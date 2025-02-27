@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 06:00:07 UTC",
+    "serialized_at": "2025-02-25 23:20:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -793,6 +793,7 @@
       "key": "4d13e97e-3e23-4475-a336-1af04f2f2c82",
       "position": 1,
       "properties": {
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82",
@@ -805,7 +806,7 @@
       "key": "5222bf02-796b-4e2a-8867-1762a253e8cd",
       "position": 2,
       "properties": {
-        "name": "Activity"
+        "name": "Day 2"
       },
       "seeding_key": {
         "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd",
@@ -818,6 +819,7 @@
       "key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f",
       "position": 3,
       "properties": {
+        "name": "Day 3"
       },
       "seeding_key": {
         "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f",
@@ -967,6 +969,22 @@
       }
     },
     {
+      "key": "084c9d94-a78d-46a9-b7df-22886e91a26c",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Computer Innovations and Careers Activity Guide can be collected and used to formatively assess the lesson objectives."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "084c9d94-a78d-46a9-b7df-22886e91a26c",
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110"
+      }
+    },
+    {
       "key": "69890191-c8d4-465c-af95-1553e4ef6604",
       "position": 1,
       "properties": {
@@ -1022,7 +1040,7 @@
       "key": "9132ad5b-72e4-4d4b-9a7e-3e8f9a5674e8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define*input devices*and*output devices*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Hardware activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *input devices* and *output devices*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Hardware activity guide."
       },
       "seeding_key": {
         "activity_section.key": "9132ad5b-72e4-4d4b-9a7e-3e8f9a5674e8",
@@ -1164,7 +1182,13 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 2. Each student will read about processing components and take notes by writing a definition and an analogy for each in the Processing Components section of their activity guide.",
-        "progression_name": "Processing Components"
+        "progression_name": "Processing Components",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Hardware Activity Guide can be used to formatively assess the lesson objectives."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3ef8f0db-30d0-42e5-b902-edf36877ee3b",
@@ -1218,7 +1242,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Use responses to this reflection question to see how well students grasp the importance of different hardware components. "
+            "markdown": "Use responses to this reflection question to formatively assess the lesson objectives."
           }
         ]
       },
@@ -1364,7 +1388,13 @@
       "position": 9,
       "properties": {
         "description": "**Do This:** Direct students to Lesson 3, Level 4. Students act as tech support for a user experiencing the same issue in the AI Chatbot simulation. They should complete their activity guide for the scenario that they have chosen, identifying the most likely cause of the problem.",
-        "progression_name": "Tech Support Chatbot"
+        "progression_name": "Tech Support Chatbot",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Troubleshooting Hardware Issues Activity Guide can be used to formatively assess the lesson objectives."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "92aff9a2-eaf7-4117-bfe7-b10be7a1e11a",
@@ -1375,8 +1405,14 @@
       "key": "d2f4e156-5caa-408a-a661-979816e45dbc",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did employing a strategy for troubleshooting assist with resolving hardware issues?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might articulate that using a strategy like SNOT reduces guesswork and frustration by breaking down the problem into manageable parts (**decomposition***in computational thinking*), helps pinpoint causes more quickly and accurately, and encourages independent, logical problem-solving skills that transfer to various real-world situations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define*decomposition*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 5 to complete Levels 5 and 6.\n- **Level 5:** Students choose one of the videos that provides details about a hardware-related career\n- **Level 6:** Students speculate about how troubleshooting strategies might be employed within this specific career",
-        "progression_name": "Hardware Careers: Components and Troubleshooting"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did employing a strategy for troubleshooting assist with resolving hardware issues?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might articulate that using a strategy like SNOT reduces guesswork and frustration by breaking down the problem into manageable parts (**decomposition** in computational thinking), helps pinpoint causes more quickly and accurately, and encourages independent, logical problem-solving skills that transfer to various real-world situations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 5 to complete Levels 5 and 6.\n- **Level 5:** Students choose one of the videos that provides details about a hardware-related career\n- **Level 6:** Students speculate about how troubleshooting strategies might be employed within this specific career",
+        "progression_name": "Hardware Careers: Components and Troubleshooting",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The free response questions on Level 6 can be used to formatively assess the lesson objectives."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d2f4e156-5caa-408a-a661-979816e45dbc",
@@ -1409,7 +1445,7 @@
       "key": "f3d81911-5bc6-4f17-ac44-9f39db1cc288",
       "position": 1,
       "properties": {
-        "description": "Let’s review some of the major points from our last few lessons about hardware and software. Software is like the set of instructions that tells a computer what to do. It’s the code and programs that make a computer useful. Without software, your computer, phone, or tablet would just be a box of wires and circuits—it wouldn’t know how to do anything. Software and hardware are like a team. The hardware performs the physical tasks—like displaying images on the screen, printing a document, or saving files on a hard drive. But it’s the software that decides*what*to display, print, or save and*how* to do it.\u000bFor example, if you press a key on a keyboard, the hardware sends the signal to the operating system (a type of software), which decides what letter to show on the screen. When you swipe through TikTok, the hardware detects your touch, and the app software loads the next video.",
+        "description": "Let’s review some of the major points from our last few lessons about hardware and software. Software is like the set of instructions that tells a computer what to do. It’s the code and programs that make a computer useful. Without software, your computer, phone, or tablet would just be a box of wires and circuits—it wouldn’t know how to do anything. Software and hardware are like a team. The hardware performs the physical tasks—like displaying images on the screen, printing a document, or saving files on a hard drive. But it’s the software that decides *what* to display, print, or save and *how* to do it.\u000bFor example, if you press a key on a keyboard, the hardware sends the signal to the operating system (a type of software), which decides what letter to show on the screen. When you swipe through TikTok, the hardware detects your touch, and the app software loads the next video.",
         "remarks": true
       },
       "seeding_key": {
@@ -1500,7 +1536,13 @@
       "key": "98dd11d7-28d4-43e9-8367-27640e06c4c7",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you learn about the roles of operating systems, application software, and utility software?*\n- *Which of these types of software do you use most often, and why?*\n- *How do you think understanding these tools will help you in the future?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ensure students can clearly articulate the distinct roles of each type of software: operating systems manage hardware and software, application software helps users complete tasks, and utility software keeps systems running smoothly. Help students connect the lesson to their own lives by identifying the software they use regularly. Highlight how each type of software impacts their day-to-day activities, such as gaming, communicating, or studying. Prompt students to consider why some types of software might feel more \"invisible\" (like utility software) compared to application software they interact with directly. Discuss how knowledge of these software types applies to future careers or problem-solving scenarios (e.g., using applications in a job, troubleshooting operating systems, optimizing devices with utilities). Emphasize how understanding software roles can make students more independent when troubleshooting or choosing the right tools for a task. Help students see the value of learning about software now to prepare for challenges in technology-driven fields or daily life."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you learn about the roles of operating systems, application software, and utility software?*\n- *Which of these types of software do you use most often, and why?*\n- *How do you think understanding these tools will help you in the future?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ensure students can clearly articulate the distinct roles of each type of software: operating systems manage hardware and software, application software helps users complete tasks, and utility software keeps systems running smoothly. Help students connect the lesson to their own lives by identifying the software they use regularly. Highlight how each type of software impacts their day-to-day activities, such as gaming, communicating, or studying. Prompt students to consider why some types of software might feel more \"invisible\" (like utility software) compared to application software they interact with directly. Discuss how knowledge of these software types applies to future careers or problem-solving scenarios (e.g., using applications in a job, troubleshooting operating systems, optimizing devices with utilities). Emphasize how understanding software roles can make students more independent when troubleshooting or choosing the right tools for a task. Help students see the value of learning about software now to prepare for challenges in technology-driven fields or daily life.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Scavenger Hunt Activity Guide can be collected and used to formatively assess the lesson objectives.\n\nThe free response questions on Level 1 can be used to formatively assess the lesson objectives."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "98dd11d7-28d4-43e9-8367-27640e06c4c7",
@@ -1522,7 +1564,13 @@
       "key": "fbf319c0-96ca-4e16-a5b0-fa882a11de1c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What role does software play in enabling computer systems to function? Give a specific example from today's activities.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students articulate that software enables hardware to perform meaningful tasks and makes devices useful. Emphasize the interdependence of hardware and software in modern technology. Ensure students can link specific examples from the scavenger hunt to their everyday lives or future careers (e.g., writing programs for authors, productivity tools for entrepreneurs, system maintenance tools for IT professionals). Encourage students to consider how their own devices and software enable their daily tasks and what they would do if these systems failed."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What role does software play in enabling computer systems to function? Give a specific example from today's activities.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students articulate that software enables hardware to perform meaningful tasks and makes devices useful. Emphasize the interdependence of hardware and software in modern technology. Ensure students can link specific examples from the scavenger hunt to their everyday lives or future careers (e.g., writing programs for authors, productivity tools for entrepreneurs, system maintenance tools for IT professionals). Encourage students to consider how their own devices and software enable their daily tasks and what they would do if these systems failed.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses to the Wrap Up discussion can be used to formatively assess the lesson objectives.\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fbf319c0-96ca-4e16-a5b0-fa882a11de1c",
@@ -1607,6 +1655,10 @@
           {
             "type": "teachingTip",
             "markdown": "This level is designed to use the Student Summaries feature, which lets you view and display the responses from the class. This requires having this level opened on your computer and, in the teacher panel, selecting the current section of your classes. [**Click here to learn more about viewing student responses**](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels). If you are unable to use the student summaries, you can also run this as an unplugged discussion where students vote in their seats or move to different corners of the room depending on their responses."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses to the questions in Level 2 can used to formatively assess the lesson objectives."
           }
         ]
       },
@@ -1670,7 +1722,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "You may choose to collect the Activity Guide to see how students grasped the concept of Optimization."
+            "markdown": "The Optimization Activity Guide can be collected and used to formatively assess the lesson objectives."
           }
         ]
       },
@@ -1698,7 +1750,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Unit Guides can be collected at the end of the day if you’d like to use the answers to these prompts to gauge how well students grasped the concepts around troubleshooting and optimization and which might need further review."
+            "markdown": "The Unit Guides can be collected at the end of the lesson as a formative assessment to gauge how well students grasped the concepts of troubleshooting and optimization and which concepts might need further review."
           }
         ]
       },
@@ -1816,7 +1868,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Build a Computer System activity guide can be used to check students' ability to justify computer system design decisions."
+            "markdown": "The Build a Computer System activity guide can be collected and used to formatively assess the lesson objectives."
           }
         ]
       },
@@ -1890,8 +1942,14 @@
       "key": "746d2b43-c0d0-463c-931b-979c85709807",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the**Empathize with the User**section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
-        "progression_name": "Sensors and AI Chatbot"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
+        "progression_name": "Sensors and AI Chatbot",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Data in Computer Systems Activity Guide can be collected and used to formatively assess the lesson objectives.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "746d2b43-c0d0-463c-931b-979c85709807",
@@ -1924,7 +1982,13 @@
       "key": "14d52a76-aa9e-4ddb-b265-53b9fe003662",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write one key insight or takeaway from today's lesson that relates to the Question of the Day. This can be completed in the Unit Guide, under the Question of the Day section. Have them share their takeaways with a partner or with the class."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write one key insight or takeaway from today's lesson that relates to the Question of the Day. This can be completed in the Unit Guide, under the Question of the Day section. Have them share their takeaways with a partner or with the class.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Unit Guide can be collected and used to formatively assess the lesson objectives."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "14d52a76-aa9e-4ddb-b265-53b9fe003662",
@@ -2155,7 +2219,13 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to respond to the reflection questions on Levels 2, 3, and 4.",
-        "progression_name": "Reflection"
+        "progression_name": "Reflection",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Processing Library Data activity guide can be collected and used to formatively assess the lesson objectives.\n\nThe free response questions in Levels 2, 3, and 4 can be used to formatively assess the lesson objectives."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d",
@@ -2200,7 +2270,13 @@
       "key": "470388e3-eab1-4609-ad18-8016c91c6a12",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video**: Show the video \"This AI coach can show tennis players how to up their game\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students watch the video carefully and answer the questions on their index card."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video**: Show the video \"This AI coach can show tennis players how to up their game\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students watch the video carefully and answer the questions on their index card.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Exit Ticket can be collected and used to formatively assess the lesson objectives.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "470388e3-eab1-4609-ad18-8016c91c6a12",
@@ -2282,7 +2358,7 @@
       "key": "61022b18-bd6f-4f34-866a-dfee56bcad5e",
       "position": 5,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define*processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 2. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
+        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 2. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
         "duration": "15",
         "name": "AI Hardware",
         "progression_name": "Processing Unit Battle"
@@ -2297,7 +2373,13 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for their AI model. They record their findings and respond to guided questions in the Determine AI Hardware section of their activity guide.",
-        "progression_name": "Determine AI Hardware"
+        "progression_name": "Determine AI Hardware",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The How AI Uses Data Activity Guide can be collected and used to formatively assess the lesson objectives.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d849d6a4-6142-4978-a4f0-26cfcd68f899",
@@ -2699,7 +2781,13 @@
       "key": "4731eef4-e8dd-4287-bd64-9d5df861cb9a",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should the next steps be for Lydia?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Similar to the previous scenario, students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released. Because this device excludes a group of users who are color blind, launching it as is means that the device is inequitable and not accessible for all users. Students should consider how Lydia can improve her design by considering all intended users.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should the next steps be for Lydia?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Similar to the previous scenario, students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released. Because this device excludes a group of users who are color blind, launching it as is means that the device is inequitable and not accessible for all users. Students should consider how Lydia can improve her design by considering all intended users.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The User Testing activity guide can be collected and used to formatively assess the lesson objectives:\n- Explain why user testing is an important part of the development process\n- Justify next steps for a product based on user testing insights and diverse perspectives\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4731eef4-e8dd-4287-bd64-9d5df861cb9a",
@@ -2759,7 +2847,7 @@
       "key": "6c84e17c-98ec-426c-bc2a-f9278891afe0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What computer system in the video might raise ethical concerns for some people? What are those concerns?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that artificial intelligence and robotics—particularly systems designed to collect personal data or replace human workers—can raise ethical concerns regarding privacy, job displacement, and the broader social impact of technology. Encourage them to explore how these concerns might differ among various stakeholders and emphasize the importance of transparency, responsible data handling, and dignity in AI-driven solutions."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What computer system in the video might raise ethical concerns for some people? What are those concerns?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that artificial intelligence and robotics—particularly systems designed to collect personal data or replace human workers—can raise ethical concerns regarding privacy, job displacement, and the broader social impact of technology. Encourage them to explore how these concerns might differ among various stakeholders and emphasize the importance of transparency, responsible data handling, and dignity in AI-driven solutions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "6c84e17c-98ec-426c-bc2a-f9278891afe0",
@@ -2767,24 +2855,12 @@
       }
     },
     {
-      "key": "32f53228-86f7-4169-905f-a4ecb839e324",
+      "key": "a626e6f5-d021-42f3-ac73-5be5b77309a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to either the class FigJam or slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Assign each group a distinct role – there are four roles per scenario. Direct students to Lesson 12, Level 1 to review the scenario with their group.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to either the class FigJam or slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the FigJam or Slide template. Each member of the group should pick a distinct role – there are four roles per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the FigJam or slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
         "duration": "20",
         "name": "Role Playing",
-        "progression_name": "AI and Emerging Technologies Ethics Roleplaying"
-      },
-      "seeding_key": {
-        "activity_section.key": "32f53228-86f7-4169-905f-a4ecb839e324",
-        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
-      }
-    },
-    {
-      "key": "a626e6f5-d021-42f3-ac73-5be5b77309a3",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the FigJam or slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2799,7 +2875,7 @@
     },
     {
       "key": "bb65bec9-1253-411f-a69a-eba57f19a4a8",
-      "position": 3,
+      "position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -2809,13 +2885,13 @@
     },
     {
       "key": "116f67dc-3050-494b-bcf1-86d0930c817c",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Remind students that their proposal should reflect a compromise between roles, not just one perspective. Encourage students to justify their ideas and challenge each other’s assumptions respectfully.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups present their proposals and discuss differences in approaches.",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "If groups struggle to agree, prompt them to identify common ground or adjust their proposal to better address concerns. Ask groups to consider whose interests are best served by their proposal and who might still have concerns."
+            "type": "assessmentOpportunity",
+            "markdown": "The Figjam or slides can be collected and used to formatively assess the lesson objectives:\n- Evaluate the ethical implications of real-world examples of emerging technologies, including those that incorporate AI.\n- Develop ethical guidelines for the responsible design and development of AI and emerging technologies.\n"
           }
         ]
       },
@@ -2826,7 +2902,7 @@
     },
     {
       "key": "b207f3f0-76d3-4a83-8fda-64fa0518b214",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -2836,13 +2912,17 @@
     },
     {
       "key": "d6026756-7bb3-44e7-9b4d-70b345c26f3b",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an insight or highlight from your group's roleplaying experience.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal with this discussion is to allow students to share their learning and ethical explorations with the class, and to talk through their personal thoughts about the ethical considerations of the scenario apart from the role that had been assumed.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Student guidelines could address fairness, transparency, privacy, or another important ethical concern. Example: \"AI systems should be transparent about how they make decisions to ensure accountability.\""
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The ethical guidelines can be collected and used to formatively assess the lesson objectives:\n- Develop ethical guidelines for the responsible design and development of AI and emerging technologies.\n"
           }
         ]
       },
@@ -2853,7 +2933,7 @@
     },
     {
       "key": "93ef8e31-6c7c-44a0-a34c-0f6e1d6319bf",
-      "position": 7,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2863,7 +2943,7 @@
     },
     {
       "key": "be362356-ad6e-4ca1-8b78-a1b72e4ca847",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on your discussion, students should identify a key ethical value or rule that should guide the responsible use of technology. They should write this on a half-sheet of paper.",
         "duration": "15",
@@ -2875,20 +2955,8 @@
       }
     },
     {
-      "key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 2. Students will work through one of the scenarios on Levels 2 and 3, following a similar pattern: they will review the scenario, roleplay one of the roles that are offered, reflect on their learning with the class, and write an ethical guideline about AI and emerging technologies that is synthesized from their discussions.",
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e",
-        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
-      }
-    },
-    {
       "key": "a48f6ac5-7fa3-4cef-bc61-0826f810d744",
-      "position": 10,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students hang up the ethical guidelines that they have developed around the classroom or in the hallway. They should wander around and read what other classmates have written as a result of their learning and conversations.",
         "progression_name": "Student Survey",
@@ -2901,6 +2969,28 @@
       },
       "seeding_key": {
         "activity_section.key": "a48f6ac5-7fa3-4cef-bc61-0826f810d744",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "76a1e00f-54b2-4d90-afbb-7f86d73bd944",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "76a1e00f-54b2-4d90-afbb-7f86d73bd944",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 1 to respond to the question.",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e",
         "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
       }
     },
@@ -2947,23 +3037,33 @@
       }
     },
     {
+      "key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "b87cbef4-0d41-47b7-9883-fbe5004ef72d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b87cbef4-0d41-47b7-9883-fbe5004ef72d",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
       "key": "cbd24455-be93-4ac3-ad9a-8deaaa26a425",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
         "activity_section.key": "cbd24455-be93-4ac3-ad9a-8deaaa26a425",
-        "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd"
-      }
-    },
-    {
-      "key": "686d3ac1-c346-46b5-b902-511679203dc7",
-      "position": 2,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "686d3ac1-c346-46b5-b902-511679203dc7",
         "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd"
       }
     },
@@ -4275,28 +4375,6 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "AI and Emerging Technologies Ethics Roleplaying"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson12-level1-2023"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "32f53228-86f7-4169-905f-a4ecb839e324"
-      },
-      "level_keys": [
-        "computer-systems-lesson12-level1-2023"
-      ]
-    },
-    {
-      "chapter": 58,
-      "position": 2,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "progression": "Check for Understanding"
@@ -4316,8 +4394,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 3,
+      "chapter": 58,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4338,25 +4416,109 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Student Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson13-level1-2024"
+          "computer-systems-lesson13-level1-2023"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "686d3ac1-c346-46b5-b902-511679203dc7"
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
       },
       "level_keys": [
-        "computer-systems-lesson13-level1-2024"
+        "computer-systems-lesson13-level1-2023"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level2-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+      },
+      "level_keys": [
+        "computer-systems-lesson13-level2-2023"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level3-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+      },
+      "level_keys": [
+        "computer-systems-lesson13-level3-2023"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level4-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+      },
+      "level_keys": [
+        "computer-systems-lesson13-level4-2023"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level5-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "b87cbef4-0d41-47b7-9883-fbe5004ef72d"
+      },
+      "level_keys": [
+        "computer-systems-lesson13-level5-2023"
       ]
     }
   ],
@@ -5035,18 +5197,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson12-level1-2023",
-        "script_level.level_keys": [
-          "computer-systems-lesson12-level1-2023"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "32f53228-86f7-4169-905f-a4ecb839e324"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "computer-systems-lesson12-level2-2023",
         "script_level.level_keys": [
           "computer-systems-lesson12-level2-2023"
@@ -5071,14 +5221,62 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson13-level1-2024",
+        "level.key": "computer-systems-lesson13-level1-2023",
         "script_level.level_keys": [
-          "computer-systems-lesson13-level1-2024"
+          "computer-systems-lesson13-level1-2023"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "686d3ac1-c346-46b5-b902-511679203dc7"
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson13-level2-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level2-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson13-level3-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level3-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson13-level4-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level4-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson13-level5-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level5-2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "b87cbef4-0d41-47b7-9883-fbe5004ef72d"
       }
     }
   ],

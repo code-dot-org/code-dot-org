@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .file-browser {
   height: 100%;
@@ -117,3 +118,20 @@ div.row:hover .button-kebab {
   width: auto;
   min-width: 100px;
 }
+
+.alertIcon {
+  color: var(--text-error-primary-fixed);
+  font-size: 1rem;
+}
+
+.backpackErrorContainer {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+
+.backpackErrorMessage {
+  color: $white;
+  font-size: 1rem;
+}
+

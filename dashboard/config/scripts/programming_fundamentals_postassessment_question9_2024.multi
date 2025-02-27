@@ -1,17 +1,28 @@
 name 'programming-fundamentals-postassessment-question9-2024'
-title 'Programming Fundamentals Post-Assessment: Question 1'
+title 'Programming Fundamentals Post-Assessment: Question 9'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`"Even"`'
+right '`"Odd"`'
+wrong '`"Small number"`'
+wrong 'No output; there is an error'
 
 allow_multiple_attempts false
 
 markdown <<MARKDOWN
-question
+What will be printed by the following code?
+
+```
+x = 7  
+if x > 5:  
+    if x % 2 == 0:  
+        print("Even")  
+    else:  
+        print("Odd")  
+else:  
+    print("Small number")
+```
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 12: Two-Way and Nested Selection
 MARKDOWN

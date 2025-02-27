@@ -1,0 +1,147 @@
+name 'PLGuide_L3_TextExample2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Title
+
+#### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus, finibus vel sem in, egestas ultrices eros. Nullam feugiat interdum diam id gravida. Vestibulum ornare lorem turpis, ut consequat ex tristique eu. 
+
+## Subtitle
+
+#### Mauris luctus massa id lectus molestie malesuada. Nullam porttitor a elit sed interdum. Nullam tellus arcu, dignissim dictum nisl ac, pellentesque vestibulum tortor. Nulla vehicula mi eu orci vulputate, eu lacinia est porta. 
+
+<!-- Main container wrapping all sections -->
+<div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin: 20px 0px">
+    <!-- Section 1 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/1bf1f9c625e1f83821e4fc9fbc7f7f19-image-1739908559016.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 1</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+    <!-- Section 2 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/5dfa54613ff29b4ea1ec6a66500a8a09-image-1739908567115.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 2</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+    <!-- Section 3 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/5a9395b2f8ba9fdd159ef52f376ebad0-image-1739908571781.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 3</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+    <!-- Section 4 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/a07d4c5506ceea8b4024dfc93e7e796c-image-1739908574464.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 4</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+</div>
+
+#### Fusce imperdiet nunc sit amet risus condimentum, eget pulvinar nisi feugiat. Vivamus ac tincidunt enim. Duis sed interdum eros. Nam quis velit molestie, vestibulum ipsum vitae, hendrerit eros. Nulla venenatis, tortor in dignissim suscipit, est urna porta erat, ac pretium diam sem vel neque.
+<br>
+
+___
+
+````html
+# Title
+
+#### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus, finibus vel sem in, egestas ultrices eros. Nullam feugiat interdum diam id gravida. Vestibulum ornare lorem turpis, ut consequat ex tristique eu. 
+
+## Subtitle
+
+#### Mauris luctus massa id lectus molestie malesuada. Nullam porttitor a elit sed interdum. Nullam tellus arcu, dignissim dictum nisl ac, pellentesque vestibulum tortor. Nulla vehicula mi eu orci vulputate, eu lacinia est porta. 
+
+<!-- Main container wrapping all sections -->
+<div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin: 20px 0px">
+    <!-- Section 1 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/1bf1f9c625e1f83821e4fc9fbc7f7f19-image-1739908559016.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 1</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+    <!-- Section 2 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/5dfa54613ff29b4ea1ec6a66500a8a09-image-1739908567115.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 2</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+    <!-- Section 3 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/5a9395b2f8ba9fdd159ef52f376ebad0-image-1739908571781.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 3</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+    <!-- Section 4 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/a07d4c5506ceea8b4024dfc93e7e796c-image-1739908574464.png" 
+             alt="ADD ALT TEXT" 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Section 4</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque 
+                scelerisque nisi, ut convallis odio tincidunt non.
+            </p>
+        </div>
+    </div>
+</div>
+
+#### Fusce imperdiet nunc sit amet risus condimentum, eget pulvinar nisi feugiat. Vivamus ac tincidunt enim. Duis sed interdum eros. Nam quis velit molestie, vestibulum ipsum vitae, hendrerit eros. Nulla venenatis, tortor in dignissim suscipit, est urna porta erat, ac pretium diam sem vel neque.
+
+````
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

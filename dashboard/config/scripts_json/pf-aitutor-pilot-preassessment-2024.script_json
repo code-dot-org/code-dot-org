@@ -10,14 +10,13 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-21 14:50:21 UTC",
+    "serialized_at": "2025-02-25 19:45:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -40,19 +39,87 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Programming Fundamentals Pre-Assessment",
+      "name": "Programming Fundamentals Pre-Assessment",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "Programming Fundamentals Pre-Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-preassessment-2024"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4f3f49dd-9df8-4285-b6a5-aad77aad9928",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f3f49dd-9df8-4285-b6a5-aad77aad9928",
+        "lesson.key": "Programming Fundamentals Pre-Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-preassessment-2024"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b4e857d5-43c1-4010-a73c-92376b669639",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4e857d5-43c1-4010-a73c-92376b669639",
+        "lesson_activity.key": "4f3f49dd-9df8-4285-b6a5-aad77aad9928"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Pre-Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-preassessment_aitutor-2024"
+        ],
+        "lesson.key": "Programming Fundamentals Pre-Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-preassessment-2024",
+        "activity_section.key": "b4e857d5-43c1-4010-a73c-92376b669639"
+      },
+      "level_keys": [
+        "programming-fundamentals-preassessment_aitutor-2024"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-preassessment_aitutor-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-preassessment_aitutor-2024"
+        ],
+        "lesson.key": "Programming Fundamentals Pre-Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-preassessment-2024",
+        "activity_section.key": "b4e857d5-43c1-4010-a73c-92376b669639"
+      }
+    }
   ],
   "resources": [
 

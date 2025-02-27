@@ -21,10 +21,6 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     target: 'es2019',
     format: [format],
     sourcemap: true,
-    external: [
-      '/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf',
-      '/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf',
-    ],
     esbuildPlugins: [
       sassPlugin({
         // In ESM mode, CSS Modules are generated which can be cached via the CSS loader.

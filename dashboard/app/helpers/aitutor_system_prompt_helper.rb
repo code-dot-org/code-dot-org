@@ -84,11 +84,19 @@ module AitutorSystemPromptHelper
 
   def self.get_validated_level_test_file_contents(level)
     test_file_contents = ""
-    if level.respond_to?(:validation) && level.validation && level.validation.values.any?
+
+    # Note: Not all Lab2 levels have the same validation structure
+    if level.type == 'Pythonlab'
+      validation_file = level.properties["validation_file"]
+      if validation_file && validation_file["contents"]
+        test_file_contents += validation_file["contents"]
+      end
+    elsif level.respond_to?(:validation) && level.validation && level.validation.values.any?
       level.validation.each_value do |validation|
         test_file_contents += validation["text"]
       end
     end
+
     test_file_contents.empty? ?
       "\n There are no tests for this level." :
       "\n The contents of the test file are: #{test_file_contents}"

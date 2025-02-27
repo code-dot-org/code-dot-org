@@ -11,7 +11,10 @@ class FollowersController < ApplicationController
 
   # GET /join/:section_code (section_code is optional)
   def student_user_new
-    @user = current_user || User.new
+    if current_user.blank?
+      @section_code = params[:section_code]
+      render 'join_logged_out', formats: [:html]
+    end
   end
 
   # POST /join/:section_code
@@ -24,8 +27,9 @@ class FollowersController < ApplicationController
       @user = User.new(followers_params(user_type))
       @user.user_type = user_type
     else
-      @user = User.new(user_type: User::TYPE_STUDENT)
-      return render 'student_user_new', formats: [:html]
+      @section_code = params[:section_code]
+      render 'join_logged_out', formats: [:html]
+      return
     end
 
     # Create boolean to confirm if a user already actively exists on a section roster
