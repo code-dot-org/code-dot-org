@@ -251,4 +251,54 @@ describe('openImportFromBackpackPrompt', () => {
     expect(SaveFileFunction).not.toHaveBeenCalled();
     expect(mockBackpackApi.deleteFiles).toHaveBeenCalled();
   });
+
+  it('should rename imported file if backpack file name duplicates hidden validation file', async () => {
+    const mockBackpackApi = getBackpackAPIMock(); // getFileList returns list ['test1.py', 'test2.py'].
+    const projectFiles = {
+      '1': {
+        id: '1',
+        name: 'project_file1.py',
+        language: 'py',
+        contents: 'This is test1.py',
+        folderId: '0',
+      },
+    };
+    const validationFile = {
+      id: '2',
+      name: 'test1.py',
+      language: 'py',
+      contents: 'This is a validation file.',
+      folderId: '0',
+    };
+    const dialogControl = {
+      showDialog: jest.fn(),
+    };
+    // Mock the dialog responses
+    dialogControl.showDialog
+      .mockResolvedValueOnce({}) // First dialog is a pending dialog.
+      .mockResolvedValueOnce({type: 'confirm'}) // Second dialog: user confirms import
+      .mockResolvedValueOnce({type: 'confirm'}); // Third dialog: user chooses to rename
+
+    // Mock extractUserInput to return 'test1.py'
+    (extractUserInput as jest.Mock).mockReturnValue('test1.py');
+
+    const NewFileFunction = jest.fn();
+    const SaveFileFunction = jest.fn();
+
+    await openImportFromBackpackPrompt({
+      dialogControl,
+      backpackApi: mockBackpackApi,
+      newFile: NewFileFunction,
+      saveFile: SaveFileFunction,
+      projectFiles,
+      validationFile,
+    });
+    // Ensure async calls complete before assertions
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+    expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
+    expect(NewFileFunction).toHaveBeenCalledTimes(1);
+    expect(SaveFileFunction).not.toHaveBeenCalled();
+  });
 });

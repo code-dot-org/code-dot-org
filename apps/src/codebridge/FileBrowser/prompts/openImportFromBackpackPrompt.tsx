@@ -147,7 +147,7 @@ export const openImportFromBackpackPrompt = async ({
           if (isSupportFileName) {
             // The user wants to import a file that has the same name as a hidden support file.
             // Give the user a choice to import with a new name or cancel the import.
-            dialogControl?.showDialog({
+            const results = await dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
               title: codebridgeI18n.importFromBackpackTitle(),
               message: codebridgeI18n.importFromBackpackDuplicateSupportMessage(
@@ -156,12 +156,10 @@ export const openImportFromBackpackPrompt = async ({
                 }
               ),
               confirmText: codebridgeI18n.importAsNewName({newFileName}),
-              handleConfirm: () =>
-                fetchFileContentAndProcess(
-                  selectedBackpackFileName,
-                  newFileName
-                ), // Fetch backpack file content and import new file with numeric suffix.
             });
+            if (results.type === 'confirm') {
+              fetchFileContentAndProcess(selectedBackpackFileName, newFileName); // Fetch backpack file content and import new file with numeric suffix.
+            }
             return;
           }
           // If the backpack file has the same name as an existing project file, show a second
@@ -201,7 +199,7 @@ export const openImportFromBackpackPrompt = async ({
             destructive: true,
           });
           if (results.type === 'confirm') {
-            handleDelete(selectedBackpackFileName); // Update existing project file.
+            handleDelete(selectedBackpackFileName);
           }
         }
       }
