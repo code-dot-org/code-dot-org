@@ -7,21 +7,21 @@ describe('openSaveToBackpackPrompt', () => {
   it('should save a file to the backpack', async () => {
     const mockBackpackApi = getBackpackAPIMock();
     const dialogMock = getDialogConfirmationMock('confirm');
-    const testFile: ProjectFile = {
-      name: 'new_file.py',
-      contents: 'print("Hello, world!")',
+    const projectFile: ProjectFile = {
+      name: 'project_file.py',
+      contents: 'This is project_file.py.',
     } as ProjectFile;
 
     await openSaveToBackpackPrompt({
       dialogControl: dialogMock,
       backpackApi: mockBackpackApi,
-      file: testFile,
+      file: projectFile,
     });
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).toHaveBeenCalledWith(
-      'new_file.py',
-      expect.objectContaining({name: 'new_file.py'}),
+      'project_file.py',
+      expect.objectContaining({name: 'project_file.py'}),
       expect.any(Function),
       expect.any(Function)
     );
@@ -30,67 +30,67 @@ describe('openSaveToBackpackPrompt', () => {
     const mockBackpackApi = getBackpackAPIMock();
     const dialogMock = getDialogConfirmationMock('cancel');
 
-    const testFile: ProjectFile = {
-      name: 'test_file.py',
-      contents: 'print("Hello, world!")',
+    const projectFile: ProjectFile = {
+      name: 'project_file.py',
+      contents: 'This is project_file.py.',
     } as ProjectFile;
 
     await openSaveToBackpackPrompt({
       dialogControl: dialogMock,
       backpackApi: mockBackpackApi,
-      file: testFile,
+      file: projectFile,
     });
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).not.toHaveBeenCalled();
   });
   it('should rename file when duplicate exists and rename (neutral) is selected', async () => {
-    const mockBackpackApi = getBackpackAPIMock();
+    const mockBackpackApi = getBackpackAPIMock(['project_file.py']);
     const dialogConfirmationMock = getDialogConfirmationMock('neutral');
 
-    const testFile: ProjectFile = {
-      name: 'test1.py',
-      contents: 'print("Hello, world!")',
+    const projectFile: ProjectFile = {
+      name: 'project_file.py',
+      contents: 'This is project_file.py.',
     } as ProjectFile;
 
     await openSaveToBackpackPrompt({
       dialogControl: dialogConfirmationMock,
       backpackApi: mockBackpackApi,
-      file: testFile,
+      file: projectFile,
     });
 
-    expect(mockBackpackApi.getFileList).toHaveBeenCalled(); // The mocked getFileList returns ['test1.py', 'test2.py'].
+    expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).toHaveBeenCalledWith(
-      'test1_1.py',
+      'project_file_1.py',
       expect.objectContaining({
-        name: 'test1_1.py',
-        contents: 'print("Hello, world!")',
+        name: 'project_file_1.py',
+        contents: 'This is project_file.py.',
       }),
       expect.any(Function),
       expect.any(Function)
     );
   });
   it('should replace file when duplicate exists and replace (confirm) is selected', async () => {
-    const mockBackpackApi = getBackpackAPIMock();
+    const mockBackpackApi = getBackpackAPIMock(['project_file.py']);
     const dialogConfirmationMock = getDialogConfirmationMock('confirm');
 
-    const testFile: ProjectFile = {
-      name: 'test1.py',
-      contents: 'print("Hello, world!")',
+    const projectFile: ProjectFile = {
+      name: 'project_file.py',
+      contents: 'This is project_file.py.',
     } as ProjectFile;
 
     await openSaveToBackpackPrompt({
       dialogControl: dialogConfirmationMock,
       backpackApi: mockBackpackApi,
-      file: testFile,
+      file: projectFile,
     });
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).toHaveBeenCalledWith(
-      'test1.py',
+      'project_file.py',
       expect.objectContaining({
-        name: 'test1.py',
-        contents: 'print("Hello, world!")',
+        name: 'project_file.py',
+        contents: 'This is project_file.py.',
       }),
       expect.any(Function),
       expect.any(Function)

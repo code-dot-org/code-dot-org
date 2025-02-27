@@ -119,16 +119,15 @@ export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
 };
 
 export const getBackpackAPIMock = (
-  isFileListEmpty: boolean = false
+  fileList: string[] = []
 ): BackpackClientApi => {
   return {
     hasBackpack: jest.fn(() => true),
     fetchChannelId: jest.fn(callback => callback()),
     fetchFile: jest.fn((filename, onError, onSuccess) => {
-      onSuccess(`Mock contents of ${filename}`);
+      onSuccess(`Mock contents of backpack file ${filename}`);
     }),
     getFileList: jest.fn((onError, onSuccess) => {
-      const fileList = isFileListEmpty ? [] : ['test1.py', 'test2.py'];
       onSuccess(fileList);
     }),
     saveFiles: jest.fn(),
