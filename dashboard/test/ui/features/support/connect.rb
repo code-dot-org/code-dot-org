@@ -47,10 +47,21 @@ def saucelabs_browser(test_run_name, http_client: nil)
 end
 
 # Set HTTP read timeout to the specified value during the block.
+# Invocable from Cucumber steps.
 def with_read_timeout(timeout, &block)
   $http_client ?
     $http_client.with_read_timeout(timeout, &block) :
     yield
+end
+
+# Set the virtual browser to either portrait or landscape orientation.
+# Invocable from Cucumber steps.
+def change_orientation(orientation)
+  $http_client.call(
+    :post,
+    "/wd/hub/session/#{$browser.session_id}/orientation",
+    {orientation: orientation.upcase}
+  )
 end
 
 def get_browser(test_run_name)
