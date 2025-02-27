@@ -860,7 +860,7 @@ class Level < ApplicationRecord
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
-    elsif try(:project_template_level).try(:level_data)['startSources']
+    elsif (level_data = try(:project_template_level).try(:level_data)) && level_data['startSources']
       # Music Lab's sources are part of level_data
       properties_camelized['templateSources'] = try(:project_template_level).try(:level_data)['startSources']
     end
