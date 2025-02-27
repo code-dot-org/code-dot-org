@@ -1,3 +1,5 @@
+import {waitFor} from '@testing-library/react';
+
 import {openImportFromBackpackPrompt} from '@cdo/apps/codebridge/FileBrowser/prompts/openImportFromBackpackPrompt';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {extractUserInput} from '@cdo/apps/lab2/views/dialogs';
@@ -111,16 +113,15 @@ describe('openImportFromBackpackPrompt', () => {
 
     await runImportFromBackpackPrompt();
 
-    // Ensure async calls complete before assertions
-    await new Promise(resolve => setTimeout(resolve, 100));
-
-    expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
-    expect(newFileFunction).toHaveBeenCalledWith({
-      contents: 'Mock contents of backpack file test_file.py',
-      fileName: 'test_file_1.py', // Renamed file with numeric suffix.
+    await waitFor(() => {
+      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+      expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
+      expect(newFileFunction).toHaveBeenCalledWith({
+        contents: 'Mock contents of backpack file test_file.py',
+        fileName: 'test_file_1.py', // Renamed file with numeric suffix.
+      });
+      expect(saveFileFunction).not.toHaveBeenCalled();
     });
-    expect(saveFileFunction).not.toHaveBeenCalled();
   });
 
   it('replaces existing project file with imported backpack file if user selects replace', async () => {
@@ -142,12 +143,13 @@ describe('openImportFromBackpackPrompt', () => {
     (extractUserInput as jest.Mock).mockReturnValue('test_file.py');
 
     await runImportFromBackpackPrompt();
-    await new Promise(resolve => setTimeout(resolve, 100));
 
-    expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
-    expect(newFileFunction).not.toHaveBeenCalled();
-    expect(saveFileFunction).toHaveBeenCalledTimes(1);
+    await waitFor(() => {
+      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+      expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
+      expect(newFileFunction).not.toHaveBeenCalled();
+      expect(saveFileFunction).toHaveBeenCalledTimes(1);
+    });
   });
 
   it('deletes the backpack file if user selects to delete', async () => {
@@ -160,13 +162,14 @@ describe('openImportFromBackpackPrompt', () => {
     (extractUserInput as jest.Mock).mockReturnValue('backpack_file.py');
 
     await runImportFromBackpackPrompt();
-    await new Promise(resolve => setTimeout(resolve, 100));
 
-    expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
-    expect(newFileFunction).not.toHaveBeenCalled();
-    expect(saveFileFunction).not.toHaveBeenCalled();
-    expect(mockBackpackApi.deleteFiles).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+      expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
+      expect(newFileFunction).not.toHaveBeenCalled();
+      expect(saveFileFunction).not.toHaveBeenCalled();
+      expect(mockBackpackApi.deleteFiles).toHaveBeenCalled();
+    });
   });
 
   it('renames imported file if backpack file name duplicates hidden validation file', async () => {
@@ -186,14 +189,15 @@ describe('openImportFromBackpackPrompt', () => {
     (extractUserInput as jest.Mock).mockReturnValue('test_file.py');
 
     await runImportFromBackpackPrompt({validationFile});
-    await new Promise(resolve => setTimeout(resolve, 100));
 
-    expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
-    expect(newFileFunction).toHaveBeenCalledWith({
-      contents: 'Mock contents of backpack file test_file.py',
-      fileName: 'test_file_1.py', // Renamed file with numeric suffix.
+    await waitFor(() => {
+      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+      expect(dialogControl.showDialog).toHaveBeenCalledTimes(3);
+      expect(newFileFunction).toHaveBeenCalledWith({
+        contents: 'Mock contents of backpack file test_file.py',
+        fileName: 'test_file_1.py', // Renamed file with numeric suffix.
+      });
+      expect(saveFileFunction).not.toHaveBeenCalled();
     });
-    expect(saveFileFunction).not.toHaveBeenCalled();
   });
 });
