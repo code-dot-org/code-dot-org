@@ -6130,39 +6130,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@statsig/client-core@npm:3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/client-core@npm:3.10.0"
-  checksum: 10/6bc9df1a63dfc3f0aed107f6ec64e33cb2fda669b0f1a823fef6c51c532cf5b50a10e8103adac5cbeeabe918e56fbe7bcbf3b028b1dd92f10b4100255829c689
+"@statsig/client-core@npm:3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/client-core@npm:3.12.2"
+  checksum: 10/742bad80742b16de2fbb454b70c19fce83d78d15d3aed008ffae205aaa852bf1b6477f235d21a212618f951c7ef8db88431ea23b42386c13c673fae13908afba
   languageName: node
   linkType: hard
 
-"@statsig/js-client@npm:3.10.0, @statsig/js-client@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/js-client@npm:3.10.0"
+"@statsig/js-client@npm:3.12.2, @statsig/js-client@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/js-client@npm:3.12.2"
   dependencies:
-    "@statsig/client-core": "npm:3.10.0"
-  checksum: 10/13cefe4f23f33548a943ed70b805ca39b2b5c6e36b7c4a036dd270da8fbb9f58e5a417005a70032301f049b9f7a8c7db4d7a675fa8dfc9764ceb6c619269f157
+    "@statsig/client-core": "npm:3.12.2"
+  checksum: 10/3f8c1e83c65aba2657886bfccadf783945d785c7ffb421916368f18cf6d48c1f86f89d1ee3c3e6f96fc931632498e35c0ed4fa3ca8f0b2b0293d432d5e878f60
   languageName: node
   linkType: hard
 
-"@statsig/session-replay@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/session-replay@npm:3.10.0"
+"@statsig/session-replay@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/session-replay@npm:3.12.2"
   dependencies:
-    "@statsig/client-core": "npm:3.10.0"
+    "@statsig/client-core": "npm:3.12.2"
     rrweb: "npm:2.0.0-alpha.14"
-  checksum: 10/81bcb45d637e6d369581d098dd5d1ec4143983ffbcdacfd21af19c181f1e25b74ce14e9e640107a7a5346952bb88e0e24a2eadc725b4efa722c5bb93f23bea7a
+  checksum: 10/8c377cbb355bbfa7e9c26e5577ea5aa7a7e8a2feaf5b1696ad6a37e4414b38e7a6f882d1a2c2a61928dfd3329429fb9ad9af48477faece48b104ddf0d0d2f151
   languageName: node
   linkType: hard
 
-"@statsig/web-analytics@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/web-analytics@npm:3.10.0"
+"@statsig/web-analytics@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/web-analytics@npm:3.12.2"
   dependencies:
-    "@statsig/client-core": "npm:3.10.0"
-    "@statsig/js-client": "npm:3.10.0"
-  checksum: 10/5c95236909f51c8ebe2ab11bb9e750f3fc97e72adfc99b7b59df15e21dc1c4ccd8ec8aec705f6d0a27a6c11334a28553fb0fd31526c7ad6882053a9ffc0c9892
+    "@statsig/client-core": "npm:3.12.2"
+    "@statsig/js-client": "npm:3.12.2"
+  checksum: 10/2835bbf2c74eb0801a8f49d349adaab99ec45eb24019c6796a420b8949d862cd73c73bff54c5086f69e84290714a4270f646c1c8302ea1d2510730adfaf65299
   languageName: node
   linkType: hard
 
@@ -10194,9 +10194,9 @@ __metadata:
     "@react-pdf/renderer": "npm:3.4.4"
     "@reduxjs/toolkit": "npm:^1.9.3"
     "@selectize/selectize": "npm:^0.15.2"
-    "@statsig/js-client": "npm:^3.10.0"
-    "@statsig/session-replay": "npm:^3.10.0"
-    "@statsig/web-analytics": "npm:^3.10.0"
+    "@statsig/js-client": "npm:^3.12.2"
+    "@statsig/session-replay": "npm:^3.12.2"
+    "@statsig/web-analytics": "npm:^3.12.2"
     "@storybook/addon-a11y": "npm:~8.1.11"
     "@storybook/addon-essentials": "npm:~8.1.11"
     "@storybook/addon-webpack5-compiler-babel": "npm:^3.0.0"
