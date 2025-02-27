@@ -142,8 +142,6 @@ describe('openImportFromBackpackPrompt', () => {
     (extractUserInput as jest.Mock).mockReturnValue('test_file.py');
 
     await runImportFromBackpackPrompt();
-
-    // Ensure async calls complete before assertions
     await new Promise(resolve => setTimeout(resolve, 100));
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
@@ -162,8 +160,6 @@ describe('openImportFromBackpackPrompt', () => {
     (extractUserInput as jest.Mock).mockReturnValue('backpack_file.py');
 
     await runImportFromBackpackPrompt();
-
-    // Ensure async calls complete before assertions
     await new Promise(resolve => setTimeout(resolve, 100));
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
@@ -187,12 +183,9 @@ describe('openImportFromBackpackPrompt', () => {
       .mockResolvedValueOnce({type: 'confirm'}) // User confirms import.
       .mockResolvedValueOnce({type: 'confirm'}); // User confirms to rename backpack file that duplicates hidden support file.
 
-    // Mock extractUserInput to return 'test1.py'
     (extractUserInput as jest.Mock).mockReturnValue('test_file.py');
 
     await runImportFromBackpackPrompt({validationFile});
-
-    // Ensure async calls complete before assertions
     await new Promise(resolve => setTimeout(resolve, 100));
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
