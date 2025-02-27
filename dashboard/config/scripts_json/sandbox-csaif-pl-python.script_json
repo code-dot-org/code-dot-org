@@ -1,0 +1,567 @@
+{
+  "script": {
+    "name": "sandbox-csaif-pl-python",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-02-26 16:23:05 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "sandbox-csaif-pl-python"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Teaching Introduction to Programming",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Computational Thinking",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Python Basics",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Algorithms with Python",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Preparing for the Final Project",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "995ad319-263f-42aa-a174-f05c8fc37ee5",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "995ad319-263f-42aa-a174-f05c8fc37ee5",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959",
+        "lesson_activity.key": "995ad319-263f-42aa-a174-f05c8fc37ee5"
+      }
+    },
+    {
+      "key": "6ffce608-9a9a-4062-b58e-90d2df9d8451",
+      "position": 2,
+      "properties": {
+        "progression_name": "Course Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451",
+        "lesson_activity.key": "995ad319-263f-42aa-a174-f05c8fc37ee5"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      },
+      "level_keys": [
+        "csaif_pl_overview_objectives_python"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cert_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      },
+      "level_keys": [
+        "csaif_pl_cert_python"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      },
+      "level_keys": [
+        "csaif_pl_module_overview_python"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      },
+      "level_keys": [
+        "csaif_pl_course_overview_python"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      },
+      "level_keys": [
+        "csaif_pl_course_structure_python"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_resources_python"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      },
+      "level_keys": [
+        "csaif_pl_career_overview_python"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      },
+      "level_keys": [
+        "csaif_pl_AI_chatbot_overview_python"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_neighborhood_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      },
+      "level_keys": [
+        "csaif_pl_neighborhood_overview_python"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_tutor_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      },
+      "level_keys": [
+        "csaif_pl_AI_tutor_overview_python"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      },
+      "level_keys": [
+        "csaif_pl_teacher_Lesson1_python"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_overview_objectives_python",
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cert_python",
+        "script_level.level_keys": [
+          "csaif_pl_cert_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_overview_python",
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_overview_python",
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_structure_python",
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "0f1e9e0e-4c04-49db-9d87-d6bdf5860959"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_resources_python",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_career_overview_python",
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_chatbot_overview_python",
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_neighborhood_overview_python",
+        "script_level.level_keys": [
+          "csaif_pl_neighborhood_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_tutor_overview_python",
+        "script_level.level_keys": [
+          "csaif_pl_AI_tutor_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_teacher_Lesson1_python",
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

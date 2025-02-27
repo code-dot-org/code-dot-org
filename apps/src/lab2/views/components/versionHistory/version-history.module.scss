@@ -7,7 +7,7 @@
   background-color: $light_gray_950;
   scrollbar-color: $light_gray_200 $light_gray_950;
   color: $white;
-  min-width: 400px;
+  width: 400px;
   text-align: left;
   vertical-align: top;
   z-index: 1000;
@@ -67,6 +67,6 @@
   font-size: 14px;
 }
 
-.actionButton {
+button.actionButton {
   margin-right: 8px;
 }

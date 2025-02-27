@@ -1,0 +1,27 @@
+name 'programming-fundamentals-postassessment_aitutor-2024'
+title 'Programming Fundamentals End-of-Unit Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'programming-fundamentals-postassessment-intro_aitutor-2024'
+level 'programming-fundamentals-postassessment-question1_aitutor-2024'
+level 'programming-fundamentals-postassessment-question2_aitutor-2024'
+level 'programming-fundamentals-postassessment-question3_aitutor-2024'
+level 'programming-fundamentals-postassessment-question4_aitutor-2024'
+level 'programming-fundamentals-postassessment-question5_aitutor-2024'
+
+page
+level 'programming-fundamentals-postassessment-question6_aitutor-2024'
+level 'programming-fundamentals-postassessment-question7_aitutor-2024'
+level 'programming-fundamentals-postassessment-question8_aitutor-2024'
+level 'programming-fundamentals-postassessment-question9_aitutor-2024'
+level 'programming-fundamentals-postassessment-question10_aitutor-2024'
+
+page
+level 'programming-fundamentals-postassessment-question11_aitutor-2024'
+level 'programming-fundamentals-postassessment-question12_aitutor-2024'
+level 'programming-fundamentals-postassessment-question13_aitutor-2024'
+level 'programming-fundamentals-postassessment-question14_aitutor-2024'
+level 'programming-fundamentals-postassessment-question15_aitutor-2024'

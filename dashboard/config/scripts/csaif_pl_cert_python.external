@@ -1,0 +1,51 @@
+name 'csaif_pl_cert_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Receiving a Certificate for this Module  
+
+#### Complete every level in this module to earn a **Certificate of Completion**, which you can download and share!  
+
+<img src="https://images.code.org/e62f36e2be7f118d2396c81c66c2a185-image-1709678127521.35.18 PM.png" alt="A certificate of completion.">
+
+---
+
+## How to Complete a Level  
+#### Completion varies by level type:  
+
+- #### **📖 Text-only:** Click <img src="https://images.code.org/748b64326684757ef45ee5ea71558fd9-Screenshot 2025-02-24 at 1.47.52 PM.png" alt="Continue Button" width="75" height="50">
+- #### **💻 Coding Activities:** Complete tasks (unlimited attempts).  
+- #### **📝 Check for Understanding:** Answer correctly (unlimited attempts).  
+- #### **✍️ Open Reflection:** Submit your response.  
+
+---
+
+## When Will I Get My Certificate?  
+#### You’ll unlock your **certificate** after completing **all levels** in the module.  
+
+- #### For single-unit modules: You’ll see a **congratulations page** once finished.  
+- #### For **multi-unit** modules: You must complete **every unit** before unlocking your certificate.  
+
+<img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" alt="Example of the congratulations page">
+
+---
+
+## Where to Find Your Certificates  
+#### Find all earned certificates at 🔗 **[My Certificates Dashboard](https://studio.code.org/my-professional-learning)** or, click **“Print Certificate”** on the module overview page.  
+
+<img src="https://images.code.org/5ee133129858267fe03da154026bef3e-image-1710872751103.24.58 AM.png" alt="The unit overview page with a black circle highlighting the Print Certificate button.">
+
+---
+
+## Can't Access Your Certificate?  
+### 🔍 Quick Checklist:  
+- #### ✅ **Completed every level?** Check your module overview page.  
+- #### ✅ **All check for understanding & coding tasks passed?** Revisit unfinished levels.  
+- #### ✅ **Multi-unit module?** Ensure all units are completed.  
+
+<img src="https://images.code.org/ed7b8a175ed6b0978367e5fc53be6e42-image-1709678606207.43.20 PM.png" alt="A completed module on Code Studio shows every level completed.">
+
+#### 🛠 **Still stuck?** [Contact Support](#).  
+
+MARKDOWN

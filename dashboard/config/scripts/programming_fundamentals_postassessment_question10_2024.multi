@@ -1,17 +1,17 @@
 name 'programming-fundamentals-postassessment-question10-2024'
-title 'Programming Fundamentals Post-Assessment: Question 1'
+title 'Programming Fundamentals Post-Assessment: Question 10'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
+wrong 'AI is always biased against humans'
+wrong 'AI cannot analyze data effectively'
+wrong 'AI can never make mistakes'
+right 'The algorithm might favor certain groups based on biased training data'
 
 allow_multiple_attempts false
 
 markdown <<MARKDOWN
-question
+Why might an AI-powered hiring algorithm be considered unfair?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 10: Algorithms IRL
 MARKDOWN

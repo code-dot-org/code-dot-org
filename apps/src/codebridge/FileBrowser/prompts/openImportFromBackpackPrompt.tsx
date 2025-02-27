@@ -7,11 +7,13 @@ import {
   getFileNameWithNumberSuffix,
   isDuplicateFileName,
   DuplicateFileError,
+  sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -19,6 +21,7 @@ import {
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 
 type OpenImportFromBackpackPromptArgsType = {
@@ -38,15 +41,19 @@ export const openImportFromBackpackPrompt = async ({
   projectFiles,
   validationFile,
 }: OpenImportFromBackpackPromptArgsType) => {
-  const handleError = (title: string, message: string) => () => {
-    // TODO: send analytics / add logging.
-    const bodyComponent = <BackpackErrorAlertBody message={message} />;
-    dialogControl?.showDialog({
-      type: DialogType.GenericAlert,
-      title,
-      bodyComponent,
-    });
-  };
+  const handleError =
+    (title: string, message: string, errorMessage: string) =>
+    (error?: Error) => {
+      const bodyComponent = <BackpackErrorAlertBody message={message} />;
+      dialogControl?.showDialog({
+        type: DialogType.GenericAlert,
+        title,
+        bodyComponent,
+      });
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(errorMessage, error);
+    };
   // Delete a file from the backpack.
   const handleDelete = async (selectedFileName: string) => {
     backpackApi.deleteFiles(
@@ -55,15 +62,17 @@ export const openImportFromBackpackPrompt = async ({
         codebridgeI18n.deleteFromBackpackTitle(),
         codebridgeI18n.deleteFromBackpackError({selectedFileName}) +
           ' ' +
-          codebridgeI18n.closeWindowTryAgain()
+          codebridgeI18n.closeWindowTryAgain(),
+        'Backpack file delete error'
       ),
-      () => {}
+      () => sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
     );
   };
 
   // Fetch file content from backpack and then update or create a project file.
   const fetchFileContentAndProcess = (
     selectedFileName: string,
+    successMetric: string,
     newFileName?: string
   ) => {
     backpackApi.fetchFile(
@@ -72,7 +81,8 @@ export const openImportFromBackpackPrompt = async ({
         codebridgeI18n.importFromBackpackTitle(),
         codebridgeI18n.getBackpackFileError({selectedFileName}) +
           ' ' +
-          codebridgeI18n.closeWindowTryAgain()
+          codebridgeI18n.closeWindowTryAgain(),
+        'Backpack file fetch error'
       ),
       (fileContent: string) => {
         if (newFileName) {
@@ -85,6 +95,7 @@ export const openImportFromBackpackPrompt = async ({
           );
           if (fileId) saveFile(fileId, fileContent);
         }
+        sendCodebridgeAnalyticsEvent(successMetric);
       }
     );
   };
@@ -96,7 +107,8 @@ export const openImportFromBackpackPrompt = async ({
   backpackApi.getFileList(
     handleError(
       codebridgeI18n.filesInBackpackTitle(),
-      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`
+      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
+      'Backpack file list fetch error'
     ),
     async (filenames: string[]) => {
       if (filenames.length === 0) {
@@ -158,7 +170,11 @@ export const openImportFromBackpackPrompt = async ({
               confirmText: codebridgeI18n.importAsNewName({newFileName}),
             });
             if (results.type === 'confirm') {
-              fetchFileContentAndProcess(selectedBackpackFileName, newFileName); // Fetch backpack file content and import new file with numeric suffix.
+              fetchFileContentAndProcess(
+                selectedBackpackFileName,
+                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
+                newFileName
+              ); // Fetch backpack file content and import new file with numeric suffix.
             }
             return;
           }
@@ -176,14 +192,22 @@ export const openImportFromBackpackPrompt = async ({
               neutralText: codebridgeI18n.importAsNewName({newFileName}),
             });
             if (results.type === 'confirm') {
-              fetchFileContentAndProcess(selectedBackpackFileName); // Update existing project file.
+              fetchFileContentAndProcess(
+                selectedBackpackFileName,
+                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE
+              ); // Update existing project file.
             } else if (results.type === 'neutral') {
-              fetchFileContentAndProcess(selectedBackpackFileName, newFileName); // Fetch backpack file content and import new file with numeric suffix.
+              fetchFileContentAndProcess(
+                selectedBackpackFileName,
+                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
+                newFileName
+              ); // Fetch backpack file content and import new file with numeric suffix.
             }
           } else {
             // Fetch backpack file content and import new file to project - not a duplicate file name.
             fetchFileContentAndProcess(
               selectedBackpackFileName,
+              EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW,
               selectedBackpackFileName
             );
           }
