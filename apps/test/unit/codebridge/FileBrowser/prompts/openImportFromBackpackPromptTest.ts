@@ -24,7 +24,7 @@ describe('openImportFromBackpackPrompt', () => {
     projectFiles: MultiFileSource['files'];
 
   beforeEach(() => {
-    mockBackpackApi = getBackpackAPIMock();
+    mockBackpackApi = getBackpackAPIMock(); // getFileList returns empty list.
     dialogControl = {
       showDialog: jest.fn(),
     };
@@ -70,7 +70,7 @@ describe('openImportFromBackpackPrompt', () => {
   });
 
   it('imports a backpack file when user confirms', async () => {
-    mockBackpackApi = getBackpackAPIMock(['backpack_file.py']);
+    mockBackpackApi = getBackpackAPIMock(['backpack_file.py']); // getFileList returns ['backpack_file.py'].
     (extractUserInput as jest.Mock).mockReturnValue('backpack_file.py');
     // Mock the dialog responses
     dialogControl.showDialog

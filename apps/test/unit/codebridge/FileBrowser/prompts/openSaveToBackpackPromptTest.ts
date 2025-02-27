@@ -1,22 +1,34 @@
 import {openSaveToBackpackPrompt} from '@cdo/apps/codebridge/FileBrowser/prompts/openSaveToBackpackPrompt';
 import {ProjectFile} from '@cdo/apps/lab2/types';
+import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {getDialogConfirmationMock, getBackpackAPIMock} from '../../test_utils';
 
 describe('openSaveToBackpackPrompt', () => {
-  it('should save a file to the backpack', async () => {
-    const mockBackpackApi = getBackpackAPIMock();
-    const dialogMock = getDialogConfirmationMock('confirm');
-    const projectFile: ProjectFile = {
+  let mockBackpackApi: BackpackClientApi,
+    dialogMock: Pick<DialogControlInterface, 'showDialog'>,
+    projectFile: ProjectFile;
+
+  beforeEach(() => {
+    mockBackpackApi = getBackpackAPIMock(); // getFileList returns empty list.
+    dialogMock = getDialogConfirmationMock('confirm');
+    projectFile = {
       name: 'project_file.py',
       contents: 'This is project_file.py.',
     } as ProjectFile;
+  });
 
-    await openSaveToBackpackPrompt({
+  const runSaveToBackpackPrompt = async () => {
+    openSaveToBackpackPrompt({
       dialogControl: dialogMock,
       backpackApi: mockBackpackApi,
       file: projectFile,
     });
+  };
+
+  it('should save a file to the backpack', async () => {
+    await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).toHaveBeenCalledWith(
@@ -26,38 +38,21 @@ describe('openSaveToBackpackPrompt', () => {
       expect.any(Function)
     );
   });
+
   it('should not save a file when canceled', async () => {
-    const mockBackpackApi = getBackpackAPIMock();
-    const dialogMock = getDialogConfirmationMock('cancel');
+    dialogMock = getDialogConfirmationMock('cancel');
 
-    const projectFile: ProjectFile = {
-      name: 'project_file.py',
-      contents: 'This is project_file.py.',
-    } as ProjectFile;
-
-    await openSaveToBackpackPrompt({
-      dialogControl: dialogMock,
-      backpackApi: mockBackpackApi,
-      file: projectFile,
-    });
+    await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).not.toHaveBeenCalled();
   });
+
   it('should rename file when duplicate exists and rename (neutral) is selected', async () => {
-    const mockBackpackApi = getBackpackAPIMock(['project_file.py']);
-    const dialogConfirmationMock = getDialogConfirmationMock('neutral');
+    mockBackpackApi = getBackpackAPIMock(['project_file.py']); // getFileList returns ['project_file.py'].
+    dialogMock = getDialogConfirmationMock('neutral');
 
-    const projectFile: ProjectFile = {
-      name: 'project_file.py',
-      contents: 'This is project_file.py.',
-    } as ProjectFile;
-
-    await openSaveToBackpackPrompt({
-      dialogControl: dialogConfirmationMock,
-      backpackApi: mockBackpackApi,
-      file: projectFile,
-    });
+    await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).toHaveBeenCalledWith(
@@ -70,20 +65,11 @@ describe('openSaveToBackpackPrompt', () => {
       expect.any(Function)
     );
   });
+
   it('should replace file when duplicate exists and replace (confirm) is selected', async () => {
-    const mockBackpackApi = getBackpackAPIMock(['project_file.py']);
-    const dialogConfirmationMock = getDialogConfirmationMock('confirm');
+    mockBackpackApi = getBackpackAPIMock(['project_file.py']);
 
-    const projectFile: ProjectFile = {
-      name: 'project_file.py',
-      contents: 'This is project_file.py.',
-    } as ProjectFile;
-
-    await openSaveToBackpackPrompt({
-      dialogControl: dialogConfirmationMock,
-      backpackApi: mockBackpackApi,
-      file: projectFile,
-    });
+    await runSaveToBackpackPrompt();
 
     expect(mockBackpackApi.getFileList).toHaveBeenCalled();
     expect(mockBackpackApi.savePythonlabFile).toHaveBeenCalledWith(
