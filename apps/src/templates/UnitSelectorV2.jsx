@@ -98,13 +98,6 @@ function UnitSelectorV2({
     />
   );
 
-  console.log('lfm', {
-    itemGroups,
-    unitId,
-    coursesWithProgress,
-    selectedSectionCourse,
-  });
-
   return isLoadingSectionData ||
     isLoadingCourses ||
     !coursesWithProgress ||
