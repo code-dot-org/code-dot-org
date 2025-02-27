@@ -243,8 +243,6 @@ interface VideoData extends VideoLevelData {
 
 // Exemplar settings for a level.
 export interface ExemplarSettings {
-  playerEnabled: boolean;
-  playerTitle: string;
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;

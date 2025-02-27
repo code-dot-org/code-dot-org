@@ -35,7 +35,7 @@ import {
   setCurrentPlayheadPosition,
   showCallout,
 } from '../redux/musicRedux';
-import {MusicLevelData} from '../types';
+import {MusicExemplarSettings, MusicLevelData} from '../types';
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
@@ -118,7 +118,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   ) as BlocklySource | undefined;
   const exemplarSettings = useAppSelector(
     state => state.lab.levelProperties?.exemplarSettings
-  );
+  ) as MusicExemplarSettings | undefined;
   const currentPackId = useAppSelector(
     state => state.music.packId || DEFAULT_PACK
   );

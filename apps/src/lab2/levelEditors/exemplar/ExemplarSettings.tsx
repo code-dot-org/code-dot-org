@@ -1,23 +1,19 @@
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
+import {MusicExemplarSettings} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-import {AppName} from '../../types';
+import {AppName, ExemplarSettings} from '../../types';
 
 import moduleStyles from './exemplar-settings.module.scss';
 
-const AppSupport: {[key in AppName]?: boolean} = {
+const AppExemplarSupport: {[key in AppName]?: boolean} = {
   music: true,
 };
-
-interface ExemplarSettings {
-  playerEnabled: boolean;
-  playerTitle: string;
-  validationEnabled: boolean;
-  validationSuccessMessage: string;
-  validationFailureMessage: string;
-}
+const AppPlayerSupport: {[key in AppName]?: boolean} = {
+  music: true,
+};
 
 interface ExemplarSettingsProps {
   initialExemplarSettings: ExemplarSettings;
@@ -25,12 +21,18 @@ interface ExemplarSettingsProps {
   appName: AppName;
 }
 
-const defaultExemplarSettings: ExemplarSettings = {
-  playerTitle: 'Example',
+// Default values for the validation part.
+const defaultExemplarValidationSettings: ExemplarSettings = {
   validationSuccessMessage: '',
   validationFailureMessage: '',
-  playerEnabled: false,
   validationEnabled: false,
+};
+
+// Default values for the player part.
+const defaultMusicExemplarSettings: MusicExemplarSettings = {
+  ...defaultExemplarValidationSettings,
+  playerTitle: 'Example',
+  playerEnabled: false,
 };
 
 const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
@@ -38,20 +40,30 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
   exemplarDefined,
   appName,
 }) => {
-  const [exemplarSettings, setExemplarSettings] = useState<ExemplarSettings>({
+  const appExemplarSupported = AppExemplarSupport[appName];
+  const appPlayerSupported = AppPlayerSupport[appName];
+
+  const defaultExemplarSettings = appPlayerSupported
+    ? defaultMusicExemplarSettings
+    : defaultExemplarValidationSettings;
+  const [exemplarSettings, setExemplarSettings] = useState<
+    ExemplarSettings | MusicExemplarSettings
+  >({
     ...defaultExemplarSettings,
     ...initialExemplarSettings,
   });
 
-  const appSupported = AppSupport[appName];
-
-  if (!appSupported) {
+  if (!appExemplarSupported) {
     return (
       <div>
         {`Exemplar settings are not available for ${appName}. Contact the engineering team for further details.`}
       </div>
     );
   }
+
+  const musicExemplarSettings = appPlayerSupported
+    ? (exemplarSettings as MusicExemplarSettings)
+    : undefined;
 
   return (
     <div>
@@ -100,8 +112,10 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
                 setExemplarSettings({
                   ...exemplarSettings,
                   validationEnabled: newValue.target.checked,
-                  // Validation requires the player.
-                  ...(newValue.target.checked ? {playerEnabled: true} : {}),
+                  // Music Lab's exemplar validation requires the player.
+                  ...(newValue.target.checked && appPlayerSupported
+                    ? {playerEnabled: true}
+                    : {}),
                 });
               }}
             />
@@ -146,65 +160,70 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
           </div>
         </CollapsibleSection>
       </div>
-      <div className={moduleStyles.section}>
-        <CollapsibleSection
-          initiallyCollapsed={false}
-          headerContent="Exemplar Player"
-        >
-          <div className={moduleStyles.row}>
-            <BodyThreeText>
-              A sound player can be added below the instructions, which will
-              play the song that is the exemplar for this level.
-            </BodyThreeText>
-          </div>
-          {!exemplarDefined && (
+
+      {musicExemplarSettings && (
+        <div className={moduleStyles.section}>
+          <CollapsibleSection
+            initiallyCollapsed={false}
+            headerContent="Exemplar Player"
+          >
             <div className={moduleStyles.row}>
-              <em>This level does not have an exemplar.</em>
+              <BodyThreeText>
+                A sound player can be added below the instructions, which will
+                play the song that is the exemplar for this level.
+              </BodyThreeText>
             </div>
-          )}
-          <div className={moduleStyles.row}>
-            <label htmlFor="exemplarPlayer" className={moduleStyles.label}>
-              Include sound player?
-            </label>
-            <input
-              type="checkbox"
-              id="exemplarPlayer"
-              name="exemplarPlayer"
-              disabled={!exemplarDefined}
-              checked={!!exemplarSettings.playerEnabled}
-              onChange={newValue => {
-                setExemplarSettings({
-                  ...exemplarSettings,
-                  playerEnabled: newValue.target.checked,
-                  // Validation requires the player.
-                  ...(!newValue.target.checked
-                    ? {validationEnabled: false}
-                    : {}),
-                });
-              }}
-            />
-          </div>
-          <div className={moduleStyles.row}>
-            <label htmlFor="title" className={moduleStyles.label}>
-              Title:
-            </label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              className={moduleStyles.callout}
-              value={exemplarSettings.playerTitle}
-              disabled={!exemplarDefined || !exemplarSettings.playerEnabled}
-              onChange={newValue => {
-                setExemplarSettings({
-                  ...exemplarSettings,
-                  playerTitle: newValue.target.value,
-                });
-              }}
-            />
-          </div>
-        </CollapsibleSection>
-      </div>
+            {!exemplarDefined && (
+              <div className={moduleStyles.row}>
+                <em>This level does not have an exemplar.</em>
+              </div>
+            )}
+            <div className={moduleStyles.row}>
+              <label htmlFor="exemplarPlayer" className={moduleStyles.label}>
+                Include sound player?
+              </label>
+              <input
+                type="checkbox"
+                id="exemplarPlayer"
+                name="exemplarPlayer"
+                disabled={!exemplarDefined}
+                checked={!!musicExemplarSettings.playerEnabled}
+                onChange={newValue => {
+                  setExemplarSettings({
+                    ...exemplarSettings,
+                    playerEnabled: newValue.target.checked,
+                    // Music Lab's exemplar validation requires the player.
+                    ...(!newValue.target.checked
+                      ? {validationEnabled: false}
+                      : {}),
+                  });
+                }}
+              />
+            </div>
+            <div className={moduleStyles.row}>
+              <label htmlFor="title" className={moduleStyles.label}>
+                Title:
+              </label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                className={moduleStyles.callout}
+                value={musicExemplarSettings.playerTitle}
+                disabled={
+                  !exemplarDefined || !musicExemplarSettings.playerEnabled
+                }
+                onChange={newValue => {
+                  setExemplarSettings({
+                    ...exemplarSettings,
+                    playerTitle: newValue.target.value,
+                  });
+                }}
+              />
+            </div>
+          </CollapsibleSection>
+        </div>
+      )}
     </div>
   );
 };
