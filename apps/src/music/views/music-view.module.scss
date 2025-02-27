@@ -102,3 +102,16 @@ $default-spacing: 2px;
   padding: 5px;
   color: $black;
 }
+
+.centerHeaderContent {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  overflow: hidden;
+
+  &Text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
