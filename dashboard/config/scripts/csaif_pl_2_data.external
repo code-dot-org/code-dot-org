@@ -3,33 +3,39 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is Generative AI?
+# Personal Data
 
-#### Generative AI is a type of artificial intelligence that can create new content. In this unit, we will be exploring Large Language Models, or LLMs.
+#### In today's digital world, data plays a crucial role in everything from social media and online shopping to healthcare and government systems. Data can be anything from a simple username to sensitive information like bank details or medical records. Companies, governments, and hackers all seek access to data—sometimes for beneficial reasons, like improving services, but other times for malicious purposes, such as identity theft or fraud.
 
+#### Cybersecurity is the practice of protecting data from unauthorized access, theft, or damage. Understanding what information is personal and how to protect it is essential to staying safe online.
 
-<img src="https://images.code.org/94c91bb3b11d912f8b4c38f34b241e09-image-1712760508654.png" alt="AI bot with thought bubbles" width="250px" style="border-radius:10px; float:right; margin: 10px 50px 0px 40px;">
+#### Apps, websites, and other computing innovations they use every day require a lot of data to run, much of which you might consider to be either private or personal.
 
-- #### **Artificial Intelligence:** A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.
+#### Reflect on which of the following pieces of information would you consider to be "personal", as in you wouldn't want it shared with just anyone.
 
+- #### Your full name
+- #### Your social security number
+- #### Your favorite musician / band
+- #### A picture of your face
+- #### Your fingerprint
+- #### Your birthdate
+- #### Your address
+- #### Where you go after school
+- #### Your phone number
+- #### Your medical information
+- #### Who your best friends are
+- #### Your racial / ethnic identity
+- #### A list of everything you've bought this month
+- #### A list of recordings of your voice
+- #### Your IP address
+- #### A video of you singing
+- #### Your academic history / report card
+- #### The town or city you live in
 
-- #### **Large Language Model:** A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 
-<div style="clear:both;"></div>
-
----
-
-## Why Students Should Learn It:
-
-#### It's important for students to learn how generative AI works because it helps them understand the technology shaping our world, fostering critical thinking about its capabilities and limitations. 
-
-#### Many students have already encountered AI in tools like search engines, social media, and voice assistants. 
-
-#### Additionally, this knowledge empowers them to use AI responsibly and creatively in their future careers.
-
-#### The **Exploring Generative AI** course aligns with the CSTA supported AI4K12 initiative, ensuring students gain a comprehensive understanding of AI concepts, preparing them to navigate and contribute to an AI-driven future.
-
-<img src="https://images.code.org/8fb4e1ab9742812c32b922c097fba151-image-1726498625343.png" alt="design process graph of the cycle" width="500px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
 MARKDOWN

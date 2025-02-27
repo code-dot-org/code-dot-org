@@ -61,7 +61,7 @@
       desc: "Explore how computer science can bring your favorite things to life."
       v2:
         title: "One Hour: Ignite. Inspire. Code."
-        desc: "Bring what your children love to life! Start the fun with an activity."
+        desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities"
     video_caption:
       visible: "One Hour Can Make The Invisible Visible"
       in_a_world: "Make The Invisible Visible | Official Trailer"
@@ -95,7 +95,7 @@
   hoc2020_ai_header: 'Explore Artificial Intelligence'
   hoc2020_ai_description: 'AI and Machine Learning are impacting our entire world. Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics and AI, and more...'
 
-  hoc2019_header: 'Learn computer science. Change the world.'
+  hoc2019_header: 'Computer science and artificial intelligence curriculum for K-12 Schools'
   hoc2019_header_line1_mobile: 'Learn computer science.'
   hoc2019_header_line2_mobile: 'Change the world.'
   social_hoc2019_every_sudent: 'Every student has the potential to change the world. Help them get started. #CSforGood'
@@ -11091,7 +11091,9 @@
 
   hoc_activities:
     heading: "Explore activities"
+    title: "Free One Hour Coding Tutorials"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
+    seo_desc: "Bring an Hour of Code and computer science to your classroom or school. With over 100 free coding tutorials available to begin learning it is easy."
     more:
       heading: "Can't find your favorite activity?"
       button: "Explore more here"
@@ -12363,6 +12365,9 @@
   hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
+
+  code_org_og_description: "Code.org provides free computer science and AI curriculum, plus professional development to support any teacher—no coding experience needed!"
+  students_og_title: "Fun tutorials to learn computer science and artificial intelligence"
 
   pl_curriculum_launch_skinny_banner_2024:
     title: Introducing new professional learning!

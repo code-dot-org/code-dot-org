@@ -1,23 +1,18 @@
-import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import {
   WithTooltip,
   TooltipProps,
 } from '@code-dot-org/component-library/tooltip';
-import classNames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import lab2I18n from '@cdo/apps/lab2/locale';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
-import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryDropdown from './VersionHistoryDropdown';
 
-import moduleStyles from './version-history.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface VersionHistoryProps {
@@ -32,21 +27,17 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   startSources,
   updatedSourceCallback,
 }) => {
-  const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
-  const menuRef = useOutsideClick<HTMLDivElement>(() => {
-    setIsVersionHistoryOpen(false);
-    setLoadError(false);
-  });
-
+  const [isVersionListLoaded, setIsVersionListLoaded] = useState(false);
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
+  const [selectedVersion, setSelectedVersion] = useState('');
   const [loading, setLoading] = useState(false);
   const [loadError, setLoadError] = useState(false);
-
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isViewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const buttonContainerRef = useRef<HTMLDivElement>(null);
 
   // The version history button is generally disabled in read only mode with two exceptions:
   // if the user is viewing an old version of the project, or if this is a teacher viewing
@@ -58,25 +49,18 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
-      if (loading) {
-        return;
-      }
-      if (loadError) {
-        setLoadError(false);
-        return;
-      }
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (!projectManager) {
         setLoadError(true);
         return;
       }
-      if (!isVersionHistoryOpen) {
+      if (!isVersionListLoaded) {
         setLoading(true);
         projectManager
           .getVersionList()
           .then(versionList => {
             setVersionList(versionList);
-            setIsVersionHistoryOpen(true);
+            setIsVersionListLoaded(true);
             setLoading(false);
           })
           .catch(() => {
@@ -84,11 +68,19 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
             setLoading(false);
           });
       } else {
-        setIsVersionHistoryOpen(false);
+        setIsVersionListLoaded(false);
+        setLoadError(false);
+        setLoading(false);
       }
     },
-    [isVersionHistoryOpen, loadError, loading]
+    [isVersionListLoaded]
   );
+
+  const closeVersionHistory = useCallback(() => {
+    setIsVersionListLoaded(false);
+    setLoadError(false);
+    setLoading(false);
+  }, []);
 
   const tooltipProps: TooltipProps = {
     text: commonI18n.versionHistory_header(),
@@ -99,7 +91,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   };
 
   return (
-    <>
+    <div ref={buttonContainerRef}>
       <WithTooltip tooltipProps={tooltipProps}>
         <Button
           isIconOnly
@@ -113,37 +105,21 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           className={darkModeStyles.tertiaryButton}
         />
       </WithTooltip>
-      {(loading || loadError) && (
-        <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
-          {loading && (
-            <div
-              className={classNames(
-                moduleStyles.versionHistoryMessage,
-                moduleStyles.loadingVersionSpinner
-              )}
-            >
-              <i className="fa fa-spinner fa-spin" />
-            </div>
-          )}
-          {loadError && (
-            <div className={moduleStyles.versionHistoryMessage}>
-              <Alert
-                type="danger"
-                text={lab2I18n.versionHistoryLoadFailure()}
-                size="s"
-              />
-            </div>
-          )}
-        </div>
+      {(isVersionListLoaded || loadError || loading) && (
+        <VersionHistoryDropdown
+          versionList={versionList}
+          updatedSourceCallback={updatedSourceCallback}
+          startSources={startSources}
+          closeDropdown={closeVersionHistory}
+          listLoaded={isVersionListLoaded}
+          buttonRef={buttonContainerRef}
+          listLoadError={loadError}
+          listLoading={loading}
+          selectedVersion={selectedVersion}
+          setSelectedVersion={setSelectedVersion}
+        />
       )}
-      <VersionHistoryDropdown
-        versionList={versionList}
-        updatedSourceCallback={updatedSourceCallback}
-        startSources={startSources}
-        closeDropdown={() => setIsVersionHistoryOpen(false)}
-        isOpen={isVersionHistoryOpen}
-      />
-    </>
+    </div>
   );
 };
 

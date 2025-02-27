@@ -24,6 +24,7 @@
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "release:dryrun": "turbo release:dryrun",
+    "start": "yarn dev",
     "test": "turbo test",
     "typecheck": "turbo typecheck"
   },
