@@ -2,6 +2,7 @@ import {CodebridgeContextType, FileId, FolderId} from '@cdo/apps/codebridge';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {smallProject} from './test-files';
 
@@ -24,6 +25,20 @@ export const getDialogAlertMock = (
   showDialog: () => {
     if (type === 'confirm') {
       return Promise.resolve({type: 'confirm'});
+    } else {
+      return Promise.resolve({type: 'cancel'});
+    }
+  },
+});
+
+export const getDialogConfirmationMock = (
+  type: 'confirm' | 'neutral' | 'cancel'
+): Pick<DialogControlInterface, 'showDialog'> => ({
+  showDialog: () => {
+    if (type === 'confirm') {
+      return Promise.resolve({type: 'confirm'});
+    } else if (type === 'neutral') {
+      return Promise.resolve({type: 'neutral'});
     } else {
       return Promise.resolve({type: 'cancel'});
     }
@@ -101,4 +116,28 @@ export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
       appoptions: JSON.stringify(innerAppOptions),
     },
   } as unknown as Element);
+};
+
+export const getBackpackAPIMock = (
+  fileList: string[] = []
+): BackpackClientApi => {
+  return {
+    hasBackpack: jest.fn(() => true),
+    fetchChannelId: jest.fn(callback => callback()),
+    fetchFile: jest.fn((filename, onError, onSuccess) => {
+      onSuccess(`Mock contents of backpack file ${filename}`);
+    }),
+    getFileList: jest.fn((onError, onSuccess) => {
+      onSuccess(fileList);
+    }),
+    saveFiles: jest.fn(),
+    savePythonlabFile: jest.fn(),
+    deleteFiles: jest.fn(),
+    updateFilesHelper: jest.fn(),
+    saveFilesHelper: jest.fn(),
+    writeSingleFileToBackpack: jest.fn(),
+    deleteFilesHelper: jest.fn(),
+    deleteSingleFileFromBackpack: jest.fn(),
+    onRequestComplete: jest.fn(),
+  } as unknown as BackpackClientApi;
 };

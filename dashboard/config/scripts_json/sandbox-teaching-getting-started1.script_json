@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-19 22:52:25 UTC",
+    "serialized_at": "2025-02-26 18:27:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -437,6 +437,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -459,6 +462,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -481,6 +487,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Why-codedotorg-PL"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -503,6 +512,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_1_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -525,6 +537,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-24-mod1-Certificate_1_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -547,6 +562,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1_1"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -569,6 +587,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1_1"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -591,6 +612,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1_1"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -613,6 +637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_1_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -635,6 +662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-tour-vid_1_1"
+        ],
         "progression": "Tour the Code.org Learning Platform"
       },
       "bonus": false,
@@ -657,6 +687,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GSself-paced-equity-U1L3-identitycircles"
+        ],
         "progression": "Tour the Code.org Learning Platform"
       },
       "bonus": false,
@@ -679,6 +712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_1_1"
+        ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,
@@ -701,6 +737,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_1_1"
+        ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,
@@ -723,6 +762,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations_1_1"
+        ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,
@@ -745,6 +787,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_1_1"
+        ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,
@@ -767,6 +812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-mod2-TeachersInClassrooms_physical-computing_1"
+        ],
         "progression": "Explore the Student View"
       },
       "bonus": false,
@@ -789,6 +837,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_1_1"
+        ],
         "progression": "Explore the Student View"
       },
       "bonus": false,
@@ -811,6 +862,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_1_1"
+        ],
         "progression": "Explore the Student View"
       },
       "bonus": false,
@@ -833,6 +887,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-21-mod2-Task-StudentView_physical-computing_1_1"
+        ],
         "progression": "Student View vs Teacher View"
       },
       "bonus": false,
@@ -855,6 +912,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_1_1"
+        ],
         "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
@@ -877,6 +937,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_1_1"
+        ],
         "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
@@ -899,6 +962,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_1_1"
+        ],
         "progression": "Track Student Progress and Provide Feedback"
       },
       "bonus": false,
@@ -921,6 +987,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_1_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -943,6 +1012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_1_1"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -965,6 +1037,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_1_1"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -987,6 +1062,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_1_1"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -1009,6 +1087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL_getting_started_assessmentsandgrading_1"
+        ],
         "progression": "Assessments and Grading"
       },
       "bonus": false,
@@ -1031,6 +1112,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1PL_getting_started_assessmentsandgrading_1"
+        ],
         "progression": "Assessments and Grading"
       },
       "bonus": false,
@@ -1053,6 +1137,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_1_1"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
@@ -1075,6 +1162,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_1_1"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
@@ -1097,6 +1187,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting-Started_PL-Resources_1"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
@@ -1115,54 +1208,13 @@
     },
     {
       "chapter": 32,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Teaching Pedagogy and Best Practices"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Use_Modify_Create_Overview_1"
-        ],
-        "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "973ab477-1ebe-4758-aeff-076222a296cf"
-      },
-      "level_keys": [
-        "Use_Modify_Create_Overview_1"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 11,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Teaching Pedagogy and Best Practices"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PRIMM_Overview_1"
-        ],
-        "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "973ab477-1ebe-4758-aeff-076222a296cf"
-      },
-      "level_keys": [
-        "PRIMM_Overview_1"
-      ]
-    },
-    {
-      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_1_1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1180,11 +1232,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_1_1"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1202,11 +1257,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1_1"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1224,11 +1282,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_1_1"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1246,11 +1307,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1_1"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1268,11 +1332,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_1_1"
+        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -1290,11 +1357,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_1_1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -1312,11 +1382,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GSSP-PL-DS-UnitStructure-w-lessons_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1704,30 +1777,6 @@
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started1",
         "activity_section.key": "ad8f7f4b-651d-47e5-9a56-9c84b8d59598"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Use_Modify_Create_Overview_1",
-        "script_level.level_keys": [
-          "Use_Modify_Create_Overview_1"
-        ],
-        "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "973ab477-1ebe-4758-aeff-076222a296cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PRIMM_Overview_1",
-        "script_level.level_keys": [
-          "PRIMM_Overview_1"
-        ],
-        "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "973ab477-1ebe-4758-aeff-076222a296cf"
       }
     },
     {

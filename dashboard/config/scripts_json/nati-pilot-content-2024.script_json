@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-23 21:06:35 UTC",
+    "serialized_at": "2025-02-26 20:23:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -174,7 +174,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "overview": "This project-based lesson guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. Students explore real-world challenges, analyze case studies, and propose actionable solutions using AI-driven technology and policy recommendations. Through research, collaboration, and peer feedback, students refine their message and create a compelling advocacy campaign.",
+        "preparation": "- Print copies of the Persona Fact Sheets for each station\n- Print copies of the Project Planning Guide (one for each group)\n- Print copies of the Gallery Walk Info Tracker (one for each student)\n- Print copies of the Peer Feedback Cards for day 3 (2-4 cards for each student)\n- Consider providing poster boards, markers, and art supplies (for physical campaigns)",
+        "student_overview": "In this project, you research real-world Internet access challenges and create an advocacy campaign to raise awareness and propose solutions. Your campaign focuses on the digital divide, net neutrality, and how technology, including AI, can help improve Internet access."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -226,7 +229,10 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "overview": "This project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.",
+        "preparation": "- Print copies of the Network Security Risk Assessment Project Planning Guide (one for each student)",
+        "student_overview": "In this project, you take on the role of a network security analyst, identifying security vulnerabilities and recommending AI-driven solutions. You explore real-world cybersecurity threats, analyze their impact, and present your findings in a professional risk assessment report."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -534,9 +540,39 @@
       "key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "450c2de6-21c8-4744-a6fd-1a094dae080d",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c",
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024"
@@ -630,9 +666,39 @@
       "key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "e238dc16-70be-45c0-b981-8f5addde1d08",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "fa188a31-82b6-452c-804e-8ec13a8071f8",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8",
         "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024"
@@ -784,6 +850,17 @@
       },
       "seeding_key": {
         "activity_section.key": "9c7464bf-2684-4ebf-9e6b-c776f52204ed",
+        "lesson_activity.key": "d76f2de1-3774-4361-9cb3-fed0f8108e6e"
+      }
+    },
+    {
+      "key": "02ed652c-8e10-46f9-a693-0685c72d3b17",
+      "position": 11,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17",
         "lesson_activity.key": "d76f2de1-3774-4361-9cb3-fed0f8108e6e"
       }
     },
@@ -1180,6 +1257,17 @@
       }
     },
     {
+      "key": "66f95018-9554-4d79-8a7b-f3c976350519",
+      "position": 22,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519",
+        "lesson_activity.key": "58b697ee-0333-4fd8-abb3-50d3f2c7a621"
+      }
+    },
+    {
       "key": "c2cdecc4-2ccd-43c3-97c1-97fa3cd2c86f",
       "position": 1,
       "properties": {
@@ -1259,6 +1347,17 @@
       },
       "seeding_key": {
         "activity_section.key": "66b2938d-be51-4c3f-857c-17ff355d59aa",
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
+      }
+    },
+    {
+      "key": "17ecc762-6907-4f99-a281-40af9a483e06",
+      "position": 5,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06",
         "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
       }
     },
@@ -1475,6 +1574,17 @@
       },
       "seeding_key": {
         "activity_section.key": "497e24a6-cb9d-4a64-bed6-6ee2c5cbad08",
+        "lesson_activity.key": "b5f9e655-62fd-4e07-9cc4-db72717adfb2"
+      }
+    },
+    {
+      "key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e",
+      "position": 11,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e",
         "lesson_activity.key": "b5f9e655-62fd-4e07-9cc4-db72717adfb2"
       }
     },
@@ -1753,6 +1863,17 @@
       }
     },
     {
+      "key": "a52ca956-f95f-44a4-b893-d7d908e25e11",
+      "position": 17,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11",
+        "lesson_activity.key": "b9ba2a1f-7384-4306-b564-95cb79888207"
+      }
+    },
+    {
       "key": "7746349b-e6c8-4a3b-af79-b1434f8b2f5f",
       "position": 1,
       "properties": {
@@ -1977,6 +2098,17 @@
       }
     },
     {
+      "key": "46df5465-284b-438a-a58c-9b99194c830b",
+      "position": 12,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
       "key": "a54f96be-5c71-4590-8c87-b6eed7e26b67",
       "position": 1,
       "properties": {
@@ -2173,6 +2305,17 @@
       }
     },
     {
+      "key": "06a0a0c3-2775-45f8-8240-20f30ab78f89",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
       "key": "ce648c4c-33f2-4807-a8dd-810d66ca13a6",
       "position": 1,
       "properties": {
@@ -2193,10 +2336,199 @@
       "key": "759712ef-cfa8-41e5-8a88-30f1dc2222b1",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video “Qualcomm Engineers are Improving Safety and Livelihoods for Fishermen in India”. \n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What challenges did the fishermen face without Internet access, and how do similar barriers affect other communities? How did technology help them, and how could AI improve Internet access for others?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goals:**Students should discuss the barriers to Internet access and recognize that limited connectivity impacts more than just convenience—it affects safety, economic stability, and access to resources. Guide students to identify the specific challenges faced by the fishermen in the video and consider how similar barriers exist in other communities. Encourage students to think about how technology, including AI, can play a role in solving these access issues, setting up connections to their advocacy project.",
+        "duration": "5",
+        "name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "759712ef-cfa8-41e5-8a88-30f1dc2222b1",
         "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "b2a49ff6-eae0-4e0b-b480-a2e0e347c3b8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of 2-3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each group a copy of the Internet Access Advocacy Campaign Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that for the next three days, they will work as Internet Access Advocates. This means they will explore real-world challenges related to equitable Internet access, the digital divide, and net neutrality. They will analyze case studies, assess the societal and ethical impacts of these issues, and develop persuasive advocacy campaigns with actionable and AI-driven solutions. Along the way, they will refine their messages through peer review and collaborative discussions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the first part of the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the rest of the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.*What do you notice about the project rubric?\n- *What does success look like for this project?*\n- *What do you notice about the project rubric?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Gallery Walk Info Tracker.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four. These groups should be different than who they are working with on the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the activity instructions with students. Explain that their group will visit each station, read the scenario, and record key information on their project planning guide. Emphasize the importance of focusing on examples, evidence, and key issues for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Assign each corner a persona (Diego, Lisa, Mr. Johnson, Aisha) and direct groups to visit stations, read scenarios, and record key issues, evidence, and examples on their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students explore the personas, ask: ‘How does this individual’s experience reflect a larger issue with Internet access? What groups face similar barriers?’ If students are only summarizing without analyzing, prompt them to think about solutions: ‘What policies or technologies could improve this person’s access to the Internet?",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Adjust structure as needed—assign starting stations, use a timer for rotations, or provide a digital version with links to each station."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b2a49ff6-eae0-4e0b-b480-a2e0e347c3b8",
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "7d0930ea-2ad6-45d4-908b-7d4380225c2d",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7d0930ea-2ad6-45d4-908b-7d4380225c2d",
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "064399ac-0577-4582-8cf3-5c1ec61d625a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument."
+      },
+      "seeding_key": {
+        "activity_section.key": "064399ac-0577-4582-8cf3-5c1ec61d625a",
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "3e872a5e-c0f2-4f30-b0bb-f6f8bf5bc125",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you the most today? Why does this issue matter? What can we do about it?*\n- Use the Three W's protocol to facilitate this discussion. First, students discuss answers in pairs or small groups. Then , select three or four students to share a takeaway.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on key takeaways from the lesson and connect the digital divide to real-world impacts. Guide them to recognize who is affected, why it matters, and how advocacy can drive change. This discussion will set the stage for their advocacy campaigns by helping them consider how to make their message compelling and actionable.",
+        "duration": "10",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e872a5e-c0f2-4f30-b0bb-f6f8bf5bc125",
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "f1214cd3-7763-4de4-8c08-1ee26b473ca9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.****\n- *What key issue did your group decide to focus on?*\n- *What evidence or examples did you identify to support your campaign?*\n- *What is one challenge or question your group still needs to address?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students should articulate their campaign’s key message and analyze whether their current plan effectively supports it. Encourage them to identify missing evidence or areas where their message could be stronger, ensuring their campaign is clear, compelling, and action-oriented.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Ensure students are making direct connections between their focus and evidence. Ask guiding questions:*“How does your campaign address a real-world problem?”*and*“What additional information would strengthen your argument?”*",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1214cd3-7763-4de4-8c08-1ee26b473ca9",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee",
+      "position": 2,
+      "properties": {
+        "duration": "35",
+        "name": "Activity",
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "bb723a52-25d5-4fb9-9d55-0e4b40781321",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to remind students of the steps students will take today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete**Narrowing Your Focus** in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check for clear, concise messaging and ask guiding questions like, “What is your key message?” and “Is your solution realistic and actionable?” Encourage students to refine their ideas for a strong, persuasive pitch.**Teaching Tip**\n\n**Teaching Tip**\n\nConsider having students choose new roles for today’s tasks. Let the Timekeeper know that they should give their group about seven minutes for this step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 1 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n**Teaching Tip:**If you suspect you will be short on time, you might choose to provide printed copies of these example pitch slides to groups as a reference while drafting their own pitch.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 2 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 3 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are structuring their pitch clearly and including key elements. Ask guiding questions like, “Does your pitch clearly communicate your message?” and “Would your audience understand what action to take?” Provide quick feedback to help students refine their ideas.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Teaching Tip:**Consider using a timer (about 7 minutes) to keep students on track. Encourage students to focus on clarity and persuasion rather than perfection—this is a draft for feedback.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to give specific feedback by asking: ‘What was strong about this campaign? What could be improved?’ If a campaign lacks a clear call to action, prompt reviewers to ask: ‘What specific action does this campaign want people to take?\n\n**Teaching Tip**Depending on group size, you may want to have two students stay—one to present and one to take notes—while the others rotate.\nDepending on classroom structure, you may want to assign group numbers before the activity to ensure students rotate in sequence (e.g., Group 1 moves to Group 2, Group 2 moves to Group 3, etc.) for a smoother transition.\n\n- Depending on group size, you may want to have two students stay—one to present and one to take notes—while the others rotate.\n\n- Depending on classroom structure, you may want to assign group numbers before the activity to ensure students rotate in sequence (e.g., Group 1 moves to Group 2, Group 2 moves to Group 3, etc.) for a smoother transition.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to prioritize impactful revisions and refine their messaging. If a group is struggling, ask guiding questions like, “What change would make your argument stronger?” or “How can you make your message clearer for your audience?”"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb723a52-25d5-4fb9-9d55-0e4b40781321",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "f085eac0-e66d-4d9a-a8a7-a40c5988a5a5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *What made your campaign compelling and actionable? What could be improved to make it even more effective?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students recognize strengths and areas for improvement in their campaigns while connecting their work to real-world advocacy strategies.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "f085eac0-e66d-4d9a-a8a7-a40c5988a5a5",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "21b1e071-182d-4f2a-b305-0ab423c23e2d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slides to display the prompts.\n- *What is one aspect of your advocacy campaign that you are most confident about so far?*\n- *What is one part of your campaign that could still be clarified, improved, or polished?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students build confidence in their campaigns by highlighting strengths and what is working well so far. They also have an opportunity to think critically about their campaign’s weaker points in order to develop a plan for improvement.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "21b1e071-182d-4f2a-b305-0ab423c23e2d",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
+      }
+    },
+    {
+      "key": "19af3a1b-9329-4cd3-bcca-4b031deaabdf",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to review their campaign using the key criteria (clear argument, strong evidence, actionable solutions). Remind them to check and refine their materials so they are presentation-ready. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Ensure students are making intentional revisions rather than just small tweaks. Ask guiding questions like, “How does your campaign persuade your audience?” and “Are your solutions realistic and well-supported?” Provide quick feedback on clarity and presentation.",
+        "duration": "30",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider setting a timer to help students stay focused. You may want to give a five-minute warning before the final check-in so they can wrap up any last details."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "19af3a1b-9329-4cd3-bcca-4b031deaabdf",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
+      }
+    },
+    {
+      "key": "69a81c90-f76e-446d-9e84-0bc94eb01faa",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "69a81c90-f76e-446d-9e84-0bc94eb01faa",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
+      }
+    },
+    {
+      "key": "837fe583-9dda-4719-9b5e-fdf1a2b60f01",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student several copies of the Peer Feedback Cards.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct groups to pair up with another group. Group A presents while Group B listens and records feedback. After each group has presented, they will pair up with another group and repeat the process.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Ensure presenters stay focused and listeners engage with feedback. Encourage students to ask questions and provide specific, constructive feedback. Support groups by clarifying ideas and keeping discussions on track."
+      },
+      "seeding_key": {
+        "activity_section.key": "837fe583-9dda-4719-9b5e-fdf1a2b60f01",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
+      }
+    },
+    {
+      "key": "3fd97cd5-a0d7-49cf-bef5-9f7446a2b2b5",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the End of Project Reflection in their Project Planning Guide. If time allows, you can have students share their responses with a partner or do a whole class share-out.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Project Planning Guide and group’s final format of their campaign pitch can be collected and used to formatively assess the lesson objectives:\n- Explain the role of routers, switches, and servers in ensuring the Internet is reliable and can grow.\n- Propose actionable solutions to address key societal impacts of the digital divide and net neutrality\n- Propose AI-driven solutions to improve Internet access and address challenges like the digital divide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3fd97cd5-a0d7-49cf-bef5-9f7446a2b2b5",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
+      }
+    },
+    {
+      "key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e",
+      "position": 6,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
       }
     },
     {
@@ -2302,10 +2634,21 @@
       }
     },
     {
+      "key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a",
+      "position": 6,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
       "key": "69d94bbf-ac38-40a0-8e3b-95daf76ecc6f",
       "position": 1,
       "properties": {
-        "description": "i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2457,6 +2800,17 @@
       }
     },
     {
+      "key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
       "key": "df7201f3-79da-4c95-8af0-92658fc5a6cd",
       "position": 1,
       "properties": {
@@ -2481,10 +2835,224 @@
       "key": "027a4d73-7039-4544-bcca-e60190794ae2",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.*What vulnerabilities would you look for first, and why? \nHow might these weaknesses affect the company if exploited?*\n- *What vulnerabilities would you look for first, and why?*\n- *How might these weaknesses affect the company if exploited?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should explore both technical and human vulnerabilities, considering how cybercriminals exploit weak security measures. Guide students to discuss the real-world impact of these breaches on businesses and individuals, including financial loss, reputational damage, and privacy concerns.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day",
+        "duration": "5",
+        "name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "027a4d73-7039-4544-bcca-e60190794ae2",
         "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
+    },
+    {
+      "key": "c9ca58fd-4f95-41f0-9d2d-2f5cad49c239",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the Network Security Risk Assessment Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that for the next three days, they will work as network security analysts. This means they will select a company scenario, identify vulnerabilities, assess their societal and ethical impacts, and propose both traditional and AI-driven solutions. Along the way, they will refine their recommendations through peer review.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 1 to choose a company scenario. Instruct them to complete the graphic organizer on their Project Planning Guide for their chosen company. ",
+        "duration": "30",
+        "name": "Activity",
+        "progression_name": "Company Case Study Choices"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9ca58fd-4f95-41f0-9d2d-2f5cad49c239",
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
+    },
+    {
+      "key": "d1d47a26-68da-4ec6-a038-6bdce0da573d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students identify vulnerabilities, check that they are categorizing them correctly (technical, human, systemic). If students list general risks, ask: ‘How does this vulnerability actually lead to a security breach?’ Encourage deeper thinking by asking: ‘What would happen if this vulnerability were exploited? Who would be affected?'\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What types of vulnerabilities came up the most?*\n- *Which ones do you think pose the biggest risks, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify patterns in network vulnerabilities across different scenarios and evaluate which pose the most significant risks. Guide them to justify their reasoning using examples, considering which vulnerabilities are most easily exploited, which have the greatest impact, and which are hardest to mitigate."
+      },
+      "seeding_key": {
+        "activity_section.key": "d1d47a26-68da-4ec6-a038-6bdce0da573d",
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
+    },
+    {
+      "key": "223c4088-94e9-4988-858c-4e9c4e5c751e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do we create a network security risk assessment?*\n- Use the Modified Whip Around protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain the key components of a Network Security Risk Assessment, including examples from their own learning from the day’s lesson.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Modified Whip Around Protocol:\n- Individually: Students answer the Question of the Day in 1-2 sentences.\n- Small Groups: Students share their responses in groups of 4.\n- Whole-Class: 2-3 groups are called on to share key insights or common patterns from their discussion."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "223c4088-94e9-4988-858c-4e9c4e5c751e",
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
+    },
+    {
+      "key": "e67b7b9f-c22c-4755-a7d1-190dfb8016e4",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e67b7b9f-c22c-4755-a7d1-190dfb8016e4",
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
+    },
+    {
+      "key": "3cb19fde-d3a7-4a68-bb4e-f44f0a1865d2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What kind of assistance would you hope AI could provide?**\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Activate prior knowledge by encouraging students to brainstorm potential AI applications in cybersecurity before being introduced to specific AI-driven solutions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3cb19fde-d3a7-4a68-bb4e-f44f0a1865d2",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the steps students will take as they engage with the AI chatbots to explore how AI is transforming cybersecurity, engaging with specialized AI chatbots to see how these tools detect threats, respond to attacks, and protect networks. Remind students to think about how these AI-driven solutions could strengthen the security recommendations in your risk assessment project as they interact with the chatbots.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 2 to learn about four possible AI-driven solutions to network vulnerabilities. ",
+        "duration": "30",
+        "name": "Activity",
+        "progression_name": "AI-Driven Solution Chatbots"
+      },
+      "seeding_key": {
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "e0a3bd4f-736d-4917-b050-f391cd25e7d2",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Listen for misconceptions that AI eliminates the need for human oversight. Ask: ‘Would this AI tool catch every security threat? Why or why not?’ If students struggle to connect AI to specific vulnerabilities, prompt them to revisit their case study and ask: ‘How would this AI solution specifically help prevent or detect this threat?’",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle with chatbot responses, model how to rephrase questions for clarity and specificity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e0a3bd4f-736d-4917-b050-f391cd25e7d2",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "e4cbb92f-8fab-4d03-a242-48e51d05800e",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e4cbb92f-8fab-4d03-a242-48e51d05800e",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "0fcaade3-02f2-448e-8df0-1473cd9153b9",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to begin drafting their Network Security Risk Assessment using their Project Planning Guide. Encourage students to focus on clear, specific details about their chosen scenario, vulnerabilities, mitigation strategies, and societal impacts.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working, check for depth and specificity—are they identifying vulnerabilities with enough detail? Ask questions like: “How does this vulnerability affect the company and its customers?” Guide students struggling with AI solutions by prompting: \"Which AI-driven strategy fits best with this risk? Why?\" Redirect students who list solutions without explanation by asking: “How does this mitigation strategy actually reduce the risk?”",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are stuck, have them partner up briefly to explain their vulnerabilities out loud—verbal processing often helps refine ideas."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "- Use this draft to gauge students' understanding of network vulnerabilities and AI-driven solution and to provide quick feedback and positive reinforcement.\n- As you review student’s work, look for:\n   - Clear and specific scenario and risks\n   - Thoughtful categorization of vulnerabilities\n   - Feasible and well-explained mitigation strategies\n   - Ethical/societal impact that goes beyond surface-level thinking"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0fcaade3-02f2-448e-8df0-1473cd9153b9",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "2fe4dfa8-ec0c-4ae9-bd31-7537a739f274",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2fe4dfa8-ec0c-4ae9-bd31-7537a739f274",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "7e696d2d-5bbb-4935-98d8-27a61c63601e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *How can AI enhance network security?*\n- Use the Modified Whip Around protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should evaluate how AI-driven security tools improve threat detection and mitigation. Encourage them to compare AI’s capabilities to traditional security methods and consider how AI can support (but not replace) human decision-making in cybersecurity. Guide students to connect these insights to real-world applications in their risk assessments.",
+        "duration": "10",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e696d2d-5bbb-4935-98d8-27a61c63601e",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "8075ad57-f9e8-455f-a005-e32c6d0b5993",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What have you learned?*\n- *How has your understanding of network vulnerabilities and solutions changed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students reflect on their learning by identifying key takeaways about network vulnerabilities, the consequences of those vulnerabilities, mitigation strategies, and AI-driven solutions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "8075ad57-f9e8-455f-a005-e32c6d0b5993",
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8"
+      }
+    },
+    {
+      "key": "3663fe60-99bb-402d-a8b6-b716a2c06b77",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of two to conduct peer reviews. Either assign peer-review partners or direct students to find a partner and exchange drafts. Remind them to use their Project Planning Guide to structure their feedback, making sure it is specific and constructive.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work, check that both partners are giving and receiving feedback. To ensure students are engaged and on-task, ask probing questions :*“What’s one suggestion you’ve given your partner to improve their assessment?”*Listen for specific feedback, not just “this looks good” or “I agree.” Redirect with:*“Can you explain why this solution is effective or suggest an alternative?”*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to navigate to Lesson 11, Level 3 in order to complete their final Network Security Risk Assessment. Once students have finished, make sure that they prepare a 30-second oral summary to share with a classmate.",
+        "duration": "30",
+        "name": "Activity",
+        "progression_name": "Final Risk Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "3663fe60-99bb-402d-a8b6-b716a2c06b77",
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8"
+      }
+    },
+    {
+      "key": "8ad98e03-37c4-4deb-b09e-565d4a1e5fb8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Divide students into two equal groups and arrange them into two lines, facing each other. Explain the students that they will take turns delivering a 30-second summary of their project and receiving feedback from the peer they are facing. Direct students to use the prompts on the screen to guide their responses if needed, and listen carefully to your partner’s insights. After 5 minutes, they will switch roles. After both pairs have shared, one line will rotate down and they will share again with a new partner.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider modeling a strong 30-second summary before students begin, demonstrating concise and clear communication, and reiterating the need to answer the displayed prompts. If students struggle to stay within time limits, use a visual or auditory timer to keep rounds on track. Encourage students to ask follow-up questions rather than just saying “good job” (e.g., “How does your solution compare to real-world cases?”)."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "These presentations can serve as an informal formative assessment opportunity. As students talk, check for the following: \n- Are students addressing all key prompts?\n- Do they provide specific details rather than vague answers?\n- Are they engaging with feedback and refining their explanations?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ad98e03-37c4-4deb-b09e-565d4a1e5fb8",
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8"
+      }
+    },
+    {
+      "key": "85929c55-74e5-4bae-9779-d6cef043640c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "85929c55-74e5-4bae-9779-d6cef043640c",
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8"
       }
     }
   ],
@@ -2566,6 +3134,50 @@
     },
     {
       "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17"
+      },
+      "level_keys": [
+        "networks-lesson1-level4-2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519"
+      },
+      "level_keys": [
+        "networks-lesson2-level1-2024"
+      ]
+    },
+    {
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2587,7 +3199,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2609,7 +3221,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2631,7 +3243,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2653,7 +3265,29 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06"
+      },
+      "level_keys": [
+        "networks-lesson3-level5-2024"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2678,7 +3312,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -2703,7 +3337,29 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e"
+      },
+      "level_keys": [
+        "networks-lesson4-level3-2024"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2728,7 +3384,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2753,7 +3409,29 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson5-level3-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11"
+      },
+      "level_keys": [
+        "networks-lesson5-level3-2024"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2775,7 +3453,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2797,7 +3475,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2819,7 +3497,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -2841,7 +3519,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -2863,7 +3541,29 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b"
+      },
+      "level_keys": [
+        "networks-lesson6-level6-2024"
+      ]
+    },
+    {
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2885,7 +3585,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2907,7 +3607,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2929,7 +3629,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2951,7 +3651,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2973,7 +3673,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2995,7 +3695,51 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson7-level7-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89"
+      },
+      "level_keys": [
+        "networks-lesson7-level7-2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e"
+      },
+      "level_keys": [
+        "networks-lesson8-level1-2024"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3017,7 +3761,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3039,7 +3783,29 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a"
+      },
+      "level_keys": [
+        "networks-lesson9-level3-2024"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3061,7 +3827,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3080,6 +3846,116 @@
       },
       "level_keys": [
         "networks-internet-lesson10-level2-2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson10-level3-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96"
+      },
+      "level_keys": [
+        "networks-lesson10-level3-2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Company Case Study Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level1-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "c9ca58fd-4f95-41f0-9d2d-2f5cad49c239"
+      },
+      "level_keys": [
+        "networks-internet-lesson11-level1-2023"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI-Driven Solution Chatbots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level2-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8"
+      },
+      "level_keys": [
+        "networks-internet-lesson11-level2-2023"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Final Risk Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level3-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "3663fe60-99bb-402d-a8b6-b716a2c06b77"
+      },
+      "level_keys": [
+        "networks-internet-lesson11-level3-2023"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level4-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "85929c55-74e5-4bae-9779-d6cef043640c"
+      },
+      "level_keys": [
+        "networks-internet-lesson11-level4-2023"
       ]
     }
   ],
@@ -3118,6 +3994,30 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "66687984-58fa-4120-bb62-cbb4d7a19cfb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson1-level4-2024",
+        "script_level.level_keys": [
+          "networks-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson2-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519"
       }
     },
     {
@@ -3170,6 +4070,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson3-level5-2024",
+        "script_level.level_keys": [
+          "networks-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson4-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson4-level1-2024"
@@ -3194,6 +4106,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson4-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson5-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson5-level1-2024"
@@ -3214,6 +4138,18 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "dabdb7ac-a19c-462f-af78-ef090cd46ccb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson5-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson5-level3-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11"
       }
     },
     {
@@ -3274,6 +4210,18 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson6-level6-2024",
+        "script_level.level_keys": [
+          "networks-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b"
       }
     },
     {
@@ -3350,6 +4298,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson7-level7-2024",
+        "script_level.level_keys": [
+          "networks-lesson7-level7-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson8-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson9-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson9-level1-2024"
@@ -3374,6 +4346,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson9-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson10-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson10-level1-2024"
@@ -3394,6 +4378,66 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "ed46a64a-1524-4d9e-8a7a-54a492db96c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson10-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson10-level3-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson11-level1-2023",
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level1-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "c9ca58fd-4f95-41f0-9d2d-2f5cad49c239"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson11-level2-2023",
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level2-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson11-level3-2023",
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level3-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "3663fe60-99bb-402d-a8b6-b716a2c06b77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson11-level4-2023",
+        "script_level.level_keys": [
+          "networks-internet-lesson11-level4-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "85929c55-74e5-4bae-9779-d6cef043640c"
       }
     }
   ],
@@ -3509,6 +4553,19 @@
       }
     },
     {
+      "name": "Gallery Walk Info Tracker",
+      "url": "https://docs.google.com/document/d/1xBwQ_66xC9fRXJrFs9dOKP7l9G8VNOfatcbeZQqeATw/edit?usp=sharing",
+      "key": "gallery_walk_info_tracker",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "gallery_walk_info_tracker"
+      }
+    },
+    {
       "name": "How Cyber Attacks Happen in Real Life",
       "url": "https://www.youtube.com/watch?v=Q3DsntHY0Ns",
       "key": "how_cyber_attacks_happen_in_real_life",
@@ -3530,6 +4587,31 @@
       },
       "seeding_key": {
         "resource.key": "http_and_dns"
+      }
+    },
+    {
+      "name": "Internet Access Advocacy Campaign Project",
+      "url": "https://docs.google.com/presentation/d/1W0OAHCaHHrI1tNtkT_mFcK8rG2r5Cqg2_TBYfY8_ptE/view",
+      "key": "internet_access_advocacy_campaign_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "internet_access_advocacy_campaign_project"
+      }
+    },
+    {
+      "name": "Internet Access Advocacy Campaign Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1RsqhCd02leQ8SNFPEI2j_eWpwoXBZ55dwwXN264b394/edit?usp=sharing",
+      "key": "internet_access_advocacy_campaign_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "internet_access_advocacy_campaign_project_planning_guide"
       }
     },
     {
@@ -3632,6 +4714,31 @@
       }
     },
     {
+      "name": "Network Security Risk Assessment Project",
+      "url": "https://docs.google.com/presentation/d/1aNzIdeBDW95Ze_qzNvuqPNz7dSHuPBqUQNeeLc3MEE0/view",
+      "key": "network_security_risk_assessment_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "network_security_risk_assessment_project"
+      }
+    },
+    {
+      "name": "Network Security Risk Assessment Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1LI2oF-XT5qutbPPjb_Y8BO0qcZxGb0dHcyTjl3Zxk3c/edit?usp=sharing",
+      "key": "network_security_risk_assessment_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "network_security_risk_assessment_project_planning_guide"
+      }
+    },
+    {
       "name": "Networks and the Internet Unit Guide",
       "url": "https://docs.google.com/document/d/1zTfZ1CxCdX1Kk-n195UEn2Fu_SVZ9RJO0sPJ5nGDCTE/edit?usp=sharing",
       "key": "networks_and_the_internet_unit_guide",
@@ -3655,6 +4762,19 @@
       },
       "seeding_key": {
         "resource.key": "packets_and_protocols"
+      }
+    },
+    {
+      "name": "Peer Feedback Cards",
+      "url": "https://docs.google.com/document/d/10gHuaMFve5x1WkZY1H0P08hPAVXO54z2T2JeLQlkRP4/edit?usp=sharing",
+      "key": "peer_feedback_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "peer_feedback_cards"
       }
     },
     {
@@ -3830,6 +4950,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "network_security_risk_assessment_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "network_security_risk_assessment_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "challenge_1_binary_cards"
       }
@@ -3952,6 +5084,30 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "the_internet_s_hidden_barriers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "gallery_walk_info_tracker"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "internet_access_advocacy_campaign_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "peer_feedback_cards"
       }
     },
     {
@@ -4168,6 +5324,16 @@
       }
     },
     {
+      "key": "128d4ae8-ab94-4da5-be3b-743da51b1c6b",
+      "properties": {
+        "description": "Propose actionable solutions to address key societal impacts of the digital divide and net neutrality"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "128d4ae8-ab94-4da5-be3b-743da51b1c6b"
+      }
+    },
+    {
       "key": "1496c98c-ff10-425a-85aa-809c2efdca77",
       "properties": {
         "description": "Explain how network structure and protocols improve the reliability of data transmission"
@@ -4175,6 +5341,26 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "1496c98c-ff10-425a-85aa-809c2efdca77"
+      }
+    },
+    {
+      "key": "2fc02a65-a124-497d-8d21-c6dfb557bf52",
+      "properties": {
+        "description": "Develop and present a Network Security Risk Assessment report"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "2fc02a65-a124-497d-8d21-c6dfb557bf52"
+      }
+    },
+    {
+      "key": "4d429490-8d6a-4f61-a131-9127c04abfc3",
+      "properties": {
+        "description": "Explain the role of routers, switches, and servers in ensuring the Internet is reliable and can grow"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "4d429490-8d6a-4f61-a131-9127c04abfc3"
       }
     },
     {
@@ -4248,6 +5434,16 @@
       }
     },
     {
+      "key": "8cada9f0-6c93-4859-bb0c-0eeb0de96268",
+      "properties": {
+        "description": "Propose AI-driven solutions to mitigate security risks"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "8cada9f0-6c93-4859-bb0c-0eeb0de96268"
+      }
+    },
+    {
       "key": "958f4c37-21f6-4f5f-81ae-33892643b027",
       "properties": {
         "description": "Identify common network security vulnerabilities"
@@ -4298,6 +5494,16 @@
       }
     },
     {
+      "key": "bdbeb759-ac0d-490a-9a3a-1406f81b6422",
+      "properties": {
+        "description": "Propose AI-driven solutions to improve Internet access and address challenges like the digital divide"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "bdbeb759-ac0d-490a-9a3a-1406f81b6422"
+      }
+    },
+    {
       "key": "bed67c4b-f0b4-4074-9778-45991a17f2ee",
       "properties": {
         "description": "Evaluate how redundancy improves the reliability of the Internet"
@@ -4315,6 +5521,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "c20f97cd-ffe2-4e26-a874-7ffe990590ae"
+      }
+    },
+    {
+      "key": "c380753e-b6e0-4d58-a6cd-a0e6911602a5",
+      "properties": {
+        "description": "Evaluate key network vulnerabilities and assess their societal and ethical implications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c380753e-b6e0-4d58-a6cd-a0e6911602a5"
       }
     },
     {

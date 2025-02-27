@@ -31,7 +31,7 @@ type GenericDialogTitleProps =
       titleComponent?: never;
     };
 
-type GenericDialogBodyProps =
+export type GenericDialogBodyProps =
   | {
       message?: never;
       bodyComponent?: React.ReactNode;

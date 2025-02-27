@@ -1,0 +1,27 @@
+name 'csaif_pl_AI_tutor_overview_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Tutor Overview
+
+
+<img src="https://images.code.org/1233653f67af64f5f96488f45b298812-image-1724078163830.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+
+## Defining Cybersecurity
+
+#### Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, and other security threats.
+
+#### In today’s digital world, cybersecurity is essential to safeguard sensitive information, prevent data breaches, and ensure privacy and safety online.
+
+<br>
+
+---
+
+## Why students should learn it
+
+#### Learning cybersecurity helps students develop critical thinking skills and understand how to stay safe in an increasingly connected world.
+
+#### It prepares them for a wide range of careers in technology and security while empowering them to protect personal and organizational data from cyber threats.
+
+MARKDOWN

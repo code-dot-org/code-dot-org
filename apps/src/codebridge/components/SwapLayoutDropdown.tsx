@@ -54,6 +54,7 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
       iconName="ellipsis-v"
       alignment="right"
       disabled={isRunningOrValidating}
+      ariaLabel={codebridgeI18n.consoleOptions()}
     >
       <div onClick={onLayoutChange} className={darkModeStyles.dropdownItem}>
         <FontAwesomeV6Icon iconName={iconName} iconStyle={'solid'} />
