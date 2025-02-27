@@ -26,6 +26,7 @@ import {connect} from 'react-redux';
 import Select from 'react-select';
 
 import 'react-select/dist/react-select.css';
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   Courses,
   Subjects,
@@ -37,7 +38,6 @@ import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
 import {SelectStyleProps, DATE_ORDER_ASC, DATE_ORDER_DESC} from '../constants';
-import {RouterContext} from '../RouterContext';
 
 import DatePicker from './components/date_picker';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';

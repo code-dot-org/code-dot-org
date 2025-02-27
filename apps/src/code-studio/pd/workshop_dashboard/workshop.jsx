@@ -11,8 +11,9 @@ import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import Spinner from '../../../sharedComponents/Spinner';
-import {RouterContext} from '../RouterContext';
 
 import AttendancePanel from './AttendancePanel';
 import DetailsPanel from './DetailsPanel';

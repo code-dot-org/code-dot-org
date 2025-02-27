@@ -7,6 +7,11 @@ import {Provider} from 'react-redux';
 import {BrowserRouter, Routes, Route, Navigate, Outlet} from 'react-router-dom';
 import {createStore, combineReducers} from 'redux';
 
+import {
+  RouterContext,
+  RouterProvider,
+  WithRouterProps,
+} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 import Header from '../components/header';
@@ -19,8 +24,6 @@ import regionalPartnerReducers, {
   setRegionalPartnerFilter,
   getInitialRegionalPartnerFilter,
 } from '../components/regional_partners_reducers';
-import {RouterContext, RouterProvider} from '../RouterContext';
-import {WithRouterProps} from '../WithRouterProps';
 
 import WorkshopAttendance from './attendance/workshop_attendance';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';

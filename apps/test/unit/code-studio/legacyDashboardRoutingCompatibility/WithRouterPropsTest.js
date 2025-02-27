@@ -8,7 +8,7 @@ import {
   useSearchParams,
 } from 'react-router-dom';
 
-import {WithRouterProps} from '@cdo/apps/code-studio/pd/WithRouterProps';
+import {WithRouterProps} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

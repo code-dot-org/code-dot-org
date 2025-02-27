@@ -6,7 +6,7 @@ import {MemoryRouter} from 'react-router-dom';
 import {
   RouterContext,
   RouterProvider,
-} from '@cdo/apps/code-studio/pd/RouterContext';
+} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 let mockNavigate = jest.fn();
 

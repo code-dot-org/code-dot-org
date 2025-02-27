@@ -6,8 +6,9 @@ import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import Spinner from '../../../../sharedComponents/Spinner';
-import {RouterContext} from '../../RouterContext';
 import {PermissionPropType} from '../permission';
 
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';

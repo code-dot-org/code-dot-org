@@ -18,7 +18,8 @@ import {
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
 
-import {RouterContext} from '../../RouterContext';
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import DatePicker from '../components/date_picker';
 
 import {

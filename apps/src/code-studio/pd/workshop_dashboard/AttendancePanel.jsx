@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {RouterContext} from '../RouterContext';
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 import {DATE_FORMAT} from './workshopConstants';
 import WorkshopPanel from './WorkshopPanel';
