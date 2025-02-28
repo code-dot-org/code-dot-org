@@ -1,3 +1,4 @@
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   AiTutorInteractionStatus as AITutorInteractionStatus,
   AiTutorTypes as AITutorTypes,
@@ -71,12 +72,4 @@ export interface ChatContext {
   studentCode?: string;
   actionType?: AITutorTypesValue | undefined;
   systemPrompt?: string;
-}
-
-export enum Role {
-  ASSISTANT = 'assistant',
-  USER = 'user',
-  SYSTEM = 'system',
-  // only used in Aichat, but our types are currently tangled up :)
-  MODEL_UPDATE = 'update',
 }

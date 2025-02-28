@@ -1,7 +1,5 @@
-import {
-  Role,
-  AITutorInteractionStatus as Status,
-} from '@cdo/apps/aiTutor/types';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {AITutorInteractionStatus as Status} from '@cdo/apps/aiTutor/types';
 
 // Initial messages we set when the user selects a tutor type.
 // General Chat

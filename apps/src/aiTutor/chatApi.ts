@@ -1,5 +1,5 @@
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
-  Role,
   AITutorInteractionStatus as Status,
   AITutorInteractionStatusValue,
   ChatCompletionMessage,

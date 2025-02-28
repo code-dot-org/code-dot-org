@@ -1,11 +1,11 @@
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import _ from 'lodash';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 
 import {savePromptAndResponse} from '../interactionsApi';
 import {
-  Role,
   AITutorInteractionStatus as Status,
   ChatCompletionMessage,
   Level,
