@@ -36,13 +36,10 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     new MusicBlocklyWorkspace()
   );
   const simple2SequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
-  const [isLoading, setIsLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   //Immediately load the library and source, then compile the song.
   const onMount = useCallback(async () => {
     workspaceRef.current.initHeadless();
-    await MusicLibrary.loadLibrary(libraryName);
-    setIsLoading(false);
 
     workspaceRef.current.loadCode(source);
     workspaceRef.current.compileSong(
@@ -57,7 +54,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     workspaceRef.current.executeCompiledSong();
     const playbackEvents = simple2SequencerRef.current.getPlaybackEvents();
     dispatch(setExemplarPlaybackEvents(playbackEvents));
-  }, [dispatch, libraryName, source]);
+  }, [dispatch, source]);
 
   useEffect(() => {
     onMount();
@@ -85,11 +82,6 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     playerRef.current?.stopSong();
     setIsPlaying(false);
   }, []);
-
-  // Some loading UI while we're fetching the library and compiling the song.
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
 
   const getPackDetails = (packId: string) => {
     const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
