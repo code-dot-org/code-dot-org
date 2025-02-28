@@ -30,19 +30,25 @@ module AichatOpenaiHelper
       aichat_model_customizations['retrievalContexts']
     )
 
-    if ! new_message['image']
-      r = [
-        {role: "system", content: instructions},
-        *stored_messages.map {|message| {role: message['role'], content: message['chatMessageText']}},
-        {role: 'user', content: new_message['chatMessageText']}
-      ]
-    else
-      r = [
-        {role: "system", content: instructions},
-        *stored_messages.map {|message| {role: message['role'], content: message['chatMessageText']}},
-        {role: 'user', content: [ type: "image_url", image_url: {url: new_message['image']}]}
-      ]
+    r = [{role: "system", content: instructions}]
+
+    messages_to_add = stored_messages.map do |message|
+      value =
+        if message['image']
+          {role: message['role'], content: [{type: "image_url", image_url: {url: message['image']}}]}
+        else
+          {role: message['role'], content: message['chatMessageText']}
+        end
+      value
     end
+    r.append(*messages_to_add)
+
+    r <<
+      if new_message['image']
+        {role: 'user', content: [{type: "image_url", image_url: {url: new_message['image']}}]}
+      else
+        {role: 'user', content: new_message['chatMessageText']}
+      end
 
     puts r
     r
@@ -50,6 +56,7 @@ module AichatOpenaiHelper
 
   def self.request_chat_completion(messages, temperature)
     http_response = client.request_chat_completion(messages, temperature)
+    puts JSON.parse(http_response.body)
     JSON.parse(http_response.body)['choices'][0]['message']['content']
   end
 

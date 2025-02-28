@@ -14,6 +14,7 @@ interface BaseChatEvent {
 }
 
 /** Base type for all chat messages */
+// TODO: create ImageChatMessage
 export interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
   image?: string;
