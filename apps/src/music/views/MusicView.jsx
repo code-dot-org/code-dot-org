@@ -319,8 +319,8 @@ class UnconnectedMusicView extends React.Component {
 
     let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
 
-    // Prevent "Select a track" dialog from showing in Toolbox Mode.
-    if (isToolboxMode) {
+    // Prevent "Select a track" dialog from special mode.
+    if (isToolboxMode || isStartMode || isEditingExemplar) {
       packId = packId || DEFAULT_PACK;
     }
     this.library.setCurrentPackId(packId);
@@ -355,9 +355,6 @@ class UnconnectedMusicView extends React.Component {
         levelToolboxDefinition
       );
     } else if (isEditingExemplar || isViewingExemplar) {
-      const exemplarPackId = this.getExemplarSources()?.packId;
-      this.library.setCurrentPackId(exemplarPackId);
-      this.props.setPackId(exemplarPackId);
       this.loadCode(this.getExemplarSources() || this.getStartSources());
     } else if (this.getStartSources() || initialSources) {
       const startSources = this.getStartSources();
@@ -488,15 +485,23 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    const isEditingExemplar = getAppOptionsEditingExemplar();
+
+    let packId = this.props.levelProperties?.levelData?.packId;
+    // Prevent "Select a track" dialog from special mode.
+    if (isToolboxMode || isStartMode || isEditingExemplar) {
+      packId = packId || DEFAULT_PACK;
+    }
+
     // Clear the pack, unless it came from the level data itself.
-    if (!this.props.levelProperties?.levelData?.packId) {
+    if (!packId) {
       this.props.setPackId(null);
       this.library.setCurrentPackId(null);
     }
 
-    // Check if we are in start mode, and if so, load sources from the default JSON.
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    // In Start mode, load sources from the default JSON.
     if (isStartMode) {
       const startSourcesFilename = 'startSources' + this.props.blockMode;
       const defaultSources = require(`@cdo/static/music/${startSourcesFilename}.json`);

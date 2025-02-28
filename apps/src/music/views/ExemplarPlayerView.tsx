@@ -5,7 +5,6 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {Source} from '../../lab2/types';
-import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {BlockMode, DEFAULT_PACK} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
@@ -17,7 +16,6 @@ import moduleStyles from './ExemplarPlayer.module.scss';
 
 interface ExemplarPlayerViewProps {
   source: Source;
-  packId: string;
   libraryName: string;
   title: string;
   labSetPlaying: (playing: boolean) => void;
@@ -25,7 +23,6 @@ interface ExemplarPlayerViewProps {
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   source,
-  packId,
   libraryName,
   title,
   labSetPlaying,
@@ -47,18 +44,6 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
 
-    // Immediately load the source code and compile the song.
-    installFunctionBlocks(BlockMode.SIMPLE2);
-
-    // Update player configuration if a pack ID is provided.
-    const currentLibrary = MusicLibrary.getInstance();
-    if (currentLibrary) {
-      currentLibrary.setCurrentPackId(packId);
-      playerRef.current?.updateConfiguration(
-        currentLibrary.getBPM(),
-        currentLibrary.getKey()
-      );
-    }
     workspaceRef.current.loadCode(source);
     workspaceRef.current.compileSong(
       {Sequencer: simple2SequencerRef.current},
@@ -72,7 +57,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     workspaceRef.current.executeCompiledSong();
     const playbackEvents = simple2SequencerRef.current.getPlaybackEvents();
     dispatch(setExemplarPlaybackEvents(playbackEvents));
-  }, [dispatch, libraryName, source, packId]);
+  }, [dispatch, libraryName, source]);
 
   useEffect(() => {
     onMount();
@@ -119,7 +104,6 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     };
   };
 
-  const packDetails = packId ? getPackDetails(packId) : undefined;
   return (
     <div className={moduleStyles.exemplarPlayer}>
       <div
@@ -154,11 +138,6 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
 
         <div className={moduleStyles.body}>
           <div className={moduleStyles.name}>{title}</div>
-          {packDetails && (
-            <div className={moduleStyles.details}>
-              {packDetails.name} &bull; {packDetails.artist}
-            </div>
-          )}
         </div>
       </div>
     </div>

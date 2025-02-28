@@ -5,6 +5,7 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
+import {getAppOptionsEditingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {Condition, ConditionType, ExemplarSettings} from '@cdo/apps/lab2/types';
 
 import {
@@ -43,7 +44,10 @@ export default class MusicValidator extends Validator {
   }
 
   shouldValidateWithExemplar(): boolean {
-    return this.exemplarSettings?.validationEnabled ?? false;
+    const isEditingExemplar = getAppOptionsEditingExemplar();
+    return (
+      !isEditingExemplar && (this.exemplarSettings?.validationEnabled ?? false)
+    );
   }
 
   getExemplarValidationResults(): {satisfied: boolean; message: string} {

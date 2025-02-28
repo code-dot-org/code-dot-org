@@ -25,7 +25,6 @@ import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import {DEFAULT_PACK} from '../constants';
 import musicI18n from '../locale';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
@@ -119,9 +118,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const exemplarSettings = useAppSelector(
     state => state.lab.levelProperties?.exemplarSettings
   ) as MusicExemplarSettings | undefined;
-  const currentPackId = useAppSelector(
-    state => state.music.packId || DEFAULT_PACK
-  );
   const library = useAppSelector(
     state =>
       (state.lab.levelProperties?.levelData as MusicLevelData | undefined)
@@ -156,12 +152,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       });
     } else if (isEditingExemplar) {
       header.showLevelBuilderSaveButton(
-        () => ({
-          exemplar_sources: {
-            ...blocklyWorkspace.getCode(),
-            packId: currentPackId,
-          },
-        }),
+        () => ({exemplar_sources: blocklyWorkspace.getCode()}),
         'Levelbuilder: Edit Exemplar',
         `/levels/${levelId}/update_exemplar_code`
       );
@@ -176,7 +167,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [
     blocklyWorkspace,
-    currentPackId,
     isStartMode,
     isEditingExemplar,
     isToolboxMode,
@@ -307,11 +297,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             />
             {exemplarSettings?.playerEnabled &&
               exemplarSources &&
-              !isEditingExemplar &&
-              !isViewingExemplar && (
+              !isEditingExemplar && (
                 <ExemplarPlayerView
                   source={exemplarSources}
-                  packId={exemplarSources.packId || DEFAULT_PACK}
                   libraryName={library}
                   title={exemplarSettings.playerTitle}
                   labSetPlaying={setPlaying}
@@ -326,7 +314,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       exemplarSettings,
       exemplarSources,
       isEditingExemplar,
-      isViewingExemplar,
       library,
       onInstructionsTextClick,
       setPlaying,

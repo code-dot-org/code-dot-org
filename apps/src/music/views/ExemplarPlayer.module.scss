@@ -13,7 +13,7 @@
     background-color: $neutral_dark80;
     color: $neutral_light;
     cursor: pointer;
-    height: 50px;
+    height: 38px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -34,8 +34,8 @@
     }
 
     .pack {
-      width: 42px;
-      height: 42px;
+      width: 30px;
+      height: 30px;
       transform: scale(1, 1);
       transition: 0.1s ease-in-out;
 
@@ -46,8 +46,8 @@
       }
 
       &Image {
-        height: 42px;
-        width: 42px;
+        height: 30px;
+        width: 30px;
         max-width: initial;
         border-radius: 4px;
         background-color: $black;
@@ -64,13 +64,6 @@
         text-overflow: ellipsis;
         font-size: 16px;
         line-height: 1.5em;
-      }
-
-      .details {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 12px;
       }
     }
   }

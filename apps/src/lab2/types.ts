@@ -90,7 +90,6 @@ export interface BlocklySource {
     blocks: BlocklyBlock[];
   };
   variables: BlocklyVariable[];
-  packId?: string;
 }
 
 export interface BlocklyBlock {
