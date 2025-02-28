@@ -28,6 +28,7 @@ $negative-grab-area-offset: calc(-1 * $grab-area-offset);
 .absoluteBar {
   position: absolute;
   z-index: 3;
+  opacity: 0;
   transition: opacity 0.1s ease-in;
   background-color: transparent;
 }
@@ -55,12 +56,10 @@ $negative-grab-area-offset: calc(-1 * $grab-area-offset);
 
 .horizontalGrabbable {
   @include horizontalAbsoluteBar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
-  opacity: 0;
 }
 
 .verticalGrabbable {
   @include verticalAbsoluteBar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
-  opacity: 0;
 }
 
 .verticalResizing {
