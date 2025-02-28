@@ -101,9 +101,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   // Effect to handle the Escape key to close the tooltip
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      console.log('Key pressed:', event.key); // Log the key pressed
       if (event.key === 'Escape' && !event.defaultPrevented) {
-        console.log('Escape key pressed');
         handleHideTooltip();
         event.preventDefault(); // Prevent other listeners from handling the event
       }
