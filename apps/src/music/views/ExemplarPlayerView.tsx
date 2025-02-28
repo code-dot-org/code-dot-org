@@ -13,7 +13,7 @@ import MusicPlayer from '../player/MusicPlayer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import {setExemplarPlaybackEvents} from '../redux/musicRedux';
 
-import moduleStyles from './MiniMusicPlayer.module.scss';
+import moduleStyles from './ExemplarPlayer.module.scss';
 
 interface ExemplarPlayerViewProps {
   source: Source;
@@ -121,7 +121,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
 
   const packDetails = packId ? getPackDetails(packId) : undefined;
   return (
-    <div className={moduleStyles.miniMusicPlayer}>
+    <div className={moduleStyles.exemplarPlayer}>
       <div
         className={moduleStyles.entry}
         key={'exemplar-player'}

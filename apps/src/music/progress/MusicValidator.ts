@@ -48,7 +48,9 @@ export default class MusicValidator extends Validator {
 
   getExemplarValidationResults(): {satisfied: boolean; message: string} {
     if (!this.shouldValidateWithExemplar()) {
-      throw new Error('Attempted to validated with exemplar when disabled.');
+      throw new Error(
+        'Exemplar validation is disabled; cannot retrieve exemplar validation results.'
+      );
     }
     const satisfied = this.validatePlaybackEventsEquivalent();
     return {
