@@ -16,9 +16,10 @@ import firehoseClient from '@cdo/apps/metrics/firehose';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
+import ClearProgressButton from './ClearProgressButton';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import LessonLock from './LessonLock';
-import {lessonType} from './progressTypes';
+import {lessonType, levelWithProgressType} from './progressTypes';
 import SendLesson from './SendLesson';
 import TeacherInfoBox from './TeacherInfoBox';
 
@@ -26,6 +27,7 @@ class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
     onClickStudentLessonPlan: PropTypes.func,
+    levels: PropTypes.arrayOf(levelWithProgressType),
 
     // redux provided
     section: sectionShape,
@@ -78,6 +80,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       lockableAuthorized,
       unitId,
       lesson,
+      levels,
     } = this.props;
 
     const sectionId = (section && section.id.toString()) || '';
@@ -99,8 +102,11 @@ class ProgressLessonTeacherInfo extends React.Component {
       return null;
     }
 
+    const numberOfLevels = levels ? levels.length : 0;
+
     return (
       <TeacherInfoBox>
+        {numberOfLevels > 0 && <ClearProgressButton levels={levels} />}
         {lesson.lesson_plan_html_url && (
           <div style={styles.buttonContainer}>
             <Button

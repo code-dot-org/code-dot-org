@@ -877,6 +877,9 @@ StudioApp.prototype.setIconsFromSkin = function (skin) {
  * @return {Promise} to express that the async operation is complete.
  */
 StudioApp.prototype.handleClearPuzzle = function (config) {
+  console.log('resetting puzzle');
+  console.log('config is', config);
+  console.log(config);
   var promise;
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {

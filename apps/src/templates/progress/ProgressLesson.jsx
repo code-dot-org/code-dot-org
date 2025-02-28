@@ -241,6 +241,7 @@ class ProgressLesson extends React.Component {
         {viewAs === ViewType.Instructor && !this.props.isMiniView && (
           <ProgressLessonTeacherInfo
             lesson={lesson}
+            levels={levels}
             lessonUrl={lessonUrl}
             onClickStudentLessonPlan={this.onClickStudentLessonPlan}
           />
