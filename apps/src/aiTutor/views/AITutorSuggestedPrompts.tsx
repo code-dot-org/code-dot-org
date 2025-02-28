@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 
-import DeprecatedSuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/DeprecatedSuggestedPrompts';
+import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
@@ -149,25 +149,30 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     [studentCode, isWaitingForChatResponse, level, dispatch]
   );
 
+  // We set selected to false because once the user selects a prompt, we convert
+  // the chip into a message in the chat history.
   const suggestedPrompts = [
     {
       label: QuickActions[ActionType.COMPILATION],
       onClick: () => handleClick(ActionType.COMPILATION),
       show: showCompilationOption,
+      selected: false,
     },
     {
       label: QuickActions[ActionType.VALIDATION],
       onClick: () => handleClick(ActionType.VALIDATION),
       show: showValidationOption,
+      selected: false,
     },
     {
       label: QuickActions[ActionType.GENERIC_HELP],
       onClick: () => handleClick(ActionType.GENERIC_HELP),
       show: showGenericErrorOption,
+      selected: false,
     },
   ];
 
-  return <DeprecatedSuggestedPrompts suggestedPrompts={suggestedPrompts} />;
+  return <SuggestedPrompts suggestedPrompts={suggestedPrompts} />;
 };
 
 export default AITutorSuggestedPrompts;
