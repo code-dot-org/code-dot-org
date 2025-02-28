@@ -91,7 +91,12 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       helperMessage={helperMessage}
       helperIcon={helperIcon}
       errorMessage={errorMessage}
-      className={classNames(moduleStyles.textFieldWrapper, className)}
+      className={classNames(
+        moduleStyles.textField,
+        moduleStyles[`textField-color-${color}`],
+        moduleStyles[`textField-size-${size}`],
+        className,
+      )}
       aria-describedby={HTMLAttributes['aria-describedby']}
     >
       <input
@@ -106,14 +111,9 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         minLength={minLength}
         autoComplete={autoComplete}
         onChange={onChange}
-        className={classNames(
-          {
-            [moduleStyles.hasError]: errorMessage,
-          },
-          moduleStyles.textField,
-          moduleStyles[`textField-color-${color}`],
-          moduleStyles[`textField-size-${size}`],
-        )}
+        className={classNames({
+          [moduleStyles.hasError]: errorMessage,
+        })}
         {...HTMLAttributes}
         aria-disabled={disabled || HTMLAttributes['aria-disabled']}
       />
