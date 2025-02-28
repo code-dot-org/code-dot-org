@@ -35,11 +35,15 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
     document.body.style.cursor = cursor;
   }, [isDragging, isActive, isVertical]);
 
-  const grabbableClass = useMemo(() => {
+  const grabbableClass = isVertical
+    ? moduleStyles.verticalGrabbable
+    : moduleStyles.horizontalGrabbable;
+
+  const resizingBarClass = useMemo(() => {
     const className = [
       isVertical
-        ? moduleStyles.verticalGrabbable
-        : moduleStyles.horizontalGrabbable,
+        ? moduleStyles.verticalResizing
+        : moduleStyles.horizontalResizing,
     ];
     if (isDragging || isActive) {
       // When we are dragging or the resize bar is active, we show the wider
@@ -56,7 +60,7 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   return (
     <div className={classNames(moduleStyles.resizeBar, layoutClass)}>
       <div
-        className={classNames(moduleStyles.grabbableDiv, grabbableClass)}
+        className={classNames(moduleStyles.absoluteBar, grabbableClass)}
         {...separatorProps}
         // TODO: the separator props are applying role "separator" as well as min/max/now aria values.
         // Is it ok to ignore this warning?
@@ -67,7 +71,11 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
         onBlur={() => setIsActive(false)}
         onMouseEnter={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
-      />
+      >
+        <div
+          className={classNames(moduleStyles.absoluteBar, resizingBarClass)}
+        />
+      </div>
     </div>
   );
 };
