@@ -26,12 +26,12 @@ Feature: View all pages on the teacher dashboard
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
     # Stats tab
-    And I click selector "a:contains(Stats)" once I see it
+    And I click selector "#uitest-local-nav-sidebar-option a:contains(Stats)" once I see it
     And I wait until element "#uitest-stats-table" is visible
     And element "#uitest-stats-table tr:eq(1)" contains text "Sally"
 
     # Roster tab
-    And I click selector "a:contains(Roster)" once I see it
+    And I click selector "#uitest-local-nav-sidebar-option a:contains(Roster)" once I see it
     And I wait until element "#uitest-manage-students-table" is visible
     And element "#uitest-manage-students-table tr:eq(1)" contains text "Sally"
     And I wait until element "#uitest-privacy-text" is visible
@@ -40,14 +40,14 @@ Feature: View all pages on the teacher dashboard
     And element "#uitest-privacy-link" contains text "Just looking for a letter"
 
     # Text responses tab
-    And I click selector "a:contains(Text Responses)" once I see it
+    And I click selector "#uitest-local-nav-sidebar-option a:contains(Text Responses)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
     # Assessments/Surveys tab: anonymous survey
-    And I click selector "a:contains(Assessments/Surveys)" once I see it
+    And I click selector "#uitest-local-nav-sidebar-option a:contains(Assessments)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
