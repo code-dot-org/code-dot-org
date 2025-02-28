@@ -180,10 +180,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
       if (currentChannelId) {
-        // const formData = new FormData();
-        // for (const file of acceptedFiles) {
-        //   formData.append('files[]', file, file.name);
-        // }
         fetch(`/v3/assets/${currentChannelId}/${acceptedFiles[0].name}`, {
           method: 'PUT',
           body: acceptedFiles[0],
@@ -207,7 +203,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {canChatWithModel && (
           <div className={moduleStyles.messageEditorRow}>
             <div {...getRootProps()}>
-              <input {...getInputProps()} />
+              <input {...getInputProps({multiple: false})} />
               <Button
                 isIconOnly={true}
                 icon={plusIcon}
