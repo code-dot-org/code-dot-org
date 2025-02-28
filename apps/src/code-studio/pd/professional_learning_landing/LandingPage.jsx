@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import DCDO from '@cdo/apps/dcdo';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -28,6 +29,8 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import experiments from '@cdo/apps/util/experiments';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -697,6 +700,14 @@ function LandingPage({
         {currentTab === 'workshopOrganizerCenter' &&
           RenderWorkshopOrganizerCenterTab()}
       </main>
+      {experiments.isEnabled('ai-differentiation') && (
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.GENERAL}
+          scriptId={null}
+          scriptName={null}
+          unitDisplayName={null}
+        />
+      )}
     </>
   );
 }
