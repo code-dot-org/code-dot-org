@@ -1,12 +1,13 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiTutorInteractionStatus as AITutorInteractionStatus,
   AiTutorTypes as AITutorTypes,
 } from '@cdo/generated-scripts/sharedConstants';
-
-// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
-export type AITutorTypesValue = string;
-export type AITutorInteractionStatusValue = string;
+export type AITutorTypesValue = ValueOf<typeof AITutorTypes>;
+export type AITutorInteractionStatusValue = ValueOf<
+  typeof AITutorInteractionStatus
+>;
 
 export {AITutorInteractionStatus, AITutorTypes};
 
@@ -14,7 +15,7 @@ export interface ChatCompletionMessage {
   id?: number;
   role: Role;
   chatMessageText: string;
-  status: string;
+  status: AITutorInteractionStatusValue;
   timestamp?: string;
 }
 

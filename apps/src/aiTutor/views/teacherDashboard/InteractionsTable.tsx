@@ -49,6 +49,7 @@ const STATUS_LABELS: StatusLabels = {
   profanity_violation: 'Profanity Violation',
   ok: 'Successful',
   unknown: 'Unknown Status',
+  user_input_too_large: 'User Input Too Large',
 };
 
 enum TimeFilter {
@@ -183,7 +184,13 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
       },
       cell: {
-        formatters: [(status: string) => <span>{STATUS_LABELS[status]}</span>],
+        formatters: [
+          (status: string) => (
+            <span>
+              {STATUS_LABELS[status as AITutorInteractionStatusValue]}
+            </span>
+          ),
+        ],
         props: {style: style.cell},
       },
     },
@@ -238,7 +245,11 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         selectedUserIds.length === 0 ||
         selectedUserIds.includes(`${message.userId}`);
       const timeMatch = isTimeMatch(message.createdAt);
-      return statusMatch && userMatch && timeMatch;
+
+      // Exclude 'user_input_too_large' from being displayed in the table
+      const excludeStatus = message.status !== 'user_input_too_large';
+
+      return statusMatch && userMatch && timeMatch && excludeStatus;
     })
     .sort((a, b) => moment(b.createdAt).diff(moment(a.createdAt)));
 
