@@ -23,7 +23,7 @@ class FilesApi < Sinatra::Base
   # Can set this to an empty array if we do not want aichat checked for profanity.
   LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', [])
 
-  BACKPACK_PROGRAM_FILE_TYPES = ['.java', '.py']
+  BACKPACK_PROGRAM_FILE_TYPES = ['.csv', '.java', '.py', '.txt']
 
   DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES = 0.3
 
