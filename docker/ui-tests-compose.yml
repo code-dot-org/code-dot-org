@@ -37,16 +37,22 @@ services:
       - selenium-chrome
       - ui-tests-redis
     command: /bin/sh -c "docker/ui_tests.sh"
+    expose:
+      - "3000" # puma web server
     networks:
       cdo_network_test:
         aliases:
-          - localhost-studio.code.org
-          - localhost.code.org
-          - localhost.hourofcode.com
-          - localhost.codeprojects.org
+          - ui-tests.code.org
+          - ui-tests-studio.code.org
+          - ui-tests.hourofcode.com
+          - ui-tests.csedweek.org
 
   ui-tests-redis:
     image: redis
+    networks:
+      - cdo_network_test
+    expose:
+      - "6379"
 
   selenium-chrome:
     hostname: selenium-chrome
@@ -58,18 +64,12 @@ services:
       DISPLAY: ':100.0'
       JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
     shm_size: '2gb'
+    networks:
+      - cdo_network_test
     expose:
       - "5910" # The selenium direct VNC port
       - "4444" # The selenium router port
       - "7910" # The selenium NoVNC service port
-    ports:
-      - "5910:5910" # The selenium direct VNC port
-      - "4444:4444" # The selenium router port
-      - "7910:7910" # The selenium NoVNC service port
-    networks:
-      cdo_network_test:
-        aliases:
-          - selenium.chrome
 
 volumes:
   mysqldata:
