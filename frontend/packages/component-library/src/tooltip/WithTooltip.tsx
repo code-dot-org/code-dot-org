@@ -157,7 +157,13 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       <div {...containerProps}>{children}</div>
       {showTooltip &&
         createPortal(
-          <div role="tooltip" style={{padding: '10px'}}>
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+          <div
+            role="tooltip"
+            style={{padding: '10px'}}
+            onMouseEnter={event => handleShowTooltip(true, event, true)}
+            onMouseLeave={handleHideTooltip}
+          >
             <Tooltip
               {...tooltipProps}
               ref={tooltipRef}
