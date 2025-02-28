@@ -192,20 +192,30 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  // There are 3 ways to "meet validation" for a level:
+  // There are 4 ways to "meet validation" for a level:
   // If the level is a predict level, the user must run the code.
-  // Otherwise, if the level has conditions, they must be satisfied.
-  // If the level has no conditions and is not a predict level,
-  // the user must run their code at least once.
+  // If the level has conditions, they must be satisfied.
+  // If the level is a submittable level and has no conditions,
+  // the user must run and edit their code.
+  // Otherwise, the user must run their code at least once.
   const hasMetValidation = useMemo(() => {
     if (predictSettings?.isPredictLevel) {
       return hasRun;
     } else if (hasConditions) {
       return satisfied;
-    } else {
+    } else if (isSubmittable) {
       return hasRun && hasEdited;
+    } else {
+      return hasRun;
     }
-  }, [predictSettings, hasConditions, satisfied, hasRun, hasEdited]);
+  }, [
+    predictSettings?.isPredictLevel,
+    hasConditions,
+    isSubmittable,
+    hasRun,
+    satisfied,
+    hasEdited,
+  ]);
 
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)

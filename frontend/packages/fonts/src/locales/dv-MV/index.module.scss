@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-thaana/scss/mixins' as NotoSansThaana;
+@include NotoSansThaana.faces($family: 'Noto Sans Thaana');
+
+.className {
+  font-family: 'Noto Sans Thaana', sans-serif;
+}

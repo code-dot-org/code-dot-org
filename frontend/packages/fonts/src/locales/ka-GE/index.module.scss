@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-georgian/scss/mixins' as NotoSansGeorgian;
+@include NotoSansGeorgian.faces($family: 'Noto Sans Georgian');
+
+.className {
+  font-family: 'Noto Sans Georgian', sans-serif;
+}

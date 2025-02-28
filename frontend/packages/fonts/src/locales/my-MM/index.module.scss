@@ -1,0 +1,6 @@
+@use '@fontsource/noto-sans-myanmar/scss/mixins' as NotoSansMyanmar;
+@include NotoSansMyanmar.faces($family: 'Noto Sans Myanmar');
+
+.className {
+  font-family: 'Noto Sans Myanmar', sans-serif;
+}

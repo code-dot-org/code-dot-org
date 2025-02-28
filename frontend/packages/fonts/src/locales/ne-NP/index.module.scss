@@ -1,0 +1,7 @@
+@use '@fontsource-variable/noto-sans-devanagari/scss/mixins' as
+  NotoSansDevanagari;
+@include NotoSansDevanagari.faces($family: 'Noto Sans Devanagari');
+
+.className {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}

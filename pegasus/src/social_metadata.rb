@@ -34,6 +34,8 @@ def get_social_metadata_for_page(request)
     music_lab: {path: "/shared/images/social-media/music-lab.png", width: 1200, height: 630},
     music_lab_jam: {path: "/shared/images/social-media/music-lab-jam.png", width: 1200, height: 630},
     lms: {path: "/shared/images/social-media/lms.png", width: 1200, height: 630},
+    teach: {path: "/shared/images/teach-page-top.png", width: 1200, height: 630},
+    students: {path: "/shared/images/courses-art-k-5.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -44,7 +46,7 @@ def get_social_metadata_for_page(request)
     "code.org" => {
       "default" => {
         title: hoc_s(:hoc2019_header),
-        description: I18n.t(:og_description),
+        description: hoc_s(:code_org_og_description),
         image: images[:kids_with_ipads]
       }
     },
@@ -139,10 +141,33 @@ def get_social_metadata_for_page(request)
         image: images[:lms]
       }
     },
+    "teach" => {
+      "default" => {
+        title: hoc_s("teach_page_top_heading"),
+        description: hoc_s("teach_page_top_desc_01"),
+        image: images[:teach]
+      }
+    },
+    "students" => {
+      "default" => {
+        title: hoc_s("students_og_title"),
+        description: hoc_s("student_courses_explore_desc"),
+        image: images[:students]
+      }
+    },
+    "learn" => {
+      "default" => {
+        title: hoc_s("hoc_activities.title"),
+        description: hoc_s("hoc_activities.seo_desc"),
+        image: images[:hoc_2024_social]
+      }
+    },
   }
 
-  if request.site == "hourofcode.com"
+  if request.path == "/" && request.site == "hourofcode.com"
     page = request.site
+  elsif request.path.include?("/learn") && request.site == "hourofcode.com"
+    page = "learn"
   elsif request.path == "/" && request.site == "code.org"
     page = request.site
   elsif request.path == "/minecraft" && request.site == "code.org"
@@ -169,6 +194,10 @@ def get_social_metadata_for_page(request)
     page = "music_lab"
   elsif request.path == "/lms" && request.site == "code.org"
     page = "lms"
+  elsif request.path == "/teach" && request.site == "code.org"
+    page = "teach"
+  elsif request.path == "/students" && request.site == "code.org"
+    page = "students"
   else
     return {}
   end

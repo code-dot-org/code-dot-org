@@ -1,22 +1,15 @@
 import {default as RtlPreview} from 'storybook-addon-rtl/preview';
+import {loadFonts} from '@code-dot-org/fonts';
+
+import '@code-dot-org/fonts/index.css';
 import './preview.module.scss';
 
 /**
  * Ensure fonts are loaded prior to rendering the story
  */
 const fontLoader = async () => {
-  const fontsToLoad = ['1rem Figtree', '1rem Noto Sans'];
-
-  const fontLoaderPromise = await Promise.all(
-    // Load individual fonts
-    fontsToLoad.map(font => document.fonts.load(font)),
-  ).then(() => {
-    // Now, wait for the document to notate fonts are ready
-    return document.fonts.ready;
-  });
-
   return {
-    fonts: await fontLoaderPromise,
+    fonts: await loadFonts(),
   };
 };
 

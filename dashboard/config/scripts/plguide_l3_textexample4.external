@@ -1,0 +1,57 @@
+name 'PLGuide_L3_TextExample4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Title
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 95%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus, finibus vel sem in, egestas ultrices eros. Nullam feugiat interdum diam id gravida. Vestibulum ornare lorem turpis, ut consequat ex tristique eu. Mauris luctus massa id lectus molestie malesuada. Nullam porttitor a elit sed interdum. Nullam tellus arcu, dignissim dictum nisl ac, pellentesque vestibulum tortor. Nulla vehicula mi eu orci vulputate, eu lacinia est porta. Fusce imperdiet nunc sit amet risus condimentum, eget pulvinar nisi feugiat. Vivamus ac tincidunt enim. Duis sed interdum eros. Nam quis velit molestie, vestibulum ipsum vitae, hendrerit eros. Nulla venenatis, tortor in dignissim suscipit, est urna porta erat, ac pretium diam sem vel neque.
+    </p>
+</div>
+
+## Subtitle
+
+<img src="https://images.code.org/691352d88e9f1f926ae50aaf7eacc547-image-1739912583738.png" 
+     alt="ADD ALT TEXT" 
+     style="width: 25%; border-radius: 10px; margin: 0px 0px 20px 20px; float: right;">
+
+#### Nulla risus lectus, euismod in ultricies sed, sodales a nulla. Vestibulum cursus dignissim aliquam. Nunc lacinia elit ipsum, id placerat neque efficitur vel. Phasellus eget sem scelerisque est consectetur condimentum. 
+
+#### Aliquam suscipit justo quis lorem venenatis, id sollicitudin ipsum porta. Nullam hendrerit lectus felis, sit amet congue neque tempus dictum. Cras accumsan eros nibh, nec fringilla mi fermentum id. Nullam tincidunt mollis interdum. 
+
+#### Aenean tempor dui mattis nulla ultrices, in faucibus tortor consequat. Aliquam sagittis sem tortor, et mattis arcu tincidunt sit amet. Ut condimentum, velit et sollicitudin efficitur, magna nulla facilisis mi, vel fermentum orci augue a augue.
+<br>
+
+___
+
+```html
+# Title
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 95%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus, finibus vel sem in, egestas ultrices eros. Nullam feugiat interdum diam id gravida. Vestibulum ornare lorem turpis, ut consequat ex tristique eu. Mauris luctus massa id lectus molestie malesuada. Nullam porttitor a elit sed interdum. Nullam tellus arcu, dignissim dictum nisl ac, pellentesque vestibulum tortor. Nulla vehicula mi eu orci vulputate, eu lacinia est porta. Fusce imperdiet nunc sit amet risus condimentum, eget pulvinar nisi feugiat. Vivamus ac tincidunt enim. Duis sed interdum eros. Nam quis velit molestie, vestibulum ipsum vitae, hendrerit eros. Nulla venenatis, tortor in dignissim suscipit, est urna porta erat, ac pretium diam sem vel neque.
+    </p>
+</div>
+
+## Subtitle
+
+<img src="https://images.code.org/691352d88e9f1f926ae50aaf7eacc547-image-1739912583738.png" 
+     alt="ADD ALT TEXT" 
+     style="width: 25%; border-radius: 10px; margin: 0px 0px 20px 20px; float: right;">
+
+#### Nulla risus lectus, euismod in ultricies sed, sodales a nulla. Vestibulum cursus dignissim aliquam. Nunc lacinia elit ipsum, id placerat neque efficitur vel. Phasellus eget sem scelerisque est consectetur condimentum. 
+
+#### Aliquam suscipit justo quis lorem venenatis, id sollicitudin ipsum porta. Nullam hendrerit lectus felis, sit amet congue neque tempus dictum. Cras accumsan eros nibh, nec fringilla mi fermentum id. Nullam tincidunt mollis interdum. 
+
+#### Aenean tempor dui mattis nulla ultrices, in faucibus tortor consequat. Aliquam sagittis sem tortor, et mattis arcu tincidunt sit amet. Ut condimentum, velit et sollicitudin efficitur, magna nulla facilisis mi, vel fermentum orci augue a augue.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
