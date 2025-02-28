@@ -13,8 +13,9 @@ interface ResizeBarProps {
 export const RESIZE_BAR_SIZE_PX = 1;
 
 // A resize bar that can be dragged to resize two adjacent panels.
-// The visible bar starts out 1px wide. There is an absolutely-positioned 5px bar
-// that is used for grabbing, and becomes visible when it is hovered/focused or being dragged.
+// The visible bar starts out 1px wide. There is an absolutely-positioned 7px bar
+// that is used for grabbing, and a 3px "resize" bar that becomes visible the grabbable bar
+// is hovered/focused or being dragged.
 // The resize bar should be used with useResizable from react-resizable-layout.
 const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   isVertical,
@@ -57,23 +58,29 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
     ? moduleStyles.verticalBar
     : moduleStyles.horizontalBar;
 
+  const {onPointerDown, ...mainSeparatorProps} = separatorProps;
+
   return (
     <div className={classNames(moduleStyles.resizeBar, layoutClass)}>
+      {/* The visible bar */}
       <div
-        className={classNames(moduleStyles.absoluteBar, grabbableClass)}
-        {...separatorProps}
+        className={classNames(moduleStyles.absoluteBar, resizingBarClass)}
+        {...mainSeparatorProps}
         // TODO: the separator props are applying role "separator" as well as min/max/now aria values.
         // Is it ok to ignore this warning?
         // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
-        onFocus={() => setIsActive(true)}
-        onBlur={() => setIsActive(false)}
-        onMouseEnter={() => setIsActive(true)}
-        onMouseLeave={() => setIsActive(false)}
       >
+        {/* The grabbable bar. We take onPointerDown from the separater props and put it here to make the bar
+        easier to grab. */}
         <div
-          className={classNames(moduleStyles.absoluteBar, resizingBarClass)}
+          onPointerDown={onPointerDown}
+          className={classNames(moduleStyles.absoluteBar, grabbableClass)}
+          onFocus={() => setIsActive(true)}
+          onBlur={() => setIsActive(false)}
+          onMouseEnter={() => setIsActive(true)}
+          onMouseLeave={() => setIsActive(false)}
         />
       </div>
     </div>
