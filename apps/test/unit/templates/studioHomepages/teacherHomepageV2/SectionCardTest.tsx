@@ -44,7 +44,9 @@ describe('SectionCard', () => {
   };
 
   function renderComponent() {
-    return render(<SectionCard section={section} />);
+    return render(
+      <SectionCard section={section} onDeleteClickCallback={() => {}} />
+    );
   }
 
   it('renders section name in header', async () => {

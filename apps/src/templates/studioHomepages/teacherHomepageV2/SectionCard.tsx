@@ -3,13 +3,10 @@ import {
   Heading5,
   OverlineOneText,
 } from '@code-dot-org/component-library/typography';
-import React, {useState} from 'react';
+import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
-import {
-  removeSectionOrThrow,
-  toggleSectionHidden,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {toggleSectionHidden} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {
@@ -21,19 +18,19 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {SectionDeleteModal} from './SectionDeleteModal';
-
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
   section: Section;
+  onDeleteClickCallback: (sectionId: number) => void;
 }
 
-export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
+export const SectionCard: React.FC<SectionCardProps> = ({
+  section,
+  onDeleteClickCallback,
+}) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-
-  const [deletingSection, setDeletingSection] = useState<boolean>(false);
 
   const onSectionSettingsClick = () => {
     navigate(
@@ -72,27 +69,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
   };
 
   const onDeleteClick = () => {
-    setDeletingSection(true);
-  };
-
-  const onCloseDeleteDialog = () => {
-    setDeletingSection(false);
-  };
-
-  const deleteSection = () => {
-    $.ajax({
-      url: `/dashboardapi/sections/${section.id}`,
-      method: 'DELETE',
-    })
-      .done(() => {
-        dispatch(removeSectionOrThrow(section.id));
-      })
-      .fail((jqXhr, status) => {
-        // We may want to handle this more cleanly in the future, but for now this
-        // matches the experience we got in angular
-        alert(i18n.unexpectedError());
-        console.error(status);
-      });
+    onDeleteClickCallback(section.id);
   };
 
   return (
@@ -174,12 +151,6 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           />
         </div>
       </div>
-      {deletingSection && (
-        <SectionDeleteModal
-          onCloseCallback={onCloseDeleteDialog}
-          sectionDeleteCallback={deleteSection}
-        />
-      )}
     </div>
   );
 };
