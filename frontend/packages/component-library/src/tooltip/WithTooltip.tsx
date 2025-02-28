@@ -1,10 +1,12 @@
 import React, {
+  cloneElement,
   isValidElement,
   useEffect,
   useRef,
   useState,
   useCallback,
   ReactNode,
+  HTMLAttributes,
 } from 'react';
 import {createPortal} from 'react-dom';
 
@@ -122,38 +124,32 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   };
 
   // Wrap children in a container with event handlers and additional padding
-  const containerProps = {
-    'aria-describedby': tooltipProps.tooltipId,
-    onFocus: (event: React.FocusEvent<HTMLElement>) => {
-      handleShowTooltip(true, event);
-      if (isValidElement(children)) {
+  const componentToWrap =
+    isValidElement<HTMLAttributes<HTMLElement>>(children) &&
+    cloneElement(children, {
+      'aria-describedby': tooltipProps.tooltipId,
+      onFocus: (event: React.FocusEvent<HTMLElement>) => {
+        handleShowTooltip(true, event);
         children.props.onFocus?.(event);
-      }
-    },
-    onBlur: (event: React.FocusEvent<HTMLElement>) => {
-      handleHideTooltip();
-      if (isValidElement(children)) {
+      },
+      onBlur: (event: React.FocusEvent<HTMLElement>) => {
+        handleHideTooltip();
         children.props.onBlur?.(event);
-      }
-    },
-    onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-      handleShowTooltip(true, event);
-      if (isValidElement(children)) {
+      },
+      onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        handleShowTooltip(true, event);
         children.props.onMouseEnter?.(event);
-      }
-    },
-    onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-      handleHideTooltip();
-      if (isValidElement(children)) {
+      },
+      onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        handleHideTooltip();
         children.props.onMouseLeave?.(event);
-      }
-    },
-    tabIndex: 0, // Make the container focusable
-  };
+      },
+      tabIndex: 0, // Make the container focusable
+    });
 
   return (
     <TooltipOverlay className={tooltipOverlayClassName}>
-      <div {...containerProps}>{children}</div>
+      {componentToWrap}
       {showTooltip &&
         createPortal(
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
