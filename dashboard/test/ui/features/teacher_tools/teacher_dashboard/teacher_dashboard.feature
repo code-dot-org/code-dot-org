@@ -22,9 +22,8 @@ Feature: Using the teacher dashboard
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "a:contains(Sally)" is visible
     When I click selector "a:contains(Sally)" to load a new page
-    And I wait until element "#teacher-panel-container" is visible
-    And check that the URL contains "/s/allthethings"
-    And check that the URL contains "viewAs=Instructor"
+    And check that the URL contains "/unit/allthethings"
+    And check that the URL contains "userId="
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
