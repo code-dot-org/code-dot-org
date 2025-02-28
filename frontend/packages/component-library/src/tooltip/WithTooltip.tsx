@@ -148,6 +148,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         children.props.onMouseLeave?.(event);
       }
     },
+    tabIndex: 0, // Make the container focusable
   };
 
   return (

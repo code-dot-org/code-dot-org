@@ -52,7 +52,8 @@ describe('Design System - Tags Component', () => {
       screen.getByText('This is the content of tag1 tooltip'),
     ).toBeInTheDocument();
 
-    // Tab to second tooltip and ensure it appears and first disappears
+    // Tab to tooltip then second tag and ensure it appears and first disappears
+    await user.tab();
     await user.tab();
 
     expect(
