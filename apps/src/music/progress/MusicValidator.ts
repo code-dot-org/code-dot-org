@@ -445,27 +445,25 @@ export default class MusicValidator extends Validator {
     const studentEvents = [...this.getPlaybackEvents()];
     const exemplarEvents = this.getExemplarPlaybackEvents();
 
-    if (studentEvents.length !== exemplarEvents.length) {
-      return false;
-    }
+    const studentMatchesExemplar = studentEvents.every(studentEvent =>
+      this.eventMatchFound(studentEvent, exemplarEvents)
+    );
+    const exemplarMatchesStudent = exemplarEvents.every(exemplarEvent =>
+      this.eventMatchFound(exemplarEvent, studentEvents)
+    );
 
-    // For each exemplar event, find a matching student event.
-    return exemplarEvents.every(exemplar => {
-      const matchIndex = studentEvents.findIndex(
-        event =>
-          event.id === exemplar.id &&
-          event.type === exemplar.type &&
-          event.when === exemplar.when
-      );
+    return studentMatchesExemplar && exemplarMatchesStudent;
+  }
 
-      if (matchIndex === -1) {
-        // No matching event found.
-        return false;
-      }
-
-      // Remove the matched event to prevent double matching.
-      studentEvents.splice(matchIndex, 1);
-      return true;
-    });
+  private eventMatchFound(
+    currentEvent: PlaybackEvent,
+    comparisonEvents: PlaybackEvent[]
+  ): boolean {
+    return comparisonEvents.some(
+      event =>
+        event.id === currentEvent.id &&
+        event.type === currentEvent.type &&
+        event.when === currentEvent.when
+    );
   }
 }
