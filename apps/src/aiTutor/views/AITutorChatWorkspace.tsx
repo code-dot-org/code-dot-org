@@ -29,7 +29,11 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   return (
     <div id="ai-tutor-chat-workspace">
       {storedMessages.map(message => (
-        <ChatMessage text={message.chatMessageText} role={message.role} />
+        <ChatMessage
+          text={message.chatMessageText}
+          role={message.role}
+          customStyles={style}
+        />
       ))}
       {showWaitingAnimation()}
       <WarningModal />
