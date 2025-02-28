@@ -1,19 +1,22 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import Modal from '@code-dot-org/component-library/modal';
 import React from 'react';
 
 import i18n from '@cdo/locale';
 
-export interface SectionDeleteDialogProps {
+import styles from './teacherHomepage.module.scss';
+
+export interface SectionDeleteModalProps {
   onCloseCallback: () => void;
   sectionDeleteCallback: () => void;
 }
 
-export const SectionDeleteDialog: React.FC<SectionDeleteDialogProps> = ({
+export const SectionDeleteModal: React.FC<SectionDeleteModalProps> = ({
   onCloseCallback,
   sectionDeleteCallback,
 }) => {
   return (
-    <Dialog
+    <Modal
+      className={styles.deleteModal}
       title={i18n.deleteSection()}
       description={i18n.deleteSectionConfirm()}
       onClose={onCloseCallback}

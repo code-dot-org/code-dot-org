@@ -21,7 +21,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {SectionDeleteDialog} from './SectionDeleteDialog';
+import {SectionDeleteModal} from './SectionDeleteModal';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -175,7 +175,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
         </div>
       </div>
       {deletingSection && (
-        <SectionDeleteDialog
+        <SectionDeleteModal
           onCloseCallback={onCloseDeleteDialog}
           sectionDeleteCallback={deleteSection}
         />
