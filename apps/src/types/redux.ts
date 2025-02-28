@@ -62,7 +62,7 @@ export interface RootState {
 
 // Temporary type definition for the result of
 // manageStudentsRedux.js:convertStudentServerData
-interface Student {
+export interface Student {
   id: number;
   name: string;
   familyName?: string;

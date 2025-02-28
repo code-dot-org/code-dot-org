@@ -3,11 +3,25 @@ import {
   Heading5,
   OverlineOneText,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
+import {
+  removeSectionOrThrow,
+  toggleSectionHidden,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {
+  TEACHER_NAVIGATION_SECTIONS_URL,
+  TEACHER_NAVIGATION_PATHS,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {Student} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import {SectionDeleteDialog} from './SectionDeleteDialog';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -16,28 +30,69 @@ interface SectionCardProps {
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const [deletingSection, setDeletingSection] = useState<boolean>(false);
+
   const onSectionSettingsClick = () => {
-    // open section settings
+    navigate(
+      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`
+    );
   };
 
   const onRosterClick = () => {
-    // open roster
+    navigate(
+      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`
+    );
   };
 
   const onLoginCardsClick = () => {
-    // open login cards
+    navigate(
+      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
+    );
   };
 
   const onCertificatesClick = () => {
-    // open certificates
+    HttpClient.get(`/dashboardapi/sections/${section.id}/students`)
+      .then(response => response.json())
+      .then((json: Student[]) => {
+        const students = json.map(student => student.name);
+        const courseVersionName: string = section.courseVersionName || '';
+        const urlParams = new URLSearchParams([
+          ['course', btoa(courseVersionName)],
+        ]);
+        students.map(student => urlParams.append('names[]', student));
+        window.location.href = `/certificates/batch?${urlParams.toString()}`;
+      });
   };
 
   const onArchiveClick = () => {
-    // archive section
+    dispatch(toggleSectionHidden(section.id));
   };
 
   const onDeleteClick = () => {
-    // delete section
+    setDeletingSection(true);
+  };
+
+  const onCloseDeleteDialog = () => {
+    setDeletingSection(false);
+  };
+
+  const deleteSection = () => {
+    $.ajax({
+      url: `/dashboardapi/sections/${section.id}`,
+      method: 'DELETE',
+    })
+      .done(() => {
+        dispatch(removeSectionOrThrow(section.id));
+      })
+      .fail((jqXhr, status) => {
+        // We may want to handle this more cleanly in the future, but for now this
+        // matches the experience we got in angular
+        alert(i18n.unexpectedError());
+        console.error(status);
+      });
   };
 
   return (
@@ -63,7 +118,10 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
             menuPlacement="right"
             triggerButtonProps={{
               isIconOnly: true,
-              icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
+              icon: {
+                iconName: 'ellipsis-vertical',
+                iconStyle: 'solid',
+              },
               color: 'gray',
               type: 'tertiary',
               size: 's',
@@ -96,9 +154,14 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
                 onClick: onCertificatesClick,
               },
               {
-                value: 'archive',
-                label: i18n.archive(),
-                icon: {iconName: 'box-archive', iconStyle: 'solid'},
+                value: section.hidden ? 'restore' : 'archive',
+                label: section.hidden
+                  ? i18n.restoreClassSection()
+                  : i18n.archive(),
+                icon: {
+                  iconName: section.hidden ? 'window-restore' : 'box-archive',
+                  iconStyle: 'solid',
+                },
                 onClick: onArchiveClick,
               },
               {
@@ -111,6 +174,12 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           />
         </div>
       </div>
+      {deletingSection && (
+        <SectionDeleteDialog
+          onCloseCallback={onCloseDeleteDialog}
+          sectionDeleteCallback={deleteSection}
+        />
+      )}
     </div>
   );
 };
