@@ -90,7 +90,7 @@
     -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
     box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
     background-clip: padding-box;
-    padding: 0.25rem 0 0;
+    padding: 0.25rem 0 0.25rem;
     white-space: nowrap;
 
     ul {
@@ -270,13 +270,13 @@
     background-color: var(--neutral-base-white);
   }
 
-  &:has(.dropdownButton:hover) {
+  &:has(.dropdownButton:hover),
+  &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-black);
       background-color: var(--neutral-gray-10);
     }
   }
-
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-black);
@@ -340,7 +340,8 @@
     background-color: var(--neutral-base-white);
   }
 
-  &:has(.dropdownButton:hover) {
+  &:has(.dropdownButton:hover),
+  &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-black);
       background-color: var(--neutral-gray-10);
@@ -420,7 +421,8 @@
     }
   }
 
-  &:has(.dropdownButton:hover) {
+  &:has(.dropdownButton:hover),
+  &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-white);
       background-color: var(--neutral-gray-90);

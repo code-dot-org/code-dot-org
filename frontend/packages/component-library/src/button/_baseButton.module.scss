@@ -37,7 +37,8 @@ a.button {
     }
   }
 
-  &:hover {
+  &:hover,
+  &.button-withForcedHover {
     box-shadow: none;
     text-decoration: none;
   }
@@ -67,7 +68,8 @@ a.button-primary {
     background-color: var(--brand-purple-50);
     color: var(--neutral-base-white);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--brand-purple-70);
     }
 
@@ -82,7 +84,8 @@ a.button-primary {
     background-color: var(--neutral-base-black);
     color: var(--neutral-base-white);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--neutral-gray-80);
     }
 
@@ -97,7 +100,8 @@ a.button-primary {
     background-color: var(--neutral-base-white);
     color: var(--neutral-base-black);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--neutral-gray-20);
     }
 
@@ -112,7 +116,8 @@ a.button-primary {
     background-color: var(--sentiment-error-50);
     color: var(--neutral-base-white);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--sentiment-error-70);
     }
 
@@ -131,7 +136,8 @@ a.button-secondary {
     border: 1px solid var(--brand-purple-50);
     color: var(--brand-purple-50);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--brand-purple-10);
       border: 1px solid var(--brand-purple-50);
       color: var(--brand-purple-50);
@@ -155,7 +161,8 @@ a.button-secondary {
     background-color: var(--neutral-base-white);
     color: var(--neutral-base-black);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--neutral-gray-10);
       border: 1px solid var(--neutral-base-black);
       color: var(--neutral-base-black);
@@ -179,7 +186,8 @@ a.button-secondary {
     background-color: var(--neutral-base-white);
     color: var(--neutral-base-black);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--neutral-gray-10);
       border: 1px solid var(--neutral-gray-40);
       color: var(--neutral-base-black);
@@ -203,7 +211,8 @@ a.button-secondary {
     background-color: var(--neutral-base-black);
     color: var(--neutral-base-white);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--neutral-gray-80);
       border: 1px solid var(--neutral-base-white);
       color: var(--neutral-base-white);
@@ -226,7 +235,8 @@ a.button-secondary {
     border: 1px solid var(--sentiment-error-50);
     color: var(--sentiment-error-50);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--sentiment-error-10);
       border: 1px solid var(--sentiment-error-50);
       color: var(--sentiment-error-50);
@@ -251,7 +261,8 @@ a.button-tertiary {
   &.button-purple {
     color: var(--brand-purple-50);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--brand-purple-10);
       color: var(--brand-purple-50);
     }
@@ -271,7 +282,8 @@ a.button-tertiary {
   &.button-black {
     color: var(--neutral-base-black);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--neutral-gray-20);
       color: var(--neutral-base-black);
     }
@@ -291,7 +303,8 @@ a.button-tertiary {
   &.button-white {
     color: var(--neutral-base-white);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--neutral-white-alpha-30);
       color: var(--neutral-base-white);
     }
@@ -311,7 +324,8 @@ a.button-tertiary {
   &.button-gray {
     color: var(--text-neutral-quaternary);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--background-neutral-quaternary);
       color: var(--text-neutral-quaternary);
     }
@@ -331,7 +345,8 @@ a.button-tertiary {
   &.button-destructive {
     color: var(--sentiment-error-50);
 
-    &:hover {
+    &:hover,
+    &.button-withForcedHover {
       background-color: var(--sentiment-error-10);
       color: var(--sentiment-error-50);
     }

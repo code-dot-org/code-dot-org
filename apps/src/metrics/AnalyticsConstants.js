@@ -27,6 +27,7 @@ const EVENTS = {
   LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
+  SECTION_SETUP_STARTED: 'Section Setup Started',
 
   // School Association
   // Update School Info Dialog
@@ -299,6 +300,7 @@ const EVENTS = {
   AI_TUTOR_CHAT_EVENT: 'AI Tutor was asked a question',
   AI_TUTOR_SUGGESTED_PROMPT_NONE: 'None - general chat',
   AI_TUTOR_SUGGESTED_PROMPT_COMPILATION: 'Compilation',
+  AI_TUTOR_SUGGESTED_PROMPT_GENERIC_HELP: 'Generic Help',
   AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',

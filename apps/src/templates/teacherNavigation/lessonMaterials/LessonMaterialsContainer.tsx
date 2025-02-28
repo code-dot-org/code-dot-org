@@ -295,10 +295,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <Spinner size={'large'} />
         </div>
       ) : (
-        <div>
+        <>
           {renderTeacherResources()}
           {renderStudentResources()}
-        </div>
+        </>
       )}
     </div>
   );

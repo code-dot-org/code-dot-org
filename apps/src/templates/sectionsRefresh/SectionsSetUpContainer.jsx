@@ -42,17 +42,7 @@ const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(
     section
-      ? [
-          {
-            ...Object.keys(section).reduce((acc, cur) => {
-              if (cur !== 'stageExtras') {
-                acc[cur] = section[cur];
-              }
-              return acc;
-            }, {}),
-            lessonExtras: section.stageExtras,
-          },
-        ]
+      ? [section]
       : [
           {
             pairingAllowed: true,

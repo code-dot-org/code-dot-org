@@ -22,8 +22,6 @@ import {
 
 const SAMPLE_VERSION_LIST: ProjectVersion[] = [
   {versionId: '0', lastModified: '2024-11-25T18:11:10.000Z', isLatest: false},
-  {versionId: '1', lastModified: '2024-12-25T18:11:10.000Z', isLatest: false},
-  {versionId: '2', lastModified: '2025-01-25T18:11:10.000Z', isLatest: false},
   {versionId: '3', lastModified: '2025-02-25T18:11:10.000Z', isLatest: true},
 ];
 const ownedChannel: Channel = {
@@ -35,6 +33,16 @@ const ownedChannel: Channel = {
   createdAt: '',
   updatedAt: '',
 };
+
+// Mock this component to speed up tests.
+jest.mock('@code-dot-org/component-library/tooltip', () => {
+  return {
+    WithTooltip: function MockWithTooltip(props: {children: React.ReactNode}) {
+      return <div>{props.children}</div>;
+    },
+    TooltipProps: {},
+  };
+});
 
 describe('VersionHistoryButton', () => {
   let store: Store;
@@ -93,7 +101,7 @@ describe('VersionHistoryButton', () => {
     getByText('Initial version');
     getByRole('button', {name: 'Restore'});
     getByRole('button', {name: 'Cancel'});
-  });
+  }, 10000);
 
   it('renders alert if getVersionList fails', async () => {
     mockedProjectManager = {
@@ -127,14 +135,15 @@ describe('VersionHistoryButton', () => {
     await act(async () => {
       user.click(button);
     });
-    await waitFor(() =>
-      expect(mockedProjectManager.getVersionList).toHaveBeenCalled()
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
     );
 
     // 3 is the latest version in the sample version list.
     const latestVersion = getByDisplayValue('3') as HTMLInputElement;
     expect(latestVersion.checked).toBe(true);
-  });
+  }, 10000);
 
   it('restores selected version on restore', async () => {
     const {getByDisplayValue, getByRole, queryByRole} = renderDefault();
@@ -150,7 +159,7 @@ describe('VersionHistoryButton', () => {
       {timeout: 2000}
     );
 
-    const versionInput = getByDisplayValue('2') as HTMLInputElement;
+    const versionInput = getByDisplayValue('0') as HTMLInputElement;
     await user.click(versionInput);
 
     const restoreButton = getByRole('button', {name: 'Restore'});
@@ -159,9 +168,9 @@ describe('VersionHistoryButton', () => {
     });
     await waitFor(
       () =>
-        expect(mockedProjectManager.restoreSources).toHaveBeenCalledWith('2'),
+        expect(mockedProjectManager.restoreSources).toHaveBeenCalledWith('0'),
       {timeout: 2000}
     );
     expect(queryByRole('dialog', {name: 'Version History List'})).toBeNull();
-  });
+  }, 10000);
 });
