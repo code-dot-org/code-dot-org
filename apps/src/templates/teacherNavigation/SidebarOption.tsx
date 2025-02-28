@@ -44,7 +44,6 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
         [styles.selected]: isSelected,
       })}
       onClick={reportMetric(pathKey)}
-      id="uitest-local-nav-sidebar-option"
     >
       <div className={styles.iconContainer}>
         <FontAwesomeV6Icon
