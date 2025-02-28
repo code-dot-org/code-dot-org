@@ -12,5 +12,5 @@
     = link_to "/users/sign_in?user_return_to=#{request.fullpath}", class: "paragraph" do
       %button= I18n.t('nav.user.signin')
 
-    = link_to "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}" do
+    = link_to "/users/new_sign_up/login_type?user_type=teacher&user_return_to=#{request.fullpath}" do
       %button.blue-button= I18n.t('nav.user.signup')

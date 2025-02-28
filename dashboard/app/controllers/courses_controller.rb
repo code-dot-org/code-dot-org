@@ -63,6 +63,9 @@ class CoursesController < ApplicationController
     @page_title = @unit_group.localized_title
     @page_description = I18n.t("data.course.name.#{@unit_group.name}.description_short", default: '').truncate(200, separator: '.', omission: '.')
 
+    link = UnitGroup.latest_stable_version(@unit_group.family_name)&.link
+    @canonical_url = CDO.studio_url(link) if link
+
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
 

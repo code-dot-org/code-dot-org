@@ -825,7 +825,9 @@ __metadata:
     rimraf: "npm:^6.0.1"
     stylelint: "npm:^16.14.1"
     swiper: "npm:^11.0.5"
+    tsc-alias: "npm:^1.8.11"
     tsup: "npm:^8.3.5"
+    typescript: "npm:^5.7.3"
     typescript-eslint: "npm:^8.15.0"
   peerDependencies:
     classnames: ^2.5.1
@@ -841,6 +843,7 @@ __metadata:
   dependencies:
     "@applitools/eyes-storybook": "npm:^3.52.1"
     "@code-dot-org/component-library-styles": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@dotenv-run/cli": "npm:^1.3.6"
     "@eslint/js": "npm:^9.16.0"
@@ -864,9 +867,53 @@ __metadata:
     sass-loader: "npm:^16.0.3"
     storybook: "npm:^8.4.4"
     storybook-addon-rtl: "npm:^1.0.1"
+    stylelint: "npm:^16.14.1"
     tsx: "npm:^4.19.2"
     typescript-eslint: "npm:^8.17.0"
     wait-on: "npm:^8.0.1"
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/fonts@workspace:*, @code-dot-org/fonts@workspace:packages/fonts":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/fonts@workspace:packages/fonts"
+  dependencies:
+    "@fontsource-variable/figtree": "npm:^5.1.2"
+    "@fontsource-variable/noto-sans": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-arabic": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-armenian": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-bengali": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-devanagari": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-georgian": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-hebrew": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-jp": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-kannada": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-khmer": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-kr": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-sc": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-sinhala": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-tamil": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-tc": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-telugu": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-thaana": "npm:^5.1.1"
+    "@fontsource-variable/noto-sans-thai": "npm:^5.1.1"
+    "@fontsource/barlow-semi-condensed": "npm:^5.1.1"
+    "@fontsource/noto-sans-jp": "npm:^5.1.1"
+    "@fontsource/noto-sans-kr": "npm:^5.1.1"
+    "@fontsource/noto-sans-math": "npm:^5.1.1"
+    "@fontsource/noto-sans-myanmar": "npm:^5.1.1"
+    "@fontsource/noto-sans-sc": "npm:^5.1.1"
+    "@fontsource/noto-sans-tc": "npm:^5.1.1"
+    eslint: "npm:^9.16.0"
+    prettier: "npm:3.3.3"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    sass: "npm:^1.85.0"
+    stylelint: "npm:^16.14.1"
+    tsup: "npm:^8.3.6"
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
   languageName: unknown
   linkType: soft
 
@@ -908,6 +955,7 @@ __metadata:
   resolution: "@code-dot-org/marketing@workspace:apps/marketing"
   dependencies:
     "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
     "@contentful/experiences-sdk-react": "npm:^1.30.3"
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@testing-library/dom": "npm:^10.4.0"
@@ -1703,6 +1751,188 @@ __metadata:
   dependencies:
     fast-deep-equal: "npm:^3.1.3"
   checksum: 10c0/7979ce12724f7b98aea06f0bb9afb20dd869f0ff6fc697517135cbb54e0a36b062cbb38ec176fe43d1fc455576839240df8f33533939ace2d64a6218a6e6b9c1
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/figtree@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "@fontsource-variable/figtree@npm:5.1.2"
+  checksum: 10c0/c0a4d0d0e9a46ad0ff3b48ec63804ffe712383d384e422e35de6ab9bb213b490e2772d04cca652413336d438a17a30f310e11a962302b5b075019599653e3687
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-arabic@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-arabic@npm:5.1.1"
+  checksum: 10c0/2d8ed88f239cf1c9f5e301613cd57d5434838fc2318a4dce08cc2a7711f8279374190b7f2728b85429cf3e212f12ab63ab6c5949be773c57fb58731e6190d302
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-armenian@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-armenian@npm:5.1.1"
+  checksum: 10c0/2299f3c4d19a1c04f62768c9fe1e8857e338af49c3bebbcd8222ddf771f880c95fadedfe435d5749982fd46a42c5989c2b8aaabd8aaabb047f776087efbf165d
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-bengali@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-bengali@npm:5.1.1"
+  checksum: 10c0/3a419ae77165dd6317e1e85a8ce382df1a02137cb4dc1835fa229ecb9e7ccf93e7df61e07c80badb61beadc602f291e8ddd1507cf98c2ef4ce1688492037d68d
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-devanagari@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-devanagari@npm:5.1.1"
+  checksum: 10c0/e3437390c5f6d4140565b23d1f3ba98c7f1dbe7ddb3b571874a9f615b68abe69f2b256ac7e897363fdaa70c820caa37d5477985af7db040c6bf249d368c8dac0
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-georgian@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-georgian@npm:5.1.1"
+  checksum: 10c0/03c2f5d1e92af09b7e32dd1341b5c4f65214e52c666841743c9bf8ac83209270758160cf4fcf761be7d7816481704ef4ee8db8cf6183c8d85c0076eb9981f778
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-hebrew@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-hebrew@npm:5.1.1"
+  checksum: 10c0/f97a6fa24af36694dfb97fcbbce08aead1de6911e6e88aded1e246c1e146f277907cff64c0a2ef918ecc25d647574e86bbf5f5d5c4f4e52e91fce79d622b33c2
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-jp@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-jp@npm:5.1.1"
+  checksum: 10c0/4e7a4f44d509e7e3a0698c3216a5c302a3487d6231e1e9e4b8e29f64f4fca1c88c8172961368a69e484b14a0105777d283266f9194ac9ca6f00f51c8d1c3be71
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-kannada@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-kannada@npm:5.1.1"
+  checksum: 10c0/02ffe08b410c4a410aaf41f8bf48ed49d70c6d6d25f2a9bde60e9da1b2c10b817a17760394a30b08e71a496bed72404dfe77a6f0980a8904d34912e54b5d76f2
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-khmer@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-khmer@npm:5.1.1"
+  checksum: 10c0/4ee70c0d664c75c965f8d153e3a77d9bd60cb243308952527e160ee446a0c9d65b1d84c94de391bd863bbc521a5df6753a2b06b86279e944fae5aee9ed843eb8
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-kr@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-kr@npm:5.1.1"
+  checksum: 10c0/db972d89aa8ae00aaa05be82f057a40fc2c36bdc27a13765a0bed10977268691e60bebaebc19b8b5f4031b6c58bbeea7a6114215d5bdd2a83881e42a32d285da
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-sc@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-sc@npm:5.1.1"
+  checksum: 10c0/f885b36fac3a1c85385b3f4e7b0b2cdab46512226345716e79c49d31be644b0fc104983ece134c87f98c503d39d134a14cf4584cb19efbc67bd13b758a3ee4c0
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-sinhala@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-sinhala@npm:5.1.1"
+  checksum: 10c0/c2ae8679bf1100a7ff8df58bcc2196063b1e846223b2a175eb695c1dfdb8b8ebefaaead1d90ca9c009d50ea6315b6ceaa017ea6d3b7a2580e70e9323c6345104
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-tamil@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-tamil@npm:5.1.1"
+  checksum: 10c0/9d2e971df467e546e2074b6fd141bd36bb592c0a7c474c28e1260833d29176a2705a48da4ff91c208e125bc548980612ed641baa04d9cf2611baaf1f526481e2
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-tc@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-tc@npm:5.1.1"
+  checksum: 10c0/b697a868855f54133fae4f21e16ff4a735ca82c321f04080e9fdb148b2ec3e57d94f954e83034a17e837af80e5f39b9131f73bbfee773689ef2b23c6f7856b4c
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-telugu@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-telugu@npm:5.1.1"
+  checksum: 10c0/8fa5f4aacb05f5cc2cb4f78265492630b4816fef62526b7ba01fd5ac029a638a44f88df1bcf1a982daa1e2767e226f362a2883d8995bb86e5e668219b9375640
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-thaana@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-thaana@npm:5.1.1"
+  checksum: 10c0/343aead6838a78be8d8e9fb3517e1415fd0c9510090c742abd1a931e47e67f181231d51e64b79ba448503db45ef8931760be83b0e031c03249db4aa151455fb6
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans-thai@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans-thai@npm:5.1.1"
+  checksum: 10c0/62adf96c9bd7cee5b86a381569b090df54bf375fb44f33fc305927b41877d604a327b593e91bb32898afe0fcdc95b28bea2f9f192c8895f2771e715057f6302a
+  languageName: node
+  linkType: hard
+
+"@fontsource-variable/noto-sans@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource-variable/noto-sans@npm:5.1.1"
+  checksum: 10c0/0341668dc3c3f24d5f358d7a2cd7f374385ed6742dace3fd0aa735a46af4747bec129798919827cf42e349e584199329770aac7fb5742d6e8e0fdcf820999cd4
+  languageName: node
+  linkType: hard
+
+"@fontsource/barlow-semi-condensed@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource/barlow-semi-condensed@npm:5.1.1"
+  checksum: 10c0/2f3eacbb1b220f65d35387136f90c7848f355695a240307bf6d07634de4128ad76d4d05a230a647640141ce16f6fd9ab6292fc27f2d6220b7a1b2bd79a555b4e
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-jp@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource/noto-sans-jp@npm:5.1.1"
+  checksum: 10c0/98923256457949af3f9b9f024bbdf16ba10fc1c5445b10b770ee71c8ed19ac83ae5adc397976974a4387b42e72bd404a5684e94a434d8b4332a43333950cc22f
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-kr@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource/noto-sans-kr@npm:5.1.1"
+  checksum: 10c0/1e2b2b4e73631a97a4c165a4cca19876cb8403ff9f8f8c6184a868f4ed98fb55ff041c646355e966e704a71ecae1ee32d9033965e976c76120f653b74d4f3b23
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-math@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource/noto-sans-math@npm:5.1.1"
+  checksum: 10c0/7f6c2bfba6cda8f80a3f002e892e63b8e730f75da2c3fc8091dc336d54a8a64b9174bb95310c6731753f69775e632a300fca302368bf9172684c01c0d80c9f64
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-myanmar@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource/noto-sans-myanmar@npm:5.1.1"
+  checksum: 10c0/86fe16912c17c92dcaed5de182b4235f805934107178a6cc89199c219a3d038ea30d2396eac13a7cdd5b30e3981c1175086bad2688bd820ea23d4c1dbeabce51
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-sc@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource/noto-sans-sc@npm:5.1.1"
+  checksum: 10c0/1a50aed84f8ca975b055c3285700f90e4d0a19130193a75211c8ab2c995b24f48e6a4566e89dde3a29f20c7e34b79df19ec0cd626acb112cd2fd05cebd93ab04
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans-tc@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@fontsource/noto-sans-tc@npm:5.1.1"
+  checksum: 10c0/78657cf4c08cfdb311d94e6558d51df3d6042cc1dde625fd6c6b5e5975c7b27e7fd3933b1d14c3a335f5e6f33f39a6cba015732bedb4b1d58f3d55d451bd306e
   languageName: node
   linkType: hard
 
@@ -6785,6 +7015,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^9.0.0":
+  version: 9.5.0
+  resolution: "commander@npm:9.5.0"
+  checksum: 10c0/5f7784fbda2aaec39e89eb46f06a999e00224b3763dc65976e05929ec486e174fe9aac2655f03ba6a5e83875bd173be5283dc19309b7c65954701c02025b3c1d
+  languageName: node
+  linkType: hard
+
 "commondir@npm:^1.0.1":
   version: 1.0.1
   resolution: "commondir@npm:1.0.1"
@@ -9931,7 +10168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.1.0":
+"globby@npm:^11.0.4, globby@npm:^11.1.0":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -12852,6 +13089,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mylas@npm:^2.1.9":
+  version: 2.1.13
+  resolution: "mylas@npm:2.1.13"
+  checksum: 10c0/093dfaf88f444d9da956c68a61ddcfe05ab9411c0024b0c7f4d721639ba7d311ea8f9c052ce617344e67d40982f67614cd634b525b923048bf9a191234968c9c
+  languageName: node
+  linkType: hard
+
 "mz@npm:^2.7.0":
   version: 2.7.0
   resolution: "mz@npm:2.7.0"
@@ -13920,6 +14164,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"plimit-lit@npm:^1.2.6":
+  version: 1.6.1
+  resolution: "plimit-lit@npm:1.6.1"
+  dependencies:
+    queue-lit: "npm:^1.5.1"
+  checksum: 10c0/af5d351bb55afe1eaa84b27c2b329699e150e4cf70464f3d474f5eabe9bdb9f48ed378ada1498d3b893f68ee7da2423ba6d9a4d88b1429d3b0aea22afcf5292b
+  languageName: node
+  linkType: hard
+
 "png-async@npm:0.9.4":
   version: 0.9.4
   resolution: "png-async@npm:0.9.4"
@@ -14436,6 +14689,13 @@ __metadata:
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
   checksum: 10c0/3258bc3dbdf322ff2663619afe5947c7926a6ef5fb78ad7d384602974c467fadfc8272af44f5eb8cddd0d011aae8fabf3a929a8eee4b86edcc0a21e6bd10f9aa
+  languageName: node
+  linkType: hard
+
+"queue-lit@npm:^1.5.1":
+  version: 1.5.2
+  resolution: "queue-lit@npm:1.5.2"
+  checksum: 10c0/8aa838b2c939aeaa6cd272b5b6b172379a3fa1d9193b2a3e687643c68c0efee3cd3493af4f1f8a11ff79b8207e4d00cc5d0b072f6e4bbeaaa27ee01f567ec4ac
   languageName: node
   linkType: hard
 
@@ -15284,6 +15544,23 @@ __metadata:
   bin:
     sass: sass.js
   checksum: 10c0/9c59b3c9b4231c18fcb4583cc232dbc4de501ddc11101b7a025e44833e3f3ce6031546dc1cd109ee9f04ebcfb1fe30ff870810af33b8feb9aa9e36dfba9ec1ef
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.85.0":
+  version: 1.85.0
+  resolution: "sass@npm:1.85.0"
+  dependencies:
+    "@parcel/watcher": "npm:^2.4.1"
+    chokidar: "npm:^4.0.0"
+    immutable: "npm:^5.0.2"
+    source-map-js: "npm:>=0.6.2 <2.0.0"
+  dependenciesMeta:
+    "@parcel/watcher":
+      optional: true
+  bin:
+    sass: sass.js
+  checksum: 10c0/a1af0c0596ae1904f66337d0c70a684db6e12210f97be4326cc3dcf18b0f956d7bc45ab2bcc7a8422d433d3eb3c9cb2cc8e60b2dafbdd01fb1ae5a23f5424690
   languageName: node
   linkType: hard
 
@@ -16783,6 +17060,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tsc-alias@npm:^1.8.11":
+  version: 1.8.11
+  resolution: "tsc-alias@npm:1.8.11"
+  dependencies:
+    chokidar: "npm:^3.5.3"
+    commander: "npm:^9.0.0"
+    globby: "npm:^11.0.4"
+    mylas: "npm:^2.1.9"
+    normalize-path: "npm:^3.0.0"
+    plimit-lit: "npm:^1.2.6"
+  bin:
+    tsc-alias: dist/bin/index.js
+  checksum: 10c0/73b58ad9c0ecffa1ed36337a3125ad14fc464f4e2345969ca080aae7004878658e30738100650f2cde05a8b08ceffc921f3c3743369539221fcfa2e93eb332c6
+  languageName: node
+  linkType: hard
+
 "tsconfig-paths@npm:^4.2.0":
   version: 4.2.0
   resolution: "tsconfig-paths@npm:4.2.0"
@@ -16839,6 +17132,47 @@ __metadata:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
   checksum: 10c0/7794953cbc784b7c8f14c4898d36a293b815b528d3098c2416aeaa2b4775dc477132cd12f75f6d32737dfd15ba10139c73f7039045352f2ba1ea7e5fe6fe3773
+  languageName: node
+  linkType: hard
+
+"tsup@npm:^8.3.6":
+  version: 8.3.6
+  resolution: "tsup@npm:8.3.6"
+  dependencies:
+    bundle-require: "npm:^5.0.0"
+    cac: "npm:^6.7.14"
+    chokidar: "npm:^4.0.1"
+    consola: "npm:^3.2.3"
+    debug: "npm:^4.3.7"
+    esbuild: "npm:^0.24.0"
+    joycon: "npm:^3.1.1"
+    picocolors: "npm:^1.1.1"
+    postcss-load-config: "npm:^6.0.1"
+    resolve-from: "npm:^5.0.0"
+    rollup: "npm:^4.24.0"
+    source-map: "npm:0.8.0-beta.0"
+    sucrase: "npm:^3.35.0"
+    tinyexec: "npm:^0.3.1"
+    tinyglobby: "npm:^0.2.9"
+    tree-kill: "npm:^1.2.2"
+  peerDependencies:
+    "@microsoft/api-extractor": ^7.36.0
+    "@swc/core": ^1
+    postcss: ^8.4.12
+    typescript: ">=4.5.0"
+  peerDependenciesMeta:
+    "@microsoft/api-extractor":
+      optional: true
+    "@swc/core":
+      optional: true
+    postcss:
+      optional: true
+    typescript:
+      optional: true
+  bin:
+    tsup: dist/cli-default.js
+    tsup-node: dist/cli-node.js
+  checksum: 10c0/b8669bba2aafb8831832d7638792a20a101778a07ba971ea36fca47c27e7095fe0c91d29669d2fc0d17941138bc87245de1d0c4e5abf0ce5dfec7bf9eb76a5bd
   languageName: node
   linkType: hard
 
@@ -17108,6 +17442,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:^5.7.3":
+  version: 5.7.3
+  resolution: "typescript@npm:5.7.3"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/b7580d716cf1824736cc6e628ab4cd8b51877408ba2be0869d2866da35ef8366dd6ae9eb9d0851470a39be17cbd61df1126f9e211d8799d764ea7431d5435afa
+  languageName: node
+  linkType: hard
+
 "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>":
   version: 5.5.4
   resolution: "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"
@@ -17125,6 +17469,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/f3b8082c9d1d1629a215245c9087df56cb784f9fb6f27b5d55577a20e68afe2a889c040aacff6d27e35be165ecf9dca66e694c42eb9a50b3b2c451b36b5675cb
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^5.7.3#optional!builtin<compat/typescript>":
+  version: 5.7.3
+  resolution: "typescript@patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/6fd7e0ed3bf23a81246878c613423730c40e8bdbfec4c6e4d7bf1b847cbb39076e56ad5f50aa9d7ebd89877999abaee216002d3f2818885e41c907caaa192cc4
   languageName: node
   linkType: hard
 

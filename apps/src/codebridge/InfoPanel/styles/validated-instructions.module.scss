@@ -62,7 +62,7 @@
 }
 
 .mainInstructions {
-  white-space: pre-wrap;
+  white-space: normal;
 
   display: flex;
   align-items: flex-start;
@@ -93,6 +93,10 @@
   @extend %bubble;
   background-color: $light_white;
   color: $neutral_dark;
+}
+
+.bubbleNoSlide {
+  animation: none;
 }
 
 .buttonInstruction {
