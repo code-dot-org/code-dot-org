@@ -14,8 +14,9 @@ export const RESIZE_BAR_SIZE_PX = 1;
 
 // A resize bar that can be dragged to resize two adjacent panels.
 // The visible bar starts out 1px wide. There is an absolutely-positioned 7px bar
-// that is used for grabbing, and a 3px "resize" bar that becomes visible the grabbable bar
-// is hovered/focused or being dragged.
+// that is used for grabbing, and a 3px "resize" bar that becomes visible
+// when the grabbable bar is hovered or being dragged.
+// The keyboard events happen on the 3px resize bar so they are visible to the user.
 // The resize bar should be used with useResizable from react-resizable-layout.
 const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   isVertical,
