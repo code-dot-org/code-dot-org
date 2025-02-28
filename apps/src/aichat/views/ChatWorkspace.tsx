@@ -5,10 +5,13 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
 import {useSelector} from 'react-redux';
 
+import {addChatEvent} from '@cdo/apps/aichat/redux/thunks';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
@@ -17,6 +20,7 @@ import {
   selectAllVisibleMessages,
   setShowModalType,
 } from '../redux';
+import {BaseChatMessage} from '../types/chatEvents';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
@@ -178,15 +182,24 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   }, [dispatch, isUserTeacher, showModalType]);
 
   const onDrop = useCallback(
-    (acceptedFiles: File[]) => {
+    async (acceptedFiles: File[]) => {
       if (currentChannelId) {
-        fetch(`/v3/assets/${currentChannelId}/${acceptedFiles[0].name}`, {
+        await fetch(`/v3/assets/${currentChannelId}/${acceptedFiles[0].name}`, {
           method: 'PUT',
           body: acceptedFiles[0],
         });
+
+        const imageAddedMessage: BaseChatMessage = {
+          role: Role.USER,
+          status: Status.UNKNOWN,
+          chatMessageText: 'Image Added',
+          timestamp: Date.now(),
+        };
+
+        dispatch(addChatEvent(imageAddedMessage));
       }
     },
-    [currentChannelId]
+    [currentChannelId, dispatch]
   );
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop});
 

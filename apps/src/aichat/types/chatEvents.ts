@@ -14,7 +14,7 @@ interface BaseChatEvent {
 }
 
 /** Base type for all chat messages */
-interface BaseChatMessage extends BaseChatEvent {
+export interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
@@ -46,6 +46,7 @@ export interface CompletedChatMessage extends BaseChatMessage {
 
 /** All chat messages must be one of these types */
 export type ChatMessage =
+  | BaseChatMessage
   | PendingChatMessage
   | ErrorChatMessage
   | CompletedChatMessage;
