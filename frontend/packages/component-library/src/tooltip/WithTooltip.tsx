@@ -108,11 +108,9 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         event.preventDefault(); // Prevent other listeners from handling the event
       }
     };
-
     if (showTooltip) {
       window.addEventListener('keydown', handleKeyDown);
     }
-
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
@@ -123,7 +121,8 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     ...tooltipStyles,
   };
 
-  // Wrap children in a container with event handlers and additional padding
+  // Check if children is a valid React element and clone it with ariaDescribedBy attribute
+  // and additional event handlers to make sure the tooltip is displayed correctly
   const componentToWrap =
     isValidElement<HTMLAttributes<HTMLElement>>(children) &&
     cloneElement(children, {
