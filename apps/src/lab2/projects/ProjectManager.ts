@@ -316,6 +316,10 @@ export default class ProjectManager {
     return this.forceReloading;
   }
 
+  setLastSource(lastSource: ProjectSources) {
+    this.lastSource = JSON.stringify(lastSource);
+  }
+
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes to the source or channel.

@@ -8,6 +8,7 @@ import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
@@ -148,6 +149,12 @@ export const useSource = (defaultSources: ProjectSources) => {
       initialSources !== previousInitialSources.current
     ) {
       if (initialSources) {
+        // Set the last source in project manager to initial sources.
+        // This prevents us from immediately saving the source on load,
+        // as we only want to save when the user makes a change.
+        Lab2Registry.getInstance()
+          .getProjectManager()
+          ?.setLastSource(initialSources);
         setSourceHelper(initialSources);
       }
       if (levelId) {
