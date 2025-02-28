@@ -8,7 +8,7 @@ import color from '@cdo/apps/util/color';
 
 const RETURN_TO = `user_return_to=${pegasus('/afe')}`;
 const SIGN_UP_URL = studio(
-  `/users/sign_up?user[user_type]=teacher&${RETURN_TO}`
+  `/users/new_sign_up/login_type?user_type=teacher&${RETURN_TO}`
 );
 const SIGN_IN_URL = studio(`/users/sign_in?${RETURN_TO}`);
 
