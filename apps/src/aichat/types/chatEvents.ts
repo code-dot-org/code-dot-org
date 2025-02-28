@@ -16,6 +16,7 @@ interface BaseChatEvent {
 /** Base type for all chat messages */
 export interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
+  image?: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
 }

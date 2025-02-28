@@ -30,11 +30,22 @@ module AichatOpenaiHelper
       aichat_model_customizations['retrievalContexts']
     )
 
-    [
-      {role: "system", content: instructions},
-      *stored_messages.map {|message| {role: message['role'], content: message['chatMessageText']}},
-      {role: 'user', content: new_message['chatMessageText']}
-    ]
+    if ! new_message['image']
+      r = [
+        {role: "system", content: instructions},
+        *stored_messages.map {|message| {role: message['role'], content: message['chatMessageText']}},
+        {role: 'user', content: new_message['chatMessageText']}
+      ]
+    else
+      r = [
+        {role: "system", content: instructions},
+        *stored_messages.map {|message| {role: message['role'], content: message['chatMessageText']}},
+        {role: 'user', content: [ type: "image_url", image_url: {url: new_message['image']}]}
+      ]
+    end
+
+    puts r
+    r
   end
 
   def self.request_chat_completion(messages, temperature)

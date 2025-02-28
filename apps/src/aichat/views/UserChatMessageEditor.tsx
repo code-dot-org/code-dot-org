@@ -24,7 +24,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
   const handleSubmit = useCallback(
     (userMessage: string) => {
       if (!isWaitingForChatResponse) {
-        dispatch(submitChatContents(userMessage));
+        dispatch(submitChatContents({text: userMessage}));
       }
     },
     [isWaitingForChatResponse, dispatch]

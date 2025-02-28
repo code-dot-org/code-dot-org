@@ -5,13 +5,11 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
 import {useSelector} from 'react-redux';
 
-import {addChatEvent} from '@cdo/apps/aichat/redux/thunks';
+import {submitChatContents} from '@cdo/apps/aichat/redux/thunks';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
@@ -20,7 +18,6 @@ import {
   selectAllVisibleMessages,
   setShowModalType,
 } from '../redux';
-import {BaseChatMessage} from '../types/chatEvents';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
@@ -45,6 +42,14 @@ const eraserIcon: FontAwesomeV6IconProps = {
 const plusIcon: FontAwesomeV6IconProps = {
   iconName: 'plus',
 };
+
+const toBase64 = (file: File) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+  });
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -189,14 +194,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           body: acceptedFiles[0],
         });
 
-        const imageAddedMessage: BaseChatMessage = {
-          role: Role.USER,
-          status: Status.UNKNOWN,
-          chatMessageText: 'Image Added',
-          timestamp: Date.now(),
-        };
+        const imageBase64 = (await toBase64(acceptedFiles[0])) as string;
 
-        dispatch(addChatEvent(imageAddedMessage));
+        dispatch(
+          submitChatContents({
+            text: 'Check out the attached image',
+            image: imageBase64,
+          })
+        );
       }
     },
     [currentChannelId, dispatch]
