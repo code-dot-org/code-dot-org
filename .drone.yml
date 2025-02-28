@@ -151,8 +151,6 @@ services:
     image: redis
     ports:
       - 6379
-    networks:
-      - cdo_network_test
 
   - name: selenium-chrome
     image: selenium/standalone-chrome:132.0
@@ -167,8 +165,6 @@ services:
       - "5910" # The selenium direct VNC port
       - "4444" # The selenium router port
       - "7910" # The selenium NoVNC service port
-    networks:
-      - cdo_network_test
 
 steps:
   - name: bin/drone/shell
@@ -268,7 +264,7 @@ steps:
     expose:
       - "3000" # puma web server
     networks:
-      cdo_network_test:
+      default:
         aliases:
           - ui-tests.code.org
           - ui-tests-studio.code.org
@@ -297,10 +293,6 @@ volumes:
     temp: {}
   - name: mysql
     temp: {}
-
-networks:
-  cdo_network_test:
-    driver: bridge
 
 trigger:
   branch:
