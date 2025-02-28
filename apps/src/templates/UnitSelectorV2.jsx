@@ -11,7 +11,6 @@ import {
   setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
-import i18n from '@cdo/locale';
 
 import firehoseClient from '../metrics/firehose';
 
@@ -36,7 +35,7 @@ const recordEvent = (eventName, sectionId, dataJson = {}) => {
 function UnitSelectorV2({
   filterToSelectedCourse = false,
   sectionId,
-  unitId,
+  scriptId,
   coursesWithProgress,
   className,
   setScriptId,
@@ -52,6 +51,7 @@ function UnitSelectorV2({
     }
   }, [sectionId, asyncLoadCoursesWithProgress]);
 
+  const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
     e => {
       const newUnitId = parseInt(e.target.value);
@@ -74,10 +74,7 @@ function UnitSelectorV2({
 
   const itemGroups = coursesWithProgress
     .filter(
-      version =>
-        !filterToSelectedCourse ||
-        version.id === selectedSectionCourse ||
-        !version.id
+      version => !filterToSelectedCourse || version.id === selectedSectionCourse
     )
     .map(version => ({
       label: version.display_name,
@@ -96,13 +93,12 @@ function UnitSelectorV2({
     />
   );
 
-  if (isLoadingCourses || isLoadingSectionData) {
-    return loadingDropdown();
-  } else if (!coursesWithProgress || coursesWithProgress.length === 0) {
-    return null;
-  }
-
-  return (
+  return isLoadingSectionData ||
+    isLoadingCourses ||
+    !coursesWithProgress ||
+    coursesWithProgress.length === 0 ? (
+    loadingDropdown()
+  ) : (
     <SimpleDropdown
       itemGroups={itemGroups}
       selectedValue={unitId}
@@ -114,14 +110,13 @@ function UnitSelectorV2({
       dropdownTextThickness="thin"
       id="unit-selector-v2"
       color="gray"
-      labelText={i18n.selectUnit()}
     />
   );
 }
 
 UnitSelectorV2.propTypes = {
   filterToSelectedCourse: PropTypes.bool,
-  unitId: PropTypes.number,
+  scriptId: PropTypes.number,
   sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
   setScriptId: PropTypes.func.isRequired,
@@ -136,7 +131,7 @@ export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 
 export default connect(
   state => ({
-    unitId: state.unitSelection.scriptId,
+    scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,

@@ -59,7 +59,9 @@ const UnitCalendar: React.FC = () => {
 
   const unitToLoad = React.useMemo(
     () =>
-      !!selectedSection.unitName ? unitName || selectedSection.unitName : null,
+      selectedSection.unitName !== null
+        ? unitName || selectedSection.unitName
+        : null,
     [unitName, selectedSection.unitName]
   );
 

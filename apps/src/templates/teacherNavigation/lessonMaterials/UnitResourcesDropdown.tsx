@@ -12,7 +12,6 @@ type UnitResourcesDropdownProps = {
   hasNumberedUnits?: boolean;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
-  disabled?: boolean;
 };
 
 const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
@@ -20,7 +19,6 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   hasNumberedUnits,
   scriptOverviewPdfUrl,
   scriptResourcesPdfUrl,
-  disabled = false,
 }) => {
   const downloadLessonPlansLabel =
     hasNumberedUnits && unitNumber
@@ -65,7 +63,6 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
         labelText="View unit options dropdown"
         options={dropdownOptions}
         size="s"
-        disabled={disabled}
         menuPlacement="right"
         triggerButtonProps={{
           color: 'gray',
