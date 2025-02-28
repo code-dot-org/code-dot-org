@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-tamil/scss/mixins' as NotoSansTamil;
+@include NotoSansTamil.faces($family: 'Noto Sans Tamil');
+
+.className {
+  font-family: 'Noto Sans Tamil', sans-serif;
+}

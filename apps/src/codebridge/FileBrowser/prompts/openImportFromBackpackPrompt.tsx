@@ -159,7 +159,7 @@ export const openImportFromBackpackPrompt = async ({
           if (isSupportFileName) {
             // The user wants to import a file that has the same name as a hidden support file.
             // Give the user a choice to import with a new name or cancel the import.
-            dialogControl?.showDialog({
+            const results = await dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
               title: codebridgeI18n.importFromBackpackTitle(),
               message: codebridgeI18n.importFromBackpackDuplicateSupportMessage(
@@ -168,20 +168,21 @@ export const openImportFromBackpackPrompt = async ({
                 }
               ),
               confirmText: codebridgeI18n.importAsNewName({newFileName}),
-              handleConfirm: () =>
-                fetchFileContentAndProcess(
-                  selectedBackpackFileName,
-                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
-                  newFileName
-                ), // Fetch backpack file content and import new file with numeric suffix.
             });
+            if (results.type === 'confirm') {
+              fetchFileContentAndProcess(
+                selectedBackpackFileName,
+                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
+                newFileName
+              ); // Fetch backpack file content and import new file with numeric suffix.
+            }
             return;
           }
           // If the backpack file has the same name as an existing project file, show a second
           // dialog that prompts user to replace/overwrite or import the backpack
           // file with a different name (newFileName).
           if (newFileName !== selectedBackpackFileName) {
-            dialogControl?.showDialog({
+            const results = await dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
               title: codebridgeI18n.importFromBackpackTitle(),
               message: codebridgeI18n.importFromBackpackDuplicateMessage({
@@ -189,18 +190,19 @@ export const openImportFromBackpackPrompt = async ({
               }),
               confirmText: codebridgeI18n.replaceFile(),
               neutralText: codebridgeI18n.importAsNewName({newFileName}),
-              handleConfirm: () =>
-                fetchFileContentAndProcess(
-                  selectedBackpackFileName,
-                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE
-                ), // Update existing project file.
-              handleNeutral: () =>
-                fetchFileContentAndProcess(
-                  selectedBackpackFileName,
-                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
-                  newFileName
-                ), // Fetch backpack file content and import new file with numeric suffix.
             });
+            if (results.type === 'confirm') {
+              fetchFileContentAndProcess(
+                selectedBackpackFileName,
+                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE
+              ); // Update existing project file.
+            } else if (results.type === 'neutral') {
+              fetchFileContentAndProcess(
+                selectedBackpackFileName,
+                EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
+                newFileName
+              ); // Fetch backpack file content and import new file with numeric suffix.
+            }
           } else {
             // Fetch backpack file content and import new file to project - not a duplicate file name.
             fetchFileContentAndProcess(
@@ -211,16 +213,18 @@ export const openImportFromBackpackPrompt = async ({
           }
         } else if (results.type === 'neutral') {
           // User selects to delete file from backpack. Open confirm delete dialog.
-          dialogControl?.showDialog({
+          const results = await dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
             title: codebridgeI18n.deleteFromBackpackTitle(),
             message: codebridgeI18n.deleteFromBackpackConfirm({
               selectedBackpackFileName,
             }),
             confirmText: codebridgeI18n.delete(),
-            handleConfirm: () => handleDelete(selectedBackpackFileName),
             destructive: true,
           });
+          if (results.type === 'confirm') {
+            handleDelete(selectedBackpackFileName);
+          }
         }
       }
     }
