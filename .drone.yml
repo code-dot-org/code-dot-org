@@ -266,10 +266,10 @@ steps:
     networks:
       default:
         aliases:
-          - ui-tests.code.org
-          - ui-tests-studio.code.org
-          - ui-tests.hourofcode.com
-          - ui-tests.csedweek.org
+          - localhost.code.org
+          - localhost-studio.code.org
+          - localhost.hourofcode.com
+          - localhost.csedweek.org
 
   - name: update-cache
     image: plugins/s3-cache
