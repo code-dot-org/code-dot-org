@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csad-2025-pilot",
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2024",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 23:20:13 UTC",
+    "serialized_at": "2025-02-27 18:41:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -277,7 +278,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "overview": "**How can we design a computer system to solve a real world problem?**\n\nStudents propose and design an AI-infused computer system and demonstrate how it would contribute to achieving one of the United Nations Sustainable Development Goals.",
+        "preparation": "- Print out a digitally distribute a copy of the Project Guide for each student\n- Digitally distribute a copy of the System Diagram template to each group\n- Print out a copy of the System Diagram Checklist for each group",
+        "student_overview": "**How can we design a computer system to solve a real world problem?**\n\nIn this project, you will brainstorm and design an AI-infused computer system that contribute to achieving one of the United Nations Sustainable Development Goals."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -793,6 +797,7 @@
       "key": "4d13e97e-3e23-4475-a336-1af04f2f2c82",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Day 1"
       },
       "seeding_key": {
@@ -806,6 +811,7 @@
       "key": "5222bf02-796b-4e2a-8867-1762a253e8cd",
       "position": 2,
       "properties": {
+        "duration": 45,
         "name": "Day 2"
       },
       "seeding_key": {
@@ -819,6 +825,7 @@
       "key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f",
       "position": 3,
       "properties": {
+        "duration": 45,
         "name": "Day 3"
       },
       "seeding_key": {
@@ -3030,6 +3037,19 @@
       "key": "e37dff16-d6bf-4364-bd4d-9a7ce36ad515",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of two or three for the project.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Sustainable Systems project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that you will be starting a three day project today centered around designing a computer system that helps make the world a better place. Introduce the UN Sustainable Development Goals as the specific framework that students will be using to pick a focus for their project.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"UN Sustainable Development Goals\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question To Consider While Watching:** *Which goals are personally relevant or interesting to you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to be making connections to their lives, communities, friends, and family as they talk about which goals are of interest to them.",
+        "duration": "15",
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing)."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "If you want to spend more time introducing your class to these goals, this [**TED Talk by Michael Greene**](https://youtu.be/o08ykAqLOxk?si=bLEBRBAzzs1pbcp7) goes into much more detail about them."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e37dff16-d6bf-4364-bd4d-9a7ce36ad515",
@@ -3037,19 +3057,98 @@
       }
     },
     {
-      "key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd",
+      "key": "a05d86b5-06f0-465f-94a7-24272f5ae8b4",
       "position": 2,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd",
+        "activity_section.key": "a05d86b5-06f0-465f-94a7-24272f5ae8b4",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "947dd1e1-e1b5-41c2-a764-aa1da3fd1028",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 8-9 and look at the example project on pages 10-11 of the Sustainable Systems project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the example of what a completed system diagram project might look like using the slide with the blown up version of the system diagram. Point out that this example project was done in line with Target 12.5 - “By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse”. Give students time to look over the rubric and the example project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the rubric and example project? What do you wonder about the rubric and example project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements, rubric, and example project."
+      },
+      "seeding_key": {
+        "activity_section.key": "947dd1e1-e1b5-41c2-a764-aa1da3fd1028",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "37588f09-c4da-4563-82b8-1ff2a3237b6a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to look through the different categories of targets and list the ones they are interested in under Explore SDG Targets in their Project Guide. Once they have listed the targets they are individually interested in, have them discuss with their groups and pick one target to focus their project on.",
+        "duration": "25",
+        "name": "Activity",
+        "progression_name": "Explore Sustainable Development Goal Targets"
+      },
+      "seeding_key": {
+        "activity_section.key": "37588f09-c4da-4563-82b8-1ff2a3237b6a",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "8633dbfc-ba83-4006-9c37-840572f58f24",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to record this target in their Project Guide under Select an SDG Target.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to help them learn more about the target they’ve chosen and start to brainstorm potential solutions and project ideas.",
+        "progression_name": "Brainstorm Your Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "8633dbfc-ba83-4006-9c37-840572f58f24",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "4dbe29c7-8f7f-49a5-99f0-47da55d73b59",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should write a description of the system in the Project Description section of their project guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
+        "progression_name": "Understanding Your Users",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students who are excited about their ideas may want to rush past this part to get to the prototyping and designing of the device. Remind them about the importance in going slow and considering diverse perspectives from the start of the design process to ensure less need for reworking and revising designs later in the process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4dbe29c7-8f7f-49a5-99f0-47da55d73b59",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "124481ea-2265-450d-b662-985363ac9609",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "124481ea-2265-450d-b662-985363ac9609",
+        "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "64a1eba4-004b-4b52-896e-d36842cd4267",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Step 2 in their Project Guides which includes defining the data, ideating a solution, and sketching a rapid prototype.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
+      },
+      "seeding_key": {
+        "activity_section.key": "64a1eba4-004b-4b52-896e-d36842cd4267",
         "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
       }
     },
     {
       "key": "b87cbef4-0d41-47b7-9883-fbe5004ef72d",
-      "position": 3,
+      "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
+        "duration": "5",
+        "name": "Wrap Up",
         "progression_name": "Survey"
       },
       "seeding_key": {
@@ -3061,6 +3160,8 @@
       "key": "cbd24455-be93-4ac3-ad9a-8deaaa26a425",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Step 3 Data Flow in their project guide with the help of their group.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing ideas with their group members. If groups come up with more than one answer for these, remind them that their system can use multiple types of data to help solve the problem.",
+        "name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "cbd24455-be93-4ac3-ad9a-8deaaa26a425",
@@ -3068,9 +3169,120 @@
       }
     },
     {
-      "key": "0a5e0dec-874a-4527-b75b-94b96635551e",
+      "key": "f5ab22c0-05dc-4108-8843-02a77a86a2df",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the System Diagram slides template and a System Diagram Checklist.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a problem statement in the Problem Statement section of their project guide. Students should add this to their system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work collaboratively on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that groups are dividing up work and collaborating on the different parts of building this diagram, discussing issues and questions as they arise.",
+        "duration": "35",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5ab22c0-05dc-4108-8843-02a77a86a2df",
+        "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd"
+      }
+    },
+    {
+      "key": "d4bb8dce-3a4c-4c06-ad7a-a6d683726fcb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the Day 2 Reflection section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4bb8dce-3a4c-4c06-ad7a-a6d683726fcb",
+        "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd"
+      }
+    },
+    {
+      "key": "7762b328-e579-48e0-8c0b-51de46df0b52",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one feature of your project that you think will impress others?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Give students a chance to share about the things they feel good about from their project heading into the gallery walk where they will be showing their work to others.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "7762b328-e579-48e0-8c0b-51de46df0b52",
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f"
+      }
+    },
+    {
+      "key": "bc1d569b-300f-4a1c-976b-f8c8736e389f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups get their presentations ready for the gallery walk and set them up around the room so that there is space to move smoothly around the room and gather at each station.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the questions for students to consider when looking at each system diagram. Provide each student with some post-it notes and have them write responses to the questions and leave them in the area of the presentation before moving on to the next diagram.",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Before starting, set clear expectations: students will analyze projects, provide feedback, and rotate through stations. Walk through the first visit together to model reading the diagram, identifying hardware/software components, connecting to SDGs, and discussing ethical considerations. Use a structured feedback approach and keep rotations timed and organized.\n\nModel the process for the first visit (observe, analyze, discuss). Use a simple feedback framework:\n- I notice… (Observation)\n- I wonder… (Question)\n- Some ethical issues that might arise are… (Ethics)\n\nSet time limits (e.g., four to six minutes per station) and use a visual timer.\n\nGive a 1-minute warning before rotations and remind students to make sure they’ve left post-it notes by the station."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc1d569b-300f-4a1c-976b-f8c8736e389f",
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f"
+      }
+    },
+    {
+      "key": "f7d2cf1e-292d-4dda-b566-2ad7a9a965f5",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f7d2cf1e-292d-4dda-b566-2ad7a9a965f5",
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f"
+      }
+    },
+    {
+      "key": "daf9a0bd-1075-432f-b1d9-12a3f81b9d82",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 4. Students use the chatbot to help synthesize this feedback and uncover any areas related to ethics and societal impact they hadn’t already thought of.\n",
+        "progression_name": "Ethics and Impact"
+      },
+      "seeding_key": {
+        "activity_section.key": "daf9a0bd-1075-432f-b1d9-12a3f81b9d82",
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f"
+      }
+    },
+    {
+      "key": "da80d462-3e98-4185-9356-872768253a0c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric."
+      },
+      "seeding_key": {
+        "activity_section.key": "da80d462-3e98-4185-9356-872768253a0c",
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f"
+      }
+    },
+    {
+      "key": "1d0fdce0-8bbc-4e43-865e-850daa9ee95d",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the Sustainable Systems Project Rubric to assess students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d0fdce0-8bbc-4e43-865e-850daa9ee95d",
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f"
+      }
+    },
+    {
+      "key": "0a5e0dec-874a-4527-b75b-94b96635551e",
+      "position": 7,
+      "properties": {
+        "progression_name": "Survey"
       },
       "seeding_key": {
         "activity_section.key": "0a5e0dec-874a-4527-b75b-94b96635551e",
@@ -3385,6 +3597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level13-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3407,6 +3622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level1-2023"
+        ],
         "progression": "Storage and Memory Components"
       },
       "bonus": false,
@@ -3429,6 +3647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level2-2023"
+        ],
         "progression": "Processing Components"
       },
       "bonus": false,
@@ -3451,6 +3672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level3-2023"
+        ],
         "progression": "Connecting Components"
       },
       "bonus": false,
@@ -3473,6 +3697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level4-2023"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -3495,6 +3722,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level5-2023"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -3517,6 +3747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level6-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3539,6 +3772,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level1-2024"
+        ],
         "progression": "Wearable Troubleshooting Scenario"
       },
       "bonus": false,
@@ -3561,6 +3797,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level2-2024"
+        ],
         "progression": "Troubleshooting Maya's Wearable"
       },
       "bonus": false,
@@ -3583,6 +3822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level3-2024"
+        ],
         "progression": "Hardware Troubleshooting Scenarios"
       },
       "bonus": false,
@@ -3605,6 +3847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level4-2024"
+        ],
         "progression": "Tech Support Chatbot"
       },
       "bonus": false,
@@ -3627,6 +3872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level5-2024"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -3649,6 +3897,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level6-2024"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -3671,6 +3922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level7-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3693,6 +3947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson4-level1-2023"
+        ],
         "progression": "Software Scavenger Hunt Debrief"
       },
       "bonus": false,
@@ -3715,6 +3972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson4-level2-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3737,6 +3997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson5-level1-2023"
+        ],
         "progression": "Troubleshooting"
       },
       "bonus": false,
@@ -3759,6 +4022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson5-level2-2023"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3781,6 +4047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson5-level3-2023"
+        ],
         "progression": "Optimization"
       },
       "bonus": false,
@@ -3803,6 +4072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson5-level4-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3900,6 +4172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level5-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3947,6 +4222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson7-level1-2024"
+        ],
         "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
@@ -3969,6 +4247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson7-level2-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4091,6 +4372,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level5-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4113,6 +4397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level1-2024"
+        ],
         "progression": "Explore an AI Model"
       },
       "bonus": false,
@@ -4135,6 +4422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level2-2024"
+        ],
         "progression": "Processing Unit Battle"
       },
       "bonus": false,
@@ -4157,6 +4447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level3-2024"
+        ],
         "progression": "Determine AI Hardware"
       },
       "bonus": false,
@@ -4179,6 +4472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level4-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4201,6 +4497,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson10-level1-2023"
+        ],
         "progression": "Security, Privacy, and Data Ownership"
       },
       "bonus": false,
@@ -4223,6 +4522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson10-level2-2023"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -4245,6 +4547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level1-2024"
+        ],
         "progression": "User Testing Results"
       },
       "bonus": false,
@@ -4267,6 +4572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level2-2024"
+        ],
         "progression": "Using AI to Analyze Data"
       },
       "bonus": false,
@@ -4289,6 +4597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level3-2024"
+        ],
         "progression": "Alice's Scenario"
       },
       "bonus": false,
@@ -4311,6 +4622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level4-2024"
+        ],
         "progression": "Josh's Scenario"
       },
       "bonus": false,
@@ -4333,6 +4647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level5-2024"
+        ],
         "progression": "Lydia's Scenario"
       },
       "bonus": false,
@@ -4355,6 +4672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level6-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4377,6 +4697,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-level2-2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4399,6 +4722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-level3-2023"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -4421,6 +4747,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Explore Sustainable Development Goal Targets"
       },
       "bonus": false,
       "seeding_key": {
@@ -4430,7 +4757,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "37588f09-c4da-4563-82b8-1ff2a3237b6a"
       },
       "level_keys": [
         "computer-systems-lesson13-level1-2023"
@@ -4439,9 +4766,10 @@
     {
       "chapter": 60,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Brainstorm Your Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -4451,7 +4779,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "8633dbfc-ba83-4006-9c37-840572f58f24"
       },
       "level_keys": [
         "computer-systems-lesson13-level2-2023"
@@ -4460,9 +4788,10 @@
     {
       "chapter": 61,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Understanding Your Users"
       },
       "bonus": false,
       "seeding_key": {
@@ -4472,7 +4801,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "4dbe29c7-8f7f-49a5-99f0-47da55d73b59"
       },
       "level_keys": [
         "computer-systems-lesson13-level3-2023"
@@ -4481,9 +4810,10 @@
     {
       "chapter": 62,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Ethics and Impact"
       },
       "bonus": false,
       "seeding_key": {
@@ -4493,7 +4823,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "daf9a0bd-1075-432f-b1d9-12a3f81b9d82"
       },
       "level_keys": [
         "computer-systems-lesson13-level4-2023"
@@ -4515,7 +4845,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b87cbef4-0d41-47b7-9883-fbe5004ef72d"
+        "activity_section.key": "0a5e0dec-874a-4527-b75b-94b96635551e"
       },
       "level_keys": [
         "computer-systems-lesson13-level5-2023"
@@ -5228,7 +5558,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "37588f09-c4da-4563-82b8-1ff2a3237b6a"
       }
     },
     {
@@ -5240,7 +5570,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "8633dbfc-ba83-4006-9c37-840572f58f24"
       }
     },
     {
@@ -5252,7 +5582,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "4dbe29c7-8f7f-49a5-99f0-47da55d73b59"
       }
     },
     {
@@ -5264,7 +5594,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "f8874111-cd8d-4fdb-a304-f0036f1dcccd"
+        "activity_section.key": "daf9a0bd-1075-432f-b1d9-12a3f81b9d82"
       }
     },
     {
@@ -5276,11 +5606,35 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b87cbef4-0d41-47b7-9883-fbe5004ef72d"
+        "activity_section.key": "0a5e0dec-874a-4527-b75b-94b96635551e"
       }
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing",
+      "key": "_exemplar_sustainable_systems_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] System Diagram Template",
+      "url": "https://docs.google.com/presentation/d/1oKcSZSiVPgceup6CoQQ1rM3PnInje6alboius9oFtjA/edit#slide=id.g33a015afebb_2_0",
+      "key": "_exemplar_system_diagram_template",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_system_diagram_template"
+      }
+    },
     {
       "name": "[KEY] Computer Innovations and Careers",
       "url": "https://docs.google.com/document/d/17DeraVp683PTsNxzdQaORhUhmA9OAYPAl9wB8dPMIuM/edit?usp=sharing",
@@ -5401,6 +5755,18 @@
       },
       "seeding_key": {
         "resource.key": "computer_innovations_and_careers"
+      }
+    },
+    {
+      "name": "Computer Systems & Devices Unit Guide",
+      "url": "https://docs.google.com/document/d/1ry1IWhEZbp_rRz4sE0ty5Mb5mBdvz_Ism-ZCKiDoZ4k/",
+      "key": "computer_systems_devices_unit_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "computer_systems_devices_unit_guide"
       }
     },
     {
@@ -5699,6 +6065,56 @@
       }
     },
     {
+      "name": "Sustainable Systems Project",
+      "url": "https://docs.google.com/presentation/d/1Asq5xx3cDCKIWvtqBfgnLgoqNwxybbElV2ebBvfic2w/view",
+      "key": "sustainable_systems_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sustainable_systems_project"
+      }
+    },
+    {
+      "name": "Sustainable Systems Project Planning Guide",
+      "url": "https://docs.google.com/document/d/140knzapQRCeyvLojN24lOFr9mBo1e-LbQKj8uFrz2qM/edit?usp=sharing",
+      "key": "sustainable_systems_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "sustainable_systems_project_planning_guide"
+      }
+    },
+    {
+      "name": "System Diagram Checklist",
+      "url": "https://docs.google.com/document/d/1suLex6X4Wa6qmI-ErVLly2xPwoHTH_S5JbK7ZutQ9vg/edit?usp=sharing",
+      "key": "system_diagram_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "system_diagram_checklist"
+      }
+    },
+    {
+      "name": "System Diagram Template",
+      "url": "https://docs.google.com/presentation/d/1NXn4u6z4UOKD3FBwoe9_cmkteDOVIyKghETSOOfXOSs/edit?usp=sharing",
+      "key": "system_diagram_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "system_diagram_template"
+      }
+    },
+    {
       "name": "Technology Ethics Roleplaying Discussion Guide",
       "url": "https://docs.google.com/document/d/1PZ_e2m9wDqctgwZCiTo6CZYu1yPVxAdl1yhJVfry5aI/edit?usp=sharing",
       "key": "technology_ethics_roleplaying_discussion_guide",
@@ -5924,6 +6340,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_exemplar_system_diagram_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "sustainable_systems_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "sustainable_systems_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "system_diagram_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "system_diagram_template"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-13",
         "resource.key": "_key_optimization"
       }
@@ -6128,7 +6580,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "computer_systems_devices_unit_guide",
+        "script.name": "csad-pilot-content-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -6446,6 +6903,16 @@
   ],
   "objectives": [
     {
+      "key": "03c86bf6-0914-4f54-9504-690224f77f66",
+      "properties": {
+        "description": "Design a prototype of a device that solves a real-world issue"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "03c86bf6-0914-4f54-9504-690224f77f66"
+      }
+    },
+    {
       "key": "0520e9ab-0a47-47bc-927d-03214f7f4df3",
       "properties": {
         "description": "Identify career pathways in computing"
@@ -6453,6 +6920,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "0520e9ab-0a47-47bc-927d-03214f7f4df3"
+      }
+    },
+    {
+      "key": "24ada36a-effc-40d7-bfce-a2e619756c39",
+      "properties": {
+        "description": "Evaluate the ethical implications of design decisions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "24ada36a-effc-40d7-bfce-a2e619756c39"
       }
     },
     {
@@ -6473,6 +6950,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "2ad60fb9-b24b-4bcf-9a81-bf7f83c1c0fc"
+      }
+    },
+    {
+      "key": "2b1c0884-7ddd-4c79-a310-671b8739af96",
+      "properties": {
+        "description": "Demonstrate how hardware, software, and communication combine to create a computer system"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "2b1c0884-7ddd-4c79-a310-671b8739af96"
       }
     },
     {
