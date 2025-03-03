@@ -97,6 +97,22 @@ export const getProgressLevelType = state => {
   }
 };
 
+export const canChangeLevelWithoutFade = state => {
+  const currentLevel = getCurrentLevel(state);
+  const previousLevel = levelById(
+    state.progress,
+    state.progress.currentLessonId,
+    state.progress.previousLevelId
+  );
+
+  return (
+    window.location.href.includes('lab2-no-fade-template') &&
+    currentLevel?.projectTemplateLevelName &&
+    currentLevel?.projectTemplateLevelName ===
+      previousLevel?.projectTemplateLevelName
+  );
+};
+
 /**
  * Returns the dashboard URL path to retrieve the level properties for a script
  * level (if we have lessons) or a level (if we don't have lessons). If we don't

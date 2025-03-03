@@ -51,6 +51,7 @@ import {SET_VIEW_TYPE} from './viewAsRedux';
 
 export interface ProgressState {
   currentLevelId: string | null;
+  previousLevelId: string | null;
   currentLessonId: number | undefined;
   deeperLearningCourse: boolean | null;
   saveAnswersBeforeNavigation: boolean | null;
@@ -101,6 +102,7 @@ interface OptionalMilestoneData {
 
 const initialState: ProgressState = {
   currentLevelId: null,
+  previousLevelId: null,
 
   // These first fields never change after initialization.
 
@@ -184,6 +186,7 @@ const progressSlice = createSlice({
       state.currentPageNumber = action.payload.currentPageNumber;
     },
     setCurrentLevelId(state, action: PayloadAction<string>) {
+      state.previousLevelId = state.currentLevelId;
       state.currentLevelId = action.payload;
     },
     setScriptProgress(
