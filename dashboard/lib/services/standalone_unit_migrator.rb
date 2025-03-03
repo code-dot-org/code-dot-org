@@ -50,6 +50,10 @@ module Services
       passed_checks
     end
 
+    def self.rollback(unit, verbose: false, log_file: nil)
+      new(unit, verbose: verbose, log_file: log_file).rollback
+    end
+
     def rollback
       unless ENV['MIGRATE_STANDALONE_UNITS']
         log "MIGRATE_STANDALONE_UNITS is not set", type: "error"
@@ -162,7 +166,7 @@ module Services
       unless all_passed
         log("Checks failed for unit migration: #{@unit.name}", type: "error")
         failing_checks = checks.select {|_, result| !result}
-        failing_checks.each {|description, result| log "#{description}: #{result}"}
+        failing_checks.each {|description, result| log("#{description}: #{result}", type: 'error')}
       end
 
       log "View the new UnitGroup here: https:#{CDO.studio_url(@unit_group.link)}" if @verbose
@@ -196,7 +200,7 @@ module Services
       else
         log("Checks failed for unit migration rollback: #{@unit.name}", type: "error")
         failing_checks = checks.select {|_, result| !result}
-        failing_checks.each {|description, result| log "#{description}: #{result}"}
+        failing_checks.each {|description, result| log("#{description}: #{result}", type: 'error')}
       end
       all_passed
     end
