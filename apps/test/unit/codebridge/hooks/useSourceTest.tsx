@@ -43,7 +43,6 @@ const ownedChannel: Channel = {
 describe('useSource', () => {
   let store: Store;
   let mockedProjectManager: jest.Mocked<ProjectManager>;
-  let projectSaveSpy: jest.Mock;
   beforeEach(() => {
     stubRedux();
     registerReducers({
@@ -53,9 +52,9 @@ describe('useSource', () => {
       progress,
     });
     store = getStore();
-    projectSaveSpy = jest.fn();
     mockedProjectManager = {
-      save: projectSaveSpy,
+      save: jest.fn(),
+      setLastSource: jest.fn(),
     } as unknown as jest.Mocked<ProjectManager>;
     Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
     // Set up the channel so we are not in read only mode (isOwner = true)
@@ -148,6 +147,7 @@ describe('useSource', () => {
     );
     renderDefault();
     expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
+    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(1);
     act(() => {
       store.dispatch(
         onLevelChange({
@@ -157,6 +157,7 @@ describe('useSource', () => {
       );
     });
     expect(mockedProjectManager.save).toHaveBeenCalledTimes(2);
+    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(2);
     const expectedNewSources = {
       source: nonValidatedLevelProperties.startSources,
       labConfig: undefined,

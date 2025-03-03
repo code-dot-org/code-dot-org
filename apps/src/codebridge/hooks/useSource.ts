@@ -152,6 +152,8 @@ export const useSource = (defaultSources: ProjectSources) => {
         // Set the last source in project manager to initial sources.
         // This prevents us from immediately saving the source on load,
         // as we only want to save when the user makes a change.
+        // Initial sources always comes from the server, so we never need to save
+        // it again.
         Lab2Registry.getInstance()
           .getProjectManager()
           ?.setLastSource(initialSources);
