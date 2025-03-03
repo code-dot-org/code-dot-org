@@ -36,12 +36,16 @@ export const SectionList: React.FC = () => {
     })
       .done(() => {
         dispatch(removeSectionOrThrow(sectionToDelete));
+        setDeletingSection(false);
+        setSectionToDelete(-1);
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
         // matches the experience we got in angular
         alert(i18n.unexpectedError());
         console.error(status);
+        setDeletingSection(false);
+        setSectionToDelete(-1);
       });
   };
 

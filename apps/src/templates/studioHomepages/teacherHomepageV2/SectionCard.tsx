@@ -1,4 +1,5 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
 import {
   Heading5,
   OverlineOneText,
@@ -72,6 +73,48 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     onDeleteClickCallback(section.id);
   };
 
+  const dropdownOptions: ActionDropdownOption[] = [
+    {
+      value: 'sectionSettings',
+      label: i18n.sectionSettings(),
+      icon: {iconName: 'gear', iconStyle: 'solid'},
+      onClick: onSectionSettingsClick,
+    },
+    {
+      value: 'roster',
+      label: i18n.roster(),
+      icon: {iconName: 'user', iconStyle: 'solid'},
+      onClick: onRosterClick,
+    },
+    {
+      value: 'loginCards',
+      label: i18n.loginCards(),
+      icon: {iconName: 'id-card', iconStyle: 'solid'},
+      onClick: onLoginCardsClick,
+    },
+    {
+      value: 'certificates',
+      label: i18n.certificates(),
+      icon: {iconName: 'file-certificate', iconStyle: 'solid'},
+      onClick: onCertificatesClick,
+    },
+    {
+      value: section.hidden ? 'restore' : 'archive',
+      label: section.hidden ? i18n.restoreClassSection() : i18n.archive(),
+      icon: {
+        iconName: section.hidden ? 'window-restore' : 'box-archive',
+        iconStyle: 'solid',
+      },
+      onClick: onArchiveClick,
+    },
+    {
+      value: 'delete',
+      label: i18n.delete(),
+      icon: {iconName: 'trash', iconStyle: 'solid'},
+      onClick: onDeleteClick,
+    },
+  ];
+
   return (
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
@@ -105,49 +148,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               className: styles.dropdownButton,
               ariaLabel: i18n.sectionOptionsDropdown(),
             }}
-            options={[
-              {
-                value: 'sectionSettings',
-                label: i18n.sectionSettings(),
-                icon: {iconName: 'gear', iconStyle: 'solid'},
-                onClick: onSectionSettingsClick,
-              },
-              {
-                value: 'roster',
-                label: i18n.roster(),
-                icon: {iconName: 'user', iconStyle: 'solid'},
-                onClick: onRosterClick,
-              },
-              {
-                value: 'loginCards',
-                label: i18n.loginCards(),
-                icon: {iconName: 'id-card', iconStyle: 'solid'},
-                onClick: onLoginCardsClick,
-              },
-              {
-                value: 'certificates',
-                label: i18n.certificates(),
-                icon: {iconName: 'file-certificate', iconStyle: 'solid'},
-                onClick: onCertificatesClick,
-              },
-              {
-                value: section.hidden ? 'restore' : 'archive',
-                label: section.hidden
-                  ? i18n.restoreClassSection()
-                  : i18n.archive(),
-                icon: {
-                  iconName: section.hidden ? 'window-restore' : 'box-archive',
-                  iconStyle: 'solid',
-                },
-                onClick: onArchiveClick,
-              },
-              {
-                value: 'delete',
-                label: i18n.delete(),
-                icon: {iconName: 'trash', iconStyle: 'solid'},
-                onClick: onDeleteClick,
-              },
-            ]}
+            options={dropdownOptions}
           />
         </div>
       </div>
