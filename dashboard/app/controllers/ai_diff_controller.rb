@@ -99,8 +99,14 @@ class AiDiffController < ApplicationController
   end
 
   private def has_required_params?
+    return false if params[:context].nil?
+
     begin
-      params.require([:context, :inputText, :contextId, :unitDisplayName, :isPreset])
+      if params[:context] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+        params.require([:inputText, :isPreset])
+      elsif params[:context] == SharedConstants::AI_DIFF_CONTEXT[:LESSON] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:UNIT] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+        params.require([:inputText, :contextId, :unitDisplayName, :isPreset])
+      end
     rescue ActionController::ParameterMissing
       return false
     end

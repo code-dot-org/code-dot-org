@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-26 18:27:38 UTC",
+    "serialized_at": "2025-02-28 21:01:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -114,21 +114,6 @@
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started1"
       }
-    },
-    {
-      "key": "Next Steps",
-      "name": "Next Steps",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Next Steps",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1"
-      }
     }
   ],
   "lesson_activities": [
@@ -192,18 +177,6 @@
       "seeding_key": {
         "lesson_activity.key": "a6e4c15a-18a1-4306-a8be-2db2c95caaf9",
         "lesson.key": "Navigating Support",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1"
-      }
-    },
-    {
-      "key": "edc65dec-3a49-461f-8cc0-9b1390e9a9a4",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "edc65dec-3a49-461f-8cc0-9b1390e9a9a4",
-        "lesson.key": "Next Steps",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started1"
       }
@@ -412,21 +385,11 @@
       "key": "03bc258c-55d7-4f7e-a045-d41df9c10521",
       "position": 3,
       "properties": {
-        "progression_name": "Wrap Up"
+        "progression_name": "Next Steps"
       },
       "seeding_key": {
         "activity_section.key": "03bc258c-55d7-4f7e-a045-d41df9c10521",
         "lesson_activity.key": "a6e4c15a-18a1-4306-a8be-2db2c95caaf9"
-      }
-    },
-    {
-      "key": "51518733-93d6-46e1-9207-b2c7a2b821fe",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "51518733-93d6-46e1-9207-b2c7a2b821fe",
-        "lesson_activity.key": "edc65dec-3a49-461f-8cc0-9b1390e9a9a4"
       }
     }
   ],
@@ -1137,15 +1100,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_1_1"
-        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_1_1"
+          "PL-teacher-resources-panel"
         ],
         "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
         "lesson_group.key": "",
@@ -1153,7 +1113,7 @@
         "activity_section.key": "ad8f7f4b-651d-47e5-9a56-9c84b8d59598"
       },
       "level_keys": [
-        "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_1_1"
+        "PL-teacher-resources-panel"
       ]
     },
     {
@@ -1183,31 +1143,6 @@
     },
     {
       "chapter": 31,
-      "position": 9,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Getting-Started_PL-Resources_1"
-        ],
-        "progression": "Explore Additional Teacher Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Getting-Started_PL-Resources_1"
-        ],
-        "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "ad8f7f4b-651d-47e5-9a56-9c84b8d59598"
-      },
-      "level_keys": [
-        "Getting-Started_PL-Resources_1"
-      ]
-    },
-    {
-      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1232,7 +1167,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1257,7 +1192,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1282,7 +1217,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1307,7 +1242,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1332,7 +1267,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
@@ -1357,49 +1292,22 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-CSD-Unit1-Module1WrapUp_1_1"
-        ],
-        "progression": "Wrap Up"
+        "progression": "Next Steps"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-CSD-Unit1-Module1WrapUp_1_1"
+          "GSSP-PL-DS-UnitStructure-w-lessons_1"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started1",
         "activity_section.key": "03bc258c-55d7-4f7e-a045-d41df9c10521"
-      },
-      "level_keys": [
-        "SP-CSD-Unit1-Module1WrapUp_1_1"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "GSSP-PL-DS-UnitStructure-w-lessons_1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "GSSP-PL-DS-UnitStructure-w-lessons_1"
-        ],
-        "lesson.key": "Next Steps",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "51518733-93d6-46e1-9207-b2c7a2b821fe"
       },
       "level_keys": [
         "GSSP-PL-DS-UnitStructure-w-lessons_1"
@@ -1745,9 +1653,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_1_1",
+        "level.key": "PL-teacher-resources-panel",
         "script_level.level_keys": [
-          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_1_1"
+          "PL-teacher-resources-panel"
         ],
         "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
         "lesson_group.key": "",
@@ -1760,18 +1668,6 @@
         "level.key": "SP-VPL-21-mod2-UnitCalendar_physical-computing_1_1",
         "script_level.level_keys": [
           "SP-VPL-21-mod2-UnitCalendar_physical-computing_1_1"
-        ],
-        "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "ad8f7f4b-651d-47e5-9a56-9c84b8d59598"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Getting-Started_PL-Resources_1",
-        "script_level.level_keys": [
-          "Getting-Started_PL-Resources_1"
         ],
         "lesson.key": "Navigating Lesson Plans, Assessments, and Resources",
         "lesson_group.key": "",
@@ -1853,26 +1749,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-CSD-Unit1-Module1WrapUp_1_1",
+        "level.key": "GSSP-PL-DS-UnitStructure-w-lessons_1",
         "script_level.level_keys": [
-          "SP-CSD-Unit1-Module1WrapUp_1_1"
+          "GSSP-PL-DS-UnitStructure-w-lessons_1"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-getting-started1",
         "activity_section.key": "03bc258c-55d7-4f7e-a045-d41df9c10521"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "GSSP-PL-DS-UnitStructure-w-lessons_1",
-        "script_level.level_keys": [
-          "GSSP-PL-DS-UnitStructure-w-lessons_1"
-        ],
-        "lesson.key": "Next Steps",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-getting-started1",
-        "activity_section.key": "51518733-93d6-46e1-9207-b2c7a2b821fe"
       }
     }
   ],

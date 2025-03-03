@@ -30,6 +30,7 @@ import {
   EMAIL_SESSION_KEY,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   NEW_SIGN_UP_USER_TYPE,
+  USER_RETURN_TO_SESSION_KEY,
   setUserReturnToUrl,
 } from './signUpFlowConstants';
 
@@ -69,12 +70,17 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         // If the user type is set as a URL parameter (e.g. being redirected from section signup and skipping
         // the first signup page), then set the user type (and URL to return the user to after signup if
         // provided) in sessionStorage.
+        setUserReturnToUrl();
+        const sourceParam = sessionStorage
+          .getItem(USER_RETURN_TO_SESSION_KEY)
+          ?.includes('/join')
+          ? {source: 'section code sign up form'}
+          : {};
         analyticsReporter.sendEvent(
           EVENTS.SIGN_UP_STARTED_EVENT,
-          {},
+          sourceParam,
           PLATFORMS.BOTH
         );
-        setUserReturnToUrl();
         sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType as string);
       } else {
         // If the user hasn't selected a user type and it's not a URL parameter, redirect them back to the

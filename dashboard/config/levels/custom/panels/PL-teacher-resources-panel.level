@@ -1,0 +1,31 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-02-28T20:39:34.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "#Steps to Access Unit Level Resources \n**Step 1:**From the Unit Overview page, navigate to your unit of choice\n\n**Step 2:** Click on the \"Go to Unit\" button of the Unit you would like to view.",
+        "imageUrl": "https://images.code.org/4f00697261c7355d80d2591d1b93650d-Screenshot 2025-02-28 at 12.40.10 PM.png",
+        "key": "music-coding-intro-seq-panel-5c8e1776-1332-425c-8237-86189507ca3c",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "**Step 3:** When you reach the Unit Overview page, click on the blue \"Teacher Resources\" button.\n**Step 4:** Select the resource that you would like to view from the dropdown menu.",
+        "imageUrl": "https://images.code.org/53fa965571ce72b9ad37d0c82f04d7a6-Screenshot 2025-02-28 at 12.40.38 PM.png",
+        "key": "music-coding-intro-seq-panel-eef7e23a-96dd-448a-a2c6-7e458e637905",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "offer_browser_tts": "true",
+    "name_suffix": "_1"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-28T20:39:34.450+00:00\",\"changed\":[\"cloned from \\\"PLmusic-coding-intro-seq-panel_1\\\"\"],\"cloned_from\":\"PLmusic-coding-intro-seq-panel_1\"},{\"changed_at\":\"2025-02-28 20:43:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+}]]></config>
+</Panels>

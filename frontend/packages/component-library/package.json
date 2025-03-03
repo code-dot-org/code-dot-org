@@ -172,6 +172,14 @@
       "import": "./dist/esm/fontAwesomeV6Icon/index.mjs",
       "require": "./dist/cjs/fontAwesomeV6Icon/index.js"
     },
+    "./formFieldWrapper": {
+      "types": {
+        "import": "./dist/esm/formFieldWrapper/index.d.mts",
+        "require": "./dist/cjs/formFieldWrapper/index.d.ts"
+      },
+      "import": "./dist/esm/formFieldWrapper/index.mjs",
+      "require": "./dist/cjs/formFieldWrapper/index.js"
+    },
     "./link": {
       "types": {
         "import": "./dist/esm/link/index.d.ts",

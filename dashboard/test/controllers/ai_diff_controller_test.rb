@@ -58,13 +58,36 @@ class AiDiffControllerTest < ActionController::TestCase
     AiDiffBedrockHelper.stubs(:create_bedrock_client).returns(@bedrock_client)
   end
 
-  test "returns bad_request when getting chat_completion if bad params" do
+  test "returns bad_request when getting chat_completion if bad params for lesson context" do
     sign_in @teacher
 
     post :chat_completion, params: {
       context: "lesson",
       inputText: "Hello!",
       contextId: @lesson.id,
+      sessionId: @session_id,
+      isPreset: false
+    }
+
+    assert_response :bad_request
+  end
+
+  test "returns bad_request when getting chat_completion if bad params for general context" do
+    sign_in @teacher
+
+    post :chat_completion, params: {
+      context: "general",
+      sessionId: @session_id,
+      isPreset: false,
+    }
+
+    assert_response :bad_request
+  end
+
+  test "returns bad_request when getting chat_completion if no context is provided" do
+    sign_in @teacher
+
+    post :chat_completion, params: {
       sessionId: @session_id,
       isPreset: false
     }
