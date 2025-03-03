@@ -35,7 +35,7 @@ export default class MusicValidator extends Validator {
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly getPlayingTriggers: () => PlayingTrigger[],
-    private readonly exemplarSettings: ExemplarSettings,
+    private readonly getExemplarSettings: () => ExemplarSettings | undefined,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
@@ -46,7 +46,8 @@ export default class MusicValidator extends Validator {
   shouldValidateWithExemplar(): boolean {
     const isEditingExemplar = getAppOptionsEditingExemplar();
     return (
-      !isEditingExemplar && (this.exemplarSettings?.validationEnabled ?? false)
+      !isEditingExemplar &&
+      (this.getExemplarSettings()?.validationEnabled ?? false)
     );
   }
 
@@ -60,8 +61,8 @@ export default class MusicValidator extends Validator {
     return {
       satisfied,
       message: satisfied
-        ? this.exemplarSettings.validationSuccessMessage
-        : this.exemplarSettings.validationFailureMessage,
+        ? this.getExemplarSettings()!.validationSuccessMessage
+        : this.getExemplarSettings()!.validationFailureMessage,
     };
   }
 
