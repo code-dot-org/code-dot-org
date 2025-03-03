@@ -1,11 +1,20 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import Tags from '@code-dot-org/component-library/tags';
 import {Heading6} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+import {createPortal} from 'react-dom';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -34,10 +43,16 @@ interface VersionHistoryDropdownProps {
   updatedSourceCallback?: (source: ProjectSources) => void;
   startSources: ProjectSources;
   closeDropdown: () => void;
-  isOpen: boolean;
+  listLoaded: boolean;
+  buttonRef: React.RefObject<HTMLDivElement>;
+  listLoading: boolean;
+  listLoadError: boolean;
+  selectedVersion: string;
+  setSelectedVersion: (version: string) => void;
 }
 
 const INITIAL_VERSION_ID = 'initial-version';
+const TOP_PADDING = 5;
 
 /**
  * Dropdown that displays a list of versions for the current project.
@@ -51,16 +66,18 @@ const VersionHistoryDropdown: React.FunctionComponent<
   updatedSourceCallback,
   startSources,
   closeDropdown,
-  isOpen,
+  listLoaded,
+  buttonRef,
+  listLoading,
+  listLoadError,
+  selectedVersion,
+  setSelectedVersion,
 }) => {
-  const [loadError, setLoadError] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [selectedVersion, setSelectedVersion] = useState('');
+  const [versionLoadError, setVersionLoadError] = useState(false);
+  const [versionLoading, setVersionLoading] = useState(false);
   const locale = currentLocale();
-  const menuRef = useOutsideClick<HTMLDivElement>(() => {
-    closeDropdown();
-  });
-  const previousIsOpen = useRef<boolean>(isOpen);
+  const menuRef = useOutsideClick<HTMLDivElement>(closeDropdown);
+  const previousListLoaded = useRef<boolean>(listLoaded);
   const latestVersion = useMemo(
     () => versionList?.find(v => v.isLatest)?.versionId || '',
     [versionList]
@@ -69,12 +86,39 @@ const VersionHistoryDropdown: React.FunctionComponent<
     state => state.lab2Project.viewingOldVersion
   );
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
 
   // If this is a teacher viewing a student's project, we hide the restore button,
   // but still allow viewing old versions.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
   const dialogControl = useDialogControl();
+
+  // Effect to position the dropdown relative to the button that opened it.
+  // We use a layout effect because it is guaranteed to run before the browser repaints
+  // the screen, so we can avoid a flash of the dropdown in the wrong position.
+  useLayoutEffect(() => {
+    const updateDropdownPositionIfShown = () => {
+      if (buttonRef.current && menuRef.current) {
+        const dropdownRect = menuRef.current.getBoundingClientRect();
+        const parentRect = buttonRef.current.getBoundingClientRect();
+        const top =
+          parentRect.top + parentRect.height + TOP_PADDING + window.scrollY;
+        const left = parentRect.right - dropdownRect.width + window.scrollX;
+        setDropdownStyles({
+          top,
+          left,
+        });
+      }
+    };
+
+    updateDropdownPositionIfShown();
+
+    window.addEventListener('resize', updateDropdownPositionIfShown);
+    return () => {
+      window.removeEventListener('resize', updateDropdownPositionIfShown);
+    };
+  }, [buttonRef, menuRef]);
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -91,30 +135,49 @@ const VersionHistoryDropdown: React.FunctionComponent<
     if (selectedVersion === '' && versionList.length > 0) {
       setSelectedVersion(latestVersion);
     }
-  }, [versionList, selectedVersion, latestVersion]);
+  }, [versionList, selectedVersion, latestVersion, setSelectedVersion]);
 
   useEffect(() => {
-    if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
-      // We only do anything here if we just re-opened the dropdown.
+    if (listLoaded && !previousListLoaded.current && selectedVersion !== '') {
       // If we are currently viewing an old version (this happens if
-      // the user x'd out of the dropdown, but did not cancel), scroll to the selected version.
-      // Wait a tick to ensure the selected version is rendered before scrolling to it.
-      // Otherwise, reset the selected version to the latest version.
-      // (we likely just restored the project to some version, so we should be viewing the latest version)
-      if (viewingOldVersion) {
-        setTimeout(() => {
-          const selectedVersionComponent =
-            document.getElementById(selectedVersion);
-          if (selectedVersionComponent) {
-            selectedVersionComponent.scrollIntoView({behavior: 'instant'});
-          }
-        }, 0);
-      } else {
+      // the user x'd out of the dropdown, but did not cancel), focus the selected version,
+      // otherwise focus the latest version and set the selected version to the latest version.
+      // We explicitly focus because we are using a react portal, and we need to ensure the focus
+      // goes to the correct element.
+      // Wait a tick to ensure the selected version is rendered before focusing it.
+      const versionId = viewingOldVersion ? selectedVersion : latestVersion;
+      if (!viewingOldVersion) {
         setSelectedVersion(latestVersion);
       }
+      if (versionId) {
+        setTimeout(() => {
+          const selectedVersionButton =
+            document.querySelector<HTMLInputElement>(
+              `input[type="radio"][name="${versionId}"]`
+            );
+          if (selectedVersionButton) {
+            selectedVersionButton.focus();
+          }
+        }, 0);
+      }
     }
-    previousIsOpen.current = isOpen;
-  }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
+
+    previousListLoaded.current = listLoaded;
+  }, [
+    listLoaded,
+    selectedVersion,
+    latestVersion,
+    viewingOldVersion,
+    setSelectedVersion,
+  ]);
+
+  useEffect(() => {
+    // If we are on the loading screen or load error screen, focus the close button.
+    if (listLoadError || listLoading) {
+      const closeButton = document.getElementById('close-version-history');
+      closeButton?.focus();
+    }
+  }, [listLoadError, listLoading]);
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {
@@ -163,8 +226,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
         appName,
         {isInitialVersion: 'false'}
       );
-      setLoading(true);
-      setLoadError(false);
+      setVersionLoading(true);
+      setVersionLoadError(false);
       projectManager
         .restoreSources(selectedVersion)
         .then(sources => {
@@ -172,14 +235,14 @@ const VersionHistoryDropdown: React.FunctionComponent<
             dispatch(setProjectSource(sources));
             successfulRestoreCleanUp(sources);
           } else {
-            setLoadError(true);
+            setVersionLoadError(true);
           }
-          setLoading(false);
+          setVersionLoading(false);
           closeDropdown();
         })
         .catch(() => {
-          setLoadError(true);
-          setLoading(false);
+          setVersionLoadError(true);
+          setVersionLoading(false);
         });
     }
   }, [
@@ -232,7 +295,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         dispatch(loadVersion({versionId: e.target.value, startSources}));
       }
     },
-    [appName, dispatch, isLatestVersion, startSources]
+    [appName, dispatch, isLatestVersion, setSelectedVersion, startSources]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version
@@ -245,8 +308,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
     closeDropdown();
   }, [closeDropdown, dispatch, isLatestVersion, selectedVersion]);
 
-  return isOpen ? (
-    <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
+  return createPortal(
+    <div
+      className={moduleStyles.versionHistoryDropdown}
+      ref={menuRef}
+      role="dialog"
+      style={dropdownStyles}
+      aria-modal="true"
+      aria-label={lab2I18n.versionHistoryList()}
+    >
       <div className={moduleStyles.versionHistoryHeader}>
         <Heading6 className={moduleStyles.versionHistoryTitle}>
           {commonI18n.versionHistory_header()}
@@ -254,89 +324,116 @@ const VersionHistoryDropdown: React.FunctionComponent<
         <CloseButton
           onClick={closeDropdown}
           aria-label={lab2I18n.closeVersionHistory()}
+          id={'close-version-history'}
         />
       </div>
-
-      <div className={moduleStyles.versionHistoryList}>
-        {versionList.map(version => (
-          <div id={version.versionId} key={version.versionId}>
-            <RadioButton
-              name={version.versionId}
-              value={version.versionId}
-              label={parseDate(version.lastModified)}
-              onChange={onVersionChange}
-              checked={selectedVersion === version.versionId}
-              className={moduleStyles.versionHistoryRow}
-            >
-              {version.isLatest && (
-                <Tags
-                  tagsList={[
-                    {
-                      label: commonI18n.current(),
-                      icon: {
-                        iconName: 'check',
-                        iconStyle: 'regular',
-                        title: 'check',
-                        placement: 'left',
-                      },
-                      tooltipContent: commonI18n.current(),
-                      tooltipId: 'current-version-tag',
-                      ariaLabel: commonI18n.current(),
-                    },
-                  ]}
-                  className={moduleStyles.latestTag}
-                  size="s"
-                />
-              )}
-            </RadioButton>
-          </div>
-        ))}
-        <div id={INITIAL_VERSION_ID}>
-          <RadioButton
-            name={INITIAL_VERSION_ID}
-            value={INITIAL_VERSION_ID}
-            label={lab2I18n.initialVersion()}
-            onChange={onVersionChange}
-            checked={selectedVersion === INITIAL_VERSION_ID}
-            className={moduleStyles.versionHistoryRow}
-          />
-        </div>
-      </div>
-
-      {loadError && (
-        <div className={classNames(moduleStyles.versionLoadError)}>
-          <Alert type="danger" text={lab2I18n.versionLoadFailure()} size="s" />
+      {listLoading && (
+        <div
+          className={classNames(
+            moduleStyles.versionHistoryMessage,
+            moduleStyles.loadingVersionSpinner
+          )}
+        >
+          <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
         </div>
       )}
-      <div className={moduleStyles.versionDropdownFooter}>
-        {loading && (
-          <div className={classNames(moduleStyles.loadingVersionSpinner)}>
-            <i className="fa fa-spinner fa-spin" />
-          </div>
-        )}
-        {!viewAsUserId && (
-          <Button
-            text={commonI18n.restore()}
-            color={'white'}
-            size={'s'}
-            onClick={restoreSelectedVersion}
-            disabled={loading}
-            className={moduleStyles.actionButton}
-            type={'primary'}
+      {listLoadError && (
+        <div className={moduleStyles.versionHistoryMessage}>
+          <Alert
+            type="danger"
+            text={lab2I18n.versionHistoryLoadFailure()}
+            size="s"
           />
-        )}
-        <Button
-          text={commonI18n.cancel()}
-          color={'white'}
-          size={'s'}
-          onClick={handleCancel}
-          disabled={loading}
-          className={moduleStyles.actionButton}
-          type={'secondary'}
-        />
-      </div>
-    </div>
-  ) : null;
+        </div>
+      )}
+      {listLoaded && (
+        <div>
+          <div className={moduleStyles.versionHistoryList}>
+            {versionList.map(version => (
+              <div id={version.versionId} key={version.versionId}>
+                <RadioButton
+                  name={version.versionId}
+                  value={version.versionId}
+                  label={parseDate(version.lastModified)}
+                  onChange={onVersionChange}
+                  checked={selectedVersion === version.versionId}
+                  className={moduleStyles.versionHistoryRow}
+                >
+                  {version.isLatest && (
+                    <Tags
+                      tagsList={[
+                        {
+                          label: commonI18n.current(),
+                          icon: {
+                            iconName: 'check',
+                            iconStyle: 'regular',
+                            title: 'check',
+                            placement: 'left',
+                          },
+                          tooltipContent: commonI18n.current(),
+                          tooltipId: 'current-version-tag',
+                          ariaLabel: commonI18n.current(),
+                        },
+                      ]}
+                      className={moduleStyles.latestTag}
+                      size="s"
+                    />
+                  )}
+                </RadioButton>
+              </div>
+            ))}
+            <div id={INITIAL_VERSION_ID}>
+              <RadioButton
+                name={INITIAL_VERSION_ID}
+                value={INITIAL_VERSION_ID}
+                label={lab2I18n.initialVersion()}
+                onChange={onVersionChange}
+                checked={selectedVersion === INITIAL_VERSION_ID}
+                className={moduleStyles.versionHistoryRow}
+              />
+            </div>
+          </div>
+          {versionLoadError && (
+            <div className={classNames(moduleStyles.versionLoadError)}>
+              <Alert
+                type="danger"
+                text={lab2I18n.versionLoadFailure()}
+                size="s"
+              />
+            </div>
+          )}
+          <div className={moduleStyles.versionDropdownFooter}>
+            {versionLoading && (
+              <div className={classNames(moduleStyles.loadingVersionSpinner)}>
+                <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
+              </div>
+            )}
+            {!viewAsUserId && (
+              <Button
+                text={commonI18n.restore()}
+                color={'white'}
+                size={'s'}
+                onClick={restoreSelectedVersion}
+                disabled={versionLoading}
+                className={moduleStyles.actionButton}
+                type={'primary'}
+              />
+            )}
+            <Button
+              text={commonI18n.cancel()}
+              color={'white'}
+              size={'s'}
+              onClick={handleCancel}
+              disabled={versionLoading}
+              className={moduleStyles.actionButton}
+              type={'secondary'}
+            />
+          </div>
+        </div>
+      )}
+    </div>,
+    document.body
+  );
 };
 
 export default React.memo(VersionHistoryDropdown);

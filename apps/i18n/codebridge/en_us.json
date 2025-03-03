@@ -11,6 +11,7 @@
   "closeFile": "close file {filename}",
   "closeWindowTryAgain": "Close this window and try again.",
   "consoleHeader": "Console",
+  "consoleOptions": "Console Options",
   "defaultLayout": "Default layout",
   "defaultNewFileContents": "Add your changes to {fileName}",
   "delete": "Delete",

@@ -1,17 +1,17 @@
 name 'programming-fundamentals-postassessment-question11-2024'
-title 'Programming Fundamentals Post-Assessment: Question 1'
+title 'Programming Fundamentals Post-Assessment: Question 11'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`while x > 10:`'
+right '`while True:`'
+wrong '`while x != 5:`'
+wrong '`while x == 0:`'
 
 allow_multiple_attempts false
 
 markdown <<MARKDOWN
-question
+Which of the following conditions could cause an infinite loop?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 8: Introduction to Loops
 MARKDOWN

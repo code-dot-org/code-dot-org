@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
@@ -15,6 +17,14 @@ const JoinSectionLinkAccountPage: React.FunctionComponent<{
   const joinSectionCodeUrlParam = sectionCode ? `/${sectionCode}` : '';
   const signUpJoinSectionUrl = `/users/new_sign_up/login_type?user_type=student&user_return_to=/join${joinSectionCodeUrlParam}`;
   const signInJoinSectionUrl = `/users/sign_in?user_return_to=/join${joinSectionCodeUrlParam}`;
+
+  useEffect(() => {
+    analyticsReporter.sendEvent(
+      EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
+      {source: 'join section'},
+      PLATFORMS.BOTH
+    );
+  }, []);
 
   return (
     <main>
