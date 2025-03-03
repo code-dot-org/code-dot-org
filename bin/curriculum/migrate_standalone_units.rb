@@ -8,7 +8,8 @@ $verbose = false
 # This script is used to convert standalone courses to UnitGroups.
 def parse_options
   options = {
-    rollback: false
+    rollback: false,
+    file_system_changes: true
   }
 
   OptionParser.new do |opts|
@@ -32,6 +33,10 @@ def parse_options
 
     opts.on("-r", "--rollback", "Rollback migration of specified units") do
       options[:rollback] = true
+    end
+
+    opts.on("--no-fs-changes", "Don't perform file system changes") do
+      options[:file_system_changes] = false
     end
 
     opts.on("-v", "--verbose", "Use verbose debug logging ") do
@@ -101,7 +106,7 @@ def migrate_units(options)
   end
 
   standalone_units.each do |unit|
-    result = Services::StandaloneUnitMigrator.call(unit, verbose: $verbose, log_file: log_file)
+    result = Services::StandaloneUnitMigrator.call(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
     migrated_units << unit.name if result
     all_successful &&= result
   end

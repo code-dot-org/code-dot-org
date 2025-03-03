@@ -2,7 +2,7 @@ require "test_helper"
 require "tempfile"
 
 class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
-  let(:described_instance) {described_class.new(@unit, verbose: true, log_file: @temp_log_file.path)}
+  let(:described_instance) {described_class.new(@unit, verbose: true, log_file: @temp_log_file.path, file_system_changes: false)}
 
   let(:family_name) {Faker::Lorem.unique.word}
 

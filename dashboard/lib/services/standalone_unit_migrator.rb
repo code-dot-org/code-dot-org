@@ -2,10 +2,11 @@ module Services
   class StandaloneUnitMigrator < Services::Base
     attr_reader :unit
 
-    def initialize(unit, verbose: false, log_file: nil)
+    def initialize(unit, verbose: false, log_file: nil, file_system_changes: true)
       @unit = unit
       @verbose = verbose
       @logger = log_file ? Logger.new(log_file) : Logger.new($stdout)
+      @file_system_changes = file_system_changes
     end
 
     def call
@@ -16,7 +17,7 @@ module Services
 
       unit_copy = @unit.dup
       log_initial_info if @verbose
-      i18n_params = set_i18n_params
+      i18n_params = set_i18n_params if @file_system_changes
 
       create_new_unit_group
       if @unit_group.errors.present?
@@ -115,15 +116,37 @@ module Services
         participant_audience: @unit.participant_audience,
         has_numbered_units: false
       )
-      @unit_group.save
+      # unless @unit_group.save
+      #   new_name = case @unit_group.errors[:name]&.first
+      #              when "can only contain lowercase letters, numbers and dashes"
+      #                @unit.name.downcase.tr(' ', '-')
+      #              when "has already been taken"
+      #                @unit.name + "-course"
+      #              else
+      #                nil
+      #              end
+      #   @unit_group = UnitGroup.new(
+      #     name: new_name,
+      #     family_name: @unit.family_name,
+      #     version_year: @unit.version_year,
+      #     instruction_type: @unit.instruction_type,
+      #     instructor_audience: @unit.instructor_audience,
+      #     participant_audience: @unit.participant_audience,
+      #     has_numbered_units: false
+      #   )
+      #   @unit_group.save
+      # end
     end
 
     private def update_unit_group(i18n_params, published_state)
       # Add existing unit to new unit group and update strings
-      # Dir.chdir(Rails.root) do
-      #   @new_unit_group.persist_strings_and_units_changes([@unit.name], i18n_params)
-      # end
-      @unit_group.update_scripts([@unit.name])
+      if @file_system_changes
+        Dir.chdir(Rails.root) do
+          @unit_group.persist_strings_and_units_changes([@unit.name], i18n_params)
+        end
+      else
+        @unit_group.update_scripts([@unit.name])
+      end
 
       # Publish the new unit group
       @unit_group.update!(published_state: published_state)
