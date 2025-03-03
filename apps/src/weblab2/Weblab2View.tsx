@@ -13,8 +13,6 @@ import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
-import {Config} from './Config';
-
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
@@ -154,29 +152,9 @@ const Weblab2View: React.FC<LabProps> = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {source, setProject, startSources, projectVersion} =
     useSource(defaultProject);
-  const [showConfig, setShowConfig] = useState<
-    'project' | 'config' | 'layout' | ''
-  >('');
-
-  const configKey = {
-    project: source || defaultProject,
-    config: config,
-    layout: config,
-  };
 
   return (
     <div className="app-wrapper">
-      <div className="app-wrapper-nav">
-        <button type="button" onClick={() => setShowConfig('project')}>
-          Edit project
-        </button>
-        <button type="button" onClick={() => setShowConfig('config')}>
-          Edit config
-        </button>
-        <button type="button" onClick={() => setShowConfig('layout')}>
-          Edit layout
-        </button>
-      </div>
       <div className="app-ide">
         {source && (
           <Codebridge
@@ -186,25 +164,6 @@ const Weblab2View: React.FC<LabProps> = () => {
             setConfig={setConfig}
             startSources={startSources}
             projectVersion={projectVersion}
-          />
-        )}
-
-        {showConfig && (
-          <Config
-            config={configKey[showConfig]}
-            setConfig={(
-              configName: string,
-              newConfig: MultiFileSource | ConfigType | string
-            ) => {
-              if (configName === 'project') {
-                setProject({source: newConfig as MultiFileSource});
-              } else if (configName === 'config' || configName === 'layout') {
-                setConfig(newConfig as ConfigType);
-              }
-              setShowConfig('');
-            }}
-            cancelConfig={() => setShowConfig('')}
-            configName={showConfig}
           />
         )}
       </div>
