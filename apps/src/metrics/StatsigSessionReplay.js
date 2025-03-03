@@ -2,12 +2,17 @@ import {StatsigClient} from '@statsig/js-client';
 import {runStatsigSessionReplay} from '@statsig/session-replay';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
 
+import {isProductionEnvironment} from '../utils';
+
 import {
   getUserID,
   getUserType,
   findOrCreateStableId,
   formatUserId,
 } from './StatsigHelpers';
+
+// A flag that can be toggled to enable session recording for development environments
+const LOCAL_MODE = false;
 
 class StatsigSessionReplay {
   constructor() {
@@ -38,7 +43,25 @@ class StatsigSessionReplay {
   }
 
   async startRecording() {
+    // check if the statsig client is already initialized
     if (this.statsigClient) {
+      return;
+    }
+
+    const managed_test_environment_element = document.querySelector(
+      'script[data-managed-test-server]'
+    );
+    const managed_test_environment = managed_test_environment_element
+      ? managed_test_environment_element.dataset.managedTestServer === 'true'
+      : false;
+
+    // Only proceed with recording if in production environment, managed test
+    // environment, or local mode is enabled
+    if (
+      !isProductionEnvironment() &&
+      !managed_test_environment &&
+      !LOCAL_MODE
+    ) {
       return;
     }
 
@@ -49,6 +72,7 @@ class StatsigSessionReplay {
   }
 
   stopRecording() {
+    // check if the statsig client is already stopped
     if (!this.statsigClient) {
       return;
     }
