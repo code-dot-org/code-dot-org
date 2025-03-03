@@ -416,13 +416,7 @@ class ScriptsController < ApplicationController
 
   # Redirect /s/... to /courses/.../units/...
   private def redirect_to_nested_course
-    if !@course && Experiment.enabled?(user: @current_user, experiment_name: 'modularity')
-      unit_group_unit = UnitGroupUnit.where(script_id: @script.id).first
-      @course = UnitGroup.get_from_cache(unit_group_unit.course_id)
-      @unit_position = unit_group_unit.position
-      nested_course_path = course_unit_path(@course, @unit_position)
-      nested_course_path << "?#{request.query_string}" if request.query_string.present?
-      redirect_to nested_course_path
-    end
+    canonical_path = Services::Courses.canonical_path(request, params, current_user)
+    redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end
