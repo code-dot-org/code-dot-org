@@ -33,7 +33,7 @@ $negative-grab-area-offset: calc(-1 * $grab-area-offset);
   background-color: transparent;
 }
 
-@mixin verticalAbsoluteBar($width, $left, $right) {
+@mixin vertical-absolute-bar($width, $left, $right) {
   width: $width;
   height: 100%;
   top: 0;
@@ -43,7 +43,7 @@ $negative-grab-area-offset: calc(-1 * $grab-area-offset);
   cursor: col-resize;
 }
 
-@mixin horizontalAbsoluteBar($width, $top, $bottom) {
+@mixin horizontal-absolute-bar($width, $top, $bottom) {
   height: $width;
   width: 100%;
   left: 0;
@@ -55,19 +55,19 @@ $negative-grab-area-offset: calc(-1 * $grab-area-offset);
 
 
 .horizontalGrabbable {
-  @include horizontalAbsoluteBar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
+  @include horizontal-absolute-bar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
 }
 
 .verticalGrabbable {
-  @include verticalAbsoluteBar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
+  @include vertical-absolute-bar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
 }
 
 .verticalResizing {
-  @include verticalAbsoluteBar($visible-area, $visible-negative-area-offset, $visible-area-offset);
+  @include vertical-absolute-bar($visible-area, $visible-negative-area-offset, $visible-area-offset);
 }
 
 .horizontalResizing {
-  @include horizontalAbsoluteBar($visible-area, $visible-negative-area-offset, $visible-area-offset);
+  @include horizontal-absolute-bar($visible-area, $visible-negative-area-offset, $visible-area-offset);
 }
 
 .visible {

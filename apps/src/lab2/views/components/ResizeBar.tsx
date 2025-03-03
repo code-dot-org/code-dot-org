@@ -72,6 +72,8 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
         // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
+        onFocus={() => setIsActive(true)}
+        onBlur={() => setIsActive(false)}
       >
         {/* The grabbable bar. We take onPointerDown from the separater props and put it here to make the bar
         easier to grab. */}
