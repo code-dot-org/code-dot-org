@@ -1,0 +1,149 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-02-28T22:40:39.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category",
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_sounds_together",
+              "x": 230,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "_rwRo`~K3/j?i5vgxaZ.",
+              "x": 350,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 50,
+              "y": 190,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/drum_beat_cowbell"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "*eX9k=SPqX{eQ8,T%}61",
+              "x": 170,
+              "y": 310,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/drum_beat_club"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "_#pzs%Eote$i0)B,#|mN",
+              "x": 390,
+              "y": 230,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/guitar_melody"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "`n}i{wol/TD2JDl1/NSk",
+              "x": 490,
+              "y": 310,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/guitar_moment"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "guitar_moment",
+          "guitar_melody"
+        ]
+      },
+      "packId": "default"
+    },
+    "long_instructions": "Dan was playing around with sounds and discovered a groove that he liked, but when he walked away from his computer his toddler ran over and messed everything up. Can you help him put his song back together?\r\n\r\nDan: \"I had the cowbell and melody together, and then I had the beat and moment together\"\r\n\r\nCan you reconstruct his song?",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor6BCPkf6utFvuIj3W7tTG5Be81z3rwi0UJuctz78mOQv4\nh0WOnZ1OAR3zAoHtp499kaYXN9N25E7USwHrSFw7122eBkYXGp4kT73524m/\nqUCApMWvCRefw8e1xeQ9+ZEgrFe8BbPdpAxCVe09GYC46vAidCMIU7vnAjpv\nNxkgv0aW1QfRS1f1z7XEIbpjeXJZWnz8R/AkJ6XM7rndS4p+1q3w50a48pnK\nECXB1C6EPvIyleaBKmHiT+jPor0v5c1M7bFtpWBI7kswXNR14KuylUMl6rlL\nQPyF20FOINMz2RFRUgiOt2oLKv/RqJZIGBMI4vkhU1VdcxpOgRrDdBsWbGxU\njm0OTbBccJK7M9CFcD08GNZ54moM2jp3qRTrHWULArX+P9kMnDgjOGicMWhu\nTddtO6cnGyCBZ7QBa6sfRlRyBFdtIsRbkvHGfXTfKMXxyLe3tG7q/dodzkbs\nHcodJJ2HlgZUCN8Vpkdw+YAUE/HbdyV0J9admlEP/RSkanOel1AiVpezXmG8\nwNaHZMfAu6nbHZzKE2zMBO5y/2rjhkgxjDhu4n85fSwaTZpt4CGQuar3uUCp\nSDPp28nfmDERCf5D25HGebJ6EjuF92g9le7hmAVlHqBxavzSZeh47vaoiIYw\ny2Z1R+y4zdfZgjiD+MltexxgwWw1Xt2oVCUQsu0INxZB1fD7c26leHiKAjXU\nRdbdkLg1Pckm905peTY8vdI4wXV3gGnklJTbP40mo9UKoUaYVTjE8/dsMcbx\nzLUxMcO/jRdzLpmdgVJYKrP8jScAulqtzmetACOCGB03rh8s5ROdkFgG4iZw\nzBWTHxLa9VmD0JCbXA0YY4qj054jfYi7mtJBDakNUKMgNUZHsyptTb76BaXl\n85R07/ISF8vRXkKKIYPmj6KQ9t4T/ODvbZSFIqvqfjMaXkrPNP7BXokOkyKB\nao54L67jI6viuP3EZ6FF8dLdsvd84R7USrAseqXOZyLSgNQB3xUSQxmeCf0X\nY3LbgcLEYqM8iwPGshUzadx9d9iaoON/odvYPnoBRB8/huImUECZBJk1K59d\nT68=\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-28T22:40:39.460+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-parson-experiment\\\"\"],\"cloned_from\":\"music-lab-simple-parson-experiment\"},{\"changed_at\":\"2025-02-28 22:41:33 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

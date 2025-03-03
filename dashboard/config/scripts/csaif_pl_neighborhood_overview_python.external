@@ -3,25 +3,33 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The Neighborhood
+# AI Tutor Overview 
+
+*note: the pilot is A/B testing if they will use AI Tutor or not*
+
+<img src="https://images.code.org/8621f0eb0b8d379ac5d11ff5689e2650-image-1740761046012.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 175px; margin: 0px 20px 0px 10px; ">
+
+####  AI-powered tools have the potential to greatly enhance student success in learning computer science. 
+
+#### To support students in their coding journey, Code.org has introduced the **AI Tutor**, a generative AI chatbot embedded directly into coding levels to help students seamlessly troubleshoot their code. 
+
+#### It can assist with debugging errors, explaining coding concepts, and guiding students through the problem-solving process.
+
+## Responsible Use
+
+#### To ensure responsible use, all chat interactions are logged and accessible to teachers. Code.org is actively testing this feature to better understand how students engage with AI and how it can be used to enhance learning.
 
 
-<img src="https://images.code.org/1233653f67af64f5f96488f45b298812-image-1724078163830.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Teacher Choice</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Teachers have full control over whether students can access the AI Tutor.<br>
+        You can choose between two identical versions of the curriculum— <b>one with the AI Tutor and one without</b>.<br><br> 
+        For teachers using the version with the AI Tutor, full control is in their hands.<br>
+        <b>You can decide when, where, and if</b> students have access to the AI-powered assistant, ensuring it aligns with their instructional goals and classroom needs.
+    </p>
+</div>
 
-## Defining Cybersecurity
 
-#### Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, and other security threats.
-
-#### In today’s digital world, cybersecurity is essential to safeguard sensitive information, prevent data breaches, and ensure privacy and safety online.
-
-<br>
-
----
-
-## Why students should learn it
-
-#### Learning cybersecurity helps students develop critical thinking skills and understand how to stay safe in an increasingly connected world.
-
-#### It prepares them for a wide range of careers in technology and security while empowering them to protect personal and organizational data from cyber threats.
-
+#### You will have the opportunity to engage with the AI Tutor and learn more later in the module.  
 MARKDOWN
