@@ -11,6 +11,7 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
+  before_action :redirect_to_nested_course, only: [:show]
   authorize_resource class: 'Unit', except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
@@ -411,5 +412,17 @@ class ScriptsController < ApplicationController
     return nil if redirect_unit == unit
 
     redirect_unit
+  end
+
+  # Redirect /s/... to /courses/.../units/...
+  private def redirect_to_nested_course
+    if !@course && Experiment.enabled?(user: @current_user, experiment_name: 'modularity')
+      unit_group_unit = UnitGroupUnit.where(script_id: @script.id).first
+      @course = UnitGroup.get_from_cache(unit_group_unit.course_id)
+      @unit_position = unit_group_unit.position
+      nested_course_path = course_unit_path(@course, @unit_position)
+      nested_course_path << "?#{request.query_string}" if request.query_string.present?
+      redirect_to nested_course_path
+    end
   end
 end

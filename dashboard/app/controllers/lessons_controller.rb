@@ -4,6 +4,8 @@ class LessonsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
+  before_action :redirect_show_to_nested_course, only: [:show]
+  before_action :redirect_student_to_nested_course, only: [:student_lesson_plan]
 
   include LevelsHelper
   include CachedUnitHelper
@@ -247,5 +249,35 @@ class LessonsController < ApplicationController
       return Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
     end
     raise ActiveRecord::RecordNotFound
+  end
+
+  # Redirect /s/... to /courses/.../units/...
+  private def redirect_show_to_nested_course
+    if params[:script_id] && Experiment.enabled?(user: @current_user, experiment_name: 'modularity')
+      unit = Unit.get_from_cache(params[:script_id])
+      course, unit_position = get_course_unit_info(unit.id)
+      lesson_position = params[:position]
+      nested_course_path = course_unit_lesson_path(course, unit_position, lesson_position)
+      nested_course_path << "?#{request.query_string}" if request.query_string.present?
+      redirect_to nested_course_path
+    end
+  end
+
+  private def redirect_student_to_nested_course
+    if params[:script_id] && Experiment.enabled?(user: @current_user, experiment_name: 'modularity')
+      unit = Unit.get_from_cache(params[:script_id])
+      course, unit_position = get_course_unit_info(unit.id)
+      lesson_position =params[:lesson_position]
+      nested_course_path = course_unit_lesson_student_path(course, unit_position, lesson_position)
+      nested_course_path << "?#{request.query_string}" if request.query_string.present?
+      redirect_to nested_course_path
+    end
+  end
+
+  private def get_course_unit_info(script_id)
+    unit_group_unit = UnitGroupUnit.where(script_id: script_id).first
+    course = UnitGroup.get_from_cache(unit_group_unit.course_id)
+    unit_position = unit_group_unit.position
+    [course, unit_position]
   end
 end

@@ -151,6 +151,15 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # Redirect /s/... to /courses/.../units/...
+    if params[:script_id] && Experiment.enabled?(user: @current_user, experiment_name: 'modularity')
+      course, unit_position = get_course_unit_info(params[:script_id])
+      course_name = course.name
+      canonical_path = build_script_level_path(@script_level, @extra_params, course_name: course_name, unit_position: unit_position)
+      redirect_to canonical_path
+      return
+    end
+
     course_name = params[:course_course_name]
     unit_position = params[:unit_position]
     canonical_path = build_script_level_path(@script_level, @extra_params, course_name: course_name, unit_position: unit_position)
@@ -277,6 +286,17 @@ class ScriptLevelsController < ApplicationController
 
   def lesson_extras
     authorize! :read, ScriptLevel
+
+    # Redirect /s/... to /courses/.../units/...
+    if params[:script_id] && Experiment.enabled?(user: @current_user, experiment_name: 'modularity')
+      unit = Unit.get_from_cache(params[:script_id])
+      course, unit_position = get_course_unit_info(unit.id)
+      lesson_position = params[:lesson_position]
+      nested_course_path = course_unit_lesson_extras_path(course, unit_position, lesson_position)
+      nested_course_path << "?#{request.query_string}" if request.query_string.present?
+      redirect_to nested_course_path
+      return
+    end
 
     @script = ScriptLevelsController.get_script(request)
     raise ActiveRecord::RecordNotFound unless @script
@@ -658,5 +678,13 @@ class ScriptLevelsController < ApplicationController
     seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
     return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT
     !seen_ta_scores_map[@script_level.lesson.id.to_s]
+  end
+
+  private def get_course_unit_info(script_name)
+    unit = Unit.get_from_cache(script_name)
+    unit_group_unit = UnitGroupUnit.where(script_id: unit.id).first
+    course = UnitGroup.get_from_cache(unit_group_unit.course_id)
+    unit_position = unit_group_unit.position
+    [course, unit_position]
   end
 end
