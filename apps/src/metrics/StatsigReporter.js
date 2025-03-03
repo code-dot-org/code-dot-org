@@ -1,5 +1,11 @@
 import {StatsigClient} from '@statsig/js-client';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
+import {
+  getUserID,
+  getUserType,
+  findOrCreateStableId,
+  formatUserId,
+} from 'statsigHelpers';
 
 import logToCloud from '@cdo/apps/logToCloud';
 import experiments from '@cdo/apps/util/experiments';
@@ -10,13 +16,6 @@ import {
   isProductionEnvironment,
   isDevelopmentEnvironment,
 } from '../utils';
-
-import {
-  getUserID,
-  getUserType,
-  findOrCreateStableId,
-  formatUserId,
-} from './StatsigHelpers';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
