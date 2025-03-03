@@ -62,8 +62,9 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   const {onPointerDown, ...mainSeparatorProps} = separatorProps;
 
   return (
+    // The always-visible 1px bar
     <div className={classNames(moduleStyles.resizeBar, layoutClass)}>
-      {/* The visible bar */}
+      {/* The visible 3px bar */}
       <div
         className={classNames(moduleStyles.absoluteBar, resizingBarClass)}
         {...mainSeparatorProps}
