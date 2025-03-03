@@ -1,4 +1,5 @@
-@import 'color', 'breakpoints', 'style-constants', 'typography';
+@import 'color', 'breakpoints', 'style-constants';
+@import '@code-dot-org/component-library-styles/typography.module';
 
 @mixin link-style {
   color: $light_black;

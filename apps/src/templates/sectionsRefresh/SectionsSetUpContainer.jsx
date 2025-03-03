@@ -1,6 +1,5 @@
 import {
   BodyTwoText,
-  Heading1,
   Heading3,
 } from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
@@ -43,17 +42,7 @@ const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(
     section
-      ? [
-          {
-            ...Object.keys(section).reduce((acc, cur) => {
-              if (cur !== 'stageExtras') {
-                acc[cur] = section[cur];
-              }
-              return acc;
-            }, {}),
-            lessonExtras: section.stageExtras,
-          },
-        ]
+      ? [section]
       : [
           {
             pairingAllowed: true,
@@ -423,25 +412,18 @@ export default function SectionsSetUpContainer({
 
   return (
     <form id={FORM_ID}>
-      <div className={moduleStyles.containerWithMarginTop}>
-        <Heading1>
-          {isNewSection
-            ? i18n.setUpClassSectionsHeader()
-            : i18n.editSectionDetails()}
-        </Heading1>
-        {isNewSection && (
-          <>
-            <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
-              {i18n.setUpClassSectionsSubheader()}
-            </BodyTwoText>
-            <BodyTwoText>
-              <a onClick={onURLClick} className={moduleStyles.textPopUp}>
-                {i18n.setUpClassSectionsSubheaderLink()}
-              </a>
-            </BodyTwoText>
-          </>
-        )}
-      </div>
+      {isNewSection && (
+        <>
+          <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
+            {i18n.setUpClassSectionsSubheader()}
+          </BodyTwoText>
+          <BodyTwoText>
+            <a onClick={onURLClick} className={moduleStyles.textPopUp}>
+              {i18n.setUpClassSectionsSubheaderLink()}
+            </a>
+          </BodyTwoText>
+        </>
+      )}
 
       {renderChildAccountPolicyNotification()}
 

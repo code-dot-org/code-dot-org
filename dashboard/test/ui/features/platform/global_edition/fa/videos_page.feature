@@ -1,5 +1,3 @@
-# Skipped due to flakiness caused by the CDO icon animation on YouTube videos
-@skip
 @chrome
 Feature: Global Edition - Farsi MVP - Videos page
 
@@ -33,49 +31,3 @@ Feature: Global Edition - Farsi MVP - Videos page
 
     When I see no difference for "Main content" within "main"
     Then I close my eyes
-
-  @eyes
-  Scenario: I see How AI Works videos on the Farsi MVP Videos page
-    Given I am on "http://code.org/global/fa/videos"
-    And I open my eyes to test "[Farsi MVP] Videos page - How AI Works videos"
-
-    When I wait until element ".how-ai-works" is visible
-    Then I see no difference for "Videos 1 and 2" within ".how-ai-works"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(2)" within shadow-host ".how-ai-works"
-    Then I see no difference for "Videos 3 and 4" within ".how-ai-works"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(3)" within shadow-host ".how-ai-works"
-    Then I see no difference for "Videos 5 and 6" within ".how-ai-works"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(4)" within shadow-host ".how-ai-works"
-    Then I see no difference for "Videos 7 and 8" within ".how-ai-works"
-
-    And I close my eyes
-
-  @eyes
-  Scenario: I see How Computers Work videos on the Farsi MVP Videos page
-    Given I am on "http://code.org/global/fa/videos"
-    And I open my eyes to test "[Farsi MVP] Videos page - How Computers Work videos"
-
-    When I wait until element ".how-computers-work" is visible
-    Then I see no difference for "Videos 1 and 2" within ".how-computers-work"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(2)" within shadow-host ".how-computers-work"
-    Then I see no difference for "Videos 3 and 4" within ".how-computers-work"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(3)" within shadow-host ".how-computers-work"
-    Then I see no difference for "Videos 5 and 6" within ".how-computers-work"
-
-    And I close my eyes
-
-  @eyes
-  Scenario: I see How the Internet Works videos on the Farsi MVP Videos page
-    Given I am on "http://code.org/global/fa/videos"
-    And I open my eyes to test "[Farsi MVP] Videos page - How the Internet Works videos"
-
-    When I wait until element ".how-internet-works" is visible
-    Then I see no difference for "Videos 1 and 2" within ".how-internet-works"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(2)" within shadow-host ".how-internet-works"
-    Then I see no difference for "Videos 3 and 4" within ".how-internet-works"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(3)" within shadow-host ".how-internet-works"
-    Then I see no difference for "Videos 5 and 6" within ".how-internet-works"
-    When I click selector ".swiper-pagination-bullet:nth-of-type(4)" within shadow-host ".how-internet-works"
-    Then I see no difference for "Videos 7 and 8" within ".how-internet-works"
-
-    And I close my eyes

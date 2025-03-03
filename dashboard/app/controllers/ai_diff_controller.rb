@@ -82,7 +82,7 @@ class AiDiffController < ApplicationController
 
     unit_num = @unit&.unit_group_units&.first&.position
 
-    course_name = @unit_group.name
+    course_name = @unit_group.present? ? @unit_group.name : @unit&.name
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
     prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name)
@@ -99,8 +99,14 @@ class AiDiffController < ApplicationController
   end
 
   private def has_required_params?
+    return false if params[:context].nil?
+
     begin
-      params.require([:context, :inputText, :contextId, :unitDisplayName, :isPreset])
+      if params[:context] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+        params.require([:inputText, :isPreset])
+      elsif params[:context] == SharedConstants::AI_DIFF_CONTEXT[:LESSON] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:UNIT] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+        params.require([:inputText, :contextId, :unitDisplayName, :isPreset])
+      end
     rescue ActionController::ParameterMissing
       return false
     end

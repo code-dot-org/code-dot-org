@@ -15,10 +15,11 @@
     "skip_dialog": true,
     "skip_sound": true,
     "display_name": "Wearable Stress-Monitor",
-    "thumbnail_url": "https://images.code.org/48dddc219622be457cde83b2841372f6-healthdevice.png"
+    "thumbnail_url": "https://images.code.org/48dddc219622be457cde83b2841372f6-healthdevice.png",
+    "bubble_choice_description": "A school is testing a new wearable wristband designed to help students track their stress levels throughout the day, but early user feedback reveals issues with accuracy, comfort, and connectivity."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-31 17:55:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:00:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:01:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:04:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:14:45 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-01-31 17:55:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:00:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:01:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:04:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:14:45 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-02-22 00:32:49 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

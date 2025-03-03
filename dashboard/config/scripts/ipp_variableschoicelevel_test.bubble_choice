@@ -1,5 +1,5 @@
 name 'IPP-variablesChoiceLevel-test'
-display_name 'Variables Choice Level'
+display_name 'Variables Practice'
 description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
 
 sublevels

@@ -111,6 +111,7 @@ export class Workshop extends React.Component {
             'course_offerings',
             'module',
             'participant_group_type',
+            'time_zone',
           ]),
         });
       })

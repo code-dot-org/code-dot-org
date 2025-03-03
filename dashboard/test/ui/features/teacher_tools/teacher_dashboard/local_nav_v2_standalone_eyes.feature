@@ -1,0 +1,27 @@
+@no_mobile
+@eyes
+Feature: V2 teacher dashboard local navigation - standalone unit - Eyes
+  Background:
+    Given I am on "http://studio.code.org/home"
+    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
+    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
+
+  Scenario: Local navigation on standalone Unit
+    When I open my eyes to test "teacher local nav v2 - standalone unit overview"
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to unit "interactive-games-animations-2024" with teacher "Teacher_Sally"
+
+    Given I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+
+    When I click selector "a:contains(New Section)" once I see it to load a new page
+    Given I wait until element "#ui-test-teacher-sidebar" is visible
+    Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
+    And I wait until element "h1:contains('Interactive Animations and Games')" is visible
+    Then I see no difference for "unit overview"
+
+    Then I click selector "#uitest-view-as-student" once I see it
+    And I wait until element ".uitest-assigned" is visible
+    Then I see no difference for "student view"
+
+    And I close my eyes
