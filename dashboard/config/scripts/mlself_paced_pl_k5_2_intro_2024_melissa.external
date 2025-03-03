@@ -23,4 +23,33 @@ markdown <<MARKDOWN
 ## Let's get started!
 
 <div style="clear:both"/>
+
+
+
+
+</head>
+<body>
+    <div class="checklist-container">
+        <div class="checklist-title">Upon Completing this Module You Will:</div>
+        <div class="checklist">
+            <label class="checklist-item">
+                <input type="checkbox"> Become a verified teacher
+            </label> <br>
+            <label class="checklist-item">
+                <input type="checkbox"> Create a section
+            </label> <br>
+            <label class="checklist-item">
+                <input type="checkbox"> Add a course
+            </label> <br>
+            <label class="checklist-item">
+                <input type="checkbox"> Access teacher materials
+            </label> <br>
+            <label class="checklist-item">
+                <input type="checkbox"> Post on the Teacher Forum
+            </label> <br>
+        </div>
+    </div>
+</body>
+</html>
+
 MARKDOWN

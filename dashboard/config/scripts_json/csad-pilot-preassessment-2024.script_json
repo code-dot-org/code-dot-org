@@ -10,13 +10,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csad-2025-pilot",
       "student_detail_progress_view": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 20:32:55 UTC",
+    "serialized_at": "2025-02-28 22:00:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -89,6 +90,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-preassessment-2024"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -121,13 +125,29 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Support Article: How to Unlock Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-How-do-I-unlock-assessments-tests-and-surveys-for-my-students",
+      "key": "support_article_how_to_unlock_assessments",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "support_article_how_to_unlock_assessments"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "support_article_how_to_unlock_assessments",
+        "script.name": "csad-pilot-preassessment-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

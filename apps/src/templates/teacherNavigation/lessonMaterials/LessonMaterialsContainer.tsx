@@ -218,6 +218,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
               isLabelVisible={false}
               onChange={event => onDropdownChange(event.target.value)}
               items={lessonOptions}
+              color="gray"
               selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
               name={'lessons-in-assigned-unit-dropdown'}
               size="s"
