@@ -62,21 +62,27 @@ def process_s3_file(bucket, key)
   puts "Processing #{File.basename(key)} in parallel with #{$max_processes} processes"
   start_time = Time.now
   output_filename = File.join($output_dir, File.basename(key))
-  File.open(output_filename, 'w') do |file|
-    Parallel.each(rows, in_processes: $max_processes) do |row|
-      data = JSON.parse(row)
-      channel_id = data['channel_id']
-      source = get_project_source(channel_id)
-      data['source'] = source
 
-      # rows may be written out of order, but each row must be intact.
-      file.flock(File::LOCK_EX)
-      file.puts data.to_json
-      file.flock(File::LOCK_UN)
-    rescue JSON::ParserError => exception
-      puts "Error parsing JSON: #{exception}"
-    end
+  Parallel.each(rows, in_processes: $max_processes) do |row|
+    data = JSON.parse(row)
+    channel_id = data['channel_id']
+    source = get_project_source(channel_id)
+    data['source'] = source
+    # Modify in place to avoid using extra memory
+    row.replace(data.to_json)
+  rescue JSON::ParserError => exception
+    puts "Error parsing JSON: #{exception}"
+    row.replace(nil)
   end
+
+  # Remove nil values in-place
+  rows.compact!
+
+  # Stream writing to reduce memory overhead
+  File.open(output_filename, 'w') do |file|
+    rows.each {|row| file.puts(row)}
+  end
+
   puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
 end
 

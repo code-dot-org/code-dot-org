@@ -64,56 +64,52 @@ end
 def process_file(input_filename)
   puts "Processing #{input_filename}"
   start_time = Time.now
-  lines = File.read(input_filename).split("\n")
+  rows = File.read(input_filename).split("\n")
   output_filename = File.join($output_dir, File.basename(input_filename))
+
+  Parallel.each(rows, in_processes: $max_processes) do |row|
+    data = JSON.parse(row, symbolize_names: true)
+    process_row_pii(data)
+    row.replace($options[:pretty] ? JSON.pretty_generate(row) : row.to_json)
+  rescue JSON::ParserError => exception
+    puts "Error parsing JSON: #{exception.message}"
+    row.replace(nil)
+  end
+
+  rows.compact!
+
   File.open(output_filename, 'w') do |file|
-    Parallel.each(lines, in_processes: $max_processes) do |line|
-      next if line.blank?
-
-      # parallel processing in the previous step may have put multiple rows in a single line.
-      # skip these rather than dumping them as undiagnosed json errors.
-      if line.include?('}{"user_level_id"')
-        puts "Skipping line containing multiple rows"
-        next
-      end
-
-      row = JSON.parse(line, symbolize_names: true)
-      process_row_pii(row)
-
-      file.flock(File::LOCK_EX)
-      file.puts($options[:pretty] ? JSON.pretty_generate(row) : row.to_json)
-      file.flush
-      file.flock(File::LOCK_UN)
-    rescue JSON::ParserError => exception
-      puts "Error parsing JSON: #{exception.message}"
+    rows.each do |row|
+      file.puts(row)
     end
   end
-  puts "Processed #{lines.size} rows in #{(Time.now - start_time).round(2)} seconds."
+
+  puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
 end
 
-def process_row_pii(row)
-  if row[:source].present?
-    pii_score, pii_entities = check_source_pii(row[:source])
-    row[:source_pii_score] = pii_score
-    row[:source_pii_entities] = pii_entities
+def process_row_pii(data)
+  if data[:source].present?
+    pii_score, pii_entities = check_source_pii(data[:source])
+    data[:source_pii_score] = pii_score
+    data[:source_pii_entities] = pii_entities
     if pii_score > $pii_threshold
-      row[:source] = nil
-      row[:link_to_project] = nil
-      row[:channel_id] = nil
+      data[:source] = nil
+      data[:link_to_project] = nil
+      data[:channel_id] = nil
     end
   end
 
-  if row[:student_answer].present?
-    pii_score, pii_entities = check_source_pii(row[:student_answer])
-    row[:student_answer_pii_score] = pii_score
-    row[:student_answer_pii_entities] = pii_entities
+  if data[:student_answer].present?
+    pii_score, pii_entities = check_source_pii(data[:student_answer])
+    data[:student_answer_pii_score] = pii_score
+    data[:student_answer_pii_entities] = pii_entities
     if pii_score > $pii_threshold
-      row[:student_answer] = nil
+      data[:student_answer] = nil
     end
   end
 
-  row[:hashed_user_id] = hashed_user_id(row[:user_id])
-  row.delete(:user_id)
+  data[:hashed_user_id] = hashed_user_id(data[:user_id])
+  data.delete(:user_id)
 end
 
 def check_source_pii(source)
