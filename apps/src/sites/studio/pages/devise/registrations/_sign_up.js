@@ -6,8 +6,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 $(document).ready(() => {
   analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {}, PLATFORMS.BOTH);
 
-  window.location.href =
-    'https://studio.code.org/users/new_sign_up/account_type';
+  window.location.href = 'https://studio.code.org/users/sign_up/account_type';
 
   document
     .getElementById('signup_form_submit')

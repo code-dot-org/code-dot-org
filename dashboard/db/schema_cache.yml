@@ -6012,6 +6012,22 @@ columns:
     default_function: 
     collation: utf8mb3_unicode_ci
     comment: Urban-centric community type
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: student_female
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: student_male
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   schools:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
@@ -14004,7 +14020,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250221170834
+version: 20250228184551
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
