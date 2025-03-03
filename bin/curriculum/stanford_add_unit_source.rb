@@ -11,7 +11,7 @@ OptionParser.new do |opts|
   opts.on("-i", "--s3-input-dir DIR", "Name of input directory under s3://cdo-data-sharing-internal/stanford/unload/ .") do |input_dir|
     $options[:input_dir] = input_dir
   end
-  opts.on("-o", "--output-dir DIR", "Name of output directory in local filesystem under $HOME/exported/unfiltered/. default: INPUT_DIR") do |output_dir|
+  opts.on("-o", "--output-dir DIR", "Name of output directory in local filesystem under /mnt/tmp-curriculum-export/exported/unfiltered/. default: INPUT_DIR") do |output_dir|
     $options[:output_dir] = output_dir
   end
   opts.on('-p', "--pretty-print") do
@@ -28,9 +28,9 @@ raise 'Input directory is required' unless $options[:input_dir] && !$options[:in
 
 $options[:output_dir] ||= $options[:input_dir]
 
-$output_dir = File.join(Dir.home, 'exported/unfiltered', $options[:output_dir])
+$output_dir = File.join('/mnt/tmp-curriculum-export', 'exported/unfiltered', $options[:output_dir])
 FileUtils.mkdir_p($output_dir)
-raise 'Output dir must be empty' unless Dir.empty?($output_dir)
+raise "Output dir must be empty: #{$output_dir}" unless Dir.empty?($output_dir)
 
 require_relative '../../deployment'
 

@@ -8,10 +8,10 @@ require 'fileutils'
 $options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: add_unit_source.rb [options]"
-  opts.on("-i", "--s3-input-dir DIR", "Name of input directory under $HOME/exported/unfiltered/ .") do |input_dir|
+  opts.on("-i", "--s3-input-dir DIR", "Name of input directory under /mnt/tmp-curriculum-export/exported/unfiltered/ .") do |input_dir|
     $options[:input_dir] = input_dir
   end
-  opts.on("-o", "--output-dir DIR", "Name of output directory  under $HOME/exported/filtered/. default: INPUT_DIR") do |output_dir|
+  opts.on("-o", "--output-dir DIR", "Name of output directory  under /mnt/tmp-curriculum-export/exported/filtered/. default: INPUT_DIR") do |output_dir|
     $options[:output_dir] = output_dir
   end
   opts.on('-p', "--pretty-print") do
@@ -24,13 +24,15 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+home = '/mnt/tmp-curriculum-export'
+
 raise 'Input directory is required' unless $options[:input_dir] && !$options[:input_dir].to_s.strip.empty?
-$input_dir = File.join(Dir.home, 'exported/unfiltered', $options[:input_dir])
+$input_dir = File.join(home, 'exported/unfiltered', $options[:input_dir])
 raise 'Input directory must exist' unless Dir.exist?($input_dir)
 raise 'Input directory must not be empty' if Dir.empty?($input_dir)
 
 $options[:output_dir] ||= $options[:input_dir]
-$output_dir = File.join(Dir.home, 'exported/filtered', $options[:output_dir])
+$output_dir = File.join(home, 'exported/filtered', $options[:output_dir])
 FileUtils.mkdir_p($output_dir)
 raise 'Output dir must be empty' unless Dir.empty?($output_dir)
 
