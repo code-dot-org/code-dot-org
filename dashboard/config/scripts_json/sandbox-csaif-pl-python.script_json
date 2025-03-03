@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-26 16:23:05 UTC",
+    "serialized_at": "2025-02-28 15:17:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -154,6 +154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_python"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -176,6 +179,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cert_python"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -198,6 +204,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_module_overview_python"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -220,6 +229,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_overview_python"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -242,6 +254,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_structure_python"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -264,6 +279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_resources_python"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -286,6 +304,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_career_overview_python"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -308,6 +329,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_chatbot_overview_python"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -330,6 +354,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_neighborhood_overview_python"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -352,6 +379,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_tutor_overview_python"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -374,6 +404,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_teacher_Lesson1_python"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,

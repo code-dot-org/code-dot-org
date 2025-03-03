@@ -3,25 +3,71 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# AI Tutor Overview
+# The PRIMM Method
+
+## Learning Approach to Programming
+
+####  The **PRIMM** method is a well-researched, structured approach to teaching programming that helps students effectively understand and engage with code.
+
+#### It stands for Predict, Run, Investigate, Modify, and Make. As you work through the lessons, you will notice that they follow a ***modified*** version of this approach.
 
 
-<img src="https://images.code.org/1233653f67af64f5f96488f45b298812-image-1724078163830.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
 
-## Defining Cybersecurity
+## Here is a breakdown of each step: 
 
-#### Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, and other security threats.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🤔 Predict</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+Before running any code, students are encouraged to predict what the code will do. This helps them engage with the logic and structure of the code, fostering a deeper understanding of how it works. 
+</p></div>
+</details>
 
-#### In today’s digital world, cybersecurity is essential to safeguard sensitive information, prevent data breaches, and ensure privacy and safety online.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🏃 Run </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+In this step, students run the code to see if their predictions were correct. This immediate feedback helps reinforce correct predictions and correct misunderstandings. 
+</p></div>
+</details>
 
-<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Investigate </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+   <p style="font-size:14pt;">
+After running the code, students explore why it behaves as it does by examining its structure, syntax, and logic. They might debug, analyze flow, and identify errors. This step emphasizes comprehension and critical thinking.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Modify </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+Students change the existing code by altering variables, adding functionality, or fixing errors. This helps them apply their understanding and experiment, reinforcing learning through practice.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Make </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+    Finally, students apply their knowledge to create something new, either by writing code from scratch or building on existing code. This step encourages creativity and solidifies their coding skills.
+ </p></div>
+</details>
+
 
 ---
 
-## Why students should learn it
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        The <b>PRIMM</b> method is effective because it combines prediction and active experimentation with reflection and creation, promoting a deeper understanding of programming concepts and problem-solving skills.
+    </p>
+</div>
 
-#### Learning cybersecurity helps students develop critical thinking skills and understand how to stay safe in an increasingly connected world.
-
-#### It prepares them for a wide range of careers in technology and security while empowering them to protect personal and organizational data from cyber threats.
+ 
 
 MARKDOWN
