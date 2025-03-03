@@ -1,6 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
+import classNames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -9,14 +11,42 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import NeighborhoodPreview from './NeighborhoodPreview';
 
 import moduleStyles from './mini-app-preview.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
-const MiniAppPreview: React.FunctionComponent = () => {
+interface MiniAppPreviewProps {
+  maximizeMiniApp: () => void;
+  minimizeMiniApp: () => void;
+  isMaximized: boolean;
+}
+
+const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
+  maximizeMiniApp,
+  minimizeMiniApp,
+  isMaximized,
+}) => {
   const {labConfig} = useCodebridgeContext();
 
   const miniApp = labConfig?.miniApp?.name;
 
   const miniAppComponent =
     miniApp === MiniApps.Neighborhood ? <NeighborhoodPreview /> : null;
+
+  const getRightButttons = () => {
+    return (
+      <Button
+        onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
+        icon={{
+          iconStyle: 'solid',
+          iconName: isMaximized ? 'compress' : 'expand',
+        }}
+        size={'xs'}
+        type={'tertiary'}
+        className={classNames(darkModeStyles.tertiaryButton)}
+        isIconOnly={true}
+        color={'white'}
+      />
+    );
+  };
 
   return (
     <PanelContainer
@@ -25,6 +55,7 @@ const MiniAppPreview: React.FunctionComponent = () => {
       leftHeaderContent={<ControlButtons />}
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
+      rightHeaderContent={getRightButttons()}
     >
       {miniAppComponent}
     </PanelContainer>

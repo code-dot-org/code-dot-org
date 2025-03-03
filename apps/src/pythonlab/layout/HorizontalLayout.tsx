@@ -52,6 +52,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
     position: rawOutputHeight,
     separatorProps: outputSeparatorProps,
     isDragging: outputDragging,
+    setPosition: setOutputSize,
   } = useResizable({
     axis: 'y',
     initial: INITIAL_OUTPUT_HEIGHT,
@@ -151,7 +152,11 @@ const HorizontalLayout: React.FunctionComponent = () => {
           separatorProps={outputSeparatorProps}
           isDragging={outputDragging}
         />
-        <Output height={outputHeight} width={rightPanelWidth} />
+        <Output
+          height={outputHeight}
+          width={rightPanelWidth}
+          setOutputSize={setOutputSize}
+        />
       </div>
     </div>
   );

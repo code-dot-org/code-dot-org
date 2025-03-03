@@ -24,12 +24,14 @@ interface OutputProps {
   className?: string;
   height?: number;
   width?: number;
+  setOutputSize?: (size: number) => void;
 }
 
 const Output: React.FunctionComponent<OutputProps> = ({
   className,
   height,
   width,
+  setOutputSize,
 }) => {
   const {config, labConfig} = useCodebridgeContext();
   const isVertical = config.activeLayout === 'vertical';
@@ -43,11 +45,20 @@ const Output: React.FunctionComponent<OutputProps> = ({
   // In horizontal mode, consoleSize is the width of the console.
   const [consoleSize, setConsoleSize] = useState<number | undefined>(undefined);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const [isMaximized, setIsMaximized] = useState<boolean>(false);
+  const [miniAppMinimizeSize, setMiniAppMinimizeSize] = useState(
+    DEFAULT_MINI_APP_SIZE
+  );
+  const [outputMinimizeSize, setOutputMinimizeSize] = useState<number>(
+    (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
+  );
+  console.log({consoleSize, outputMinimizeSize});
 
   const {
     position: miniAppSize,
     separatorProps: miniAppSeparatorProps,
     isDragging: miniAppDragging,
+    setPosition: setMiniAppSize,
   } = useResizable({
     axis: isVertical ? 'y' : 'x',
     initial: DEFAULT_MINI_APP_SIZE,
@@ -188,6 +199,22 @@ const Output: React.FunctionComponent<OutputProps> = ({
     ? {height: consoleSize}
     : {width: consoleSize};
 
+  const maximizeMiniApp = () => {
+    setIsMaximized(true);
+    setMiniAppMinimizeSize(adjustedMiniAppSize);
+    setOutputMinimizeSize(
+      (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
+    );
+    setOutputSize && setOutputSize(MAX_MINI_APP_SIZE);
+    setMiniAppSize(MAX_MINI_APP_SIZE);
+  };
+
+  const minimizeMiniApp = () => {
+    setIsMaximized(false);
+    setMiniAppSize(miniAppMinimizeSize);
+    setOutputSize && setOutputSize(outputMinimizeSize);
+  };
+
   return (
     <div
       className={classNames(
@@ -199,7 +226,11 @@ const Output: React.FunctionComponent<OutputProps> = ({
       ref={resizeContainerRef}
     >
       <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
-        <MiniAppPreview />
+        <MiniAppPreview
+          maximizeMiniApp={maximizeMiniApp}
+          minimizeMiniApp={minimizeMiniApp}
+          isMaximized={isMaximized}
+        />
       </div>
       <ResizeBar
         isVertical={!isVertical}
