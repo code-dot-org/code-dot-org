@@ -2,14 +2,14 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiTutorInteractionStatus as AITutorInteractionStatus,
-  AiTutorTypes as AITutorTypes,
+  AiTutorTypes as AITutorActions,
 } from '@cdo/generated-scripts/sharedConstants';
-export type AITutorTypesValue = ValueOf<typeof AITutorTypes>;
+export type AITutorAction = ValueOf<typeof AITutorActions>;
 export type AITutorInteractionStatusValue = ValueOf<
   typeof AITutorInteractionStatus
 >;
 
-export {AITutorInteractionStatus, AITutorTypes};
+export {AITutorInteractionStatus, AITutorActions};
 
 export interface ChatCompletionMessage {
   id?: number;
@@ -23,7 +23,7 @@ export interface AITutorInteraction {
   userId?: number;
   levelId?: number;
   scriptId?: number;
-  type: AITutorTypesValue | undefined;
+  type: AITutorAction | undefined;
   prompt: string;
   status: AITutorInteractionStatusValue;
   aiResponse?: string;
@@ -40,7 +40,7 @@ export interface StudentChatRow {
   scriptId?: number;
   status: AITutorInteractionStatusValue;
   studentName: string;
-  type: AITutorTypesValue;
+  type: AITutorAction;
   updatedAt?: string;
   userId: number;
 }
@@ -71,6 +71,6 @@ export interface ChatContext {
   // or the student's code for compilation and validation.
   studentInput: string;
   studentCode?: string;
-  actionType?: AITutorTypesValue | undefined;
+  actionType?: AITutorAction | undefined;
   systemPrompt?: string;
 }
