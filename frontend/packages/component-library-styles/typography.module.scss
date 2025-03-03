@@ -5,29 +5,6 @@
    Updating styles in this file will require a manual sync of the that file.
 */
 
-// TODO: [DSCO-64] (https://codedotorg.atlassian.net/browse/DSCO-64)
-//  Once we move Typography to DSCO_ - make sure we delete apps/fonts/ folder,
-//  since that folder is only needed for scss modules
-@font-face {
-  font-family: 'Barlow Semi Condensed Semibold';
-  font-style: normal;
-  font-weight: 600;
-  src:
-    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf')
-      format('truetype'),
-    local('?');
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed Medium';
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf')
-      format('truetype'),
-    local('?');
-}
-
 html {
   font-size: 100%;
 }

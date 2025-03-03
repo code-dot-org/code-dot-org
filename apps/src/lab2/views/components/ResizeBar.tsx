@@ -13,8 +13,10 @@ interface ResizeBarProps {
 export const RESIZE_BAR_SIZE_PX = 1;
 
 // A resize bar that can be dragged to resize two adjacent panels.
-// The visible bar starts out 1px wide. There is an absolutely-positioned 5px bar
-// that is used for grabbing, and becomes visible when it is hovered/focused or being dragged.
+// The visible bar starts out 1px wide. There is an absolutely-positioned 7px bar
+// that is used for grabbing, and a 3px "resize" bar that becomes visible
+// when the grabbable bar is hovered or being dragged.
+// The keyboard events happen on the 3px resize bar so they are visible to the user.
 // The resize bar should be used with useResizable from react-resizable-layout.
 const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   isVertical,
@@ -35,11 +37,15 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
     document.body.style.cursor = cursor;
   }, [isDragging, isActive, isVertical]);
 
-  const grabbableClass = useMemo(() => {
+  const grabbableClass = isVertical
+    ? moduleStyles.verticalGrabbable
+    : moduleStyles.horizontalGrabbable;
+
+  const resizingBarClass = useMemo(() => {
     const className = [
       isVertical
-        ? moduleStyles.verticalGrabbable
-        : moduleStyles.horizontalGrabbable,
+        ? moduleStyles.verticalResizing
+        : moduleStyles.horizontalResizing,
     ];
     if (isDragging || isActive) {
       // When we are dragging or the resize bar is active, we show the wider
@@ -53,11 +59,15 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
     ? moduleStyles.verticalBar
     : moduleStyles.horizontalBar;
 
+  const {onPointerDown, ...mainSeparatorProps} = separatorProps;
+
   return (
+    // The always-visible 1px bar
     <div className={classNames(moduleStyles.resizeBar, layoutClass)}>
+      {/* The visible 3px bar */}
       <div
-        className={classNames(moduleStyles.grabbableDiv, grabbableClass)}
-        {...separatorProps}
+        className={classNames(moduleStyles.absoluteBar, resizingBarClass)}
+        {...mainSeparatorProps}
         // TODO: the separator props are applying role "separator" as well as min/max/now aria values.
         // Is it ok to ignore this warning?
         // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role
@@ -65,9 +75,18 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
         tabIndex={0}
         onFocus={() => setIsActive(true)}
         onBlur={() => setIsActive(false)}
-        onMouseEnter={() => setIsActive(true)}
-        onMouseLeave={() => setIsActive(false)}
-      />
+      >
+        {/* The grabbable bar. We take onPointerDown from the separater props and put it here to make the bar
+        easier to grab. */}
+        <div
+          onPointerDown={onPointerDown}
+          className={classNames(moduleStyles.absoluteBar, grabbableClass)}
+          onFocus={() => setIsActive(true)}
+          onBlur={() => setIsActive(false)}
+          onMouseEnter={() => setIsActive(true)}
+          onMouseLeave={() => setIsActive(false)}
+        />
+      </div>
     </div>
   );
 };

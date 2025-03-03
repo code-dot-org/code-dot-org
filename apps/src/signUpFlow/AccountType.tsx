@@ -3,7 +3,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React, {useState, useEffect} from 'react';
 
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -16,8 +15,8 @@ import {navigateToHref} from '../utils';
 import FreeCurriculumDialog from './FreeCurriculumDialog';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
-  USER_RETURN_TO_SESSION_KEY,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
+  setUserReturnToUrl,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -29,13 +28,7 @@ const AccountType: React.FunctionComponent = () => {
     useState(false);
 
   useEffect(() => {
-    const userReturnTo = queryParams('user_return_to');
-    if (userReturnTo) {
-      sessionStorage.setItem(
-        USER_RETURN_TO_SESSION_KEY,
-        userReturnTo as string
-      );
-    }
+    setUserReturnToUrl();
 
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_STARTED_EVENT,
@@ -84,11 +77,11 @@ const AccountType: React.FunctionComponent = () => {
     if (loginTypeAlreadySelected) {
       const finishSignupUrl =
         accountType === 'teacher'
-          ? '/users/new_sign_up/finish_teacher_account'
-          : '/users/new_sign_up/finish_student_account';
+          ? '/users/sign_up/finish_teacher_account'
+          : '/users/sign_up/finish_student_account';
       navigateToHref(studio(finishSignupUrl));
     } else {
-      navigateToHref(studio('/users/new_sign_up/login_type'));
+      navigateToHref(studio('/users/sign_up/login_type'));
     }
   };
 

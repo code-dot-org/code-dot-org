@@ -329,6 +329,7 @@ export default class WorkshopTable extends React.Component {
           canDelete: row.can_delete,
           endDate: row.sessions[row.sessions.length - 1].end,
         },
+        sessions: row.sessions.map(s => ({...s, is_local: !row.time_zone})),
       })
     );
 

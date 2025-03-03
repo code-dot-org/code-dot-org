@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question10-2024'
+title 'Computer Systems and Devices Post-Assessment: Question 1'
+
+wrong 'wrong'
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+question
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson x
+MARKDOWN

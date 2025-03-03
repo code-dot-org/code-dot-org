@@ -4,11 +4,12 @@ import React, {useState} from 'react';
 
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-export default function LtiRosterSyncSettings(props) {
+export function LtiRosterSyncSettings(props) {
   const enabledLabel = i18n.ltiSectionSyncEnabled();
   const disabledLabel = i18n.ltiSectionSyncDisabled();
   const settingsDescription = i18n.ltiSectionSyncSettingsDescription({
@@ -76,3 +77,13 @@ LtiRosterSyncSettings.propTypes = {
   formId: PropTypes.string.isRequired,
   lmsName: PropTypes.string,
 };
+
+const RegionalLtiRosterSyncSettings = props => (
+  <GlobalEditionWrapper
+    component={LtiRosterSyncSettings}
+    componentId="LtiRosterSyncSettings"
+    props={props}
+  />
+);
+
+export default RegionalLtiRosterSyncSettings;

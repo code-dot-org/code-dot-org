@@ -1,0 +1,19 @@
+name 'computer-systems-lesson3-level5c-2024'
+title 'Robots in Space'
+description 'See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.'
+
+markdown <<MARKDOWN
+# Robots in Space
+
+See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.
+
+As you watch, be prepared to reflect on the following in the next activity:
+
+- What kind of hardware components are used by people in this career?  
+- What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?  
+
+**Note**: This video opens in a new tab ⧉.  
+
+[![YouTube Video Thumbnail](https://images.code.org/3584d2ccc3b2523d3794a6548c3a1e90-robots.png)](https://www.youtube.com/watch?v=Rh9qxBsvXVY)
+
+MARKDOWN

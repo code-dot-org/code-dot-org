@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-10T19:30:04.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": "0.5",
+        "temperature": 0.3,
         "systemPrompt": "Information about Aisha:\n- A first-year university student studying computer science.\n- Lives in student housing where the Wi-Fi is slow and gets throttled during peak hours.\n- Needs fast Internet for coding projects and online classes, but ISPs prioritize customers who pay extra.\n- Feels frustrated that gaming and streaming services work faster than academic websites.",
         "retrievalContexts": [
 
@@ -52,6 +51,7 @@
     "bubble_choice_description": "Aisha is a first-year university student studying computer science. \r\n",
     "thumbnail_url": "https://images.code.org/1f154d19ca26dc5bd913c46d7ddcacd7-Aisha.webp"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-10T19:30:04.546+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona3\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona3\"},{\"changed_at\":\"2025-02-10 19:35:11 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:36:39 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:44:28 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-21 01:00:43 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 01:01:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

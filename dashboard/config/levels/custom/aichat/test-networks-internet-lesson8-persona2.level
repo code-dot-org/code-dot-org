@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-10T19:13:39.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": "0.5",
+        "temperature": 0.3,
         "systemPrompt": "Information about LIsa:\n- Runs an organic farm and wants to sell her produce online.\n- Lives in a rural town where Internet speeds are slow and unreliable.\n- Competes with bigger businesses that can afford high-speed Internet.\n- Struggles to process online orders and market her farm on social media.",
         "retrievalContexts": [
 
@@ -53,6 +52,7 @@
     "bubble_choice_description": "Lisa is a small business owner in a rural area.\r\n",
     "thumbnail_url": "https://images.code.org/f128c1f787591e63a0edd3f8e5406810-Lisa.webp"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-10T19:13:39.446+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona1\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona1\"},{\"changed_at\":\"2025-02-10 19:16:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:21:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:37:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:29:56 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:30:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:35:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-21 00:57:41 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 01:02:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

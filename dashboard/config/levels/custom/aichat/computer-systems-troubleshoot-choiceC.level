@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-13T22:20:54.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -10,7 +9,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.3,
+        "temperature": 0.2,
         "systemPrompt": "",
         "retrievalContexts": [
           ""
@@ -45,6 +44,7 @@
     "bubble_choice_description": "You're an IT Help Desk agent helping Sam troubleshoot their VR headset.",
     "thumbnail_url": "https://images.code.org/e8f9d386c85f2b33c881f143136d1994-Icon Template (2).png"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-13T22:20:54.198+00:00\",\"changed\":[\"cloned from \\\"computer-systems-troubleshoot-choiceB\\\"\"],\"cloned_from\":\"computer-systems-troubleshoot-choiceB\"},{\"changed_at\":\"2025-02-13 22:27:13 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-14 14:20:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-14 16:22:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

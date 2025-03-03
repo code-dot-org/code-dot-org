@@ -10,11 +10,19 @@ import React, {useEffect} from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+import FreeResponseAIEvaluation from './FreeResponseAIEvaluation';
 
 import styles from './summary.module.scss';
 
-const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
+const FreeResponseResponses = ({
+  responses,
+  showStudentNames,
+  eventData,
+  levelInstructions,
+}) => {
   const constructStudentName = response =>
     getFullName(response.student_display_name, response.student_family_name);
 
@@ -205,6 +213,12 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
           type="gray"
         />
       )}
+      {experiments.isEnabled(experiments.FREE_RESPONSE_AI_ANALYSIS) && (
+        <FreeResponseAIEvaluation
+          responses={responses}
+          levelInstructions={levelInstructions}
+        />
+      )}
     </div>
   );
 };
@@ -213,6 +227,7 @@ FreeResponseResponses.propTypes = {
   responses: PropTypes.arrayOf(PropTypes.object),
   showStudentNames: PropTypes.bool,
   eventData: PropTypes.object,
+  levelInstructions: PropTypes.string,
 };
 
 export default FreeResponseResponses;

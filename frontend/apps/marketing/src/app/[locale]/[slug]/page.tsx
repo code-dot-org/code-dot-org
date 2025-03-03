@@ -4,8 +4,7 @@ import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 
 // Register custom components server-side
 import '@/contentful/register-custom-components';
-import classNames from 'classnames';
-import {FONT_VARIABLES_BY_LOCALE} from '@/config/fonts';
+import FontLoader from '@code-dot-org/fonts/FontLoader';
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; preview?: string}>;
@@ -25,14 +24,14 @@ export default async function ExperiencePage({
     return <div>{error.message}</div>;
   }
 
-  const fontVariables = FONT_VARIABLES_BY_LOCALE[locale];
   // extract the styles from the experience
   const stylesheet = experience ? detachExperienceStyles(experience) : null;
 
   // experience currently needs to be stringified manually to be passed to the component
   const experienceJSON = experience ? JSON.stringify(experience) : null;
   return (
-    <main style={{width: '100%'}} className={classNames(fontVariables)}>
+    <main style={{width: '100%'}}>
+      <FontLoader locale={locale} />
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader experienceJSON={experienceJSON} locale={locale} />
     </main>
