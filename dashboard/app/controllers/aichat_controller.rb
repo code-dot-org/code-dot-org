@@ -9,7 +9,6 @@ class AichatController < ApplicationController
   # POST /aichat/find_toxicity
   # Finds toxicity in the given system prompt and retrieval contexts and returns a list of flagged fields.
   def find_toxicity
-    puts params
     locale = params[:locale] || "en"
     level_id = params[:levelId]
     flagged_fields = []
