@@ -1,7 +1,8 @@
 import Button from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {AITutorTypes as ActionType, Role} from '@cdo/apps/aiTutor/types';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
 
 import {askAITutor} from '../aiTutor/redux/aiTutorRedux';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
