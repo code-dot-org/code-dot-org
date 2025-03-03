@@ -52,7 +52,6 @@ const Output: React.FunctionComponent<OutputProps> = ({
   const [outputMinimizeSize, setOutputMinimizeSize] = useState<number>(
     (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
   );
-  console.log({consoleSize, outputMinimizeSize});
 
   const {
     position: miniAppSize,
@@ -152,13 +151,15 @@ const Output: React.FunctionComponent<OutputProps> = ({
           width: newVisualizationWidth,
           'margin-left': (newWidth - newVisualizationWidth) / 2,
         });
+
+        console.log(`setting new visualization size: ${newVisualizationWidth}`);
       }
     },
     []
   );
 
   const throttledResize = useMemo(
-    () => throttle(handleResize, 30),
+    () => throttle(handleResize, 10, {leading: false}),
     [handleResize]
   );
 
@@ -168,6 +169,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
       width !== undefined ||
       miniAppSize !== undefined
     ) {
+      console.log('calling throttled resize');
       throttledResize(height, width, miniApp, miniAppSize, isVertical);
     }
   }, [height, width, miniApp, throttledResize, miniAppSize, isVertical]);
@@ -200,19 +202,19 @@ const Output: React.FunctionComponent<OutputProps> = ({
     : {width: consoleSize};
 
   const maximizeMiniApp = () => {
-    setIsMaximized(true);
     setMiniAppMinimizeSize(adjustedMiniAppSize);
     setOutputMinimizeSize(
       (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
     );
     setOutputSize && setOutputSize(MAX_MINI_APP_SIZE);
     setMiniAppSize(MAX_MINI_APP_SIZE);
+    setIsMaximized(true);
   };
 
   const minimizeMiniApp = () => {
-    setIsMaximized(false);
     setMiniAppSize(miniAppMinimizeSize);
     setOutputSize && setOutputSize(outputMinimizeSize);
+    setIsMaximized(false);
   };
 
   return (

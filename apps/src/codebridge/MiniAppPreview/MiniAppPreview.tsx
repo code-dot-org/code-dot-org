@@ -31,23 +31,6 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   const miniAppComponent =
     miniApp === MiniApps.Neighborhood ? <NeighborhoodPreview /> : null;
 
-  const getRightButttons = () => {
-    return (
-      <Button
-        onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
-        icon={{
-          iconStyle: 'solid',
-          iconName: isMaximized ? 'compress' : 'expand',
-        }}
-        size={'xs'}
-        type={'tertiary'}
-        className={classNames(darkModeStyles.tertiaryButton)}
-        isIconOnly={true}
-        color={'white'}
-      />
-    );
-  };
-
   return (
     <PanelContainer
       id="codebridge-preview"
@@ -55,7 +38,25 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
       leftHeaderContent={<ControlButtons />}
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
-      rightHeaderContent={getRightButttons()}
+      rightHeaderContent={
+        <Button
+          onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
+          icon={{
+            iconStyle: 'solid',
+            iconName: isMaximized ? 'compress' : 'expand',
+          }}
+          size={'xs'}
+          type={'tertiary'}
+          className={classNames(darkModeStyles.tertiaryButton)}
+          isIconOnly={true}
+          color={'white'}
+          ariaLabel={
+            isMaximized
+              ? codebridgeI18n.minimizePreview()
+              : codebridgeI18n.maximizePreview()
+          }
+        />
+      }
     >
       {miniAppComponent}
     </PanelContainer>
