@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2025-02-13T21:05:50.000Z",
   "level_num": "custom",
@@ -21,30 +20,33 @@
         "key": "computer-systems-lesson3-onlineresources-1-c4575f2c-89c4-4fea-9958-6e355e5676f0"
       },
       {
-        "text": "**Subject**: “Z35 not logging steps – stops at random!”\n**Username**: FitTechFan220\n\n**Message**:\n\n“Has anyone else noticed that if your battery is too low, the Z35 tracker pretty much stops counting steps? It happened to me three times until I realized that I was down to 70% battery.\nAlso, if you haven’t cleared the stored data in over a week, you’ll hit the 20 MB cap and it won’t track new workouts. Plugging into your PC to offload the data fixes the issue.”",
+        "text": "*Excerpt from Printer Manufacturer’s Online FAQ*\n\n**Title**: “XYZ 3D Printer Troubleshooting” \n\n**Excerpt**:\n“Always keep your printer's nozzle clean. A partial clog is a top cause of mid‐print failures.”\n“Ensure your power supply meets the rated output: recommended 12 Volts at 20 Amps minimum for stable bed and nozzle heating. Do not use an extension cord!”",
         "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
         "key": "undefined-6f520c00-abc2-4c6f-83cb-59fc2fee94bf",
         "typing": false,
         "fadeInOverPrevious": true
       },
       {
-        "text": "Excerpt from “*Quick Start Guide – Model Z35 Health Wearable*”\n\n**Content**:\n\n“This device requires frequent recharging. For best results, maintain a battery level above 80% during monitoring periods.”\n\n“If the device’s charge falls below 80%, its step-count feature and notification system may operate intermittently.”\n\n“Regularly transfer data to a computer to prevent storage from reaching the 20 MB limit.”",
+        "text": "*Community Forum Post*\n\n**Subject**: “Weird layer shifts on my new build” \n\n**Username**: 3DWizard99 \n\n**Message**:\n“I kept seeing layers shift on the X-axis. Turned out one of the motors was overheating. Adding a small cooling fan fixed it instantly!”",
         "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
         "key": "undefined-cdf9bada-48d5-443f-8edb-b133acbf4dd2",
         "layout": "text-top-right"
       },
       {
-        "text": "**Platform**: MicroBloggers\n\n**User**: *@WearableGuru*\n\n**Post**:\n\n“Pro Tip for #Z35 users: \n\nIf you’re not hitting your milestones or seeing those celebratory messages, check two things:\n\n* Battery above 80% (the device conserves power aggressively and may not record steps if lower).\n* Sync your data at least once every few days—filling up that 20 MB limit = no new logs!\n\n## #FitnessTech #Troubleshooting #WearableWednesday”",
+        "text": "*Social Media Slicing Tips*\n\n**Platform**: MakerGram \n\n**User**: @PrintMaster \n\n**Post**:\n“If you’re printing via Wi-Fi and your router is overloaded, your data being sent from your computer might pause, messing up the print. Try slicing offline, put the data on SD card, or upgrade your router.”",
         "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
         "key": "undefined-91f68b3a-8101-4f9c-861a-555ac85b7c47"
       },
       {
-        "text": "##FAQ Excerpt:\n\n**Q**: “My device stopped sending me celebratory texts and audio cues; what do I do?”\n\n**A**: “First, verify your wearable’s battery is fully charged (recommended minimum 80%). Then, confirm there is available memory (under 20 MB used). Clear old workout logs via your computer or the Z35 companion app if near capacity.”",
+        "text": "**YouTube Tutorial** “*Common 3D Printing Fails*”\n\n\n**Segment Title**: “Bed Leveling” \n\n**Summary**:\nShows how a slightly unlevel bed or incorrect “Z offset” causes prints to detach or shift.\n\nRecommends users test to ensure the nozzle is at the correct height.",
         "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
         "key": "undefined-9989f337-5219-42f9-86d6-9204105e8673"
       }
-    ]
+    ],
+    "display_name": "3D Printer",
+    "thumbnail_url": "https://images.code.org/5f75f8a7f232281941e60983ee501f99-3d-printing.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-13T21:05:50.331+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson3-scenario-2\\\"\"],\"cloned_from\":\"computer-systems-lesson3-scenario-2\"},{\"changed_at\":\"2025-02-13 21:06:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-13 21:37:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-13T21:05:50.331+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson3-scenario-2\\\"\"],\"cloned_from\":\"computer-systems-lesson3-scenario-2\"},{\"changed_at\":\"2025-02-13 21:06:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-13 21:37:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 19:19:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 19:21:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 19:35:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

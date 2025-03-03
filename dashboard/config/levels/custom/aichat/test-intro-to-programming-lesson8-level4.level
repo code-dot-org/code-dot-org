@@ -1,17 +1,16 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-01-29T03:18:43.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# AI Chatbot Debugging\r\n\r\n## Do This:\r\n\r\n1. Use This Level to Get Debugging Help\r\n   - If you are stuck on Levels 2 or 3, use this level to chat with the AI Chatbot.\r\n   - The chatbot can help you understand error messages, debug logic issues, and suggest next steps.\r\n2. Ask the AI Chatbot for Help in These Ways:\r\n   - **Understanding Error Messages:** *\"I got this error: NameError: name 'painter' is not defined. What does it mean?\"*\r\n   - **Debugging Unexpected Behavior:** *\"My code runs, but it doesn't do what I expect. It should paint a line but it doesn't. What could be wrong?\"*\r\n   - **Finding the Best Debugging Strategy:** *\"What debugging steps should I try if my program isn't working correctly?\"*\r\n3. Use the Chatbot’s Suggestions to Debug Your Code\r\n   - If the chatbot suggests checking values, use print statements in your program.\r\n   - If the chatbot points to an error message, find the most important lines and identify what went wrong.\r\n   - If the chatbot suggests a fix, try modifying your code and re-running your tests.\r\n4. Return to Your Level and Test Your Fixes\r\n   - After getting help, go back to your programming level (Level 2 or 3) and apply what you learned.\r\n   - Re-run validation tests to check if the problem is fixed.\r\n\r\n::: details [**Tips for Using the Chatbot Effectively**]\r\n- Be specific—describe exactly what’s happening in your program.\r\n- Copy and paste error messages to help the chatbot analyze them.\r\n- Ask follow-up questions if the chatbot’s response isn’t clear.\r\n- Test one change at a time and rerun the program after each fix.\r\n:::",
+    "long_instructions": "## Do This:\r\n\r\n**1. Use this chatbot to get debugging help.**\r\n- If you are stuck on Levels 2 or 3, use this chatbot can help you understand error messages, debug logic issues, and suggest next steps.\r\n\r\n---\r\n\r\n**2. Some ways to ask the chatbot for help:**\r\n- **Understanding Error Messages:** *\"I got this error: NameError: name 'painter' is not defined. What does it mean?\"*\r\n- **Debugging Unexpected Behavior:** *\"My code runs, but it doesn't do what I expect. It should paint a line but it doesn't. What could be wrong?\"*\r\n- **Finding the Best Debugging Strategy:** *\"What debugging steps should I try if my program isn't working correctly?\"*\r\n\r\n---\r\n\r\n**3. Use the chatbot's suggestions to debug your code.**\r\n- If the chatbot suggests checking values, use `print` statements in your program.\r\n- If the chatbot points to an error message, find the most important lines and identify what went wrong.\r\n- If the chatbot suggests a fix, try modifying your code and re-running your tests.\r\n\r\n---\r\n\r\n**4. Return to the level and test your fixes.**\r\n- After getting help, go back to your programming level (Level 2 or 3) and apply what you learned.\r\n- Re-run the tests to check if the problem is fixed.\r\n\r\n::: details [**Tips for Using the Chatbot Effectively**]\r\n- Be specific—describe exactly what’s happening in your program.\r\n- Copy and paste error messages to help the chatbot analyze them.\r\n- Ask follow-up questions if the chatbot’s response isn’t clear.\r\n- Test one change at a time and rerun the program after each fix.\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "You are a helpful Python debugging assistant specifically designed for students working in The Neighborhood programming environment. Your goal is to guide students in understanding errors, troubleshooting logic issues, and applying debugging strategies rather than just providing direct answers.",
         "retrievalContexts": [
 
@@ -42,6 +41,7 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-29 03:18:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 03:19:22 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 21:58:20 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-30 16:15:59 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-29 03:18:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 03:19:22 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 21:58:20 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-30 16:15:59 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 14:43:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

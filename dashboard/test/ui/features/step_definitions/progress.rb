@@ -71,7 +71,7 @@ def verify_bubble_type(selector, type)
 end
 
 def header_bubble_selector(level_num)
-  ".header_level .react_stage a:nth(#{level_num - 1}) .progress-bubble"
+  ".header_level .react_stage a:eq(#{level_num - 1}) .progress-bubble"
 end
 
 Then /^I verify the bubble for level (\d+) is an? (concept|activity) bubble/ do |level, type|
@@ -93,14 +93,14 @@ Then /^I verify progress in the header of the current page is "([^"]*)" for leve
 end
 
 Then /^I verify progress in the drop down of the current page is "([^"]*)" for lesson (\d+) level (\d+)/ do |test_result, lesson, level|
-  selector = "tbody tr:nth(#{lesson.to_i - 1}) a:contains(#{level.to_i}) .progress-bubble"
+  selector = "tbody tr:eq(#{lesson.to_i - 1}) a:contains(#{level.to_i}) .progress-bubble"
   verify_progress(selector, test_result)
 end
 
 Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"]*)"( without waiting)?/ do |lesson, level, detail_view, test_result, without_waiting|
   selector = detail_view.nil? ?
-    ".uitest-summary-progress-table .uitest-summary-progress-row:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})" :
-    ".uitest-detail-progress-table .uitest-progress-lesson:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})"
+    ".uitest-summary-progress-table .uitest-summary-progress-row:eq(#{lesson.to_i - 1}) .progress-bubble:eq(#{level.to_i - 1})" :
+    ".uitest-detail-progress-table .uitest-progress-lesson:eq(#{lesson.to_i - 1}) .progress-bubble:eq(#{level.to_i - 1})"
   verify_progress(selector, test_result, no_wait: !!without_waiting)
 end
 

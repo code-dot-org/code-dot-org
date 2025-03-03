@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-02-07T22:55:05.000Z",
   "level_num": "custom",
@@ -170,7 +171,8 @@
           ]
         },
         "type": "flyout",
-        "addFunctionCalls": false
+        "addFunctionCalls": true,
+        "addFunctionDefinition": true
       },
       "sounds": {
         "sabrina_carpenter_espresso": [
@@ -296,8 +298,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-07T22:55:05.654+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-define_1\\\"\"],\"cloned_from\":\"music-coding-intro-functions-define_1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-07T22:55:05.654+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-define_1\\\"\"],\"cloned_from\":\"music-coding-intro-functions-define_1\"},{\"changed_at\":\"2025-02-18 21:08:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

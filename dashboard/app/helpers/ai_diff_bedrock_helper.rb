@@ -3,7 +3,8 @@ module AiDiffBedrockHelper
   TEMP = 0.5
   MODEL_ID = 'anthropic.claude-3-sonnet-20240229-v1:0'
   MODEL_ARN = 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
-  KB_ID = '1WHRENJ0OA'
+  # TODO: extract this to a secret or other centralized parameter once KB is deployed via cloudformation.
+  KB_ID = 'ODWSNBOEZG'
   RETRIEVAL_LIMIT = 10
 
   def self.create_bedrock_client
@@ -89,7 +90,7 @@ module AiDiffBedrockHelper
     unless unit_num.nil?
       temp_filters.push(
         or_all: [
-          {equals: {key: "unit", value: format("U%d", unit_num)}},
+          {equals: {key: "unit", value: format("U%02d", unit_num)}},
           {equals: {key: "unit", value: "all"}}
         ]
       )

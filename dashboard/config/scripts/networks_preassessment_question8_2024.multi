@@ -1,0 +1,19 @@
+name 'networks-preassessment-question8-2024'
+title 'Networks and the Internet Pre-Assessment: Question 8'
+
+wrong 'Too many devices connected at once'
+wrong 'Phishing attacks that trick users into giving personal information'
+right 'Using a fast Internet connection'
+wrong 'Updating software regularly'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following is a common cybersecurity threat on networks?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Network Security
+
+Lesson 10: Emerging Technologies
+MARKDOWN

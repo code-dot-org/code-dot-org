@@ -4,7 +4,6 @@
 .divider {
   border: 0;
   border-top: 1px solid;
-  margin: 0;
   width: 100%;
 }
 
@@ -21,6 +20,10 @@
 
 // Divider margin
 .divider-margin {
+  &-none {
+    margin: 0;
+  }
+
   &-xs {
     margin: 0.5rem 0;
   }

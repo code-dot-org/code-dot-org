@@ -53,6 +53,14 @@ DisabledLink.args = {
 };
 
 export const LinkWithTextPropVsLinkWithChildrenProp = MultipleTemplate.bind({});
+
+// TODO: https://codedotorg.atlassian.net/browse/CMS-365
+LinkWithTextPropVsLinkWithChildrenProp.parameters = {
+  eyes: {
+    include: false,
+  },
+};
+
 LinkWithTextPropVsLinkWithChildrenProp.args = {
   components: [
     {

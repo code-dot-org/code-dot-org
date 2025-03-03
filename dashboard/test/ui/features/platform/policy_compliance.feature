@@ -115,6 +115,7 @@ Feature: Policy Compliance and Parental Permission
 
     # Ensure that the new email was used
     When I press "lockout-submit"
+    And I wait until element "#lockout-submit" is visible
     And I reload the page
     Then I wait to see "#lockout-panel-form"
     And element "#parent-email" has value "parent2@example.com"

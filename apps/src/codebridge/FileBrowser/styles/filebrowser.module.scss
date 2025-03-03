@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .file-browser {
   height: 100%;
@@ -68,7 +69,9 @@
   margin-right: 4px;
 }
 
-.button-kebab {
+// Using button to increase specificity of this class
+// (this allows it to take precedence over the component library button styles)
+button.button-kebab {
   display: none;
   height: 20px;
   width: 20px;
@@ -115,3 +118,20 @@ div.row:hover .button-kebab {
   width: auto;
   min-width: 100px;
 }
+
+.alertIcon {
+  color: var(--text-error-primary-fixed);
+  font-size: 1rem;
+}
+
+.backpackErrorContainer {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+
+.backpackErrorMessage {
+  color: $white;
+  font-size: 1rem;
+}
+

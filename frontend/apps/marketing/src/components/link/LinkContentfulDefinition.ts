@@ -1,6 +1,5 @@
 // Creates a definition for the Link component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
-import {marginBottomNoneToMDefinition} from '@/components/common/definitions';
 
 export const LinkContentfulComponentDefinition: ComponentDefinition = {
   id: 'link',
@@ -30,7 +29,6 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
-    marginBottom: marginBottomNoneToMDefinition,
     isLinkExternal: {
       displayName:
         'Is this link external? (Does this link leave the code.org site?)',

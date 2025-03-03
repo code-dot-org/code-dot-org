@@ -1,0 +1,14 @@
+# See _dashboard.yaml for `kind: Deployment` details
+{{- include "dashboard" 
+  (merge (dict 
+    "apiVersion" "apps/v1"
+    "kind" "Deployment"
+    "name" (include "cdo.fullname" (merge (dict "component" "dashboard") .))
+    "labels" (include "cdo.labels" (merge (dict "component" "dashboard") .))
+    "selectorLabels" (include "cdo.selectorLabels" (merge (dict "component" "dashboard") .))
+  ) .)
+}}
+
+{{- if or (eq .Values.RAILS_ENV "") (not .Values.RAILS_ENV) }}
+{{- fail (printf "Error: RAILS_ENV is not set by values.yaml (current value: '%s').\n\nHint: if you're trying to do local dev with skaffold, try the -p flag, e.g. `skaffold -p development` sets RAILS_ENV=development.\n" .Values.RAILS_ENV) }}
+{{- end }}

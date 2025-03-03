@@ -1,32 +1,9 @@
-@import 'primitiveColors.scss';
+@use 'colors.scss';
 @import 'font.scss';
 
 /* This file is being copied and adopted to shared/css/typography.scss
    Updating styles in this file will require a manual sync of the that file.
 */
-
-// TODO: [DSCO-64] (https://codedotorg.atlassian.net/browse/DSCO-64)
-//  Once we move Typography to DSCO_ - make sure we delete apps/fonts/ folder,
-//  since that folder is only needed for scss modules
-@font-face {
-  font-family: 'Barlow Semi Condensed Semibold';
-  font-style: normal;
-  font-weight: 600;
-  src:
-    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf')
-      format('truetype'),
-    local('?');
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed Medium';
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf')
-      format('truetype'),
-    local('?');
-}
 
 html {
   font-size: 100%;
@@ -93,7 +70,7 @@ html {
 */
 
 @mixin heading-common {
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
   margin: 0 0 0.5em 0;
 }
 
@@ -142,7 +119,7 @@ html {
 // Paragraph styles
 @mixin paragraph-common {
   @include main-font-regular;
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
   margin-bottom: 1em;
 }
 

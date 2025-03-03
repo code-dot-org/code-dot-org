@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "title": "Careers & Emerging Tech",
+    "title": "Check for Understanding",
     "long_instructions": "How can identifying your skills and interests help you explore careers that involve emerging technologies? Provide an example from your activity.",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -17,7 +17,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-23 23:13:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-01-23 23:13:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-17 21:39:38 +0000\",\"changed\":[\"title\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -172,12 +172,14 @@ const Timeline: React.FunctionComponent = () => {
   return (
     <div
       id="timeline"
+      aria-label="Timeline"
       className={classNames(
         moduleStyles.timeline,
         isPlaying && moduleStyles.timelinePlaying
       )}
       onClick={onTimelineClick}
       ref={timelineRef}
+      tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
     >
       <div
         id="timeline-measures-background"

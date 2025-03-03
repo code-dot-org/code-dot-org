@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-01-22T22:14:04.000Z",
   "level_num": "custom",
@@ -21,7 +20,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "# create a companion function\n",
+          "contents": "# Modify the code below to create a new companion for your main character\ndef create_companion(name, type):\n    print(\"✨ You have a new companion!\")\n    print(\"🐾 Meet \" + name + \", a loyal \" + type + \" who will join you on your adventure!\")\n\n# Example Calls:\ncreate_companion(\"Luna\", \"magical cat\")\ncreate_companion(\"Sparky\", \"robotic dog\")\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -35,6 +34,7 @@
     "bubble_choice_description": "Every good hero has a lovable animal companion. ",
     "thumbnail_url": "https://images.code.org/9d6af2707322639ba909278ac0077027-Screen Shot 2025-01-22 at 2.53.48 PM.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T22:14:04.652+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-combineFunctions\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-combineFunctions\"},{\"changed_at\":\"2025-01-22 22:21:45 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:22:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:22:30 +0000\",\"changed\":[\"name\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:54:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:03:48 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-22T22:14:04.652+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-combineFunctions\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-combineFunctions\"},{\"changed_at\":\"2025-01-22 22:21:45 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:22:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:22:30 +0000\",\"changed\":[\"name\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:54:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:03:48 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-20 19:14:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-20 19:14:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>

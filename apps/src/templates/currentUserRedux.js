@@ -18,6 +18,8 @@ const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
 const SET_AI_RUBRICS_DISABLED = 'currentUser/SET_AI_RUBRICS_DISABLED';
+const SET_AI_DIFFERENTIATION_ENABLED =
+  'currentUser/SET_AI_DIFFERENTIATION_ENABLED';
 const SET_PROGRESS_TABLE_V2_CLOSED_BETA =
   'currentUser/SET_PROGRESS_TABLE_V2_CLOSED_BETA';
 const SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED =
@@ -98,6 +100,10 @@ export const setAiRubricsDisabled = aiRubricsDisabled => ({
   type: SET_AI_RUBRICS_DISABLED,
   aiRubricsDisabled,
 });
+export const setAiDifferentiationEnabled = aiDifferentiationEnabled => ({
+  type: SET_AI_DIFFERENTIATION_ENABLED,
+  aiDifferentiationEnabled,
+});
 export const setUserCreatedAt = userCreatedAt => ({
   type: SET_USER_CREATED_AT,
   userCreatedAt,
@@ -111,6 +117,7 @@ const initialState = {
   userRoleInCourse: CourseRoles.Unknown,
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
+  aiDifferentiationEnabled: null,
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
   isLti: undefined,
@@ -221,6 +228,12 @@ export default function currentUser(state = initialState, action) {
       aiRubricsDisabled: action.aiRubricsDisabled,
     };
   }
+  if (action.type === SET_AI_DIFFERENTIATION_ENABLED) {
+    return {
+      ...state,
+      aiDifferentiationEnabled: action.aiDifferentiationEnabled,
+    };
+  }
   if (action.type === SET_USER_CREATED_AT) {
     return {
       ...state,
@@ -240,6 +253,7 @@ export default function currentUser(state = initialState, action) {
       sort_by_family_name,
       show_progress_table_v2,
       ai_rubrics_disabled,
+      ai_differentiation_enabled,
       progress_table_v2_closed_beta,
       is_lti,
       date_progress_table_invitation_last_delayed,
@@ -278,6 +292,7 @@ export default function currentUser(state = initialState, action) {
       isSortedByFamilyName: sort_by_family_name,
       showProgressTableV2: show_progress_table_v2,
       aiRubricsDisabled: ai_rubrics_disabled,
+      aiDifferentiationEnabled: ai_differentiation_enabled,
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,

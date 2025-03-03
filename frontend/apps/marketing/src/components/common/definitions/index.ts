@@ -12,13 +12,3 @@ export const marginBottomNoneToMDefinition = {
     ],
   },
 };
-
-export const marginBottomNoneToLDefinition = {
-  ...marginBottomNoneToMDefinition,
-  validations: {
-    in: [
-      ...marginBottomNoneToMDefinition.validations.in,
-      {value: 'l', displayName: 'Large'},
-    ],
-  },
-};

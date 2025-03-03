@@ -3756,6 +3756,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A."
@@ -3765,6 +3771,7 @@ __metadata:
     classnames: ^2.5.1
     react: ">=16"
     react-dom: ">=16"
+    swiper: ^11.0.5
   languageName: node
   linkType: soft
 
@@ -10139,6 +10146,7 @@ __metadata:
     "@code-dot-org/artist": "npm:0.2.1"
     "@code-dot-org/blockly": "npm:4.0.14"
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
+    "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/craft": "npm:0.2.2"
     "@code-dot-org/dance-party": "npm:2.0.0"
     "@code-dot-org/johnny-five": "npm:2.1.0-cdo.3"
@@ -10320,6 +10328,7 @@ __metadata:
     mocha: "npm:^10.6.0"
     mock-firmata: "npm:0.2.0"
     moment: "npm:^2.29.4"
+    moment-timezone: "npm:^0.5.47"
     object-fit-images: "npm:^3.2.3"
     papaparse: "npm:^5.4.1"
     path-browserify: "npm:^1.0.1"
@@ -20884,6 +20893,15 @@ canvg@gabelerner/canvg:
   dependencies:
     board-io: "npm:^3.0.5"
   checksum: 10/b6b95409b02f3e4d2248d34e80b1175870f6bfb34f4bd3764c31fef6e40915a1c5c7452d8fbd84731015721053ed37745953cc3601a377f1a100050a5332d103
+  languageName: node
+  linkType: hard
+
+"moment-timezone@npm:^0.5.47":
+  version: 0.5.47
+  resolution: "moment-timezone@npm:0.5.47"
+  dependencies:
+    moment: "npm:^2.29.4"
+  checksum: 10/b2ad32e6b7ea4ce99756c9f571f8eb1bdd6592ecdc2bf3f7fb988ae980a49a7e87b986776090571b9608c8576205f839b736dc7589c180ce36c82fad4b8416c6
   languageName: node
   linkType: hard
 

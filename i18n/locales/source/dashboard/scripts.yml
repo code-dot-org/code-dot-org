@@ -10713,7 +10713,7 @@ en:
               display_name: 'Part II:  Concepts in Courses A - F'
             k5_next_steps_1:
               display_name: 'Part III:  Next Steps'
-          title: Teaching Computer Science Fundamentals ('23-'24)
+          title: Teaching Computer Science Fundamentals
           description: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -14225,7 +14225,7 @@ en:
             lesson-4:
               name: Level Types
             lesson-5:
-              name: " READ ME"
+              name: Component Library
             lesson-6:
               name: Color
             lesson-7:
@@ -17936,8 +17936,8 @@ en:
           title: Teaching Data Science
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.\n\n#### The Data Science unit is part of the **_Computer Science and AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs."
+          student_description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.\n\n#### The Data Science unit is part of the **_Computer Science and AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs."
         foundations-gen-ai-2024:
           lessons: {}
           lesson_groups: {}
@@ -18663,6 +18663,24 @@ en:
               name: Decomposing Adventure Game (Lesson 12)
             lesson-22:
               name: Variables with AI Tutor
+            lesson-23:
+              name: Lesson 5 - Variables and Data Flow
+            lesson-24:
+              name: Lesson 6 - Working with Objects
+            lesson-25:
+              name: Lesson 7 - Functions and Parameters
+            lesson-26:
+              name: Lesson 9 - Intro to Loops
+            lesson-27:
+              name: Lesson 10 - Conditionals
+            lesson-28:
+              name: Lesson 12 - Decomposing a Pixel Image
+            lesson-29:
+              name: Lesson 13 - Two-Way & Nested Selection
+            lesson-30:
+              name: Lesson 14 - Pixels of Me Project
+            lesson-31:
+              name: Lesson 8 - Debugging Strategies
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
@@ -18828,6 +18846,8 @@ en:
           lessons:
             lesson-1:
               name: Templates and Experiments
+            lesson-2:
+              name: Assessments
           lesson_groups: {}
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
@@ -18844,3 +18864,343 @@ en:
           description_short: ''
           description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards."
           student_description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards."
+        ui-test-single-unit-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-single-unit-2025
+          title: Single Unit 2025
+          description_audience: ''
+          description_short: This is the short overview for Single Unit 2025.
+          description: This is the teacher overview for Single Unit 2025.
+          student_description: This is the student overview for Single Unit 2025.
+        ui-test-single-unit-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-single-unit-2026
+          title: Single Unit 2026
+          description_audience: ''
+          description_short: This is the short overview for Single Unit 2026.
+          description: This is the teacher overview for Single Unit 2026.
+          student_description: This is the student overview for Single Unit 2026.
+        sandbox-teaching-getting-started1:
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+          lesson_groups: {}
+          name: sandbox-teaching-getting-started1
+          title: Getting Started Sandbox (Updated)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csad-pilot-preassessment-2024:
+          lessons:
+            lesson-1:
+              name: Computer Systems and Devices Pre-Assessment
+          lesson_groups: {}
+          name: csad-pilot-preassessment-2024
+          title: 'Computer Systems and Systems: Pre-Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csad-pilot-content-2024:
+          lessons:
+            lesson-1:
+              name: Introduction to Computer Systems
+            lesson-2:
+              name: Hardware
+            lesson-3:
+              name: Troubleshooting and Optimizing Hardware
+            lesson-4:
+              name: Software and Operating Systems
+            lesson-5:
+              name: Build a Computer System
+            lesson-6:
+              name: Data in Computer Systems
+            lesson-7:
+              name: Processing Data in a System
+            lesson-8:
+              name: How AI Uses Data
+            lesson-9:
+              name: IoT and Emerging Technologies
+            lesson-10:
+              name: User Testing
+            lesson-11:
+              name: Just Because We Can, Should We?
+            lesson-12:
+              name: Nobel in AI Project
+            lesson-13:
+              name: Troubleshooting and Optimizing Software
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End-of-Unit Project
+          name: csad-pilot-content-2024
+          title: 'Computer Systems and Devices: Content'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csad-pilot-postassessment-2024:
+          lessons:
+            lesson-1:
+              name: Computer Systems and Devices End-of-Unit Assessment
+          lesson_groups: {}
+          name: csad-pilot-postassessment-2024
+          title: 'Computer Systems and Devices: End-of-Unit Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-pilot-preassessment-2024:
+          lessons:
+            lesson-1:
+              name: Programming Fundamentals Pre-Assessment
+          lesson_groups: {}
+          name: pf-pilot-preassessment-2024
+          title: 'Programming Fundamentals: Pre-Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-pilot-content-2024:
+          lessons:
+            lesson-1:
+              name: Computing Careers
+            lesson-2:
+              name: Computational Thinking
+            lesson-3:
+              name: Designing Algorithms
+            lesson-4:
+              name: Variables and Data Flow
+            lesson-5:
+              name: Working with Objects
+            lesson-6:
+              name: Functions and Parameters
+            lesson-7:
+              name: Debugging Strategies
+            lesson-8:
+              name: Introduction to Loops
+            lesson-9:
+              name: Conditional Statements
+            lesson-10:
+              name: Algorithms IRL
+            lesson-11:
+              name: Decomposition
+            lesson-12:
+              name: Two-Way and Nested Selection
+            lesson-13:
+              name: Pixels of Me Project
+            lesson-14:
+              name: Working with Objects
+            lesson-15:
+              name: Functions and Parameters
+            lesson-16:
+              name: Debugging Strategies
+            lesson-17:
+              name: Introduction to Loops
+            lesson-18:
+              name: Conditional Statements
+            lesson-19:
+              name: Decomposition
+            lesson-20:
+              name: Two-Way and Nested Selection
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End-of-Unit Project
+            lessonGroup-4:
+              display_name: Alternate Level Progressions (Console)
+          name: pf-pilot-content-2024
+          title: 'Programming Fundamentals: Content'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-pilot-postassessment-2024:
+          lessons:
+            lesson-1:
+              name: Programming Fundamentals Post-Assessment
+          lesson_groups: {}
+          name: pf-pilot-postassessment-2024
+          title: 'Programming Fundamentals: End-of-Unit Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-aitutor-pilot-preassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-aitutor-pilot-preassessment-2024
+          title: 'Programming Fundamentals: Pre-Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-aitutor-pilot-content-2024:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End-of-Unit Project
+            lessonGroup-4:
+              display_name: Alternate Level Progressions (Console)
+          name: pf-aitutor-pilot-content-2024
+          title: 'Programming Fundamentals: Content'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-aitutor-pilot-postassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-aitutor-pilot-postassessment-2024
+          title: 'Programming Fundamentals: End-of-Unit Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        nati-pilot-preassessment-2024:
+          lessons:
+            lesson-1:
+              name: Networks and the Internet Pre-Assessment
+          lesson_groups: {}
+          name: nati-pilot-preassessment-2024
+          title: 'Networks and the Internet: Pre-Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        nati-pilot-content-2024:
+          lessons:
+            lesson-1:
+              name: Introduction to the Internet
+            lesson-2:
+              name: Sending Bits
+            lesson-3:
+              name: IP Addresses
+            lesson-4:
+              name: Routers and Redundancy
+            lesson-5:
+              name: Packets
+            lesson-6:
+              name: HTTP and DNS
+            lesson-7:
+              name: The Internet's Hidden Barriers
+            lesson-8:
+              name: Internet Access Advocacy Campaign Project
+            lesson-9:
+              name: Network Security
+            lesson-10:
+              name: Emerging Technologies
+            lesson-11:
+              name: Network Security Risk Assessment Project
+          lesson_groups: {}
+          name: nati-pilot-content-2024
+          title: 'Networks and the Internet: Content'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        nati-pilot-postassessment-2024:
+          lessons:
+            lesson-1:
+              name: Networks and the Internet End-of-Unit Assessment
+          lesson_groups: {}
+          name: nati-pilot-postassessment-2024
+          title: 'Networks and the Internet: Post-Assessment'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        introduction-to-teaching-data-science-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: introduction-to-teaching-data-science-pilot
+          title: Teaching Data Science [Pilot]
+          description_audience: ''
+          description_short: ''
+          description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.\n\n#### The Data Science unit is part of the **_Computer Science and AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs."
+          student_description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.\n\n#### The Data Science unit is part of the **_Computer Science and AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs."
+        6-12-csd-music-lab:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-csd-music-lab
+          title: 6-12 CSD Music Lab Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-cyber:
+          lessons:
+            lesson-1:
+              name: Introduction to Cybersecruity
+            lesson-2:
+              name: Cybersecurity and Global Impacts
+          lesson_groups: {}
+          name: sandbox-csaif-pl-cyber
+          title: Cybersecurity and Global Impacts PL
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-networks:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csaif-pl-networks
+          title: Networks and the Internet PL
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-python:
+          lessons:
+            lesson-1:
+              name: Teaching Introduction to Programming
+            lesson-2:
+              name: Computational Thinking
+            lesson-3:
+              name: Python Basics
+            lesson-4:
+              name: Algorithms with Python
+            lesson-5:
+              name: Preparing for the Final Project
+          lesson_groups: {}
+          name: sandbox-csaif-pl-python
+          title: Introduction to Programming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-spanish-test-a-unit:
+          lessons:
+            lesson-1:
+              name: Test Stuff Here
+          lesson_groups: {}
+          name: gen-ai-spanish-test-a-unit
+          title: Gen AI Spanish Test A
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-computer-systems:
+          lessons:
+            lesson-1:
+              name: Teaching Computer Systems and Devices
+            lesson-2:
+              name: Hardware and Software
+            lesson-3:
+              name: Data in Computer Systems
+            lesson-4:
+              name: Ethical Use and the Final Project
+          lesson_groups: {}
+          name: sandbox-csaif-pl-computer-systems
+          title: Computer Systems and Devices
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

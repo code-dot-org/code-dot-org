@@ -1,6 +1,6 @@
 name 'computer-systems-solix-agri-professionals'
 display_name 'Industry Professional for Solix Ag Robotics'
-description '#### <br /> Learn how Solix Ag Robotics is transforming agriculture through automation and precision farming. Select a role and conduct an interview to understand how AI-powered robots help professionals increase efficiency and sustainability.'
+description 'Learn how Solix Ag Robotics is transforming agriculture through automation and precision farming. Select a role and conduct an interview to understand how AI-powered robots help professionals increase efficiency and sustainability.'
 
 sublevels
 level 'computer-systems-farmer-brazil-aichat'

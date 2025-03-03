@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_02_13_210703) do
+ActiveRecord::Schema.define(version: 2025_02_21_170834) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -81,6 +81,16 @@ ActiveRecord::Schema.define(version: 2025_02_13_210703) do
     t.bigint "request_id"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
+  end
+
+  create_table "aichat_message_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "aichat_message_id", null: false
+    t.bigint "teacher_id", null: false
+    t.boolean "approval"
+    t.boolean "flagged"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aichat_message_id"], name: "index_aichat_message_feedbacks_on_aichat_message_id", unique: true
   end
 
   create_table "aichat_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1414,10 +1424,10 @@ ActiveRecord::Schema.define(version: 2025_02_13_210703) do
     t.datetime "deleted_at"
     t.string "code"
     t.integer "session_format"
+    t.string "time_zone"
     t.text "meeting_link"
     t.string "location_name"
     t.string "location_address"
-    t.string "time_zone"
     t.index ["code"], name: "index_pd_sessions_on_code", unique: true
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id"
   end
@@ -1543,6 +1553,9 @@ ActiveRecord::Schema.define(version: 2025_02_13_210703) do
     t.string "module"
     t.string "name"
     t.string "participant_group_type"
+    t.text "description"
+    t.text "registration_link"
+    t.boolean "hidden"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id"
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end
@@ -2515,6 +2528,7 @@ ActiveRecord::Schema.define(version: 2025_02_13_210703) do
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
+  add_foreign_key "aichat_message_feedbacks", "aichat_messages"
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"

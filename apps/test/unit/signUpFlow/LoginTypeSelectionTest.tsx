@@ -3,11 +3,16 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '@cdo/apps/code-studio/utils';
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -43,6 +48,25 @@ describe('LoginTypeSelection', () => {
     expect(navigateToHrefMock).toHaveBeenCalledWith(
       '/users/new_sign_up/account_type'
     );
+  });
+
+  it('sets appropriate sessionStorage values if sent here with url params', async () => {
+    const userType = 'student';
+    const userReturnTo = '/testReturnToUrl';
+
+    await waitFor(() => {
+      setWindowLocation({
+        search: `?user_type=${userType}&user_return_to=${userReturnTo}`,
+      });
+      renderDefault(null);
+    });
+
+    expect(sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY)).toEqual(userType);
+    expect(sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY)).toEqual(
+      userReturnTo
+    );
+
+    resetWindowLocation();
   });
 
   it('renders headers, buttons and inputs', async () => {
