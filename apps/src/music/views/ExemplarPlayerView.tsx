@@ -16,14 +16,12 @@ import moduleStyles from './ExemplarPlayer.module.scss';
 
 interface ExemplarPlayerViewProps {
   source: Source;
-  libraryName: string;
   title: string;
   labSetPlaying: (playing: boolean) => void;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   source,
-  libraryName,
   title,
   labSetPlaying,
 }) => {

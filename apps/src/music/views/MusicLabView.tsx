@@ -34,7 +34,7 @@ import {
   setCurrentPlayheadPosition,
   showCallout,
 } from '../redux/musicRedux';
-import {MusicExemplarSettings, MusicLevelData} from '../types';
+import {MusicExemplarSettings} from '../types';
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
@@ -118,11 +118,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const exemplarSettings = useAppSelector(
     state => state.lab.levelProperties?.exemplarSettings
   ) as MusicExemplarSettings | undefined;
-  const library = useAppSelector(
-    state =>
-      (state.lab.levelProperties?.levelData as MusicLevelData | undefined)
-        ?.library || 'launch2024'
-  );
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -300,7 +295,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               !isEditingExemplar && (
                 <ExemplarPlayerView
                   source={exemplarSources}
-                  libraryName={library}
                   title={exemplarSettings.playerTitle}
                   labSetPlaying={setPlaying}
                 />
@@ -314,7 +308,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       exemplarSettings,
       exemplarSources,
       isEditingExemplar,
-      library,
       onInstructionsTextClick,
       setPlaying,
     ]
