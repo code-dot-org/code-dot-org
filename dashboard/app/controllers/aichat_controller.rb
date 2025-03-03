@@ -9,17 +9,19 @@ class AichatController < ApplicationController
   # POST /aichat/find_toxicity
   # Finds toxicity in the given system prompt and retrieval contexts and returns a list of flagged fields.
   def find_toxicity
+    puts params
     locale = params[:locale] || "en"
+    level_id = params[:levelId]
     flagged_fields = []
 
     if params[:systemPrompt].present?
-      toxicity = AichatSafetyHelper.find_toxicity('user', params[:systemPrompt], locale)
+      toxicity = AichatSafetyHelper.find_toxicity('user', params[:systemPrompt], locale, level_id)
       flagged_fields << {field: 'systemPrompt', toxicity: toxicity} if toxicity.present?
     end
 
     if params[:retrievalContexts].present?
       retrieval_joined = params[:retrievalContexts].join(' ')
-      toxicity = AichatSafetyHelper.find_toxicity('user', retrieval_joined, locale)
+      toxicity = AichatSafetyHelper.find_toxicity('user', retrieval_joined, locale, level_id)
       flagged_fields << {field: 'retrievalContexts', toxicity: toxicity} if toxicity.present?
     end
 

@@ -13,11 +13,14 @@ import {saveAiCustomization} from './helpers/saveAiCustomization';
 export const publishModelCard = createAsyncThunk(
   'aichat/publishModelCard',
   async (_, {dispatch, getState}) => {
+    const state = getState() as RootState;
+
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
     await saveAiCustomization(
-      (getState() as RootState).aichat.currentAiCustomizations,
+      state.aichat.currentAiCustomizations,
       'publishModelCard',
-      dispatch as AppDispatch
+      dispatch as AppDispatch,
+      parseInt(state.progress.currentLevelId || '')
     );
   }
 );
