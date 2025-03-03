@@ -1,3 +1,22 @@
+/*
+
+IMPORTANT: Before you use Session Replay, you must ensure that you are filtering
+PII from the session replay data. Please reference the Statsig Session
+Replay docs, specifically the section on filtering PII, for more information:
+https://docs.statsig.com/session-replay/configure#configure-recording-privacypii-options
+
+Statsig supports filtering of PII by adding specific classes to the HTML elements
+that contain PII. Please refer to the above documentation for more information.
+At the time of writing, the classes that Statsig supports are:
+
+* input[type="password"] will be masked by default.
+* An element with the class name .rr-block will not be recorded. Instead, it will
+  replay as a placeholder with the same dimensions.
+* An element with the class name .rr-ignore will not record its input events.
+* All text of elements with the class name .rr-mask and their children will be 
+  masked.
+
+*/
 import {StatsigClient} from '@statsig/js-client';
 import {runStatsigSessionReplay} from '@statsig/session-replay';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
