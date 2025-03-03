@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {initialAssistantGreeting} from '../constants';
@@ -37,7 +38,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
           role={message.role}
           customStyles={style}
           footer={
-            message.role === 'assistant' &&
+            message.role === Role.ASSISTANT &&
             message.chatMessageText !== initialAssistantGreeting ? (
               <AssistantMessageFeedback messageId={message.id} />
             ) : null
