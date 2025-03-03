@@ -17,12 +17,14 @@ interface MiniAppPreviewProps {
   maximizeMiniApp: () => void;
   minimizeMiniApp: () => void;
   isMaximized: boolean;
+  style?: React.CSSProperties;
 }
 
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   maximizeMiniApp,
   minimizeMiniApp,
   isMaximized,
+  style,
 }) => {
   const {labConfig} = useCodebridgeContext();
 
@@ -58,7 +60,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
         />
       }
     >
-      {miniAppComponent}
+      <div style={style}>{miniAppComponent}</div>
     </PanelContainer>
   );
 };

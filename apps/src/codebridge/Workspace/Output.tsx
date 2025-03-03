@@ -52,6 +52,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
   const [outputMinimizeSize, setOutputMinimizeSize] = useState<number>(
     (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
   );
+  const [waitingForResize, setWaitingForResize] = useState<boolean>(false);
 
   const {
     position: miniAppSize,
@@ -152,14 +153,14 @@ const Output: React.FunctionComponent<OutputProps> = ({
           'margin-left': (newWidth - newVisualizationWidth) / 2,
         });
 
-        console.log(`setting new visualization size: ${newVisualizationWidth}`);
+        setWaitingForResize(false);
       }
     },
     []
   );
 
   const throttledResize = useMemo(
-    () => throttle(handleResize, 10, {leading: false}),
+    () => throttle(handleResize, 20, {leading: false}),
     [handleResize]
   );
 
@@ -169,7 +170,6 @@ const Output: React.FunctionComponent<OutputProps> = ({
       width !== undefined ||
       miniAppSize !== undefined
     ) {
-      console.log('calling throttled resize');
       throttledResize(height, width, miniApp, miniAppSize, isVertical);
     }
   }, [height, width, miniApp, throttledResize, miniAppSize, isVertical]);
@@ -193,6 +193,11 @@ const Output: React.FunctionComponent<OutputProps> = ({
     );
   }
 
+  // We set the opacity to 0 when we initiate a maximize or minimize action
+  // so the use doesn't see a flash of the incorrectly-sized preview
+  // while maximizing/minimizing.
+  const previewOpacity = waitingForResize ? 0 : 1;
+
   const miniAppStyle = isVertical
     ? {height: adjustedMiniAppSize}
     : {width: adjustedMiniAppSize};
@@ -202,6 +207,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
     : {width: consoleSize};
 
   const maximizeMiniApp = () => {
+    setWaitingForResize(true);
     setMiniAppMinimizeSize(adjustedMiniAppSize);
     setOutputMinimizeSize(
       (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
@@ -212,6 +218,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
   };
 
   const minimizeMiniApp = () => {
+    setWaitingForResize(true);
     setMiniAppSize(miniAppMinimizeSize);
     setOutputSize && setOutputSize(outputMinimizeSize);
     setIsMaximized(false);
@@ -232,6 +239,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
           maximizeMiniApp={maximizeMiniApp}
           minimizeMiniApp={minimizeMiniApp}
           isMaximized={isMaximized}
+          style={{opacity: previewOpacity}}
         />
       </div>
       <ResizeBar
