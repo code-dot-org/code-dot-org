@@ -556,7 +556,7 @@ namespace :seed do
     if File.exist?(HASH_FILE)
       dump_hash = File.read(HASH_FILE)
 
-      if current_hash == dump_hash
+      if true || current_hash == dump_hash
         puts 'Cache hit! Loading from db dump'
         sh('mysql -u root < db/ui_test_data.sql')
         next

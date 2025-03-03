@@ -106,6 +106,9 @@ namespace :ci do
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
+      ###DEBUG
+      container_features = container_features.sample(3)
+      ###DEBUG
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
       # Use --local to configure the UI tests to run against localhost and

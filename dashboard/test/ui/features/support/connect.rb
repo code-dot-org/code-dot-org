@@ -68,7 +68,7 @@ end
 def get_browser(test_run_name)
   browser = nil
   $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
-  if ENV['CI'] == 'true' # TODO: only on first try
+  if true || ENV['CI'] == 'true' # TODO: only on first try
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       SeleniumBrowser.remote(CI_SELENIUM_URL, http_client: $http_client) # TODO: headless?
     end
