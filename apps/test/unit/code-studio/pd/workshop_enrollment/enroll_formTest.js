@@ -89,7 +89,7 @@ describe('Enroll Form', () => {
   const renderDefault = (overrides = {}) =>
     shallow(<EnrollForm {...props} {...overrides} />);
 
-  const getLabelSelector = key => `Label[htmlFor="${key}"]`;
+  const getLabelSelector = key => `FormFieldWrapper[htmlFor="${key}"]`;
   const getIdSelector = key => `#${key}`;
 
   const testValidateFields = (params, selector) => {
