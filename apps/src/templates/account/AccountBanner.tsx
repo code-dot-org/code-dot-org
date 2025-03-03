@@ -7,7 +7,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import codeLogo from '../images/codeLogo.svg';
+import codeLogo from '../images/codeLogo.png';
 
 import styles from './account-components.module.scss';
 

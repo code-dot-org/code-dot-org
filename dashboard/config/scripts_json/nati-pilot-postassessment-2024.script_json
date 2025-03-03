@@ -10,14 +10,14 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "show_calendar": true,
+      "pilot_experiment": "nati-2025-pilot",
       "student_detail_progress_view": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-19 21:44:06 UTC",
+    "serialized_at": "2025-02-28 21:58:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -40,28 +40,115 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Networks and the Internet End-of-Unit Assessment",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-postassessment-2024"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "def84fd7-b6cd-491a-a40e-b034f78b99e2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "def84fd7-b6cd-491a-a40e-b034f78b99e2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-postassessment-2024"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f92231ba-83e6-497f-b8db-54c15d189e67",
+      "position": 1,
+      "properties": {
+        "progression_name": "End-of-Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "f92231ba-83e6-497f-b8db-54c15d189e67",
+        "lesson_activity.key": "def84fd7-b6cd-491a-a40e-b034f78b99e2"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "networks-postassessment-2024"
+        ],
+        "progression": "End-of-Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-postassessment-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-postassessment-2024",
+        "activity_section.key": "f92231ba-83e6-497f-b8db-54c15d189e67"
+      },
+      "level_keys": [
+        "networks-postassessment-2024"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "networks-postassessment-2024",
+        "script_level.level_keys": [
+          "networks-postassessment-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-postassessment-2024",
+        "activity_section.key": "f92231ba-83e6-497f-b8db-54c15d189e67"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Support Article: How to Unlock Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-How-do-I-unlock-assessments-tests-and-surveys-for-my-students",
+      "key": "support_article_how_to_unlock_assessments",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "support_article_how_to_unlock_assessments"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "support_article_how_to_unlock_assessments",
+        "script.name": "nati-pilot-postassessment-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

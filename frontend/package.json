@@ -24,7 +24,9 @@
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "release:dryrun": "turbo release:dryrun",
+    "start": "yarn dev",
     "test": "turbo test",
+    "test:unit": "yarn test",
     "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",

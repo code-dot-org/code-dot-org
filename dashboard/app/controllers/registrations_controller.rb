@@ -77,14 +77,14 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/new_sign_up/account_type
+  # Get /users/sign_up/account_type
   #
   def account_type
     view_options(full_width: true, responsive_content: true)
   end
 
   #
-  # Get /users/new_sign_up/login_type
+  # Get /users/sign_up/login_type
   #
   def login_type
     view_options(full_width: true, responsive_content: true)
@@ -99,7 +99,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/new_sign_up/finish_student_account
+  # Get /users/sign_up/finish_student_account
   #
   def finish_student_account
     @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
@@ -117,7 +117,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/new_sign_up/finish_teacher_account
+  # Get /users/sign_up/finish_teacher_account
   #
   def finish_teacher_account
     location = Geocoder.search(request.ip).try(:first)

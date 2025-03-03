@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-19T20:27:28.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -12,7 +11,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -44,6 +43,7 @@
     },
     "thumbnail_url": "https://images.code.org/2d120b80ec86cf7fe9a52749c8e49b2b-Pasted Graphic 1.png"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-19T20:27:28.079+00:00\",\"changed\":[\"cloned from \\\"computer-systems-designer-aichat\\\"\"],\"cloned_from\":\"computer-systems-designer-aichat\"},{\"changed_at\":\"2025-02-19 20:27:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

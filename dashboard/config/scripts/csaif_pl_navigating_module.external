@@ -1,0 +1,38 @@
+name 'csaif_pl_navigating_module'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating this Module 
+
+## 🎉 Congratulations on completing this lesson.
+
+#### **What’s next?** This professional learning module includes one additional lesson to enhance your understanding and teaching of the Cybersecurity and Global Impacts Unit.
+
+### ✅ **Lesson 1- Introduction to Teaching Cybersecurity and Global Impacts**
+#### This lesson provides an introduction to the Cybersecurity and Global unit and professional learning module. It offers a brief overview of key cybersecurity concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the unit.
+
+### ➡️ **Lesson 2- Lesson Exploration**
+#### This lesson focuses on exploring the content of the Cybersecurity and Global Impacts Unit. Key concepts, activities, and projects from the Unit will be introduced.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Engage with our Learning Community!
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:0px;">
+    <p>
+
+####Participating in the <a href="google.com" target="_blank">CSAIF Self-Paced Professional Learning Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader CSAIF learner community. 
+
+#### **Please share your motivation for teaching the Cybersecurity and Global Impacts Unit.**
+</p></div>
+</details>
+
+## Let's continue this exciting journey!
+
+
+
+
+
+
+
+MARKDOWN

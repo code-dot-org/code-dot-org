@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question14-2024'
+title 'Computer Systems and Devices Post-Assessment: Question 14'
+
+right 'Storage → Output → Processing → Input'
+wrong 'Input → Processing → Storage → Output'
+wrong 'Output → Input → Processing → Storage'
+wrong 'Processing → Storage → Input → Output'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which sequence represents the correct order of data flow in a computer?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Hardware
+MARKDOWN

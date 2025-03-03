@@ -14,6 +14,8 @@ import {
   setHasRun,
   setIsRunning,
   setIsValidating,
+  setHasValidated,
+  setHasError,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -58,6 +60,8 @@ const ControlButtons: React.FunctionComponent = () => {
     dispatch(setHasRun(false));
     dispatch(setIsRunning(false));
     dispatch(setIsValidating(false));
+    dispatch(setHasValidated(false));
+    dispatch(setHasError(false));
   }, [dispatch]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);

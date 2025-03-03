@@ -75,7 +75,7 @@ describe('FinishTeacherAccount', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/account_type'
+      '/users/sign_up/account_type'
     );
   });
 
@@ -85,7 +85,7 @@ describe('FinishTeacherAccount', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/login_type'
+      '/users/sign_up/login_type'
     );
   });
 

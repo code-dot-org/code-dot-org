@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-13T22:08:35.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -10,7 +9,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.3,
+        "temperature": 0.2,
         "systemPrompt": "",
         "retrievalContexts": [
           ""
@@ -45,6 +44,7 @@
     "bubble_choice_description": "You're an IT Help Desk agent helping John troubleshoot his gaming PC.",
     "thumbnail_url": "https://images.code.org/aa49cb564c2f75807b2c9837e9bd9e4e-Icon Template (1).png"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-13T22:08:35.593+00:00\",\"changed\":[\"cloned from \\\"computer-systems-troubleshoot-choiceA\\\"\"],\"cloned_from\":\"computer-systems-troubleshoot-choiceA\"},{\"changed_at\":\"2025-02-13 22:17:26 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-13 22:19:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-14 14:14:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-14 16:22:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>
