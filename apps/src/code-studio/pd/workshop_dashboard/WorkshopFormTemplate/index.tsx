@@ -1,5 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+
+import {useWorkshop} from '../hooks/useWorkshop';
 
 import {
   Session,
@@ -48,53 +49,43 @@ export const WorkshopFormTemplate: FC<WorkshopCourseConfig> = ({
   session_fields,
   fields,
 }) => {
-  const {workshopId} = useParams();
+  const workshop = useWorkshop();
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [formState, setFormState] = useState<WorkshopFormState>({
-    course: null,
-    capacity: null,
-    description: null,
-    facilitators: [],
-    fee: null,
-    grades: [],
-    hidden: false,
-    name: null,
-    notes: null,
-    organizerId: null,
-    prereq: null,
-    regionalPartnerId: null,
-    registrationLink: null,
-    subject: null,
-    suppressEmail: false,
-    courseOfferings: [],
-    participantGroupType: null,
-    timeZone: null,
-  });
+  const [workshopFormState, setWorkshopFormState] = useState<WorkshopFormState>(
+    {
+      course: null,
+      capacity: null,
+      description: null,
+      facilitators: [],
+      fee: null,
+      grades: [],
+      hidden: false,
+      name: null,
+      notes: null,
+      organizerId: null,
+      prereq: null,
+      regionalPartnerId: null,
+      registrationLink: null,
+      subject: null,
+      suppressEmail: false,
+      courseOfferings: [],
+      participantGroupType: null,
+      timeZone: null,
+    }
+  );
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [sessions, setSessions] = useState<SessionFormState[]>([]);
+  const [sessionFormState, setSessionFormState] = useState<SessionFormState[]>(
+    []
+  );
 
   useEffect(() => {
-    let mounted = true;
-    if (!workshopId) return;
-    const fetchWorkshop = async () => {
-      const response = await fetch(`/api/v1/pd/workshops/${workshopId}`);
-      if (response.ok) {
-        const data = await response.json();
-        if (mounted) {
-          setFormState(workshopDataToState(data));
-          setSessions(sessionDataToState(data.sessions));
-        }
-      }
-    };
-
-    fetchWorkshop();
-
-    return () => {
-      mounted = false;
-    };
-  }, [workshopId]);
+    if (workshop) {
+      setWorkshopFormState(workshopDataToState(workshop));
+      setSessionFormState(sessionDataToState(workshop.sessions));
+    }
+  }, [workshop]);
 
   return <h1>{label}</h1>;
 };
