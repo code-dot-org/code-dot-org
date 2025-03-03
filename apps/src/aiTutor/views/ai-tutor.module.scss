@@ -150,3 +150,17 @@ button.buttonStyle {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+.feedbackIcons {
+  height: 36px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.feedbackDetails {
+  width: 90%;
+}
+
+.feedbackButton {
+  margin-right: 5px;
+}
