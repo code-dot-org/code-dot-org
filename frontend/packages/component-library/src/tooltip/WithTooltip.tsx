@@ -60,7 +60,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     hideTimeoutRef.current = window.setTimeout(() => {
       setShowTooltip(false);
       setNodePosition(null);
-    }, 100); // Adjust the delay as needed
+    }, 100); // Allows for small but visible close delay
   };
 
   const tailLength = tailLengths[tooltipProps.size || 'm'];
@@ -104,8 +104,11 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && !event.defaultPrevented) {
-        handleHideTooltip();
-        event.preventDefault(); // Prevent other listeners from handling the event
+        if (event.target instanceof HTMLElement) {
+          event.target.blur(); // Remove focus from the container
+        } else {
+          handleHideTooltip(); // Hide the tooltip if unable to remove focus natively
+        }
       }
     };
     if (showTooltip) {
