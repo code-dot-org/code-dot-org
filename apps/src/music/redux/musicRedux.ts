@@ -51,6 +51,7 @@ export interface MusicState {
   playbackEvents: PlaybackEvent[];
   /** The playback events associated with the exemplar player */
   exemplarPlaybackEvents: PlaybackEvent[];
+  playerContext: 'exemplar' | 'musicView' | null;
   /** The current ordered functions */
   orderedFunctions: FunctionEvents[];
   /** The current last measure of the song */
@@ -93,6 +94,7 @@ const initialState: MusicState = {
   hideHeaders: false,
   playbackEvents: [],
   exemplarPlaybackEvents: [],
+  playerContext: null,
   orderedFunctions: [],
   lastMeasure: 0,
   // Default to 1 (fully loaded). When loading a new sound, the progress will be set back to 0 before the load starts.
@@ -266,6 +268,12 @@ const musicSlice = createSlice({
 
       state.bpm = bpm;
     },
+    setPlayerContext: (
+      state,
+      action: PayloadAction<'exemplar' | 'musicView' | null>
+    ) => {
+      state.playerContext = action.payload;
+    },
     setExemplarPlaybackEvents: (
       state,
       action: PayloadAction<PlaybackEvent[]>
@@ -353,4 +361,5 @@ export const {
   setKey,
   setBpm,
   setExemplarPlaybackEvents,
+  setPlayerContext,
 } = musicSlice.actions;

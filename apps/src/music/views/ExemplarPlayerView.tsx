@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {Source} from '../../lab2/types';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -10,7 +10,7 @@ import {BlockMode, DEFAULT_PACK} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
-import {setExemplarPlaybackEvents} from '../redux/musicRedux';
+import {setPlayerContext, setExemplarPlaybackEvents} from '../redux/musicRedux';
 
 import moduleStyles from './ExemplarPlayer.module.scss';
 
@@ -26,6 +26,8 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   labSetPlaying,
 }) => {
   const dispatch = useAppDispatch();
+  const playerContext = useAppSelector(state => state.music.playerContext);
+
   const playerRef = useRef<MusicPlayer | null>(null);
   if (playerRef.current === null) {
     playerRef.current = new MusicPlayer();
@@ -35,7 +37,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   );
   const simple2SequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  //Immediately load the library and source, then compile the song.
+  // Immediately load the library and source, then compile the song.
   const onMount = useCallback(async () => {
     workspaceRef.current.initHeadless();
 
@@ -60,6 +62,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
 
   // Uses the already compiled song to preload sounds and play it.
   const onPlaySong = useCallback(async () => {
+    Blockly.getMainWorkspace().hideChaff();
     labSetPlaying(false);
     playerRef.current?.stopSong();
 
@@ -73,13 +76,25 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     playerRef.current?.playSong(
       simple2SequencerRef.current.getPlaybackEvents()
     );
-    setIsPlaying(true);
-  }, [labSetPlaying]);
 
-  const onStopSong = useCallback(async () => {
-    playerRef.current?.stopSong();
+    dispatch(setPlayerContext('exemplar'));
+    setIsPlaying(true);
+  }, [dispatch, labSetPlaying]);
+
+  // Stop the exemplar song, updating Redux and local state.
+  const onStopSong = useCallback(() => {
+    if (playerContext === 'exemplar') {
+      playerRef.current?.stopSong();
+    }
+    dispatch(setPlayerContext(null));
     setIsPlaying(false);
-  }, []);
+  }, [playerContext, dispatch]);
+
+  useEffect(() => {
+    if (playerContext !== 'exemplar' && isPlaying) {
+      onStopSong();
+    }
+  }, [playerContext, isPlaying, onStopSong]);
 
   const getPackDetails = (packId: string) => {
     const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
