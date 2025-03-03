@@ -1489,6 +1489,8 @@ function resizePinnedBelowVisualizationArea() {
 
   pinnedBelowVisualization.style.top = top + 'px';
   pinnedBelowVisualization.style.bottom = bottom + 'px';
+  pinnedBelowVisualization.style.left = 0;
+  pinnedBelowVisualization.style.right = 0;
 }
 
 /**
