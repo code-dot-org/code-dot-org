@@ -13,26 +13,11 @@ import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
+import VerticalLayout from './layout/VerticalLayout';
+
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
-};
-
-const labeledGridLayouts = {
-  horizontal: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace file-preview"
-    `,
-  },
-  vertical: {
-    gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace workspace"
-    "info-panel file-preview file-preview"`,
-  },
 };
 
 const defaultConfig: ConfigType = {
@@ -65,10 +50,12 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-
-  labeledGridLayouts,
-  activeLayout: 'horizontal',
+  activeLayout: 'vertical',
   showFileBrowser: true,
+  layoutComponents: {
+    vertical: <VerticalLayout />,
+    horizontal: <div />,
+  },
 };
 
 const defaultSource: MultiFileSource = {
