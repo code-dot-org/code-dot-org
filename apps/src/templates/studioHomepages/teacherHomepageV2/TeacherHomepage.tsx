@@ -14,6 +14,8 @@ import styles from './teacherHomepage.module.scss';
 export const TeacherHomepage: React.FC = () => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
+  const [showHiddenOnly, setShowHiddenOnly] = React.useState(false);
+
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
@@ -24,11 +26,21 @@ export const TeacherHomepage: React.FC = () => {
             <Heading4>{i18n.classSections()}</Heading4>
             <div className={styles.headerButtonRow}>
               <SegmentedButtons
-                selectedButtonValue="teaching"
-                onChange={() => {}}
+                onChange={value =>
+                  value === 'teaching'
+                    ? setShowHiddenOnly(false)
+                    : setShowHiddenOnly(true)
+                }
+                selectedButtonValue={showHiddenOnly ? 'archived' : 'teaching'}
                 buttons={[
-                  {label: 'Teaching', value: 'teaching'},
-                  {label: 'Archived', value: 'archived'},
+                  {
+                    label: 'Teaching',
+                    value: 'teaching',
+                  },
+                  {
+                    label: 'Archived',
+                    value: 'archived',
+                  },
                 ]}
                 size="s"
               />
@@ -54,7 +66,7 @@ export const TeacherHomepage: React.FC = () => {
                 />
               </div>
             </div>
-            <SectionList />
+            <SectionList showHiddenOnly={showHiddenOnly} />
           </div>
           <div className={styles.blankAnnouncement} />
         </div>
