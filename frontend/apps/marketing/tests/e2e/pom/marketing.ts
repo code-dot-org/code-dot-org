@@ -1,4 +1,6 @@
 import {type Page} from '@playwright/test';
+import {loadFonts, FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
+
 export class MarketingPage {
   readonly locale: string;
   readonly page: Page;
@@ -35,7 +37,20 @@ export class MarketingPage {
   async goto(subPath: string) {
     await this.page.goto(`${this.getBasePath()}${subPath}`);
 
-    // Wait for fonts to load before proceeding.
-    await this.page.waitForFunction(() => document.fonts.ready);
+    await this.loadFonts();
+  }
+
+  async loadFonts() {
+    // Inject Font Loader to the browser context and wait for fonts to be loaded
+    await this.page.evaluate(
+      ({fn, fonts}) => {
+        const injectedLoadFonts = new Function(`return (${fn})`)();
+
+        return injectedLoadFonts(fonts).then(() =>
+          console.log('[Test Runner] all fonts loaded!'),
+        );
+      },
+      {fn: loadFonts.toString(), fonts: FONT_FAMILY_NAMES},
+    );
   }
 }
