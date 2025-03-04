@@ -8,6 +8,7 @@ import {useSelector} from 'react-redux';
 import {submitChatContents} from '@cdo/apps/aichat/redux/thunks';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -18,6 +19,7 @@ import {
   selectAllVisibleMessages,
   setShowModalType,
 } from '../redux';
+import {UploadAssetResponse} from '../types';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
@@ -42,14 +44,6 @@ const eraserIcon: FontAwesomeV6IconProps = {
 const plusIcon: FontAwesomeV6IconProps = {
   iconName: 'plus',
 };
-
-const toBase64 = (file: File) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-  });
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -189,17 +183,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const onDrop = useCallback(
     async (acceptedFiles: File[]) => {
       if (currentChannelId) {
-        await fetch(`/v3/assets/${currentChannelId}/${acceptedFiles[0].name}`, {
-          method: 'PUT',
-          body: acceptedFiles[0],
-        });
-
-        const imageBase64 = (await toBase64(acceptedFiles[0])) as string;
+        const response = await HttpClient.put(
+          `/v3/assets/${currentChannelId}/${acceptedFiles[0].name}`,
+          acceptedFiles[0]
+        );
+        const {filename} = (await response.json()) as UploadAssetResponse;
 
         dispatch(
           submitChatContents({
             text: 'Check out the attached image',
-            image: imageBase64,
+            assets: [filename],
           })
         );
       }

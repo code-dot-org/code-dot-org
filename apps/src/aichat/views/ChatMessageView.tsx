@@ -5,6 +5,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -26,7 +27,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   isChatHistoryView,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText, image} = chatMessage;
+  const {status, role, chatMessageText, assets} = chatMessage;
+  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -81,10 +83,16 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       ) : null;
   }
 
+  // Assume only one asset which is an image for now
+  const imageUrl =
+    assets && assets.length > 0 && currentChannelId
+      ? `/v3/assets/${currentChannelId}/${assets[0]}`
+      : undefined;
+
   return (
     <ChatMessage
       text={displayText}
-      image={image}
+      image={imageUrl}
       role={role}
       messageStyle={getMessageStyle(status, role)}
       footer={footer}

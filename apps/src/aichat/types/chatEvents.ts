@@ -17,7 +17,8 @@ interface BaseChatEvent {
 // TODO: create ImageChatMessage
 export interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
-  image?: string;
+  /** Asset file names to optionally send with text content */
+  assets?: string[];
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
 }
