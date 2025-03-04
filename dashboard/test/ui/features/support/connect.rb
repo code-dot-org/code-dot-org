@@ -69,6 +69,10 @@ def get_browser(test_run_name)
   browser = nil
   $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
   if ENV['CI'] == 'true' # TODO: only on first try
+    ENV['PEGASUS_TEST_DOMAIN'] = 'ui-tests:3000'
+    ENV['DASHBOARD_TEST_DOMAIN'] = 'ui-tests:3000'
+    ENV['HOUROFCODE_TEST_DOMAIN'] = 'ui-tests:3000'
+    ENV['CSEDWEEK_TEST_DOMAIN'] = 'ui-tests:3000'
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       SeleniumBrowser.remote(CI_SELENIUM_URL, http_client: $http_client) # TODO: headless?
     end
