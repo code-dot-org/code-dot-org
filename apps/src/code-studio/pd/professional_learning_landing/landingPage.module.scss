@@ -1,7 +1,7 @@
 // Styles for studio.code.org/my-professional-learning
 
 @use 'color.scss';
-@import 'typography';
+@import '@code-dot-org/component-library-styles/typography.module';
 @import 'breakpoints';
 
 main.wrapper {

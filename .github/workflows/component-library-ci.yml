@@ -71,6 +71,10 @@ jobs:
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
+      - name: Build
+        run: yarn build --filter @code-dot-org/design-system-storybook
+        working-directory: ./frontend
+
       - name: Eyes Tests
         id: eyes
         run: |

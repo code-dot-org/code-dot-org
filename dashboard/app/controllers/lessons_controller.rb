@@ -33,7 +33,12 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
+    lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
+
+    @page_title = "#{t('lesson_plan')}: #{lesson_data[:displayName]}"
+    @page_description = lesson_data[:overview].truncate(200, separator: '.', omission: '.')
+
+    @lesson_data = lesson_data
   end
 
   # GET /lessons/2345

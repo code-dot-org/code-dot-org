@@ -33,7 +33,8 @@
   },
   "dependencies": {
     "@code-dot-org/component-library": "workspace:*",
-    "@contentful/experiences-sdk-react": "^1.30.3",
+    "@code-dot-org/fonts": "workspace:*",
+    "@contentful/experiences-sdk-react": "^1.33.2",
     "contentful": "^11.2.5",
     "next": "^15.1.2",
     "react": "^18.3.1",

@@ -1,0 +1,40 @@
+name 'csaif_pl_vocabulary'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Vocabulary Choose Your Own Adventure
+
+#### This unit has a lot of vocabulary that may be new to both you and your students. Choose one of the following activities to explore the vocabulary and increase your own understanding of these key ideas.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Mind Map (Mild)</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p> 
+
+#### Create a mind map connecting key cybersecurity terms to their definitions and real-world applications.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Adventures in Cybersecurity (Medium)</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Text
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Digital Escape Room (Spicy)</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Text
+</p></div>
+</details>
+
+
+MARKDOWN

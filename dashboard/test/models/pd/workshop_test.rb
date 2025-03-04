@@ -1636,6 +1636,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'N/A', workshop.workshop_date_range_string
   end
 
+  test 'bad time_zone value results in nil' do
+    workshop = create :workshop, time_zone: 'Bad/Zone'
+    assert_equal nil, workshop.time_zone
+  end
+
   private def session_on_day(day_offset)
     # 9am-5pm
     session_on(day_offset, 9.hours, 17.hours)

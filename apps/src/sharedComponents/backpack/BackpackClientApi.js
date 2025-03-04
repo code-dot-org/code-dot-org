@@ -38,7 +38,7 @@ export default class BackpackClientApi {
       this.channelId + '/' + filename + cacheBustSuffix,
       (error, data) => {
         if (error) {
-          onError();
+          onError(error);
         } else {
           onSuccess(data);
         }
@@ -111,7 +111,7 @@ export default class BackpackClientApi {
           fileObject,
           [filename],
           onError,
-          () => {},
+          onSuccess,
           'pythonlab'
         )
     );

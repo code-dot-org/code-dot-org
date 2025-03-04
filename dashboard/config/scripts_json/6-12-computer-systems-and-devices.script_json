@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-24 01:15:35 UTC",
+    "serialized_at": "2025-02-25 19:00:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -214,7 +214,7 @@
     },
     {
       "key": "lesson-14",
-      "name": "Nobel in AI Project",
+      "name": "Sustainable Systems",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -384,6 +384,31 @@
       "seeding_key": {
         "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe",
         "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "541dc361-4d8c-4172-a246-347361e427e6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "fc71ab45-dbd3-42d2-b6e3-d9b4b6cdb29e",
+      "position": 2,
+      "properties": {
+        "name": "Project Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc71ab45-dbd3-42d2-b6e3-d9b4b6cdb29e",
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices"
       }
@@ -690,25 +715,59 @@
       }
     },
     {
-      "key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0",
-      "position": 1,
-      "properties": {
-        "progression_name": "AI and Emerging Technologies Ethics Roleplaying"
-      },
-      "seeding_key": {
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0",
-        "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
-      }
-    },
-    {
       "key": "a35690e2-5c17-4c77-a29a-613476d338d2",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2",
         "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
+      }
+    },
+    {
+      "key": "9b160fa2-7fba-4170-a95d-482a094714a6",
+      "position": 1,
+      "properties": {
+        "name": "Project Day 1",
+        "progression_name": "Explore Sustainable Development Goal Targets"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b160fa2-7fba-4170-a95d-482a094714a6",
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6"
+      }
+    },
+    {
+      "key": "51142482-8b5f-4a64-99d3-7de94bc547b4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Brainstorm Your Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "51142482-8b5f-4a64-99d3-7de94bc547b4",
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6"
+      }
+    },
+    {
+      "key": "8773e289-12de-4d5d-ac2e-f27c96243625",
+      "position": 3,
+      "properties": {
+        "progression_name": "Understanding Your Users"
+      },
+      "seeding_key": {
+        "activity_section.key": "8773e289-12de-4d5d-ac2e-f27c96243625",
+        "lesson_activity.key": "541dc361-4d8c-4172-a246-347361e427e6"
+      }
+    },
+    {
+      "key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44",
+      "position": 1,
+      "properties": {
+        "progression_name": " Ethics & Impact"
+      },
+      "seeding_key": {
+        "activity_section.key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44",
+        "lesson_activity.key": "fc71ab45-dbd3-42d2-b6e3-d9b4b6cdb29e"
       }
     }
   ],
@@ -1836,31 +1895,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "computer-systems-lesson12-scenario-1"
-        ],
-        "progression": "AI and Emerging Technologies Ethics Roleplaying"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-1"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
-      },
-      "level_keys": [
-        "computer-systems-lesson12-scenario-1"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "computer-systems-lesson12-cfu"
         ],
         "progression": "Check for Understanding"
@@ -1877,6 +1911,94 @@
       },
       "level_keys": [
         "computer-systems-lesson12-cfu"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Sustainable Development Goal Targets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-level1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9b160fa2-7fba-4170-a95d-482a094714a6"
+      },
+      "level_keys": [
+        "computer-systems-project-level1"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Brainstorm Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-brainstorm-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "51142482-8b5f-4a64-99d3-7de94bc547b4"
+      },
+      "level_keys": [
+        "computer-systems-project-brainstorm-chat"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Understanding Your Users"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-user-profile-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8773e289-12de-4d5d-ac2e-f27c96243625"
+      },
+      "level_keys": [
+        "computer-systems-project-user-profile-chat"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": " Ethics & Impact"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-project-ethics-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44"
+      },
+      "level_keys": [
+        "computer-systems-project-ethics-chat"
       ]
     }
   ],
@@ -2423,18 +2545,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson12-scenario-1",
-        "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-1"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "computer-systems-lesson12-cfu",
         "script_level.level_keys": [
           "computer-systems-lesson12-cfu"
@@ -2443,6 +2553,54 @@
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
         "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-level1",
+        "script_level.level_keys": [
+          "computer-systems-project-level1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9b160fa2-7fba-4170-a95d-482a094714a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-brainstorm-chat",
+        "script_level.level_keys": [
+          "computer-systems-project-brainstorm-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "51142482-8b5f-4a64-99d3-7de94bc547b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-user-profile-chat",
+        "script_level.level_keys": [
+          "computer-systems-project-user-profile-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8773e289-12de-4d5d-ac2e-f27c96243625"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-project-ethics-chat",
+        "script_level.level_keys": [
+          "computer-systems-project-ethics-chat"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "c73bb5ad-1be0-4db9-b42e-1ef8069c9f44"
       }
     }
   ],
