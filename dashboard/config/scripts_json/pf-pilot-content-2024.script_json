@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "programming-fundamentals-2025-pilot",
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2024",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 02:00:36 UTC",
+    "serialized_at": "2025-02-25 22:40:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9092,6 +9093,17 @@
       }
     },
     {
+      "name": "Python Lab Neighborhood Documentation",
+      "url": "https://docs.google.com/document/d/1x3xmKI_ADq8GaGoI0XGX9pJIE4VmPM3iXq_qIHeo7r4/edit?usp=sharing",
+      "key": "python_lab_neighborhood_documentation",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "python_lab_neighborhood_documentation"
+      }
+    },
+    {
       "name": "Selection Flowchart",
       "url": "https://docs.google.com/document/d/1QmlYZcPeQ_rLpKtW-yjyZrTJ9tN1_zxHn5kYvzZgji4/edit?usp=sharing",
       "key": "selection_flowchart",
@@ -9384,7 +9396,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "python_lab_neighborhood_documentation",
+        "script.name": "pf-pilot-content-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

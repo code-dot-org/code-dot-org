@@ -1,4 +1,3 @@
-import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
 import {removeSectionOrThrow} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -65,7 +64,6 @@ export const SectionList: React.FC = () => {
 
   return (
     <div className={styles.sectionList}>
-      <Heading4>{i18n.classSections()}</Heading4>
       {getSectionList(sections)}
       {deletingSection && (
         <SectionDeleteModal

@@ -45,8 +45,8 @@ export default function SingleSectionSetUp({
             required={true}
             requiredMessageText={i18n.chooseAtLeastOne()}
             options={gradeOptions}
-            values={section.grade || section.grades || []}
-            setValues={g => updateSection('grade', g)}
+            values={section.grades || []}
+            setValues={g => updateSection('grades', g)}
           />
         </div>
       )}

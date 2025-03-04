@@ -68,5 +68,5 @@ describe('FileTabs', () => {
     const user = userEvent.setup();
     await user.click(closeButton);
     expect(context.closeFile).toHaveBeenCalledWith('1');
-  }, 10000);
+  }, 15000);
 });

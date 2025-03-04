@@ -64,7 +64,6 @@ describe('SectionList', () => {
 
   it('renders list of teacher section cards', async () => {
     renderComponent();
-    await screen.findByText('Class Sections');
     screen.getByText('Period 1');
     screen.getByText('Period 2');
     screen.getByText('Period 3');

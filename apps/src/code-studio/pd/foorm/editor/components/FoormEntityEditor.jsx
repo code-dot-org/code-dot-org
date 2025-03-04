@@ -262,6 +262,7 @@ class FoormEntityEditor extends React.Component {
                   day: this.state.day,
                   is_friday_institute: this.state.is_friday_institute,
                   workshop_agenda: this.state.workshop_agenda,
+                  pl_topics: this.state.pl_topics,
                 }}
               />
             </Tab>

@@ -17,6 +17,7 @@
 #
 class AichatMessage < ApplicationRecord
   belongs_to :aichat_thread
+  has_one :aichat_message_feedback
 
   enum role: {
     user: 1,

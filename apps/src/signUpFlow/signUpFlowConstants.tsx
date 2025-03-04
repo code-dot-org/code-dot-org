@@ -1,3 +1,5 @@
+import {queryParams} from '@cdo/apps/code-studio/utils';
+
 // session storage keys
 export const ACCOUNT_TYPE_SESSION_KEY = 'accountType';
 export const SCHOOL_ID_SESSION_KEY = 'schoolId';
@@ -7,6 +9,13 @@ export const SCHOOL_COUNTRY_SESSION_KEY = 'schoolCountry';
 export const EMAIL_SESSION_KEY = 'email';
 export const OAUTH_LOGIN_TYPE_SESSION_KEY = 'oauthType';
 export const USER_RETURN_TO_SESSION_KEY = 'userReturnTo';
+
+export const setUserReturnToUrl = () => {
+  const userReturnTo = queryParams('user_return_to');
+  if (userReturnTo) {
+    sessionStorage.setItem(USER_RETURN_TO_SESSION_KEY, userReturnTo as string);
+  }
+};
 
 export const clearSignUpSessionStorage = (isTeacher: boolean) => {
   const fieldsToClear = [

@@ -1,0 +1,16 @@
+name 'csaif_pl_2_encryption_03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Encryption
+
+#### Many of the ideas we use to keep secrets in the digital age are far older than the Internet. The process of encoding a plain text message in some secret way is called **encryption**.
+
+#### For example in Roman times Julius Caesar is reported to have encrypted messages to his soldiers and generals by using a simple alphabetic shift - every character was encrypted by substituting it with a character that was some fixed number of letters away in the alphabet.
+
+#### As a result an alphabetic shift is often referred to as the Caesar Cipher.
+
+#### In this lesson students explore decrypting messages both on their own and with the aid of a computation tool. Take a few minutes to explore the decryption tool in the next level.
+
+MARKDOWN
