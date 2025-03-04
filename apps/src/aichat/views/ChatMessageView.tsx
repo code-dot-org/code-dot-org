@@ -26,7 +26,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   isChatHistoryView,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText} = chatMessage;
+  const {status, role, chatMessageText, image} = chatMessage;
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -84,6 +84,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   return (
     <ChatMessage
       text={displayText}
+      image={image}
       role={role}
       messageStyle={getMessageStyle(status, role)}
       footer={footer}

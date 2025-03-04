@@ -12,6 +12,7 @@ $icon-overlay-padding-right: 8px;
 %message {
   @extend %markdown-styles;
   display: flex;
+  flex-direction: column;
   padding: 12px;
   justify-content: flex-start;
   align-items: center;
@@ -86,6 +87,10 @@ $icon-overlay-padding-right: 8px;
 .message-container-user {
   @extend %message-container;
   justify-content: flex-end;
+}
+
+.image {
+  width: 100px;
 }
 
 %container {
