@@ -37,7 +37,7 @@ class ShareDisallowedDialog extends Component {
             />
             <Button
               useAsLink={true}
-              href={`/users/new_sign_up/account_type?user_return_to=${location.pathname}`}
+              href={`/users/sign_up/account_type?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
             />
           </div>

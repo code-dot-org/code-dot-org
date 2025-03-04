@@ -6,7 +6,7 @@ wrong 'Using Ethernet instead of Wi-Fi'
 wrong 'Closing background applications'
 wrong 'Upgrading to a faster router'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which scenario could cause a slow Internet connection at home?

@@ -6,7 +6,7 @@ right 'They allow computers to be identified and located on a network'
 wrong 'They increase the security of an Internet connection'
 wrong 'They control what websites a user can visit'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Why do IP addresses matter in networking?

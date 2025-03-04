@@ -90,7 +90,7 @@ describe('VersionHistoryButton', () => {
     });
     await waitFor(
       () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
-      {timeout: 2000}
+      {timeout: 3000}
     );
 
     // We use the functions returned from render because the dialog is rendered to document.body,

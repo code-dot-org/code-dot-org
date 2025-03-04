@@ -144,11 +144,15 @@ export async function getStudentChatHistory(
  * Returns a {@link DetectToxicityResponse}.
  */
 export async function detectToxicityInCustomizations(
-  aiCustomizations: AiCustomizations
+  aiCustomizations: AiCustomizations,
+  levelId: number | null
 ): Promise<DetectToxicityResponse> {
   const response = await HttpClient.post(
     paths.FIND_TOXICITY_URL,
-    JSON.stringify(extractFieldsToCheckForToxicity(aiCustomizations)),
+    JSON.stringify({
+      ...extractFieldsToCheckForToxicity(aiCustomizations),
+      levelId,
+    }),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',
