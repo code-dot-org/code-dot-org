@@ -131,6 +131,7 @@ jobs:
 
   ui-tests:
     runs-on: ubuntu-24.04
+    environment: marketing-test
     needs:
       - deploy-to-marketing-test
 

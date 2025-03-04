@@ -39,6 +39,7 @@ jobs:
 
     ui-tests:
       runs-on: ubuntu-24.04
+      environment: marketing-pr
 
       steps:
         - uses: actions/checkout@v4
