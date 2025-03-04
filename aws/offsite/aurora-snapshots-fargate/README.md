@@ -12,29 +12,29 @@ Run unit tests:
 
 1. **Configure AWS Client** - ensure local AWS API calls authenticate with credentials that can deploy to the offsite AWS account.
     1. **Create Offsite Profile** - Add an entry to `.aws/config` named `codeorg-offsite` such as
-      ```
-        [profile codeorg-offsite]
-        region = my-region-2
-      ```
+    ```ini
+    [profile codeorg-offsite]
+    region = my-region-2
+    ```
     2. **Configure Credentials** - Add an entry to `.aws/credentials` with API keys provisioned with appropriate Role/Policies
-     ```
-       [codeorg-offsite]
-        aws_access_key_id = MYKEYID
-        aws_secret_access_key = mysecretkey
-     ```
+    ```ini
+    [codeorg-offsite]
+    aws_access_key_id = MYKEYID
+    aws_secret_access_key = mysecretkey
+    ```
     3. **Switch to Offsite Profile** - Configure the AWS client to default to the offsite profile
-    ``` bash
-      export AWS_PROFILE=codeorg-offsite
+    ```bash
+    export AWS_PROFILE=codeorg-offsite
     ```
 2. **Build Image** - Create a docker image for execution in an AWS ECS Linux/x86 container:
 
-``` bash
+```bash
 docker buildx build . --no-cache --platform linux/amd64 --tag [AWS Account ID].dkr.ecr.[AWS Region].amazonaws.com/aurora-verify-backups:[VersionNumber] --tag [AWS Account ID].dkr.ecr.[AWS Region].amazonaws.com/aurora-verify-backups:latest
 ```
 
 3. **Push Image** -  to ECR repository named `aurora-verify-backups`, tagged with `latest`
 
-``` bash
+```bash
 aws ecr get-login-password --region [AWS Region] | docker login --username AWS --password-stdin [AWS Account ID].dkr.ecr.[AWS Region].amazonaws.com
 docker push [AWS Account ID].dkr.ecr.[AWS Region].amazonaws.com/aurora-verify-backups --all-tags
 ```

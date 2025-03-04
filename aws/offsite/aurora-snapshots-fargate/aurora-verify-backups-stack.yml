@@ -45,10 +45,13 @@ Resources:
               - Effect: Allow
                 Action:
                   - ecr:GetAuthorizationToken
+                Resource: '*'
+              - Effect: Allow
+                Action:
                   - ecr:BatchCheckLayerAvailability
                   - ecr:GetDownloadUrlForLayer
                   - ecr:BatchGetImage
-                Resource: '*'
+                Resource: !Sub "arn:aws:ecr:${AWS::Region}:${AWS::AccountId}:aurora-verify-backups"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:

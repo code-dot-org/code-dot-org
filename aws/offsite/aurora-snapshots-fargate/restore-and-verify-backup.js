@@ -33,6 +33,38 @@ const DB_ENGINE = process.env.DB_ENGINE;
 const DB_NAME = process.env.DB_NAME;
 const NEW_PASSWORD = generateSimplePassword(32);
 
+const main = async () => {
+  const rdsClient = new RDSClient({ region: REGION });
+
+  try {
+    console.log("Starting restore of database from latest snapshot");
+
+    await restoreLatestSnapshot(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
+    console.log("Database restored and available");
+
+    await changePassword(rdsClient, DB_CLUSTER_ID, NEW_PASSWORD);
+    console.log("Successfully changed password");
+    // Sleep for 30 seconds to wait for password change to take effect
+    await sleepMs(30000);
+
+    await verifyDb(rdsClient, DB_INSTANCE_ID, NEW_PASSWORD);
+    console.log("verified");
+  } catch (error) {
+    Honeybadger.notify(error, {
+      name: "Offsite account snapshot verification"
+    });
+    console.log(error);
+    throw error;
+  } finally {
+    console.log("deleting cluster");
+    await deleteCluster(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
+  }
+};
+
+if (require.main === module) {
+  main();
+}
+
 const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
   // Ignore snapshots with "retain" in the name or any automated snapshots
   const snapshotFilterFunction = function(snapshot) {
@@ -182,38 +214,6 @@ const deleteCluster = async (rdsClient, clusterId, instanceId) => {
 
   await rdsClient.send(deleteClusterCommand);
 };
-
-const main = async () => {
-  const rdsClient = new RDSClient({ region: REGION });
-
-  try {
-    console.log("Starting restore of database from latest snapshot");
-
-    await restoreLatestSnapshot(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
-    console.log("Database restored and available");
-
-    await changePassword(rdsClient, DB_CLUSTER_ID, NEW_PASSWORD);
-    console.log("Successfully changed password");
-    // Sleep for 30 seconds to wait for password change to take effect
-    await sleepMs(30000);
-
-    await verifyDb(rdsClient, DB_INSTANCE_ID, NEW_PASSWORD);
-    console.log("verified");
-  } catch (error) {
-    Honeybadger.notify(error, {
-      name: "Offsite account snapshot verification"
-    });
-    console.log(error);
-    throw error;
-  } finally {
-    console.log("deleting cluster");
-    await deleteCluster(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
-  }
-};
-
-if (require.main === module) {
-  main();
-}
 
 module.exports = {
   restoreLatestSnapshot,
