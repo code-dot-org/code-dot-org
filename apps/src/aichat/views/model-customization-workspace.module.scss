@@ -114,7 +114,7 @@ label.selectedModelDropdown {
   display: inline-block;
 }
 
-.updateButton {
+button.updateButton {
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
@@ -128,6 +128,7 @@ label.selectedModelDropdown {
 .compareModelsButton {
   padding: 5px 16px;
   margin: 10px 0;
+  width: 100%;
 }
 
 .fieldLabelContainer {
