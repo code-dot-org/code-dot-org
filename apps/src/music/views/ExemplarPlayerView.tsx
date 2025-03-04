@@ -57,11 +57,13 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
       BlockMode.SIMPLE2
     );
 
-    // Clear any prior events and execute triggers to prepare playback.
-    simple2SequencerRef.current.clear();
-    workspaceRef.current.executeAllTriggers();
+    // Clear any prior events to prepare playback.
     simple2SequencerRef.current.clear();
     workspaceRef.current.executeCompiledSong();
+    await playerRef.current?.preloadSounds(
+      simple2SequencerRef.current.getPlaybackEvents(),
+      () => {}
+    );
     const playbackEvents = simple2SequencerRef.current.getPlaybackEvents();
     dispatch(setExemplarPlaybackEvents(playbackEvents));
   }, [dispatch, packId, source]);
@@ -76,13 +78,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     labSetPlaying(false);
     playerRef.current?.stopSong();
 
-    const allTriggerEvents = simple2SequencerRef.current.getPlaybackEvents();
-
-    // Preload sounds and then play the song using the compiled events.
-    await playerRef.current?.preloadSounds(
-      [...allTriggerEvents, ...simple2SequencerRef.current.getPlaybackEvents()],
-      () => {}
-    );
+    // Play the song using the compiled events.
     playerRef.current?.playSong(
       simple2SequencerRef.current.getPlaybackEvents()
     );
