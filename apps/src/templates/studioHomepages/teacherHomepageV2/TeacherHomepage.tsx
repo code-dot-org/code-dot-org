@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Heading2, Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -21,6 +21,7 @@ export const TeacherHomepage: React.FC = () => {
 
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            <Heading4>{i18n.classSections()}</Heading4>
             <div className={styles.headerButtonRow}>
               <SegmentedButtons
                 selectedButtonValue="teaching"

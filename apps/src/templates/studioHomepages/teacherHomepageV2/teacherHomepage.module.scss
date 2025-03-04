@@ -9,23 +9,27 @@
 .teacherHomepageBody {
   display: flex;
   flex-direction: column;
+  max-width: 1160px;
+  width: 100%;
 }
 
 .teacherHomepageContent {
   display: flex;
   flex-direction: row;
   width: fit-content;
-  max-width: 100%;
+  width: 100%;
 }
 
 .teacherHomepageLeftContent {
-  width: fit-content;
+  width: 100%;
+  max-width: 800px;
+  min-width: 500px;
 }
 
 .headerButtonRow {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .headerButtonRowRight {
@@ -36,7 +40,6 @@
 .sectionList {
   display: flex;
   flex-direction: column;
-  padding: 12px 0;
   gap: 16px;
 }
 
@@ -46,7 +49,7 @@
   background-color: $neutral_light;
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 100%;
 }
 
 .sectionCardHeader {
@@ -86,6 +89,7 @@
 
 .blankAnnouncement {
   width: 320px;
+  min-width: 320px;
   height: 600px;
   background-color: var(--background-brand-purple-light);
   margin-inline-start: 40px;
