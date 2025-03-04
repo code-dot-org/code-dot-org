@@ -14,7 +14,7 @@
     end
 
     email ||= params[:email]
-    finish_sign_up_url = user_type == User::TYPE_TEACHER ? users_new_sign_up_finish_teacher_account_path : users_new_sign_up_finish_student_account_path
+    finish_sign_up_url = user_type == User::TYPE_TEACHER ? users_sign_up_finish_teacher_account_path : users_sign_up_finish_student_account_path
     script_data[:lti_provider] = lti_provider
     script_data[:lti_provider_name] = Policies::Lti::LMS_PLATFORMS[lti_provider.to_sym][:name]
     script_data[:finish_sign_up_url] = finish_sign_up_url

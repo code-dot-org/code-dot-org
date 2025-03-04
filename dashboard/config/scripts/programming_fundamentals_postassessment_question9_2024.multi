@@ -6,7 +6,7 @@ right '`"Odd"`'
 wrong '`"Small number"`'
 wrong 'No output; there is an error'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What will be printed by the following code?

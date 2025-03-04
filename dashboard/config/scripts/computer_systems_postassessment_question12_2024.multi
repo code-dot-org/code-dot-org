@@ -6,7 +6,7 @@ wrong 'Controlling memory and processes'
 wrong 'Providing a user interface'
 right 'Designing and manufacturing computer hardware'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is **NOT** a function of an operating system?

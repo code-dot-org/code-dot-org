@@ -6,7 +6,7 @@ wrong 'Allowing only one employee to handle data'
 right 'Encrypting the data and using multi-factor authentication'
 wrong 'Changing passwords once a year'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A company is concerned about cybercriminals stealing customer data. What is the best way to protect sensitive information on their network?

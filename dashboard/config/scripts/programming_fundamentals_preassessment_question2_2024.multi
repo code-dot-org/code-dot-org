@@ -6,7 +6,7 @@ wrong 'Breaking a task into smaller steps'
 wrong 'Testing a program for errors'
 wrong 'Repeating a block of code'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2: Computational Thinking
