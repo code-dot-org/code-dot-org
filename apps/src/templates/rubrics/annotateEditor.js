@@ -233,3 +233,11 @@ export const annotateLines = (evidence, observations, hoverCallback) => {
 
   return ret;
 };
+
+/**
+ * Clear prior line annotations
+ */
+export const clearAnnotations = () => {
+  EditorAnnotator.clearAnnotations();
+  EditorAnnotator.clearHighlightedLines();
+};

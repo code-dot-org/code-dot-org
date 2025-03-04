@@ -18,9 +18,7 @@ import {
   THUMBS_DOWN,
 } from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {annotateLines} from '@cdo/apps/templates/rubrics/annotateEditor';
-import LearningGoals, {
-  clearAnnotations,
-} from '@cdo/apps/templates/rubrics/LearningGoals';
+import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -715,14 +713,6 @@ describe('LearningGoals - Enzyme', () => {
   });
   afterEach(() => {
     restoreAnnotator();
-  });
-
-  describe('clearAnnotations', () => {
-    it('should clear annotations and clear highlighted lines', () => {
-      clearAnnotations();
-      sinon.assert.called(clearAnnotationsStub);
-      sinon.assert.called(clearHighlightedLinesStub);
-    });
   });
 
   it('changes learning goal when left and right buttons are pressed', () => {

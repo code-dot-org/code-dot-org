@@ -6,7 +6,10 @@ import {
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
-import {annotateLines} from '@cdo/apps/templates/rubrics/annotateEditor';
+import {
+  annotateLines,
+  clearAnnotations,
+} from '@cdo/apps/templates/rubrics/annotateEditor';
 import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
 import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
 
@@ -264,5 +267,28 @@ describe('annotateLines', () => {
     deprecatedExpect(annotations[0].message).to.be.equal(
       observations.split('.')[0]
     );
+  });
+});
+
+describe('clearAnnotations', () => {
+  let clearAnnotationsStub, clearHighlightedLinesStub;
+
+  beforeEach(() => {
+    clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
+    clearHighlightedLinesStub = sinon.stub(
+      EditorAnnotator,
+      'clearHighlightedLines'
+    );
+  });
+
+  afterEach(() => {
+    clearAnnotationsStub.restore();
+    clearHighlightedLinesStub.restore();
+  });
+
+  it('should clear annotations and clear highlighted lines', () => {
+    clearAnnotations();
+    sinon.assert.called(clearAnnotationsStub);
+    sinon.assert.called(clearHighlightedLinesStub);
   });
 });

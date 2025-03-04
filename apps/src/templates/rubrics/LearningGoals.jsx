@@ -21,7 +21,7 @@ import AiAssessment from './AiAssessment';
 import AiAssessmentFeedbackContext, {
   NO_FEEDBACK,
 } from './AiAssessmentFeedbackContext';
-import {annotateLines} from './annotateEditor';
+import {annotateLines, clearAnnotations} from './annotateEditor';
 import EvidenceLevels from './EvidenceLevels';
 import ProgressRing from './ProgressRing';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
@@ -36,14 +36,6 @@ import {
 import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
-
-/**
- * Clear prior line annotations
- */
-export function clearAnnotations() {
-  EditorAnnotator.clearAnnotations();
-  EditorAnnotator.clearHighlightedLines();
-}
 
 export default function LearningGoals({
   productTour,
