@@ -1,0 +1,100 @@
+{
+  "name": "@code-dot-org/fonts",
+  "version": "0.0.0-alpha.0",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/fonts/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/fonts"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/esm/index.d.mts",
+        "require": "./dist/cjs/index.d.ts"
+      },
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    },
+    "./index.css": "./dist/index.css",
+    "./locales/*": "./dist/locales/*",
+    "./FontLoader": {
+      "types": {
+        "import": "./dist/esm/react/FontLoader/index.d.mts",
+        "require": "./dist/cjs/react/FontLoader/index.d.ts"
+      },
+      "import": "./dist/esm/react/FontLoader/index.mjs",
+      "require": "./dist/cjs/react/FontLoader/index.js"
+    },
+    "./loader": {
+      "types": {
+        "import": "./dist/esm/loader/index.d.mts",
+        "require": "./dist/cjs/loader/index.d.ts"
+      },
+      "import": "./dist/esm/loader/index.mjs",
+      "require": "./dist/cjs/loader/index.js"
+    }
+  },
+  "files": [
+    "*.scss"
+  ],
+  "scripts": {
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' tsup",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/figtree": "^5.1.2",
+    "@fontsource-variable/noto-sans": "^5.1.1",
+    "@fontsource-variable/noto-sans-arabic": "^5.1.1",
+    "@fontsource-variable/noto-sans-armenian": "^5.1.1",
+    "@fontsource-variable/noto-sans-bengali": "^5.1.1",
+    "@fontsource-variable/noto-sans-devanagari": "^5.1.1",
+    "@fontsource-variable/noto-sans-georgian": "^5.1.1",
+    "@fontsource-variable/noto-sans-hebrew": "^5.1.1",
+    "@fontsource-variable/noto-sans-jp": "^5.1.1",
+    "@fontsource-variable/noto-sans-kannada": "^5.1.1",
+    "@fontsource-variable/noto-sans-khmer": "^5.1.1",
+    "@fontsource-variable/noto-sans-kr": "^5.1.1",
+    "@fontsource-variable/noto-sans-sc": "^5.1.1",
+    "@fontsource-variable/noto-sans-sinhala": "^5.1.1",
+    "@fontsource-variable/noto-sans-tamil": "^5.1.1",
+    "@fontsource-variable/noto-sans-tc": "^5.1.1",
+    "@fontsource-variable/noto-sans-telugu": "^5.1.1",
+    "@fontsource-variable/noto-sans-thaana": "^5.1.1",
+    "@fontsource-variable/noto-sans-thai": "^5.1.1",
+    "@fontsource/barlow-semi-condensed": "^5.1.1",
+    "@fontsource/noto-sans-jp": "^5.1.1",
+    "@fontsource/noto-sans-kr": "^5.1.1",
+    "@fontsource/noto-sans-math": "^5.1.1",
+    "@fontsource/noto-sans-myanmar": "^5.1.1",
+    "@fontsource/noto-sans-sc": "^5.1.1",
+    "@fontsource/noto-sans-tc": "^5.1.1",
+    "eslint": "^9.16.0",
+    "prettier": "3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.85.0",
+    "stylelint": "^16.14.1",
+    "tsup": "^8.3.6"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

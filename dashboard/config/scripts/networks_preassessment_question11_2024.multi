@@ -6,7 +6,7 @@ wrong 'AI can slow down Internet connections'
 wrong 'AI makes it impossible for hackers to attack networks'
 right 'AI helps detect and prevent cyber threats in real time'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 How is artificial intelligence (AI) used in network security?

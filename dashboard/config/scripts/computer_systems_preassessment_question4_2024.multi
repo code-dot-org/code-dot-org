@@ -6,7 +6,7 @@ right 'Managing hardware and software'
 wrong 'Displaying images on a monitor'
 wrong 'Controlling internet speed'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is the **main role** of an operating system?

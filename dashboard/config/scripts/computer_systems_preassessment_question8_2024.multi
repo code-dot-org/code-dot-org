@@ -1,17 +1,19 @@
 name 'computer-systems-preassessment-question8-2024'
-title 'Computer Systems and Devices Pre-Assessment: Question 1'
+title 'Computer Systems and Devices Pre-Assessment: Question 8'
 
-wrong 'wrong'
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
+right 'a web browser'
+wrong 'a computer\'s operating system'
+wrong 'a printer driver'
+wrong 'a graphics card'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
-question
+Which is an example of **application software**?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 4: Software and Operating Systems
+
+Lesson 5: Troubleshooting and Optimizing Software
 MARKDOWN

@@ -6,7 +6,7 @@ wrong 'Whether an algorithm is written in Python or Java'
 wrong 'If an algorithm uses variables correctly'
 right 'If an algorithm is biased against certain groups of people'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is an ethical concern when designing algorithms?

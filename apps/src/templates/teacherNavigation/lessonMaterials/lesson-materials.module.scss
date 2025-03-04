@@ -108,6 +108,14 @@
   align-items: center;
 }
 
+.viewOptionsDropdown {
+  margin-left: 16px;
+
+  & li {
+    min-width: 200px;
+  }
+}
+
 .lessonMaterialsContainer{
   display: flex;
   flex-direction: column;

@@ -72,7 +72,6 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
-  staticDirs: ['./styles'],
   swc: () => ({
     // Removes the need to import React by specifying we are targeting React 17+ using the React jsx transform
     // See: https://storybook.js.org/docs/8.5/configure/integration/compilers#the-swc-compiler-doesnt-work-with-react

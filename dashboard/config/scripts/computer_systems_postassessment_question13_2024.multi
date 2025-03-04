@@ -6,7 +6,7 @@ right 'AI may cause job displacement in certain industries'
 wrong 'AI will eliminate the need for programming'
 wrong 'AI will only be used in scientific research'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which statement best describes a potential challenge of AI and automation in the future?

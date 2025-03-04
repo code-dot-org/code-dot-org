@@ -20,7 +20,8 @@ import {handleToxicityRequestError} from './handleToxicityRequestError';
 export const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
   saveType: SaveType,
-  dispatch: AppDispatch
+  dispatch: AppDispatch,
+  levelId: number | null
 ) => {
   // Remove any empty example topics on save
   const trimmedExampleTopics =
@@ -52,7 +53,8 @@ export const saveAiCustomization = async (
   let toxicity: DetectToxicityResponse;
   try {
     toxicity = await detectToxicityInCustomizations(
-      trimmedCurrentAiCustomizations
+      trimmedCurrentAiCustomizations,
+      levelId
     );
   } catch (error) {
     await handleToxicityRequestError(error as Error, dispatch);
