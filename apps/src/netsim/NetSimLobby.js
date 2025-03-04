@@ -5,6 +5,7 @@
  * @see NetSimRemoteNodeSelectionPanel for implementation of the actual
  *      lobby table.
  */
+import md5 from 'blueimp-md5';
 import $ from 'jquery';
 
 import {getUserSections} from '@cdo/apps/util/userSectionClient';
@@ -546,6 +547,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
   sectionList,
   sharedShardSeed
 ) {
+  console.log('NetSimLobby.prototype.buildShardChoiceList_');
   this.shardChoices_.length = 0;
 
   // If we have a shared shard seed, put it first in the list:
@@ -595,7 +597,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
  * @private
  */
 NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
-  return ('ns_' + this.levelKey_ + '_' + seed).substr(0, 48);
+  return 'ns_' + md5(this.levelKey_ + '_' + seed).substring(0, 32);
 };
 
 /**
