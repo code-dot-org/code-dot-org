@@ -547,7 +547,6 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
   sectionList,
   sharedShardSeed
 ) {
-  console.log('NetSimLobby.prototype.buildShardChoiceList_');
   this.shardChoices_.length = 0;
 
   // If we have a shared shard seed, put it first in the list:
