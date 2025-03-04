@@ -90,7 +90,12 @@ $icon-overlay-padding-right: 8px;
 }
 
 .image {
-  width: 100px;
+  width: 80px;
+}
+
+.imageRow {
+  display: flex;
+  gap: 8px;
 }
 
 %container {

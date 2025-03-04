@@ -83,16 +83,15 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       ) : null;
   }
 
-  // Assume only one asset which is an image for now
-  const imageUrl =
-    assets && assets.length > 0 && currentChannelId
-      ? `/v3/assets/${currentChannelId}/${assets[0]}`
+  const imageUrls =
+    assets && currentChannelId
+      ? assets.map(asset => `/v3/assets/${currentChannelId}/${asset}`)
       : undefined;
 
   return (
     <ChatMessage
       text={displayText}
-      image={imageUrl}
+      images={imageUrls}
       role={role}
       messageStyle={getMessageStyle(status, role)}
       footer={footer}

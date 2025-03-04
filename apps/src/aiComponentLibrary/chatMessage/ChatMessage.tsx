@@ -11,7 +11,7 @@ import moduleStyles from './chat-message.module.scss';
 
 interface ChatMessageProps {
   text: string;
-  image?: string;
+  images?: string[];
   role: Role;
   customStyles?: {[label: string]: string};
   footer?: React.ReactNode;
@@ -21,7 +21,7 @@ interface ChatMessageProps {
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
-  image,
+  images,
   role,
   customStyles,
   footer,
@@ -70,7 +70,18 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 : commonI18n.aiChatMessageUser()
             }
           >
-            {image && <img alt="" src={image} className={moduleStyles.image} />}
+            {images && (
+              <div className={moduleStyles.imageRow}>
+                {images.map(image => (
+                  <img
+                    key={image}
+                    alt=""
+                    src={image}
+                    className={moduleStyles.image}
+                  />
+                ))}
+              </div>
+            )}
             <SafeMarkdown markdown={text} />
           </div>
         </div>

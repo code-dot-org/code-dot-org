@@ -183,23 +183,33 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const onDrop = useCallback(
     async (acceptedFiles: File[]) => {
       if (currentChannelId) {
-        const response = await HttpClient.put(
-          `/v3/assets/${currentChannelId}/${acceptedFiles[0].name}`,
-          acceptedFiles[0]
-        );
-        const {filename} = (await response.json()) as UploadAssetResponse;
+        const assets: string[] = [];
+        // Cap at 3 for now
+        for (const file of acceptedFiles.slice(0, 3)) {
+          const response = await HttpClient.put(
+            `/v3/assets/${currentChannelId}/${file.name}`,
+            file
+          );
+          const {filename} = (await response.json()) as UploadAssetResponse;
+          assets.push(filename);
+        }
 
         dispatch(
           submitChatContents({
-            text: 'Check out the attached image',
-            assets: [filename],
+            text: 'Tell me a story using these images',
+            assets,
           })
         );
       }
     },
     [currentChannelId, dispatch]
   );
-  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop});
+  const {getRootProps, getInputProps, isDragActive} = useDropzone({
+    onDrop,
+    accept: {
+      'image/*': ['.jpeg', '.jpg', '.png'],
+    },
+  });
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
@@ -214,7 +224,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {canChatWithModel && (
           <div className={moduleStyles.messageEditorRow}>
             <div {...getRootProps()}>
-              <input {...getInputProps({multiple: false})} />
+              <input {...getInputProps()} />
               <Button
                 isIconOnly={true}
                 icon={plusIcon}

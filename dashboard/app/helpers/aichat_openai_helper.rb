@@ -48,8 +48,12 @@ module AichatOpenaiHelper
       if new_message['image']
         {role: 'user', content: [{type: "image_url", image_url: {url: new_message['image']}}]}
       elsif new_message['assets']
-        asset_uri = AichatAssetHelper.get_asset_data_uri(encrypted_channel_id, new_message['assets'][0])
-        {role: 'user', content: [{type: "image_url", image_url: {url: asset_uri}}]}
+        formatted_new_message = {role: 'user', content: [{type: "text", text: new_message['chatMessageText']}]}
+        new_message['assets'].each do |filename|
+          asset_uri = AichatAssetHelper.get_asset_data_uri(encrypted_channel_id, filename)
+          formatted_new_message[:content] << {type: "image_url", image_url: {url: asset_uri}}
+        end
+        formatted_new_message
       else
         {role: 'user', content: new_message['chatMessageText']}
       end
