@@ -27,6 +27,7 @@ import AppConfig from '../appConfig';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import musicI18n from '../locale';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
 import {
@@ -65,6 +66,7 @@ interface MusicLabViewProps {
   allowPackSelection: boolean;
   analyticsReporter: AnalyticsReporter;
   blocklyWorkspace: MusicBlocklyWorkspace;
+  getExemplarEvents: () => PlaybackEvent[];
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -82,6 +84,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   allowPackSelection,
   analyticsReporter,
   blocklyWorkspace,
+  getExemplarEvents,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -298,7 +301,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               exemplarSources &&
               !isEditingExemplar && (
                 <ExemplarPlayerView
-                  source={exemplarSources}
+                  getPlaybackEvents={getExemplarEvents}
                   title={exemplarSettings.playerTitle}
                   labSetPlaying={setPlaying}
                   packId={currentPackId}
@@ -316,6 +319,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       onInstructionsTextClick,
       setPlaying,
       currentPackId,
+      getExemplarEvents,
     ]
   );
 

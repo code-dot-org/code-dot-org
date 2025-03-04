@@ -473,9 +473,6 @@ class UnconnectedMusicView extends React.Component {
     return this.props.levelProperties.exemplarSettings;
   };
 
-  getExemplarPlaybackEvents = () => {
-    return this.props.exemplarPlaybackEvents;
-  };
   getPlayingTriggers = () => {
     return this.playingTriggers;
   };
@@ -545,6 +542,20 @@ class UnconnectedMusicView extends React.Component {
 
   getExemplarSources = () => {
     return this.props.levelProperties?.exemplarSources;
+  };
+
+  getExemplarPlaybackEvents = () => {
+    const exemplarSources = this.getExemplarSources();
+    if (!exemplarSources) {
+      return [];
+    }
+    const workspace = new MusicBlocklyWorkspace();
+    const sequencer = new Simple2Sequencer();
+    workspace.initHeadless();
+    workspace.loadCode(exemplarSources);
+    workspace.compileSong({Sequencer: sequencer}, BlockMode.SIMPLE2);
+    workspace.executeCompiledSong();
+    return sequencer.getPlaybackEvents();
   };
 
   onBlockSpaceChange = e => {
@@ -875,6 +886,7 @@ class UnconnectedMusicView extends React.Component {
           }
           analyticsReporter={this.analyticsReporter}
           blocklyWorkspace={this.musicBlocklyWorkspace}
+          getExemplarEvents={this.getExemplarPlaybackEvents}
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -906,7 +918,6 @@ const MusicView = connect(
     startingPlayheadPosition: state.music.startingPlayheadPosition,
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
-    exemplarPlaybackEvents: state.music.exemplarPlaybackEvents,
     validationState: state.lab.validationState,
   }),
   dispatch => ({

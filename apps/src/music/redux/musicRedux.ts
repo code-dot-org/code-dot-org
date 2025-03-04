@@ -274,12 +274,6 @@ const musicSlice = createSlice({
     ) => {
       state.playerContext = action.payload;
     },
-    setExemplarPlaybackEvents: (
-      state,
-      action: PayloadAction<PlaybackEvent[]>
-    ) => {
-      state.exemplarPlaybackEvents = action.payload;
-    },
   },
 });
 
@@ -360,6 +354,5 @@ export const {
   setLoopEnd,
   setKey,
   setBpm,
-  setExemplarPlaybackEvents,
   setPlayerContext,
 } = musicSlice.actions;
