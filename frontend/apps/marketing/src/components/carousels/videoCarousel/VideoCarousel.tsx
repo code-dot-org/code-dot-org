@@ -14,7 +14,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 interface VideoCarouselProps extends CarouselProps {
-  carouselId: string;
   slides: {
     id: string;
     slide: ReactNode;
