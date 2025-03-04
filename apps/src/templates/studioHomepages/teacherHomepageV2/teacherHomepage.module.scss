@@ -1,7 +1,36 @@
 @import 'color';
 
-.teacherHomepageBody {
+.teacherHomepage {
+  display: flex;
+  justify-content: center;
   padding: 24px 40px;
+}
+
+.teacherHomepageBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherHomepageContent {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.teacherHomepageLeftContent {
+  width: fit-content;
+}
+
+.headerButtonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.headerButtonRowRight {
+  display: flex;
+  gap: 6px;
 }
 
 .sectionList {
@@ -53,4 +82,11 @@
 .dropdownButton {
   width: 32px;
   height: 32px;
+}
+
+.blankAnnouncement {
+  width: 320px;
+  height: 600px;
+  background-color: var(--background-brand-purple-light);
+  margin-inline-start: 40px;
 }
