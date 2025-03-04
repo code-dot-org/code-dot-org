@@ -38,7 +38,6 @@ class FreeResponse < Level
     peer_reviewable
     optional
     allow_multiple_attempts
-    stay_on_level_after_submit
   )
 
   before_validation do
@@ -73,9 +72,5 @@ class FreeResponse < Level
       default: default,
       smart: true
     )
-  end
-
-  def stay_on_level?
-    !!try(:stay_on_level_after_submit)&.to_bool
   end
 end
