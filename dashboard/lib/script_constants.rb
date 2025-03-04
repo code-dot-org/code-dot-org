@@ -265,7 +265,7 @@ module ScriptConstants
     SELF_PACED_PL_K5_2024_1 = 'self-paced-pl-k5-2024-1'.freeze,
     SELF_PACED_PL_K5_2024_2 = 'self-paced-pl-k5-2024-2'.freeze,
     THREE_5GAMEDESIGN_2024 = '3-5gamedesign-2024'.freeze,
-].freeze
+  ].freeze
 
   ADDITIONAL_I18N_UNITS = [
     ALLTHETHINGS = 'allthethings'.freeze,
@@ -297,7 +297,7 @@ module ScriptConstants
     POEM_ART = 'poem-art'.freeze,
     POETRY_HOC3 = 'poetry-hoc3'.freeze,
     VIGENERE = 'vigenere'.freeze
-]
+  ]
 
   DEFAULT_VERSION_YEAR = '2017'
 
