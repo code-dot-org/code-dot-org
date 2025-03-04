@@ -563,7 +563,6 @@ export default function EnrollForm(props: EnrollFormProps) {
             <FormFieldWrapper
               errorMessage={formErrors.school_info}
               htmlFor={SCHOOL_INFO_ID}
-              id={`${SCHOOL_INFO_ID}_wrapper`}
             />
           </div>
         </>
@@ -588,7 +587,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               label="Please describe your role"
               className={getRequiredStyles('describe_role')}
               errorMessage={formErrors.describe_role}
-              id="describe_role_wrapper"
+              htmlFor="describe_role"
             >
               <textarea
                 id="describe_role"
@@ -608,7 +607,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('grades_teaching')}
               label="What grades are you teaching this year? (Select all that apply)"
               errorMessage={formErrors.grades_teaching}
-              id="grades_teaching_wrapper"
+              htmlFor="grades_teaching"
             >
               <Typography
                 semanticTag="p"
@@ -654,7 +653,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                       />
                       {stateKey && (
                         <FormFieldWrapper
-                          id={`${grade}_wrapper`}
+                          htmlFor={grade}
                           errorMessage={formErrors[stateKey]}
                         >
                           <textarea
@@ -684,7 +683,7 @@ export default function EnrollForm(props: EnrollFormProps) {
             className={getRequiredStyles('csf_intro_intent')}
             label={csfIntroIntentLabel}
             errorMessage={formErrors.csf_intro_intent}
-            id="csf_intro_intent_wrapper"
+            htmlFor="csf_intro_intent"
           >
             <fieldset id="csf_intro_intent">
               <RadioButtonsGroup
@@ -710,7 +709,7 @@ export default function EnrollForm(props: EnrollFormProps) {
             className={getRequiredStyles('csf_intro_other_factors')}
             label={csfIntroOtherFactorsLabel}
             errorMessage={formErrors.csf_intro_other_factors}
-            id="csf_intro_other_factors_wrapper"
+            htmlFor="csf_intro_other_factors"
           >
             <fieldset id="csf_intro_other_factors">
               {csfIntroOtherFactorsAnswers.map(factor => (
@@ -752,7 +751,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('csf_courses_planned')}
               label={coursesPlannedLabel}
               errorMessage={formErrors.csf_courses_planned}
-              id="csf_courses_planned_wrapper"
+              htmlFor="csf_courses_planned"
             >
               <fieldset id="csf_courses_planned">
                 {csfCourses.map(course => {
@@ -782,7 +781,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                       />
                       {stateKey && (
                         <FormFieldWrapper
-                          id={`${course}_wrapper`}
+                          htmlFor={course}
                           errorMessage={formErrors[stateKey]}
                         >
                           <textarea
@@ -808,7 +807,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('attended_csf_intro_workshop')}
               label="Have you attended a CS Fundamentals Intro Workshop before?"
               errorMessage={formErrors.attended_csf_intro_workshop}
-              id="attended_csf_intro_workshop_wrapper"
+              htmlFor="attended_csf_intro_workshop"
             >
               <fieldset id="attended_csf_intro_workshop">
                 <RadioButtonsGroup
@@ -836,7 +835,7 @@ export default function EnrollForm(props: EnrollFormProps) {
           className={getRequiredStyles('previous_courses')}
           label="Which computer science courses or activities have you taught in the past?"
           errorMessage={formErrors.previous_courses}
-          id="previous_courses_wrapper"
+          htmlFor="previous_courses"
         >
           <fieldset id="previous_courses">
             {previousCourses.map(course => (
@@ -890,7 +889,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('taught_ap_before')}
               label={cspReturningTeachersTaughtAPLabel}
               errorMessage={formErrors.taught_ap_before}
-              id="taught_ap_before_wrapper"
+              htmlFor="taught_ap_before"
             >
               <fieldset id="taught_ap_before">
                 <RadioButtonsGroup
@@ -915,7 +914,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('planning_to_teach_ap')}
               label={cspReturningTeachersPlanningAPLabel}
               errorMessage={formErrors.planning_to_teach_ap}
-              id="planning_to_teach_ap_wrapper"
+              htmlFor="planning_to_teach_ap"
             >
               <fieldset id="planning_to_teach_ap">
                 <RadioButtonsGroup
