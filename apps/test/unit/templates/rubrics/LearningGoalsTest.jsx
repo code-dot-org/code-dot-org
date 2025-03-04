@@ -781,7 +781,7 @@ describe('LearningGoals - Enzyme', () => {
       aiEvaluations[0].observations
     );
 
-    const wrapper = shallow(
+    render(
       <LearningGoals
         learningGoals={learningGoals}
         teacherHasEnabledAi={true}
@@ -791,15 +791,12 @@ describe('LearningGoals - Enzyme', () => {
       />
     );
 
-    deprecatedExpect(wrapper.find('AiAssessment').props().aiEvidence).to.equal(
-      undefined
-    );
+    const regex = new RegExp(aiEvidence[0].message, 'i');
+    expect(screen.queryByText(regex)).toEqual(null);
 
     loadEditor();
 
-    deprecatedExpect(
-      wrapper.find('AiAssessment').props().aiEvidence
-    ).to.deep.equal(aiEvidence);
+    screen.getByText(regex);
   });
 
   it('does not renders AiAssessment when teacher has disabled ai', () => {
