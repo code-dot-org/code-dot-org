@@ -13,13 +13,11 @@ $(document).ready(function () {
     .appname;
 
   ReactDOM.render(
-    <div>
-      <EditValidations
-        initialValidations={validations}
-        levelName={levelName}
-        appName={appName}
-      />
-    </div>,
+    <EditValidations
+      initialValidations={validations}
+      levelName={levelName}
+      appName={appName}
+    />,
     document.getElementById('validations-editor')
   );
 });

@@ -117,12 +117,10 @@ export default class ProgressManager {
             this.currentValidationState.callout = validation.callout;
             if (this.currentValidationState.satisfied && validation.next) {
               if (this.validator.shouldValidateWithExemplar()) {
-                const exemplarValidationResults =
-                  this.validator.getExemplarValidationResults();
-                this.currentValidationState.satisfied =
-                  exemplarValidationResults.satisfied;
-                this.currentValidationState.message =
-                  exemplarValidationResults.message;
+                this.currentValidationState = {
+                  ...this.currentValidationState,
+                  ...this.validator.getExemplarValidationResults(),
+                };
               }
             }
             this.onProgressChange();
