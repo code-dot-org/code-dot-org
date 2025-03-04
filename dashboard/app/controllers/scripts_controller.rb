@@ -319,12 +319,12 @@ class ScriptsController < ApplicationController
         UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
         UnitGroup.latest_stable_version(unit_name)
       if unit_group&.single_unit_course?
-        script = unit_group.default_units.first
+        script = unit_group.units_for_user(current_user).first
         return script
       end
     end
 
-    return nil
+    nil
   end
 
   private def set_unit
