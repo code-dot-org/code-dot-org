@@ -175,23 +175,15 @@ html {
 
 // Strong and Em styles
 @mixin strong {
-  @include main-font-semi-bold;
+  font-weight: $semi-bold-font-weight;
 }
 
 @mixin extra-strong {
-  @include main-font-bold;
+  font-weight: $bold-font-weight;
 }
 
 @mixin em {
-  @include main-font-regular-italic;
-}
-
-@mixin strong-em {
-  @include main-font-semi-bold-italic;
-}
-
-@mixin extra-strong-em {
-  @include main-font-bold-italic;
+  font-style: italic;
 }
 
 // Caption styles
@@ -283,20 +275,6 @@ strong,
 em,
 .em {
   @include em;
-}
-
-strong em,
-em strong,
-.em .strong,
-.strong .em {
-  @include strong-em;
-}
-
-.em .extra-strong,
-.extra-strong .em,
-em .extra-strong,
-.extra-strong em {
-  @include extra-strong-em;
 }
 
 // Captions

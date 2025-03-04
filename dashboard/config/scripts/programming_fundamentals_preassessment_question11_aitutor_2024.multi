@@ -6,7 +6,7 @@ right '`while` loop'
 wrong '`else` loop'
 wrong '`function` loop'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which type of loop runs as long as a condition remains true?

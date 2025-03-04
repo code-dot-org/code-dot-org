@@ -12,10 +12,13 @@ import {saveAiCustomization} from './helpers/saveAiCustomization';
 export const updateAiCustomization = createAsyncThunk(
   'aichat/updateAiCustomization',
   async (_, {dispatch, getState}) => {
+    const state = getState() as RootState;
+
     await saveAiCustomization(
-      (getState() as RootState).aichat.currentAiCustomizations,
+      state.aichat.currentAiCustomizations,
       'updateChatbot',
-      dispatch as AppDispatch
+      dispatch as AppDispatch,
+      parseInt(state.progress.currentLevelId || '')
     );
   }
 );

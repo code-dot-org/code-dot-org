@@ -6,7 +6,7 @@ wrong 'It prevents cyberattacks'
 right 'It translates human-friendly website names into numerical IP addresses'
 wrong 'It creates new websites'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following best explains the role of DNS (Domain Name System)?

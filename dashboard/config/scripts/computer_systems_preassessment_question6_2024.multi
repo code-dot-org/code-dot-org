@@ -4,11 +4,9 @@ title 'Computer Systems and Devices Pre-Assessment: Question 6'
 right 'A database of student records'
 wrong 'A handwritten journal'
 wrong 'A collection of random images'
-wrong 'A series of video clips
+wrong 'A series of video clips'
 
-'
-
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of these is **structured data**?

@@ -6,7 +6,7 @@ wrong 'AI always provides unbiased results'
 wrong 'AI does not require human input'
 right 'AI can analyze large amounts of data faster than humans'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following describes a key advantage of AI in data analysis?

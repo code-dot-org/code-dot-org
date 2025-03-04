@@ -6,7 +6,7 @@ wrong 'It stores but does not analyze information'
 wrong 'It operates without data input'
 right 'It identifies patterns and makes decisions'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 How does AI use data?

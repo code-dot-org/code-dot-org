@@ -35,6 +35,8 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  community_type     :string(16)
+#  student_female     :integer
+#  student_male       :integer
 #
 # Indexes
 #

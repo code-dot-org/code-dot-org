@@ -6,7 +6,7 @@ wrong 'AI could process resumes faster than human recruiters'
 wrong 'AI could help companies save money'
 wrong 'AI could suggest alternative job positions'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A hiring company uses an AI-powered resume screening system. What is an ethical concern with this technology?

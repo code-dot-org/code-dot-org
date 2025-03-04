@@ -1,20 +1,33 @@
 require 'selenium/webdriver'
 
 module SeleniumBrowser
+  def self.webdriver_options_object(browser: :chrome, headless: false)
+    options = Selenium::WebDriver::Options.send(browser)
+    options.add_argument('window-size=1280,1024') if [:chrome, :firefox].include?(browser)
+    options.add_argument('headless') if headless
+    return options
+  end
+
   def self.local(browser: :chrome, headless: true)
     browser = browser.to_sym
-    options = {}
-    case browser
-    when :chrome
-      options[:options] = Selenium::WebDriver::Chrome::Options.new
-      options[:options].add_argument('headless') if headless
-      options[:options].add_argument('window-size=1280,1024')
-    when :firefox
-      options[:options] = Selenium::WebDriver::Firefox::Options.new
-      options[:options].headless! if headless
-      options[:options].add_argument('window-size=1280,1024')
+    options = webdriver_options_object(browser: browser, headless: headless)
+    return Selenium::WebDriver.for(browser, options: options)
+  end
+
+  def self.remote(url, capabilities: nil, options: nil, http_client: nil)
+    if capabilities.nil? && options.nil?
+      options = webdriver_options_object(browser: :chrome)
     end
-    Selenium::WebDriver.for browser, options
+
+    http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
+    return http_client.with_read_timeout(5.minutes) do
+      Selenium::WebDriver.for(:remote,
+        url: url,
+        capabilities: capabilities,
+        options: options,
+        http_client: http_client
+      )
+    end
   end
 
   require 'net/http/persistent'

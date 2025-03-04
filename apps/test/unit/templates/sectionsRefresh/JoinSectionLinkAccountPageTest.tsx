@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 
 describe('JoinSectionLinkAccountPage', () => {
   const signUpUrlBase =
-    '/users/new_sign_up/login_type?user_type=student&user_return_to=/join';
+    '/users/sign_up/login_type?user_type=student&user_return_to=/join';
   const logInUrlBase = '/users/sign_in?user_return_to=/join';
 
   it('renders page with links returning user to /join when no section code provided', () => {

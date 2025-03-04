@@ -19,7 +19,7 @@ module OmniauthCallbacksControllerTests
       auth_hash = mock_oauth
 
       post "/users/auth/facebook"
-      get '/users/auth/facebook/callback', params: {finish_url: '/users/new_sign_up/finish_student_account'}
+      get '/users/auth/facebook/callback', params: {finish_url: '/users/sign_up/finish_student_account'}
       assert_template 'omniauth/redirect'
       assert PartialRegistration.in_progress? session
 
@@ -47,7 +47,7 @@ module OmniauthCallbacksControllerTests
       auth_hash = mock_oauth
 
       post "/users/auth/facebook"
-      get '/users/auth/facebook/callback', params: {finish_url: '/users/new_sign_up/finish_teacher_account'}
+      get '/users/auth/facebook/callback', params: {finish_url: '/users/sign_up/finish_teacher_account'}
       assert_template 'omniauth/redirect'
       assert PartialRegistration.in_progress? session
 
@@ -117,17 +117,6 @@ module OmniauthCallbacksControllerTests
           facebook-sign-in
         )
       )
-    end
-
-    test 'user_type is usually unset on finish_sign_up' do
-      mock_oauth
-
-      get '/users/sign_up'
-      sign_in_through_facebook
-      omniauth_redirect
-
-      assert_template partial: '_finish_sign_up'
-      assert_nil assigns(:user).user_type
     end
 
     private def mock_oauth

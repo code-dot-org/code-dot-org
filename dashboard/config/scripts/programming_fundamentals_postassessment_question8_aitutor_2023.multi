@@ -6,7 +6,7 @@ wrong 'Abstraction (ignoring unnecessary details) and Loops (repeating code)'
 wrong 'Debugging (finding errors) and Recursion (calling the function within itself)'
 wrong 'Pattern Recognition (identifying repeated structures) and Data Storage (saving information)'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A student is designing an algorithm to navigate a robot through a maze. The robot must reach the exit by following these rules:

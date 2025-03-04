@@ -6,7 +6,7 @@ wrong 'A computer virus'
 wrong 'A large amount of stored data'
 wrong 'A collection of images'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3: Designing Algorithms
