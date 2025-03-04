@@ -20,15 +20,14 @@ At the time of writing, the classes that Statsig supports are:
 import {StatsigClient} from '@statsig/js-client';
 import {runStatsigSessionReplay} from '@statsig/session-replay';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
-
-import {isProductionEnvironment} from '../utils';
-
 import {
   getUserID,
   getUserType,
   findOrCreateStableId,
   formatUserId,
-} from './StatsigHelpers';
+} from 'statsigHelpers';
+
+import {isProductionEnvironment} from '../utils';
 
 // A flag that can be toggled to enable session recording for development environments
 const LOCAL_MODE = false;
