@@ -394,7 +394,7 @@ Resources:
               Value: 1
             -
               Name: DRONE_AGENT_ENVIRON
-              Value: "DRONE_DOCKER_NETWORK_ID=cdo_network_test"
+              Value: "DRONE_DOCKER_NETWORK_ID=cdo_network_test,DRONE_RUNNER_NETWORKS=cdo_network_test"
             # END: Settings for the Drone Runner.
 
   DroneAutoscalerEcsService:
