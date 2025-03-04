@@ -40,7 +40,7 @@ runs:
       shell: bash
       env:
         STAGE: ${{ inputs.stage }}
-      run: yarn test:ui:ci --filter @code-dot-org/marketing
+      run: yarn workspace @code-dot-org/marketing test:ui:ci
       working-directory: ./frontend
 
     - name: Upload reports
