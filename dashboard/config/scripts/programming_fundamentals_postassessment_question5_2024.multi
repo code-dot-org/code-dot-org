@@ -1,17 +1,17 @@
 name 'programming-fundamentals-postassessment-question5-2024'
-title 'Programming Fundamentals Post-Assessment: Question 1'
+title 'Programming Fundamentals Post-Assessment: Question 5'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
+wrong 'Using print statements to track variable values'
+wrong 'Testing small sections of code at a time'
+right 'Ignoring error messages and rerunning the program until it works'
+wrong 'Asking an AI chatbot or a classmate for help when stuck'
 
 allow_multiple_attempts false
 
 markdown <<MARKDOWN
-question
+Which of the following is **NOT** an effective debugging strategy?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 7: Debugging Strategies
 MARKDOWN

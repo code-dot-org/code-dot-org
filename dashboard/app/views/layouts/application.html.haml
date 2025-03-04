@@ -10,6 +10,8 @@
     %title= title
     - if @page_description
       = tag 'meta', property: 'description', content: @page_description
+    - if @canonical_url
+      = tag 'link', rel: 'canonical', href: @canonical_url
     - begin
       = ::NewRelic::Agent.browser_timing_header
     - rescue
