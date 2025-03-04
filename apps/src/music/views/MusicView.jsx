@@ -71,7 +71,6 @@ import {
   setSelectedTriggerId,
   clearSelectedTriggerId,
   getBlockMode,
-  setPlayerContext,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -135,7 +134,6 @@ class UnconnectedMusicView extends React.Component {
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
     exemplarPlaybackEvents: PropTypes.array,
-    setPlayerContext: PropTypes.func,
     validationState: PropTypes.object,
   };
 
@@ -798,7 +796,6 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = () => {
-    this.props.setPlayerContext('musicView');
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -948,7 +945,6 @@ const MusicView = connect(
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     clearCallout: id => dispatch(clearCallout()),
-    setPlayerContext: mode => dispatch(setPlayerContext(mode)),
   })
 )(UnconnectedMusicView);
 

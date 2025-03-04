@@ -2,14 +2,13 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_PACK} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
-import {setPlayerContext} from '../redux/musicRedux';
 
 import moduleStyles from './ExemplarPlayer.module.scss';
 
@@ -26,8 +25,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   labSetPlaying,
   packId,
 }) => {
-  const dispatch = useAppDispatch();
-  const playerContext = useAppSelector(state => state.music.playerContext);
+  const labIsPlaying = useAppSelector(state => state.music.isPlaying);
 
   const playerRef = useRef<MusicPlayer | null>(null);
   if (playerRef.current === null) {
@@ -35,7 +33,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   }
   const simple2SequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  // Immediately load the library and source, then compile the song.
+  // Adjust the packId and preload sounds.
   const onMount = useCallback(async () => {
     const currentLibrary = MusicLibrary.getInstance();
     if (currentLibrary) {
@@ -64,25 +62,24 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     // Play the song using the compiled events.
     playerRef.current?.playSong(getPlaybackEvents());
 
-    dispatch(setPlayerContext('exemplar'));
     setIsPlaying(true);
-  }, [dispatch, labSetPlaying, getPlaybackEvents]);
+  }, [labSetPlaying, getPlaybackEvents]);
 
   // Stop the exemplar song, updating Redux and local state.
   const onStopSong = useCallback(() => {
-    console.log(playerContext);
-    if (playerContext === 'exemplar') {
+    if (!labIsPlaying) {
+      // If the player was stopped by the Run button, we do not want to interfere with
+      // MusicLabView's control of the player.
       playerRef.current?.stopSong();
     }
-    dispatch(setPlayerContext(null));
     setIsPlaying(false);
-  }, [playerContext, dispatch]);
+  }, [labIsPlaying]);
 
   useEffect(() => {
-    if (playerContext !== 'exemplar' && isPlaying) {
+    if (labIsPlaying && isPlaying) {
       onStopSong();
     }
-  }, [playerContext, isPlaying, onStopSong]);
+  }, [labIsPlaying, isPlaying, onStopSong]);
 
   const getPackDetails = (packId: string) => {
     const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
