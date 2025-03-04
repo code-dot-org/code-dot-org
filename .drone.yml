@@ -165,6 +165,11 @@ services:
       - "5910" # The selenium direct VNC port
       - "4444" # The selenium router port
       - "7910" # The selenium NoVNC service port
+    links:
+      - ui-tests:localhost.code.org
+      - ui-tests:localhost-studio.code.org
+      - ui-tests:localhost.hourofcode.com
+      - ui-tests:localhost.csedweek.org
 
 steps:
   - name: bin/drone/shell
@@ -263,12 +268,6 @@ steps:
       - exit $EXIT_CODE
     expose:
       - "3000" # puma web server
-    network:
-      aliases:
-        - localhost.code.org
-        - localhost-studio.code.org
-        - localhost.hourofcode.com
-        - localhost.csedweek.org
 
   - name: update-cache
     image: plugins/s3-cache
