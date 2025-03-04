@@ -38,7 +38,7 @@ export default defineConfig<EyesFixture>({
       type: 'classic',
       batch: {name: 'Marketing'},
       sendDom: true,
-      failTestsOnDiff: 'afterAll',
+      failTestsOnDiff: 'afterEach',
       branchName: 'staging',
       // Additional configuration options...
     },
@@ -63,7 +63,7 @@ export default defineConfig<EyesFixture>({
   ],
 
   /* Run your local dev server before starting the tests */
-  ...(process.env.STAGE === 'localhost' || process.env.STAGE === 'pr'
+  ...(process.env.STAGE === 'pr'
     ? {
         webServer: {
           command: 'cd ../../ && yarn dev --filter @code-dot-org/marketing',
