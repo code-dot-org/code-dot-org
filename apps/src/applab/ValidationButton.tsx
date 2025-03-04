@@ -2,7 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
+import {AITutorActions} from '@cdo/apps/aiTutor/types';
 
 import {askAITutor} from '../aiTutor/redux/aiTutorRedux';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
@@ -45,7 +45,7 @@ const ValidationButton: React.FunctionComponent = () => {
       systemPrompt,
       studentInput: `${systemPrompt} ${studentCode}`,
       studentCode,
-      actionType: ActionType.COMPLETION,
+      actionType: AITutorActions.COMPLETION,
     };
 
     dispatch(askAITutor(chatContext));

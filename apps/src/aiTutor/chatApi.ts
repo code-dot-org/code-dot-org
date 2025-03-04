@@ -137,7 +137,7 @@ type OpenaiChatCompletionMessage = {
   content: string;
   // Only used in case of PII or profanity violation
   flagged_content?: string;
-  safety_status?: AITutorInteractionStatusValue;
+  safety_status?: ShareFilterStatus;
 };
 
 type ChatCompletionResponse = {
