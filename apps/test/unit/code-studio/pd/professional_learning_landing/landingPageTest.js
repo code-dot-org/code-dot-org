@@ -17,7 +17,11 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
@@ -72,6 +76,14 @@ const DEFAULT_PROPS = {
   hiddenPlSectionIds: [],
 };
 
+// Needed to mock out the PDFDownloadLink component in the AiDiffContainer
+jest.mock('@react-pdf/renderer', () => ({
+  PDFDownloadLink: () => null,
+  StyleSheet: {
+    create: () => null,
+  },
+}));
+
 describe('LandingPage', () => {
   let store;
   let defaultCreateObjectURL;
@@ -93,9 +105,17 @@ describe('LandingPage', () => {
       return 'testCreateObjectURL';
     });
     window.URL.createObjectURL = mockCreateObjectUrl;
+    window.HTMLElement.prototype.scrollIntoView = () => {};
     stubRedux();
-    registerReducers({isRtl, teacherSections});
+    registerReducers({isRtl, teacherSections, currentUser});
     store = getStore();
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        name: 'test_user',
+        has_completed_ai_differentiation_welcome: true,
+      })
+    );
     window.open = jest.fn();
   });
 
@@ -211,6 +231,19 @@ describe('LandingPage', () => {
       screen.getByText(TEST_WORKSHOP.location_address);
     });
     fetchStub.mockRestore();
+  });
+
+  test('renders AiDiffFloatingActionButton component', async () => {
+    // mock experiment is enabled
+    experiments.isEnabled = jest.fn(() => true);
+    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+
+    const chatButton = await screen.findByRole('button', {
+      name: i18n.openOrCloseTeachingAssistant(),
+    });
+    fireEvent.click(chatButton);
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+    experiments.isEnabled = jest.fn(() => false);
   });
 
   it('page shows no tabs for teacher with no relevant permissions', () => {

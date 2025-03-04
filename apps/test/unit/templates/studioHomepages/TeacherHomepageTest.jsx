@@ -1,11 +1,21 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
+import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
 
 import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
@@ -27,6 +37,14 @@ const DEFAULT_PROPS = {
   hasFeedback: false,
   currentUserId: 42,
 };
+
+function createStoreWithUser(userData) {
+  stubRedux();
+  const store = getStore();
+  registerReducers({currentUser});
+  store.dispatch(setInitialData(userData));
+  return store;
+}
 
 // Instead of trying to hook up an absolute ton of redux providers and fake servers, we'll just
 // mock out the individual components that make up this dashboard.
@@ -142,6 +160,14 @@ jest.mock('@cdo/apps/templates/ProtectedStatefulDiv', () => {
   ));
 });
 
+// Needed to mock out the PDFDownloadLink component in the AiDiffContainer
+jest.mock('@react-pdf/renderer', () => ({
+  PDFDownloadLink: () => null,
+  StyleSheet: {
+    create: () => null,
+  },
+}));
+
 function realizeWithStore(store, props = {}) {
   return render(
     <Provider store={store}>
@@ -153,13 +179,19 @@ function realizeWithStore(store, props = {}) {
 describe('TeacherHomepage', () => {
   const oldWindowLocation = window.location;
   let store;
+  const userInitialData = {
+    id: 1,
+    name: 'test_user',
+    has_completed_ai_differentiation_welcome: true,
+  };
+
   const realize = props => realizeWithStore(store, props);
 
   beforeEach(() => {
     delete window.location;
     window.location = new URL('https://studio.code.org/home');
-    stubRedux();
-    store = getStore();
+    store = createStoreWithUser(userInitialData);
+    window.HTMLElement.prototype.scrollIntoView = () => {};
   });
 
   afterEach(() => {
@@ -170,6 +202,18 @@ describe('TeacherHomepage', () => {
   it('shows a Header Banner that says My Dashboard', () => {
     realize();
     expect(screen.getByText('My Dashboard')).toBeInTheDocument;
+  });
+
+  it('shows the FAB button', async () => {
+    experiments.isEnabled = jest.fn(() => true);
+    realize();
+
+    const chatButton = await screen.findByRole('button', {
+      name: i18n.openOrCloseTeachingAssistant(),
+    });
+    fireEvent.click(chatButton);
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+    experiments.isEnabled = jest.fn(() => false);
   });
 
   it('renders 2 ProtectedStatefulDivs', () => {
@@ -365,13 +409,18 @@ describe('TeacherHomepage', () => {
 describe('TeacherHomepage - Farsi Global Edition', () => {
   const oldWindowLocation = window.location;
   let store;
+  const userInitialData = {
+    id: 1,
+    name: 'test_user',
+    has_completed_ai_differentiation_welcome: false,
+  };
+
   const realize = props => realizeWithStore(store, props);
 
   beforeEach(() => {
     delete window.location;
     window.location = new URL('https://studio.code.org/global/fa/home');
-    stubRedux();
-    store = getStore();
+    store = createStoreWithUser(userInitialData);
   });
 
   afterEach(() => {

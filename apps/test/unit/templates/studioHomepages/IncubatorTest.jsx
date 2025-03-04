@@ -11,7 +11,7 @@ import {
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
+import Incubator from '@cdo/apps/templates/studioHomepages/Incubator.jsx';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -23,7 +23,7 @@ jest.mock('@react-pdf/renderer', () => ({
   },
 }));
 
-describe('ProjectHeader', () => {
+describe('Incubator', () => {
   let store;
   beforeEach(() => {
     stubRedux();
@@ -47,18 +47,10 @@ describe('ProjectHeader', () => {
   function renderDefault() {
     render(
       <Provider store={store}>
-        <ProjectHeader canViewAdvancedTools={true} projectCount={200} />
+        <Incubator />
       </Provider>
     );
   }
-
-  it('renders the correct project count in subheading', () => {
-    renderDefault();
-
-    expect(
-      screen.getByText('Over 200 million projects created')
-    ).toBeInTheDocument();
-  });
 
   it('renders the AI Diff FAB when experiment is enabled', async () => {
     // mock experiment is enabled
