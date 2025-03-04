@@ -4,20 +4,37 @@ import {Provider} from 'react-redux';
 import {
   createMemoryRouter,
   createRoutesFromElements,
+  Outlet,
   Route,
   RouterProvider,
+  useLocation,
 } from 'react-router-dom';
 import {Store} from 'redux';
 
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionOptionsDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionOptionsDropdown';
+import teacherSections, {
+  setSections,
+  selectSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {
+  TEACHER_NAVIGATION_SECTIONS_URL,
+  SPECIFIC_SECTION_BASE_URL,
+  TEACHER_NAVIGATION_PATHS,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {Student} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-describe('SectionOptionsDropdown', () => {
-  const cdo_section: Section = {
+const LocationElement = () => {
+  const location = useLocation();
+  return <div>{location.pathname}</div>;
+};
+
+const SECTIONS: Section[] = [
+  {
     id: 11,
     name: 'Period 1',
     hidden: false,
@@ -52,11 +69,10 @@ describe('SectionOptionsDropdown', () => {
     syncEnabled: false,
     ttsAutoplayEnabled: false,
     unitId: null,
-  };
-
-  const google_section: Section = {
-    id: 11,
-    name: 'Period 1',
+  },
+  {
+    id: 12,
+    name: 'Period 2',
     hidden: false,
     courseVersionName: 'csd-2024',
     unitName: null,
@@ -64,7 +80,7 @@ describe('SectionOptionsDropdown', () => {
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
-    code: 'G-ABCDEF',
+    code: 'ABCDEF',
     codeReviewExpiresAt: null,
     course: null,
     courseDisplayName: "Computer Science Discoveries ('24-'25)",
@@ -76,8 +92,8 @@ describe('SectionOptionsDropdown', () => {
     isAssignedCSA: false,
     isAssignedStandaloneCourse: false,
     lessonExtras: false,
-    loginType: 'google_classroom',
-    loginTypeName: 'Google Classroom',
+    loginType: 'picture',
+    loginTypeName: 'Picture Password',
     pairingAllowed: false,
     participantType: undefined,
     postMilestoneDisabled: false,
@@ -89,51 +105,82 @@ describe('SectionOptionsDropdown', () => {
     syncEnabled: false,
     ttsAutoplayEnabled: false,
     unitId: null,
-  };
+  },
+];
 
-  const clever_section: Section = {
-    id: 11,
-    name: 'Period 1',
-    hidden: false,
-    courseVersionName: 'csd-2024',
-    unitName: null,
-    aiTutorEnabled: false,
+const STUDENTS: Student[] = [
+  {
+    id: 1,
+    name: 'Bobby',
+    familyName: 'Hill',
+    username: '',
+    email: '',
+    age: '',
+    gender: '',
+    genderTeacherInput: '',
+    secretWords: '',
+    secretPicturePath: '',
+    loginType: '',
+    sectionId: 11,
+    sharingDisabled: false,
+    hasEverSignedIn: true,
+    dependsOnThisSectionForLogin: true,
+    isEditing: false,
+    isSaving: false,
+    rowType: '',
+    userType: 'student',
     atRiskAgeGatedDate: new Date(),
-    atRiskAgeGatedUsState: 'xyz',
-    anyStudentHasProgress: false,
-    code: 'C-ABCDEF',
-    codeReviewExpiresAt: null,
-    course: null,
-    courseDisplayName: "Computer Science Discoveries ('24-'25)",
-    courseId: 52,
-    courseOfferingId: 192,
-    courseVersionId: 553,
-    createdAt: '2024-10-04T18:19:41.000Z',
-    grades: [],
-    isAssignedCSA: false,
-    isAssignedStandaloneCourse: false,
-    lessonExtras: false,
-    loginType: 'clever',
-    loginTypeName: 'Clever',
-    pairingAllowed: false,
-    participantType: undefined,
-    postMilestoneDisabled: false,
-    providerManaged: false,
-    restrictSection: false,
-    sectionInstructors: [],
+    childAccountComplianceState: '',
+    latestPermissionRequestSentAt: new Date(),
+    usState: '',
+  },
+  {
+    id: 1,
+    name: 'Daria',
+    familyName: 'Morgendorffer',
+    username: '',
+    email: '',
+    age: '',
+    gender: '',
+    genderTeacherInput: '',
+    secretWords: '',
+    secretPicturePath: '',
+    loginType: '',
+    sectionId: 11,
     sharingDisabled: false,
-    studentCount: 1,
-    syncEnabled: false,
-    ttsAutoplayEnabled: false,
-    unitId: null,
-  };
+    hasEverSignedIn: true,
+    dependsOnThisSectionForLogin: true,
+    isEditing: false,
+    isSaving: false,
+    rowType: '',
+    userType: 'student',
+    atRiskAgeGatedDate: new Date(),
+    childAccountComplianceState: '',
+    latestPermissionRequestSentAt: new Date(),
+    usState: '',
+  },
+];
 
+const navigate = jest.fn();
+
+describe('SectionOptionsDropdown', () => {
   const store: Store = getStore();
+  registerReducers({teacherSections});
+  store.dispatch(setSections(SECTIONS));
+  store.dispatch(selectSection(11));
 
   let sendEventSpy: jest.SpyInstance;
+  let fetchSpy: jest.SpyInstance;
 
   beforeEach(() => {
+    jest.mock('react-router-dom', () => ({
+      ...jest.requireActual('react-router-dom'),
+      useNavigate: () => navigate,
+    }));
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    fetchSpy = jest
+      .spyOn(HttpClient, 'fetchJson')
+      .mockResolvedValue({value: STUDENTS, response: new Response()});
   });
 
   afterEach(() => {
@@ -141,7 +188,7 @@ describe('SectionOptionsDropdown', () => {
   });
 
   function renderComponent(
-    section = cdo_section,
+    section: Section = SECTIONS[0],
     initialRoute = '/teacher_dashboard/home'
   ) {
     return render(
@@ -149,15 +196,59 @@ describe('SectionOptionsDropdown', () => {
         <RouterProvider
           router={createMemoryRouter(
             createRoutesFromElements([
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <SectionOptionsDropdown
-                    section={section}
-                    onDeleteClickCallback={() => {}}
-                  />
-                }
-              />,
+              <Route path="/">
+                <Route
+                  path={TEACHER_NAVIGATION_PATHS.home}
+                  element={
+                    <SectionOptionsDropdown
+                      section={section}
+                      onDeleteClickCallback={() => {}}
+                    />
+                  }
+                />
+                <Route
+                  path={TEACHER_NAVIGATION_SECTIONS_URL}
+                  element={
+                    <div>
+                      <Outlet />
+                    </div>
+                  }
+                >
+                  <Route
+                    path={SPECIFIC_SECTION_BASE_URL}
+                    element={
+                      <div>
+                        <Outlet />
+                      </div>
+                    }
+                  >
+                    <Route
+                      path={TEACHER_NAVIGATION_PATHS.settings}
+                      element={
+                        <div>
+                          <LocationElement />
+                        </div>
+                      }
+                    />
+                    <Route
+                      path={TEACHER_NAVIGATION_PATHS.roster}
+                      element={
+                        <div>
+                          <LocationElement />
+                        </div>
+                      }
+                    />
+                    <Route
+                      path={TEACHER_NAVIGATION_PATHS.loginInfo}
+                      element={
+                        <div>
+                          <LocationElement />
+                        </div>
+                      }
+                    />
+                  </Route>
+                </Route>
+              </Route>,
             ]),
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
           )}
@@ -166,28 +257,53 @@ describe('SectionOptionsDropdown', () => {
     );
   }
 
-  it('displays Google sync option if section is linked to Google Classroom', () => {
-    renderComponent(google_section);
-    const sync = screen.getByText(i18n.syncGoogle());
-    expect(screen.queryByText(i18n.loginCards())).toBe(null);
-    expect(screen.queryByText(i18n.syncCleverDropdown())).toBe(null);
-    fireEvent.click(sync);
-    expect(sendEventSpy).toHaveBeenCalled();
+  it('displays section settings option to navigate to settings page', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.sectionSettings());
+    fireEvent.click(link);
+    screen.getByText('/sections/11/settings');
   });
 
-  it('displays Clever sync option if section is linked to Clever', () => {
-    renderComponent(clever_section);
-    const sync = screen.getByText(i18n.syncCleverDropdown());
-    expect(screen.queryByText(i18n.loginCards())).toBe(null);
-    expect(screen.queryByText(i18n.syncGoogle())).toBe(null);
-    fireEvent.click(sync);
-    expect(sendEventSpy).toHaveBeenCalled();
+  it('displays roster option to navigate to roster page', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.roster());
+    fireEvent.click(link);
+    screen.getByText('/sections/11/roster');
   });
 
-  it('displays login cards option if section is not LTI linked', () => {
-    renderComponent(cdo_section);
-    screen.getByText(i18n.loginCards());
-    expect(screen.queryByText(i18n.syncCleverDropdown())).toBe(null);
-    expect(screen.queryByText(i18n.syncGoogle())).toBe(null);
+  it('displays login cards option to navigate to login_info page', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.loginCards());
+    fireEvent.click(link);
+    screen.getByText('/sections/11/login_info');
+  });
+
+  it('displays certificates option to print student certificates', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.certificates());
+    fireEvent.click(link);
+    expect(fetchSpy).toHaveBeenCalledWith('/dashboardapi/sections/11/students');
+  });
+
+  it('displays archive option to hide / restore section', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.archive());
+    fireEvent.click(link);
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      'Section table archive section clicked',
+      {},
+      'Both'
+    );
+  });
+
+  it('displays delete option to initiate section delete', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.delete());
+    fireEvent.click(link);
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      'Section table delete section clicked',
+      {},
+      'Both'
+    );
   });
 });
