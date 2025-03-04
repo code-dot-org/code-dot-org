@@ -596,7 +596,10 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
  * @private
  */
 NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
-  return 'ns_' + md5(this.levelKey_ + '_' + seed).substring(0, 32);
+  // The blueImp md5 implementation returns a 32-character hex string
+  // We used to truncate this to 48 characters, but that's not necessary now
+  // since these should always be 35-character strings.
+  return 'ns_' + md5(this.levelKey_ + '_' + seed);
 };
 
 /**
