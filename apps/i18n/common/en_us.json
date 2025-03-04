@@ -2963,8 +2963,6 @@
   "submitProjectGallery_thanksForSubmission": "Thanks for your submission.",
   "submitProjectGallery_tryAgain": "The project could not be submitted. Please try again later.",
   "syncClever": "Sync students from Clever",
-  "syncCleverDropdown": "Sync Clever",
-  "syncGoogle": "Sync Google Classroom",
   "syncGoogleClassroom": "Sync students from Google Classroom",
   "syncingYourStudents": "Syncing Your Students",
   "syncingYourStudentsDescription": "If your Code.org section is ever out of date with your list of students in {loginType}, click on the \"Sync students from {loginType}\" button on the [Manage Students]({url}) tab: ",
