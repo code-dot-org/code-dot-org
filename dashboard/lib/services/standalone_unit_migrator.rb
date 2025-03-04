@@ -40,7 +40,7 @@ module Services
       @unit_group.reload
 
       # Clear "course" settings from the unit
-      @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
+      clear_settings_from_unit
 
       update_unit_group(i18n_params, unit_copy.published_state)
 
@@ -69,6 +69,8 @@ module Services
         return false
       end
 
+      @name_changed = true if @unit_group.name != @unit.name
+
       unit_group_id = @unit_group.id
       course_version = @unit_group.course_version
 
@@ -76,7 +78,7 @@ module Services
       rollback_section_assignments
 
       # Add "course" settings back to unit
-      @unit.update!(is_course: true, version_year: @unit_group.version_year, family_name: @unit_group.family_name, published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type, instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience)
+      rollback_unit_settings
 
       course_version.update!(content_root_id: @unit.id, content_root_type: 'Unit')
 
@@ -116,27 +118,33 @@ module Services
         participant_audience: @unit.participant_audience,
         has_numbered_units: false
       )
-      @unit_group.save
-      # unless @unit_group.save
-      #   new_name = case @unit_group.errors[:name]&.first
-      #              when "can only contain lowercase letters, numbers and dashes"
-      #                @unit.name.downcase.tr(' ', '-')
-      #              when "has already been taken"
-      #                @unit.name + "-course"
-      #              else
-      #                nil
-      #              end
-      #   @unit_group = UnitGroup.new(
-      #     name: new_name,
-      #     family_name: @unit.family_name,
-      #     version_year: @unit.version_year,
-      #     instruction_type: @unit.instruction_type,
-      #     instructor_audience: @unit.instructor_audience,
-      #     participant_audience: @unit.participant_audience,
-      #     has_numbered_units: false
-      #   )
-      #   @unit_group.save
-      # end
+      unless @unit_group.save
+        new_name = case @unit_group.errors[:name]&.first
+                   when "can only contain lowercase letters, numbers and dashes"
+                     @unit.name.downcase.tr(' ', '-')
+                   when "has already been taken"
+                     @unit.name + "-course"
+                   else
+                     nil
+                   end
+        @unit_group = UnitGroup.new(
+          name: new_name,
+          family_name: @unit.family_name,
+          version_year: @unit.version_year,
+          instruction_type: @unit.instruction_type,
+          instructor_audience: @unit.instructor_audience,
+          participant_audience: @unit.participant_audience,
+          has_numbered_units: false
+        )
+        @name_changed = true
+        @unit_group.save
+      end
+    end
+
+    private def clear_settings_from_unit
+      @unit.properties["is_course"] = false
+      @unit.properties["version_year"] = nil
+      @unit.update_columns(properties: @unit.properties, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
     end
 
     private def update_unit_group(i18n_params, published_state)
@@ -169,9 +177,9 @@ module Services
     private def run_checks(course_version, dupe_unit, original_course_version_id)
       checks = {
         "New UnitGroup is valid" => @unit_group.valid?,
-        "Existing unit is valid" => @unit.valid?,
+        "Existing unit is valid" => @unit.valid? || @name_changed,
         "CourseVersion is valid" => course_version.valid?,
-        "New UnitGroup has the same name as the existing unit" => @unit_group.name == dupe_unit.name,
+        "New UnitGroup has the same name as the existing unit" => @unit_group.name == dupe_unit.name || @name_changed,
         "New UnitGroup has the same family_name as the existing unit" => @unit_group.family_name == dupe_unit.family_name,
         "New UnitGroup has the same version_year as the existing unit" => @unit_group.version_year == dupe_unit.version_year,
         "New UnitGroup has the same instruction_type as the existing unit" => @unit_group.instruction_type == dupe_unit.instruction_type,
@@ -187,13 +195,14 @@ module Services
 
       # Determine if all checks passed
       all_passed = checks.values.all?
-      unless all_passed
+      if all_passed
+        log "View the new UnitGroup here: https:#{CDO.studio_url(@unit_group.link)}" if @verbose
+      else
         log("Checks failed for unit migration: #{@unit.name}", type: "error")
         failing_checks = checks.select {|_, result| !result}
         failing_checks.each {|description, result| log("#{description}: #{result}", type: 'error')}
       end
 
-      log "View the new UnitGroup here: https:#{CDO.studio_url(@unit_group.link)}" if @verbose
       all_passed
     end
 
@@ -206,10 +215,16 @@ module Services
       log "Rolled back #{sections_rollback} sections for unit #{@unit.name}" if @verbose
     end
 
+    private def rollback_unit_settings
+      @unit.properties["is_course"] = true
+      @unit.properties["version_year"] = @unit_group.version_year
+      @unit.update_columns(properties: @unit.properties, family_name: @unit_group.family_name, published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type, instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience)
+    end
+
     private def rollback_checks(unit_group_id)
       checks = {
         "UnitGroup is destroyed" => UnitGroup.find_by(id: unit_group_id).nil?,
-        "Unit is valid" => @unit.valid?,
+        "Unit is valid" => @unit.valid? || @name_changed,
         "CourseVersion is valid" => @unit.course_version.valid?,
         "Unit is a course" => @unit.is_course?,
         "Unit does not have a unit_group" => @unit.unit_group.nil?,

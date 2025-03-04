@@ -113,7 +113,7 @@ def migrate_units(options)
 
   File.write(MIGRATED_UNITS_LOG, migrated_units.join("\n"))
   puts "Units Migrated: #{migrated_units.count}"
-  puts "View migrated units here: #{File.expand_path(MIGRATED_UNITS_LOG)}"
+  puts "View migrated units here: #{File.expand_path(MIGRATED_UNITS_LOG)}" unless migrated_units.empty?
   puts "There was an issue with the migration. View the log for more information." unless all_successful
   puts "Log File: #{File.expand_path(log_file)}" if log_file
 end
