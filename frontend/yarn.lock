@@ -1213,7 +1213,6 @@ __metadata:
   resolution: "@code-dot-org/frontend@workspace:."
   dependencies:
     "@storybook/test-runner": "npm:^0.19.1"
-    clipanion: "npm:^4.0.0-rc.4"
     lint-staged: "npm:^15.4.3"
     prettier: "npm:3.3.3"
     rimraf: "npm:^6.0.1"
@@ -7447,17 +7446,6 @@ __metadata:
   version: 0.0.1
   resolution: "client-only@npm:0.0.1"
   checksum: 10c0/9d6cfd0c19e1c96a434605added99dff48482152af791ec4172fb912a71cff9027ff174efd8cdb2160cc7f377543e0537ffc462d4f279bc4701de3f2a3c4b358
-  languageName: node
-  linkType: hard
-
-"clipanion@npm:^4.0.0-rc.4":
-  version: 4.0.0-rc.4
-  resolution: "clipanion@npm:4.0.0-rc.4"
-  dependencies:
-    typanion: "npm:^3.8.0"
-  peerDependencies:
-    typanion: "*"
-  checksum: 10c0/047b415b59a5e9777d00690fba563ccc850eca6bf27790a88d1deea3ecc8a89840ae9aed554ff284cc698a9f3f20256e43c25ff4a7c4c90a71e5e7d9dca61dd1
   languageName: node
   linkType: hard
 
@@ -18019,13 +18007,6 @@ __metadata:
   bin:
     turbo: bin/turbo
   checksum: 10c0/cad6a7b16d2cdaa15fe75efe1938d335cb026c073dfe639aaf2dce4c4d10ecc6a63216689682c1d1f7238ceed56f6e4ba736aa1b738aec70afb66f770e7c3817
-  languageName: node
-  linkType: hard
-
-"typanion@npm:^3.8.0":
-  version: 3.14.0
-  resolution: "typanion@npm:3.14.0"
-  checksum: 10c0/8b03b19844e6955bfd906c31dc781bae6d7f1fb3ce4fe24b7501557013d4889ae5cefe671dafe98d87ead0adceb8afcb8bc16df7dc0bd2b7331bac96f3a7cae2
   languageName: node
   linkType: hard
 
