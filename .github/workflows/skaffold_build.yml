@@ -1,0 +1,170 @@
+name: skaffold
+on: [push]
+
+jobs:
+  # Step 1: build platform specific docker images: amd64, arm64
+  build:
+    name: build
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      matrix:
+        runs-on: [ubuntu-latest, skaffold-arm64]
+    env:
+      SKAFFOLD_DEFAULT_REPO: ghcr.io/${{ github.repository_owner }}
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      # build docker images with -amd64 or -arm64 suffix, we'll stitch them together later:
+      APPEND_ARCHITECTURE_TO_DOCKER_TAG: true
+    outputs:
+      docker_tag_amd64: ${{ steps.docker_tags.outputs.docker_tag_amd64 }}
+      docker_tag_arm64: ${{ steps.docker_tags.outputs.docker_tag_arm64 }}
+      docker_tag: ${{ steps.docker_tags.outputs.docker_tag }}
+    defaults:
+      run:
+        shell: bash -ex {0}
+    steps:
+      - name: Setup Docker Tags
+        id: docker_tags
+        run: |
+          DOCKER_TAG="${BRANCH_NAME//[^a-zA-Z0-9_.-]/-}"
+          echo "docker_tag=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
+
+          if [[ "$APPEND_ARCHITECTURE_TO_DOCKER_TAG" == "true" ]]; then
+            ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
+            DOCKER_TAG="${DOCKER_TAG}-${ARCH}"
+            echo "docker_tag_${ARCH}=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
+          fi
+          
+          echo "DOCKER_TAG=$DOCKER_TAG" >> $GITHUB_ENV
+
+      # - name: ssh into the runner
+      #   uses: mxschmitt/action-tmate@v3
+      
+      # GitHub Runners didn't have a big enough disk for our giant Docker images
+      # but fortunately they have an empty tmp disk mounted at /mnt, we just need
+      # to symlink it into /var/lib/docker.
+      - name: Put /var/lib/docker on the big empty temp disk
+        run: |
+          echo "Docker had `sudo df -h /var/lib/docker | awk 'NR==2 {print $4}'` available"
+          echo
+          sudo systemctl stop docker
+          sudo mkdir /mnt/docker
+          sudo chmod --reference=/var/lib/docker /mnt/docker
+          sudo chown --reference=/var/lib/docker /mnt/docker
+          # `rm -rf docker` saves 4GB on the same disk as code-dot-org source,
+          # but `mv docker docker.old` is ~5s faster
+          sudo rm -rf /var/lib/docker /var/lib/docker.old
+          sudo ln -s /mnt/docker /var/lib/docker
+          sudo systemctl start docker
+          echo
+          echo "Docker now has `sudo df -h /var/lib/docker | awk 'NR==2 {print $4}'` available"
+          echo "Workspace has `sudo df -h $GITHUB_WORKSPACE | awk 'NR==2 {print $4}'` available"
+
+      - name: install skaffold
+        run: |
+          ARCH=$(uname -m)
+          if [[ "$ARCH" == "aarch64" ]]; then
+            curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-arm64
+          else
+            curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+          fi
+          sudo install skaffold /usr/local/bin/
+
+      # Add support for more platforms with QEMU (optional)
+      # https://github.com/docker/setup-qemu-action
+      # - name: Set up QEMU
+      #   uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        # with:
+          # platforms: linux/amd64,linux/arm64
+
+      # Login to GitHub Container Registry
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout sources
+        uses: actions/checkout@v4
+
+      # - name: ssh into the runner
+      #   uses: mxschmitt/action-tmate@v3
+
+      - name: skaffold cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.skaffold/cache
+          key: skaffold-${{ hashFiles('~/.skaffold/cache') }}
+          restore-keys: |
+            skaffold-
+
+      - name: did we use skaffold cache?
+        run: |
+          find ~/.skaffold/cache || true
+          du -h ~/.skaffold/cache || true
+
+      # - name: Free disk space
+      #   run: |
+      #     echo "Docker has `sudo df -h /var/lib/docker | awk 'NR==2 {print $4}'` available"
+      #     echo "Workspace has `sudo df -h $GITHUB_WORKSPACE | awk 'NR==2 {print $4}'` available"
+
+      - name: skaffold build
+        run: |
+          skaffold \
+            build \
+            -v info \
+            --tag $DOCKER_TAG \
+            --push
+
+          # Disabled because it takes 5x as long on GitHub AMD64 machines:
+          #   --platform=linux/arm64,linux/amd64
+
+          echo "Done w/ skaffold build"
+
+      - name: did we use skaffold cache?
+        run: |
+          find ~/.skaffold/cache
+          du -h ~/.skaffold/cache
+
+  # Step 2: stitch the platform specific images into a multi-platform image
+  stitch-multi-platform:
+    name: Stitch a Multi-Platform Image from Platform-Specific Images
+    runs-on: ubuntu-latest
+    needs: build
+    env:
+      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/code-dot-org
+      MULTI_PLATFORM_IMAGE: ghcr.io/${{ github.repository_owner }}/code-dot-org:${{ needs.build.outputs.docker_tag }}
+    defaults:
+      run:
+        shell: bash -ex {0}
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Parse DOCKER_TAGS JSON and prepare tag list
+        id: parse_tags
+        run: |
+          # Extract tags prefixed with "docker_tag_" and prepend $IMAGE_NAME to each tag
+          DOCKER_TAGS_JSON='${{ toJSON(needs.build.outputs) }}'          
+          SINGLE_ARCH_IMAGES=$(jq -r --arg prefix "$IMAGE_NAME" 'to_entries | map(select(.key | test("^docker_tag_")) | "\($prefix):\(.value)") | join(" ")' <<< "$DOCKER_TAGS_JSON")
+          echo "SINGLE_ARCH_IMAGES=$SINGLE_ARCH_IMAGES" >> "$GITHUB_ENV"
+
+      - name: Stitch platform images into a multi-platform image
+        run: |
+          # Use imagetools to stitch all platform-specific images into one multi-platform image
+          docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
+
+# Grant the GITHUB_TOKEN the necessary permissions to publish to GitHub Packages
+permissions:
+  contents: read
+  packages: write
