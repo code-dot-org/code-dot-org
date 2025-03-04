@@ -299,10 +299,16 @@ export default function LearningGoals({
   // Remember whether no not the code editor is loaded
   const studio = studioApp();
   const [editorLoaded, setEditorLoaded] = useState(!!studio.editor);
-  useMemo(() => {
-    studio.on('afterInit', () => {
+  useEffect(() => {
+    const handleAfterInit = () => {
       setEditorLoaded(true);
-    });
+    };
+
+    studio.on('afterInit', handleAfterInit);
+
+    return () => {
+      studio.off('afterInit', handleAfterInit);
+    };
   }, [studio]);
 
   const aiEvidence = useMemo(() => {
