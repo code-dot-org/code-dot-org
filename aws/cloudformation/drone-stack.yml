@@ -392,9 +392,11 @@ Resources:
             -
               Name: DRONE_AGENT_CONCURRENCY
               Value: 1
+            # TODO: figure out a way to create the network on the runner such that DRONE_RUNNER_NETWORKS will work
             -
               Name: DRONE_AGENT_ENVIRON
-              Value: "DRONE_DOCKER_NETWORK_ID=cdo_network_test,DRONE_RUNNER_NETWORKS=cdo_network_test"
+              Value: "DRONE_RUNNER_NETWORKS=cdo_network_test"
+              # TODO: why didn't DRONE_DOCKER_NETWORK_ID have any effect?
             # END: Settings for the Drone Runner.
 
   DroneAutoscalerEcsService:
