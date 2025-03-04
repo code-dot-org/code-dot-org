@@ -165,11 +165,11 @@ services:
       - "5910" # The selenium direct VNC port
       - "4444" # The selenium router port
       - "7910" # The selenium NoVNC service port
-    links:
-      - ui-tests:localhost.code.org
-      - ui-tests:localhost-studio.code.org
-      - ui-tests:localhost.hourofcode.com
-      - ui-tests:localhost.csedweek.org
+    extra_hosts:
+      - "localhost.code.org=ui-tests"
+      - "localhost-studio.code.org=ui-tests"
+      - "localhost.hourofcode.com=ui-tests"
+      - "localhost.csedweek.org=ui-tests"
 
 steps:
   - name: bin/drone/shell
