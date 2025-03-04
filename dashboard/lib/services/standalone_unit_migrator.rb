@@ -116,6 +116,7 @@ module Services
         participant_audience: @unit.participant_audience,
         has_numbered_units: false
       )
+      @unit_group.save
       # unless @unit_group.save
       #   new_name = case @unit_group.errors[:name]&.first
       #              when "can only contain lowercase letters, numbers and dashes"
