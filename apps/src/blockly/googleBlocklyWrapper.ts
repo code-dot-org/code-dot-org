@@ -875,6 +875,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     new KeyboardNavigation(workspace);
+    // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
+    const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
+    workspace.setTheme(theme);
 
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.
