@@ -10,10 +10,6 @@ kind: pipeline
 type: docker
 name: unit
 
-networks:
-  cdo_network_test:
-    driver: bridge
-
 clone:
   disable: true
 
@@ -147,10 +143,6 @@ kind: pipeline
 type: docker
 name: ui
 
-networks:
-  cdo_network_test:
-    driver: bridge
-
 clone:
   disable: true
 
@@ -197,8 +189,6 @@ steps:
         You can also open a VSCode tunnel into drone to edit live:
         bin/drone/vscode $hostname
         EOF
-    networks:
-      - cdo_network_test
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
@@ -211,8 +201,6 @@ steps:
       pull: true
       mount:
         - .
-    networks:
-      - cdo_network_test
 
   - name: checkout
     image: bitnami/git
@@ -232,8 +220,6 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
-    networks:
-      - cdo_network_test
 
   - name: restore-cache
     image: plugins/s3-cache
@@ -243,8 +229,6 @@ steps:
       pull: true
       restore: true
       filename: ui-tests-cache-ubuntu-20.tar
-    networks:
-      - cdo_network_test
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
@@ -307,14 +291,16 @@ steps:
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
         - dashboard/db/ui_test_data.hash
         - dashboard/db/ui_test_data.sql
-    networks:
-      - cdo_network_test
 
 volumes:
   - name: rbenv
     temp: {}
   - name: mysql
     temp: {}
+
+networks:
+  cdo_network_test:
+    driver: bridge
 
 trigger:
   branch:
