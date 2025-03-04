@@ -216,6 +216,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
     setOutputSize(MAX_MINI_APP_SIZE);
     setMiniAppSize(MAX_MINI_APP_SIZE);
     setIsMaximized(true);
+    throttledResize(height, width, miniApp, miniAppSize, isVertical);
   };
 
   const minimizeMiniApp = () => {
@@ -223,6 +224,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
     setMiniAppSize(miniAppMinimizeSize);
     setOutputSize(outputMinimizeSize);
     setIsMaximized(false);
+    throttledResize(height, width, miniApp, miniAppSize, isVertical);
   };
 
   return (
