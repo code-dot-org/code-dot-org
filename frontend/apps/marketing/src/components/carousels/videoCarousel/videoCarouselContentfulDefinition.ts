@@ -14,6 +14,11 @@ export const VideoCarouselContentfulComponentDefinition: ComponentDefinition = {
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
-  children: true,
-  variables: {},
+  children: false,
+  variables: {
+    slides: {
+      displayName: 'Video slides',
+      type: 'Array',
+    },
+  },
 };

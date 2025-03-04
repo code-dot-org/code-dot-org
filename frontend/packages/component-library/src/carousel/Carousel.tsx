@@ -29,6 +29,8 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   showNavArrows?: boolean;
   /** Carousel content */
   slides: {id: string; slide: ReactNode}[];
+  /** Carousel custom class name */
+  className?: string;
 }
 
 /**
@@ -95,10 +97,8 @@ const Carousel: React.FC<CarouselProps> = ({
             },
           }}
         >
-          {slides.map(({id, slide}) => (
-            <SwiperSlide key={id} className={className}>
-              {slide}
-            </SwiperSlide>
+          {slides?.map(({id, slide}) => (
+            <SwiperSlide key={id}>{slide}</SwiperSlide>
           ))}
         </Swiper>
         {showNavArrows && (
