@@ -24,7 +24,8 @@ interface OutputProps {
   className?: string;
   height?: number;
   width?: number;
-  setOutputSize?: (size: number) => void;
+  // Set the size of the output container (width in vertical mode, height in horizontal mode).
+  setOutputSize: (size: number) => void;
 }
 
 const Output: React.FunctionComponent<OutputProps> = ({
@@ -212,7 +213,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
     setOutputMinimizeSize(
       (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
     );
-    setOutputSize && setOutputSize(MAX_MINI_APP_SIZE);
+    setOutputSize(MAX_MINI_APP_SIZE);
     setMiniAppSize(MAX_MINI_APP_SIZE);
     setIsMaximized(true);
   };
@@ -220,7 +221,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
   const minimizeMiniApp = () => {
     setWaitingForResize(true);
     setMiniAppSize(miniAppMinimizeSize);
-    setOutputSize && setOutputSize(outputMinimizeSize);
+    setOutputSize(outputMinimizeSize);
     setIsMaximized(false);
   };
 
