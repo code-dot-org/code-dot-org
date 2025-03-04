@@ -6,7 +6,7 @@ wrong 'Only the programs running on a device'
 right 'A combination of hardware and software working together'
 wrong 'Just the internet connection'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What makes up a **computer system**?

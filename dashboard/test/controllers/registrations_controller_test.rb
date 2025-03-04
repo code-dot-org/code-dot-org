@@ -216,9 +216,9 @@ class RegistrationsControllerTest < ActionController::TestCase
     ]
 
     urls.each do |url|
-      session.delete(:user_return_to)
       get :new, params: {user_return_to: url}
-      assert_equal url, session[:user_return_to]
+      user_return_to_url = users_sign_up_account_type_url + "?user_return_to=#{url}"
+      assert_redirected_to user_return_to_url
     end
   end
 
@@ -808,20 +808,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     student.reload
     assert_equal "male", student.gender_student_input
     assert_equal "m", student.gender
-  end
-
-  test 'does not render the parent email section for LTI users' do
-    user = create :student, :with_lti_auth
-    PartialRegistration.persist_attributes session, user
-
-    post :new, params: {
-      user: {
-        email: 'test@code.org'
-      }
-    }
-
-    assert_template partial: '_finish_sign_up'
-    assert_select '#parent_email-container', 0
   end
 
   test 'verifies lti users if they are a teacher' do

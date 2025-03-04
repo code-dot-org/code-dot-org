@@ -6,7 +6,7 @@ right 'Network redundancy'
 wrong 'Packet loss'
 wrong 'DNS blocking'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 During a thunderstorm, a main Internet connection in a city goes offline, but users can still access the Internet because an alternative route is available. What networking feature allows this?

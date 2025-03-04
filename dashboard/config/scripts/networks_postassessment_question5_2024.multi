@@ -6,7 +6,7 @@ wrong 'TCP'
 wrong 'VPN'
 right 'HTTP'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 When you type a website URL like `www.example.com` into a browser, what protocol is used to request and load the webpage?

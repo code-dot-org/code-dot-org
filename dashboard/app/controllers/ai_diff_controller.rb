@@ -31,37 +31,70 @@ class AiDiffController < ApplicationController
       return render status: :bad_request, json: {error: exception.message}
     end
 
-    # Add user message to thread
-    begin
-      AichatMessage.create!(
-        aichat_thread_id: @thread.id,
-        external_id: @thread.external_id,
-        role: :user,
-        content: params[:inputText],
-        is_preset: params[:isPreset],
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
-    end
+    # Log messages if the response was successful and not flagged for PII.
+    if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
+      # Add user message to thread
+      begin
+        AichatMessage.create!(
+          aichat_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :user,
+          content: params[:inputText],
+          is_preset: params[:isPreset],
+        )
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
 
-    # Add response message to thread
-    begin
-      AichatMessage.create!(
-        aichat_thread_id: @thread.id,
-        external_id: @thread.external_id,
-        role: :assistant,
-        content: response_body[:chat_message_text],
-        is_preset: params[:isPreset],
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
+      # Add response message to thread
+      begin
+        AichatMessage.create!(
+          aichat_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :assistant,
+          content: response_body[:chat_message_text],
+          is_preset: params[:isPreset],
+        )
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
     end
 
     render(status: :ok, json: response_body)
   end
 
+  private def contains_pii?
+    response = Aws::Comprehend::Client.new.detect_pii_entities(
+      {language_code: 'en', text: params[:inputText]}
+    )
+
+    # a string without pii concerns will contain no entities. example responses:
+    # {
+    #   "source": "the quick brown fox jumped over the lazy dog",
+    #   "response": []
+    # }
+    # {
+    #   "source": "the quick brown fox (206) 555-1212 jumped over the lazy dog at 55 main st",
+    #   "response": [
+    #     "{:score=>0.9999105930328369, :type=>\"PHONE\", :begin_offset=>20, :end_offset=>34}",
+    #     "{:score=>0.9999832510948181, :type=>\"ADDRESS\", :begin_offset=>63, :end_offset=>73}"
+    #   ]
+    # }
+
+    max_score = response.entities.map(&:score).max || 0
+
+    max_score > 0.9
+  end
+
   private def get_response_body(session_id)
-    # TODO: Check for profanity/ PII in input text
+    if contains_pii?
+      return {
+        role: "assistant",
+        status: SharedConstants::AI_INTERACTION_STATUS[:PII_VIOLATION],
+        chat_message_text: 'Sorry, I cannot accept messages that contain personal information.',
+        session_id: session_id
+      }
+    end
 
     # get lesson info for prompt generation
 

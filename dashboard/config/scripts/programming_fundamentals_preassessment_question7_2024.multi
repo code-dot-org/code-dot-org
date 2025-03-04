@@ -6,7 +6,7 @@ wrong 'To define an object\’s properties'
 right 'To perform an action associated with an object'
 wrong 'To delete an object'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 5: Working with Objects

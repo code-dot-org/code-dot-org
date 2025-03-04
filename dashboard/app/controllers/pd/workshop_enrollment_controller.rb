@@ -33,8 +33,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     elsif !current_user
       @script_data = {
         props: {
-          new_account_url: "#{new_user_registration_url}?user_return_to=#{request.fullpath}",
-          existing_account_url: "/users/sign_in?user_return_to=#{request.fullpath}"
+          new_account_url: "/users/sign_up/login_type?user_type=teacher&user_return_to=/pd/workshops/#{@workshop.id}/enroll",
+          existing_account_url: "/users/sign_in?user_return_to=/pd/workshops/#{@workshop.id}/enroll"
         }.to_json
       }
       render :logged_out

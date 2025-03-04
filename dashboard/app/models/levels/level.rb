@@ -860,7 +860,11 @@ class Level < ApplicationRecord
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
+    elsif (level_data = try(:project_template_level).try(:level_data)) && level_data['startSources']
+      # Music Lab's sources are part of level_data
+      properties_camelized['templateSources'] = try(:project_template_level).try(:level_data)['startSources']
     end
+
     # Localized properties
     properties_camelized["validations"] = localized_validations if get_validations
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]

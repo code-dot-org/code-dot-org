@@ -6,7 +6,7 @@ right '`while True:`'
 wrong '`while x != 5:`'
 wrong '`while x == 0:`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following conditions could cause an infinite loop?
