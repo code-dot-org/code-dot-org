@@ -173,6 +173,11 @@ RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.co
     mv chromedriver /usr/local/bin/chromedriver && \
     chmod +x /usr/local/bin/chromedriver
 
+# install selenium
+RUN curl -sSLOJ https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.29.0/selenium-server-4.29.0.jar && \
+    mkdir -p /opt/selenium/ && \
+    mv ./selenium-server-4.29.0.jar /opt/selenium/
+
 # install pdftk & tidy
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
     curl -sSLOJ https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb && \

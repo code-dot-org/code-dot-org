@@ -26,7 +26,7 @@ module DashboardHelpers
     dcdo_cookie_value[key] = value
 
     current_host = URI(@browser.current_url.to_s).host
-    current_domain = current_host && PublicSuffix.parse(current_host).domain
+    current_domain = current_host && PublicSuffix.valid?(current_host) && PublicSuffix.parse(current_host).domain
 
     dcdo_cookie = {name: Rack::CookieDCDO::KEY, value: dcdo_cookie_value.to_json, path: '/'}
     dcdo_cookie[:domain] = ".#{current_domain}" if current_domain # sets the cookie for the top-level domain
