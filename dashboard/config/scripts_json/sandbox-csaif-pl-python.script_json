@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-28 15:17:31 UTC",
+    "serialized_at": "2025-03-03 16:05:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -52,9 +52,11 @@
       "name": "Computational Thinking",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Understand core computational thinking concepts, including abstraction, decomposition, pattern recognition, and algorithms.\n- Explore how students apply computational thinking while learning to code.\n- Learn unplugged pedagogy strategies to make computational thinking more accessible and engaging.\n\n**Suggested Time:** 20 minutes \n",
+        "student_overview": "**In this lesson, you will:**\n\n- Understand core computational thinking concepts, including abstraction, decomposition, pattern recognition, and algorithms.\n- Explore how students apply computational thinking while learning to code.\n- Learn unplugged pedagogy strategies to make computational thinking more accessible and engaging.\n\n**Suggested Time:** 20 minutes "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -121,6 +123,19 @@
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-python"
       }
+    },
+    {
+      "key": "aabba2cc-ceb3-4642-9ae2-2ecea67e13b1",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aabba2cc-ceb3-4642-9ae2-2ecea67e13b1",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python"
+      }
     }
   ],
   "activity_sections": [
@@ -144,6 +159,30 @@
       "seeding_key": {
         "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451",
         "lesson_activity.key": "995ad319-263f-42aa-a174-f05c8fc37ee5"
+      }
+    },
+    {
+      "key": "6ece6870-b1a9-482c-8196-6423eefe3d06",
+      "position": 1,
+      "properties": {
+        "name": "What is Computational Thinking?",
+        "progression_name": "What is Computational Thinking?"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06",
+        "lesson_activity.key": "aabba2cc-ceb3-4642-9ae2-2ecea67e13b1"
+      }
+    },
+    {
+      "key": "4d1731d1-4163-4605-a05d-a8a03080e09d",
+      "position": 2,
+      "properties": {
+        "name": "Exploring Computational Thinking",
+        "progression_name": "Exploring Computational Thinking"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d",
+        "lesson_activity.key": "aabba2cc-ceb3-4642-9ae2-2ecea67e13b1"
       }
     }
   ],
@@ -422,6 +461,204 @@
       "level_keys": [
         "csaif_pl_teacher_Lesson1_python"
       ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_comp_think_L1_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_comp_think_L1_python"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_overview_L2_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_overview_L2_python"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-DS-comp_think_panel_L3_Python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      },
+      "level_keys": [
+        "csaif-pl-DS-comp_think_panel_L3_Python"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_comp_think_L4_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      },
+      "level_keys": [
+        "csaif_pl_module_comp_think_L4_python"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L5_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_L5_python"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L6_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_L6_python"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L7_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_L7_python"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-comp_thinking_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      },
+      "level_keys": [
+        "csaif-pl-comp_thinking_L8_python"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_comp_think_forum_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      },
+      "level_keys": [
+        "csaif-pl-_comp_think_forum_L8_python"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -555,6 +792,114 @@
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-python",
         "activity_section.key": "6ffce608-9a9a-4062-b58e-90d2df9d8451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_comp_think_L1_python",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_comp_think_L1_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_overview_L2_python",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_overview_L2_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-DS-comp_think_panel_L3_Python",
+        "script_level.level_keys": [
+          "csaif-pl-DS-comp_think_panel_L3_Python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_comp_think_L4_python",
+        "script_level.level_keys": [
+          "csaif_pl_module_comp_think_L4_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "6ece6870-b1a9-482c-8196-6423eefe3d06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_L5_python",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L5_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_L6_python",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L6_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_L7_python",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L7_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-comp_thinking_L8_python",
+        "script_level.level_keys": [
+          "csaif-pl-comp_thinking_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_comp_think_forum_L8_python",
+        "script_level.level_keys": [
+          "csaif-pl-_comp_think_forum_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4d1731d1-4163-4605-a05d-a8a03080e09d"
       }
     }
   ],

@@ -6,7 +6,7 @@ wrong 'Arguments must always be strings, while parameters must be numbers'
 right 'Parameters define what input a function expects; arguments are actual values passed when calling the function'
 wrong 'There is no difference'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is the difference between a **parameter** and an **argument** in Python?

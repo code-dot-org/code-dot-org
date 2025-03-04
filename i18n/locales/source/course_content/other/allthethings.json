@@ -3030,7 +3030,7 @@
     "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/50/levels/8": {
-    "long_instructions": "## Python Lab with micro:bit enabled\n\nConnect your micro:bit, write a MicroPython program in the workspace, then click on the 'Send to micro:bit' button.\nIf you open your dev console, you will see a log of the percent completion and also when the flashing of the micro:bit is completed.",
+    "long_instructions": "## Python Lab with micro:bit enabled\n\nConnect your micro:bit, write a MicroPython program in the workspace, then click on the 'Send to micro:bit' button.\n\nIf you open your dev console, you will see a log of the percent completion and also when the flashing of the micro:bit is completed.",
     "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/50/levels/9": {

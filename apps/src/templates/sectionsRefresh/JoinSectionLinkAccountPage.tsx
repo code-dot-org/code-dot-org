@@ -15,7 +15,7 @@ const JoinSectionLinkAccountPage: React.FunctionComponent<{
     ? i18n.accountNeededJoinSectionWithCodeBannerLabel({sectionCode})
     : i18n.accountNeededJoinSectionWithoutCodeBannerLabel();
   const joinSectionCodeUrlParam = sectionCode ? `/${sectionCode}` : '';
-  const signUpJoinSectionUrl = `/users/new_sign_up/login_type?user_type=student&user_return_to=/join${joinSectionCodeUrlParam}`;
+  const signUpJoinSectionUrl = `/users/sign_up/login_type?user_type=student&user_return_to=/join${joinSectionCodeUrlParam}`;
   const signInJoinSectionUrl = `/users/sign_in?user_return_to=/join${joinSectionCodeUrlParam}`;
 
   useEffect(() => {

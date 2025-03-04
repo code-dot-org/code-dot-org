@@ -5,7 +5,9 @@ import React from 'react';
 import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
+import EnrollForm, {
+  labelKeyToTextMap,
+} from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import * as useSchoolInfoModule from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import * as getAuthenticityTokenModule from '@cdo/apps/util/AuthenticityTokenStore';
@@ -89,7 +91,7 @@ describe('Enroll Form', () => {
   const renderDefault = (overrides = {}) =>
     shallow(<EnrollForm {...props} {...overrides} />);
 
-  const getLabelSelector = key => `Label[htmlFor="${key}"]`;
+  const getLabelSelector = key => `Label[text="${labelKeyToTextMap[key]}"]`;
   const getIdSelector = key => `#${key}`;
 
   const testValidateFields = (params, selector) => {
@@ -557,10 +559,11 @@ describe('Enroll Form', () => {
         .to.be.undefined;
     });
 
-    // first name and email fields are set as props on page load
+    // first name, last name, and email fields are set as props on page load
     // the user needs to explicitly set them blank for errors to appear
     [
       ['first_name', getIdSelector('first_name')],
+      ['last_name', getIdSelector('last_name')],
       ['email', getIdSelector('email')],
     ].forEach(([param, selector]) => {
       it(`do not submit when user sets blank ${param}`, () => {
@@ -568,13 +571,17 @@ describe('Enroll Form', () => {
       });
     });
 
-    [
-      ['last_name', getIdSelector('last_name')],
-      ['school_info', getLabelSelector('school_info')],
-    ].forEach(([param, selector]) => {
-      it(`do not submit when user does not input ${param}`, () => {
-        testValidateFields({...requiredParams, [param]: ''}, selector);
-      });
+    it('do not submit when user does not input school_info', () => {
+      const param = 'school_info';
+      enrollForm = renderDefault({...requiredParams, [param]: null});
+      enrollForm.find(getIdSelector('submit')).simulate('click');
+
+      const error = enrollForm
+        .find('.school_info_container')
+        .find('Label')
+        .prop('errorMessage');
+      expect(error).to.be.defined;
+      expect(fetchStub.called).to.be.false;
     });
   });
 });

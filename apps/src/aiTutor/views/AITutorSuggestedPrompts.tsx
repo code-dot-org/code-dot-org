@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 
-import DeprecatedSuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/DeprecatedSuggestedPrompts';
+import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
@@ -32,9 +32,12 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   );
 
   const hasPythonLabError = useAppSelector(state => state.lab2System.hasError);
-  const hasRunOrTestedPythonLabCode = useAppSelector(
-    state => state.lab2System.hasRun || state.lab2System.hasValidated
+  const hasRunPythonCode = useAppSelector(state => state.lab2System.hasRun);
+  const hasValidatedPythonCode = useAppSelector(
+    state => state.lab2System.hasValidated
   );
+  const hasRunOrTestedPythonLabCode =
+    hasRunPythonCode || hasValidatedPythonCode;
   const isPythonLabRunning = useAppSelector(
     state => state.lab2System.isRunning
   );
@@ -44,7 +47,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   const {hasConditions, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
-  const pythonLabValidationPassed = !hasConditions || satisfied;
+  const pythonLabValidationFailed =
+    hasConditions && hasValidatedPythonCode && !satisfied;
 
   // For JavaLab
   const javaLabSources = useAppSelector(state => state.javalabEditor.sources);
@@ -80,7 +84,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         hasRunOrTestedPythonLabCode &&
         !isWaitingForChatResponse;
       const showGenericErrorOption = showOption && hasPythonLabError;
-      const showValidationOption = showOption && !pythonLabValidationPassed;
+      const showValidationOption = showOption && pythonLabValidationFailed;
       return {studentCode, showGenericErrorOption, showValidationOption};
     } else if (labType === 'Javalab') {
       const studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
@@ -149,25 +153,30 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     [studentCode, isWaitingForChatResponse, level, dispatch]
   );
 
+  // We set selected to false because once the user selects a prompt, we convert
+  // the chip into a message in the chat history.
   const suggestedPrompts = [
     {
       label: QuickActions[ActionType.COMPILATION],
       onClick: () => handleClick(ActionType.COMPILATION),
       show: showCompilationOption,
+      selected: false,
     },
     {
       label: QuickActions[ActionType.VALIDATION],
       onClick: () => handleClick(ActionType.VALIDATION),
       show: showValidationOption,
+      selected: false,
     },
     {
       label: QuickActions[ActionType.GENERIC_HELP],
       onClick: () => handleClick(ActionType.GENERIC_HELP),
       show: showGenericErrorOption,
+      selected: false,
     },
   ];
 
-  return <DeprecatedSuggestedPrompts suggestedPrompts={suggestedPrompts} />;
+  return <SuggestedPrompts suggestedPrompts={suggestedPrompts} />;
 };
 
 export default AITutorSuggestedPrompts;

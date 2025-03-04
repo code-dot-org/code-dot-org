@@ -17,9 +17,7 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
-import SchoolDataInputs, {
-  SCHOOL_INFO_ID,
-} from '@cdo/apps/templates/SchoolDataInputs.jsx';
+import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs.jsx';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import QuestionsTable from '../form_components/QuestionsTable';
@@ -123,13 +121,11 @@ type EnrollFormProps = {
 const Label = ({
   children,
   text,
-  htmlFor,
   errorMessage,
   className = '',
 }: {
   children?: ReactNode;
   text?: ReactNode;
-  htmlFor?: string;
   errorMessage?: ReactNode;
   className?: string;
 }) => (
@@ -140,7 +136,6 @@ const Label = ({
       textFieldStyles['textField-m'],
       className
     )}
-    htmlFor={htmlFor}
   >
     {text && <span className={textFieldStyles.textFieldLabel}>{text}</span>}
     {children}
@@ -157,6 +152,23 @@ const Label = ({
     )}
   </label>
 );
+
+export const labelKeyToTextMap = {
+  grades_teaching:
+    'What grades are you teaching this year? (Select all that apply)',
+  csf_intro_intent:
+    'Most teachers register for the Intro workshop in order to learn how to teach a CS Fundamentals course during the current or upcoming academic year. Is this also true of your interest in registering for this workshop?',
+  csf_intro_other_factors:
+    'What other factors might influence your registration? Check all that apply.',
+  attended_csf_intro_workshop:
+    'Have you attended a CS Fundamentals Intro Workshop before?',
+  taught_ap_before: 'Have you taught an Advanced Placement (AP) course before?',
+  planning_to_teach_ap:
+    'Are you planning to teach CS Principles as an AP course?',
+  previous_courses:
+    'Which computer science courses or activities have you taught in the past?',
+  describe_role: 'Please describe your role',
+};
 
 export default function EnrollForm(props: EnrollFormProps) {
   const roles = useMemo(() => {
@@ -493,13 +505,8 @@ export default function EnrollForm(props: EnrollFormProps) {
     `${OTHER} ${EXPLAIN}`,
   ];
 
-  const csfIntroIntentLabel =
-    `Most teachers register for the Intro workshop in order to learn how to ` +
-    `teach a CS Fundamentals course during the current or upcoming academic year. Is this also ` +
-    `true of your interest in registering for this workshop?`;
   const csfIntroIntentAnswers = ['Yes', 'No', 'Unsure'];
 
-  const csfIntroOtherFactorsLabel = `What other factors might influence your registration? Check all that apply.`;
   const csfIntroOtherFactorsAnswers = [
     'I am newly assigned to teach computer science and want help getting started.',
     'Teaching computer science is one of my teaching duties.',
@@ -511,14 +518,12 @@ export default function EnrollForm(props: EnrollFormProps) {
     'I am here to bring information back to my school or district.',
   ];
 
-  const cspReturningTeachersTaughtAPLabel = `Have you taught an Advanced Placement (AP) course before?`;
   const cspReturningTeachersTaughtAPAnswers = [
     'Yes, AP CS Principles or AP CS A',
     'Yes, but in another subject',
     'No',
   ];
 
-  const cspReturningTeachersPlanningAPLabel = `Are you planning to teach CS Principles as an AP course?`;
   const cspReturningTeachersPlanningAPAnswers = [
     'Yes',
     'No',
@@ -606,10 +611,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               containerClassName={styles.school_info_required}
               {...schoolInfo}
             />
-            <Label
-              errorMessage={formErrors.school_info}
-              htmlFor={SCHOOL_INFO_ID}
-            />
+            <Label errorMessage={formErrors.school_info} />
           </div>
         </>
       )}
@@ -630,10 +632,9 @@ export default function EnrollForm(props: EnrollFormProps) {
           />
           {formState.role && DESCRIBE_ROLES.includes(formState.role) && (
             <Label
-              text="Please describe your role"
+              text={labelKeyToTextMap.describe_role}
               className={getRequiredStyles('describe_role')}
               errorMessage={formErrors.describe_role}
-              htmlFor="describe_role"
             >
               <textarea
                 id="describe_role"
@@ -651,10 +652,8 @@ export default function EnrollForm(props: EnrollFormProps) {
           {props.workshop_course !== ADMIN_COUNSELOR && (
             <Label
               className={getRequiredStyles('grades_teaching')}
-              text="What grades are you teaching this year? (Select all that
-                    apply)"
+              text={labelKeyToTextMap.grades_teaching}
               errorMessage={formErrors.grades_teaching}
-              htmlFor="grades_teaching"
             >
               <Typography
                 semanticTag="p"
@@ -699,10 +698,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                         }
                       />
                       {stateKey && (
-                        <Label
-                          htmlFor={grade}
-                          errorMessage={formErrors[stateKey]}
-                        >
+                        <Label errorMessage={formErrors[stateKey]}>
                           <textarea
                             id={grade}
                             name={grade}
@@ -728,9 +724,8 @@ export default function EnrollForm(props: EnrollFormProps) {
           props.workshop_subject === DISTRICT) && (
           <Label
             className={getRequiredStyles('csf_intro_intent')}
-            text={csfIntroIntentLabel}
+            text={labelKeyToTextMap.csf_intro_intent}
             errorMessage={formErrors.csf_intro_intent}
-            htmlFor="csf_intro_intent"
           >
             <fieldset id="csf_intro_intent">
               <RadioButtonsGroup
@@ -754,9 +749,8 @@ export default function EnrollForm(props: EnrollFormProps) {
           props.workshop_subject === DISTRICT) && (
           <Label
             className={getRequiredStyles('csf_intro_other_factors')}
-            text={csfIntroOtherFactorsLabel}
+            text={labelKeyToTextMap.csf_intro_other_factors}
             errorMessage={formErrors.csf_intro_other_factors}
-            htmlFor="csf_intro_other_factors"
           >
             <fieldset id="csf_intro_other_factors">
               {csfIntroOtherFactorsAnswers.map(factor => (
@@ -798,7 +792,6 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('csf_courses_planned')}
               text={coursesPlannedLabel}
               errorMessage={formErrors.csf_courses_planned}
-              htmlFor="csf_courses_planned"
             >
               <fieldset id="csf_courses_planned">
                 {csfCourses.map(course => {
@@ -827,10 +820,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                         }
                       />
                       {stateKey && (
-                        <Label
-                          htmlFor={course}
-                          errorMessage={formErrors[stateKey]}
-                        >
+                        <Label errorMessage={formErrors[stateKey]}>
                           <textarea
                             id={course}
                             name={course}
@@ -852,9 +842,8 @@ export default function EnrollForm(props: EnrollFormProps) {
 
             <Label
               className={getRequiredStyles('attended_csf_intro_workshop')}
-              text="Have you attended a CS Fundamentals Intro Workshop before?"
+              text={labelKeyToTextMap.attended_csf_intro_workshop}
               errorMessage={formErrors.attended_csf_intro_workshop}
-              htmlFor="attended_csf_intro_workshop"
             >
               <fieldset id="attended_csf_intro_workshop">
                 <RadioButtonsGroup
@@ -880,10 +869,8 @@ export default function EnrollForm(props: EnrollFormProps) {
       {props.collect_demographics && (
         <Label
           className={getRequiredStyles('previous_courses')}
-          text="Which computer science courses or activities have you taught in
-                the past?"
+          text={labelKeyToTextMap.previous_courses}
           errorMessage={formErrors.previous_courses}
-          htmlFor="previous_courses"
         >
           <fieldset id="previous_courses">
             {previousCourses.map(course => (
@@ -935,9 +922,8 @@ export default function EnrollForm(props: EnrollFormProps) {
 
             <Label
               className={getRequiredStyles('taught_ap_before')}
-              text={cspReturningTeachersTaughtAPLabel}
+              text={labelKeyToTextMap.taught_ap_before}
               errorMessage={formErrors.taught_ap_before}
-              htmlFor="taught_ap_before"
             >
               <fieldset id="taught_ap_before">
                 <RadioButtonsGroup
@@ -960,9 +946,8 @@ export default function EnrollForm(props: EnrollFormProps) {
 
             <Label
               className={getRequiredStyles('planning_to_teach_ap')}
-              text={cspReturningTeachersPlanningAPLabel}
+              text={labelKeyToTextMap.planning_to_teach_ap}
               errorMessage={formErrors.planning_to_teach_ap}
-              htmlFor="planning_to_teach_ap"
             >
               <fieldset id="planning_to_teach_ap">
                 <RadioButtonsGroup

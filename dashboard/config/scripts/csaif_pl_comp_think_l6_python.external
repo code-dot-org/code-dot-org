@@ -1,0 +1,55 @@
+name 'csaif_pl_comp_think_L6_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computational Thinking: The Key to Better Coding  
+
+
+
+<img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 250px; margin: 0px 20px 0px 10px; ">
+
+####  Before students start coding, they need to learn how to think like a programmer.
+
+#### Computational thinking—breaking problems into steps, recognizing patterns, and designing clear instructions—helps them become better coders.
+
+#### In this activity,from Lesson XX, you'll experience how students use these skills to navigate a maze with the Painter. 
+
+#### By focusing on problem-solving first, students build a stronger foundation before they start coding.
+
+## Navigate the Painter
+
+#### You are going to navigate the painter from position A to position C using only the following commands: 
+
+- #### Move_forward 
+- #### Turn_right
+
+#### Jot down th
+
+
+
+<div style="text-align: center;">
+    <img src="https://images.code.org/d178a10fd4861e5cfd1ecc597db667ff-image-1741026488503.png" 
+         alt="A sample of a chat conversation with an AI bot." 
+         width="450px" 
+         style="border-radius: 5px; border: 2px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+</div>
+
+
+---
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Teacher Choice</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Teachers have full control over whether students can access the AI Tutor.<br>
+        You can choose between two identical versions of the curriculum— <b>one with the AI Tutor and one without</b>.<br><br> 
+        For teachers using the version with the AI Tutor, full control is in their hands.<br>
+        <b>You can decide when, where, and if</b> students have access to the AI-powered assistant, ensuring it aligns with their instructional goals and classroom needs.
+    </p>
+</div>
+
+
+#### You will have the opportunity to engage with the AI Tutor and learn more later in the module. 
+
+
+MARKDOWN

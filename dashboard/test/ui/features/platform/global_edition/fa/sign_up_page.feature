@@ -7,7 +7,7 @@ Feature: Global Edition - Farsi MVP - Sign Up page
 
   @eyes
   Scenario: I see the Farsi MVP Sign In page
-    Given I am on "http://studio.code.org/global/fa/users/new_sign_up/account_type"
+    Given I am on "http://studio.code.org/global/fa/users/sign_up/account_type"
     And I open my eyes to test "[Farsi MVP] Sign Up page"
 
     # Create your free account
