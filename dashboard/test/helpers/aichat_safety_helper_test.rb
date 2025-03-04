@@ -67,7 +67,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     SERVICES.each do |service|
       test "returns toxicity for #{role} input if detected using #{service}" do
         stub_safety_services(service, role)
-        response = AichatSafetyHelper.find_toxicity(role, @profane_message, 'en')
+        response = AichatSafetyHelper.find_toxicity(role, @profane_message, 'en', nil)
         verify_safety_response(service, response)
       end
     end
@@ -75,7 +75,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
 
   test "returns nil if no services are enabled for role" do
     stub_safety_services('comprehend', 'assistant')
-    response = AichatSafetyHelper.find_toxicity('user', 'message', 'en')
+    response = AichatSafetyHelper.find_toxicity('user', 'message', 'en', nil)
     assert_nil response
   end
 
@@ -89,7 +89,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     ROLES.each do |role|
       SERVICES.each do |service|
         stub_safety_services(service, role)
-        response = AichatSafetyHelper.find_toxicity(role, 'clean message', 'en')
+        response = AichatSafetyHelper.find_toxicity(role, 'clean message', 'en', nil)
         assert_nil response
       end
     end
@@ -100,7 +100,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     mock_response = create_stubbed_response(@openai_response_safe_json)
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response).once
 
-    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
+    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
   end
 
   test "retries if request_safety_check returns a response.body other than INAPPROPRIATE or OK" do
@@ -112,7 +112,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
       returns(mock_response_safe).
       twice
 
-    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
+    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
   end
 
   test "raises an error if request_safety_check returns a response.body other than INAPPROPRIATE or OK twice" do
@@ -121,7 +121,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
 
     assert_raises do
-      AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
+      AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
     end
   end
 

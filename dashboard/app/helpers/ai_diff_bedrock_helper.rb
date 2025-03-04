@@ -40,6 +40,14 @@ module AiDiffBedrockHelper
 
       $output_format_instructions$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name
       )
+    when SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+      prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+
+      Here are the search results in numbered order:
+      $search_results$
+
+      $output_format_instructions$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name
+      )
     end
     prompt
   end
@@ -96,6 +104,10 @@ module AiDiffBedrockHelper
       )
     end
     temp_filters.push({equals: {key: "course", value: course_name}}) unless course_name.nil?
+
+    if lesson_number.nil? && unit_num.nil? && course_name.nil?
+      temp_filters.push({equals: {key: "scope", value: "general"}})
+    end
 
     #can't use "and_all" if there is only 1 expression to filter on, only 2+
     if temp_filters.length > 1

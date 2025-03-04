@@ -6,7 +6,7 @@ right 'It manages the transmission of web pages from servers to browsers'
 wrong 'It controls network traffic between routers'
 wrong 'It translates domain names into IP addresses'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following best describes the function of HTTP (HyperText Transfer Protocol)?

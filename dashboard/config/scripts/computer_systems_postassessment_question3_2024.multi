@@ -6,7 +6,7 @@ wrong 'A USB drive used for storing files'
 right 'A smartwatch that tracks heart rate and sends data to a mobile app'
 wrong 'A wired keyboard used for input'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is an example of an IoT device?

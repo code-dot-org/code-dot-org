@@ -6,7 +6,7 @@ wrong 'A method for debugging errors in an object'
 wrong 'A way to store multiple objects in a list'
 right 'The syntax used to access an object\'s attributes and methods'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following best describes **dot notation** in Python?

@@ -6,7 +6,7 @@ wrong '`while`'
 right '`if`'
 wrong '`print`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which statement is used to execute code only when a condition is true?
