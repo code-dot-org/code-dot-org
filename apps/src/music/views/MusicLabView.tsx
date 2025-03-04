@@ -97,6 +97,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+
+  const currentPackId = useAppSelector(state => state.music.packId);
+
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
   );
@@ -297,6 +300,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   source={exemplarSources}
                   title={exemplarSettings.playerTitle}
                   labSetPlaying={setPlaying}
+                  packId={currentPackId}
                 />
               )}
           </PanelContainer>
@@ -310,6 +314,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       isEditingExemplar,
       onInstructionsTextClick,
       setPlaying,
+      currentPackId,
     ]
   );
 

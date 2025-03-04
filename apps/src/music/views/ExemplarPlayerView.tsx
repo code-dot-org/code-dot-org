@@ -18,12 +18,14 @@ interface ExemplarPlayerViewProps {
   source: Source;
   title: string;
   labSetPlaying: (playing: boolean) => void;
+  packId: string | null;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   source,
   title,
   labSetPlaying,
+  packId,
 }) => {
   const dispatch = useAppDispatch();
   const playerContext = useAppSelector(state => state.music.playerContext);
@@ -39,6 +41,14 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   // Immediately load the library and source, then compile the song.
   const onMount = useCallback(async () => {
+    const currentLibrary = MusicLibrary.getInstance();
+    if (currentLibrary) {
+      currentLibrary.setCurrentPackId(packId);
+      playerRef.current?.updateConfiguration(
+        currentLibrary.getBPM(),
+        currentLibrary.getKey()
+      );
+    }
     workspaceRef.current.initHeadless();
 
     workspaceRef.current.loadCode(source);
@@ -54,7 +64,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     workspaceRef.current.executeCompiledSong();
     const playbackEvents = simple2SequencerRef.current.getPlaybackEvents();
     dispatch(setExemplarPlaybackEvents(playbackEvents));
-  }, [dispatch, source]);
+  }, [dispatch, packId, source]);
 
   useEffect(() => {
     onMount();
