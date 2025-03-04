@@ -45,7 +45,7 @@
     "./button/index.css": "./dist/esm/button/index.css",
     "./carousel": {
       "types": {
-        "import": "./dist/esm/carousel/index.d.mts",
+        "import": "./dist/esm/carousel/index.d.ts",
         "require": "./dist/cjs/carousel/index.d.ts"
       },
       "import": "./dist/esm/carousel/index.mjs",
