@@ -16,7 +16,6 @@ import {SchoolInformation} from '@cdo/apps/accounts/SchoolInformation';
 import TurnOffAiDiff from '@cdo/apps/accounts/TurnOffAiDiff';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import statsigSessionReplay from '@cdo/apps/metrics/StatsigSessionReplay';
 import {getStore} from '@cdo/apps/redux';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import color from '@cdo/apps/util/color';
@@ -42,8 +41,6 @@ const {
 } = scriptData;
 
 $(document).ready(() => {
-  const replay = new statsigSessionReplay();
-  replay.startRecording();
   const migrateMultiAuthMountPoint =
     document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {
