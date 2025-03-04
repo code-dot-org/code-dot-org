@@ -302,12 +302,12 @@ export type StandaloneAppName =
 // A validation condition.
 export interface Condition {
   name: string;
-  value?: string | number;
+  value?: string | number | object;
 }
 
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number';
+  valueType?: 'string' | 'number' | 'json';
   description: string;
 }
 

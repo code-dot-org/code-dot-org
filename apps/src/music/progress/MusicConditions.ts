@@ -131,4 +131,9 @@ export const MusicConditions: ConditionNames = {
     description:
       'Checks if a given trigger button (1, 2, 3, 4) is pressed. Ex. Value: 1',
   },
+  PLAYED_SOUNDS_IN_SEQUENCE: {
+    name: 'played_sounds_in_sequence',
+    valueType: 'json',
+    description: 'Checks if the given sequence has been played.',
+  },
 };
