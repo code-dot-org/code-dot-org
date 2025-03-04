@@ -19,6 +19,7 @@ import {BlocklySource} from '@cdo/apps/lab2/types';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -374,6 +375,17 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
+  const headerContent = (
+    <div className={moduleStyles.centerHeaderContent}>
+      <div className={moduleStyles.centerHeaderContentText}>
+        {musicI18n.panelHeaderWorkspace()}
+      </div>
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
+      )}
+    </div>
+  );
+
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
       {allowPackSelection && <PackDialog player={player} />}
@@ -398,7 +410,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           <PanelContainer
             id="workspace-panel"
-            headerContent={musicI18n.panelHeaderWorkspace()}
+            headerContent={headerContent}
             hideHeaders={hideHeaders}
             rightHeaderContent={
               <HeaderButtons

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-26 16:23:20 UTC",
+    "serialized_at": "2025-03-03 22:53:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -55,6 +55,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -370,7 +371,8 @@
       "key": "7744b31a-ad1c-4f08-9f43-2621c698941b",
       "position": 1,
       "properties": {
-        "description": "- Formative: FRQ / Multi / Match / Hotspot / Parson\n- Summative: Validated"
+        "description": "- Formative: FRQ / Multi / Match / Hotspot / Parson\n- Summative: Validated",
+        "progression_name": "Sequencing - Explore"
       },
       "seeding_key": {
         "activity_section.key": "7744b31a-ad1c-4f08-9f43-2621c698941b",
@@ -381,7 +383,8 @@
       "key": "fac77d94-7225-4901-b503-3607d4af0194",
       "position": 1,
       "properties": {
-        "description": "- Formative: Validated\n- Summative: Mini-Rubric"
+        "description": "- Formative: Validated\n- Summative: Mini-Rubric",
+        "progression_name": "Sequencing - Practice"
       },
       "seeding_key": {
         "activity_section.key": "fac77d94-7225-4901-b503-3607d4af0194",
@@ -392,7 +395,8 @@
       "key": "e893f1f5-5c15-47e3-929f-4b743636d3c3",
       "position": 1,
       "properties": {
-        "description": "- Formative: Validated\n- Summative: Mini-Rubric"
+        "description": "- Formative: Validated\n- Summative: Mini-Rubric",
+        "progression_name": "Sequencing - Synthesis"
       },
       "seeding_key": {
         "activity_section.key": "e893f1f5-5c15-47e3-929f-4b743636d3c3",
@@ -403,7 +407,8 @@
       "key": "804786e6-c6af-4819-8038-77082a11af00",
       "position": 1,
       "properties": {
-        "description": "- Formative: FRQ / Multi / Match / Hotspot / Parson\n- Summative: Validated"
+        "description": "- Formative: FRQ / Multi / Match / Hotspot / Parson\n- Summative: Validated",
+        "progression_name": "Loops - Explore"
       },
       "seeding_key": {
         "activity_section.key": "804786e6-c6af-4819-8038-77082a11af00",
@@ -414,7 +419,8 @@
       "key": "29940a56-aa43-473e-9d88-ba352b297563",
       "position": 1,
       "properties": {
-        "description": "- Formative: Validated\n- Summative: Mini-Rubric"
+        "description": "- Formative: Validated\n- Summative: Mini-Rubric",
+        "progression_name": "Loops - Practice"
       },
       "seeding_key": {
         "activity_section.key": "29940a56-aa43-473e-9d88-ba352b297563",
@@ -853,6 +859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-simple-functions-test"
+        ],
         "progression": "Functions Test"
       },
       "bonus": false,
@@ -867,6 +876,244 @@
       },
       "level_keys": [
         "music-lab-simple-functions-test"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-sequence-explore-formative"
+        ],
+        "progression": "Sequencing - Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequence-explore-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7744b31a-ad1c-4f08-9f43-2621c698941b"
+      },
+      "level_keys": [
+        "music-lab-sequence-explore-formative"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-sequence-explore-evaluative"
+        ],
+        "progression": "Sequencing - Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequence-explore-evaluative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7744b31a-ad1c-4f08-9f43-2621c698941b"
+      },
+      "level_keys": [
+        "music-lab-sequence-explore-evaluative"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-sequence-practice-formative"
+        ],
+        "progression": "Sequencing - Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequence-practice-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "fac77d94-7225-4901-b503-3607d4af0194"
+      },
+      "level_keys": [
+        "music-lab-sequence-practice-formative"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-sequencing-practice-evaluative"
+        ],
+        "progression": "Sequencing - Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequencing-practice-evaluative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "fac77d94-7225-4901-b503-3607d4af0194"
+      },
+      "level_keys": [
+        "music-lab-sequencing-practice-evaluative"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-sequencing-synthesis-formative"
+        ],
+        "progression": "Sequencing - Synthesis"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequencing-synthesis-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "e893f1f5-5c15-47e3-929f-4b743636d3c3"
+      },
+      "level_keys": [
+        "music-lab-sequencing-synthesis-formative"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-sequencing-synthesis-evaluative"
+        ],
+        "progression": "Sequencing - Synthesis"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequencing-synthesis-evaluative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "e893f1f5-5c15-47e3-929f-4b743636d3c3"
+      },
+      "level_keys": [
+        "music-lab-sequencing-synthesis-evaluative"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops - Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-loops-explore-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "804786e6-c6af-4819-8038-77082a11af00"
+      },
+      "level_keys": [
+        "music-lab-loops-explore-formative"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops - Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-loops-explore-summative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "804786e6-c6af-4819-8038-77082a11af00"
+      },
+      "level_keys": [
+        "music-lab-loops-explore-summative"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops - Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-loops-practice-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "29940a56-aa43-473e-9d88-ba352b297563"
+      },
+      "level_keys": [
+        "music-lab-loops-practice-formative"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops - Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-loops-practice-summative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "29940a56-aa43-473e-9d88-ba352b297563"
+      },
+      "level_keys": [
+        "music-lab-loops-practice-summative"
       ]
     }
   ],
@@ -1049,6 +1296,126 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "ff9f2856-d529-46ef-ac44-87b6bec697f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequence-explore-formative",
+        "script_level.level_keys": [
+          "music-lab-sequence-explore-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7744b31a-ad1c-4f08-9f43-2621c698941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequence-explore-evaluative",
+        "script_level.level_keys": [
+          "music-lab-sequence-explore-evaluative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7744b31a-ad1c-4f08-9f43-2621c698941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequence-practice-formative",
+        "script_level.level_keys": [
+          "music-lab-sequence-practice-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "fac77d94-7225-4901-b503-3607d4af0194"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequencing-practice-evaluative",
+        "script_level.level_keys": [
+          "music-lab-sequencing-practice-evaluative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "fac77d94-7225-4901-b503-3607d4af0194"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequencing-synthesis-formative",
+        "script_level.level_keys": [
+          "music-lab-sequencing-synthesis-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "e893f1f5-5c15-47e3-929f-4b743636d3c3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequencing-synthesis-evaluative",
+        "script_level.level_keys": [
+          "music-lab-sequencing-synthesis-evaluative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "e893f1f5-5c15-47e3-929f-4b743636d3c3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-loops-explore-formative",
+        "script_level.level_keys": [
+          "music-lab-loops-explore-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "804786e6-c6af-4819-8038-77082a11af00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-loops-explore-summative",
+        "script_level.level_keys": [
+          "music-lab-loops-explore-summative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "804786e6-c6af-4819-8038-77082a11af00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-loops-practice-formative",
+        "script_level.level_keys": [
+          "music-lab-loops-practice-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "29940a56-aa43-473e-9d88-ba352b297563"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-loops-practice-summative",
+        "script_level.level_keys": [
+          "music-lab-loops-practice-summative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "29940a56-aa43-473e-9d88-ba352b297563"
       }
     }
   ],

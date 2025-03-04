@@ -6,7 +6,7 @@ wrong 'Application software is built into the hardware, while system software ru
 wrong 'System software is optional, while application software is required for a computer to run'
 wrong 'System software runs only on mobile devices, while application software runs on computers'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which statement best explains the difference between system software and application software?

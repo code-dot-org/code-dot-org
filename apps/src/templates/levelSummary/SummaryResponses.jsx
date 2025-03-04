@@ -39,7 +39,8 @@ const SummaryResponses = ({
   const isMulti =
     scriptData.levels[levelNumber].type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
-
+  const levelInstructions =
+    scriptData.levels[levelNumber].properties?.long_instructions;
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [showStudentNames, setShowStudentNames] = useState(false);
 
@@ -179,6 +180,7 @@ const SummaryResponses = ({
         {isFreeResponse && (
           <FreeResponseResponses
             responses={scriptData.responses[levelNumber]}
+            levelInstructions={levelInstructions}
             showStudentNames={showStudentNames}
             eventData={eventData}
           />

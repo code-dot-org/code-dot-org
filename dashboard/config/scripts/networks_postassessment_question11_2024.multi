@@ -6,7 +6,7 @@ right 'Decentralized networks with redundancy'
 wrong 'Limiting the number of users'
 wrong 'Slowing down Internet speeds for new users'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A popular social media platform suddenly experiences a surge in users. What Internet feature helps prevent the site from crashing due to high traffic?

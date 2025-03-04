@@ -6,7 +6,7 @@ wrong '![](https://images.code.org/add73876a4c56cadf6b262cab922df2b-image-174050
 wrong '![](https://images.code.org/ccec169053a337af5e13cf1c3b581b55-image-1740503191261.png)'
 wrong '![](https://images.code.org/806791763b3a88fca358ad276926442b-image-1740503209347.png)'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 6: Functions and Parameters

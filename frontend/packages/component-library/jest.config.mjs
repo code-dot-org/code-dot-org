@@ -1,3 +1,6 @@
+import {dirname} from 'path';
+import {fileURLToPath} from 'url';
+
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
 export default {
   testEnvironment: 'jsdom',
@@ -8,7 +11,7 @@ export default {
         jsc: {
           baseUrl: '.',
           paths: {
-            '@/*': ['./src/*'],
+            '@/*': [`${dirname(fileURLToPath(import.meta.url))}/src/*`],
           },
           transform: {
             react: {
@@ -20,6 +23,7 @@ export default {
     ],
   },
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|scss|sass)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],

@@ -6,7 +6,7 @@ wrong 'To monitor the speed of an Internet connection'
 wrong 'To store all website content on local computers'
 right 'To translate human-friendly domain names into IP addresses'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is the role of the Domain Name System (DNS)?

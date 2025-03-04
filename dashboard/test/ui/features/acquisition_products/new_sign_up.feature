@@ -3,7 +3,7 @@ Feature: Teacher can create a new account in new sign up flow
 
 Scenario: Teacher can create a school associated account in the new sign up flow
 
-  Given I am on "http://studio.code.org/users/new_sign_up/account_type"
+  Given I am on "http://studio.code.org/users/sign_up/account_type"
   And I open my eyes to test "Teacher Sign up"
   And I see no difference for "Account Selection Page"
   And I press the last button with text "Sign up as a teacher" to load a new page
@@ -23,7 +23,7 @@ Scenario: Teacher can create a school associated account in the new sign up flow
 
 Scenario: Student can create an account in the new sign up flow
 
-  Given I am on "http://studio.code.org/users/new_sign_up/account_type"
+  Given I am on "http://studio.code.org/users/sign_up/account_type"
   And I press the last button with text "Sign up as a student" to load a new page
   And I fill in the new sign up email field with a random email
   And I press keys "password" for element "#uitest-password"
@@ -39,7 +39,7 @@ Scenario: Student can create an account in the new sign up flow
 
 Scenario: 10yo student hits Colorado lockout
 
-  Given I am on "http://studio.code.org/users/new_sign_up/account_type"
+  Given I am on "http://studio.code.org/users/sign_up/account_type"
   When I use a cookie to mock the DCDO key "cpa_experience" as "true"
   And I press the last button with text "Sign up as a student" to load a new page
   And I fill in the new sign up email field with a random email

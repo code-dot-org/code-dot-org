@@ -6,7 +6,7 @@ right 'A combination of hardware and software that processes information'
 wrong 'The physical devices that connect to the internet'
 wrong 'A single piece of hardware'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A computer system consists of multiple components working together. Which statement best describes this system?

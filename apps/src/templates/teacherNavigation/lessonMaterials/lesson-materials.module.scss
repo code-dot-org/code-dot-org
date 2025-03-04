@@ -7,6 +7,12 @@
   justify-content: space-between;
 }
 
+.lessonMaterialsDropdowns {
+  display: flex;
+  gap: 16px;
+  margin-right: 16px;
+}
+
 .rowContainer {
   display: flex;
   height: 48px;
@@ -30,7 +36,6 @@
 }
 
 .resourcesTable {
-  margin-top: 20px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
 }
@@ -101,4 +106,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.viewOptionsDropdown {
+  margin-left: 16px;
+
+  & li {
+    min-width: 200px;
+  }
+}
+
+.lessonMaterialsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skeletonDropdown {
+  width: 250px;
+  border-radius: 0.25rem;
+  height: 2rem;
+  margin-inline-start: 8px;
+}
+
+.unitSelector{
+  max-width: 400px;
 }

@@ -4,6 +4,41 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Next Steps
+#### Congratulations! You completed Code.org's Getting Started with Professional Learning module. In this module, you: 
+<div style="font-size: 18px;">
+   <div> 
+        ✅ Got an introduction to Code.org's mission.
+    </div>
+       <br>
+   <div>
+        ✅ Became a  <a href="https://www.example.com" target="_blank">verified teacher</a>
+    </div><br>
+   <div>
+        ✅ Learned how to navigate the Code.org website and teacher tools.
+     
+    </div>
+    <br>
+    <div>
+      ✅ Set up a  <a href="https://www.example.com" target="_blank">classroom section</a>
+    </div>
+<br>
+   <div>
+        ✅ Added a <a href="https://www.example.com" target="_blank">course</a>
+    </div>
+<br>
+   <div>
+        ✅ Located and used course  <a href="https://www.example.com" target="_blank">lesson plans</a> and <a href="https://www.example.com" target="_blank">teacher resources.</a>
+    </div>
+    <br>
+   <div>
+        ✅ Posted on the <a href="https://www.example.com" target="_blank"> Teacher Forum</a>
+    </div>
+<br>
+   <div>
+        ✅ Learned how to  <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula.
+    </div>
+
+
 
 ##What Do I Do Next? 
 

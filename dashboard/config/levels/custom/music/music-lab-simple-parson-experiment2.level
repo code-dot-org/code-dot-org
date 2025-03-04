@@ -57,29 +57,11 @@
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
-              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
               "fields": {
-                "times": 5
-              }
-            },
-            {
-              "type": "play_sound_at_current_location_simple2",
-              "id": "nR]tk,X}ew;K_IxlLE-N",
-              "x": 230,
-              "y": 150,
-              "disabledReasons": [
-                "MANUALLY_DISABLED"
-              ],
-              "deletable": false,
-              "editable": false,
-              "extraState": {
-                "disableNextConnection": false
-              },
-              "fields": {
-                "sound": "mc_hammer_u_cant_touch_this/break_it_down"
+                "times": 3
               }
             },
             {
@@ -101,9 +83,26 @@
             },
             {
               "type": "play_sound_at_current_location_simple2",
+              "id": "nR]tk,X}ew;K_IxlLE-N",
+              "x": 230,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "mc_hammer_u_cant_touch_this/break_it_down"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
               "id": "play_sound_at_current_location_simple2",
-              "x": 270,
-              "y": 90,
+              "x": 330,
+              "y": 50,
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
@@ -144,7 +143,7 @@
       },
       "packId": "mc_hammer_u_cant_touch_this"
     },
-    "long_instructions": "Code the song so that:\r\n- \"Stop - Hammer Time\" plays exactly once\r\n- the \"Main Loop\" plays 10 times\r\n- \"Break it down\" plays 2 times\r\n\r\n**[Click Here to see and hear the final result](https://drive.google.com/file/d/1g9y0gCavOxwxu4_wQzfWecBVSFK0sSrt/view?usp=sharing)**",
+    "long_instructions": "Code the song so that:\r\n- \"Stop - Hammer Time\" plays exactly once\r\n- the \"Main Loop\" plays 6 times\r\n- \"Break it down\" plays 2 times\r\n\r\nListen to the example below to hear how it sounds",
     "validations": [
       {
         "key": "music-lab-simple-parson-experiment_2423241e-6580-4bb6-a085-d989c497c305",
@@ -157,7 +156,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-12T02:50:46.416+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-parson-experiment\\\"\"],\"cloned_from\":\"music-lab-simple-parson-experiment\"},{\"changed_at\":\"2025-02-12 02:51:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:53:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:55:01 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:59:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-12T02:50:46.416+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-parson-experiment\\\"\"],\"cloned_from\":\"music-lab-simple-parson-experiment\"},{\"changed_at\":\"2025-02-12 02:51:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:53:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:55:01 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:59:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-03 18:06:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-03 18:07:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -6,7 +6,7 @@ wrong 'To test for errors in a program'
 wrong 'To repeat a process multiple times'
 wrong 'To store large amounts of data'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is **decomposition** used for when solving programming problems?
