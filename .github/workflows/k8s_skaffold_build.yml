@@ -1,6 +1,6 @@
 # This is currently an experimental feature, see: k8s/experimental.yaml
 
-name: 'k8s: skaffold build'
+name: k8s
 on:
   # Trigger on merges into production (i.e. DTP), or on any PR, however note that we filter
   # PRs down to PRs where the source-branch is *k8s* using `if:` blocks below.
@@ -146,7 +146,7 @@ jobs:
 
   # Step 2: stitch the platform specific images into a multi-platform image
   stitch-multi-platform:
-    name: Stitch a Multi-Platform Image from Platform-Specific Images
+    name: stitch multi-platform image
 
     # while experimental, we /never/ want to block normal PR work:
     continue-on-error: true
