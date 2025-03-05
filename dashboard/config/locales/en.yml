@@ -1177,7 +1177,7 @@ en:
   view_teacher_guide: 'View teacher guide'
   curriculum_catalog:
     title: "Curriculum Catalog"
-    description: 'Courses, tutorials, and more designed to teach computer science, artificial intelligence, coding and more to all ages and experience levels.'
+    description: 'Courses, tutorials, and more designed to teach computer science, artificial intelligence, coding, and more to all ages and experience levels.'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
