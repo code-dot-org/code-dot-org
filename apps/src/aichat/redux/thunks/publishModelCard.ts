@@ -13,9 +13,11 @@ import {saveAiCustomization} from './helpers/saveAiCustomization';
 export const publishModelCard = createAsyncThunk(
   'aichat/publishModelCard',
   async (_, {dispatch, getState}) => {
-    const state = getState() as RootState;
-
     dispatch(setModelCardProperty({property: 'isPublished', value: true}));
+
+    // Note that it's important that we get the state after we dispatch the Redux action to publish the model card.
+    // Otherwise, there's no state change detected and the updated published state won't be saved.
+    const state = getState() as RootState;
     await saveAiCustomization(
       state.aichat.currentAiCustomizations,
       'publishModelCard',

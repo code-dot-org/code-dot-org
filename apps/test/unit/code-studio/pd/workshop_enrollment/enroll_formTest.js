@@ -91,7 +91,8 @@ describe('Enroll Form', () => {
   const renderDefault = (overrides = {}) =>
     shallow(<EnrollForm {...props} {...overrides} />);
 
-  const getLabelSelector = key => `Label[text="${labelKeyToTextMap[key]}"]`;
+  const getLabelSelector = key =>
+    `FormFieldWrapper[label="${labelKeyToTextMap[key]}"]`;
   const getIdSelector = key => `#${key}`;
 
   const testValidateFields = (params, selector) => {
@@ -578,7 +579,7 @@ describe('Enroll Form', () => {
 
       const error = enrollForm
         .find('.school_info_container')
-        .find('Label')
+        .find('FormFieldWrapper')
         .prop('errorMessage');
       expect(error).to.be.defined;
       expect(fetchStub.called).to.be.false;

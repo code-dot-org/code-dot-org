@@ -1,9 +1,7 @@
-import {Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import i18n from '@cdo/locale';
 
 import {SectionCard} from './SectionCard';
 
@@ -22,10 +20,5 @@ export const SectionList: React.FC = () => {
     return sectionElementList;
   };
 
-  return (
-    <div className={styles.sectionList}>
-      <Heading4>{i18n.classSections()}</Heading4>
-      {getSectionList(sections)}
-    </div>
-  );
+  return <div className={styles.sectionList}>{getSectionList(sections)}</div>;
 };
