@@ -12,6 +12,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 describe('SectionList', () => {
   const sections = [
@@ -55,11 +56,23 @@ describe('SectionList', () => {
 
   let store: Store;
 
+  const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+
   beforeEach(() => {
     store = getStore();
     registerReducers({teacherSections, currentUser});
     store.dispatch(setSections(serverSections));
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+      return Promise.resolve({value: {}, response: new Response()});
+    });
   });
 
   function renderComponent() {
@@ -74,5 +87,15 @@ describe('SectionList', () => {
     renderComponent();
     screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
+  });
+
+  it('create section button opens popup', async () => {
+    renderComponent();
+
+    screen.getByRole('button', {name: 'New class section'}).click();
+
+    await screen.findByText('Create a new section');
+    screen.getByText('Picture password');
+    screen.getByRole('button', {name: 'Cancel'});
   });
 });
