@@ -3,6 +3,8 @@
 
 import {Condition, ExemplarSettings, Validation} from '@cdo/apps/lab2/types';
 
+import {getAppOptionsEditingExemplar} from '../projects/utils';
+
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
@@ -13,17 +15,8 @@ export abstract class Validator {
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
-  setExemplarSettings(settings?: ExemplarSettings): void {
-    this.exemplarSettings = settings;
-  }
-  shouldValidateWithExemplar(): boolean {
+  didPassExemplarValidation(): boolean {
     return false;
-  }
-  getExemplarValidationResults(): {
-    satisfied: boolean;
-    message: string;
-  } {
-    return {satisfied: true, message: ''};
   }
 }
 
@@ -87,7 +80,6 @@ export default class ProgressManager {
 
   setValidator(validator: Validator) {
     this.validator = validator;
-    this.validator.setExemplarSettings(this.exemplarSettings);
   }
 
   getCurrentState(): ValidationState {
@@ -111,6 +103,10 @@ export default class ProgressManager {
     // can be used by multiple validations.
     this.validator.checkConditions();
 
+    const exemplarSettings = this.exemplarSettings;
+    const shouldValidateExample =
+      !getAppOptionsEditingExemplar() && exemplarSettings?.validationEnabled;
+
     // Go through each validation to see if we have a match.
     for (const validation of this.currentValidations) {
       // If it's a non-successful validation (i.e. validation.next is false), then
@@ -130,10 +126,14 @@ export default class ProgressManager {
             this.currentValidationState.message = validation.message;
             this.currentValidationState.callout = validation.callout;
             if (this.currentValidationState.satisfied && validation.next) {
-              if (this.validator.shouldValidateWithExemplar()) {
+              if (shouldValidateExample) {
+                const satisfied = this.validator.didPassExemplarValidation();
                 this.currentValidationState = {
                   ...this.currentValidationState,
-                  ...this.validator.getExemplarValidationResults(),
+                  satisfied,
+                  message: satisfied
+                    ? exemplarSettings.validationSuccessMessage!
+                    : exemplarSettings.validationFailureMessage!,
                 };
               }
             }
