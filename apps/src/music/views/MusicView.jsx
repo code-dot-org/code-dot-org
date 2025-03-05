@@ -157,8 +157,7 @@ class UnconnectedMusicView extends React.Component {
       this.getExemplarPlaybackEvents,
       this.getValidationTimeout,
       this.player,
-      this.getPlayingTriggers,
-      this.getExemplarSettings
+      this.getPlayingTriggers
     );
 
     // Set shared shared objects in the MusicRegistry so views outside of this
@@ -465,10 +464,6 @@ class UnconnectedMusicView extends React.Component {
 
   getPlaybackEvents = () => {
     return this.props.playbackEvents;
-  };
-
-  getExemplarSettings = () => {
-    return this.props.levelProperties.exemplarSettings;
   };
 
   getPlayingTriggers = () => {

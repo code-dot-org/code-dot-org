@@ -1,22 +1,30 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {Condition, Validation} from '@cdo/apps/lab2/types';
+import {Condition, ExemplarSettings, Validation} from '@cdo/apps/lab2/types';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
-  abstract shouldValidateWithExemplar(): boolean;
-  abstract getExemplarValidationResults(): {
-    satisfied: boolean;
-    message: string;
-  };
+  exemplarSettings: ExemplarSettings | undefined;
   abstract shouldCheckConditions(): boolean;
   abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
+  setExemplarSettings(settings?: ExemplarSettings): void {
+    this.exemplarSettings = settings;
+  }
+  shouldValidateWithExemplar(): boolean {
+    return false;
+  }
+  getExemplarValidationResults(): {
+    satisfied: boolean;
+    message: string;
+  } {
+    return {satisfied: true, message: ''};
+  }
 }
 
 // The current progress validation state.
@@ -56,6 +64,7 @@ export default class ProgressManager {
   private validator: Validator | undefined;
   private onProgressChange: () => void;
   private currentValidationState: ValidationState;
+  exemplarSettings: ExemplarSettings | undefined;
 
   constructor(onProgressChange: () => void) {
     this.currentValidations = undefined;
@@ -67,13 +76,18 @@ export default class ProgressManager {
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(validations?: Validation[]) {
+  onLevelChange(
+    validations?: Validation[],
+    exemplarSettings?: ExemplarSettings
+  ) {
     this.currentValidations = validations;
+    this.exemplarSettings = exemplarSettings;
     this.resetValidation();
   }
 
   setValidator(validator: Validator) {
     this.validator = validator;
+    this.validator.setExemplarSettings(this.exemplarSettings);
   }
 
   getCurrentState(): ValidationState {

@@ -81,18 +81,8 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     }
   }, [isPlaying, exemplarIsPlaying, onStopSong]);
 
-  const getPackDetails = (packId: string) => {
-    const packFolder = MusicLibrary.getInstance()?.getFolderForFolderId(packId);
-    if (!packFolder) {
-      return null;
-    }
-    return {
-      name: packFolder.name,
-      artist: packFolder.artist,
-      color: packFolder.color,
-      image: MusicLibrary.getInstance()?.getPackImageUrl(packId),
-    };
-  };
+  // The exemplar player always uses the default pack image to reduce distraction.
+  const packImage = MusicLibrary.getInstance()?.getPackImageUrl(DEFAULT_PACK);
 
   return (
     <div className={moduleStyles.exemplarPlayer}>
@@ -111,8 +101,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
         >
           <img
             className={moduleStyles.packImage}
-            // The exemplar player always uses the default pack image to reduce distraction.
-            src={getPackDetails(DEFAULT_PACK)?.image}
+            src={packImage}
             alt=""
             draggable={false}
           />

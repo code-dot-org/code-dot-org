@@ -195,6 +195,7 @@ export interface LevelProperties {
   // Exemplars
   exampleSolutions?: string[];
   exemplarSources?: Source;
+  exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
@@ -209,7 +210,6 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
-  exemplarSettings?: ExemplarSettings;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -242,9 +242,13 @@ interface VideoData extends VideoLevelData {
 
 // Exemplar settings for a level.
 export interface ExemplarSettings {
+  // Validation settings (always expected)
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;
+  // Player settings (optional, only used for Music)
+  playerEnabled?: boolean;
+  playerTitle?: string;
 }
 
 // Python Lab specific property

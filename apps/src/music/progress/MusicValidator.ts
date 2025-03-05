@@ -28,6 +28,7 @@ export interface ConditionNames {
 }
 
 export default class MusicValidator extends Validator {
+  exemplarSettings: ExemplarSettings | undefined;
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
@@ -35,7 +36,6 @@ export default class MusicValidator extends Validator {
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly getPlayingTriggers: () => PlayingTrigger[],
-    private readonly getExemplarSettings: () => ExemplarSettings | undefined,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
@@ -46,23 +46,20 @@ export default class MusicValidator extends Validator {
   shouldValidateWithExemplar(): boolean {
     const isEditingExemplar = getAppOptionsEditingExemplar();
     return (
-      !isEditingExemplar &&
-      (this.getExemplarSettings()?.validationEnabled ?? false)
+      !isEditingExemplar && (this.exemplarSettings?.validationEnabled ?? false)
     );
   }
 
   getExemplarValidationResults(): {satisfied: boolean; message: string} {
     if (!this.shouldValidateWithExemplar()) {
-      throw new Error(
-        'Exemplar validation is disabled; cannot retrieve exemplar validation results.'
-      );
+      return {satisfied: true, message: ''};
     }
     const satisfied = this.validatePlaybackEventsEquivalent();
     return {
       satisfied,
       message: satisfied
-        ? this.getExemplarSettings()!.validationSuccessMessage
-        : this.getExemplarSettings()!.validationFailureMessage,
+        ? this.exemplarSettings!.validationSuccessMessage
+        : this.exemplarSettings!.validationFailureMessage,
     };
   }
 

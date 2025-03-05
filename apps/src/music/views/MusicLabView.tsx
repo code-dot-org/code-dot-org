@@ -15,7 +15,7 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {BlocklySource} from '@cdo/apps/lab2/types';
+import {BlocklySource, ExemplarSettings} from '@cdo/apps/lab2/types';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -36,7 +36,6 @@ import {
   setCurrentPlayheadPosition,
   showCallout,
 } from '../redux/musicRedux';
-import {MusicExemplarSettings} from '../types';
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
@@ -124,7 +123,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   ) as BlocklySource | undefined;
   const exemplarSettings = useAppSelector(
     state => state.lab.levelProperties?.exemplarSettings
-  ) as MusicExemplarSettings | undefined;
+  ) as ExemplarSettings | undefined;
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -302,7 +301,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               !isEditingExemplar && (
                 <ExemplarPlayerView
                   getPlaybackEvents={getExemplarEvents}
-                  title={exemplarSettings.playerTitle}
+                  title={exemplarSettings.playerTitle!}
                   packId={currentPackId}
                 />
               )}

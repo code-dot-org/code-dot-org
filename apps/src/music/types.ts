@@ -1,6 +1,5 @@
 import * as GoogleBlockly from 'blockly/core';
 
-import ExemplarSettings from '../lab2/levelEditors/exemplar/ExemplarSettings';
 import {ProjectLevelData} from '../lab2/types';
 import {ValueOf} from '../types/utils';
 
@@ -33,8 +32,3 @@ export type SoundLoadCallbacks = {
   onLoadFinished?: LoadFinishedCallback;
   updateLoadProgress?: UpdateLoadProgressCallback;
 };
-
-export interface MusicExemplarSettings extends ExemplarSettings {
-  playerEnabled: boolean;
-  playerTitle: string;
-}
