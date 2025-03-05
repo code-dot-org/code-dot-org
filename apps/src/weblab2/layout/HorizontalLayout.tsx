@@ -8,6 +8,13 @@ import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
+const MIN_INFO_PANEL_WIDTH = 150;
+const INITIAL_INFO_PANEL_WIDTH = 300;
+const MIN_EDITOR_HEIGHT = 200;
+const MIN_PREVIEW_HEIGHT = 200;
+const INITIAL_PREVIEW_HEIGHT = 400;
+const MIN_RIGHT_PANEL_WIDTH = 300;
+
 const HorizontalLayout: React.FunctionComponent = () => {
   const {
     leftPanelWidth,
@@ -20,20 +27,20 @@ const HorizontalLayout: React.FunctionComponent = () => {
     rightBottomPanelDragging,
   } = useHorizontalLayout({
     leftPanel: {
-      minWidth: 150,
-      initialWidth: 300,
+      minWidth: MIN_INFO_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
       name: 'instructions',
     },
     rightTopPanel: {
-      minHeight: 300,
+      minHeight: MIN_EDITOR_HEIGHT,
       name: 'editor',
     },
     rightBottomPanel: {
-      minHeight: 200,
-      initialHeight: 600,
+      minHeight: MIN_PREVIEW_HEIGHT,
+      initialHeight: INITIAL_PREVIEW_HEIGHT,
       name: 'preview',
     },
-    minRightPanelWidth: 300,
+    minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
   });
 
   return (

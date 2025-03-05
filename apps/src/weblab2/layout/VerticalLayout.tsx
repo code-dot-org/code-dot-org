@@ -8,6 +8,12 @@ import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
+const MIN_INFO_PANEL_WIDTH = 150;
+const INITIAL_INFO_PANEL_WIDTH = 300;
+const MIN_EDITOR_WIDTH = 300;
+const MIN_PREVIEW_WIDTH = 200;
+const INITIAL_PREVIEW_WIDTH = 600;
+
 const VerticalLayout: React.FunctionComponent = () => {
   const {
     leftPanelWidth,
@@ -17,17 +23,17 @@ const VerticalLayout: React.FunctionComponent = () => {
     leftPanelDragging,
   } = useVerticalLayout({
     leftPanel: {
-      minWidth: 150,
-      initialWidth: 300,
+      minWidth: MIN_INFO_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
       name: 'instructions',
     },
     middlePanel: {
-      minWidth: 300,
+      minWidth: MIN_EDITOR_WIDTH,
       name: 'editor',
     },
     rightPanel: {
-      minWidth: 200,
-      initialWidth: 600,
+      minWidth: MIN_PREVIEW_WIDTH,
+      initialWidth: INITIAL_PREVIEW_WIDTH,
       name: 'preview',
     },
   });

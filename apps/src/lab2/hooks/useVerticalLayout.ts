@@ -16,6 +16,8 @@ interface UseVerticalLayoutProps {
 
 /**
  * Hook that manages the layout of a lab with 3 vertical, resizable panels.
+ * The resize bars are used to adjust the width of the left and right panels,
+ * and the middle panel takes up the remaining space, but won't go below its minimum width.
  * To be used in conjunction with the ResizeBar component.
  * See pythonlab/layout/VerticalLayout for a usage example.
  */
@@ -109,8 +111,9 @@ export const useVerticalLayout = ({
   }, [adjustWidths]);
 
   useEffect(() => {
-    // Flexbox can handle adjusting the widths of the panel to fit the screen, but the
-    // output panel needs an accurate width in order to resize the visualization appropriately.
+    // Flexbox can handle adjusting the widths of the panel to fit the screen, but some
+    // panels needs an accurate width in order to resize appropriately (for example, output panels
+    // in pythonlab resize the visualization).
     window.addEventListener('resize', adjustWidths);
     return () => window.removeEventListener('resize', adjustWidths);
   }, [adjustWidths]);

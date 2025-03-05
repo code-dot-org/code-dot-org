@@ -20,7 +20,15 @@ interface UseHorizontalLayoutProps {
   rightBottomPanel: RowPanelConfig;
   minRightPanelWidth: number;
 }
-
+/**
+ * Hook that manages the layout of a lab with 3 resizable panels.
+ * The page is split into two columns, with the left column containing the left panel.
+ * The right column contains 2 panels, the right top panel and the right bottom panel.
+ * The resize bars adjust the width of the left panel and the height of the right bottom panel,
+ * and the right top panel and right column take up the remaining space (but will not go below their minimum sizes).
+ * To be used in conjunction with the ResizeBar component.
+ * See pythonlab/layout/HorizontalLayout for a usage example.
+ */
 export const useHorizontalLayout = ({
   leftPanel,
   rightTopPanel,
@@ -143,8 +151,9 @@ export const useHorizontalLayout = ({
   }, [throttledAdjustWorkspaceHeight]);
 
   useEffect(() => {
-    // Flexbox can handle adjusting the widths of the panel to fit the screen, but the
-    // output panel needs an accurate width in order to resize the visualization appropriately.
+    // Flexbox can handle adjusting the widths of the panel to fit the screen, but some
+    // panels needs an accurate width in order to resize appropriately (for example, output panels
+    // in pythonlab resize the visualization).
     window.addEventListener('resize', throttledResize);
     return () => window.removeEventListener('resize', throttledResize);
   }, [throttledResize]);
