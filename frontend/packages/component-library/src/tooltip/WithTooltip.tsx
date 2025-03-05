@@ -124,7 +124,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     ...tooltipStyles,
   };
 
-  // Check if child is a valid React element and clone it with ariaDescribedBy attribute
+  // Check if children prop is a valid React element and clone it with ariaDescribedBy attribute
   // and additional event handlers to make sure the tooltip is displayed correctly
   const componentToWrap =
     isValidElement<HTMLAttributes<HTMLElement>>(children) &&
