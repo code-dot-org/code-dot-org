@@ -1,7 +1,7 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, NavigateFunction} from 'react-router-dom';
 
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,
@@ -15,47 +15,50 @@ export interface SectionOptionsDropdownProps {
   sectionId: number;
 }
 
+const onSectionSettingsClick = (
+  navigate: NavigateFunction,
+  sectionId: number
+) => {
+  navigate(
+    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
+  );
+};
+
+const onRosterClick = (navigate: NavigateFunction, sectionId: number) => {
+  navigate(
+    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
+  );
+};
+
+const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
+  navigate(
+    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
+  );
+};
+
 export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   sectionId,
 }) => {
   const navigate = useNavigate();
-
-  const onSectionSettingsClick = () => {
-    navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
-    );
-  };
-
-  const onRosterClick = () => {
-    navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
-    );
-  };
-
-  const onLoginCardsClick = () => {
-    navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
-    );
-  };
 
   const dropdownOptions: ActionDropdownOption[] = [
     {
       value: 'sectionSettings',
       label: i18n.sectionSettings(),
       icon: {iconName: 'gear', iconStyle: 'solid'},
-      onClick: onSectionSettingsClick,
+      onClick: () => onSectionSettingsClick(navigate, sectionId),
     },
     {
       value: 'roster',
       label: i18n.roster(),
       icon: {iconName: 'user', iconStyle: 'solid'},
-      onClick: onRosterClick,
+      onClick: () => onRosterClick(navigate, sectionId),
     },
     {
       value: 'loginCards',
       label: i18n.loginCards(),
       icon: {iconName: 'id-card', iconStyle: 'solid'},
-      onClick: onLoginCardsClick,
+      onClick: () => onLoginCardsClick(navigate, sectionId),
     },
   ];
 
