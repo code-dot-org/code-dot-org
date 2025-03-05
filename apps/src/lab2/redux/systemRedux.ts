@@ -11,6 +11,7 @@ export interface Lab2SystemState {
   isValidating: boolean;
   hasValidated: boolean;
   hasError: boolean;
+  runCount: number;
 }
 
 const initialState: Lab2SystemState = {
@@ -20,6 +21,7 @@ const initialState: Lab2SystemState = {
   isValidating: false,
   hasValidated: false,
   hasError: false,
+  runCount: 0,
 };
 
 // SLICE
@@ -45,6 +47,9 @@ const systemSlice = createSlice({
     setHasError(state, action: PayloadAction<boolean>) {
       state.hasError = action.payload;
     },
+    incrementRunCount(state) {
+      state.runCount += 1;
+    },
   },
 });
 
@@ -55,6 +60,7 @@ export const {
   setIsValidating,
   setHasValidated,
   setHasError,
+  incrementRunCount,
 } = systemSlice.actions;
 
 export default systemSlice.reducer;

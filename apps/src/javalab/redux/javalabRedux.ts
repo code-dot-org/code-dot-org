@@ -1,7 +1,6 @@
 /**
  * Redux store for generic Java Lab state.
  */
-
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 export interface JavalabState {
@@ -18,6 +17,7 @@ export interface JavalabState {
   hasRunOrTestedCode: boolean;
   isJavabuilderConnecting: boolean;
   isCaptchaDialogOpen: boolean;
+  runCount: number;
 }
 
 const initialState: JavalabState = {
@@ -34,6 +34,7 @@ const initialState: JavalabState = {
   hasRunOrTestedCode: false,
   isJavabuilderConnecting: false,
   isCaptchaDialogOpen: false,
+  runCount: 0,
 };
 
 const javalabSlice = createSlice({
@@ -89,6 +90,9 @@ const javalabSlice = createSlice({
     setIsCaptchaDialogOpen(state, action: PayloadAction<boolean>) {
       state.isCaptchaDialogOpen = action.payload;
     },
+    incrementRunCount(state) {
+      state.runCount += 1;
+    },
   },
 });
 
@@ -105,6 +109,7 @@ export const {
   setValidationPassed,
   setHasRunOrTestedCode,
   setIsCaptchaDialogOpen,
+  incrementRunCount,
 } = javalabSlice.actions;
 
 export default javalabSlice.reducer;

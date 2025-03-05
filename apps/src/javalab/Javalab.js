@@ -59,6 +59,7 @@ import javalab, {
   setHasRunOrTestedCode,
   setIsJavabuilderConnecting,
   setIsCaptchaDialogOpen,
+  incrementRunCount,
 } from './redux/javalabRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import Theater from './theater/Theater';
@@ -405,6 +406,7 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
 
   getStore().dispatch(setHasRunOrTestedCode(true));
   getStore().dispatch(setIsJavabuilderConnecting(true));
+  getStore().dispatch(incrementRunCount());
 
   this.studioApp_.attempts++;
 

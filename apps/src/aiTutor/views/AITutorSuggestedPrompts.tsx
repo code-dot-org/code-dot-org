@@ -23,32 +23,33 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
   const level = useAppSelector(state => state.aiTutor.level);
 
-  // For PythonLab
-  const pythonLabSource = useAppSelector(
+  // For pythonlab
+  const pythonlabSource = useAppSelector(
     state => state.lab2Project?.projectSources?.source
   );
-
-  const hasPythonLabError = useAppSelector(state => state.lab2System.hasError);
+  const hasPythonlabError = useAppSelector(state => state.lab2System.hasError);
   const hasRunPythonCode = useAppSelector(state => state.lab2System.hasRun);
+  const runCount = useAppSelector(state => state.lab2System.runCount);
+  console.log('runCount', runCount);
   const hasValidatedPythonCode = useAppSelector(
     state => state.lab2System.hasValidated
   );
-  const hasRunOrTestedPythonLabCode =
+  const hasRunOrTestedPythonlabCode =
     hasRunPythonCode || hasValidatedPythonCode;
-  const isPythonLabRunning = useAppSelector(
+  const isPythonlabRunning = useAppSelector(
     state => state.lab2System.isRunning
   );
-  const isPythonLabValidating = useAppSelector(
+  const isPythonlabValidating = useAppSelector(
     state => state.lab2System.isValidating
   );
   const {hasConditions, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
-  const pythonLabValidationFailed =
+  const pythonlabValidationFailed =
     hasConditions && hasValidatedPythonCode && !satisfied;
 
-  // For JavaLab
-  const javaLabSources = useAppSelector(state => state.javalabEditor.sources);
+  // For javalab
+  const javalabSources = useAppSelector(state => state.javalabEditor.sources);
   const fileMetadata = useAppSelector(
     state => state.javalabEditor.fileMetadata
   );
@@ -56,44 +57,46 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     state => state.javalabEditor.activeTabKey
   );
 
-  const hasJavaLabCompilationError = useAppSelector(
+  const hasJavalabCompilationError = useAppSelector(
     state => state.javalabEditor.hasCompilationError
   );
-  const hasRunOrTestedJavaLabCode = useAppSelector(
+  const hasRunOrTestedJavalabCode = useAppSelector(
     state => state.javalab.hasRunOrTestedCode
   );
-  const isJavaLabRunning = useAppSelector(state => state.javalab.isRunning);
-  const javaLabValidationPassed = useAppSelector(
+  const runCountJavalab = useAppSelector(state => state.javalab.runCount);
+  console.log('runCountJavalab', runCountJavalab);
+  const isJavalabRunning = useAppSelector(state => state.javalab.isRunning);
+  const javalabValidationPassed = useAppSelector(
     state => state.javalab.validationPassed
   );
 
   function getOptionsByLabType(labType: string) {
     if (labType === 'Pythonlab') {
       const studentCode =
-        typeof pythonLabSource !== 'string' && pythonLabSource
-          ? getActiveFileForSource(pythonLabSource)?.contents || ''
+        typeof pythonlabSource !== 'string' && pythonlabSource
+          ? getActiveFileForSource(pythonlabSource)?.contents || ''
           : '';
       // Only show a suggested prompt if we aren't currently running or validating code,
       // code has been run or validated, and we aren't waiting for a chat response.
       const showOption =
-        !isPythonLabRunning &&
-        !isPythonLabValidating &&
-        hasRunOrTestedPythonLabCode &&
+        !isPythonlabRunning &&
+        !isPythonlabValidating &&
+        hasRunOrTestedPythonlabCode &&
         !isWaitingForChatResponse;
-      const showGenericErrorOption = showOption && hasPythonLabError;
-      const showValidationOption = showOption && pythonLabValidationFailed;
+      const showGenericErrorOption = showOption && hasPythonlabError;
+      const showValidationOption = showOption && pythonlabValidationFailed;
       return {studentCode, showGenericErrorOption, showValidationOption};
     } else if (labType === 'Javalab') {
-      const studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
+      const studentCode = javalabSources[fileMetadata[activeTabKey]].text;
       const showCompilationOption =
-        !isJavaLabRunning &&
-        hasRunOrTestedJavaLabCode &&
-        hasJavaLabCompilationError &&
+        !isJavalabRunning &&
+        hasRunOrTestedJavalabCode &&
+        hasJavalabCompilationError &&
         !isWaitingForChatResponse;
       const showValidationOption =
-        hasRunOrTestedJavaLabCode &&
-        !hasJavaLabCompilationError &&
-        !javaLabValidationPassed &&
+        hasRunOrTestedJavalabCode &&
+        !hasJavalabCompilationError &&
+        !javalabValidationPassed &&
         !isWaitingForChatResponse;
       return {studentCode, showCompilationOption, showValidationOption};
     }
