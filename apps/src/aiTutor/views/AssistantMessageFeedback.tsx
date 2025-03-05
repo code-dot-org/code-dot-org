@@ -33,6 +33,8 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
   );
   const runCountJavalab = useAppSelector(state => state.javalab.runCount);
 
+  // If the user clicks on 'Run' or 'Validate', close the feedback details.
+  // This is to avoid displaying a suggested prompt chip(s) over feedback details.
   useEffect(() => {
     setDetailsOpen(false);
   }, [runCountJavalab, runCountPythonlab, validateCountPythonlab]);
