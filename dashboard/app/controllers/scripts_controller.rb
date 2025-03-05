@@ -427,7 +427,7 @@ class ScriptsController < ApplicationController
     if unit.unit_group&.single_unit_course?
       redirect_unit_group = UnitGroup.latest_assigned_version(unit.unit_group.family_name, current_user)
       redirect_unit_group ||= UnitGroup.latest_stable_version(unit.unit_group.family_name, locale: locale)
-      redirect_unit = redirect_unit_group.default_units.first if redirect_unit_group&.single_unit_course?
+      redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
     end
 
     # Do not redirect if we are already on the correct unit.

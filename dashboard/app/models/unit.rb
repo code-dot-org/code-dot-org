@@ -709,6 +709,10 @@ class Unit < ApplicationRecord
     # Users can view any course not in a family.
     return true if family_name.nil? && !unit_group&.single_unit_course?
 
+    if unit_group&.single_unit_course?
+      return unit_group&.can_view_version?(user, locale)
+    end
+
     latest_stable_version = Unit.latest_stable_version(family_name)
     latest_stable_version_in_locale = Unit.latest_stable_version(family_name, locale: locale)
     is_latest = latest_stable_version == self || latest_stable_version_in_locale == self

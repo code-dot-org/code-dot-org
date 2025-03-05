@@ -444,8 +444,16 @@ class UnitTest < ActiveSupport::TestCase
       @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
 
+      @single_unit_course_offering = create :course_offering, key: 'single-unit-course', display_name: 'single-unit-course'
       @single_unit_2023 = create :unit, name: 'single-unit-2023'
       @single_unit_course_2023 = create :single_unit_course, name: 'single-unit-course-2023', family_name: "single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
+      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2023, key: "2023", display_name: "2023"
+      @single_unit_2024 = create :unit, name: 'single-unit-2024'
+      @single_unit_course_2024 = create :single_unit_course, name: 'single-unit-course-2024', family_name: "single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2024, key: "2024", display_name: "2024"
+      @single_unit_2025 = create :unit, name: 'single-unit-2025'
+      @single_unit_course_2025 = create :single_unit_course, name: 'single-unit-course-2025', family_name: "single-unit-course", version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit: @single_unit_2025
+      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2025, key: "2025", display_name: "2025"
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
@@ -501,9 +509,20 @@ class UnitTest < ActiveSupport::TestCase
       assert unit2.can_view_version?(@student)
     end
 
-    test 'can_view_version? is false if unit is in single-unit course has no progress and is not assigned' do
+    test 'can_view_version? is false if unit in single-unit course has no progress and is not assigned' do
       @single_unit_2023.reload
       refute @single_unit_2023.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if unit in single-unit course is the latest stable version' do
+      @single_unit_2024.reload
+      refute @single_unit_2024.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if student is assigned to unit in single-unit course' do
+      @student.expects(:assigned_script?).returns(true)
+
+      assert @single_unit_2023.can_view_version?(@student)
     end
   end
 
