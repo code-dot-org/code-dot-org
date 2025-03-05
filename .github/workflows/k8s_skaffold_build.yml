@@ -104,6 +104,10 @@ jobs:
 
       - name: Checkout sources
         uses: actions/checkout@v4
+        with:
+          lfs: true
+          # only fetch the last 100 commits, same as drone:
+          fetch-depth: 100
 
       # - name: ssh into the runner
       #   uses: mxschmitt/action-tmate@v3
