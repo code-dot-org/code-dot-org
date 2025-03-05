@@ -1,32 +1,28 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/ResizeBar';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-interface PanelConfig {
-  minWidth: number;
-  initialWidth?: number;
-  name: string;
-}
+import {ColumnPanelConfig} from './types';
 
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 
 export const useVerticalLayout = (
-  leftPanel: PanelConfig,
-  middlePanel: PanelConfig,
-  rightPanel: PanelConfig
+  leftPanel: ColumnPanelConfig,
+  middlePanel: ColumnPanelConfig,
+  rightPanel: ColumnPanelConfig
 ) => {
   const [leftPanelWidth, setLeftPanelWidth] = useState<number | undefined>(
     leftPanel.initialWidth
   );
-  const [middlePanelWidth, setMiddlePanelWidth] = React.useState<
-    number | undefined
-  >(middlePanel.initialWidth);
-  const [rightPanelWidth, setRightPanelWidth] = React.useState<
-    number | undefined
-  >(rightPanel.initialWidth);
+  const [middlePanelWidth, setMiddlePanelWidth] = useState<number | undefined>(
+    middlePanel.initialWidth
+  );
+  const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
+    rightPanel.initialWidth
+  );
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const {
