@@ -15,22 +15,22 @@ const VerticalLayout: React.FunctionComponent = () => {
     rightPanelWidth,
     leftPanelSeparatorProps,
     leftPanelDragging,
-  } = useVerticalLayout(
-    {
+  } = useVerticalLayout({
+    leftPanel: {
       minWidth: 150,
       initialWidth: 300,
       name: 'instructions',
     },
-    {
+    middlePanel: {
       minWidth: 300,
       name: 'editor',
     },
-    {
+    rightPanel: {
       minWidth: 200,
       initialWidth: 600,
       name: 'preview',
-    }
-  );
+    },
+  });
 
   return (
     <div className={moduleStyles.layoutContainer}>

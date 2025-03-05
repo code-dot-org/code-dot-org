@@ -9,11 +9,17 @@ import {ColumnPanelConfig} from './types';
 
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 
-export const useVerticalLayout = (
-  leftPanel: ColumnPanelConfig,
-  middlePanel: ColumnPanelConfig,
-  rightPanel: ColumnPanelConfig
-) => {
+interface VerticalLayoutProps {
+  leftPanel: ColumnPanelConfig;
+  middlePanel: ColumnPanelConfig;
+  rightPanel: ColumnPanelConfig;
+}
+
+export const useVerticalLayout = ({
+  leftPanel,
+  middlePanel,
+  rightPanel,
+}: VerticalLayoutProps) => {
   const [leftPanelWidth, setLeftPanelWidth] = useState<number | undefined>(
     leftPanel.initialWidth
   );
@@ -29,6 +35,7 @@ export const useVerticalLayout = (
     position: rawLeftPanelWidth,
     separatorProps: leftPanelSeparatorProps,
     isDragging: leftPanelDragging,
+    setPosition: setLeftPanelSize,
   } = useResizable({
     axis: 'x',
     initial: leftPanel.initialWidth,
@@ -40,6 +47,7 @@ export const useVerticalLayout = (
     position: rawRightPanelWidth,
     separatorProps: rightPanelSeparatorProps,
     isDragging: rightPanelDragging,
+    setPosition: setRightPanelSize,
   } = useResizable({
     axis: 'x',
     initial: rightPanel.initialWidth,
@@ -111,5 +119,7 @@ export const useVerticalLayout = (
     leftPanelDragging,
     rightPanelSeparatorProps,
     rightPanelDragging,
+    setLeftPanelSize,
+    setRightPanelSize,
   };
 };
