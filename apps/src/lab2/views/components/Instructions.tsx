@@ -247,7 +247,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             </div>
           </div>
         )}
-        {(useMessage || canShowNextButton) && (
+        {(useMessage || canShowNextButton) && text && (
           <div
             key={useMessageIndex + ' - ' + useMessage}
             id="instructions-feedback"
