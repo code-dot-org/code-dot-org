@@ -93,7 +93,7 @@ describe('SectionList', () => {
   it('create section button opens popup', async () => {
     renderComponent();
 
-    screen.getByRole('button', {name: 'New class section'}).click();
+    userEvent.click(screen.getByRole('button', {name: 'New class section'}));
 
     await screen.findByText('Create a new section');
     screen.getByText('Picture password');
