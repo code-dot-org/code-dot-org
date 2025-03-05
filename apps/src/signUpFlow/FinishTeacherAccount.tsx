@@ -72,8 +72,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
   const [userReturnTo, setUserReturnTo] = useState('/home');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
-    useState(false);
+  const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
+    useState('');
 
   const showEducatorRole = statsigReporter.getIsInExperiment(
     'educator_role',
@@ -174,7 +174,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
     setIsSubmitting(true);
     sendFinishEvent();
-    showErrorCreatingAccountMessage(false);
+    setErrorCreatingAccountMessage('');
 
     const signUpParams = {
       new_sign_up: true,
@@ -207,8 +207,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
       clearSignUpSessionStorage(true);
       navigateToHref(userReturnTo);
     } else {
+      if (response.status === 400) {
+        response
+          .json()
+          .then(badRequest => setErrorCreatingAccountMessage(badRequest.error));
+      } else {
+        setErrorCreatingAccountMessage(locale.error_signing_up_message());
+      }
       setIsSubmitting(false);
-      showErrorCreatingAccountMessage(true);
     }
   };
 
@@ -261,12 +267,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
                 className={style.xIcon}
               />
               <SafeMarkdown
-                markdown={locale.error_signing_up_message()}
+                markdown={errorCreatingAccountMessage}
                 className={style.errorMessageText}
               />
             </div>
             <CloseButton
-              onClick={() => showErrorCreatingAccountMessage(false)}
+              onClick={() => setErrorCreatingAccountMessage('')}
               aria-label={locale.error_signing_up_message_aria_label()}
             />
           </div>

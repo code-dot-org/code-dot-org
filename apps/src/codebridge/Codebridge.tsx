@@ -25,7 +25,6 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Workspace from './Workspace';
-import Output from './Workspace/Output';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
@@ -93,7 +92,6 @@ export const Codebridge = React.memo(
           'file-preview': FilePreview,
           'info-panel': config.Instructions || InfoPanel,
           workspace: Workspace,
-          output: Output,
         };
         let gridLayout: string;
         let gridLayoutRows: string;

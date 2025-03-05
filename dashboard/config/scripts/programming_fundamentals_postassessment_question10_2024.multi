@@ -6,7 +6,7 @@ wrong 'AI cannot analyze data effectively'
 wrong 'AI can never make mistakes'
 right 'The algorithm might favor certain groups based on biased training data'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Why might an AI-powered hiring algorithm be considered unfair?

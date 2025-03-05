@@ -6,7 +6,7 @@ wrong 'Writing an infinite loop'
 wrong 'Running a program without output'
 right 'Using incorrect indentation'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is an example of a **syntax error**?

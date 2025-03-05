@@ -6,7 +6,7 @@ right 'Disable voice recognition features when not in use'
 wrong 'Install more smart devices'
 wrong 'Turn off the Wi-Fi'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A user notices their smart home assistant is responding to conversations even when not addressed. What is the best action to improve privacy?

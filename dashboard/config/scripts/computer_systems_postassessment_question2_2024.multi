@@ -4,11 +4,9 @@ title 'Computer Systems and Devices Post-Assessment: Question 2'
 wrong 'A broken keyboard'
 wrong 'A faulty power supply'
 right 'Insufficient RAM'
-wrong 'A slow internet connection
+wrong 'A slow internet connection'
 
-'
-
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Your computer keeps freezing when running multiple applications. What is the most likely cause?
