@@ -52,10 +52,5 @@ export class MarketingPage {
       },
       {fn: loadFonts.toString(), fonts: FONT_FAMILY_NAMES},
     );
-
-    await this.page.evaluate(() =>
-      document.fonts.ready.then(fonts => console.log(fonts)),
-    );
-    await this.page.waitForFunction(() => document.fonts.ready);
   }
 }
