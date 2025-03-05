@@ -1,17 +1,12 @@
-import classNames from 'classnames';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {MiniApps} from '@codebridge/constants';
 import {throttle} from 'lodash';
 import React, {useRef, useState, useCallback, useMemo, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
-import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {useCodebridgeContext} from '../codebridgeContext';
-import CodebridgeRegistry from '../CodebridgeRegistry';
-import Console from '../Console/Console';
-import {MiniApps} from '../constants';
-import MiniAppPreview from '../MiniAppPreview/MiniAppPreview';
 
 import {
   DEFAULT_MINI_APP_SIZE,
@@ -19,9 +14,8 @@ import {
   MAX_MINI_APP_SIZE,
   MIN_CONSOLE_SIZE,
 } from './constants';
+import Output from './Output';
 import {scaleMiniApp} from './outputHelpers';
-
-import moduleStyles from './output.module.scss';
 
 interface HorizontalOutputProps {
   height: number;
@@ -128,44 +122,6 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
     [handleResize]
   );
 
-  useEffect(() => {
-    if (
-      height !== undefined ||
-      width !== undefined ||
-      miniAppWidth !== undefined
-    ) {
-      throttledResize(height, width, miniApp, miniAppWidth);
-    }
-  }, [height, width, miniApp, throttledResize, miniAppWidth]);
-
-  useEffect(() => {
-    // Fit the console to the new container.
-    CodebridgeRegistry.getInstance()
-      .getConsoleManager()
-      ?.getTerminalFitAddon()
-      ?.fit();
-  }, [consoleWidth]);
-
-  if (!miniApp) {
-    return (
-      <div
-        className={classNames(moduleStyles.outputContainer, className)}
-        style={style}
-      >
-        <Console />
-      </div>
-    );
-  }
-
-  // We set the opacity to 0 when we initiate a maximize or minimize action
-  // so the use doesn't see a flash of the incorrectly-sized preview
-  // while maximizing/minimizing.
-  const previewOpacity = waitingForResize ? 0 : 1;
-
-  const miniAppStyle = {width: adjustedMiniAppWidth};
-
-  const consoleStyle = {width: consoleWidth};
-
   const maximizeMiniApp = () => {
     setWaitingForResize(true);
     setMiniAppMinimizeWidth(adjustedMiniAppWidth);
@@ -184,33 +140,32 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
     throttledResize(height, width, miniApp, miniAppWidth);
   };
 
+  useEffect(() => {
+    if (
+      height !== undefined ||
+      width !== undefined ||
+      miniAppWidth !== undefined
+    ) {
+      throttledResize(height, width, miniApp, miniAppWidth);
+    }
+  }, [height, width, miniApp, throttledResize, miniAppWidth]);
+
   return (
-    <div
-      className={classNames(
-        moduleStyles.outputContainer,
-        moduleStyles.horizontal,
-        className
-      )}
+    <Output
       style={style}
-      ref={resizeContainerRef}
-    >
-      <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
-        <MiniAppPreview
-          maximizeMiniApp={maximizeMiniApp}
-          minimizeMiniApp={minimizeMiniApp}
-          isMaximized={isMaximized}
-          style={{opacity: previewOpacity}}
-        />
-      </div>
-      <ResizeBar
-        isVertical={true}
-        separatorProps={miniAppSeparatorProps}
-        isDragging={miniAppDragging}
-      />
-      <div style={consoleStyle} className={moduleStyles.flexShrink0}>
-        <Console />
-      </div>
-    </div>
+      consoleSize={consoleWidth}
+      waitingForResize={waitingForResize}
+      adjustedMiniAppSize={adjustedMiniAppWidth}
+      isVertical={false}
+      maximizeMiniApp={maximizeMiniApp}
+      minimizeMiniApp={minimizeMiniApp}
+      miniAppSeparatorProps={miniAppSeparatorProps}
+      resizeContainerRef={resizeContainerRef}
+      isMaximized={isMaximized}
+      miniAppDragging={miniAppDragging}
+      className={className}
+      miniApp={miniApp}
+    />
   );
 };
 

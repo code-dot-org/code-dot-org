@@ -1,26 +1,21 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import MiniAppPreview from '@codebridge/MiniAppPreview/MiniAppPreview';
-import classNames from 'classnames';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {MiniApps} from '@codebridge/constants';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import Console from '@cdo/apps/codebridge/Console/Console';
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
-import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import CodebridgeRegistry from '../CodebridgeRegistry';
-import {MiniApps} from '../constants';
-
+import {
+  DEFAULT_MINI_APP_SIZE,
+  MIN_MINI_APP_SIZE,
+  MAX_MINI_APP_SIZE,
+  MIN_CONSOLE_SIZE,
+} from './constants';
+import Output from './Output';
 import {scaleMiniApp} from './outputHelpers';
-
-import moduleStyles from './output.module.scss';
-
-const DEFAULT_MINI_APP_SIZE = 400;
-const MIN_MINI_APP_SIZE = 200;
-const MIN_CONSOLE_SIZE = 200;
-const MAX_MINI_APP_SIZE = 800;
 
 interface VerticalOutputProps {
   className?: string;
@@ -39,8 +34,6 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
     width,
   };
   const resizeContainerRef = useRef<HTMLDivElement>(null);
-  // In vertical mode, consoleSize is the height of the console.
-  // In horizontal mode, consoleSize is the width of the console.
   const [consoleHeight, setConsoleHeight] = useState<number | undefined>(
     undefined
   );
@@ -128,34 +121,6 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
     }
   }, [width, miniApp, throttledResize, miniAppHeight]);
 
-  useEffect(() => {
-    // Fit the console to the new container.
-    CodebridgeRegistry.getInstance()
-      .getConsoleManager()
-      ?.getTerminalFitAddon()
-      ?.fit();
-  }, [consoleHeight]);
-
-  if (!miniApp) {
-    return (
-      <div
-        className={classNames(moduleStyles.outputContainer, className)}
-        style={style}
-      >
-        <Console />
-      </div>
-    );
-  }
-
-  // We set the opacity to 0 when we initiate a maximize or minimize action
-  // so the use doesn't see a flash of the incorrectly-sized preview
-  // while maximizing/minimizing.
-  const previewOpacity = waitingForResize ? 0 : 1;
-
-  const miniAppStyle = {height: adjustedMiniAppHeight};
-
-  const consoleStyle = {height: consoleHeight};
-
   const maximizeMiniApp = () => {
     setWaitingForResize(true);
     setMiniAppMinimizeHeight(adjustedMiniAppHeight);
@@ -175,32 +140,21 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
   };
 
   return (
-    <div
-      className={classNames(
-        moduleStyles.outputContainer,
-        moduleStyles.vertical,
-        className
-      )}
+    <Output
       style={style}
-      ref={resizeContainerRef}
-    >
-      <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
-        <MiniAppPreview
-          maximizeMiniApp={maximizeMiniApp}
-          minimizeMiniApp={minimizeMiniApp}
-          isMaximized={isMaximized}
-          style={{opacity: previewOpacity}}
-        />
-      </div>
-      <ResizeBar
-        isVertical={false}
-        separatorProps={miniAppSeparatorProps}
-        isDragging={miniAppDragging}
-      />
-      <div style={consoleStyle} className={moduleStyles.flexShrink0}>
-        <Console />
-      </div>
-    </div>
+      consoleSize={consoleHeight}
+      waitingForResize={waitingForResize}
+      adjustedMiniAppSize={adjustedMiniAppHeight}
+      isVertical={true}
+      maximizeMiniApp={maximizeMiniApp}
+      minimizeMiniApp={minimizeMiniApp}
+      miniAppSeparatorProps={miniAppSeparatorProps}
+      resizeContainerRef={resizeContainerRef}
+      isMaximized={isMaximized}
+      miniAppDragging={miniAppDragging}
+      className={className}
+      miniApp={miniApp}
+    />
   );
 };
 
