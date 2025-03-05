@@ -70,9 +70,15 @@ COPY --chown=${UID} \
   ./apps/eslint \
   ./apps/eslint/
 
+# Required to handle the `portal:../frontend/packages/component-library` link in apps/package.json
 COPY --chown=${UID} \
   ./frontend/packages/component-library/package.json \
   ./frontend/packages/component-library/
+
+# Required to handle the `portal:../frontend/packages/component-library-styles` link in apps/package.json
+COPY --chown=${UID} \
+  ./frontend/packages/component-library-styles/package.json \
+  ./frontend/packages/component-library-styles/
 
 RUN \
   #
