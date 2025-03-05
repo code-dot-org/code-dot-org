@@ -1,5 +1,4 @@
 @no_mobile
-@no_ci
 Feature: Teacher viewing student chat history in AI Chat Lab
 
   Teachers can view student chat history and interact with the student's customized models in AI Chat Lab.
