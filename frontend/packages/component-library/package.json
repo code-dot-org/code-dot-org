@@ -238,6 +238,14 @@
       "import": "./dist/esm/radioButton/index.mjs",
       "require": "./dist/cjs/radioButton/index.js"
     },
+    "./cms/iframe": {
+      "types": {
+        "import": "./dist/esm/cms/iframe/index.d.ts",
+        "require": "./dist/cjs/cms/iframe/index.d.ts"
+      },
+      "import": "./dist/esm/cms/iframe/index.mjs",
+      "require": "./dist/cjs/cms/iframe/index.js"
+    },
     "./cms/section": {
       "types": {
         "import": "./dist/esm/cms/section/index.d.ts",
