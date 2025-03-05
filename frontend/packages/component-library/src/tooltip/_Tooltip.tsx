@@ -1,12 +1,12 @@
 import classnames from 'classnames';
-import {forwardRef} from 'react';
+import {forwardRef, HTMLAttributes} from 'react';
 
 import {ComponentPlacementDirection, ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './tooltip.module.scss';
 
-export interface TooltipProps {
+export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   /** Tooltip text */
   text: string | React.ReactNode;
   /**
@@ -71,6 +71,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       className,
       size = 'm',
       style = {},
+      ...HTMLAttributes
     },
     ref,
   ) => {
@@ -87,6 +88,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
         )}
         style={style}
         role="tooltip"
+        {...HTMLAttributes}
       >
         {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
         <span className={moduleStyles.tooltipText}>{text}</span>
