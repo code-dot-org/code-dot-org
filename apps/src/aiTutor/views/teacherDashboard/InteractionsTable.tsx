@@ -49,6 +49,7 @@ const STATUS_LABELS: StatusLabels = {
   profanity_violation: 'Profanity Violation',
   ok: 'Successful',
   unknown: 'Unknown Status',
+  user_input_too_large: 'User Input Too Large',
 };
 
 enum TimeFilter {
@@ -183,7 +184,13 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
         props: {style: {...style.headerCell, ...styleOverrides.headerCell}},
       },
       cell: {
-        formatters: [(status: string) => <span>{STATUS_LABELS[status]}</span>],
+        formatters: [
+          (status: string) => (
+            <span>
+              {STATUS_LABELS[status as AITutorInteractionStatusValue]}
+            </span>
+          ),
+        ],
         props: {style: style.cell},
       },
     },

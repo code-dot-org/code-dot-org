@@ -69,7 +69,7 @@ describe('SectionList', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={<SectionList />}
+                element={<SectionList showHiddenOnly={false} />}
               />,
             ]),
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}

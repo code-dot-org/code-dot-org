@@ -11,6 +11,8 @@ import React from 'react';
 import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import Spinner from '../../../sharedComponents/Spinner';
 
 import AttendancePanel from './AttendancePanel';
@@ -22,17 +24,13 @@ import {PermissionPropType, WorkshopAdmin} from './permission';
 import SignUpPanel from './SignUpPanel';
 
 export class Workshop extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,
     }).isRequired,
-    route: PropTypes.shape({
-      view: PropTypes.string,
-    }).isRequired,
+    view: PropTypes.string,
     permission: PermissionPropType.isRequired,
   };
 
@@ -61,7 +59,7 @@ export class Workshop extends React.Component {
 
     // Don't allow editing a workshop that has been started.
     if (
-      this.props.route.view === 'edit' &&
+      this.props.view === 'edit' &&
       this.state.workshop &&
       this.state.workshop.state !== 'Not Started'
     ) {
@@ -167,7 +165,7 @@ export class Workshop extends React.Component {
       return <p>No workshop found</p>;
     }
 
-    const {params, permission, route} = this.props;
+    const {params, permission, view} = this.props;
     const {workshopId} = params;
     const isWorkshopAdmin = permission.has(WorkshopAdmin);
     const {workshop, enrollments, loadingEnrollments} = this.state;
@@ -207,7 +205,7 @@ export class Workshop extends React.Component {
           loadEnrollments={this.loadEnrollments}
         />
         <DetailsPanel
-          view={route.view}
+          view={view}
           workshopId={workshopId}
           workshop={workshop}
           workshopState={workshopState}
