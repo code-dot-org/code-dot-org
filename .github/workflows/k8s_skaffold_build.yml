@@ -1,19 +1,25 @@
-name: skaffold
+# This is currently an experimental feature, see: k8s/experimental.yaml
+
+name: 'k8s: skaffold build'
 on:
-  # Trigger on merges into production (i.e. DTP), or on any PR with "k8s" somewhere in
-  # the branch name, e.g. myname/k8s-feature-branch or k8s/feature-branch
+  # Trigger on merges into production (i.e. DTP), or on any PR, however note that we filter
+  # PRs down to PRs where the source-branch is *k8s* using `if:` blocks below.
   push:
     branches:
       - production
   pull_request:
-    branches:
-      - '*k8s*'
-
 
 jobs:
   # Step 1: build platform specific docker images: amd64, arm64
   build:
-    name: build
+    name: skaffold build
+
+    # while experimental, we /never/ want to block normal PR work:
+    continue-on-error: true
+
+    # only run on PRs where the source branch is *k8s*:
+    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+
     runs-on: ${{ matrix.runs-on }}
     strategy:
       matrix:
@@ -141,6 +147,13 @@ jobs:
   # Step 2: stitch the platform specific images into a multi-platform image
   stitch-multi-platform:
     name: Stitch a Multi-Platform Image from Platform-Specific Images
+
+    # while experimental, we /never/ want to block normal PR work:
+    continue-on-error: true
+
+    # only run on PRs where the source branch is *k8s*:
+    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+
     runs-on: ubuntu-latest
     needs: build
     env:
