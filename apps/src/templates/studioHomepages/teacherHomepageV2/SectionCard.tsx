@@ -34,7 +34,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <SectionOptionsDropdown section={section} />
+          <SectionOptionsDropdown sectionId={section.id} />
         </div>
       </div>
     </div>

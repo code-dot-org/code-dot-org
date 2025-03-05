@@ -3,7 +3,6 @@ import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/act
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
-import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,
   TEACHER_NAVIGATION_PATHS,
@@ -13,29 +12,29 @@ import i18n from '@cdo/locale';
 import styles from './teacherHomepage.module.scss';
 
 export interface SectionOptionsDropdownProps {
-  section: Section;
+  sectionId: number;
 }
 
 export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
-  section,
+  sectionId,
 }) => {
   const navigate = useNavigate();
 
   const onSectionSettingsClick = () => {
     navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`
+      `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
     );
   };
 
   const onRosterClick = () => {
     navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`
+      `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
     );
   };
 
   const onLoginCardsClick = () => {
     navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
+      `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
     );
   };
 
