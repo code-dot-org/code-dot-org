@@ -153,19 +153,13 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       {componentToWrap}
       {showTooltip &&
         createPortal(
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-          <div
-            role="tooltip"
-            style={{padding: '10px'}}
+          <Tooltip
+            {...tooltipProps}
+            ref={tooltipRef}
+            style={tooltipStyleProps}
             onMouseEnter={event => handleShowTooltip(true, event, true)}
             onMouseLeave={handleHideTooltip}
-          >
-            <Tooltip
-              {...tooltipProps}
-              ref={tooltipRef}
-              style={tooltipStyleProps}
-            />
-          </div>,
+          />,
           document.body,
         )}
     </TooltipOverlay>
