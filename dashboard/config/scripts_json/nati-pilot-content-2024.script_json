@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "nati-2025-pilot",
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2024",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-03 22:08:09 UTC",
+    "serialized_at": "2025-03-04 22:49:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4590,6 +4591,18 @@
       }
     },
     {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
       "name": "AI Networks Chat",
       "url": "https://docs.google.com/document/d/1aZKiP8iWpEHYO8y19GfwrbGsV7xQkm4P5khDwrhrrjo/edit?usp=sharing",
       "key": "ai_networks_chat",
@@ -5008,6 +5021,18 @@
       "seeding_key": {
         "resource.key": "threat_detection_guided_notes"
       }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
     }
   ],
   "lessons_resources": [
@@ -5015,6 +5040,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_key_ai_networks_chat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "ai_chat_lab_faq"
       }
     },
     {
@@ -5033,6 +5064,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "networks_and_the_internet_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     },
     {
@@ -5241,7 +5278,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "nati-pilot-content-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

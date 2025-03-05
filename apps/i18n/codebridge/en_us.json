@@ -53,6 +53,8 @@
   "makeSupport": "Make support file",
   "makeValidation": "Make validation file",
   "manageFiles": "Manage Files",
+  "maximizePreview": "Maximize preview",
+  "minimizePreview": "Minimize preview",
   "moveFile": "Move",
   "moveFolder": "Move",
   "moveFilePrompt": "Please enter your destination folder",

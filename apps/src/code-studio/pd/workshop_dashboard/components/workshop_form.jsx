@@ -26,6 +26,7 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   Subjects,
   SubjectNames,
@@ -83,9 +84,7 @@ const INPUT_HEIGHT = 34;
 // These two things are stored as separate attributes in the workshop model.
 
 export class WorkshopForm extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,

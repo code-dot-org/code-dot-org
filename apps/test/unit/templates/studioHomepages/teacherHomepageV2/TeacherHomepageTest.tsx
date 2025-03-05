@@ -1,14 +1,25 @@
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {
+  createMemoryRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
 import {Store} from 'redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 describe('SectionList', () => {
   const sections = [
@@ -50,20 +61,50 @@ describe('SectionList', () => {
 
   const serverSections = sections.map(serverSectionFromSection);
 
-  const store: Store = getStore();
-  registerReducers({teacherSections});
-  store.dispatch(setSections(serverSections));
+  let store: Store;
 
-  function renderComponent() {
+  beforeEach(() => {
+    store = getStore();
+    registerReducers({teacherSections, currentUser});
+    store.dispatch(setSections(serverSections));
+    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+  });
+
+  function renderComponent(initialRoute = '/teacher_dashboard/home') {
     return render(
       <Provider store={store}>
-        <TeacherHomepage />
+        <RouterProvider
+          router={createMemoryRouter(
+            createRoutesFromElements([
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.home}
+                element={<TeacherHomepage />}
+              />,
+            ]),
+            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
+          )}
+        />
       </Provider>
     );
   }
-  it('renders SectionList component', async () => {
+
+  it('renders SectionList component', () => {
     renderComponent();
-    await screen.findByText('Welcome,');
+    screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
+  });
+
+  it('teaching/archived toggle', async () => {
+    renderComponent();
+    screen.getByRole('button', {name: 'Teaching'});
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+
+    screen.getByText('Period 1');
+    expect(screen.queryByText('hidden')).toBeNull();
+
+    userEvent.click(archivedButton);
+
+    await screen.findByText('hidden');
+    expect(screen.queryByText('Period 1')).toBeNull();
   });
 });

@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 
 #### See what educators are saying about teaching the **Programming Fundamentals** unit. 
 
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 100%;">
+<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
     <div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/79eb210b5f7afd55420449d359b9a7e2-image-1740767255820.png" alt="Quotation Mark Icon" style="width: 40px; height: 40px; margin-bottom: 10px;">
         <p style="font-size:14pt;">“The structured lessons and hands-on activities make it easy for students to grasp computational thinking. The blend of coding and real-world applications keeps them engaged.”</p>
