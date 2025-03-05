@@ -69,6 +69,7 @@ DefaultCarousel.parameters = {
         "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content.",
     },
   },
+  eyes: {waitBeforeCapture: 4000},
 };
 DefaultCarousel.play = async ({
   canvasElement,
