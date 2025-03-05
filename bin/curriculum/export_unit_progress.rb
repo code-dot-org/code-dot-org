@@ -23,12 +23,6 @@ OptionParser.new do |opts|
   opts.on("-z", "--level-id LEVEL", "Level id") do |level_id|
     $options[:level_id] = level_id
   end
-  opts.on("-l", "--limit LIMIT") do |limit|
-    $options[:limit] = limit
-  end
-  opts.on('-f', "--offset OFFSET") do |offset|
-    $options[:offset] = offset
-  end
   opts.on('-p', "--pretty-print") do
     $options[:pretty] = true
   end
@@ -52,7 +46,7 @@ puts "Loading Rails environment..."
 require_relative '../../dashboard/config/environment'
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
-def fetch_progress(simple:, unit_id:, level_id:, limit:, offset:)
+def fetch_progress(simple:, unit_id:, level_id:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
@@ -65,8 +59,6 @@ def fetch_progress(simple:, unit_id:, level_id:, limit:, offset:)
     params = {
       unit_id: unit_id,
       level_id: level_id,
-      limit: limit,
-      offset: offset,
     }
     query = ERB.new(query_template).result_with_hash(params)
     client = RedshiftClient.instance
@@ -105,15 +97,10 @@ def main
   level_id = $options[:level_id].presence
   Level.find(level_id) if level_id
 
-  limit = $options[:limit].presence
-  offset = $options[:offset].presence
-
   fetch_progress(
     simple: simple,
     unit_id: unit_id,
     level_id: level_id,
-    limit: limit,
-    offset: offset,
   )
 end
 

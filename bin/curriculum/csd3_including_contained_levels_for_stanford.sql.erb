@@ -237,8 +237,4 @@ where
     <%= unit_id && "and cs.script_id = #{unit_id}" %>
 --  and ul.submitted = 1
 --  and sy.school_year in ('2023-24')
--- order by 1,2,3,4
-    ORDER BY ul.id
-    <%= limit && "LIMIT #{limit}"%>
-    <%= offset && "OFFSET #{offset}" %>
 ;
