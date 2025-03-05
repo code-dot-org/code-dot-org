@@ -1249,7 +1249,6 @@ __metadata:
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@contentful/experiences-sdk-react": "npm:1.30.3"
-    "@dotenv-run/cli": "npm:^1.3.6"
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@playwright/test": "npm:~1.49.1"
     "@testing-library/dom": "npm:^10.4.0"
@@ -1261,6 +1260,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     concurrently: "npm:^9.1.2"
     contentful: "npm:^11.2.5"
+    dotenv: "npm:^16.4.7"
     eslint: "npm:^9.16.0"
     eslint-plugin-jest: "npm:^28.9.0"
     jest: "npm:^29.7.0"
@@ -8754,6 +8754,13 @@ __metadata:
   version: 16.4.5
   resolution: "dotenv@npm:16.4.5"
   checksum: 10c0/48d92870076832af0418b13acd6e5a5a3e83bb00df690d9812e94b24aff62b88ade955ac99a05501305b8dc8f1b0ee7638b18493deb6fe93d680e5220936292f
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.4.7":
+  version: 16.4.7
+  resolution: "dotenv@npm:16.4.7"
+  checksum: 10c0/be9f597e36a8daf834452daa1f4cc30e5375a5968f98f46d89b16b983c567398a330580c88395069a77473943c06b877d1ca25b4afafcdd6d4adb549e8293462
   languageName: node
   linkType: hard
 
