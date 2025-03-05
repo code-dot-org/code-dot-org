@@ -77,11 +77,11 @@ const AccountType: React.FunctionComponent = () => {
     if (loginTypeAlreadySelected) {
       const finishSignupUrl =
         accountType === 'teacher'
-          ? '/users/new_sign_up/finish_teacher_account'
-          : '/users/new_sign_up/finish_student_account';
+          ? '/users/sign_up/finish_teacher_account'
+          : '/users/sign_up/finish_student_account';
       navigateToHref(studio(finishSignupUrl));
     } else {
-      navigateToHref(studio('/users/new_sign_up/login_type'));
+      navigateToHref(studio('/users/sign_up/login_type'));
     }
   };
 

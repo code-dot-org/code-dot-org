@@ -10,7 +10,7 @@ import {FeedbackData} from '../interactionsApi';
 
 import AssistantMessageFeedbackDetails from './AssistantMessageFeedbackDetails';
 
-import style from './chat-workspace.module.scss';
+import style from './ai-tutor.module.scss';
 
 interface AssistantMessageProps {
   messageId: number | undefined;

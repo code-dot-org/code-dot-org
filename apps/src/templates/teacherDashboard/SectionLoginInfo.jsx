@@ -182,7 +182,7 @@ class EmailLogins extends React.Component {
         <ol>
           <li>
             {i18n.loginInfo_joinStep1({
-              url: `${studioUrlPrefix}/users/new_sign_up/account_type`,
+              url: `${studioUrlPrefix}/users/sign_up/account_type`,
             })}
             <br />
             <img

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 22:40:40 UTC",
+    "serialized_at": "2025-03-04 22:51:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4478,6 +4478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level1_aitutor-2024"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4500,6 +4503,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level2_aitutor-2024"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4522,6 +4528,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level3_aitutor-2024"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4544,6 +4553,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level4_aitutor-2024"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4566,6 +4578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson1-level5-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4588,6 +4603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson2-level1_aitutor-2024"
+        ],
         "progression": "Decomposition"
       },
       "bonus": false,
@@ -4610,6 +4628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson2-level2_aitutor-2024"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4632,6 +4653,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson2-level3_aitutor-2024"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4654,6 +4678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson2-level4-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4676,6 +4703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level1_aitutor-2024"
+        ],
         "progression": "Steps to Create a Playlist"
       },
       "bonus": false,
@@ -4698,6 +4728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level2_aitutor-2024"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4720,6 +4753,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level3_aitutor-2024"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4742,6 +4778,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level4_aitutor-2024"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4764,6 +4803,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level5_aitutor-2024"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4786,6 +4828,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level6_aitutor-2024"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4808,6 +4853,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level7_aitutor-2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4830,6 +4878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson3-level8-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4852,6 +4903,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level1-aitutor-2024"
+        ],
         "progression": "Using Python Lab"
       },
       "bonus": false,
@@ -4874,6 +4928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level2-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4896,6 +4953,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level3-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4918,6 +4978,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level4-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4940,6 +5003,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level5-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4962,6 +5028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level6-aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4984,6 +5053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson4-level7-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5006,6 +5078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level1-aitutor-2023"
+        ],
         "progression": "The Neighborhood and the Painter"
       },
       "bonus": false,
@@ -5028,6 +5103,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level2-aitutor-2023"
+        ],
         "progression": "The Neighborhood and the Painter"
       },
       "bonus": false,
@@ -5050,6 +5128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level3-aitutor-2023"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5072,6 +5153,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level4-aitutor-2023"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5094,6 +5178,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level5-aitutor-2023"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5116,6 +5203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level6-aitutor-2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5138,6 +5228,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level7-aitutor-2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5160,6 +5253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson5-level8-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5182,6 +5278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level1-aitutor-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -5204,6 +5303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level2-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5226,6 +5328,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level3-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5248,6 +5353,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level4-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5270,6 +5378,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level5-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5292,6 +5403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level6-aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5314,6 +5428,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level7-aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5336,6 +5453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson6-level8-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5358,6 +5478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level1-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5380,6 +5503,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level2-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5402,6 +5528,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level3-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5424,6 +5553,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level4-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5446,6 +5578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level5-aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5468,6 +5603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson7-level6-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5490,6 +5628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level1-aitutor-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -5512,6 +5653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level2-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5534,6 +5678,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level3-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5556,6 +5703,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level4-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5578,6 +5728,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level5-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5600,6 +5753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level6-aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5622,6 +5778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson8-level7-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5644,6 +5803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level1-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5666,6 +5828,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level2-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5688,6 +5853,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level3-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5710,6 +5878,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level4-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5732,6 +5903,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level5-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5754,6 +5928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level6-aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5776,6 +5953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson9-level7-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5798,6 +5978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson10-level1-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5820,6 +6003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson11-level1-aitutor-2024"
+        ],
         "progression": "My Pixel Image"
       },
       "bonus": false,
@@ -5842,6 +6028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson11-level2-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5864,6 +6053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level1-aitutor-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -5886,6 +6078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level2-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5908,6 +6103,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level3-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5930,6 +6128,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level4-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5952,6 +6153,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level5-aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5974,6 +6178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level6-aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5996,6 +6203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson12-level7-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6018,6 +6228,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson13-level1-aitutor-2024"
+        ],
         "progression": "Pixels of Me Project"
       },
       "bonus": false,
@@ -6040,6 +6253,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson13-level2-aitutor-2024"
+        ],
         "progression": "Pixels of Me Project"
       },
       "bonus": false,
@@ -6062,6 +6278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-ai-tutor-lesson13-level3-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6084,6 +6303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson14-level1_aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6106,6 +6328,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson14-level3_aitutor-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6128,6 +6353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson14-level2_aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6150,6 +6378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level1_aitutor-2024"
+        ],
         "progression": "Using the print() Function"
       },
       "bonus": false,
@@ -6172,6 +6403,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level2_aitutor-2024"
+        ],
         "progression": "Using the print() Function"
       },
       "bonus": false,
@@ -6194,6 +6428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level3_aitutor-2024"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6216,6 +6453,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level4_aitutor-2024"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6238,6 +6478,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level5_aitutor-2024"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6260,6 +6503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level6_aitutor-2024"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -6282,6 +6528,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level7_aitutor-2024"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -6304,6 +6553,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level8_aitutor-2024"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -6326,6 +6578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level9_aitutor-2024"
+        ],
         "progression": "Write Your Own Functions"
       },
       "bonus": false,
@@ -6348,6 +6603,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level10_aitutor-2024"
+        ],
         "progression": "Write Your Own Functions"
       },
       "bonus": false,
@@ -6370,6 +6628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level1_aitutor-2024"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -6392,6 +6653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level2_aitutor-2024"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6414,6 +6678,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level3_aitutor-2024"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6436,6 +6703,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level4_aitutor-2024"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6458,6 +6728,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level5_aitutor-2024"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6480,6 +6753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level6_aitutor-2024"
+        ],
         "progression": "More Debugging Practice"
       },
       "bonus": false,
@@ -6502,6 +6778,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level7_aitutor-2024"
+        ],
         "progression": "More Debugging Practice"
       },
       "bonus": false,
@@ -6524,6 +6803,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level8_aitutor-2024"
+        ],
         "progression": "More Debugging Practice"
       },
       "bonus": false,
@@ -6546,6 +6828,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level1_aitutor-2024"
+        ],
         "progression": "Comparison Operators"
       },
       "bonus": false,
@@ -6568,6 +6853,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level2_aitutor-2024"
+        ],
         "progression": "Comparison Operators"
       },
       "bonus": false,
@@ -6590,6 +6878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level3_aitutor-2024"
+        ],
         "progression": "Introduction to while Loops"
       },
       "bonus": false,
@@ -6612,6 +6903,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level4_aitutor-2024"
+        ],
         "progression": "Introduction to while Loops"
       },
       "bonus": false,
@@ -6634,6 +6928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level5_aitutor-2024"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6656,6 +6953,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level6_aitutor-2024"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6678,6 +6978,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level7_aitutor-2024"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6700,6 +7003,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level8_aitutor-2024"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6722,6 +7028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level9_aitutor-2024"
+        ],
         "progression": "Dynamic Game Play"
       },
       "bonus": false,
@@ -6744,6 +7053,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level10_aitutor-2024"
+        ],
         "progression": "Dynamic Game Play"
       },
       "bonus": false,
@@ -6766,6 +7078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level1_aitutor-2024"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -6788,6 +7103,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level2_aitutor-2024"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -6810,6 +7128,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level3_aitutor-2024"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -6832,6 +7153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level4_aitutor-2024"
+        ],
         "progression": "Using elif and Getting User Input"
       },
       "bonus": false,
@@ -6854,6 +7178,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level5_aitutor-2024"
+        ],
         "progression": "Using elif and Getting User Input"
       },
       "bonus": false,
@@ -6876,6 +7203,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level6_aitutor-2024"
+        ],
         "progression": "Using elif and Getting User Input"
       },
       "bonus": false,
@@ -6898,6 +7228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level7_aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6920,6 +7253,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level8_aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6942,6 +7278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson19-level1_aitutor-2024"
+        ],
         "progression": "Examples of Adventure Games"
       },
       "bonus": false,
@@ -6964,6 +7303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level1_aitutor-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -6986,6 +7328,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level2_aitutor-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -7008,6 +7353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level3_aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7030,6 +7378,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level4_aitutor-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7052,6 +7403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level5_aitutor-2024"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -7074,6 +7428,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level6_aitutor-2024"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -7096,6 +7453,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level7_aitutor-2024"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -8605,6 +8965,18 @@
       }
     },
     {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
       "name": "Algorithm Decision-Making",
       "url": "https://docs.google.com/document/d/1zCe5nxpYzzU7C9rF-D9rqVfpgwgSzOcjShuh2UpeWuw/edit?usp=drive_link",
       "key": "algorithm_decision-making",
@@ -8902,6 +9274,18 @@
       }
     },
     {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
       "name": "Waymo Self-Driving Car",
       "url": "https://drive.google.com/file/d/1yxxJ_YiA2CiEt1V82Nl3HfcK7IoK9xol/view?usp=sharing",
       "key": "waymo_self-driving_car",
@@ -8978,6 +9362,12 @@
     {
       "seeding_key": {
         "lesson.key": "Computing Careers",
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computing Careers",
         "resource.key": "career_exploration"
       }
     },
@@ -8991,6 +9381,12 @@
       "seeding_key": {
         "lesson.key": "Computing Careers",
         "resource.key": "programming_fundamentals_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computing Careers",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     },
     {
@@ -9159,7 +9555,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_chat_lab_faq",
+        "script.name": "pf-aitutor-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "python_lab_neighborhood_documentation",
+        "script.name": "pf-aitutor-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "pf-aitutor-pilot-content-2024"
       }
     }

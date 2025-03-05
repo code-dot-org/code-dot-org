@@ -6,7 +6,7 @@ right 'Creating a long, unique password with a mix of letters, numbers, and symb
 wrong 'Using the same password for all accounts'
 wrong 'Writing down passwords on a sticky note'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which is the most effective way to create a strong password?

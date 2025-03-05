@@ -13,10 +13,10 @@ markdown <<MARKDOWN
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li> Define, analyze, and improve algorithms using sequence, selection, and iteration.</li>
-    <li> Use variables, conditionals, loops, and functions to create, test, and refine modular programs.</li>
-    <li> Assess AI technologies for biases and privacy concerns, proposing strategies to mitigate risks.</li>
-    <li> Connect programming skills to real-world opportunities in computing and related industries.</li>
+      <li> Define, analyze, and improve algorithms using sequence, selection, and iteration.</li>&#8201;
+    <li> Use variables, conditionals, loops, and functions to create, test, and refine modular programs.</li>&#8201;
+    <li> Assess AI technologies for biases and privacy concerns, proposing strategies to mitigate risks.</li>&#8201;
+    <li> Connect programming skills to real-world opportunities in computing and related industries.</li><br>
     <li> Use abstraction, decomposition, and pattern recognition to design and troubleshoot programs effectively.</li>
     </ul>
   </div>

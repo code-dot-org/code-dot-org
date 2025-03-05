@@ -57,8 +57,8 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher';
 
   const finishAccountUrl = isTeacher
-    ? studio('/users/new_sign_up/finish_teacher_account')
-    : studio('/users/new_sign_up/finish_student_account');
+    ? studio('/users/sign_up/finish_teacher_account')
+    : studio('/users/sign_up/finish_student_account');
   const userType = isTeacher ? UserTypes.TEACHER : UserTypes.STUDENT;
   cookies.set(NEW_SIGN_UP_USER_TYPE, userType, {path: '/'});
 
@@ -85,7 +85,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       } else {
         // If the user hasn't selected a user type and it's not a URL parameter, redirect them back to the
         // first step of signup to select their user type.
-        navigateToHref('/users/new_sign_up/account_type');
+        navigateToHref('/users/sign_up/account_type');
       }
     }
 

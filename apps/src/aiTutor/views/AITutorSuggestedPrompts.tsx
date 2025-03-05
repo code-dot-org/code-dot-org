@@ -1,10 +1,7 @@
 import React, {useCallback} from 'react';
 
-import DeprecatedSuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/DeprecatedSuggestedPrompts';
-import {
-  AITutorTypes as ActionType,
-  AITutorTypesValue,
-} from '@cdo/apps/aiTutor/types';
+import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import {AITutorAction, AITutorActions} from '@cdo/apps/aiTutor/types';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -14,9 +11,9 @@ import {genericCompilation, genericValidation, genericHelp} from '../constants';
 import {askAITutor} from '../redux/aiTutorRedux';
 
 const QuickActions = {
-  [ActionType.COMPILATION]: genericCompilation,
-  [ActionType.VALIDATION]: genericValidation,
-  [ActionType.GENERIC_HELP]: genericHelp,
+  [AITutorActions.COMPILATION]: genericCompilation,
+  [AITutorActions.VALIDATION]: genericValidation,
+  [AITutorActions.GENERIC_HELP]: genericHelp,
 };
 
 const AITutorSuggestedPrompts: React.FunctionComponent = () => {
@@ -32,9 +29,12 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   );
 
   const hasPythonLabError = useAppSelector(state => state.lab2System.hasError);
-  const hasRunOrTestedPythonLabCode = useAppSelector(
-    state => state.lab2System.hasRun || state.lab2System.hasValidated
+  const hasRunPythonCode = useAppSelector(state => state.lab2System.hasRun);
+  const hasValidatedPythonCode = useAppSelector(
+    state => state.lab2System.hasValidated
   );
+  const hasRunOrTestedPythonLabCode =
+    hasRunPythonCode || hasValidatedPythonCode;
   const isPythonLabRunning = useAppSelector(
     state => state.lab2System.isRunning
   );
@@ -44,7 +44,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   const {hasConditions, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
-  const pythonLabValidationPassed = !hasConditions || satisfied;
+  const pythonLabValidationFailed =
+    hasConditions && hasValidatedPythonCode && !satisfied;
 
   // For JavaLab
   const javaLabSources = useAppSelector(state => state.javalabEditor.sources);
@@ -80,7 +81,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         hasRunOrTestedPythonLabCode &&
         !isWaitingForChatResponse;
       const showGenericErrorOption = showOption && hasPythonLabError;
-      const showValidationOption = showOption && !pythonLabValidationPassed;
+      const showValidationOption = showOption && pythonLabValidationFailed;
       return {studentCode, showGenericErrorOption, showValidationOption};
     } else if (labType === 'Javalab') {
       const studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
@@ -108,7 +109,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const handleClick = useCallback(
-    (actionType: AITutorTypesValue) => {
+    (aiTutorAction: AITutorAction) => {
       if (isWaitingForChatResponse) {
         return;
       }
@@ -116,17 +117,17 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       let studentInput = '';
       let suggestedPromptType = '';
 
-      switch (actionType) {
-        case ActionType.COMPILATION:
-          studentInput = QuickActions[ActionType.COMPILATION];
+      switch (aiTutorAction) {
+        case AITutorActions.COMPILATION:
+          studentInput = QuickActions[AITutorActions.COMPILATION];
           suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_COMPILATION;
           break;
-        case ActionType.VALIDATION:
-          studentInput = QuickActions[ActionType.VALIDATION];
+        case AITutorActions.VALIDATION:
+          studentInput = QuickActions[AITutorActions.VALIDATION];
           suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_VALIDATION;
           break;
-        case ActionType.GENERIC_HELP:
-          studentInput = QuickActions[ActionType.GENERIC_HELP];
+        case AITutorActions.GENERIC_HELP:
+          studentInput = QuickActions[AITutorActions.GENERIC_HELP];
           suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_GENERIC_HELP;
           break;
       }
@@ -134,7 +135,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       const chatContext = {
         studentInput,
         studentCode,
-        actionType,
+        actionType: aiTutorAction,
       };
 
       dispatch(askAITutor(chatContext));
@@ -149,25 +150,30 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     [studentCode, isWaitingForChatResponse, level, dispatch]
   );
 
+  // We set selected to false because once the user selects a prompt, we convert
+  // the chip into a message in the chat history.
   const suggestedPrompts = [
     {
-      label: QuickActions[ActionType.COMPILATION],
-      onClick: () => handleClick(ActionType.COMPILATION),
+      label: QuickActions[AITutorActions.COMPILATION],
+      onClick: () => handleClick(AITutorActions.COMPILATION),
       show: showCompilationOption,
+      selected: false,
     },
     {
-      label: QuickActions[ActionType.VALIDATION],
-      onClick: () => handleClick(ActionType.VALIDATION),
+      label: QuickActions[AITutorActions.VALIDATION],
+      onClick: () => handleClick(AITutorActions.VALIDATION),
       show: showValidationOption,
+      selected: false,
     },
     {
-      label: QuickActions[ActionType.GENERIC_HELP],
-      onClick: () => handleClick(ActionType.GENERIC_HELP),
+      label: QuickActions[AITutorActions.GENERIC_HELP],
+      onClick: () => handleClick(AITutorActions.GENERIC_HELP),
       show: showGenericErrorOption,
+      selected: false,
     },
   ];
 
-  return <DeprecatedSuggestedPrompts suggestedPrompts={suggestedPrompts} />;
+  return <SuggestedPrompts suggestedPrompts={suggestedPrompts} />;
 };
 
 export default AITutorSuggestedPrompts;

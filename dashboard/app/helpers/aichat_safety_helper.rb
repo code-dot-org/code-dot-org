@@ -13,7 +13,7 @@ module AichatSafetyHelper
 
     # Checks for toxicity in the given text using various services, determined by DCDO settings.
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
-    def find_toxicity(role, text, locale)
+    def find_toxicity(role, text, locale, level_id)
       if blocklist_enabled?(role)
         text.split.each do |word|
           return {text: text, blocked_by: 'blocklist', details: {blocked_word: word}} if profane_word_blocklist.include? word
@@ -32,13 +32,13 @@ module AichatSafetyHelper
       end
 
       if openai_enabled?(role)
-        details = openai_safety_check(text)
+        details = openai_safety_check(text, level_id)
         return {text: text, blocked_by: 'openai', details: details} if details
       end
     end
 
     # Used to check safety content given text with the given moderation system prompt.
-    private def openai_safety_check(text)
+    private def openai_safety_check(text, level_id)
       details = nil
       start_time = Time.now
       report_openai_safety_check("Start")
@@ -46,7 +46,7 @@ module AichatSafetyHelper
       # replying with something other valid expected output.
       attempts = 1
       Retryable.retryable(tries: 2) do
-        messages = safety_check_messages(text)
+        messages = safety_check_messages(text, level_id)
         response = client.request_chat_completion(messages, 1)
         raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
@@ -100,8 +100,22 @@ module AichatSafetyHelper
       DCDO.get("aichat_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
     end
 
-    private def get_safety_system_prompt
-      'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an American public middle school classroom. Examples of inappropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.'
+    private def get_safety_system_prompt(level_id)
+      spanish_script_name = 'gen-ai-spanish-test-a-unit'
+
+      in_spanish_script = false
+      if level_id
+        level = Level.find_by(id: level_id)
+        bubble_choice_parents = BubbleChoice.parent_levels(level.name)
+
+        any_parent_in_spanish_script = bubble_choice_parents.any? do |pl|
+          pl.script_levels.any? {|sl| sl.script.name == spanish_script_name}
+        end
+        level_in_spanish_script = level.script_levels.any? {|sl| sl.script.name == spanish_script_name}
+        in_spanish_script = any_parent_in_spanish_script || level_in_spanish_script
+      end
+
+      "You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an #{in_spanish_script ? 'Spanish' : 'American'} public middle school classroom. Examples of inappropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`."
     end
 
     private def get_safety_system_prompt_version
@@ -109,11 +123,11 @@ module AichatSafetyHelper
     end
 
     # Format messages with text to be checked for safety and moderation system prompt.
-    private def safety_check_messages(text)
+    private def safety_check_messages(text, level_id)
       [
         {
           role: "system",
-          content: get_safety_system_prompt
+          content: get_safety_system_prompt(level_id)
         },
         {
           role: "user",
@@ -162,7 +176,7 @@ module AichatSafetyHelper
     end
   end
 
-  def self.find_toxicity(role, text, locale)
-    ToxicityDetector.new.find_toxicity(role, text, locale)
+  def self.find_toxicity(role, text, locale, level_id)
+    ToxicityDetector.new.find_toxicity(role, text, locale, level_id)
   end
 end
