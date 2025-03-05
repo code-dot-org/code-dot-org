@@ -6,7 +6,7 @@ wrong 'Privacy and data security'
 right 'Trade-offs between safety and harm reduction'
 wrong 'AI\'s ability to drive better than humans'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A self-driving car is programmed to avoid pedestrians at all costs. However, this decision increases the risk of crashing into another vehicle. What ethical dilemma is being faced?

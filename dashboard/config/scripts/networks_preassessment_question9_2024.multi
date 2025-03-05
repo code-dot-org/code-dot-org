@@ -6,7 +6,7 @@ wrong 'The way computers break data into smaller packets'
 wrong 'The difference between wired and wireless connections'
 right 'The gap between those who have reliable Internet access and those who do not'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What does the digital divide refer to?

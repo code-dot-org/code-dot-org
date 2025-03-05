@@ -6,7 +6,7 @@ wrong '`z = 10 + 5.5`'
 wrong '`is_raining = True`'
 right '`x = "10" + 5`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following statements will produce an error in Python?

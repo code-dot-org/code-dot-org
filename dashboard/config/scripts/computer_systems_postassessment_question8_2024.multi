@@ -6,7 +6,7 @@ wrong 'Text data'
 right 'Visual data'
 wrong 'Sensor data'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which type of data would a security camera recording motion collect?
