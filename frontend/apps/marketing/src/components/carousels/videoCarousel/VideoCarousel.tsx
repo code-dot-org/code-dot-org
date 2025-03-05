@@ -28,7 +28,17 @@ interface VideoCarouselProps extends CarouselProps {
 const VideoCarousel: React.FC<VideoCarouselProps> = ({slides, ...props}) => {
   // Workaround for the experience builder not working with Array
   if (slides[0] == null) {
-    return <div>Please open the preview tab to preview the carousel.</div>;
+    return (
+      <div>
+        <p>
+          <em>
+            <strong>✍ Carousel placeholder.</strong> Please add a "Carousel"
+            content type entry in the Content sidebar, and open the preview tab
+            to see the carousel.
+          </em>
+        </p>
+      </div>
+    );
   }
 
   const getSlides = () => {
