@@ -1,6 +1,13 @@
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {
+  createMemoryRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
 import {Store} from 'redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -12,6 +19,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 describe('SectionList', () => {
@@ -75,15 +83,25 @@ describe('SectionList', () => {
     });
   });
 
-  function renderComponent() {
+  function renderComponent(initialRoute = '/teacher_dashboard/home') {
     return render(
       <Provider store={store}>
-        <TeacherHomepage />
+        <RouterProvider
+          router={createMemoryRouter(
+            createRoutesFromElements([
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.home}
+                element={<TeacherHomepage />}
+              />,
+            ]),
+            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
+          )}
+        />
       </Provider>
     );
   }
 
-  it('renders SectionList component', async () => {
+  it('renders SectionList component', () => {
     renderComponent();
     screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
@@ -97,5 +115,19 @@ describe('SectionList', () => {
     await screen.findByText('Create a new section');
     screen.getByText('Picture password');
     screen.getByRole('button', {name: 'Cancel'});
+  });
+
+  it('teaching/archived toggle', async () => {
+    renderComponent();
+    screen.getByRole('button', {name: 'Teaching'});
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+
+    screen.getByText('Period 1');
+    expect(screen.queryByText('hidden')).toBeNull();
+
+    userEvent.click(archivedButton);
+
+    await screen.findByText('hidden');
+    expect(screen.queryByText('Period 1')).toBeNull();
   });
 });
