@@ -27,15 +27,14 @@ interface VideoCarouselProps extends CarouselProps {
 
 const VideoCarousel: React.FC<VideoCarouselProps> = ({slides, ...props}) => {
   // Workaround for the experience builder not working with Array
-  // If you see this error add a content entry in the Content sidebar
-  // and save, you should then see the placeholder message below.
-  if (slides[0] == null) {
+  if (slides == null) {
     return (
       <div>
         <em>
           <strong>✍ Video carousel placeholder.</strong> Please add a
-          "Carousel" content type entry in the Content sidebar, and open the
-          preview tab to see the carousel.
+          "Carousel" content type entry in the Content sidebar, save, and open
+          the preview tab to see the carousel. An empty carousel will show in
+          this editor, but it's here.
         </em>
       </div>
     );
