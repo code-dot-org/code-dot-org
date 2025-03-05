@@ -10,12 +10,20 @@ import {ColumnPanelConfig, RowPanelConfig} from './types';
 
 // The top Y coordinate of the panel. This is the height of the main page header.
 const PANEL_TOP_COORDINATE = 50;
-export const useHorizontalLayout = (
-  leftPanel: ColumnPanelConfig,
-  rightTopPanel: RowPanelConfig,
-  rightBottomPanel: RowPanelConfig,
-  minRightPanelWidth: number
-) => {
+
+interface UseHorizontalLayoutProps {
+  leftPanel: ColumnPanelConfig;
+  rightTopPanel: RowPanelConfig;
+  rightBottomPanel: RowPanelConfig;
+  minRightPanelWidth: number;
+}
+
+export const useHorizontalLayout = ({
+  leftPanel,
+  rightTopPanel,
+  rightBottomPanel,
+  minRightPanelWidth,
+}: UseHorizontalLayoutProps) => {
   const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
     undefined
   );
@@ -34,6 +42,7 @@ export const useHorizontalLayout = (
     position: rawLeftPanelWidth,
     separatorProps: leftPanelSeparatorProps,
     isDragging: leftPanelDragging,
+    setPosition: setLeftPanelSize,
   } = useResizable({
     axis: 'x',
     initial: leftPanel.initialWidth,
@@ -48,6 +57,7 @@ export const useHorizontalLayout = (
     position: rawRightBottomPanelHeight,
     separatorProps: rightBottomPanelSeparatorProps,
     isDragging: rightBottomPanelDragging,
+    setPosition: setRightBottomPanelSize,
   } = useResizable({
     axis: 'y',
     initial: rightBottomPanel.initialHeight,
@@ -145,5 +155,7 @@ export const useHorizontalLayout = (
     leftPanelDragging,
     rightBottomPanelSeparatorProps,
     rightBottomPanelDragging,
+    setLeftPanelSize,
+    setRightBottomPanelSize,
   };
 };

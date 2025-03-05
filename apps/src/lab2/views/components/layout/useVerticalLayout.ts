@@ -9,7 +9,7 @@ import {ColumnPanelConfig} from './types';
 
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 
-interface VerticalLayoutProps {
+interface UseVerticalLayoutProps {
   leftPanel: ColumnPanelConfig;
   middlePanel: ColumnPanelConfig;
   rightPanel: ColumnPanelConfig;
@@ -19,7 +19,7 @@ export const useVerticalLayout = ({
   leftPanel,
   middlePanel,
   rightPanel,
-}: VerticalLayoutProps) => {
+}: UseVerticalLayoutProps) => {
   const [leftPanelWidth, setLeftPanelWidth] = useState<number | undefined>(
     leftPanel.initialWidth
   );
