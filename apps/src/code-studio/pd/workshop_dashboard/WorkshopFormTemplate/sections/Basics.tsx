@@ -162,12 +162,18 @@ export const Basics: FC<SectionProps> = ({
         )}
       </div>
       <div className={commonStyles.row}>
-        <FormFieldWrapper label="Workshop description">
+        <FormFieldWrapper
+          label="Workshop description"
+          helperMessage="Public-facing summary to attract and inform participants."
+          size="s"
+          className={classNames(commonStyles.item, commonStyles.required)}
+        >
           <textarea
             id="description"
             name="description"
             onChange={e => handleChange({description: e.target.value})}
             value={state.description}
+            placeholder="Enter description here"
           />
         </FormFieldWrapper>
       </div>
