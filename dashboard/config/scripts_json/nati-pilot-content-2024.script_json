@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "nati-2025-pilot",
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2024",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-26 20:23:06 UTC",
+    "serialized_at": "2025-03-04 22:49:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3138,6 +3139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson1-level4-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3160,6 +3164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson2-level1-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3182,6 +3189,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level1-2024"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3204,6 +3214,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level2-2024"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3226,6 +3239,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level3-2024"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3248,6 +3264,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level4-2024"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3270,6 +3289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson3-level5-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3342,6 +3364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson4-level3-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3414,6 +3439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson5-level3-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3436,6 +3464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level1-2024"
+        ],
         "progression": "Internet Simulator: DNS Queries"
       },
       "bonus": false,
@@ -3458,6 +3489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level2-2024"
+        ],
         "progression": "DNS Hierarchy Chatbot"
       },
       "bonus": false,
@@ -3480,6 +3514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level3-2024"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3502,6 +3539,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level4-2024"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3524,6 +3564,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level5-2024"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3546,6 +3589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson6-level6-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3568,6 +3614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level1-2024"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3590,6 +3639,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level2-2024"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3612,6 +3664,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level3-2024"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3634,6 +3689,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level4-2024"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3656,6 +3714,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level5-2024"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3678,6 +3739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level6-2024"
+        ],
         "progression": "Choose a Persona"
       },
       "bonus": false,
@@ -3700,6 +3764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson7-level7-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3722,6 +3789,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson8-level1-2024"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -3744,6 +3814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level1-2024"
+        ],
         "progression": "Identify, Defend, Reflect!"
       },
       "bonus": false,
@@ -3766,6 +3839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level2-2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3788,6 +3864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson9-level3-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3810,6 +3889,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level1-2024"
+        ],
         "progression": "Threat Detection Chatbot"
       },
       "bonus": false,
@@ -3832,6 +3914,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level2-2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3854,6 +3939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson10-level3-2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3876,6 +3964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level1-2023"
+        ],
         "progression": "Company Case Study Choices"
       },
       "bonus": false,
@@ -3898,6 +3989,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level2-2023"
+        ],
         "progression": "AI-Driven Solution Chatbots"
       },
       "bonus": false,
@@ -3920,6 +4014,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level3-2023"
+        ],
         "progression": "Final Risk Assessment"
       },
       "bonus": false,
@@ -3942,6 +4039,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level4-2023"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -4491,6 +4591,18 @@
       }
     },
     {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
       "name": "AI Networks Chat",
       "url": "https://docs.google.com/document/d/1aZKiP8iWpEHYO8y19GfwrbGsV7xQkm4P5khDwrhrrjo/edit?usp=sharing",
       "key": "ai_networks_chat",
@@ -4752,6 +4864,18 @@
       }
     },
     {
+      "name": "Packets",
+      "url": "https://docs.google.com/presentation/d/1AM8LkR7PwcDyQvGh622HhH0F7wpBcFw41H2QISBA1c4/edit?usp=drive_link",
+      "key": "packets",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "packets"
+      }
+    },
+    {
       "name": "Packets and Protocols",
       "url": "https://docs.google.com/document/d/1Kv3ohVDHlzFqtNr6G8dUOQ3pDXgVhe366w3JxGGeufE/edit?usp=sharing",
       "key": "packets_and_protocols",
@@ -4897,6 +5021,18 @@
       "seeding_key": {
         "resource.key": "threat_detection_guided_notes"
       }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
     }
   ],
   "lessons_resources": [
@@ -4904,6 +5040,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_key_ai_networks_chat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "ai_chat_lab_faq"
       }
     },
     {
@@ -4922,6 +5064,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "networks_and_the_internet_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     },
     {
@@ -5035,6 +5183,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "packets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "packets_and_protocols"
       }
     },
@@ -5124,7 +5278,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "nati-pilot-content-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

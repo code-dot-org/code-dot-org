@@ -28,7 +28,7 @@
 .sidebarContainer {
   width: 242px;
   flex: 0 0 242px;
-  background-color: $light_gray_50;
+  background-color: var(--background-neutral-secondary);
   height: auto;
 
   .sectionHeader {
@@ -55,16 +55,14 @@
 
 .sidebarNewTags{
   margin-inline-start: 10px;
-
 }
 
 .sidebarSectionHeader .sidebarNewTags div {
-  background-color: $light_primary_500;
-
+  background-color: var(--background-brand-teal-primary);
 }
 
 .sidebarSectionHeader .sidebarNewTags div span {
-  color: $white
+  color: white
 }
 
 .sectionDropdown {
@@ -97,15 +95,15 @@
   color: var(--text-neutral-tertiary);
 
   &.selected {
-    border-left: 4px solid $light_primary_500;
-    background-color: $neutral_gray10;
+    border-left: 4px solid var(--borders-brand-teal-primary);
+    background-color: var(--background-neutral-tertiary);
     padding-left: 28px;
     text-decoration: none;
     color: var(--text-neutral-primary);
   }
 
   &:hover {
-    background-color: $neutral_gray10;
+    background-color: var(--background-neutral-tertiary);
     text-decoration: none;
     .optionIcon {
       color: var(--text-neutral-primary);
@@ -119,8 +117,8 @@
 
 .navLink {
   display: inline-block;
-  background-color: $purple;
-  color: $white;
+  background-color: var(--background-brand-purple-primary);
+  color: white;
   text-align: center;
   padding: 10px 20px;
   border-radius: 5px;
@@ -130,15 +128,15 @@
   font-weight: 600;
 
   &:hover {
-    background-color: $brand_secondary_dark;
-    color: $white;
+    background-color: var(--background-brand-purple-strong);
+    color: white;
     text-decoration: none;
   }
 
   &:focus {
-    outline: $brand_primary_default solid 2px;
+    outline: var(--borders-brand-teal-primary) solid 2px;
     outline-offset: 2px;
-    color: $white;
+    color: white;
   }
 }
 
@@ -158,7 +156,7 @@
   .headerSectionName {
     margin-bottom: 0;
     margin-top: 0;
-    color: $light_primary_500;
+    color: var(--text-brand-teal-primary);
   }
 }
 

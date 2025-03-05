@@ -6,7 +6,7 @@ wrong 'User Datagram Protocol (UDP)'
 wrong 'HyperText Transfer Protocol (HTTP)'
 wrong 'Domain Name System (DNS)'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 You are streaming a live sports game on your phone. Which of the following ensures that video data arrives in the correct order and without missing parts?

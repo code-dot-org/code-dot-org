@@ -6,7 +6,7 @@ wrong 'AI speeds up Wi-Fi connections'
 wrong 'AI helps create new network protocols'
 wrong 'AI encrypts all online traffic automatically'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is a real-world example of how AI enhances network security?

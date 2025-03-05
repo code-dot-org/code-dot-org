@@ -8,6 +8,7 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
@@ -37,9 +38,7 @@ export default class WorkshopTable extends React.Component {
     onSort: PropTypes.func,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static defaultProps = {
     workshops: undefined,

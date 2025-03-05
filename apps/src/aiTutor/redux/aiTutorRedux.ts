@@ -1,11 +1,12 @@
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import _ from 'lodash';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 
+import {initialAssistantGreeting} from '../constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
-  Role,
   AITutorInteractionStatus as Status,
   ChatCompletionMessage,
   Level,
@@ -26,7 +27,7 @@ export interface AITutorState {
 const initialChatMessages: ChatCompletionMessage[] = [
   {
     role: Role.ASSISTANT,
-    chatMessageText: "Hi! I'm your AI Tutor.",
+    chatMessageText: initialAssistantGreeting,
     status: Status.OK,
   },
 ];

@@ -6,7 +6,7 @@ right 'The digital divide'
 wrong 'Network redundancy'
 wrong 'Cloud computing'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A town in a rural area struggles with slow Internet speeds and limited access to online resources. What is this an example of?

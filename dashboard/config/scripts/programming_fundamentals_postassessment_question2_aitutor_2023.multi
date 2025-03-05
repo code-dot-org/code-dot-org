@@ -6,7 +6,7 @@ wrong '`"Greater than 2"`'
 wrong '`"Negative or zero"`'
 wrong 'No output; there is a syntax error'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A student wrote the following function but made a mistake. What will happen when calling `check_number(3)`?

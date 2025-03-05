@@ -720,6 +720,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
 end
 
 def to_percent(number, n_sig_digits)
+  return nil if number.nil?
   percent = number * 100.0
   return 0 if percent.zero?
   "#{percent.round(-(Math.log10(percent).ceil - n_sig_digits))}%"

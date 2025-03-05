@@ -18,6 +18,8 @@
 #  longitude                   :decimal(9, 6)
 #  school_category             :string(255)
 #  last_known_school_year_open :string(9)
+#  county_id                   :string(255)
+#  county_name                 :string(255)
 #
 # Indexes
 #

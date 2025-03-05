@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
+import {AITutorActions} from '@cdo/apps/aiTutor/types';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -63,7 +63,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
       const chatContext = {
         studentInput: userMessage,
         studentCode,
-        actionType: ActionType.GENERAL_CHAT,
+        actionType: AITutorActions.GENERAL_CHAT,
       };
 
       dispatch(askAITutor(chatContext));

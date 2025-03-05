@@ -19,7 +19,7 @@ Feature: Global Edition - Farsi MVP - Sign In page
     And element "form[action='/global/fa/users/auth/clever'] button" contains text matching "ورود از طریق باهوش"
     And element "form[action='/global/fa/users/sign_in'] button" contains text matching "ورود"
     And the link reading "رمز عبور خود را فراموش کرده‌اید؟" within element "#signin" goes to "http://studio.code.org/global/fa/users/password/new"
-    And the href of selector "#signin a:contains(یک حساب کاربری ایجاد کنید)" contains "/global/fa/users/new_sign_up/account_type"
+    And the href of selector "#signin a:contains(یک حساب کاربری ایجاد کنید)" contains "/global/fa/users/sign_up/account_type"
 
     # Want to try coding without signing in?
     Given I wait until element "#code_without_signing_in" contains text "می‌خواهید برنامه‌نویسی را بدون ثبت نام امتحان کنید؟"

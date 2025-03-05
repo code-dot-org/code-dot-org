@@ -6,7 +6,7 @@ right 'Central Processing Unit (CPU)'
 wrong 'Graphics card'
 wrong 'RAM'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which component processes and executes instructions?

@@ -38,7 +38,7 @@ describe('SelectAccountType', () => {
     fireEvent.click(studentButton);
     fireEvent.click(teacherButton);
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/login_type'
+      '/users/sign_up/login_type'
     );
     expect(navigateToHrefMock).toHaveBeenCalledTimes(2);
   });
@@ -74,12 +74,12 @@ describe('SelectAccountType', () => {
 
     fireEvent.click(screen.getByText(locale.sign_up_as_a_student()));
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/finish_student_account'
+      '/users/sign_up/finish_student_account'
     );
 
     fireEvent.click(screen.getByText(locale.sign_up_as_a_teacher()));
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/finish_teacher_account'
+      '/users/sign_up/finish_teacher_account'
     );
 
     sessionStorage.clear();

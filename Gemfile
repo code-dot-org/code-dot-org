@@ -72,7 +72,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google', '~> 0.2.0'
+  gem 'aws-google', '~> 0.2.2'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
@@ -219,6 +219,10 @@ gem 'jwt', '~> 2.7.0'
 # we'll need to prepare for:
 # https://github.com/twilio/twilio-ruby/blob/6.0.0/UPGRADE.md#2023-05-03-5xx-to-6xx
 gem 'twilio-ruby', '< 6.0'
+
+# TwitterCldr uses Unicode's Common Locale Data Repository (CLDR)
+# to format certain types of text into their localized equivalents.
+gem 'twitter_cldr', '~> 6.12.1'
 
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
@@ -373,3 +377,5 @@ gem "json-schema", "~> 4.3"
 gem "csv"
 
 gem "async", "~> 1.32"
+
+gem "webrick", "~> 1.9"

@@ -6,7 +6,7 @@ right 'To allow devices to communicate and share data globally'
 wrong 'To store all information in one central location'
 wrong 'To make computers faster'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is the primary function of the Internet?

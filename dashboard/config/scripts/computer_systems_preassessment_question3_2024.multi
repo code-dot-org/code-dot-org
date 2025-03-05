@@ -6,7 +6,7 @@ wrong 'Printer'
 right 'Keyboard'
 wrong 'Speaker'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is an **input device**?
