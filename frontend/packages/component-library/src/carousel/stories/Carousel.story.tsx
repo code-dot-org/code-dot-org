@@ -46,11 +46,7 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
         style={{maxWidth: '800px', margin: '0 auto', marginBlock: '2rem'}}
         key={index}
       >
-        <Carousel
-          {...componentArg}
-          key={componentArg.carouselId}
-          children={componentArg.children}
-        />
+        <Carousel {...componentArg} key={componentArg.carouselId} />
       </div>
     ))}
   </>
