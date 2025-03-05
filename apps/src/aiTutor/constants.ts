@@ -4,26 +4,16 @@ import {PromptOptionKeys} from './types';
 
 export const initialAssistantGreeting = "Hi! I'm your AI Tutor.";
 
-export enum SuggestedPromptActionLabels {
-  COMPILATION = "Why doesn't my code compile?",
-  VALIDATION = 'Why are my tests failing?',
-  GENERIC_HELP = "Why doesn't my code work?",
-}
-
 export enum SuggestedPromptActions {
   COMPILATION = 'compilation',
   VALIDATION = 'validation',
   GENERIC_HELP = 'generic_help',
 }
 
-export const QuickActions: Record<
-  SuggestedPromptActions,
-  SuggestedPromptActionLabels
-> = {
-  [SuggestedPromptActions.COMPILATION]: SuggestedPromptActionLabels.COMPILATION,
-  [SuggestedPromptActions.VALIDATION]: SuggestedPromptActionLabels.VALIDATION,
-  [SuggestedPromptActions.GENERIC_HELP]:
-    SuggestedPromptActionLabels.GENERIC_HELP,
+export const QuickActions: Record<SuggestedPromptActions, string> = {
+  [SuggestedPromptActions.COMPILATION]: "Why doesn't my code compile?",
+  [SuggestedPromptActions.VALIDATION]: 'Why are my tests failing?',
+  [SuggestedPromptActions.GENERIC_HELP]: "Why doesn't my code work?",
 };
 
 export const AITutorEventMap: Record<
