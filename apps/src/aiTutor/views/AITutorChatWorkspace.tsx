@@ -32,8 +32,9 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 
   return (
     <div id="ai-tutor-chat-workspace">
-      {storedMessages.map(message => (
+      {storedMessages.map((message, index) => (
         <ChatMessage
+          key={message.id ?? `message-${index}`}
           text={message.chatMessageText}
           role={message.role}
           customStyles={style}

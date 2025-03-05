@@ -17,10 +17,7 @@ const QuickActions = {
 };
 
 const AITutorSuggestedPrompts: React.FunctionComponent = () => {
-  const [clickPromptCount, setClickPromptCount] = useState(0);
   const [clickPromptCountChange, setClickPromptCountChange] = useState(false);
-  const [runCount, setRunCount] = useState(0);
-  const [runCountChange, setRunCountChange] = useState(false);
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
   );
@@ -34,7 +31,6 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   const hasPythonlabError = useAppSelector(state => state.lab2System.hasError);
   const hasRunPythonCode = useAppSelector(state => state.lab2System.hasRun);
   const runCountPythonlab = useAppSelector(state => state.lab2System.runCount);
-  console.log('runCountPythonlab', runCountPythonlab);
   const hasValidatedPythonCode = useAppSelector(
     state => state.lab2System.hasValidated
   );
@@ -68,19 +64,15 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     state => state.javalab.hasRunOrTestedCode
   );
   const runCountJavalab = useAppSelector(state => state.javalab.runCount);
-  console.log('runCountJavalab', runCountJavalab);
   const isJavalabRunning = useAppSelector(state => state.javalab.isRunning);
   const javalabValidationPassed = useAppSelector(
     state => state.javalab.validationPassed
   );
 
   useEffect(() => {
-    console.log('useEffect for run count and run count change');
-    const count = Math.max(runCountJavalab, runCountPythonlab);
-    setRunCount(count);
-    setRunCountChange(true);
+    console.log('useEffect run count change');
     setClickPromptCountChange(false);
-  }, [runCountChange, runCountJavalab, runCountPythonlab]);
+  }, [runCountJavalab, runCountPythonlab]);
 
   function getOptionsByLabType(labType: string) {
     if (labType === 'Pythonlab') {
@@ -162,19 +154,9 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         suggestedPrompt: suggestedPromptType,
       });
       console.log('inside handleClick');
-      // Use functional updates to ensure state updates correctly
-      setClickPromptCount(prev => prev + 1);
       setClickPromptCountChange(() => true);
-      setRunCountChange(() => false);
-      console.log('clickPromptCountChange', clickPromptCountChange);
     },
-    [
-      isWaitingForChatResponse,
-      studentCode,
-      dispatch,
-      level,
-      clickPromptCountChange,
-    ]
+    [isWaitingForChatResponse, studentCode, dispatch, level]
   );
 
   // We set selected to false because once the user selects a prompt, we convert
@@ -199,11 +181,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       selected: false,
     },
   ];
-  console.log('clickPromptCount', clickPromptCount);
-  console.log('runCount', runCount);
-  console.log('clickPromptCountChange', clickPromptCountChange);
-  console.log('runCountChange', runCountChange);
-  const showPrompts = !clickPromptCountChange && runCountChange;
+  const showPrompts = !clickPromptCountChange;
 
   console.log('showPrompts', showPrompts);
   return showPrompts ? (
