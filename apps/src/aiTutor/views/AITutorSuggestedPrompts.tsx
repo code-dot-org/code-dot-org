@@ -138,8 +138,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       runCountPythonlab,
       validateCountJavalab,
       validateCountPythonlab,
-      validationState.hasConditions,
-      validationState.satisfied,
+      validationState,
     ]
   );
 
