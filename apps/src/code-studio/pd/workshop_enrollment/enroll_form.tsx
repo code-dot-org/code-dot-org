@@ -5,12 +5,11 @@ import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import Typography from '@code-dot-org/component-library/typography';
-import classNames from 'classnames';
-import React, {Fragment, ReactNode, useMemo, useState} from 'react';
+import React, {Fragment, useMemo, useState} from 'react';
 
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -43,7 +42,6 @@ import {
 } from './constants';
 
 import styles from '@cdo/apps/code-studio/pd/workshop_enrollment/EnrollForm/styles.module.scss';
-import textFieldStyles from '@cdo/apps/componentLibrary/textField/textfield.module.scss';
 
 interface SchoolInfoProps {
   country?: string;
@@ -111,47 +109,6 @@ type EnrollFormProps = {
   taught_ap_before?: string;
   planning_to_teach_ap?: string;
 };
-
-/**
- * This Label component is necessary to apply the same label and
- * error message elements that TextField DSCO component has to other
- * inputs that don't yet have a label or error message prop, such
- * as textarea, RadioButtonsGroup, and Checkbox.
- */
-const Label = ({
-  children,
-  text,
-  errorMessage,
-  className = '',
-}: {
-  children?: ReactNode;
-  text?: ReactNode;
-  errorMessage?: ReactNode;
-  className?: string;
-}) => (
-  <label
-    className={classNames(
-      textFieldStyles.textField,
-      textFieldStyles['textField-black'],
-      textFieldStyles['textField-m'],
-      className
-    )}
-  >
-    {text && <span className={textFieldStyles.textFieldLabel}>{text}</span>}
-    {children}
-    {errorMessage && (
-      <div
-        className={classNames(
-          textFieldStyles.textFieldHelperSection,
-          textFieldStyles.textFieldErrorSection
-        )}
-      >
-        <FontAwesomeV6Icon iconName={'circle-exclamation'} />
-        <span>{errorMessage}</span>
-      </div>
-    )}
-  </label>
-);
 
 export const labelKeyToTextMap = {
   grades_teaching:
@@ -611,7 +568,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               containerClassName={styles.school_info_required}
               {...schoolInfo}
             />
-            <Label errorMessage={formErrors.school_info} />
+            <FormFieldWrapper errorMessage={formErrors.school_info} />
           </div>
         </>
       )}
@@ -631,8 +588,8 @@ export default function EnrollForm(props: EnrollFormProps) {
             errorMessage={formErrors.role}
           />
           {formState.role && DESCRIBE_ROLES.includes(formState.role) && (
-            <Label
-              text={labelKeyToTextMap.describe_role}
+            <FormFieldWrapper
+              label={labelKeyToTextMap.describe_role}
               className={getRequiredStyles('describe_role')}
               errorMessage={formErrors.describe_role}
             >
@@ -646,13 +603,13 @@ export default function EnrollForm(props: EnrollFormProps) {
                 }
                 value={formState.describe_role}
               />
-            </Label>
+            </FormFieldWrapper>
           )}
 
           {props.workshop_course !== ADMIN_COUNSELOR && (
-            <Label
+            <FormFieldWrapper
               className={getRequiredStyles('grades_teaching')}
-              text={labelKeyToTextMap.grades_teaching}
+              label={labelKeyToTextMap.grades_teaching}
               errorMessage={formErrors.grades_teaching}
             >
               <Typography
@@ -698,7 +655,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                         }
                       />
                       {stateKey && (
-                        <Label errorMessage={formErrors[stateKey]}>
+                        <FormFieldWrapper errorMessage={formErrors[stateKey]}>
                           <textarea
                             id={grade}
                             name={grade}
@@ -709,22 +666,22 @@ export default function EnrollForm(props: EnrollFormProps) {
                             }
                             value={formState[stateKey]}
                           />
-                        </Label>
+                        </FormFieldWrapper>
                       )}
                     </Fragment>
                   );
                 })}
               </fieldset>
-            </Label>
+            </FormFieldWrapper>
           )}
         </>
       )}
       {props.workshop_course === CSF &&
         (props.workshop_subject === INTRO ||
           props.workshop_subject === DISTRICT) && (
-          <Label
+          <FormFieldWrapper
             className={getRequiredStyles('csf_intro_intent')}
-            text={labelKeyToTextMap.csf_intro_intent}
+            label={labelKeyToTextMap.csf_intro_intent}
             errorMessage={formErrors.csf_intro_intent}
           >
             <fieldset id="csf_intro_intent">
@@ -742,14 +699,14 @@ export default function EnrollForm(props: EnrollFormProps) {
                 }))}
               />
             </fieldset>
-          </Label>
+          </FormFieldWrapper>
         )}
       {props.workshop_course === CSF &&
         (props.workshop_subject === INTRO ||
           props.workshop_subject === DISTRICT) && (
-          <Label
+          <FormFieldWrapper
             className={getRequiredStyles('csf_intro_other_factors')}
-            text={labelKeyToTextMap.csf_intro_other_factors}
+            label={labelKeyToTextMap.csf_intro_other_factors}
             errorMessage={formErrors.csf_intro_other_factors}
           >
             <fieldset id="csf_intro_other_factors">
@@ -770,7 +727,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                 />
               ))}
             </fieldset>
-          </Label>
+          </FormFieldWrapper>
         )}
       {props.workshop_course === CSF &&
         props.workshop_subject === DEEP_DIVE && (
@@ -788,9 +745,9 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={styles.table}
             />
 
-            <Label
+            <FormFieldWrapper
               className={getRequiredStyles('csf_courses_planned')}
-              text={coursesPlannedLabel}
+              label={coursesPlannedLabel}
               errorMessage={formErrors.csf_courses_planned}
             >
               <fieldset id="csf_courses_planned">
@@ -820,7 +777,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                         }
                       />
                       {stateKey && (
-                        <Label errorMessage={formErrors[stateKey]}>
+                        <FormFieldWrapper errorMessage={formErrors[stateKey]}>
                           <textarea
                             id={course}
                             name={course}
@@ -832,17 +789,17 @@ export default function EnrollForm(props: EnrollFormProps) {
                             }
                             className={styles.textarea}
                           />
-                        </Label>
+                        </FormFieldWrapper>
                       )}
                     </Fragment>
                   );
                 })}
               </fieldset>
-            </Label>
+            </FormFieldWrapper>
 
-            <Label
+            <FormFieldWrapper
               className={getRequiredStyles('attended_csf_intro_workshop')}
-              text={labelKeyToTextMap.attended_csf_intro_workshop}
+              label={labelKeyToTextMap.attended_csf_intro_workshop}
               errorMessage={formErrors.attended_csf_intro_workshop}
             >
               <fieldset id="attended_csf_intro_workshop">
@@ -862,14 +819,14 @@ export default function EnrollForm(props: EnrollFormProps) {
                   )}
                 />
               </fieldset>
-            </Label>
+            </FormFieldWrapper>
           </>
         )}
 
       {props.collect_demographics && (
-        <Label
+        <FormFieldWrapper
           className={getRequiredStyles('previous_courses')}
-          text={labelKeyToTextMap.previous_courses}
+          label={labelKeyToTextMap.previous_courses}
           errorMessage={formErrors.previous_courses}
         >
           <fieldset id="previous_courses">
@@ -886,7 +843,7 @@ export default function EnrollForm(props: EnrollFormProps) {
               />
             ))}
           </fieldset>
-        </Label>
+        </FormFieldWrapper>
       )}
 
       {props.workshop_course === CSP &&
@@ -920,9 +877,9 @@ export default function EnrollForm(props: EnrollFormProps) {
               className={getRequiredStyles('years_teaching_cs')}
             />
 
-            <Label
+            <FormFieldWrapper
               className={getRequiredStyles('taught_ap_before')}
-              text={labelKeyToTextMap.taught_ap_before}
+              label={labelKeyToTextMap.taught_ap_before}
               errorMessage={formErrors.taught_ap_before}
             >
               <fieldset id="taught_ap_before">
@@ -942,11 +899,11 @@ export default function EnrollForm(props: EnrollFormProps) {
                   )}
                 />
               </fieldset>
-            </Label>
+            </FormFieldWrapper>
 
-            <Label
+            <FormFieldWrapper
               className={getRequiredStyles('planning_to_teach_ap')}
-              text={labelKeyToTextMap.planning_to_teach_ap}
+              label={labelKeyToTextMap.planning_to_teach_ap}
               errorMessage={formErrors.planning_to_teach_ap}
             >
               <fieldset id="planning_to_teach_ap">
@@ -966,7 +923,7 @@ export default function EnrollForm(props: EnrollFormProps) {
                   )}
                 />
               </fieldset>
-            </Label>
+            </FormFieldWrapper>
           </>
         )}
       <Typography semanticTag="p" visualAppearance="body-four">

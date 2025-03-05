@@ -1,11 +1,13 @@
 import React from 'react';
 
-import {Role} from '@cdo/apps/aiTutor/types';
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {initialAssistantGreeting} from '../constants';
+
 import AITutorSuggestedPrompts from './AITutorSuggestedPrompts';
-import AssistantMessage from './AssistantMessage';
-import UserMessage from './UserMessage';
+import AssistantMessageFeedback from './AssistantMessageFeedback';
 import WarningModal from './WarningModal';
 
 import style from './ai-tutor.module.scss';
@@ -30,13 +32,19 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 
   return (
     <div id="ai-tutor-chat-workspace">
-      {storedMessages.map((message, idx) =>
-        message.role === Role.ASSISTANT ? (
-          <AssistantMessage message={message} key={idx} />
-        ) : (
-          <UserMessage message={message} key={idx} />
-        )
-      )}
+      {storedMessages.map(message => (
+        <ChatMessage
+          text={message.chatMessageText}
+          role={message.role}
+          customStyles={style}
+          footer={
+            message.role === Role.ASSISTANT &&
+            message.chatMessageText !== initialAssistantGreeting ? (
+              <AssistantMessageFeedback messageId={message.id} />
+            ) : null
+          }
+        />
+      ))}
       {showWaitingAnimation()}
       <WarningModal />
       <AITutorSuggestedPrompts />

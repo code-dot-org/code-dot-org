@@ -33,7 +33,7 @@ markdown <<MARKDOWN
 
 ## Activity: Designing an Algorithm with Sticky Notes
 
-#### In this activity from Lesson 3, students use sticky notes to visualize problem-solving patterns.
+#### Let's practice visualizing problem-solving patterns using sticky notes.
 
 #### To get started, use scratch paper or sticky notes to map out an algorithm that moderates comments for a content creator.
 
@@ -84,6 +84,12 @@ markdown <<MARKDOWN
         Encourage students to reflect on how breaking down a problem and mapping out decisions helps them write more efficient algorithms.<br><br> Taking time to visualize an algorithm before coding prevents confusion, reveals gaps in logic, and ensures a clear, structured approach to problem-solving.
     </p>
 </div>
+
+<br>
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 
 ## Let's try one more unplugged activity!
 

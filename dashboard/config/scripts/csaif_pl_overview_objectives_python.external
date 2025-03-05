@@ -29,9 +29,9 @@ markdown <<MARKDOWN
 <div style="margin: 20px auto; width: 90%; max-width: 900px; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
     <h2 style="margin-top: 0;">In this module, you will:</h2>
     <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
-        <li>Understand the key components of computational thinking - pattern recognition, abstraction, decomposition, and algorithms</li>
+        <li>Understand the key components of computational thinking - pattern recognition, abstraction, decomposition, and algorithms</li><br>
         <li>Learn Python programming basics using Code.org’s engaging Neighborhood IDE
-</li>
+</li><br>
         <li>Examine the ethical implications of technology
 </li>
     </ul>

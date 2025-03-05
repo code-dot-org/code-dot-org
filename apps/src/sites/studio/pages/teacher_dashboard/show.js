@@ -137,7 +137,7 @@ $(document).ready(function () {
       : sections.find(s => s.id === section.id);
     const selectedSection = {...selectedSectionFromList, ...section};
 
-    getStore().dispatch(selectSection(selectedSection.id));
+    store.dispatch(selectSection(selectedSection.id));
 
     setSelectedSectionData(selectedSection);
 

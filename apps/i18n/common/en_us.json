@@ -3210,7 +3210,7 @@
   "weekDuration": "1.5-4 hours",
   "weekLabel": "Week {number}",
   "weeklyLessonLayout": "Weekly Lesson Layout",
-  "welcome": "Welcome, ",
+  "welcome": "Welcome, {teacherName}",
   "welcomeToDanceParty": "Welcome to Dance Party!",
   "whatCountry": "What country are you located in?",
   "when": "when",
