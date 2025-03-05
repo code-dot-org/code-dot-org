@@ -11,10 +11,13 @@ import {SectionList} from './SectionList';
 
 import styles from './teacherHomepage.module.scss';
 
+type ArchivedToggleOption = 'teaching' | 'archived';
+
 export const TeacherHomepage: React.FC = () => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
-  const [showHiddenOnly, setShowHiddenOnly] = React.useState(false);
+  const [selectedArchiveToggle, setSelectedArchiveToggle] =
+    React.useState<ArchivedToggleOption>('teaching');
 
   return (
     <div className={styles.teacherHomepage}>
@@ -27,11 +30,9 @@ export const TeacherHomepage: React.FC = () => {
             <div className={styles.headerButtonRow}>
               <SegmentedButtons
                 onChange={value =>
-                  value === 'teaching'
-                    ? setShowHiddenOnly(false)
-                    : setShowHiddenOnly(true)
+                  setSelectedArchiveToggle(value as ArchivedToggleOption)
                 }
-                selectedButtonValue={showHiddenOnly ? 'archived' : 'teaching'}
+                selectedButtonValue={selectedArchiveToggle}
                 buttons={[
                   {
                     label: 'Teaching',
@@ -66,7 +67,9 @@ export const TeacherHomepage: React.FC = () => {
                 />
               </div>
             </div>
-            <SectionList showHiddenOnly={showHiddenOnly} />
+            <SectionList
+              showHiddenOnly={selectedArchiveToggle === 'archived'}
+            />
           </div>
           <div className={styles.blankAnnouncement} />
         </div>

@@ -57,7 +57,7 @@ describe('SectionList', () => {
   function renderComponent() {
     return render(
       <Provider store={store}>
-        <SectionList />
+        <SectionList showHiddenOnly={false} />
       </Provider>
     );
   }
