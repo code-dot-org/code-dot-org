@@ -1,4 +1,5 @@
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
@@ -70,9 +71,23 @@ describe('SectionList', () => {
     );
   }
 
-  it('renders SectionList component', async () => {
+  it('renders SectionList component', () => {
     renderComponent();
     screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
+  });
+
+  it('teaching/archived toggle', async () => {
+    renderComponent();
+    screen.getByRole('button', {name: 'Teaching'});
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+
+    screen.getByText('Period 1');
+    expect(screen.queryByText('hidden')).toBeNull();
+
+    userEvent.click(archivedButton);
+
+    await screen.findByText('hidden');
+    expect(screen.queryByText('Period 1')).toBeNull();
   });
 });
