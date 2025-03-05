@@ -13,6 +13,7 @@ import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
+import HorizontalLayout from './layout/HorizontalLayout';
 import VerticalLayout from './layout/VerticalLayout';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
@@ -54,7 +55,7 @@ const defaultConfig: ConfigType = {
   showFileBrowser: true,
   layoutComponents: {
     vertical: <VerticalLayout />,
-    horizontal: <div />,
+    horizontal: <HorizontalLayout />,
   },
 };
 
