@@ -56,5 +56,6 @@ export class MarketingPage {
     await this.page.evaluate(() =>
       document.fonts.ready.then(fonts => console.log(fonts)),
     );
+    await this.page.waitForFunction(() => document.fonts.ready);
   }
 }
