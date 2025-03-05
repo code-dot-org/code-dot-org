@@ -75,7 +75,6 @@ describe('SectionList', () => {
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
           )}
         />
-        <SectionList />
       </Provider>
     );
   }
