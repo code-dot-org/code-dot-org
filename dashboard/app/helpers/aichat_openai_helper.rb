@@ -34,36 +34,27 @@ module AichatOpenaiHelper
     r = [{role: "system", content: instructions}]
 
     messages_to_add = stored_messages.map do |message|
-      value =
-        if message['image']
-          {role: message['role'], content: [{type: "image_url", image_url: {url: message['image']}}]}
-        else
-          {role: message['role'], content: message['chatMessageText']}
-        end
-      value
+      format_message(message, encrypted_channel_id)
     end
     r.append(*messages_to_add)
 
-    r <<
-      if new_message['image']
-        {role: 'user', content: [{type: "image_url", image_url: {url: new_message['image']}}]}
-      elsif new_message['assets']
-        formatted_new_message = {role: 'user', content: [{type: "text", text: new_message['chatMessageText']}]}
-        new_message['assets'].each do |filename|
-          asset_uris = AichatAssetHelper.get_asset_data_uris(encrypted_channel_id, filename)
-          asset_uris.each do |asset_uri|
-            formatted_new_message[:content] << {type: "image_url", image_url: {url: asset_uri}}
-          end
-        end
-        formatted_new_message
-      else
-        {role: 'user', content: new_message['chatMessageText']}
-      end
+    r << format_message(new_message, encrypted_channel_id)
 
     puts r
     # Optional for debugging - to see large output
     # File.write("messages.json", r.to_json)
     r
+  end
+
+  def self.format_message(message, encrypted_channel_id)
+    formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
+    message['assets']&.each do |filename|
+      asset_uris = AichatAssetHelper.get_asset_data_uris(encrypted_channel_id, filename)
+      asset_uris.each do |asset_uri|
+        formatted[:content] << {type: "image_url", image_url: {url: asset_uri}}
+      end
+    end
+    formatted
   end
 
   def self.request_chat_completion(messages, temperature)

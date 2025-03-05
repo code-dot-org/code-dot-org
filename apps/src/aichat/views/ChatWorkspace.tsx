@@ -196,7 +196,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
         dispatch(
           submitChatContents({
-            text: 'Tell me a story using these images and documents',
+            text: 'Continue the story from your previous message using all the documents and photos in the chat history',
             assets,
           })
         );
