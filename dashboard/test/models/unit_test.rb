@@ -443,6 +443,9 @@ class UnitTest < ActiveSupport::TestCase
 
       @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+
+      @single_unit_2023 = create :unit, name: 'single-unit-2023'
+      @single_unit_course_2023 = create :single_unit_course, name: 'single-unit-course-2023', family_name: "single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
@@ -496,6 +499,11 @@ class UnitTest < ActiveSupport::TestCase
       unit2.reload
 
       assert unit2.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is false if unit is in single-unit course has no progress and is not assigned' do
+      @single_unit_2023.reload
+      refute @single_unit_2023.can_view_version?(@student)
     end
   end
 
