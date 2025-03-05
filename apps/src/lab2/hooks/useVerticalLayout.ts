@@ -2,10 +2,9 @@ import {useCallback, useEffect, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
-import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/ResizeBar';
+import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import {ColumnPanelConfig} from '@cdo/apps/lab2/views/components/layout/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {ColumnPanelConfig} from './types';
 
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 
@@ -15,6 +14,11 @@ interface UseVerticalLayoutProps {
   rightPanel: ColumnPanelConfig;
 }
 
+/**
+ * Hook that manages the layout of a lab with 3 vertical, resizable panels.
+ * To be used in conjunction with the ResizeBar component.
+ * See pythonlab/layout/VerticalLayout for a usage example.
+ */
 export const useVerticalLayout = ({
   leftPanel,
   middlePanel,

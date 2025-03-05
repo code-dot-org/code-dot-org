@@ -3,8 +3,8 @@ import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
 import React from 'react';
 
-import {useVerticalLayout} from '@cdo/apps/lab2/views/components/layout/useVerticalLayout';
-import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
+import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 

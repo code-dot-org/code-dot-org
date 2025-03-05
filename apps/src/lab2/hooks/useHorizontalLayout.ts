@@ -3,10 +3,13 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
-import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/ResizeBar';
+import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ColumnPanelConfig, RowPanelConfig} from './types';
+import {
+  ColumnPanelConfig,
+  RowPanelConfig,
+} from '../views/components/layout/types';
 
 // The top Y coordinate of the panel. This is the height of the main page header.
 const PANEL_TOP_COORDINATE = 50;

@@ -3,8 +3,8 @@ import React from 'react';
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {InfoPanel} from '@cdo/apps/codebridge/InfoPanel';
 import Workspace from '@cdo/apps/codebridge/Workspace';
-import {useHorizontalLayout} from '@cdo/apps/lab2/views/components/layout/useHorizontalLayout';
-import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
+import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
+import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
