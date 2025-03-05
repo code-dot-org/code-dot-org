@@ -78,6 +78,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       <div
         ref={ref}
         id={tooltipId}
+        aria-live="polite"
         className={classnames(
           moduleStyles.tooltip,
           moduleStyles[`tooltip-${direction}`],

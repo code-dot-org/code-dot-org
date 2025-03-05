@@ -46,11 +46,11 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     event: React.SyntheticEvent<HTMLElement>,
     isTooltip: boolean = false,
   ) => {
+    setShowTooltip(show);
     if (hideTimeoutRef.current) {
       clearTimeout(hideTimeoutRef.current);
       hideTimeoutRef.current = null;
     }
-    setShowTooltip(show);
     if (!isTooltip) {
       setNodePosition(show ? (event.target as HTMLElement) : null);
     }
@@ -124,7 +124,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     ...tooltipStyles,
   };
 
-  // Check if children is a valid React element and clone it with ariaDescribedBy attribute
+  // Check if child is a valid React element and clone it with ariaDescribedBy attribute
   // and additional event handlers to make sure the tooltip is displayed correctly
   const componentToWrap =
     isValidElement<HTMLAttributes<HTMLElement>>(children) &&
@@ -146,7 +146,6 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         handleHideTooltip();
         children.props.onMouseLeave?.(event);
       },
-      tabIndex: 0, // Make the container focusable
     });
 
   return (
