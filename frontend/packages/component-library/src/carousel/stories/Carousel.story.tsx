@@ -93,20 +93,20 @@ DefaultCarousel.play = async ({
   ];
 
   // check that the navigation arrows are showing
-  expect(navArrowPrev).toBeInTheDocument();
-  expect(navArrowNext).toBeInTheDocument();
+  await expect(navArrowPrev).toBeInTheDocument();
+  await expect(navArrowNext).toBeInTheDocument();
 
   // check that the pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
-    const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+  for (const dotLabel of paginationDots) {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  }
 
   // check that slides are in the carousel
-  slides.forEach(async slideText => {
-    const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
-  });
+  for (const slideText of slides) {
+    const headings = await canvas.findAllByText(slideText);
+    headings.forEach(heading => expect(heading).toBeInTheDocument());
+  }
 };
 
 export const CarouselWithoutNavArrows = SingleTemplate.bind({});
@@ -136,14 +136,14 @@ CarouselWithoutNavArrows.play = async ({
   const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
 
   // check that the navigation arrows are not showing
-  expect(navArrowPrev).not.toBeInTheDocument();
-  expect(navArrowNext).not.toBeInTheDocument();
+  await expect(navArrowPrev).not.toBeInTheDocument();
+  await expect(navArrowNext).not.toBeInTheDocument();
 
   // check that the pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
-    const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+  for (const dotLabel of paginationDots) {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  }
 };
 
 export const CarouselWithTouchMove = SingleTemplate.bind({});
@@ -181,20 +181,20 @@ CarouselWithTouchMove.play = async ({
   ];
 
   // check that the navigation arrows are showing
-  expect(navArrowPrev).toBeInTheDocument();
-  expect(navArrowNext).toBeInTheDocument();
+  await expect(navArrowPrev).toBeInTheDocument();
+  await expect(navArrowNext).toBeInTheDocument();
 
   // check that the pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
-    const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+  for (const dotLabel of paginationDots) {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  }
 
   // check that slides are in the carousel
-  slides.forEach(async slideText => {
-    const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
-  });
+  for (const slideText of slides) {
+    const headings = await canvas.findAllByText(slideText);
+    headings.forEach(heading => expect(heading).toBeInTheDocument());
+  }
 };
 
 export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
@@ -234,23 +234,23 @@ CarouselWithCustomSlidesPerView.play = async ({
   ];
 
   // check that the navigation arrows are showing
-  expect(navArrowPrev).toBeInTheDocument();
-  expect(navArrowNext).toBeInTheDocument();
+  await expect(navArrowPrev).toBeInTheDocument();
+  await expect(navArrowNext).toBeInTheDocument();
 
   // check that two pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
-    const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+  for (const dotLabel of paginationDots) {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  }
 
   // check that the third pagination dot is not showing
   expect(paginationDotThree).not.toBeInTheDocument();
 
   // check that slides are in the carousel
-  slides.forEach(async slideText => {
-    const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
-  });
+  for (const slideText of slides) {
+    const headings = await canvas.findAllByText(slideText);
+    headings.forEach(heading => expect(heading).toBeInTheDocument());
+  }
 };
 
 // TODO CMS-360 - Add Action Block carousel when Action Block component is ready
@@ -382,16 +382,16 @@ VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   navArrowNext.forEach(nextArrow => expect(nextArrow).toBeInTheDocument());
 
   // check that the pagination dots are showing on both carousels
-  paginationDots.forEach(async dotLabel => {
+  for (const dotLabel of paginationDots) {
     const dots = await canvas.findAllByLabelText(dotLabel);
     dots.forEach(dot => expect(dot).toBeInTheDocument());
-  });
+  }
 
   // check that videos are visible in both carousels
-  videoTitles.forEach(async videoTitle => {
+  for (const videoTitle of videoTitles) {
     const videos = await canvas.findAllByTitle(videoTitle);
     videos.forEach(video => expect(video).toBeVisible());
-  });
+  }
 };
 
 export const ImageCarousel = SingleTemplate.bind({});
