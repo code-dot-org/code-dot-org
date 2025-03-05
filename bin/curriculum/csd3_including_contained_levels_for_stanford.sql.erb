@@ -63,16 +63,22 @@ with
              , l.name activity_level_name
              , l.type activity_level_type
              , case
-                   when
-                       l.type = 'Multi' and
-                       JSON_EXTRACT_PATH_TEXT(JSON_EXTRACT_ARRAY_ELEMENT_TEXT(JSON_EXTRACT_PATH_TEXT(l.properties, 'questions'), 0, true),'text') <> ''
-                       then JSON_EXTRACT_PATH_TEXT(JSON_EXTRACT_ARRAY_ELEMENT_TEXT(JSON_EXTRACT_PATH_TEXT(l.properties, 'questions'), 0, true),'text')
-                   when
-                       l.type in ('External', 'Multi')
-                           and JSON_EXTRACT_PATH_TEXT(l.properties, 'markdown') <> ''
-                       then JSON_EXTRACT_PATH_TEXT(l.properties, 'markdown')
-                   else    JSON_EXTRACT_PATH_TEXT(l.properties, 'long_instructions')
-            end instructions
+                   when l.type = 'External'
+                       then JSON_EXTRACT_PATH_TEXT(l.properties, 'markdown', true)
+                   when l.type = 'Multi'
+                       -- multi instructions can either be in markdown or questions
+                       then COALESCE(
+                           JSON_EXTRACT_PATH_TEXT(l.properties, 'markdown', true),
+                           JSON_EXTRACT_PATH_TEXT(
+                               JSON_EXTRACT_ARRAY_ELEMENT_TEXT(
+                                   JSON_EXTRACT_PATH_TEXT(l.properties, 'questions', true)
+                               , 0, true)
+                           , 'text', true)
+                       )
+                   else
+                       -- long_instructions is valid for FreeResponse and most lab level types
+                       JSON_EXTRACT_PATH_TEXT(l.properties, 'long_instructions', true)
+             end instructions
         from course_structure_segment css1
                  left JOIN dashboard_production.levels l ON css1.activity_level_id  = l.id
     )
