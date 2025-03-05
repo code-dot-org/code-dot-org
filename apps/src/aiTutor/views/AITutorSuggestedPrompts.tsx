@@ -29,13 +29,13 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     state => state.lab2Project?.projectSources?.source
   );
   const hasPythonlabError = useAppSelector(state => state.lab2System.hasError);
-  const hasRunPythonCode = useAppSelector(state => state.lab2System.hasRun);
   const runCountPythonlab = useAppSelector(state => state.lab2System.runCount);
-  const hasValidatedPythonCode = useAppSelector(
-    state => state.lab2System.hasValidated
+  const validateCountPythonlab = useAppSelector(
+    state => state.lab2System.validateCount
   );
+
   const hasRunOrTestedPythonlabCode =
-    hasRunPythonCode || hasValidatedPythonCode;
+    runCountPythonlab || validateCountPythonlab;
   const isPythonlabRunning = useAppSelector(
     state => state.lab2System.isRunning
   );
@@ -46,7 +46,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     state => state.lab.validationState
   );
   const pythonlabValidationFailed =
-    hasConditions && hasValidatedPythonCode && !satisfied;
+    hasConditions && validateCountPythonlab && !satisfied;
 
   // For javalab
   const javalabSources = useAppSelector(state => state.javalabEditor.sources);
@@ -70,9 +70,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   );
 
   useEffect(() => {
-    console.log('useEffect run count change');
     setClickPromptCountChange(false);
-  }, [runCountJavalab, runCountPythonlab]);
+  }, [runCountJavalab, runCountPythonlab, validateCountPythonlab]);
 
   function getOptionsByLabType(labType: string) {
     if (labType === 'Pythonlab') {
@@ -153,7 +152,6 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         progressionType: level?.progressionType,
         suggestedPrompt: suggestedPromptType,
       });
-      console.log('inside handleClick');
       setClickPromptCountChange(() => true);
     },
     [isWaitingForChatResponse, studentCode, dispatch, level]
@@ -183,7 +181,6 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   ];
   const showPrompts = !clickPromptCountChange;
 
-  console.log('showPrompts', showPrompts);
   return showPrompts ? (
     <SuggestedPrompts suggestedPrompts={suggestedPrompts} />
   ) : null;

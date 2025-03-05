@@ -20,6 +20,7 @@ import {
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {
+  incrementValidateCount,
   setHasValidated,
   setIsValidating,
 } from '@cdo/apps/lab2/redux/systemRedux';
@@ -176,6 +177,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         dispatch(setIsValidating(false))
       );
       dispatch(setHasValidated(true));
+      dispatch(incrementValidateCount());
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
