@@ -14,13 +14,9 @@ import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
   section: Section;
-  onDeleteClickCallback: (sectionId: number) => void;
 }
 
-export const SectionCard: React.FC<SectionCardProps> = ({
-  section,
-  onDeleteClickCallback,
-}) => {
+export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
   return (
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
@@ -38,10 +34,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <SectionOptionsDropdown
-            section={section}
-            onDeleteClickCallback={onDeleteClickCallback}
-          />
+          <SectionOptionsDropdown section={section} />
         </div>
       </div>
     </div>

@@ -69,12 +69,7 @@ describe('SectionCard', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <SectionCard
-                    section={section}
-                    onDeleteClickCallback={() => {}}
-                  />
-                }
+                element={<SectionCard section={section} />}
               />,
             ]),
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
