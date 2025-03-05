@@ -17,6 +17,8 @@ import {
   ServerChatEvent,
   isCompletedChatMessage,
   PendingChatMessage,
+  UserActionEvent,
+  ModelUpdate,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -53,7 +55,32 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<ServerChatEvent[]>
     ) => {
-      state.studentChatHistory = action.payload;
+      // if no history, do nothing?
+      if (action.payload.length === 0) {
+        return;
+      }
+
+      const lastResetIndex = action.payload.findLastIndex(event => {
+        return (
+          [
+            'selectedModelId',
+            'temperature',
+            'systemPrompt',
+            'retrievalContexts',
+          ].includes((event as ModelUpdate)?.updatedField) ||
+          (event as UserActionEvent)?.descriptionKey === 'CLEAR_CHAT'
+        );
+      });
+
+      if (lastResetIndex >= 0) {
+        // Push or replace?
+        // Does it matter if reset event is in events past or current?
+        state.chatEventsPast = action.payload.slice(0, lastResetIndex + 1);
+        state.chatEventsCurrent = action.payload.slice(lastResetIndex + 1);
+        // state.studentChatHistory = action.payload;
+      } else {
+        state.chatEventsCurrent = action.payload;
+      }
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
