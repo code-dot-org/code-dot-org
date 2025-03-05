@@ -158,6 +158,7 @@ RUN curl --output /tmp/firefox.deb https://s3.amazonaws.com/circle-downloads/fir
     true
 
 # install chrome
+# TODO: install from https://googlechromelabs.github.io/chrome-for-testing/ instead
 RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     dpkg -i google-chrome-stable_current_amd64.deb || apt-get -fy install && \
     rm google-chrome-stable_current_amd64.deb && \
@@ -166,12 +167,13 @@ RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_
         "/opt/google/chrome/google-chrome"
 
 # install chromedriver
-RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.com/LATEST_RELEASE) && \
-    curl -sSLOJ "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_RELEASE/chromedriver_linux64.zip" && \
-    unzip chromedriver_linux64.zip && \
-    rm chromedriver_linux64.zip && \
-    mv chromedriver /usr/local/bin/chromedriver && \
-    chmod +x /usr/local/bin/chromedriver
+RUN export CHROMEDRIVER_RELEASE=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json | jq -r .channels.Stable.version) && \
+    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$CHROMEDRIVER_RELEASE/linux64/chromedriver-linux64.zip" && \
+    unzip chromedriver-linux64.zip && \
+    mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
+    chmod +x /usr/local/bin/chromedriver && \
+    rm -r chromedriver-linux64 && \
+    rm chromedriver-linux64.zip
 
 # install selenium
 RUN curl -sSLOJ https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.29.0/selenium-server-4.29.0.jar && \
