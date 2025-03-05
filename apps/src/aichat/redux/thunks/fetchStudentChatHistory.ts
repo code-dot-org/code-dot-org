@@ -7,8 +7,8 @@ import {getStudentChatHistory} from '../../aichatApi';
 import {setStudentChatHistory} from '../slice';
 
 // This thunk's callback function submits a teacher's student's id along with the level/script id
-// (and the scriptLevelId if the level is a sublevel) to the student chat history endpoint,
-// waits for a response, and then returns the student's chat events for that level/script.
+// to the student chat history endpoint, waits for a response,
+// and then returns the student's chat events for that level/script.
 export const fetchStudentChatHistory = createAsyncThunk(
   'aichat/fetchStudentChatHistory',
   async (studentUserId: number, thunkAPI) => {

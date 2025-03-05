@@ -59,6 +59,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const visibleItems = useSelector(selectAllVisibleMessages);
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
     if (progress.viewAsUserId && progress.currentLevelId) {
@@ -77,6 +80,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       dispatch(fetchStudentChatHistory(selectedStudent.id));
     }
   }, [selectedStudent, dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchStudentChatHistory(currentUserId));
+  }, [dispatch, currentUserId, currentLevelId]);
 
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);
@@ -217,7 +224,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {selectedStudent ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList events={visibleItems} />
+        <ChatEventsList events={[...studentChatHistory, ...visibleItems]} />
       )}
 
       <div className={moduleStyles.footer}>

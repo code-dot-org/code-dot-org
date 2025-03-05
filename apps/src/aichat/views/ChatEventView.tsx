@@ -22,10 +22,11 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
+// To do: different load level message for owners vs. non-owners
 const ChatEventDescriptions = {
   COPY_CHAT: aichatI18n.chatEventDescriptions_copyChat(),
   CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
-  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 interface ChatEventViewProps {

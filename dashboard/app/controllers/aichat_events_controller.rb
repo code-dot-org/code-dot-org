@@ -51,7 +51,7 @@ class AichatEventsController < ApplicationController
 
     script_id = params[:scriptId]
     level_id = params[:levelId]
-    student_user_id = params[:studentUserId]
+    student_user_id = params[:studentUserId].to_i
     unless can_view_student_chat_history?(student_user_id)
       return render(status: :forbidden, json: {error: "Access denied for student chat history."})
     end
@@ -102,6 +102,6 @@ class AichatEventsController < ApplicationController
   end
 
   private def can_view_student_chat_history?(student_user_id)
-    User.find_by_id(student_user_id)&.student_of?(current_user)
+    User.find_by_id(student_user_id)&.student_of?(current_user) || current_user.id == student_user_id
   end
 end
