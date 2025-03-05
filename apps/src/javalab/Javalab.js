@@ -60,6 +60,7 @@ import javalab, {
   setIsJavabuilderConnecting,
   setIsCaptchaDialogOpen,
   incrementRunCount,
+  incrementValidateCount,
 } from './redux/javalabRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import Theater from './theater/Theater';
@@ -380,6 +381,7 @@ Javalab.prototype.onRun = function () {
     levelId: this.levelIdForAnalytics,
   });
   this.executeJavabuilder(ExecutionType.RUN);
+  getStore().dispatch(incrementRunCount());
 };
 
 Javalab.prototype.onTest = function () {
@@ -395,6 +397,7 @@ Javalab.prototype.onTest = function () {
     validated: validated,
   });
   this.executeJavabuilder(ExecutionType.TEST);
+  getStore().dispatch(incrementValidateCount());
 };
 
 Javalab.prototype.executeJavabuilder = function (executionType) {
@@ -406,7 +409,6 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
 
   getStore().dispatch(setHasRunOrTestedCode(true));
   getStore().dispatch(setIsJavabuilderConnecting(true));
-  getStore().dispatch(incrementRunCount());
 
   this.studioApp_.attempts++;
 

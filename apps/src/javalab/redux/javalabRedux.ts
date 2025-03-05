@@ -18,6 +18,7 @@ export interface JavalabState {
   isJavabuilderConnecting: boolean;
   isCaptchaDialogOpen: boolean;
   runCount: number;
+  validateCount: number;
 }
 
 const initialState: JavalabState = {
@@ -35,6 +36,7 @@ const initialState: JavalabState = {
   isJavabuilderConnecting: false,
   isCaptchaDialogOpen: false,
   runCount: 0,
+  validateCount: 0,
 };
 
 const javalabSlice = createSlice({
@@ -93,6 +95,9 @@ const javalabSlice = createSlice({
     incrementRunCount(state) {
       state.runCount += 1;
     },
+    incrementValidateCount(state) {
+      state.validateCount += 1;
+    },
   },
 });
 
@@ -110,6 +115,7 @@ export const {
   setHasRunOrTestedCode,
   setIsCaptchaDialogOpen,
   incrementRunCount,
+  incrementValidateCount,
 } = javalabSlice.actions;
 
 export default javalabSlice.reducer;

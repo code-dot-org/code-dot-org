@@ -56,14 +56,13 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   const activeTabKey = useAppSelector(
     state => state.javalabEditor.activeTabKey
   );
-
   const hasJavalabCompilationError = useAppSelector(
     state => state.javalabEditor.hasCompilationError
   );
-  const hasRunOrTestedJavalabCode = useAppSelector(
-    state => state.javalab.hasRunOrTestedCode
-  );
   const runCountJavalab = useAppSelector(state => state.javalab.runCount);
+  const validateCountJavalab = useAppSelector(
+    state => state.javalab.validateCount
+  );
   const isJavalabRunning = useAppSelector(state => state.javalab.isRunning);
   const javalabValidationPassed = useAppSelector(
     state => state.javalab.validationPassed
@@ -71,7 +70,12 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
   useEffect(() => {
     setClickPromptCountChange(false);
-  }, [runCountJavalab, runCountPythonlab, validateCountPythonlab]);
+  }, [
+    runCountJavalab,
+    runCountPythonlab,
+    validateCountPythonlab,
+    validateCountJavalab,
+  ]);
 
   function getOptionsByLabType(labType: string) {
     if (labType === 'Pythonlab') {
@@ -93,11 +97,11 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       const studentCode = javalabSources[fileMetadata[activeTabKey]].text;
       const showCompilationOption =
         !isJavalabRunning &&
-        hasRunOrTestedJavalabCode &&
+        runCountJavalab &&
         hasJavalabCompilationError &&
         !isWaitingForChatResponse;
       const showValidationOption =
-        hasRunOrTestedJavalabCode &&
+        validateCountJavalab &&
         !hasJavalabCompilationError &&
         !javalabValidationPassed &&
         !isWaitingForChatResponse;
