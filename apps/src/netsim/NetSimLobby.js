@@ -5,12 +5,12 @@
  * @see NetSimRemoteNodeSelectionPanel for implementation of the actual
  *      lobby table.
  */
-import md5 from 'blueimp-md5';
 import $ from 'jquery';
 
 import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
 var _ = require('lodash');
+var md5 = require('md5');
 
 var i18n = require('@cdo/netsim/locale');
 

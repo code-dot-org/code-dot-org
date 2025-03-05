@@ -7254,13 +7254,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/blueimp-md5@npm:^2":
-  version: 2.18.2
-  resolution: "@types/blueimp-md5@npm:2.18.2"
-  checksum: 10/812c1e50ff095eca61d8e2f0c6ffd597f0293a59ab5e5fec5bed7ef36fd45547afba89b8fb1d09625b4a8c0a5200875e99c387c00b22c648582f98194bdbeae6
-  languageName: node
-  linkType: hard
-
 "@types/body-parser@npm:*":
   version: 1.19.5
   resolution: "@types/body-parser@npm:1.19.5"
@@ -10207,7 +10200,6 @@ __metadata:
     "@testing-library/react": "npm:^12.1.5"
     "@testing-library/react-hooks": "npm:^8.0.1"
     "@testing-library/user-event": "npm:^14.4.3"
-    "@types/blueimp-md5": "npm:^2"
     "@types/chai": "npm:^4.3.5"
     "@types/htmlhint": "npm:^1.1.5"
     "@types/jest": "npm:^29.5.12"
@@ -10238,7 +10230,6 @@ __metadata:
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
     babel-plugin-syntax-async-functions: "npm:^6.13.0"
     blockly: "npm:11.1.1"
-    blueimp-md5: "npm:^2.19.0"
     bootstrap-sass: "npm:^3.4.1"
     browser-process-hrtime: "npm:0.1.2"
     buffer: "npm:^6.0.3"
@@ -10461,13 +10452,6 @@ __metadata:
   dependencies:
     jsdom: "npm:23.0.0"
   checksum: 10/630a2cf7e092f975479b1bd8297dcd4df488d9bc069196362228e396a434d5877d83541297a5522d83715d88654dbc84ad9e4dfd6af3f89321a2b3b9ad88b96b
-  languageName: node
-  linkType: hard
-
-"blueimp-md5@npm:^2.19.0":
-  version: 2.19.0
-  resolution: "blueimp-md5@npm:2.19.0"
-  checksum: 10/84dc5f86e0d890e50c067a52b85654ec02e56d019c6af88f5a2810b1353adfd37b09ae34f540ef5cd1f19fe0023cb69d0dd68877123044cc49fbf6e7ff4c9a18
   languageName: node
   linkType: hard
 
