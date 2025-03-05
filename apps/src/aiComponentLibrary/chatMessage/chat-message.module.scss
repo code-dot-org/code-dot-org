@@ -90,7 +90,30 @@ $icon-overlay-padding-right: 8px;
 }
 
 .image {
-  width: 80px;
+  height: 80px;
+}
+
+.pdfPreview {
+  display: flex;
+  max-width: 120px;
+  align-items: center;
+  gap: 8px;
+  border: 1px dashed black;
+  border-radius: 8px;
+  padding: 4px;
+  text-align: center;
+  margin: auto;
+
+  i {
+    font-size: 30px;
+  }
+
+  span {
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .imageRow {

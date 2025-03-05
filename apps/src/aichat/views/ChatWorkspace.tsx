@@ -196,7 +196,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
         dispatch(
           submitChatContents({
-            text: 'Tell me a story using these images',
+            text: 'Tell me a story using these images and documents',
             assets,
           })
         );
@@ -208,6 +208,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     onDrop,
     accept: {
       'image/*': ['.jpeg', '.jpg', '.png'],
+      'application/pdf': ['.pdf'],
     },
   });
 

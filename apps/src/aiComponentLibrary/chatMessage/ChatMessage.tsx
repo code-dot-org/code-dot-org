@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -11,7 +12,7 @@ import moduleStyles from './chat-message.module.scss';
 
 interface ChatMessageProps {
   text: string;
-  images?: string[];
+  assetUrls?: string[];
   role: Role;
   customStyles?: {[label: string]: string};
   footer?: React.ReactNode;
@@ -21,7 +22,7 @@ interface ChatMessageProps {
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
-  images,
+  assetUrls,
   role,
   customStyles,
   footer,
@@ -70,19 +71,31 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 : commonI18n.aiChatMessageUser()
             }
           >
-            {images && (
+            <SafeMarkdown markdown={text} />
+            {assetUrls && (
               <div className={moduleStyles.imageRow}>
-                {images.map(image => (
-                  <img
-                    key={image}
-                    alt=""
-                    src={image}
-                    className={moduleStyles.image}
-                  />
-                ))}
+                {assetUrls.map(url => {
+                  const parts = url.split('/');
+                  const filename = parts[parts.length - 1];
+                  return url.endsWith('.pdf') ? (
+                    <div key={url} className={moduleStyles.pdfPreview}>
+                      <FontAwesomeV6Icon
+                        iconName="file-pdf"
+                        className={moduleStyles.pdfIcon}
+                      />
+                      <span>{filename}</span>
+                    </div>
+                  ) : (
+                    <img
+                      key={url}
+                      alt=""
+                      src={url}
+                      className={moduleStyles.image}
+                    />
+                  );
+                })}
               </div>
             )}
-            <SafeMarkdown markdown={text} />
           </div>
         </div>
         <div

@@ -50,8 +50,10 @@ module AichatOpenaiHelper
       elsif new_message['assets']
         formatted_new_message = {role: 'user', content: [{type: "text", text: new_message['chatMessageText']}]}
         new_message['assets'].each do |filename|
-          asset_uri = AichatAssetHelper.get_asset_data_uri(encrypted_channel_id, filename)
-          formatted_new_message[:content] << {type: "image_url", image_url: {url: asset_uri}}
+          asset_uris = AichatAssetHelper.get_asset_data_uris(encrypted_channel_id, filename)
+          asset_uris.each do |asset_uri|
+            formatted_new_message[:content] << {type: "image_url", image_url: {url: asset_uri}}
+          end
         end
         formatted_new_message
       else
@@ -59,6 +61,8 @@ module AichatOpenaiHelper
       end
 
     puts r
+    # Optional for debugging - to see large output
+    # File.write("messages.json", r.to_json)
     r
   end
 
