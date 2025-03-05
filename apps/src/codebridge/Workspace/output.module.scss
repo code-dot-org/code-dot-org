@@ -1,7 +1,7 @@
 .outputContainer {
   display: flex;
-  height: 100%;
   grid-area: output;
+  width: 100%;
   overflow: hidden;
 
   &.vertical {
@@ -11,4 +11,8 @@
   &.horizontal {
     flex-direction: row;
   }
+}
+
+.flexShrink0 {
+  flex-shrink: 0;
 }

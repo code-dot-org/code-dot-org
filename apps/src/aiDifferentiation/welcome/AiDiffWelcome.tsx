@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import {
@@ -11,13 +12,13 @@ import {
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
+import Confetti from 'react-dom-confetti';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
-import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import {Button} from '../../componentLibrary/button';
 import AiDiffChat, {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -46,6 +47,7 @@ interface AiDiffWelcomeProps {
   scriptId: number;
   scriptName: string;
   unitDisplayName: string;
+  firstState?: WelcomeState;
 }
 
 const SUGGESTED_PROMPTS_FOR_SELECTION: {
@@ -78,6 +80,7 @@ const optionButton = (
       )}
       onClick={onClick}
       type="button"
+      aria-label={title}
     >
       <FontAwesomeV6Icon
         iconName={iconName}
@@ -109,14 +112,34 @@ const getStartedPage = (onClick: () => void) => {
             className={style.botScanning}
             alt={'AI Teaching Assistant'}
           />
-          <Heading1 className={style.getStartedTitle}>
-            AI Teaching Assistant
-          </Heading1>
-          <BodyOneText className={style.getStartedSubtitle}>
-            Empowering teachers. Enhancing learning.
-          </BodyOneText>
+          <Heading1>AI Teaching Assistant</Heading1>
+          <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
         </div>
         <Button onClick={onClick} text="Get Started" />
+      </div>
+    </div>
+  );
+};
+
+const progressBarHeader = (percentage: number, onBack: () => void) => {
+  return (
+    <div className={style.progressBarHeader}>
+      <button
+        className={style.headerBackButton}
+        type="button"
+        onClick={onBack}
+        aria-label="Back"
+      >
+        <FontAwesomeV6Icon
+          iconName="arrow-left"
+          className={style.headerBackIcon}
+        />
+      </button>
+      <div className={style.progressBar}>
+        <div
+          className={style.progressBarFill}
+          style={{width: `${percentage}%`}}
+        />
       </div>
     </div>
   );
@@ -128,9 +151,11 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   scriptId,
   scriptName,
   unitDisplayName,
+  // This should only be used for testing purposes
+  firstState = 'get_started',
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
-    React.useState<WelcomeState>('get_started');
+    React.useState<WelcomeState>(firstState);
 
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
@@ -138,6 +163,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const [selectedOption, setSelectedOption] = React.useState<
     'plan' | 'create' | null
   >(null);
+
+  const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
 
   const updateShowWelcomeExperience = React.useCallback(() => {
     HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
@@ -172,39 +199,55 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       return (
         <div className={style.selectOption}>
           <div className={style.selectOptionPage}>
-            <Heading3>Pick a skill to practice</Heading3>
-            <Heading6 className={style.selectOptionSubtitle}>
-              Using AI in multiple ways increases productivity.
-            </Heading6>
-            {optionButton(
-              selectedOption === 'plan',
-              () => setSelectedOption('plan'),
-              'folder-tree',
-              'Plan',
-              'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
-            )}
-            {optionButton(
-              selectedOption === 'create',
-              () => setSelectedOption('create'),
-              'file-pen',
-              'Create',
-              'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
-            )}
+            {progressBarHeader(30, () => setCurrentWelcomeState('get_started'))}
+            <div className={style.selectOptionContent}>
+              <Heading3>Pick a skill to practice</Heading3>
+              <Heading6 className={style.selectOptionSubtitle}>
+                Using AI in multiple ways increases productivity.
+              </Heading6>
+              {optionButton(
+                selectedOption === 'plan',
+                () => setSelectedOption('plan'),
+                'folder-tree',
+                'Plan',
+                'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
+              )}
+              {optionButton(
+                selectedOption === 'create',
+                () => setSelectedOption('create'),
+                'file-pen',
+                'Create',
+                'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
+              )}
+            </div>
+            {continueAndSkipButtons(nextState, !selectedOption)}
           </div>
-          {continueAndSkipButtons(nextState, !selectedOption)}
         </div>
       );
     },
     [continueAndSkipButtons, selectedOption]
   );
 
+  React.useEffect(() => {
+    if (currentWelcomeState === WelcomeStates.end_page) {
+      setConfettiActive(true);
+    }
+    if (currentWelcomeState === WelcomeStates.practice) {
+      setConfettiActive(false);
+      setChatContinueButtonDisabled(true);
+    }
+  }, [currentWelcomeState]);
+
   const endPage = React.useCallback(() => {
     return (
       <div className={style.endPage}>
         <div className={style.endPageTop}>
+          <div className={style.confetti}>
+            <Confetti active={confettiActive} />
+          </div>
           <img
-            src={aiBotConfetti}
-            className={style.botConfetti}
+            src={aiBotHappy}
+            className={style.botHappy}
             alt={'Congratulations!'}
           />
           <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
@@ -238,17 +281,19 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <img
               src={ai101Thumnail}
               className={style.ai101Thumbnail}
-              alt={'AI 101 professional learning course'}
+              alt={''}
             />
           </a>
         </div>
         <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
       </div>
     );
-  }, [updateShowWelcomeExperience]);
+  }, [updateShowWelcomeExperience, confettiActive]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
+      // Default to something so we don't just show a blank page
+      setSelectedOption('plan');
       return null;
     }
     const {initialMessage, suggestedPrompts} =
@@ -256,16 +301,19 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
     return (
       <div className={style.practicePage}>
-        <AiDiffChat
-          context={context}
-          scriptId={scriptId}
-          scriptName={scriptName}
-          chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-          unitDisplayName={unitDisplayName}
-          initialChatMessage={initialMessage}
-          suggestedPrompts={suggestedPrompts}
-          disableEndButtons={true}
-        />
+        {progressBarHeader(60, () => setCurrentWelcomeState('select_option'))}
+        <div className={style.practiceContent}>
+          <AiDiffChat
+            context={context}
+            scriptId={scriptId}
+            scriptName={scriptName}
+            chatResponseCallback={() => setChatContinueButtonDisabled(false)}
+            unitDisplayName={unitDisplayName}
+            initialChatMessage={initialMessage}
+            suggestedPrompts={suggestedPrompts}
+            disableEndButtons={true}
+          />
+        </div>
         {continueAndSkipButtons(
           WelcomeStates.end_page,
           chatContinueButtonDisabled

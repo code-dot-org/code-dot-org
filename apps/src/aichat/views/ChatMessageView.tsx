@@ -7,7 +7,11 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {ChatMessage as ChatMessageType} from '../types';
+import {
+  type ChatMessage as ChatMessageType,
+  isCompletedChatMessage,
+  isServerChatEvent,
+} from '../types';
 
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
@@ -41,40 +45,48 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     chatMessage.role === Role.USER &&
     chatMessage.status === Status.PROFANITY_VIOLATION;
 
-  // Note: ID should always be defined when viewing chat history,
-  // but is currently marked optional because the ChatEvent type
-  // is used for both chat history and live chat.
-  // TODO: Clean up types to separate server and client IDs.
-  const commonProps = {
-    id: chatMessage.id!,
-    chatMessageText: chatMessage.chatMessageText,
-    teacherFeedback: chatMessage?.teacherFeedback,
-  };
-
   const isAssistant = chatMessage.role === Role.ASSISTANT;
 
-  const chatHistoryFooter = messageVisible ? (
-    <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
-  ) : userMessageProfanity ? (
-    <ProfanityFeedbackFooter
-      {...commonProps}
-      toggleProfaneMessageVisibility={() =>
-        setShowProfaneUserMessage(!showProfaneUserMessage)
-      }
-      profaneMessageVisible={showProfaneUserMessage}
-    />
-  ) : null;
-  const defaultFooter =
-    messageVisible && isAssistant ? (
-      <CopyButton copyText={chatMessage.chatMessageText} />
+  let footer;
+  if (isChatHistoryView) {
+    // In chat history view, all events should have been retrieved from the server (i.e. should have an ID).
+    if (!isServerChatEvent(chatMessage)) {
+      console.warn('Invalid event in chat history', chatMessage);
+      return null;
+    }
+
+    const commonProps = {
+      id: chatMessage.id,
+      chatMessageText: chatMessage.chatMessageText,
+      teacherFeedback: isCompletedChatMessage(chatMessage)
+        ? chatMessage.teacherFeedback
+        : undefined,
+    };
+
+    footer = messageVisible ? (
+      <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
+    ) : userMessageProfanity ? (
+      <ProfanityFeedbackFooter
+        {...commonProps}
+        toggleProfaneMessageVisibility={() =>
+          setShowProfaneUserMessage(!showProfaneUserMessage)
+        }
+        profaneMessageVisible={showProfaneUserMessage}
+      />
     ) : null;
+  } else {
+    footer =
+      messageVisible && isAssistant ? (
+        <CopyButton copyText={chatMessage.chatMessageText} />
+      ) : null;
+  }
 
   return (
     <ChatMessage
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
-      footer={isChatHistoryView ? chatHistoryFooter : defaultFooter}
+      footer={footer}
     />
   );
 };

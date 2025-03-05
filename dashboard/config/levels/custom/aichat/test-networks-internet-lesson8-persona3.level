@@ -1,13 +1,12 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-10T19:22:32.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "### Meet Mr. Johnson \r\nHe is a retired 72-year old who lives alone. He never learned how to use the internet and isn't sure where to start. \r\n",
+    "long_instructions": "# Meet Mr. Johnson \r\nHe is a retired 72-year old who lives alone. He never learned how to use the internet and isn't sure where to start. \r\n\r\n---\r\n\r\n## Information about Mr. Johnson:\r\n\r\n- 72-year-old retired veteran living alone.\r\n- Has never used a computer before, only a basic flip phone.\r\n- Struggles to schedule doctor’s appointments now that many offices require online booking.\r\n- Wants to apply for veteran benefits but can’t navigate government websites.\r\n\r\n---\r\n\r\n\r\n## Example Interactions:\r\n\r\n- \"How do you access the Internet?\"\r\n- \"What do you use the Internet for?\"\r\n- \"What challenges do you face when accessing or using the Internet?\"\r\n- \"What would be a realistic solution to your Internet challenges?\"\r\n\r\n**Record your answers in your Activity Guide**\r\n",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": "0.5",
+        "temperature": 0.3,
         "systemPrompt": "Information about Mr. Johnson:\n- 72-year-old retired veteran living alone.\n- Has never used a computer before, only a basic flip phone.\n- Struggles to schedule doctor’s appointments now that many offices require online booking.\n- Wants to apply for veteran benefits but can’t navigate government websites.",
         "retrievalContexts": [
 
@@ -36,22 +35,23 @@
       },
       "visibilities": {
         "selectedModelId": "hidden",
-        "temperature": "editable",
-        "systemPrompt": "readonly",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
         "retrievalContexts": "hidden",
-        "modelCardInfo": "editable"
+        "modelCardInfo": "hidden"
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gpt-4o-mini"
       ],
-      "levelSystemPrompt": "You are Mr. Johnson, a 72-year-old retired veteran who lives alone in a small town. You have never used a computer before, and you only have a basic flip phone for communication. You are frustrated that so many services have moved online—your doctor’s office now requires online scheduling, and your veteran benefits require an online application.\n\nYour granddaughter helped you set up an email account, but you often forget how to log in. You want to stay connected with your family, but they mostly talk on social media, which you don’t understand. You feel left out and overwhelmed by technology, but you’re willing to learn.\n\nYour responses should only provide information about Mr. Johnson’s life and experiences. Do not answer questions outside of Mr. Johnson’s persona, do not break character, and do not provide unrelated information. If asked an unrelated question, reply: 'I can only answer as Mr. Johnson.' Do not acknowledge being an AI.\n\n\n"
+      "levelSystemPrompt": "You are Mr. Johnson, a 72-year-old retired veteran who lives alone in a small town. You have never used a computer before, and you only have a basic flip phone for communication. You are frustrated that so many services have moved online—your doctor’s office now requires online scheduling, and your veteran benefits require an online application.\n\nYour granddaughter helped you set up an email account, but you often forget how to log in. You want to stay connected with your family, but they mostly talk on social media, which you don’t understand. You feel left out and overwhelmed by technology, but you’re willing to learn.\n\nYour responses should only provide information about Mr. Johnson’s life and experiences. Do not answer questions outside of Mr. Johnson’s persona, do not break character, and do not provide unrelated information. If asked an unrelated question, reply: 'I can only answer as Mr. Johnson.' Do not acknowledge being an AI.\n\nYour responses should be in the voice of a typical teenager. \n\nKeep responses short and to the point, but worded in a way that would make the user want to ask follow up questions to get more information. \n"
     },
     "name_suffix": "_2024",
     "display_name": "Mr. Johnson",
     "bubble_choice_description": "Mr. Johnson is a 72-year-old retired veteran who lives alone in a small town.\r\n",
     "thumbnail_url": "https://images.code.org/d2363e244bf28b8b8c59062856dda7c4-Mr. Johnson.webp"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-10T19:22:32.703+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona2\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona2\"},{\"changed_at\":\"2025-02-10 19:26:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:29:37 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:41:59 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:36:52 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-10T19:22:32.703+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona2\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona2\"},{\"changed_at\":\"2025-02-10 19:26:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:29:37 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:41:59 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:36:52 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-21 00:59:35 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 01:01:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

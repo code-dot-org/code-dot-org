@@ -151,3 +151,14 @@
   border-color: var(--neutral-gray-70);
   background-color: var(--neutral-gray-90);
 }
+
+// Focus styles
+@mixin focus-styles {
+  outline: var(--borders-brand-teal-primary) solid 2px;
+  outline-offset: 2px;
+}
+
+// Transition styles
+@mixin transition-all {
+  transition: all 0.2s ease;
+}

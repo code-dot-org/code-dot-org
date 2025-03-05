@@ -1,0 +1,182 @@
+{
+  "script": {
+    "name": "csad-pilot-preassessment-2024",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "Foundations of CS and AI",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "pilot_experiment": "csad-2025-pilot",
+      "student_detail_progress_view": true,
+      "version_year": "2024",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-02-28 22:00:32 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csad-pilot-preassessment-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csad-pilot-preassessment-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Computer Systems and Devices Pre-Assessment",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csad-pilot-preassessment-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "65387335-219c-49f7-aebb-a33f374c01cd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65387335-219c-49f7-aebb-a33f374c01cd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csad-pilot-preassessment-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9b79994d-a5bf-4046-ae7e-611afe24f2d3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b79994d-a5bf-4046-ae7e-611afe24f2d3",
+        "lesson_activity.key": "65387335-219c-49f7-aebb-a33f374c01cd"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computer-systems-preassessment-2024"
+        ],
+        "progression": "Pre-Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-preassessment-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csad-pilot-preassessment-2024",
+        "activity_section.key": "9b79994d-a5bf-4046-ae7e-611afe24f2d3"
+      },
+      "level_keys": [
+        "computer-systems-preassessment-2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-preassessment-2024",
+        "script_level.level_keys": [
+          "computer-systems-preassessment-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csad-pilot-preassessment-2024",
+        "activity_section.key": "9b79994d-a5bf-4046-ae7e-611afe24f2d3"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Support Article: How to Unlock Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-How-do-I-unlock-assessments-tests-and-surveys-for-my-students",
+      "key": "support_article_how_to_unlock_assessments",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "support_article_how_to_unlock_assessments"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "support_article_how_to_unlock_assessments",
+        "script.name": "csad-pilot-preassessment-2024"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

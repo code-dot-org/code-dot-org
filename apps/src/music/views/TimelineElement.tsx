@@ -60,8 +60,13 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
     ? eventData.instrumentType
     : 'beat';
 
+  // The format of an id is "soundType/soundName" so parsing out the soundName
+  const friendlyLabel = eventData.id.split('/').pop();
+
   return (
-    <div
+    <button
+      type="button"
+      aria-label={friendlyLabel}
       className={classNames(
         'timeline-element',
         moduleStyles.timelineElement,
@@ -86,7 +91,7 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
       }}
     >
       &nbsp;
-    </div>
+    </button>
   );
 };
 

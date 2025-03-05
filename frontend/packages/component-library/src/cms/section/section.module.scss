@@ -16,7 +16,7 @@
 }
 
 // Section background color
-.section {
+.section-background {
   &-primary {
     background-color: var(--background-neutral-primary);
   }
@@ -43,8 +43,8 @@
   }
 }
 
-// Section spacing
-.section {
+// Section padding
+.section-padding {
   &-m {
     padding-block: 2.5rem;
   }

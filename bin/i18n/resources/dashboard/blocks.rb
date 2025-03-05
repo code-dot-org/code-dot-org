@@ -12,7 +12,7 @@ module I18n
 
         I18N_SOURCE_FILE_PATH = File.join(I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
 
-        # Pull in various fields for custom blocks from .json files and save them to blocks.en.yml
+        # Pull in various fields for custom blocks from .json files and save them to blocks/en.json
         def self.sync_in
           SyncIn.perform
         end

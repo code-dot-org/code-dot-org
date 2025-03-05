@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-02-21T17:13:46.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Intro to Loops",
+    "long_instructions": "**What would be a more descriptive name for `mystery_function`? Explain your answer.**\r\n\r\nMake sure to include an explanation of what the `while` loop is doing.\r\n\r\n```\r\nfrom neighborhood import Painter\r\n\r\nsusana = Painter()\r\n\r\n# Define mystery_function\r\ndef mystery_function:\r\n  while susana.has_paint():\r\n    susana.paint(\"white\")\r\n    susana.move()\r\n\r\n# Run your code\r\nwhile susana.is_on_bucket():\r\n     susana.take_paint()\r\nmystery_function()\r\n``` ",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-21T17:13:46.199+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson9-free-response\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson9-free-response\"},{\"changed_at\":\"2025-02-21 17:14:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

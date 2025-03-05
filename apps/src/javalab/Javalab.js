@@ -10,11 +10,12 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -22,7 +23,6 @@ import {
 } from '../containedLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 
-import {BackpackAPIContext} from './BackpackAPIContext';
 import {
   CsaViewMode,
   ExecutionType,
@@ -313,7 +313,7 @@ Javalab.prototype.init = function (config) {
 
   let backpackApi = null;
   if (backpackEnabled) {
-    backpackApi = new BackpackClientApi(config.backpackChannel);
+    backpackApi = new BackpackClientApi('javalab', config.backpackChannel);
   }
 
   // Used for some post requests made in Javalab, namely

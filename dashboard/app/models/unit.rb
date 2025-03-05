@@ -951,12 +951,6 @@ class Unit < ApplicationRecord
     under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_programming)
   end
 
-  # TODO: (Dani) Update to use new course types framework.
-  # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
-  def middle_high?
-    csd? || csp? || csa? || foundations_of_cs? || foundations_of_programming?
-  end
-
   def requires_verified_instructor?
     # As of now the only course that requires the instructor to be verified in order to run code is CSA.
     # TODO: determine if this should be replaced with has_verified_resources? instead.
@@ -2145,7 +2139,14 @@ class Unit < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
-    middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+    csd? ||
+      csp? ||
+      csa? ||
+      foundations_of_cs? ||
+      foundations_of_programming? ||
+      ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key) ||
+      properties['content_area'] == Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA.curriculum_6_8 ||
+      properties['content_area'] == Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA.curriculum_9_12
   end
 
   def ai_assessment_enabled?

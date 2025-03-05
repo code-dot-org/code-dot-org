@@ -18,11 +18,11 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {
   AichatContext,
-  ChatCompletionApiResponse,
-  ChatMessage,
-  isChatMessage,
+  isCompletedChatMessage,
+  PendingChatMessage,
+  CompletedChatMessage,
 } from '../../types';
-import {getNewMessageId} from '../utils';
+import {getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
@@ -45,7 +45,7 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newUserMessage: ChatMessage = {
+    const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
@@ -56,14 +56,14 @@ export const submitChatContents = createAsyncThunk(
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
-    let chatApiResponse: ChatCompletionApiResponse;
+    let messages: CompletedChatMessage[] = [];
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .incrementCounter('Aichat.ChatCompletionRequestInitiated');
-      chatApiResponse = await postAichatCompletionMessage(
+      messages = await postAichatCompletionMessage(
         newUserMessage,
-        chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
+        chatEventsCurrent.filter(isCompletedChatMessage),
         aiCustomizations,
         aichatContext
       );
@@ -87,26 +87,20 @@ export const submitChatContents = createAsyncThunk(
         },
       ]);
 
-    if (chatApiResponse.flagged_content) {
-      console.log(
-        `Content flagged by profanity filter: ${chatApiResponse.flagged_content}`
-      );
-    }
-
     thunkAPI.dispatch(clearChatMessagePending());
     // Send a report that the user has started the aichat level after successfully sending
     // a chat message and then receiving a response from the chatbot.
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
-    chatApiResponse.messages.forEach(message => {
-      dispatch(addChatEvent({...message, timestamp: Date.now()}));
+    messages.forEach(message => {
+      dispatch(addChatEvent(message));
     });
   }
 );
 
 async function handleChatCompletionError(
   error: Error,
-  newUserMessage: ChatMessage,
+  newUserMessage: PendingChatMessage,
   dispatch: AppDispatch
 ) {
   // Only send log report if not a 403 error.
@@ -127,7 +121,7 @@ async function handleChatCompletionError(
       .incrementCounter('Aichat.ChatCompletionErrorRateLimited');
     dispatch(
       addChatEvent({
-        id: getNewMessageId(),
+        removeId: getNewRemoveId(),
         text: commonI18n.aiChatRateLimitError(),
         notificationType: 'error',
         timestamp: Date.now(),

@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {setLevel} from '../aiTutor/redux/aiTutorRedux';
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {
   setProjectUpdatedAt,
@@ -55,6 +56,18 @@ import {
   Validation,
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
+
+const mapLevelPropertiesToAITutorLevel = (
+  levelProperties: LevelProperties
+) => ({
+  id: levelProperties.id,
+  type: levelProperties.type || '',
+  aiTutorAvailable: !!levelProperties.aiTutorAvailable,
+  hasValidation:
+    !!levelProperties.validations && levelProperties.validations.length > 0,
+  isAssessment: !!levelProperties.isAssessment,
+  progressionType: levelProperties.progressionType || '',
+});
 
 interface PageError {
   errorMessage: string;
@@ -144,8 +157,11 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
-
     thunkAPI.dispatch(setScriptId(payload.scriptId));
+
+    // Massage levelProperties to match aiTutor's format
+    const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
+    thunkAPI.dispatch(setLevel(aiTutorLevel));
 
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -321,13 +337,15 @@ export const isLabLoading = (state: {lab: LabState}) =>
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
-  const isEditingExemplarMode = getAppOptionsEditingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   // Exemplar and block edit modes do not have a channel.
-  if (isEditMode || isEditingExemplarMode) {
+  if (isEditMode || isEditingExemplar) {
     return false;
+  } else if (isViewingExemplar) {
+    return true;
   }
-
   // Otherwise, we are in read only mode if we are not the owner of the channel,
   // the level is frozen, the level is a read only predict level, the level has been submitted.
   // or this is a lab that should be read only while running and the code is currently running.
@@ -647,9 +665,7 @@ export const {
   setScriptId,
   onLevelChange,
   setPermissions,
+  setChannel,
 } = labSlice.actions;
-
-// These should not be set outside of the lab slice.
-const {setChannel} = labSlice.actions;
 
 export default labSlice.reducer;

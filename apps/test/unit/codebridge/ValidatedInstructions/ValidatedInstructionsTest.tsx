@@ -86,9 +86,8 @@ describe('ValidatedInstructions', () => {
       screen.queryByRole('button', {name: commonI18n.continue()})
     ).toBeNull();
 
-    // Update edit and run flags in redux
+    // Update run flag in redux
     store.dispatch(setHasRun(true));
-    store.dispatch(setHasEdited(true));
 
     // Continue button should be present.
     screen.getByRole('button', {name: commonI18n.continue()});
@@ -164,8 +163,13 @@ describe('ValidatedInstructions', () => {
       screen.queryByRole('button', {name: commonI18n.unsubmit()})
     ).toBeNull();
 
-    // Mark code as run and edited; submit should show up
+    // Mark code as run; submit should not yet show up.
     store.dispatch(setHasRun(true));
+    expect(
+      screen.queryByRole('button', {name: commonI18n.submit()})
+    ).toBeNull();
+
+    // Mark as edited, now submit should show up.
     store.dispatch(setHasEdited(true));
 
     // Submit button should be present.
@@ -191,9 +195,8 @@ describe('ValidatedInstructions', () => {
       screen.queryByRole('button', {name: commonI18n.finish()})
     ).toBeNull();
 
-    // Mark code as run and edited; finish should show up
+    // Mark code as run; finish should show up
     store.dispatch(setHasRun(true));
-    store.dispatch(setHasEdited(true));
 
     // Finish button should be present.
     screen.getByRole('button', {name: commonI18n.finish()});

@@ -27,7 +27,12 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   messageStyle = 'default',
 }) => {
   return (
-    <div className={moduleStyles[`message-container-${role}`]}>
+    <div
+      className={classNames(
+        moduleStyles[`message-container-${role}`],
+        'uitest-chat-message'
+      )}
+    >
       <div className={moduleStyles.messageWithChildren}>
         <div className={moduleStyles[`container-${role}`]}>
           {role === Role.ASSISTANT && (

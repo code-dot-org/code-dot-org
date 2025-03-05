@@ -20,9 +20,11 @@ import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Workspace from './Workspace';
-import Output from './Workspace/Output';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
@@ -90,7 +92,6 @@ export const Codebridge = React.memo(
           'file-preview': FilePreview,
           'info-panel': config.Instructions || InfoPanel,
           workspace: Workspace,
-          output: Output,
         };
         let gridLayout: string;
         let gridLayoutRows: string;
@@ -147,6 +148,13 @@ export const Codebridge = React.memo(
       config.layoutComponents,
     ]);
 
+    const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+    const backpackApi = useMemo(
+      () => new BackpackClientApi(appName, null),
+      [appName]
+    );
+
     return (
       <CodebridgeContextProvider
         value={{
@@ -162,15 +170,17 @@ export const Codebridge = React.memo(
           sendConsoleInput,
         }}
       >
-        <div
-          className={classNames(
-            moduleStyles.codebridgeContainer,
-            innerLayout.className
-          )}
-          style={innerLayout.style}
-        >
-          {innerLayout.children}
-        </div>
+        <BackpackAPIContext.Provider value={backpackApi}>
+          <div
+            className={classNames(
+              moduleStyles.codebridgeContainer,
+              innerLayout.className
+            )}
+            style={innerLayout.style}
+          >
+            {innerLayout.children}
+          </div>
+        </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>
     );
   }

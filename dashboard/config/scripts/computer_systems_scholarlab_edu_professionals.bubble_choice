@@ -1,6 +1,6 @@
 name 'computer-systems-scholarlab-edu-professionals'
 display_name 'Industry Professional for Scholarlab'
-description '#### <br /> Explore how educators and students use Scholarlab Simulations to conduct virtual science experiments and enhance STEM learning. Choose a professional to interview and learn how AI is shaping the future of education.'
+description 'Explore how educators and students use Scholarlab Simulations to conduct virtual science experiments and enhance STEM learning. Choose a professional to interview and learn how AI is shaping the future of education.'
 
 sublevels
 level 'computer-systems-teacher-edu-aichat'

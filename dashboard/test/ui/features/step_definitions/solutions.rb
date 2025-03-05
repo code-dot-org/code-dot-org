@@ -46,7 +46,7 @@ end
 Then /^I submit the assessment on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{append_noautoplay(puzzle_url)}"
-    And I click selector ".answers:nth(0) .answerbutton[index=1]" once I see it
+    And I click selector ".answers:eq(0) .answerbutton[index=1]" once I see it
     And I wait for 5 seconds
     And I click selector ".submitButton" once I see it
     And I wait until element ".modal" is visible

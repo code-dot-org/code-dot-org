@@ -1,0 +1,158 @@
+name '1SP-VPL-21-mod2-Task-StudentView_physical-computing_1_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Differences Between Student and Teacher View
+
+#### **Student View** is designed for learners to engage with lessons and activities. Students can access coding puzzles, interactive exercises, and tutorials tailored to their skill levels. It’s streamlined and focuses on fostering creativity and exploration.
+
+
+#### **Teacher View**, however, provides educators with tools to guide and monitor student progress. Teachers can see lesson plans, manage student accounts, track performance, and access solutions to activities. It includes additional resources, like teaching tips and curriculum overviews, to support effective instruction. <a href="https://support.code.org/hc/en-us/articles/202138023-How-do-I-access-solutions-and-answer-keys" target="_blank">Solutions</a> and <a href="https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System" target="_blank">rosters </a> are available in teacher view. 
+
+#### **Note:** Students only have access to student view, while teachers have access to both student view and teacher view. 
+
+
+##How do I know if I'm in Student View or Teacher View? 
+
+<body style="font-size: 18px; font-family: Arial, sans-serif;">
+
+<h1 style="text-align: center;">Teacher View or Student View?</h1>
+
+<div style="display: flex; justify-content: center; gap: 30px; text-align: center; font-weight: bold;">
+   <div style="flex: 1;">Teacher View</div>
+   <div style="flex: 1;">Student View</div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px;">
+ <div style="flex: 1;">
+ <img src="teacher-dashboard-image-url" alt="Teacher Dashboard View" width="300">
+</div>
+   <div style="flex: 1;">
+   <img src="student-dashboard-image-url" alt="Student Dashboard View" width="300">
+   </div>
+ </div>
+ <p style="text-align: center; font-weight: bold; margin-top: 10px;">My Dashboard</p>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px;">
+   <div style="flex: 1;">
+   <img src="teacher-course-page-image-url" alt="Teacher Course Page" width="300"><br>
+   <p style="font-weight: bold;">Teacher View has resources like lesson plans, and a blue pop-out window on the right side.</p>
+</div>
+   <div style="flex: 1;">
+   <img src="student-course-page-image-url" alt="Student Course Page" width="300"><br>
+   <p style="font-weight: bold;">Student view only shows course levels.</p>
+</div>
+</div>
+<p style="text-align: center; font-weight: bold; margin-top: 10px;">Course Page</p>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px;">
+   <div style="flex: 1;">
+   <img src="teacher-course-level-image-url" alt="Teacher Course Level" width="300"><br>
+   <p style="font-weight: bold;">Teacher View has a blue panel on the right.</p>
+ </div>
+<div style="flex: 1;">
+   <img src="student-course-level-image-url" alt="Student Course Level" width="300"><br>
+   <p style="font-weight: bold;">Student View shows course levels without extra teacher tools.</p>
+ </div>
+ </div>
+ <p style="text-align: center; font-weight: bold; margin-top: 10px;">Course Level</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### **My Dashboard** 
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="20">
+   <tr align="center">
+          <td>
+            <h2>Student View</h2>
+              <br>
+            <img src="your-student-image-url-here" alt="Student View Image" width="200">
+            </td>
+            <td>
+            <h2>Teacher View</h2>
+            <br>
+            <img src="your-teacher-image-url-here" alt="Teacher View Image" width="200">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+#### * Teacher View has "create a section" and "class sections" 
+
+
+
+### **Course Page**
+<br>
+<p>
+  <img 
+    src="https://images.code.org/691cd16597ece614a68f8f93ab790ded-image-1734124258562.gif" 
+    alt="Teacher panel opening and closing on the right side of the screen" 
+    style="float: left; height: 300px; width: 275px; clear: both; margin: 0 20px 20px 0;">
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+#### * Teacher view has resources like lesson plans, blue pop out window on the side 
+#### * Student view only has course levels
+
+
+
+### **Course Level**
+#### * Teacher view has blue panel on the right
+
+Update the image of differences between views: 
+![](https://images.code.org/dd07437ffb774ccdb97afd1f3bef4a86-image-1733952107312.21.43 PM.png)
+
+<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 10px 10px; margin: 20px 0px 20px 0px">
+
+# <i class="fa-solid fa-person-chalkboard"></i>
+
+
+
+<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 5px 5px 0px 5px;">
+
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Don't see solutions or lesson plans in your account?</b></p>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px"> <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >Click here</a> to complete the form to become a verified teacher. 
+</p>
+
+</div>
+
+
+
+
+
+MARKDOWN

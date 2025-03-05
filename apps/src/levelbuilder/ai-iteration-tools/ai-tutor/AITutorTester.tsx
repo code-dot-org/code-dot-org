@@ -1,9 +1,9 @@
+import Button from '@code-dot-org/component-library/button';
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
@@ -18,7 +18,6 @@ interface AIInteraction {
   studentInput: string;
   systemPrompt?: string | undefined;
   levelId?: number | undefined;
-  temperature?: number | undefined;
   aiResponse: string | undefined;
 }
 

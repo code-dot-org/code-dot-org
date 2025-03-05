@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {useEffect, useRef} from 'react';
 import {useDispatch} from 'react-redux';
 import {
@@ -24,7 +25,7 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import {TeacherHomepageV2} from '../studioHomepages/TeacherHomepageV2';
+import {TeacherHomepage} from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
@@ -93,6 +94,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
+  const sectionHasAITutor = React.useMemo(
+    () =>
+      selectedSection
+        ? selectedSection.courseVersionName?.includes('csa') ||
+          selectedSection.courseVersionName?.includes('aitutor')
+        : false,
+    [selectedSection]
+  );
+
   const studentCount = useAppSelector(
     state => state.teacherSections.selectedStudents.length
   );
@@ -116,7 +126,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepageV2 headline={'Testing'} />
+                <TeacherHomepage />
               </div>
             </>
           }
@@ -129,7 +139,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div className={styles.pageAndSidebar}>
-                <TeacherNavigationBar />
+                <TeacherNavigationBar showAITutorTab={showAITutorTab} />
                 <Outlet />
               </div>
             </>
@@ -302,20 +312,25 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 />
               }
             />
-            {showAITutorTab && (
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
-                element={
+            <Route
+              path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
+              element={
+                showAITutorTab && sectionHasAITutor ? (
                   <ElementOrEmptyPage
                     showNoStudents={studentCount === 0}
-                    showNoCurriculumAssigned={!anyStudentHasProgress}
+                    showNoCurriculumAssigned={false}
                     element={applyV1TeacherDashboardWidth(
                       <TutorTab sectionId={sectionId || 0} />
                     )}
                   />
-                }
-              />
-            )}
+                ) : (
+                  <Navigate
+                    to={TEACHER_NAVIGATION_PATHS.progress}
+                    replace={true}
+                  />
+                )
+              }
+            />
           </Route>
         </Route>
       </Route>
@@ -329,13 +344,18 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAITutorTab,
       selectedSection,
       studioUrlPrefix,
+      sectionHasAITutor,
     ]
+  );
+
+  const baseUrlPrepend = _.once(
+    () => window.location.pathname.split('/teacher_dashboard')[0] || ''
   );
 
   return (
     <RouterProvider
       router={createBrowserRouter(createRoutesFromElements(routes), {
-        basename: TEACHER_NAVIGATION_BASE_URL,
+        basename: baseUrlPrepend() + TEACHER_NAVIGATION_BASE_URL,
       })}
     />
   );

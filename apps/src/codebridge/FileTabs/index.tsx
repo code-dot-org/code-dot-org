@@ -29,7 +29,7 @@ import Sortable from './Sortable';
 import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
-  const {source, rearrangeFiles} = useCodebridgeContext();
+  const {source, rearrangeFiles, setActiveFile} = useCodebridgeContext();
 
   const files = getOpenFiles(source);
 
@@ -57,8 +57,13 @@ export const FileTabs = React.memo(() => {
     }
   }
   function handleDragStart(event: DragStartEvent) {
-    setDraggingFileId(event.active.id as string);
-    // set file to active
+    // Handle drag start only if the file is in the list of open files.
+    // This can get called when the close button is clicked, and we want to ignore
+    // it in this case.
+    if (source.files[event.active.id as string].open) {
+      setDraggingFileId(event.active.id as string);
+      setActiveFile(event.active.id as string);
+    }
   }
 
   return (

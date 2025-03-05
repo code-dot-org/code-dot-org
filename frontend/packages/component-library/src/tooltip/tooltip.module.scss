@@ -54,6 +54,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   z-index: 10;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: fit-content;
   background-color: $tooltip-background-color;
   box-sizing: border-box;

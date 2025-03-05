@@ -2,8 +2,12 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
+import {
+  setHasError,
+  setLoadedCodeEnvironment,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -60,7 +64,10 @@ const setUpPyodideWorker = () => {
         consoleManager?.writeConsoleMessage(message);
         break;
       case 'run_complete':
-        consoleManager?.writeSystemMessage('Program completed.', appName);
+        consoleManager?.writeSystemMessage(
+          pythonlabI18n.programCompleted(),
+          appName
+        );
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -68,9 +75,15 @@ const setUpPyodideWorker = () => {
         getStore().dispatch(setAndSaveSource(message));
         break;
       case 'error':
+        getStore().dispatch(setHasError(true));
+        if (message.includes(MessageTag.INPUT_FAILED)) {
+          consoleManager?.writeErrorMessage(pythonlabI18n.inputFailed());
+          break;
+        }
         consoleManager?.writeErrorMessage(parseErrorMessage(message));
         break;
       case 'system_error':
+        getStore().dispatch(setHasError(true));
         consoleManager?.writeSystemError(message, appName);
         Lab2Registry.getInstance()
           .getMetricsReporter()
@@ -180,6 +193,9 @@ const asyncRun = (() => {
 
     // Make sure async setup is done
     await initializeServiceWorker();
+    // Reset error state
+    getStore().dispatch(setHasError(false));
+
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
       const messageData = {
@@ -187,7 +203,6 @@ const asyncRun = (() => {
         id,
         source,
         validationFile,
-        canSupportInput: canSupportInput(),
       };
       pyodideWorker.postMessage(messageData);
     });
@@ -201,7 +216,7 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    consoleManager?.writeSystemMessage('Program stopped.', appName);
+    consoleManager?.writeSystemMessage(pythonlabI18n.programStopped(), appName);
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');

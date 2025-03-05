@@ -1,7 +1,7 @@
 class OpenaiChatController < ApplicationController
   authorize_resource class: false
 
-  API_KEY = CDO.openai_chat_completion_api_key
+  API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
 
   # POST /openai/chat_completion

@@ -5,6 +5,9 @@ import {
   VisualAppearance,
 } from '@code-dot-org/component-library/typography';
 import React, {ReactNode} from 'react';
+import classNames from 'classnames';
+
+import moduleStyles from './paragraph.module.scss';
 
 type ParagraphVisualAppearance = Extract<
   VisualAppearance,
@@ -18,6 +21,8 @@ type ParagraphProps = {
   visualAppearance: ParagraphVisualAppearance;
   /** Whether the paragraph text is strong */
   isStrong: boolean;
+  /** Paragraph color */
+  color: 'primary' | 'secondary';
   /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
   className?: string;
 };
@@ -25,18 +30,21 @@ type ParagraphProps = {
 const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   visualAppearance,
   isStrong,
+  color,
   children,
   className,
-}) => {
-  return (
-    <Typography
-      className={className}
-      semanticTag="p"
-      visualAppearance={visualAppearance}
-    >
-      {isStrong ? <StrongText>{children}</StrongText> : children}
-    </Typography>
-  );
-};
+}) => (
+  <Typography
+    semanticTag="p"
+    visualAppearance={visualAppearance}
+    className={classNames(
+      moduleStyles.paragraph,
+      moduleStyles[`paragraph-color-${color}`],
+      className,
+    )}
+  >
+    {isStrong ? <StrongText>{children}</StrongText> : children}
+  </Typography>
+);
 
 export default Paragraph;

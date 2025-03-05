@@ -184,7 +184,6 @@ export function findParentStatementInputTypes(id) {
  * still save the blocks into a "DEFAULT" category.
  */
 export function validateBlockCategories(workspace) {
-  workspace.cleanUp();
   const topBlocks = workspace.getTopBlocks(true);
 
   const noCategoryBlocks =

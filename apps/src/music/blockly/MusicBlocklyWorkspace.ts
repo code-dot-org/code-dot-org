@@ -2,7 +2,11 @@ import * as GoogleBlockly from 'blockly/core';
 
 import {BLOCK_TYPES, Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
-import {ProcedureBlock, ExtendedBlock} from '@cdo/apps/blockly/types';
+import {
+  ProcedureBlock,
+  ExtendedBlock,
+  ExtendedWorkspaceSvg,
+} from '@cdo/apps/blockly/types';
 import {disableOrphanBlocks} from '@cdo/apps/blockly/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
@@ -208,6 +212,7 @@ export default class MusicBlocklyWorkspace {
     addToolboxBlocksToWorkspace(toolbox.contents, workspace);
 
     validateBlockCategories(workspace);
+    workspace.cleanUp();
     workspace.addChangeListener(e => {
       if (e.type === Blockly.Events.BLOCK_MOVE) {
         validateBlockCategories(workspace);
@@ -648,6 +653,10 @@ export default class MusicBlocklyWorkspace {
   // For each function body in the current workspace, add a function call
   // block to the toolbox. Also add a function definition block, if required.
   generateFunctionBlocks() {
+    const workspace = this.workspace as ExtendedWorkspaceSvg;
+    if (workspace?.isReadOnly()) {
+      return;
+    }
     const blockList: GoogleBlockly.utils.toolbox.ToolboxItemInfo[] = [];
 
     if (this.toolbox?.addFunctionDefinition) {

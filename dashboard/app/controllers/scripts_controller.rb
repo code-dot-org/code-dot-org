@@ -2,12 +2,13 @@ require 'cdo/i18n'
 
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
+  include TeacherDashboardUtils
 
   before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
+  before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'Unit', except: [:update]
@@ -16,7 +17,17 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
-    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
+    if @script.redirect_to?
+      redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to "#{redirect_path}#{redirect_query_string}"
+      return
+    end
+
+    if TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
       if request.query_parameters.include? "user_id"
         redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
         if redirect_query_string.empty?
@@ -38,17 +49,8 @@ class ScriptsController < ApplicationController
       end
     end
 
-    if @script.is_deprecated
-      return render 'errors/deprecated_course'
-    end
-    if @script.redirect_to?
-      redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
-      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to "#{redirect_path}#{redirect_query_string}"
-      return
-    end
-
-    if request.path != (canonical_path = script_path(@script))
+    canonical_path = @course ? course_unit_path(@course, @unit_position) : script_path(@script)
+    if request.path != canonical_path
       # return a temporary redirect rather than a permanent one, to avoid ever
       # serving a permanent redirect from a unit's new location to its old
       # location during the unit renaming process.
@@ -98,6 +100,12 @@ class ScriptsController < ApplicationController
     }
 
     @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
+
+    @page_title = "Unit: #{@script.localized_title}"
+    @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
+
+    link = Unit.latest_stable_version(@script.family_name)&.link
+    @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -308,8 +316,17 @@ class ScriptsController < ApplicationController
     return nil
   end
 
-  private def set_unit_by_name
-    @script = get_unit_by_name
+  private def set_unit
+    course_name = params[:course_course_name]
+    if course_name
+      @course = UnitGroup.get_from_cache(course_name)
+      raise ActiveRecord::RecordNotFound unless @course
+      @unit_position = params[:position]
+      unit_group_unit = UnitGroupUnit.find_by(course_id: @course.id, position: @unit_position)
+      @script = Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
+    else
+      @script = get_unit_by_name
+    end
     raise ActiveRecord::RecordNotFound unless @script
   end
 
@@ -382,8 +399,8 @@ class ScriptsController < ApplicationController
   end
 
   private def set_redirect_override
-    if params[:id] && params[:no_redirect]
-      VersionRedirectOverrider.set_unit_redirect_override(session, params[:id])
+    if @script && params[:no_redirect]
+      VersionRedirectOverrider.set_unit_redirect_override(session, @script.name)
     end
   end
 

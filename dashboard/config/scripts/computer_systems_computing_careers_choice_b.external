@@ -3,24 +3,17 @@ title 'Software Engineer'
 description 'Learn how these professionals develop and program the software that powers devices and applications.'
 
 markdown <<MARKDOWN
-# Software Engineer
+## Software Engineer
 
-<br/> 
-<p style="font-size:16px">Learn how these professionals develop and program the software that powers devices and applications.</p>
-<br/>
-<p style="font-size:16px">As you watch, answer the following questions in your activity guide:</p>
+Learn how these professionals develop and program the software that powers devices and applications.
 
-<ul style="font-size:16px">
-  <li>What does this person do in their role?</li>
-  <li>What skills or tools do they use?</li>
-  <li>What challenges do you think they might face?</li>
-</ul>
+As you watch, answer the following questions in your activity guide:
 
-<br>
+* What does this person do in their role?
+* What skills or tools do they use?
+* What challenges do you think they might face?
 
-<p style="font-size:16px"><strong>Note</strong>: This video opens in a new tab ⧉.</p>
-
-<br>
+**Note:** This video opens in a new tab.
 
 <div style="text-align: center; margin-top: 20px;">
   <a href="https://www.youtube.com/watch?v=_WQ_VV4pXPc" target="_blank" rel="noopener noreferrer">
@@ -29,6 +22,4 @@ markdown <<MARKDOWN
          style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
   </a>
 </div>
-
-<br/><br/>
 MARKDOWN

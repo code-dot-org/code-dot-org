@@ -25,6 +25,9 @@ import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 
+import {START_BLOCKS} from '../constants';
+import {START_SOURCES} from '../lab2/constants';
+
 import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
@@ -846,7 +849,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       !!optOptionsExtended.disableVariableEditing;
     blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
     blocklyWrapper.isStartMode =
-      optOptionsExtended.editBlocks === 'start_sources';
+      !!optOptionsExtended.editBlocks &&
+      // Lab2 levels such as Music Lab use 'start_sources', while older labs use 'start_blocks'.
+      [START_BLOCKS, START_SOURCES].includes(optOptionsExtended.editBlocks);
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;
@@ -904,6 +909,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.addChangeListener(updateBlockLimits);
     }
 
+    // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    if (blocklyWrapper.isToolboxMode) {
+      workspace.addChangeListener(event => {
+        if (event.type === GoogleBlockly.Events.MOVE) {
+          workspace.cleanUp();
+        }
+      });
+    }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate
     // location.

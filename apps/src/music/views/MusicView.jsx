@@ -16,7 +16,11 @@ import {
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -287,6 +291,8 @@ class UnconnectedMusicView extends React.Component {
     // In start mode, we always show the full toolbox for the given block mode.
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    const isEditingExemplar = getAppOptionsEditingExemplar();
+    const isViewingExemplar = getAppOptionsViewingExemplar();
 
     // Music Lab supports two types of toolbox configuration in levels:
     // The toolbox property is a simple list of block types and categories.
@@ -345,6 +351,8 @@ class UnconnectedMusicView extends React.Component {
         levelToolbox,
         levelToolboxDefinition
       );
+    } else if (isEditingExemplar || isViewingExemplar) {
+      this.loadCode(this.getExemplarSources() || this.getStartSources());
     } else if (this.getStartSources() || initialSources) {
       const startSources = this.getStartSources();
       let codeToLoad = startSources;
@@ -502,12 +510,21 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (!this.props.levelProperties?.levelData?.startSources) {
-      const startSourcesFilename = 'startSources' + this.props.blockMode;
-      return require(`@cdo/static/music/${startSourcesFilename}.json`);
+    const templateSources = this.props.levelProperties?.templateSources;
+    const levelSources = this.props.levelProperties?.levelData?.startSources;
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    if (templateSources && !isStartMode) {
+      return templateSources;
+    } else if (levelSources) {
+      return levelSources;
     } else {
-      return this.props.levelProperties?.levelData.startSources;
+      const defaultStartSourcesFilename = 'startSources' + this.props.blockMode;
+      return require(`@cdo/static/music/${defaultStartSourcesFilename}.json`);
     }
+  };
+
+  getExemplarSources = () => {
+    return this.props.levelProperties?.exemplarSources;
   };
 
   onBlockSpaceChange = e => {

@@ -80,7 +80,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   }
 
   if (isNotification(event)) {
-    const {id, text, notificationType, timestamp} = event;
+    const {removeId, text, notificationType, timestamp} = event;
     return (
       <Alert
         text={`${text} ${timestampToLocalTime(timestamp)}`}
@@ -90,7 +90,9 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
             : 'success'
         }
         onClose={
-          isTeacherView ? undefined : () => dispatch(removeUpdateMessage(id))
+          isTeacherView
+            ? undefined
+            : () => dispatch(removeUpdateMessage(removeId))
         }
         link={
           notificationType === 'permissionsError'
@@ -116,23 +118,20 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
         onClose={
           isTeacherView
             ? undefined
-            : () => dispatch(removeUpdateMessage(event.id))
+            : () => dispatch(removeUpdateMessage(event.removeId))
         }
       />
     );
   }
 
-  if (event.descriptionKey) {
-    return (
-      <Alert
-        text={ChatEventDescriptions[event.descriptionKey] as string}
-        type="info"
-        size="s"
-      />
-    );
-  }
-
-  return null;
+  // Automatically narrowed to UserActionEvent
+  return (
+    <Alert
+      text={ChatEventDescriptions[event.descriptionKey]}
+      type="info"
+      size="s"
+    />
+  );
 };
 
 export default memo(ChatEventView);

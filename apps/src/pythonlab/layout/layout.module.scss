@@ -8,11 +8,10 @@
 .flexColumn {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
-.flexGrow {
-  flex-grow: 1;
+.shrinkAndGrow {
+  flex: 1 1 auto;
 }
 
 .flexShrink0 {

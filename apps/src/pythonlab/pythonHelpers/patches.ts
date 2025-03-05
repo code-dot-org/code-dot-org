@@ -4,6 +4,7 @@ export enum MessageTag {
   MATPLOTLIB_IMG = 'MATPLOTLIB_SHOW_IMG',
   NEIGHBORHOOD_SIGNAL = '[NEIGHBORHOOD]',
   INPUT_PROMPT = '[INPUT_PROMPT]',
+  INPUT_FAILED = '[INPUT_FAILED]',
 }
 
 export const TEARDOWN_CODE = `from pythonlab_setup import teardown_pythonlab
@@ -40,7 +41,7 @@ export const pythonlabInputModule = {
     );
     request.send(null);
     if (request.status !== 200) {
-      throw new Error('Failed to read input.');
+      throw new Error(MessageTag.INPUT_FAILED);
     }
     return request.responseText;
   },

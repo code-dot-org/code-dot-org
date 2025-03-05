@@ -1,13 +1,17 @@
 /**
  * Main landing page and router for the workshop dashboard.
  */
-import {createHistory} from 'history';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Provider} from 'react-redux';
-import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router'; // eslint-disable-line no-restricted-imports
+import {BrowserRouter, Routes, Route, Navigate, Outlet} from 'react-router-dom';
 import {createStore, combineReducers} from 'redux';
 
+import {
+  RouterContext,
+  RouterProvider,
+  WithRouterProps,
+} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 import Header from '../components/header';
@@ -30,17 +34,14 @@ import workshopDashboardReducers, {
   setFacilitatorCourses,
 } from './reducers';
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
-import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
+import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
 import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
 
-const ROOT_PATH = '/pd/workshop_dashboard';
-// eslint-disable-next-line react-hooks/rules-of-hooks
-const browserHistory = useRouterHistory(createHistory)({
-  basename: ROOT_PATH,
-});
+export const ROOT_PATH = '/pd/workshop_dashboard';
+
 const store = createStore(
   combineReducers({
     workshopDashboard: workshopDashboardReducers,
@@ -49,106 +50,139 @@ const store = createStore(
   })
 );
 
-const WorkshopDashboardHeader = props => (
-  <Header baseName="Workshop Dashboard" {...props} />
-);
+const routeConfigs = [
+  {
+    path: 'reports',
+    breadcrumbs: 'Reports',
+    component: ReportView,
+  },
+  {
+    path: 'workshops',
+    breadcrumbs: 'Workshops',
+    component: WorkshopIndex,
+  },
+  {
+    path: 'workshops/filter',
+    breadcrumbs: 'Workshops,Filter',
+    component: WorkshopFilter,
+  },
+  {
+    path: 'workshops/new',
+    breadcrumbs: 'Workshops,New Workshop',
+    component: NewWorkshop,
+  },
+  {
+    path: 'workshops/:workshopId',
+    breadcrumbs: 'Workshops,View Workshop',
+    component: Workshop,
+    props: {view: 'show'},
+  },
+  {
+    path: 'workshops/:workshopId/edit',
+    breadcrumbs: 'Workshops,Edit Workshop',
+    component: Workshop,
+    props: {view: 'edit'},
+  },
+  {
+    path: 'workshops/:workshopId/attendance',
+    breadcrumbs: 'Workshops,Workshop,Take Attendance',
+    component: WorkshopAttendance,
+  },
+  {
+    path: 'workshops/:workshopId/attendance/:sessionId',
+    breadcrumbs: 'Workshops,Workshop,Take Attendance',
+    component: WorkshopAttendance,
+  },
+  {
+    path: 'daily_survey_results/:workshopId',
+    breadcrumbs: 'Survey Results',
+    component: DailySurveyResultsLoader,
+  },
+  {
+    path: 'workshop_daily_survey_results/:workshopId',
+    breadcrumbs: 'Survey Results',
+    component: FoormDailySurveyResultsLoader,
+  },
+  {
+    path: 'legacy_survey_summaries',
+    breadcrumbs: 'Legacy Facilitator Survey Summaries',
+    component: LegacySurveySummaries,
+  },
+];
 
-export default class WorkshopDashboard extends React.Component {
-  static propTypes = {
-    permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
-    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
-    mapboxAccessToken: PropTypes.string,
-  };
+const HeaderWrapper = () => {
+  const {router} = useContext(RouterContext);
+  return (
+    <>
+      <WithRouterProps
+        component={Header}
+        routeConfigs={routeConfigs}
+        baseName="Workshop Dashboard"
+        router={router}
+      />
+      <Outlet />
+    </>
+  );
+};
 
-  constructor(props) {
-    super(props);
-
-    if (props.permissionList) {
-      store.dispatch(setPermission(props.permissionList));
+const WorkshopDashboard = ({
+  permissionList,
+  facilitatorCourses,
+  mapboxAccessToken,
+  regionalPartners,
+}) => {
+  useEffect(() => {
+    if (permissionList) {
+      store.dispatch(setPermission(permissionList));
     }
 
-    if (props.facilitatorCourses) {
-      store.dispatch(setFacilitatorCourses(props.facilitatorCourses));
+    if (facilitatorCourses) {
+      store.dispatch(setFacilitatorCourses(facilitatorCourses));
     }
 
-    if (props.mapboxAccessToken) {
-      store.dispatch(setMapboxAccessToken(props.mapboxAccessToken));
+    if (mapboxAccessToken) {
+      store.dispatch(setMapboxAccessToken(mapboxAccessToken));
     }
 
-    store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    store.dispatch(setRegionalPartners(regionalPartners));
     store.dispatch(
       setRegionalPartnerFilter(
         getInitialRegionalPartnerFilter(
-          props.permissionList.includes(WorkshopAdmin),
-          this.props.regionalPartners,
+          permissionList.includes(WorkshopAdmin),
+          regionalPartners,
           ALL_PARTNERS_OPTION
         )
       )
     );
-  }
+  }, [permissionList, facilitatorCourses, mapboxAccessToken, regionalPartners]);
 
-  render() {
-    return (
-      <Provider store={store}>
-        <Router history={browserHistory}>
-          <Route path="/" component={WorkshopDashboardHeader}>
-            <IndexRedirect to="/workshops" />
-            <Route
-              path="reports"
-              breadcrumbs="Reports"
-              component={ReportView}
-            />
-            <Route
-              path="workshops"
-              breadcrumbs="Workshops"
-              component={WorkshopIndex}
-            />
-            <Route
-              path="workshops/filter"
-              breadcrumbs="Workshops,Filter"
-              component={WorkshopFilter}
-            />
-            <Route
-              path="daily_survey_results(/:workshopId)"
-              breadcrumbs="Survey Results"
-              component={DailySurveyResultsLoader}
-            />
-            <Route
-              path="workshop_daily_survey_results(/:workshopId)"
-              breadcrumbs="Survey Results"
-              component={FoormDailySurveyResultsLoader}
-            />
-            <Route
-              path="legacy_survey_summaries"
-              breadcrumbs="Legacy Facilitator Survey Summaries"
-              component={LegacySurveySummaries}
-            />
-            <Route
-              path="workshops/new"
-              breadcrumbs="Workshops,New Workshop"
-              component={NewWorkshop}
-            />
-            <Route
-              path="workshops/:workshopId"
-              breadcrumbs="Workshops,View Workshop"
-              component={Workshop}
-              view="show"
-            />
-            <Route
-              path="workshops/:workshopId/edit"
-              breadcrumbs="Workshops,Edit Workshop"
-              component={Workshop}
-              view="edit"
-            />
-            <Route
-              path="workshops/:workshopId/attendance(/:sessionId)"
-              breadcrumbs="Workshops,Workshop,Take Attendance"
-              component={WorkshopAttendance}
-            />
-          </Route>
-        </Router>
-      </Provider>
-    );
-  }
-}
+  return (
+    <Provider store={store}>
+      <BrowserRouter basename={ROOT_PATH}>
+        <RouterProvider basename={ROOT_PATH}>
+          <Routes>
+            <Route path="/" element={<HeaderWrapper />}>
+              <Route index element={<Navigate to="/workshops" replace />} />
+              {routeConfigs.map(({path, component, props = {}}) => (
+                <Route
+                  key={path}
+                  path={path}
+                  element={<WithRouterProps component={component} {...props} />}
+                />
+              ))}
+            </Route>
+          </Routes>
+        </RouterProvider>
+      </BrowserRouter>
+    </Provider>
+  );
+};
+
+WorkshopDashboard.propTypes = {
+  permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
+  mapboxAccessToken: PropTypes.string,
+};
+
+export default WorkshopDashboard;

@@ -397,11 +397,7 @@ end
 
 When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
-    $http_client.call(
-      :post,
-      "/wd/hub/session/#{@browser.session_id}/orientation",
-      {orientation: orientation.upcase}
-    )
+    change_orientation(orientation)
   end
 end
 
@@ -1017,6 +1013,12 @@ end
 
 Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
   expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
+end
+
+Then /^I wait until I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  wait_until do
+    @browser.execute_script("return $(\"#{selector}\").length;") == num.to_i
+  end
 end
 
 Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|

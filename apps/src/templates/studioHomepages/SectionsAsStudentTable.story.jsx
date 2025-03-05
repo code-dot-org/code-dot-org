@@ -64,6 +64,20 @@ const sections = [
     login_type: 'google_classroom',
     code: 'G-DSLIGFDE',
   },
+  {
+    name: 'Period 6',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: 'to Progress tab',
+    assignedTitle: 'Single Unit Course',
+    linkToAssigned: 'to Course',
+    currentUnitTitle: 'Single Unit',
+    linkToCurrentUnit: 'to Unit',
+    is_assigned_single_unit_course: true,
+    numberOfStudents: 19,
+    linkToStudents: 'to Manage Students tab',
+    login_type: 'word',
+    code: 'EEB206',
+  },
 ];
 
 export default {

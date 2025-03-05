@@ -1,0 +1,57 @@
+name 'SP-VPL-21-mod1-Overview-Welcome_physical-computing_1_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+<img src="https://images.code.org/8f8f1dae36b39433164cf3752db52472-image-1628784411625.jpg" alt="Two students laughing next to a laptop" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
+
+<br> 
+
+#### This free self-paced professional learning experience is designed for users brand new to Code.org’s platform who want an overview of the teacher experience.
+<br>
+<br>
+<br>
+<br>
+
+## **You will:**
+
+
+<div style="font-size: 18px;">
+   <div> 
+        ✅ Get an introduction to Code.org's mission.
+    </div>
+       <br>
+   <div>
+        ✅ Become a  <a href="https://www.example.com" target="_blank">verified teacher</a>
+    </div><br>
+   <div>
+        ✅ Learn how to navigate the Code.org website and teacher tools.
+     
+    </div>
+    <br>
+    <div>
+      ✅ Set up a  <a href="https://www.example.com" target="_blank">classroom section</a>
+    </div>
+<br>
+   <div>
+        ✅ Add a <a href="https://www.example.com" target="_blank">course</a>
+    </div>
+<br>
+   <div>
+        ✅ Locate and use course  <a href="https://www.example.com" target="_blank">lesson plans</a> and <a href="https://www.example.com" target="_blank">teacher resources.</a>
+    </div>
+    <br>
+   <div>
+        ✅ Post on the <a href="https://www.example.com" target="_blank"> Teacher Forum</a>
+    </div>
+<br>
+   <div>
+        ✅ Learn how to  <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula.
+    </div>
+
+
+
+#### **Suggested time to complete the Getting Started Module:** 80 minutes
+MARKDOWN

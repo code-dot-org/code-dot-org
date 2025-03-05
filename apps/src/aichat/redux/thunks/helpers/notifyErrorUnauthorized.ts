@@ -3,7 +3,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {getNewMessageId} from '../../utils';
+import {getNewRemoveId} from '../../utils';
 import {addChatEvent} from '../addChatEvent';
 import {sendAnalytics} from '../sendAnalytics';
 
@@ -25,7 +25,7 @@ export async function notifyErrorUnauthorized(
 
   dispatch(
     addChatEvent({
-      id: getNewMessageId(),
+      removeId: getNewRemoveId(),
       text: messageText,
       notificationType: 'permissionsError',
       timestamp: Date.now(),

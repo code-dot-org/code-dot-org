@@ -6,6 +6,7 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 
 import {getValidationFromSource} from '../codebridge';
@@ -28,7 +29,7 @@ export async function handleRunClick(
 ) {
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (!source) {
-    consoleManager?.writeSystemMessage('You have no code to run.', appName);
+    consoleManager?.writeSystemMessage(pythonlabI18n.noCode(), appName);
     return;
   }
   if (runTests) {
@@ -38,12 +39,12 @@ export async function handleRunClick(
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
     if (!code) {
       consoleManager?.writeSystemMessage(
-        `You have no ${MAIN_PYTHON_FILE} to run.`,
+        pythonlabI18n.noFileToRun({fileName: MAIN_PYTHON_FILE}),
         appName
       );
       return;
     }
-    consoleManager?.writeSystemMessage('Running program...', appName);
+    consoleManager?.writeSystemMessage(pythonlabI18n.runningProgram(), appName);
     await runPythonCode(code, source);
     if (isNeighborhoodLevel()) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
@@ -89,7 +90,10 @@ export async function runAllTests(
   const validationToRun = validationFile || getValidationFromSource(source);
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (validationToRun) {
-    consoleManager?.writeSystemMessage(`Running level tests...`, appName);
+    consoleManager?.writeSystemMessage(
+      pythonlabI18n.runningLevelTests(),
+      appName
+    );
     progressManager?.resetValidation();
     // We only send the separate validation file, because otherwise the
     // source already has the validation file.
@@ -112,7 +116,7 @@ export async function runAllTests(
     }
   } else {
     consoleManager?.writeSystemMessage(
-      `Running your project's tests...`,
+      pythonlabI18n.runningProjectTests(),
       appName
     );
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.

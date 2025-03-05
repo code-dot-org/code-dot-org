@@ -62,9 +62,8 @@ slack_bot_token: !Secret
 jwks_data:
 jwk_private_key_data:
 
-openai_chat_completion_api_key: ''
 openai_evaluate_rubric_api_key:
-openai_aichat_safety_api_key: !Secret
+openai_student_learning_api_key: !Secret
 
 # Mapbox
 mapbox_upload_tileset:    'censustiles-dev'
@@ -82,3 +81,6 @@ active_job_queue_adapter: :async
 # Number of workers to start when running `rake build:start_active_job_workers`:
 active_job_backend_n_workers_to_start: 2
 active_job_backend_rolling_restart_in_n_batches: 1
+
+# Enables I18n lazy loading
+lazy_load_i18n: true

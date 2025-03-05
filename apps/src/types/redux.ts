@@ -23,6 +23,7 @@ import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
+import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
 
 // The type for our global redux store. This is incomplete until we type every slice
@@ -38,6 +39,7 @@ export interface RootState {
   calendar: CalendarState;
   codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
+  dance: DanceState;
   header: HeaderReduxState;
   javalab: JavalabState;
   javalabConsole: JavalabConsoleState;

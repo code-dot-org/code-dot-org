@@ -1,6 +1,7 @@
 @import '2022-rebrand-update';
-@import 'color', 'font', 'typography', 'breakpoints',
-  'barlow-semi-condensed-font';
+@import 'color', 'breakpoints';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/typography.module';
 
 :root {
   --swiper-pagination-color: #{$light_primary_500};
