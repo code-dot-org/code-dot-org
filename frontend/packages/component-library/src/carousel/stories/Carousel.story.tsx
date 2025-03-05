@@ -1,5 +1,5 @@
 import type {Meta, StoryFn} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import {within, expect, userEvent} from '@storybook/test';
 
 import Carousel, {CarouselProps} from '../index';
 
@@ -76,8 +76,8 @@ DefaultCarousel.play = async ({
   canvasElement: HTMLElement;
 }) => {
   const canvas = within(canvasElement);
-  const navArrowPrev = canvas.queryByLabelText('Previous slide');
-  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const navArrowPrev = canvas.getByLabelText('Previous slide');
+  const navArrowNext = canvas.getByLabelText('Next slide');
   const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
   const slides = [
     'This is slide 1',
@@ -88,14 +88,21 @@ DefaultCarousel.play = async ({
     'This is slide 6',
   ];
 
-  // check that the navigation arrows are showing
+  // check that the next nav arrow is showing and working
   await expect(navArrowPrev).toBeInTheDocument();
-  await expect(navArrowNext).toBeInTheDocument();
+  await userEvent.click(navArrowNext);
+  await userEvent.click(navArrowNext);
 
-  // check that the pagination dots are showing
+  // check that the previous nav arrow is showing and working
+  await expect(navArrowNext).toBeInTheDocument();
+  await userEvent.click(navArrowPrev);
+  await userEvent.click(navArrowPrev);
+
+  // check that the pagination dots are showing and working
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
     expect(dot).toBeInTheDocument();
+    await userEvent.click(dot);
   }
 
   // check that slides are in the carousel
