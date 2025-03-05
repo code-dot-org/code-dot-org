@@ -1,10 +1,10 @@
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
-import Output from '@codebridge/Workspace/Output';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
+import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import ResizeBar, {
   RESIZE_BAR_SIZE_PX,
@@ -152,10 +152,10 @@ const HorizontalLayout: React.FunctionComponent = () => {
           separatorProps={outputSeparatorProps}
           isDragging={outputDragging}
         />
-        <Output
+        <HorizontalOutput
           height={outputHeight}
           width={rightPanelWidth}
-          setOutputSize={setOutputSize}
+          setOutputHeight={setOutputSize}
         />
       </div>
     </div>

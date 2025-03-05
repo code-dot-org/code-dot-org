@@ -1,9 +1,9 @@
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
-import Output from '@codebridge/Workspace/Output';
 import React, {useCallback, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
+import VerticalOutput from '@cdo/apps/codebridge/Workspace/VerticalOutput';
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import ResizeBar, {
   RESIZE_BAR_SIZE_PX,
@@ -115,10 +115,10 @@ const VerticalLayout: React.FunctionComponent = () => {
         separatorProps={outputSeparatorProps}
         isDragging={outputDragging}
       />
-      <Output
+      <VerticalOutput
         width={outputWidth}
         className={moduleStyles.shrinkAndGrow}
-        setOutputSize={setOutputSize}
+        setOutputWidth={setOutputSize}
       />
     </div>
   );
