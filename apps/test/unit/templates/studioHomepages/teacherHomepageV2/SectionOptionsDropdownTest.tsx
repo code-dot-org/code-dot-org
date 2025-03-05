@@ -100,7 +100,7 @@ describe('SectionOptionsDropdown', () => {
               <Route path="/">
                 <Route
                   path={TEACHER_NAVIGATION_PATHS.home}
-                  element={<SectionOptionsDropdown section={section} />}
+                  element={<SectionOptionsDropdown sectionId={section.id} />}
                 />
                 <Route
                   path={TEACHER_NAVIGATION_SECTIONS_URL}
