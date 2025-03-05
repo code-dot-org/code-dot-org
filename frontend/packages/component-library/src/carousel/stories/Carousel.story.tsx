@@ -363,7 +363,7 @@ VideoCarousels.parameters = {
         'Videos carousels can show or hide captions based on the `showCaption` prop on the `Video` component. There are margins applied between carousels so this displays nicely in Storybook, but this is not a part of the component itself.',
     },
   },
-  eyes: {waitBeforeCapture: '.ytp-cued-thumbnail-overlay-image'},
+  eyes: {waitBeforeCapture: 4000},
 };
 VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   const canvas = within(canvasElement);
