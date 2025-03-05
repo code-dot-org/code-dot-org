@@ -6,7 +6,7 @@ wrong '![](https://images.code.org/a2db9ab04825b0d5bfab575084e0e023-image-174051
 wrong '![](https://images.code.org/64a9592301156c3f9ac283bef351cf67-image-1740511950147.png)'
 right '![](https://images.code.org/d56d0ab62391cb7bd6dac6d9058df996-image-1740511958096.png)'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What will be the output of the following program?

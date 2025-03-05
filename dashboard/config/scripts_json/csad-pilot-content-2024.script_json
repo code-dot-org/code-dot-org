@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-27 18:41:24 UTC",
+    "serialized_at": "2025-03-04 22:46:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -518,6 +518,7 @@
       "key": "a9220a21-94f4-4860-b65c-2ff45acc28d6",
       "position": 2,
       "properties": {
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -882,7 +883,13 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Students should open the Computer Innovation Map, and click on the markers to explore innovations in medicine, agriculture, education, and fashion. The markers have videos and descriptions to learn about each innovation. Students should select one innovation to investigate, then complete the first page of their activity guide.",
-        "progression_name": "Pick an Innovation"
+        "progression_name": "Pick an Innovation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If your students are unable to access the resource linked on the level due to school network restrictions, you can have students use [this resource](https://docs.google.com/presentation/d/11_vTxAX7WZTmFqn2jQRvDkErAhHlQriLj2KfWEJM2Zg/edit?usp=sharing) which contains the same information."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3ef5f00c-f231-41db-8abc-5d5d80432d3e",
@@ -4747,6 +4754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level1-2023"
+        ],
         "progression": "Explore Sustainable Development Goal Targets"
       },
       "bonus": false,
@@ -4769,6 +4779,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level2-2023"
+        ],
         "progression": "Brainstorm Your Project"
       },
       "bonus": false,
@@ -4791,6 +4804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level3-2023"
+        ],
         "progression": "Understanding Your Users"
       },
       "bonus": false,
@@ -4813,6 +4829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level4-2023"
+        ],
         "progression": "Ethics and Impact"
       },
       "bonus": false,
@@ -4835,6 +4854,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level5-2023"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -5720,6 +5742,18 @@
       }
     },
     {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
       "name": "Build a Computer System",
       "url": "https://docs.google.com/document/d/1HaOTj31J9bhujOWbGkBP3ki0tPUwnZiG2T6JJSppczE/edit?usp=sharing",
       "key": "build_a_computer_system",
@@ -5779,6 +5813,18 @@
       },
       "seeding_key": {
         "resource.key": "computing_innovation_map"
+      }
+    },
+    {
+      "name": "Computing Innovation Map (Alternative)",
+      "url": "https://docs.google.com/presentation/d/11_vTxAX7WZTmFqn2jQRvDkErAhHlQriLj2KfWEJM2Zg/edit?usp=sharing",
+      "key": "computing_innovation_map_alternative_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovation_map_alternative_"
       }
     },
     {
@@ -6253,6 +6299,18 @@
       }
     },
     {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
       "name": "What is IoT?",
       "url": "https://www.youtube.com/watch?v=6mBO2vqLv38",
       "key": "what_is_iot_",
@@ -6275,6 +6333,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "computer_innovations_and_careers"
       }
     },
@@ -6287,7 +6351,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "computing_innovation_map_alternative_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "introduction_to_computer_systems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     },
     {
@@ -6582,7 +6658,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_chat_lab_faq",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "computer_systems_devices_unit_guide",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "csad-pilot-content-2024"
       }
     }

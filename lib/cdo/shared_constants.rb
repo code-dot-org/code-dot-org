@@ -844,4 +844,15 @@ module SharedConstants
     COURSE: "course",
     GENERAL: "general"
   }.freeze
+
+  DISALLOWED_ROUTES = [
+    "/admin/",
+    "/api/",
+    "/blockly/",
+    "/dashboardapi/",
+    "/join/",
+    "/milestone/",
+    "/projects/",
+    "/sections/"
+  ].freeze
 end

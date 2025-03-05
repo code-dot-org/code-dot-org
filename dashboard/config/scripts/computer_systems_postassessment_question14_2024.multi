@@ -6,7 +6,7 @@ wrong 'Input → Processing → Storage → Output'
 wrong 'Output → Input → Processing → Storage'
 wrong 'Processing → Storage → Input → Output'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which sequence represents the correct order of data flow in a computer?

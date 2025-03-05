@@ -6,7 +6,7 @@ right 'The risk of bias in decision-making'
 wrong 'The speed of AI processing'
 wrong 'The colors of AI interfaces'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of these is an ethical concern in AI?

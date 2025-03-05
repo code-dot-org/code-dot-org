@@ -6012,6 +6012,22 @@ columns:
     default_function: 
     collation: utf8mb3_unicode_ci
     comment: Urban-centric community type
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: student_female
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: student_male
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   schools:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
@@ -6106,6 +6122,22 @@ columns:
     collation: utf8mb3_unicode_ci
     comment: 
   - *125
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: county_id
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: county_name
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
   script_levels:
   - *5
   - *36
@@ -14004,7 +14036,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250221170834
+version: 20250303183756
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

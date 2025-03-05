@@ -28,6 +28,7 @@ const EVENTS = {
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
   SECTION_SETUP_STARTED: 'Section Setup Started',
+  LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
 
   // School Association
   // Update School Info Dialog

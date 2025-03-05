@@ -7,10 +7,10 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Computing Innovation Map\r\n\r\n![](https://images.code.org/6f32ab87e5311ad41bebfe978ed14a71-image-1738282808454.png)\r\n\r\n### Do This:\r\n\r\n* Click the link to open the interactive Computing Innovation Map.\r\n* Click on the markers to explore different computing innovations in medicine, agriculture, education, and fashion.\r\n* Watch videos and read descriptions to learn how each innovation works.\r\n* Choose one innovation to investigate.",
+    "long_instructions": "## Computing Innovation Map\r\n\r\n![](https://images.code.org/6f32ab87e5311ad41bebfe978ed14a71-image-1738282808454.png)\r\n\r\n### Do This:\r\n\r\n* Click the link to open the interactive Computing Innovation Map.\r\n* Click on the markers to explore different computing innovations in medicine, agriculture, education, and fashion.\r\n* Watch videos and read descriptions to learn how each innovation works.\r\n* Choose one innovation to investigate.\r\n\r\n**Note:** If you are unable to access the site linked below, you can use this resource as an alternative [Computing Innovation Map](https://docs.google.com/presentation/d/11_vTxAX7WZTmFqn2jQRvDkErAhHlQriLj2KfWEJM2Zg/edit?usp=sharing)",
     "link_title": "Computing Innovation Map",
     "url": "https://www.google.com/maps/d/u/1/viewer?hl=en&mid=1wpU-4sxapqN7ksztqtEdVEcKtbhCcA0"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-19T20:36:40.583+00:00\",\"changed\":[\"cloned from \\\"computer-systems-innovation-map\\\"\"],\"cloned_from\":\"computer-systems-innovation-map\"},{\"changed_at\":\"2025-02-19 20:36:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-19T20:36:40.583+00:00\",\"changed\":[\"cloned from \\\"computer-systems-innovation-map\\\"\"],\"cloned_from\":\"computer-systems-innovation-map\"},{\"changed_at\":\"2025-02-19 20:36:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-03 23:55:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </ExternalLink>

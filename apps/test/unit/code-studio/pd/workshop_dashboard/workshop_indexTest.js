@@ -1,5 +1,6 @@
 import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import PropTypes from 'prop-types';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -11,6 +12,10 @@ import Permission, {
   WorkshopAdmin,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {WorkshopIndex} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_index';
+
+WorkshopIndex.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
 
 describe('WorkshopIndex', () => {
   const fakeRouter = {

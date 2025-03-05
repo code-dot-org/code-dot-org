@@ -6,7 +6,7 @@ wrong 'Internet neutrality'
 wrong 'Redundancy in networks'
 wrong 'Phishing attacks'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A student relies on public libraries for Internet access because their home does not have a connection. What global issue does this situation highlight?

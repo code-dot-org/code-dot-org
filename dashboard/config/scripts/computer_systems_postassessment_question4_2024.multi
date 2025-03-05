@@ -6,7 +6,7 @@ wrong 'Change the desktop background'
 wrong 'Close the browser before gaming'
 wrong 'Lower the screen brightness'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A student needs to optimize their laptop for gaming. Which of the following changes will have the greatest impact?

@@ -3,11 +3,11 @@
  * Route: /workshops
  */
 import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   DATE_ORDER_ASC,
   DATE_ORDER_DESC,
@@ -49,19 +49,20 @@ export class WorkshopIndex extends React.Component {
     permission: PermissionPropType.isRequired,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
-  handleNewWorkshopClick = () => {
+  handleNewWorkshopClick = e => {
+    e.preventDefault();
     this.context.router.push('/workshops/new');
   };
 
-  handleAttendanceReportsClick = () => {
+  handleAttendanceReportsClick = e => {
+    e.preventDefault();
     this.context.router.push('/reports');
   };
 
-  handleLegacySurveySummariesClick = () => {
+  handleLegacySurveySummariesClick = e => {
+    e.preventDefault();
     this.context.router.push('/legacy_survey_summaries');
   };
 
@@ -106,18 +107,25 @@ export class WorkshopIndex extends React.Component {
           {canCreate && (
             <Button
               className="btn-primary"
+              href={this.context.router.createHref('/workshops/new')}
               onClick={this.handleNewWorkshopClick}
             >
               New Workshop
             </Button>
           )}
           {canSeeAttendanceReports && (
-            <Button onClick={this.handleAttendanceReportsClick}>
+            <Button
+              href={this.context.router.createHref('/reports')}
+              onClick={this.handleAttendanceReportsClick}
+            >
               Attendance Reports
             </Button>
           )}
           {canSeeLegacySurveySummaries && (
-            <Button onClick={this.handleLegacySurveySummariesClick}>
+            <Button
+              href={this.context.router.createHref('/legacy_survey_summaries')}
+              onClick={this.handleLegacySurveySummariesClick}
+            >
               Legacy Facilitator Survey Summaries
             </Button>
           )}

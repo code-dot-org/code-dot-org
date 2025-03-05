@@ -6,7 +6,7 @@ wrong 'Closing unused applications'
 wrong 'Using a wired connection instead of Wi-Fi'
 wrong 'Restarting the router regularly'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What factor can slow down an Internet connection?
