@@ -66,6 +66,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   const [clickPromptCountChange, setClickPromptCountChange] = useState(false);
 
   useEffect(() => {
+    // If the user clicks on 'Run' or 'Test'/'Validate', we want to show the user
+    // the suggested prompt(s) if there is an code/validation error.
     setClickPromptCountChange(false);
   }, [
     runCountJavalab,
@@ -192,6 +194,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       };
     })
     .filter(prompt => prompt.show);
+  // If the user clicked on a suggested prompt, do not show a suggested prompt until the
+  // clicks on the 'Run' or 'Validate'/'Test' buttons.
   const showPrompts = !clickPromptCountChange;
 
   return showPrompts ? (
