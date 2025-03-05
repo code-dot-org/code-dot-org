@@ -786,6 +786,35 @@ type ParticipantTypesResponse = {
   availableParticipantTypes: string[];
 };
 
+export const asyncLoadTeacherHomepageSectionData =
+  (): SectionThunkAction => dispatch => {
+    dispatch(beginAsyncLoad());
+
+    const promises: Promise<object>[] = [
+      fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
+        offerings =>
+          dispatch(setCourseOfferings(offerings as AssignmentCourseOffering[]))
+      ),
+      fetchJSON('/dashboardapi/sections/available_participant_types').then(
+        participantTypes =>
+          dispatch(
+            setAvailableParticipantTypes(
+              (participantTypes as ParticipantTypesResponse)
+                .availableParticipantTypes
+            )
+          )
+      ),
+    ];
+
+    return Promise.all(promises)
+      .catch(err => {
+        console.error(err.message);
+      })
+      .then(() => {
+        dispatch(endAsyncLoad());
+      });
+  };
+
 export const asyncLoadSectionData =
   (id: number | void): SectionThunkAction =>
   dispatch => {
