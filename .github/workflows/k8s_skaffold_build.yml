@@ -1,5 +1,14 @@
 name: skaffold
-on: [push]
+on:
+  # Trigger on merges into production (i.e. DTP), or on any PR with "k8s" somewhere in
+  # the branch name, e.g. myname/k8s-feature-branch or k8s/feature-branch
+  push:
+    branches:
+      - production
+  pull_request:
+    branches:
+      - '*k8s*'
+
 
 jobs:
   # Step 1: build platform specific docker images: amd64, arm64
