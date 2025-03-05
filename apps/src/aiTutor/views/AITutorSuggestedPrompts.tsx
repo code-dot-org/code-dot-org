@@ -187,7 +187,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       return {
         label: message,
         onClick: () => handleClick(typedAction),
-        show: optionKey ? promptOptions[optionKey] ?? false : false, // Resolve TS demands.
+        show: optionKey ? !!promptOptions[optionKey] : false,
         selected: false,
       };
     })
