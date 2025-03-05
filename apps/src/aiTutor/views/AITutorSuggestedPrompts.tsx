@@ -76,17 +76,17 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
   const getSuggestedPromptOptionsByLabType = useCallback(
     (labType: string): SuggestedPromptOptions => {
+      // Show a suggested prompt if:
+      // * we aren't currently running or validating code,
+      // * and we aren't waiting for a chat response
+      // * code has been run or validated.
+      // However, if the user clicks on run/validate again after clicking on a
+      // suggested prompt, hide the suggested prompt(s).
       if (labType === 'Pythonlab') {
         const studentCode =
           typeof pythonlabSource !== 'string' && pythonlabSource
             ? getActiveFileForSource(pythonlabSource)?.contents || ''
             : '';
-        // Show a suggested prompt if:
-        // * we aren't currently running or validating code,
-        // * and we aren't waiting for a chat response
-        // * code has been run or validated.
-        // However, if the user clicks on run/validate again after clicking on a
-        // suggested prompt, hide the suggested prompt(s).
         const showOption =
           !isPythonlabRunning &&
           !isPythonlabValidating &&
