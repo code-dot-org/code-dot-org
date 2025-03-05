@@ -1,72 +1,69 @@
 import React, {useCallback, useState, useEffect} from 'react';
 
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
-import {AITutorAction, AITutorActions} from '@cdo/apps/aiTutor/types';
+import {AITutorAction} from '@cdo/apps/aiTutor/types';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {genericCompilation, genericValidation, genericHelp} from '../constants';
+import {
+  SuggestedPromptActions,
+  QuickActions,
+  AITutorEventMap,
+  PromptOptionMap,
+} from '../constants';
 import {askAITutor} from '../redux/aiTutorRedux';
+import {SuggestedPromptOptions} from '../types';
 
-const QuickActions = {
-  [AITutorActions.COMPILATION]: genericCompilation,
-  [AITutorActions.VALIDATION]: genericValidation,
-  [AITutorActions.GENERIC_HELP]: genericHelp,
+const useLabSelectors = () => {
+  return useAppSelector(state => ({
+    isWaitingForChatResponse: state.aiTutor.isWaitingForChatResponse,
+    level: state.aiTutor.level,
+
+    // pythonlab selectors
+    pythonlabSource: state.lab2Project?.projectSources?.source,
+    hasPythonlabError: state.lab2System.hasError,
+    runCountPythonlab: state.lab2System.runCount,
+    validateCountPythonlab: state.lab2System.validateCount,
+    isPythonlabRunning: state.lab2System.isRunning,
+    isPythonlabValidating: state.lab2System.isValidating,
+    validationState: state.lab.validationState,
+
+    // javalab selectors
+    javalabSources: state.javalabEditor.sources,
+    fileMetadata: state.javalabEditor.fileMetadata,
+    activeTabKey: state.javalabEditor.activeTabKey,
+    hasJavalabCompilationError: state.javalabEditor.hasCompilationError,
+    runCountJavalab: state.javalab.runCount,
+    validateCountJavalab: state.javalab.validateCount,
+    isJavalabRunning: state.javalab.isRunning,
+    javalabValidationPassed: state.javalab.validationPassed,
+  }));
 };
 
 const AITutorSuggestedPrompts: React.FunctionComponent = () => {
+  const {
+    isWaitingForChatResponse,
+    level,
+    pythonlabSource,
+    hasPythonlabError,
+    runCountPythonlab,
+    validateCountPythonlab,
+    isPythonlabRunning,
+    isPythonlabValidating,
+    validationState,
+    javalabSources,
+    fileMetadata,
+    activeTabKey,
+    hasJavalabCompilationError,
+    runCountJavalab,
+    validateCountJavalab,
+    isJavalabRunning,
+    javalabValidationPassed,
+  } = useLabSelectors();
+
   const [clickPromptCountChange, setClickPromptCountChange] = useState(false);
-  const isWaitingForChatResponse = useAppSelector(
-    state => state.aiTutor.isWaitingForChatResponse
-  );
-
-  const level = useAppSelector(state => state.aiTutor.level);
-
-  // For pythonlab
-  const pythonlabSource = useAppSelector(
-    state => state.lab2Project?.projectSources?.source
-  );
-  const hasPythonlabError = useAppSelector(state => state.lab2System.hasError);
-  const runCountPythonlab = useAppSelector(state => state.lab2System.runCount);
-  const validateCountPythonlab = useAppSelector(
-    state => state.lab2System.validateCount
-  );
-
-  const hasRunOrTestedPythonlabCode =
-    runCountPythonlab || validateCountPythonlab;
-  const isPythonlabRunning = useAppSelector(
-    state => state.lab2System.isRunning
-  );
-  const isPythonlabValidating = useAppSelector(
-    state => state.lab2System.isValidating
-  );
-  const {hasConditions, satisfied} = useAppSelector(
-    state => state.lab.validationState
-  );
-  const pythonlabValidationFailed =
-    hasConditions && validateCountPythonlab && !satisfied;
-
-  // For javalab
-  const javalabSources = useAppSelector(state => state.javalabEditor.sources);
-  const fileMetadata = useAppSelector(
-    state => state.javalabEditor.fileMetadata
-  );
-  const activeTabKey = useAppSelector(
-    state => state.javalabEditor.activeTabKey
-  );
-  const hasJavalabCompilationError = useAppSelector(
-    state => state.javalabEditor.hasCompilationError
-  );
-  const runCountJavalab = useAppSelector(state => state.javalab.runCount);
-  const validateCountJavalab = useAppSelector(
-    state => state.javalab.validateCount
-  );
-  const isJavalabRunning = useAppSelector(state => state.javalab.isRunning);
-  const javalabValidationPassed = useAppSelector(
-    state => state.javalab.validationPassed
-  );
 
   useEffect(() => {
     setClickPromptCountChange(false);
@@ -77,44 +74,78 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     validateCountJavalab,
   ]);
 
-  function getOptionsByLabType(labType: string) {
-    if (labType === 'Pythonlab') {
-      const studentCode =
-        typeof pythonlabSource !== 'string' && pythonlabSource
-          ? getActiveFileForSource(pythonlabSource)?.contents || ''
-          : '';
-      // Only show a suggested prompt if we aren't currently running or validating code,
-      // code has been run or validated, and we aren't waiting for a chat response.
-      const showOption =
-        !isPythonlabRunning &&
-        !isPythonlabValidating &&
-        hasRunOrTestedPythonlabCode &&
-        !isWaitingForChatResponse;
-      const showGenericErrorOption = showOption && hasPythonlabError;
-      const showValidationOption = showOption && pythonlabValidationFailed;
-      return {studentCode, showGenericErrorOption, showValidationOption};
-    } else if (labType === 'Javalab') {
-      const studentCode = javalabSources[fileMetadata[activeTabKey]].text;
-      const showCompilationOption =
-        !isJavalabRunning &&
-        runCountJavalab &&
-        hasJavalabCompilationError &&
-        !isWaitingForChatResponse;
-      const showValidationOption =
-        validateCountJavalab &&
-        !hasJavalabCompilationError &&
-        !javalabValidationPassed &&
-        !isWaitingForChatResponse;
-      return {studentCode, showCompilationOption, showValidationOption};
-    }
-    return {};
-  }
+  const getSuggestedPromptOptionsByLabType = useCallback(
+    (labType: string): SuggestedPromptOptions => {
+      if (labType === 'Pythonlab') {
+        const studentCode =
+          typeof pythonlabSource !== 'string' && pythonlabSource
+            ? getActiveFileForSource(pythonlabSource)?.contents || ''
+            : '';
+        // Show a suggested prompt if:
+        // * we aren't currently running or validating code,
+        // * and we aren't waiting for a chat response
+        // * code has been run or validated.
+        // However, if the user clicks on run/validate again after clicking on a
+        // suggested prompt, hide the suggested prompt(s).
+        const showOption =
+          !isPythonlabRunning &&
+          !isPythonlabValidating &&
+          (!!runCountPythonlab || !!validateCountPythonlab) &&
+          !isWaitingForChatResponse;
+        return {
+          studentCode,
+          showGenericErrorOption: showOption && hasPythonlabError,
+          showValidationOption:
+            showOption &&
+            validationState.hasConditions &&
+            !!validateCountPythonlab &&
+            !validationState.satisfied,
+        };
+      }
+      if (labType === 'Javalab') {
+        const studentCode = javalabSources[fileMetadata[activeTabKey]].text;
+        return {
+          studentCode,
+          showCompilationOption:
+            !isJavalabRunning &&
+            !!runCountJavalab &&
+            hasJavalabCompilationError &&
+            !isWaitingForChatResponse,
+          showValidationOption:
+            !!validateCountJavalab &&
+            !hasJavalabCompilationError &&
+            !javalabValidationPassed &&
+            !isWaitingForChatResponse,
+        };
+      }
+      return {studentCode: ''};
+    },
+    [
+      activeTabKey,
+      fileMetadata,
+      hasJavalabCompilationError,
+      hasPythonlabError,
+      isJavalabRunning,
+      isPythonlabRunning,
+      isPythonlabValidating,
+      isWaitingForChatResponse,
+      javalabSources,
+      javalabValidationPassed,
+      pythonlabSource,
+      runCountJavalab,
+      runCountPythonlab,
+      validateCountJavalab,
+      validateCountPythonlab,
+      validationState.hasConditions,
+      validationState.satisfied,
+    ]
+  );
 
-  const labOptions = level?.type ? getOptionsByLabType(level.type) : {};
-  const studentCode: string = labOptions.studentCode || '';
-  const showCompilationOption = labOptions.showCompilationOption || false;
-  const showValidationOption = labOptions.showValidationOption || false;
-  const showGenericErrorOption = labOptions.showGenericErrorOption || false;
+  // promptOptions is an object with 3 optional keys (boolean values):
+  // showCompilationOption, showValidatonOption, and showGenericErrorOption
+  const {studentCode, ...promptOptions} = level?.type
+    ? getSuggestedPromptOptionsByLabType(level.type)
+    : {studentCode: ''};
 
   const dispatch = useAppDispatch();
 
@@ -123,66 +154,44 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       if (isWaitingForChatResponse) {
         return;
       }
+      dispatch(
+        askAITutor({
+          studentInput: QuickActions[aiTutorAction as SuggestedPromptActions],
+          studentCode,
+          actionType: aiTutorAction,
+        })
+      );
 
-      let studentInput = '';
-      let suggestedPromptType = '';
-
-      switch (aiTutorAction) {
-        case AITutorActions.COMPILATION:
-          studentInput = QuickActions[AITutorActions.COMPILATION];
-          suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_COMPILATION;
-          break;
-        case AITutorActions.VALIDATION:
-          studentInput = QuickActions[AITutorActions.VALIDATION];
-          suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_VALIDATION;
-          break;
-        case AITutorActions.GENERIC_HELP:
-          studentInput = QuickActions[AITutorActions.GENERIC_HELP];
-          suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_GENERIC_HELP;
-          break;
-      }
-
-      const chatContext = {
-        studentInput,
-        studentCode,
-        actionType: aiTutorAction,
-      };
-
-      dispatch(askAITutor(chatContext));
+      const suggestedPromptEventKey =
+        AITutorEventMap[
+          aiTutorAction.toUpperCase() as keyof typeof AITutorEventMap
+        ];
 
       analyticsReporter.sendEvent(EVENTS.AI_TUTOR_CHAT_EVENT, {
         levelId: level?.id,
         levelType: level?.type,
         progressionType: level?.progressionType,
-        suggestedPrompt: suggestedPromptType,
+        suggestedPrompt: EVENTS[suggestedPromptEventKey],
       });
       setClickPromptCountChange(() => true);
     },
     [isWaitingForChatResponse, studentCode, dispatch, level]
   );
 
-  // We set selected to false because once the user selects a prompt, we convert
-  // the chip into a message in the chat history.
-  const suggestedPrompts = [
-    {
-      label: QuickActions[AITutorActions.COMPILATION],
-      onClick: () => handleClick(AITutorActions.COMPILATION),
-      show: showCompilationOption,
-      selected: false,
-    },
-    {
-      label: QuickActions[AITutorActions.VALIDATION],
-      onClick: () => handleClick(AITutorActions.VALIDATION),
-      show: showValidationOption,
-      selected: false,
-    },
-    {
-      label: QuickActions[AITutorActions.GENERIC_HELP],
-      onClick: () => handleClick(AITutorActions.GENERIC_HELP),
-      show: showGenericErrorOption,
-      selected: false,
-    },
-  ];
+  const suggestedPrompts = Object.entries(QuickActions)
+    .map(([action, message]) => {
+      const typedAction = action as SuggestedPromptActions;
+      const optionKey = PromptOptionMap[typedAction];
+      // selected is assigned false so that when the user selects a chip, it is converted to
+      // a message in the chat history.
+      return {
+        label: message,
+        onClick: () => handleClick(typedAction),
+        show: optionKey ? promptOptions[optionKey] ?? false : false, // Resolve TS demands.
+        selected: false,
+      };
+    })
+    .filter(prompt => prompt.show);
   const showPrompts = !clickPromptCountChange;
 
   return showPrompts ? (
