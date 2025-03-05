@@ -29,7 +29,7 @@ test.describe('All the things UI e2e test', () => {
         ).toBeVisible();
       });
 
-      test(`eyes`, async ({eyes}, testInfo) => {
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
         await eyes.check(testInfo.title, {region: component});
       });
     });
