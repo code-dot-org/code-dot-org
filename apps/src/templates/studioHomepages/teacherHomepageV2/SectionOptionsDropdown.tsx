@@ -1,7 +1,7 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, NavigateFunction} from 'react-router-dom';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -13,7 +13,7 @@ import {
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {Student} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, AppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import styles from './teacherHomepage.module.scss';
@@ -23,54 +23,57 @@ export interface SectionOptionsDropdownProps {
   onDeleteClickCallback: (sectionId: number) => void;
 }
 
+const onSectionSettingsClick = (
+  navigate: NavigateFunction,
+  sectionId: number
+) => {
+  navigate(
+    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
+  );
+};
+
+const onRosterClick = (navigate: NavigateFunction, sectionId: number) => {
+  navigate(
+    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
+  );
+};
+
+const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
+  navigate(
+    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
+  );
+};
+
+const onCertificatesClick = (section: Section) => {
+  HttpClient.fetchJson<Student[]>(
+    `/dashboardapi/sections/${section.id}/students`
+  )
+    .then(response => response.value)
+    .then((value: Student[]) => {
+      const students = value.map(student => student.name);
+      const courseVersionName: string = section.courseVersionName || '';
+      const urlParams = new URLSearchParams([
+        ['course', btoa(courseVersionName)],
+      ]);
+      students.map(student => urlParams.append('names[]', student));
+      window.location.href = `/certificates/batch?${urlParams.toString()}`;
+    });
+};
+
+const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
+  const hideShowEvent = section.hidden
+    ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
+    : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
+  analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
+  dispatch(toggleSectionHidden(section.id));
+};
+
 export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   section,
   onDeleteClickCallback,
 }) => {
-  const dispatch = useAppDispatch();
   const navigate = useNavigate();
-
-  const onSectionSettingsClick = () => {
-    navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`
-    );
-  };
-
-  const onRosterClick = () => {
-    navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`
-    );
-  };
-
-  const onLoginCardsClick = () => {
-    navigate(
-      `${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
-    );
-  };
-
-  const onCertificatesClick = () => {
-    HttpClient.fetchJson<Student[]>(
-      `/dashboardapi/sections/${section.id}/students`
-    )
-      .then(response => response.value)
-      .then((value: Student[]) => {
-        const students = value.map(student => student.name);
-        const courseVersionName: string = section.courseVersionName || '';
-        const urlParams = new URLSearchParams([
-          ['course', btoa(courseVersionName)],
-        ]);
-        students.map(student => urlParams.append('names[]', student));
-        window.location.href = `/certificates/batch?${urlParams.toString()}`;
-      });
-  };
-
-  const onArchiveClick = () => {
-    const hideShowEvent = section.hidden
-      ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
-      : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
-    analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
-    dispatch(toggleSectionHidden(section.id));
-  };
+  const dispatch = useAppDispatch();
 
   const onDeleteClick = () => {
     analyticsReporter.sendEvent(
@@ -86,25 +89,26 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       value: 'sectionSettings',
       label: i18n.sectionSettings(),
       icon: {iconName: 'gear', iconStyle: 'solid'},
-      onClick: onSectionSettingsClick,
+      onClick: () => onSectionSettingsClick(navigate, section.id),
     },
     {
       value: 'roster',
       label: i18n.roster(),
       icon: {iconName: 'user', iconStyle: 'solid'},
-      onClick: onRosterClick,
+
+      onClick: () => onRosterClick(navigate, section.id),
     },
     {
       value: 'loginCards',
       label: i18n.loginCards(),
       icon: {iconName: 'id-card', iconStyle: 'solid'},
-      onClick: onLoginCardsClick,
+      onClick: () => onLoginCardsClick(navigate, section.id),
     },
     {
       value: 'certificates',
       label: i18n.certificates(),
       icon: {iconName: 'file-certificate', iconStyle: 'solid'},
-      onClick: onCertificatesClick,
+      onClick: () => onCertificatesClick(section),
     },
     {
       value: section.hidden ? 'restore' : 'archive',
@@ -113,7 +117,7 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         iconName: section.hidden ? 'window-restore' : 'box-archive',
         iconStyle: 'solid',
       },
-      onClick: onArchiveClick,
+      onClick: () => onArchiveClick(dispatch, section),
     },
     {
       value: 'delete',

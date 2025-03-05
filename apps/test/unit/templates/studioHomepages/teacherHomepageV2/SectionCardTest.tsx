@@ -88,7 +88,6 @@ describe('SectionCard', () => {
     renderComponent();
     screen.getByText('Period 1');
   });
-
   it('renders section class code with login info link', () => {
     const teacherDashboardUrlSpy = jest.spyOn(
       urlHelpers,
@@ -99,6 +98,11 @@ describe('SectionCard', () => {
     const link = screen.getByText('ABCDEF');
     fireEvent.click(link);
     expect(teacherDashboardUrlSpy).toHaveBeenCalled();
+  });
+
+  it('renders section options dropdown', () => {
+    renderComponent();
+    screen.getByLabelText('Section options dropdown');
   });
 
   it('renders section options dropdown', () => {

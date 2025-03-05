@@ -9,47 +9,33 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "<h2>What is Decomposition?</h2>\n<p style =\" font-size: 24pt;\">\nDecomposition involves breaking down a problem into smaller, more manageable parts.</p>\n\n",
-        "imageUrl": "https://images.code.org/edc8460ccee5be3e42431cab91852ffb-spreadsheet-data (1).png",
+        "text": "<h2>What is Decomposition?</h2>\n<p style =\" font-size: 32px;\">\nDecomposition involves breaking down a problem into smaller, more manageable parts.</p>\n<br>\n<p style =\" font-size: 32px;\">\n<b>Example:</b>\nA student wants to code a character to navigate a maze. Instead of solving it all at once, they break it into smaller tasks: moving forward, turning, and reaching checkpoints. </p>",
+        "imageUrl": "https://images.code.org/b2d55f421c6f9c7ff7af3c265ec1221b-panel images.jpg",
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c",
         "layout": "text-top-left"
       },
       {
-        "text": "",
-        "imageUrl": "https://images.code.org/f7abc415cc5d1c8c9575830c1117990e-spreadsheet-data2.png",
-        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
-      },
-      {
-        "text": "",
-        "imageUrl": "https://images.code.org/d764dd1ce2a390513c3b11e55255015d-spreadsheet-data3.png",
-        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
-        "layout": "text-bottom-right"
-      },
-      {
-        "text": "",
-        "imageUrl": "https://images.code.org/0ee3df3e0c4108a3257bca8c8909be4e-spreadsheet-data4.png",
-        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "text": "<h2>What is Abstraction?</h2>\n<p style =\" font-size: 32px;\">\nAbstraction means focusing on the important details and ignoring unnecessary complexity.</p>\n<br>\n<p style =\" font-size: 32px;\">\n<b>Example:</b>\nInstead of giving step-by-step directions for tying a shoe, a teacher just says, \"Tie your shoe,\" because students already know the details. Similarly, in coding, students use simple commands like <code>turn_left()</code> instead of coding every tiny movement. </p>",
+        "imageUrl": "https://images.code.org/b9189fc3b9138b57734883540a9154eb-panel images (1).jpg",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013",
         "layout": "text-top-left"
       },
       {
-        "text": "",
-        "imageUrl": "https://images.code.org/b56eee8b845197b374e42cba3b58d8d8-spreadsheet-data5.png",
-        "key": "sp-pl-DS-SpreadsheetVocab-643a23e5-54c4-4eb0-a0bb-bde8f986587c"
+        "text": "<h2>What is Pattern Recognition?</h2>\n<p style =\" font-size: 32px;\">\nAbstraction means focusing on the important details and ignoring unnecessary complexity.</p>\n<br>\n<p style =\" font-size: 32px;\">\n<b>Example:</b>\nA student notices that every square in a grid-based game requires the same sequence: move forward, turn right, move forward. They recognize this pattern and reuse the steps instead of figuring out each square separately. </p>",
+        "imageUrl": "https://images.code.org/2d73a51a4fc776c76b5d9f83958e1fb2-panel images (2).jpg",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-top-left"
       },
       {
-        "text": "",
-        "imageUrl": "https://images.code.org/0a5ce399bfee37f09b098dbab0d00acc-spreadsheet-data6.png",
-        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
-      },
-      {
-        "text": "",
-        "imageUrl": "https://images.code.org/4344b159bccf663bad4bf0545c109924-spreadsheet-data7.png",
-        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce"
+        "text": "<h2>What is Algorithm Design?</h2>\n<p style =\" font-size: 32px;\">\nAlgorithm design is creating a step-by-step plan or set of instructions to solve a problem.</p>\n<br>\n<p style =\" font-size: 32px;\">\n<b>Example:</b>\nBefore coding, a student writes out the steps to draw a simple shape: move forward, turn 90 degrees, repeat. This helps them plan before trying it on the computer. </p>",
+        "imageUrl": "https://images.code.org/b9ba47e9c9c058d9c1ce5b6f73000015-panel images (3).jpg",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
       }
     ],
     "name_suffix": "_2024",
     "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-03T15:46:28.328+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-SpreadsheetVocab\\\"\"],\"cloned_from\":\"sp-pl-DS-SpreadsheetVocab\"},{\"changed_at\":\"2025-03-03 16:32:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-03T15:46:28.328+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-SpreadsheetVocab\\\"\"],\"cloned_from\":\"sp-pl-DS-SpreadsheetVocab\"},{\"changed_at\":\"2025-03-03 16:32:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-04 16:54:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-04 16:54:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-04 16:55:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

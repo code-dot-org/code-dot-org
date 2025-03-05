@@ -10,7 +10,11 @@ import {SectionDeleteModal} from './SectionDeleteModal';
 
 import styles from './teacherHomepage.module.scss';
 
-export const SectionList: React.FC = () => {
+interface SectionListProps {
+  showHiddenOnly: boolean;
+}
+
+export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
   const [deletingSection, setDeletingSection] = useState<boolean>(false);
   const [sectionToDelete, setSectionToDelete] = useState<number>(-1);
@@ -48,23 +52,25 @@ export const SectionList: React.FC = () => {
       });
   };
 
-  const getSectionList = (sections: SectionMap) => {
+  const filteredSectionList = React.useMemo(() => {
     const sectionElementList: JSX.Element[] = [];
-    for (const [k, v] of Object.entries(sections)) {
-      sectionElementList.push(
-        <SectionCard
-          key={k}
-          section={v}
-          onDeleteClickCallback={onDeleteClickCallback}
-        />
-      );
+    for (const [k, section] of Object.entries(sections)) {
+      if (showHiddenOnly === section.hidden) {
+        sectionElementList.push(
+          <SectionCard
+            key={k}
+            section={section}
+            onDeleteClickCallback={onDeleteClickCallback}
+          />
+        );
+      }
     }
     return sectionElementList;
-  };
+  }, [sections, showHiddenOnly]);
 
   return (
     <div className={styles.sectionList}>
-      {getSectionList(sections)}
+      {filteredSectionList}
       {deletingSection && (
         <SectionDeleteModal
           onCloseCallback={onCloseDeleteDialog}
