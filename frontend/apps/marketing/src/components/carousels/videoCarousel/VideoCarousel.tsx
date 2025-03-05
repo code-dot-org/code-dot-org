@@ -4,7 +4,7 @@ import '@code-dot-org/component-library/carousel/index.css';
 import DSCOCarousel, {
   CarouselProps,
 } from '@code-dot-org/component-library/carousel';
-import React, {ReactNode, useId} from 'react';
+import React, {ReactNode} from 'react';
 
 import Video from '@code-dot-org/component-library/video';
 
@@ -26,8 +26,6 @@ interface VideoCarouselProps extends CarouselProps {
 }
 
 const VideoCarousel: React.FC<VideoCarouselProps> = ({slides, ...props}) => {
-  const carouselId = `id-${useId().replaceAll(':', '')}`;
-
   // Workaround for the experience builder not working with Array
   if (slides[0] == null) {
     return <div>Please open the preview tab to preview the carousel.</div>;
@@ -63,12 +61,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides, ...props}) => {
 
   return (
     <>
-      <DSCOCarousel
-        {...props}
-        carouselId={carouselId}
-        showNavArrows={true}
-        slides={getSlides()}
-      />
+      <DSCOCarousel {...props} showNavArrows={true} slides={getSlides()} />
     </>
   );
 };

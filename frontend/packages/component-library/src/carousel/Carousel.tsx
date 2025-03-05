@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {HTMLAttributes, ReactNode} from 'react';
+import {HTMLAttributes, ReactNode, useId} from 'react';
 
 // Import Swiper React components
 // See Swiper documentation here: https://swiperjs.com/react
@@ -48,7 +48,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
  * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
  */
 const Carousel: React.FC<CarouselProps> = ({
-  carouselId = 'id-' + crypto.randomUUID(),
+  carouselId = `id-${useId().replaceAll(':', '')}`,
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
