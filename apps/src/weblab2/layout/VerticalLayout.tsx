@@ -6,7 +6,7 @@ import Workspace from '@cdo/apps/codebridge/Workspace';
 import {useVerticalLayout} from '@cdo/apps/lab2/views/components/layout/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 
-import moduleStyles from './layout.module.scss';
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const VerticalLayout: React.FunctionComponent = () => {
   const {

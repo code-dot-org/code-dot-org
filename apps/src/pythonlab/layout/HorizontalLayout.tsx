@@ -6,7 +6,7 @@ import React from 'react';
 import {useHorizontalLayout} from '@cdo/apps/lab2/views/components/layout/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 
-import moduleStyles from './layout.module.scss';
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_RIGHT_PANEL_WIDTH = 300;
 const MIN_LEFT_PANEL_WIDTH = 150;

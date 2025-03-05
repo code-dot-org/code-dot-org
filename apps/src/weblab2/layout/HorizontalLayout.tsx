@@ -6,7 +6,7 @@ import Workspace from '@cdo/apps/codebridge/Workspace';
 import {useHorizontalLayout} from '@cdo/apps/lab2/views/components/layout/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 
-import moduleStyles from './layout.module.scss';
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const HorizontalLayout: React.FunctionComponent = () => {
   const {

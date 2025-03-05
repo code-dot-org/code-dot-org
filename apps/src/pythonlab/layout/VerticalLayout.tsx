@@ -6,7 +6,7 @@ import React from 'react';
 import {useVerticalLayout} from '@cdo/apps/lab2/views/components/layout/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 
-import moduleStyles from './layout.module.scss';
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
 const MIN_OUTPUT_WIDTH = 200;
