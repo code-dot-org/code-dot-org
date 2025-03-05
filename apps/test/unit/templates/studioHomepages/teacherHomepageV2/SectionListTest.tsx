@@ -1,12 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {
-  createMemoryRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from 'react-router-dom';
 import {Store} from 'redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -15,7 +9,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 describe('SectionList', () => {
   const sections = [
@@ -61,20 +54,10 @@ describe('SectionList', () => {
   registerReducers({teacherSections});
   store.dispatch(setSections(serverSections));
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+  function renderComponent() {
     return render(
       <Provider store={store}>
-        <RouterProvider
-          router={createMemoryRouter(
-            createRoutesFromElements([
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.home}
-                element={<SectionList showHiddenOnly={false} />}
-              />,
-            ]),
-            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
-          )}
-        />
+        <SectionList showHiddenOnly={false} />
       </Provider>
     );
   }
