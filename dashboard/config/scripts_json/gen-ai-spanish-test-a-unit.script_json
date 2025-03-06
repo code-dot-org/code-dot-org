@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 19:36:43 UTC",
+    "serialized_at": "2025-03-05 17:59:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -82,6 +82,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-4omini-spanish-a"
+        ],
         "progression": "Spanish Testing!"
       },
       "bonus": false,
@@ -97,6 +100,72 @@
       "level_keys": [
         "gen-ai-4omini-spanish-a"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Spanish Testing!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-temperature"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      },
+      "level_keys": [
+        "gen-ai-4omini-spanish-temperature"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Spanish Testing!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-systemprompt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      },
+      "level_keys": [
+        "gen-ai-4omini-spanish-systemprompt"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Spanish Testing!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-retrieval"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      },
+      "level_keys": [
+        "gen-ai-4omini-spanish-retrieval"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -105,6 +174,42 @@
         "level.key": "gen-ai-4omini-spanish-a",
         "script_level.level_keys": [
           "gen-ai-4omini-spanish-a"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-4omini-spanish-temperature",
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-temperature"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-4omini-spanish-systemprompt",
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-systemprompt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-4omini-spanish-retrieval",
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-retrieval"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

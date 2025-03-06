@@ -3,8 +3,27 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<img src="https://images.code.org/a5c70021bac12d2d05c62fe23100405b-image-1739407653011.org PL.png" alt="lined paper with five check boxes describing the benefits of Code.org professional learning. " style="border-radius:10px; float: center; height: 800px; clear: both; margin: 0 20px 20px 0; ">
 
-
+<body>
+    <div style="text-align: center; padding: 20px;">
+        <h1 style="color: #0093A4;">Why Choose Code.org Professional Learning?</h1>
+ <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                📚 Enhance your instructional and pedagogical skills
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                💡 Deepen your expertise in computer science content
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                🖥️ Get hands-on experience with the same materials your students will use
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                🎯 Be classroom-ready to teach CS with confidence—on short notice if needed
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                🏆 Earn a certificate to showcase your professional growth
+            </div>
+        </div>
+    </div>
 
 MARKDOWN

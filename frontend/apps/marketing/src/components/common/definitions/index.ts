@@ -12,3 +12,10 @@ export const marginBottomNoneToMDefinition = {
     ],
   },
 };
+
+export const removeMarginBottomDefinition = {
+  displayName: 'Remove margin bottom?',
+  type: 'Boolean',
+  defaultValue: false,
+  group: 'style',
+};
