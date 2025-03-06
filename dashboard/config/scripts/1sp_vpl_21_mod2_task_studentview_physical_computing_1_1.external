@@ -15,6 +15,114 @@ markdown <<MARKDOWN
 
 ##How do I know if I'm in Student View or Teacher View? 
 
+   <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>
+        <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF;">Student View</th>
+        <th style="width: 50%; text-align: left; padding: 10px; background-color: #8C52BA; color: #FFFFFF;">Teacher View</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <li>Designed for learners to engage with lessons and activities.</li>
+                <li>Access to coding puzzles, interactive exercises, and tutorials.</li>
+                <li>Tailored to student skill levels.</li>
+                <li>Streamlined for creativity and exploration.</li>
+                <li>Students only have access to Student View.</li>
+            </ul>
+        </td>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <li>Provides tools for educators to guide and monitor student progress.</li>
+                <li>Access to lesson plans and student management tools.</li>
+                <li>Tracks student performance and provides solutions to activities.</li>
+                <li>Includes additional resources like teaching tips and curriculum overviews.</li>
+                <li>Solutions and rosters are available.</li>
+                <li>Teachers have access to both Student View and Teacher View.</li>
+            </ul>
+        </td>
+      <tr>
+      </table>
+      
+<h2>
+My Dashboard
+</h2> 
+      
+  <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>      
+      <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF;">Student View</th>
+        <th style="width: 50%; text-align: left; padding: 10px; background-color: #8C52BA; color: #FFFFFF;">Teacher View</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <li>Designed for learners to engage with lessons and activities.</li>
+               
+            </ul>
+        </td>
+        <td style="padding: 10px; vertical-align: top;">
+             <div style="flex: 1;">
+ <img src="teacher-dashboard-image-url" alt="Teacher Dashboard View" width="300">
+</div>
+<ul>
+                <li>Provides tools for educators to guide and monitor student progress.</li>
+                
+            </ul>
+        </td>
+      <tr>
+          </table>
+<h2>
+Course Page
+</h2> 
+      
+  <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>      
+      <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF;">Student View</th>
+        <th style="width: 50%; text-align: left; padding: 10px; background-color: #8C52BA; color: #FFFFFF;">Teacher View</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <li>Designed for learners to engage with lessons and activities.</li>
+               
+            </ul>
+        </td>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <li>Provides tools for educators to guide and monitor student progress.</li>
+                
+            </ul>
+        </td>
+      <tr>
+          </table>
+          
+          <h2>
+Course Level
+</h2> 
+      
+  <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>      
+      <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF;">Student View</th>
+        <th style="width: 50%; text-align: left; padding: 10px; background-color: #8C52BA; color: #FFFFFF;">Teacher View</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <li>Designed for learners to engage with lessons and activities.</li>
+               
+            </ul>
+        </td>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <li>Provides tools for educators to guide and monitor student progress.</li>
+                
+            </ul>
+        </td>
+      <tr>
+          </table>
+
+
+
+
 <body style="font-size: 18px; font-family: Arial, sans-serif;">
 
 <h1 style="text-align: center;">Teacher View or Student View?</h1>

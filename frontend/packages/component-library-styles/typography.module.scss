@@ -77,6 +77,7 @@ html {
 @mixin heading-xxl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 3rem;
   line-height: 1.16;
 }
@@ -84,6 +85,7 @@ html {
 @mixin heading-xl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 2.125rem;
   line-height: 1.24;
 }
@@ -91,6 +93,7 @@ html {
 @mixin heading-lg {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 1.75rem;
   line-height: 1.28;
 }
@@ -98,6 +101,7 @@ html {
 @mixin heading-md {
   @include heading-common;
   font-family: $barlowSemiCondensed-medium;
+  font-weight: $medium-font-weight;
   font-size: 1.5rem;
   line-height: 1.32;
 }
@@ -158,7 +162,7 @@ html {
 @mixin overline-one {
   @include overline-common;
   font-size: 0.875rem;
-  line-height: 1.6;
+  line-height: 1.54;
 }
 
 @mixin overline-two {
@@ -188,10 +192,10 @@ html {
 
 // Caption styles
 @mixin figcaption {
-  @include main-font-regular;
-  font-size: 0.813rem;
+  @include main-font-semi-bold;
+  font-size: 0.875rem;
+  line-height: 1.54;
   margin: 0.5em 0 1em;
-  line-height: 1.64;
 }
 
 // ----------------------------------------

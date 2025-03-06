@@ -98,7 +98,7 @@ describe('SectionList', () => {
     await screen.findByText('Create a new section');
     screen.getByText('Picture password');
     screen.getByRole('button', {name: 'Cancel'});
-  }, 15000);
+  }, 10000);
 
   it('teaching/archived toggle', async () => {
     renderComponent();
@@ -112,5 +112,5 @@ describe('SectionList', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
-  }, 15000);
+  }, 10000);
 });
