@@ -4,7 +4,7 @@ import React, {useEffect} from 'react';
 import {SeparatorProps} from 'react-resizable-layout';
 
 import Console from '@cdo/apps/codebridge/Console/Console';
-import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
+import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 

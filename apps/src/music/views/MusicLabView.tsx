@@ -427,7 +427,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 {WARNING_BANNER_MESSAGES.TOOLBOX_MODE}
               </div>
             )}
-            <div id={blocklyDivId} />
+            <div role="application" id={blocklyDivId} />
             {showAdvancedControls && (
               <div className={moduleStyles.advancedControlsContainer}>
                 <AdvancedControls />

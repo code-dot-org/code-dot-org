@@ -1,0 +1,241 @@
+{
+  "title": "Equity in CS: Pre-module survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question1",
+          "html": "<h1>Equity in CS Self-paced Online Professional Learning for Educators</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Equity in CS  - Pre-Module Survey</h2>"
+        },
+        {
+          "type": "html",
+          "name": "section1_previous_equity_experience",
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your experience with equity concepts and teaching strategies.</span></p>\n"
+        },
+        {
+          "type": "matrix",
+          "name": "pre_familiarity_concepts",
+          "title": "How familiar are you with each of the following concepts:",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Not familiar at all"
+            },
+            {
+              "value": "2",
+              "text": "Not familiar"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Familiar"
+            },
+            {
+              "value": "5",
+              "text": "Extremely familiar"
+            }
+          ],
+          "rows": [
+            {
+              "value": "equity",
+              "text": "Equity"
+            },
+            {
+              "value": "diversity",
+              "text": "Diversity"
+            },
+            {
+              "value": "stereotype_threat",
+              "text": "Stereotype Threat"
+            },
+            {
+              "value": "implicit_bias",
+              "text": "Implicit bias"
+            },
+            {
+              "value": "intersectionality",
+              "text": "Intersectionality"
+            },
+            {
+              "value": "student_centered_pedagogy",
+              "text": "Student-Centered Pedagogy"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "ability_meet_diverse_needs_cs",
+          "title": "How confident are you in meeting the diverse learning needs of all students in the classroom?",
+          "rateCount": 5,
+          "rateMax": 5,
+          "minRateDescription": "Not confident at all",
+          "maxRateDescription": "Extremely confident"
+        },
+        {
+          "type": "comment",
+          "name": "strategies_inclusive_cs_classroom",
+          "title": "Please share some of the strategies you currently use to create an inclusive CS classroom environment.",
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "html",
+          "name": "section2_demographics",
+          "html": "<h2>Teaching Context</h2>\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your role as an educator. <p>As a reminder this survey is confidential. We collect this information for program improvement. None of your responses will ever be tied back to you personally.</span></p>\n"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teacher_role",
+          "title": "Which best describes your role as an educator? ",
+          "choices": [
+            {
+              "value": "classroom",
+              "text": "Classroom teacher"
+            },
+            {
+              "value": "stem_tech_techer",
+              "text": "STEM / Tech teacher"
+            },
+            {
+              "value": "other_specialist",
+              "text": "Other specialist teacher"
+            },
+            {
+              "value": "librarian",
+              "text": "Librarian / school media specialist"
+            },
+            {
+              "value": "paraprofessional",
+              "text": "Paraprofessional/aide"
+            },
+            {
+              "value": "district_coach",
+              "text": "District level coach/specialist"
+            },
+            {
+              "value": "outside_school",
+              "text": "Out-of-school educator (e.g. tutor, after school teacher)"
+            },
+            {
+              "value": "administrator",
+              "text": "Administrator"
+            },
+            {
+              "value": "parent",
+              "text": "Parent"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "text",
+          "name": "teaching_experience_years",
+          "title": "How many years have you been teaching at K-12 schools?",
+          "description": "(Please enter a number 0-90: enter 1 if this is your first year)",
+          "inputType": "number",
+          "min": 0,
+          "max": 90
+        },
+        {
+          "type": "text",
+          "name": "teaching_experience_years_cs",
+          "title": "How many years have you been teaching Computer Science at the K-12 level?",
+          "description": "(Please enter a number 0-90: enter 0 if you don't consider yourself a Computer Science teacher; enter 1 if this is your first year)",
+          "inputType": "number",
+          "min": 0,
+          "max": 90
+        },
+        {
+          "type": "checkbox",
+          "name": "grade",
+          "title": "At what grade levels did you teach this year?",
+          "description": " (Select all that apply)",
+          "choices": [
+            {
+              "value": "k",
+              "text": "Kindergarten"
+            },
+            {
+              "value": "1",
+              "text": "1st grade"
+            },
+            {
+              "value": "2",
+              "text": "2nd grade"
+            },
+            {
+              "value": "3",
+              "text": "3rd grade"
+            },
+            {
+              "value": "4",
+              "text": "4th grade"
+            },
+            {
+              "value": "5",
+              "text": "5th grade"
+            },
+            {
+              "value": "6",
+              "text": "6th grade"
+            },
+            {
+              "value": "7",
+              "text": "7th grade"
+            },
+            {
+              "value": "8",
+              "text": "8th grade"
+            },
+            {
+              "value": "9",
+              "text": "9th grade"
+            },
+            {
+              "value": "10",
+              "text": "10th grade"
+            },
+            {
+              "value": "11",
+              "text": "11th grade"
+            },
+            {
+              "value": "12",
+              "text": "12th grade"
+            },
+            {
+              "value": "12up",
+              "text": "Above 12th grade"
+            },
+            {
+              "value": "na",
+              "text": "N/A"
+            }
+          ]
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "gender_identity"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
+          "name": "racial_ethnic_identity"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

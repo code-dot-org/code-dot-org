@@ -1,9 +1,19 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
+import {Provider} from 'react-redux';
+import {
+  createMemoryRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
+import {Store} from 'redux';
 
+import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import * as urlHelpers from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 describe('SectionCard', () => {
   const section: Section = {
@@ -43,26 +53,51 @@ describe('SectionCard', () => {
     unitId: null,
   };
 
-  function renderComponent() {
-    return render(<SectionCard section={section} />);
+  const store: Store = getStore();
+
+  beforeEach(() => {});
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+    return render(
+      <Provider store={store}>
+        <RouterProvider
+          router={createMemoryRouter(
+            createRoutesFromElements([
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.home}
+                element={<SectionCard section={section} />}
+              />,
+            ]),
+            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
+          )}
+        />
+      </Provider>
+    );
   }
 
-  it('renders section name in header', async () => {
+  it('renders section name in header', () => {
     renderComponent();
-    await screen.findByText('Class Code:');
     screen.getByText('Period 1');
   });
 
-  it('renders section class code with login info link', async () => {
+  it('renders section class code with login info link', () => {
     const teacherDashboardUrlSpy = jest.spyOn(
       urlHelpers,
       'teacherDashboardUrl'
     );
 
     renderComponent();
-    await screen.findByText('Class Code:');
     const link = screen.getByText('ABCDEF');
     fireEvent.click(link);
     expect(teacherDashboardUrlSpy).toHaveBeenCalled();
+  });
+
+  it('renders section options dropdown', () => {
+    renderComponent();
+    screen.getByLabelText('Section options dropdown');
   });
 });

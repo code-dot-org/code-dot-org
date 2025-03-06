@@ -1,6 +1,6 @@
 name 'csaif-pl-choice_L8_python'
 display_name 'Variables Practice'
-description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+description 'This is a choice level. You will see this type of level ending almost every lesson. They give your students a chance to practice skills. Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
 
 sublevels
 level 'test-intro-to-programming-lesson5-variables-5a'

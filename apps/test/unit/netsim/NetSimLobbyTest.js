@@ -12,52 +12,96 @@ const SIGNED_IN_USER = {
     name: 'teacher',
   },
 };
+
+const rootDiv = $('<div>');
+const netsim = {
+  debouncedResizeFooter: () => {},
+  shardChange: {register: () => {}},
+  isConnectedToShardID: () => true,
+};
+
 describe('NetSimLobby', () => {
-  let rootDiv, netsim, getUserSectionsStub;
-  beforeEach(function () {
+  let getUserSectionsStub;
+
+  // Helper function to create a NetSimLobby instance
+  const createLobbyWithLevelKey = (levelKey = 'test-level-key') => {
+    return new NetSimLobby(rootDiv, netsim, {
+      levelKey,
+      ...SIGNED_IN_USER,
+    });
+  };
+
+  beforeEach(() => {
     getUserSectionsStub = jest
       .spyOn(userSectionClient, 'getUserSections')
       .mockClear()
       .mockImplementation();
     NetSimTestUtils.initializeGlobalsToDefaultValues();
-    rootDiv = $('<div>');
-    netsim = {
-      debouncedResizeFooter: () => {},
-      shardChange: {register: () => {}},
-      isConnectedToShardID: () => {
-        return true;
-      },
-    };
   });
 
-  afterEach(function () {
+  afterEach(() => {
     userSectionClient.getUserSections.mockRestore();
   });
 
   it('performs an async request to fetch user sections', () => {
-    new NetSimLobby(rootDiv, netsim, SIGNED_IN_USER);
+    createLobbyWithLevelKey();
     expect(getUserSectionsStub).toHaveBeenCalledTimes(1);
   });
 
   it('filters out archived sections', () => {
-    const netsimLobby = new NetSimLobby(rootDiv, netsim, SIGNED_IN_USER);
-
+    const netsimLobby = createLobbyWithLevelKey();
     const sectionList = [
-      {
-        id: 1,
-        name: 'Course 1',
-        hidden: true,
-      },
-      {
-        id: 2,
-        name: 'Course 2',
-        hidden: false,
-      },
+      {id: 1, name: 'Course 1', hidden: true},
+      {id: 2, name: 'Course 2', hidden: false},
     ];
     netsimLobby.buildShardChoiceList_(sectionList, null);
+
     expect(netsimLobby.shardChoices_).toHaveLength(1);
     expect(netsimLobby.shardChoices_.map(obj => obj.displayName)).toContain(
       'Course 2'
     );
+  });
+
+  describe('makeShardIDFromSeed_', () => {
+    const sampleLevelKey = 's-nati-pilot-content-2024-lessons-1-levels-3';
+    let lobby;
+
+    beforeEach(() => {
+      lobby = createLobbyWithLevelKey(sampleLevelKey);
+    });
+
+    it("should return a string starting with 'ns_'", () => {
+      const shardID = lobby.makeShardIDFromSeed_('testSeed');
+      expect(shardID.startsWith('ns_')).toBe(true);
+    });
+
+    it('should return a 35-character string', () => {
+      const shardID = lobby.makeShardIDFromSeed_('testSeed');
+      expect(shardID.length).toBe(35);
+    });
+
+    it('should generate different shard IDs for different seeds', () => {
+      const id1 = lobby.makeShardIDFromSeed_('seed1');
+      const id2 = lobby.makeShardIDFromSeed_('seed2');
+      expect(id1).not.toBe(id2);
+    });
+
+    it('should generate different shard IDs for different level keys', () => {
+      const lobby1 = createLobbyWithLevelKey(
+        's-nati-pilot-content-2024-lessons-1-levels-3'
+      );
+      const lobby2 = createLobbyWithLevelKey(
+        's-nati-pilot-content-2024-lessons-1-levels-4'
+      );
+      const id1 = lobby1.makeShardIDFromSeed_('sameSeed');
+      const id2 = lobby2.makeShardIDFromSeed_('sameSeed');
+      expect(id1).not.toBe(id2);
+    });
+
+    it('should return the same shard ID for the same levelKey and seed', () => {
+      const id1 = lobby.makeShardIDFromSeed_('fixedSeed');
+      const id2 = lobby.makeShardIDFromSeed_('fixedSeed');
+      expect(id1).toBe(id2);
+    });
   });
 });

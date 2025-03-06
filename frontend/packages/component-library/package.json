@@ -18,6 +18,22 @@
   "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
+    "./accordion": {
+      "types": {
+        "import": "./dist/esm/accordion/index.d.ts",
+        "require": "./dist/cjs/accordion/index.d.ts"
+      },
+      "import": "./dist/esm/accordion/index.mjs",
+      "require": "./dist/cjs/accordion/index.js"
+    },
+    "./accordrion/faqAccordion": {
+      "types": {
+        "import": "./dist/esm/accordion/faqAccordion/index.d.ts",
+        "require": "./dist/cjs/accordion/faqAccordion/index.d.ts"
+      },
+      "import": "./dist/esm/accordion/faqAccordion/index.mjs",
+      "require": "./dist/cjs/accordion/faqAccordion/index.js"
+    },
     "./alert": {
       "types": {
         "import": "./dist/esm/alert/index.d.ts",
@@ -323,6 +339,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "dompurify": "^3.2.4",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
@@ -371,6 +388,7 @@
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
+    "dompurify": "^3.2.4",
     "react": ">=16",
     "react-dom": ">=16",
     "swiper": "^11.0.5"

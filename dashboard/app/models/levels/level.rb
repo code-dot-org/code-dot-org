@@ -98,6 +98,7 @@ class Level < ApplicationRecord
     offer_browser_tts
     use_secondary_finish_button
     skip_url
+    stay_on_level_after_submit
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
