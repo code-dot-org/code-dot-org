@@ -24,12 +24,15 @@ interface OutputProps {
   className?: string;
   height?: number;
   width?: number;
+  // Set the size of the output container (width in vertical mode, height in horizontal mode).
+  setOutputSize: (size: number) => void;
 }
 
 const Output: React.FunctionComponent<OutputProps> = ({
   className,
   height,
   width,
+  setOutputSize,
 }) => {
   const {config, labConfig} = useCodebridgeContext();
   const isVertical = config.activeLayout === 'vertical';
@@ -43,11 +46,20 @@ const Output: React.FunctionComponent<OutputProps> = ({
   // In horizontal mode, consoleSize is the width of the console.
   const [consoleSize, setConsoleSize] = useState<number | undefined>(undefined);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const [isMaximized, setIsMaximized] = useState<boolean>(false);
+  const [miniAppMinimizeSize, setMiniAppMinimizeSize] = useState(
+    DEFAULT_MINI_APP_SIZE
+  );
+  const [outputMinimizeSize, setOutputMinimizeSize] = useState<number>(
+    (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
+  );
+  const [waitingForResize, setWaitingForResize] = useState<boolean>(false);
 
   const {
     position: miniAppSize,
     separatorProps: miniAppSeparatorProps,
     isDragging: miniAppDragging,
+    setPosition: setMiniAppSize,
   } = useResizable({
     axis: isVertical ? 'y' : 'x',
     initial: DEFAULT_MINI_APP_SIZE,
@@ -141,13 +153,15 @@ const Output: React.FunctionComponent<OutputProps> = ({
           width: newVisualizationWidth,
           'margin-left': (newWidth - newVisualizationWidth) / 2,
         });
+
+        setWaitingForResize(false);
       }
     },
     []
   );
 
   const throttledResize = useMemo(
-    () => throttle(handleResize, 30),
+    () => throttle(handleResize, 20, {leading: false}),
     [handleResize]
   );
 
@@ -180,6 +194,11 @@ const Output: React.FunctionComponent<OutputProps> = ({
     );
   }
 
+  // We set the opacity to 0 when we initiate a maximize or minimize action
+  // so the use doesn't see a flash of the incorrectly-sized preview
+  // while maximizing/minimizing.
+  const previewOpacity = waitingForResize ? 0 : 1;
+
   const miniAppStyle = isVertical
     ? {height: adjustedMiniAppSize}
     : {width: adjustedMiniAppSize};
@@ -187,6 +206,26 @@ const Output: React.FunctionComponent<OutputProps> = ({
   const consoleStyle = isVertical
     ? {height: consoleSize}
     : {width: consoleSize};
+
+  const maximizeMiniApp = () => {
+    setWaitingForResize(true);
+    setMiniAppMinimizeSize(adjustedMiniAppSize);
+    setOutputMinimizeSize(
+      (isVertical ? width : height) || DEFAULT_MINI_APP_SIZE
+    );
+    setOutputSize(MAX_MINI_APP_SIZE);
+    setMiniAppSize(MAX_MINI_APP_SIZE);
+    setIsMaximized(true);
+    throttledResize(height, width, miniApp, miniAppSize, isVertical);
+  };
+
+  const minimizeMiniApp = () => {
+    setWaitingForResize(true);
+    setMiniAppSize(miniAppMinimizeSize);
+    setOutputSize(outputMinimizeSize);
+    setIsMaximized(false);
+    throttledResize(height, width, miniApp, miniAppSize, isVertical);
+  };
 
   return (
     <div
@@ -199,7 +238,12 @@ const Output: React.FunctionComponent<OutputProps> = ({
       ref={resizeContainerRef}
     >
       <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
-        <MiniAppPreview />
+        <MiniAppPreview
+          maximizeMiniApp={maximizeMiniApp}
+          minimizeMiniApp={minimizeMiniApp}
+          isMaximized={isMaximized}
+          style={{opacity: previewOpacity}}
+        />
       </div>
       <ResizeBar
         isVertical={!isVertical}
