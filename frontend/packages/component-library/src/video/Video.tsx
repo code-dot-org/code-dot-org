@@ -102,9 +102,7 @@ const Video: React.FC<VideoProps> = ({
         )}
       </div>
       <div className={moduleStyles.footer}>
-        {showCaption && (
-          <Figcaption className={moduleStyles.caption}>{videoTitle}</Figcaption>
-        )}
+        {showCaption && <Figcaption>{videoTitle}</Figcaption>}
         {videoFallback && (
           <LinkButton
             className={moduleStyles.download}

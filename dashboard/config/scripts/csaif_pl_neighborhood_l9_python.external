@@ -1,0 +1,74 @@
+name 'csaif-pl_neighborhood_L9_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome to the Neighborhood
+
+<img src="https://images.code.org/b448b13c66c9f0104a8a62e50340df88-image-1741198407647.png" alt="neighborhood ide scene with taxi and donut truck" width="180px" style="border-radius:20px; float:right; margin: 0 20px 10px 0px;">
+
+
+
+#### The Neighborhood IDE provides an engaging, visual approach to learning programming by allowing users to control a painter's character to navigate a neighborhood and create patterns.
+
+#### This interactive environment supports foundational coding skills while reinforcing computational thinking in an intuitive, exploratory way.
+
+#### It encourages creativity and problem-solving, making coding more enjoyable for learners of all levels.
+
+<br>
+
+
+
+## Why this approach works
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">👁️ Visual and Immediate Feedback </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Seeing the painter move and create patterns helps learners quickly connect code to outcomes, reinforcing cause-and-effect relationships in programming.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">⚖️ Low Barrier to Entry</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> The simple text commands make it accessible for beginners, reducing cognitive load while building confidence.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">🧠 Supports Computational Thinking</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;">Concepts like sequencing, loops, and conditionals are introduced naturally as students direct the painter’s movement and actions.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">🎨 Creativity and Engagement </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Painting patterns and exploring the neighborhood make coding feel playful, promoting experimentation and problem-solving.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">🌉 Bridges to More Complex Coding </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;">  The structured yet flexible environment helps students transition from basic commands to more advanced programming concepts over time.
+</p></div>
+</details>
+
+---
+
+<div style="display: flex; align-items: center; gap: 20px; width: 95%; margin: 20px auto;">
+ 
+    <img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" 
+         alt="bargraph and data icon" 
+         style="border-radius: 10px; width: 15%; height: auto;">
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 85%;">
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+            While the neighborhood-themed activity provides a visual and engaging way to explore data types, we recognize that it may not be fully compatible with screen readers.<br><br> To ensure all students can participate meaningfully, an alternative lesson using Python Lab is available for those with accessibility needs.
+        </p>
+    </div>
+</div>
+
+MARKDOWN
