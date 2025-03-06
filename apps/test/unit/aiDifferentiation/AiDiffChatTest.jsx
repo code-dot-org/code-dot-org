@@ -166,6 +166,7 @@ describe('AiDiffChat', () => {
       isPreset: true,
       text: 'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
       sessionId: '123abc',
+      url: window.location.href,
     };
     const responseEventData2 = {
       chatContext: AiDiffContext.LESSON,
@@ -176,6 +177,7 @@ describe('AiDiffChat', () => {
       isPreset: true,
       text: "Beep boop I'm a bot",
       sessionId: '123abc',
+      url: window.location.href,
     };
     const feedbackEventData = {
       chatContext: AiDiffContext.LESSON,
