@@ -51,4 +51,8 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
   def facilitators
     object.facilitators.map {|f| "#{f.name} <#{f.email}>"}.join("\n")
   end
+
+  def virtual
+    object.virtual?
+  end
 end

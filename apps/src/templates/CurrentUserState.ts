@@ -16,6 +16,7 @@ export interface CurrentUserState {
   countryCode: string;
   userId: number;
   userName: string;
+  displayName?: string;
   userType: 'unknown' | 'teacher' | 'student';
   userRoleInCourse: CourseRole;
   signInState: SignInState;

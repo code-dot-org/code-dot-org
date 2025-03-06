@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-22 07:12:43 UTC",
+    "serialized_at": "2025-02-24 21:50:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -365,6 +365,18 @@
       }
     },
     {
+      "key": "5482e2fd-705b-41d4-b986-a0716b1bc2ab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5482e2fd-705b-41d4-b986-a0716b1bc2ab",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet"
+      }
+    },
+    {
       "key": "051b61cb-2205-4d76-9522-28d416a60af0",
       "position": 1,
       "properties": {
@@ -540,6 +552,39 @@
       "seeding_key": {
         "activity_section.key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2",
         "lesson_activity.key": "4f8447ed-0446-4f8a-b25a-268e93c5d437"
+      }
+    },
+    {
+      "key": "f579c5d3-07dc-429a-a6a3-08a51bed2010",
+      "position": 1,
+      "properties": {
+        "progression_name": "Company Case Study Choices"
+      },
+      "seeding_key": {
+        "activity_section.key": "f579c5d3-07dc-429a-a6a3-08a51bed2010",
+        "lesson_activity.key": "5482e2fd-705b-41d4-b986-a0716b1bc2ab"
+      }
+    },
+    {
+      "key": "c31627cd-e17f-4eb0-856c-2621dbcc6ebf",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI-Driven Solution Chatbots"
+      },
+      "seeding_key": {
+        "activity_section.key": "c31627cd-e17f-4eb0-856c-2621dbcc6ebf",
+        "lesson_activity.key": "5482e2fd-705b-41d4-b986-a0716b1bc2ab"
+      }
+    },
+    {
+      "key": "201b8ee6-6cbe-4120-b0e1-3322f6fd0035",
+      "position": 3,
+      "properties": {
+        "progression_name": "Final Risk Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "201b8ee6-6cbe-4120-b0e1-3322f6fd0035",
+        "lesson_activity.key": "5482e2fd-705b-41d4-b986-a0716b1bc2ab"
       }
     },
     {
@@ -1329,6 +1374,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Company Case Study Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-choiceLevel"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "f579c5d3-07dc-429a-a6a3-08a51bed2010"
+      },
+      "level_keys": [
+        "test-networks-internet-lesson11-choiceLevel"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI-Driven Solution Chatbots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-AI-choiceLevel"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "c31627cd-e17f-4eb0-856c-2621dbcc6ebf"
+      },
+      "level_keys": [
+        "test-networks-internet-lesson11-AI-choiceLevel"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Risk Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-and-internet-lesson11-project"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "201b8ee6-6cbe-4120-b0e1-3322f6fd0035"
+      },
+      "level_keys": [
+        "test-networks-and-internet-lesson11-project"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-networks-internet-matching-template1"
         ],
@@ -1349,7 +1460,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1374,7 +1485,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1399,7 +1510,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1424,7 +1535,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1449,7 +1560,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1474,7 +1585,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1499,7 +1610,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -1524,7 +1635,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1549,7 +1660,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1574,7 +1685,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1599,7 +1710,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -1624,7 +1735,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1649,7 +1760,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -1674,7 +1785,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -1699,7 +1810,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1724,7 +1835,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -1749,7 +1860,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -2085,6 +2196,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-networks-and-the-internet",
         "activity_section.key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-lesson11-choiceLevel",
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-choiceLevel"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "f579c5d3-07dc-429a-a6a3-08a51bed2010"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-lesson11-AI-choiceLevel",
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-AI-choiceLevel"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "c31627cd-e17f-4eb0-856c-2621dbcc6ebf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-and-internet-lesson11-project",
+        "script_level.level_keys": [
+          "test-networks-and-internet-lesson11-project"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "201b8ee6-6cbe-4120-b0e1-3322f6fd0035"
       }
     },
     {

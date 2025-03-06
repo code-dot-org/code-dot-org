@@ -232,6 +232,16 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
                               params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_unit.lessons[0].relative_position}}, name: 'levelbuilder can view in-development student lesson plan'
 
+  test 'show includes correct SEO data' do
+    get :show, params: {
+      script_id: @script.name,
+      position: @lesson.relative_position
+    }
+    assert_response :ok
+    assert_includes(@response.body, "<title>Lesson Plan: lesson display name")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"lesson overview\"")
+  end
+
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {

@@ -94,6 +94,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
+  const sectionHasAITutor = React.useMemo(
+    () =>
+      selectedSection
+        ? selectedSection.courseVersionName?.includes('csa') ||
+          selectedSection.courseVersionName?.includes('aitutor')
+        : false,
+    [selectedSection]
+  );
+
   const studentCount = useAppSelector(
     state => state.teacherSections.selectedStudents.length
   );
@@ -306,7 +315,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             <Route
               path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
               element={
-                showAITutorTab ? (
+                showAITutorTab && sectionHasAITutor ? (
                   <ElementOrEmptyPage
                     showNoStudents={studentCount === 0}
                     showNoCurriculumAssigned={false}
@@ -335,6 +344,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAITutorTab,
       selectedSection,
       studioUrlPrefix,
+      sectionHasAITutor,
     ]
   );
 

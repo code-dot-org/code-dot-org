@@ -63,8 +63,8 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [userReturnTo, setUserReturnTo] = useState('/home');
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
-    useState(false);
+  const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
+    useState('');
 
   // Remove oauth user_type cookie if it exists
   cookies.remove(NEW_SIGN_UP_USER_TYPE);
@@ -72,12 +72,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
     if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
-      navigateToHref('/users/new_sign_up/account_type');
+      navigateToHref('/users/sign_up/account_type');
     } else if (
       sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
       sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
     ) {
-      navigateToHref('/users/new_sign_up/login_type');
+      navigateToHref('/users/sign_up/login_type');
     }
 
     analyticsReporter.sendEvent(
@@ -216,7 +216,7 @@ const FinishStudentAccount: React.FunctionComponent<{
     }
     setIsSubmitting(true);
     sendFinishEvent();
-    showErrorCreatingAccountMessage(false);
+    setErrorCreatingAccountMessage('');
 
     const signUpParams = {
       new_sign_up: true,
@@ -246,8 +246,14 @@ const FinishStudentAccount: React.FunctionComponent<{
       clearSignUpSessionStorage(false);
       navigateToHref(userReturnTo);
     } else {
+      if (response.status === 400) {
+        response
+          .json()
+          .then(badRequest => setErrorCreatingAccountMessage(badRequest.error));
+      } else {
+        setErrorCreatingAccountMessage(locale.error_signing_up_message());
+      }
       setIsSubmitting(false);
-      showErrorCreatingAccountMessage(true);
     }
   };
 
@@ -266,11 +272,11 @@ const FinishStudentAccount: React.FunctionComponent<{
                 className={style.xIcon}
               />
               <BodyThreeText className={style.errorMessageText}>
-                <SafeMarkdown markdown={locale.error_signing_up_message()} />
+                <SafeMarkdown markdown={errorCreatingAccountMessage} />
               </BodyThreeText>
             </div>
             <CloseButton
-              onClick={() => showErrorCreatingAccountMessage(false)}
+              onClick={() => setErrorCreatingAccountMessage('')}
               aria-label={locale.error_signing_up_message_aria_label()}
             />
           </div>

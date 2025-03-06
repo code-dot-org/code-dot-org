@@ -3,11 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Data Science is Everywhere
+# Cybersecurity is Everywhere
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "><strong>Teacher Tip: </strong> Data science is everywhere, influencing industries from healthcare to sports. Connecting your students to these real-world applications helps them see the relevance of what they’re learning and deepens their understanding.  
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "><strong>Teacher Tip: </strong> Cybersecurity plays a crucial role in various industries, from healthcare to transportation. Helping students connect these real-world applications to cybersecurity principles enhances their understanding of digital security, privacy, and risk management.
+
+  
 </p>
 </div>
 
@@ -41,15 +43,15 @@ markdown <<MARKDOWN
             <th align="center">Transportation</th>
         </tr>
     <tr>
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Predictive models that help doctors diagnose diseases earlier, personalized treatment plans, and wearable devices that monitor health metrics and provide insights for better health management.</td>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Protecting patient records from cyber threats, securing medical devices from hacking, and ensuring data privacy in telemedicine services.</td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Fraud detection systems that identify unusual spending patterns, personalized financial advice from robo-advisors, and stock market analysis for better investment strategies.
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Preventing fraud through advanced security systems, encrypting online transactions, and safeguarding financial institutions from cyberattacks.
 </td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Inventory management systems that predict product demand, personalized marketing campaigns based on customer data, and dynamic pricing models that adjust prices in real-time based on demand and competition.
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Protecting customer data from breaches, securing e-commerce transactions, and preventing cyber fraud in digital payment systems.
 </td>
             
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Optimization of public transit routes based on usage patterns, predictive maintenance of vehicles to avoid breakdowns, and ride-sharing algorithms that match drivers and passengers efficiently.
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Securing GPS navigation systems, protecting ride-sharing and public transit platforms from cyber threats, and ensuring safe communication between smart vehicles.
 </td>
             
            
@@ -85,16 +87,11 @@ markdown <<MARKDOWN
             
         </tr>
     <tr>
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"> Adaptive learning platforms that tailor educational content to individual students' needs, data-driven insights into student performance to improve teaching methods, and early warning systems to identify students at risk of falling behind.
-</td>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"> Implementing secure online learning environments, preventing cyberbullying and phishing attacks, and protecting student data from unauthorized access.</td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Performance analysis of athletes using wearable technology, data-driven strategies for team management and game tactics, and fan engagement through personalized content and experiences.
-
-</td>
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Ensuring cybersecurity in sports analytics platforms, protecting athlete data from unauthorized access, and securing smart stadiums from digital threats.</td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Monitoring and predicting climate change effects, optimizing energy usage in smart grids, and analyzing environmental data to support conservation efforts.
-
-</td>
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Safeguarding data from environmental monitoring systems, securing smart grids from cyber threats, and ensuring the integrity of climate research data.</td>
             
    
             

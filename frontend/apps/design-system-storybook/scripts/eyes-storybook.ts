@@ -14,12 +14,12 @@ exec('yarn dotenv-run -- eyes-storybook', (error, stdout) => {
   const testsSuccessful =
     error == null && stdout.includes('No differences were found!');
 
-  if (process.env.CI !== 'true') {
+  if (!eyesFailureLink || process.env.CI !== 'true') {
     console.log(stdout);
     console.log(error);
   }
 
-  const a = dedent(`
+  const report = dedent(`
         # 🖼️ Visual Comparison Report
             
         ${
@@ -44,5 +44,5 @@ exec('yarn dotenv-run -- eyes-storybook', (error, stdout) => {
         }
     `);
 
-  console.log(dedent(a));
+  console.log(dedent(report));
 });

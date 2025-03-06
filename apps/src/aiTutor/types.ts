@@ -1,19 +1,21 @@
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiTutorInteractionStatus as AITutorInteractionStatus,
-  AiTutorTypes as AITutorTypes,
+  AiTutorTypes as AITutorActions,
 } from '@cdo/generated-scripts/sharedConstants';
 
-// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
-export type AITutorTypesValue = string;
-export type AITutorInteractionStatusValue = string;
-
-export {AITutorInteractionStatus, AITutorTypes};
+export type AITutorAction = ValueOf<typeof AITutorActions>;
+export type AITutorInteractionStatusValue = ValueOf<
+  typeof AITutorInteractionStatus
+>;
+export {AITutorInteractionStatus, AITutorActions};
 
 export interface ChatCompletionMessage {
   id?: number;
   role: Role;
   chatMessageText: string;
-  status: string;
+  status: AITutorInteractionStatusValue;
   timestamp?: string;
 }
 
@@ -21,7 +23,7 @@ export interface AITutorInteraction {
   userId?: number;
   levelId?: number;
   scriptId?: number;
-  type: AITutorTypesValue | undefined;
+  type: AITutorAction | undefined;
   prompt: string;
   status: AITutorInteractionStatusValue;
   aiResponse?: string;
@@ -38,7 +40,7 @@ export interface StudentChatRow {
   scriptId?: number;
   status: AITutorInteractionStatusValue;
   studentName: string;
-  type: AITutorTypesValue;
+  type: AITutorAction;
   updatedAt?: string;
   userId: number;
 }
@@ -69,14 +71,6 @@ export interface ChatContext {
   // or the student's code for compilation and validation.
   studentInput: string;
   studentCode?: string;
-  actionType?: AITutorTypesValue | undefined;
+  actionType?: AITutorAction | undefined;
   systemPrompt?: string;
-}
-
-export enum Role {
-  ASSISTANT = 'assistant',
-  USER = 'user',
-  SYSTEM = 'system',
-  // only used in Aichat, but our types are currently tangled up :)
-  MODEL_UPDATE = 'update',
 }

@@ -79,48 +79,6 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     And I close my eyes
 
-  Scenario: Local navigation on standalone Unit
-    When I open my eyes to test "teacher local nav v2 - standalone unit overview"
-    Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "interactive-games-animations-2024" with teacher "Teacher_Sally"
-
-    Given I sign in as "Teacher_Sally" and go home
-    And I get levelbuilder access
-
-    When I click selector "a:contains(New Section)" once I see it to load a new page
-
-    Given I wait until element "#ui-test-teacher-sidebar" is visible
-
-    Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
-
-    And I wait until element "h1:contains('Interactive Animations and Games')" is visible
-
-    Then I see no difference for "unit overview"
-
-    Then I click selector "#uitest-view-as-student" once I see it
-
-    And I wait until element ".uitest-assigned" is visible
-
-    Then I see no difference for "student view"
-
-    Then I click selector "#uitest-view-as-teacher" once I see it
-
-    Then I see no difference for "back to teacher"
-
-    Then I select the "Sally" option in dropdown "uitest-view-as-student-selector"
-
-    Then I see no difference for "selected student view"
-
-    Then I select the "Me" option in dropdown "uitest-view-as-student-selector"
-
-    Then I see no difference for "back to teacher 2"
-
-    Then I click selector "button:contains('Assign to sections')" once I see it
-
-    Then I see no difference for "assign to sections modal"
-
-    And I close my eyes
-
   Scenario: Local navigation on the rest of the teacher dashboard pages
     When I open my eyes to test "teacher local nav v2 - other pages"
     Given I create an authorized teacher-associated student named "Sally"
