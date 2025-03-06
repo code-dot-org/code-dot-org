@@ -68,21 +68,24 @@ const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
   dispatch(toggleSectionHidden(section.id));
 };
 
+const onDeleteClick = (
+  onDeleteClickCallback: (sectionId: number) => void,
+  sectionId: number
+) => {
+  analyticsReporter.sendEvent(
+    EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
+    {},
+    PLATFORMS.BOTH
+  );
+  onDeleteClickCallback(sectionId);
+};
+
 export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   section,
   onDeleteClickCallback,
 }) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-
-  const onDeleteClick = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
-      {},
-      PLATFORMS.BOTH
-    );
-    onDeleteClickCallback(section.id);
-  };
 
   const dropdownOptions: ActionDropdownOption[] = [
     {
@@ -123,7 +126,7 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       value: 'delete',
       label: i18n.delete(),
       icon: {iconName: 'trash', iconStyle: 'solid'},
-      onClick: onDeleteClick,
+      onClick: () => onDeleteClick(onDeleteClickCallback, section.id),
     },
   ];
 
