@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 
-import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import experiments from '@cdo/apps/util/experiments';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import HeaderBanner from '../HeaderBanner';
@@ -75,14 +72,6 @@ class Incubator extends Component {
             ]}
           />
         </div>
-        {experiments.isEnabled('ai-differentiation') && (
-          <AiDiffFloatingActionButton
-            context={AiDiffContext.GENERAL}
-            scriptId={null}
-            scriptName={null}
-            unitDisplayName={null}
-          />
-        )}
       </div>
     );
   }

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
@@ -15,7 +16,9 @@ import projects, {
   setCaptchaKey,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(() => {
   const projectsData = getScriptData('projects');
@@ -56,4 +59,25 @@ $(document).ready(() => {
     </Provider>,
     document.querySelector('#projects-page')
   );
+  displayDifferentiationChat();
 });
+
+function displayDifferentiationChat() {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.GENERAL}
+          scriptId={null}
+          scriptName={null}
+          unitDisplayName={null}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
+}

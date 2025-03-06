@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -19,6 +20,8 @@ import {
   setPageType,
   beginCreatingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
@@ -140,6 +143,7 @@ function showHomepage() {
     </Provider>,
     document.getElementById('homepage-container')
   );
+  displayDifferentiationChat();
 }
 
 /**
@@ -180,4 +184,24 @@ function getTeacherAnnouncement(override) {
   }
 
   return announcement;
+}
+
+function displayDifferentiationChat() {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.GENERAL}
+          scriptId={null}
+          scriptName={null}
+          unitDisplayName={null}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
 }

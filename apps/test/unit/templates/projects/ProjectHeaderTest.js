@@ -1,4 +1,4 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -12,16 +12,6 @@ import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader.jsx';
-import experiments from '@cdo/apps/util/experiments';
-import i18n from '@cdo/locale';
-
-// Needed to mock out the PDFDownloadLink component in the AiDiffContainer
-jest.mock('@react-pdf/renderer', () => ({
-  PDFDownloadLink: () => null,
-  StyleSheet: {
-    create: () => null,
-  },
-}));
 
 describe('ProjectHeader', () => {
   let store;
@@ -58,18 +48,5 @@ describe('ProjectHeader', () => {
     expect(
       screen.getByText('Over 200 million projects created')
     ).toBeInTheDocument();
-  });
-
-  it('renders the AI Diff FAB when experiment is enabled', async () => {
-    // mock experiment is enabled
-    experiments.isEnabled = jest.fn(() => true);
-    renderDefault();
-
-    const chatButton = await screen.findByRole('button', {
-      name: i18n.openOrCloseTeachingAssistant(),
-    });
-    fireEvent.click(chatButton);
-    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
-    experiments.isEnabled = jest.fn(() => false);
   });
 });

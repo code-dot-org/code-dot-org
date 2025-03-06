@@ -2,11 +2,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
-import experiments from '@cdo/apps/util/experiments';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import ProjectsPromo from './ProjectsPromo';
@@ -37,14 +34,6 @@ export default class ProjectHeader extends React.Component {
             canViewAdvancedTools={this.props.canViewAdvancedTools}
           />
         </div>
-        {experiments.isEnabled('ai-differentiation') && (
-          <AiDiffFloatingActionButton
-            context={AiDiffContext.GENERAL}
-            scriptId={null}
-            scriptName={null}
-            unitDisplayName={null}
-          />
-        )}
       </div>
     );
   }

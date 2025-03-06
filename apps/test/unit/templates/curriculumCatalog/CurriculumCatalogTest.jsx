@@ -12,9 +12,6 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import currentUser, {
-  setInitialData,
-} from '@cdo/apps/templates/currentUserRedux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import teacherSections, {
   setSections,
@@ -23,9 +20,7 @@ import {
   getSimilarRecommendations,
   getStretchRecommendations,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
-import experiments from '@cdo/apps/util/experiments';
 import {tryGetSessionStorage} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
 
 import {
   setWindowLocation,
@@ -50,14 +45,6 @@ import {
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
 
-// Needed to mock out the PDFDownloadLink component in the AiDiffContainer
-jest.mock('@react-pdf/renderer', () => ({
-  PDFDownloadLink: () => null,
-  StyleSheet: {
-    create: () => null,
-  },
-}));
-
 describe('CurriculumCatalog', () => {
   const defaultProps = {
     curriculaData: allCurricula,
@@ -75,23 +62,15 @@ describe('CurriculumCatalog', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({responsive, teacherSections, currentUser});
+    registerReducers({responsive, teacherSections});
     store = getStore();
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
     store.dispatch(setSections(sections));
-    store.dispatch(
-      setInitialData({
-        id: 1,
-        name: 'test_user',
-        has_completed_ai_differentiation_welcome: true,
-      })
-    );
 
     replacedLocation = undefined;
     window.history.replaceState = (_, __, newLocation) => {
       replacedLocation = newLocation;
     };
-    window.HTMLElement.prototype.scrollIntoView = () => {};
   });
 
   afterEach(() => {
@@ -100,7 +79,6 @@ describe('CurriculumCatalog', () => {
     sessionStorage.removeItem('similarRecommenderResults');
     sessionStorage.removeItem('stretchRecommenderResults');
     window.history.replaceState = replaceStateOrig;
-    jest.restoreAllMocks();
   });
 
   function renderDefault() {
@@ -121,19 +99,6 @@ describe('CurriculumCatalog', () => {
     renderDefault();
 
     screen.getByText('Code.org courses, tutorials, and more', {exact: false});
-  });
-
-  test('renders AiDiffFloatingActionButton component', async () => {
-    // mock experiment is enabled
-    experiments.isEnabled = jest.fn(() => true);
-    renderDefault();
-
-    const chatButton = await screen.findByRole('button', {
-      name: i18n.openOrCloseTeachingAssistant(),
-    });
-    fireEvent.click(chatButton);
-    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
-    experiments.isEnabled = jest.fn(() => false);
   });
 
   it('does not render language filter row when in English locale', () => {

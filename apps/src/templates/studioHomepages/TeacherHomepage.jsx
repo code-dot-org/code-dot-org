@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
@@ -13,9 +12,7 @@ import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import experiments from '@cdo/apps/util/experiments';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CensusTeacherBanner from '../census/CensusTeacherBanner';
@@ -286,14 +283,6 @@ export const UnconnectedTeacherHomepage = ({
           />
         </section>
       </div>
-      {experiments.isEnabled('ai-differentiation') && (
-        <AiDiffFloatingActionButton
-          context={AiDiffContext.GENERAL}
-          scriptId={null}
-          scriptName={null}
-          unitDisplayName={null}
-        />
-      )}
     </div>
   );
 };

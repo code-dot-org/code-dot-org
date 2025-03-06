@@ -16,7 +16,6 @@ import {
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
-import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
@@ -24,9 +23,7 @@ import {
   getSimilarRecommendations,
   getStretchRecommendations,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
-import experiments from '@cdo/apps/util/experiments';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
@@ -323,14 +320,6 @@ const CurriculumCatalog = ({
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}
       </div>
-      {experiments.isEnabled('ai-differentiation') && (
-        <AiDiffFloatingActionButton
-          context={AiDiffContext.GENERAL}
-          scriptId={null}
-          scriptName={null}
-          unitDisplayName={null}
-        />
-      )}
     </>
   );
 };
