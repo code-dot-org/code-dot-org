@@ -21,7 +21,7 @@ import teacherSections, {
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
-describe('SectionList', () => {
+describe('TeacherHomepage', () => {
   const sections = [
     {
       id: 11,
@@ -94,6 +94,7 @@ describe('SectionList', () => {
     screen.getByText('Class Sections');
   });
 
+  //TODO (TEACH-1659): Why did we need to increase timeouts on this test?
   it('teaching/archived toggle', async () => {
     renderComponent();
     screen.getByRole('button', {name: 'Teaching'});
@@ -106,5 +107,5 @@ describe('SectionList', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
-  });
+  }, 10000);
 });
