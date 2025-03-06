@@ -76,9 +76,13 @@ class SectionsController < ApplicationController
   def archive_all
     sections = current_user.sections_owned
 
+    num_hidden = sections.count {|s| !s.hidden}
+
     sections.each do |section|
       section.update!(hidden: true)
     end
+
+    render json: {num_hidden: num_hidden}
   end
 
   private def redirect_to_section_script_or_course

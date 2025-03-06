@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -13,6 +13,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 describe('SectionList', () => {
   const sections = [
@@ -56,11 +57,27 @@ describe('SectionList', () => {
 
   let store: Store;
 
+  const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+
   beforeEach(() => {
     store = getStore();
     registerReducers({teacherSections, currentUser});
     store.dispatch(setSections(serverSections));
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+  });
+
+  afterEach(() => {
+    fetchSpy.mockRestore();
   });
 
   function renderComponent() {
@@ -90,4 +107,19 @@ describe('SectionList', () => {
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
   }, 10000);
+
+  it('archives all sections', async () => {
+    renderComponent();
+    const optionsDropdown = screen.getByRole('button', {name: 'More options'});
+    fireEvent.click(optionsDropdown);
+
+    const archiveAllSectionsButton = await screen.findByRole('button', {
+      name: 'Archive all sections',
+    });
+
+    fireEvent.click(archiveAllSectionsButton);
+
+    expect(screen.queryByText('Period 1')).toBeNull();
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+  });
 });

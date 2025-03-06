@@ -4,12 +4,10 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Heading2, Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {archiveAllSections} from '../../teacherDashboard/teacherSectionsRedux';
-
+import {ArchiveAllModal} from './ArchiveAllModal';
 import {SectionList} from './SectionList';
 
 import styles from './teacherHomepage.module.scss';
@@ -22,7 +20,8 @@ export const TeacherHomepage: React.FC = () => {
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
 
-  const dispatch = useAppDispatch();
+  const [archiveAllModalOpen, setArchiveAllModalOpen] =
+    React.useState<boolean>(false);
 
   return (
     <div className={styles.teacherHomepage}>
@@ -68,13 +67,7 @@ export const TeacherHomepage: React.FC = () => {
                       icon: {iconName: 'gear', iconStyle: 'solid'},
                       value: 'archive',
                       onClick: () => {
-                        HttpClient.post('/sections/archive_all')
-                          .then(() => {
-                            dispatch(archiveAllSections());
-                          })
-                          .catch(error => {
-                            console.log('error archiving all sections', error);
-                          });
+                        setArchiveAllModalOpen(true);
                       },
                     },
                   ]}
@@ -84,6 +77,10 @@ export const TeacherHomepage: React.FC = () => {
                     color: 'gray',
                     type: 'secondary',
                   }}
+                />
+                <ArchiveAllModal
+                  isOpen={archiveAllModalOpen}
+                  onClose={() => setArchiveAllModalOpen(false)}
                 />
               </div>
             </div>
