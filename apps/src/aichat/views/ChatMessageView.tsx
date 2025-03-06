@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {memo, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -16,6 +17,8 @@ import {
 
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
+
+import styles from './chatWorkspace.module.scss';
 
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
@@ -83,15 +86,33 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       ) : null;
   }
 
-  const assetUrls =
-    assets && currentChannelId
-      ? assets.map(asset => `/v3/assets/${currentChannelId}/${asset}`)
-      : undefined;
+  if (!isAssistant && !isChatHistoryView && assets && currentChannelId) {
+    footer = (
+      <div className={styles.assetRow}>
+        {assets.map(asset => {
+          return asset.endsWith('.pdf') ? (
+            <div key={asset} className={styles.pdfPreview}>
+              <FontAwesomeV6Icon
+                iconName="file-pdf"
+                className={styles.pdfIcon}
+              />
+              <span>{asset}</span>
+            </div>
+          ) : (
+            <img
+              key={asset}
+              alt=""
+              src={`/v3/assets/${currentChannelId}/${asset}`}
+            />
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <ChatMessage
       text={displayText}
-      assetUrls={assetUrls}
       role={role}
       messageStyle={getMessageStyle(status, role)}
       footer={footer}
