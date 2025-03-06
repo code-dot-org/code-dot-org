@@ -68,7 +68,7 @@ const Carousel: React.FC<CarouselProps> = ({
       className={classNames(moduleStyles.carouselWrapper, className)}
       {...HTMLAttributes}
     >
-      <div className={classNames(moduleStyles.carousel, className)}>
+      <div className={classNames(moduleStyles.carousel)}>
         {/* Swiper carousel */}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
