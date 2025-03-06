@@ -21,8 +21,6 @@ const HorizontalLayout: React.FunctionComponent = () => {
     rightPanelWidth,
     rightTopPanelHeight,
     rightBottomPanelHeight,
-    leftPanelSeparatorProps,
-    leftPanelDragging,
     rightBottomPanelSeparatorProps,
     rightBottomPanelDragging,
   } = useHorizontalLayout({
@@ -49,11 +47,10 @@ const HorizontalLayout: React.FunctionComponent = () => {
         style={{width: leftPanelWidth}}
         className={moduleStyles.flexShrink0}
       />
-      <ResizeBar
-        isVertical={true}
-        separatorProps={leftPanelSeparatorProps}
-        isDragging={leftPanelDragging}
-      />
+      {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
+         can only drag left, not right (something about the mouse events getting 
+         captured by the preview?).
+         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
       <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
         <Workspace style={{height: rightTopPanelHeight}} />
         <ResizeBar
