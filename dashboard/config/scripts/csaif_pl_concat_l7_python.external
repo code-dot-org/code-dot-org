@@ -3,61 +3,36 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Computational Thinking: The Key to Better Coding  
+# String Concatenation   
 
 
-
-<img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 170px; margin: 0px 20px 0px 10px; ">
-
-####  Computational thinking—breaking problems into steps, recognizing patterns, and designing clear instructions—lays the foundation for strong coding skills.
-
-#### In this activity, you'll see how students apply these skills to guide the Painter through a maze.
-
-#### By prioritizing problem-solving, students develop a solid understanding before diving into code.
+#### In the previous levels, you worked with **print statements** and **string Concatenation**.
 
 
+<img src="https://images.code.org/0d5ccbdeb31cf38001ebb37338ac81cc-image-1741191408570.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
-## Navigate the Painter
+#### **Concatenation** simply means joining things together, like two pieces of text or data and uses `+` symbol. In the picture above, the symbol connects the variable value to the string message in the print statement.
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Jot down the steps to navigate the painter from position A to position C on the map below using only the following commands: 
-    </p>
-    <ul>
-    <li style="font-size: 14pt;">Move_forward</li>
-    <li style="font-size: 14pt;">Turn_right</li>
-    </ul>
-    <p style="font-size: 14pt;">Now, try going from C to E. </p>
-    <br>
-    <p style="font-size: 14pt;"><b>What do you notice?</b> </p>
-</div>
+## Non-string variables
 
+#### Since `print` statements in Python output text, any non-string variable (such as an `int`, `float`, or `boolean`) must be converted to a string before being printed.
 
-
-
-<div style="text-align: center;">
-    <img src="https://images.code.org/d178a10fd4861e5cfd1ecc597db667ff-image-1741026488503.png" 
-         alt="A sample of a chat conversation with an AI bot." 
-         width="450px" 
-         style="border-radius: 5px; border: 2px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
-</div>
+<img src="https://images.code.org/ce76a8a8e439f4b531fcc6d3df6c7e48-image-1741191203136.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
 ---
 
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+<div style="background-color: #F7F8FA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
 
-  <p style="font-size: 14pt; font-weight: bold; margin: 0;">Pause & Reflect</p>
-        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">After completing both paths, reflect on the process.<br><br>How did breaking the journey into steps, recognizing movement patterns, and creating clear instructions help navigate the maze? <br><br> In other words, how did you use <b>computational thinking</b> to complete this task? 
-        
+  <p style="font-size: 14pt; font-weight: bold; margin: 0;">Casting a Variable to String</p>
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Use the <code>str()</code> function to convert non-string data types into a string so they can be printed or combined with other text.<br><br> Use the <code>+</code> operator to join the text.
+    </p>
+    <img src="https://images.code.org/ec0cc4e98ddf8f2830d54a8064b9c923-image-1741193014924.png" alt="design process graph of the cycle" width="400px" style="display: block; margin-left: auto; margin-right: auto;"><br>
+    <p style="font-size: 14pt;">
+    Without <code>str()</code>, this would cause a <code>TypeError</code> because Python cannot concatenate a string and an integer directly.
     </p>
 </div>
 
-<br>
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
-
-
-
+## Let's practice with a choice level!
 MARKDOWN

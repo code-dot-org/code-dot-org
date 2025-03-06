@@ -43,8 +43,9 @@
         "gpt-4o-mini"
       ]
     },
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "long_instructions": "##Play around!\r\nAsk some questions in spanish, try out the system prompt and retrieval in spanish as well! "
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-25T19:36:27.344+00:00\",\"changed\":[\"cloned from \\\"gen-ai-4omini-testing\\\"\"],\"cloned_from\":\"gen-ai-4omini-testing\"},{\"changed_at\":\"2025-02-25 19:36:33 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-25T19:36:27.344+00:00\",\"changed\":[\"cloned from \\\"gen-ai-4omini-testing\\\"\"],\"cloned_from\":\"gen-ai-4omini-testing\"},{\"changed_at\":\"2025-02-25 19:36:33 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-05 17:27:52 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

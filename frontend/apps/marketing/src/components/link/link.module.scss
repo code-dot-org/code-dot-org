@@ -4,6 +4,10 @@
 a.link {
   margin-top: 0;
   margin-bottom: 1em;
+
+  &.link-removeMarginBottom {
+    @include mixins.common-margin-bottom-none;
+  }
 }
 
 // Link sizes

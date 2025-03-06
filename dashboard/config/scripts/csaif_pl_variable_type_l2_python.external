@@ -5,41 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Exploring Data Types
 
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
 
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -77,41 +45,9 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
 
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
 
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -149,41 +85,9 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
 
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
 
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -221,41 +125,9 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
 
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
 
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -293,41 +165,9 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
 
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
 
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -365,41 +205,9 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
 
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
 
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True<br> False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -429,13 +237,17 @@ markdown <<MARKDOWN
     <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
+        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
     </div>
 
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
+
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
+
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -457,7 +269,7 @@ markdown <<MARKDOWN
     
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam" <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
+        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
     </div>
 </div>
 
@@ -465,13 +277,17 @@ markdown <<MARKDOWN
     <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
+        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
     </div>
 
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
+
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
+
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -493,7 +309,7 @@ markdown <<MARKDOWN
     
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
+        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
     </div>
 </div>
 
@@ -501,13 +317,17 @@ markdown <<MARKDOWN
     <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
+        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
     </div>
 
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
+
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
+
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -524,12 +344,12 @@ markdown <<MARKDOWN
     </div>
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue" "Pine Drive" <br><br><b> Street Names</b></p>
+        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
     </div>
     
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
+        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
     </div>
 </div>
 
@@ -537,13 +357,17 @@ markdown <<MARKDOWN
     <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
+        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
     </div>
 
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
+
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
+
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -560,12 +384,12 @@ markdown <<MARKDOWN
     </div>
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
+        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
     </div>
     
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
+        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
     </div>
 </div>
 
@@ -573,13 +397,17 @@ markdown <<MARKDOWN
     <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
+        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
     </div>
 
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
+
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
+
+# Exploring Data Types
 
 #### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
 
@@ -596,12 +424,12 @@ markdown <<MARKDOWN
     </div>
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street" "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
+        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
     </div>
     
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
+        <p style="font-size:14pt;">"Sam" <br>"Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
     </div>
 </div>
 
@@ -609,7 +437,7 @@ markdown <<MARKDOWN
     <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
+        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
     </div>
 
 <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
@@ -617,1645 +445,112 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
         <p style="font-size:14pt;"># Exploring Data Types
 
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
+<img src="https://images.code.org/dcd0149dfa63c39a7adf10b6aa0d5746-image-1741188476107.png" alt="House with tree and garden" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 00px;">
 
 
-## Data Cards 
 
-#### Look at these sample data cards. What do you notice about them?
 
 
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102<br> 205,<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102,<br> 205,<br> 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102,<br> 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan",<br> "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br>"Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <br"Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <b"Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", <"Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
 
-## Data Cards 
 
-#### Look at these sample data cards. What do you notice about them?
 
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;"># Exploring Data Types
-
-#### Imagine you are the local community center organizer. You’ve received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. Your task? Sort these cards and notice patterns in the data.
-
-
-## Data Cards 
-
-#### Look at these sample data cards. What do you notice about them?
-
-
- <div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">102, 205, 311 <br><br><b> House Numbers</b></p>
-    </div>
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">"Maple Street", "Oak Avenue", "Pine Drive" <br><br><b> Street Names</b></p>
-    </div>
-    
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-       <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">Sam", "Jordan", "Maria" <br><br><b> Resident Names</b></p>
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
-    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">True, False, True  <br><br><b> Has a Garden?</b></p>
-    </div>
-
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
-                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
-        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
-        <p style="font-size:14pt;">250000.50, 187500.75, 320000.00 <br><br><b> House Numbers</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50000.50, 187500.75, 320000.00 <br><br><b> House Numbers</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, 187500.75, 320000.00 <br><br><b> House Numbers</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87500.75, 320000.00 <br><br><b> House Numbers</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, 320000.00 <br><br><b> House Numbers</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320000.00 <br><br><b> House Numbers</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Has a Garden?</b></p>
     </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> House Numbers</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> H</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Ho</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Hom</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home </b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home P</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Pr</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Pri</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Pric</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Price</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
-
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
-
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> H</b></p>
     </div>
-</div>
-
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Ho</b></p>
     </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Hom</b></p>
     </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Home</b></p>
     </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Home </b></p>
     </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
-
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Home P</b></p>
     </div>
-</div>
-
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50, MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50 MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Home Pr</b></p>
     </div>
-</div>
-
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50  MARKDOWN87,500.75, $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50  MARKDOWN87,500.75 $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Home Pri</b></p>
     </div>
-</div>
-
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50  MARKDOWN87,500.75  $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-        You've finished the first lesson in this professional learning module! <br> Computational Thinking is up next! 
-    </p>
-</div>
 
-![]()50,000.50  MARKDOWN87,500.75  $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Home Pric</b></p>
     </div>
-</div>
 
 
 
-
-![]()50,000.50  MARKDOWN87,500.75  $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
 
 
 
-50,000.50  MARKDOWN87,500.75  $320,000.00 <br><br><b> Home Prices</b></p>
+50,000.50<br> MARKDOWN87,500.75<br> $320,000.00 <br><br><b> Home Price</b></p>
     </div>
-</div>
 
-#
 
 
-50,000.50  MARKDOWN87,500.75  $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
-
-##
 
-
-50,000.50  MARKDOWN87,500.75  $320,000.00 <br><br><b> Home Prices</b></p>
-    </div>
-</div>
 
-## 
 
 
 

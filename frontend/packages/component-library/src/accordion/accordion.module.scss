@@ -1,0 +1,76 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+// Accordion common styles
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    border-radius: $regular-border-radius;
+    border: 1px solid var(--borders-neutral-primary);
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.875rem;
+      padding: 0.75rem 1.25rem;
+      cursor: pointer;
+
+      i {
+        color: var(--text-neutral-placeholder);
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    > p {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      padding: 1.25rem;
+      gap: 0.75rem;
+      background: var(--background-neutral-secondary);
+    }
+
+    // Open accordion item styles
+    &[open] {
+      summary {
+        // Flips the chevron icon when accordion item is open
+        i:last-child {
+          transform: scaleY(-1);
+        }
+        border-bottom: 1px solid var(--borders-neutral-primary);
+      }
+    }
+
+    summary:hover {
+      @include transition-all;
+      background: var(--background-neutral-secondary);
+
+      i {
+        color: var(--text-neutral-quaternary);
+      }
+    }
+
+    &:has(summary:focus-visible) {
+      @include focus-styles;
+      summary {
+        outline: none;
+      }
+    }
+  }
+}
