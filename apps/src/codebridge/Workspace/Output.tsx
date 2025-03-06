@@ -26,6 +26,8 @@ interface OutputProps {
   miniAppDragging: boolean;
 }
 
+// Component for program output (console and mini app preview, if it exists).
+// This component is used by HorizontalOutput and VerticalOutput, which wrap it with additional layout logic.
 const Output: React.FunctionComponent<OutputProps> = ({
   style,
   className,
