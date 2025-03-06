@@ -1,8 +1,10 @@
 import React, {FC, useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
 
-import {useWorkshop} from '../hooks/useWorkshop';
+import {useFetch} from '../hooks/useFetch';
 
 import {
+  CourseOffering,
   Session,
   SessionFormState,
   Workshop,
@@ -11,22 +13,23 @@ import {
 } from './types';
 
 export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
-  course: data.course ?? null,
-  capacity: data.capacity ?? null,
+  course: data.course ?? '',
+  capacity: data.capacity?.toString() ?? '',
   description: data.description ?? '',
   facilitators: data.facilitators ?? [],
   fee: data.fee ?? '',
   grades: data.grades ?? [],
   hidden: data.hidden ?? false,
-  name: data.name ?? null,
+  name: data.name ?? '',
   notes: data.notes ?? '',
-  organizerId: data.organizer?.id,
+  organizerId: data.organizer?.id ?? null,
   prereq: data.prereq ?? '',
-  regionalPartnerId: data.regional_partner_id,
+  hasPrereq: data.prereq ? true : false,
+  regionalPartnerId: data.regional_partner_id ?? null,
   registrationLink: data.registration_link ?? '',
   subject: data.subject ?? '',
   suppressEmail: data.suppress_email ?? false,
-  courseOfferings: data.course_offerings ?? [],
+  courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
   participantGroupType: data.participant_group_type ?? '',
   timeZone: data.time_zone ?? '',
 });
@@ -46,13 +49,23 @@ export const sessionDataToState = (data: Session[]): SessionFormState[] =>
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
 }) => {
-  const {workshop} = useWorkshop();
+  const {workshopId} = useParams();
+
+  const workshopUrl = workshopId
+    ? `/api/v1/pd/workshops/${workshopId}`
+    : undefined;
+
+  const [workshop] = useFetch<Workshop>({url: workshopUrl});
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [courseOfferings] = useFetch<CourseOffering[]>({
+    url: '/course_offerings/self_paced_pl_course_offerings',
+  });
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [workshopFormState, setWorkshopFormState] = useState<WorkshopFormState>(
     {
       course: '',
-      capacity: undefined,
+      capacity: '',
       description: '',
       facilitators: [],
       fee: '',
@@ -60,9 +73,10 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       hidden: false,
       name: '',
       notes: '',
-      organizerId: undefined,
+      organizerId: null,
       prereq: '',
-      regionalPartnerId: undefined,
+      hasPrereq: false,
+      regionalPartnerId: null,
       registrationLink: '',
       subject: '',
       suppressEmail: false,
