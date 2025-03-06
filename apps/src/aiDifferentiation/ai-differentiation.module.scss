@@ -216,6 +216,9 @@
   &Confirm i {
     color: $light_affirmative_500;
   }
+  &Negative i {
+    color: $light_negative_500;
+  }
 }
 
 .chips fieldset div {
