@@ -4,6 +4,7 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Heading2, Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -57,7 +58,31 @@ export const TeacherHomepage: React.FC = () => {
                   name="More options"
                   size="s"
                   labelText={i18n.moreOptions()}
-                  options={[]}
+                  options={[
+                    {
+                      label: i18n.archiveAllSections(),
+                      icon: {iconName: 'gear', iconStyle: 'solid'},
+                      value: 'archive',
+                      onClick: () => {
+                        // HttpClient.fetchJson(
+                        //   '/dashboardapi/sections/archive_all'
+                        // ).then(response => {
+                        //   console.log('lfm', {response});
+                        // });
+                        HttpClient.post(
+                          '/dashboardapi/sections/archive_all',
+                          '',
+                          false
+                        )
+                          .then(() => {
+                            console.log('success');
+                          })
+                          .catch(error => {
+                            console.log('error', error);
+                          });
+                      },
+                    },
+                  ]}
                   triggerButtonProps={{
                     icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
                     isIconOnly: true,

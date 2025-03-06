@@ -173,6 +173,7 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          post 'archive_all'
         end
       end
     end
