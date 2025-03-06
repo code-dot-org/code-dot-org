@@ -22,10 +22,12 @@ export const SectionDeleteModal: React.FC<SectionDeleteModalProps> = ({
       onClose={onCloseCallback}
       primaryButtonProps={{
         text: i18n.delete(),
+        ariaLabel: i18n.delete(),
         onClick: sectionDeleteCallback,
       }}
       secondaryButtonProps={{
         text: i18n.dialogCancel(),
+        ariaLabel: i18n.dialogCancel(),
         onClick: onCloseCallback,
       }}
     />
