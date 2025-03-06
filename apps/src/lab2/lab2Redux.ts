@@ -539,6 +539,8 @@ async function setUpAndLoadProject(
   projectManager.addSaveSuccessListener(channel => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
     dispatch(setChannel(channel));
+    // If we had a successful save, we know the project is not too large.
+    dispatch(setProjectTooLarge(false));
   });
   projectManager.addSaveNoopListener(channel => {
     if (channel) {
