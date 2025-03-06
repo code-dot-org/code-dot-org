@@ -1,5 +1,5 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -26,18 +26,6 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
   const [detailsOpen, setDetailsOpen] = useState<boolean>(false);
 
   const level = useAppSelector(state => state.aiTutor.level);
-
-  const runCountPythonlab = useAppSelector(state => state.lab2System.runCount);
-  const validateCountPythonlab = useAppSelector(
-    state => state.lab2System.validateCount
-  );
-  const runCountJavalab = useAppSelector(state => state.javalab.runCount);
-
-  // If the user clicks on 'Run' or 'Validate', close the feedback details.
-  // This is to avoid displaying a suggested prompt chip(s) over feedback details.
-  useEffect(() => {
-    setDetailsOpen(false);
-  }, [runCountJavalab, runCountPythonlab, validateCountPythonlab]);
 
   const handleIconClick = (thumbsUp: boolean, thumbsDown: boolean) => {
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_FEEDBACK_SUBMITTED, {

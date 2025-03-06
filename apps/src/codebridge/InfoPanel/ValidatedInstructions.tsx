@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import React, {useContext, useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
+import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
@@ -20,7 +21,6 @@ import {
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {
-  incrementValidateCount,
   setHasValidated,
   setIsValidating,
 } from '@cdo/apps/lab2/redux/systemRedux';
@@ -177,7 +177,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         dispatch(setIsValidating(false))
       );
       dispatch(setHasValidated(true));
-      dispatch(incrementValidateCount());
+      dispatch(setShowSuggestedPrompts(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

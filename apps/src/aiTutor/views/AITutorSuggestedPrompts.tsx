@@ -1,4 +1,4 @@
-import React, {useCallback, useState, useEffect} from 'react';
+import React, {useCallback} from 'react';
 
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import {AITutorAction} from '@cdo/apps/aiTutor/types';
@@ -13,20 +13,21 @@ import {
   AITutorEventMap,
   PromptOptionMap,
 } from '../constants';
-import {askAITutor} from '../redux/aiTutorRedux';
+import {askAITutor, setShowSuggestedPrompts} from '../redux/aiTutorRedux';
 import {SuggestedPromptOptions} from '../types';
 
 const useLabSelectors = () => {
   return useAppSelector(state => ({
     isWaitingForChatResponse: state.aiTutor.isWaitingForChatResponse,
     level: state.aiTutor.level,
+    showSuggestedPrompts: state.aiTutor.showSuggestedPrompts,
 
     // pythonlab selectors
     pythonlabSource: state.lab2Project?.projectSources?.source,
     hasPythonlabError: state.lab2System.hasError,
-    runCountPythonlab: state.lab2System.runCount,
-    validateCountPythonlab: state.lab2System.validateCount,
     isPythonlabRunning: state.lab2System.isRunning,
+    hasRunPythonCode: state.lab2System.hasRun,
+    hasValidatedPythonCode: state.lab2System.hasValidated,
     isPythonlabValidating: state.lab2System.isValidating,
     validationState: state.lab.validationState,
 
@@ -35,8 +36,7 @@ const useLabSelectors = () => {
     fileMetadata: state.javalabEditor.fileMetadata,
     activeTabKey: state.javalabEditor.activeTabKey,
     hasJavalabCompilationError: state.javalabEditor.hasCompilationError,
-    runCountJavalab: state.javalab.runCount,
-    validateCountJavalab: state.javalab.validateCount,
+    hasRunOrTestedJavalabCode: state.javalab.hasRunOrTestedCode,
     isJavalabRunning: state.javalab.isRunning,
     javalabValidationPassed: state.javalab.validationPassed,
   }));
@@ -46,35 +46,22 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   const {
     isWaitingForChatResponse,
     level,
+    showSuggestedPrompts,
     pythonlabSource,
     hasPythonlabError,
-    runCountPythonlab,
-    validateCountPythonlab,
+    hasRunPythonCode,
     isPythonlabRunning,
+    hasValidatedPythonCode,
     isPythonlabValidating,
     validationState,
     javalabSources,
     fileMetadata,
     activeTabKey,
     hasJavalabCompilationError,
-    runCountJavalab,
-    validateCountJavalab,
     isJavalabRunning,
+    hasRunOrTestedJavalabCode,
     javalabValidationPassed,
   } = useLabSelectors();
-
-  const [clickPromptCountChange, setClickPromptCountChange] = useState(false);
-
-  useEffect(() => {
-    // If the user clicks on 'Run' or 'Test'/'Validate', we want to show the user
-    // the suggested prompt(s) if there is an code/validation error.
-    setClickPromptCountChange(false);
-  }, [
-    runCountJavalab,
-    runCountPythonlab,
-    validateCountPythonlab,
-    validateCountJavalab,
-  ]);
 
   const getSuggestedPromptOptionsByLabType = useCallback(
     (labType: string): SuggestedPromptOptions => {
@@ -92,7 +79,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         const showOption =
           !isPythonlabRunning &&
           !isPythonlabValidating &&
-          (!!runCountPythonlab || !!validateCountPythonlab) &&
+          (hasRunPythonCode || hasValidatedPythonCode) &&
           !isWaitingForChatResponse;
         return {
           studentCode,
@@ -100,7 +87,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
           showValidationOption:
             showOption &&
             validationState.hasConditions &&
-            !!validateCountPythonlab &&
+            hasValidatedPythonCode &&
             !validationState.satisfied,
         };
       }
@@ -110,11 +97,11 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
           studentCode,
           showCompilationOption:
             !isJavalabRunning &&
-            !!runCountJavalab &&
+            hasRunOrTestedJavalabCode &&
             hasJavalabCompilationError &&
             !isWaitingForChatResponse,
           showValidationOption:
-            !!validateCountJavalab &&
+            hasRunOrTestedJavalabCode &&
             !hasJavalabCompilationError &&
             !javalabValidationPassed &&
             !isWaitingForChatResponse,
@@ -127,6 +114,9 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       fileMetadata,
       hasJavalabCompilationError,
       hasPythonlabError,
+      hasRunOrTestedJavalabCode,
+      hasRunPythonCode,
+      hasValidatedPythonCode,
       isJavalabRunning,
       isPythonlabRunning,
       isPythonlabValidating,
@@ -134,11 +124,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       javalabSources,
       javalabValidationPassed,
       pythonlabSource,
-      runCountJavalab,
-      runCountPythonlab,
-      validateCountJavalab,
-      validateCountPythonlab,
-      validationState,
+      validationState.hasConditions,
+      validationState.satisfied,
     ]
   );
 
@@ -155,6 +142,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       if (isWaitingForChatResponse) {
         return;
       }
+      dispatch(setShowSuggestedPrompts(false));
       dispatch(
         askAITutor({
           studentInput: QuickActions[aiTutorAction as SuggestedPromptActions],
@@ -174,7 +162,6 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         progressionType: level?.progressionType,
         suggestedPrompt: EVENTS[suggestedPromptEventKey],
       });
-      setClickPromptCountChange(() => true);
     },
     [isWaitingForChatResponse, studentCode, dispatch, level]
   );
@@ -195,9 +182,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     .filter(prompt => prompt.show);
   // If the user clicked on a suggested prompt, do not show a suggested prompt until the
   // clicks on the 'Run' or 'Validate'/'Test' buttons.
-  const showPrompts = !clickPromptCountChange;
-
-  return showPrompts ? (
+  return showSuggestedPrompts ? (
     <SuggestedPrompts suggestedPrompts={suggestedPrompts} />
   ) : null;
 };

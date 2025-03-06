@@ -6,12 +6,12 @@ import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterH
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
+import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
-  incrementRunCount,
   setHasRun,
   setIsRunning,
   setIsValidating,
@@ -80,7 +80,7 @@ const ControlButtons: React.FunctionComponent = () => {
         dispatch(setIsRunning(false))
       );
       dispatch(setHasRun(true));
-      dispatch(incrementRunCount());
+      dispatch(setShowSuggestedPrompts(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
