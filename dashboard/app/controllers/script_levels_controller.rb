@@ -662,7 +662,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   private def redirect_to_canonical_path
-    canonical_path = Services::Courses.canonical_path(request, params, current_user)
+    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
     redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end

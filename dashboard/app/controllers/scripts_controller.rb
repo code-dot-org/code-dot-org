@@ -416,7 +416,7 @@ class ScriptsController < ApplicationController
 
   # Redirect /s/... to /courses/.../units/...
   private def redirect_to_nested_course
-    canonical_path = Services::Courses.canonical_path(request, params, current_user)
+    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
     redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end
