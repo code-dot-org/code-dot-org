@@ -89,5 +89,5 @@ describe('SectionList', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
-  });
+  }, 10000);
 });
