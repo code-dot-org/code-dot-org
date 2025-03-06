@@ -5,8 +5,10 @@ import {Heading2, Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import {archiveAllSections} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {SectionList} from './SectionList';
 
@@ -19,6 +21,8 @@ export const TeacherHomepage: React.FC = () => {
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
+
+  const dispatch = useAppDispatch();
 
   return (
     <div className={styles.teacherHomepage}>
@@ -64,21 +68,12 @@ export const TeacherHomepage: React.FC = () => {
                       icon: {iconName: 'gear', iconStyle: 'solid'},
                       value: 'archive',
                       onClick: () => {
-                        // HttpClient.fetchJson(
-                        //   '/dashboardapi/sections/archive_all'
-                        // ).then(response => {
-                        //   console.log('lfm', {response});
-                        // });
-                        HttpClient.post(
-                          '/dashboardapi/sections/archive_all',
-                          '',
-                          false
-                        )
+                        HttpClient.post('/sections/archive_all')
                           .then(() => {
-                            console.log('success');
+                            dispatch(archiveAllSections());
                           })
                           .catch(error => {
-                            console.log('error', error);
+                            console.log('error archiving all sections', error);
                           });
                       },
                     },

@@ -4,6 +4,8 @@ class SectionsController < ApplicationController
   load_and_authorize_resource :section, only: [:edit]
   authorize_resource :section, only: [:new]
 
+  skip_before_action :verify_authenticity_token, only: [:archive_all]
+
   def new
     redirect_to home_path unless params[:loginType] && params[:participantType]
     @user_country = helpers.country_code(current_user, request)
@@ -66,6 +68,22 @@ class SectionsController < ApplicationController
     else
       render json: {verified: false}
     end
+  end
+
+  # POST /api/sections/archive
+  # Archive all sections owned by the current user.
+  # Note: does not archive co-taught sections created by another user.
+  def archive_all
+    puts 'lfm 1'
+    sections = current_user.sections_owned
+
+    hiddens = []
+    sections.each do |section|
+      section.update!(hidden: true)
+      # hiddens.append({id: section.id, hidden: section.hidden})
+    end
+
+    render json: hiddens
   end
 
   private def redirect_to_section_script_or_course

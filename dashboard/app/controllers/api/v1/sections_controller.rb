@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha, :archive_all]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
@@ -217,22 +217,6 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
     render json: course_offerings
-  end
-
-  # POST /api/sections/archive
-  # Archive all sections owned by the current user.
-  # Note: does not archive co-taught sections created by another user.
-  def archive_all
-    puts 'lfm 1'
-    sections = current_user.sections_owned
-
-    hiddens = []
-    sections.each do |section|
-      section.update!(hidden: true)
-      # hiddens.append({id: section.id, hidden: section.hidden})
-    end
-
-    render json: hiddens
   end
 
   # GET /api/v1/sections/available_participant_types
