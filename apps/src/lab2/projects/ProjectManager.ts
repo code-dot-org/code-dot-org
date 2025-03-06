@@ -435,6 +435,11 @@ export default class ProjectManager {
       this.forceReloading = true;
       this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
       reload();
+    } else if (error.message.includes('413')) {
+      // If we had a payload too large error, don't try to save again until the project
+      // has changed, as it will fail again. The save fail listener should handle
+      // the 413 error and inform the user accordingly.
+      this.lastSource = JSON.stringify(this.sourcesToSave);
     } else {
       // Otherwise, we log the error, including the message as details.
       this.metricsReporter.logError(errorMessage, error, {
