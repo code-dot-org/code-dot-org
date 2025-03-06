@@ -89,41 +89,44 @@ DefaultCarousel.play = async ({
     'This is slide 6',
   ];
 
+  // check that slides are in the carousel
+  for (const slideText of slides) {
+    const heading = await canvas.findByText(slideText);
+    expect(heading).toBeInTheDocument();
+  }
+
   // check that the next nav arrow is showing and working
   await expect(navArrowNext).toBeInTheDocument();
+  // click to the next slide group
   await userEvent.click(navArrowNext);
-  // go to end of the carousel
+  // click to the end of the carousel
   await userEvent.click(navArrowNext);
 
   // check that the previous nav arrow is showing and working
   await expect(navArrowPrev).toBeInTheDocument();
+  // click to the previous slide group
   await userEvent.click(navArrowPrev);
-  // go to beginning of the carousel
+  // click to the beginning of the carousel
   await userEvent.click(navArrowPrev);
 
   // check that the pagination dots are showing and working
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
     expect(dot).toBeInTheDocument();
-    // click to the end of the carousel
-    await userEvent.click(dot);
   }
 
   // click out of order using pagination dots
   const paginationDotOne = canvas.getByLabelText(paginationDots[0]);
   const paginationDotTwo = canvas.getByLabelText(paginationDots[1]);
+  const paginationDotThree = canvas.getByLabelText(paginationDots[2]);
   // click pagination dot 1
   await userEvent.click(paginationDotOne);
   // click pagination dot 2
   await userEvent.click(paginationDotTwo);
-  // go to beginning of the carousel
+  // click pagination dot 3
+  await userEvent.click(paginationDotThree);
+  // go back to beginning of the carousel
   await userEvent.click(paginationDotOne);
-
-  // check that slides are in the carousel
-  for (const slideText of slides) {
-    const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
-  }
 };
 
 export const CarouselWithoutNavArrows = SingleTemplate.bind({});
