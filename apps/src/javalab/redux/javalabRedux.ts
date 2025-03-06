@@ -1,6 +1,7 @@
 /**
  * Redux store for generic Java Lab state.
  */
+
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 export interface JavalabState {
