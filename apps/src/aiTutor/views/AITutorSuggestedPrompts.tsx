@@ -69,8 +69,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       // * we aren't currently running or validating code,
       // * and we aren't waiting for a chat response
       // * code has been run or validated.
-      // However, if the user clicks on run/validate again after clicking on a
-      // suggested prompt, hide the suggested prompt(s).
+      // However, if the user clicks on a suggested prompt, hide the suggested prompt(s)
+      // until after they click on run or test/validate again.
       if (labType === 'Pythonlab') {
         const studentCode =
           typeof pythonlabSource !== 'string' && pythonlabSource
