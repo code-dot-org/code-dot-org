@@ -451,9 +451,6 @@ class UnitTest < ActiveSupport::TestCase
       @single_unit_2024 = create :unit, name: 'single-unit-2024'
       @single_unit_course_2024 = create :single_unit_course, name: 'single-unit-course-2024', family_name: "single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
       create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2024, key: "2024", display_name: "2024"
-      @single_unit_2025 = create :unit, name: 'single-unit-2025'
-      @single_unit_course_2025 = create :single_unit_course, name: 'single-unit-course-2025', family_name: "single-unit-course", version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit: @single_unit_2025
-      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2025, key: "2025", display_name: "2025"
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
@@ -516,12 +513,12 @@ class UnitTest < ActiveSupport::TestCase
 
     test 'can_view_version? is true if unit in single-unit course is the latest stable version' do
       @single_unit_2024.reload
-      refute @single_unit_2024.can_view_version?(@student)
+      assert @single_unit_2024.can_view_version?(@student)
     end
 
     test 'can_view_version? is true if student is assigned to unit in single-unit course' do
-      @student.expects(:assigned_script?).returns(true)
-
+      @student.scripts << @single_unit_2023
+      @single_unit_2023.reload
       assert @single_unit_2023.can_view_version?(@student)
     end
   end
