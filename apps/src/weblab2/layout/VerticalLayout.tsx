@@ -55,7 +55,8 @@ const VerticalLayout: React.FunctionComponent = () => {
       />
       {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you
          can only drag left, not right (something about the mouse events getting 
-         captured by the preview?) */}
+         captured by the preview?) 
+         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
       <div
         style={{width: rightPanelWidth}}
         className={moduleStyles.shrinkAndGrow}
