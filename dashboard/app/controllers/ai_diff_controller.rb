@@ -46,7 +46,7 @@ class AiDiffController < ApplicationController
 
     # Add response message to thread
     begin
-      AichatMessage.create!(
+      assistant_message = AichatMessage.create!(
         aichat_thread_id: @thread.id,
         external_id: @thread.external_id,
         role: :assistant,
@@ -56,6 +56,9 @@ class AiDiffController < ApplicationController
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
     end
+
+    response_body[:messageId] = assistant_message.id
+    response_body[:threadId] = @thread.id
 
     render(status: :ok, json: response_body)
   end
