@@ -1,12 +1,12 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import ToggleFileBrowserButton from '@codebridge/components/ToggleFileBrowserButton';
-import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
 import classnames from 'classnames';
 import React from 'react';
 
 import {Editor} from '@cdo/apps/codebridge/Editor/Editor';
+import {FileBrowser} from '@cdo/apps/codebridge/FileBrowser/FileBrowser';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';

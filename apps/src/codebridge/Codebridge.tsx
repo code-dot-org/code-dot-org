@@ -4,7 +4,6 @@ import {
   SOURCE_REDUCER_ACTIONS,
   useSourceUtilities,
 } from '@codebridge/codebridgeContext';
-import {FileBrowser} from '@codebridge/FileBrowser';
 import {useReducerWithCallback} from '@codebridge/hooks';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import {SideBar} from '@codebridge/SideBar';
@@ -18,6 +17,7 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
+import {FileBrowser} from '@cdo/apps/codebridge/FileBrowser/FileBrowser';
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
