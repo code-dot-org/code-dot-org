@@ -10,7 +10,9 @@
     "/courses/3-5gamedesign-2024",
   ];
 
-  if (prefixes.filter((prefix) => window.location.pathname.startsWith(prefix)).length > 0) {
+  const localeSelect = document.querySelector("#locale");
+  const useLocalizeJS = localeSelect?.hasAttribute('data-useLocalizeJS');
+  if (localeSelect && useLocalizeJS && prefixes.filter((prefix) => window.location.pathname.startsWith(prefix)).length > 0) {
     Localize.initialize({
       key: 'xxx_I0P5RaUEW8s5h',
       rememberLanguage: true,
@@ -46,7 +48,6 @@
       const cdoLanguage = inverseMapping[language] || language;
 
       const ensureSelector = (cdoLanguage) => {
-        const localeSelect = document.querySelector("#locale");
         if (localeSelect) {
           localeSelect.selectedIndex = localeSelect.querySelector("option[value='" + cdoLanguage + "']").index;
           localeSelect.removeEventListener('change', handleChange);
