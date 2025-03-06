@@ -33,10 +33,7 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-# TODO: start requiring the unit name, and pass it to
-# csd3_including_contained_levels_for_stanford.sql to query an entire unit.
-
-# raise "Unit name is required" unless $options[:unit]
+raise "Unit name is required" unless $options[:unit]
 
 require_relative '../../deployment'
 require_relative '../../lib/cdo/redshift' if rack_env?(:production)
@@ -46,7 +43,7 @@ puts "Loading Rails environment..."
 require_relative '../../dashboard/config/environment'
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
-def fetch_progress(simple:, unit_id:, level_id:)
+def fetch_progress(simple:, unit_name:, level_id:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
@@ -57,7 +54,7 @@ def fetch_progress(simple:, unit_id:, level_id:)
     pathname = File.expand_path(filename, __dir__)
     query_template = File.read(pathname)
     params = {
-      unit_id: unit_id,
+      unit_name: unit_name,
       level_id: level_id,
     }
     query = ERB.new(query_template).result_with_hash(params)
@@ -91,15 +88,14 @@ def main
   simple = $options[:simple]
 
   unit_name = $options[:unit].presence || 'csd3-2023'
-  unit = Unit.find_by!(name: unit_name)
-  unit_id = unit.id
+  Unit.find_by!(name: unit_name)
 
   level_id = $options[:level_id].presence
   Level.find(level_id) if level_id
 
   fetch_progress(
     simple: simple,
-    unit_id: unit_id,
+    unit_name: unit_name,
     level_id: level_id,
   )
 end
