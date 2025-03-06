@@ -1,61 +1,62 @@
+import Slider from '@code-dot-org/component-library/slider';
 import React from 'react';
 
 import MazeVisualization from '@cdo/apps/maze/Visualization';
+import commonI18n from '@cdo/locale';
+
+import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
 
 import moduleStyles from './neighborhood.module.scss';
 
 interface NeighborhoodVisualizationProps {
   className?: string;
-  isDarkMode: boolean;
+  isDarkMode?: boolean;
   useProtectedDiv?: boolean;
 }
-const ICON_PATH = '/blockly/media/turtle/';
 
 const NeighborhoodVisualization: React.FunctionComponent<
   NeighborhoodVisualizationProps
 > = ({className, isDarkMode, useProtectedDiv = true}) => {
-  const fullIconPath = isDarkMode
-    ? ICON_PATH + 'icons_white.png'
-    : ICON_PATH + 'icons.png';
+  const [sliderValue, setSliderValue] = React.useState(
+    NeighborhoodSpeedTracker.getInstance().getSpeed()
+  );
+  const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newSpeed = parseInt(e.target.value);
+    setSliderValue(newSpeed);
+    NeighborhoodSpeedTracker.getInstance().setSpeed(newSpeed);
+  };
 
   return (
     <div className={className}>
       <div className={moduleStyles.neighborhoodPreviewBackground}>
         <MazeVisualization useProtectedDiv={useProtectedDiv} />
       </div>
-      <div className={moduleStyles.sliderBackground}>
-        <svg
-          id="slider"
-          version="1.1"
-          width="150"
-          height="50"
+      <div className={moduleStyles.sliderContainer}>
+        <Slider
+          name="neighborhood-speed"
+          value={sliderValue}
+          onChange={handleSpeedChange}
+          color={isDarkMode ? 'white' : 'black'}
+          isPercentMode={true}
+          hideValue={true}
+          leftButtonProps={{
+            'aria-label': commonI18n.decreaseSpeed(),
+            icon: {
+              iconName: 'turtle',
+              title: commonI18n.decreaseSpeed(),
+            },
+            size: 's',
+          }}
+          rightButtonProps={{
+            'aria-label': commonI18n.increaseSpeed(),
+            icon: {
+              iconName: 'rabbit',
+              title: commonI18n.increaseSpeed(),
+            },
+            size: 's',
+          }}
           className={moduleStyles.slider}
-        >
-          {/* Slow icon. */}
-          <clipPath id="slowClipPath">
-            <rect width="26" height="12" x="5" y="14" />
-          </clipPath>
-          <image
-            xlinkHref={fullIconPath}
-            height="42"
-            width="84"
-            x="-21"
-            y="-10"
-            clipPath="url(#slowClipPath)"
-          />
-          {/* Fast icon. */}
-          <clipPath id="fastClipPath">
-            <rect width="26" height="16" x="120" y="10" />
-          </clipPath>
-          <image
-            xlinkHref={fullIconPath}
-            height="42"
-            width="84"
-            x="120"
-            y="-11"
-            clipPath="url(#fastClipPath)"
-          />
-        </svg>
+        />
       </div>
     </div>
   );

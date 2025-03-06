@@ -4,11 +4,19 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
+  get '/robots.txt' => 'robots#index'
+
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
   # Redirect old sign up flow to new sign up flow
-  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+  get "/users/sign_up", to: redirect("/users/sign_up/account_type")
+
+  # Redirect uses of "new_sign_up" to "sign_up"
+  get "/users/new_sign_up/account_type", to: redirect("/users/sign_up/account_type")
+  get "/users/new_sign_up/login_type", to: redirect("/users/sign_up/login_type")
+  get "/users/new_sign_up/finish_student_account", to: redirect("/users/sign_up/finish_student_account")
+  get "/users/new_sign_up/finish_teacher_account", to: redirect("/users/sign_up/finish_teacher_account")
 
   # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
   # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
@@ -212,12 +220,12 @@ Dashboard::Application.routes.draw do
     devise_scope :user do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
-      post '/users/finish_sign_up', to: 'registrations#new'
-      get '/users/new_sign_up/account_type', to: 'registrations#account_type'
-      get '/users/new_sign_up/login_type', to: 'registrations#login_type'
+      get '/users/sign_up', to: 'registrations#new'
+      get '/users/sign_up/account_type', to: 'registrations#account_type'
+      get '/users/sign_up/login_type', to: 'registrations#login_type'
       get '/users/gdpr_check', to: 'registrations#gdpr_check'
-      get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
-      get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      get '/users/sign_up/finish_student_account', to: 'registrations#finish_student_account'
+      get '/users/sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -973,6 +981,7 @@ Dashboard::Application.routes.draw do
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
+        post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'

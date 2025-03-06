@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-02-07T22:55:16.000Z",
   "level_num": "custom",
@@ -156,7 +157,8 @@
           ],
           "Control": [
             "play_sounds_together",
-            "repeat_simple2"
+            "repeat_simple2",
+            "triggered_at_simple2"
           ],
           "Play": [
             "play_sound_at_current_location_simple2"
@@ -192,8 +194,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-07T22:55:16.284+00:00\",\"changed\":[\"cloned from \\\"PLmusic-coding-intro-event-functions\\\"\"],\"cloned_from\":\"PLmusic-coding-intro-event-functions\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-07T22:55:16.284+00:00\",\"changed\":[\"cloned from \\\"PLmusic-coding-intro-event-functions\\\"\"],\"cloned_from\":\"PLmusic-coding-intro-event-functions\"},{\"changed_at\":\"2025-02-18 23:07:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

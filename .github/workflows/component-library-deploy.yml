@@ -1,0 +1,38 @@
+name: Component-Library-Deploy
+
+on:
+    workflow_dispatch:
+
+    push:
+      branches:
+        - staging
+        - staging-next
+      paths:
+        - 'frontend/packages/component-library/**'
+        - 'frontend/packages/component-library-styles/**'
+        - 'shared/**'
+
+jobs:
+    ci:
+      uses: ./.github/workflows/component-library-ci.yml
+      secrets: inherit
+
+    deploy:
+      needs:
+        - ci
+
+      permissions:
+        contents: read
+        pages: write
+        id-token: write
+
+      environment:
+        name: component-library-storybook
+
+      runs-on: ubuntu-24.04
+
+      steps:
+        - name: Deploy to GitHub Pages
+          uses: actions/deploy-pages@v4
+          with:
+            artifact_name: "component-library-storybook"

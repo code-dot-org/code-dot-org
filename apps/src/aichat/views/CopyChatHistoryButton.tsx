@@ -56,7 +56,7 @@ const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
     <Button
       onClick={handleCopy}
       text={aichatI18n.copyChatButtonText()}
-      iconLeft={{iconName: 'clipboard'}}
+      iconLeft={{iconName: 'copy'}}
       size="s"
       color="gray"
       type="secondary"

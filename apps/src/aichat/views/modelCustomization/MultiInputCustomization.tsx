@@ -1,8 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {StrongText} from '@code-dot-org/component-library/typography';
 import React, {useState, useCallback} from 'react';
-
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 
 import aichatI18n from '../../locale';
 import {Visibility} from '../../types';

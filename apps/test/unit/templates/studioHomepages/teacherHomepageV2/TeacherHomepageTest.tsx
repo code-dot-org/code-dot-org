@@ -1,9 +1,13 @@
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import teacherSections, {
   setSections,
@@ -50,9 +54,14 @@ describe('SectionList', () => {
 
   const serverSections = sections.map(serverSectionFromSection);
 
-  const store: Store = getStore();
-  registerReducers({teacherSections});
-  store.dispatch(setSections(serverSections));
+  let store: Store;
+
+  beforeEach(() => {
+    store = getStore();
+    registerReducers({teacherSections, currentUser});
+    store.dispatch(setSections(serverSections));
+    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+  });
 
   function renderComponent() {
     return render(
@@ -61,9 +70,24 @@ describe('SectionList', () => {
       </Provider>
     );
   }
-  it('renders SectionList component', async () => {
+
+  it('renders SectionList component', () => {
     renderComponent();
-    await screen.findByText('Welcome,');
+    screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
   });
+
+  it('teaching/archived toggle', async () => {
+    renderComponent();
+    screen.getByRole('button', {name: 'Teaching'});
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+
+    screen.getByText('Period 1');
+    expect(screen.queryByText('hidden')).toBeNull();
+
+    userEvent.click(archivedButton);
+
+    await screen.findByText('hidden');
+    expect(screen.queryByText('Period 1')).toBeNull();
+  }, 10000);
 });

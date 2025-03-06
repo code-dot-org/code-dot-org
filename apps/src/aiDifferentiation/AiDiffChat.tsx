@@ -120,6 +120,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         isPreset: preset,
         text: prompt,
         sessionId: session,
+        url: window.location.href,
       };
       analyticsReporter.sendEvent(
         EVENTS.AI_DIFF_CHAT_EVENT,

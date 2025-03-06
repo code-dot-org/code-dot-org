@@ -1,11 +1,11 @@
 import Link from '@code-dot-org/component-library/link';
+import Typography from '@code-dot-org/component-library/typography';
 import {orderBy} from 'lodash';
 import React from 'react';
 import * as Table from 'reactabular-table';
 // @ts-expect-error sortabular doesn't define it's types.
 import * as sort from 'sortabular';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {

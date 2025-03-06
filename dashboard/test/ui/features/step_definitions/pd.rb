@@ -98,8 +98,8 @@ end
 Given /^I open the new workshop form$/ do
   steps <<~GHERKIN
     And I am on "http://studio.code.org/pd/workshop_dashboard"
-    Then I wait until element "button:contains('New Workshop')" is visible
-    Then I press "button:contains('New Workshop')" using jQuery
+    Then I wait until element "a:contains('New Workshop')" is visible
+    Then I press the last link with text "New Workshop"
 
     And I wait until element "h2:contains('New Workshop')" is visible
   GHERKIN

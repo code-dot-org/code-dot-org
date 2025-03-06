@@ -3,11 +3,11 @@ import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 

@@ -119,6 +119,8 @@ export enum BLOCK_TYPES {
   argumentReporter = 'argument_reporter',
   behaviorDefinition = 'behavior_definition',
   behaviorGet = 'gamelab_behavior_get',
+  category = 'category',
+  categoryDynamic = 'custom_category',
   colourRandom = 'colour_random',
   danceWhenSetup = 'Dancelab_whenSetup',
   parametersGet = 'parameters_get',

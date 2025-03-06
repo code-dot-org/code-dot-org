@@ -40,6 +40,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     position: rawOutputWidth,
     separatorProps: outputSeparatorProps,
     isDragging: outputDragging,
+    setPosition: setOutputSize,
   } = useResizable({
     axis: 'x',
     initial: INITIAL_OUTPUT_WIDTH,
@@ -114,7 +115,11 @@ const VerticalLayout: React.FunctionComponent = () => {
         separatorProps={outputSeparatorProps}
         isDragging={outputDragging}
       />
-      <Output width={outputWidth} className={moduleStyles.shrinkAndGrow} />
+      <Output
+        width={outputWidth}
+        className={moduleStyles.shrinkAndGrow}
+        setOutputSize={setOutputSize}
+      />
     </div>
   );
 };

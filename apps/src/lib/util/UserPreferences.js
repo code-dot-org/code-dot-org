@@ -69,6 +69,12 @@ export default class UserPreferences extends Record({userId: 'me'}) {
     });
   }
 
+  setAiDifferentiationEnabled(aiDifferentiationEnabled) {
+    return $.post(`/api/v1/users/ai_differentiation_enabled`, {
+      ai_differentiation_enabled: aiDifferentiationEnabled,
+    });
+  }
+
   /**
    * Save the background music user preference
    * @param {boolean} muteMusic: True if background music muted

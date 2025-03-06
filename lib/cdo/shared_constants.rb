@@ -757,6 +757,7 @@ module SharedConstants
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
     COMPLETION: 'completion',
+    GENERIC_HELP: 'generic_help',
   }.freeze
 
   USER_TYPES = OpenStruct.new(
@@ -843,4 +844,15 @@ module SharedConstants
     COURSE: "course",
     GENERAL: "general"
   }.freeze
+
+  DISALLOWED_ROUTES = [
+    "/admin/",
+    "/api/",
+    "/blockly/",
+    "/dashboardapi/",
+    "/join/",
+    "/milestone/",
+    "/projects/",
+    "/sections/"
+  ].freeze
 end

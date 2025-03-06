@@ -94,6 +94,7 @@ describe('AiDiffChat', () => {
       isPreset: true,
       text: 'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
       sessionId: '123abc',
+      url: window.location.href,
     };
     const responseEventData2 = {
       chatContext: AiDiffContext.LESSON,
@@ -104,6 +105,7 @@ describe('AiDiffChat', () => {
       isPreset: true,
       text: "Beep boop I'm a bot",
       sessionId: '123abc',
+      url: window.location.href,
     };
 
     //sends the api call then logs the suggested prompt and the bot message
@@ -274,6 +276,7 @@ describe('AiDiffChat', () => {
       isPreset: false,
       text: userMessage,
       sessionId: '123abc',
+      url: window.location.href,
     };
     const responseEventData2 = {
       chatContext: AiDiffContext.LESSON,
@@ -284,6 +287,7 @@ describe('AiDiffChat', () => {
       isPreset: false,
       text: "Beep boop I'm a bot",
       sessionId: '123abc',
+      url: window.location.href,
     };
 
     //sends the api call then logs the user message and the bot message
@@ -348,6 +352,7 @@ describe('AiDiffChat', () => {
       isPreset: false,
       text: userMessage,
       sessionId: '123abc',
+      url: window.location.href,
     };
     const responseEventData2 = {
       chatContext: AiDiffContext.LESSON,
@@ -358,6 +363,7 @@ describe('AiDiffChat', () => {
       isPreset: false,
       text: "Beep boop I'm a bot",
       sessionId: '123abc',
+      url: window.location.href,
     };
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(

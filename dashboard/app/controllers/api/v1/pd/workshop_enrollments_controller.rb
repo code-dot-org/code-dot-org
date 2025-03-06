@@ -81,7 +81,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         render json: {
           workshop_enrollment_status: RESPONSE_MESSAGES[:SUCCESS],
           account_exists: user.present?,
-          sign_up_url: url_for('/users/new_sign_up/account_type'),
+          sign_up_url: url_for('/users/sign_up/account_type'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
       rescue ActiveRecord::ValueTooLong

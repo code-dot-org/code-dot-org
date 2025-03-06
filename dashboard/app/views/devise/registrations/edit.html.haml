@@ -88,6 +88,9 @@
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 
+- if current_user.teacher?
+  %div#turn-off-ai-diff
+
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')

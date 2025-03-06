@@ -3,10 +3,10 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
-import Slider from '@cdo/apps/slider';
 import commonI18n from '@cdo/locale';
 
 import {NeighborhoodSignalType} from './constants';
+import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
 import {NeighborhoodSignal} from './types';
 
 const Direction = tiles.Direction;
@@ -26,9 +26,9 @@ export default class Neighborhood {
   private onNewlineMessage: () => void;
   private setIsRunning: (isRunning: boolean) => void;
   private statusMessagePrefix: string;
-  private speedSlider: Slider | null;
   private signals: NeighborhoodSignal[];
   private nextSignalIndex: number;
+  private speedTracker: NeighborhoodSpeedTracker;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -42,9 +42,9 @@ export default class Neighborhood {
     this.onNewlineMessage = onNewlineMessage;
     this.setIsRunning = setIsRunning;
     this.statusMessagePrefix = statusMessagePrefix;
-    this.speedSlider = null;
     this.signals = [];
     this.nextSignalIndex = -1;
+    this.speedTracker = NeighborhoodSpeedTracker.getInstance();
   }
 
   afterInject(
@@ -84,11 +84,6 @@ export default class Neighborhood {
     this.controller.subtype.initWallMap();
     this.controller.initWithSvg(svg);
 
-    const slider = document.getElementById('slider');
-    if (!slider) {
-      return;
-    }
-    this.speedSlider = new Slider(10, 35, 130, slider);
     this.signals = [];
     this.nextSignalIndex = 0;
 
@@ -98,7 +93,9 @@ export default class Neighborhood {
     const testInterface = (window as any).__TestInterface;
     if (testInterface) {
       testInterface.setSpeedSliderValue = (value: number) => {
-        this.speedSlider!.setValue(value);
+        // The old slider used a range of 0 to 1, while the new slider uses 0 to 100.
+        // Note: this will change the animation speed but won't actually update the UI.
+        this.speedTracker.setSpeed(value * 100);
       };
     }
   }
@@ -261,9 +258,9 @@ export default class Neighborhood {
 
   // Multiplier on the time per action or step at execution time.
   getPegmanSpeedMultiplier() {
-    // The slider goes from 0 to 1. We scale the speed slider value to be between
+    // The slider goes from 0 to 100. We scale the speed slider value to be between
     // 2 (slowest) and 0 (fastest).
-    return -2 * this.speedSlider!.getValue() + 2;
+    return -2 * (this.speedTracker.getSpeed() / 100) + 2;
   }
 
   // Ensure the svg maze is empty except for the 'look' tile.

@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "serialized_maze": [
@@ -353,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This:\r\n\r\nHelp! There's something wrong with the program! It isn't doing exactly what it should be according to the algorithm flowchart below. \r\n1. Read through the flowchart to understand what the program should do. <br>\r\n2. Run and test the program to debug the program so that it works as expected for all outcomes.<br>\r\n\r\n<img src=\"https://images.code.org/5b9333200c988348fd80197ff2504404-Screenshot 2025-02-07 094249.png\" style=\"width:300px;\">",
+    "long_instructions": "# Do This:\r\n\r\nHelp! There's something wrong with the program! It isn't doing exactly what it should be according to the algorithm flowchart below. \r\n1. Read through the flowchart to understand what the program should do. <br>\r\n2. Run and test the program to debug the program so that it works as expected for all outcomes.<br>\r\n\r\n<img src=\"https://images.code.org/5b9333200c988348fd80197ff2504404-Screenshot 2025-02-07 094249.png\" style=\"width:300px;\">\r\n\r\n---\r\n\r\n## AI Tutor Support:\r\n\r\n::: details [**Not sure why the program isn't following the flowchart?**]\r\n\r\n**Ask AI:**\r\n- If you're unsure why the Painter isn’t behaving as expected, use AI Tutor to investigate how nested conditionals affect the outcome.\r\n- If you're having trouble debugging incorrect logic, ask AI for help analyzing errors.\r\n:::",
     "start_sources": {
       "files": {
         "0": {
@@ -374,6 +374,6 @@
     "thumbnail_url": "https://images.code.org/5b9333200c988348fd80197ff2504404-Screenshot 2025-02-07 094249.png",
     "bubble_choice_description": "There's something wrong with the program! It isn't doing exactly what it should be according to the algorithm flowchart."
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-14T04:37:56.361+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson13-level6a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson13-level6a\"},{\"changed_at\":\"2025-02-14 04:38:13 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-14T04:37:56.361+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson13-level6a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson13-level6a\"},{\"changed_at\":\"2025-02-14 04:38:13 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 16:23:39 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 18:12:53 +0000\",\"changed\":[\"ai_tutor_available\",\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

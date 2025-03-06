@@ -5,32 +5,50 @@ description 'description here'
 markdown <<MARKDOWN
 # Module Overview
 
-<img src="https://images.code.org/26fa1ff538cb832f6d052c0476dbc380-image-1713985435884.03.51 PM.png" alt="A young student rests their hands on a laptop keyboard while they code." style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
 
 ## What's included in this module?
 
 #### This professional learning module module is made up of four lessons:
 
-### **🎉 Welcome to Code.org** - ⭐️ You're here!
 
-#### This section will give you a quick overview of Code.org's mission and values. We'll also share how you can receive a certificate for completing this module.
-
-### **🖥️ Navigating the Code.org Learning Platform**
-
-#### This section will give you a more in-depth view of the Code.org platform, where our teacher tools are located. You'll have a chance to set up a class section and see how you can track your students' progress.
-
-### **🧑🏾‍🎓The Student Experience**
-
-#### In this section, you'll explore what learning with Code.org looks like from a student’s perspective. This experience will help you support student learning.
-
-### **📝 Navigating Lesson Plans, Assessments, and Resources**
-
-#### Once you've gotten the hang of the teacher tools, we'll give you a tour of our lesson materials. You'll have a chance to review Code.org lesson plans and teacher resources.
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">   <b>🎉Welcome to Code.org - ⭐️ You're here!</b> </p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> This section will give you a quick overview of Code.org's mission and values. We'll also share how you can receive a certificate for completing this module.
+    </p>
+</div>
 
 
-### **💌 Navigating Support**
 
-#### Before you start teaching, we'll review some other support sources that you can take advantage of.
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;"><b>🖥️ Navigating the Code.org Learning Platform</b></p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+       This section will give you a more in-depth view of the Code.org platform, where our teacher tools are located. You'll have a chance to set up a class section and see how you can track your students' progress.
+    </p>
+</div>
+
+
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">   <b>🧑🏾‍🎓The Student Experience</b> </p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> In this section, you'll explore what learning with Code.org looks like from a student’s perspective. This experience will help you support student learning.
+    </p>
+</div>
+
+
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;"><b>📝 Navigating Lesson Plans, Assessments, and Resources</b></p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+Once you've gotten the hang of the teacher tools, we'll give you a tour of our lesson materials. You'll have a chance to review Code.org lesson plans and teacher resources.
+    </p>
+</div>
+
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">   <b>💌 Navigating Support</b> </p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> Before you start teaching, we'll review some other support sources that you can take advantage of.
+    </p>
+</div>
 
 ## **Engaging with This Module**
 

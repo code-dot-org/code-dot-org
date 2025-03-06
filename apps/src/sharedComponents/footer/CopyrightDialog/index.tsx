@@ -1,7 +1,10 @@
 import Link from '@code-dot-org/component-library/link';
+import {
+  BodyThreeText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {BodyThreeText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';

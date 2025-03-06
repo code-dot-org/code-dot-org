@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-13T22:45:21.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -10,7 +9,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.3,
+        "temperature": 0.2,
         "systemPrompt": "",
         "retrievalContexts": [
           ""
@@ -45,6 +44,7 @@
     "bubble_choice_description": "You're an IT Help Desk agent helping Alex troubleshoot their drone.",
     "thumbnail_url": "https://images.code.org/180503e6df12b1d882d433db6572196e-Icon Template (4).png"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-13T22:45:21.556+00:00\",\"changed\":[\"cloned from \\\"computer-systems-troubleshoot-choiceD\\\"\"],\"cloned_from\":\"computer-systems-troubleshoot-choiceD\"},{\"changed_at\":\"2025-02-13 22:46:32 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-14 14:37:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-14 16:24:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

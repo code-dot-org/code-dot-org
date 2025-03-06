@@ -114,6 +114,7 @@ namespace :seed do
     interactive-games-animations-2024
     focus-on-creativity3-2024
     focus-on-coding3-2024
+    customizing-llms-2024
     csp1-2017
     csp2-2017
     csp3-2017

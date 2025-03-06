@@ -887,6 +887,10 @@ en:
         PL_equitymod_access: 'How to bring computer science to your elementary school: Be a changemaker'
         bias-deb-raji: Algorithmic Bias with Dr Deborah Raji
         ai-auditing-deb-raji: AI Auditing with Dr Deborah Raji
+        csaif-pilot-game-streamer: 'Game Streamer '
+        csaif-pilot-music-producer: Music Producer CPU
+        csaif-pilot-content-creator: Content Creator
+        csaif-pilot-graphic-designer: Graphic Designer
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
