@@ -90,13 +90,13 @@ DefaultCarousel.play = async ({
   ];
 
   // check that the next nav arrow is showing and working
-  await expect(navArrowPrev).toBeInTheDocument();
+  await expect(navArrowNext).toBeInTheDocument();
   await userEvent.click(navArrowNext);
   // go to end of the carousel
   await userEvent.click(navArrowNext);
 
   // check that the previous nav arrow is showing and working
-  await expect(navArrowNext).toBeInTheDocument();
+  await expect(navArrowPrev).toBeInTheDocument();
   await userEvent.click(navArrowPrev);
   // go to beginning of the carousel
   await userEvent.click(navArrowPrev);
