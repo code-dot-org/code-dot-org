@@ -1,5 +1,4 @@
-import {render, screen} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -103,9 +102,9 @@ describe('TeacherHomepage', () => {
     screen.getByText('Period 1');
     expect(screen.queryByText('hidden')).toBeNull();
 
-    userEvent.click(archivedButton);
+    fireEvent.click(archivedButton);
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
-  }, 10000);
+  });
 });
