@@ -1878,6 +1878,28 @@ class ScriptsControllerTest < ActionController::TestCase
         get :show, params: {id: unit.name}
         assert_response :success
       end
+
+      it '/courses/:course_course_name/units/:unit_position/ does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, position: unit_position}
+        assert_response :success
+      end
+    end
+
+    context 'modularity is on' do
+      let(:modularity_enabled) {true}
+
+      it '/s/:id/ does redirect' do
+        sign_in user
+        get :show, params: {id: unit.name}
+        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}"
+      end
+
+      it '/courses/:course_course_name/units/:unit_position/ does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, position: unit_position}
+        assert_response :success
+      end
     end
   end
 end
