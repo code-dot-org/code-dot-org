@@ -23,6 +23,9 @@ OptionParser.new do |opts|
   opts.on("-z", "--level-id LEVEL", "Level id") do |level_id|
     $options[:level_id] = level_id
   end
+  opts.on("-o", "--output-dir OUTPUT_DIR", "Output directory name in S3") do |output_dir|
+    $options[:output_dir] = output_dir
+  end
   opts.on('-p', "--pretty-print") do
     $options[:pretty] = true
   end
@@ -43,7 +46,7 @@ puts "Loading Rails environment..."
 require_relative '../../dashboard/config/environment'
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
-def fetch_progress(simple:, unit_name:, level_id:)
+def fetch_progress(simple:, unit_name:, level_id:, output_dir:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
@@ -56,6 +59,7 @@ def fetch_progress(simple:, unit_name:, level_id:)
     params = {
       unit_name: unit_name,
       level_id: level_id,
+      output_dir: output_dir
     }
     query = ERB.new(query_template).result_with_hash(params)
     client = RedshiftClient.instance
@@ -92,10 +96,13 @@ def main
   level_id = $options[:level_id].presence
   Level.find(level_id) if level_id
 
+  output_dir = $options[:output_dir].presence || unit_name
+
   fetch_progress(
     simple: simple,
     unit_name: unit_name,
     level_id: level_id,
+    output_dir: output_dir
   )
 end
 
