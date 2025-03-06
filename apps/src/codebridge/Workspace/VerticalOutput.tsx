@@ -23,6 +23,8 @@ interface VerticalOutputProps {
   setOutputWidth: (size: number) => void;
 }
 
+// Output component when the display is in horizontal mode. If you make an update here,
+// you likely also should update HorizontalOutput.tsx. The components are split for readability.
 const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
   className,
   width,
