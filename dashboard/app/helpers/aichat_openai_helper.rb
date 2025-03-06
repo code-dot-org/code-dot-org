@@ -31,19 +31,11 @@ module AichatOpenaiHelper
       aichat_model_customizations['retrievalContexts']
     )
 
-    r = [{role: "system", content: instructions}]
-
-    messages_to_add = stored_messages.map do |message|
-      format_message(message, encrypted_channel_id)
-    end
-    r.append(*messages_to_add)
-
-    r << format_message(new_message, encrypted_channel_id)
-
-    puts r
-    # Optional for debugging - to see large output
-    # File.write("messages.json", r.to_json)
-    r
+    [
+      {role: "system", content: instructions},
+      *stored_messages.map {|message| format_message(message, encrypted_channel_id)},
+      format_message(new_message, encrypted_channel_id)
+    ]
   end
 
   def self.format_message(message, encrypted_channel_id)
@@ -59,7 +51,6 @@ module AichatOpenaiHelper
 
   def self.request_chat_completion(messages, temperature)
     http_response = client.request_chat_completion(messages, temperature)
-    puts JSON.parse(http_response.body)
     JSON.parse(http_response.body)['choices'][0]['message']['content']
   end
 
