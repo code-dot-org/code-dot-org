@@ -6,7 +6,7 @@ import {
   CodebridgeContextProvider,
   CodebridgeContextType,
 } from '@cdo/apps/codebridge';
-import {FileTabs} from '@cdo/apps/codebridge/FileTabs';
+import {FileTabs} from '@cdo/apps/codebridge/FileTabs/FileTabs';
 
 import {getDefaultCodebridgeContext} from '../test_utils';
 import '@testing-library/jest-dom';

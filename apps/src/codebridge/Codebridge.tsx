@@ -5,7 +5,6 @@ import {
   useSourceUtilities,
 } from '@codebridge/codebridgeContext';
 import {useReducerWithCallback} from '@codebridge/hooks';
-import {InfoPanel} from '@codebridge/InfoPanel';
 import {SideBar} from '@codebridge/SideBar';
 import {
   ConfigType,
@@ -18,13 +17,14 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
 import {FileBrowser} from '@cdo/apps/codebridge/FileBrowser/FileBrowser';
-import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
+import {FilePreview} from '@cdo/apps/codebridge/FilePreview/FilePreview';
+import {InfoPanel} from '@cdo/apps/codebridge/InfoPanel/InfoPanel';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import Workspace from './Workspace';
+import Workspace from './Workspace/Workspace';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
