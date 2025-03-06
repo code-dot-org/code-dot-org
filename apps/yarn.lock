@@ -3766,9 +3766,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A."
   dependencies:
+    dompurify: "npm:^3.2.4"
     lodash: "npm:^4.17.21"
   peerDependencies:
     classnames: ^2.5.1
+    dompurify: ^3.2.4
     react: ">=16"
     react-dom: ">=16"
     swiper: ^11.0.5
@@ -8058,6 +8060,13 @@ __metadata:
   version: 4.0.5
   resolution: "@types/tough-cookie@npm:4.0.5"
   checksum: 10/01fd82efc8202670865928629697b62fe9bf0c0dcbc5b1c115831caeb073a2c0abb871ff393d7df1ae94ea41e256cb87d2a5a91fd03cdb1b0b4384e08d4ee482
+  languageName: node
+  linkType: hard
+
+"@types/trusted-types@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "@types/trusted-types@npm:2.0.7"
+  checksum: 10/8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
   languageName: node
   linkType: hard
 
@@ -13080,6 +13089,18 @@ canvg@gabelerner/canvg:
   dependencies:
     domelementtype: "npm:^2.2.0"
   checksum: 10/e0d2af7403997a3ca040a9ace4a233b75ebe321e0ef628b417e46d619d65d47781b2f2038b6c2ef6e56e73e66aec99caf6a12c7e687ecff18ef74af6dfbde5de
+  languageName: node
+  linkType: hard
+
+"dompurify@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "dompurify@npm:3.2.4"
+  dependencies:
+    "@types/trusted-types": "npm:^2.0.7"
+  dependenciesMeta:
+    "@types/trusted-types":
+      optional: true
+  checksum: 10/98570c53385518a2f9b617f796926338856acfdd3369c88b5905bddf96bd7d391bf8a5433127155e0046e6faa2bfb767185fcd571b865dfabe624c099e2537f5
   languageName: node
   linkType: hard
 

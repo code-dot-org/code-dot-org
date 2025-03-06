@@ -1,4 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import PropTypes from 'prop-types';
 import React from 'react';
 import {Factory} from 'rosie';
 
@@ -7,6 +8,10 @@ import AttendancePanel from '@cdo/apps/code-studio/pd/workshop_dashboard/Attenda
 import {stubWindowDashboard} from '../../../../util/testUtils';
 
 import './workshopFactory';
+
+AttendancePanel.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
 
 describe('AttendancePanel', () => {
   stubWindowDashboard({

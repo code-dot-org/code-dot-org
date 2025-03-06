@@ -57,14 +57,13 @@ describe('SectionList', () => {
   function renderComponent() {
     return render(
       <Provider store={store}>
-        <SectionList />
+        <SectionList showHiddenOnly={false} />
       </Provider>
     );
   }
 
   it('renders list of teacher section cards', async () => {
     renderComponent();
-    await screen.findByText('Class Sections');
     screen.getByText('Period 1');
     screen.getByText('Period 2');
     screen.getByText('Period 3');

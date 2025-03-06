@@ -7,24 +7,31 @@ markdown <<MARKDOWN
 
 
 
-<img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 250px; margin: 0px 20px 0px 10px; ">
+<img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 170px; margin: 0px 20px 0px 10px; ">
 
-####  Before students start coding, they need to learn how to think like a programmer.
+####  Computational thinking—breaking problems into steps, recognizing patterns, and designing clear instructions—lays the foundation for strong coding skills.
 
-#### Computational thinking—breaking problems into steps, recognizing patterns, and designing clear instructions—helps them become better coders.
+#### In this activity, you'll see how students apply these skills to guide the Painter through a maze.
 
-#### In this activity,from Lesson XX, you'll experience how students use these skills to navigate a maze with the Painter. 
+#### By prioritizing problem-solving, students develop a solid understanding before diving into code.
 
-#### By focusing on problem-solving first, students build a stronger foundation before they start coding.
+
 
 ## Navigate the Painter
 
-#### You are going to navigate the painter from position A to position C using only the following commands: 
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Jot down the steps to navigate the painter from position A to position C on the map below using only the following commands: 
+    </p>
+    <ul>
+    <li style="font-size: 14pt;">Move_forward</li>
+    <li style="font-size: 14pt;">Turn_right</li>
+    </ul>
+    <p style="font-size: 14pt;">Now, try going from C to E. </p>
+    <br>
+    <p style="font-size: 14pt;"><b>What do you notice?</b> </p>
+</div>
 
-- #### Move_forward 
-- #### Turn_right
-
-#### Jot down th
 
 
 
@@ -39,17 +46,18 @@ markdown <<MARKDOWN
 ---
 
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Teacher Choice</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Teachers have full control over whether students can access the AI Tutor.<br>
-        You can choose between two identical versions of the curriculum— <b>one with the AI Tutor and one without</b>.<br><br> 
-        For teachers using the version with the AI Tutor, full control is in their hands.<br>
-        <b>You can decide when, where, and if</b> students have access to the AI-powered assistant, ensuring it aligns with their instructional goals and classroom needs.
+
+  <p style="font-size: 14pt; font-weight: bold; margin: 0;">Pause & Reflect</p>
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">After completing both paths, reflect on the process.<br><br>How did breaking the journey into steps, recognizing movement patterns, and creating clear instructions help navigate the maze? <br><br> In other words, how did you use <b>computational thinking</b> to complete this task? 
+        
     </p>
 </div>
 
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 
-#### You will have the opportunity to engage with the AI Tutor and learn more later in the module. 
 
 
 MARKDOWN

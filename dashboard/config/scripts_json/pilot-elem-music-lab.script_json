@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "pilot-elem-music-lab",
-    "serialized_at": "2025-02-07 14:18:08 UTC",
+    "serialized_at": "2025-03-05 20:51:45 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -84,7 +84,7 @@
       "relative_position": 3,
       "properties": {
         "background": "dark",
-        "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for a stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
+        "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -702,6 +702,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-match"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1024,6 +1027,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-match"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1321,6 +1327,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-events-match"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,

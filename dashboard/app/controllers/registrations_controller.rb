@@ -173,7 +173,13 @@ class RegistrationsController < Devise::RegistrationsController
       end
 
       if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up])
-        @user = Services::PartialRegistration::UserBuilder.call(request: request)
+        begin
+          @user = Services::PartialRegistration::UserBuilder.call(request: request)
+        rescue ActiveRecord::RecordInvalid => exception
+          return render json: {
+            error: exception
+          }, status: :bad_request
+        end
         SignUpTracking.log_load_finish_sign_up request, (@user.providers&.first || 'email')
         sign_in @user
       else

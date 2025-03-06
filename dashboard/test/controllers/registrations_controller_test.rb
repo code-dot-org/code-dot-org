@@ -529,8 +529,17 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     teacher_params = set_up_partial_registration(@default_params)
 
-    exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: teacher_params}}
-    assert_equal("Validation failed: Email has already been taken", exception.message)
+    post :create, params: {new_sign_up: true, user: teacher_params}
+    assert_includes response.body, "Validation failed: Email has already been taken"
+  end
+
+  test "create user with invalid fields throws 400 error" do
+    name_longer_than_70_char = '12345678901234567890123456789012345678901234567890123456789012345678901234567890'
+    teacher_params = set_up_partial_registration(@default_params.merge({name: name_longer_than_70_char}))
+
+    post :create, params: {new_sign_up: true, user: teacher_params}
+    assert_equal response.status, 400
+    assert_includes response.body, "Validation failed: Display Name is too long (maximum is 70 characters)"
   end
 
   test "create as student with age [new sign up flow]" do
@@ -580,8 +589,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     params_without_age = set_up_partial_registration(@default_params.update(age: ''))
 
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: params_without_age}}
-      assert_equal("Validation failed: Age is required", exception.message)
+      post :create, params: {new_sign_up: true, user: params_without_age}
+      assert_includes response.body, "Validation failed: Age is required"
     end
   end
 
@@ -600,8 +609,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: params_with_panda_email}}
-      assert exception.message.include?("Email is invalid")
+      post :create, params: {new_sign_up: true, user: params_with_panda_email}
+      assert_includes response.body, "Email is invalid"
     end
   end
 
@@ -669,8 +678,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     eu_student_params = set_up_partial_registration(@default_params.update(data_transfer_agreement_required: "1"))
 
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: eu_student_params}}
-      assert_equal "Validation failed: Data transfer agreement accepted must be accepted", exception.message
+      post :create, params: {new_sign_up: true, user: eu_student_params}
+      assert_includes response.body, "Validation failed: Data transfer agreement accepted must be accepted"
     end
   end
 
@@ -695,8 +704,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     @default_params.delete(:email)
     set_up_partial_registration(@default_params)
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: @default_params}}
-      assert exception.message.include?("Email is required")
+      post :create, params: {new_sign_up: true, user: @default_params}
+      assert_includes response.body, "Email is required"
     end
   end
 

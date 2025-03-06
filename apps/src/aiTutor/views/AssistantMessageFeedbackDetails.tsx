@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 
 import {saveFeedback, FeedbackData} from '../interactionsApi';
 
-import style from './chat-workspace.module.scss';
+import style from './ai-tutor.module.scss';
 
 interface AssistantMessageFeedbackDetailsProps {
   messageId: number | undefined;
