@@ -1,6 +1,6 @@
-import Output from '@codebridge/Workspace/Output';
 import React from 'react';
 
+import {FilePreview} from '@cdo/apps/codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@cdo/apps/codebridge/InfoPanel/InfoPanel';
 import Workspace from '@cdo/apps/codebridge/Workspace/Workspace';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -9,10 +9,10 @@ import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
-const MIN_OUTPUT_WIDTH = 200;
-const MIN_EDITOR_WIDTH = 300;
 const INITIAL_INFO_PANEL_WIDTH = 300;
-const INITIAL_OUTPUT_WIDTH = 400;
+const MIN_EDITOR_WIDTH = 300;
+const MIN_PREVIEW_WIDTH = 200;
+const INITIAL_PREVIEW_WIDTH = 600;
 
 const VerticalLayout: React.FunctionComponent = () => {
   const {
@@ -21,13 +21,10 @@ const VerticalLayout: React.FunctionComponent = () => {
     rightPanelWidth,
     leftPanelSeparatorProps,
     leftPanelDragging,
-    rightPanelSeparatorProps,
-    rightPanelDragging,
-    setRightPanelSize,
   } = useVerticalLayout({
     leftPanel: {
-      initialWidth: INITIAL_INFO_PANEL_WIDTH,
       minWidth: MIN_INFO_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
       name: 'instructions',
     },
     middlePanel: {
@@ -35,9 +32,9 @@ const VerticalLayout: React.FunctionComponent = () => {
       name: 'editor',
     },
     rightPanel: {
-      initialWidth: INITIAL_OUTPUT_WIDTH,
-      minWidth: MIN_OUTPUT_WIDTH,
-      name: 'output',
+      minWidth: MIN_PREVIEW_WIDTH,
+      initialWidth: INITIAL_PREVIEW_WIDTH,
+      name: 'preview',
     },
   });
 
@@ -56,16 +53,16 @@ const VerticalLayout: React.FunctionComponent = () => {
         style={{width: middlePanelWidth}}
         className={moduleStyles.shrinkAndGrow}
       />
-      <ResizeBar
-        isVertical={true}
-        separatorProps={rightPanelSeparatorProps}
-        isDragging={rightPanelDragging}
-      />
-      <Output
-        width={rightPanelWidth}
+      {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you
+         can only drag left, not right (something about the mouse events getting 
+         captured by the preview?) 
+         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
+      <div
+        style={{width: rightPanelWidth}}
         className={moduleStyles.shrinkAndGrow}
-        setOutputSize={setRightPanelSize}
-      />
+      >
+        <FilePreview />
+      </div>
     </div>
   );
 };

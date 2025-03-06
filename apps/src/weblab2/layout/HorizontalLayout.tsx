@@ -1,6 +1,6 @@
-import Output from '@codebridge/Workspace/Output';
 import React from 'react';
 
+import {FilePreview} from '@cdo/apps/codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@cdo/apps/codebridge/InfoPanel/InfoPanel';
 import Workspace from '@cdo/apps/codebridge/Workspace/Workspace';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
@@ -8,12 +8,12 @@ import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
-const MIN_RIGHT_PANEL_WIDTH = 300;
-const MIN_LEFT_PANEL_WIDTH = 150;
-const MIN_OUTPUT_HEIGHT = 120;
-const MIN_EDITOR_HEIGHT = 200;
+const MIN_INFO_PANEL_WIDTH = 150;
 const INITIAL_INFO_PANEL_WIDTH = 300;
-const INITIAL_OUTPUT_HEIGHT = 300;
+const MIN_EDITOR_HEIGHT = 200;
+const MIN_PREVIEW_HEIGHT = 200;
+const INITIAL_PREVIEW_HEIGHT = 400;
+const MIN_RIGHT_PANEL_WIDTH = 300;
 
 const HorizontalLayout: React.FunctionComponent = () => {
   const {
@@ -21,15 +21,12 @@ const HorizontalLayout: React.FunctionComponent = () => {
     rightPanelWidth,
     rightTopPanelHeight,
     rightBottomPanelHeight,
-    leftPanelSeparatorProps,
-    leftPanelDragging,
     rightBottomPanelSeparatorProps,
     rightBottomPanelDragging,
-    setRightBottomPanelSize,
   } = useHorizontalLayout({
     leftPanel: {
+      minWidth: MIN_INFO_PANEL_WIDTH,
       initialWidth: INITIAL_INFO_PANEL_WIDTH,
-      minWidth: MIN_LEFT_PANEL_WIDTH,
       name: 'instructions',
     },
     rightTopPanel: {
@@ -37,9 +34,9 @@ const HorizontalLayout: React.FunctionComponent = () => {
       name: 'editor',
     },
     rightBottomPanel: {
-      initialHeight: INITIAL_OUTPUT_HEIGHT,
-      minHeight: MIN_OUTPUT_HEIGHT,
-      name: 'output',
+      minHeight: MIN_PREVIEW_HEIGHT,
+      initialHeight: INITIAL_PREVIEW_HEIGHT,
+      name: 'preview',
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
   });
@@ -50,11 +47,10 @@ const HorizontalLayout: React.FunctionComponent = () => {
         style={{width: leftPanelWidth}}
         className={moduleStyles.flexShrink0}
       />
-      <ResizeBar
-        isVertical={true}
-        separatorProps={leftPanelSeparatorProps}
-        isDragging={leftPanelDragging}
-      />
+      {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
+         can only drag left, not right (something about the mouse events getting 
+         captured by the preview?).
+         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
       <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
         <Workspace style={{height: rightTopPanelHeight}} />
         <ResizeBar
@@ -62,11 +58,9 @@ const HorizontalLayout: React.FunctionComponent = () => {
           separatorProps={rightBottomPanelSeparatorProps}
           isDragging={rightBottomPanelDragging}
         />
-        <Output
-          height={rightBottomPanelHeight}
-          width={rightPanelWidth}
-          setOutputSize={setRightBottomPanelSize}
-        />
+        <div style={{height: rightBottomPanelHeight}}>
+          <FilePreview />
+        </div>
       </div>
     </div>
   );
