@@ -40,10 +40,6 @@ describe('ProjectHeader', () => {
     );
   }
 
-  // function renderDefault() {
-  //   render(<ProjectHeader canViewAdvancedTools={true} projectCount={200} />);
-  // }
-
   it('renders the correct project count in subheading', () => {
     renderDefault();
 
