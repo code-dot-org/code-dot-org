@@ -1,6 +1,14 @@
 import {useState, useEffect} from 'react';
 
-const baseFetchState = {
+interface BaseFetchState<T> {
+  loading: boolean;
+  data: T | null;
+  response: Response | null;
+  error: Error | null;
+  status: number | null;
+}
+
+const baseFetchState: BaseFetchState<null> = {
   loading: false,
   data: null,
   response: null,
@@ -8,7 +16,7 @@ const baseFetchState = {
   status: null,
 };
 
-const EMPTY_OPTIONS = {};
+const EMPTY_OPTIONS: RequestInit = {};
 
 /**
  * React hook for making a fetch request to a resource that returns a JSON
@@ -35,14 +43,17 @@ const EMPTY_OPTIONS = {};
  *
  * @param {string} url - URL of resource to fetch
  * @param {RequestInit} options - options to pass to fetch
- * @param {any[]} deps - array of values that fetch depends on; a new fetch
- *    request will be sent if any of the values in the array change
- * @returns {{loading: boolean, data: Object, error: Object, status: number | null}}
+ * @returns {BaseFetchState}
  */
-export const useFetch = (url, options = EMPTY_OPTIONS) => {
-  const [fetchState, setFetchState] = useState(baseFetchState);
+export const useFetch = <T>(
+  url: string,
+  options: RequestInit = EMPTY_OPTIONS
+): BaseFetchState<T> => {
+  const [fetchState, setFetchState] =
+    useState<BaseFetchState<null>>(baseFetchState);
 
   useEffect(() => {
+    if (!url) return;
     // This local variable tracks whether this instance of the effect has been
     // cancelled. One important case where this is true is when a previous instance
     // of the effect is canceled before a new instance is created when deps change.
@@ -50,12 +61,12 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
 
     // Likewise, the abortController is also a local variable and specifc to
     // this instance of the effect.
-    let abortController;
+    let abortController: AbortController | undefined;
     if (window.AbortController) {
       abortController = new AbortController();
     }
 
-    const calculatedOptions = {
+    const calculatedOptions: RequestInit = {
       credentials: 'same-origin',
       signal: abortController ? abortController.signal : undefined,
       ...options,
@@ -88,7 +99,7 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
       } catch (e) {
         console.error(e);
         if (!canceled) {
-          setFetchState({...baseFetchState, error: e, status});
+          setFetchState({...baseFetchState, error: e as Error, status});
         }
       }
     })();

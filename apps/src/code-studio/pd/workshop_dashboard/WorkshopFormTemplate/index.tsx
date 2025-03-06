@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
-import {useFetch} from '../hooks/useFetch';
+import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {
   CourseOffering,
@@ -51,15 +51,17 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 }) => {
   const {workshopId} = useParams();
 
-  const workshopUrl = workshopId
-    ? `/api/v1/pd/workshops/${workshopId}`
-    : undefined;
+  const workshopUrl = workshopId ? `/api/v1/pd/workshops/${workshopId}` : '';
 
-  const [workshop] = useFetch<Workshop>({url: workshopUrl});
+  const {data: workshop} = useFetch<Workshop>(workshopUrl);
+
+  const courseOfferingsUrl = config.fields.course_offerings
+    ? '/course_offerings/self_paced_pl_course_offerings'
+    : '';
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [courseOfferings] = useFetch<CourseOffering[]>({
-    url: '/course_offerings/self_paced_pl_course_offerings',
-  });
+  const {data: courseOfferings} =
+    useFetch<CourseOffering[]>(courseOfferingsUrl);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [workshopFormState, setWorkshopFormState] = useState<WorkshopFormState>(
@@ -99,11 +101,14 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   }, [workshop]);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleChange = (key: string, value: unknown) => {
+  const handleChange = <K extends keyof WorkshopFormState>(
+    update: Record<K, WorkshopFormState[K]>
+  ) => {
     setWorkshopFormState(prevState => ({
       ...prevState,
-      [key]: value,
+      ...update,
     }));
   };
+
   return <h1>{config.label}</h1>;
 };
