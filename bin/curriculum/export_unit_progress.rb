@@ -61,9 +61,8 @@ def fetch_progress(simple:, unit_name:, level_id:)
     client = RedshiftClient.instance
     start_time = Time.now
     puts "Querying redshift using #{filename} with #{params}..."
-    results = execute_redshift_query(client, query)
+    execute_redshift_query(client, query)
     puts "Redshift progress query executed in: #{(Time.now - start_time).round(2)} seconds"
-    results
   elsif Rails.env.development?
     # fetch the data from the local db instead of redshift when running in
     # development. this allows us to test the codepaths for project fetch

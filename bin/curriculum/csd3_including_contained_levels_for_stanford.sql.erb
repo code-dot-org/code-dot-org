@@ -1,6 +1,7 @@
 --
 -- this is an analytics query, to be run against the redshift database.
 --
+unload ($$
 with
     template_levels as (
         select distinct
@@ -237,4 +238,8 @@ where
     <%= unit_name && "and cs.script_name = #{unit_name}" %>
 --  and ul.submitted = 1
 --  and sy.school_year in ('2023-24')
+$$)
+to 's3://cdo-data-sharing-internal/stanford/unload/<%=unit_name%>/<%=unit_name%>_'
+FORMAT JSON
+iam_role 'arn:aws:iam::475661607190:role/redshift-s3';
 ;
