@@ -6,6 +6,10 @@ p {
     margin-top: 0;
   }
 
+  &.overline-removeMarginBottom {
+    @include mixins.common-margin-bottom-none;
+  }
+
   // Overline colors
   &.overline-color {
     &-primary {

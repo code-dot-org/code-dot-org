@@ -42,6 +42,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
   );
+  const projectTooLarge = useAppSelector(
+    state => state.lab2Project.projectTooLarge
+  );
   const dispatch = useAppDispatch();
 
   const headerContent = (
@@ -113,6 +116,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
                 }
                 type={'warning'}
               />
+            )}
+            {projectTooLarge && (
+              <Alert text={codebridgeI18n.projectTooLarge()} type={'danger'} />
             )}
             {viewingOldVersion && (
               <Alert

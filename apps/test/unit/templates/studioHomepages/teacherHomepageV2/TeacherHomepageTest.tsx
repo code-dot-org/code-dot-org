@@ -1,7 +1,12 @@
-import {render, screen} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {
+  createMemoryRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
 import {Store} from 'redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -14,8 +19,9 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
-describe('SectionList', () => {
+describe('TeacherHomepage', () => {
   const sections = [
     {
       id: 11,
@@ -76,10 +82,20 @@ describe('SectionList', () => {
     });
   });
 
-  function renderComponent() {
+  function renderComponent(initialRoute = '/teacher_dashboard/home') {
     return render(
       <Provider store={store}>
-        <TeacherHomepage />
+        <RouterProvider
+          router={createMemoryRouter(
+            createRoutesFromElements([
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.home}
+                element={<TeacherHomepage />}
+              />,
+            ]),
+            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
+          )}
+        />
       </Provider>
     );
   }
@@ -100,6 +116,7 @@ describe('SectionList', () => {
     screen.getByRole('button', {name: 'Cancel'});
   }, 15000);
 
+  //TODO (TEACH-1659): Why did we need to increase timeouts on this test?
   it('teaching/archived toggle', async () => {
     renderComponent();
     screen.getByRole('button', {name: 'Teaching'});
@@ -108,7 +125,7 @@ describe('SectionList', () => {
     screen.getByText('Period 1');
     expect(screen.queryByText('hidden')).toBeNull();
 
-    userEvent.click(archivedButton);
+    fireEvent.click(archivedButton);
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();

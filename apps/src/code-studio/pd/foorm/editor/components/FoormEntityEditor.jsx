@@ -58,6 +58,7 @@ class FoormEntityEditor extends React.Component {
       day: 1,
       is_friday_institute: false,
       workshop_agenda: 'module1',
+      pl_topics: ['self-paced-1', 'self-paced-2'],
     };
 
     // use debounce to only call once per second when editing
@@ -196,6 +197,14 @@ class FoormEntityEditor extends React.Component {
                 type="text"
                 value={this.state.workshop_agenda}
                 onChange={e => this.setState({workshop_agenda: e.target.value})}
+              />
+            </label>
+            <label>
+              pl_topics <br />
+              <input
+                type="text"
+                value={this.state.pl_topics}
+                onChange={e => this.setState({pl_topics: e.target.value})}
               />
             </label>
           </form>
