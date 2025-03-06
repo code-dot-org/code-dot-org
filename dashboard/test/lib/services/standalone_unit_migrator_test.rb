@@ -58,12 +58,14 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
       assert_match(/Existing Unit's course version not found/, log_contents)
     end
 
-    it 'fails when new UnitGroup fails to save' do
-      @unit.update_column(:name, "INVALID NAME")
-      refute migrate_unit
+    it 'succeeds when unit has an invalid name' do
+      invalid_name = "INVALID NAME"
+      @unit.update_column(:name, invalid_name)
+      assert migrate_unit
 
-      log_contents = File.read(@temp_log_file.path)
-      assert_match(/Migration failed for/, log_contents)
+      @unit.reload
+      unit_group = @unit.unit_group
+      assert_equal invalid_name.downcase.tr(' ', '-'), unit_group.name
     end
 
     it 'rolls back migration when checks fail' do

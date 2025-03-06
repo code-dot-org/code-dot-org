@@ -40,7 +40,7 @@ module Services
       @unit_group.reload
 
       # Clear "course" settings from the unit
-      clear_settings_from_unit
+      @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
 
       update_unit_group(i18n_params, unit_copy.published_state)
 
@@ -139,12 +139,6 @@ module Services
         @name_changed = true
         @unit_group.save
       end
-    end
-
-    private def clear_settings_from_unit
-      @unit.properties["is_course"] = false
-      @unit.properties["version_year"] = nil
-      @unit.update_columns(properties: @unit.properties, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
     end
 
     private def update_unit_group(i18n_params, published_state)
