@@ -2,6 +2,8 @@ import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 
+import {CourseContentDropdown} from './CourseContentDropdown';
+
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardBodyProps {
@@ -9,5 +11,9 @@ interface SectionCardBodyProps {
 }
 
 export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
-  return <div className={styles.sectionCardBody}>{section.name}</div>;
+  return (
+    <div className={styles.sectionCardBody}>
+      <CourseContentDropdown section={section} />
+    </div>
+  );
 };
