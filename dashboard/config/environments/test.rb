@@ -37,12 +37,6 @@ Dashboard::Application.configure do
     config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
   end
 
-  # In CI environments (ie, Drone), stub relevant AWS services (currently just SageMaker)
-  # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
-  if is_ci
-    config.stub_aichat_aws_services = true
-  end
-
   config.assets.quiet = true
 
   # Show full error reports and disable caching.
