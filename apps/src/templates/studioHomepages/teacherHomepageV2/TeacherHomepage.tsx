@@ -11,8 +11,13 @@ import {SectionList} from './SectionList';
 
 import styles from './teacherHomepage.module.scss';
 
+type ArchivedToggleOption = 'teaching' | 'archived';
+
 export const TeacherHomepage: React.FC = () => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
+
+  const [selectedArchiveToggle, setSelectedArchiveToggle] =
+    React.useState<ArchivedToggleOption>('teaching');
 
   return (
     <div className={styles.teacherHomepage}>
@@ -24,18 +29,26 @@ export const TeacherHomepage: React.FC = () => {
             <Heading4>{i18n.classSections()}</Heading4>
             <div className={styles.headerButtonRow}>
               <SegmentedButtons
-                selectedButtonValue="teaching"
-                onChange={() => {}}
+                onChange={value =>
+                  setSelectedArchiveToggle(value as ArchivedToggleOption)
+                }
+                selectedButtonValue={selectedArchiveToggle}
                 buttons={[
-                  {label: 'Teaching', value: 'teaching'},
-                  {label: 'Archived', value: 'archived'},
+                  {
+                    label: i18n.teaching(),
+                    value: 'teaching',
+                  },
+                  {
+                    label: i18n.archived(),
+                    value: 'archived',
+                  },
                 ]}
                 size="s"
               />
               <div className={styles.headerButtonRowRight}>
                 <Button
                   iconLeft={{iconName: 'plus', iconStyle: 'solid'}}
-                  text="New class section"
+                  text={i18n.newClassSection()}
                   onClick={() => {}}
                   size="s"
                   className={styles.createSectionButton}
@@ -43,7 +56,7 @@ export const TeacherHomepage: React.FC = () => {
                 <ActionDropdown
                   name="More options"
                   size="s"
-                  labelText="More options"
+                  labelText={i18n.moreOptions()}
                   options={[]}
                   triggerButtonProps={{
                     icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
@@ -54,7 +67,9 @@ export const TeacherHomepage: React.FC = () => {
                 />
               </div>
             </div>
-            <SectionList />
+            <SectionList
+              showHiddenOnly={selectedArchiveToggle === 'archived'}
+            />
           </div>
           <div className={styles.blankAnnouncement} />
         </div>

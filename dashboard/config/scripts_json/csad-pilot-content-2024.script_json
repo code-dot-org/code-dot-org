@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-03 23:58:38 UTC",
+    "serialized_at": "2025-03-04 22:46:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5742,6 +5742,18 @@
       }
     },
     {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
       "name": "Build a Computer System",
       "url": "https://docs.google.com/document/d/1HaOTj31J9bhujOWbGkBP3ki0tPUwnZiG2T6JJSppczE/edit?usp=sharing",
       "key": "build_a_computer_system",
@@ -6287,6 +6299,18 @@
       }
     },
     {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
       "name": "What is IoT?",
       "url": "https://www.youtube.com/watch?v=6mBO2vqLv38",
       "key": "what_is_iot_",
@@ -6304,6 +6328,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_key_computer_innovations_and_careers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "ai_chat_lab_faq"
       }
     },
     {
@@ -6328,6 +6358,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "introduction_to_computer_systems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     },
     {
@@ -6622,7 +6658,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_chat_lab_faq",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "computer_systems_devices_unit_guide",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "csad-pilot-content-2024"
       }
     }

@@ -1,18 +1,17 @@
 name 'csaif-pl-comp_thinking_L8_python'
-title 'Terminology Matching'
+title 'Computational Thinking- Matching'
 
-height '75'
+height '85'
 
-question 'Rules for addressing and sending data across the internet by assigning unique numbers to each connected device'
-answer 'Internet Protocol (IP)'
-question 'Takes inventory of all packets in the datastream to ensure they are successfully sent and received.'
-answer 'Transmission Control Protocol (TCP)'
-question 'Chunk of data and its metadata, used to route and reassemble information on the Internet.'
-answer 'Packet'
-question 'The way in which information travels on the Internet, not as a single piece but in chunks.'
-answer 'Datastream'
-question 'Sends all packets without checking whether they were received or ordered properly'
-answer 'User Datagram Protocol (UDP)'
+question 'A student looks at a complex drawing and breaks it down into smaller shapes to code with basic commands.'
+answer 'Decomposition'
+question 'A student realizes that making a square always requires the same sequence of four moves and reuses that pattern in their code.'
+answer 'Pattern Recognition'
+question 'Instead of worrying about individual pixels, a student uses a simple "draw_circle()" command to create a round shape.'
+answer 'Abstraction'
+question 'A student writes a step-by-step plan for navigating a character through a maze before turning it into code.'
+answer 'Algorithm Design'
+
 
 
 markdown <<MARKDOWN

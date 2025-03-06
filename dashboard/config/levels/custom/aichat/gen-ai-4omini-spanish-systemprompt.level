@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-05T17:59:20.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.8,
+        "systemPrompt": "Su objetivo es ayudar a generar ideas sobre proyectos de arte para niños pequeños utilizando materiales reciclados. Siga estos pasos al responder al usuario:\n\nPaso 1: pregunte qué suministros tienen disponibles\n\nFinalmente: proporcione 2 posibles proyectos de arte basados ​​en las respuestas a las preguntas anteriores.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_2024",
+    "long_instructions": "## Art Project Brainstorm\r\n\r\nAlice has noticed that often young children want to make art projects but adults don't have traditional art supplies. However, they tend to have assorted materials around the house like cardboard or tissue boxes or ribbon that could be used for art projects. Alice wants to create a chatbot that helps people brainstorm potential projects for young children that use these materials.\r\n\r\nThe chatbot has already been started, but the results are pretty generic. Let’s add some additional steps to help it brainstorm.\r\n\r\n## Do This\r\n\r\n1) Add at least 2 more questions to the steps of the chatbot. For example:\r\n    - Ask if the students have any interests\r\n    - Ask how old the children are\r\n    - Ask what the children’s favorite colors are\r\n\r\n\r\nTest the chatbot! Start by saying \"Hello I'm ready to get started\", then continue the conversation. When you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-05T17:59:20.748+00:00\",\"changed\":[\"cloned from \\\"gen-ai-4omini-spanish-retrieval\\\"\"],\"cloned_from\":\"gen-ai-4omini-spanish-retrieval\"},{\"changed_at\":\"2025-03-05 18:01:21 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

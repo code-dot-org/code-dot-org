@@ -1,0 +1,57 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-04T15:34:39.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "showSoundFilters": true
+    },
+    "long_instructions": "Sanchit wants to create a \"dueling genres\" effect using the sample tracks:\r\n\r\n\"I want the beat and bass to sound like one genre for a bit, then I want it to switch to a different genre. Then that whole thing should repeat like they're clapping back at each other throughout the song\"\r\n\r\nCan you help Sanchit create this song? Use the example below to hear what this could sound like!\r\n\r\n**Specific Requirement:** Your song should use a nested loop!",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RB94z1YKLgBXkR7XAwG3SHjrg\n0fedp1jjT2IfuDnM8uQy9xxmRhCB7QPNQp/SfY1DiPv2IAgV2UOMViOdBu54\nUO/t6DNebkutu424JvRO07M01nG6gzHgjoThPdp3d3eHQQTrJILCKE0YrDx2\ndGsEGuCRuTQCKB/LVkmj5vh9Cqz+OyMBqEIqRL2pKWTeuu8/oLQOHgTx+Epw\nYPDPqXqjSG75q++pZhD9uS6jHWFe+VFNjJ2kU7R5cnv1NBgWXp9cchjXJMK4\n/v+wOEEcWXzjAe66ZoHavazCL41McZMQ+BZGLbDKxUt+SuTjVFIHe6yl6mJ1\n8BjQpk6qmFtu8x6M3W0gE7npuPxvChy/eQgvOVm5ogqgknalPCUwVhA+x7On\nqTPVII3350uxJvC2RvkJ+ggoEfOpARjSUDeTuoebW2exmCH3G/btlx993PDB\nKtQrPPzpJkzEDB4l3+AAPwFfzONA7gNB1WYhrBXjh4KXdZ+VuS+0OMiFNElg\nfD7FHiepSKy/zKQJpS1KqYEfMnQm7jb1SgI28L3O5tV/evo9xkTYNHvH8axj\niL6qB0+LKwSSt3MTYw47pYXhiIKRSUplioKkK7mrtj4QLLQ6OtcmAPGYuX2j\nL4RhowrQltNDO7ThDxNk72tQxC+pPUa74kA2isAaea7aF8OAwfKaCnlXe8Sv\ny9vOw6dhMsy4eUCR8VPPNZ45tT8v81qTrzLJXP0/6KO7UDUqQp3p5lMDeq3S\nW7JLb0Jes4OWrH7bui55whC5wFtiwiqMs67SqYJMZxBN2x53VdgWSjFTYLuv\nO0PJpqImqG/TOZCarLOoBFUJveMEeMk/iYZs87Y5BcnsepzDKzyeRKw/7UNx\nJkt9p/xG5+Ki2WVzIpQ1pRKNF+E/fEMGi7pMMj5eU3lO2OMnY5mwMxkAY6Rd\n5wF03y9ZRSSGtYcaCQUCvnGjKQ6YRO+TngI7bBT4z7u21q/xiAV4JJc6cLJR\n0TdBgZRxBvi4Ybp61B8M2I7tONJiPniv53TPVMYR3xGUSxRfMzYXITU0ug97\nxuEA7J0OhBjfKUbz0EUc9fXGzle4A0r3DAJOonGx9EMetXngznuQigwbEoAJ\n/a28PK5CPD3wl3FTzgtKGShv21vqX3myIoMg5VBNLcLneZED3bXK/5bToWyF\n3P9QG6s9glrF1BHrKNO/uiGbc6nCnWgNYh9aMjS/4HgNcWNTmjZkRodV6nkn\nHIGt/7BDt4ugz9pqV5n/1t3kSICJC/PiW2EoGLbvkK6zztJ5uOyhEK8tkZxD\nGBFIrv/v3i+J4b0nwkA=\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-04T15:34:39.824+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-04 15:38:04 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 15:39:21 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

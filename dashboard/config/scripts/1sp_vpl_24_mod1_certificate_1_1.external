@@ -11,42 +11,60 @@ markdown <<MARKDOWN
 
 #### We encourage you to share your certificates to social media to celebrate your success!
 
-## FAQ
-
-### **How do I complete a level in a self-paced module?**
-
-#### Completion varies by level type:
+## FAQs
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;"><b>How do I complete a level in a self-paced module?</b></summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;"> Completion varies by level type:
 
 * #### On a text-only level (such as this one), you'll need to click the "Continue" button.
 * #### For a coding activity level, you may be asked to complete a task. Some levels will require a correct answer. You will have an unlimited number of attempts.
 * #### For a checking for understanding level, such as vocabulary matching or multiple choice, you will need to answer correctly. You will have an unlimited number of attempts.
 * #### For an open reflection level, you will need to submit an answer to the question(s) provided.
-<br>
+</p></div>
+</details> 
 
-### **When will I receive my certificate?**
 
-#### You'll be taken to a congratulations page once you've completed every level within a self-paced experience. If the self-paced experience has multiple units (see the image directly below), you will see the congratulations page once every level is complete in every unit. 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;"><b>When will I receive my certificate?</b></summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;"> You'll be taken to a congratulations page once you've completed every level within a self-paced experience. If the self-paced experience has multiple units (see the image directly below), you will see the congratulations page once every level is complete in every unit. 
 
 <img src="https://images.code.org/d9524ff90cfb71186c7af20a4563e30d-image-1709678323493.38.38 PM.png" alt="A self-paced experience showing two units.">
+</p> 
+</div>
+</details>
 
-<br>
-
-### **Where can I find the certificates I've earned?**
-
-#### You can find all your certificates at <a href="studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the module.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;"><b>Where can I find the certificates I've earned?</b></summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;"> You can find all your certificates at <a href="studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the module.
 
 #### You can also access your certificates by clicking "Print Certificate" on each module overview page.
 
 <img src="https://images.code.org/5ee133129858267fe03da154026bef3e-image-1710872751103.24.58 AM.png" alt="The unit overview page with a black circle highlighting the Print Certificate button.">
+</p></div>
+</details>
 
-### **Why can't I access my certificate?**
-
-#### Ensure that *every* level has been completed in the module. Your module overview page should look similar to this image:
+ 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;"><b>Why can't I access my certificate?</b></summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;"> Ensure that <b>every</b> level has been completed in the module. Your module overview page should look similar to this image:
 
 <img src="https://images.code.org/ed7b8a175ed6b0978367e5fc53be6e42-image-1709678606207.43.20 PM.png" alt="A completed module on Code Studio shows every level completed.">
 
 #### You may need to return to individual levels to complete them. If every level is complete and you still can't access a certificate, <a href="https://support.code.org/hc/en-us/requests/new" target="blank" rel="noopener noreferrer">send us a message</a>.
+</p></div>
+</details>
+<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 10px 10px; margin: 20px 0px 20px 0px">
 
+# <i class="fa-solid fa-person-chalkboard"></i>
+<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 5px 5px 0px 5px;">
 
-#### If you are not already a verified teacher, <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >click here</a> to complete the form to become a verified teacher. 
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>If you are not already a verified teacher,</b></p>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px"> <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >Click here</a> to complete the form to become a verified teacher. 
+</p>
+ 
 MARKDOWN
