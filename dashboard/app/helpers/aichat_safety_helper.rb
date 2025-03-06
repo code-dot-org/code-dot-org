@@ -178,7 +178,7 @@ module AichatSafetyHelper
 
   class StubbedToxicityDetector
     def find_toxicity(_, text, _, _)
-      text == 'damn' ?
+      text == 'Damn' ?
         {text: text, blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}} :
         nil
     end
