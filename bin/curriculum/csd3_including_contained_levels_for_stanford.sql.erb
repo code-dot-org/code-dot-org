@@ -224,9 +224,10 @@ select distinct
         else 'https://studio.code.org/projects/'||p.project_type||'/'||JSON_EXTRACT_PATH_TEXT(p.value,'id',true)
         end link_to_project
     , JSON_EXTRACT_PATH_TEXT(p.value,'id',true) channel_id
+    , sy.school_year_int
 from activity_level_details  cs
          join dashboard_production.user_levels ul on ul.script_id = cs.script_id and ul.level_id = cs.activity_level_id
---          join analysis.school_years sy on ul.created_at between sy.started_at and sy.ended_at
+         join analysis.school_years sy on ul.created_at between sy.started_at and sy.ended_at
          left join level_sources_segment ls  on ul.level_source_id = ls.id
          left join level_sources_free_response_segment lsfr  on ul.level_source_id = lsfr.id
          left join channel_tokens_users ctu on ul.user_id = ctu.user_id and cs.script_id = ctu.script_id and cs.project_level_id = ctu.level_id
@@ -236,8 +237,6 @@ where
     ul.attempts > 0
     <%= level_id && "and cs.level_id = #{level_id}" %>
     <%= unit_name && "and cs.script_name = #{unit_name}" %>
---  and ul.submitted = 1
---  and sy.school_year in ('2023-24')
 $$)
 to 's3://cdo-data-sharing-internal/stanford/unload/<%=unit_name%>/<%=unit_name%>_'
 FORMAT JSON
