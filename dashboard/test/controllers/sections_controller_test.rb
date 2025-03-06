@@ -252,4 +252,33 @@ class SectionsControllerTest < ActionController::TestCase
     get :edit, params: {id: other_teacher_section.id}
     assert_response :forbidden
   end
+
+  test 'archive_all archives sections' do
+    sign_in @teacher
+
+    post :archive_all
+
+    assert_response :success
+    @teacher.sections_owned.each do |section|
+      assert_equal true, section.hidden
+    end
+  end
+
+  test 'archive_all does not archive cotaught section' do
+    sign_in @teacher
+    section_owner = create(:teacher)
+
+    coteacher_section = create(:section, user: section_owner, login_type: 'picture')
+    create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
+
+    post :archive_all
+
+    assert_response :success
+
+    coteacher_section.reload
+    assert_equal false, coteacher_section.hidden
+    @teacher.sections_owned.each do |section|
+      assert_equal true, section.hidden
+    end
+  end
 end

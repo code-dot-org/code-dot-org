@@ -74,16 +74,11 @@ class SectionsController < ApplicationController
   # Archive all sections owned by the current user.
   # Note: does not archive co-taught sections created by another user.
   def archive_all
-    puts 'lfm 1'
     sections = current_user.sections_owned
 
-    hiddens = []
     sections.each do |section|
       section.update!(hidden: true)
-      # hiddens.append({id: section.id, hidden: section.hidden})
     end
-
-    render json: hiddens
   end
 
   private def redirect_to_section_script_or_course
