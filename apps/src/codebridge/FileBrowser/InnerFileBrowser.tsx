@@ -2,7 +2,6 @@ import {FolderId} from '@codebridge/types';
 import {shouldShowFile} from '@codebridge/utils';
 import classNames from 'classnames';
 import React from 'react';
-import Draggable from 'react-draggable';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
@@ -11,7 +10,7 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDndDataContext} from './DnDDataContextProvider';
-import {NotDraggable} from './Draggable';
+import {NotDraggable, Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FolderRow, FileRowProps, FileRow} from './FileBrowserRow';
 import {setFileType, DragType} from './types';
