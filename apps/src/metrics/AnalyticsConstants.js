@@ -293,11 +293,8 @@ const EVENTS = {
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
   AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
-<<<<<<< HEAD
   AI_DIFF_FEEDBACK_EVENT: 'AI Differentiation Feedback Event',
-=======
   AI_DIFF_CHAT_TOGGLED: 'AI Differentiation Chat Toggled on/off',
->>>>>>> staging
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
