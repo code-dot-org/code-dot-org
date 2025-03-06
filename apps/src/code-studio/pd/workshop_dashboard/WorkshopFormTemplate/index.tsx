@@ -127,6 +127,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       {/* Basics */}
       <Basics
         state={workshopFormState}
+        courseOfferings={courseOfferings}
         handleChange={handleChange}
         config={config}
       />

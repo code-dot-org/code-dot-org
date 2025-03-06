@@ -3,6 +3,7 @@ import {
   SimpleDropdown,
 } from '@code-dot-org/component-library/dropdown';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
+import Tags from '@code-dot-org/component-library/tags';
 import TextField from '@code-dot-org/component-library/textField';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
@@ -16,10 +17,19 @@ import commonStyles from '../styles.module.scss';
 
 export const Basics: FC<SectionProps> = ({
   config: {
-    fields: {name, grades, subject, prereq, capacity},
+    fields: {
+      name,
+      grades,
+      subject,
+      prereq,
+      capacity,
+      description,
+      course_offerings,
+    },
   },
   state,
   handleChange,
+  courseOfferings,
 }) => {
   const handleGradesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let selectedGrades = [...state.grades];
@@ -39,6 +49,26 @@ export const Basics: FC<SectionProps> = ({
     handleChange({grades: selectedGrades});
   };
 
+  const handleCourseOfferingsChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    let selectedCourseOfferings = [...state.courseOfferings];
+    if (e.target.checked) {
+      selectedCourseOfferings.push(e.target.value);
+    } else {
+      selectedCourseOfferings = selectedCourseOfferings.filter(
+        co => co !== e.target.value
+      );
+    }
+    handleChange({courseOfferings: selectedCourseOfferings});
+  };
+
+  const removeCourseOffering = (id: string) => {
+    handleChange({
+      courseOfferings: state.courseOfferings.filter(co => co !== id),
+    });
+  };
+
   const subjectOptions = useMemo(() => {
     let options = [{value: '', text: 'Select a subject'}];
     if (subject?.options) {
@@ -50,7 +80,7 @@ export const Basics: FC<SectionProps> = ({
   }, [subject?.options]);
 
   return (
-    <div>
+    <>
       <Heading2 visualAppearance="heading-sm">Workshop Basics</Heading2>
       <div className={commonStyles.row}>
         {name && (
@@ -130,11 +160,7 @@ export const Basics: FC<SectionProps> = ({
           <TextField
             inputType="number"
             name="capacity"
-            onChange={e =>
-              handleChange({
-                capacity: e.target.value ? Number(e.target.value) : undefined,
-              })
-            }
+            onChange={e => handleChange({capacity: e.target.value})}
             value={state.capacity?.toString()}
             label="Capacity"
             helperMessage="Maximum number of attendees allowed."
@@ -144,11 +170,11 @@ export const Basics: FC<SectionProps> = ({
             })}
           />
         )}
-        {/* empty space */}
+        {/* empty space aligns with optional subject */}
         {subject && <div className={commonStyles.item} />}
       </div>
       <div className={commonStyles.row}>
-        {state.hasPrereq && (
+        {prereq && state.hasPrereq && (
           <div className={commonStyles.card}>
             <TextField
               name="prereq"
@@ -156,27 +182,93 @@ export const Basics: FC<SectionProps> = ({
               value={state.prereq}
               label="Workshop prerequisites"
               size="s"
-              className={classNames(commonStyles.item, commonStyles.required)}
+              className={classNames(commonStyles.item, {
+                [commonStyles.required]: prereq.required,
+              })}
             />
           </div>
         )}
       </div>
       <div className={commonStyles.row}>
-        <FormFieldWrapper
-          label="Workshop description"
-          helperMessage="Public-facing summary to attract and inform participants."
-          size="s"
-          className={classNames(commonStyles.item, commonStyles.required)}
-        >
-          <textarea
-            id="description"
-            name="description"
-            onChange={e => handleChange({description: e.target.value})}
-            value={state.description}
-            placeholder="Enter description here"
-          />
-        </FormFieldWrapper>
+        {description && (
+          <FormFieldWrapper
+            label="Workshop description"
+            helperMessage="Public-facing summary to attract and inform participants."
+            size="s"
+            className={classNames(commonStyles.item, commonStyles.required)}
+          >
+            <textarea
+              id="description"
+              name="description"
+              onChange={e => handleChange({description: e.target.value})}
+              value={state.description}
+              placeholder="Enter description here"
+            />
+          </FormFieldWrapper>
+        )}
       </div>
-    </div>
+      <div className={commonStyles.row}>
+        {course_offerings && (
+          <CheckboxDropdown
+            name="course_offerings"
+            onChange={handleCourseOfferingsChange}
+            onSelectAll={() =>
+              handleChange({
+                courseOfferings:
+                  courseOfferings?.map(({id}) => id.toString()) ?? [],
+              })
+            }
+            selectAllText="Select all"
+            clearAllText="Clear all"
+            onClearAll={() => {
+              handleChange({courseOfferings: []});
+            }}
+            styleAsFormField={true}
+            checkedOptions={state.courseOfferings}
+            allOptions={
+              courseOfferings?.map(({id, display_name}) => ({
+                value: id.toString(),
+                label: display_name,
+              })) ?? []
+            }
+            labelText="Select workshop topic(s)"
+            size="s"
+            className={classNames(commonStyles.item, {
+              [commonStyles.required]: course_offerings.required,
+            })}
+          />
+        )}
+      </div>
+      <div>
+        {courseOfferings &&
+          state.courseOfferings.map(id => {
+            const topic =
+              courseOfferings.find(co => co.id === Number(id))?.display_name ??
+              '';
+            return (
+              <div className={commonStyles.tag_button_container}>
+                <Tags
+                  key={id}
+                  tagsList={[
+                    {
+                      label: topic,
+                      icon: {
+                        iconName: 'close',
+                        title: 'remove topic',
+                        iconStyle: 'regular',
+                        placement: 'right',
+                      },
+                    },
+                  ]}
+                />
+                <button
+                  type="button"
+                  onClick={() => removeCourseOffering(id)}
+                />
+              </div>
+            );
+          })}
+      </div>
+    </>
   );
 };

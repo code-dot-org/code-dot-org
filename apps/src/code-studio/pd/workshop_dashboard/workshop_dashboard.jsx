@@ -76,7 +76,7 @@ const routeConfigs = [
   },
   ...WorkshopCourseConfigs.map(config => ({
     path: `workshops/new/${config.slug}`,
-    breadcrumbs: `Workshops,New ${config.label} Workshop`,
+    breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
     component: WorkshopFormTemplate,
     props: {config},
   })),
