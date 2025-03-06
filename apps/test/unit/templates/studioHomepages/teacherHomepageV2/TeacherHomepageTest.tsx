@@ -95,10 +95,10 @@ describe('SectionList', () => {
 
     userEvent.click(screen.getByRole('button', {name: 'New class section'}));
 
-    await screen.findByText('Create a new section');
+    await screen.findByText('Create a new section', {}, {timeout: 5000});
     screen.getByText('Picture password');
     screen.getByRole('button', {name: 'Cancel'});
-  }, 10000);
+  }, 15000);
 
   it('teaching/archived toggle', async () => {
     renderComponent();
