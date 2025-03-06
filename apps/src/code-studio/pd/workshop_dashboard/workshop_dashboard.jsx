@@ -12,6 +12,7 @@ import {
   RouterProvider,
   WithRouterProps,
 } from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 import Header from '../components/header';
@@ -39,6 +40,7 @@ import ReportView from './reports/report_view';
 import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
+import {WorkshopFormTemplate} from './WorkshopFormTemplate';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
 
@@ -71,6 +73,12 @@ const routeConfigs = [
     breadcrumbs: 'Workshops,New Workshop',
     component: NewWorkshop,
   },
+  ...WorkshopCourseConfigs.map(config => ({
+    path: `workshops/new/${config.slug}`,
+    breadcrumbs: `Workshops,New ${config.label} Workshop`,
+    component: WorkshopFormTemplate,
+    props: config,
+  })),
   {
     path: 'workshops/:workshopId',
     breadcrumbs: 'Workshops,View Workshop',
