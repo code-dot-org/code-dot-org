@@ -437,10 +437,7 @@ describe('CurriculumCatalog', () => {
     // Select all curricula checkboxes
     screen.getAllByRole('checkbox').forEach(checkbox => {
       // Ignore filter for translation checkbox
-      if (
-        checkbox.name !== 'filterTranslatedToggle' &&
-        checkbox.name !== 'Suggested Prompts[]'
-      ) {
+      if (checkbox.name !== 'filterTranslatedToggle') {
         fireEvent.click(checkbox);
         expect(checkbox.checked).toBeTruthy();
       }

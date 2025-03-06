@@ -26,12 +26,10 @@ describe('ProjectHeader', () => {
         has_completed_ai_differentiation_welcome: true,
       })
     );
-    window.HTMLElement.prototype.scrollIntoView = () => {};
   });
 
   afterEach(() => {
     restoreRedux();
-    jest.restoreAllMocks();
   });
 
   function renderDefault() {
@@ -41,6 +39,10 @@ describe('ProjectHeader', () => {
       </Provider>
     );
   }
+
+  // function renderDefault() {
+  //   render(<ProjectHeader canViewAdvancedTools={true} projectCount={200} />);
+  // }
 
   it('renders the correct project count in subheading', () => {
     renderDefault();

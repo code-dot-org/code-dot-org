@@ -153,7 +153,6 @@ function realizeWithStore(store, props = {}) {
 describe('TeacherHomepage', () => {
   const oldWindowLocation = window.location;
   let store;
-
   const realize = props => realizeWithStore(store, props);
 
   beforeEach(() => {
@@ -366,7 +365,6 @@ describe('TeacherHomepage', () => {
 describe('TeacherHomepage - Farsi Global Edition', () => {
   const oldWindowLocation = window.location;
   let store;
-
   const realize = props => realizeWithStore(store, props);
 
   beforeEach(() => {
