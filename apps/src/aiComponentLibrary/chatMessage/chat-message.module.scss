@@ -12,7 +12,6 @@ $icon-overlay-padding-right: 8px;
 %message {
   @extend %markdown-styles;
   display: flex;
-  flex-direction: column;
   padding: 12px;
   justify-content: flex-start;
   align-items: center;
