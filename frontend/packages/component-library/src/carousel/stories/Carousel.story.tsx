@@ -109,13 +109,13 @@ DefaultCarousel.play = async ({
   // click to the beginning of the carousel
   await userEvent.click(navArrowPrev);
 
-  // check that the pagination dots are showing and working
+  // check that the pagination dots are showing
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
     expect(dot).toBeInTheDocument();
   }
 
-  // click out of order using pagination dots
+  // check that pagination dots are working
   const paginationDotOne = canvas.getByLabelText(paginationDots[0]);
   const paginationDotTwo = canvas.getByLabelText(paginationDots[1]);
   const paginationDotThree = canvas.getByLabelText(paginationDots[2]);
