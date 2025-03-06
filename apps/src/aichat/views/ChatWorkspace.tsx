@@ -2,13 +2,10 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {useDropzone} from 'react-dropzone';
 import {useSelector} from 'react-redux';
 
-import {submitChatContents} from '@cdo/apps/aichat/redux/thunks';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -19,7 +16,6 @@ import {
   selectAllVisibleMessages,
   setShowModalType,
 } from '../redux';
-import {UploadAssetResponse} from '../types';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
@@ -39,10 +35,6 @@ enum WorkspaceTeacherViewTab {
 
 const eraserIcon: FontAwesomeV6IconProps = {
   iconName: 'eraser',
-};
-
-const plusIcon: FontAwesomeV6IconProps = {
-  iconName: 'plus',
 };
 
 /**
@@ -67,8 +59,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       );
     }
   });
-
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
 
   const dispatch = useAppDispatch();
 
@@ -180,38 +170,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     dispatch(setShowModalType(undefined));
   }, [dispatch, isUserTeacher, showModalType]);
 
-  const onDrop = useCallback(
-    async (acceptedFiles: File[]) => {
-      if (currentChannelId) {
-        const assets: string[] = [];
-        // Cap at 3 for now
-        for (const file of acceptedFiles.slice(0, 3)) {
-          const response = await HttpClient.put(
-            `/v3/assets/${currentChannelId}/${file.name}`,
-            file
-          );
-          const {filename} = (await response.json()) as UploadAssetResponse;
-          assets.push(filename);
-        }
-
-        dispatch(
-          submitChatContents({
-            text: 'Continue the story from your previous message using all the documents and photos in the chat history',
-            assets,
-          })
-        );
-      }
-    },
-    [currentChannelId, dispatch]
-  );
-  const {getRootProps, getInputProps, isDragActive} = useDropzone({
-    onDrop,
-    accept: {
-      'image/*': ['.jpeg', '.jpg', '.png'],
-      'application/pdf': ['.pdf'],
-    },
-  });
-
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {ChatModal && <ChatModal onClose={onCloseModal} />}
@@ -223,22 +181,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
       <div className={moduleStyles.footer}>
         {canChatWithModel && (
-          <div className={moduleStyles.messageEditorRow}>
-            <div {...getRootProps()}>
-              <input {...getInputProps()} />
-              <Button
-                isIconOnly={true}
-                icon={plusIcon}
-                size="m"
-                type="secondary"
-                color={isDragActive ? 'black' : 'gray'}
-                onClick={() => {}}
-              />
-            </div>
-            <UserChatMessageEditor
-              editorContainerClassName={moduleStyles.messageEditorContainer}
-            />
-          </div>
+          <UserChatMessageEditor
+            editorContainerClassName={moduleStyles.messageEditorContainer}
+          />
         )}
         <div className={moduleStyles.buttonRow}>
           <Button

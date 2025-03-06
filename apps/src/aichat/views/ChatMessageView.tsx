@@ -102,6 +102,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
             <img
               key={asset}
               alt=""
+              className={styles.imagePreview}
               src={`/v3/assets/${currentChannelId}/${asset}`}
             />
           );
