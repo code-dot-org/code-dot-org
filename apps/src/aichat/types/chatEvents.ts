@@ -14,8 +14,7 @@ interface BaseChatEvent {
 }
 
 /** Base type for all chat messages */
-// TODO: create ImageChatMessage
-export interface BaseChatMessage extends BaseChatEvent {
+interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
   /** Asset file names to optionally send with text content */
   assets?: string[];
@@ -49,7 +48,6 @@ export interface CompletedChatMessage extends BaseChatMessage {
 
 /** All chat messages must be one of these types */
 export type ChatMessage =
-  | BaseChatMessage
   | PendingChatMessage
   | ErrorChatMessage
   | CompletedChatMessage;
