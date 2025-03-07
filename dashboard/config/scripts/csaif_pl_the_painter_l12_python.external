@@ -6,62 +6,75 @@ markdown <<MARKDOWN
 # Meet the Painter 
 
 
-
-<img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="bargraph and data icon" style="border-radius:10px; float: left; ; height: 170px; margin: 0px 20px 0px 10px; ">
-
 #### In the Neighborhood IDE, the object you will work with is from **The Painter** class. 
 
-this means the painter is programmed with certain attributes and functions 
+#### Remember, objects have attributes and methods. 
 
-Attributes of the painter: 
+- #### An **attribute** is a characteristic the object has.
+- #### A **method** is an action that an object can perform.
 
-functions of the painter: 
+## The Painter Object
 
-
-
-
-
-## Navigate the Painter
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Jot down the steps to navigate the painter from position A to position C on the map below using only the following commands: 
-    </p>
-    <ul>
-    <li style="font-size: 14pt;">Move_forward</li>
-    <li style="font-size: 14pt;">Turn_right</li>
-    </ul>
-    <p style="font-size: 14pt;">Now, try going from C to E. </p>
-    <br>
-    <p style="font-size: 14pt;"><b>What do you notice?</b> </p>
-</div>
-
-
-
-
-<div style="text-align: center;">
-    <img src="https://images.code.org/d178a10fd4861e5cfd1ecc597db667ff-image-1741026488503.png" 
-         alt="A sample of a chat conversation with an AI bot." 
-         width="450px" 
-         style="border-radius: 5px; border: 2px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
-</div>
-
+<div style="display: flex; width: 80%; margin: auto; gap: 20px; align-items: flex-start;">
+        <div>
+            <img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="The painter" style="width: 100%; object-fit: cover; border-radius: 10px;">
+        </div>
+        <div style="flex: 1; display: flex; gap: 20px;">
+            <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px;">
+                <p style="font-size: 14pt; font-weight: bold; margin: 0;">Attributes</p>
+                <ul style="list-style-type: none; padding: 0; text-align: center; margin: 10px 0;">
+                    <li style="font-size: 12pt; line-height: 1.5;">x_location = 0</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">y_location = 0</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">direction = "east"</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">paint = 0</li>
+                </ul>
+            </div>
+            <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px;">
+                <p style="font-size: 14pt; font-weight: bold; margin: 0;">Methods</p>
+                <ul style="list-style-type: none; padding: 0; text-align: center; margin: 10px 0;">
+                    <li style="font-size: 12pt; line-height: 1.5;">move()</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">turn_left()</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">paint(color)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 ---
 
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+## Dot Notation
 
-  <p style="font-size: 14pt; font-weight: bold; margin: 0;">Pause & Reflect</p>
-        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">After completing both paths, reflect on the process.<br><br>How did breaking the journey into steps, recognizing movement patterns, and creating clear instructions help navigate the maze? <br><br> In other words, how did you use <b>computational thinking</b> to complete this task? 
-        
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Dot notation accesses an object's attributes or methods using a dot (.)
     </p>
+    <ul>
+    <li style="font-size: 14pt; font-weight: bold;">painter.move()</li><br>
+    <li style="font-size: 14pt; font-weight: bold;">painter.turn_left()</li>
+    </ul>
+   
 </div>
 
-<br>
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
+## Getting Started with Objects
 
+<table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/7d0849ab4adda8a45784b7b4fd541339-image-1741277550544.png" alt="painter = Painter()" width="130%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+            First, <b>instantiate</b> the object by creating a new instance of the <code>Painter</code> class. <br><br> This is done by assigning the <code> Painter()</code> object to a variable.<br> <i>Here, the variable name is painter, but you can use any name.</i> 
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/069ae6b084ee5e4a0a89a6ad174df043-image-1741277578060.png" alt="painter.move()" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                Now that new object has been <b>instantiated</b>, it has access to the methods defined by the <code>Painter</code>class. <br><br> You can use <b>dot notation</b> to call the methods, like <code>painter.move()</code> or <code>painter.turn_left()</code>
+            </td>
+        </tr>
+ </table>
 
-
+## Let's try! 
 MARKDOWN

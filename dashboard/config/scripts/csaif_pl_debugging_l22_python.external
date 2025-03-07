@@ -1,0 +1,57 @@
+name 'csaif_pl_debugging_L22_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debugging Strategies 
+
+
+Handout resource 
+Highlevel explain of the strategies
+**Outcome:** Students apply debugging strategies to identify, explain, and fix errors in code.
+
+- Teacher introduces three key debugging strategies:
+    - **Code Tracing / Printing Values**
+    - **Error Message Clarifications**
+    - **Insight Assistant (AI-based questions)**
+
+
+---
+---
+
+## Dot Notation
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Dot notation accesses an object's attributes or methods using a dot (.)
+    </p>
+    <ul>
+    <li style="font-size: 14pt; font-weight: bold;">painter.move()</li><br>
+    <li style="font-size: 14pt; font-weight: bold;">painter.turn_left()</li>
+    </ul>
+   
+</div>
+
+## Getting Started with Objects
+
+<table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/7d0849ab4adda8a45784b7b4fd541339-image-1741277550544.png" alt="painter = Painter()" width="130%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+            First, <b>instantiate</b> the object by creating a new instance of the <code>Painter</code> class. <br><br> This is done by assigning the <code> Painter()</code> object to a variable.<br> <i>Here, the variable name is painter, but you can use any name.</i> 
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/069ae6b084ee5e4a0a89a6ad174df043-image-1741277578060.png" alt="painter.move()" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                Now that new object has been <b>instantiated</b>, it has access to the methods defined by the <code>Painter</code>class. <br><br> You can use <b>dot notation</b> to call the methods, like <code>painter.move()</code> or <code>painter.turn_left()</code>
+            </td>
+        </tr>
+ </table>
+
+## Let's try! 
+MARKDOWN

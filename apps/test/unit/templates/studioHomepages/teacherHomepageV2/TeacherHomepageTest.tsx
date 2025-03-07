@@ -19,6 +19,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 describe('TeacherHomepage', () => {
   const sections = [
@@ -62,11 +63,23 @@ describe('TeacherHomepage', () => {
 
   let store: Store;
 
+  const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+
   beforeEach(() => {
     store = getStore();
     registerReducers({teacherSections, currentUser});
     store.dispatch(setSections(serverSections));
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+      return Promise.resolve({value: {}, response: new Response()});
+    });
   });
 
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
@@ -92,6 +105,16 @@ describe('TeacherHomepage', () => {
     screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
   });
+
+  it('create section button opens popup', async () => {
+    renderComponent();
+
+    fireEvent.click(screen.getByRole('button', {name: 'New class section'}));
+
+    await screen.findByText('Create a new section', {}, {timeout: 5000});
+    screen.getByText('Picture password');
+    screen.getByRole('button', {name: 'Cancel'});
+  }, 15000);
 
   //TODO (TEACH-1659): Why did we need to increase timeouts on this test?
   it('teaching/archived toggle', async () => {

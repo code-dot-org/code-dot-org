@@ -59,6 +59,15 @@
       "require": "./dist/cjs/button/index.js"
     },
     "./button/index.css": "./dist/esm/button/index.css",
+    "./carousel": {
+      "types": {
+        "import": "./dist/esm/carousel/index.d.ts",
+        "require": "./dist/cjs/carousel/index.d.ts"
+      },
+      "import": "./dist/esm/carousel/index.mjs",
+      "require": "./dist/cjs/carousel/index.js"
+    },
+    "./carousel/index.css": "./dist/esm/carousel/index.css",
     "./checkbox": {
       "types": {
         "import": "./dist/esm/checkbox/index.d.ts",

@@ -1,3 +1,4 @@
+import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -6,7 +7,6 @@ import {
   CodebridgeContextProvider,
   CodebridgeContextType,
 } from '@cdo/apps/codebridge';
-import {FileTabs} from '@cdo/apps/codebridge/FileTabs';
 
 import {getDefaultCodebridgeContext} from '../test_utils';
 import '@testing-library/jest-dom';

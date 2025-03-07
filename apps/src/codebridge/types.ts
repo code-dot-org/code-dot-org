@@ -44,17 +44,10 @@ export type ConfigType = {
   previewFileTypes?: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
-  labeledGridLayouts?: {
-    [key: string]: {
-      gridLayout: string;
-      gridLayoutRows: string;
-      gridLayoutColumns: string;
-    };
-  };
   activeLayout?: LayoutKey;
   showFileBrowser: boolean;
   validMimeTypes?: string[];
-  layoutComponents?: {horizontal: React.ReactNode; vertical: React.ReactNode};
+  layoutComponents: {horizontal: React.ReactNode; vertical: React.ReactNode};
 };
 
 export type SetProjectFunction = (project: ProjectSources) => void;

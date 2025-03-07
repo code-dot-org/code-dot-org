@@ -45,6 +45,7 @@ import {
 import ProjectManager from './projects/ProjectManager';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {getPredictResponse} from './projects/userLevelsApi';
+import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {LevelPropertiesValidator} from './responseValidators';
 import {
   AppName,
@@ -538,6 +539,8 @@ async function setUpAndLoadProject(
   projectManager.addSaveSuccessListener(channel => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
     dispatch(setChannel(channel));
+    // If we had a successful save, we know the project is not too large.
+    dispatch(setProjectTooLarge(false));
   });
   projectManager.addSaveNoopListener(channel => {
     if (channel) {
@@ -547,7 +550,13 @@ async function setUpAndLoadProject(
       dispatch(setProjectUpdatedSaved());
     }
   });
-  projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
+  projectManager.addSaveFailListener(error => {
+    dispatch(setProjectUpdatedError());
+    if (error.message?.includes('413')) {
+      // The user's project is too large to save. Mark it as too large.
+      dispatch(setProjectTooLarge(true));
+    }
+  });
   // Figure out if we should reset to start sources. This happens if the url parameter
   // ?reset=true is present.
   // This parameter is only used by levelbuilders.

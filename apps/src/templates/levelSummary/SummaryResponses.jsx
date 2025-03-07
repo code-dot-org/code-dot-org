@@ -181,6 +181,7 @@ const SummaryResponses = ({
           <FreeResponseResponses
             responses={scriptData.responses[levelNumber]}
             levelInstructions={levelInstructions}
+            unitName={scriptData.reportingData.unitName}
             showStudentNames={showStudentNames}
             eventData={eventData}
           />
