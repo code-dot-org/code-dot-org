@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-import {logUserLevelEvaluation} from '@cdo/apps/userLevelEvaluations/userLevelEvaluationsApi';
+import {logUserLevelEvaluation} from '@cdo/apps/aiEvaluation/userLevelEvaluations/userLevelEvaluationsApi';
 
 import SafeMarkdown from '../SafeMarkdown';
 
