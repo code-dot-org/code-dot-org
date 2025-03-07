@@ -36,8 +36,12 @@ export const Basics: FC<SectionProps> = ({
     if (e.target.checked) {
       selectedGrades.push(e.target.value);
       selectedGrades.sort((a, b) => {
+        // sort 'K' to beginning
         if (a === 'K') return -1;
         if (b === 'K') return 1;
+        // sort 'Other' to end
+        if (a === 'Other') return 1;
+        if (b === 'Other') return -1;
         const numA = Number(a);
         const numB = Number(b);
         if (isNaN(numA) || isNaN(numB)) return 0;
