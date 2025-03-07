@@ -1,5 +1,5 @@
 Marketing::Engine.routes.draw do
   scope ':locale' do
-    resources :campaign, only: [:show]
+    resources :promotions, only: [:show]
   end
 end

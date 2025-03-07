@@ -5,18 +5,21 @@ module Services
   module Marketing
     class ContentfulClient
       include Singleton
+
+      class << self
+        delegate :entry, to: :instance
+      end
+
       def initialize
         @client = Contentful::Client.new(
-          space: '90t6bu6vlf76',
+          space: CDO.contentful_space_id,
           access_token: CDO.contentful_api_key,
           api_url: CDO.contentful_hostname
         )
       end
 
       def entry(locale, id)
-        entry = @client.entry(id, locale: locale)
-
-        entry.fields[:items_in_this_list].map(&:fields)
+        @client.entry(id, locale: locale)
       end
     end
   end
