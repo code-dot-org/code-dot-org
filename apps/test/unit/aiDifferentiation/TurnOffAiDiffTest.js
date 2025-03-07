@@ -11,7 +11,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import currentUser, {
-  setAiDifferentiationEnabled,
+  setAiDifferentiationToggledOff,
 } from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
@@ -22,7 +22,7 @@ describe('TurnOffAiDiff', () => {
     stubRedux();
     registerReducers({currentUser});
     store = getStore();
-    store.dispatch(setAiDifferentiationEnabled(true));
+    store.dispatch(setAiDifferentiationToggledOff(false));
   });
 
   afterEach(() => {
@@ -31,7 +31,7 @@ describe('TurnOffAiDiff', () => {
   });
 
   it('renders correctly with initial state', () => {
-    store.dispatch(setAiDifferentiationEnabled(true));
+    store.dispatch(setAiDifferentiationToggledOff(false));
     render(
       <Provider store={store}>
         <TurnOffAiDiff />
@@ -49,7 +49,7 @@ describe('TurnOffAiDiff', () => {
   });
 
   it('toggles the setting when clicked', () => {
-    store.dispatch(setAiDifferentiationEnabled(true));
+    store.dispatch(setAiDifferentiationToggledOff(false));
 
     render(
       <Provider store={store}>
@@ -59,7 +59,7 @@ describe('TurnOffAiDiff', () => {
 
     const setStub = jest.spyOn(
       UserPreferences.prototype,
-      'setAiDifferentiationEnabled'
+      'setAiDifferentiationToggledOff'
     );
 
     const toggle = screen.getByRole('checkbox', {
@@ -73,6 +73,6 @@ describe('TurnOffAiDiff', () => {
     screen.getByRole('checkbox', {
       name: i18n.aiTeachingAssistantSettingsStatus({status: 'disabled'}),
     });
-    expect(setStub).toHaveBeenCalledWith(false);
+    expect(setStub).toHaveBeenCalledWith(true);
   });
 });
