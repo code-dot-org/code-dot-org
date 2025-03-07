@@ -1,0 +1,42 @@
+@use 'color.scss';
+
+.modalDialog {
+  border-radius: 6px;
+  width: 560px;
+  max-height: 80vh;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 22px;
+  overflow-y: auto;
+}
+
+.miniContactContainer {
+  background-color: color.$lightest_cyan; // Ensure you have this variable defined
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  .checkbox label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  .form-group {
+    margin-bottom: 15px !important; // Increased specificity to override global styles
+  }
+
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
