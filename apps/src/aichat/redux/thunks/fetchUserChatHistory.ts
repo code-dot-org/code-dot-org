@@ -4,7 +4,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {RootState} from '@cdo/apps/types/redux';
 
 import {getUserChatHistory} from '../../aichatApi';
-import {setPersonalChatHistory, setStudentChatHistory} from '../slice';
+import {setOwnChatHistory, setStudentChatHistory} from '../slice';
 
 interface FetchUserChatHistoryParams {
   userId: number;
@@ -27,7 +27,7 @@ export const fetchUserChatHistory = createAsyncThunk(
       );
 
       if (isOwnHistory) {
-        thunkAPI.dispatch(setPersonalChatHistory(chatHistoryApiResponse));
+        thunkAPI.dispatch(setOwnChatHistory(chatHistoryApiResponse));
       } else {
         thunkAPI.dispatch(setStudentChatHistory(chatHistoryApiResponse));
       }

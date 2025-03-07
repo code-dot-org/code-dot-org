@@ -57,11 +57,7 @@ const aichatSlice = createSlice({
     ) => {
       state.studentChatHistory = action.payload;
     },
-    setPersonalChatHistory: (
-      state,
-      action: PayloadAction<ServerChatEvent[]>
-    ) => {
-      // if no history, do nothing?
+    setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
       if (action.payload.length === 0) {
         return;
       }
@@ -296,7 +292,7 @@ export const {
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
-  setPersonalChatHistory,
+  setOwnChatHistory,
   setUserHasAichatAccess,
   setViewMode,
 } = aichatSlice.actions;
