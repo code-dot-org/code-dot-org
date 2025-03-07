@@ -55,6 +55,12 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<ServerChatEvent[]>
     ) => {
+      state.studentChatHistory = action.payload;
+    },
+    setPersonalChatHistory: (
+      state,
+      action: PayloadAction<ServerChatEvent[]>
+    ) => {
       // if no history, do nothing?
       if (action.payload.length === 0) {
         return;
@@ -73,11 +79,8 @@ const aichatSlice = createSlice({
       });
 
       if (lastResetIndex >= 0) {
-        // Push or replace?
-        // Does it matter if reset event is in events past or current?
         state.chatEventsPast = action.payload.slice(0, lastResetIndex + 1);
         state.chatEventsCurrent = action.payload.slice(lastResetIndex + 1);
-        // state.studentChatHistory = action.payload;
       } else {
         state.chatEventsCurrent = action.payload;
       }
@@ -293,6 +296,7 @@ export const {
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
+  setPersonalChatHistory,
   setUserHasAichatAccess,
   setViewMode,
 } = aichatSlice.actions;

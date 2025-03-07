@@ -12,7 +12,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
 import {
-  fetchStudentChatHistory,
+  fetchUserChatHistory,
   selectAllVisibleMessages,
   setShowModalType,
 } from '../redux';
@@ -65,14 +65,17 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const dispatch = useAppDispatch();
 
+  // Update to be called on switch of level? Bug noticed by Sanchit
   useEffect(() => {
     if (selectedStudent) {
-      dispatch(fetchStudentChatHistory(selectedStudent.id));
+      dispatch(
+        fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
+      );
     }
   }, [selectedStudent, dispatch]);
 
   useEffect(() => {
-    dispatch(fetchStudentChatHistory(currentUserId));
+    dispatch(fetchUserChatHistory({userId: currentUserId, isOwnHistory: true}));
   }, [dispatch, currentUserId, currentLevelId]);
 
   const selectedStudentName =
@@ -183,7 +186,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {selectedStudent ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList events={[...studentChatHistory, ...visibleItems]} />
+        <ChatEventsList events={visibleItems} />
       )}
 
       <div className={moduleStyles.footer}>

@@ -28,7 +28,7 @@ const paths = {
   GET_CHAT_REQUEST_URL: `${ROOT_REQUEST_URL}/chat_request`,
   CHAT_COMPLETION_URL: `${ROOT_GENERAL_URL}/chat_completion`,
   LOG_CHAT_EVENT_URL: `${ROOT_EVENT_URL}/log_chat_event`,
-  STUDENT_CHAT_HISTORY_URL: `${ROOT_EVENT_URL}/student_chat_history`,
+  CHAT_HISTORY_URL: `${ROOT_EVENT_URL}/chat_history`,
   SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_EVENT_URL}/submit_teacher_feedback`,
   USER_HAS_AICHAT_ACCESS_URL: `${ROOT_GENERAL_URL}/user_has_access`,
   FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
@@ -122,18 +122,18 @@ export async function postLogChatEvent(
  * This function sends a GET request to the aichat student chat history backend controller, then returns
  * a list of chat events if successful.
  */
-export async function getStudentChatHistory(
-  studentUserId: number,
+export async function getUserChatHistory(
+  userId: number,
   levelId: number,
   scriptId: number | null
 ): Promise<ServerChatEvent[]> {
   const params: Record<string, string> = {
-    studentUserId: studentUserId.toString(),
+    userId: userId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
   };
   const response = await HttpClient.fetchJson<ServerChatEvent[]>(
-    paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
+    paths.CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
 
   return response.value;
