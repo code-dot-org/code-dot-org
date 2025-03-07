@@ -7,7 +7,7 @@ import React, {ReactNode, useMemo} from 'react';
 import Video from '@code-dot-org/component-library/video';
 
 export type VideoCarouselProps = {
-  /** Carousel content w/ fields from Contentful*/
+  /** Carousel content w/ fields from Contentful */
   slides: {
     id: string;
     slide: ReactNode;
