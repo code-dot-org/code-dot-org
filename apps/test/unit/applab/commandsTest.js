@@ -154,9 +154,22 @@ describe('openUrl', () => {
   it('fails if given a non-string url', () => {
     openUrl({url: 42});
 
+    // Expect error from apiValidateType
     expect(errorHandler.outputWarning).toHaveBeenCalledWith(
       'openUrl() url parameter value (42) is not a string.'
     );
+  });
+
+  it('fails given a non-url', () => {
+    openUrl({url: 'not a url'});
+    expect(false).toBe(true);
+    // todo: this test is incomplete
+  });
+
+  it('fails given a mailto link', () => {
+    openUrl({url: 'mailto:test@example.com'});
+    expect(false).toBe(true);
+    // todo: this test is incomplete
   });
 
   it('opens new tab for "studio.code.org" and "code.org" links', () => {

@@ -1614,6 +1614,7 @@ applabCommands.onEvent = function (opts) {
   return false;
 };
 
+// WTF: We do not know if this is even a valid url yet, we could totally check that on the frontend (and also on the backend)
 function filterUrl(urlToCheck) {
   $.ajax({
     url: '/safe_browsing/',
@@ -1637,38 +1638,44 @@ function filterUrl(urlToCheck) {
 }
 
 applabCommands.openUrl = function (opts) {
-  if (apiValidateType(opts, 'openUrl', 'url', opts.url, 'string')) {
-    // studio.code.org and code.org links are immediately opened.
-    // Other links are filtered.
+  apiValidateType(opts, 'openUrl', 'url', opts.url, 'string');
 
-    let hostname = opts.url;
-    // First, remove protocol from url string, if present.
-    let protocols = ['https://', 'http://', 'www.'];
-    protocols.forEach(protocol => {
-      if (hostname.startsWith(protocol)) {
-        hostname = hostname.slice(protocol.length);
-      }
-    });
-    // Second, remove path from url string, if present.
-    const pathIndex = hostname.indexOf('/');
-    if (pathIndex !== -1) {
-      hostname = hostname.substr(0, pathIndex);
-    }
+  if (opts.url.startsWith('mailto:')) {
+    // TODO: this uses the translated string 'redirectUnsupportedExplanation'
+    // which mistakenly assumes that only 'mailto:' links could cause this
+    // error. We should make it more general so we can consistently fail other
+    // types of bad urls.
+    getStore().dispatch(
+      actions.addRedirectNotice(REDIRECT_RESPONSE.UNSUPPORTED, opts.url)
+    );
+    return;
+  }
 
-    if (['studio.code.org', 'code.org'].includes(hostname)) {
-      if (opts.url.startsWith('http')) {
-        window.open(opts.url);
-      } else {
-        // If url doesn't have a protocol, add one
-        window.open('https://' + opts.url);
-      }
-    } else if (hostname.startsWith('mailto')) {
-      getStore().dispatch(
-        actions.addRedirectNotice(REDIRECT_RESPONSE.UNSUPPORTED, opts.url)
-      );
-    } else {
-      filterUrl(opts.url);
-    }
+  // If the URL doesn't start with http or https, assume https
+  const assumedUrl =
+    opts.url.startsWith('http://') || opts.url.startsWith('https://')
+      ? opts.url
+      : 'https://' + opts.url;
+
+  // Create a new URL object (throws if the URL is invalid)
+  let url;
+  try {
+    url = new URL(assumedUrl);
+  } catch (error) {
+    // TODO: We should consider a new REDIRECT_RESPONSE for invalid URLs, in the
+    // meantime, imply the URL is unsafe.
+    getStore().dispatch(
+      actions.addRedirectNotice(REDIRECT_RESPONSE.REJECTED, opts.url)
+    );
+    return;
+  }
+
+  const trustedDomains = ['studio.code.org', 'code.org'];
+
+  if (trustedDomains.includes(url.hostname)) {
+    window.open(url.href);
+  } else {
+    filterUrl(url.href);
   }
 };
 
