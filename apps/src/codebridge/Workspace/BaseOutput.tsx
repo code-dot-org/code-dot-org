@@ -28,7 +28,7 @@ interface OutputProps {
 
 // Component for program output (console and mini app preview, if it exists).
 // This component is used by HorizontalOutput and VerticalOutput, which wrap it with additional layout logic.
-const Output: React.FunctionComponent<OutputProps> = ({
+const BaseOutput: React.FunctionComponent<OutputProps> = ({
   style,
   className,
   consoleSize,
@@ -105,4 +105,4 @@ const Output: React.FunctionComponent<OutputProps> = ({
   );
 };
 
-export default Output;
+export default BaseOutput;

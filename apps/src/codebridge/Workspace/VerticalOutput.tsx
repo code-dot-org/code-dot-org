@@ -8,13 +8,13 @@ import {useResizable} from 'react-resizable-layout';
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import BaseOutput from './BaseOutput';
 import {
   DEFAULT_MINI_APP_SIZE,
   MIN_MINI_APP_SIZE,
   MAX_MINI_APP_SIZE,
   MIN_CONSOLE_SIZE,
 } from './constants';
-import Output from './Output';
 import {scaleMiniApp} from './outputHelpers';
 
 interface VerticalOutputProps {
@@ -142,7 +142,7 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
   };
 
   return (
-    <Output
+    <BaseOutput
       style={style}
       consoleSize={consoleHeight}
       waitingForResize={waitingForResize}
