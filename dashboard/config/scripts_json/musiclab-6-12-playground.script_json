@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-04 19:54:52 UTC",
+    "serialized_at": "2025-03-06 20:33:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -466,7 +466,8 @@
       "key": "7d605012-2711-4396-8b26-335581ff7c56",
       "position": 1,
       "properties": {
-        "description": "- Formative: Validated\n- Summative: Mini-Rubric"
+        "description": "- Formative: Validated\n- Summative: Mini-Rubric",
+        "progression_name": "Functions - Practice"
       },
       "seeding_key": {
         "activity_section.key": "7d605012-2711-4396-8b26-335581ff7c56",
@@ -897,6 +898,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-practice-debug-shadow"
+        ],
         "progression": "Shadow Experiments"
       },
       "bonus": false,
@@ -919,6 +923,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-practice-debug-shadow2"
+        ],
         "progression": "Shadow Experiments"
       },
       "bonus": false,
@@ -1191,6 +1198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-synthesis-formative"
+        ],
         "progression": "Loops - Synthesis"
       },
       "bonus": false,
@@ -1213,6 +1223,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-synthesis-summative"
+        ],
         "progression": "Loops - Synthesis"
       },
       "bonus": false,
@@ -1235,6 +1248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-formative"
+        ],
         "progression": "Functions - Explore"
       },
       "bonus": false,
@@ -1257,6 +1273,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-summative"
+        ],
         "progression": "Functions - Explore"
       },
       "bonus": false,
@@ -1271,6 +1290,28 @@
       },
       "level_keys": [
         "music-lab-functions-explore-summative"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions - Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-practice-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7d605012-2711-4396-8b26-335581ff7c56"
+      },
+      "level_keys": [
+        "music-lab-functions-practice-formative"
       ]
     }
   ],
@@ -1645,6 +1686,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "bfe0eaf2-13d2-4dc0-838f-53a21a60bac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-practice-formative",
+        "script_level.level_keys": [
+          "music-lab-functions-practice-formative"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7d605012-2711-4396-8b26-335581ff7c56"
       }
     }
   ],

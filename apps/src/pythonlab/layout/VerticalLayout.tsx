@@ -1,5 +1,5 @@
-import {InfoPanel} from '@codebridge/InfoPanel';
-import Workspace from '@codebridge/Workspace';
+import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
+import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
 import VerticalOutput from '@cdo/apps/codebridge/Workspace/VerticalOutput';
