@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'cdo/script_config'
-
+require 'pry'
 class ScriptLevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include UsersHelper  # For user session state accessors.
@@ -2396,7 +2396,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
     let(:lesson) {unit.lessons.first}
     let(:lesson_position) {lesson.relative_position}
-    let(:level) {unit.lessons.first.levels.first}
+    let(:level) {unit.lessons.first.script_levels.first}
     let(:modularity_enabled) {false}
 
     before do
@@ -2405,15 +2405,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     end
 
     context 'modularity is off' do
-      it '/s/:script_id/lessons/:lesson_position/levels/:id does not redirect' do
+      it '/s/:script_id/lessons/:lesson_position/levels/:position does not redirect' do
         sign_in user
-        get :show, params: {script_id: unit.name, lesson_position: lesson_position, id: level.id}
+        get :show, params: {script_id: unit.name, lesson_position: lesson_position, id: level.position}
         assert_response :success
       end
 
-      it '/courses/:course_course_name/units/:unit_position/lessons/:lesson_position/levels/:id does not redirect' do
+      it '/courses/:course_course_name/units/:unit_position/lessons/:lesson_position/levels/:position does not redirect' do
         sign_in user
-        get :show, params: {course_course_name: course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.id}
+        get :show, params: {course_course_name: course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}
         assert_response :success
       end
     end
@@ -2421,15 +2421,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     context 'modularity is on' do
       let(:modularity_enabled) {true}
 
-      it '/s/:script_id/lessons/:lesson_position/levels/:id does redirect' do
+      it '/s/:script_id/lessons/:lesson_position/levels/:position does redirect' do
         sign_in user
-        get :show, params: {script_id: unit.name, lesson_position: lesson_position, id: level.id}
-        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}/lessons/#{lesson_position}"
+        get :show, params: {script_id: unit.name, lesson_position: lesson_position, id: level.position}
+        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}/lessons/#{lesson_position}/levels/#{level.position}"
       end
 
-      it '/courses/:course_course_name/units/:unit_position/lessons/:lesson_position/levels/:id does not redirect' do
+      it '/courses/:course_course_name/units/:unit_position/lessons/:lesson_position/levels/:position does not redirect' do
         sign_in user
-        get :show, params: {course_course_name: course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.id}
+        get :show, params: {course_course_name: course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}
         assert_response :success
       end
     end
