@@ -25,6 +25,10 @@ type FilesComponentProps = {
   appName?: string;
 };
 
+/**
+ * Recursive component that renders the file tree, starting from the folder with the given parentId
+ * (there is an implicit root folder with a default parentId).
+ */
 const InnerFileBrowser = React.memo(
   ({parentId, folders, files, setFileType, appName}: FilesComponentProps) => {
     const {dragData, dropData} = useDndDataContext();

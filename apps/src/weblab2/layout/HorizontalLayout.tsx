@@ -1,8 +1,8 @@
+import {FilePreview} from '@codebridge/FilePreview/FilePreview';
+import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
+import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
-import {FilePreview} from '@cdo/apps/codebridge/FilePreview/FilePreview';
-import {InfoPanel} from '@cdo/apps/codebridge/InfoPanel/InfoPanel';
-import Workspace from '@cdo/apps/codebridge/Workspace/Workspace';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
