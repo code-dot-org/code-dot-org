@@ -1,5 +1,6 @@
 @import 'color';
 
+// TeacherHomepage
 .teacherHomepage {
   display: flex;
   justify-content: center;
@@ -37,12 +38,70 @@
   gap: 6px;
 }
 
+.blankAnnouncement {
+  width: 320px;
+  min-width: 320px;
+  height: 600px;
+  background-color: var(--background-brand-purple-light);
+  margin-inline-start: 40px;
+}
+
+// SectionList
 .sectionList {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+// SectionCard
+
+.sectionCardWrapper {
+  border: 1px solid $neutral_dark20;
+  border-radius: 4px;
+  background-color: $neutral_light;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.sectionCardHeader {
+  padding: 16px;
+  border-bottom: 1px solid $neutral_dark20;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.sectionCardHeaderLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionCardHeaderRight {
+  display: flex;
+}
+
+.sectionCardHeaderText {
+  height: 28px;
+}
+
+.sectionCardCode {
+  height: 22px;
+
+  a {
+    color: $light_primary_500;
+  }
+}
+
+// SectionOptionsDropdown
+.dropdownButton {
+  width: 32px;
+  height: 32px;
+}
+
+// SectionCardBody
 .sectionCardBody {
   padding: 0 16px 16px 16px;
   display: flex;
@@ -86,6 +145,7 @@
   color: $neutral_dark80;
 }
 
+// CourseContentDropdown
 .courseContentDropdownContainer {
   background-color: var(--neutral-base-white);
   border: 1px solid $neutral_dark20;
@@ -93,57 +153,4 @@
   padding: 12px;
   gap: 8px;
   width: 375px;
-}
-
-.sectionCardWrapper {
-  border: 1px solid $neutral_dark20;
-  border-radius: 4px;
-  background-color: $neutral_light;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 16px;
-}
-
-.sectionCardHeader {
-  padding: 16px;
-  border-bottom: 1px solid $neutral_dark20;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: stretch;
-}
-
-.sectionCardHeaderLeft {
-  display: flex;
-  flex-direction: column;
-}
-
-.sectionCardHeaderRight {
-  display: flex;
-}
-
-.sectionCardHeaderText {
-  height: 28px;
-}
-
-.sectionCardCode {
-  height: 22px;
-
-  a {
-    color: $light_primary_500;
-  }
-}
-
-.dropdownButton {
-  width: 32px;
-  height: 32px;
-}
-
-.blankAnnouncement {
-  width: 320px;
-  min-width: 320px;
-  height: 600px;
-  background-color: var(--background-brand-purple-light);
-  margin-inline-start: 40px;
 }

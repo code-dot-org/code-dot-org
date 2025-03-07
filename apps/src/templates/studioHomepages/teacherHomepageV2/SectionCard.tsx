@@ -26,7 +26,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
             <Heading5>{section.name}</Heading5>
           </div>
           <div className={styles.sectionCardCode}>
-            <OverlineOneText>
+            <OverlineOneText style={{marginBottom: 0}}>
               {i18n.classCode()}
               <a href={teacherDashboardUrl(section.id, '/login_info')}>
                 {section.code}

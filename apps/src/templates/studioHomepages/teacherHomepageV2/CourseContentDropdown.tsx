@@ -1,6 +1,8 @@
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import i18n from '@cdo/locale';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -13,7 +15,10 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
 }) => {
   return (
     <div className={styles.courseContentDropdownContainer}>
-      {section.courseDisplayName}
+      <BodyThreeText>
+        <b>{`${i18n.course()}: `}</b>
+        {`${section.courseDisplayName}`}
+      </BodyThreeText>
     </div>
   );
 };
