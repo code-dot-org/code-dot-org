@@ -26,7 +26,7 @@ module Services
 
       create_new_unit_group
       if @unit_group.errors.present?
-        log "Migration failed for #{@unit.name}: #{@unit_group.errors.full_messages.join(', ')}", type: "error"
+        log "Migration failed for Unit #{@unit.name} to UnitGroup #{@unit_group.name}: #{@unit_group.errors.full_messages.join(', ')}", type: "error"
         return false
       end
 
@@ -126,7 +126,7 @@ module Services
       unless @unit_group.save
         new_name = case @unit_group.errors[:name]&.first
                    when "can only contain lowercase letters, numbers and dashes"
-                     @unit.name.downcase.tr(' ', '-')
+                     @unit.name.downcase.tr(' ', '-').tr('_', '-')
                    when "has already been taken"
                      @unit.name + "-course"
                    else

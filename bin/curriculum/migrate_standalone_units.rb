@@ -106,13 +106,19 @@ def migrate_units(options)
   end
 
   standalone_units.each do |unit|
-    result = Services::StandaloneUnitMigrator.call(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
+    begin
+      result = Services::StandaloneUnitMigrator.call(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
+    rescue Exception => exception
+      filtered_backtrace = exception.backtrace.select {|line| line.include?("standalone_unit_migrator.rb")}
+      puts "ERROR: Caught an exception while migrating #{unit.name}: #{exception.class} - #{exception.message}\n\tBacktrace: #{filtered_backtrace}"
+    end
     migrated_units << unit.name if result
     all_successful &&= result
   end
 
-  File.write(MIGRATED_UNITS_LOG, migrated_units.join("\n"))
+  File.write(MIGRATED_UNITS_LOG, migrated_units.join("\n")) unless migrated_units.empty?
   puts "Units Migrated: #{migrated_units.count}"
+  puts "There are still unmigrated units! Unmigrated Units: #{Unit.all.count(&:is_course?)}" if Unit.all.count(&:is_course?) > 0
   puts "View migrated units here: #{File.expand_path(MIGRATED_UNITS_LOG)}" unless migrated_units.empty?
   puts "There was an issue with the migration. View the log for more information." unless all_successful
   puts "Log File: #{File.expand_path(log_file)}" if log_file
