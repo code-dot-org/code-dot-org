@@ -1,4 +1,4 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/colors';
 @import '@code-dot-org/component-library-styles/mixins.scss';
 
 // Link common styles
@@ -10,7 +10,7 @@
   text-decoration: underline;
 
   &:focus-visible {
-    outline: 2px solid var(--brand-teal-50);
+    outline: 2px solid var(--borders-brand-teal-primary);
     border-radius: 0.25rem;
     outline-offset: 0;
   }
@@ -20,36 +20,36 @@
   }
 
   &-primary {
-    color: var(--brand-purple-50);
+    color: var(--text-brand-purple-primary);
 
     &:hover,
     :active,
     :visited {
-      color: var(--brand-purple-70);
+      color: var(--text-brand-purple-secondary);
     }
 
     &:focus-visible {
-      color: var(--brand-purple-50);
+      color: var(--text-brand-purple-primary);
     }
   }
 
   &-secondary {
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
 
     &:hover,
     :active,
     :visited {
-      color: var(--neutral-gray-80);
+      color: var(--text-neutral-tertiary);
     }
 
     &:focus-visible {
-      color: var(--neutral-base-black);
+      color: var(--text-neutral-primary);
     }
   }
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
-    color: var(--neutral-gray-30);
+    color: var(--text-neutral-disabled);
   }
 }
 
