@@ -33,7 +33,7 @@ const TurnOffAiDiff: React.FC = () => {
 
   const dispatch = useAppDispatch();
 
-  const setEnabled = toggledOff ? i18n.enabled() : i18n.disabled();
+  const setEnabled = toggledOff ? i18n.disabled() : i18n.enabled();
 
   return (
     <div>
