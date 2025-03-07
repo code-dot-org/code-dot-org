@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'contentful'
+require 'marketing/contentful_client'
 
 module Marketing
   class PromotionsController < ApplicationController
@@ -11,7 +12,7 @@ module Marketing
     # GET /marketing/:locale/promotions/:id
     # Returns a teacher sidebar with up to two individual promotional items.
     def show
-      entry = Services::Marketing::ContentfulClient.entry(params[:locale], params[:id])
+      entry = Marketing::ContentfulClient.entry(params[:locale], params[:id])
       head :not_found unless entry.content_type.id == TEACHER_HOMEPAGE_SIDEBAR_CONTENT_TYPE
 
       result = entry.fields.clone
