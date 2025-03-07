@@ -14,22 +14,21 @@ interface SectionListProps {
   showHiddenOnly: boolean;
 }
 
+const NO_SECTION_ID: number = -1;
+
 export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
-  const [deletingSection, setDeletingSection] = useState<boolean>(false);
-  const [sectionToDelete, setSectionToDelete] = useState<number>(-1);
+  const [sectionToDelete, setSectionToDelete] = useState<number>(NO_SECTION_ID);
   const sections: SectionMap = useAppSelector(
     state => state.teacherSections.sections
   );
 
   const onDeleteClickCallback = (sectionId: number) => {
-    setDeletingSection(true);
     setSectionToDelete(sectionId);
   };
 
   const onCloseDeleteDialog = () => {
-    setDeletingSection(false);
-    setSectionToDelete(-1);
+    setSectionToDelete(NO_SECTION_ID);
   };
 
   const deleteSection = () => {
@@ -39,7 +38,6 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
     })
       .done(() => {
         dispatch(removeSectionOrThrow(sectionToDelete));
-        setDeletingSection(false);
         setSectionToDelete(-1);
       })
       .fail((jqXhr, status) => {
@@ -47,8 +45,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
         // matches the experience we got in angular
         alert(i18n.unexpectedError());
         console.error(status);
-        setDeletingSection(false);
-        setSectionToDelete(-1);
+        setSectionToDelete(NO_SECTION_ID);
       });
   };
 
@@ -71,7 +68,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   return (
     <div className={styles.sectionList}>
       {filteredSectionList}
-      {deletingSection && (
+      {sectionToDelete > NO_SECTION_ID && (
         <SectionDeleteModal
           onCloseCallback={onCloseDeleteDialog}
           sectionDeleteCallback={deleteSection}
