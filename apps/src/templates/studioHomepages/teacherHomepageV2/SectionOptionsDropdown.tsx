@@ -1,6 +1,6 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
-import React from 'react';
+import React, {useMemo} from 'react';
 import {useNavigate, NavigateFunction} from 'react-router-dom';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -87,48 +87,54 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
-  const dropdownOptions: ActionDropdownOption[] = [
-    {
-      value: 'sectionSettings',
-      label: i18n.sectionSettings(),
-      icon: {iconName: 'gear', iconStyle: 'solid'},
-      onClick: () => onSectionSettingsClick(navigate, section.id),
-    },
-    {
-      value: 'roster',
-      label: i18n.roster(),
-      icon: {iconName: 'user', iconStyle: 'solid'},
-
-      onClick: () => onRosterClick(navigate, section.id),
-    },
-    {
-      value: 'loginCards',
-      label: i18n.loginCards(),
-      icon: {iconName: 'id-card', iconStyle: 'solid'},
-      onClick: () => onLoginCardsClick(navigate, section.id),
-    },
-    {
-      value: 'certificates',
-      label: i18n.certificates(),
-      icon: {iconName: 'file-certificate', iconStyle: 'solid'},
-      onClick: () => onCertificatesClick(section),
-    },
-    {
-      value: section.hidden ? 'restore' : 'archive',
-      label: section.hidden ? i18n.restoreClassSection() : i18n.archive(),
-      icon: {
-        iconName: section.hidden ? 'window-restore' : 'box-archive',
-        iconStyle: 'solid',
+  const dropdownOptions: ActionDropdownOption[] = useMemo(() => {
+    const options: ActionDropdownOption[] = [
+      {
+        value: 'sectionSettings',
+        label: i18n.sectionSettings(),
+        icon: {iconName: 'gear', iconStyle: 'solid'},
+        onClick: () => onSectionSettingsClick(navigate, section.id),
       },
-      onClick: () => onArchiveClick(dispatch, section),
-    },
-    {
-      value: 'delete',
-      label: i18n.delete(),
-      icon: {iconName: 'trash', iconStyle: 'solid'},
-      onClick: () => onDeleteClick(onDeleteClickCallback, section.id),
-    },
-  ];
+      {
+        value: 'roster',
+        label: i18n.roster(),
+        icon: {iconName: 'user', iconStyle: 'solid'},
+
+        onClick: () => onRosterClick(navigate, section.id),
+      },
+      {
+        value: 'loginCards',
+        label: i18n.loginCards(),
+        icon: {iconName: 'id-card', iconStyle: 'solid'},
+        onClick: () => onLoginCardsClick(navigate, section.id),
+      },
+      {
+        value: 'certificates',
+        label: i18n.certificates(),
+        icon: {iconName: 'file-certificate', iconStyle: 'solid'},
+        onClick: () => onCertificatesClick(section),
+      },
+      {
+        value: section.hidden ? 'restore' : 'archive',
+        label: section.hidden ? i18n.restoreClassSection() : i18n.archive(),
+        icon: {
+          iconName: section.hidden ? 'window-restore' : 'box-archive',
+          iconStyle: 'solid',
+        },
+        onClick: () => onArchiveClick(dispatch, section),
+      },
+    ];
+
+    if (section.studentCount > 0) {
+      options.push({
+        value: 'delete',
+        label: i18n.delete(),
+        icon: {iconName: 'trash', iconStyle: 'solid'},
+        onClick: () => onDeleteClick(onDeleteClickCallback, section.id),
+      });
+    }
+    return options;
+  }, [section, dispatch, navigate, onDeleteClickCallback]);
 
   return (
     <ActionDropdown
