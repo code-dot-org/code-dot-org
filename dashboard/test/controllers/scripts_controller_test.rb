@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include Minitest::RSpecMocks
 
   setup_all do
     seed_deprecated_unit_fixtures
@@ -1890,6 +1891,50 @@ class ScriptsControllerTest < ActionController::TestCase
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
     File.stubs(:write).with do |filename, _|
       filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts.en.yml')
+    end
+  end
+
+  describe '#redirect_to_canonical_path' do
+    let!(:user) {create :teacher}
+    let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
+    let(:modularity_enabled) {false}
+
+    before do
+      allow(Experiment).to receive(:enabled?).and_call_original
+      allow(Experiment).to receive(:enabled?).with(user: user, experiment_name: 'modularity').and_return(modularity_enabled)
+    end
+
+    context 'modularity is off' do
+      it '/s/:id/ does not redirect' do
+        sign_in user
+        get :show, params: {id: unit.name}
+        assert_response :success
+      end
+
+      it '/courses/:course_course_name/units/:position/ does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, position: unit_position}
+        assert_response :success
+      end
+    end
+
+    context 'modularity is on' do
+      let(:modularity_enabled) {true}
+
+      it '/s/:id/ does redirect' do
+        sign_in user
+        get :show, params: {id: unit.name}
+        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}"
+      end
+
+      it '/courses/:course_course_name/units/:position/ does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, position: unit_position}
+        assert_response :success
+      end
     end
   end
 end
