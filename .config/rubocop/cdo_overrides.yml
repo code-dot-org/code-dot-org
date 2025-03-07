@@ -9,7 +9,7 @@ Gemspec/RequiredRubyVersion:
   Enabled: true
   # Engines follow the ruby version for the main app
   Exclude: 
-    - engines/**/*
+    - dashboard/engines/**/*
 
 Layout/DotPosition:
   EnforcedStyle: trailing

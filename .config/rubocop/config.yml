@@ -31,6 +31,5 @@ Rails:
   Enabled: true
   Include:
     - dashboard/**/* # only run Rails cops on Rails-specific code
-    - engines/**/* # only run Rails cops on Rails-specific code
   Exclude:
     - dashboard/legacy/**/*
