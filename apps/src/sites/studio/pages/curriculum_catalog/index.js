@@ -3,14 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import CurriculumCatalog from '../../../../templates/curriculumCatalog/CurriculumCatalog';
 
@@ -51,18 +49,3 @@ $(document).ready(function () {
   );
   displayDifferentiationChat();
 });
-
-function displayDifferentiationChat() {
-  const aiDiffFabMountPoint = document.getElementById(
-    'ai-differentiation-fab-mount-point'
-  );
-
-  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <AiDiffFloatingActionButton context={AiDiffContext.GENERAL} />
-      </Provider>,
-      aiDiffFabMountPoint
-    );
-  }
-}

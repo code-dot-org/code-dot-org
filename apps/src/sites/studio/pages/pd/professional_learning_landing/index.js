@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 // Execute after page has fully loaded so the Amplitude event only fires on full page load
 $(() => {
@@ -42,18 +40,3 @@ $(() => {
   );
   displayDifferentiationChat();
 });
-
-function displayDifferentiationChat() {
-  const aiDiffFabMountPoint = document.getElementById(
-    'ai-differentiation-fab-mount-point'
-  );
-
-  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <AiDiffFloatingActionButton context={AiDiffContext.GENERAL} />
-      </Provider>,
-      aiDiffFabMountPoint
-    );
-  }
-}
