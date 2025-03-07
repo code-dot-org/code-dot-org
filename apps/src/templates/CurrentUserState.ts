@@ -33,6 +33,6 @@ export interface CurrentUserState {
   usStateCode: string | null;
   uuid: string;
   isLti: boolean;
-  aiDifferentiationEnabled: boolean;
+  aiDifferentiationToggledOff: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
 }
