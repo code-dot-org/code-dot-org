@@ -71,6 +71,10 @@ DefaultCarousel.parameters = {
   },
   eyes: {waitBeforeCapture: 4000},
 };
+// There are no unit (Jest) tests for this component because there are
+// integration issues between Swiper and Jest, and we can cover what we
+// need using Storybook play functions and Eyes tests.
+// See https://codedotorg.atlassian.net/browse/CMS-361 for more context.
 DefaultCarousel.play = async ({
   canvasElement,
 }: {
