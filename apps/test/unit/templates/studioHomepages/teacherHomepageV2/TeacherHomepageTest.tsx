@@ -18,8 +18,8 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 describe('TeacherHomepage', () => {
   const sections = [
@@ -109,7 +109,7 @@ describe('TeacherHomepage', () => {
   it('create section button opens popup', async () => {
     renderComponent();
 
-    userEvent.click(screen.getByRole('button', {name: 'New class section'}));
+    fireEvent.click(screen.getByRole('button', {name: 'New class section'}));
 
     await screen.findByText('Create a new section', {}, {timeout: 5000});
     screen.getByText('Picture password');
