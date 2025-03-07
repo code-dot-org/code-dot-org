@@ -112,10 +112,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             onClick={() => setIsShowingModelDialog(true)}
             type="secondary"
             color="gray"
-            className={classNames(
-              styles.updateButton,
-              styles.compareModelsButton
-            )}
+            className={classNames(styles.compareModelsButton)}
             disabled={readOnlyWorkspace}
           />
         )}

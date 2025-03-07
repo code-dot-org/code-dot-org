@@ -5,9 +5,11 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import React, {ReactNode} from 'react';
 import classNames from 'classnames';
 
+import {RemoveMarginBottomProps} from '@/components/common/types';
+
 import moduleStyles from './link.module.scss';
 
-export type LinkProps = {
+export type LinkProps = RemoveMarginBottomProps & {
   /** Link Label */
   children: ReactNode;
   /** Link URL */
@@ -23,12 +25,17 @@ const Link: React.FunctionComponent<LinkProps> = ({
   href,
   size,
   isLinkExternal,
+  removeMarginBottom,
 }) => (
   <DSCOLink
     href={href}
     openInNewTab={isLinkExternal}
     size={size}
-    className={classNames(moduleStyles.link, moduleStyles[`link-size-${size}`])}
+    className={classNames(
+      moduleStyles.link,
+      moduleStyles[`link-size-${size}`],
+      removeMarginBottom && moduleStyles['link-removeMarginBottom'],
+    )}
   >
     {children}
     {isLinkExternal && (

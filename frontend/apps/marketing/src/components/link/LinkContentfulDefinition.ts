@@ -1,5 +1,6 @@
 // Creates a definition for the Link component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+import {removeMarginBottomDefinition} from '@/components/common/definitions';
 
 export const LinkContentfulComponentDefinition: ComponentDefinition = {
   id: 'link',
@@ -43,6 +44,7 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       group: 'content',
     },
+    removeMarginBottom: {...removeMarginBottomDefinition},
     children: {
       displayName: 'Link Label',
       type: 'Text',

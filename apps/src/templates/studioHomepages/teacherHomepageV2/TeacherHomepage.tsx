@@ -4,15 +4,32 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Heading2, Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';
+import {
+  asyncLoadTeacherHomepageSectionData,
+  beginEditingSection,
+} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {SectionList} from './SectionList';
 
 import styles from './teacherHomepage.module.scss';
 
+type ArchivedToggleOption = 'teaching' | 'archived';
+
 export const TeacherHomepage: React.FC = () => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
+
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    dispatch(asyncLoadTeacherHomepageSectionData());
+  }, [dispatch]);
+
+  const [selectedArchiveToggle, setSelectedArchiveToggle] =
+    React.useState<ArchivedToggleOption>('teaching');
 
   return (
     <div className={styles.teacherHomepage}>
@@ -24,26 +41,34 @@ export const TeacherHomepage: React.FC = () => {
             <Heading4>{i18n.classSections()}</Heading4>
             <div className={styles.headerButtonRow}>
               <SegmentedButtons
-                selectedButtonValue="teaching"
-                onChange={() => {}}
+                onChange={value =>
+                  setSelectedArchiveToggle(value as ArchivedToggleOption)
+                }
+                selectedButtonValue={selectedArchiveToggle}
                 buttons={[
-                  {label: 'Teaching', value: 'teaching'},
-                  {label: 'Archived', value: 'archived'},
+                  {
+                    label: i18n.teaching(),
+                    value: 'teaching',
+                  },
+                  {
+                    label: i18n.archived(),
+                    value: 'archived',
+                  },
                 ]}
                 size="s"
               />
               <div className={styles.headerButtonRowRight}>
                 <Button
                   iconLeft={{iconName: 'plus', iconStyle: 'solid'}}
-                  text="New class section"
-                  onClick={() => {}}
+                  text={i18n.newClassSection()}
+                  onClick={() => dispatch(beginEditingSection())}
                   size="s"
                   className={styles.createSectionButton}
                 />
                 <ActionDropdown
                   name="More options"
                   size="s"
-                  labelText="More options"
+                  labelText={i18n.moreOptions()}
                   options={[]}
                   triggerButtonProps={{
                     icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
@@ -54,11 +79,14 @@ export const TeacherHomepage: React.FC = () => {
                 />
               </div>
             </div>
-            <SectionList />
+            <SectionList
+              showHiddenOnly={selectedArchiveToggle === 'archived'}
+            />
           </div>
           <div className={styles.blankAnnouncement} />
         </div>
       </div>
+      <AddSectionDialog />
     </div>
   );
 };

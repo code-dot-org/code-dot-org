@@ -7,7 +7,7 @@ import {useResizable} from 'react-resizable-layout';
 
 import Console from '@cdo/apps/codebridge/Console/Console';
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
-import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
+import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';

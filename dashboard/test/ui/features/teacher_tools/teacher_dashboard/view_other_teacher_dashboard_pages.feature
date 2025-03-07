@@ -1,5 +1,11 @@
 @no_mobile
 Feature: Views the pages on the teacher dashboard that are untested elsewhere
+  Background:
+    Given I am on "http://studio.code.org/home"
+    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
+    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
+    Given I use a cookie to mock the DCDO key "ai-tutor-teacher-nav-v2" as "false"
+
   Scenario: Viewing teacher dashboard pages
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
@@ -9,7 +15,7 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
-        # Progress tab
+    # Progress tab
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
@@ -21,13 +27,13 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
-        # Stats tab
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
+    # Stats tab
+    Given I click selector "#ui-test-teacher-sidebar a:contains('Stats')" once I see it
     And I wait until element "#uitest-stats-table" is visible
     And element "#uitest-stats-table tr:eq(1)" contains text "Sally"
 
-        # Manage students tab
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    # Manage students tab
+    Given I click selector "#ui-test-teacher-sidebar a:contains('Roster')" once I see it
     And I wait until element "#uitest-manage-students-table" is visible
     And element "#uitest-manage-students-table tr:eq(1)" contains text "Sally"
     And I wait until element "#uitest-privacy-text" is visible
@@ -35,15 +41,15 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     And I wait until element "#uitest-privacy-link" is visible
     And element "#uitest-privacy-link" contains text "Just looking for a letter"
 
-        # Text responses tab
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Text Responses)" once I see it
+    # Text responses tab
+    Given I click selector "#ui-test-teacher-sidebar a:contains('Text Responses')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
-        # Assessments/Surveys tab: anonymous survey
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    # Assessments/Surveys tab: anonymous survey
+    Given I click selector "#ui-test-teacher-sidebar a:contains('Assessments')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
@@ -52,7 +58,7 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     And I wait until element "div:contains(this survey is anonymous)" is visible
     And I wait until element "div:contains(no submissions for this assessment)" is not visible
 
-        # Assessments/Surveys tab: assessment
+    # Assessments/Surveys tab: assessment
     And I select the "Lesson 33: Single page assessment" option in dropdown "assessment-selector"
     And I wait until element "#uitest-submission-status-table" is visible
     And element "#uitest-submission-status-table tr:eq(1)" contains text "Sally"
