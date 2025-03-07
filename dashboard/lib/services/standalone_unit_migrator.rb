@@ -15,6 +15,11 @@ module Services
         return false
       end
 
+      if @unit.unit_group
+        log "Unit already has a UnitGroup: #{@unit.name}", type: "error"
+        return false
+      end
+
       unit_copy = @unit.dup
       log_initial_info if @verbose
       i18n_params = set_i18n_params if @file_system_changes

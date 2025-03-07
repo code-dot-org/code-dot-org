@@ -58,6 +58,15 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
       assert_match(/Existing Unit's course version not found/, log_contents)
     end
 
+    it 'fails when unit already has a UnitGroup' do
+      @unit_group = create :single_unit_course, unit: @unit
+      @unit.reload
+
+      refute migrate_unit
+      log_contents = File.read(@temp_log_file.path)
+      assert_match(/Unit already has a UnitGroup/, log_contents)
+    end
+
     it 'succeeds when unit has an invalid name' do
       invalid_name = "INVALID NAME"
       @unit.update_column(:name, invalid_name)
