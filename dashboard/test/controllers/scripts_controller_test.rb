@@ -1862,7 +1862,7 @@ class ScriptsControllerTest < ActionController::TestCase
   describe '#redirect_to_nested_course' do
     let!(:user) {create :teacher}
     let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:unit) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit_position) {1}
     let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
     let(:modularity_enabled) {false}
@@ -1879,7 +1879,7 @@ class ScriptsControllerTest < ActionController::TestCase
         assert_response :success
       end
 
-      it '/courses/:course_course_name/units/:unit_position/ does not redirect' do
+      it '/courses/:course_course_name/units/:position/ does not redirect' do
         sign_in user
         get :show, params: {course_course_name: course.name, position: unit_position}
         assert_response :success
@@ -1895,7 +1895,7 @@ class ScriptsControllerTest < ActionController::TestCase
         assert_redirected_to "/courses/#{course.name}/units/#{unit_position}"
       end
 
-      it '/courses/:course_course_name/units/:unit_position/ does not redirect' do
+      it '/courses/:course_course_name/units/:position/ does not redirect' do
         sign_in user
         get :show, params: {course_course_name: course.name, position: unit_position}
         assert_response :success
