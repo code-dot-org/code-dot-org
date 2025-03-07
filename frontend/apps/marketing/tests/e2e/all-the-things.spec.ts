@@ -2,8 +2,31 @@ import {expect, Locator} from '@playwright/test';
 import {test} from './fixtures/base';
 import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
 import {AllTheThingsPage} from './pom/all-the-things';
+import AxeBuilder from '@axe-core/playwright';
 
 test.describe('All the things UI e2e test', () => {
+  test.describe('a11y', () => {
+    test('should have no accessibility violations', async ({page}) => {
+      const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      await allTheThingsPage.goto();
+
+      const accessibilityScanResults = await new AxeBuilder({page}).analyze(); // 4
+
+      // Do not allow any more accessibility errors. If you fixed one, reduce the number below.
+      if (accessibilityScanResults.violations.length > 0) {
+        // Log out the violations so we can fix them
+        // The current allowed violations are:
+        // 1. color contrast on overline
+        // 2. iframe no title
+        console.warn(
+          JSON.stringify(accessibilityScanResults.violations, null, 2),
+        );
+
+        expect(accessibilityScanResults.violations.length).toEqual(2);
+      }
+    });
+  });
+
   Object.entries(EXPECTED_LOCALIZATION_STRINGS).forEach(([locale, entry]) => {
     test.describe(`Localization - ${locale}`, () => {
       let component: Locator;
@@ -122,9 +145,9 @@ test.describe('All the things UI e2e test', () => {
       });
 
       test('renders', async () => {
-        // There are three headers, ensure they are visible
+        // There are six headers, ensure they are visible
         const headerLocator = component.getByRole('heading');
-        await expect(headerLocator).toHaveCount(3);
+        await expect(headerLocator).toHaveCount(6);
 
         const headerLocators = await headerLocator.all();
 
