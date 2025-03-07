@@ -6,7 +6,7 @@ right 'Breaking a complex problem into smaller, more manageable parts'
 wrong 'Writing a program without any errors'
 wrong 'Using AI to solve problems automatically'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following best describes **decomposition** in computational thinking?

@@ -8,7 +8,7 @@ wrong 'GPU – Controls the operating system
 
 '
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following correctly matches the hardware component to its function?

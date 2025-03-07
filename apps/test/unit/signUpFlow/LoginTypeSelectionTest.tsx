@@ -46,7 +46,7 @@ describe('LoginTypeSelection', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/account_type'
+      '/users/sign_up/account_type'
     );
   });
 
@@ -243,7 +243,7 @@ describe('LoginTypeSelection', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(
-        '/users/new_sign_up/finish_student_account'
+        '/users/sign_up/finish_student_account'
       );
     });
 
@@ -399,7 +399,7 @@ describe('LoginTypeSelection', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(
-        '/users/new_sign_up/finish_student_account'
+        '/users/sign_up/finish_student_account'
       );
     });
 
@@ -417,7 +417,7 @@ describe('LoginTypeSelection', () => {
     expect(
       finishSignUpButton
         .toString()
-        .includes("href: '/users/new_sign_up/finish_student_account'")
+        .includes("href: '/users/sign_up/finish_student_account'")
     ).toBeTruthy;
 
     // Checks that the page is displaying student-facing LMS content
@@ -438,7 +438,7 @@ describe('LoginTypeSelection', () => {
     expect(
       finishSignUpButton
         .toString()
-        .includes("href: '/users/new_sign_up/finish_teacher_account'")
+        .includes("href: '/users/sign_up/finish_teacher_account'")
     ).toBeTruthy;
 
     // Checks that the page is displaying teacher-facing LMS content

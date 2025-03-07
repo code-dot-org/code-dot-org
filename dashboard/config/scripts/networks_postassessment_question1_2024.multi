@@ -6,7 +6,7 @@ wrong 'Server'
 right 'Router'
 wrong 'Modem'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Your school is setting up a new Wi-Fi network. To ensure devices can connect and communicate with each other and the Internet, which network device is essential?

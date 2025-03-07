@@ -1,4 +1,3 @@
-import Button from '@code-dot-org/component-library/button';
 import {
   Heading5,
   OverlineOneText,
@@ -9,6 +8,8 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
+import {SectionOptionsDropdown} from './SectionOptionsDropdown';
+
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
@@ -16,10 +17,6 @@ interface SectionCardProps {
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
-  const onDropdownButtonClick = () => {
-    // open dropdown modal
-  };
-
   return (
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
@@ -37,16 +34,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <Button
-            isIconOnly
-            icon={{iconName: 'ellipsis-vertical'}}
-            onClick={onDropdownButtonClick}
-            color={'gray'}
-            type={'tertiary'}
-            size={'s'}
-            className={styles.dropdownButton}
-            ariaLabel={i18n.sectionOptionsDropdown()}
-          />
+          <SectionOptionsDropdown sectionId={section.id} />
         </div>
       </div>
     </div>

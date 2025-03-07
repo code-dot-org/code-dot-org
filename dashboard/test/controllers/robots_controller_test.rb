@@ -16,14 +16,15 @@ class RobotsControllerTest < ActionController::TestCase
     assert_includes(lines, 'User-agent: *')
   end
 
-  test 'denies all for non production environment' do
-    set_env :levelbuilder
-    get :index
-    assert_response :success
-    lines = response.body.lines(chomp: true)
-    assert_includes(lines, 'Disallow: /')
-    refute_includes(lines, 'Allow:')
-  end
+  # Turning off disallow - see robots controller file
+  # test 'denies all for non production environment' do
+  #   set_env :levelbuilder
+  #   get :index
+  #   assert_response :success
+  #   lines = response.body.lines(chomp: true)
+  #   assert_includes(lines, 'Disallow: /')
+  #   refute_includes(lines, 'Allow:')
+  # end
 
   test 'allows all for production with a couple exceptions' do
     set_env :production
@@ -31,6 +32,7 @@ class RobotsControllerTest < ActionController::TestCase
     assert_response :success
     lines = response.body.lines(chomp: true)
     assert_includes(lines, 'Allow: /')
-    assert_includes(lines, 'Disallow: /projects/')
+    # Turning off disallow - see robots controller file
+    #assert_includes(lines, 'Disallow: /projects/')
   end
 end

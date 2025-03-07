@@ -1,11 +1,12 @@
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import _ from 'lodash';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 
+import {initialAssistantGreeting} from '../constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {
-  Role,
   AITutorInteractionStatus as Status,
   ChatCompletionMessage,
   Level,
@@ -21,12 +22,13 @@ export interface AITutorState {
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   isChatOpen: boolean;
+  showSuggestedPrompts: boolean;
 }
 
 const initialChatMessages: ChatCompletionMessage[] = [
   {
     role: Role.ASSISTANT,
-    chatMessageText: "Hi! I'm your AI Tutor.",
+    chatMessageText: initialAssistantGreeting,
     status: Status.OK,
   },
 ];
@@ -38,6 +40,7 @@ const initialState: AITutorState = {
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   isChatOpen: false,
+  showSuggestedPrompts: false,
 };
 
 export const formatQuestionForAITutor = (chatContext: ChatContext) => {
@@ -167,6 +170,9 @@ const aiTutorSlice = createSlice({
     setIsChatOpen: (state, action: PayloadAction<boolean>) => {
       state.isChatOpen = action.payload;
     },
+    setShowSuggestedPrompts: (state, action: PayloadAction<boolean>) => {
+      state.showSuggestedPrompts = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(askAITutor.fulfilled, state => {
@@ -192,4 +198,5 @@ export const {
   setIsWaitingForChatResponse,
   updateLastChatMessage,
   setIsChatOpen,
+  setShowSuggestedPrompts,
 } = aiTutorSlice.actions;

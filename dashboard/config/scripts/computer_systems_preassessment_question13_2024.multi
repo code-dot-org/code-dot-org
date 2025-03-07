@@ -6,7 +6,7 @@ wrong 'Restarting the device'
 wrong 'Adding more RAM'
 right 'Installing random software'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which action will **NOT** improve a slow computer?

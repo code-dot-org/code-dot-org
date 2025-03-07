@@ -28,6 +28,7 @@ const EVENTS = {
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
   SECTION_SETUP_STARTED: 'Section Setup Started',
+  LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
 
   // School Association
   // Update School Info Dialog
@@ -292,6 +293,7 @@ const EVENTS = {
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
   AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
+  AI_DIFF_FEEDBACK_EVENT: 'AI Differentiation Feedback Event',
   AI_DIFF_CHAT_TOGGLED: 'AI Differentiation Chat Toggled on/off',
 
   // AI Tutor

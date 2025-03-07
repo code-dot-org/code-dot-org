@@ -1,6 +1,10 @@
 @import 'color';
 @import '@code-dot-org/component-library-styles/font';
 @import '@code-dot-org/component-library-styles/mixins';
+@import '@code-dot-org/component-library-styles/primitiveColors.scss';
+
+$border-color: $light_gray_800;
+$border-width: 1px;
 
 .aiTutorContainer {
   position: fixed;
@@ -67,12 +71,12 @@ button.buttonStyle {
 
 .aiTutorHeader {
   border-radius: 4px 4px 0 0;
-  background: $neutral_dark;
+  background:  var(--neutral-gray-90);
   color: $neutral_white;
 
-  border-top: 2px solid $neutral_dark;
-  border-right: 2px solid $neutral_dark;
-  border-left: 2px solid $neutral_dark;
+  border-top: $border-width solid $border-color;
+  border-right: $border-width solid $border-color;
+  border-left: $border-width solid $border-color;
 
   padding-inline-start: 0.75rem;
 
@@ -110,8 +114,8 @@ button.buttonStyle {
   flex-direction: column;
   gap: 28px;
   padding: 1rem;
-  border-right: 0.125rem solid $neutral_dark;
-  border-left: 0.125rem solid $neutral_dark;
+  border-right: $border-width solid $border-color;
+  border-left: $border-width solid $border-color;
   background: $neutral_white;
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: 408px;
@@ -129,15 +133,34 @@ button.buttonStyle {
 }
 
 .aiTutorFooter {
-  align-items: center;
-  background: $neutral_dark;
+  background: var(--neutral-gray-90);
   border-radius: 0 0 4px 4px;
-  border-bottom: 2px solid $neutral_dark;
+  border-bottom: $border-width solid $border-color;
+  border-right: $border-width solid $border-color;
+  border-left: $border-width solid $border-color;
   color: $neutral_white;
-  gap: 0.5rem;
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .waitingForResponse {
   width: 50px;
+}
+
+.message-user {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.feedbackIcons {
+  height: 36px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.feedbackDetails {
+  width: 90%;
+}
+
+.feedbackButton {
+  margin-right: 5px;
 }

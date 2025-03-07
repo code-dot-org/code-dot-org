@@ -22,6 +22,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         id: current_user.id,
         uuid: current_user.uuid,
         username: current_user.username,
+        display_name: current_user.name,
         user_type: current_user.user_type,
         is_signed_in: true,
         short_name: current_user.short_name,

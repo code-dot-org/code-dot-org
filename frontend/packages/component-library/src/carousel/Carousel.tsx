@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {HTMLAttributes, ReactNode} from 'react';
+import {HTMLAttributes, ReactNode, useId} from 'react';
 
 // Import Swiper React components
 // See Swiper documentation here: https://swiperjs.com/react
@@ -29,6 +29,8 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   showNavArrows?: boolean;
   /** Carousel content */
   slides: {id: string; slide: ReactNode}[];
+  /** Carousel custom class name */
+  className?: string;
 }
 
 /**
@@ -46,7 +48,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
  * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
  */
 const Carousel: React.FC<CarouselProps> = ({
-  carouselId = 'id-' + crypto.randomUUID(),
+  carouselId = `id-${useId().replaceAll(':', '')}`,
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
@@ -66,7 +68,7 @@ const Carousel: React.FC<CarouselProps> = ({
       className={classNames(moduleStyles.carouselWrapper, className)}
       {...HTMLAttributes}
     >
-      <div className={classNames(moduleStyles.carousel, className)}>
+      <div className={classNames(moduleStyles.carousel)}>
         {/* Swiper carousel */}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
@@ -95,10 +97,8 @@ const Carousel: React.FC<CarouselProps> = ({
             },
           }}
         >
-          {slides.map(({id, slide}) => (
-            <SwiperSlide key={id} className={className}>
-              {slide}
-            </SwiperSlide>
+          {slides?.map(({id, slide}) => (
+            <SwiperSlide key={id}>{slide}</SwiperSlide>
           ))}
         </Swiper>
         {showNavArrows && (

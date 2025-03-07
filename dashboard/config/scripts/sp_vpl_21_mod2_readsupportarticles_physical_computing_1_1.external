@@ -4,13 +4,48 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Task: Practice Finding a Support Article 
-
-<img src="https://images.code.org/5e8b54f924347a88b0f022f4411ec399-image-1714074689677.46.49 PM.png" alt="Screenshot of the Code.org Help and support page." style="border:1px solid black; float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
-
 ## Steps to Access Support Articles:
 
-#### **Step 1:** Click on the "?" in the upper right hand corner of your screen.
-#### **Step 2:** Select "Help and support" from the dropdown menu.
-#### **Step 3:** Select and read a support article that interests you.
-<br><br><br><br><br>
+<!-- Main container wrapping all sections -->
+<div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+    <!-- Section 1 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/3c83695c71b7811cb7deba00af5a5051-image-1741210146778.29.01 PM.png" 
+             alt="Screenshot of the question mark in the top corner of the page." 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Step 1: </p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+              Click on the "?" in the upper right hand corner of your screen.
+            </p>
+        </div>
+    </div>
+    <!-- Section 2 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/79d8099618260b8e35ac39318875cdd7-image-1741210225814.30.21 PM.png" 
+             alt="Screenshot of the Code.org Help and support button." 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Step 2:</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+                Select "Help and support" from the dropdown menu.
+            </p>
+        </div>
+    </div>
+    <!-- Section 3 -->
+    <div style="display: flex; align-items: center; width: 100%;">
+        <img src="https://images.code.org/5e8b54f924347a88b0f022f4411ec399-image-1714074689677.46.49 PM.png" 
+             alt="Screenshot of the Code.org Help and support page." 
+             style="width: 10%; border-radius: 10px; margin: 0px 20px 20px 0px;">
+        <div>
+            <p style="font-size: 14pt; font-weight: bold; margin: 0;">Step 3:</p>
+            <p style="font-size: 14pt; line-height: 1.2; margin: 5px 0;">
+               Select and read a support article that interests you.
+            </p>
+        </div>
+    </div>
+
+
+
+
 MARKDOWN

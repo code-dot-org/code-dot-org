@@ -6,7 +6,7 @@ wrong 'Wi-Fi'
 wrong 'Bluetooth'
 wrong 'Satellite'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A university campus wants to set up high-speed Internet connections for research labs. Which type of connection should they choose for the best reliability and speed?

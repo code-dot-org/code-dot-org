@@ -8,11 +8,31 @@ markdown <<MARKDOWN
 #### Code.org’s curricula offers additional materials for **verified teachers.** 
 
 #### These materials include:
+<!-- Unified container for all four cards -->
+<div style="display: flex; justify-content: space-between; width: 100%; gap: 10px; margin: 20px 0px 20px 0px">
+    <!-- Card 1 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Student assessments and surveys</p>
+   
+    </div>
+    <!-- Card 2 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Example solutions and answer keys</p>
+ 
+    </div>
+    <!-- Card 3 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">The ability to leave feedback for students on levels</p>
+ 
+    </div>
+    <!-- Card 4 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Teaching tips and more!</p>
+ 
+    </div>
+</div>
 
-* #### Student assessments and surveys.
-* #### Example solutions and answer keys.
-* #### The ability to leave feedback for students on levels.
-* #### Teaching tips and more!
+
 
 #### If you are not already a verified teacher, <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >click here</a> to complete the form to become a verified teacher. 
 

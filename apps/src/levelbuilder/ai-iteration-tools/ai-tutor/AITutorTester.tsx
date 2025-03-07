@@ -18,7 +18,6 @@ interface AIInteraction {
   studentInput: string;
   systemPrompt?: string | undefined;
   levelId?: number | undefined;
-  temperature?: number | undefined;
   aiResponse: string | undefined;
 }
 
