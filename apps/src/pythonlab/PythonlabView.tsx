@@ -93,6 +93,7 @@ const defaultConfig: ConfigType = {
   layoutComponents: {
     horizontal: <HorizontalLayout />,
     vertical: <VerticalLayout />,
+    share: <div>Hello from the share view!</div>,
   },
 };
 
