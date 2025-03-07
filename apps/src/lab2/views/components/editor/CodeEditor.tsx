@@ -130,29 +130,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   // Sets aria-label on the input div once code mirror loads
   useEffect(() => {
-    const setAriaLabel = () => {
-      const cmContentDiv = editorRef.current?.querySelector('.cm-content');
-      if (cmContentDiv) {
-        cmContentDiv.setAttribute('aria-label', i18n.codeEditor());
-      }
-    };
-
-    // Set the aria-label initially
-    setAriaLabel();
-
-    // Ensure we set aria-label if/when code mirror updates
-    const observer = new MutationObserver(setAriaLabel);
-    if (editorRef.current) {
-      observer.observe(editorRef.current, {
-        childList: true,
-        subtree: true,
-      });
+    const cmContentDiv = editorRef.current?.querySelector('.cm-content');
+    if (cmContentDiv) {
+      cmContentDiv.setAttribute('aria-label', i18n.codeEditor());
     }
-
-    // Cleanup observer on unmount
-    return () => {
-      observer.disconnect();
-    };
   }, []);
 
   return (
