@@ -337,7 +337,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         aria-modal
         role="dialog"
       >
-        <div id="hidden-item" tabIndex={0} role="button" />
         {showSoundFilters && (
           <div
             id="sounds-panel-top"
