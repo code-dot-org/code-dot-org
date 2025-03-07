@@ -3,7 +3,7 @@ class AichatMessagesController < ApplicationController
   load_and_authorize_resource
 
   # params are
-  # messageId: int
+  # aichat_message_id: int
   # approval: boolean
   # flagged: boolean
   # POST /aichat_message/:aichat_message_id/submit_feedback
@@ -20,7 +20,7 @@ class AichatMessagesController < ApplicationController
     rescue StandardError => exception
       return render(json: {error: exception.message}, status: :unprocessable_entity)
     end
-    render(json: {message: "Feedback saved successfully"}, status: :created)
+    head :ok
   end
 
   private def set_aichat_message
