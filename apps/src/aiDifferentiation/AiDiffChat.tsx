@@ -271,6 +271,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           Array.isArray(item) ? (
             <AiDiffSuggestedPrompts
               suggestedPrompts={item}
+              isLatest={id === messageHistory.length - 1}
               onSubmit={onPromptSelect}
               key={id}
             />
