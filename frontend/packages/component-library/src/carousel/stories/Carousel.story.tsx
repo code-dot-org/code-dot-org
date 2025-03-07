@@ -96,7 +96,7 @@ DefaultCarousel.play = async ({
   // check that slides are in the carousel
   for (const slideText of slides) {
     const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   }
 
   // check that the next nav arrow is showing and working
@@ -116,7 +116,7 @@ DefaultCarousel.play = async ({
   // check that the pagination dots are showing
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
+    await expect(dot).toBeInTheDocument();
   }
 
   // check that pagination dots are working
@@ -166,7 +166,7 @@ CarouselWithoutNavArrows.play = async ({
   // check that the pagination dots are showing
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
+    await expect(dot).toBeInTheDocument();
   }
 };
 
@@ -211,13 +211,13 @@ CarouselWithTouchMove.play = async ({
   // check that the pagination dots are showing
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
+    await expect(dot).toBeInTheDocument();
   }
 
   // check that slides are in the carousel
   for (const slideText of slides) {
     const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   }
 };
 
@@ -264,16 +264,16 @@ CarouselWithCustomSlidesPerView.play = async ({
   // check that two pagination dots are showing
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
+    await expect(dot).toBeInTheDocument();
   }
 
   // check that the third pagination dot is not showing
-  expect(paginationDotThree).not.toBeInTheDocument();
+  await expect(paginationDotThree).not.toBeInTheDocument();
 
   // check that slides are in the carousel
   for (const slideText of slides) {
     const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   }
 };
 
@@ -477,12 +477,12 @@ ImageCarousel.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   // check that the pagination dots are showing
   for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
+    await expect(dot).toBeInTheDocument();
   }
 
   // check that images are visible in carousel
   for (const imageSlide of imageSlides) {
     const image = await canvas.findByAltText(imageSlide);
-    expect(image).toBeVisible();
+    await expect(image).toBeVisible();
   }
 };
