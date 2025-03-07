@@ -1,14 +1,13 @@
 'use client';
 
 import '@code-dot-org/component-library/carousel/index.css';
-import DSCOCarousel, {
-  CarouselProps,
-} from '@code-dot-org/component-library/carousel';
+import DSCOCarousel from '@code-dot-org/component-library/carousel';
 import React, {ReactNode, useMemo} from 'react';
 
 import Video from '@code-dot-org/component-library/video';
 
-interface VideoCarouselProps extends CarouselProps {
+export type VideoCarouselProps = {
+  /** Carousel content w/ fields from Contentful*/
   slides: {
     id: string;
     slide: ReactNode;
@@ -18,9 +17,9 @@ interface VideoCarouselProps extends CarouselProps {
       videoFallbackFile: {fields: {file: {url: string}}};
     };
   }[];
-}
+};
 
-const VideoCarousel: React.FC<VideoCarouselProps> = ({slides, ...props}) => {
+const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
   // Workaround for the experience builder not working with Array
   if (slides == null) {
     return (
@@ -53,7 +52,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides, ...props}) => {
     [slides], // Dependencies: recompute only when `slides` changes
   );
 
-  return <DSCOCarousel {...props} showNavArrows={true} slides={slidesData} />;
+  return <DSCOCarousel showNavArrows={true} slides={slidesData} />;
 };
 
 export default VideoCarousel;
