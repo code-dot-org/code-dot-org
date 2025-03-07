@@ -68,10 +68,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
       ai_rubrics_disabled: aiRubricsDisabled,
     });
   }
-  /**
-   * Save the preference to opt-out of AI Differentiation Chat.
-   * @param {boolean} aiDifferentiationToggledOff: True if disabling AI Chat features, false otherwise.
-   */
+
   setAiDifferentiationEnabled(aiDifferentiationEnabled) {
     return $.post(`/api/v1/users/ai_differentiation_enabled`, {
       ai_differentiation_enabled: aiDifferentiationEnabled,
