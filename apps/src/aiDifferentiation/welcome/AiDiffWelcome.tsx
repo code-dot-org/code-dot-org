@@ -24,6 +24,12 @@ import AiDiffChat, {
   EXPLAIN_CONCEPT_PROMPT,
   EXTRA_PRACTICE_PROMPT,
   FINISH_EARLY_PROMPT,
+  ADJUST_TIMING_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  REAL_WORLD_PROMPT,
+  EXIT_TICKET_PROMPT,
+  MINI_LESSON_PROMPT,
+  LESSON_HOOK_PROMPT,
 } from '../AiDiffChat';
 import {ChatPrompt} from '../types';
 
@@ -56,12 +62,24 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
   plan: {
     initialMessage:
       'Lets iterate together! What would you like to change? Below are some of the tasks I can help you with.',
-    suggestedPrompts: [EXPLAIN_CONCEPT_PROMPT, EXAMPLE_PROMPT],
+    suggestedPrompts: [
+      EXPLAIN_CONCEPT_PROMPT,
+      EXAMPLE_PROMPT,
+      ADJUST_TIMING_PROMPT,
+      DEBUG_MISTAKES_PROMPT,
+      REAL_WORLD_PROMPT,
+    ],
   },
   create: {
     initialMessage:
       'Lets work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.',
-    suggestedPrompts: [FINISH_EARLY_PROMPT, EXTRA_PRACTICE_PROMPT],
+    suggestedPrompts: [
+      FINISH_EARLY_PROMPT,
+      EXTRA_PRACTICE_PROMPT,
+      EXIT_TICKET_PROMPT,
+      MINI_LESSON_PROMPT,
+      LESSON_HOOK_PROMPT,
+    ],
   },
 };
 
@@ -209,7 +227,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 selectedOption === 'plan',
                 () => setSelectedOption('plan'),
                 'folder-tree',
-                'Plan',
+                'Ideate',
                 'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
               )}
               {optionButton(
