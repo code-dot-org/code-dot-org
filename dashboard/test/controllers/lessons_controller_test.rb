@@ -1442,7 +1442,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes(@response.body, 'editScriptUrl')
   end
 
-  describe '#redirect_to_nested_course' do
+  describe '#redirect_to_canonical_path' do
     let!(:user) {create :teacher}
     let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit) {create :unit, :with_lessons, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}

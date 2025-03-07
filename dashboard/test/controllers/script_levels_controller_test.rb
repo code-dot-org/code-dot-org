@@ -2388,7 +2388,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute response.body.include? no_access_msg
   end
 
-  describe '#redirect_to_nested_course' do
+  describe '#redirect_to_canonical_path' do
     let!(:user) {create :teacher}
     let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit) {create :unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}

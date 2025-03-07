@@ -1859,7 +1859,7 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
-  describe '#redirect_to_nested_course' do
+  describe '#redirect_to_canonical_path' do
     let!(:user) {create :teacher}
     let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
     let(:unit) {create :unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}

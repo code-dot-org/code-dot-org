@@ -11,7 +11,7 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  before_action :redirect_to_nested_course, only: [:show]
+  before_action :redirect_to_canonical_path, only: [:show]
   authorize_resource class: 'Unit', except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
@@ -415,7 +415,7 @@ class ScriptsController < ApplicationController
   end
 
   # Redirect /s/... to /courses/.../units/...
-  private def redirect_to_nested_course
+  private def redirect_to_canonical_path
     canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
     redirect_to canonical_path unless canonical_path == request.fullpath
   end
