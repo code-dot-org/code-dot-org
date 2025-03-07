@@ -45,6 +45,45 @@
 
 .sectionCardBody {
   padding: 0 16px 16px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.sectionCardBodyRight {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  gap: 16px;
+}
+
+.taskButtons {
+  border: 1px solid $light_gray_400;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--neutral-base-white);
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.taskButtonLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.taskButtonIcons {
+  color: $light_primary_500;
+}
+
+.taskButtonArrow {
+  color: $neutral_dark80;
 }
 
 .courseContentDropdownContainer {
@@ -53,6 +92,7 @@
   border-radius: 4px;
   padding: 12px;
   gap: 8px;
+  width: 375px;
 }
 
 .sectionCardWrapper {
