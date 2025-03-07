@@ -13,28 +13,12 @@ import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
-import {Config} from './Config';
+import HorizontalLayout from './layout/HorizontalLayout';
+import VerticalLayout from './layout/VerticalLayout';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
-};
-
-const labeledGridLayouts = {
-  horizontal: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace file-preview"
-    `,
-  },
-  vertical: {
-    gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace workspace"
-    "info-panel file-preview file-preview"`,
-  },
 };
 
 const defaultConfig: ConfigType = {
@@ -67,10 +51,12 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-
-  labeledGridLayouts,
-  activeLayout: 'horizontal',
+  activeLayout: 'vertical',
   showFileBrowser: true,
+  layoutComponents: {
+    vertical: <VerticalLayout />,
+    horizontal: <HorizontalLayout />,
+  },
 };
 
 const defaultSource: MultiFileSource = {
@@ -154,29 +140,9 @@ const Weblab2View: React.FC<LabProps> = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {source, setProject, startSources, projectVersion} =
     useSource(defaultProject);
-  const [showConfig, setShowConfig] = useState<
-    'project' | 'config' | 'layout' | ''
-  >('');
-
-  const configKey = {
-    project: source || defaultProject,
-    config: config,
-    layout: config,
-  };
 
   return (
     <div className="app-wrapper">
-      <div className="app-wrapper-nav">
-        <button type="button" onClick={() => setShowConfig('project')}>
-          Edit project
-        </button>
-        <button type="button" onClick={() => setShowConfig('config')}>
-          Edit config
-        </button>
-        <button type="button" onClick={() => setShowConfig('layout')}>
-          Edit layout
-        </button>
-      </div>
       <div className="app-ide">
         {source && (
           <Codebridge
@@ -186,25 +152,6 @@ const Weblab2View: React.FC<LabProps> = () => {
             setConfig={setConfig}
             startSources={startSources}
             projectVersion={projectVersion}
-          />
-        )}
-
-        {showConfig && (
-          <Config
-            config={configKey[showConfig]}
-            setConfig={(
-              configName: string,
-              newConfig: MultiFileSource | ConfigType | string
-            ) => {
-              if (configName === 'project') {
-                setProject({source: newConfig as MultiFileSource});
-              } else if (configName === 'config' || configName === 'layout') {
-                setConfig(newConfig as ConfigType);
-              }
-              setShowConfig('');
-            }}
-            cancelConfig={() => setShowConfig('')}
-            configName={showConfig}
           />
         )}
       </div>

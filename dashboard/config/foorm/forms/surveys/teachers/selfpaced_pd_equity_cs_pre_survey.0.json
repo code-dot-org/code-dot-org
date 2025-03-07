@@ -7,80 +7,101 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<h1>Equity in CS Self-paced Online Professional Learning for Educators</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Equity in CS  - Pre-Module Survey</h2>"
+          "html": "<h1>Equity in CS Self-paced Online Professional Learning for Educators</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Equity in CS  - Pre-Module Survey</h2>"
         },
         {
-          "type": "html",
-          "name": "section1_previous_equity_experience",
-          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your experience with equity concepts and teaching strategies.</span></p>\n"
-        },
-        {
-          "type": "matrix",
-          "name": "pre_familiarity_concepts",
-          "title": "How familiar are you with each of the following concepts:",
-          "columns": [
+          "type": "radiogroup",
+          "name": "main_goal",
+          "title": "My main goal for this professional learning is to:",
+          "choices": [
             {
-              "value": "1",
-              "text": "Not familiar at all"
+              "value": "better_understand_equity_impact",
+              "text": "Better understand how equity, diversity, and inclusion shape students’ experience in CS"
             },
             {
-              "value": "2",
-              "text": "Not familiar"
+              "value": "better_cdo_equity_approach",
+              "text": "Better understand how Code.org's computer science (CS) curriculum addresses equity, diversity, and inclusion"
             },
             {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "4",
-              "text": "Familiar"
-            },
-            {
-              "value": "5",
-              "text": "Extremely familiar"
+              "value": "learn_cs_teaching_strategies_equity",
+              "text": "Learn strategies for creating inclusive CS classrooms"
             }
           ],
-          "rows": [
+          "hasOther": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "current_teacher",
+          "title": "Are you currently teaching CS content? ",
+          "choices": [
             {
-              "value": "equity",
-              "text": "Equity"
+              "value": "yes",
+              "text": "Yes"
             },
             {
-              "value": "diversity",
-              "text": "Diversity"
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "plan_to_teach_cdo",
+          "title": "Are you currently teaching or planning to teach any Code.org CS content? ",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
             },
             {
-              "value": "stereotype_threat",
-              "text": "Stereotype Threat"
+              "value": "prob_yes",
+              "text": "Probably yes"
             },
             {
-              "value": "implicit_bias",
-              "text": "Implicit bias"
+              "value": "dont_know",
+              "text": "I don't know yet"
             },
             {
-              "value": "intersectionality",
-              "text": "Intersectionality"
+              "value": "prob_not",
+              "text": "Probably not"
             },
             {
-              "value": "student_centered_pedagogy",
-              "text": "Student-Centered Pedagogy"
+              "value": "no",
+              "text": "No"
             }
           ]
         },
         {
           "type": "rating",
+          "name": "confidence_create_inclusive_classroom",
+          "title": "How confident do you feel in your ability to create an inclusive classroom when teaching computer science?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not confident at all",
+          "maxRateDescription": "Very confident"
+        },
+        {
+          "type": "rating",
           "name": "ability_meet_diverse_needs_cs",
-          "title": "How confident are you in meeting the diverse learning needs of all students in the classroom?",
-          "rateCount": 5,
-          "rateMax": 5,
+          "title": "How confident do you feel about your ability to meet the diverse learning needs of all students in the classroom?",
+          "rateCount": 7,
+          "rateMax": 7,
           "minRateDescription": "Not confident at all",
           "maxRateDescription": "Extremely confident"
         },
         {
-          "type": "comment",
-          "name": "strategies_inclusive_cs_classroom",
-          "title": "Please share some of the strategies you currently use to create an inclusive CS classroom environment.",
-          "rows": 3
+          "type": "html",
+          "name": "section1_previous_equity_experience",
+          "html": "\n<p><span style='font-size: 12pt;'>How much do you agree with the following statement?</span></p>"
+        },
+        {
+          "type": "rating",
+          "name": "attitude_equity_cs",
+          "title": "Students learn CS better in an inclusive classroom with a teacher who employs equity-informed strategies.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         }
       ]
     },
@@ -157,7 +178,7 @@
         {
           "type": "checkbox",
           "name": "grade",
-          "title": "At what grade levels did you teach this year?",
+          "title": "At what grade levels do you teach or plan to teach?",
           "description": " (Select all that apply)",
           "choices": [
             {

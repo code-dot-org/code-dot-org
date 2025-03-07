@@ -1,7 +1,6 @@
 @no_mobile
 Feature: Using the teacher dashboard homepage (v1)
 
-
   Scenario: Attempt to join a section you own redirects to dashboard with error message
     Given I am a teacher
     And I create a new student section and go home

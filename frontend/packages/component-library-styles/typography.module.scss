@@ -100,8 +100,8 @@ html {
 
 @mixin heading-md {
   @include heading-common;
-  font-family: $barlowSemiCondensed-medium;
-  font-weight: $medium-font-weight;
+  font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 1.5rem;
   line-height: 1.32;
 }
