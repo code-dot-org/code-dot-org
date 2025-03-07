@@ -45,7 +45,7 @@ export const AllTypographyElements: Story = {
   render: () => (
     <>
       <Typography semanticTag="h1" visualAppearance="heading-xxl">
-        This is a Typography Component. (H1)
+        This is a Typography Component. (H1) TEST
       </Typography>
       <Typography semanticTag="h2" visualAppearance="heading-xl">
         This is a Typography Component. (H2)
