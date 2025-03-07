@@ -6,6 +6,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import i18n from '@cdo/apps/pythonlab/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {editorConfig} from './editorConfig';
@@ -126,6 +127,33 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorReadOnlyCompartment,
     editorEditableCompartment,
   ]);
+
+  // Sets aria-label on the input div once code mirror loads
+  useEffect(() => {
+    const setAriaLabel = () => {
+      const cmContentDiv = editorRef.current?.querySelector('.cm-content');
+      if (cmContentDiv) {
+        cmContentDiv.setAttribute('aria-label', i18n.codeEditor());
+      }
+    };
+
+    // Set the aria-label initially
+    setAriaLabel();
+
+    // Ensure we set aria-label if/when code mirror updates
+    const observer = new MutationObserver(setAriaLabel);
+    if (editorRef.current) {
+      observer.observe(editorRef.current, {
+        childList: true,
+        subtree: true,
+      });
+    }
+
+    // Cleanup observer on unmount
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div
