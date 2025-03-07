@@ -1,17 +1,19 @@
+import Button from '@code-dot-org/component-library/button';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Modal, FormGroup, Button, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Modal, FormGroup, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
 
 import 'react-select/dist/react-select.css';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import color from '@cdo/apps/util/color';
 
 import {SelectStyleProps} from '../constants';
 import ButtonList from '../form_components/ButtonList';
 import FieldGroup from '../form_components/FieldGroup';
+
+import style from './RegionalPartnerMiniContact.module.scss';
 
 const ROLES = [
   'Teacher',
@@ -130,7 +132,7 @@ export class RegionalPartnerMiniContact extends React.Component {
           id={`regional-partner-mini-contact-form-${this.props.sourcePageId}`}
           className="regional-partner-mini-contact-form"
         >
-          <div style={styles.intro}>
+          <div className={style.intro}>
             Your local Code.org Regional Partner provides high quality Code.org
             professional learning to teachers, and can help guide your school or
             district on implementation, certification, funding, and more. They
@@ -146,7 +148,7 @@ export class RegionalPartnerMiniContact extends React.Component {
           />
           {this.state.errors.includes('email') && (
             <div
-              style={styles.error}
+              className={style.error}
               id="regional-partner-mini-contact-error-email"
             >
               Please enter an email.
@@ -163,7 +165,7 @@ export class RegionalPartnerMiniContact extends React.Component {
           {this.state.errors.includes('zip') && (
             <div
               id="regional-partner-mini-contact-error-zip"
-              style={styles.error}
+              className={style.error}
             >
               Please enter your school ZIP Code.
             </div>
@@ -184,10 +186,10 @@ export class RegionalPartnerMiniContact extends React.Component {
             answers={GRADE_LEVEL}
             required={false}
             selectedItems={this.state.grade_levels}
-            style={styles.button}
+            className={style.button}
             suppressLineBreak
           />
-          <FormGroup style={styles.select}>
+          <FormGroup className={style.select}>
             <ControlLabel>Your role</ControlLabel>
             <Select
               id="role"
@@ -208,9 +210,13 @@ export class RegionalPartnerMiniContact extends React.Component {
             defaultValue={this.state.notes}
           />
           {!this.state.submitting && (
-            <Button id="submit" onClick={this.submit}>
-              Send
-            </Button>
+            <Button
+              id="submit"
+              onClick={this.submit}
+              type="secondary"
+              text="Send"
+              color="gray"
+            />
           )}
           {this.state.submitting && <span className="fa fa-spin fa-spinner" />}{' '}
         </FormGroup>
@@ -267,11 +273,15 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
   render() {
     return (
       <span>
-        <span onClick={this.open}>{this.props.children}</span>
+        <Button
+          onClick={this.open}
+          className={style.linkButton}
+          text={this.props.children}
+        />
         <Modal show={this.state.showing} onHide={this.close}>
-          <Modal.Header closeButton style={styles.modalHeader} />
-          <Modal.Body style={styles.modalBody}>
-            <div style={styles.miniContactContainer}>
+          <Modal.Header closeButton className={style.modalHeader} />
+          <Modal.Body className={style.modalBody}>
+            <div className={style.miniContactContainer}>
               {this.state.options && (
                 <RegionalPartnerMiniContact
                   options={this.state.options}
@@ -286,31 +296,3 @@ export class RegionalPartnerMiniContactPopupLink extends React.Component {
     );
   }
 }
-
-const styles = {
-  error: {
-    color: color.red,
-  },
-  miniContactContainer: {
-    backgroundColor: color.lightest_cyan,
-    padding: 20,
-    borderRadius: 10,
-    textAlign: 'left',
-  },
-  modalHeader: {
-    padding: '0 15px 0 0',
-    height: 30,
-    borderBottom: 'none',
-  },
-  modalBody: {
-    padding: '0 15px 15px 15px',
-    fontSize: 14,
-    lineHeight: '22px',
-  },
-  intro: {
-    paddingBottom: 10,
-  },
-  select: {
-    maxWidth: 500,
-  },
-};

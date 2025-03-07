@@ -32,9 +32,13 @@ FormDefault.args = {
 
 const DialogTemplate = args => {
   return (
-    <RegionalPartnerMiniContactPopupLink {...args}>
-      <span>Some Children Element</span>
-    </RegionalPartnerMiniContactPopupLink>
+    <p>
+      Fill out{' '}
+      <RegionalPartnerMiniContactPopupLink {...args}>
+        this Form
+      </RegionalPartnerMiniContactPopupLink>
+      .
+    </p>
   );
 };
 

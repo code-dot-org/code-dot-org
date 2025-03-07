@@ -1,0 +1,62 @@
+@import 'color.scss';
+
+.error {
+  color: $red;
+}
+
+.miniContactContainer {
+  background-color: $lightest_cyan;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.modalHeader {
+  padding: 0 15px 0 0;
+  height: 30px;
+  border-bottom: none;
+}
+
+.modalBody {
+  padding: 0 15px 15px 15px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.intro {
+  padding-bottom: 10px;
+}
+
+.select {
+  max-width: 500px;
+}
+
+button.linkButton {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  gap: 10px;
+  text-decoration: underline;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent !important;
+  color: $light_secondary_500 !important;
+
+  -webkit-appearance: none;
+
+  &:active:not([aria-disabled='true']) {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $light_secondary_700 !important;
+  }
+
+  &:focus-visible {
+    border-radius: 0.25rem;
+    outline-offset: 0;
+    color: $light_secondary_500 !important;
+  }
+
+}
