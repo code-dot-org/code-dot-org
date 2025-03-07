@@ -12911,7 +12911,18 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
           }
         }
-        return this.mark(indentDepth, node.body, depth + 1);
+        // Check if body is already a block
+        if (node.body.type === 'BlockStatement') {
+          return this.mark(indentDepth, node.body, depth + 1);
+        } else {
+          // Instead of creating a new block, directly handle indentation and parse the statement.
+          this.addIndent({
+              bounds: this.getBounds(node.body),
+              depth: depth + 1,
+              prefix: this.getIndentPrefix(this.getBounds(node.body), indentDepth),
+          });
+          return this.mark(indentDepth + DEFAULT_INDENT_DEPTH.length, node.body, depth + 1);
+        }
       case 'BlockStatement':
         prefix = this.getIndentPrefix(this.getBounds(node), indentDepth);
         indentDepth += prefix.length;
@@ -19272,6 +19283,7 @@ dedupe = function(path) {
   // is a regular `for` loop.
 
   function parseForStatement(node) {
+    console.log('parseForStatement', node);
     next();
     labels.push(loopLabel);
     expect(_parenL);
@@ -19396,6 +19408,7 @@ dedupe = function(path) {
   }
 
   function parseWhileStatement(node) {
+    console.log('parseWhileStatement', node);
     next();
     node.test = parseParenExpression();
     labels.push(loopLabel);
