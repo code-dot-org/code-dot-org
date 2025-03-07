@@ -137,7 +137,8 @@ begin
   AWS::S3.upload_to_bucket(
     options[:source_bucket],
     # Begin filename with `_` so that it's more likely to be displayed at the beginning of the S3 Console listing.
-    "#{options[:source_prefix]}/_#{options[:log_filename]}",
+    # Delete leading slash if optional source prefix was not provided.
+    "#{options[:source_prefix]}/_#{options[:log_filename]}".delete_prefix('/'),
     file_contents,
     {no_random: true} # Don't prefix log filename with a random unique identifier.
   )
@@ -146,7 +147,8 @@ begin
   AWS::S3.upload_to_bucket(
     options[:destination_bucket],
     # Begin filename with `_` so that it's more likely to be displayed at the beginning of the S3 Console listing.
-    "#{options[:destination_prefix]}/_#{options[:log_filename]}",
+    # # Delete leading slash if optional destination prefix was not provided.
+    "#{options[:destination_prefix]}/_#{options[:log_filename]}".delete_prefix('/'),
     file_contents,
     {no_random: true} # Don't prefix log filename with a random unique identifier.
   )
