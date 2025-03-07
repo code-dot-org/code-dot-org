@@ -9,7 +9,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import i18n from '@cdo/locale';
 
 import {SectionCardBody} from './SectionCardBody';
-
 import {SectionOptionsDropdown} from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
