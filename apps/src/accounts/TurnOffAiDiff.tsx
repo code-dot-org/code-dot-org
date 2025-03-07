@@ -8,7 +8,7 @@ import React from 'react';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {setAiDifferentiationToggledOff} from '@cdo/apps/templates/currentUserRedux';
+import {setAiDifferentiationEnabled} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -16,8 +16,8 @@ import i18n from '@cdo/locale';
 import moduleStyles from './accountSettings.module.scss';
 
 const TurnOffAiDiff: React.FC = () => {
-  const toggledOff = useAppSelector(
-    state => state.currentUser.aiDifferentiationToggledOff
+  const aiDifferentiationEnabled = useAppSelector(
+    state => state.currentUser.aiDifferentiationEnabled
   );
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
@@ -25,15 +25,19 @@ const TurnOffAiDiff: React.FC = () => {
   const handleToggle = () => {
     analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_TOGGLED, {
       'user id': currentUserId,
-      state: !toggledOff ? 'on' : 'off',
+      state: aiDifferentiationEnabled ? 'on' : 'off',
     });
-    new UserPreferences().setAiDifferentiationToggledOff(!toggledOff);
-    dispatch(setAiDifferentiationToggledOff(!toggledOff));
+    new UserPreferences().setAiDifferentiationEnabled(
+      !aiDifferentiationEnabled
+    );
+    dispatch(setAiDifferentiationEnabled(!aiDifferentiationEnabled));
   };
 
   const dispatch = useAppDispatch();
 
-  const setEnabled = toggledOff ? i18n.disabled() : i18n.enabled();
+  const setEnabled = aiDifferentiationEnabled
+    ? i18n.enabled()
+    : i18n.disabled();
 
   return (
     <div>
@@ -48,7 +52,7 @@ const TurnOffAiDiff: React.FC = () => {
         />
       </BodyTwoText>
       <Toggle
-        checked={!toggledOff}
+        checked={aiDifferentiationEnabled}
         onChange={handleToggle}
         name="aiTeacherDiffToggle"
         position={'left'}

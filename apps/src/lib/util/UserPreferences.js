@@ -72,10 +72,9 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    * Save the preference to opt-out of AI Differentiation Chat.
    * @param {boolean} aiDifferentiationToggledOff: True if disabling AI Chat features, false otherwise.
    */
-  setAiDifferentiationToggledOff(aiDifferentiationToggledOff) {
-    console.log('inside set user preferences');
-    return $.post(`/api/v1/users/ai_differentiation_toggled_off`, {
-      ai_differentiation_toggled_off: aiDifferentiationToggledOff,
+  setAiDifferentiationEnabled(aiDifferentiationEnabled) {
+    return $.post(`/api/v1/users/ai_differentiation_enabled`, {
+      ai_differentiation_enabled: aiDifferentiationEnabled,
     });
   }
 
