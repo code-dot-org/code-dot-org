@@ -1,5 +1,4 @@
 import Button from '@code-dot-org/component-library/button';
-import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -94,10 +93,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   return (
     <div
       id="chat-workspace-conversation"
-      className={classNames(
-        moduleStyles.conversationArea,
-        moduleStyles.scrollToBottomContainer
-      )}
+      className={moduleStyles.conversationArea}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {events.map(event => (
