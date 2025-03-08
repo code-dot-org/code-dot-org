@@ -48,9 +48,9 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
           />
         ))}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+        <AITutorSuggestedPrompts />
       </div>
       <WarningModal />
-      <AITutorSuggestedPrompts />
     </div>
   );
 };
