@@ -29,3 +29,10 @@ export enum ModalTypes {
   WARNING = 'warning',
   TEACHER_ONBOARDING = 'teacherOnboarding',
 }
+
+export const RESET_CONVERSATION_CUSTOMIZATION_UPDATES = [
+  'selectedModelId',
+  'temperature',
+  'systemPrompt',
+  'retrievalContexts',
+];

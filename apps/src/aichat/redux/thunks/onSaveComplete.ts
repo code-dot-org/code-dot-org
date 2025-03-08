@@ -3,7 +3,10 @@ import {TestResults} from '@cdo/apps/constants';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {saveTypeToAnalyticsEvent} from '../../constants';
+import {
+  saveTypeToAnalyticsEvent,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../../constants';
 import {AiCustomizations, ViewMode} from '../../types';
 import {
   endSave,
@@ -29,12 +32,7 @@ export const onSaveComplete =
     );
     if (
       changedProperties.some(property =>
-        [
-          'selectedModelId',
-          'temperature',
-          'systemPrompt',
-          'retrievalContexts',
-        ].includes(property)
+        RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(property)
       )
     ) {
       dispatch(setNewChatSession());

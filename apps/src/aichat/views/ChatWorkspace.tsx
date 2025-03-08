@@ -74,6 +74,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [selectedStudent, dispatch]);
 
+  // Do we need to run this when viewAsUserId changes?
+  // Kind of an edge case, but if you load with ?user_id=2 (ie, student project directly)
+  // the teacher's history is being shown in the "Test student model" tab.
+  // We log chat history when a teacher interacts with a student's model -- this could produce weirdness, I think.
   useEffect(() => {
     dispatch(fetchUserChatHistory({userId: currentUserId, isOwnHistory: true}));
   }, [dispatch, currentUserId, currentLevelId]);

@@ -2,7 +2,10 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
 
-import {ModalTypes} from '../constants';
+import {
+  ModalTypes,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
 import {
   AiCustomizations,
   ChatEvent,
@@ -64,13 +67,9 @@ const aichatSlice = createSlice({
 
       const lastResetIndex = action.payload.findLastIndex(event => {
         return (
-          [
-            'selectedModelId',
-            'temperature',
-            'systemPrompt',
-            'retrievalContexts',
-          ].includes((event as ModelUpdate)?.updatedField) ||
-          (event as UserActionEvent)?.descriptionKey === 'CLEAR_CHAT'
+          RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
+            (event as ModelUpdate)?.updatedField
+          ) || (event as UserActionEvent)?.descriptionKey === 'CLEAR_CHAT'
         );
       });
 

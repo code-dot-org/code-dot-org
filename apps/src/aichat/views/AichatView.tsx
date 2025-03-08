@@ -139,6 +139,8 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
 
   // When the level changes or if we are viewing aichat level as a different user
   // (e.g., teacher viewing student work), clear the chat message history and start a new session.
+  // do we need to clear when viewAsUserId changes? seeing issue where I (as teacher) see my history when I load page,
+  // go to view a student, then come back to mine, and it's gone.
   useEffect(() => {
     dispatch(clearChatMessages());
   }, [currentLevelId, viewAsUserId, dispatch]);
