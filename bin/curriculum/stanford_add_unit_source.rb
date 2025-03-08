@@ -63,22 +63,17 @@ def process_s3_file(bucket, key)
   start_time = Time.now
   output_filename = File.join($output_dir, File.basename(key))
 
-  Parallel.each(rows, in_processes: $max_processes) do |row|
+  rows = Parallel.map(rows, in_processes: $max_processes) do |row|
     data = JSON.parse(row)
     channel_id = data['channel_id']
     source = get_project_source(channel_id)
     data['source'] = source
-    # Modify in place to avoid using extra memory
-    row.replace(data.to_json)
+    data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception}"
-    row.replace(nil)
+    row
   end
 
-  # Remove nil values in-place
-  rows.compact!
-
-  # Stream writing to reduce memory overhead
   File.open(output_filename, 'w') do |file|
     rows.each {|row| file.puts(row)}
   end

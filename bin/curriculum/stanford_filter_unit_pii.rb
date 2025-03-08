@@ -62,26 +62,22 @@ def main
 end
 
 def process_file(input_filename)
-  puts "Processing #{input_filename}"
+  puts "Processing #{input_filename} in #{$max_processes} processes..."
   start_time = Time.now
   rows = File.read(input_filename).split("\n")
   output_filename = File.join($output_dir, File.basename(input_filename))
 
-  Parallel.each(rows, in_processes: $max_processes) do |row|
+  rows = Parallel.map(rows, in_processes: $max_processes) do |row|
     data = JSON.parse(row, symbolize_names: true)
     process_row_pii(data)
-    row.replace($options[:pretty] ? JSON.pretty_generate(row) : row.to_json)
+    $options[:pretty] ? JSON.pretty_generate(data) : data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception.message}"
-    row.replace(nil)
+    row
   end
 
-  rows.compact!
-
   File.open(output_filename, 'w') do |file|
-    rows.each do |row|
-      file.puts(row)
-    end
+    rows.each {|row| file.puts(row)}
   end
 
   puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
