@@ -14,7 +14,7 @@ interface SectionListProps {
   showHiddenOnly: boolean;
 }
 
-const NO_SECTION_ID: number = -1;
+const NO_SECTION_ID = -1;
 
 export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
