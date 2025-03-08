@@ -2,8 +2,8 @@ class OpenaiChatController < ApplicationController
   authorize_resource class: false
 
   API_KEY = CDO.openai_student_learning_api_key
-  MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
-
+  # MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
+  MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
   # POST /openai/chat_completion
   def chat_completion
     unless has_required_messages_param?
@@ -19,14 +19,48 @@ class OpenaiChatController < ApplicationController
 
     # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
     # system prompt, create one based on the level context.
+    feature = params[:feature]
     level_id = params[:levelId]
-    script_id = params[:scriptId]
+    unit_id = params[:unitId] ? params[:unitId] : params[:scriptId]
 
-    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AiSystemPrompts::SystemPromptHelper.get_system_prompt(feature, level_id, unit_id)
 
+    puts "------"
+    puts
+    puts "system_prompt"
+    puts
+    puts system_prompt
+
+    puts "------"
+    puts
+    puts "params[:messages]"
+    puts
+    puts params[:messages]
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
-    response = client.request_chat_completion(messages)
+    puts "------"
+    puts
+    puts "messages"
+    puts
+    puts print messages
+
+    if feature == 'evaluation'
+      response_format = {
+        type: "json_schema",
+        json_schema: {
+          name: "evaluation",
+          schema: {
+            type: "object",
+            properties: {
+              evaluation_criteria: {type: "string"},
+              ai_evaluation: {type: "string"},
+              ai_reasoning: {type: "string"}
+            },
+          }
+        }
+      }
+    end
+    response = client.request_chat_completion(messages, response_format)
     response_body = JSON.parse(response.body)
     response_body = response_body['choices'][0]['message'] if response.code == 200
     chat_completion_return_message =  {status: response.code, json: response_body}

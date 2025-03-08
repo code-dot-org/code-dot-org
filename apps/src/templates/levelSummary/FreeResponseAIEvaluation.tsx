@@ -8,6 +8,7 @@ import {logUserLevelEvaluation} from '@cdo/apps/aiEvaluation/userLevelEvaluation
 import SafeMarkdown from '../SafeMarkdown';
 
 import style from '@cdo/apps/levelbuilder/ai-iteration-tools/ai-tutor/ai-tutor-tester.module.scss';
+import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/evaluationApi';
 
 interface StudentResponse {
   user_id: number;
@@ -59,12 +60,20 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   const evaluateStudentResponse = async (studentResponse: StudentResponse) => {
     const studentPrompt = `${basePrompt} Please review the student's responses and indicate whether the response is "great", "ok", or "needs revision". Provide one sentence with your reasoning. The student's instructions are: ${levelData.levelInstructions}.`;
     const studentResponseString = `${studentResponse.student_display_name} replied ${studentResponse.text}`;
-    const chatApiResponse = await getChatCompletionMessage(
-      studentResponseString,
-      [],
-      studentPrompt
-    );
-    const aiEvaluation = chatApiResponse.assistantResponse;
+    const studentWorkSample = {
+      studentId: studentResponse.user_id,
+      studentDisplayName: studentResponse.student_display_name,
+      studentWork: studentResponse.text,
+      levelId: levelData.levelId,
+      unitId: levelData.unitId,
+    };
+    const chatApiResponse = await evaluateStudentWork(studentWorkSample);
+    // const chatApiResponse = await getChatCompletionMessage(
+    //   studentResponseString,
+    //   [],
+    //   studentPrompt
+    // );
+    const aiEvaluation = chatApiResponse;
     if (aiEvaluation) {
       logUserLevelEvaluation({
         userId: studentResponse.user_id,

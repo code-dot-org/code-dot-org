@@ -1,8 +1,17 @@
+require 'cdo/shared_constants'
+
 module AiSystemPrompts::SystemPromptHelper
   # What's shared between Evaluate & AI Tutor?
-  def self.get_basic_system_prompt
+
+  def self.get_system_prompt(feature, level_id, unit_id)
+    level = get_level(level_id)
+    unit = get_unit(unit_id)
+    feature == SharedConstants::AI_FEATURES[:EVALUATION] ? AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, unit) : AiSystemPrompts::AITutorSystemPromptHelper.get_system_prompt(level, unit)
+  end
+
+  def self.get_basic_system_prompt(level, unit)
     base_prompt =
-      "You are an expert Computer Science teacher. Your students are in grades: #{get_grade_levels}. The programming language they are learning is #{get_programming_language}. They are working on a level where they have been asked to #{get_level_instructions}."
+      "You are an expert Computer Science teacher. Your students are in grades: #{get_grade_levels(unit)}. The programming language they are learning is #{get_programming_language(unit)}. They are working on a level where they have been asked to #{get_level_instructions(level)}."
     if programming_level?(level)
       base_prompt += get_starter_code
       base_prompt += get_validated_level_test_file_contents
@@ -10,23 +19,21 @@ module AiSystemPrompts::SystemPromptHelper
     base_prompt
   end
 
-  def get_grade_levels(unit)
-    unit?.get_course_version?.course_offering.grade_levels
+  def self.get_grade_levels(unit)
+    unit.get_course_version.course_offering.grade_levels
   end
 
   # TODO: see if there's a better way to do this maybe via marketing info for course catalog?
   # TODO: also see if there's a unit description that would be helpful. There's one for courses,
   # but it might be too broad.
-  def get_programming_language(unit)
-    case language
-    when unit.csa?
+  def self.get_programming_language(unit)
+    if unit.csa?
       "Java"
-    when unit.csp?
+    elsif unit.csp?
       "JavaScript"
     else
       "Python"
     end
-    language
   end
 
   def self.programming_level?(level)
