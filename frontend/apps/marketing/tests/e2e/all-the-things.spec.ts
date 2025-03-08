@@ -17,12 +17,11 @@ test.describe('All the things UI e2e test', () => {
         // Log out the violations so we can fix them
         // The current allowed violations are:
         // 1. color contrast on overline
-        // 2. iframe no title
         console.warn(
           JSON.stringify(accessibilityScanResults.violations, null, 2),
         );
 
-        expect(accessibilityScanResults.violations.length).toEqual(2);
+        expect(accessibilityScanResults.violations.length).toEqual(1);
       }
     });
   });
