@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -18,14 +18,33 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
   );
+  const showSuggestedPrompts = useAppSelector(
+    state => state.aiTutor.showSuggestedPrompts
+  );
 
+  const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
   useEffect(() => {
-    // Autoscroll to the bottom of the workspace when new messages are added.
-    conversationContainerRef.current?.scrollTo({
-      top: conversationContainerRef.current.scrollHeight,
-      behavior: 'smooth',
-    });
-  }, [storedMessages.length, isWaitingForChatResponse]);
+    // Autoscroll to the bottom of the workspace when new messages, suggested prompts,
+    // or waiting for animation gif is displayed.
+    console.log('showSuggestedPrompts', showSuggestedPrompts);
+    console.log(
+      'conversationContainerRef.current.scrollHeight',
+      conversationContainerRef?.current?.scrollHeight
+    );
+    setTimeout(() => {
+      if (conversationContainerRef.current) {
+        conversationContainerRef.current.scrollTo({
+          top: conversationContainerRef.current.scrollHeight,
+          behavior: 'smooth',
+        });
+      }
+    }, 150); // Small delay to ensure DOM updates before scrolling.
+  }, [
+    storedMessages.length,
+    isWaitingForChatResponse,
+    showSuggestedPrompts,
+    feedbackDetailsOpen,
+  ]);
 
   return (
     <div id="ai-tutor-chat-workspace" className={style.aiTutorChatWorkspace}>
@@ -42,13 +61,16 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
             footer={
               message.role === Role.ASSISTANT &&
               message.chatMessageText !== initialAssistantGreeting ? (
-                <AssistantMessageFeedback messageId={message.id} />
+                <AssistantMessageFeedback
+                  messageId={message.id}
+                  onDetailsOpenChange={setFeedbackDetailsOpen}
+                />
               ) : null
             }
           />
         ))}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
-        <AITutorSuggestedPrompts />
+        {showSuggestedPrompts && <AITutorSuggestedPrompts />}
       </div>
       <WarningModal />
     </div>
@@ -60,11 +82,13 @@ const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
 }) => {
   if (shouldDisplay) {
     return (
-      <img
-        src="/blockly/media/aichat/typing-animation.gif"
-        alt={'Waiting for response'}
-        className={style.waitingForResponse}
-      />
+      <div className={style.waitingAnimationWrapper}>
+        <img
+          src="/blockly/media/aichat/typing-animation.gif"
+          alt={'Waiting for response'}
+          className={style.waitingForResponse}
+        />
+      </div>
     );
   }
   return null;
