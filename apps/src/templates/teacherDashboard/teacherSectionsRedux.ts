@@ -14,6 +14,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {RootState} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
   SectionLoginType,
@@ -791,6 +792,32 @@ type ParticipantTypesResponse = {
   availableParticipantTypes: string[];
 };
 
+export const asyncLoadTeacherHomepageSectionData =
+  (): SectionThunkAction => dispatch => {
+    dispatch(beginAsyncLoad());
+
+    const promises: Promise<object>[] = [
+      HttpClient.fetchJson<AssignmentCourseOffering[]>(
+        '/dashboardapi/sections/valid_course_offerings'
+      ).then(response => dispatch(setCourseOfferings(response.value))),
+      HttpClient.fetchJson<ParticipantTypesResponse>(
+        '/dashboardapi/sections/available_participant_types'
+      ).then(response =>
+        dispatch(
+          setAvailableParticipantTypes(response.value.availableParticipantTypes)
+        )
+      ),
+    ];
+
+    return Promise.all(promises)
+      .catch(err => {
+        console.error(err.message);
+      })
+      .then(() => {
+        dispatch(endAsyncLoad());
+      });
+  };
+
 export const asyncLoadSectionData =
   (id: number | void): SectionThunkAction =>
   dispatch => {
@@ -1113,7 +1140,6 @@ const {
   ltiRosterImportSuccess,
   rosterImportRequest,
   rosterImportSuccess,
-  setAvailableParticipantTypes,
   startSaveRequest,
 } = sectionSlice.actions;
 
@@ -1137,6 +1163,7 @@ export const {
   setSectionCodeReviewExpiresAt,
   setSections,
   setStudentsForCurrentSection,
+  setAvailableParticipantTypes,
   startLoadingSectionData,
   updateSectionAiTutorEnabled,
   updateSelectedSection,

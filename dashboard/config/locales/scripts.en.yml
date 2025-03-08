@@ -20410,3 +20410,28 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        customizing-llms-latm-pilot:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: "(Optional) Foundations in a Day"
+            lessonGroup-2:
+              display_name: "("
+            lessonGroup-4:
+              display_name: User-Centered Design
+          name: customizing-llms-latm-pilot
+          title: Customizing LLMs (LATM Pilot)
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+
+            ##Just Starting this Unit?
+
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+
+            We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
+          student_description: ''

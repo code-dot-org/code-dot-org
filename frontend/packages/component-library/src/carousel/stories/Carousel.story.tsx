@@ -1,5 +1,5 @@
 import type {Meta, StoryFn} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import {within, expect, userEvent} from '@storybook/test';
 
 import Carousel, {CarouselProps} from '../index';
 
@@ -46,11 +46,7 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
         style={{maxWidth: '800px', margin: '0 auto', marginBlock: '2rem'}}
         key={index}
       >
-        <Carousel
-          {...componentArg}
-          key={componentArg.carouselId}
-          children={componentArg.children}
-        />
+        <Carousel {...componentArg} key={componentArg.carouselId} />
       </div>
     ))}
   </>
@@ -73,15 +69,20 @@ DefaultCarousel.parameters = {
         "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content.",
     },
   },
+  eyes: {waitBeforeCapture: 4000},
 };
+// There are no unit (Jest) tests for this component because there are
+// integration issues between Swiper and Jest, and we can cover what we
+// need using Storybook play functions and Eyes tests.
+// See https://codedotorg.atlassian.net/browse/CMS-361 for more context.
 DefaultCarousel.play = async ({
   canvasElement,
 }: {
   canvasElement: HTMLElement;
 }) => {
   const canvas = within(canvasElement);
-  const navArrowPrev = canvas.queryByLabelText('Previous slide');
-  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const navArrowPrev = canvas.getByLabelText('Previous slide');
+  const navArrowNext = canvas.getByLabelText('Next slide');
   const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
   const slides = [
     'This is slide 1',
@@ -92,21 +93,44 @@ DefaultCarousel.play = async ({
     'This is slide 6',
   ];
 
-  // check that the navigation arrows are showing
-  expect(navArrowPrev).toBeInTheDocument();
-  expect(navArrowNext).toBeInTheDocument();
+  // check that slides are in the carousel
+  for (const slideText of slides) {
+    const heading = await canvas.findByText(slideText);
+    await expect(heading).toBeInTheDocument();
+  }
+
+  // check that the next nav arrow is showing and working
+  await expect(navArrowNext).toBeInTheDocument();
+  // click to the next slide group
+  await userEvent.click(navArrowNext);
+  // click to the end of the carousel
+  await userEvent.click(navArrowNext);
+
+  // check that the previous nav arrow is showing and working
+  await expect(navArrowPrev).toBeInTheDocument();
+  // click to the previous slide group
+  await userEvent.click(navArrowPrev);
+  // click to the beginning of the carousel
+  await userEvent.click(navArrowPrev);
 
   // check that the pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
+  for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+    await expect(dot).toBeInTheDocument();
+  }
 
-  // check that slides are in the carousel
-  slides.forEach(async slideText => {
-    const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
-  });
+  // check that pagination dots are working
+  const paginationDotOne = canvas.getByLabelText(paginationDots[0]);
+  const paginationDotTwo = canvas.getByLabelText(paginationDots[1]);
+  const paginationDotThree = canvas.getByLabelText(paginationDots[2]);
+  // click pagination dot 1
+  await userEvent.click(paginationDotOne);
+  // click pagination dot 2
+  await userEvent.click(paginationDotTwo);
+  // click pagination dot 3
+  await userEvent.click(paginationDotThree);
+  // go back to beginning of the carousel
+  await userEvent.click(paginationDotOne);
 };
 
 export const CarouselWithoutNavArrows = SingleTemplate.bind({});
@@ -136,14 +160,14 @@ CarouselWithoutNavArrows.play = async ({
   const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
 
   // check that the navigation arrows are not showing
-  expect(navArrowPrev).not.toBeInTheDocument();
-  expect(navArrowNext).not.toBeInTheDocument();
+  await expect(navArrowPrev).not.toBeInTheDocument();
+  await expect(navArrowNext).not.toBeInTheDocument();
 
   // check that the pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
+  for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+    await expect(dot).toBeInTheDocument();
+  }
 };
 
 export const CarouselWithTouchMove = SingleTemplate.bind({});
@@ -181,20 +205,20 @@ CarouselWithTouchMove.play = async ({
   ];
 
   // check that the navigation arrows are showing
-  expect(navArrowPrev).toBeInTheDocument();
-  expect(navArrowNext).toBeInTheDocument();
+  await expect(navArrowPrev).toBeInTheDocument();
+  await expect(navArrowNext).toBeInTheDocument();
 
   // check that the pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
+  for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+    await expect(dot).toBeInTheDocument();
+  }
 
   // check that slides are in the carousel
-  slides.forEach(async slideText => {
+  for (const slideText of slides) {
     const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
-  });
+    await expect(heading).toBeInTheDocument();
+  }
 };
 
 export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
@@ -234,23 +258,23 @@ CarouselWithCustomSlidesPerView.play = async ({
   ];
 
   // check that the navigation arrows are showing
-  expect(navArrowPrev).toBeInTheDocument();
-  expect(navArrowNext).toBeInTheDocument();
+  await expect(navArrowPrev).toBeInTheDocument();
+  await expect(navArrowNext).toBeInTheDocument();
 
   // check that two pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
+  for (const dotLabel of paginationDots) {
     const dot = await canvas.findByLabelText(dotLabel);
-    expect(dot).toBeInTheDocument();
-  });
+    await expect(dot).toBeInTheDocument();
+  }
 
   // check that the third pagination dot is not showing
-  expect(paginationDotThree).not.toBeInTheDocument();
+  await expect(paginationDotThree).not.toBeInTheDocument();
 
   // check that slides are in the carousel
-  slides.forEach(async slideText => {
+  for (const slideText of slides) {
     const heading = await canvas.findByText(slideText);
-    expect(heading).toBeInTheDocument();
-  });
+    await expect(heading).toBeInTheDocument();
+  }
 };
 
 // TODO CMS-360 - Add Action Block carousel when Action Block component is ready
@@ -363,8 +387,7 @@ VideoCarousels.parameters = {
         'Videos carousels can show or hide captions based on the `showCaption` prop on the `Video` component. There are margins applied between carousels so this displays nicely in Storybook, but this is not a part of the component itself.',
     },
   },
-  // Turning this off because this test is very flaky
-  eyes: {include: false},
+  eyes: {waitBeforeCapture: 4000},
 };
 VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   const canvas = within(canvasElement);
@@ -383,16 +406,16 @@ VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   navArrowNext.forEach(nextArrow => expect(nextArrow).toBeInTheDocument());
 
   // check that the pagination dots are showing on both carousels
-  paginationDots.forEach(async dotLabel => {
+  for (const dotLabel of paginationDots) {
     const dots = await canvas.findAllByLabelText(dotLabel);
     dots.forEach(dot => expect(dot).toBeInTheDocument());
-  });
+  }
 
   // check that videos are visible in both carousels
-  videoTitles.forEach(async videoTitle => {
+  for (const videoTitle of videoTitles) {
     const videos = await canvas.findAllByTitle(videoTitle);
     videos.forEach(video => expect(video).toBeVisible());
-  });
+  }
 };
 
 export const ImageCarousel = SingleTemplate.bind({});
@@ -453,13 +476,13 @@ ImageCarousel.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
 
   // check that the pagination dots are showing
   for (const dotLabel of paginationDots) {
-    const dots = await canvas.findAllByLabelText(dotLabel);
-    dots.forEach(dot => expect(dot).toBeInTheDocument());
+    const dot = await canvas.findByLabelText(dotLabel);
+    await expect(dot).toBeInTheDocument();
   }
 
   // check that images are visible in carousel
   for (const imageSlide of imageSlides) {
-    const images = await canvas.findAllByAltText(imageSlide);
-    images.forEach(image => expect(image).toBeVisible());
+    const image = await canvas.findByAltText(imageSlide);
+    await expect(image).toBeVisible();
   }
 };

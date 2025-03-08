@@ -26,6 +26,8 @@
     "release:dryrun": "turbo release:dryrun",
     "start": "yarn dev",
     "test": "turbo test",
+    "test:ui:ci": "turbo test:ui:ci",
+    "test:ui:local": "turbo test:ui:local",
     "test:unit": "yarn test",
     "typecheck": "turbo typecheck"
   },
