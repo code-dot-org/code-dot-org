@@ -1,4 +1,4 @@
-import Modal from '@code-dot-org/component-library/modal';
+import Dialog from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -8,15 +8,11 @@ import i18n from '@cdo/locale';
 import {archiveAllSections} from '../../teacherDashboard/teacherSectionsRedux';
 
 interface ArchiveAllModalProps {
-  isOpen: boolean;
   onClose: () => void;
 }
 
-export const ArchiveAllModal: React.FC<ArchiveAllModalProps> = ({
-  isOpen,
-  onClose,
-}) => {
-  const [confirmed, setConfirmed] = React.useState(false);
+export const ArchiveAllModal: React.FC<ArchiveAllModalProps> = ({onClose}) => {
+  const [isConfirmed, setIsConfirmed] = React.useState(false);
 
   const [numHidden, setNumHidden] = React.useState(0);
 
@@ -24,54 +20,57 @@ export const ArchiveAllModal: React.FC<ArchiveAllModalProps> = ({
 
   const dispatch = useAppDispatch();
 
-  if (!isOpen) {
-    return null;
-  }
-
-  const archiveAll = () => {
+  const archiveAll = React.useCallback(() => {
     setIsLoading(true);
     HttpClient.post('/sections/archive_all')
-      .then(response => {
-        dispatch(archiveAllSections());
-        setConfirmed(true);
-        return response.json();
-      })
+      .then(response => response.json())
       .then(json => {
+        dispatch(archiveAllSections());
         if (json.num_hidden) {
           setNumHidden(json.num_hidden);
         }
         setIsLoading(false);
+        setIsConfirmed(true);
       })
       .catch(error => {
         console.log('error archiving all sections', error);
         setIsLoading(false);
       });
-  };
+  }, [dispatch, setIsLoading, setIsConfirmed, setNumHidden]);
 
-  const areYouSureProps = {
-    title: i18n.areYouSure(),
-    description: i18n.archiveAllWarning(),
-    primaryButtonProps: {
-      text: i18n.archiveAllSections(),
-      onClick: archiveAll,
-      isPending: isLoading,
-    },
-    secondaryButtonProps: {
-      text: i18n.cancel(),
-      onClick: onClose,
-    },
-  };
+  const areYouSureProps = React.useMemo(
+    () => ({
+      title: i18n.archiveWarning(),
+      description: i18n.archiveAllNote(),
+      primaryButtonProps: {
+        text: i18n.archiveAllSections(),
+        onClick: archiveAll,
+        isPending: isLoading,
+      },
+      secondaryButtonProps: {
+        text: i18n.cancel(),
+        onClick: onClose,
+      },
+    }),
+    [archiveAll, isLoading, onClose]
+  );
 
-  const doneArchiving = {
-    title: i18n.archivedAllSections(),
-    description: i18n.numArchivedSections({numHidden}),
-    primaryButtonProps: {
-      text: i18n.closeDialog(),
-      onClick: onClose,
-    },
-  };
+  const doneArchiving = React.useMemo(
+    () => ({
+      title: i18n.archivedAllSections(),
+      description: i18n.numArchivedSections({numHidden}),
+      primaryButtonProps: {
+        text: i18n.closeDialog(),
+        onClick: onClose,
+      },
+    }),
+    [numHidden, onClose]
+  );
 
-  const modalProps = confirmed ? doneArchiving : areYouSureProps;
-
-  return <Modal {...modalProps} onClose={onClose} />;
+  return (
+    <Dialog
+      {...(isConfirmed ? doneArchiving : areYouSureProps)}
+      onClose={onClose}
+    />
+  );
 };

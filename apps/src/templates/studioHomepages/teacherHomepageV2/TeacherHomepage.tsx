@@ -78,10 +78,11 @@ export const TeacherHomepage: React.FC = () => {
                     type: 'secondary',
                   }}
                 />
-                <ArchiveAllModal
-                  isOpen={archiveAllModalOpen}
-                  onClose={() => setArchiveAllModalOpen(false)}
-                />
+                {archiveAllModalOpen && (
+                  <ArchiveAllModal
+                    onClose={() => setArchiveAllModalOpen(false)}
+                  />
+                )}
               </div>
             </div>
             <SectionList
