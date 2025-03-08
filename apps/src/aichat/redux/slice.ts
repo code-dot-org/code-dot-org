@@ -108,10 +108,6 @@ const aichatSlice = createSlice({
       }
     },
     clearChatMessages: state => {
-      // To do: I think we should probably put this conversation history in chatEventsPast,
-      // rather than studentChatHistory. Or, if we are going to load past history into the conversation history,
-      // find the most recent "break" in the history (eg, clearing of chat) and load everything past it into
-      // chatEventsCurrent, and the rest into chatEventsPast.
       state.studentChatHistory = [];
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];

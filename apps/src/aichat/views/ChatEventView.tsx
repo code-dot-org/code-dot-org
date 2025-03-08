@@ -89,7 +89,6 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
     );
   }
 
-  // do we care if the teacher can't dismiss these notifications on their own history?
   if (isNotification(event)) {
     const {removeId, text, notificationType, timestamp} = event;
     return (
