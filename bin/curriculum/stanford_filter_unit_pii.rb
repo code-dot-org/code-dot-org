@@ -28,8 +28,8 @@ home = '/mnt/tmp-curriculum-export'
 
 raise 'Input directory is required' unless $options[:input_dir] && !$options[:input_dir].to_s.strip.empty?
 $input_dir = File.join(home, 'exported/unfiltered', $options[:input_dir])
-raise 'Input directory must exist' unless Dir.exist?($input_dir)
-raise 'Input directory must not be empty' if Dir.empty?($input_dir)
+raise "Input directory must exist: #{$input_dir}" unless Dir.exist?($input_dir)
+raise "Input directory must not be empty: #{$input_dir}" if Dir.empty?($input_dir)
 
 $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'exported/filtered', $options[:output_dir])
@@ -76,7 +76,7 @@ def process_file(input_filename)
     process_row_pii(data)
     $options[:pretty] ? JSON.pretty_generate(data) : data.to_json
   rescue JSON::ParserError => exception
-    puts "Error parsing JSON: #{exception.message}"
+    puts "Error parsing JSON: #{exception.message}. row:\n#{row}"
     row
   end
 
