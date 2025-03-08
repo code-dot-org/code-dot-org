@@ -25,7 +25,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
   useEffect(() => {
     // Autoscroll to the bottom of the workspace when new messages, suggested prompts,
-    // or waiting for animation gif is displayed.
+    // or waiting animation is displayed.
     setTimeout(() => {
       if (conversationContainerRef.current) {
         conversationContainerRef.current.scrollTo({
