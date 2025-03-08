@@ -26,11 +26,6 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   useEffect(() => {
     // Autoscroll to the bottom of the workspace when new messages, suggested prompts,
     // or waiting for animation gif is displayed.
-    console.log('showSuggestedPrompts', showSuggestedPrompts);
-    console.log(
-      'conversationContainerRef.current.scrollHeight',
-      conversationContainerRef?.current?.scrollHeight
-    );
     setTimeout(() => {
       if (conversationContainerRef.current) {
         conversationContainerRef.current.scrollTo({
