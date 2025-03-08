@@ -12897,21 +12897,8 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         this.jsBlock(node, depth, bounds);
         return this.jsSocketAndMark(indentDepth, node.argument, depth + 1, null);
       case 'ForStatement':
-        this.jsBlock(node, depth, bounds);
-        if (this.opts.categories.loops.beginner && isStandardForLoop(node)) {
-          this.jsSocketAndMark(indentDepth, node.test.right);
-        } else {
-          if (node.init != null) {
-            this.jsSocketAndMark(indentDepth, node.init, depth + 1, NEVER_PAREN, null, ['for-statement-init']);
-          }
-          if (node.test != null) {
-            this.jsSocketAndMark(indentDepth, node.test, depth + 1, 10);
-          }
-          if (node.update != null) {
-            this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
-          }
-        }
-        return this.mark(indentDepth, node.body, depth + 1);
+        this.jsSocketAndMark(indentDepth, node.body, depth + 1);
+        return this.jsSocketAndMark(indentDepth, node.test, depth + 1);
       case 'BlockStatement':
         prefix = this.getIndentPrefix(this.getBounds(node), indentDepth);
         indentDepth += prefix.length;
