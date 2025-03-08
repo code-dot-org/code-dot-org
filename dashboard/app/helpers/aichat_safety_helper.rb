@@ -178,6 +178,8 @@ module AichatSafetyHelper
 
   class StubbedToxicityDetector
     def find_toxicity(_, text, _, _)
+      # Note that it's important that we use the word "Damn" here, as our UI tests specifically use this word
+      # so that we can use a stubbed version of our toxicity detection service in CI environments (ie, Drone).
       text == 'Damn' ?
         {text: text, blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}} :
         nil
