@@ -30,7 +30,6 @@ $options[:output_dir] ||= $options[:input_dir]
 
 $output_dir = File.join('/mnt/tmp-curriculum-export', 'exported/unfiltered', $options[:output_dir])
 FileUtils.mkdir_p($output_dir)
-raise "Output dir must be empty: #{$output_dir}" unless Dir.empty?($output_dir)
 
 require_relative '../../deployment'
 
@@ -52,6 +51,13 @@ end
 $max_processes = 25
 
 def process_s3_file(bucket, key)
+  output_filename = File.join($output_dir, File.basename(key))
+
+  if File.exist?(output_filename)
+    puts "Skipping #{File.basename(key)} because output file already exists: #{output_filename}"
+    return
+  end
+
   puts "Downloading s3://#{bucket}/#{key}"
   start_time = Time.now
   s3 = Aws::S3::Client.new
@@ -61,8 +67,6 @@ def process_s3_file(bucket, key)
 
   puts "Processing #{File.basename(key)} in parallel with #{$max_processes} processes"
   start_time = Time.now
-  output_filename = File.join($output_dir, File.basename(key))
-
   rows = Parallel.map(rows, in_processes: $max_processes) do |row|
     data = JSON.parse(row)
     channel_id = data['channel_id']

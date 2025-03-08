@@ -34,7 +34,6 @@ raise 'Input directory must not be empty' if Dir.empty?($input_dir)
 $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'exported/filtered', $options[:output_dir])
 FileUtils.mkdir_p($output_dir)
-raise 'Output dir must be empty' unless Dir.empty?($output_dir)
 
 require_relative '../../deployment'
 
@@ -62,10 +61,15 @@ def main
 end
 
 def process_file(input_filename)
+  output_filename = File.join($output_dir, File.basename(input_filename))
+  if File.exist?(output_filename)
+    puts "Skipping #{input_filename} because output file already exists: #{output_filename}"
+    return
+  end
+
   puts "Processing #{input_filename} in #{$max_processes} processes..."
   start_time = Time.now
   rows = File.read(input_filename).split("\n")
-  output_filename = File.join($output_dir, File.basename(input_filename))
 
   rows = Parallel.map(rows, in_processes: $max_processes) do |row|
     data = JSON.parse(row, symbolize_names: true)
