@@ -14,6 +14,9 @@ OptionParser.new do |opts|
   opts.on("-o", "--output-dir DIR", "Name of output directory  under /mnt/tmp-curriculum-export/exported/filtered/. default: INPUT_DIR") do |output_dir|
     $options[:output_dir] = output_dir
   end
+  opts.on("-f", "--filename FILENAME", "Name of input file within input directory.") do |filename|
+    $options[:filename] = filename
+  end
   opts.on('-p', "--pretty-print") do
     $options[:pretty] = true
   end
@@ -50,14 +53,25 @@ $max_processes = 25
 def main
   puts "Filtering PII..."
   start_time = Time.now
-  input_filenames = Dir.glob(File.join($input_dir, '*.json'))
-  puts "Found #{input_filenames.size} input files in #{$input_dir}"
+  input_filenames = get_input_filenames
   input_filenames.each do |input_filename|
     process_file(input_filename)
   rescue Parallel::DeadWorker => exception
     puts "parallel error: #{exception.class}: #{exception.message}\n#{exception.backtrace.join("\n")}"
   end
   puts "Filtered PII in #{(Time.now - start_time).to_i} seconds."
+end
+
+def get_input_filenames
+  if $options[:filename]
+    input_filename = File.join($input_dir, $options[:filename])
+    raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
+    puts "Found input file: #{input_filename}"
+    return [input_filename]
+  end
+  input_filenames = Dir.glob(File.join($input_dir, '*.json'))
+  puts "Found #{input_filenames.size} input files in #{$input_dir}"
+  input_filenames
 end
 
 def process_file(input_filename)
