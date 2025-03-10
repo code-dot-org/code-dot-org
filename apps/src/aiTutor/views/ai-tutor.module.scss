@@ -17,10 +17,8 @@ $default-spacing: 16px;
 }
 
 .aiTutorChatWorkspace {
-  overflow-y: auto;
   max-height: 600px;
   flex-grow: 1;
-  box-sizing: border-box;
 }
 
 button.buttonStyle {
