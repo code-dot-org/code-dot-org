@@ -18,7 +18,7 @@ const ShareView: React.FunctionComponent = () => {
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
   const getAvailableOutputWidth = () => {
-    return Math.max(window.innerWidth - 172, 400);
+    return Math.max(window.innerWidth - 150, 400);
   };
 
   const [outputWidth, setOutputWidth] = useState(getAvailableOutputWidth());
