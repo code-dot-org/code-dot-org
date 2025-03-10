@@ -1,16 +1,26 @@
 @import '@code-dot-org/component-library-styles/colors';
 .shareContainer {
   display: flex;
-  color: var(--text-neutral-white-fixed);
+  color: var(--text-neutral-primary);
   height: 100%;
 }
 
 .sidebar {
-  width: 300px;
+  width: 150px;
   margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  gap: 8px;
 }
 
 .consoleContainer {
   height: 100%;
   width: 100%;
+}
+
+.consoleToggle {
+  margin-left: 8px;
+  margin-bottom: 8px;
 }
