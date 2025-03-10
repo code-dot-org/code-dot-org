@@ -1,10 +1,10 @@
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {OpenaiChatCompletionMessage} from '../aiTutor/chatApi';
-import {logUserLevelEvaluation} from './userLevelEvaluations/userLevelEvaluationsApi';
-import {AiFeatures} from '@cdo/generated-scripts/sharedConstants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiFeatures} from '@cdo/generated-scripts/sharedConstants';
 
-const EVALUATE_URL = '/openai/evaluate';
+import {OpenaiChatCompletionMessage} from '../aiTutor/chatApi';
+
+import {logUserLevelEvaluation} from './userLevelEvaluations/userLevelEvaluationsApi';
 
 interface StudentWorkSample {
   studentId: number;
@@ -13,28 +13,41 @@ interface StudentWorkSample {
   levelId: number;
   unitId: number;
 }
+
+interface AIResponse {
+  ai_evaluation: string;
+  ai_reasoning: string;
+}
+
 export async function evaluateStudentWork(
   studentWorkSample: StudentWorkSample
-): Promise<string> {
+): Promise<AIResponse> {
   const response = await evaluationFromOpenAI(
     studentWorkSample.studentWork,
     studentWorkSample.levelId,
     studentWorkSample.unitId
   );
-  const aiEvaluation = response?.content;
-  console.log('from evaluationApi', aiEvaluation);
-  if (aiEvaluation) {
+  let parsedResponse;
+
+  console.log('response', response);
+
+  if (response?.safety_status) {
+    parsedResponse = {
+      ai_evaluation: 'Error',
+      ai_reasoning: response.safety_status,
+    };
+  } else if (response?.content) {
+    parsedResponse = JSON.parse(response?.content);
     logUserLevelEvaluation({
       userId: studentWorkSample.studentId,
       levelId: studentWorkSample.levelId,
-      unitId: 1,
-      evaluationCriteria: 'AI evaluation',
-      aiEvaluation: aiEvaluation,
-      aiReasoning: 'AI evaluation',
+      unitId: studentWorkSample.unitId,
+      evaluationCriteria: parsedResponse.evaluation_criteria,
+      aiEvaluation: parsedResponse.ai_evaluation,
+      aiReasoning: parsedResponse.ai_reasoning,
     });
-    return aiEvaluation;
   }
-  return '';
+  return parsedResponse;
 }
 
 const CHAT_COMPLETION_URL = '/openai/chat_completion';
@@ -62,6 +75,6 @@ export async function evaluationFromOpenAI(
   if (response.ok) {
     return await response.json();
   } else {
-    throw new Error('Error getting chat completion response');
+    throw new Error('Error getting evaluation response');
   }
 }

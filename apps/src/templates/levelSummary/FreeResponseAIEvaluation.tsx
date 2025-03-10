@@ -3,18 +3,18 @@ import React, {useEffect, useState} from 'react';
 
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-import {logUserLevelEvaluation} from '@cdo/apps/aiEvaluation/userLevelEvaluations/userLevelEvaluationsApi';
 
 import SafeMarkdown from '../SafeMarkdown';
 
 import style from '@cdo/apps/levelbuilder/ai-iteration-tools/ai-tutor/ai-tutor-tester.module.scss';
 import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/evaluationApi';
 
-interface StudentResponse {
+interface StudentAnswer {
   user_id: number;
   text: string;
   student_display_name: string;
   aiEvaluation: string;
+  aiReasoning: string;
 }
 
 interface LevelData {
@@ -24,7 +24,7 @@ interface LevelData {
 }
 
 interface FreeResponseAIEvaluationProps {
-  responses: StudentResponse[];
+  responses: StudentAnswer[];
   levelData: LevelData;
 }
 
@@ -32,11 +32,15 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   FreeResponseAIEvaluationProps
 > = ({responses, levelData}) => {
   const [evaluationsPending, setEvaluationsPending] = useState<boolean>(false);
-  const [evaluations, setEvaluations] = useState<StudentResponse[]>([]);
+  const [evaluations, setEvaluations] = useState<StudentAnswer[]>([]);
   const [evaluationCount, setEvaluationCount] = useState<number>(0);
   const [aiSummary, setAiSummary] = useState<string>('');
   const evaluationComplete =
     evaluationCount > 0 && responses.length === evaluationCount;
+
+  console.log('evlautionComplete', evaluationComplete);
+  console.log('evaluationCount', evaluationCount);
+  console.log('responses.length', responses.length);
 
   useEffect(() => {
     if (evaluationComplete) {
@@ -44,9 +48,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       summarizeStudentEvaluations(evaluations);
     }
   }, [evaluations, evaluationComplete]);
-
-  const basePrompt =
-    'You are a teaching assistant for a high school AP Computer Science class where the students are learning JavaScript.';
 
   const getAIEvaluations = async () => {
     setEvaluationsPending(true);
@@ -57,46 +58,27 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     await Promise.allSettled(responsePromises);
   };
 
-  const evaluateStudentResponse = async (studentResponse: StudentResponse) => {
-    const studentPrompt = `${basePrompt} Please review the student's responses and indicate whether the response is "great", "ok", or "needs revision". Provide one sentence with your reasoning. The student's instructions are: ${levelData.levelInstructions}.`;
-    const studentResponseString = `${studentResponse.student_display_name} replied ${studentResponse.text}`;
+  const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
     const studentWorkSample = {
-      studentId: studentResponse.user_id,
-      studentDisplayName: studentResponse.student_display_name,
-      studentWork: studentResponse.text,
+      studentId: studentAnswer.user_id,
+      studentDisplayName: studentAnswer.student_display_name,
+      studentWork: studentAnswer.text,
       levelId: levelData.levelId,
       unitId: levelData.unitId,
     };
-    const chatApiResponse = await evaluateStudentWork(studentWorkSample);
-    // const chatApiResponse = await getChatCompletionMessage(
-    //   studentResponseString,
-    //   [],
-    //   studentPrompt
-    // );
-    const aiEvaluation = chatApiResponse;
-    if (aiEvaluation) {
-      logUserLevelEvaluation({
-        userId: studentResponse.user_id,
-        levelId: levelData.levelId,
-        unitId: levelData.unitId,
-        evaluationCriteria: studentPrompt,
-        aiEvaluation: aiEvaluation,
-        // TODO: separately return reasoning, disentangle the AI call from aiTutor/chatApi.ts
-        aiReasoning:
-          'Figure out how to separate the response from the reasoning',
-      });
-      const evaluation = {
-        ...studentResponse,
-        aiEvaluation: aiEvaluation,
-      };
-      setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
-      setEvaluationCount(prevCount => prevCount + 1);
-    }
+    const aiResponse = await evaluateStudentWork(studentWorkSample);
+    const evaluation = {
+      ...studentAnswer,
+      aiEvaluation: aiResponse.ai_evaluation,
+      aiReasoning: aiResponse.ai_reasoning,
+    };
+    setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
+    setEvaluationCount(prevCount => prevCount + 1);
   };
 
-  const summarizeStudentEvaluations = async (
-    evaluations: StudentResponse[]
-  ) => {
+  const summarizeStudentEvaluations = async (evaluations: StudentAnswer[]) => {
+    const basePrompt =
+      'You are a teaching assistant for a high school AP Computer Science class where the students are learning JavaScript.';
     const sectionPrompt = `${basePrompt} Please review the evaluations of the student responses and based on the results indicate whether the teacher should "review the concept" or "move on to the next lesson". Provide one sentence with your reasoning.`;
     const chatApiResponse = await getChatCompletionMessage(
       evaluations.map(evaluation => evaluation.aiEvaluation).join(' '),
@@ -141,6 +123,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
                     </td>
                     <td className={style.cell}>
                       <div>{evaluation.aiEvaluation}</div>
+                      <div>{evaluation.aiReasoning}</div>
                     </td>
                   </tr>
                 ))}
