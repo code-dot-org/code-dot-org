@@ -28,6 +28,7 @@ export const TeacherHomepage: React.FC = () => {
 
   const sections = useAppSelector(state => state.teacherSections.sections);
 
+  // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
 
   const numSections = React.useMemo(
