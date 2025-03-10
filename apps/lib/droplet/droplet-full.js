@@ -19283,7 +19283,6 @@ dedupe = function(path) {
   // is a regular `for` loop.
 
   function parseForStatement(node) {
-    console.log('parseForStatement', node);
     next();
     labels.push(loopLabel);
     expect(_parenL);
@@ -19408,7 +19407,6 @@ dedupe = function(path) {
   }
 
   function parseWhileStatement(node) {
-    console.log('parseWhileStatement', node);
     next();
     node.test = parseParenExpression();
     labels.push(loopLabel);
