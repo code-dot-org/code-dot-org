@@ -107,6 +107,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               id={`${carouselId}-prev`}
               className={classNames(moduleStyles.swiperNavPrev)}
+              aria-label={'Previous slide'}
             >
               <FontAwesomeV6Icon iconName="arrow-left" />
             </button>
@@ -114,6 +115,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               id={`${carouselId}-next`}
               className={classNames(moduleStyles.swiperNavNext)}
+              aria-label={'Next slide'}
             >
               <FontAwesomeV6Icon iconName="arrow-right" />
             </button>

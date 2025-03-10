@@ -5,53 +5,70 @@ description 'description here'
 markdown <<MARKDOWN
 # Debugging Strategies 
 
+<img src="https://images.code.org/fd0828bb1d9b5cf133d304bff312828a-image-1741370764632.png" alt="coding bug icon" width="100px" style="border-radius:10px; float:left; margin: 5px 0 0px 0px;">
 
-Handout resource 
-Highlevel explain of the strategies
-**Outcome:** Students apply debugging strategies to identify, explain, and fix errors in code.
+<br>
 
-- Teacher introduces three key debugging strategies:
-    - **Code Tracing / Printing Values**
-    - **Error Message Clarifications**
-    - **Insight Assistant (AI-based questions)**
+#### Debugging is a critical skill in coding, helping programmers identify and fix errors in their code. 
 
+#### Effective debugging strategies not only improve code accuracy but also build essential problem-solving and logical thinking skills. 
 
----
----
+<div style="clear:both;"></div>
 
-## Dot Notation
+## Common Debugging Strategies
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Dot notation accesses an object's attributes or methods using a dot (.)
-    </p>
-    <ul>
-    <li style="font-size: 14pt; font-weight: bold;">painter.move()</li><br>
-    <li style="font-size: 14pt; font-weight: bold;">painter.turn_left()</li>
-    </ul>
-   
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 2px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Validation Testing</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;">
+    <p style = "font-size:14pt"> Validation testing checks if your program meets expected results by running predefined tests. <br><br>If a test fails, it means there’s a bug to fix.
+</p>
 </div>
+</details>
 
-## Getting Started with Objects
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 2px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Code Tracing and Print Statements</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;">
+    <p style = "font-size:14pt"> Code tracing follows the flow of your program to understand what each line is doing. <br><br>This can be done mentally, on paper, or by adding print statements.
+</p>
+</div>
+</details>
 
-<table border="1" width="100%" cellpadding="10">
-        <tr>
-            <td width="33%">
-                <img src="https://images.code.org/7d0849ab4adda8a45784b7b4fd541339-image-1741277550544.png" alt="painter = Painter()" width="130%">
-            </td>
-            <td width="67%" style="font-size:14pt;">
-            First, <b>instantiate</b> the object by creating a new instance of the <code>Painter</code> class. <br><br> This is done by assigning the <code> Painter()</code> object to a variable.<br> <i>Here, the variable name is painter, but you can use any name.</i> 
-            </td>
-        </tr>
-        <tr>
-            <td width="33%">
-                <img src="https://images.code.org/069ae6b084ee5e4a0a89a6ad174df043-image-1741277578060.png" alt="painter.move()" width="100%">
-            </td>
-            <td width="67%" style="font-size:14pt;">
-                Now that new object has been <b>instantiated</b>, it has access to the methods defined by the <code>Painter</code>class. <br><br> You can use <b>dot notation</b> to call the methods, like <code>painter.move()</code> or <code>painter.turn_left()</code>
-            </td>
-        </tr>
- </table>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 2px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🤖 AI Assistance</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;">
+    <p style = "font-size:14pt"> The AI chat is a tool that can help debug your code by analyzing errors, explaining unclear messages, and suggesting fixes. <br><br>It’s especially useful when:<br></p>
+<ul>
+<li style = "font-size:14pt">There’s <b>no error message</b>, but the program isn’t behaving as expected.</li>
+<li style = "font-size:14pt"><b>The error message is hard to understand.</b></li>
+<li style = "font-size:14pt">You’ve <b>tried debugging yourself</b> but still aren’t sure what’s wrong.
+</li>
+</ul>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 2px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Error Message Clarifications</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;">
+    <p style = "font-size:14pt"> Error messages are system-generated feedback that help identify issues in your code.  <br><br>They provide traceback messages that show where an error occurred and the type of issue that needs to be fixed.
+</p>
+</div>
+</details>
+<br>
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ These strategies are featured in the <a href="https://docs.google.com/document/d/18Okia2_j-C2QHUhV7_z_a3qgDQvuHdPZP2_hRuq3HUs/edit?usp=sharing" target="blank" rel="noopener noreferrer">Debugging Resource</a> in <a href="https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/7g" target="blank" rel="noopener noreferrer">Lesson 7</a>. 
+</p>
+
+
+</h4>
 
 ## Let's try! 
+
+<h4>
+ Open the  <a href="https://docs.google.com/document/d/18Okia2_j-C2QHUhV7_z_a3qgDQvuHdPZP2_hRuq3HUs/edit?usp=sharing" target="blank" rel="noopener noreferrer">Debugging Strategies</a> resource page in a separate tab to guide you in correcting the errors on the next page. </h4>
+ 
+ 
+
+![]()
 MARKDOWN

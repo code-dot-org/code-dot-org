@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:46:12.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,15 +41,15 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "display_name": "Andrew's Chatbot",
     "bubble_choice_description": "Andrew is a folk music songwriter, but he can never finish his songs. He wants a chatbot app that lets him type in one of his song lyrics then will generate a chorus.",
     "thumbnail_url": "https://images.code.org/a7b7099dc217d4a6a6810868c17fa79b-Lesson 4 - Level 13C - Andrew's Chatbot - Folk Chorus.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:46:12.106+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L13C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L13C_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:46:12.106+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L13C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L13C_2024\"},{\"changed_at\":\"2025-03-07 19:51:19 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

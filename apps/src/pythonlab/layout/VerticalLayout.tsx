@@ -1,8 +1,8 @@
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
-import Output from '@codebridge/Workspace/Output';
 import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
+import VerticalOutput from '@cdo/apps/codebridge/Workspace/VerticalOutput';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
@@ -61,10 +61,10 @@ const VerticalLayout: React.FunctionComponent = () => {
         separatorProps={rightPanelSeparatorProps}
         isDragging={rightPanelDragging}
       />
-      <Output
-        width={rightPanelWidth}
+      <VerticalOutput
+        width={rightPanelWidth || INITIAL_OUTPUT_WIDTH}
         className={moduleStyles.shrinkAndGrow}
-        setOutputSize={setRightPanelSize}
+        setOutputWidth={setRightPanelSize}
       />
     </div>
   );

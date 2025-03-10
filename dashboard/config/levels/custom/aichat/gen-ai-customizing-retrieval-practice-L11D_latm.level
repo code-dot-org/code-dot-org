@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:47:35.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.5",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,15 +41,15 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "display_name": "Cultural Norms Chatbot",
     "bubble_choice_description": "Mariah wants to use a chatbot to help make sure she has the right cultural norms and etiquette when visiting another country.",
     "thumbnail_url": "https://images.code.org/43950e17b8c5bf5b82118e70d8a8bc95-Lesson 7 - Level 11D- Cultural Norms Chatbot.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:35.216+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L11D_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L11D_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:35.216+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L11D_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L11D_2024\"},{\"changed_at\":\"2025-03-07 20:07:06 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,0 +1,25 @@
+{
+  "ci": {
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "bf-cache": "off",
+        "color-contrast": "off",
+        "frame-title": "off",
+        "heading-order": "off",
+        "inspector-issues": "off",
+        "offscreen-images": ["error", {"minScore": 0.5, "maxLength": 1}],
+        "total-byte-weight": ["error", {"minScore": 0.5}],
+        "unminified-javascript": ["error", {"maxLength": 15}],
+        "unused-css-rules": ["error", {"maxLength": 4}],
+        "unused-javascript": ["error", {"maxLength": 6}],
+        "uses-text-compression": ["error", {"maxLength": 5}],
+        "valid-source-maps": "off",
+        "uses-rel-preconnect": "off"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

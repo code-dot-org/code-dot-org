@@ -17,7 +17,7 @@
 #
 class AichatMessage < ApplicationRecord
   belongs_to :aichat_thread
-  has_one :aichat_message_feedback
+  has_one :aichat_message_feedback, dependent: :destroy
 
   enum role: {
     user: 1,
