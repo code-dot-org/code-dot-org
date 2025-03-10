@@ -19,7 +19,8 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import AiDiffChat, {
+import AiDiffChat from '../AiDiffChat';
+import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
   EXTRA_PRACTICE_PROMPT,
@@ -30,7 +31,7 @@ import AiDiffChat, {
   EXIT_TICKET_PROMPT,
   MINI_LESSON_PROMPT,
   LESSON_HOOK_PROMPT,
-} from '../AiDiffChat';
+} from '../AiDiffPredefinedPrompts';
 import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
