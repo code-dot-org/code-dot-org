@@ -20,6 +20,8 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import experiments from '../util/experiments';
+
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
 
@@ -68,7 +70,11 @@ export const Codebridge = React.memo(
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
     const innerLayout = useMemo(() => {
-      if (isShareView && config.layoutComponents.share) {
+      if (
+        isShareView &&
+        config.layoutComponents.share &&
+        experiments.isEnabled(experiments.CODEBRIDGE_SHARE)
+      ) {
         return config.layoutComponents.share;
       }
       let currentLayout = config.activeLayout;
