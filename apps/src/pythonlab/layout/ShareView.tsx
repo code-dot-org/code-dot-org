@@ -14,7 +14,8 @@ const ShareView: React.FunctionComponent = () => {
   );
 
   return (
-    <div className={moduleStyles.container}>
+    <div className={moduleStyles.shareContainer}>
+      <div className={moduleStyles.sidebar}>Sidebar</div>
       {hasPreview(miniApp) ? <ConsoleAndPreviewShare /> : <ConsoleShare />}
     </div>
   );

@@ -1,2 +1,10 @@
+@import '@code-dot-org/component-library-styles/colors';
 .shareContainer {
+  display: flex;
+  color: var(--text-neutral-white-fixed);
+}
+
+.sidebar {
+  width: 300px;
+  margin-top: 120px;
 }
