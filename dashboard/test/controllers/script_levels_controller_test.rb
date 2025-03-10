@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'cdo/script_config'
-require 'pry'
+
 class ScriptLevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include UsersHelper  # For user session state accessors.
