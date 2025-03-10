@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import {HTMLAttributes} from 'react';
+import {ImgHTMLAttributes} from 'react';
 
 import moduleStyles from './image.module.scss';
 
-export interface ImageProps extends HTMLAttributes<HTMLElement> {
+export interface ImageProps extends ImgHTMLAttributes<HTMLElement> {
   /** Image source */
   src: string;
   /** Image alt text */
