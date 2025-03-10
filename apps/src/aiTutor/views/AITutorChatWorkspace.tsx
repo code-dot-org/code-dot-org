@@ -5,6 +5,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {initialAssistantGreeting} from '../constants';
+import {ChatCompletionMessage} from '../types';
 
 import AITutorSuggestedPrompts from './AITutorSuggestedPrompts';
 import AssistantMessageFeedback from './AssistantMessageFeedback';
@@ -14,6 +15,7 @@ import style from './ai-tutor.module.scss';
 
 const AITutorChatWorkspace: React.FunctionComponent = () => {
   const conversationContainerRef = useRef<HTMLDivElement>(null);
+  const lastAssistantMessageRef = useRef<HTMLDivElement | null>(null);
   const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
@@ -23,6 +25,36 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   );
 
   const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
+
+  const findAssistantLastIndex = (array: ChatCompletionMessage[]) => {
+    for (let i = array.length - 1; i >= 0; i--) {
+      if (array[i].role === Role.ASSISTANT) {
+        return i;
+      }
+    }
+    return -1;
+  };
+  const lastAssistantMessageIndex = findAssistantLastIndex(storedMessages);
+  const isLastMessageFromAssistant =
+    storedMessages.length - 1 === lastAssistantMessageIndex;
+
+  useEffect(() => {
+    // Autoscroll to the bottom of the workspace when new messages, suggested prompts,
+    // or waiting animation is displayed.
+    setTimeout(() => {
+      if (lastAssistantMessageRef.current && isLastMessageFromAssistant) {
+        lastAssistantMessageRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start', // Ensures it scrolls to the top of the message.
+        });
+      }
+    }, 250); // Small delay to ensure DOM updates before scrolling.
+  }, [
+    storedMessages.length,
+    isWaitingForChatResponse,
+    isLastMessageFromAssistant,
+  ]);
+
   useEffect(() => {
     // Autoscroll to the bottom of the workspace when new messages, suggested prompts,
     // or waiting animation is displayed.
@@ -47,23 +79,30 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
         className={style.conversationContainer}
         ref={conversationContainerRef}
       >
-        {storedMessages.map((message, index) => (
-          <ChatMessage
-            key={message.id ?? `message-${index}`}
-            text={message.chatMessageText}
-            role={message.role}
-            customStyles={style}
-            footer={
-              message.role === Role.ASSISTANT &&
-              message.chatMessageText !== initialAssistantGreeting ? (
-                <AssistantMessageFeedback
-                  messageId={message.id}
-                  onDetailsOpenChange={setFeedbackDetailsOpen}
-                />
-              ) : null
-            }
-          />
-        ))}
+        {storedMessages.map((message, index) => {
+          const isLastAssistantMessage = index === lastAssistantMessageIndex;
+          return (
+            <div
+              key={message.id ?? `message-${index}`}
+              ref={isLastAssistantMessage ? lastAssistantMessageRef : null}
+            >
+              <ChatMessage
+                text={message.chatMessageText}
+                role={message.role}
+                customStyles={style}
+                footer={
+                  message.role === Role.ASSISTANT &&
+                  message.chatMessageText !== initialAssistantGreeting ? (
+                    <AssistantMessageFeedback
+                      messageId={message.id}
+                      onDetailsOpenChange={setFeedbackDetailsOpen}
+                    />
+                  ) : null
+                }
+              />
+            </div>
+          );
+        })}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
         <AITutorSuggestedPrompts />
       </div>
