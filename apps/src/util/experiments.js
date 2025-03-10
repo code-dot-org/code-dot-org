@@ -63,7 +63,7 @@ experiments.CSP_VALIDATION_VIA_AI = 'csp_validation_via_ai';
 experiments.FREE_RESPONSE_AI_ANALYSIS = 'free_response_ai_analysis';
 // Allows users to view the new version of the teacher homepage
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
-// Use the new version of python lab share view
+// Use the new version of codebridge share view
 experiments.CODEBRIDGE_SHARE = 'codebridge-share';
 
 /**

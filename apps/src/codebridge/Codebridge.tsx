@@ -18,9 +18,8 @@ import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import experiments from '../util/experiments';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
