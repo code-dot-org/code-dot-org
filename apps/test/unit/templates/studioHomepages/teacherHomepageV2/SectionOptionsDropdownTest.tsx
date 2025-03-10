@@ -65,7 +65,7 @@ const SECTIONS: Section[] = [
     restrictSection: false,
     sectionInstructors: [],
     sharingDisabled: false,
-    studentCount: 1,
+    studentCount: 0,
     syncEnabled: false,
     ttsAutoplayEnabled: false,
     unitId: null,
