@@ -7,6 +7,7 @@ import Console from '@cdo/apps/codebridge/Console/Console';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
+import {hasPreview} from '../utils';
 
 import moduleStyles from './output.module.scss';
 
@@ -51,7 +52,7 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
       ?.fit();
   }, [consoleSize]);
 
-  if (!miniApp) {
+  if (!hasPreview(miniApp)) {
     return (
       <div
         className={classNames(moduleStyles.outputContainer, className)}
