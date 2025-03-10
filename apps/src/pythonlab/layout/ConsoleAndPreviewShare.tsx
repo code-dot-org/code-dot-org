@@ -7,13 +7,20 @@ import moduleStyles from './share-view.module.scss';
 
 interface ConsoleAndPreviewShareProps {
   consoleVisible: boolean;
+  availableWidth: number;
 }
 
 const ConsoleAndPreviewShare: React.FunctionComponent<
   ConsoleAndPreviewShareProps
-> = ({consoleVisible}) => {
+> = ({consoleVisible, availableWidth}) => {
   if (consoleVisible) {
-    return <HorizontalOutput height={800} setOutputHeight={() => {}} />;
+    return (
+      <HorizontalOutput
+        height={800}
+        width={availableWidth}
+        setOutputHeight={() => {}}
+      />
+    );
   }
 
   return (
