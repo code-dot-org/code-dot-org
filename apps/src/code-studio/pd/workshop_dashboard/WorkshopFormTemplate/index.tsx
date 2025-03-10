@@ -71,7 +71,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     ? '/course_offerings/self_paced_pl_course_offerings'
     : '';
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const {data: courseOfferings} =
     useFetch<CourseOffering[]>(courseOfferingsUrl);
 
@@ -124,40 +123,33 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   return (
     <form id="workshop-form-template" className={styles.container}>
       <Heading1 visualAppearance="heading-xl">{heading}</Heading1>
-      {/* Basics */}
       <Basics
         state={workshopFormState}
         courseOfferings={courseOfferings}
         handleChange={handleChange}
         config={config}
       />
-      {/* Schedule */}
       <Schedule state={sessionFormState} />
-      {/* PartnerFacilitator */}
       <PartnerFacilitator
         state={workshopFormState}
         handleChange={handleChange}
         config={config}
       />
-      {/* EmailsReminders */}
       <EmailsReminders
         state={workshopFormState}
         handleChange={handleChange}
         config={config}
       />
-      {/* AdditionalInfo */}
       <AdditionalInfo
         state={workshopFormState}
         handleChange={handleChange}
         config={config}
       />
-      {/* PublishSettings */}
       <PublishSettings
         state={workshopFormState}
         handleChange={handleChange}
         config={config}
       />
-      {/* PublishCancelButtons */}
       <PublishCancelButtons publish={() => {}} cancel={() => {}} />
     </form>
   );
