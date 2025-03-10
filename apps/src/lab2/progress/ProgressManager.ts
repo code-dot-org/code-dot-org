@@ -8,7 +8,6 @@ import {getAppOptionsEditingExemplar} from '../projects/utils';
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
-  exemplarSettings: ExemplarSettings | undefined;
   abstract shouldCheckConditions(): boolean;
   abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
@@ -57,7 +56,7 @@ export default class ProgressManager {
   private validator: Validator | undefined;
   private onProgressChange: () => void;
   private currentValidationState: ValidationState;
-  exemplarSettings: ExemplarSettings | undefined;
+  private exemplarSettings: ExemplarSettings | undefined;
 
   constructor(onProgressChange: () => void) {
     this.currentValidations = undefined;

@@ -8,19 +8,18 @@ import {DEFAULT_PACK} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import {setIsPlaying} from '../redux/musicRedux';
 
 import moduleStyles from './ExemplarPlayer.module.scss';
 
 interface ExemplarPlayerViewProps {
-  getPlaybackEvents: () => PlaybackEvent[];
+  playbackEvents: PlaybackEvent[];
   title: string;
   packId: string | null;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
-  getPlaybackEvents,
+  playbackEvents,
   title,
   packId,
 }) => {
@@ -31,7 +30,6 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   if (playerRef.current === null) {
     playerRef.current = new MusicPlayer();
   }
-  const simple2SequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
   const [exemplarIsPlaying, setExemplarIsPlaying] = useState<boolean>(false);
   // Adjust the packId and preload sounds.
   const onMount = useCallback(async () => {
@@ -43,27 +41,24 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
         currentLibrary.getKey()
       );
     }
-
-    // Clear any prior events to prepare playback.
-    simple2SequencerRef.current.clear();
-    await playerRef.current?.preloadSounds(getPlaybackEvents(), () => {});
-  }, [packId, getPlaybackEvents]);
+    await playerRef.current?.preloadSounds(playbackEvents, () => {});
+  }, [packId, playbackEvents]);
 
   useEffect(() => {
     onMount();
   }, [onMount]);
 
-  // Uses the already compiled song to preload sounds and play it.
+  // Play the already compiled song with the pre-loads sounds.
   const onPlaySong = useCallback(async () => {
     Blockly.getMainWorkspace().hideChaff();
     dispatch(setIsPlaying(false));
     playerRef.current?.stopSong();
 
     // Play the song using the compiled events.
-    playerRef.current?.playSong(getPlaybackEvents());
+    playerRef.current?.playSong(playbackEvents);
 
     setExemplarIsPlaying(true);
-  }, [dispatch, getPlaybackEvents]);
+  }, [dispatch, playbackEvents]);
 
   // Stop the exemplar song, updating Redux and local state.
   const onStopSong = useCallback(() => {

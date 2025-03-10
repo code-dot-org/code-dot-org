@@ -324,6 +324,7 @@ class UnconnectedMusicView extends React.Component {
     }
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
+    this.setExemplarPlaybackEvents();
 
     this.props.isPlayView
       ? this.musicBlocklyWorkspace.initHeadless()
@@ -538,6 +539,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getExemplarPlaybackEvents = () => {
+    return this.exemplarPlaybackEvents || [];
+  };
+
+  setExemplarPlaybackEvents = () => {
     const exemplarSources = this.getExemplarSources();
     if (!exemplarSources) {
       return [];
@@ -548,7 +553,8 @@ class UnconnectedMusicView extends React.Component {
     workspace.loadCode(exemplarSources);
     workspace.compileSong({Sequencer: sequencer}, BlockMode.SIMPLE2);
     workspace.executeCompiledSong();
-    return sequencer.getPlaybackEvents();
+    this.exemplarPlaybackEvents = sequencer.getPlaybackEvents();
+    workspace.dispose();
   };
 
   onBlockSpaceChange = e => {
@@ -878,7 +884,7 @@ class UnconnectedMusicView extends React.Component {
           }
           analyticsReporter={this.analyticsReporter}
           blocklyWorkspace={this.musicBlocklyWorkspace}
-          getExemplarEvents={this.getExemplarPlaybackEvents}
+          exemplarPlaybackEvents={this.getExemplarPlaybackEvents()}
         />
         <Callouts />
       </AnalyticsContext.Provider>

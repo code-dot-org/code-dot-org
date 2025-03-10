@@ -7,10 +7,6 @@ import {AppName, ExemplarSettings} from '../../types';
 
 import moduleStyles from './exemplar-settings.module.scss';
 
-const AppExemplarSupport: {[key in AppName]?: boolean} = {
-  music: true,
-};
-
 interface ExemplarSettingsProps {
   exemplarDefined: boolean;
   exemplarSettings: ExemplarSettings;
@@ -30,16 +26,6 @@ const ExemplarValidation: React.FunctionComponent<ExemplarSettingsProps> = ({
   onChange,
   appName,
 }) => {
-  const appExemplarSupported = AppExemplarSupport[appName];
-
-  if (!appExemplarSupported) {
-    return (
-      <div>
-        {`Exemplar settings are not available for ${appName}. Contact the engineering team for further details.`}
-      </div>
-    );
-  }
-
   return (
     <div className={moduleStyles.section}>
       <CollapsibleSection

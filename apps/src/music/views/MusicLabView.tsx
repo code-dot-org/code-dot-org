@@ -65,7 +65,7 @@ interface MusicLabViewProps {
   allowPackSelection: boolean;
   analyticsReporter: AnalyticsReporter;
   blocklyWorkspace: MusicBlocklyWorkspace;
-  getExemplarEvents: () => PlaybackEvent[];
+  exemplarPlaybackEvents: PlaybackEvent[];
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -83,7 +83,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   allowPackSelection,
   analyticsReporter,
   blocklyWorkspace,
-  getExemplarEvents,
+  exemplarPlaybackEvents,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -300,7 +300,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               exemplarSources &&
               !isEditingExemplar && (
                 <ExemplarPlayerView
-                  getPlaybackEvents={getExemplarEvents}
+                  playbackEvents={exemplarPlaybackEvents}
                   title={exemplarSettings.playerTitle!}
                   packId={currentPackId}
                 />
@@ -316,7 +316,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       isEditingExemplar,
       onInstructionsTextClick,
       currentPackId,
-      getExemplarEvents,
+      exemplarPlaybackEvents,
     ]
   );
 
