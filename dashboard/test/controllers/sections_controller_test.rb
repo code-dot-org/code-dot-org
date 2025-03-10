@@ -259,7 +259,8 @@ class SectionsControllerTest < ActionController::TestCase
     post :archive_all
 
     assert_response :success
-    assert_equal ({num_hidden: 5}), JSON.parse(@response.body)
+    response_json = JSON.parse(@response.body)
+    assert_equal 5, response_json['num_hidden']
     @teacher.sections_owned.each do |section|
       assert_equal true, section.hidden
     end
@@ -279,7 +280,8 @@ class SectionsControllerTest < ActionController::TestCase
     coteacher_section.reload
     assert_equal false, coteacher_section.hidden
 
-    assert_equal ({num_hidden: 5}), JSON.parse(@response.body)
+    response_json = JSON.parse(@response.body)
+    assert_equal 5, response_json['num_hidden']
     @teacher.sections_owned.each do |section|
       assert_equal true, section.hidden
     end
