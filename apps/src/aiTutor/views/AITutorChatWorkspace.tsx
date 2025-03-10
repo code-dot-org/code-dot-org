@@ -33,7 +33,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
           behavior: 'smooth',
         });
       }
-    }, 150); // Small delay to ensure DOM updates before scrolling.
+    }, 250); // Small delay to ensure DOM updates before scrolling.
   }, [
     storedMessages.length,
     isWaitingForChatResponse,
@@ -65,7 +65,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
           />
         ))}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
-        {showSuggestedPrompts && <AITutorSuggestedPrompts />}
+        <AITutorSuggestedPrompts />
       </div>
       <WarningModal />
     </div>
