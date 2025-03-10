@@ -2,8 +2,24 @@ class OpenaiChatController < ApplicationController
   authorize_resource class: false
 
   API_KEY = CDO.openai_student_learning_api_key
-  # MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
-  MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
+
+  AI_TUTOR = SharedConstants::AI_FEATURES[:AI_TUTOR]
+  AI_TUTOR_MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
+
+  EVALUATION = SharedConstants::AI_FEATURES[:EVALUATION]
+  EVALUATE_MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
+
+  FEATURE_DETAILS = {
+    AI_TUTOR => {
+      api_key: API_KEY,
+      model: AI_TUTOR_MODEL
+    },
+    EVALUATION => {
+      api_key: API_KEY,
+      model: EVALUATE_MODEL,
+    }
+  }
+
   # POST /openai/chat_completion
   def chat_completion
     unless has_required_messages_param?
@@ -17,34 +33,17 @@ class OpenaiChatController < ApplicationController
     # If the content is profane, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {safety_status: filter_result.type, flagged_content: filter_result.content}) if filter_result && filter_result.type == 'profanity'
 
-    # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
-    # system prompt, create one based on the level context.
     feature = params[:feature]
     level_id = params[:levelId]
     unit_id = params[:unitId] ? params[:unitId] : params[:scriptId]
 
+    # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
+    # system prompt, create one based on the level and feature context.
     system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AiSystemPrompts::SystemPromptHelper.get_system_prompt(feature, level_id, unit_id)
 
-    puts "------"
-    puts
-    puts "system_prompt"
-    puts
-    puts system_prompt
-
-    puts "------"
-    puts
-    puts "params[:messages]"
-    puts
-    puts params[:messages]
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
-    puts "------"
-    puts
-    puts "messages"
-    puts
-    puts print messages
-
-    if feature == 'evaluation'
+    if feature == SharedConstants::AI_FEATURES[:EVALUATION]
       response_format = {
         type: "json_schema",
         json_schema: {
@@ -60,6 +59,7 @@ class OpenaiChatController < ApplicationController
         }
       }
     end
+    client = client(feature)
     response = client.request_chat_completion(messages, response_format)
     response_body = JSON.parse(response.body)
     response_body = response_body['choices'][0]['message'] if response.code == 200
@@ -76,8 +76,10 @@ class OpenaiChatController < ApplicationController
     params[:messages].present?
   end
 
-  private def client
-    OpenaiChatHelper::Client.new(API_KEY, MODEL)
+  private def client(feature)
+    api_key = FEATURE_DETAILS[feature][:api_key]
+    model = FEATURE_DETAILS[feature][:model]
+    OpenaiChatHelper::Client.new(api_key, model)
   end
 
   private def prepend_system_prompt(system_prompt, messages)
