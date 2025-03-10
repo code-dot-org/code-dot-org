@@ -4,7 +4,7 @@ module AichatSagemakerHelper
 
   def self.create_sagemaker_client
     # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments
-    CI::Utils.ci_job_ui_tests? ?
+    Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services ?
       StubbedSagemakerClient.new :
       Aws::SageMakerRuntime::Client.new
   end
