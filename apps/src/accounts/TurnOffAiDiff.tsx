@@ -25,7 +25,7 @@ const TurnOffAiDiff: React.FC = () => {
   const handleToggle = () => {
     analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_TOGGLED, {
       'user id': currentUserId,
-      state: aiDifferentiationEnabled ? 'on' : 'off',
+      state: aiDifferentiationEnabled ? 'off' : 'on',
     });
     new UserPreferences().setAiDifferentiationEnabled(
       !aiDifferentiationEnabled
