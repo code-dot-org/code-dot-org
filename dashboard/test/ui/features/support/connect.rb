@@ -11,7 +11,6 @@ $browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
 
 MAX_CONNECT_RETRIES = 3
 SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
-CI_SELENIUM_URL = ENV.fetch('CI_SELENIUM_URL', 'http://localhost:4444').freeze
 
 # Run all feature scenarios in a single session.
 def single_session?
@@ -68,7 +67,7 @@ end
 def get_browser(test_run_name)
   browser = nil
   if ENV['TEST_LOCAL'] == 'true' || ENV['CI'] == 'true' # TODO: only on first try
-    headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
+    headless = ENV['TEST_LOCAL_HEADLESS'] == 'true' || ENV['CI'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
     $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
