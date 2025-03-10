@@ -128,6 +128,11 @@ const FreeResponseResponses = ({
   const showAIAnalysis =
     experiments.isEnabled(experiments.FREE_RESPONSE_AI_ANALYSIS) &&
     AiEvaluationMVPUnits.includes(unitName);
+  const responsesForAi = responses.map(response => {
+    response.user_id;
+    response.student_display_name;
+    response.text;
+  });
 
   return (
     <div className={styles.studentResponsesContent}>
@@ -225,7 +230,10 @@ const FreeResponseResponses = ({
         />
       )}
       {showAIAnalysis && (
-        <FreeResponseAIEvaluation responses={responses} levelData={levelData} />
+        <FreeResponseAIEvaluation
+          responses={responsesForAi}
+          levelData={levelData}
+        />
       )}
     </div>
   );

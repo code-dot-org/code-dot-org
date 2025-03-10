@@ -3,9 +3,9 @@ module AiSystemPrompts::EvaluateSystemPromptHelper
     evaluation_criteria = get_evaluation_criteria(level)
     evaluation_structure = <<~TEXT
       Please review the student's work. Respond in correctly formatted JSON.
-      evaluation_criteria should just be a copy of #{evaluation_criteria}.
-      ai_evaluation should be your assessment of the student's work. Respond with "great", "ok", or "needs revision".
-      ai_reasoning should be rovide one sentence with your reasoning.
+      evaluationCriteria should just be a copy of #{evaluation_criteria}.
+      aiEvaluation should be your assessment of the student's work. Respond with "great", "ok", or "needs revision".
+      aiReasoning should be rovide one sentence with your reasoning.
     TEXT
     prompt = AiSystemPrompts::SystemPromptHelper.get_basic_system_prompt(level, unit)
     prompt << evaluation_structure
