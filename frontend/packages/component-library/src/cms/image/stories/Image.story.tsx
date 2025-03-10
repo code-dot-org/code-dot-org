@@ -10,7 +10,7 @@ export default {
 type Story = StoryObj<typeof Image>;
 
 //
-// TEMPLATE
+// STORIES
 //
 export const DefaultImage: Story = {
   args: {
