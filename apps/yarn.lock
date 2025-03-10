@@ -3766,9 +3766,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A."
   dependencies:
+    dompurify: "npm:^3.2.4"
     lodash: "npm:^4.17.21"
   peerDependencies:
     classnames: ^2.5.1
+    dompurify: ^3.2.4
     react: ">=16"
     react-dom: ">=16"
     swiper: ^11.0.5
@@ -8061,6 +8063,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/trusted-types@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "@types/trusted-types@npm:2.0.7"
+  checksum: 10/8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
+  languageName: node
+  linkType: hard
+
 "@types/unist@npm:*, @types/unist@npm:^2.0.0":
   version: 2.0.3
   resolution: "@types/unist@npm:2.0.3"
@@ -10328,6 +10337,7 @@ __metadata:
     mocha: "npm:^10.6.0"
     mock-firmata: "npm:0.2.0"
     moment: "npm:^2.29.4"
+    moment-timezone: "npm:^0.5.47"
     object-fit-images: "npm:^3.2.3"
     papaparse: "npm:^5.4.1"
     path-browserify: "npm:^1.0.1"
@@ -13079,6 +13089,18 @@ canvg@gabelerner/canvg:
   dependencies:
     domelementtype: "npm:^2.2.0"
   checksum: 10/e0d2af7403997a3ca040a9ace4a233b75ebe321e0ef628b417e46d619d65d47781b2f2038b6c2ef6e56e73e66aec99caf6a12c7e687ecff18ef74af6dfbde5de
+  languageName: node
+  linkType: hard
+
+"dompurify@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "dompurify@npm:3.2.4"
+  dependencies:
+    "@types/trusted-types": "npm:^2.0.7"
+  dependenciesMeta:
+    "@types/trusted-types":
+      optional: true
+  checksum: 10/98570c53385518a2f9b617f796926338856acfdd3369c88b5905bddf96bd7d391bf8a5433127155e0046e6faa2bfb767185fcd571b865dfabe624c099e2537f5
   languageName: node
   linkType: hard
 
@@ -20892,6 +20914,15 @@ canvg@gabelerner/canvg:
   dependencies:
     board-io: "npm:^3.0.5"
   checksum: 10/b6b95409b02f3e4d2248d34e80b1175870f6bfb34f4bd3764c31fef6e40915a1c5c7452d8fbd84731015721053ed37745953cc3601a377f1a100050a5332d103
+  languageName: node
+  linkType: hard
+
+"moment-timezone@npm:^0.5.47":
+  version: 0.5.47
+  resolution: "moment-timezone@npm:0.5.47"
+  dependencies:
+    moment: "npm:^2.29.4"
+  checksum: 10/b2ad32e6b7ea4ce99756c9f571f8eb1bdd6592ecdc2bf3f7fb988ae980a49a7e87b986776090571b9608c8576205f839b736dc7589c180ce36c82fad4b8416c6
   languageName: node
   linkType: hard
 

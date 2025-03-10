@@ -2,6 +2,8 @@ import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+
 import {ItemRowProps} from './types';
 
 import moduleStyles from '../styles/filebrowser.module.scss';
@@ -43,6 +45,7 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
           iconName="ellipsis-v"
           className={moduleStyles['button-kebab']}
           id={`uitest-file-${item.id}-kebab`}
+          ariaLabel={codebridgeI18n.fileOptions()}
         >
           <span
             className={moduleStyles['button-bar']}

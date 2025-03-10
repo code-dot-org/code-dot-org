@@ -13,11 +13,17 @@ function initPage() {
   const section = getScriptData('section');
   const canEnableAITutor = getScriptData('canEnableAITutor');
 
+  const sectionWithUpdatedFields = {
+    ...section,
+    grades: section.grade,
+    lessonExtras: section.stageExtras,
+  };
+
   ReactDOM.render(
     <div className={moduleStyles.containerWithMarginTop}>
       <Heading1>{i18n.editSectionDetails()}</Heading1>
       <SectionsSetUpContainer
-        sectionToBeEdited={section}
+        sectionToBeEdited={sectionWithUpdatedFields}
         canEnableAITutor={canEnableAITutor}
         defaultRedirectUrl="/home"
       />

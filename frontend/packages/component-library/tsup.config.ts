@@ -2,6 +2,7 @@ import {defineConfig} from 'tsup';
 import {postcssModules, sassPlugin} from 'esbuild-sass-plugin';
 import type {Options} from 'tsup';
 import {glob} from 'glob';
+import {spawnSync} from 'node:child_process';
 
 const entryPoints = glob.sync('./src/**/index.ts', {
   posix: true,
@@ -17,14 +18,41 @@ function createConfig(format: 'cjs' | 'esm'): Options {
   return {
     entry: entryPoints,
     outDir: `dist/${format}`,
-    clean: true,
     target: 'es2019',
     format: [format],
+    dts: false, // See typescript generator below
+    async onSuccess() {
+      console.log(`Generating typescript types...`);
+      // This generates the .d.ts files using the official typescript compiler, `tsc`
+      // rather than using the esbuild implementation that uses the Microsoft API Extractor
+      const tsc = spawnSync('tsc', [
+        '--emitDeclarationOnly',
+        '--declaration',
+        '--project',
+        'src',
+        '--outDir',
+        `dist/${format}`,
+      ]);
+      const tscAlias = spawnSync('tsc-alias', [
+        '-p',
+        'src/tsconfig.json',
+        '--outDir',
+        `dist/${format}`,
+      ]);
+
+      if (tsc.status === 0 && tscAlias.status === 0) {
+        console.log(`Generating typescript types success`);
+      } else {
+        console.error(`Generating typescript types failed`);
+        console.error('tsc:', tsc.stdout.toString(), tsc.stderr.toString());
+        console.error(
+          'tsc-alias:',
+          tscAlias.stdout.toString(),
+          tscAlias.stderr.toString(),
+        );
+      }
+    },
     sourcemap: true,
-    external: [
-      '/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf',
-      '/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf',
-    ],
     esbuildPlugins: [
       sassPlugin({
         // In ESM mode, CSS Modules are generated which can be cached via the CSS loader.

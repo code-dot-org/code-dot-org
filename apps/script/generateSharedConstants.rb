@@ -118,6 +118,7 @@ def main
       PROJECT_SUBMISSION_STATUS
       EDUCATOR_ROLES
       AI_DIFF_CONTEXT
+      DISALLOWED_ROUTES
     ),
     file_type: 'ts'
   )

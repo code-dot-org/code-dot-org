@@ -1,16 +1,16 @@
 name 'csaif_pl_check_for_understanding'
 editor_experiment ''
-title 'Check for Understanding: Data Science or NOT Data Science'
+title 'Check for Understanding: Cybersecurity or NOT Cybersecurity'
 type 'multi2'
-question 'Select the scenarios that are examples of Data Science.'
+question 'Select the scenarios that are examples of Cybersecurity.'
 
 
 
-right 'An app uses past user behavior to recommend new music playlists tailored to individual tastes.'
-wrong 'A teacher grades student essays manually based on a rubric without any software assistance.'
-right 'A company analyzes customer purchase history to forecast future product demand and optimize inventory.'
-wrong 'A photographer manually edits photos in Photoshop to enhance their quality.'
-right 'A social media platform analyzes user interactions to identify trending topics and suggest relevant content.'
+wrong ' A company trains employees on customer service etiquette to improve communication.'
+right 'A website requires users to verify their identity using two-factor authentication before logging in.'
+wrong 'A chef stores recipes in a physical cookbook to keep track of ingredients.'
+right 'A bank encrypts online transactions to protect customers from fraud and cyberattacks.'
+right 'A school district installs content filtering software to prevent students from accessing harmful websites.'
 
 
 teacher_markdown <<MARKDOWN

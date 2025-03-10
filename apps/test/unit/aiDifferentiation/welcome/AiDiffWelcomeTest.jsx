@@ -18,6 +18,19 @@ jest.mock('@react-pdf/renderer', () => {
   };
 });
 
+jest.mock('@cdo/apps/aiDifferentiation/AiDiffChat', () => {
+  return function MockAiDiffChat(props) {
+    return (
+      // eslint-disable-next-line react/prop-types
+      <button onClick={props.chatResponseCallback} type="button">
+        ai chat mocked
+      </button>
+    );
+  };
+});
+
+jest.mock('react-dom-confetti', () => () => <div>confetti</div>);
+
 const DEFAULT_PROPS = {
   setShowWelcomeExperience: () => {},
   context: 'some-context',
@@ -50,17 +63,27 @@ describe('AiDiffWelcome', () => {
   });
 
   test('selecting an option and clicking "Continue" transitions to practice page', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'select_option'} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
 
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 
-    screen.getByText(
-      'Lets iterate together! What would you like to change? Below are some of the tasks I can help you with.'
-    );
+    screen.getByText('ai chat mocked');
+  });
+
+  test('practice page buttons work correctly', async () => {
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'practice'} />);
+
+    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
+
+    // Click a button that simulates getting a chat response
+    fireEvent.click(screen.getByText('ai chat mocked'));
+
+    expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled();
+    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+
+    screen.getByText('You’re on your way to becoming an AI all-star!');
   });
 
   test('clicking "Finish" on the end page triggers setShowWelcomeExperience', async () => {
@@ -69,56 +92,27 @@ describe('AiDiffWelcome', () => {
       <AiDiffWelcome
         {...DEFAULT_PROPS}
         setShowWelcomeExperience={setShowWelcomeExperienceStub}
+        firstState={'end_page'}
       />
     );
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
-
-    const input = screen.getByRole('textbox');
-    fireEvent.change(input, {target: {value: 'Test'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
-
-    await waitFor(
-      () =>
-        expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled(),
-      {timeout: 100}
-    );
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-
     screen.getByText('You’re on your way to becoming an AI all-star!');
 
     screen.getByText('Continue your learning journey');
 
     fireEvent.click(screen.getByRole('button', {name: 'Finish'}));
 
+    screen.getByText('confetti');
+
     await waitFor(
       () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
       {timeout: 100}
     );
-    return;
   }, 15000);
 
   test('End page buttons work correctly', async () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'end_page'} />);
 
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
-
-    const input = screen.getByRole('textbox');
-    fireEvent.change(input, {target: {value: 'Test'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
-
-    await waitFor(() =>
-      expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled()
-    );
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    screen.getByText('confetti');
 
     expect(
       screen.getByRole('link', {
@@ -130,13 +124,10 @@ describe('AiDiffWelcome', () => {
       screen.getByRole('button', {name: 'Practice another skill'})
     );
     screen.getByText('Pick a skill to practice');
-    return;
-  }, 15000);
+  });
 
   test('Back button works correctly', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'select_option'} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Back'}));
     screen.getByText('AI Teaching Assistant');
@@ -150,15 +141,15 @@ describe('AiDiffWelcome', () => {
       <AiDiffWelcome
         {...DEFAULT_PROPS}
         setShowWelcomeExperience={setShowWelcomeExperienceStub}
+        firstState={'select_option'}
       />
     );
 
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
-
     fireEvent.click(screen.getByRole('link', {name: 'Skip the tutorial'}));
 
-    await waitFor(() =>
-      expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false)
+    await waitFor(
+      () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
+      {timeout: 100}
     );
-  }, 15000);
+  });
 });

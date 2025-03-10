@@ -1432,3 +1432,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        gen-ai-spanish-test-a:
+          title: Gen AI Spanish A
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        customizing-llms-latm-pilot:
+          title: Customizing LLMs (LATM Pilot)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

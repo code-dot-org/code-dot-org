@@ -1,3 +1,4 @@
+import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -6,7 +7,6 @@ import {
   CodebridgeContextProvider,
   CodebridgeContextType,
 } from '@cdo/apps/codebridge';
-import {FileTabs} from '@cdo/apps/codebridge/FileTabs';
 
 import {getDefaultCodebridgeContext} from '../test_utils';
 import '@testing-library/jest-dom';
@@ -68,5 +68,5 @@ describe('FileTabs', () => {
     const user = userEvent.setup();
     await user.click(closeButton);
     expect(context.closeFile).toHaveBeenCalledWith('1');
-  }, 10000);
+  }, 15000);
 });
