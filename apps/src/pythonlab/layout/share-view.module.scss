@@ -2,9 +2,15 @@
 .shareContainer {
   display: flex;
   color: var(--text-neutral-white-fixed);
+  height: 100%;
 }
 
 .sidebar {
   width: 300px;
   margin-top: 120px;
+}
+
+.consoleContainer {
+  height: 100%;
+  width: 100%;
 }
