@@ -135,7 +135,7 @@ describe('TeacherHomepage', () => {
     expect(screen.queryByText('Period 1')).toBeNull();
   }, 10000);
 
-  it('archives all sections', async () => {
+  it('archive all opens modal', async () => {
     renderComponent();
     const optionsDropdown = screen.getByRole('button', {name: 'More options'});
     fireEvent.click(optionsDropdown);
@@ -146,7 +146,6 @@ describe('TeacherHomepage', () => {
 
     fireEvent.click(archiveAllSectionsButton);
 
-    expect(screen.queryByText('Period 1')).toBeNull();
-    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    screen.getByText('Archive all your sections?');
   });
 });
