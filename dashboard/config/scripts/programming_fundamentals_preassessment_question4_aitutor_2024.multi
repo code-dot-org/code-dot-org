@@ -8,7 +8,7 @@ right 'Sequencing, Selection, Iteration'
 wrong 'Loops, Variables, Decisions'
 wrong 'Functions, Operators, Debugging'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3: Designing Algorithms

@@ -6,6 +6,8 @@ import React from 'react';
 import {Checkbox, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import Spinner from '../../../../sharedComponents/Spinner';
 import {PermissionPropType, WorkshopAdmin} from '../permission';
 
@@ -25,9 +27,7 @@ export class WorkshopSummaryReport extends React.Component {
     course: PropTypes.oneOf(COURSE_VALUES),
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   state = {
     loading: true,

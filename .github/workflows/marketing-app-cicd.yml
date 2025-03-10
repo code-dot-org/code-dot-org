@@ -128,3 +128,33 @@ jobs:
         template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
         parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }}"
         capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM
+
+  ui-tests:
+    runs-on: ubuntu-24.04
+    environment: marketing-test
+    needs:
+      - deploy-to-marketing-test
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
+        working-directory: ./frontend
+
+      - name: UI Tests
+        uses: ./.github/actions/frontend/marketing/ui-tests
+        with:
+          STAGE: test
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
+          MARKETING_BASE_URL: ${{ vars.MARKETING_BASE_URL }}

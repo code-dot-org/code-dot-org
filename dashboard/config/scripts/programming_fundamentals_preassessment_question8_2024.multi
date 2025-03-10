@@ -6,7 +6,7 @@ wrong '`object = move`'
 wrong '`move.object()`'
 wrong '`method.object()`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is an example of accessing an object’s method?

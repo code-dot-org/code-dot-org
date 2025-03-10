@@ -32,12 +32,13 @@
           ]
         }
       },
-      "allowChangeStartingPlayheadPosition": true
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
     },
     "long_instructions": "Simple2 - Launch Library",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-05T18:30:25.678+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-02-05 18:31:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-05T18:30:25.678+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-02-05 18:31:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-05 22:16:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

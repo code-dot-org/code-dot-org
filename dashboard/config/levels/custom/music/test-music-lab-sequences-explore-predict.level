@@ -1,0 +1,111 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-07T19:45:39.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### What does this new block do?\r\n\r\nDo this: \r\n- Look at the code in the workspace. \r\n    - What do you notice about it? \r\n    - What do you think it will sound like when you press \"Run\"?   \r\n- Press \"Run\". Did it sound as you expected? Why do you think that is?\r\n\r\n\r\n\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "carly_rae_jepsen_call_me_maybe": [
+          "hey_i_just_met_you",
+          "chorus_instruments",
+          "strings_big",
+          "strings_small",
+          "muted_guitar",
+          "bass",
+          "drums_full",
+          "drums_intro",
+          "drums_prechorus",
+          "drums_steady",
+          "sweep",
+          "strings_flourish",
+          "strings_slowdown"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "carly_rae_jepsen_call_me_maybe",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "carly_rae_jepsen_call_me_maybe/hey_i_just_met_you"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "g?.Wt;h[;suX(UtaXH37",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "carly_rae_jepsen_call_me_maybe/strings_big"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "cC?h+(+L.;u#)]9H0OJ(",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "carly_rae_jepsen_call_me_maybe/bass"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-07T19:45:39.476+00:00\",\"changed\":[\"cloned from \\\"test-musicLab-sequences-explore-predict\\\"\"],\"cloned_from\":\"test-musicLab-sequences-explore-predict\"},{\"changed_at\":\"2025-03-07 19:45:41 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:23:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

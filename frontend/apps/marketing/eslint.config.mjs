@@ -5,7 +5,7 @@ import nextPlugin from '@next/eslint-plugin-next';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['.next/*'],
+    ignores: ['.next/*', 'playwright-report', 'test-results'],
   },
   {
     // TODO: Remove this once the following Github Issue is resolved:

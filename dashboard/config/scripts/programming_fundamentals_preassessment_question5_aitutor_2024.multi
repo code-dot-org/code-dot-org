@@ -8,7 +8,7 @@ wrong '`name = "Alice"`'
 right '`is_student = True`'
 wrong '`height = 5.9`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4: Variables and Data Flow

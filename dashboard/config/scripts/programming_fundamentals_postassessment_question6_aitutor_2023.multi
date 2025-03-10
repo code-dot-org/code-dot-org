@@ -6,7 +6,7 @@ wrong 'Using one function to call another function'
 wrong 'Writing code in multiple languages'
 wrong 'Storing data in an organized way'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following best describes **decomposition** and **abstraction** working together?

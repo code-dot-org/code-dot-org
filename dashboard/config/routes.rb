@@ -10,7 +10,13 @@ Dashboard::Application.routes.draw do
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
   # Redirect old sign up flow to new sign up flow
-  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+  get "/users/sign_up", to: redirect("/users/sign_up/account_type")
+
+  # Redirect uses of "new_sign_up" to "sign_up"
+  get "/users/new_sign_up/account_type", to: redirect("/users/sign_up/account_type")
+  get "/users/new_sign_up/login_type", to: redirect("/users/sign_up/login_type")
+  get "/users/new_sign_up/finish_student_account", to: redirect("/users/sign_up/finish_student_account")
+  get "/users/new_sign_up/finish_teacher_account", to: redirect("/users/sign_up/finish_teacher_account")
 
   # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
   # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
@@ -50,6 +56,8 @@ Dashboard::Application.routes.draw do
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
+
+    resources :user_level_evaluations, only: [:create]
 
     resources :user_level_interactions, only: [:create]
 
@@ -214,12 +222,12 @@ Dashboard::Application.routes.draw do
     devise_scope :user do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
-      post '/users/finish_sign_up', to: 'registrations#new'
-      get '/users/new_sign_up/account_type', to: 'registrations#account_type'
-      get '/users/new_sign_up/login_type', to: 'registrations#login_type'
+      get '/users/sign_up', to: 'registrations#new'
+      get '/users/sign_up/account_type', to: 'registrations#account_type'
+      get '/users/sign_up/login_type', to: 'registrations#login_type'
       get '/users/gdpr_check', to: 'registrations#gdpr_check'
-      get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
-      get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      get '/users/sign_up/finish_student_account', to: 'registrations#finish_student_account'
+      get '/users/sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -1215,6 +1223,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
+    post 'aichat_messages/:aichat_message_id/submit_feedback', to: 'aichat_messages#submit_feedback'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

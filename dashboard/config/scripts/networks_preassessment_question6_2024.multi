@@ -6,7 +6,7 @@ right 'It ensures data can still be transmitted if a connection fails'
 wrong 'It speeds up the processing power of individual computers'
 wrong 'It reduces the need for security protections'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is a benefit of redundancy in networks?

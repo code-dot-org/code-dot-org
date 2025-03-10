@@ -32,3 +32,6 @@
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :allow_multiple_attempts, description: "Allow multiple attempts"}
     %p Whether or not a user can submit multiple answers. It will not apply for levels in level groups.
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :stay_on_level_after_submit, description: "Stay on level after submit"}
+    %p If checked, students will not be automatically advanced to the next level on submit. Only applies to standalone levels.

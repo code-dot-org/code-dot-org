@@ -2,6 +2,7 @@ require 'test_helper'
 
 class LessonsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include Minitest::RSpecMocks
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -1449,5 +1450,51 @@ class LessonsControllerTest < ActionController::TestCase
     assert_response 200
     assert_includes(@response.body, 'editLessonUrl')
     assert_includes(@response.body, 'editScriptUrl')
+  end
+
+  describe '#redirect_to_canonical_path' do
+    let!(:user) {create :teacher}
+    let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, :with_lessons, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
+    let(:lesson) {unit.lessons.first}
+    let(:lesson_position) {lesson.relative_position}
+    let(:modularity_enabled) {false}
+
+    before do
+      allow(Experiment).to receive(:enabled?).and_call_original
+      allow(Experiment).to receive(:enabled?).with(user: user, experiment_name: 'modularity').and_return(modularity_enabled)
+    end
+
+    context 'modularity is off' do
+      it '/s/:script_id/lessons/:position does not redirect' do
+        sign_in user
+        get :show, params: {script_id: unit.name, position: lesson_position}
+        assert_response :success
+      end
+
+      it '/courses/:course_course_name/units/:unit_position/lessons/:position does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, unit_position: unit_position, position: lesson_position}
+        assert_response :success
+      end
+    end
+
+    context 'modularity is on' do
+      let(:modularity_enabled) {true}
+
+      it '/s/:script_id/lessons/:position does redirect' do
+        sign_in user
+        get :show, params: {script_id: unit.name, position: lesson_position}
+        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}/lessons/#{lesson_position}"
+      end
+
+      it '/courses/:course_course_name/units/:unit_position/lessons/:position does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, unit_position: unit_position, position: lesson_position}
+        assert_response :success
+      end
+    end
   end
 end

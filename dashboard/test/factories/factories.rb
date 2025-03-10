@@ -2116,4 +2116,12 @@ FactoryBot.define do
     unit_id {1}
     level_id {1}
   end
+
+  factory :aichat_message do
+    association :aichat_thread, factory: :aichat_thread
+    external_id {"1234"}
+    role {:assistant}
+    content {"Lorem ipsum"}
+    is_preset {false}
+  end
 end

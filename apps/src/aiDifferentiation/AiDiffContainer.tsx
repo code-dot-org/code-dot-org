@@ -25,9 +25,9 @@ interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: string;
   open: boolean;
-  scriptId: number;
-  scriptName: string;
-  unitDisplayName: string;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({

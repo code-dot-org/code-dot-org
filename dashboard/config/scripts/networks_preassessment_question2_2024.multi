@@ -6,7 +6,7 @@ wrong 'Switch'
 right 'Router'
 wrong 'Modem'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following devices is responsible for forwarding data between networks?
