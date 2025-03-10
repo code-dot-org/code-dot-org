@@ -56,9 +56,9 @@
 // SectionCard
 
 .sectionCardWrapper {
-  border: 1px solid $neutral_dark20;
+  border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
-  background-color: $neutral_light;
+  background-color: var(--neutral-gray-5);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -67,7 +67,7 @@
 
 .sectionCardHeader {
   padding: 16px;
-  border-bottom: 1px solid $neutral_dark20;
+  border-bottom: 1px solid var(--neutral-gray-20);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -91,7 +91,7 @@
   height: 22px;
 
   a {
-    color: $light_primary_500;
+    color: var(--brand-teal-50);
   }
 }
 
@@ -118,7 +118,7 @@
 }
 
 .taskButtons {
-  border: 1px solid $light_gray_400;
+  border: 1px solid var(--neutral-gray-40);
   display: flex;
   flex-direction: row;
   background-color: var(--neutral-base-white);
@@ -126,7 +126,6 @@
   height: 40px;
   padding: 0 12px;
   align-items: center;
-  align-content: center;
   justify-content: space-between;
   margin: 0;
 }
@@ -135,20 +134,26 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
+  margin: 0px;
+  align-items: center;
+
+  p {
+    margin: 0px;
+  }
 }
 
 .taskButtonIcons {
-  color: $light_primary_500;
+  color: var(--brand-teal-50);
 }
 
 .taskButtonArrow {
-  color: $neutral_dark80;
+  color: var(--neutral-gray-80);
 }
 
 // CourseContentDropdown
 .courseContentDropdownContainer {
   background-color: var(--neutral-base-white);
-  border: 1px solid $neutral_dark20;
+  border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
   padding: 12px;
   gap: 8px;
