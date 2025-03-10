@@ -13,7 +13,7 @@ module Marketing
     # Returns a teacher sidebar with up to two individual promotional items.
     def show
       entry = Marketing::ContentfulClient.entry(params[:locale], params[:id])
-      head :not_found unless entry.content_type.id == TEACHER_HOMEPAGE_SIDEBAR_CONTENT_TYPE
+      return head :not_found unless entry && entry.content_type.id == TEACHER_HOMEPAGE_SIDEBAR_CONTENT_TYPE
 
       result = entry.fields.clone
       result.transform_values! do |v|

@@ -381,4 +381,4 @@ gem "async", "~> 1.32"
 gem "webrick", "~> 1.9"
 
 # Automatically include all rails engines
-Dir[File.join(Bundler.root.to_s, 'dashboard/engines/*/')].each {|f| gemspec path: f}
+Dir[Bundler.root.join('**/engines/*/')].each {|engine_path| gemspec path: engine_path}
