@@ -44,9 +44,9 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: string;
-  scriptId: number;
-  scriptName: string;
-  unitDisplayName: string;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
   firstState?: WelcomeState;
 }
 

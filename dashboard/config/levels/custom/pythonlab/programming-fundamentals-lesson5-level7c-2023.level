@@ -353,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "## Do This:\r\n\r\n1. Create a `Painter` object.\r\n2. Add methods to paint a line to the cone.\r\n\t- **Hint:** Use your pseudocode on the activity guide for Task 1: A to E.",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a `Painter` object.\r\n2. Use what you have learned so far to paint a design of your choice.\r\n\t- **Hint:** Use your pseudocode on the activity guide for Task 1: A to E.",
     "start_sources": {
       "files": {
         "0": {
@@ -373,6 +373,6 @@
     "bubble_choice_description": "Use what you have learned so far to paint a design of your choice. ",
     "thumbnail_url": "https://images.code.org/5575a7f45df153ed5cc6d2db1a727bfb-paint-roller.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-21T15:58:30.869+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-levelbonus\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-levelbonus\"},{\"changed_at\":\"2025-02-21 15:58:33 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-21T15:58:30.869+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-levelbonus\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-levelbonus\"},{\"changed_at\":\"2025-02-21 15:58:33 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:10:09 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

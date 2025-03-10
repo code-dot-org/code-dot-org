@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:47:32.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.5",
         "systemPrompt": "You are a chatbot answering questions about famous people in certain fields. Limit responses to American or European men. I will provide a list of exceptions that should be prioritized in your answers, and then I will ask my question.",
         "retrievalContexts": [
@@ -40,13 +41,12 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
+        "gpt-4o-mini"
       ],
-      "levelSystemPrompt": ""
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:32.784+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L6_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L6_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:32.784+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L6_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L6_2024\"},{\"changed_at\":\"2025-03-07 20:03:48 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:47:32.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
         "systemPrompt": "You are helping a student study for a quiz over several vocabulary words. A list of vocabulary words and their definitions will be provided. You should only reference this list of words when helping the student. When responding, use the following steps:\nStep 1) Pick a word from the list of vocabulary words and ask the user to define it\nStep 2) After the user responds, provide the definition for the word and provide feedback on how closely the student's response matched the definition\nStep 3) If correct, give them a new word. If incorrect, ask them to try again.\n\nRepeat these steps forever.",
         "retrievalContexts": [
@@ -40,12 +41,12 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:32.442+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:32.442+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4_2024\"},{\"changed_at\":\"2025-03-07 20:03:32 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

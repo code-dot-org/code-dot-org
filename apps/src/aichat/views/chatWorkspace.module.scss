@@ -13,6 +13,12 @@ $tabs-default-spacing: 4px;
   overflow: hidden;
 }
 
+.messageEditorRow {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
 %conversation-area,
 .conversationArea {
   flex-grow: 1;
@@ -93,4 +99,40 @@ $tabs-default-spacing: 4px;
 
 .alertLink {
   white-space: nowrap;
+}
+
+// Styles for asset previews. TODO: Move/update when implementing final UI
+
+.assetRow {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 8px 0;
+}
+
+.imagePreview {
+  height: 80px;
+}
+
+.pdfPreview {
+  display: flex;
+  max-width: 150px;
+  align-items: center;
+  gap: 8px;
+  border: 1px dashed black;
+  border-radius: 8px;
+  padding: 4px;
+  text-align: center;
+  margin-top: auto;
+
+  i {
+    font-size: 30px;
+  }
+
+  span {
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

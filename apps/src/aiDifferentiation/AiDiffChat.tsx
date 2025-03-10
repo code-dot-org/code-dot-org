@@ -52,9 +52,9 @@ const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
 
 interface AiDiffChatProps {
   context: string;
-  scriptId: number;
-  scriptName: string;
-  unitDisplayName: string;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
@@ -156,6 +156,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             role: Role.ASSISTANT,
             chatMessageText: json.chat_message_text,
             status: json.status,
+            id: json.messageId,
           };
 
           // logging here because on the first user message the sessionId is null
@@ -214,7 +215,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
               isTA={true}
               footer={
                 item.role === Role.ASSISTANT && (
-                  <AiDiffBotMessageFooter message={item} />
+                  <AiDiffBotMessageFooter
+                    message={item}
+                    reportingData={reportingData}
+                  />
                 )
               }
             />

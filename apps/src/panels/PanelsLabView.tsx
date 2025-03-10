@@ -33,18 +33,24 @@ import {PanelsLevelProperties} from './types';
 const appName = 'panels';
 
 // Temporary solution for sending analytics for Hour of Code 2024.
-// TODO: Remove/consolidate reporters after HOC 2024.
-const HOC_2024_SCRIPT_NAME = 'music-jam-2024';
+// We are also temporarily sending panel analytics for the Elementary Music Lab Pilot
+// TODO: Remove/consolidate reporters
+const VALID_SCRIPT_NAMES = ['music-jam-2024', 'pilot-elem-music-lab'];
+function isValidScriptName() {
+  return VALID_SCRIPT_NAMES.some(name =>
+    window.location.pathname.includes(name)
+  );
+}
 const resetAnalyticsSession = () => {
-  if (!window.location.pathname.includes(HOC_2024_SCRIPT_NAME)) {
+  if (!isValidScriptName()) {
     return;
   }
 
   setSessionId(Date.now());
 };
 const sendAnalyticsEvent = async (event: string, data?: object) => {
-  // Checking the script name to keep this scoped to HOC 2024 only.
-  if (!window.location.pathname.includes(HOC_2024_SCRIPT_NAME)) {
+  // Checking the script name to keep this scoped to included scripts only.
+  if (!isValidScriptName()) {
     return;
   }
 
@@ -60,7 +66,7 @@ const sendAnalyticsEvent = async (event: string, data?: object) => {
   }
 };
 const updateAnalyticsProperty = (key: string, value: string) => {
-  if (!window.location.pathname.includes(HOC_2024_SCRIPT_NAME)) {
+  if (!isValidScriptName()) {
     return;
   }
 
