@@ -67,15 +67,11 @@ end
 
 def get_browser(test_run_name)
   browser = nil
-  $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
-  if ENV['CI'] == 'true' # TODO: only on first try
-    browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-      SeleniumBrowser.remote(CI_SELENIUM_URL, http_client: $http_client) # TODO: headless?
-    end
-  elsif ENV['TEST_LOCAL'] == 'true'
+  if ENV['TEST_LOCAL'] == 'true' || ENV['CI'] == 'true' # TODO: only on first try
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
+    $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name, http_client: $selenium_http_client)
     end

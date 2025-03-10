@@ -16,8 +16,5 @@ eval "$(rbenv init -)"
 # start mysql
 sudo service mysql start && mysql -V
 
-# start selenium
-java -jar /opt/selenium/selenium-server-4.29.0.jar standalone &
-
 # execute original command
 exec "$@"

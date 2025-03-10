@@ -9,7 +9,7 @@ module SeleniumBrowser
   end
 
   def self.local(browser: :chrome, headless: true)
-    browser = browser.to_sym
+    browser = browser.to_sym.downcase
     options = webdriver_options_object(browser: browser, headless: headless)
     return Selenium::WebDriver.for(browser, options: options)
   end
