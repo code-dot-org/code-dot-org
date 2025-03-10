@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-02-21T15:58:00.000Z",
   "level_num": "custom",
@@ -362,16 +361,31 @@
           "language": "py",
           "contents": "from neighborhood import Painter\n#add the painter object below\n\n#add methods below to move the painter\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
     "display_name": "Practice Moving A to C",
-    "thumbnail_url": "https://images.code.org/73eae11fbbbf93ae1535faa7fac73bf7-practiceAtoC.jpg"
+    "thumbnail_url": "https://images.code.org/73eae11fbbbf93ae1535faa7fac73bf7-practiceAtoC.jpg",
+    "validation_file": {
+      "id": "2",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass TestMoveToCone(unittest.TestCase):\n    \"\"\"\n    Validation Tests:\n    1) Ensure a Painter object is created.\n    2) Ensure that Painter ends up at (x=2, y=3) with at least one move action.\n    \"\"\"\n\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"\n        Retrieve the neighborhood log once for all tests.\n        We'll store it for use in both tests.\n        \"\"\"\n        cls.neighborhood_log = ValidationProtocol().get_neighborhood_log()\n\n        # If there's at least one Painter, store its log for convenience\n        if cls.neighborhood_log.painter_logs:\n            cls.painter_log = cls.neighborhood_log.painter_logs[0]\n        else:\n            cls.painter_log = None\n\n    def test_create_painter_object(self):\n        \"\"\"\n        Check if a Painter object was created.\n        \"\"\"\n        self.assertIsNotNone(\n            self.painter_log,\n            \"We couldn't find a Painter object. Did you create one?\"\n        )\n\n    def test_move_painter_to_cone(self):\n        \"\"\"\n        Check if the Painter reaches the cone.\n        (This only runs if a Painter object exists.)\n        \"\"\"\n        if self.painter_log is None:\n            # Skip this step if the student didn't even create a Painter\n            self.skipTest(\"No Painter object found.\")\n\n        # The Painter must move at least once\n        self.assertTrue(\n            self.painter_log.did_action_at_least(\"MOVE\", 1),\n            \"It looks like your Painter never moved. Make sure to call the move() function.\"\n        )\n\n        # The Painter should end at x=2, y=3\n        final_position = self.painter_log.ending_position\n        self.assertEqual(\n            final_position.x, \n            2,\n            \"Your Painter didn't reach the cone. Make sure it moves horizontally until its x position is 4.\"\n        )\n        self.assertEqual(\n            final_position.y, \n            3,\n            \"Your Painter didn't reach the cone. Make sure it doesn't turn to move vertically.\"\n        )\n\nif __name__ == '__main__':\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-21T15:58:00.467+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level6\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level6\"},{\"changed_at\":\"2025-02-21 15:58:59 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-21T15:58:00.467+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level6\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level6\"},{\"changed_at\":\"2025-02-21 15:58:59 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:06:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:07:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

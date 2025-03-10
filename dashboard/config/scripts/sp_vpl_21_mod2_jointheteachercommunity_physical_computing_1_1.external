@@ -4,6 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Task: Post an Introduction on the Teacher Forum
+## We are thrilled to have you here. Come join our Community!
 
 <img src="https://images.code.org/41a18fb531ea5efa1cdecbf501a6e6d5-image-1695929431113.30.26 PM.png" alt="Screenshot of a thread in the teacher forum titled 'Welcome to CS Discoveries: Introduce Yourself." style="float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
 

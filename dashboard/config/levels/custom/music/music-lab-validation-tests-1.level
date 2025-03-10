@@ -1,0 +1,116 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-07T14:19:04.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "carly_rae_jepsen_call_me_maybe",
+      "showSoundFilters": true
+    },
+    "long_instructions": "Validation Tests",
+    "validations": [
+      {
+        "key": "music-lab-validation-tests-1_4b4d1c64-c5d5-4f11-b4ea-51f40591bb11",
+        "message": "Will this check if 2 sounds then 3 sounds are played?",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-validation-tests-1_5ae20314-cd4d-4667-abbe-fdaf605de169",
+        "message": "Played 3 sounds together",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-validation-tests-1_d8be44f0-9d78-43e6-802a-11e0fa920fdc",
+        "message": "This should happen when 2 sounds have been played together",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-lab-validation-tests-1_8f0607a3-c0eb-477e-8481-ef2e6e9a26c6",
+        "message": "This should happen when 2 sounds have played so far",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-lab-validation-tests-1_7505283e-6bb6-4b71-af24-447828b75d32",
+        "message": "This should happen when 1 sound has played so far",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-lab-validation-tests-1_fd6bd90b-a8d0-436c-bd52-efd3f3964319",
+        "message": "This should be a base condition, for when nothing happens",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-07T14:19:04.437+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-07 14:21:11 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-07 14:23:23 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-07 14:24:18 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-07 14:26:25 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-07 14:29:56 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

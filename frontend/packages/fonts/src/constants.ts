@@ -44,8 +44,8 @@ export type InternationalFontLocale =
  * Uses the document.fonts API to load fonts via the defined font face.
  * Promise resolves when all Code.org fonts are resolved and the DOM is noted as ready.
  */
-export function loadFonts() {
-  const fontsToLoad = FONT_FAMILY_NAMES.map(font => `1rem ${font}`);
+export function loadFonts(fonts = FONT_FAMILY_NAMES) {
+  const fontsToLoad = fonts.map(font => `1rem ${font}`);
 
   return Promise.all([
     // Load individual fonts

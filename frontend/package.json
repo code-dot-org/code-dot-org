@@ -26,11 +26,14 @@
     "release:dryrun": "turbo release:dryrun",
     "start": "yarn dev",
     "test": "turbo test",
+    "test:ui:ci": "turbo test:ui:ci",
+    "test:ui:local": "turbo test:ui:local",
     "test:unit": "yarn test",
     "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "@storybook/test-runner": "^0.19.1",
     "lint-staged": "^15.4.3",
     "prettier": "3.3.3",

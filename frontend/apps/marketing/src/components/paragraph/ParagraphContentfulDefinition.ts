@@ -1,5 +1,6 @@
 // Creates a definition for the Paragraph component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+import {removeMarginBottomDefinition} from '@/components/common/definitions';
 
 export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
   id: 'paragraph',
@@ -41,6 +42,7 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    removeMarginBottom: {...removeMarginBottomDefinition},
     children: {
       displayName: 'Content',
       type: 'Text',

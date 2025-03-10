@@ -20,7 +20,7 @@
 .aiDiffContainer {
   position: fixed;
   left: 10px;
-  bottom: 120px;
+  bottom: 106px;
   z-index: 2000;
   width: 512px;
 
@@ -228,6 +228,9 @@
   &Confirm i {
     color: $light_affirmative_500;
   }
+  &Negative i {
+    color: $light_negative_500;
+  }
 }
 
 .chips fieldset div {
@@ -237,11 +240,11 @@
 .floatingActionButton {
   position: fixed;
   left: 10px;
-  bottom: 48px;
+  bottom: 33px;
 
-  height: 66px;
-  width: 66px;
-  background-size: 66px;
+  height: 60px;
+  width: 60px;
+  background-size: 60px;
   padding: 0;
   background-color: transparent;
 

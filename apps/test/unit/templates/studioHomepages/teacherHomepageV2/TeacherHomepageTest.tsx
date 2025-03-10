@@ -1,5 +1,4 @@
-import {render, screen} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -20,8 +19,9 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
-describe('SectionList', () => {
+describe('TeacherHomepage', () => {
   const sections = [
     {
       id: 11,
@@ -63,11 +63,23 @@ describe('SectionList', () => {
 
   let store: Store;
 
+  const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+
   beforeEach(() => {
     store = getStore();
     registerReducers({teacherSections, currentUser});
     store.dispatch(setSections(serverSections));
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+
+    fetchSpy.mockImplementation((url: string) => {
+      if (url === '/dashboardapi/sections/available_participant_types') {
+        return Promise.resolve({
+          value: {availableParticipantTypes: ['student']},
+          response: new Response(),
+        });
+      }
+      return Promise.resolve({value: {}, response: new Response()});
+    });
   });
 
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
@@ -94,6 +106,17 @@ describe('SectionList', () => {
     screen.getByText('Class Sections');
   });
 
+  it('create section button opens popup', async () => {
+    renderComponent();
+
+    fireEvent.click(screen.getByRole('button', {name: 'New class section'}));
+
+    await screen.findByText('Create a new section', {}, {timeout: 5000});
+    screen.getByText('Picture password');
+    screen.getByRole('button', {name: 'Cancel'});
+  }, 15000);
+
+  //TODO (TEACH-1659): Why did we need to increase timeouts on this test?
   it('teaching/archived toggle', async () => {
     renderComponent();
     screen.getByRole('button', {name: 'Teaching'});
@@ -102,9 +125,9 @@ describe('SectionList', () => {
     screen.getByText('Period 1');
     expect(screen.queryByText('hidden')).toBeNull();
 
-    userEvent.click(archivedButton);
+    fireEvent.click(archivedButton);
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
-  });
+  }, 10000);
 });

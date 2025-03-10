@@ -1,5 +1,6 @@
 // Creates a definition for the Typography component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+import {removeMarginBottomDefinition} from '@/components/common/definitions';
 
 export const HeadingContentfulComponentDefinition: ComponentDefinition = {
   id: 'heading',
@@ -31,6 +32,7 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    removeMarginBottom: {...removeMarginBottomDefinition},
     children: {
       displayName: 'Content',
       type: 'Text',
