@@ -12911,11 +12911,12 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
           }
         }
-        // Check if body is already a block
+        // Check if body is already a block, i.e., the body is wrapped by curly braces.
         if (node.body.type === 'BlockStatement') {
           return this.mark(indentDepth, node.body, depth + 1);
         } else {
-          // Instead of creating a new block, directly handle indentation and parse the statement.
+          // If the for loop body is a single line, add indentation and then parse
+          // expression.
           this.addIndent({
               bounds: this.getBounds(node.body),
               depth: depth + 1,
