@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:46:11.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,15 +41,15 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "display_name": "Hannah's Chatbot",
     "bubble_choice_description": "Hannah wants to make a chatbot that helps people learn about the environment.",
     "thumbnail_url": "https://images.code.org/ec3236cce555a4b0cc735daf35930069-Lesson 4 - Level 13A - Hannah’s Chatbot - Environment.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:46:11.780+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L13A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L13A_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:46:11.780+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L13A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L13A_2024\"},{\"changed_at\":\"2025-03-07 19:50:39 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

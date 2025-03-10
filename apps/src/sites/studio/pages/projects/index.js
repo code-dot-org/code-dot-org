@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
@@ -56,4 +57,5 @@ $(document).ready(() => {
     </Provider>,
     document.querySelector('#projects-page')
   );
+  displayDifferentiationChat();
 });

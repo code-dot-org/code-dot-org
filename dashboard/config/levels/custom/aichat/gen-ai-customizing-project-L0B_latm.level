@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:49:16.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
         "systemPrompt": "Your audience is intended for people who might not know much about cars. For you to begin speaking to your user, the user must say \"Lets begin!\"  When your user says \"Lets begin!\" before answering any questions, ask the user about how much they know about cars using a scale of; very much, somewhat a lot, or nothing at all. Depending on how much this person may know, it will tell you how formal or straightforward you should respond to the user. Use a nice and friendly tone when answering questions. \nTry giving short and simple answers that people new to learning about cars can understand. Explain any terms a user might not know. ",
         "retrievalContexts": [
@@ -48,14 +49,14 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "name_suffix": "_latm",
     "display_name": "Car Bot",
     "bubble_choice_description": "Car bot is an AI used to learn more about cars. Ask the bot any question you want specifically about cars and it will give you a straightforward answer."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:16.431+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0B_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:16.431+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0B_2024\"},{\"changed_at\":\"2025-03-07 20:16:33 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

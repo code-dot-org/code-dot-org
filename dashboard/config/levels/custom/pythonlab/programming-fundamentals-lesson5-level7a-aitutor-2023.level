@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-02-24T19:34:15.000Z",
   "level_num": "custom",
@@ -363,16 +362,31 @@
           "contents": "from neighborhood import Painter\n#add the painter object below\n\n#add methods below to move the painter\n",
           "folderId": "0",
           "active": true,
-          "open": true
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
     "display_name": "Practice Painting A",
     "bubble_choice_description": "Use your pseudocode for Task 3 to code the painter to paint a line to the cone. ",
-    "thumbnail_url": "https://images.code.org/7bfe3a0eca350c9f985e1bcec8c77811-practiceAtoD.jpg"
+    "thumbnail_url": "https://images.code.org/7bfe3a0eca350c9f985e1bcec8c77811-practiceAtoD.jpg",
+    "validation_file": {
+      "id": "2",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass TestPainterEndsAt30(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"\n        Retrieve the NeighborhoodLog once for all tests.\n        \"\"\"\n        cls.neighborhood_log = ValidationProtocol().get_neighborhood_log()\n        painter_logs = cls.neighborhood_log.painter_logs\n        cls.painter_log = painter_logs[0] if painter_logs else None\n\n    def test_step1_create_painter(self):\n        \"\"\"\n        Create a Painter object.\n        \"\"\"\n        self.assertIsNotNone(\n            self.painter_log,\n            \"We couldn't find a Painter object. Make sure you create one!\"\n        )\n\n    def test_step2_final_position(self):\n        \"\"\"\n        Painter reaches the cone.\n        \"\"\"\n        if self.painter_log is None:\n            self.skipTest(\"No Painter found!\")\n\n        final_pos = self.painter_log.ending_position\n        if final_pos.x != 3 or final_pos.y != 0:\n            self.fail(\n                \"Your Painter didn't reach the cone.\"\n            )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-24T19:34:15.363+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level5-ai-tutor\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level5-ai-tutor\"},{\"changed_at\":\"2025-02-24 19:35:51 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-24T19:34:15.363+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level5-ai-tutor\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level5-ai-tutor\"},{\"changed_at\":\"2025-02-24 19:35:51 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 04:07:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

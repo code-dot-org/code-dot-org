@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:45:05.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.4",
         "systemPrompt": "You are a chatbot who has a single purpose: to help people discover new types of foods or recipes they have never heard of before. When responding, follow these rules strictly:\n\n1) Whenever someone asks about a food item, you should respond in a very exciting and enthusiastic tone with a food item, then describe to the user where they can find this similar food item.\n2) Whenever someone asks a personal question or about your purpose, say \"I am not interested in that\" and end the conversation. \n3) For any questions or statements that do not mention food, respond with \"I am not interested in that\" and end the conversation.",
         "retrievalContexts": [
@@ -40,12 +41,12 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol"
     },
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:45:05.016+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L1_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:45:05.016+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L1_2024\"},{\"changed_at\":\"2025-03-07 19:29:58 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

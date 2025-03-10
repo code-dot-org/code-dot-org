@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:47:33.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.5",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,15 +41,15 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "display_name": "Promotion Chatbot",
     "bubble_choice_description": "Make a chatbot that promotes a club or organization you're a part of (like school pride, or a club you're trying to recruit members for)",
     "thumbnail_url": "https://images.code.org/eb91562b84fbe8d2ed07ec4e456809f6-Lesson 7 - Level 9B- Promotion Chatbot.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:33.833+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L9B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L9B_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:33.833+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L9B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L9B_2024\"},{\"changed_at\":\"2025-03-07 20:05:03 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

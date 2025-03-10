@@ -24,8 +24,8 @@ markdown <<MARKDOWN
         Jot down the steps to navigate the painter from position A to position C on the map below using only the following commands: 
     </p>
     <ul>
-    <li style="font-size: 14pt;">Move_forward</li>
-    <li style="font-size: 14pt;">Turn_right</li>
+    <li style="font-size: 14pt;">move_forward</li>
+    <li style="font-size: 14pt;">turn_left</li>
     </ul>
     <p style="font-size: 14pt;">Now, try going from C to E. </p>
     <br>

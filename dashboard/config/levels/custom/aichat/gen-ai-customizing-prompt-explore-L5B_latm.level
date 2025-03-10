@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:45:48.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
         "systemPrompt": "You are a chatbot built to help people understand how to drive in Arizona. \n\nUse metaphors or analogies to explain concepts as often as possible. \n\nUse a friendly, warm tone. \n\nDo not answer any questions that are not related to driving in Arizona. If asked a question that is not about driving in Arizona, just repeat your purpose.",
         "retrievalContexts": [
@@ -40,15 +41,15 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "display_name": "Changing the Tone",
     "bubble_choice_description": "System prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit tone or way of speaking**.",
     "thumbnail_url": "https://images.code.org/af53abe42de131ca3b75c18587781548-Lesson 3 - Level 5B - Changing the Tone.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:45:48.026+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L5B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L5B_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:45:48.026+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L5B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L5B_2024\"},{\"changed_at\":\"2025-03-07 19:42:54 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:49:17.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,13 +41,13 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "project_template_level_name": "gen-ai-customizing-project-template_latm",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:17.077+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L2_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L2_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:17.077+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L2_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L2_2024\"},{\"changed_at\":\"2025-03-07 20:31:37 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

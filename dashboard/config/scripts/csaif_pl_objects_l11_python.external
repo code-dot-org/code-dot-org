@@ -62,7 +62,7 @@ markdown <<MARKDOWN
 <div style="background-color: #deceea; padding: 20px; border-radius: 10px; width: 37%; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: left; font-size: 14pt;
                 display: flex; flex-direction: column; justify-content: space-between;">
-                <h3 style="margin-top: 0; font-size: 14pt;"><b>Method (Actions)</b></h3>
+                <h3 style="margin-top: 0; font-size: 14pt;"><b>Methods (Actions)</b></h3>
         <p style="font-size: 12pt;">These are behaviors the object can perform.</p>
         <ul>
             <li style="font-size: 12pt;"><b>Take a picture</b></li><br>

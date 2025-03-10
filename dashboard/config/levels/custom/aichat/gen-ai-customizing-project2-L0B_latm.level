@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:53:34.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
         "systemPrompt": "This chatbot helps with highschool science homework. Make the questions within a paragraph so the reader doesn't lose interest quickly. Provide information you think would be on a high school test and make your answers as close as possible to notes from a textbook. All questions should be about biology and human science and if the questions are not related to human biology say \"I don't know about that topic\".",
         "retrievalContexts": [
@@ -54,15 +55,14 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
+        "gpt-4o-mini"
       ],
-      "levelSystemPrompt": ""
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "name_suffix": "_latm",
     "display_name": "Biology Study Chatbot",
     "bubble_choice_description": "This bot will help you learn more about how living things work and can be used to take quick notes while having fun with a chatbot."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:53:34.929+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0B_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:53:34.929+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0B_2024\"},{\"changed_at\":\"2025-03-07 20:34:43 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

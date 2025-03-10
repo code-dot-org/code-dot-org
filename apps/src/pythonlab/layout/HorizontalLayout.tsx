@@ -1,8 +1,8 @@
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
-import Output from '@codebridge/Workspace/Output';
 import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
+import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
@@ -62,10 +62,10 @@ const HorizontalLayout: React.FunctionComponent = () => {
           separatorProps={rightBottomPanelSeparatorProps}
           isDragging={rightBottomPanelDragging}
         />
-        <Output
-          height={rightBottomPanelHeight}
+        <HorizontalOutput
+          height={rightBottomPanelHeight || INITIAL_OUTPUT_HEIGHT}
           width={rightPanelWidth}
-          setOutputSize={setRightBottomPanelSize}
+          setOutputHeight={setRightBottomPanelSize}
         />
       </div>
     </div>

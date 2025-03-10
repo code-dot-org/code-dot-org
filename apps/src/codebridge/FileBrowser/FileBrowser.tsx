@@ -9,6 +9,10 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
+import {
+  restrictToFirstScrollableAncestor,
+  restrictToVerticalAxis,
+} from '@dnd-kit/modifiers';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
@@ -67,7 +71,14 @@ export const FileBrowser = React.memo(() => {
       rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}
     >
       <div className={moduleStyles.fileBrowserContents}>
-        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
+        <DndContext
+          onDragEnd={handleDragEnd}
+          sensors={sensors}
+          modifiers={[
+            restrictToVerticalAxis,
+            restrictToFirstScrollableAncestor,
+          ]}
+        >
           <DndDataContextProvider
             value={{dragData, dropData}}
             dndMonitor={dndMonitor}

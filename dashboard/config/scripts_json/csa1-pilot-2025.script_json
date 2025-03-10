@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:14:47 UTC",
+    "serialized_at": "2025-03-09 01:39:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -315,7 +315,7 @@
     },
     {
       "key": "Decomposition and Design",
-      "name": "Decomposition and Design",
+      "name": "(Optional) Decomposition and Design",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,

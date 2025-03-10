@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -140,6 +141,7 @@ function showHomepage() {
     </Provider>,
     document.getElementById('homepage-container')
   );
+  displayDifferentiationChat();
 }
 
 /**
