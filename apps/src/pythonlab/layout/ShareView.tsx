@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import Toggle from '@code-dot-org/component-library/toggle';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 import {hasPreview} from '@cdo/apps/codebridge';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -17,11 +17,6 @@ const ShareView: React.FunctionComponent = () => {
   const miniApp = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
-  const getAvailableOutputWidth = () => {
-    return Math.max(window.innerWidth - 150, 400);
-  };
-
-  const [outputWidth, setOutputWidth] = useState(getAvailableOutputWidth());
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onViewCode = () => {
     projectManager?.redirectToView();
@@ -33,16 +28,6 @@ const ShareView: React.FunctionComponent = () => {
   const [consoleVisible, setConsoleVisible] = useState(false);
 
   const showPreview = hasPreview(miniApp);
-
-  useEffect(() => {
-    window.addEventListener('resize', () =>
-      setOutputWidth(getAvailableOutputWidth())
-    );
-    return () =>
-      window.removeEventListener('resize', () =>
-        setOutputWidth(getAvailableOutputWidth())
-      );
-  }, []);
 
   return (
     <div className={moduleStyles.shareContainer}>
@@ -77,10 +62,7 @@ const ShareView: React.FunctionComponent = () => {
         />
       </div>
       {showPreview ? (
-        <ConsoleAndPreviewShare
-          consoleVisible={consoleVisible}
-          availableWidth={outputWidth}
-        />
+        <ConsoleAndPreviewShare consoleVisible={consoleVisible} />
       ) : (
         <ConsoleShare />
       )}
