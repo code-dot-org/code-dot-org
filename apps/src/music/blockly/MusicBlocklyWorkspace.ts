@@ -411,6 +411,14 @@ export default class MusicBlocklyWorkspace {
     console.log('Execution time: ', Date.now() - startTime);
   }
 
+  executeCode(code: string, scope: object) {
+    try {
+      CustomMarshalingInterpreter.evalWith(code, scope, {runMaxSteps: 1000});
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   /**
    * Executes code for the specific trigger referenced by the ID. It is
    * assumed that {@link compileSong()} has already been called and all event

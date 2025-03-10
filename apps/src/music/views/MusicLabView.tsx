@@ -1,3 +1,4 @@
+import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -15,6 +16,7 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -62,6 +64,7 @@ interface MusicLabViewProps {
   allowPackSelection: boolean;
   analyticsReporter: AnalyticsReporter;
   blocklyWorkspace: MusicBlocklyWorkspace;
+  executeCode: (code: string) => void;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -79,6 +82,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   allowPackSelection,
   analyticsReporter,
   blocklyWorkspace,
+  executeCode,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -427,6 +431,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 {WARNING_BANNER_MESSAGES.TOOLBOX_MODE}
               </div>
             )}
+            <CodeEditor
+              darkMode={true}
+              onCodeChange={code => {
+                executeCode(code);
+              }}
+              startCode={'test'}
+              editorConfigExtensions={[javascript()]}
+            />
             <div id={blocklyDivId} />
             {showAdvancedControls && (
               <div className={moduleStyles.advancedControlsContainer}>

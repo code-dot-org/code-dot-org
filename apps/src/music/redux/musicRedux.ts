@@ -70,6 +70,8 @@ export interface MusicState {
     id?: string;
     index: number;
   };
+  /** Current JS if we are showing a code editor. */
+  currentCode?: string;
 
   // State used by advanced controls (currently internal-only) with the ToneJS player
   loopEnabled: boolean;
@@ -104,6 +106,7 @@ const initialState: MusicState = {
     id: undefined,
     index: 0,
   },
+  currentCode: undefined,
   loopEnabled: false,
   loopStart: 1,
   loopEnd: 5,
@@ -236,6 +239,9 @@ const musicSlice = createSlice({
     clearCallout: state => {
       state.currentCallout.id = undefined;
     },
+    setCurrentCode: (state, action: PayloadAction<string>) => {
+      state.currentCode = action.payload;
+    },
     setLoopEnabled: (state, action: PayloadAction<boolean>) => {
       state.loopEnabled = action.payload;
     },
@@ -338,6 +344,7 @@ export const {
   setUndoStatus,
   showCallout,
   clearCallout,
+  setCurrentCode,
   setLoopEnabled,
   setLoopStart,
   setLoopEnd,
