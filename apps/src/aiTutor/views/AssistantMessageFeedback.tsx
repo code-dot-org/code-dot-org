@@ -14,6 +14,9 @@ import style from './ai-tutor.module.scss';
 
 interface AssistantMessageProps {
   messageId: number | undefined;
+  // Callback function from parent component to track when assistant feedback details
+  // are opened or closed. Allows auto-scroll to take into account assistant message
+  // feedback height.
   onDetailsOpenChange: (isOpen: boolean) => void;
 }
 
