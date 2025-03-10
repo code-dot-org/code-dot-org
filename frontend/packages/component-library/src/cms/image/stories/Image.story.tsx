@@ -47,7 +47,7 @@ export const ImageWithBorder: Story = {
     const getComputedStyleValue = (property: string) =>
       window.getComputedStyle(document.body).getPropertyValue(property);
     const expectedBorderColor = getComputedStyleValue(
-      '--borders-neutral-light',
+      '--borders-neutral-primary',
     );
     const expectedBorderSize = '1px';
     const expectedBorderStyle = 'solid';
