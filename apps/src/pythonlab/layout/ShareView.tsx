@@ -62,7 +62,11 @@ const ShareView: React.FunctionComponent = () => {
             onClick={onRemix}
           />
         </div>
-        {showPreview ? <ConsoleAndPreviewShare /> : <ConsoleShare />}
+        {showPreview ? (
+          <ConsoleAndPreviewShare consoleVisible={consoleVisible} />
+        ) : (
+          <ConsoleShare />
+        )}
       </div>
     </div>
   );
