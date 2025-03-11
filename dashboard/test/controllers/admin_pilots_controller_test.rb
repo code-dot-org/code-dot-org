@@ -11,11 +11,11 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   #
-  # create_pilot tests
+  # create tests
   #
   test 'non-admin cannot create pilot' do
     sign_in @not_admin
-    post :create_pilot, params: {
+    post :create, params: {
       pilot: {
         name: 'test-pilot-1',
         display_name: 'Test Pilot 1',
@@ -26,7 +26,7 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'admin can create pilot' do
-    post :create_pilot, params: {
+    post :create, params: {
       pilot: {
         name: 'test-pilot-2',
         display_name: 'Test Pilot 2',
@@ -43,12 +43,12 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'create pilot with empty params fails' do
-    post :create_pilot, params: {}
+    post :create, params: {}
     assert_response :bad_request
   end
 
   test 'create pilot with invalid name fails' do
-    post :create_pilot, params: {
+    post :create, params: {
       pilot: {
         name: 'TestPilot1',
         display_name: 'Test Pilot 1',
@@ -59,7 +59,7 @@ class AdminPilotsControllerTest < ActionController::TestCase
   end
 
   test 'create pilot with missing display_name fails' do
-    post :create_pilot, params: {
+    post :create, params: {
       pilot: {
         name: 'test-pilot-1',
         allow_joining_via_url: true
@@ -74,7 +74,7 @@ class AdminPilotsControllerTest < ActionController::TestCase
 
   test 'non-admin cannot view list of piloters' do
     sign_in @not_admin
-    get :show_pilot, params: {pilot_name: 'csp-piloters'}
+    get :show, params: {pilot_name: 'csp-piloters'}
     assert_response :forbidden
   end
 
@@ -83,7 +83,7 @@ class AdminPilotsControllerTest < ActionController::TestCase
     pilot2 = create :pilot
     create :teacher, pilot_experiment: pilot1.name, email: 'csp@example.com'
     create :teacher, pilot_experiment: pilot2.name, email: 'cspnot@example.com'
-    get :show_pilot, params: {pilot_name: pilot1.name}
+    get :show, params: {pilot_name: pilot1.name}
     assert_response :success
     assert_select 'table tr td.email', {count: 1, text: "csp@example.com"}
     assert_select 'table tr td.actions form input.btn-primary', 1

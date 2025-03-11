@@ -3,11 +3,11 @@ class AdminPilotsController < ApplicationController
   before_action :require_admin
   check_authorization
 
-  def pilots
+  def index
     @pilots = Pilot.all
   end
 
-  def create_pilot
+  def create
     pilot_params = params[:pilot]
     return head :bad_request unless pilot_params
 
@@ -21,10 +21,10 @@ class AdminPilotsController < ApplicationController
       return render status: :bad_request, json: {error: exception.message}
     end
 
-    redirect_to :pilots_admin_pilots
+    redirect_to :admin_pilots
   end
 
-  def show_pilot
+  def show
     @pilot_name = params[:pilot_name]
     return head :bad_request unless Pilot.exists?(name: @pilot_name)
     user_ids = SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
@@ -50,7 +50,7 @@ class AdminPilotsController < ApplicationController
         flash[:notice] = "Successfully added #{email} to #{pilot_name}!"
       end
     end
-    redirect_to action: 'show_pilot', pilot_name: pilot_name
+    redirect_to action: 'show', pilot_name: pilot_name
   end
 
   def remove_from_pilot
@@ -64,6 +64,6 @@ class AdminPilotsController < ApplicationController
 
     flash[:notice] = "Successfully removed #{email} from #{pilot_name}"
 
-    redirect_to action: 'show_pilot', pilot_name: pilot_name
+    redirect_to action: 'show', pilot_name: pilot_name
   end
 end

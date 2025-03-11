@@ -618,11 +618,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :admin_pilots, only: [], path: '/admin/pilots' do
+    resources :admin_pilots, only: [:index, :create, :show], path: '/admin/pilots', param: 'pilot_name' do
       collection do
-        get '/', action: 'pilots', as: 'pilots'
-        post :create_pilot
-        get '/:pilot_name', action: 'show_pilot', as: 'show_pilot'
       end
     end
 
