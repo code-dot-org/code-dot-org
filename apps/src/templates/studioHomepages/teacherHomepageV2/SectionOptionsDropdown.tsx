@@ -11,8 +11,6 @@ import {
   TEACHER_NAVIGATION_SECTIONS_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
-import {Student} from '@cdo/apps/types/redux';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, AppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -28,36 +26,24 @@ const onSectionSettingsClick = (
   sectionId: number
 ) => {
   navigate(
-    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
+    `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
   );
 };
 
 const onRosterClick = (navigate: NavigateFunction, sectionId: number) => {
   navigate(
-    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
+    `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
   );
 };
 
 const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
   navigate(
-    `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
+    `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
   );
 };
 
-const onCertificatesClick = (section: Section) => {
-  HttpClient.fetchJson<Student[]>(
-    `/dashboardapi/sections/${section.id}/students`
-  )
-    .then(response => response.value)
-    .then((value: Student[]) => {
-      const students = value.map(student => student.name);
-      const courseVersionName: string = section.courseVersionName || '';
-      const urlParams = new URLSearchParams([
-        ['course', btoa(courseVersionName)],
-      ]);
-      students.map(student => urlParams.append('names[]', student));
-      window.location.href = `/certificates/batch?${urlParams.toString()}`;
-    });
+const onCertificatesClick = () => {
+  // Add logic
 };
 
 const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
@@ -112,7 +98,7 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         value: 'certificates',
         label: i18n.certificates(),
         icon: {iconName: 'file-certificate', iconStyle: 'solid'},
-        onClick: () => onCertificatesClick(section),
+        onClick: () => onCertificatesClick(),
       },
       {
         value: section.hidden ? 'restore' : 'archive',
@@ -124,8 +110,9 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         onClick: () => onArchiveClick(dispatch, section),
       },
     ];
+    console.log(section.studentCount);
 
-    if (section.studentCount > 0) {
+    if (section.studentCount && section.studentCount > 0) {
       options.push({
         value: 'delete',
         label: i18n.delete(),

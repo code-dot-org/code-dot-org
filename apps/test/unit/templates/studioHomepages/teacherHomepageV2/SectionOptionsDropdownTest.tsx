@@ -24,8 +24,6 @@ import {
   SPECIFIC_SECTION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
-import {Student} from '@cdo/apps/types/redux';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 const LocationElement = () => {
@@ -101,63 +99,10 @@ const SECTIONS: Section[] = [
     restrictSection: false,
     sectionInstructors: [],
     sharingDisabled: false,
-    studentCount: 1,
+    studentCount: 2,
     syncEnabled: false,
     ttsAutoplayEnabled: false,
     unitId: null,
-  },
-];
-
-const STUDENTS: Student[] = [
-  {
-    id: 1,
-    name: 'Bobby',
-    familyName: 'Hill',
-    username: '',
-    email: '',
-    age: '',
-    gender: '',
-    genderTeacherInput: '',
-    secretWords: '',
-    secretPicturePath: '',
-    loginType: '',
-    sectionId: 11,
-    sharingDisabled: false,
-    hasEverSignedIn: true,
-    dependsOnThisSectionForLogin: true,
-    isEditing: false,
-    isSaving: false,
-    rowType: '',
-    userType: 'student',
-    atRiskAgeGatedDate: new Date(),
-    childAccountComplianceState: '',
-    latestPermissionRequestSentAt: new Date(),
-    usState: '',
-  },
-  {
-    id: 1,
-    name: 'Daria',
-    familyName: 'Morgendorffer',
-    username: '',
-    email: '',
-    age: '',
-    gender: '',
-    genderTeacherInput: '',
-    secretWords: '',
-    secretPicturePath: '',
-    loginType: '',
-    sectionId: 11,
-    sharingDisabled: false,
-    hasEverSignedIn: true,
-    dependsOnThisSectionForLogin: true,
-    isEditing: false,
-    isSaving: false,
-    rowType: '',
-    userType: 'student',
-    atRiskAgeGatedDate: new Date(),
-    childAccountComplianceState: '',
-    latestPermissionRequestSentAt: new Date(),
-    usState: '',
   },
 ];
 
@@ -170,7 +115,6 @@ describe('SectionOptionsDropdown', () => {
   store.dispatch(selectSection(11));
 
   let sendEventSpy: jest.SpyInstance;
-  let fetchSpy: jest.SpyInstance;
 
   beforeEach(() => {
     jest.mock('react-router-dom', () => ({
@@ -178,9 +122,6 @@ describe('SectionOptionsDropdown', () => {
       useNavigate: () => navigate,
     }));
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
-    fetchSpy = jest
-      .spyOn(HttpClient, 'fetchJson')
-      .mockResolvedValue({value: STUDENTS, response: new Response()});
   });
 
   afterEach(() => {
@@ -278,13 +219,6 @@ describe('SectionOptionsDropdown', () => {
     screen.getByText('/sections/11/login_info');
   });
 
-  it('displays certificates option to print student certificates', () => {
-    renderComponent();
-    const link = screen.getByText(i18n.certificates());
-    fireEvent.click(link);
-    expect(fetchSpy).toHaveBeenCalledWith('/dashboardapi/sections/11/students');
-  });
-
   it('displays archive option to hide / restore section', () => {
     renderComponent();
     const link = screen.getByText(i18n.archive());
@@ -296,8 +230,9 @@ describe('SectionOptionsDropdown', () => {
     );
   });
 
-  it('displays delete option to initiate section delete', () => {
-    renderComponent();
+  it('displays delete option to initiate section delete', async () => {
+    renderComponent(SECTIONS[1]);
+
     const link = screen.getByText(i18n.delete());
     fireEvent.click(link);
     expect(sendEventSpy).toHaveBeenCalledWith(
@@ -305,5 +240,10 @@ describe('SectionOptionsDropdown', () => {
       {},
       'Both'
     );
+  });
+
+  it('does not display delete option if section has students', async () => {
+    renderComponent();
+    expect(screen.queryByText(i18n.delete())).toBeNull();
   });
 });
