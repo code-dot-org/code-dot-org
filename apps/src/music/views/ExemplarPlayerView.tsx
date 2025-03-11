@@ -2,6 +2,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_PACK} from '../constants';
@@ -11,7 +13,6 @@ import MusicPlayer from '../player/MusicPlayer';
 import {setIsPlaying} from '../redux/musicRedux';
 
 import moduleStyles from './ExemplarPlayer.module.scss';
-
 interface ExemplarPlayerViewProps {
   playbackEvents: PlaybackEvent[];
   title: string;
@@ -51,6 +52,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   // Play the already compiled song with the pre-loads sounds.
   const onPlaySong = useCallback(async () => {
     Blockly.getMainWorkspace().hideChaff();
+    // Stop the main lab view player.
     dispatch(setIsPlaying(false));
     playerRef.current?.stopSong();
 
@@ -69,6 +71,12 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     }
     setExemplarIsPlaying(false);
   }, [isPlaying]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, () => {
+    if (exemplarIsPlaying) {
+      onStopSong();
+    }
+  });
 
   useEffect(() => {
     if (isPlaying && exemplarIsPlaying) {
