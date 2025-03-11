@@ -37,7 +37,7 @@ describe('LoginTypeSelection', () => {
     if (userType) {
       sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
     }
-    render(<LoginTypeSelection />);
+    render(<LoginTypeSelection isSignedOut={true} />);
   }
 
   it('redirects user back to account type page if they have not selected account type', async () => {

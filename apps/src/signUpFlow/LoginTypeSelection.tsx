@@ -48,7 +48,9 @@ const getUserType = () => {
     : '';
 };
 
-const LoginTypeSelection: React.FunctionComponent = () => {
+const LoginTypeSelection: React.FunctionComponent<{
+  isSignedOut: boolean;
+}> = ({isSignedOut}) => {
   const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
@@ -70,42 +72,48 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   cookies.set(NEW_SIGN_UP_USER_TYPE, userType, {path: '/'});
 
   useEffect(() => {
-    // Handle if the user type is not currently set in sessionStorage.
-    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
-      const urlUserType = queryParams('user_type');
-      if (
-        urlUserType &&
-        (urlUserType === UserTypes.TEACHER || urlUserType === UserTypes.STUDENT)
-      ) {
-        // If the user type is set as a URL parameter (e.g. being redirected from section signup and skipping
-        // the first signup page), then set the user type (and URL to return the user to after signup if
-        // provided) in sessionStorage.
-        setUserReturnToUrl();
-        const sourceParam = sessionStorage
-          .getItem(USER_RETURN_TO_SESSION_KEY)
-          ?.includes('/join')
-          ? {source: 'section code sign up form'}
-          : {};
-        analyticsReporter.sendEvent(
-          EVENTS.SIGN_UP_STARTED_EVENT,
-          sourceParam,
-          PLATFORMS.BOTH
-        );
-        sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, urlUserType as string);
-        setUserType(urlUserType);
-      } else {
-        // If the user hasn't selected a user type and it's not a URL parameter, redirect them back to the
-        // first step of signup to select their user type.
-        navigateToHref('/users/sign_up/account_type');
-      }
-    }
-
     async function getToken() {
       setAuthToken(await getAuthenticityToken());
     }
 
-    getToken();
-  }, []);
+    if (isSignedOut) {
+      // Handle if the user type is not currently set in sessionStorage.
+      if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+        const urlUserType = queryParams('user_type');
+        if (
+          urlUserType &&
+          (urlUserType === UserTypes.TEACHER ||
+            urlUserType === UserTypes.STUDENT)
+        ) {
+          // If the user type is set as a URL parameter (e.g. being redirected from section signup and skipping
+          // the first signup page), then set the user type (and URL to return the user to after signup if
+          // provided) in sessionStorage.
+          setUserReturnToUrl();
+          const sourceParam = sessionStorage
+            .getItem(USER_RETURN_TO_SESSION_KEY)
+            ?.includes('/join')
+            ? {source: 'section code sign up form'}
+            : {};
+          analyticsReporter.sendEvent(
+            EVENTS.SIGN_UP_STARTED_EVENT,
+            sourceParam,
+            PLATFORMS.BOTH
+          );
+          sessionStorage.setItem(
+            ACCOUNT_TYPE_SESSION_KEY,
+            urlUserType as string
+          );
+          setUserType(urlUserType);
+        } else {
+          // If the user hasn't selected a user type and it's not a URL parameter, redirect them back to the
+          // first step of signup to select their user type.
+          navigateToHref('/users/sign_up/account_type');
+        }
+      }
+
+      getToken();
+    }
+  }, [isSignedOut]);
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' && !createAccountButtonDisabled) {
