@@ -19,6 +19,7 @@ interface MiniAppPreviewProps {
   isMaximized: boolean;
   style?: React.CSSProperties;
   showMaximizeButton?: boolean;
+  handleScaling?: boolean;
 }
 
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
@@ -27,13 +28,16 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   isMaximized,
   style,
   showMaximizeButton = true,
+  handleScaling,
 }) => {
   const {labConfig} = useCodebridgeContext();
 
   const miniApp = labConfig?.miniApp?.name;
 
   const miniAppComponent =
-    miniApp === MiniApps.Neighborhood ? <NeighborhoodPreview /> : null;
+    miniApp === MiniApps.Neighborhood ? (
+      <NeighborhoodPreview handleScaling={handleScaling} />
+    ) : null;
 
   return (
     <PanelContainer
@@ -64,7 +68,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
         )
       }
     >
-      <div style={style}>{miniAppComponent}</div>
+      <div style={style} className={moduleStyles.miniAppContainer}>
+        {miniAppComponent}
+      </div>
     </PanelContainer>
   );
 };

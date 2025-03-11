@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import Toggle from '@code-dot-org/component-library/toggle';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {hasPreview} from '@cdo/apps/codebridge';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -28,6 +28,25 @@ const ShareView: React.FunctionComponent = () => {
   const [consoleVisible, setConsoleVisible] = useState(false);
 
   const showPreview = hasPreview(miniApp);
+
+  const getAvailablePreviewWidth = () => {
+    return Math.max(window.innerWidth - 150, 400);
+  };
+
+  const [previewWidth, setPreviewWidth] = useState(getAvailablePreviewWidth());
+  const [previewHeight, setPreviewHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setPreviewWidth(getAvailablePreviewWidth());
+      setPreviewHeight(window.innerHeight);
+    });
+    return () =>
+      window.removeEventListener('resize', () => {
+        setPreviewWidth(getAvailablePreviewWidth());
+        setPreviewHeight(window.innerHeight);
+      });
+  }, []);
 
   return (
     <div className={moduleStyles.shareContainer}>
@@ -61,11 +80,20 @@ const ShareView: React.FunctionComponent = () => {
           onClick={onRemix}
         />
       </div>
-      {showPreview ? (
-        <ConsoleAndPreviewShare consoleVisible={consoleVisible} />
-      ) : (
-        <ConsoleShare />
-      )}
+      <div
+        className={moduleStyles.previewContainer}
+        style={{width: previewWidth, height: previewHeight}}
+      >
+        {showPreview ? (
+          <ConsoleAndPreviewShare
+            consoleVisible={consoleVisible}
+            height={previewHeight}
+            width={previewWidth}
+          />
+        ) : (
+          <ConsoleShare />
+        )}
+      </div>
     </div>
   );
 };

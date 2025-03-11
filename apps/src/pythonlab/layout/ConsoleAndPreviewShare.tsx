@@ -1,55 +1,35 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import MiniAppPreview from '@cdo/apps/codebridge/MiniAppPreview/MiniAppPreview';
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 
-import moduleStyles from './share-view.module.scss';
-
 interface ConsoleAndPreviewShareProps {
   consoleVisible: boolean;
+  height: number;
+  width: number;
 }
 
 const ConsoleAndPreviewShare: React.FunctionComponent<
   ConsoleAndPreviewShareProps
-> = ({consoleVisible}) => {
-  const getAvailableOutputWidth = () => {
-    return Math.max(window.innerWidth - 150, 400);
-  };
-
-  const [outputWidth, setOutputWidth] = useState(getAvailableOutputWidth());
-  const [outputHeight, setOutputHeight] = useState(window.innerHeight);
-
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setOutputWidth(getAvailableOutputWidth());
-      setOutputHeight(window.innerHeight);
-    });
-    return () =>
-      window.removeEventListener('resize', () => {
-        setOutputWidth(getAvailableOutputWidth());
-        setOutputHeight(window.innerHeight);
-      });
-  }, []);
-
+> = ({consoleVisible, height, width}) => {
   if (consoleVisible) {
     return (
       <HorizontalOutput
-        height={outputHeight}
-        width={outputWidth}
+        height={height}
+        width={width}
         setOutputHeight={() => {}}
       />
     );
   }
 
   return (
-    <div className={moduleStyles.fullScreenPreview}>
-      <MiniAppPreview
-        showMaximizeButton={false}
-        maximizeMiniApp={() => {}}
-        minimizeMiniApp={() => {}}
-        isMaximized={false}
-      />
-    </div>
+    <MiniAppPreview
+      showMaximizeButton={false}
+      maximizeMiniApp={() => {}}
+      minimizeMiniApp={() => {}}
+      isMaximized={false}
+      handleScaling={true}
+    />
   );
 };
 
