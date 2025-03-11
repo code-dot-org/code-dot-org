@@ -125,7 +125,7 @@
         {
           "type": "matrix",
           "name": "learning_obj_equity_strategies",
-          "title": "After completing this module, I feel confident to implement the following practices in my classroom:",
+          "title": "After completing this module,  I feel confident to use the following tools to improve my teaching practice:",
           "columns": [
             {
               "value": "1",
@@ -182,7 +182,7 @@
           "choices": [
             {
               "value": "yes_already_did",
-              "text": "Yes, I already did"
+              "text": "Yes, I already have"
             },
             {
               "value": "yes_plan",

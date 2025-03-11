@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:14:57 UTC",
+    "serialized_at": "2025-03-11 05:02:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1195,7 +1195,7 @@
       "key": "7591edec-dd28-4ec4-812e-43f1b37bc932",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students label the parts of the UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students label the parts of the UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction* in terms of class design and UML diagrams.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
       },
       "seeding_key": {
         "activity_section.key": "7591edec-dd28-4ec4-812e-43f1b37bc932",
