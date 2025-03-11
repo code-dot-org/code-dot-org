@@ -64,10 +64,15 @@ def change_orientation(orientation)
   )
 end
 
+def use_local_selenium?
+  # as opposed to saucelabs
+  return ENV['TEST_LOCAL'] == 'true' || ENV['CI'] == 'true' # TODO: only on first try
+end
+
 def get_browser(test_run_name)
   browser = nil
   $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
-  if ENV['TEST_LOCAL'] == 'true' || ENV['CI'] == 'true' # TODO: only on first try
+  if use_local_selenium?
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true' || ENV['CI'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
@@ -158,7 +163,7 @@ After do |scenario|
 end
 
 def context(str)
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless use_local_selenium?
     $browser&.execute_script("sauce:context=#{str}")
   end
 rescue => exception
