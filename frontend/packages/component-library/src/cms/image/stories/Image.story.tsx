@@ -1,6 +1,8 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
+import imageFile from '@public/images/image-component.png';
+
 import Image from '../index';
 
 export default {
@@ -14,7 +16,7 @@ type Story = StoryObj<typeof Image>;
 //
 export const DefaultImage: Story = {
   args: {
-    src: 'https://images.ctfassets.net/90t6bu6vlf76/6kTQglLn3K6jP0zd54lahO/e97b9f7d9a239db2f9a8cab3238d576d/teach-page-top.png',
+    src: imageFile,
     altText: 'Teacher in front of classroom',
   },
   play: async ({canvasElement}) => {
@@ -28,7 +30,7 @@ export const DefaultImage: Story = {
 
 export const ImageWithBorder: Story = {
   args: {
-    src: 'https://images.ctfassets.net/90t6bu6vlf76/6fdNRFZbNXpiXQd6v7fHen/e987f724ae45b23f12e61419a14933fe/help-page-spread-word.png',
+    src: imageFile,
     altText: 'Teacher helping student at computer',
     hasBorder: true,
   },
@@ -64,7 +66,7 @@ export const ImageWithBorder: Story = {
 
 export const ImageWithBoxShadow: Story = {
   args: {
-    src: 'https://images.ctfassets.net/90t6bu6vlf76/6kTQglLn3K6jP0zd54lahO/e97b9f7d9a239db2f9a8cab3238d576d/teach-page-top.png',
+    src: imageFile,
     altText: 'Teacher in front of classroom',
     hasBoxShadow: true,
   },
