@@ -70,6 +70,6 @@ class AdminSearchController < ApplicationController
     else
       flash[:alert] = "Section (CODE: #{params[:section_code]}) not found or undeleted."
     end
-    redirect_to :lookup_section
+    redirect_to :lookup_section_admin_search_index
   end
 end

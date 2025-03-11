@@ -609,10 +609,15 @@ Dashboard::Application.routes.draw do
     get '/admin/debug', to: 'admin_reports#debug'
 
     # internal search tools
-    get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-    get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
-    post '/admin/lookup_section', to: 'admin_search#lookup_section'
-    post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
+    resources :admin_search, only: [], path: '/admin' do
+      collection do
+        get :find_students
+        get :lookup_section
+        post :lookup_section
+        post :undelete_section
+      end
+    end
+
     get '/admin/pilots/', to: 'admin_pilots#pilots', as: 'pilots'
     post '/admin/pilots/', to: 'admin_pilots#create_pilot', as: 'create_pilot'
     get '/admin/pilots/:pilot_name', to: 'admin_pilots#show_pilot', as: 'show_pilot'
