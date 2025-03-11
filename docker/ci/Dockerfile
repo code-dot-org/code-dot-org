@@ -8,7 +8,7 @@
 
 
 #########################################################
-FROM ubuntu:20.04 as base
+FROM ubuntu:20.04 AS base
 #########################################################
 # multi-stage build for parallel compiling ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
@@ -50,7 +50,7 @@ RUN groupadd --gid 3434 ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
 #########################################################
-FROM base as rbenv
+FROM base AS rbenv
 #########################################################
 # compile ruby to /home/${USER}/.rbenv
 #########################################################
@@ -67,7 +67,7 @@ RUN mkdir -p "$(rbenv root)"/plugins && \
 
 
 #########################################################
-FROM base as primary-layer
+FROM base AS primary-layer
 #########################################################
 # Main layer of this Dockerfile: add packages etc below
 #########################################################
