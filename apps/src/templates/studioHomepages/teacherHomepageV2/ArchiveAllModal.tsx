@@ -5,6 +5,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import SafeMarkdown from '../../SafeMarkdown';
 import {archiveAllSections} from '../../teacherDashboard/teacherSectionsRedux';
 
 interface ArchiveAllModalProps {
@@ -41,7 +42,7 @@ export const ArchiveAllModal: React.FC<ArchiveAllModalProps> = ({onClose}) => {
   const areYouSureProps = React.useMemo(
     () => ({
       title: i18n.archiveWarning(),
-      description: i18n.archiveAllNote(),
+      customContent: <SafeMarkdown markdown={i18n.archiveAllNote()} />,
       primaryButtonProps: {
         text: i18n.archiveAllSections(),
         onClick: archiveAll,
