@@ -9,9 +9,9 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLElement> {
   /** Image alt text */
   altText?: string;
   /** Image border */
-  border?: boolean;
+  hasBorder?: boolean;
   /** Image box shadow */
-  boxShadow?: boolean;
+  hasBoxShadow?: boolean;
   /** Image custom className */
   className?: string;
 }
@@ -32,8 +32,8 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLElement> {
 const Image: React.FC<ImageProps> = ({
   src,
   altText = '',
-  border = false,
-  boxShadow = false,
+  hasBorder = false,
+  hasBoxShadow = false,
   className,
   ...HTMLAttributes
 }: ImageProps) => {
@@ -41,8 +41,8 @@ const Image: React.FC<ImageProps> = ({
     <img
       className={classNames(
         moduleStyles.image,
-        moduleStyles[border ? 'image-border' : ''],
-        moduleStyles[boxShadow ? 'image-boxShadow' : ''],
+        moduleStyles[hasBorder ? 'image-hasBorder' : ''],
+        moduleStyles[hasBoxShadow ? 'image-hasBoxShadow' : ''],
         className,
       )}
       alt={altText}
