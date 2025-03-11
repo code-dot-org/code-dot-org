@@ -5,8 +5,6 @@ module SeleniumBrowser
     options = Selenium::WebDriver::Options.send(browser)
     options.add_argument('--window-size=1280,1024') if [:chrome, :firefox].include?(browser)
     options.add_argument('--headless') if headless
-    # https://stackoverflow.com/a/53970825/1810460
-    options.add_argument('--no-sandbox') # TODO: chrome only
     return options
   end
 
