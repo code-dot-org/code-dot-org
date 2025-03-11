@@ -24,20 +24,14 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   );
 
   const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
-  const currentMessagesCountRef = useRef(storedMessages.length);
-  const currentFeedbackDetailsOpenRef = useRef(feedbackDetailsOpen);
+  const prevMessagesCountRef = useRef(storedMessages.length);
+  const prevFeedbackDetailsOpenRef = useRef(feedbackDetailsOpen);
 
   const lastAssistantMessageIndex = storedMessages
     .map(msg => msg.role)
     .lastIndexOf(Role.ASSISTANT);
-
   const isLastMessageFromAssistant =
     lastAssistantMessageIndex === storedMessages.length - 1;
-  const isNewMessage =
-    storedMessages.length !== currentMessagesCountRef.current;
-  // Tracks if assistant feedback details section was just opened.
-  const isFeedbackOpened =
-    feedbackDetailsOpen && !currentFeedbackDetailsOpenRef.current;
 
   const scrollToBottom = () => {
     conversationContainerRef.current?.scrollTo({
@@ -54,7 +48,14 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   };
 
   useEffect(() => {
-    if (!conversationContainerRef.current) return;
+    if (!conversationContainerRef.current) {
+      return;
+    }
+
+    const isNewMessage = storedMessages.length !== prevMessagesCountRef.current;
+    // Tracks if assistant feedback details section was just opened.
+    const isFeedbackOpened =
+      feedbackDetailsOpen && !prevFeedbackDetailsOpenRef.current;
 
     setTimeout(() => {
       if (isNewMessage) {
@@ -67,16 +68,13 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 
       // Update refs to track changes in number of stored messages and whether
       // assistant feedback details is open.
-      currentMessagesCountRef.current = storedMessages.length;
-      currentFeedbackDetailsOpenRef.current = feedbackDetailsOpen;
+      prevMessagesCountRef.current = storedMessages.length;
+      prevFeedbackDetailsOpenRef.current = feedbackDetailsOpen;
     }, 200); // Small delay to allow DOM updates
   }, [
     storedMessages.length,
-    isWaitingForChatResponse,
     showSuggestedPrompts,
     feedbackDetailsOpen,
-    isNewMessage,
-    isFeedbackOpened,
     isLastMessageFromAssistant,
   ]);
 
