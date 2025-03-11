@@ -24,6 +24,8 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   );
 
   const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
+  const currentMessagesCountRef = useRef(storedMessages.length);
+  const currentFeedbackDetailsOpenRef = useRef(feedbackDetailsOpen);
 
   const lastAssistantMessageIndex = storedMessages
     .map(msg => msg.role)
@@ -31,30 +33,50 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 
   const isLastMessageFromAssistant =
     lastAssistantMessageIndex === storedMessages.length - 1;
+  const isNewMessage =
+    storedMessages.length !== currentMessagesCountRef.current;
+  // Tracks if assistant feedback details section was just opened.
+  const isFeedbackOpened =
+    feedbackDetailsOpen && !currentFeedbackDetailsOpenRef.current;
+
+  const scrollToBottom = () => {
+    conversationContainerRef.current?.scrollTo({
+      top: conversationContainerRef.current.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollToAssistantMessage = () => {
+    lastAssistantMessageRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
 
   useEffect(() => {
     if (!conversationContainerRef.current) return;
 
     setTimeout(() => {
-      if (isLastMessageFromAssistant && lastAssistantMessageRef.current) {
-        // Scroll to the top of the latest assistant message
-        lastAssistantMessageRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      } else {
-        // Scroll to the bottom for user messages or other elements
-        conversationContainerRef.current?.scrollTo({
-          top: conversationContainerRef.current.scrollHeight,
-          behavior: 'smooth',
-        });
+      if (isNewMessage) {
+        isLastMessageFromAssistant
+          ? scrollToAssistantMessage()
+          : scrollToBottom();
+      } else if (isFeedbackOpened || showSuggestedPrompts) {
+        scrollToBottom();
       }
-    }, 250); // Small delay to allow DOM updates
+
+      // Update refs to track changes in number of stored messages and whether
+      // assistant feedback details is open.
+      currentMessagesCountRef.current = storedMessages.length;
+      currentFeedbackDetailsOpenRef.current = feedbackDetailsOpen;
+    }, 200); // Small delay to allow DOM updates
   }, [
     storedMessages.length,
     isWaitingForChatResponse,
     showSuggestedPrompts,
     feedbackDetailsOpen,
+    isNewMessage,
+    isFeedbackOpened,
     isLastMessageFromAssistant,
   ]);
 
@@ -99,17 +121,16 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
   shouldDisplay,
 }) => {
-  if (shouldDisplay) {
-    return (
-      <div className={style.waitingAnimationWrapper}>
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={style.waitingForResponse}
-        />
-      </div>
-    );
-  }
-  return null;
+  if (!shouldDisplay) return null;
+  return (
+    <div className={style.waitingAnimationWrapper}>
+      <img
+        src="/blockly/media/aichat/typing-animation.gif"
+        alt="Waiting for response"
+        className={style.waitingForResponse}
+      />
+    </div>
+  );
 };
+
 export default AITutorChatWorkspace;
