@@ -19,7 +19,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
 import {scaleMiniApp} from '../Workspace/outputHelpers';
 
-import moduleStyles from './neighborhood-preview.module.scss';
+import moduleStyles from './mini-app-preview.module.scss';
 
 interface NeighborhoodPreviewProps {
   handleScaling?: boolean;
@@ -125,7 +125,7 @@ const NeighborhoodPreview: React.FunctionComponent<
   ]);
 
   return (
-    <div ref={containerRef} className={moduleStyles.neighborhoodContainer}>
+    <div ref={containerRef} className={moduleStyles.miniAppContainer}>
       <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
     </div>
   );
