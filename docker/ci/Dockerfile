@@ -157,21 +157,10 @@ RUN curl --output /tmp/firefox.deb https://s3.amazonaws.com/circle-downloads/fir
     rm /tmp/firefox.deb && \
     true
 
-# install chrome
-RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    dpkg -i google-chrome-stable_current_amd64.deb || apt-get -fy install && \
-    rm google-chrome-stable_current_amd64.deb && \
-    sed -i \
-        's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' \
-        "/opt/google/chrome/google-chrome"
-
-# install chromedriver
-RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.com/LATEST_RELEASE) && \
-    curl -sSLOJ "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_RELEASE/chromedriver_linux64.zip" && \
-    unzip chromedriver_linux64.zip && \
-    rm chromedriver_linux64.zip && \
-    mv chromedriver /usr/local/bin/chromedriver && \
-    chmod +x /usr/local/bin/chromedriver
+# install Chrome for Testing (and corresponding chromedriver) based on instructions at
+# https://developer.chrome.com/blog/chrome-for-testing/#how_can_i_get_chrome_for_testing_binaries
+RUN npx @puppeteer/browsers install chrome@stable && \
+    npx @puppeteer/browsers install chromedriver@stable
 
 # install pdftk & tidy
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
