@@ -1,5 +1,7 @@
 import React from 'react';
 
+import i18n from '@cdo/locale';
+
 import {EmptyState} from '../../teacherNavigation/EmptyState';
 
 import noArchivedSections from './images/no_archived_sections.png';
@@ -15,11 +17,11 @@ export const EmptyHomepage: React.FC<EmptyHomepageProps> = ({
 }) => {
   return (
     <EmptyState
-      headline="It's a bit empty here"
+      headline={i18n.emptySectionHeadline()}
       descriptionText={
         showHiddenOnly
-          ? 'You haven’t archived any class sections yet.'
-          : 'You haven’t created any class sections yet.'
+          ? i18n.emptyArchivedClassSections()
+          : i18n.emptyClassSections()
       }
       imageComponent={
         <img
