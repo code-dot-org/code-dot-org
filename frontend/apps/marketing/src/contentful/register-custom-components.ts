@@ -13,6 +13,7 @@ import Divider, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import Image, {ImageContentfulComponentDefinition} from '@/components/image';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
 import Overline, {
   OverlineContentfulComponentDefinition,
@@ -25,10 +26,7 @@ import Section, {
 } from '@/components/section';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
-import {
-  defineComponents,
-  CONTENTFUL_COMPONENTS,
-} from '@contentful/experiences-sdk-react';
+import {defineComponents} from '@contentful/experiences-sdk-react';
 
 defineComponents(
   [
@@ -47,6 +45,10 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: Image,
+      definition: ImageContentfulComponentDefinition,
     },
     {
       component: Link,
@@ -73,6 +75,6 @@ defineComponents(
     },
   ],
   {
-    enabledBuiltInComponents: [CONTENTFUL_COMPONENTS.image.id],
+    enabledBuiltInComponents: [],
   },
 );
