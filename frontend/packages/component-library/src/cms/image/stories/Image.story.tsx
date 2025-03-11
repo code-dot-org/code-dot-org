@@ -30,7 +30,7 @@ export const ImageWithBorder: Story = {
   args: {
     src: 'https://images.ctfassets.net/90t6bu6vlf76/6fdNRFZbNXpiXQd6v7fHen/e987f724ae45b23f12e61419a14933fe/help-page-spread-word.png',
     altText: 'Teacher helping student at computer',
-    border: true,
+    hasBorder: true,
   },
   parameters: {
     docs: {
@@ -66,7 +66,7 @@ export const ImageWithBoxShadow: Story = {
   args: {
     src: 'https://images.ctfassets.net/90t6bu6vlf76/6kTQglLn3K6jP0zd54lahO/e97b9f7d9a239db2f9a8cab3238d576d/teach-page-top.png',
     altText: 'Teacher in front of classroom',
-    boxShadow: true,
+    hasBoxShadow: true,
   },
   parameters: {
     docs: {
