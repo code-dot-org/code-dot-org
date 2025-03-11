@@ -213,7 +213,6 @@
       "import": "./dist/esm/cms/image/index.mjs",
       "require": "./dist/cjs/cms/image/index.js"
     },
-    "./cms/image/index.css": "./dist/esm/cms/image/index.css",
     "./link": {
       "types": {
         "import": "./dist/esm/link/index.d.ts",
