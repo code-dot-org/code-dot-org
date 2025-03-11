@@ -20036,6 +20036,8 @@ en:
               name: Assessments
             lesson-3:
               name: Sequences - Explore
+            lesson-4:
+              name: Sequences - Practice
           lesson_groups: {}
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
@@ -20436,4 +20438,23 @@ en:
 
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
+          student_description: ''
+        self-paced-pl-teaching-computer-science-discoveries-music-lab:
+          lessons:
+            lesson-1:
+              name: Introduction to Programming with Music Lab
+            lesson-2:
+              name: 'Teaching Lessons 1 - 5: Sequences'
+            lesson-3:
+              name: 'Teaching Lessons 6-9: Loops'
+            lesson-4:
+              name: 'Teaching Lessons 10 - 13: Functions'
+            lesson-5:
+              name: Accessibility in Music Lab
+          lesson_groups: {}
+          name: self-paced-pl-teaching-computer-science-discoveries-music-lab
+          title: Teaching Programming with Music Lab
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''

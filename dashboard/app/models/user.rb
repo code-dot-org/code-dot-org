@@ -207,7 +207,7 @@ class User < ApplicationRecord
     seen_ta_scores_map
     roster_synced
     educator_role
-    ai_differentiation_enabled
+    ai_differentiation_toggled_off
     has_completed_ai_differentiation_welcome
   )
 

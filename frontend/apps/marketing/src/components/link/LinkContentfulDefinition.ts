@@ -50,7 +50,6 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       defaultValue: 'Link',
       group: 'content',
-      required: true,
     },
   },
 };

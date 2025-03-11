@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-09 01:39:59 UTC",
+    "serialized_at": "2025-03-11 05:07:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3173,8 +3173,19 @@
       }
     },
     {
-      "key": "b12a95bc-c687-4365-b197-619bd7502c9d",
+      "key": "70766dd4-f547-43c6-9dc1-e2e806f8faf1",
       "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk students through the flow chart and highlight how while loops can be found in everyday life. "
+      },
+      "seeding_key": {
+        "activity_section.key": "70766dd4-f547-43c6-9dc1-e2e806f8faf1",
+        "lesson_activity.key": "a82e0329-74a7-442f-b09f-1e82e03ab4f0"
+      }
+    },
+    {
+      "key": "b12a95bc-c687-4365-b197-619bd7502c9d",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *While Loops*.",
         "tips": [
@@ -3191,7 +3202,7 @@
     },
     {
       "key": "90f9053d-ca41-4aa8-b437-c8a065050ee5",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Loops and Boolean Methods"
@@ -3203,7 +3214,7 @@
     },
     {
       "key": "4029874b-906a-42c2-9758-d4ee281f7a91",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
@@ -3220,9 +3231,9 @@
     },
     {
       "key": "3eaeb14a-b080-4405-b131-7d7dadbab523",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that we can use while loops to repeat an action when we don't know how many times the action will repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
       },
       "seeding_key": {
         "activity_section.key": "3eaeb14a-b080-4405-b131-7d7dadbab523",
@@ -3231,7 +3242,7 @@
     },
     {
       "key": "7d8ef6f7-f707-47bc-980d-2852de329a7b",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "We now know how to implement two components of algorithms in Java – sequencing and iteration. Software engineers often plan their algorithms in natural language first before writing code. This is an important step that helps us better understand a problem and plan the steps we need to take to develop a solution.",
         "duration": "15",
@@ -3245,7 +3256,7 @@
     },
     {
       "key": "ed6537fb-2921-4954-8d01-71fc652e1761",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.",
         "tips": [
@@ -3262,7 +3273,7 @@
     },
     {
       "key": "3cb775dc-add3-43bb-8fa8-e5d621c6b2d5",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding on Level 6, then continue to complete Level 7 to implement their solution for their chosen problem.",
         "progression_name": "Practice: Using Loops and Boolean Methods",
@@ -3956,7 +3967,7 @@
       "key": "8adca8d4-1615-4789-8d97-e3aaac2e042f",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Explain the components of a method signature:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The keyword `public`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The ***return type***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***method signature***\n\n**Do This:** Explain how methods are called:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java looks for method in the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A method call interrupts the sequential execution of statements\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***return***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Flow of control returns to the point after the method was called",
+        "description": "**Do This:** Explain the components of a method signature:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The keyword `public`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The ***return type***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***method signature***\n\n**Do This:** Explain how methods are called:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java looks for method in the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A method call interrupts the sequential execution of statements\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Procedural abstraction** allows methods to be changed without affecting the rest of the program. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***return***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Flow of control returns to the point after the method was called",
         "tips": [
           {
             "type": "teachingTip",
