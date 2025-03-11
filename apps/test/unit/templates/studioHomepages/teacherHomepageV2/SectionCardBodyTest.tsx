@@ -140,8 +140,8 @@ describe('SectionCardBody', () => {
 
   it('renders task button with link to lesson materials', () => {
     renderComponent();
-    const progressButton = screen.getByText('View lesson materials');
-    fireEvent.click(progressButton);
+    const materialsButton = screen.getByText('View lesson materials');
+    fireEvent.click(materialsButton);
     screen.getByText('/sections/11/materials');
   });
 });

@@ -3,10 +3,7 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
-import {
-  TEACHER_NAVIGATION_SECTIONS_URL,
-  TEACHER_NAVIGATION_PATHS,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {TEACHER_NAVIGATION_SECTIONS_URL} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -14,12 +11,14 @@ interface TaskButtonProps {
   buttonText: string;
   icon: string;
   sectionId: number;
+  path: string;
 }
 
 export const TaskButton: React.FC<TaskButtonProps> = ({
   buttonText,
   icon,
   sectionId,
+  path,
 }) => {
   const navigate = useNavigate();
 
@@ -28,9 +27,7 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
       type={'button'}
       className={styles.taskButtons}
       onClick={() =>
-        navigate(
-          `${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.progress}`
-        )
+        navigate(`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`)
       }
     >
       <div className={styles.taskButtonLeft}>
