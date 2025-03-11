@@ -443,7 +443,7 @@ button.rubricHeaderTab {
     height: 40px;
     padding: 0 1rem 0 2rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     align-self: stretch;
     line-height: 154%;
     position: relative;
@@ -486,6 +486,7 @@ button.rubricHeaderTab {
   gap: 16px;
   font-size: 14px;
   padding-left: 10px;
+  padding-top: 0.5rem;
 }
 
 .learningGoalHeaderRightSide {
@@ -559,7 +560,6 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
   gap: 8px;
   min-height: 92px;
 }
