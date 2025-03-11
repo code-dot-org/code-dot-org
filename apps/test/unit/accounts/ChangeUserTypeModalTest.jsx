@@ -1,32 +1,9 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, getDefaultNormalizer} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import ChangeUserTypeModal from '@cdo/apps/accounts/ChangeUserTypeModal';
-
-// Mock i18n strings used in the components
-jest.mock('@cdo/locale', () => {
-  const customStrings = {
-    changeUserTypeModal_save_teacher: () => 'Save Teacher',
-    cancel: () => 'Cancel',
-    saving: () => 'Saving...',
-    changeUserTypeModal_title: () => 'Change User Type',
-    changeUserTypeModal_unexpectedError: () => 'An unexpected error occurred.',
-    changeUserTypeModal_email_isRequired: () => 'Email is required.',
-    changeUserTypeModal_email_invalid: () => 'Invalid email.',
-    changeUserTypeModal_emailOptIn_description: () =>
-      'Email opt-in description.',
-    changeUserTypeModal_emailOptIn_isRequired: () =>
-      'Email opt-in is required.',
-  };
-  return {
-    __esModule: true,
-    default: new Proxy(customStrings, {
-      get: (target, prop) => {
-        return prop in target ? target[prop] : () => prop;
-      },
-    }),
-  };
-});
+import i18n from '@cdo/locale';
 
 describe('ChangeUserTypeModal', () => {
   const DEFAULT_PROPS = {
@@ -38,133 +15,180 @@ describe('ChangeUserTypeModal', () => {
     return render(<ChangeUserTypeModal {...DEFAULT_PROPS} {...props} />);
   };
 
-  const getEmailInput = () => screen.getByRole('textbox', {name: /email/i});
+  const getEmailInput = () =>
+    screen.getByRole('textbox', {
+      name: RegExp(i18n.changeUserTypeModal_email_label(), 'i'),
+    });
   const getEmailOptInSelect = () =>
-    screen.getByRole('combobox', {name: /email opt-in/i});
+    screen.getByRole('combobox', {
+      name: RegExp(i18n.changeUserTypeModal_emailOptIn_description(), 'i'),
+    });
   const getSubmitButton = () =>
-    screen.getByRole('button', {name: /save teacher/i});
-  const getCancelButton = () => screen.getByRole('button', {name: /cancel/i});
+    screen.getByRole('button', {
+      name: RegExp(i18n.changeUserTypeModal_save_teacher(), 'i'),
+    });
+  const getCancelButton = () =>
+    screen.getByRole('button', {name: i18n.cancel()});
 
   it('renders the modal with the correct title', () => {
     renderComponent();
-    expect(screen.getByText('Change User Type')).toBeInTheDocument();
+    expect(
+      screen.getByText(i18n.changeUserTypeModal_title())
+    ).toBeInTheDocument();
   });
 
-  it('disables everything and shows save text when saving', async () => {
+  it('disables everything and shows saving text when submitting', async () => {
+    const user = userEvent.setup();
     renderComponent();
-    fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
-    fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
-    fireEvent.click(getSubmitButton());
+    await user.type(getEmailInput(), 'valid@example.com');
+    await user.selectOptions(getEmailOptInSelect(), 'yes');
+    await user.click(getSubmitButton());
 
     expect(getEmailInput()).toBeDisabled();
     expect(getEmailOptInSelect()).toBeDisabled();
     expect(getSubmitButton()).toBeDisabled();
     expect(getCancelButton()).toBeDisabled();
-    expect(screen.getByText('Saving...')).toBeInTheDocument();
+    expect(screen.getByText(i18n.saving())).toBeInTheDocument();
   });
 
-  it('shows unknown error text when an unknown error occurs', async () => {
-    DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce(
-      new Error('Unknown error')
-    );
-    renderComponent();
-    fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
-    fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
-    fireEvent.click(getSubmitButton());
+  it('displays an unknown error when the submission fails', async () => {
+    const handleSubmit = jest
+      .fn()
+      .mockRejectedValue(new Error('Unknown error'));
+    const user = userEvent.setup();
+    renderComponent({handleSubmit});
+    await user.type(getEmailInput(), 'valid@example.com');
+    await user.selectOptions(getEmailOptInSelect(), 'yes');
+    await user.click(getSubmitButton());
 
     expect(
-      await screen.findByText('An unexpected error occurred.')
+      await screen.findByText(i18n.changeUserTypeModal_unexpectedError(), {
+        normalizer: getDefaultNormalizer({collapseWhitespace: false}),
+      })
     ).toBeInTheDocument();
   });
 
-  it('calls handleCancel when clicking the cancel button', () => {
+  it('calls handleCancel when clicking the cancel button', async () => {
     const handleCancel = jest.fn();
+    const user = userEvent.setup();
     renderComponent({handleCancel});
+    await user.click(getCancelButton());
 
-    fireEvent.click(getCancelButton());
     expect(handleCancel).toHaveBeenCalled();
   });
 
   describe('validation', () => {
-    it('shows an error when email is empty', () => {
+    it('checks that email is present', async () => {
+      const user = userEvent.setup();
       renderComponent();
-      fireEvent.change(getEmailInput(), {target: {value: ''}});
-      fireEvent.blur(getEmailInput());
+      await user.selectOptions(getEmailOptInSelect(), 'yes');
 
-      expect(screen.getByText('Email is required.')).toBeInTheDocument();
+      expect(
+        screen.getByText(i18n.changeUserTypeModal_email_isRequired())
+      ).toBeInTheDocument();
       expect(getSubmitButton()).toBeDisabled();
     });
 
-    it('shows an error when email is invalid', () => {
+    it('checks that email is valid', async () => {
+      const user = userEvent.setup();
       renderComponent();
-      fireEvent.change(getEmailInput(), {target: {value: 'invalidEmail'}});
-      fireEvent.blur(getEmailInput());
+      await user.type(getEmailInput(), 'invalid-email');
+      await user.selectOptions(getEmailOptInSelect(), 'yes');
 
-      expect(screen.getByText('Invalid email.')).toBeInTheDocument();
+      expect(
+        screen.getByText(i18n.changeUserTypeModal_email_invalid())
+      ).toBeInTheDocument();
       expect(getSubmitButton()).toBeDisabled();
     });
 
-    it('shows an error when email opt-in is empty', () => {
+    it('checks that email opt-in is present', async () => {
+      const user = userEvent.setup();
       renderComponent();
-      fireEvent.change(getEmailOptInSelect(), {target: {value: ''}});
-      fireEvent.blur(getEmailOptInSelect());
+      await user.type(getEmailInput(), 'valid@example.com');
 
-      expect(screen.getByText('Email opt-in is required.')).toBeInTheDocument();
+      expect(
+        screen.getByText(i18n.changeUserTypeModal_emailOptIn_isRequired())
+      ).toBeInTheDocument();
       expect(getSubmitButton()).toBeDisabled();
     });
 
-    it('enables the submit button when form is valid', () => {
+    it('enables the submit button when the form is valid', async () => {
+      const user = userEvent.setup();
       renderComponent();
-      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
-      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
+      await user.type(getEmailInput(), 'valid@example.com');
+      await user.selectOptions(getEmailOptInSelect(), 'yes');
 
       expect(getSubmitButton()).not.toBeDisabled();
     });
   });
 
   describe('server errors', () => {
-    it('shows server errors for email', () => {
-      renderComponent();
-      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
-      fireEvent.change(getEmailInput(), {target: {value: ''}});
+    it('clears email error on email change', async () => {
+      const user = userEvent.setup();
+      renderComponent({
+        serverErrors: {email: i18n.changeUserTypeModal_email_isRequired()},
+      });
 
-      expect(screen.getByText('Email is required.')).toBeInTheDocument();
+      expect(
+        screen.getByText(i18n.changeUserTypeModal_email_isRequired())
+      ).toBeInTheDocument();
+
+      await user.type(getEmailInput(), 'valid@example.com');
+
+      expect(
+        screen.queryByText(i18n.changeUserTypeModal_email_isRequired())
+      ).not.toBeInTheDocument();
     });
 
-    it('shows server errors for email opt-in', () => {
-      renderComponent();
-      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
-      fireEvent.change(getEmailOptInSelect(), {target: {value: ''}});
+    it('clears email opt-in error on opt-in change', async () => {
+      const user = userEvent.setup();
+      renderComponent({
+        serverErrors: {
+          emailOptIn: i18n.changeUserTypeModal_emailOptIn_isRequired(),
+        },
+      });
 
-      expect(screen.getByText('Email opt-in is required.')).toBeInTheDocument();
+      expect(
+        screen.getByText(i18n.changeUserTypeModal_emailOptIn_isRequired())
+      ).toBeInTheDocument();
+
+      await user.selectOptions(getEmailOptInSelect(), 'yes');
+
+      expect(
+        screen.queryByText(i18n.changeUserTypeModal_emailOptIn_isRequired())
+      ).not.toBeInTheDocument();
     });
   });
 
   describe('onSubmitFailure', () => {
-    it('shows unknown error when no server errors are returned', async () => {
-      DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce(
-        new Error('Unknown error')
-      );
-      renderComponent();
-      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
-      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
-      fireEvent.click(getSubmitButton());
+    it('displays unknown error when no specific server errors exist', async () => {
+      const handleSubmit = jest
+        .fn()
+        .mockRejectedValue(new Error('Unknown error'));
+      const user = userEvent.setup();
+      renderComponent({handleSubmit});
+      await user.type(getEmailInput(), 'valid@example.com');
+      await user.selectOptions(getEmailOptInSelect(), 'yes');
+      await user.click(getSubmitButton());
 
       expect(
-        await screen.findByText('An unexpected error occurred.')
+        await screen.findByText(i18n.changeUserTypeModal_unexpectedError(), {
+          normalizer: getDefaultNormalizer({collapseWhitespace: false}),
+        })
       ).toBeInTheDocument();
     });
 
-    it('shows server errors when they are returned', async () => {
+    it('displays specific server errors when returned', async () => {
       const serverErrors = {
         email: 'Email already in use',
         emailOptIn: 'Invalid opt-in selection',
       };
-      DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce({serverErrors});
-      renderComponent();
-      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
-      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
-      fireEvent.click(getSubmitButton());
+      const handleSubmit = jest.fn().mockRejectedValue({serverErrors});
+      const user = userEvent.setup();
+      renderComponent({handleSubmit});
+      await user.type(getEmailInput(), 'valid@example.com');
+      await user.selectOptions(getEmailOptInSelect(), 'yes');
+      await user.click(getSubmitButton());
 
       expect(
         await screen.findByText('Email already in use')
