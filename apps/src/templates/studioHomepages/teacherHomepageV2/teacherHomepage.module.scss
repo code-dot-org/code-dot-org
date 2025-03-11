@@ -54,7 +54,6 @@
 }
 
 // SectionCard
-
 .sectionCardWrapper {
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
@@ -89,6 +88,10 @@
 
 .sectionCardCode {
   height: 22px;
+
+  p {
+    margin: 0;
+  }
 
   a {
     color: var(--brand-teal-50);
