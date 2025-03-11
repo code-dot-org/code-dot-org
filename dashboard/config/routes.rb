@@ -620,11 +620,10 @@ Dashboard::Application.routes.draw do
 
     resources :admin_pilots, only: [:index, :create, :show], path: '/admin/pilots', param: 'pilot_name' do
       collection do
+        post :add_to_pilot
+        post :remove_from_pilot
       end
     end
-
-    post '/admin/add_to_pilot', to: 'admin_pilots#add_to_pilot', as: 'add_to_pilot'
-    post '/admin/remove_from_pilot', to: 'admin_pilots#remove_from_pilot', as: 'remove_from_pilot'
 
     # internal engineering dashboards
     get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
