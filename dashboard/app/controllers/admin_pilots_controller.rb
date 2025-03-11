@@ -21,7 +21,7 @@ class AdminPilotsController < ApplicationController
       return render status: :bad_request, json: {error: exception.message}
     end
 
-    redirect_to :pilots
+    redirect_to :pilots_admin_pilots
   end
 
   def show_pilot

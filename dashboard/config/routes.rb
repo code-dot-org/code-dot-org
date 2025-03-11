@@ -618,9 +618,14 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/admin/pilots/', to: 'admin_pilots#pilots', as: 'pilots'
-    post '/admin/pilots/', to: 'admin_pilots#create_pilot', as: 'create_pilot'
-    get '/admin/pilots/:pilot_name', to: 'admin_pilots#show_pilot', as: 'show_pilot'
+    resources :admin_pilots, only: [], path: '/admin/pilots' do
+      collection do
+        get '/', action: 'pilots', as: 'pilots'
+        post :create_pilot
+        get '/:pilot_name', action: 'show_pilot', as: 'show_pilot'
+      end
+    end
+
     post '/admin/add_to_pilot', to: 'admin_pilots#add_to_pilot', as: 'add_to_pilot'
     post '/admin/remove_from_pilot', to: 'admin_pilots#remove_from_pilot', as: 'remove_from_pilot'
 
