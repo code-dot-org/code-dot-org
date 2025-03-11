@@ -119,16 +119,18 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
   shouldDisplay,
 }) => {
-  if (!shouldDisplay) return null;
-  return (
-    <div className={style.waitingAnimationWrapper}>
-      <img
-        src="/blockly/media/aichat/typing-animation.gif"
-        alt="Waiting for response"
-        className={style.waitingForResponse}
-      />
-    </div>
-  );
+  if (shouldDisplay) {
+    return (
+      <div className={style.waitingAnimationWrapper}>
+        <img
+          src="/blockly/media/aichat/typing-animation.gif"
+          alt="Waiting for response"
+          className={style.waitingForResponse}
+        />
+      </div>
+    );
+  }
+  return null;
 };
 
 export default AITutorChatWorkspace;
