@@ -51,7 +51,7 @@ export const TeacherHomepage: React.FC = () => {
               setSelectedArchiveToggle={setSelectedArchiveToggle}
             />
             {numSections === 0 ? (
-              <EmptyHomepage />
+              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (
               <SectionList
                 showHiddenOnly={selectedArchiveToggle === 'archived'}
