@@ -7,9 +7,13 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import {Store} from 'redux';
 
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -20,6 +24,8 @@ import teacherSections, {
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+const INITIAL_ROUTE = '/teacher_dashboard/home';
 
 describe('TeacherHomepage', () => {
   const sections = [
@@ -61,16 +67,10 @@ describe('TeacherHomepage', () => {
 
   const serverSections = sections.map(serverSectionFromSection);
 
-  let store: Store;
-
   const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
 
   beforeEach(() => {
-    store = getStore();
-    registerReducers({teacherSections, currentUser});
-    store.dispatch(setSections(serverSections));
-    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
-
+    stubRedux();
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/dashboardapi/sections/available_participant_types') {
         return Promise.resolve({
@@ -84,9 +84,14 @@ describe('TeacherHomepage', () => {
 
   afterEach(() => {
     fetchSpy.mockRestore();
+    restoreRedux();
   });
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+  function renderComponent(initialSections = serverSections) {
+    const store = getStore();
+    registerReducers({teacherSections, currentUser});
+    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+    store.dispatch(setSections(initialSections));
     return render(
       <Provider store={store}>
         <RouterProvider
@@ -97,7 +102,7 @@ describe('TeacherHomepage', () => {
                 element={<TeacherHomepage />}
               />,
             ]),
-            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
+            {initialEntries: [INITIAL_ROUTE], basename: '/teacher_dashboard'}
           )}
         />
       </Provider>
@@ -147,5 +152,24 @@ describe('TeacherHomepage', () => {
     fireEvent.click(archiveAllSectionsButton);
 
     screen.getByText('Archive all class sections?');
+  });
+
+  it('empty sections shows empty state', async () => {
+    renderComponent([]);
+
+    await screen.findByText('Welcome, Rubber Ducky');
+    await screen.findByText("It's a bit empty here...");
+    screen.getByText('You haven’t created any class sections yet.');
+  });
+
+  it('empty archived sections shows empty state', () => {
+    renderComponent([]);
+
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+    fireEvent.click(archivedButton);
+
+    screen.getByText('Welcome, Rubber Ducky');
+    screen.getByText("It's a bit empty here...");
+    screen.getByText('You haven’t archived any class sections yet.');
   });
 });
