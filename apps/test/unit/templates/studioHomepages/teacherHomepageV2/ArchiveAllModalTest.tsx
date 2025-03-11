@@ -35,16 +35,16 @@ describe('ArchiveAllModal', () => {
 
   it('should display the correct modal', () => {
     renderDefault();
-    screen.getByText('Archive all your sections?');
+    screen.getByText('Archive all class sections?');
     screen.getByText('Note: this will', {exact: false});
-    screen.getByRole('button', {name: 'Archive all sections'});
+    screen.getByRole('button', {name: 'Archive all class sections'});
     screen.getByRole('button', {name: 'Cancel'});
   });
 
   it('should call the archive function when the archive all button is clicked', async () => {
     renderDefault();
     const archiveButton = screen.getByRole('button', {
-      name: 'Archive all sections',
+      name: 'Archive all class sections',
     });
     fireEvent.click(archiveButton);
     expect(fetchSpy).toHaveBeenCalledWith('/sections/archive_all');
@@ -53,7 +53,7 @@ describe('ArchiveAllModal', () => {
   it('should display the number of hidden sections after archiving', async () => {
     renderDefault();
     const archiveButton = screen.getByRole('button', {
-      name: 'Archive all sections',
+      name: 'Archive all class sections',
     });
     fireEvent.click(archiveButton);
 
@@ -65,7 +65,7 @@ describe('ArchiveAllModal', () => {
     const onClose = jest.fn();
     renderDefault({onClose});
     const archiveButton = screen.getByRole('button', {
-      name: 'Archive all sections',
+      name: 'Archive all class sections',
     });
     fireEvent.click(archiveButton);
 

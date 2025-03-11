@@ -141,11 +141,11 @@ describe('TeacherHomepage', () => {
     fireEvent.click(optionsDropdown);
 
     const archiveAllSectionsButton = await screen.findByRole('button', {
-      name: 'Archive all sections',
+      name: 'Archive all class sections',
     });
 
     fireEvent.click(archiveAllSectionsButton);
 
-    screen.getByText('Archive all your sections?');
+    screen.getByText('Archive all class sections?');
   });
 });
