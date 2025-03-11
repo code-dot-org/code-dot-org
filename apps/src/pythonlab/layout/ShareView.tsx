@@ -13,6 +13,9 @@ import ConsoleShare from './ConsoleShare';
 
 import moduleStyles from './share-view.module.scss';
 
+const SIDEBAR_WIDTH = 150;
+const MIN_PREVIEW_WIDTH = 200;
+
 const ShareView: React.FunctionComponent = () => {
   const miniApp = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
@@ -30,7 +33,7 @@ const ShareView: React.FunctionComponent = () => {
   const showPreview = hasPreview(miniApp);
 
   const getAvailablePreviewWidth = () => {
-    return Math.max(window.innerWidth - 150, 400);
+    return Math.max(window.innerWidth - SIDEBAR_WIDTH, MIN_PREVIEW_WIDTH);
   };
 
   const [previewWidth, setPreviewWidth] = useState(getAvailablePreviewWidth());

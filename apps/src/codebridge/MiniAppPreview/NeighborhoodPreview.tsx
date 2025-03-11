@@ -6,6 +6,7 @@ import {
   MiniApps,
 } from '@codebridge/constants';
 import {findFile} from '@codebridge/utils';
+import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
@@ -40,20 +41,25 @@ const NeighborhoodPreview: React.FunctionComponent<
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scaleNeighborhood = useCallback(() => {
-    if (handleScaling) {
-      const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_SIZE;
-      const height =
-        containerRef.current?.clientHeight || DEFAULT_MINI_APP_SIZE;
-      scaleMiniApp(height, width);
-    }
-  }, [handleScaling]);
+    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_SIZE;
+    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_SIZE;
+    scaleMiniApp(height, width);
+  }, []);
+
+  const throttledScaleNeighborhood = useMemo(
+    () => throttle(scaleNeighborhood, 30),
+    [scaleNeighborhood]
+  );
 
   // Scale neighborhood on load, and on resize.
   useEffect(() => {
-    scaleNeighborhood();
-    window.addEventListener('resize', scaleNeighborhood);
-    return () => window.removeEventListener('resize', scaleNeighborhood);
-  }, [scaleNeighborhood]);
+    if (handleScaling) {
+      throttledScaleNeighborhood();
+      window.addEventListener('resize', throttledScaleNeighborhood);
+      return () =>
+        window.removeEventListener('resize', throttledScaleNeighborhood);
+    }
+  }, [throttledScaleNeighborhood, handleScaling]);
 
   const neighborhood = useMemo(() => {
     const neighborhoodRef = new Neighborhood(
