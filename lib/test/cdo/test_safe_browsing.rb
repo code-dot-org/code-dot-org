@@ -15,6 +15,13 @@ class SafeBrowsingTest < Minitest::Test
     c.filter_sensitive_data('<SAFE_BROWSE_API_KEY>') {CDO.google_safe_browsing_key}
   end
 
+  def test_invalid_url
+    refute SafeBrowsing.determine_safe_to_open("some string")
+    refute SafeBrowsing.determine_safe_to_open("ftp://example.com")
+    refute SafeBrowsing.determine_safe_to_open("mailto:user@example.com")
+    refute SafeBrowsing.determine_safe_to_open("example.com") # missing protocol
+  end
+
   def test_determine_safe_website
     assert SafeBrowsing.determine_safe_to_open("https://code.org/")
   end

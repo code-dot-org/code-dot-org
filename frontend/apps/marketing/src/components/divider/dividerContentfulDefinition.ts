@@ -5,7 +5,7 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
   id: 'divider',
   name: 'Divider',
   category: 'Custom Components',
-  builtInStyles: 'cfMargin',
+  builtInStyles: ['cfMargin'],
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/6UpajalIAQ0bHw17sZky2Y/6c93c9859576d981676325338e844075/component_divider_thumbnail.png',
   tooltip: {

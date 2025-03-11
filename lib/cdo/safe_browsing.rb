@@ -11,6 +11,7 @@ module SafeBrowsing
   # @param [String] url The url to lookup in Google Safe Browsing API.
   # @return [Boolean] False, if Google Safe Browsing has identified threat at given website. True, otherwise.
   def self.determine_safe_to_open(url_to_check)
+    return false unless valid_url?(url_to_check)
     return false unless CDO.google_safe_browsing_key
 
     uri = URI("https://safebrowsing.googleapis.com/v4/threatMatches:find?key=" + CDO.google_safe_browsing_key)
@@ -69,5 +70,12 @@ module SafeBrowsing
     )
 
     site_approved
+  end
+
+  def self.valid_url?(url)
+    uri = URI.parse(url)
+    uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+  rescue URI::InvalidURIError
+    false
   end
 end

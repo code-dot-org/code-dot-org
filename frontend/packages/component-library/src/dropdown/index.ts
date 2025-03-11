@@ -1,3 +1,6 @@
+// Auto-import SASS generated CSS
+import './index.css';
+
 import ActionDropdown, {
   ActionDropdownProps,
 } from './actionDropdown/ActionDropdown';

@@ -38,7 +38,6 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       defaultValue: 'Heading',
       group: 'content',
-      required: true,
     },
   },
 };

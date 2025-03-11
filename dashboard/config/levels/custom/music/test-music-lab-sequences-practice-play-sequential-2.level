@@ -1,0 +1,102 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-10T20:18:45.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Add More Layers \r\n\r\nJesse, the music producer, loves what you've done with the beats to Sabrina's chorus. They're looking for more sounds to layer into each vocal and beat combination you made. \r\n\r\n**Try this:** \r\n- Use a `play together` block around each beat you added. Then, add more sounds like bass and instruments to create a fuller sound in each measure. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "vocals_chorus_1",
+          "vocals_chorus_2"
+        ],
+        "electro": [
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "synth_cave",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_shimmy",
+          "boom_impact",
+          "spring_lift",
+          "wormhole",
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_strobe",
+          "drum_beat_sharp",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "crackle"
+        ],
+        "groove": [
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "bass_sub_bus",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "guitar_bird",
+          "clav_bounce",
+          "guitar_cloud",
+          "guitar_rainbow",
+          "rhodes_bounce",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "strings",
+          "laser"
+        ],
+        "indie": [
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "acoustic_bass",
+          "rhythm_guitar",
+          "synth_hook",
+          "synth_theme",
+          "guitar_lick",
+          "crash_build",
+          "guitar_clean_phrase",
+          "hey"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_sequential",
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-10 21:29:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:31:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:32:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:33:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:40:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
