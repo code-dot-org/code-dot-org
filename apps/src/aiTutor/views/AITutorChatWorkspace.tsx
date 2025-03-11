@@ -5,7 +5,6 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {initialAssistantGreeting} from '../constants';
-import {ChatCompletionMessage} from '../types';
 
 import AITutorSuggestedPrompts from './AITutorSuggestedPrompts';
 import AssistantMessageFeedback from './AssistantMessageFeedback';
@@ -26,51 +25,36 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 
   const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
 
-  const findAssistantLastIndex = (array: ChatCompletionMessage[]) => {
-    for (let i = array.length - 1; i >= 0; i--) {
-      if (array[i].role === Role.ASSISTANT) {
-        return i;
-      }
-    }
-    return -1;
-  };
-  const lastAssistantMessageIndex = findAssistantLastIndex(storedMessages);
+  const lastAssistantMessageIndex = storedMessages
+    .map(msg => msg.role)
+    .lastIndexOf(Role.ASSISTANT);
+
   const isLastMessageFromAssistant =
-    storedMessages.length - 1 === lastAssistantMessageIndex;
+    lastAssistantMessageIndex === storedMessages.length - 1;
 
   useEffect(() => {
-    console.log('conversation useEffect', conversationContainerRef.current);
-    // Autoscroll to the bottom of the workspace when new user messages, suggested prompts,
-    // or waiting animation is displayed.
+    if (!conversationContainerRef.current) return;
+
     setTimeout(() => {
-      if (conversationContainerRef.current) {
-        conversationContainerRef.current.scrollTo({
+      if (isLastMessageFromAssistant && lastAssistantMessageRef.current) {
+        // Scroll to the top of the latest assistant message
+        lastAssistantMessageRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      } else {
+        // Scroll to the bottom for user messages or other elements
+        conversationContainerRef.current?.scrollTo({
           top: conversationContainerRef.current.scrollHeight,
           behavior: 'smooth',
         });
       }
-    }, 250); // Small delay to ensure DOM updates before scrolling.
+    }, 250); // Small delay to allow DOM updates
   }, [
     storedMessages.length,
     isWaitingForChatResponse,
     showSuggestedPrompts,
     feedbackDetailsOpen,
-    isLastMessageFromAssistant,
-  ]);
-  useEffect(() => {
-    console.log('lastAssistant useEffect', lastAssistantMessageRef.current);
-    // Autoscroll to the top of the latest assistant message.
-    setTimeout(() => {
-      if (lastAssistantMessageRef.current && isLastMessageFromAssistant) {
-        lastAssistantMessageRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start', // Ensures it scrolls to the top of the message.
-        });
-      }
-    }, 250); // Small delay to ensure DOM updates before scrolling.
-  }, [
-    storedMessages.length,
-    isWaitingForChatResponse,
     isLastMessageFromAssistant,
   ]);
 
