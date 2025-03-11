@@ -1263,6 +1263,7 @@ __metadata:
     "@code-dot-org/fonts": "workspace:*"
     "@contentful/experiences-sdk-react": "npm:^1.34.1"
     "@next/eslint-plugin-next": "npm:^15.0.3"
+    "@next/third-parties": "npm:^15.2.1"
     "@playwright/test": "npm:~1.49.1"
     "@testing-library/dom": "npm:^10.4.0"
     "@testing-library/jest-dom": "npm:^6.6.3"
@@ -3263,6 +3264,18 @@ __metadata:
   version: 15.1.4
   resolution: "@next/swc-win32-x64-msvc@npm:15.1.4"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/third-parties@npm:^15.2.1":
+  version: 15.2.1
+  resolution: "@next/third-parties@npm:15.2.1"
+  dependencies:
+    third-party-capital: "npm:1.0.20"
+  peerDependencies:
+    next: ^13.0.0 || ^14.0.0 || ^15.0.0
+    react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+  checksum: 10c0/32b09d88727688f8111a7e6f85fe81887139c6b3bebc73da77622f17e6ff6f1a1eb4034a1b0fe699e54a8c4d97a3303aca072d7e6cb6acba6529a678208e8440
   languageName: node
   linkType: hard
 
@@ -17334,6 +17347,13 @@ __metadata:
   dependencies:
     any-promise: "npm:^1.0.0"
   checksum: 10c0/f375aeb2b05c100a456a30bc3ed07ef03a39cbdefe02e0403fb714b8c7e57eeaad1a2f5c4ecfb9ce554ce3db9c2b024eba144843cd9e344566d9fcee73b04767
+  languageName: node
+  linkType: hard
+
+"third-party-capital@npm:1.0.20":
+  version: 1.0.20
+  resolution: "third-party-capital@npm:1.0.20"
+  checksum: 10c0/7f45ff156ec9d7e2957a5b39061be22b780ffbd2d93c127252d908e2bff6cdd09f827a95909d457c8096e036f155006a38e355a06ee11cb6d63c7f4b150bbfb0
   languageName: node
   linkType: hard
 

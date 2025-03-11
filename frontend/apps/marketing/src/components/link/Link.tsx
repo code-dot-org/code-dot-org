@@ -1,4 +1,3 @@
-import '@code-dot-org/component-library/link/index.css';
 import {default as DSCOLink} from '@code-dot-org/component-library/link';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';

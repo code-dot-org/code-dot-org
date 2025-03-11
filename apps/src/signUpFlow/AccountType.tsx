@@ -21,44 +21,48 @@ import {
 
 import style from './signUpFlowStyles.module.scss';
 
-const AccountType: React.FunctionComponent = () => {
+const AccountType: React.FunctionComponent<{
+  isSignedOut: boolean;
+}> = ({isSignedOut}) => {
   const [loginTypeAlreadySelected, setLoginTypeAlreadySelected] =
     useState(false);
   const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
     useState(false);
 
   useEffect(() => {
-    setUserReturnToUrl();
-
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_STARTED_EVENT,
-      {},
-      PLATFORMS.BOTH
-    );
-
-    // If sent here from trying to log in with OAuth without an account, log the OAuth type and have this page
-    // send to the final signup page instead of having them pick login type again.
-    let oauthType = sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY);
-    if (oauthType) {
-      setLoginTypeAlreadySelected(true);
-
-      // Convert the name of the OAuth type so it lines up with our existing metrics for logging the login type
-      // selected.
-      if (oauthType === 'google_oauth2') {
-        oauthType = 'google';
-      } else if (oauthType === 'microsoft_v2_auth') {
-        oauthType = 'microsoft';
-      }
+    if (isSignedOut) {
+      setUserReturnToUrl();
 
       analyticsReporter.sendEvent(
-        EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
-        {
-          'user login type': oauthType,
-        },
+        EVENTS.SIGN_UP_STARTED_EVENT,
+        {},
         PLATFORMS.BOTH
       );
+
+      // If sent here from trying to log in with OAuth without an account, log the OAuth type and have this page
+      // send to the final signup page instead of having them pick login type again.
+      let oauthType = sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY);
+      if (oauthType) {
+        setLoginTypeAlreadySelected(true);
+
+        // Convert the name of the OAuth type so it lines up with our existing metrics for logging the login type
+        // selected.
+        if (oauthType === 'google_oauth2') {
+          oauthType = 'google';
+        } else if (oauthType === 'microsoft_v2_auth') {
+          oauthType = 'microsoft';
+        }
+
+        analyticsReporter.sendEvent(
+          EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
+          {
+            'user login type': oauthType,
+          },
+          PLATFORMS.BOTH
+        );
+      }
     }
-  }, []);
+  }, [isSignedOut]);
 
   const selectAccountType = (accountType: string) => {
     analyticsReporter.sendEvent(
