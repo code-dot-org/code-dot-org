@@ -1,12 +1,9 @@
 # frozen_string_literal: true
 
 require 'contentful'
-require 'marketing/contentful_client'
 
 module Marketing
   class PromotionsController < ApplicationController
-    helper Rails.application.routes.url_helpers
-
     TEACHER_HOMEPAGE_SIDEBAR_CONTENT_TYPE = 'teacherHomepageSidebar'
 
     # GET /marketing/:locale/promotions/:id
