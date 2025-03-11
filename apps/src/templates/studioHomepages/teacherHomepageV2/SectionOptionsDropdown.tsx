@@ -82,12 +82,10 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       {},
       PLATFORMS.BOTH
     );
-    console.log('lfm2');
     $.ajax(`/dashboardapi/sections/${section.id}/students`).done(result => {
       const names = result.map((student: {name: string}) => student.name);
       setStudentNames(names);
       certFormRef.current?.submit();
-      console.log('lfm1', names);
     });
   }, [section.id]);
 
@@ -128,7 +126,6 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         onClick: () => onArchiveClick(dispatch, section),
       },
     ];
-    console.log(section.studentCount);
 
     if (section.studentCount && section.studentCount > 0) {
       options.push({
