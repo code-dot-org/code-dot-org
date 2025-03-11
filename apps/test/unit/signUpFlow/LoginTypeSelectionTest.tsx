@@ -50,7 +50,22 @@ describe('LoginTypeSelection', () => {
     );
   });
 
-  it('sets appropriate sessionStorage values if sent here with url params', async () => {
+  it('redirects user back to account type page if sent here with invalid user type url params', async () => {
+    await waitFor(() => {
+      setWindowLocation({
+        search: `?user_type=invalidUserType`,
+      });
+      renderDefault(null);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/sign_up/account_type'
+    );
+
+    resetWindowLocation();
+  });
+
+  it('sets appropriate sessionStorage values if sent here with valid url params', async () => {
     const userType = 'student';
     const userReturnTo = '/testReturnToUrl';
 

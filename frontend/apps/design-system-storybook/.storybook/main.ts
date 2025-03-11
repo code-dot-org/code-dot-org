@@ -1,5 +1,6 @@
 import {join, dirname, resolve} from 'node:path';
 import {StorybookConfig} from '@storybook/react-webpack5';
+import {IgnorePlugin} from 'webpack';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -89,6 +90,17 @@ const config: StorybookConfig = {
         ...config.resolve.alias,
         '@': resolve(__dirname, '../../../packages/component-library/src'),
       };
+    }
+
+    if (config.plugins) {
+      // Ignore the auto generated index.css which is bundled by tsup
+      // webpack generates its own css in the styling plugin above
+      config.plugins.push(
+        new IgnorePlugin({
+          resourceRegExp: /^\.\/index.css$/,
+          contextRegExp: /component-library\/src/,
+        }),
+      );
     }
 
     return config;

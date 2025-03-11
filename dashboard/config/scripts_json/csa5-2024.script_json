@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 01:51:44 UTC",
+    "serialized_at": "2025-03-10 20:34:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7241,7 +7241,7 @@
     },
     {
       "name": "This is Not Morgan Freeman",
-      "url": "https://youtu.be/oxXpB9pSETo",
+      "url": "https://youtu.be/rYT_ZOeYPJg?si=1pRcIr57bClA8rID",
       "key": "this_is_not_morgan_freeman",
       "properties": {
         "audience": "Student",

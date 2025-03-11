@@ -12,6 +12,7 @@ class ScriptLevelsController < ApplicationController
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
   before_action :check_script_id_is_name, only: [:show, :lesson_extras]
+  before_action :redirect_to_canonical_path, only: [:show, :lesson_extras]
 
   # The TA scores alert will be shown at most once for each lesson. This
   # is the maximum number of times it will be shown across all lessons.
@@ -658,5 +659,10 @@ class ScriptLevelsController < ApplicationController
     seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
     return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT
     !seen_ta_scores_map[@script_level.lesson.id.to_s]
+  end
+
+  private def redirect_to_canonical_path
+    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
+    redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end

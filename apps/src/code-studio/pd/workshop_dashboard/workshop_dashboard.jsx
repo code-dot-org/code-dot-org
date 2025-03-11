@@ -37,6 +37,7 @@ import workshopDashboardReducers, {
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
 import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
+import {workshopLabel} from './utils/workshopLabel';
 import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
@@ -75,9 +76,9 @@ const routeConfigs = [
   },
   ...WorkshopCourseConfigs.map(config => ({
     path: `workshops/new/${config.slug}`,
-    breadcrumbs: `Workshops,New ${config.label} Workshop`,
+    breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
     component: WorkshopFormTemplate,
-    props: config,
+    props: {config},
   })),
   {
     path: 'workshops/:workshopId',
