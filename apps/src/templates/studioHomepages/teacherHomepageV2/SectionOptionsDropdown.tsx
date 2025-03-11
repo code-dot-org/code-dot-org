@@ -3,6 +3,7 @@ import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/act
 import React, {useMemo} from 'react';
 import {useNavigate, NavigateFunction} from 'react-router-dom';
 
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {toggleSectionHidden} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -20,6 +21,8 @@ export interface SectionOptionsDropdownProps {
   section: Section;
   onDeleteClickCallback: (sectionId: number) => void;
 }
+
+const CERTIFICATE_URL = '/certificates/batch';
 
 const onSectionSettingsClick = (
   navigate: NavigateFunction,
@@ -40,10 +43,6 @@ const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
   navigate(
     `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
   );
-};
-
-const onCertificatesClick = () => {
-  // Add logic
 };
 
 const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
@@ -73,6 +72,25 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
+  const certFormRef = React.useRef<HTMLFormElement>(null);
+
+  const [studentNames, setStudentNames] = React.useState<string[]>([]);
+
+  const onClickPrintCerts = React.useCallback(() => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
+    console.log('lfm2');
+    $.ajax(`/dashboardapi/sections/${section.id}/students`).done(result => {
+      const names = result.map((student: {name: string}) => student.name);
+      setStudentNames(names);
+      certFormRef.current?.submit();
+      console.log('lfm1', names);
+    });
+  }, [section.id]);
+
   const dropdownOptions: ActionDropdownOption[] = useMemo(() => {
     const options: ActionDropdownOption[] = [
       {
@@ -98,7 +116,7 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         value: 'certificates',
         label: i18n.certificates(),
         icon: {iconName: 'file-certificate', iconStyle: 'solid'},
-        onClick: () => onCertificatesClick(),
+        onClick: () => onClickPrintCerts(),
       },
       {
         value: section.hidden ? 'restore' : 'archive',
@@ -121,26 +139,39 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       });
     }
     return options;
-  }, [section, dispatch, navigate, onDeleteClickCallback]);
+  }, [section, dispatch, navigate, onDeleteClickCallback, onClickPrintCerts]);
 
   return (
-    <ActionDropdown
-      name="section-options-dropdown"
-      labelText="Section Options"
-      menuPlacement="right"
-      triggerButtonProps={{
-        isIconOnly: true,
-        icon: {
-          iconName: 'ellipsis-vertical',
-          iconStyle: 'solid',
-        },
-        color: 'gray',
-        type: 'tertiary',
-        size: 's',
-        className: styles.dropdownButton,
-        ariaLabel: i18n.sectionOptionsDropdown(),
-      }}
-      options={dropdownOptions}
-    />
+    <form ref={certFormRef} action={CERTIFICATE_URL} method="POST">
+      <RailsAuthenticityToken />
+      {section.courseVersionName && (
+        <input
+          type="hidden"
+          name="course"
+          value={btoa(section.courseVersionName)}
+        />
+      )}
+      {studentNames.map((name, index) => (
+        <input key={index} type="hidden" name="names[]" value={name} />
+      ))}
+      <ActionDropdown
+        name="section-options-dropdown"
+        labelText="Section Options"
+        menuPlacement="right"
+        triggerButtonProps={{
+          isIconOnly: true,
+          icon: {
+            iconName: 'ellipsis-vertical',
+            iconStyle: 'solid',
+          },
+          color: 'gray',
+          type: 'tertiary',
+          size: 's',
+          className: styles.dropdownButton,
+          ariaLabel: i18n.sectionOptionsDropdown(),
+        }}
+        options={dropdownOptions}
+      />
+    </form>
   );
 };
