@@ -58,7 +58,7 @@ describe('FileTabs', () => {
     const user = userEvent.setup();
     await user.click(tab);
     expect(context.setActiveFile).toHaveBeenCalledWith(file.id);
-  }, 10000);
+  });
 
   it('can close a tab', async () => {
     renderDefault();
@@ -68,5 +68,5 @@ describe('FileTabs', () => {
     const user = userEvent.setup();
     await user.click(closeButton);
     expect(context.closeFile).toHaveBeenCalledWith('1');
-  }, 15000);
+  });
 });

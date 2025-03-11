@@ -61,7 +61,7 @@ export default defineConfig<EyesFixture>({
         webServer: {
           command: 'cd ../../ && yarn dev --filter @code-dot-org/marketing',
           url: 'http://localhost:3001',
-          reuseExistingServer: !process.env.CI,
+          reuseExistingServer: true,
         },
       }
     : undefined),

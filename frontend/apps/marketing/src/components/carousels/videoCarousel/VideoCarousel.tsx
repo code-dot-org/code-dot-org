@@ -45,7 +45,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
               videoTitle={videoTitle}
               youTubeId={youTubeId}
               showCaption={true}
-              videoFallback={videoFallbackFile?.fields.file.url}
+              videoFallback={videoFallbackFile?.fields?.file?.url}
             />
           ),
         })),

@@ -24,6 +24,7 @@ import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import HorizontalLayout from './layout/HorizontalLayout';
+import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
@@ -93,6 +94,7 @@ const defaultConfig: ConfigType = {
   layoutComponents: {
     horizontal: <HorizontalLayout />,
     vertical: <VerticalLayout />,
+    share: <ShareView />,
   },
 };
 

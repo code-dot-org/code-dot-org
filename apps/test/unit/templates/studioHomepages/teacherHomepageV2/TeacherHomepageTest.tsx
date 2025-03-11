@@ -133,7 +133,7 @@ describe('TeacherHomepage', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
-  }, 10000);
+  });
 
   it('archive all opens modal', async () => {
     renderComponent();

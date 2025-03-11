@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:45:49.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,8 +41,9 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol. "
     },
     "project_template_level_name": "gen-ai-customizing-prompt-templateB_latm",
     "display_name": "Personal Tutor",
@@ -49,7 +51,6 @@
     "thumbnail_url": "https://images.code.org/e4599c3b8f63a4a07c0e5a091352a33c-Lesson 3 - Level 7B - Personal Tutor.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:45:49.412+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7B_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:45:49.412+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7B_2024\"},{\"changed_at\":\"2025-03-07 19:44:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

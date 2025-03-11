@@ -1,4 +1,3 @@
-import '@code-dot-org/component-library/typography/index.css';
 import {
   default as Typography,
   StrongText,

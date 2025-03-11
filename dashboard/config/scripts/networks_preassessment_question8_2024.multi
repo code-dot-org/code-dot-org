@@ -2,8 +2,8 @@ name 'networks-preassessment-question8-2024'
 title 'Networks and the Internet Pre-Assessment: Question 8'
 
 wrong 'Too many devices connected at once'
-wrong 'Phishing attacks that trick users into giving personal information'
-right 'Using a fast Internet connection'
+right 'Phishing attacks that trick users into giving personal information'
+wrong 'Using a fast Internet connection'
 wrong 'Updating software regularly'
 
 allow_multiple_attempts true

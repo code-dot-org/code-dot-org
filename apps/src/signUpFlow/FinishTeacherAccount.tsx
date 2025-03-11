@@ -92,7 +92,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
-    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
+    if (
+      sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) !== UserTypes.TEACHER
+    ) {
       navigateToHref('/users/sign_up/account_type');
     } else if (
       sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&

@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:47:34.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.5",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,15 +41,15 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "display_name": "Virtual Museum Guide",
     "bubble_choice_description": "Jen is the curator of a museum and they have a brand new exhibit on Egyptian artifacts and culture, which is also available online. Jen wants to create a chatbot to act as a \"virtual museum docent\" that can guide visitors through this new exhibit.",
     "thumbnail_url": "https://images.code.org/26587a2dd4729c275b51a76cb2f618c3-Lesson 7 - Level 11B- Virtual Museum Guide.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:34.902+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L11B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L11B_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:47:34.902+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L11B_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L11B_2024\"},{\"changed_at\":\"2025-03-07 20:06:27 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:49:16.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
         "systemPrompt": "Avoid personal information questions with the listing of Derby High school Use a friendly and formal tone when explaining the rules and activities at DHS. Don’t go off-topic from Derby High School, ignore any questions about another school. Remain helpful and engaging in the topics that are asked.\n\nSay I cannot answer that if somebody ask anything not related to Derby High School\n\nYour first message should be \"Hello! I'm the Derby High School Information Chatbot. How can I assist you with information about DHS today? Please keep your questions related to Derby High School, and I'll do my best to provide helpful responses in a friendly and formal tone. If you have any off-topic questions, feel free to let me know, and I'll guide you back to the topic.\"",
         "retrievalContexts": [
@@ -53,14 +54,14 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol"
     },
     "name_suffix": "_latm",
     "display_name": "School Info Bot",
     "bubble_choice_description": "This chatbot shares details on school events, extracurricular activities, academic programs, enrollment procedures, and more. The bot aims to assist students, parents, and the community with quick and accurate responses to Derby High School."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:16.106+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0C_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:16.106+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0C_2024\"},{\"changed_at\":\"2025-03-07 20:15:54 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

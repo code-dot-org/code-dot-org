@@ -16,6 +16,8 @@ interface BaseChatEvent {
 /** Base type for all chat messages */
 interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
+  /** Asset file names to optionally send with text content */
+  assets?: string[];
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
 }

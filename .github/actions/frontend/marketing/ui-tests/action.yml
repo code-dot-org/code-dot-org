@@ -11,6 +11,8 @@ inputs:
   APPLITOOLS_API_KEY:
     description: "Applitools API Key"
     required: true
+  MARKETING_BASE_URL:
+    description: "The base URL for the marketing application. Defaults to http://localhost:3001"
   STAGE:
     description: "local, pr, test, or production"
     required: true
@@ -36,10 +38,11 @@ runs:
         APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}
         " > .env
 
-    - name: Build
+    - name: Start Application Server (in background)
       shell: bash
-      run: yarn build --filter @code-dot-org/marketing
       working-directory: ./frontend
+      run: |
+        nohup yarn dev --filter @code-dot-org/marketing | tee nohup.out &
 
     - name: UI Tests
       shell: bash
@@ -48,10 +51,18 @@ runs:
       run: yarn workspace @code-dot-org/marketing test:ui:ci
       working-directory: ./frontend
 
-    - name: Upload reports
+    - name: Upload Playwright reports
       if: failure()
       id: deployment
       uses: actions/upload-pages-artifact@v3
       with:
         path: frontend/apps/marketing/playwright-report
         name: playwright-report
+
+    - name: Run Google Lighthouse Audits
+      uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8
+      with:
+        urls: ${{ inputs.MARKETING_BASE_URL || 'http://localhost:3001' }}/en-US/all-the-things
+        uploadArtifacts: true
+        temporaryPublicStorage: true
+        configPath: './frontend/apps/marketing/lighthouserc.json'
