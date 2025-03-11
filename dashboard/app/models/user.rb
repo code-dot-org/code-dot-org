@@ -1061,21 +1061,6 @@ class User < ApplicationRecord
     student
   end
 
-  # def downgrade_to_student
-  #   return true if student? # No-op if user is already a student
-
-  #   # Force the DB update for user_type only, no validations
-  #   update_column(:user_type, TYPE_STUDENT)
-
-  #   # becomes(Student)
-
-  #   # Set email to nil (passing Student validations)
-  #   update!(email: nil)
-  #   reload
-
-  #   self
-  # end
-
   def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
@@ -1110,18 +1095,6 @@ class User < ApplicationRecord
 
       teacher
     end
-    # binding.pry
-    # transaction do
-    #   # Force the DB update for user_type only, no validations
-    #   update_column(:user_type, TYPE_TEACHER)
-
-    #   if migrated?
-    #     update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
-    #   end
-
-    #   update!(new_attributes)
-    #   becomes(Teacher)
-    # end
   rescue
     # becomes(Student)
     false # Relevant errors are set on the user model, so we rescue and return false here.
