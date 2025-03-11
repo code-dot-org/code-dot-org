@@ -30,19 +30,7 @@ runs:
       shell: bash
       working-directory: ./frontend/apps/marketing
       run: |
-        echo "CONTENTFUL_SPACE_ID=${{ inputs.CONTENTFUL_SPACE_ID }}
-        CONTENTFUL_ENV_ID=master
-        CONTENTFUL_API_HOST=cdn.contentful.com
-        CONTENTFUL_TOKEN=${{ inputs.CONTENTFUL_TOKEN }}
-        CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID=experience
-        APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}
-        " > .env
-
-    - name: Start Application Server (in background)
-      shell: bash
-      working-directory: ./frontend
-      run: |
-        nohup yarn dev --filter @code-dot-org/marketing | tee nohup.out &
+        echo "APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}" >> .env
 
     - name: UI Tests
       shell: bash
