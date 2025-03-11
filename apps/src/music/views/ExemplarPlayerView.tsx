@@ -16,13 +16,11 @@ import moduleStyles from './ExemplarPlayer.module.scss';
 interface ExemplarPlayerViewProps {
   playbackEvents: PlaybackEvent[];
   title: string;
-  packId: string | null;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   playbackEvents,
   title,
-  packId,
 }) => {
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
@@ -32,18 +30,10 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     playerRef.current = new MusicPlayer();
   }
   const [exemplarIsPlaying, setExemplarIsPlaying] = useState<boolean>(false);
-  // Adjust the packId and preload sounds.
+
   const onMount = useCallback(async () => {
-    const currentLibrary = MusicLibrary.getInstance();
-    if (currentLibrary) {
-      currentLibrary.setCurrentPackId(packId);
-      playerRef.current?.updateConfiguration(
-        currentLibrary.getBPM(),
-        currentLibrary.getKey()
-      );
-    }
     await playerRef.current?.preloadSounds(playbackEvents, () => {});
-  }, [packId, playbackEvents]);
+  }, [playbackEvents]);
 
   useEffect(() => {
     onMount();
