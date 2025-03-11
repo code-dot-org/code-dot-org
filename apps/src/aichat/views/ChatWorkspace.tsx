@@ -59,14 +59,20 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       );
     }
   });
+  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (selectedStudent) {
-      dispatch(fetchStudentChatHistory(selectedStudent.id));
+      dispatch(
+        fetchStudentChatHistory({
+          studentUserId: selectedStudent.id,
+          channelId: currentChannelId,
+        })
+      );
     }
-  }, [selectedStudent, dispatch]);
+  }, [selectedStudent, currentChannelId, dispatch]);
 
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);

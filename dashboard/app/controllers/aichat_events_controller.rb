@@ -52,11 +52,23 @@ class AichatEventsController < ApplicationController
     script_id = params[:scriptId]
     level_id = params[:levelId]
     student_user_id = params[:studentUserId]
+
+    if params[:channelId].empty?
+      return render json: []
+    else
+      _, project_id = storage_decrypt_channel_id(params[:channelId])
+    end
+
     unless can_view_student_chat_history?(student_user_id)
       return render(status: :forbidden, json: {error: "Access denied for student chat history."})
     end
 
-    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
+    aichat_events = AichatEvent.where(
+      user_id: student_user_id,
+      level_id: level_id,
+      script_id: script_id,
+      project_id: project_id
+    ).order(:created_at).map do |event|
       chat_event = event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
       {
         id: event.id,
