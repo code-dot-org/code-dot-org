@@ -51,7 +51,7 @@ const NeighborhoodPreview: React.FunctionComponent<
     [scaleNeighborhood]
   );
 
-  // Scale neighborhood on load, and on resize.
+  // If handleScaling is true, scale neighborhood on load, and on resize.
   useEffect(() => {
     if (handleScaling) {
       throttledScaleNeighborhood();
