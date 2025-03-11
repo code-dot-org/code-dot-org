@@ -477,6 +477,14 @@ Resources:
                   - 'cloudformation:DeleteChangeSet'
                   - 'cloudformation:GetTemplateSummary'
                 Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
+              # Manage Frontends autoscaling group
+              - Effect: Allow
+                Action:
+                  - 'autoscaling:StartInstanceRefresh'
+                Resource:
+                  # TODO: if `!Ref Frontends` works, we can eliminate the manual arn
+                  - !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
+                  - !Ref Frontends
               - Effect: Allow
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
