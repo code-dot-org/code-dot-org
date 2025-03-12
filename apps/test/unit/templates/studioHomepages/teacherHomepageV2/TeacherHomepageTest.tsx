@@ -67,9 +67,10 @@ describe('TeacherHomepage', () => {
 
   const serverSections = sections.map(serverSectionFromSection);
 
-  const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+  let fetchSpy: jest.SpyInstance;
 
   beforeEach(() => {
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
     stubRedux();
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/dashboardapi/sections/available_participant_types') {
@@ -113,15 +114,22 @@ describe('TeacherHomepage', () => {
     renderComponent();
     screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
+    screen.getByText('Period 1');
+    screen.getByText('Period 4');
   });
 
   it('create section button opens popup', async () => {
     renderComponent();
 
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/dashboardapi/sections/available_participant_types'
+    );
+
     fireEvent.click(screen.getByRole('button', {name: 'New class section'}));
 
-    await screen.findByText('Create a new section', {}, {timeout: 5000});
-    screen.getByText('Picture password');
+    await screen.findByText('Create a new section');
+
+    await screen.findByText('Picture password', {}, {timeout: 5000});
     screen.getByRole('button', {name: 'Cancel'});
   }, 15000);
 
