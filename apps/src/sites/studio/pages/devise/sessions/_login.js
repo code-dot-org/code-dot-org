@@ -67,7 +67,6 @@ $(document).ready(() => {
   });
 
   const courseBlocks = document.querySelectorAll('.courseblock-tall');
-  console.log(courseBlocks);
   courseBlocks.forEach(courseBlock => {
     const courseTitle = courseBlock.querySelector('h3').textContent;
     const courseUrl = courseBlock.querySelector('a').href;
