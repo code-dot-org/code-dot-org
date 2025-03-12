@@ -13,6 +13,7 @@ import Divider, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import Iframe, {IframeContentfulComponentDefinition} from '@/components/iframe';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
 import Overline, {
   OverlineContentfulComponentDefinition,
@@ -47,6 +48,13 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: Iframe,
+      definition: IframeContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Link,
