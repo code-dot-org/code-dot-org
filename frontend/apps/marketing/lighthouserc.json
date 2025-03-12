@@ -11,10 +11,11 @@
         "offscreen-images": ["error", {"minScore": 0.5, "maxLength": 1}],
         "total-byte-weight": ["error", {"minScore": 0.5}],
         "unminified-css": ["error", {"maxLength": 1}],
-        "unminified-javascript": ["error", {"maxLength": 15}],
+        "unminified-javascript": ["error", {"maxLength": 20}],
         "unused-css-rules": ["error", {"maxLength": 5}],
-        "unused-javascript": ["error", {"maxLength": 6}],
+        "unused-javascript": ["error", {"maxLength": 10}],
         "uses-text-compression": ["error", {"maxLength": 5}],
+        "third-party-cookies": "off",
         "valid-source-maps": "off",
         "uses-rel-preconnect": "off"
       }

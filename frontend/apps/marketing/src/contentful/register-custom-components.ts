@@ -10,6 +10,9 @@ import VideoCarousel, {
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
+import FAQAccordion, {
+  FAQAccordionContentfulComponentDefinition,
+} from '@/components/faqAccordion';
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
@@ -43,6 +46,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: FAQAccordion,
+      definition: FAQAccordionContentfulComponentDefinition,
     },
     {
       component: Heading,

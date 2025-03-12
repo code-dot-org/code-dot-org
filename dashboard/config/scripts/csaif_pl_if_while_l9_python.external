@@ -1,0 +1,43 @@
+name 'csaif_pl_if-while-L9_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding if vs. while and How They Work Together  
+
+#### Throughout this lesson, we've explored the key differences between if statements and while loops.
+
+- #### `if` statements check a condition once and execute the code if it's true.
+- #### `while` loops continue running as long as the condition remains true, making them useful for repeating actions.
+
+#### These two structures often work together in a program. For example, an `if` statement can check a condition inside a `while` loop to decide when to stop or when to adjust behavior.
+
+## Example: Working Together
+
+#### Imagine a Painter that keeps moving forward and painting until it runs out of paint. The while loop makes sure it has paint, and an if statement checks when it should stop:
+
+<img src="https://images.code.org/a6a6c77908b803c398b0d3dadb954d5f-image-1741636712323.png" alt="code with a while and if statement" width="350px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+
+
+---
+
+<div style="background-color: #F7F8FA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+  
+  <p style="font-size: 14pt; font-weight: bold; margin: 0;">Debugging Strategies</p>
+  
+  <ul style="font-size: 14pt; line-height: 1.5; padding-left: 20px; margin-top: 10px;">
+    <li>✅ Printing values (<code>print()</code> statements) to check what’s happening inside the loop.</li><br>
+    <li>✅ Using test conditions to predict what should happen and compare with actual results.</li><br>
+    <li>✅ Tracking infinite loops by adding a stopping condition to avoid an endless cycle.</li><br>
+    <li>✅ Running code in small steps to isolate errors.</li>
+  </ul>
+
+</div>
+
+
+![]()
+MARKDOWN

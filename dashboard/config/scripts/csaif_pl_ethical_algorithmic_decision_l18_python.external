@@ -1,0 +1,63 @@
+name 'csaif_pl_ethical-algorithmic-decision-L18-python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Analyzing the Algorithm
+
+<img src="https://images.code.org/8c57754f154962c0619e3596f0f849e8-image-1741713107783.png" alt="algorithm icon" style="border-radius:10px; float: left; ; height: 125px; margin: 0px 20px 0px 10px; ">
+
+#### Now that we've explored how algorithms impact our daily lives and the ethical concerns they raise, it's time to put that knowledge into practice.
+
+#### In this <a href='https://docs.google.com/document/d/1zCe5nxpYzzU7C9rF-D9rqVfpgwgSzOcjShuh2UpeWuw/edit?usp=sharing' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>activity</a>, you'll examine a flawed music recommendation algorithm and consider ways to make it more fair and inclusive. 
+
+<div style="clear:both;"></div>
+
+## Activity: Fixing a Biased Music Algorithm
+
+<img src="https://images.code.org/5561f8507048debeb216c77e26493818-image-1741712973124.png" alt="algorithm icon" style="border-radius:10px; float: right; ; height: 300px; margin: 10px 20px 10px 10px; ">
+
+### **Step 1: Review the Algorithm**
+
+#### Take a look at the flowchart in front of you. This represents a music recommendation algorithm that suggests songs to a user based on their first song choice.
+
+#### **Ask yourself:**
+- #### How does the algorithm make decisions?
+- #### What patterns do you notice in how songs are recommended?
+
+### **Step 2: Identify the Problem**
+
+#### Think critically about the limitations of this algorithm.
+#### **Consider:**
+
+- #### Does this recommendation system encourage variety, or does it keep users within a narrow selection of songs?
+- #### How might this impact users who want to discover new music?
+- #### Are there any unintended biases in how it selects songs?
+
+
+### **Step 3: Propose Improvements**
+#### Now, redesign the algorithm!
+
+- #### What changes could you make to ensure a more diverse set of recommendations?
+- #### How could user preferences or feedback be incorporated?
+- #### How might your improvements create a better experience for a wider range of users?
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h2>Reflection</h2>
+  	<ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">         
+       <li>Can you think of any real-world examples where biased algorithms affect what people see, buy, or experience?</li><br>
+    <li>How can we help students recognize and question biased algorithms in their own lives?.</li><br>
+    <li>What ethical challenges do we face when trying to make algorithm-based decisions fair?</li><br>
+    
+</ul>
+</div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 10. You can find more details in the full <a href='https://levelbuilder-studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/10' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+
+MARKDOWN

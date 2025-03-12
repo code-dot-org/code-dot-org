@@ -6,7 +6,7 @@ export const VideoContentfulComponentDefinition: ComponentDefinition = {
   name: 'Video',
   category: 'Custom Components',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/34JWsHE14EP6EoqJyoa3vI/2328840aeb5c98b7483aa50f7ba7dcf0/component_video_thumbnail.png',
+    'https://images.ctfassets.net/90t6bu6vlf76/34JWsHE14EP6EoqJyoa3vI/516d08ada4c866195d86bc668fcaf458/component_video_thumbnail.png',
   tooltip: {
     description:
       'Add a video frame to your layout. Supports title, download, and fallback options.',

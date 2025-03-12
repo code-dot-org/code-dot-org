@@ -663,6 +663,11 @@ const sectionSlice = createSlice({
     ltiRosterImportSuccess(state, action: PayloadAction<LtiSectionSyncResult>) {
       state.ltiSyncResult = action.payload;
     },
+    archiveAllSections(state) {
+      state.sectionIds.forEach(id => {
+        state.sections[id].hidden = true;
+      });
+    },
   },
 });
 
@@ -1164,6 +1169,7 @@ export const {
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,
+  archiveAllSections,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;

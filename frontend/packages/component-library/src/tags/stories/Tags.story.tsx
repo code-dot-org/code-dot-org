@@ -1,6 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import Tags, {TagsProps} from '../index';
+import Tags, {TagProps, TagsProps} from '../index';
+import {useState} from 'react';
 
 export default {
   title: 'DesignSystem/Tags',
@@ -22,6 +23,42 @@ const SingleTemplate: StoryFn<TagsProps> = args => (
     </div>
   </>
 );
+
+const SingleTemplateWithTagState: StoryFn<TagsProps> = args => {
+  const initialState = ['AAA', 'BBB', 'CCC'];
+  const [tags, setTags] = useState(initialState);
+
+  const removeTag = (index: number) => {
+    setTags(prev => {
+      const newTags = [...prev];
+      newTags.splice(index, 1);
+      return newTags;
+    });
+  };
+
+  const tagsList: TagProps[] = tags.map((label, i) => ({
+    label,
+    tooltipId: label,
+    tooltipContent: label,
+    onClose: () => removeTag(i),
+    type: 'closable',
+  }));
+
+  return (
+    <>
+      <p>
+        * Margins on this screen does not represent Component's margins, and are
+        only added to improve storybook view *{' '}
+      </p>
+      <div style={{marginTop: 50}}>
+        <Tags {...args} tagsList={tagsList} />
+      </div>
+      <div style={{marginTop: 50}}>
+        <button onClick={() => setTags(initialState)}>Reset</button>
+      </div>
+    </>
+  );
+};
 
 const MultipleTemplate: StoryFn<{
   components: TagsProps[];
@@ -45,7 +82,7 @@ DefaultTags.args = {
   tagsList: [
     {tooltipId: 'math', label: 'Math', tooltipContent: 'Math'},
     {
-      label: '+1',
+      label: 'Icon left',
       icon: {
         iconName: 'check',
         iconStyle: 'solid',
@@ -56,7 +93,7 @@ DefaultTags.args = {
       tooltipContent: 'Science, English',
     },
     {
-      label: '+1',
+      label: 'Icon right',
       icon: {
         iconName: 'check',
         iconStyle: 'solid',
@@ -76,7 +113,7 @@ NoTooltipTags.args = {
   tagsList: [
     {label: 'Math'},
     {
-      label: '+1',
+      label: 'Icon left',
       icon: {
         iconName: 'check',
         iconStyle: 'solid',
@@ -85,7 +122,7 @@ NoTooltipTags.args = {
       },
     },
     {
-      label: '+1',
+      label: 'Icon right',
       icon: {
         iconName: 'check',
         iconStyle: 'solid',
@@ -103,7 +140,7 @@ TagsWithHTMLTooltipContent.args = {
   tagsList: [
     {tooltipId: 'math', label: 'Math', tooltipContent: <>Math</>},
     {
-      label: '+1',
+      label: 'Icon left',
       icon: {
         iconName: 'check',
         iconStyle: 'solid',
@@ -118,7 +155,7 @@ TagsWithHTMLTooltipContent.args = {
       ),
     },
     {
-      label: '+1',
+      label: 'Icon right',
       icon: {
         iconName: 'check',
         iconStyle: 'solid',
@@ -133,6 +170,12 @@ TagsWithHTMLTooltipContent.args = {
   className: 'test',
 };
 
+export const TagsWithOnCloseProp = SingleTemplateWithTagState.bind({});
+TagsWithOnCloseProp.args = {
+  size: 'm',
+  className: 'test',
+};
+
 export const GroupOfSizesOfTags = MultipleTemplate.bind({});
 GroupOfSizesOfTags.args = {
   components: [
@@ -140,7 +183,7 @@ GroupOfSizesOfTags.args = {
       tagsList: [
         {tooltipId: 'mathS', label: 'Math S', tooltipContent: 'Math S'},
         {
-          label: '+1',
+          label: 'Science English S',
           tooltipId: 'science-englishS',
           icon: {
             iconName: 'check',
@@ -152,7 +195,7 @@ GroupOfSizesOfTags.args = {
         },
         {
           tooltipId: 'englishS',
-          label: 'Tags',
+          label: 'English S',
           tooltipContent: 'English S',
           icon: {
             iconName: 'circle-user',
@@ -161,6 +204,13 @@ GroupOfSizesOfTags.args = {
             placement: 'right',
           },
         },
+        {
+          tooltipId: 'closeS',
+          label: 'Close',
+          tooltipContent: 'Close S',
+          onClose: () => {},
+          type: 'closable',
+        },
       ],
       size: 's',
     },
@@ -168,7 +218,7 @@ GroupOfSizesOfTags.args = {
       tagsList: [
         {tooltipId: 'mathM', label: 'Math M', tooltipContent: 'Math M'},
         {
-          label: '+1',
+          label: 'Science english M',
           tooltipId: 'science-englishM',
           icon: {
             iconName: 'check',
@@ -180,7 +230,7 @@ GroupOfSizesOfTags.args = {
         },
         {
           tooltipId: 'englishM',
-          label: 'Tags',
+          label: 'English M',
           tooltipContent: 'English M',
           icon: {
             iconName: 'circle-user',
@@ -189,6 +239,13 @@ GroupOfSizesOfTags.args = {
             placement: 'right',
           },
         },
+        {
+          tooltipId: 'closeM',
+          label: 'Close',
+          tooltipContent: 'Close M',
+          onClose: () => {},
+          type: 'closable',
+        },
       ],
       size: 'm',
     },
@@ -196,7 +253,7 @@ GroupOfSizesOfTags.args = {
       tagsList: [
         {tooltipId: 'mathL', label: 'Math L', tooltipContent: 'Math L'},
         {
-          label: '+1',
+          label: 'Science English L',
           tooltipId: 'science-englishL',
           icon: {
             iconName: 'check',
@@ -208,7 +265,7 @@ GroupOfSizesOfTags.args = {
         },
         {
           tooltipId: 'englishL',
-          label: 'Tags',
+          label: 'English L',
           tooltipContent: 'English L',
           icon: {
             iconName: 'circle-user',
@@ -216,6 +273,13 @@ GroupOfSizesOfTags.args = {
             title: 'check',
             placement: 'right',
           },
+        },
+        {
+          tooltipId: 'closeL',
+          label: 'Close',
+          tooltipContent: 'Close L',
+          onClose: () => {},
+          type: 'closable',
         },
       ],
       size: 'l',

@@ -6,28 +6,30 @@ markdown <<MARKDOWN
 # Task: Post an Introduction on the Teacher Forum
 ## We are thrilled to have you here. Come join our Community!
 
-<img src="https://images.code.org/41a18fb531ea5efa1cdecbf501a6e6d5-image-1695929431113.30.26 PM.png" alt="Screenshot of a thread in the teacher forum titled 'Welcome to CS Discoveries: Introduce Yourself." style="float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
-
-#### **Step 1:** Click on the "?" in the upper right hand corner of your screen.
-#### **Step 2:** Select "Teacher forum" from the dropdown menu. 
-#### **Step 3:** Click the magnifying glass at the top-right corner.
-#### **Step 4:** Search for the thread, "Welcome to CS Discoveries: Introduce yourself" and click on it.
-#### **Step 5:** Click "Reply" and introduce yourself to the CS Discoveries teacher community!
 
 <div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
 
-<a href="https://forum.code.org/t/strategies-to-promote-equity-in-cs-lesson-2-level-2-reflection/40326" target="_blank" rel="noopener noreferrer">
+<a href="https://forum.code.org/t/welcome-to-code-org-we-are-thrilled-you-have-joined-our-community/40528" target="_blank" rel="noopener noreferrer">
 <img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" style="width: auto; height: 100px;"  alt="A browser with two text boxes, both including an avatar and lines of text."></a>
 
 <div style="background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
 
 <p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Post to the Code.org Forum</b></p>
 
-<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Post your ideas and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Introduce yourself and find other teachers on the forum! Click on the icon to the left to direct to our forum post.
 </p>
 
 
 </div>
 </div>
+
+
+#### **Note: You can access the teacher forum from anywhere in Code.org by following these steps:**
+
+#### **Step 1:** Click on the "?" in the upper right hand corner of your screen.
+#### **Step 2:** Select "Teacher forum" from the dropdown menu. 
+#### **Step 3:** Click the magnifying glass at the top-right corner.
+#### **Step 4:** Search for the thread, "Welcome to CS Discoveries: Introduce yourself" and click on it.
+#### **Step 5:** Click "Reply" and introduce yourself to the CS Discoveries teacher community!
 
 MARKDOWN
