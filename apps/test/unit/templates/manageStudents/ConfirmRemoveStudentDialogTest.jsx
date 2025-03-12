@@ -26,6 +26,9 @@ describe('ConfirmRemoveStudentDialog', () => {
   });
 
   it('renders the dialog with the correct header when the student has signed in', () => {
+    i18n.removeStudentBody1 = jest.fn(
+      () => 'This will remove the student and their records.'
+    );
     render(
       <ConfirmRemoveStudentDialog {...defaultProps} hasEverSignedIn={true} />
     );
@@ -33,11 +36,7 @@ describe('ConfirmRemoveStudentDialog', () => {
     expect(
       screen.getByText(i18n.removeStudentAndRecordsHeader({studentName}))
     ).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        new RegExp(i18n.removeStudentBody1().replace(/\*\*/g, ''), 'i')
-      )
-    ).toBeInTheDocument();
+    expect(screen.getByText(i18n.removeStudentBody1())).toBeInTheDocument();
     expect(screen.getByText(i18n.learnMore())).toBeInTheDocument();
   });
 
