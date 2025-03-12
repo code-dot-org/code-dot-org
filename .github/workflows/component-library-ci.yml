@@ -22,7 +22,7 @@ jobs:
                   frontend
                   shared/fonts
                   .github
-                  lfs: true
+                lfs: true
 
             - name: Setup Frontend
               uses: ./.github/actions/frontend/setup
@@ -68,7 +68,7 @@ jobs:
           sparse-checkout: |
             frontend
             .github
-            lfs: true
+          lfs: true
 
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
