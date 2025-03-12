@@ -190,6 +190,17 @@ export default class MusicValidator extends Validator {
         }
       }
 
+      if (eventData.effects) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.USED_EFFECT.name,
+        });
+        const effectValues = Object.values(eventData.effects);
+        if (effectValues.includes('low') || effectValues.includes('medium')) {
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.USED_EFFECT_NON_DEFAULT.name,
+          });
+        }
+      }
       const validationInfo = eventData.validationInfo;
       if (validationInfo) {
         // Check for a block nested within an if/else block causing something to play.
