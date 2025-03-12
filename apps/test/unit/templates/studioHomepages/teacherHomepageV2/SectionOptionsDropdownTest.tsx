@@ -24,6 +24,7 @@ import {
   SPECIFIC_SECTION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 const LocationElement = () => {
@@ -115,6 +116,7 @@ describe('SectionOptionsDropdown', () => {
   store.dispatch(selectSection(11));
 
   let sendEventSpy: jest.SpyInstance;
+  let fetchSpy: jest.SpyInstance;
 
   beforeEach(() => {
     jest.mock('react-router-dom', () => ({
@@ -122,6 +124,7 @@ describe('SectionOptionsDropdown', () => {
       useNavigate: () => navigate,
     }));
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
   });
 
   afterEach(() => {
@@ -217,6 +220,29 @@ describe('SectionOptionsDropdown', () => {
     const link = screen.getByText(i18n.loginCards());
     fireEvent.click(link);
     screen.getByText('/sections/11/login_info');
+  });
+
+  it('displays certificates option to print student certificates', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.certificates());
+    fireEvent.click(link);
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      'Section table print certificates clicked',
+      {},
+      'Both'
+    );
+    expect(fetchSpy).toHaveBeenCalledWith('/dashboardapi/sections/11/students');
+  });
+
+  it('displays archive option to hide / restore section', () => {
+    renderComponent();
+    const link = screen.getByText(i18n.archive());
+    fireEvent.click(link);
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      'Section table archive section clicked',
+      {},
+      'Both'
+    );
   });
 
   it('displays archive option to hide / restore section', () => {

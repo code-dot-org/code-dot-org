@@ -12,6 +12,8 @@ import {
   TEACHER_NAVIGATION_SECTIONS_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {Student} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, AppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -82,11 +84,25 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       {},
       PLATFORMS.BOTH
     );
-    $.ajax(`/dashboardapi/sections/${section.id}/students`).done(result => {
-      const names = result.map((student: {name: string}) => student.name);
-      setStudentNames(names);
-      certFormRef.current?.submit();
-    });
+    HttpClient.fetchJson<Student[]>(
+      `/dashboardapi/sections/${section.id}/students`
+    )
+      .then(result => {
+        if (!result.response.ok) {
+          throw new Error(
+            `Failed to retrieve student names for certificates: ${result.response.statusText}`
+          );
+        }
+        return result.value;
+      })
+      .then(value => {
+        const names = value.map((student: {name: string}) => student.name);
+        setStudentNames(names);
+        certFormRef.current?.submit();
+      })
+      .catch(error =>
+        console.error('Error retrieving student names for certificates', error)
+      );
   }, [section.id]);
 
   const dropdownOptions: ActionDropdownOption[] = useMemo(() => {
