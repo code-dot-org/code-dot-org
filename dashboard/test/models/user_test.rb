@@ -991,7 +991,7 @@ class UserTest < ActiveSupport::TestCase
     migrated_student = create(:student, email: email)
 
     legacy_student = build(:user, :demigrated, email: email)
-    # ignore "Email has already been taken" error
+    # skip validation since we're creating a second user with the same email
     legacy_student.save(validate: false)
     assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
