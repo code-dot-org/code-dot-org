@@ -176,6 +176,8 @@ RUN export CHROME_STABLE_VERSION=$(curl -s https://googlechromelabs.github.io/ch
     rm -r chromedriver-linux64 && \
     rm chromedriver-linux64.zip
 
+ENV CHROME_BIN=/usr/local/bin/chrome
+
 # install pdftk & tidy
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
     curl -sSLOJ https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb && \
