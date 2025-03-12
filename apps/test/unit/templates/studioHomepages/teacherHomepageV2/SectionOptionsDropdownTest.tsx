@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, act} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -187,6 +187,7 @@ describe('SectionOptionsDropdown', () => {
       deferred.resolve({data: 'success'});
       return deferred.promise();
     });
+    HTMLFormElement.prototype.submit = jest.fn();
   });
 
   afterEach(() => {
@@ -284,10 +285,11 @@ describe('SectionOptionsDropdown', () => {
     screen.getByText('/sections/11/login_info');
   });
 
-  it('displays certificates option to print student certificates', () => {
+  it('displays certificates option to print student certificates', async () => {
     renderComponent();
     const link = screen.getByText(i18n.certificates());
     fireEvent.click(link);
+    await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(
       'Section table print certificates clicked',
       {},
