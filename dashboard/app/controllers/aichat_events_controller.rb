@@ -84,7 +84,7 @@ class AichatEventsController < ApplicationController
 
     begin
       chat_event = AichatEvent.find(chat_event_id)
-      unless can_view_chat_history?(chat_event.user_id)
+      unless can_submit_feedback?(chat_event.user_id)
         return render(status: :forbidden, json: {error: "Access denied for submitting teacher feedback."})
       end
 
@@ -103,5 +103,9 @@ class AichatEventsController < ApplicationController
 
   private def can_view_chat_history?(user_id)
     User.find_by_id(user_id)&.student_of?(current_user) || current_user.id == user_id
+  end
+
+  private def can_submit_feedback?(user_id)
+    User.find_by_id(user_id)&.student_of?(current_user)
   end
 end
