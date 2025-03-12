@@ -87,14 +87,7 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
     HttpClient.fetchJson<Student[]>(
       `/dashboardapi/sections/${section.id}/students`
     )
-      .then(result => {
-        if (!result.response.ok) {
-          throw new Error(
-            `Failed to retrieve student names for certificates: ${result.response.statusText}`
-          );
-        }
-        return result.value;
-      })
+      .then(result => result.value)
       .then(value => {
         const names = value.map((student: {name: string}) => student.name);
         setStudentNames(names);
@@ -143,7 +136,7 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       },
     ];
 
-    if (section.studentCount && section.studentCount > 0) {
+    if (section.studentCount === 0) {
       options.push({
         value: 'delete',
         label: i18n.delete(),

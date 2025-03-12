@@ -24,6 +24,7 @@ import {
   SPECIFIC_SECTION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {Student} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -107,6 +108,59 @@ const SECTIONS: Section[] = [
   },
 ];
 
+const STUDENTS: Student[] = [
+  {
+    id: 1,
+    name: 'Bobby',
+    familyName: 'Hill',
+    username: '',
+    email: '',
+    age: '',
+    gender: '',
+    genderTeacherInput: '',
+    secretWords: '',
+    secretPicturePath: '',
+    loginType: '',
+    sectionId: 12,
+    sharingDisabled: false,
+    hasEverSignedIn: true,
+    dependsOnThisSectionForLogin: true,
+    isEditing: false,
+    isSaving: false,
+    rowType: '',
+    userType: 'student',
+    atRiskAgeGatedDate: new Date(),
+    childAccountComplianceState: '',
+    latestPermissionRequestSentAt: new Date(),
+    usState: '',
+  },
+  {
+    id: 1,
+    name: 'Daria',
+    familyName: 'Morgendorffer',
+    username: '',
+    email: '',
+    age: '',
+    gender: '',
+    genderTeacherInput: '',
+    secretWords: '',
+    secretPicturePath: '',
+    loginType: '',
+    sectionId: 12,
+    sharingDisabled: false,
+    hasEverSignedIn: true,
+    dependsOnThisSectionForLogin: true,
+    isEditing: false,
+    isSaving: false,
+    rowType: '',
+    userType: 'student',
+    atRiskAgeGatedDate: new Date(),
+    childAccountComplianceState: '',
+    latestPermissionRequestSentAt: new Date(),
+    usState: '',
+  },
+];
+
 const navigate = jest.fn();
 
 describe('SectionOptionsDropdown', () => {
@@ -124,7 +178,15 @@ describe('SectionOptionsDropdown', () => {
       useNavigate: () => navigate,
     }));
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
-    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
+      value: STUDENTS,
+      response: new Response(),
+    });
+    $.ajax = jest.fn().mockImplementation(() => {
+      const deferred = $.Deferred();
+      deferred.resolve({data: 'success'});
+      return deferred.promise();
+    });
   });
 
   afterEach(() => {
@@ -245,19 +307,8 @@ describe('SectionOptionsDropdown', () => {
     );
   });
 
-  it('displays archive option to hide / restore section', () => {
+  it('displays delete option to initiate section delete', () => {
     renderComponent();
-    const link = screen.getByText(i18n.archive());
-    fireEvent.click(link);
-    expect(sendEventSpy).toHaveBeenCalledWith(
-      'Section table archive section clicked',
-      {},
-      'Both'
-    );
-  });
-
-  it('displays delete option to initiate section delete', async () => {
-    renderComponent(SECTIONS[1]);
 
     const link = screen.getByText(i18n.delete());
     fireEvent.click(link);
@@ -269,7 +320,7 @@ describe('SectionOptionsDropdown', () => {
   });
 
   it('does not display delete option if section has students', async () => {
-    renderComponent();
+    renderComponent(SECTIONS[1]);
     expect(screen.queryByText(i18n.delete())).toBeNull();
   });
 });
