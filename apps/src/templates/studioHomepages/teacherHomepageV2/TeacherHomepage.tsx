@@ -13,6 +13,7 @@ import {
   beginEditingSection,
 } from '../../teacherDashboard/teacherSectionsRedux';
 
+import {ArchiveAllModal} from './ArchiveAllModal';
 import {SectionList} from './SectionList';
 
 import styles from './teacherHomepage.module.scss';
@@ -30,6 +31,9 @@ export const TeacherHomepage: React.FC = () => {
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
+
+  const [archiveAllModalOpen, setArchiveAllModalOpen] =
+    React.useState<boolean>(false);
 
   return (
     <div className={styles.teacherHomepage}>
@@ -69,7 +73,16 @@ export const TeacherHomepage: React.FC = () => {
                   name="More options"
                   size="s"
                   labelText={i18n.moreOptions()}
-                  options={[]}
+                  options={[
+                    {
+                      label: i18n.archiveAllSections(),
+                      icon: {iconName: 'gear', iconStyle: 'solid'},
+                      value: 'archive',
+                      onClick: () => {
+                        setArchiveAllModalOpen(true);
+                      },
+                    },
+                  ]}
                   triggerButtonProps={{
                     icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
                     isIconOnly: true,
@@ -77,6 +90,11 @@ export const TeacherHomepage: React.FC = () => {
                     type: 'secondary',
                   }}
                 />
+                {archiveAllModalOpen && (
+                  <ArchiveAllModal
+                    onClose={() => setArchiveAllModalOpen(false)}
+                  />
+                )}
               </div>
             </div>
             <SectionList

@@ -205,6 +205,14 @@
       "import": "./dist/esm/formFieldWrapper/index.mjs",
       "require": "./dist/cjs/formFieldWrapper/index.js"
     },
+    "./cms/image": {
+      "types": {
+        "import": "./dist/esm/cms/image/index.d.ts",
+        "require": "./dist/cjs/cms/image/index.d.ts"
+      },
+      "import": "./dist/esm/cms/image/index.mjs",
+      "require": "./dist/cjs/cms/image/index.js"
+    },
     "./link": {
       "types": {
         "import": "./dist/esm/link/index.d.ts",

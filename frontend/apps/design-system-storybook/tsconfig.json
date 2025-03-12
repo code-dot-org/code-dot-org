@@ -3,7 +3,8 @@
   "include": [".storybook/**/*"],
   "compilerOptions": {
     "paths": {
-      "@/*": ["../../packages/component-library/src/*"]
+      "@/*": ["../../packages/component-library/src/*"],
+      "@public/*": ["./public/*"]
     }
   }
 }
