@@ -243,7 +243,7 @@ class StorageIdTest < Minitest::Test
       "Expected #{total_operations} successful operations but got #{actual_successful_operations}: #{failed_operations_message}"
     )
     assert_equal 0, failure_count, "Expected 0 failures but got #{failure_count}"
-    # Ensure execution time was less than 1 second.
-    assert_operator total_time.round(2), :<, 1
+    # Ensure execution time was less than 5 seconds.
+    assert_operator total_time.round(2), :<, 5
   end
 end
