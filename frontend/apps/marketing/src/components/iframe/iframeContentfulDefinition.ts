@@ -35,7 +35,7 @@ export const IframeContentfulComponentDefinition: ComponentDefinition = {
     height: {
       displayName: 'Embed container height',
       type: 'Text',
-      defaultValue: '100%',
+      defaultValue: '500px',
       group: 'style',
     },
     width: {
