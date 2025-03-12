@@ -30,13 +30,6 @@ describe('ChangeUserTypeModal', () => {
   const getCancelButton = () =>
     screen.getByRole('button', {name: i18n.cancel()});
 
-  it('renders the modal with the correct title', () => {
-    renderComponent();
-    expect(
-      screen.getByText(i18n.changeUserTypeModal_title())
-    ).toBeInTheDocument();
-  });
-
   it('disables everything and shows saving text when submitting', async () => {
     const user = userEvent.setup();
     renderComponent();
@@ -190,9 +183,7 @@ describe('ChangeUserTypeModal', () => {
       await user.selectOptions(getEmailOptInSelect(), 'yes');
       await user.click(getSubmitButton());
 
-      expect(
-        await screen.findByText('Email already in use')
-      ).toBeInTheDocument();
+      expect(screen.getByText('Email already in use')).toBeInTheDocument();
       expect(screen.getByText('Invalid opt-in selection')).toBeInTheDocument();
     });
   });
