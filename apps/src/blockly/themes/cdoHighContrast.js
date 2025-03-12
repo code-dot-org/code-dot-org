@@ -5,6 +5,11 @@ import fontConstants from '@cdo/apps/fontConstants';
 
 import {Themes} from '../constants';
 
+for (const key in HighContrastTheme.blockStyles) {
+  delete HighContrastTheme.blockStyles[key].colourSecondary;
+  delete HighContrastTheme.blockStyles[key].colourTertiary;
+}
+
 // We use the primary colour for variable shadow blocks. Shadow blocks cannot include a variable field,
 // so this only applies to argument_reporter blocks.
 const variableColor =
@@ -18,18 +23,12 @@ const coreBlocklyOverrides = {
   },
   colour_blocks: {
     colourPrimary: '#006E96',
-    colourSecondary: '99C5D5',
-    colourTertiary: '#4D9AB6',
   },
   loop_blocks: {
     colourPrimary: '#BC107D',
-    colourSecondary: 'E49FCB',
-    colourTertiary: '#D058A4',
   },
   procedure_blocks: {
     colourPrimary: '#39700F',
-    colourSecondary: '#B0C69F',
-    colourTertiary: '#749B57',
   },
   variable_blocks: {
     colourPrimary: variableColor,
