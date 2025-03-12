@@ -38,6 +38,9 @@ class Rubric < ApplicationRecord
         id: level.id,
         name: level.name,
         position: script_level&.position,
+      },
+      course: {
+        name: script_level.script.unit_group&.name,
       }
     }
   end

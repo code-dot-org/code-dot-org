@@ -65,6 +65,8 @@ experiments.FREE_RESPONSE_AI_ANALYSIS = 'free_response_ai_analysis';
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use the new version of codebridge share view
 experiments.CODEBRIDGE_SHARE = 'codebridge-share';
+// Allows teachers to use the ai enabled csp rubrics
+experiments.CSP_RUBRICS_ENABLED = 'csp-rubrics-enabled';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

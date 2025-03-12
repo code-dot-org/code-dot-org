@@ -25,6 +25,9 @@ export const rubricShape = PropTypes.shape({
   level: PropTypes.shape({
     id: PropTypes.number,
   }),
+  course: PropTypes.shape({
+    name: PropTypes.string,
+  }),
 });
 
 // Used for any data that is only for reporting purposes. Other data may be used for event reporting

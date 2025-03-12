@@ -16,6 +16,7 @@ import {
   selectReadyStudentCount,
 } from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -213,81 +214,88 @@ function RubricFloatingActionButton({
     ? classnames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
 
-  return (
-    <div id="fab-contained">
-      <button
-        id="ui-floatingActionButton"
-        aria-label={i18n.openOrCloseTeachingAssistant()}
-        className={classes}
-        onClick={handleClick}
-        type="button"
-      >
-        <img
-          alt="AI bot"
-          src={fabIcon}
-          onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-        />
-      </button>
-      {showCountBubble ? (
-        <>
-          <div
-            className={classnames(
-              style.countOverlay,
-              'uitest-count-bubble',
-              dismissConfirmed && 'uitest-dismiss-confirmed'
-            )}
-          >
-            <BodyFourText className={style.countText}>
-              <StrongText>
-                <span aria-label={i18n.aiEvaluationsToReview()}>
-                  {readyStudentCount}
-                </span>
-              </StrongText>
-            </BodyFourText>
-          </div>
-          {showScoresAlert && (
-            <StudentScoresAlert
-              closeAlert={setSeenTaScores}
-              viewScores={viewScores}
-            />
-          )}
-        </>
-      ) : (
-        <div
-          className={style.taOverlay}
-          style={{backgroundImage: `url(${taIcon})`}}
+  if (
+    rubric.course !== 'csp-2025' ||
+    experiments.isEnabled('csp-rubrics-enabled')
+  ) {
+    return (
+      <div id="fab-contained">
+        <button
+          id="ui-floatingActionButton"
+          aria-label={i18n.openOrCloseTeachingAssistant()}
+          className={classes}
+          onClick={handleClick}
+          type="button"
         >
           <img
-            src={taIcon}
-            alt="TA overlay"
-            onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
+            alt="AI bot"
+            src={fabIcon}
+            onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
           />
-        </div>
-      )}
-      {/* TODO: do not hardcode in AI setting */}
-      <ErrorBoundary
-        fallback={
-          <RubricErrorContainer
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            error={internalError}
+        </button>
+        {showCountBubble ? (
+          <>
+            <div
+              className={classnames(
+                style.countOverlay,
+                'uitest-count-bubble',
+                dismissConfirmed && 'uitest-dismiss-confirmed'
+              )}
+            >
+              <BodyFourText className={style.countText}>
+                <StrongText>
+                  <span aria-label={i18n.aiEvaluationsToReview()}>
+                    {readyStudentCount}
+                  </span>
+                </StrongText>
+              </BodyFourText>
+            </div>
+            {showScoresAlert && (
+              <StudentScoresAlert
+                closeAlert={setSeenTaScores}
+                viewScores={viewScores}
+              />
+            )}
+          </>
+        ) : (
+          <div
+            className={style.taOverlay}
+            style={{backgroundImage: `url(${taIcon})`}}
+          >
+            <img
+              src={taIcon}
+              alt="TA overlay"
+              onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
+            />
+          </div>
+        )}
+        {/* TODO: do not hardcode in AI setting */}
+        <ErrorBoundary
+          fallback={
+            <RubricErrorContainer
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+              error={internalError}
+            />
+          }
+          onError={onInternalError}
+        >
+          <RubricContainer
+            rubric={rubric}
+            studentLevelInfo={studentLevelInfo}
+            reportingData={reportingData}
+            onLevelForEvaluation={onLevelForEvaluation}
+            teacherHasEnabledAi={aiEnabled}
+            open={isOpen}
+            closeRubric={handleClick}
+            sectionId={sectionId}
           />
-        }
-        onError={onInternalError}
-      >
-        <RubricContainer
-          rubric={rubric}
-          studentLevelInfo={studentLevelInfo}
-          reportingData={reportingData}
-          onLevelForEvaluation={onLevelForEvaluation}
-          teacherHasEnabledAi={aiEnabled}
-          open={isOpen}
-          closeRubric={handleClick}
-          sectionId={sectionId}
-        />
-      </ErrorBoundary>
-    </div>
-  );
+        </ErrorBoundary>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
 
 RubricFloatingActionButton.propTypes = {
