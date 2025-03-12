@@ -38,11 +38,5 @@ export const IframeContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: '500px',
       group: 'style',
     },
-    width: {
-      displayName: 'Embed container width',
-      type: 'Text',
-      defaultValue: '100%',
-      group: 'style',
-    },
   },
 };
