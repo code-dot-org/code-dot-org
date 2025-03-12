@@ -24,12 +24,12 @@ instance for the Code.org design system (`@code-dot-org/component-library`). Pub
 ### Packages
  Publicly available packages:
 
-- [@code-dot-org/component-library](packages/component-library): The Design System React component library for Code.org ()
+- [@code-dot-org/component-library](packages/component-library): The Code.org Design System React component library.
 - [@code-dot-org/component-library-styles](packages/component-library-styles): Common Styles
-(`variables`, `colors`, `mixins`, `typography styles`, etc) of Code.org 
-Design System([@code-dot-org/component-library](packages/component-library)). Based on [Figma](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33951&m=dev).
-Used by [@code-dot-org/component-library](packages/component-library), can(for Code.org - should) also be used as a standalone package
-for styling components with Code.org's Design System styles.
+(`variables`, `colors`, `mixins`, `typography styles`, etc) of Code.org Design System 
+([@code-dot-org/component-library](packages/component-library)). Based on [Figma](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33951&m=dev).
+Used by [@code-dot-org/component-library](packages/component-library), can(for Code.org - should) also be used as 
+a standalone package for styling components with Code.org's Design System styles.
 - [@code-dot-org/lint-config](packages/lint-config): Shared linters configuration for Code.org projects 
 (includes `eslint`, `lint-staged,` `prettier`, `stylelint`, `typescript` configs).
 - [@code-dot-org/fonts](packages/fonts): Code.org's Design System fonts package.
