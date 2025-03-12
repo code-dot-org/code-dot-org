@@ -1,5 +1,5 @@
 Marketing::Engine.routes.draw do
-  scope ':locale' do
-    resources :promotions, only: [:show]
+  namespace :teacher do
+    resources :promotions, only: [:show], to: 'promotions#show'
   end
 end

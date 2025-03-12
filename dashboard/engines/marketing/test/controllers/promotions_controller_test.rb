@@ -44,16 +44,16 @@ class PromotionsControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'returns teacher sidebar json' do
-      get "/marketing/#{locale}/promotions/#{entry_id}"
+      get "/marketing/teacher/promotions/#{entry_id}"
       assert_response :ok
-      assert_equal expected_result, @response.body
+      _(@response.body).must_equal expected_result
     end
 
     context 'when the entry does not exist' do
       let(:entry) {nil}
 
       it 'returns a 404' do
-        get "/marketing/#{locale}/promotions/#{entry_id}"
+        get "/marketing/teacher/promotions/#{entry_id}"
         assert_response :not_found
       end
     end
@@ -62,7 +62,7 @@ class PromotionsControllerTest < ActionDispatch::IntegrationTest
       let(:content_type) {TestContentType.new(id: 'wrongContentType')}
 
       it 'returns a 404' do
-        get "/marketing/#{locale}/promotions/#{entry_id}"
+        get "/marketing/teacher/promotions/#{entry_id}"
         assert_response :not_found
       end
     end
