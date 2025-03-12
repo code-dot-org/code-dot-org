@@ -62,20 +62,19 @@ const aichatSlice = createSlice({
     },
     setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
       // Find the last index of an event that marks the start a new conversation with the model.
-      const lastResetIndex = action.payload.reduce(
-        (accumulator, currentValue, currentIndex) => {
-          if (
-            RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
-              (currentValue as ModelUpdate)?.updatedField
-            ) ||
-            (currentValue as UserActionEvent)?.descriptionKey === 'CLEAR_CHAT'
-          ) {
-            return currentIndex;
-          }
-          return accumulator;
-        },
-        -1
-      );
+      const events = action.payload;
+      let lastResetIndex = -1;
+      for (let i = events.length - 1; i >= 0; i--) {
+        if (
+          RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
+            (events[i] as ModelUpdate)?.updatedField
+          ) ||
+          (events[i] as UserActionEvent)?.descriptionKey === 'CLEAR_CHAT'
+        ) {
+          lastResetIndex = i;
+          break;
+        }
+      }
 
       if (lastResetIndex >= 0) {
         state.chatEventsPast = action.payload.slice(0, lastResetIndex + 1);
