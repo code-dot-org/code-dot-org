@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React, {ChangeEvent, useRef} from 'react';
+import React, {ChangeEvent, useCallback, useRef} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -46,8 +46,6 @@ const UploadButton: React.FC = () => {
         file,
       ]);
 
-    console.log(allowedFiles);
-
     for (const [key, filename] of allowedFiles) {
       dispatch(addStagedFile({key, filename}));
     }
@@ -83,6 +81,14 @@ const UploadButton: React.FC = () => {
     }
   };
 
+  const onUploadClick = useCallback(() => {
+    if (inputRef.current) {
+      inputRef.current.click();
+      // Clear the value in case the same file is selected again.
+      inputRef.current.value = '';
+    }
+  }, [inputRef]);
+
   return (
     <>
       <input
@@ -100,7 +106,7 @@ const UploadButton: React.FC = () => {
         size="s"
         type="secondary"
         color="gray"
-        onClick={() => inputRef.current?.click()}
+        onClick={onUploadClick}
         disabled={numStagedFiles >= MAX_NUM_FILES}
       />
     </>

@@ -185,12 +185,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       )}
 
       <div className={moduleStyles.footer}>
+        {multimodalEnabled && <StagedFilesPreview />}
         {canChatWithModel && (
           <UserChatMessageEditor
             editorContainerClassName={moduleStyles.messageEditorContainer}
           />
         )}
-        {multimodalEnabled && <StagedFilesPreview />}
         <div className={moduleStyles.buttonRow}>
           {multimodalEnabled && <UploadButton />}
           <Button
