@@ -1,5 +1,5 @@
 import {render, screen, waitFor} from '@testing-library/react';
-import userEvent, {UserEvent} from '@testing-library/user-event';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
 import Tags, {TagProps} from './../index';
@@ -142,87 +142,5 @@ describe('Design System - Tags Component', () => {
 
     expect(tagLabel).toBeInTheDocument();
     expect(icon).toBeInTheDocument();
-  });
-
-  describe('onClose', () => {
-    let user: UserEvent;
-    let onClick1: jest.Mock;
-    let onClick2: jest.Mock;
-    let tagsList: TagProps[];
-    let button1: HTMLElement;
-    let button2: HTMLElement;
-
-    beforeEach(() => {
-      user = userEvent.setup();
-      onClick1 = jest.fn();
-      onClick2 = jest.fn();
-      tagsList = [
-        {
-          type: 'closable',
-          tooltipId: 'tag-icon-1',
-          label: 'tag with icon',
-          tooltipContent: 'Tooltip with icon',
-          onClose: onClick1,
-          icon: {
-            iconName: 'close',
-            iconStyle: 'solid',
-            title: 'Close 1',
-            placement: 'right',
-          },
-        },
-        {
-          type: 'closable',
-          tooltipId: 'tag-icon-2',
-          label: 'tag with icon',
-          tooltipContent: 'Tooltip with icon',
-          onClose: onClick2,
-          icon: {
-            iconName: 'close',
-            iconStyle: 'solid',
-            title: 'Close 2',
-            placement: 'right',
-          },
-        },
-      ];
-
-      render(<Tags tagsList={tagsList} />);
-
-      [button1, button2] = screen.getAllByRole('button', {
-        name: /close/i,
-      });
-    });
-
-    it('has keyboard navigable close button if onClose is present', async () => {
-      await user.tab();
-
-      expect(button1).toHaveFocus();
-
-      await user.tab();
-
-      expect(button2).toHaveFocus();
-    });
-
-    it('calls onClose when the close button is clicked', async () => {
-      await user.click(button1);
-
-      expect(onClick1).toHaveBeenCalledTimes(1);
-      expect(onClick2).not.toHaveBeenCalled();
-    });
-
-    it('calls onClose when Enter or Space is pressed while close button has focus', async () => {
-      await user.tab();
-      expect(button1).toHaveFocus();
-      await user.keyboard('{Enter}');
-
-      expect(onClick1).toHaveBeenCalledTimes(1);
-      expect(onClick2).not.toHaveBeenCalled();
-
-      await user.tab();
-      expect(button2).toHaveFocus();
-      await user.keyboard(' ');
-
-      expect(onClick1).toHaveBeenCalledTimes(1);
-      expect(onClick2).toHaveBeenCalledTimes(1);
-    });
   });
 });

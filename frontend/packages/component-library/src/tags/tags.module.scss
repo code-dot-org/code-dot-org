@@ -6,8 +6,6 @@
 .tags {
   display: flex;
   column-gap: 0.5em;
-  row-gap: 0.5em;
-  flex-wrap: wrap;
 
   .tag {
     display: flex;
@@ -34,8 +32,7 @@
       padding-inline-start: 8px;
     }
 
-    &:has(i:last-child),
-    &:has(button:last-child) {
+    &:has(i:not(:first-child)) {
       padding-inline-end: 8px;
     }
   }

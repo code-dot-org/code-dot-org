@@ -9,7 +9,7 @@ import moduleStyles from './tags.module.scss';
 export interface TagsProps {
   /** Array of tags to be rendered */
   tagsList: TagProps[];
-  /** Size of tag */
+  /** Size of button */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
   /** Optional className for custom styles, etc*/
   className?: string;
@@ -41,19 +41,16 @@ const Tags: React.FunctionComponent<TagsProps> = ({
     )}
     data-testid="tags"
   >
-    {tagsList.map(
-      ({key, tooltipId, label, tooltipContent, ariaLabel, icon, ...props}) => (
-        <Tag
-          key={key ?? tooltipId ?? label}
-          tooltipId={tooltipId}
-          label={label}
-          ariaLabel={ariaLabel}
-          icon={icon}
-          tooltipContent={tooltipContent}
-          {...props}
-        />
-      ),
-    )}
+    {tagsList.map(({tooltipId, label, tooltipContent, ariaLabel, icon}) => (
+      <Tag
+        key={tooltipId}
+        tooltipId={tooltipId}
+        label={label}
+        ariaLabel={ariaLabel}
+        icon={icon}
+        tooltipContent={tooltipContent}
+      />
+    ))}
   </div>
 );
 
