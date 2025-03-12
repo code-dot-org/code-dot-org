@@ -1,4 +1,4 @@
-// Creates a definition for the Divider component to be used in Contentful Studio
+// Creates a definition for the Image component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const ImageContentfulComponentDefinition: ComponentDefinition = {
