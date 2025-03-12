@@ -11,9 +11,9 @@ interface FetchUserChatHistoryParams {
   isOwnHistory: boolean;
 }
 
-// This thunk's callback function submits a teacher's student's id along with the level/script id
-// to the student chat history endpoint, waits for a response,
-// and then returns the student's chat events for that level/script.
+// This thunk's callback function submits a user id (either a teacher or student)
+// along with the level/script id to the chat history endpoint,
+// waits for a response, and then returns the user's chat events for that level/script.
 export const fetchUserChatHistory = createAsyncThunk(
   'aichat/fetchUserChatHistory',
   async ({userId, isOwnHistory}: FetchUserChatHistoryParams, thunkAPI) => {

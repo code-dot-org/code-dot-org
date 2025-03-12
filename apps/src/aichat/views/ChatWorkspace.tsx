@@ -66,7 +66,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const dispatch = useAppDispatch();
 
-  // Update to be called on switch of level? Bug noticed by Sanchit
   useEffect(() => {
     if (selectedStudent) {
       dispatch(
