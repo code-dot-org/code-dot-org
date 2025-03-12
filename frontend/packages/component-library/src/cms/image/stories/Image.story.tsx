@@ -17,7 +17,10 @@ type Story = StoryObj<typeof Image>;
 export const DefaultImage: Story = {
   args: {
     src: imageFile,
-    altText: 'Teacher in front of classroom',
+    altText: 'Teacher helping student',
+  },
+  parameters: {
+    eyes: {waitBeforeCapture: 4000},
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -31,7 +34,7 @@ export const DefaultImage: Story = {
 export const ImageWithBorder: Story = {
   args: {
     src: imageFile,
-    altText: 'Teacher helping student at computer',
+    altText: 'Teacher helping student',
     hasBorder: true,
   },
   parameters: {
@@ -40,6 +43,7 @@ export const ImageWithBorder: Story = {
         story: 'Add a border to an image if it blends into the background.',
       },
     },
+    eyes: {waitBeforeCapture: 4000},
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -67,7 +71,7 @@ export const ImageWithBorder: Story = {
 export const ImageWithBoxShadow: Story = {
   args: {
     src: imageFile,
-    altText: 'Teacher in front of classroom',
+    altText: 'Teacher helping student',
     hasBoxShadow: true,
   },
   parameters: {
@@ -77,6 +81,7 @@ export const ImageWithBoxShadow: Story = {
           "Add a box shadow to an image if it's used at the top of the page.",
       },
     },
+    eyes: {waitBeforeCapture: 4000},
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
