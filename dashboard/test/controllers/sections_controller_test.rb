@@ -266,7 +266,7 @@ class SectionsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'archive_all does not archive cotaught section' do
+  test 'archive_all does archive cotaught section' do
     sign_in @teacher
     section_owner = create(:teacher)
 
@@ -278,10 +278,10 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
 
     coteacher_section.reload
-    assert_equal false, coteacher_section.hidden
+    assert_equal true, coteacher_section.hidden
 
     response_json = JSON.parse(@response.body)
-    assert_equal 5, response_json['num_hidden']
+    assert_equal 6, response_json['num_hidden']
     @teacher.sections_owned.each do |section|
       assert_equal true, section.hidden
     end

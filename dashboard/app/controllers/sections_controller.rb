@@ -74,7 +74,7 @@ class SectionsController < ApplicationController
   # Archive all sections owned by the current user.
   # Note: does not archive co-taught sections created by another user.
   def archive_all
-    sections = current_user.sections_owned
+    sections = current_user.sections_instructed
 
     num_hidden = sections.count {|s| !s.hidden}
 

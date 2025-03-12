@@ -304,7 +304,7 @@
   "archiveAllSections": "Archive all class sections",
   "archivedAllSections": "All class sections archived",
   "archiveWarning": "Archive all class sections?",
-  "archiveAllNote": "Note: this will **not** archive class sections you are co-teaching that were created by another teacher.",
+  "archiveAllNote": "Note: this will archive all class sections you are teaching including sections that were created by another teacher that you are coteaching.",
   "numArchivedSections": "{numHidden, plural, one {1 section was} other {# sections were}} archived.",
   "archiveSection": "Archive Section",
   "archived": "Archived",
