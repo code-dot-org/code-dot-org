@@ -65,12 +65,6 @@ describe('SectionCardBody', () => {
 
   const store: Store = getStore();
 
-  beforeEach(() => {});
-
-  afterEach(() => {
-    jest.restoreAllMocks();
-  });
-
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
     return render(
       <Provider store={store}>
