@@ -19,7 +19,7 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
     src: {
       displayName: 'Image source',
       type: 'Media',
-      defaultValue: '',
+      defaultValue: undefined,
       group: 'content',
     },
     altText: {
