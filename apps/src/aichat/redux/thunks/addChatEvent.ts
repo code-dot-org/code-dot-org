@@ -17,7 +17,7 @@ import {addEventToChatEventsCurrent} from '../slice';
 export const addChatEvent =
   <T extends ChatEvent>(chatEvent: T) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
-    // Do not log to frontend for UserActionEvents (eg, clear chat),
+    // Do not show in chat window for UserActionEvents (eg, clear chat),
     // which are hidden from participants and only displayed in teacher view of student chat history.
     if (!isUserActionEvent(chatEvent)) {
       dispatch(addEventToChatEventsCurrent(chatEvent));
