@@ -5,6 +5,9 @@ import fontConstants from '@cdo/apps/fontConstants';
 
 import {Themes} from '../constants';
 
+// Our themes only define the primary colour for each block style.
+// By doing this, we allow Blockly to automatically generate secondary and tertiary colors.
+// This is important for dark mode as we override the secondary color generation method.
 for (const key in HighContrastTheme.blockStyles) {
   delete HighContrastTheme.blockStyles[key].colourSecondary;
   delete HighContrastTheme.blockStyles[key].colourTertiary;
