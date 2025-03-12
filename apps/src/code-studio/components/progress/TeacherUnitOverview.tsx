@@ -12,7 +12,7 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   TEACHER_NAVIGATION_PATHS,
-  LABELED_TEACHER_NAVIGATION_PATHS,
+  getBasePath,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -40,35 +40,39 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
 
   const navigate = useNavigate();
   const {unitName} = useParams();
+  const {courseVersionName, unitPosition} = useParams();
+  const unitDefined = unitName || (courseVersionName && unitPosition);
+
+  // React.useEffect(() => {
+  //   if (!unitName && selectedSection?.unitName) {
+  //     navigate(
+  //       generatePath(
+  //         LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
+  //         {unitName: selectedSection.unitName, sectionId: selectedSection.id}
+  //       ),
+  //       {replace: true}
+  //     );
+  //     return;
+  //   }
+  // }, [unitName, selectedSection, navigate]);
 
   React.useEffect(() => {
-    if (!unitName && selectedSection?.unitName) {
-      navigate(
-        generatePath(
-          LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
-          {unitName: selectedSection.unitName, sectionId: selectedSection.id}
-        ),
-        {replace: true}
-      );
+    if (!unitDefined || !userType || !userId) {
       return;
     }
-  }, [unitName, selectedSection, navigate]);
+    const unitLoadedId = unitName || `${courseVersionName}-${unitPosition}`;
 
-  React.useEffect(() => {
-    if (!unitName || !userType || !userId) {
-      return;
-    }
-
-    if (unitLoaded === unitName) {
+    if (unitLoaded === unitLoadedId) {
       return;
     }
 
     setUnitSummaryResponse(null);
-    setUnitLoaded(unitName);
+    setUnitLoaded(unitLoadedId);
 
-    HttpClient.fetchJson<UnitSummaryResponse>(
-      `/dashboardapi/unit_summary/${unitName}`
-    )
+    const fetchUnitSummaryPath = unitName
+      ? `/dashboardapi/unit_summary/${unitName}`
+      : `/dashboardapi/unit_summary/${courseVersionName}/${unitPosition}`;
+    HttpClient.fetchJson<UnitSummaryResponse>(fetchUnitSummaryPath)
       .then(response => response?.value)
       .then(responseJson => {
         setUnitSummaryReduxData(responseJson, dispatch, userType, userId);
@@ -78,6 +82,8 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
           EVENTS.TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED,
           {
             unitName: unitName,
+            courseName: courseVersionName,
+            unitPosition: unitPosition,
           }
         );
       })
@@ -85,7 +91,9 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
         console.error('Error loading unit overview', error);
 
         analyticsReporter.sendEvent(EVENTS.TEACHER_NAV_UNIT_OVERVIEW_FAILED, {
-          unitName,
+          unitName: unitName,
+          courseName: courseVersionName,
+          unitPosition: unitPosition,
         });
       });
   }, [
@@ -97,13 +105,24 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
     selectedSection,
     unitLoaded,
     setUnitLoaded,
+    courseVersionName,
+    unitPosition,
+    unitDefined,
   ]);
 
-  if (
-    !unitSummaryResponse ||
-    !unitSummaryResponse.unitData ||
-    unitSummaryResponse.unitData.name !== unitName
-  ) {
+  // Has any Unit Summary been loaded?
+  const unitSummaryAvailable =
+    unitSummaryResponse && unitSummaryResponse.unitData;
+  if (!unitSummaryAvailable) {
+    return <Spinner size={'large'} />;
+  }
+
+  // Is the currently requested Unit Summary loaded?
+  const currentUnitSummaryAvailable =
+    unitSummaryResponse.unitData.name === unitName ||
+    (unitSummaryResponse.unitData.course_name === courseVersionName &&
+      unitSummaryResponse.unitData.unit_position === unitPosition);
+  if (!currentUnitSummaryAvailable) {
     return <Spinner size={'large'} />;
   }
 
@@ -116,6 +135,13 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
     unitSummaryResponse.unitData.showAiAssessmentsAnnouncement &&
     experiments.isEnabled(experiments.AI_ASSESSMENTS_ANNOUNCEMENT);
 
+  const courseLink = unitSummaryResponse.unitData.course_name
+    ? generatePath(getBasePath(TEACHER_NAVIGATION_PATHS.courseOverview), {
+        courseVersionName: unitSummaryResponse.unitData.course_name,
+        sectionId: selectedSection.id,
+      })
+    : null;
+
   return (
     <UnitOverview
       id={selectedSection.unitId}
@@ -124,13 +150,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       courseVersionId={selectedSection.courseVersionId}
       isSingleUnitCourse={selectedSection.isAssignedSingleUnitCourse}
       courseTitle={unitSummaryResponse.unitData.course_title}
-      courseLink={
-        unitSummaryResponse.unitData.course_name
-          ? generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
-              courseVersionName: unitSummaryResponse.unitData.course_name,
-            })
-          : null
-      }
+      courseLink={courseLink}
       excludeCsfColumnInLegend={!unitSummaryResponse.unitData.csf}
       teacherResources={unitSummaryResponse.unitData.teacher_resources}
       studentResources={unitSummaryResponse.unitData.student_resources || []}

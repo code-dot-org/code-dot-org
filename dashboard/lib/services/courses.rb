@@ -4,8 +4,7 @@ class Services::Courses
   # This method returns the canonical version of a given path related to a UnitGroup/Course
   # for example given a /s/.../ URL it will return the appropriate /courses/.../units/...
   # URL because /s/.../ is being deprecated.
-  #
-  # @param path [String] the original URL path to transform
+  # # @param path [String] the original URL path to transform
   # @param params [Hash] a `params` Hash provided to a Controller.
   # @param current_user [User] the currently authenticated user object, used for experiment checks
   # @return [String] the transformed canonical path if applicable, or the original path if no transformation is made

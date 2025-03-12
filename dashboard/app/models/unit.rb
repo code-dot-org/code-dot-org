@@ -165,7 +165,7 @@ class Unit < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validates_presence_of :link
+  validates :link, presence: true
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validate :deeper_learning_courses_cannot_be_launched
 
@@ -547,7 +547,7 @@ class Unit < ApplicationRecord
   #   get_from_cache('11') --> script_cache['11'] = <Unit id=11, name=...>
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Unit name="frozen", id=...>
   #
-  # @param id_or_name [String|Integer] script id, script name, or script family name.
+  # @param id_or_name [String, Integer] script id, script name, or script family name.
   def self.get_from_cache(id_or_name, raise_exceptions: true)
     script =
       if should_cache?
