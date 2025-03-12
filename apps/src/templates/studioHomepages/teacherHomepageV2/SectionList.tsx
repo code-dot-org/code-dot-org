@@ -43,21 +43,6 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
         console.error(error);
         setSectionToDelete(NO_SECTION_ID);
       });
-    // $.ajax({
-    //   url: `/dashboardapi/sections/${sectionToDelete}`,
-    //   method: 'DELETE',
-    // })
-    //   .done(() => {
-    //     dispatch(removeSectionOrThrow(sectionToDelete));
-    //     setSectionToDelete(-1);
-    //   })
-    //   .fail((jqXhr, status) => {
-    //     // We may want to handle this more cleanly in the future, but for now this
-    //     // matches the experience we got in angular
-    //     alert(i18n.unexpectedError());
-    //     console.error(status);
-    //     setSectionToDelete(NO_SECTION_ID);
-    //   });
   };
 
   const filteredSectionList = React.useMemo(() => {
