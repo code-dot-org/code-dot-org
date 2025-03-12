@@ -990,12 +990,9 @@ class UserTest < ActiveSupport::TestCase
     email = 'test@foo.bar'
     migrated_student = create(:student, email: email)
 
-    legacy_student = build(:student, email: email)
+    legacy_student = build(:user, :demigrated, email: email)
     # ignore "Email has already been taken" error
-    assert_raises(ActiveRecord::RecordInvalid) do
-      legacy_student.save(validate: false)
-    end
-    legacy_student.demigrate_from_multi_auth
+    legacy_student.save(validate: false)
     assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
