@@ -1,6 +1,8 @@
 import type {Meta, StoryObj, StoryFn} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
+import bgPattern from '@public/images/bg-pattern.png';
+
 import Section, {SectionProps, sectionBackground} from '../index';
 import {BodyOneText, Heading2} from '@/typography';
 
@@ -68,8 +70,7 @@ export const SectionWithBackgroundColor: Story = {
 export const SectionWithBackgroundPattern: Story = {
   args: {
     background: sectionBackground.patternPrimary,
-    backgroundImageUrl:
-      'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+    backgroundImageUrl: bgPattern,
     padding: 'l',
     children: (
       <>
@@ -140,8 +141,7 @@ MultipleSections.args = {
     },
     {
       background: sectionBackground.patternDark,
-      backgroundImageUrl:
-        'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+      backgroundImageUrl: bgPattern,
       padding: 'l',
       children: (
         <>
