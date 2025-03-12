@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -27,9 +27,10 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   const prevMessagesCountRef = useRef(storedMessages.length);
   const prevFeedbackDetailsOpenRef = useRef(feedbackDetailsOpen);
 
-  const lastAssistantMessageIndex = storedMessages
-    .map(msg => msg.role)
-    .lastIndexOf(Role.ASSISTANT);
+  const lastAssistantMessageIndex = useMemo(
+    () => storedMessages.map(msg => msg.role).lastIndexOf(Role.ASSISTANT),
+    [storedMessages]
+  );
   const isLastMessageFromAssistant =
     lastAssistantMessageIndex === storedMessages.length - 1;
 
