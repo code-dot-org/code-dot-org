@@ -8,7 +8,7 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/2erlhdZVjByJbpMw9UKcWE/27dd8f0be5edd691efec64368d99caae/component_image_thumbnail.png',
+    'https://images.ctfassets.net/90t6bu6vlf76/2erlhdZVjByJbpMw9UKcWE/ee11e8a21370bbcd3b1b0b702b00d0e5/component_image_thumbnail.png',
   tooltip: {
     description:
       'Add an image to your layout. Supports border and shadow options.',
