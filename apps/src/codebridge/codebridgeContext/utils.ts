@@ -80,6 +80,7 @@ export const useSourceUtilities = (dispatch: React.Dispatch<ReducerAction>) => {
         // this line causes the apparent circular dependency issue
         // contents = codebridgeI18n.defaultNewFileContents({fileName}),
         contents = DEFAULT_NEW_FILE_CONTENTS,
+        validationFileId,
       }) => {
         dispatch({
           type: SOURCE_REDUCER_ACTIONS.NEW_FILE,
@@ -87,6 +88,7 @@ export const useSourceUtilities = (dispatch: React.Dispatch<ReducerAction>) => {
             fileName,
             folderId,
             contents: contents.replace(/\${fileName}/g, fileName),
+            validationFileId,
           },
         });
       }),

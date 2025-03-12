@@ -92,7 +92,7 @@ onmessage = async event => {
       ...source,
       files: {
         ...source.files,
-        [validationFile.id]: validationFile,
+        validation: validationFile,
       },
     };
   }
