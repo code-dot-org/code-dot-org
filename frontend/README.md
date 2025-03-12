@@ -14,35 +14,38 @@ This directory uses [Turborepo](https://turbo.build/) to manage the monorepo and
 - `packages`: Libraries, build tools, configurations (Shared linter configs, component library, etc.)
 
 ### Apps
- Open source Code.org applications:
+
+Open source Code.org applications:
 
 - [@code-dot-org/marketing](apps/marketing): Code.org's marketing site (uses Contentful).
 - [@code-dot-org/design-system-storybook](apps/design-system-storybook): A [Storybook](https://storybook.js.org/)
-instance for the Code.org design system (`@code-dot-org/component-library`). Publicly available at
-[https://code-dot-org.github.io/code-dot-org/component-library-storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook).
+  instance for the Code.org design system (`@code-dot-org/component-library`). Publicly available at
+  [https://code-dot-org.github.io/code-dot-org/component-library-storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook).
 
 ### Packages
- Publicly available packages:
+
+Publicly available packages:
 
 - [@code-dot-org/component-library](packages/component-library): The Code.org Design System React component library.
 - [@code-dot-org/component-library-styles](packages/component-library-styles): Common Styles
-(`variables`, `colors`, `mixins`, `typography styles`, etc) of Code.org Design System 
-([@code-dot-org/component-library](packages/component-library)). Based on [Figma](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33951&m=dev).
-Used by [@code-dot-org/component-library](packages/component-library), can(for Code.org - should) also be used as 
-a standalone package for styling components with Code.org's Design System styles.
-- [@code-dot-org/lint-config](packages/lint-config): Shared linters configuration for Code.org projects 
-(includes `eslint`, `lint-staged,` `prettier`, `stylelint`, `typescript` configs).
+  (`variables`, `colors`, `mixins`, `typography styles`, etc) of Code.org Design System
+  ([@code-dot-org/component-library](packages/component-library)). Based on [Figma](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33951&m=dev).
+  Used by [@code-dot-org/component-library](packages/component-library), can(for Code.org - should) also be used as
+  a standalone package for styling components with Code.org's Design System styles.
+- [@code-dot-org/lint-config](packages/lint-config): Shared linters configuration for Code.org projects
+  (includes `eslint`, `lint-staged,` `prettier`, `stylelint`, `typescript` configs).
 - [@code-dot-org/fonts](packages/fonts): Code.org's Design System fonts package.
 - [@code-dot-org/changelogs](packages/changelogs): [Release-it](https://github.com/release-it/release-it)
-configuration for changelogs automatic generation, package versioning, and publishing.
+  configuration for changelogs automatic generation, package versioning, and publishing.
 
 ## Getting Started
 
-*(!!!)* If you're unable to find some information in this README.md, please refer to the documentation of package/app 
+_(!!!)_ If you're unable to find some information in this README.md, please refer to the documentation of package/app
 that you're working on. (e.g. go to [package/component-library/README.md](packages/component-library/README.md),
 [apps/marketing/README.md](apps/marketing/README.md), etc)
 
 ### Prerequisites
+
 Ensure that [corepack](https://nodejs.org/api/corepack.html) is enabled.
 
 ```bash
