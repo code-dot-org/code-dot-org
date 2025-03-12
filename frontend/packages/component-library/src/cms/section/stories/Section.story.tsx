@@ -101,7 +101,7 @@ export const SectionWithBackgroundPattern: Story = {
     const section = heading.closest('section');
     if (section) {
       const backgroundImage = section.style.backgroundImage;
-      expect(backgroundImage).toContain('banner-bg-lines-neutral-light.png');
+      expect(backgroundImage).toContain('bg-pattern.png');
     }
   },
 };
