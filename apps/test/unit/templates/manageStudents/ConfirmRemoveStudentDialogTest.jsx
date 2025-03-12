@@ -1,30 +1,13 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
+import i18n from '@cdo/locale';
 
-jest.mock('@cdo/locale', () => ({
-  removeStudentAndRecordsHeader: jest.fn(
-    ({studentName}) => `Remove ${studentName} and their records`
-  ),
-  removeUnusedStudentHeader: jest.fn(
-    ({studentName}) => `Remove unused student ${studentName}`
-  ),
-  removeStudentBody1: jest.fn(
-    () => 'This will remove the student and their records.'
-  ),
-  learnMore: jest.fn(() => 'Learn more'),
-  removeStudentBody2: jest.fn(
-    () => 'This student depends on this section for login.'
-  ),
-  removeStudentSendHomeInstructions: jest.fn(() => 'Send home instructions'),
-  removeStudent: jest.fn(() => 'Remove Student'),
-  dialogOK: jest.fn(() => 'OK'),
-  cancel: jest.fn(() => 'Cancel'),
-  closeDialog: jest.fn(() => 'Close'),
-}));
+const studentName = MINIMUM_TEST_PROPS.studentName;
 
 describe('ConfirmRemoveStudentDialog', () => {
   const defaultProps = {
@@ -32,6 +15,11 @@ describe('ConfirmRemoveStudentDialog', () => {
     onConfirm: jest.fn(),
     onCancel: jest.fn(),
   };
+
+  const getRemoveStudentButton = () =>
+    screen.getByRole('button', {name: RegExp(i18n.removeStudent(), 'i')});
+  const getCancelButton = () =>
+    screen.getByRole('button', {name: RegExp(i18n.cancel(), 'i')});
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -43,12 +31,14 @@ describe('ConfirmRemoveStudentDialog', () => {
     );
 
     expect(
-      screen.getByText('Remove Clark Kent and their records')
+      screen.getByText(i18n.removeStudentAndRecordsHeader({studentName}))
     ).toBeInTheDocument();
     expect(
-      screen.getByText('This will remove the student and their records.')
+      screen.getByText(
+        new RegExp(i18n.removeStudentBody1().replace(/\*\*/g, ''), 'i')
+      )
     ).toBeInTheDocument();
-    expect(screen.getByText('Learn more')).toBeInTheDocument();
+    expect(screen.getByText(i18n.learnMore())).toBeInTheDocument();
   });
 
   it('renders the dialog with the correct header when the student has never signed in', () => {
@@ -57,10 +47,10 @@ describe('ConfirmRemoveStudentDialog', () => {
     );
 
     expect(
-      screen.getByText('Remove unused student Clark Kent')
+      screen.getByText(i18n.removeUnusedStudentHeader({studentName}))
     ).toBeInTheDocument();
     expect(
-      screen.queryByText('This will remove the student and their records.')
+      screen.queryByText(i18n.removeStudentBody1())
     ).not.toBeInTheDocument();
   });
 
@@ -73,30 +63,29 @@ describe('ConfirmRemoveStudentDialog', () => {
       />
     );
 
+    expect(screen.getByText(i18n.removeStudentBody2())).toBeInTheDocument();
     expect(
-      screen.getByText('This student depends on this section for login.')
+      screen.getByText(i18n.removeStudentSendHomeInstructions())
     ).toBeInTheDocument();
-    expect(screen.getByText('Send home instructions')).toBeInTheDocument();
   });
 
-  it('calls onConfirm when the confirm button is clicked', () => {
+  it('calls onConfirm when the confirm button is clicked', async () => {
+    const user = userEvent.setup();
     render(
       <ConfirmRemoveStudentDialog {...defaultProps} hasEverSignedIn={true} />
     );
-
-    const confirmButton = screen.getByText('Remove Student');
-    fireEvent.click(confirmButton);
+    await user.click(getRemoveStudentButton());
 
     expect(defaultProps.onConfirm).toHaveBeenCalled();
   });
 
-  it('calls onCancel when the cancel button is clicked', () => {
+  it('calls onCancel when the cancel button is clicked', async () => {
+    const user = userEvent.setup();
     render(
       <ConfirmRemoveStudentDialog {...defaultProps} hasEverSignedIn={true} />
     );
 
-    const cancelButton = screen.getByRole('button', {name: /cancel/i});
-    fireEvent.click(cancelButton);
+    await user.click(getCancelButton());
 
     expect(defaultProps.onCancel).toHaveBeenCalled();
   });
@@ -110,11 +99,8 @@ describe('ConfirmRemoveStudentDialog', () => {
       />
     );
 
-    const confirmButton = screen.getByRole('button', {name: /Remove Student/i});
-    const cancelButton = screen.getByRole('button', {name: /cancel/i});
-
-    expect(confirmButton).toBeDisabled();
-    expect(cancelButton).toBeDisabled();
+    expect(getRemoveStudentButton()).toBeDisabled();
+    expect(getCancelButton()).toBeDisabled();
   });
 
   it('does not render the "learn more" link when the student has never signed in', () => {
@@ -122,6 +108,6 @@ describe('ConfirmRemoveStudentDialog', () => {
       <ConfirmRemoveStudentDialog {...defaultProps} hasEverSignedIn={false} />
     );
 
-    expect(screen.queryByText('Learn more')).not.toBeInTheDocument();
+    expect(screen.queryByText(i18n.learnMore())).not.toBeInTheDocument();
   });
 });
