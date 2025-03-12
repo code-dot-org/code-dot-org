@@ -28,17 +28,18 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: '',
       group: 'content',
     },
-    hasBorder: {
-      displayName: 'Add border',
-      type: 'Boolean',
-      defaultValue: false,
+    hasDecoration: {
+      displayName: 'Decoration',
+      type: 'Text',
+      defaultValue: 'none',
       group: 'style',
-    },
-    hasBoxShadow: {
-      displayName: 'Add shadow',
-      type: 'Boolean',
-      defaultValue: false,
-      group: 'style',
+      validations: {
+        in: [
+          {value: 'none', displayName: 'None'},
+          {value: 'border', displayName: 'Border'},
+          {value: 'shadow', displayName: 'Shadow'},
+        ],
+      },
     },
   },
 };

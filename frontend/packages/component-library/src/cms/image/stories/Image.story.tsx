@@ -32,7 +32,7 @@ export const ImageWithBorder: Story = {
   args: {
     src: imageFile,
     altText: 'Teacher helping student at computer',
-    hasBorder: true,
+    hasDecoration: 'border',
   },
   parameters: {
     docs: {
@@ -64,17 +64,16 @@ export const ImageWithBorder: Story = {
   },
 };
 
-export const ImageWithBoxShadow: Story = {
+export const ImageWithShadow: Story = {
   args: {
     src: imageFile,
     altText: 'Teacher in front of classroom',
-    hasBoxShadow: true,
+    hasDecoration: 'shadow',
   },
   parameters: {
     docs: {
       description: {
-        story:
-          "Add a box shadow to an image if it's used at the top of the page.",
+        story: "Add a shadow to an image if it's used at the top of the page.",
       },
     },
   },
