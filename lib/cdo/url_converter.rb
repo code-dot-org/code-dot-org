@@ -46,6 +46,6 @@ class UrlConverter
     # Convert http to https
     url = url.gsub(/^#{'http://'}/, 'https://') unless url.start_with? 'http://localhost'
     # Convert x.y.code.org to x-y.code.org
-    url.gsub(/(\w+)\.(\w+)#{'.code.org'}/, '\1-\2.code.org')
+    url.gsub(/(\w+)\.(\w+)#{'\.code.org'}/, '\1-\2.code.org')
   end
 end

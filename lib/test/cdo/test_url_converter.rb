@@ -86,6 +86,21 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://localhost.csedweek.org:3000/about', url_converter.replace_origin('https://csedweek.org/about')
   end
 
+  def adhoc_url_converter
+    UrlConverter.new(
+      pegasus_host: 'adhoc-test.cdn-code.org',
+      dashboard_host: 'adhoc-test-studio.cdn-code.org'
+    )
+  end
+
+  def test_conversions_in_adhoc_configuration
+    url_converter = adhoc_url_converter
+    assert_equal 'https://adhoc-test.cdn-code.org', url_converter.replace_origin('https://code.org')
+    assert_equal 'https://adhoc-test.cdn-code.org/', url_converter.replace_origin('https://code.org/')
+    assert_equal 'https://adhoc-test.cdn-code.org/curriculum/unplugged', url_converter.replace_origin('https://code.org/curriculum/unplugged')
+    assert_equal 'https://adhoc-test-studio.cdn-code.org', url_converter.replace_origin('https://studio.code.org')
+  end
+
   def test_does_not_upgrade_protocol_in_local_configuration
     url_converter = local_url_converter
     assert_equal 'http://localhost.code.org:3000', url_converter.replace_origin('http://code.org')
