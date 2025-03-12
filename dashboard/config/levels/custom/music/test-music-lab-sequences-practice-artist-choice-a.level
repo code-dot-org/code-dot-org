@@ -1,0 +1,95 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-11T20:29:09.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Tinashe's \"Tightrope\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Build the song with code. \r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "tinashe_tightrope": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_verse_5",
+          "vocals_verse_6",
+          "vocals_verse_7",
+          "vocals_verse_8",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_prechorus_5",
+          "vocals_prechorus_6",
+          "vocals_prechorus_7",
+          "vocals_prechorus_8",
+          "vocals_chorus_lead_1",
+          "vocals_chorus_lead_2",
+          "vocals_chorus_lead_3",
+          "vocals_chorus_backups",
+          "vocals_chorus_adlibs",
+          "vocals_baby_dont_go",
+          "drums_intro",
+          "drums_open_hat",
+          "drums_perc_loop",
+          "drums_tambo",
+          "drums_tambo_fast",
+          "drums_verse",
+          "reverse_vocal",
+          "sha",
+          "bass",
+          "main_synth",
+          "synth_melody",
+          "outro_melody_1",
+          "outro_melody_2",
+          "outro_melody_3",
+          "outro_melody_4"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "tinashe_tightrope",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "display_name": "\"Tightrope\"",
+    "thumbnail_url": "https://images.code.org/49c3bda643c0d65d7eca40b56a333ecb-Screenshot 2025-03-11 at 1.32.31 PM.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-11T20:29:09.991+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-a\"},{\"changed_at\":\"2025-03-11 20:33:09 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 20:42:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
