@@ -26,6 +26,7 @@ describe('SectionList', () => {
       hidden: false,
       courseVersionName: 'csd-2024',
       unitName: null,
+      studentCount: 0,
     },
     {
       id: 12,

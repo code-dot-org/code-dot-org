@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import {removeSectionOrThrow} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -32,21 +33,31 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   };
 
   const deleteSection = () => {
-    $.ajax({
-      url: `/dashboardapi/sections/${sectionToDelete}`,
-      method: 'DELETE',
-    })
-      .done(() => {
+    HttpClient.delete(`/dashboardapi/sections/${sectionToDelete}`, true)
+      .then(() => {
         dispatch(removeSectionOrThrow(sectionToDelete));
-        setSectionToDelete(-1);
+        setSectionToDelete(NO_SECTION_ID);
       })
-      .fail((jqXhr, status) => {
-        // We may want to handle this more cleanly in the future, but for now this
-        // matches the experience we got in angular
+      .catch((error: Error) => {
         alert(i18n.unexpectedError());
-        console.error(status);
+        console.error(error);
         setSectionToDelete(NO_SECTION_ID);
       });
+    // $.ajax({
+    //   url: `/dashboardapi/sections/${sectionToDelete}`,
+    //   method: 'DELETE',
+    // })
+    //   .done(() => {
+    //     dispatch(removeSectionOrThrow(sectionToDelete));
+    //     setSectionToDelete(-1);
+    //   })
+    //   .fail((jqXhr, status) => {
+    //     // We may want to handle this more cleanly in the future, but for now this
+    //     // matches the experience we got in angular
+    //     alert(i18n.unexpectedError());
+    //     console.error(status);
+    //     setSectionToDelete(NO_SECTION_ID);
+    //   });
   };
 
   const filteredSectionList = React.useMemo(() => {
