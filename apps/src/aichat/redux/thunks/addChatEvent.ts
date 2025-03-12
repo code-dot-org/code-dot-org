@@ -13,20 +13,20 @@ import {addEventToChatEventsCurrent} from '../slice';
 
 // This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible.
 // Then it logs the event to the backend for all chat events except notifications with includeInHistory != true.
+// It also excludes logging to both frontend and backend if the teacher is viewing as a student.
 export const addChatEvent =
   <T extends ChatEvent>(chatEvent: T) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
+    // If teacher is viewing as a student, do not add chat events to the chat history.
+    if (getState().progress.viewAsUserId) {
+      return;
+    }
+
     // User action events are hidden from participants and only displayed in teacher view of student chat history.
     if (!isUserActionEvent(chatEvent)) {
       dispatch(addEventToChatEventsCurrent(chatEvent));
     }
-    // Log chat event to backend.
-    const state = getState() as RootState;
-    const aichatContext: AichatContext = {
-      currentLevelId: parseInt(state.progress.currentLevelId || ''),
-      scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
-    };
+
     // Other than notifications that are not included in chat history (save errors not due to profanity),
     // log the chat event to backend.
     if (
@@ -47,6 +47,14 @@ export const addChatEvent =
           updatedValue: updatedValueToLog,
         };
       }
+
+      const state = getState() as RootState;
+      const aichatContext: AichatContext = {
+        currentLevelId: parseInt(state.progress.currentLevelId || ''),
+        scriptId: state.progress.scriptId,
+        channelId: state.lab.channel?.id,
+      };
+
       ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
     }
   };
