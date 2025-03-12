@@ -1903,8 +1903,7 @@ class ScriptsControllerTest < ActionController::TestCase
     let(:modularity_enabled) {false}
 
     before do
-      allow(Experiment).to receive(:enabled?).and_call_original
-      allow(Experiment).to receive(:enabled?).with(user: user, experiment_name: 'modularity').and_return(modularity_enabled)
+      allow(Policies::Courses).to receive(:modularity_enabled?).with(user).and_return(modularity_enabled)
     end
 
     context 'modularity is off' do
