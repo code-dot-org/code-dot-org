@@ -1,0 +1,56 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-11T20:38:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Sharkira's \"Amarillo\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Build the song with code. \r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "shakira_amarillo",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "display_name": "\"Amarillo\"",
+    "thumbnail_url": "https://images.code.org/edf2bc137fc34454a83518041a932240-Screenshot 2025-03-11 at 1.41.02 PM.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-11T20:38:31.508+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-b\"},{\"changed_at\":\"2025-03-11 20:41:17 +0000\",\"changed\":[\"long_instructions\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 20:42:05 +0000\",\"changed\":[\"level_data\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

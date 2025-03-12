@@ -22,6 +22,7 @@ export interface AITutorState {
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   isChatOpen: boolean;
+  showSuggestedPrompts: boolean;
 }
 
 const initialChatMessages: ChatCompletionMessage[] = [
@@ -39,6 +40,7 @@ const initialState: AITutorState = {
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   isChatOpen: false,
+  showSuggestedPrompts: false,
 };
 
 export const formatQuestionForAITutor = (chatContext: ChatContext) => {
@@ -67,6 +69,7 @@ const formatResponseForStudent = (response: string) => {
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
   async (chatContext: ChatContext, thunkAPI) => {
+    thunkAPI.dispatch(setIsWaitingForChatResponse(true));
     const state = thunkAPI.getState();
     const aiTutorState = state as {aiTutor: AITutorState};
     const levelContext = {
@@ -95,6 +98,7 @@ export const askAITutor = createAsyncThunk(
       levelContext.levelId,
       levelContext.scriptId
     );
+    thunkAPI.dispatch(setIsWaitingForChatResponse(false));
     thunkAPI.dispatch(
       updateLastChatMessage({
         status: chatApiResponse.status,
@@ -168,18 +172,9 @@ const aiTutorSlice = createSlice({
     setIsChatOpen: (state, action: PayloadAction<boolean>) => {
       state.isChatOpen = action.payload;
     },
-  },
-  extraReducers: builder => {
-    builder.addCase(askAITutor.fulfilled, state => {
-      state.isWaitingForChatResponse = false;
-    });
-    builder.addCase(askAITutor.rejected, (state, action) => {
-      state.isWaitingForChatResponse = false;
-      console.error(action.error);
-    });
-    builder.addCase(askAITutor.pending, state => {
-      state.isWaitingForChatResponse = true;
-    });
+    setShowSuggestedPrompts: (state, action: PayloadAction<boolean>) => {
+      state.showSuggestedPrompts = action.payload;
+    },
   },
 });
 
@@ -193,4 +188,5 @@ export const {
   setIsWaitingForChatResponse,
   updateLastChatMessage,
   setIsChatOpen,
+  setShowSuggestedPrompts,
 } = aiTutorSlice.actions;

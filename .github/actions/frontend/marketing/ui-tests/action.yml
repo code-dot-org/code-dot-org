@@ -1,0 +1,68 @@
+name: "Run Marketing UI Tests"
+description: "Runs the marketing UI tests"
+
+inputs:
+  CONTENTFUL_SPACE_ID:
+    description: "Contentful Space ID"
+    required: true
+  CONTENTFUL_TOKEN:
+    description: "Contentful API Key"
+    required: true
+  APPLITOOLS_API_KEY:
+    description: "Applitools API Key"
+    required: true
+  MARKETING_BASE_URL:
+    description: "The base URL for the marketing application. Defaults to http://localhost:3001"
+  STAGE:
+    description: "local, pr, test, or production"
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - name: Install Playwright
+      shell: bash
+      run: yarn playwright install --with-deps
+      working-directory: ./frontend/apps/marketing
+
+    - name: Prepare UI Test Environment
+      shell: bash
+      working-directory: ./frontend/apps/marketing
+      run: |
+        echo "CONTENTFUL_SPACE_ID=${{ inputs.CONTENTFUL_SPACE_ID }}
+        CONTENTFUL_ENV_ID=master
+        CONTENTFUL_API_HOST=cdn.contentful.com
+        CONTENTFUL_TOKEN=${{ inputs.CONTENTFUL_TOKEN }}
+        CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID=experience
+        APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}
+        " > .env
+
+    - name: Start Application Server (in background)
+      shell: bash
+      working-directory: ./frontend
+      run: |
+        nohup yarn dev --filter @code-dot-org/marketing | tee nohup.out &
+
+    - name: UI Tests
+      shell: bash
+      env:
+        STAGE: ${{ inputs.stage }}
+      run: yarn workspace @code-dot-org/marketing test:ui:ci
+      working-directory: ./frontend
+
+    - name: Upload Playwright reports
+      if: failure()
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: frontend/apps/marketing/playwright-report
+        name: playwright-report
+
+    - name: Run Google Lighthouse Audits
+      uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8
+      with:
+        urls: ${{ inputs.MARKETING_BASE_URL || 'http://localhost:3001' }}/en-US/all-the-things
+        uploadArtifacts: true
+        temporaryPublicStorage: true
+        configPath: './frontend/apps/marketing/lighthouserc.json'

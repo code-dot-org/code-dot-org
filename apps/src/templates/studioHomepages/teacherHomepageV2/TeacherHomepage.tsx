@@ -4,9 +4,16 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Heading2, Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';
+import {
+  asyncLoadTeacherHomepageSectionData,
+  beginEditingSection,
+} from '../../teacherDashboard/teacherSectionsRedux';
+
+import {ArchiveAllModal} from './ArchiveAllModal';
 import {SectionList} from './SectionList';
 
 import styles from './teacherHomepage.module.scss';
@@ -16,8 +23,17 @@ type ArchivedToggleOption = 'teaching' | 'archived';
 export const TeacherHomepage: React.FC = () => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    dispatch(asyncLoadTeacherHomepageSectionData());
+  }, [dispatch]);
+
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
+
+  const [archiveAllModalOpen, setArchiveAllModalOpen] =
+    React.useState<boolean>(false);
 
   return (
     <div className={styles.teacherHomepage}>
@@ -49,7 +65,7 @@ export const TeacherHomepage: React.FC = () => {
                 <Button
                   iconLeft={{iconName: 'plus', iconStyle: 'solid'}}
                   text={i18n.newClassSection()}
-                  onClick={() => {}}
+                  onClick={() => dispatch(beginEditingSection())}
                   size="s"
                   className={styles.createSectionButton}
                 />
@@ -57,7 +73,16 @@ export const TeacherHomepage: React.FC = () => {
                   name="More options"
                   size="s"
                   labelText={i18n.moreOptions()}
-                  options={[]}
+                  options={[
+                    {
+                      label: i18n.archiveAllSections(),
+                      icon: {iconName: 'gear', iconStyle: 'solid'},
+                      value: 'archive',
+                      onClick: () => {
+                        setArchiveAllModalOpen(true);
+                      },
+                    },
+                  ]}
                   triggerButtonProps={{
                     icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
                     isIconOnly: true,
@@ -65,6 +90,11 @@ export const TeacherHomepage: React.FC = () => {
                     type: 'secondary',
                   }}
                 />
+                {archiveAllModalOpen && (
+                  <ArchiveAllModal
+                    onClose={() => setArchiveAllModalOpen(false)}
+                  />
+                )}
               </div>
             </div>
             <SectionList
@@ -74,6 +104,7 @@ export const TeacherHomepage: React.FC = () => {
           <div className={styles.blankAnnouncement} />
         </div>
       </div>
+      <AddSectionDialog />
     </div>
   );
 };

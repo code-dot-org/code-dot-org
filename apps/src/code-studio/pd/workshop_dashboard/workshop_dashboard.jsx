@@ -37,6 +37,7 @@ import workshopDashboardReducers, {
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
 import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
+import {workshopLabel} from './utils/workshopLabel';
 import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
@@ -75,9 +76,10 @@ const routeConfigs = [
   },
   ...WorkshopCourseConfigs.map(config => ({
     path: `workshops/new/${config.slug}`,
-    breadcrumbs: `Workshops,New ${config.label} Workshop`,
+    breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
     component: WorkshopFormTemplate,
-    props: config,
+    props: {config},
+    noRouter: true,
   })),
   {
     path: 'workshops/:workshopId',
@@ -171,13 +173,21 @@ const WorkshopDashboard = ({
           <Routes>
             <Route path="/" element={<HeaderWrapper />}>
               <Route index element={<Navigate to="/workshops" replace />} />
-              {routeConfigs.map(({path, component, props = {}}) => (
-                <Route
-                  key={path}
-                  path={path}
-                  element={<WithRouterProps component={component} {...props} />}
-                />
-              ))}
+              {routeConfigs.map(
+                ({path, component: Component, noRouter, props = {}}) => (
+                  <Route
+                    key={path}
+                    path={path}
+                    element={
+                      noRouter ? (
+                        <Component {...props} />
+                      ) : (
+                        <WithRouterProps component={Component} {...props} />
+                      )
+                    }
+                  />
+                )
+              )}
             </Route>
           </Routes>
         </RouterProvider>

@@ -34,6 +34,7 @@ const defaultChatResponse = {
   chat_message_text: "Beep boop I'm a bot",
   status: Status.OK,
   session_id: '123abc',
+  messageId: 42,
 };
 
 describe('AiDiffChat', () => {
@@ -64,17 +65,12 @@ describe('AiDiffChat', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
+    screen.getByRole('checkbox', {name: 'Give me an example'});
     screen.getByRole('checkbox', {name: 'Explain a concept'});
-    screen.getByRole('checkbox', {
-      name: 'Give an example to use with my class',
-    });
-    screen.getByRole('checkbox', {
-      name: 'Write an extension activity for students who finish early',
-    });
-    screen.getByRole('checkbox', {
-      name: 'Write an extension activity for students who need extra practice',
-    });
+    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
+    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
+    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
   });
 
   it('Selecting a suggested prompt gives response', async () => {
@@ -140,6 +136,116 @@ describe('AiDiffChat', () => {
     //bot message should show in the chat
     const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
     expect(message).toHaveTextContent("Beep boop I'm a bot");
+  });
+
+  it('Feedback on initial message has no API call, Feedback on actual assistant messages does', async () => {
+    render(<AiDiffChat {...defaultProps} />);
+
+    //clicking feedback on the inital dummy message doesn't log or call api
+    const thumbsUpBtn = screen.getByRole('button', {
+      name: i18n.aiDifferentiationThumbsUp(),
+    });
+    fireEvent.click(thumbsUpBtn);
+    expect(fetchStub).not.toHaveBeenCalled();
+
+    //click a suggested prompt
+    const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
+    fireEvent.click(prompt);
+
+    const responseEventData = {
+      chatContext: AiDiffContext.LESSON,
+      scriptId: 2,
+      scriptName: 'test_lesson',
+      unitName: 'test unit name',
+      role: Role.USER,
+      isPreset: true,
+      text: 'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
+      sessionId: '123abc',
+      url: window.location.href,
+    };
+    const responseEventData2 = {
+      chatContext: AiDiffContext.LESSON,
+      scriptId: 2,
+      scriptName: 'test_lesson',
+      unitName: 'test unit name',
+      role: Role.ASSISTANT,
+      isPreset: true,
+      text: "Beep boop I'm a bot",
+      sessionId: '123abc',
+      url: window.location.href,
+    };
+    const feedbackEventData = {
+      chatContext: AiDiffContext.LESSON,
+      scriptId: 2,
+      scriptName: 'test_lesson',
+      unitName: 'test unit name',
+      thumbsUp: true,
+      thumbsDown: false,
+      flagged: false,
+      text: "Beep boop I'm a bot",
+      messageId: 42,
+    };
+
+    //sends the api call then logs the suggested prompt and the bot message
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/ai_diff/chat_completion',
+        JSON.stringify({
+          context: AiDiffContext.LESSON,
+          inputText: responseEventData.text,
+          contextId: responseEventData.scriptId,
+          lessonId: responseEventData.lessonId,
+          unitDisplayName: responseEventData.unitName,
+          sessionId: null,
+          isPreset: true,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData,
+        PLATFORMS.STATSIG
+      );
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData2,
+        PLATFORMS.STATSIG
+      );
+    });
+
+    jest.clearAllMocks();
+
+    //bot message should show in the chat
+    const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
+    expect(message).toHaveTextContent("Beep boop I'm a bot");
+
+    //click thumbs up for actual chat message
+    const thumbsUpBtn2 = screen.getAllByRole('button', {
+      name: i18n.aiDifferentiationThumbsUp(),
+    })[1];
+    fireEvent.click(thumbsUpBtn2);
+
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/aichat_messages/42/submit_feedback',
+        JSON.stringify({
+          approval: true,
+          flagged: false,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.AI_DIFF_FEEDBACK_EVENT,
+        feedbackEventData,
+        PLATFORMS.STATSIG
+      );
+    });
   });
 
   it('Typing a message shows in chat, then gets a response', async () => {
@@ -304,11 +410,21 @@ describe('AiDiffChat', () => {
 
   it('Suggest prompt button is present and works', () => {
     render(<AiDiffChat {...defaultProps} />);
-    expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
     const suggest_prompt = screen.getByRole('button', {
       name: i18n.aiDifferentiation_suggest_prompt(),
     });
     fireEvent.click(suggest_prompt);
-    expect(screen.getAllByRole('checkbox')).toHaveLength(8);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(10);
+    // Check the last new prompt is from the second set.
+    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+      'Real world connection'
+    );
+    fireEvent.click(suggest_prompt);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(15);
+    // Check the last new prompt is from the first set.
+    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+      'Write an exit ticket'
+    );
   });
 });

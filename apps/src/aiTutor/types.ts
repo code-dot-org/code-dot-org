@@ -74,3 +74,15 @@ export interface ChatContext {
   actionType?: AITutorAction | undefined;
   systemPrompt?: string;
 }
+
+export type SuggestedPromptOptions = {
+  studentCode: string;
+  showCompilationOption?: boolean;
+  showValidationOption?: boolean;
+  showGenericErrorOption?: boolean;
+};
+
+export type PromptOptionKeys =
+  | 'showCompilationOption'
+  | 'showValidationOption'
+  | 'showGenericErrorOption';

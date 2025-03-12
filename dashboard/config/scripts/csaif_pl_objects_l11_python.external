@@ -26,7 +26,7 @@ markdown <<MARKDOWN
                 <b>Attributes (Characteristics) </b> Descriptive properties of the object.
             </li>
             <li style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-                <b>Functions (Actions/Behaviors)</b>  What the object can do.
+                <b>Methods (Actions/Behaviors)</b>  What the object can do.
             </li>
         </ul>
     </div>
@@ -51,9 +51,9 @@ markdown <<MARKDOWN
         <h3 style="margin-top: 0; font-size: 14pt;"><b>Attributes (Characteristics)</b></h3>
         <p style="font-size: 12pt;">These are properties that describe the object.</p>
         <ul>
-            <li style="font-size: 12pt;"><b>Lens Type</b> – Wide-angle, telephoto, etc.</li>
-            <li style="font-size: 12pt;"><b>Resolution</b> – 12MP, 48MP, etc.</li>
-            <li style="font-size: 12pt;"><b>Zoom Level</b> – Optical zoom, digital zoom.</li>
+            <li style="font-size: 12pt;"><b>Lens Type</b> – Wide-angle, telephoto, etc.</li><br>
+            <li style="font-size: 12pt;"><b>Resolution</b> – 12MP, 48MP, etc.</li><br>
+            <li style="font-size: 12pt;"><b>Zoom Level</b> – Optical zoom, digital zoom.</li><br>
             <li style="font-size: 12pt;"><b>Size</b> – Compact, DSLR, mirrorless.</li><br>
         </ul>
     </div>
@@ -62,7 +62,7 @@ markdown <<MARKDOWN
 <div style="background-color: #deceea; padding: 20px; border-radius: 10px; width: 37%; 
                 box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: left; font-size: 14pt;
                 display: flex; flex-direction: column; justify-content: space-between;">
-                <h3 style="margin-top: 0; font-size: 14pt;"><b>Functions (Actions)</b></h3>
+                <h3 style="margin-top: 0; font-size: 14pt;"><b>Methods (Actions)</b></h3>
         <p style="font-size: 12pt;">These are behaviors the object can perform.</p>
         <ul>
             <li style="font-size: 12pt;"><b>Take a picture</b></li><br>

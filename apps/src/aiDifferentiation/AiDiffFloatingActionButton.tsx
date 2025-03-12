@@ -19,9 +19,9 @@ import style from './ai-differentiation.module.scss';
 
 interface AiDiffFloatingActionButtonProps {
   context: string;
-  scriptId: number;
-  scriptName: string;
-  unitDisplayName: string;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({

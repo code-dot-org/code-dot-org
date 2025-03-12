@@ -1,0 +1,8 @@
+name 'test-music-lab-sequences-practice-choice'
+display_name 'Creativity with Constraints'
+description 'Choose one of the option below to help different coders find solutions for their problems.'
+
+sublevels
+level 'test-music-lab-sequences-practice-choice-a'
+level 'test-music-lab-sequences-practice-choice-b'
+

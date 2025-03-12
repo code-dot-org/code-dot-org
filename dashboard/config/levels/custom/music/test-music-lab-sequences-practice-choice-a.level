@@ -1,0 +1,143 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-11T20:50:27.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Layering Beats \r\n\r\nYour friend, Caroline, needs help layering beats with the sounds she was given. Create a  10-measure backbeat that uses at least one rest and one sound effect. \r\n\r\nChallenge: Try to recreate this timline that plays one sound, then overlaps the same sound before it's done.\r\n\r\n![](https://images.code.org/fa037d7a27293c030e8b80f03c3da413-image-1741727610707.13.00 PM.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "shakira_maluma_chantaje": [
+          "drums_intro",
+          "drums_verse_small",
+          "drums_verse_big",
+          "drums_chorus",
+          "kick_verse_1",
+          "kick_verse_2",
+          "kick_build_1",
+          "kick_build_2",
+          "snap_sample",
+          "snap_sample_full",
+          "percussion",
+          "shaker"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "crunch",
+          "hey",
+          "rustle",
+          "scratch",
+          "swipe"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "clap",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "vibraslap",
+          "bubble",
+          "kick_impact",
+          "dive",
+          "dark_sweep_crash",
+          "brass"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "trashy_crash",
+          "stomp",
+          "pick_scrape",
+          "gong",
+          "feedback"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "shakira_maluma_chantaje",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "display_name": "Beat on Beat on Beat",
+    "thumbnail_url": "https://images.code.org/1c82e0b4cf62718acbdb7873455ab0cb-Screenshot 2025-03-11 at 2.02.08 PM.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-11T20:50:27.788+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-a\"},{\"changed_at\":\"2025-03-11 21:02:21 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:03:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:15:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:25:40 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

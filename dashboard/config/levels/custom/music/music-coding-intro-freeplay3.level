@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-02-06T22:15:46.000Z",
   "level_num": "custom",
@@ -144,11 +145,10 @@
         "callout": "run-button"
       }
     ],
-    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> You're the sound designer!\r\n\r\n1. Add trigger events\r\n2. Program sounds to play when triggeed\r\n3. Have fun designing sound for your game or story",
+    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> You're the sound designer!\r\n\r\n1. Add trigger events\r\n2. Program sounds to play when triggered\r\n3. Have fun designing sound for your game or story",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-06T22:15:46.030+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"},{\"changed_at\":\"2025-02-06 22:17:17 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:18:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 19:30:27 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 21:53:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 21:54:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-06T22:15:46.030+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"},{\"changed_at\":\"2025-02-06 22:17:17 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:18:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 19:30:27 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 21:53:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 21:54:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-06 16:29:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

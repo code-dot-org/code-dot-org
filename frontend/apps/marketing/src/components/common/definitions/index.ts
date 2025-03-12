@@ -1,3 +1,5 @@
+import {ComponentDefinitionVariable} from '@contentful/experiences-core/types';
+
 export const marginBottomNoneToMDefinition = {
   displayName: 'Margin bottom',
   type: 'Text',
@@ -13,7 +15,7 @@ export const marginBottomNoneToMDefinition = {
   },
 };
 
-export const removeMarginBottomDefinition = {
+export const removeMarginBottomDefinition: ComponentDefinitionVariable = {
   displayName: 'Remove margin bottom?',
   type: 'Boolean',
   defaultValue: false,

@@ -8,6 +8,7 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
+import {SectionCardBody} from './SectionCardBody';
 import {SectionOptionsDropdown} from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
@@ -44,6 +45,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
           />
         </div>
       </div>
+      {!section.hidden && <SectionCardBody section={section} />}
     </div>
   );
 };

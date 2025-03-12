@@ -101,7 +101,7 @@ describe('VersionHistoryButton', () => {
     getByText('Initial version');
     getByRole('button', {name: 'Restore'});
     getByRole('button', {name: 'Cancel'});
-  }, 10000);
+  });
 
   it('renders alert if getVersionList fails', async () => {
     mockedProjectManager = {
@@ -143,7 +143,7 @@ describe('VersionHistoryButton', () => {
     // 3 is the latest version in the sample version list.
     const latestVersion = getByDisplayValue('3') as HTMLInputElement;
     expect(latestVersion.checked).toBe(true);
-  }, 10000);
+  });
 
   it('restores selected version on restore', async () => {
     const {getByDisplayValue, getByRole, queryByRole} = renderDefault();
@@ -172,5 +172,5 @@ describe('VersionHistoryButton', () => {
       {timeout: 2000}
     );
     expect(queryByRole('dialog', {name: 'Version History List'})).toBeNull();
-  }, 10000);
+  });
 });
