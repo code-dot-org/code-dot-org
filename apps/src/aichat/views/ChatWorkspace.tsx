@@ -12,6 +12,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
 import {
+  clearChatMessages,
   fetchUserChatHistory,
   selectAllVisibleMessages,
   setShowModalType,
@@ -74,13 +75,17 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [selectedStudent, dispatch]);
 
-  // Do we need to run this when viewAsUserId changes?
-  // Kind of an edge case, but if you load with ?user_id=2 (ie, student project directly)
-  // the teacher's history is being shown in the "Test student model" tab.
-  // We log chat history when a teacher interacts with a student's model -- this could produce weirdness, I think.
   useEffect(() => {
-    dispatch(fetchUserChatHistory({userId: currentUserId, isOwnHistory: true}));
-  }, [dispatch, currentUserId, currentLevelId]);
+    dispatch(clearChatMessages());
+
+    // Do not seed the conversation with previous chat history if we are viewing a student's work,
+    // as we do not record the teacher's chat history with the student's model.
+    if (!selectedStudent) {
+      dispatch(
+        fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
+      );
+    }
+  }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
 
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);

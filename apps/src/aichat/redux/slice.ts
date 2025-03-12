@@ -111,7 +111,6 @@ const aichatSlice = createSlice({
       }
     },
     clearChatMessages: state => {
-      state.studentChatHistory = [];
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
