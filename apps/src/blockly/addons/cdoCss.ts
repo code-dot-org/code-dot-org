@@ -81,10 +81,10 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       font-weight: 400 !important; // Noto Sans Math only supports the normal font-weight
     }
     .blocklyShadowFieldText {
-      fill: ${color.neutral_dark40} !important;
+      fill: ${color.neutral_dark40} !important; // Prevents override by .blocklyText
     }
     .blocklyShadowMusicFieldRect {
-      fill: ${color.neutral_dark} !important;
+      fill: ${color.neutral_dark};
     }
     `
   );
