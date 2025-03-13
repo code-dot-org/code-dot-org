@@ -2,6 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
+import {MiniApps} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
@@ -24,8 +25,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
-
-import {MiniApps} from '../constants';
 
 import moduleStyles from './console.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
