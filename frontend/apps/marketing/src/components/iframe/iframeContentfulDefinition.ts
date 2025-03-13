@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const IframeContentfulComponentDefinition: ComponentDefinition = {
   id: 'iframe',
   name: 'iFrame Block',
-  category: 'Advanced',
+  category: '04: Advanced',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/1qy9FC9Bqb4ADrpyszIa5M/eb4c9dde9c1c90ab40036e8fa4412697/component_iframe_thumbnail.png',
   tooltip: {
