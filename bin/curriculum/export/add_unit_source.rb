@@ -32,7 +32,7 @@ require_relative '../../../deployment'
 
 start_time = Time.now
 puts "Loading Rails environment..."
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 # load secret before parallelizing to reduce debug spew
 CDO.channels_api_secret
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"

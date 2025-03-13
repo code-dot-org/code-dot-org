@@ -236,7 +236,7 @@ from activity_level_details  cs
 where
     ul.attempts > 0
     <%= level_id && "and cs.level_id = #{level_id}" %>
-    <%= unit_name && "and cs.script_name = #{unit_name}" %>
+    <%= unit_name && "and cs.script_name = '#{unit_name}'" %>
 $$)
 to 's3://cdo-data-sharing-internal/stanford/unload/<%=output_dir%>/<%=unit_name%>_'
 FORMAT JSON
