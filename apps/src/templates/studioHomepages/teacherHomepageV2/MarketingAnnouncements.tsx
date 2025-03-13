@@ -14,7 +14,7 @@ const TEST_ANNOUNCEMENT = {
   description: 'This is a test announcement',
   buttonText: 'Click me',
   buttonLink: 'https://code.org',
-  image: 'https://code.org/images/logo.png',
+  imageURL: 'https://code.org/images/logo.png',
 };
 
 export const MarketingAnnouncements: React.FC = () => {
@@ -35,7 +35,7 @@ export const MarketingAnnouncements: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.announcements}>
       {announcements.map(announcement => (
         <MarketingAnnouncement {...announcement} />
       ))}
