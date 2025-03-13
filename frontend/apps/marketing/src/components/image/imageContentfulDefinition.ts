@@ -28,7 +28,7 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: '',
       group: 'content',
     },
-    hasDecoration: {
+    decoration: {
       displayName: 'Decoration',
       type: 'Text',
       defaultValue: 'none',

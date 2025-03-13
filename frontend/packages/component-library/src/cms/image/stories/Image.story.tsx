@@ -62,7 +62,7 @@ export const ImageWithBorder: Story = {
   args: {
     src: imageFile,
     altText: 'Teacher helping student',
-    hasDecoration: 'border',
+    decoration: 'border',
   },
   parameters: {
     docs: {
@@ -101,7 +101,7 @@ export const ImageWithShadow: Story = {
   args: {
     src: imageFile,
     altText: 'Teacher helping student',
-    hasDecoration: 'shadow',
+    decoration: 'shadow',
   },
   parameters: {
     docs: {
