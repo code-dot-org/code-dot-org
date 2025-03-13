@@ -5,12 +5,14 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import styles from './teacherHomepage.module.scss';
+
 export interface MarketingAnnouncementProps {
   title: string;
   description: string;
   buttonText: string;
   buttonLink: string;
-  image: string;
+  imageURL: string;
 }
 
 export const MarketingAnnouncement: React.FC<MarketingAnnouncementProps> = ({
@@ -18,14 +20,20 @@ export const MarketingAnnouncement: React.FC<MarketingAnnouncementProps> = ({
   description,
   buttonText,
   buttonLink,
-  image,
+  imageURL,
 }) => {
   return (
-    <div>
-      image
+    <div className={styles.announcement}>
+      <img src={imageURL} alt={title} className={styles.announcementImage} />
       <Heading3>{title}</Heading3>
       <BodyThreeText>{description}</BodyThreeText>
-      <LinkButton href={buttonLink} color="white" text={buttonText} />
+      <LinkButton
+        href={buttonLink}
+        color="black"
+        text={buttonText}
+        type="secondary"
+        size="xs"
+      />
     </div>
   );
 };

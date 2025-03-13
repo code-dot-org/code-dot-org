@@ -92,5 +92,31 @@
   min-width: 320px;
   height: 600px;
   background-color: var(--background-brand-purple-light);
+}
+
+// Marketing announcements
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-inline-start: 40px;
+}
+
+.announcement {
+  width: 280px;
+  max-width: 280px;
+  min-height: 150px;
+  max-height: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  background-color: $neutral_light;
+}
+
+.announcementImage {
+  width: 280px;
+  min-height: 160px;
+  margin-bottom: 20px;
 }
