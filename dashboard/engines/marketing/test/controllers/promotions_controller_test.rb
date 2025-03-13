@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'contentful'
 
-class PromotionsControllerTest < ActionDispatch::IntegrationTest
+class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
   TestEntry = Struct.new(:content_type, :fields, keyword_init: true)
@@ -15,28 +15,30 @@ class PromotionsControllerTest < ActionDispatch::IntegrationTest
       TestEntry.new(
         content_type: content_type,
         fields: {
-          adPosition1: TestEntry.new(
-            fields: {
-              title: 'Ad 1',
-            }
-          ),
-          adPosition2: TestEntry.new(
-            fields: {
-              title: 'Ad 2',
-            }
-          ),
+          sidebar_ads: [
+            TestEntry.new(
+              fields: {
+                title: 'Ad 1',
+              }
+            ),
+            TestEntry.new(
+              fields: {
+                title: 'Ad 2',
+              }
+            ),
+          ]
         },
       )
     end
     let(:expected_result) do
-      {
-        adPosition1: {
+      [
+        {
           title: 'Ad 1'
         },
-        adPosition2: {
+        {
           title: 'Ad 2'
         }
-      }.to_json
+      ].to_json
     end
 
     before do
