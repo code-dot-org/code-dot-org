@@ -19,15 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-          sparse-checkout: |
-            frontend
-            .github
-
-      - name: Setup Frontend
-        uses: ./.github/actions/frontend/setup
+      - uses: ./.github/actions/frontend/checkout-setup
 
       - name: Build
         run: yarn build --filter @code-dot-org/marketing
@@ -37,15 +29,7 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-          sparse-checkout: |
-            frontend
-            .github
-
-      - name: Setup Frontend
-        uses: ./.github/actions/frontend/setup
+      - uses: ./.github/actions/frontend/checkout-setup
 
       - name: Dryrun Release
         run: yarn release:dryrun --filter @code-dot-org/marketing
@@ -56,15 +40,7 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-          sparse-checkout: |
-            frontend
-            .github
-
-      - name: Setup Frontend
-        uses: ./.github/actions/frontend/setup
+      - uses: ./.github/actions/frontend/checkout-setup
 
       - name: Build
         run: yarn build --filter @code-dot-org/marketing

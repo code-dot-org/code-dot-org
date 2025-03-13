@@ -1,0 +1,14 @@
+name: "Setup Frontend"
+description: "Checkout and setup steps"
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v4
+      with:
+        lfs: true
+        sparse-checkout: |
+          frontend
+          .github
+
+    - name: Setup Frontend
+      uses: ./.github/actions/frontend/setup
