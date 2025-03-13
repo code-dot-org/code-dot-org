@@ -41,7 +41,6 @@ export const TeacherPromotions: React.FC = () => {
     HttpClient.get('/marketing/teacher/promotions/55R4y1NlZ0qJG9O0qgyq0Q')
       .then(response => response.json())
       .then(data => {
-        console.log('lfm', data);
         setPromotions(data.map(serverPromotionConverter));
         setIsLoading(false);
       })
