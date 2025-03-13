@@ -75,10 +75,8 @@ export const SectionWithBackgroundPattern: Story = {
     padding: 'l',
     children: (
       <>
-        <Heading2 style={{color: 'white'}}>
-          This is a section with a background pattern
-        </Heading2>
-        <BodyOneText style={{color: 'white'}}>I'm just a sentence.</BodyOneText>
+        <Heading2>This is a section with a background pattern</Heading2>
+        <BodyOneText>I'm just a sentence.</BodyOneText>
       </>
     ),
   },
@@ -146,10 +144,8 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2 style={{color: 'white'}}>This is section four</Heading2>
-          <BodyOneText style={{color: 'white'}}>
-            I'm just a sentence.
-          </BodyOneText>
+          <Heading2>This is section four</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
     },
