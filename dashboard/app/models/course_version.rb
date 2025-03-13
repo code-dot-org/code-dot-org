@@ -28,7 +28,7 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies
   has_many :reference_guides
 
-  unless ENV['MIGRATE_STANDALONE_UNITS']
+  unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
     attr_readonly :content_root_type
     attr_readonly :content_root_id
   end

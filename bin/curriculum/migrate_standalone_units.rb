@@ -64,7 +64,7 @@ end
 
 def main(options)
   # Make sure environment variable is set to allow migration
-  unless ENV['MIGRATE_STANDALONE_UNITS']
+  unless ENV.fetch('MIGRATE_STANDALONE_UNITS')
     puts "MIGRATE_STANDALONE_UNITS is not set"
     return
   end
@@ -145,7 +145,12 @@ def rollback_units(options)
   end
 
   units.each do |unit|
-    result = Services::StandaloneUnitMigrator.rollback(unit, verbose: $verbose, log_file: log_file)
+    begin
+      result = Services::StandaloneUnitMigrator.rollback(unit, verbose: $verbose, log_file: log_file)
+    rescue Exception => exception
+      filtered_backtrace = exception.backtrace.select {|line| line.include?("standalone_unit_migrator.rb")}
+      puts "ERROR: Caught an exception while rolling back #{unit.name}: #{exception.class} - #{exception.message}\n\tBacktrace: #{filtered_backtrace}"
+    end
     successful_rollback_count += 1 if result
     all_successful &&= result
   end

@@ -10,7 +10,7 @@ module Services
     end
 
     def call
-      unless ENV['MIGRATE_STANDALONE_UNITS']
+      unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
         log "MIGRATE_STANDALONE_UNITS is not set", type: "error"
         return false
       end
@@ -61,7 +61,7 @@ module Services
     end
 
     def rollback
-      unless ENV['MIGRATE_STANDALONE_UNITS']
+      unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
         log "MIGRATE_STANDALONE_UNITS is not set", type: "error"
         return false
       end
