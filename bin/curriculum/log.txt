@@ -1,0 +1,4 @@
+# Logfile created on 2025-03-13 15:29:44 -0400 by logger.rb/v1.6.1
+E, [2025-03-13T15:29:53.651167 #35881] ERROR -- : Migration failed for Unit computer-systems-and-devices-2024 to UnitGroup computer-systems-and-devices-2024-course: Name has already been taken
+E, [2025-03-13T15:30:57.323755 #35881] ERROR -- : Migration failed for Unit networks-and-the-internet-2024 to UnitGroup networks-and-the-internet-2024-course: Name has already been taken
+E, [2025-03-13T15:31:10.041862 #35881] ERROR -- : Migration failed for Unit sandbox-pl-cv to UnitGroup sandbox-pl-cv-course: Name has already been taken

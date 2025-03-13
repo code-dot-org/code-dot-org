@@ -1,0 +1,20 @@
+{
+  "name": "csa6-exemplars",
+  "script_names": [
+    "csa6-exemplars"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csa6-exemplars",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

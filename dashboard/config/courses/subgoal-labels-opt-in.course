@@ -1,0 +1,20 @@
+{
+  "name": "subgoal-labels-opt-in",
+  "script_names": [
+    "subgoal-labels-opt-in"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "subgoal-labels-opt-in",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

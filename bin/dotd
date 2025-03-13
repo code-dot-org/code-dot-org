@@ -404,7 +404,7 @@ end
 def run_on(server_name, command)
   # Double-escape the command string, once for each remote shell we're passing
   # through.
-  return true if system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
+  return true if system "ssh -t alex.brown@gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
   # Non-zero exit code from the command
   warn_and_confirm "There was an error running `#{command}` on #{server_name}"
   return false

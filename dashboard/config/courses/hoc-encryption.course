@@ -1,0 +1,20 @@
+{
+  "name": "hoc-encryption",
+  "script_names": [
+    "hoc-encryption"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoc-encryption",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

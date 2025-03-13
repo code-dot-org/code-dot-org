@@ -1,0 +1,20 @@
+{
+  "name": "craft17-kiki",
+  "script_names": [
+    "craft17-kiki"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "craft17-kiki",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

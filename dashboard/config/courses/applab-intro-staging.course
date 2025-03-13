@@ -1,0 +1,20 @@
+{
+  "name": "applab-intro-staging",
+  "script_names": [
+    "applab-intro-staging"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "applab-intro-staging",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
