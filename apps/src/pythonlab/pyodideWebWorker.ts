@@ -87,7 +87,7 @@ onmessage = async event => {
   let results = undefined;
   let sourceToWrite = source;
   // Add the validation file to the source if it exists. Use the id "validation"
-  // so the validation file does not overwrite a user file.
+  // so the validation file does not overwrite a user file (user files have stringified numeric ids).
   if (validationFile) {
     sourceToWrite = {
       ...source,
