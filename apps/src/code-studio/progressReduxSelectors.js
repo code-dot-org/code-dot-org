@@ -3,6 +3,7 @@
 
 import _ from 'lodash';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
@@ -106,7 +107,7 @@ export const canChangeLevelWithoutFade = state => {
   );
 
   return (
-    window.location.href.includes('lab2-no-fade-template') &&
+    queryParams('lab2-no-fade-template') === 'true' &&
     currentLevel?.projectTemplateLevelName &&
     currentLevel?.projectTemplateLevelName ===
       previousLevel?.projectTemplateLevelName
