@@ -15,6 +15,7 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {BlocklySource, ExemplarSettings} from '@cdo/apps/lab2/types';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -26,6 +27,7 @@ import AppConfig from '../appConfig';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import musicI18n from '../locale';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
 import {
@@ -37,6 +39,7 @@ import {
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
+import ExemplarPlayerView from './ExemplarPlayerView';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -62,6 +65,7 @@ interface MusicLabViewProps {
   allowPackSelection: boolean;
   analyticsReporter: AnalyticsReporter;
   blocklyWorkspace: MusicBlocklyWorkspace;
+  exemplarPlaybackEvents: PlaybackEvent[];
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -79,6 +83,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   allowPackSelection,
   analyticsReporter,
   blocklyWorkspace,
+  exemplarPlaybackEvents,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -95,6 +100,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
   );
@@ -109,6 +115,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     state => state.music.startingPlayheadPosition
   );
   const lastMeasure = useAppSelector(state => state.music.lastMeasure);
+
+  const exemplarSources = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSources
+  ) as BlocklySource | undefined;
+  const exemplarSettings = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSettings
+  ) as ExemplarSettings | undefined;
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -281,11 +294,26 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               }
               handleInstructionsTextClick={onInstructionsTextClick}
             />
+            {exemplarSettings?.playerEnabled &&
+              exemplarSources &&
+              !isEditingExemplar && (
+                <ExemplarPlayerView
+                  playbackEvents={exemplarPlaybackEvents}
+                  title={exemplarSettings.playerTitle!}
+                />
+              )}
           </PanelContainer>
         </div>
       );
     },
-    [hideHeaders, onInstructionsTextClick]
+    [
+      hideHeaders,
+      exemplarSettings,
+      exemplarSources,
+      isEditingExemplar,
+      onInstructionsTextClick,
+      exemplarPlaybackEvents,
+    ]
   );
 
   const renderPlayArea = useCallback(
