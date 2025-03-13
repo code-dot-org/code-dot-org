@@ -113,7 +113,7 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2>This is section one</Heading2>
+          <Heading2>Primary section</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
@@ -123,7 +123,17 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2>This is section two</Heading2>
+          <Heading2>Secondary section</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
+        </>
+      ),
+    },
+    {
+      background: sectionBackground.dark,
+      padding: 'l',
+      children: (
+        <>
+          <Heading2>Dark section</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
@@ -133,7 +143,17 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2>This is section three</Heading2>
+          <Heading2>Brand Light Primary section</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
+        </>
+      ),
+    },
+    {
+      background: sectionBackground.brandLightSecondary,
+      padding: 'l',
+      children: (
+        <>
+          <Heading2>Brand Light Secondary section</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
@@ -144,7 +164,18 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2>This is section four</Heading2>
+          <Heading2>Pattern Dark section</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
+        </>
+      ),
+    },
+    {
+      background: sectionBackground.patternPrimary,
+      backgroundImageUrl: bgPattern,
+      padding: 'l',
+      children: (
+        <>
+          <Heading2>Pattern Primary section</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
@@ -158,13 +189,30 @@ MultipleSections.play = async ({
 }) => {
   const canvas = within(canvasElement);
   const headings = [
-    'This is section one',
-    'This is section two',
-    'This is section three',
-    'This is section four',
+    'Primary section',
+    'Secondary section',
+    'Dark section',
+    'Brand Light Primary section',
+    'Brand Light Secondary section',
+    'Pattern Dark section',
+    'Pattern Primary section',
   ];
-  const sectionWithPattern = canvas
-    .getByText('This is section four')
+  const sectionPrimary = canvas.getByText('Primary section').closest('section');
+  const sectionSecondary = canvas
+    .getByText('Secondary section')
+    .closest('section');
+  const sectionDark = canvas.getByText('Dark section').closest('section');
+  const sectionBrandLightPrimary = canvas
+    .getByText('Brand Light Primary section')
+    .closest('section');
+  const sectionBrandLightSecondary = canvas
+    .getByText('Brand Light Secondary section')
+    .closest('section');
+  const sectionPatternDark = canvas
+    .getByText('Pattern Dark section')
+    .closest('section');
+  const sectionPatternPrimary = canvas
+    .getByText('Pattern Primary section')
     .closest('section');
 
   headings.forEach(async headingText => {
@@ -174,9 +222,39 @@ MultipleSections.play = async ({
     await expect(heading).toBeInTheDocument();
   });
 
-  // check if the fourth section has the background image set
-  if (sectionWithPattern) {
-    const backgroundImage = sectionWithPattern.style.backgroundImage;
-    await expect(backgroundImage).toContain('bg-pattern');
-  }
+  // check if the right sections have the Light data-theme
+  const sectionsWithLightTheme = [
+    sectionPrimary,
+    sectionSecondary,
+    sectionBrandLightPrimary,
+    sectionBrandLightSecondary,
+  ];
+  sectionsWithLightTheme.forEach(async section => {
+    if (section) {
+      const dataTheme = section.getAttribute('data-theme');
+      await expect(dataTheme).toBe('Light');
+    }
+  });
+
+  // check if the right sections have the Dark data-theme
+  const sectionsWithDarkTheme = [
+    sectionDark,
+    sectionPatternDark,
+    sectionPatternPrimary,
+  ];
+  sectionsWithDarkTheme.forEach(async section => {
+    if (section) {
+      const dataTheme = section.getAttribute('data-theme');
+      await expect(dataTheme).toBe('Dark');
+    }
+  });
+
+  // check if the right sections have the background image
+  const sectionsWithBgPattern = [sectionPatternDark, sectionPatternPrimary];
+  sectionsWithBgPattern.forEach(async section => {
+    if (section) {
+      const backgroundImage = section.style.backgroundImage;
+      await expect(backgroundImage).toContain('bg-pattern');
+    }
+  });
 };
