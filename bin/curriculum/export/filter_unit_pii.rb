@@ -64,7 +64,7 @@ def get_input_filenames
     puts "Found input file: #{input_filename}"
     return [input_filename]
   end
-  input_filenames = Dir.glob(File.join($input_dir, '*.json'))
+  input_filenames = Dir.glob(File.join($input_dir, '*.jsonl'))
   puts "Found #{input_filenames.size} input files in #{$input_dir}"
   input_filenames
 end
