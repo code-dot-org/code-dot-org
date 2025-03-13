@@ -8,7 +8,7 @@ import React from 'react';
 
 import styles from './teacherHomepage.module.scss';
 
-export interface MarketingAnnouncementInfo {
+export interface TeacherPromoInfo {
   announcementType: string;
   backgroundColor: string; //TODO(lfm) add background color
   buttonLabel: string;
@@ -19,32 +19,31 @@ export interface MarketingAnnouncementInfo {
   isCloseable: boolean;
 }
 
-interface MarketingAnnouncementAdditionalProps {
-  closeAnnouncementCallback: () => void;
+interface TeacherPromoAdditionalProps {
+  onClose: () => void;
 }
 
-type MarketingAnnouncementProps = MarketingAnnouncementInfo &
-  MarketingAnnouncementAdditionalProps;
+type TeacherPromoProps = TeacherPromoInfo & TeacherPromoAdditionalProps;
 
-export const MarketingAnnouncement: React.FC<MarketingAnnouncementProps> = ({
+export const TeacherPromo: React.FC<TeacherPromoProps> = ({
   title,
   description,
   buttonLabel,
   buttonTarget,
   image,
   isCloseable,
-  closeAnnouncementCallback,
+  onClose,
 }) => {
   return (
-    <div className={styles.announcement}>
+    <div className={styles.promotion}>
       {isCloseable && (
         <div className={styles.closeButton}>
-          <button type="button" onClick={closeAnnouncementCallback}>
+          <button type="button" onClick={onClose}>
             <FontAwesomeV6Icon iconName="close" />
           </button>
         </div>
       )}
-      <img src={image} alt={title} className={styles.announcementImage} />
+      <img src={image} alt={title} className={styles.promotionImage} />
       <Heading3>{title}</Heading3>
       <BodyThreeText>{description}</BodyThreeText>
       <LinkButton
@@ -53,7 +52,7 @@ export const MarketingAnnouncement: React.FC<MarketingAnnouncementProps> = ({
         text={buttonLabel}
         type="secondary"
         size="s"
-        className={styles.announcementButton}
+        className={styles.promotionButton}
       />
     </div>
   );
