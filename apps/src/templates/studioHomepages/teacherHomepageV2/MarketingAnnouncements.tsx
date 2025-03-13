@@ -4,7 +4,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   MarketingAnnouncement,
-  MarketingAnnouncementProps,
+  MarketingAnnouncementInfo,
 } from './MarketingAnnouncement';
 
 import styles from './teacherHomepage.module.scss';
@@ -15,11 +15,12 @@ const TEST_ANNOUNCEMENT = {
   buttonText: 'Click me',
   buttonLink: 'https://code.org',
   imageURL: 'https://code.org/images/logo.png',
+  isCloseable: true,
 };
 
 export const MarketingAnnouncements: React.FC = () => {
   const [announcements, setAnnouncements] = React.useState<
-    MarketingAnnouncementProps[]
+    MarketingAnnouncementInfo[]
   >([]);
 
   React.useEffect(() => {
@@ -34,10 +35,22 @@ export const MarketingAnnouncements: React.FC = () => {
       });
   }, []);
 
+  const closeAnnouncementCallback = React.useCallback(
+    (index: number) => {
+      setAnnouncements([...announcements].splice(index, 1));
+
+      // TODO(lfm): Send a POST request to the server to mark the announcement as closed
+    },
+    [announcements]
+  );
+
   return (
     <div className={styles.announcements}>
-      {announcements.map(announcement => (
-        <MarketingAnnouncement {...announcement} />
+      {announcements.map((announcement, ind) => (
+        <MarketingAnnouncement
+          {...announcement}
+          closeAnnouncementCallback={() => closeAnnouncementCallback(ind)}
+        />
       ))}
       <div className={styles.blankAnnouncement} />
     </div>
