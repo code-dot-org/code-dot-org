@@ -1,4 +1,4 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -82,6 +82,10 @@ describe('TeacherHomepage', () => {
     });
   });
 
+  afterEach(() => {
+    fetchSpy.mockRestore();
+  });
+
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
     return render(
       <Provider store={store}>
@@ -129,5 +133,19 @@ describe('TeacherHomepage', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
+  });
+
+  it('archive all opens modal', async () => {
+    renderComponent();
+    const optionsDropdown = screen.getByRole('button', {name: 'More options'});
+    fireEvent.click(optionsDropdown);
+
+    const archiveAllSectionsButton = await screen.findByRole('button', {
+      name: 'Archive all class sections',
+    });
+
+    fireEvent.click(archiveAllSectionsButton);
+
+    screen.getByText('Archive all class sections?');
   });
 });

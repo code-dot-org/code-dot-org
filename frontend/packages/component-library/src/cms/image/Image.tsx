@@ -12,6 +12,10 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLElement> {
   hasDecoration?: 'none' | 'border' | 'shadow';
   /** Image custom className */
   className?: string;
+  /** Image onLoad callback */
+  onLoad?: () => void;
+  /** Image onError callback */
+  onError?: () => void;
 }
 
 /**
@@ -32,6 +36,8 @@ const Image: React.FC<ImageProps> = ({
   altText = '',
   hasDecoration,
   className,
+  onLoad,
+  onError,
   ...HTMLAttributes
 }: ImageProps) => {
   return (
@@ -45,6 +51,8 @@ const Image: React.FC<ImageProps> = ({
       alt={altText}
       src={src}
       {...HTMLAttributes}
+      onLoad={onLoad}
+      onError={onError}
     />
   );
 };

@@ -77,11 +77,13 @@ class HomeController < ApplicationController
   # Signed out: redirect to sign in
   def home
     authenticate_user!
-    init_homepage
-    if current_user.teacher? && Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2')
+
+    if current_user.teacher? && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2') || DCDO.get('teacher-homepage-v2', false))
       redirect_to '/teacher_dashboard/home'
       return
     end
+
+    init_homepage
     render 'home/index'
   end
 

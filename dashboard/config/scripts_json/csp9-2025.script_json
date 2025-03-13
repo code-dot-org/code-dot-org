@@ -1,0 +1,2107 @@
+{
+  "script": {
+    "name": "csp9-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-11 18:25:44 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csp9-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_unit9_2020",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Unit 9: Create PT"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Mock Exam"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Create PT Deep Dive",
+      "name": "Create PT Deep Dive",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task and how it is scored. This lesson is also designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. ",
+        "preparation": "* Print or prepare to distribute digital copies of the Create PT - Survival Guide\n* Review pages 1-5 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3-new/38851) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zH__f0Hx7zZVdIJWBsWwbrkpR6LtyAAOmtqF7gCdUFI/edit?usp=sharing)\n",
+        "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT."
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "Create PT   Make a Plan",
+      "name": "Create PT   Make a Plan",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.",
+        "preparation": "* Review pages 6-15 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3-new/38851) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zvt_xQIAL6_achJHWu-hkQ2QsdtFEnLEJs5-6xn11es/edit?usp=sharing)",
+        "student_overview": "This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project."
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT   Make a Plan",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "Create PT - Complete the Task (9 hrs)",
+      "name": "Create PT - Complete the Task (9 hrs)",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "It is finally time for students to take on the Create Performance Task. For a total of 9 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\n\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 9 hours of class time.  At the end, students will submit their program code, program video, and personalized project reference through their AP digital portfolio.",
+        "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\n* Review how to create a stand-alone App Lab project to assist students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3-new/38851) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1oA6gTYeeHtlUhwvE4wN2C9l_JfrDVYfHbL-8sE18ahI/edit?usp=sharing)",
+        "purpose": ".",
+        "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 9 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - personalized project references must be done on your own."
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "Create PT Written Response Mock Exam",
+      "name": "Create PT Written Response Mock Exam",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "How can I employ effective strategies to excel in the AP Computer Science Principles written exam?\n\nOn Day 1 of the lesson, students explore the exam format, learn test-taking and annotation strategies, and finally craft responses to two sample Performance Task prompts, specifically addressing #1 \"Program Design, Function, and Purpose\" and #2(a) \"Algorithm Development.\" Students should be prepared with completed Personalized Project Reference (PPR) sheets. The lesson emphasizes discussions, annotations, and writing exercises to build confidence and strategic skills for the upcoming exam.\n\nOn Day 2 of this lesson, the teacher models the day 1 strategies by annotating a sample performance task question. Then, students begin the second half of the mock exam while the teacher facilitates, encourages, and helps clarify any confusion. Finally, students participate in quick partner and whole class review to reinforce collaboration, acknowledge challenges, and make suggestions for future sessions.",
+        "preparation": "* Print Personalized Project References\n* Choose one, or both\n  * Print copies of Activity Guide (Version A) - Create PT Mock Exam (one for each student)\n  * Print copies of Activity Guide (Version B) - Create PT Mock Exam (one for each student)\n* Print and cut Create PT Mock Exam Description\n* Set up a space for the \"Want to Know\" area that students can contribute to\n* Gather sticky notes for each student to use\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-4-new/38852) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "How can I employ effective strategies to excel in the AP Computer Science Principles written exam?\n\n\nOn Day 1 of the lesson, you will explore the exam format, learn test-taking and annotation strategies, and finally craft responses to two sample Performance Task prompts.\n\nOn Day 2 of this lesson, you will begin the second half of the mock exam, writing the second set of responses. Additionally, you will review the strategies, acknowledging challenges and making suggestions to help you master your response writing capabilities."
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "aed8a8f6-aad9-494d-85bd-b90e10b7b56b",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aed8a8f6-aad9-494d-85bd-b90e10b7b56b",
+        "lesson.key": "Create PT Deep Dive",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c",
+        "lesson.key": "Create PT Deep Dive",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "ce945acd-ad77-4478-a48a-105e9fc00b5a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce945acd-ad77-4478-a48a-105e9fc00b5a",
+        "lesson.key": "Create PT Deep Dive",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "4aaea9b6-4b81-43e0-8e44-b011285cff4d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4aaea9b6-4b81-43e0-8e44-b011285cff4d",
+        "lesson.key": "Create PT   Make a Plan",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea",
+        "lesson.key": "Create PT   Make a Plan",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "24cce2d7-6ec1-407a-9231-dacf7b92dfe9",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap-up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24cce2d7-6ec1-407a-9231-dacf7b92dfe9",
+        "lesson.key": "Create PT   Make a Plan",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "774e58f9-3eec-4707-a95b-f9f7fb4a5cf1",
+      "position": 1,
+      "properties": {
+        "duration": 20,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "774e58f9-3eec-4707-a95b-f9f7fb4a5cf1",
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "a679bec9-f236-4f00-b219-b0e56e2b7cb0",
+      "position": 2,
+      "properties": {
+        "duration": 70,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a679bec9-f236-4f00-b219-b0e56e2b7cb0",
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "b98ccbae-773a-4b68-b11a-e829176c942d",
+      "position": 3,
+      "properties": {
+        "name": "Wrap-up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b98ccbae-773a-4b68-b11a-e829176c942d",
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "aabd28ef-d3f6-4550-92d7-baa2605aa144",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day One"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144",
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "369b4140-e5c0-4307-a623-d8b2786d3e41",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day Two"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41",
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "key": "50bb656c-34a2-463b-ac0d-21d459e091f6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50bb656c-34a2-463b-ac0d-21d459e091f6",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2375616d-d892-42e1-aa98-00ca8090b628",
+      "position": 1,
+      "properties": {
+        "description": "Today we're going to start looking more deeply at the Create PT, focusing specifically on understanding: \n\n* The different components of the Create PT\n* How the task will be scored\n\nDon't worry, you already have much of the knowledge and skills you need to do well on this task. The hardest part might be just understanding what is required of you. \n\nFirst, we'll quickly read the task description and look a some examples and how they were scored.",
+        "name": "Introduce the Create PT",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. This lesson is designed to introduce what these nuances are, and begin to provide some answers to the questions that will inevitably arise. Keep in mind that the next lesson provides a more structured set of responses to those questions, and so today students are just diving in to what the task looks like."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2375616d-d892-42e1-aa98-00ca8090b628",
+        "lesson_activity.key": "aed8a8f6-aad9-494d-85bd-b90e10b7b56b"
+      }
+    },
+    {
+      "key": "24601bf6-a370-4053-811b-2a4cc0ae9e92",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students should each get printed or digital copies of the Task Instructions.",
+        "name": "Review Create PT Submission Requirements"
+      },
+      "seeding_key": {
+        "activity_section.key": "24601bf6-a370-4053-811b-2a4cc0ae9e92",
+        "lesson_activity.key": "aed8a8f6-aad9-494d-85bd-b90e10b7b56b"
+      }
+    },
+    {
+      "key": "b354efba-6896-446b-b7e2-ddf90489f92b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read and then discuss with a partner the Task Instructions.*\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* Video of their code running\n* PDF of program code\n* Personalized Program Reference including code snippets from their programs\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b354efba-6896-446b-b7e2-ddf90489f92b",
+        "lesson_activity.key": "aed8a8f6-aad9-494d-85bd-b90e10b7b56b"
+      }
+    },
+    {
+      "key": "ab9a7b72-b0da-43f6-8265-d8e2818e92dc",
+      "position": 4,
+      "properties": {
+        "description": "After reading discuss with a partner:\n\n* What will you *actually* be turning in to the College Board?\n* What are you hoping will become more clear before starting the project?\n\n**Discuss:** *Give students time to read the pages, in pairs or individually, and then discuss both questions with one another. The first one is more important for now.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab9a7b72-b0da-43f6-8265-d8e2818e92dc",
+        "lesson_activity.key": "aed8a8f6-aad9-494d-85bd-b90e10b7b56b"
+      }
+    },
+    {
+      "key": "89a953d8-4b0c-43a2-b799-8eb792d0cddd",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Hopefully in your reading you concluded that for the Create PT you'll need to submit:\n\n* Video showing your programs main functionality, including input and output\n* A PDF of your program code\n* Personalize Program Reference\n\nI'm sure that right now you have a lot of questions about what this task will look like and how it will be scored. Before we answer them, let's look at some examples first.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "89a953d8-4b0c-43a2-b799-8eb792d0cddd",
+        "lesson_activity.key": "aed8a8f6-aad9-494d-85bd-b90e10b7b56b"
+      }
+    },
+    {
+      "key": "5dda6bf1-1e75-4776-8abf-8d7e0b5d478b",
+      "position": 1,
+      "properties": {
+        "description": "Today we will use the Create PT Survival Guide to dig in a little deeper with the Create PT.  The beginning of the packet has a few quick activities that help get us in the right mindset for thinking about and doing the task so you are ready to hit the ground running.\n\nThe guide will be useful throughout the entire process of completing the actual Create Task as well.",
+        "name": "The Create PT Survival Guide",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5dda6bf1-1e75-4776-8abf-8d7e0b5d478b",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "23782e35-e2cc-4362-be0a-e1a5321d9d96",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Create PT Survival Guide. "
+      },
+      "seeding_key": {
+        "activity_section.key": "23782e35-e2cc-4362-be0a-e1a5321d9d96",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "a0cca385-2558-40d0-9731-d88c90bd84d5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students quickly review the information on page 1 which summarizes components of the task and the role of the guide. Answer any high-level questions that come up.\n    \n",
+        "duration": "5",
+        "name": "Task Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0cca385-2558-40d0-9731-d88c90bd84d5",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "fd42dde5-8fde-4e39-8e35-f06f2ab3ea5e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
+        "duration": "5",
+        "name": "What is Required of My Program?"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd42dde5-8fde-4e39-8e35-f06f2ab3ea5e",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "0118e4ec-5408-4215-abd6-4bad724b8666",
+      "position": 5,
+      "properties": {
+        "description": "Based on these four takeaways, it's clear that you have a lot of freedom in deciding how to design your program. Before moving on, we're going to complete two short activities to make sure we really understand the third requirement about our functions, since that one is the most complicated.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0118e4ec-5408-4215-abd6-4bad724b8666",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "a0d010a4-16a5-4697-96b2-0fbe8ea95c81",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
+        "duration": "10",
+        "name": "Function Requirement Activity 1: Does It Count?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0d010a4-16a5-4697-96b2-0fbe8ea95c81",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "71bcc4d9-f49c-41a2-90b2-bba8e63b852e",
+      "position": 7,
+      "properties": {
+        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterwards lead a discussion on the patterns they see.*\n\n**Discussion Goal:** The main takeaways from this activity should be:\n\n* Some \"complicated\" looking functions may still not earn both rows if they are missing a component. \n* Two functions may look very similar but because of small differences, one will earn full credit while the other will not.\n\n\nUse the Scoring Guide Create PT Survival Guide - KEY \n for commentary on individual algorithms.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "71bcc4d9-f49c-41a2-90b2-bba8e63b852e",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "0b6cd3c5-e34a-4a0f-98fa-5bb9d0aa6f49",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to \ncomplete the activity on page 5. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result.",
+        "duration": "10",
+        "name": "Function Requirements Activity 2: Two Function Calls:"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b6cd3c5-e34a-4a0f-98fa-5bb9d0aa6f49",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "12f3d594-6004-4a11-86e8-fc22e956dc30",
+      "position": 9,
+      "properties": {
+        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterward, lead a discussion on the patterns they see.*\n\n**Discussion Goal:** This activity is designed to help students anticipate how they'll need to make some decisions about how to design their functions. Here are some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "12f3d594-6004-4a11-86e8-fc22e956dc30",
+        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
+      }
+    },
+    {
+      "key": "10e5f66e-6f89-41af-be7f-39711afbf8d3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of writing functions for the Create PT do you feel clicked today? What do you still have questions about?*\n\nHave students share with one another before sharing with the whole class.\n\n**Dicsussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. "
+      },
+      "seeding_key": {
+        "activity_section.key": "10e5f66e-6f89-41af-be7f-39711afbf8d3",
+        "lesson_activity.key": "ce945acd-ad77-4478-a48a-105e9fc00b5a"
+      }
+    },
+    {
+      "key": "7c6da5dd-0c50-40dc-be92-f51fb17c4b94",
+      "position": 2,
+      "properties": {
+        "description": "Next time we meet we'll look at strategies for narrowing down your topic and start to make a plan for completing the task.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7c6da5dd-0c50-40dc-be92-f51fb17c4b94",
+        "lesson_activity.key": "ce945acd-ad77-4478-a48a-105e9fc00b5a"
+      }
+    },
+    {
+      "key": "86e1f84e-a9ce-443d-9ede-010e66d75fff",
+      "position": 1,
+      "properties": {
+        "description": "Last time we looked through the requirements for the programs developed for the Create PT, including this takeaway: *Make sure your program includes a function that has a parameter, an if-statement, and a loop.*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "86e1f84e-a9ce-443d-9ede-010e66d75fff",
+        "lesson_activity.key": "4aaea9b6-4b81-43e0-8e44-b011285cff4d"
+      }
+    },
+    {
+      "key": "1b221b29-a3af-405f-af7e-66ed3b776bee",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Identify the parameter, if-statement, and loop in this function.*\n\n**Discussion Goal:** Listen for students to point out the parameter `list` on line 01, the for-loop on line 03, and the if-statement on line 04."
+      },
+      "seeding_key": {
+        "activity_section.key": "1b221b29-a3af-405f-af7e-66ed3b776bee",
+        "lesson_activity.key": "4aaea9b6-4b81-43e0-8e44-b011285cff4d"
+      }
+    },
+    {
+      "key": "07b547ed-d0a3-417e-907a-103f9917ee1e",
+      "position": 1,
+      "properties": {
+        "description": "Today we'll continue to use the Create PT Survival Guide to practice thinking about the Create PT and the steps needed to get started.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "07b547ed-d0a3-417e-907a-103f9917ee1e",
+        "lesson_activity.key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea"
+      }
+    },
+    {
+      "key": "85f352ba-3a41-4c25-a51d-2a26fcba0390",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a class read the \"Narrow It Down\" section (page 6) of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n",
+        "duration": "5",
+        "name": "Narrow It Down"
+      },
+      "seeding_key": {
+        "activity_section.key": "85f352ba-3a41-4c25-a51d-2a26fcba0390",
+        "lesson_activity.key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea"
+      }
+    },
+    {
+      "key": "5d7536ab-9c2c-45f8-bf75-650f4af043fb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students go through one of the three project ideas and practice helping the example student narrow down their project. Give students roughly 5 minutes to discuss ideas with a partner. Then have a couple volunteers from each project idea share how they helped narrow down the project idea.\n\n**Discuss:** *Lead a discussion about how to narrow down project ideas.*\n* Many projects have sub parts, each of which could stand on its own as a PT\n* You should be able to easily see a list and function opportunity within at least one of the sub parts -- if you can't, not a good choice.\n* For any project idea it should be relatively easy to scope it down to one or two things that will be totally acceptable for the Create PT\n\n**Discussion Goal:** Understand it doesn't have to be a big project; The create PT is about demonstrating something you already know how to do.  \n\nThe biggest thing we're trying to guard against is students' eyes being bigger than their stomachs.  We want to encourage students to be creative and start build whatever they want, but temper that with the realities of the Create PT...\n\n* It doesn't need to be a big project\n* Your job is to demonstrate that you know how to program something and identify certain aspects of it.\n* There are no points for coolness or prettiness\n* If you want to do something big, just get it started for the Create PT and come back to it afterward.\n",
+        "duration": "10",
+        "name": "Practice Narrowing It Down"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d7536ab-9c2c-45f8-bf75-650f4af043fb",
+        "lesson_activity.key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea"
+      }
+    },
+    {
+      "key": "0e390527-d37b-41c4-af98-9a7e6ea8b4c6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Quickly read this section (page 8) with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can.",
+        "duration": "5",
+        "name": "Choosing a Project Idea "
+      },
+      "seeding_key": {
+        "activity_section.key": "0e390527-d37b-41c4-af98-9a7e6ea8b4c6",
+        "lesson_activity.key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea"
+      }
+    },
+    {
+      "key": "9e3be574-b218-4075-b8da-7f16f9397e8b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students use page 8 to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects.",
+        "duration": "10",
+        "name": "Brainstorm Ideas"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e3be574-b218-4075-b8da-7f16f9397e8b",
+        "lesson_activity.key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea"
+      }
+    },
+    {
+      "key": "7f85d99e-90fd-4c55-9b08-14cd9f516377",
+      "position": 6,
+      "properties": {
+        "description": "**Discuss:** *Have students share and compare their responses with a classmate. When deciding on a project the answer to all of the questions in the guide should be \"yes\".*\n\n**Discussion Goal:** Students should exit this brief activity with (1) a basic idea of what they're going to do for their project and (2) confidence that they can do it.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f85d99e-90fd-4c55-9b08-14cd9f516377",
+        "lesson_activity.key": "4b5a24d1-528c-4a80-a7aa-b26922be2cea"
+      }
+    },
+    {
+      "key": "0058ff63-c18e-4488-aa4f-2fdf6bb50499",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 9 class hours to track their progress and make sure they have every component needed to answer the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
+        "name": "Make a Plan\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "0058ff63-c18e-4488-aa4f-2fdf6bb50499",
+        "lesson_activity.key": "24cce2d7-6ec1-407a-9231-dacf7b92dfe9"
+      }
+    },
+    {
+      "key": "0550dce6-8e9a-4cfd-a706-12b818979548",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** *Have students share where they think most of their time should go.*\n\n**Discussion Goal:** the goal here is to have students start planning in earnest for the Create PT. Students should take seriously how they will allocate their time, and should think about how they probably want to maximize the amount of time they have to write the code and the written responses.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0550dce6-8e9a-4cfd-a706-12b818979548",
+        "lesson_activity.key": "24cce2d7-6ec1-407a-9231-dacf7b92dfe9"
+      }
+    },
+    {
+      "key": "927919fb-1a5d-4edd-a4ec-8b11ba76b047",
+      "position": 3,
+      "properties": {
+        "description": "* Coding time that isn't focused on making your function or list is likely not well spent. It doesn't matter if your program \"looks good\" so long as it works!\n* Don't forget to allocate time to make your video, code PDF, and Personalize Program Reference.\n* **Use the checklists** in the survival guide to make sure you'll earn all the points."
+      },
+      "seeding_key": {
+        "activity_section.key": "927919fb-1a5d-4edd-a4ec-8b11ba76b047",
+        "lesson_activity.key": "24cce2d7-6ec1-407a-9231-dacf7b92dfe9"
+      }
+    },
+    {
+      "key": "720e292e-9d75-439e-9359-afe4fc07d5ee",
+      "position": 4,
+      "properties": {
+        "description": "Now that we have methods and strategies for completing the task along with the beginnings of a plan, tomorrow we'll officially start the task.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "720e292e-9d75-439e-9359-afe4fc07d5ee",
+        "lesson_activity.key": "24cce2d7-6ec1-407a-9231-dacf7b92dfe9"
+      }
+    },
+    {
+      "key": "7db68552-4bf4-4922-bdc8-2d3ef683f3f8",
+      "position": 1,
+      "properties": {
+        "description": "*   For the next ~9-12 days, you will be completing the Create Performance Task. \n    * Most of the work for this task *must* be done independently - but you are allowed to collaborate with another student to create a program.  However, you must have enough individual contributions to meet all the requirements of the written responses.* I (teacher) can help you with *process* and timeline and keep you on task\n* There are a few other last minute things we should look at to make sure you're clear before we start.",
+        "name": "Ready?",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Creating an App Lab Project:** Before students begin programming, they should make sure that they are creating their program in a new App Lab Project - NOT in a level associated with a previous lesson.\n\nHowever, you can use a previous project as a starting point as long as you add new parts that fulfill the task requirements.\n\n**To build off a program started in a previous lesson:**\n\nMake sure to click “Remix” from the original program level. This will create a new copy of the program that can be accessed from the list of individual student projects found at [https://studio.code.org/projects](https://studio.code.org/projects). Students should indicate using comments what parts of the program are copied from older projects. \n\n**For students who are creating an entirely new program:**\n\nCreate a new App Lab project by visiting [https://studio.code.org/projects/applab/new](https://studio.code.org/projects/applab/new)\n\n**How Can You Help as a Teacher:** Review the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf), in particular pages 170-171  to understand how you as a teacher can and cannot assist on the Create Performance Task.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7db68552-4bf4-4922-bdc8-2d3ef683f3f8",
+        "lesson_activity.key": "774e58f9-3eec-4707-a95b-f9f7fb4a5cf1"
+      }
+    },
+    {
+      "key": "55389b37-3c63-4f77-bad8-0eb545872696",
+      "position": 2,
+      "properties": {
+        "description": "Before we start let's review the AP CSP Create Task Instructions.\n\n---\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Read page 12-13: Preparing for the Performance Task. This is a general checklist of things you should do to prepare for the AP Performance Task.  Let's see how we did. With a partner - one person reading from the top down, the other reading from bottom up - check off things we've done to prepare so far.  Identify anything we haven't done. Discuss together before discussing as a class. Also, Read Page 11: AP Computer Science Principles Policy on Plagiarism. With a partner carefully read this section. Discuss together before discussing as a class.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Make sure everyone understands expectations.\n\n* For example: if you use a library that someone else created, you need to include a comment citing this source as code you yourself did not write\n* If using images, media or other copyrighted material found on the web, you should cite those sources in comments in your program code - usually at the top.  Something like:\n\n```\n// The images used in this app came from:\n// [1] bird image - http://name-of-site.com/path/to/image.jpg\n// [2] flower image - http://site.com/path/to/flower.jpg\n```",
+        "progression_name": "Tech Setup and Tools for Create PT"
+      },
+      "seeding_key": {
+        "activity_section.key": "55389b37-3c63-4f77-bad8-0eb545872696",
+        "lesson_activity.key": "774e58f9-3eec-4707-a95b-f9f7fb4a5cf1"
+      }
+    },
+    {
+      "key": "c7759eba-e403-4998-a609-4c4990c8775a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read Pages 14-15: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the* **You must**, **You may not**, *and* **You may** *sections of this page. Then with you partner summarize: what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
+        "progression_name": "Tech Setup and Tools for Create PT"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7759eba-e403-4998-a609-4c4990c8775a",
+        "lesson_activity.key": "774e58f9-3eec-4707-a95b-f9f7fb4a5cf1"
+      }
+    },
+    {
+      "key": "7b2c2920-7c62-4993-a14b-f4a05d60f1f7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* Take out your Create PT timeline that we developed and reviewed.\n* Ask and answer any remaining questions.\n* Remind students of the overall timeline and that the official PT time is about to start.",
+        "name": "Set",
+        "progression_name": "Create PT Coding Workspace"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b2c2920-7c62-4993-a14b-f4a05d60f1f7",
+        "lesson_activity.key": "774e58f9-3eec-4707-a95b-f9f7fb4a5cf1"
+      }
+    },
+    {
+      "key": "1fc2f03a-52cc-4994-9a9e-570f30cc4ad9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Links in Code Studio:**\n\n* Students can find links to AP resources on the student page in code studio associated with this lesson. Students will need to be signed into to AP Classroom to view these resources.\n",
+        "name": "GO! Complete Create Performance Task"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fc2f03a-52cc-4994-9a9e-570f30cc4ad9",
+        "lesson_activity.key": "a679bec9-f236-4f00-b219-b0e56e2b7cb0"
+      }
+    },
+    {
+      "key": "1afb57fe-a2b2-451a-984e-5bb2b0241ba5",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Submission Timeline:** You may spread out submission over a few days if you like since students can save progress in the AP Digital Portfolio. As long as they finalize submission by the closing date of the PTs it's fine.\n\nIn the past submitting everything right at the deadline has been a risky proposition as the site sometimes experiences outages due to heavy traffic.  Get *something* in early and modify later.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1afb57fe-a2b2-451a-984e-5bb2b0241ba5",
+        "lesson_activity.key": "b98ccbae-773a-4b68-b11a-e829176c942d"
+      }
+    },
+    {
+      "key": "2e0b496c-7a01-4d58-954d-c465098a2649",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submitting:**\n\n* You are encouraged to submit and save work in the AP digital portfolio as you go!\n* At the designated end of the Task administration (having allowed for at least 12 hours of class time for work) students should submit their video of the program running,  written responses, and program code to their [AP Digital Portfolio](https://apstudents.collegeboard.org/digital-submission/submit-ap-csp-work). You can find more instructions as well by using the [AP Digital Portfolio: Student User Guide](https://apcentral.collegeboard.org/pdf/digital-portfolio-student-user-guide-ap-csp.pdf).\n\nBefore they submit their final work:\n\n * Encourage students to check over the Survival Guide checklists one more time to make sure they met the requirements.\n * Make sure they have all the components necessary for the Create Performance Task.",
+        "name": "Students submit completed Create Performance Task"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e0b496c-7a01-4d58-954d-c465098a2649",
+        "lesson_activity.key": "b98ccbae-773a-4b68-b11a-e829176c942d"
+      }
+    },
+    {
+      "key": "abf79b71-f8c7-409c-b340-dae37427699f",
+      "position": 3,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "abf79b71-f8c7-409c-b340-dae37427699f",
+        "lesson_activity.key": "b98ccbae-773a-4b68-b11a-e829176c942d"
+      }
+    },
+    {
+      "key": "45355638-e5c2-40f5-a428-e018cc3f659b",
+      "position": 1,
+      "properties": {
+        "description": "####Review Exam Requirements\n\n",
+        "duration": "5",
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The prompts in this lesson come from the CED and are publicly available. Some teachers may wish to use alternate prompts. There are three practice exams available only to teachers in the “Resources and Assignments” area of [AP Classroom](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/classroom-resources#:~:text=the%20intended%20result.-,AP%20Classroom,-Whether%20you%E2%80%99re%20teaching). These practice exams provide comprehensive coverage of the written response portion of the Create Performance Task, as well as scoring guidelines for each of the four prompts. \nIf a teacher chooses to use one or more of these prompts, they should replace the prompts in the Activity Guide. Prompts appear on pages 2-6 of Version A and pages 2 and 4-7 of Version B. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "45355638-e5c2-40f5-a428-e018cc3f659b",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "4e145db4-f939-4111-9f83-defbc9ac8cac",
+      "position": 2,
+      "properties": {
+        "description": "Today you will explore strategies for the free response portion of the AP CS Principles exam. By the end of the next class, you will have answered all four parts required for the free response portion of this mock exam.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4e145db4-f939-4111-9f83-defbc9ac8cac",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "efab796e-321e-41e1-8e0e-c93a83425d74",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute**:  Create PT Mock Exam Description\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Instructions on the Quick Annotations Slide.\n\n**Do This**: Ask students to circle key terms and underline anything unclear. Encourage brief notes or questions in the margins.\n\n**Distribute**:  Sticky notes for Parking Lot\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Instructions on the Parking Lot slide\n\n**Do This**: Ask students to jot down any questions or points of confusion, and place them in the \"Want to Know\" area."
+      },
+      "seeding_key": {
+        "activity_section.key": "efab796e-321e-41e1-8e0e-c93a83425d74",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "36b73880-4639-4ded-907f-ffa3af4bf614",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**“Want to Know”** comes from K-W-L charts, wherein students describe what they already know about a topic, what they want to know about a topic, and then after reading, what they have learned. Some classes may be more comfortable with this format. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "36b73880-4639-4ded-907f-ffa3af4bf614",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "d984eac3-a22d-426b-a942-67736b47e19b",
+      "position": 5,
+      "properties": {
+        "description": "After students place items in the \"Want to Know\" area take a minute to group similar things together to help you identify themes. One simple way to do this if nothing else becomes obvious is group them into: Ideas, Concerns, Questions. This will help you refer back to items in this area as themes and questions get addressed. Then quickly move into the activity of the lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "d984eac3-a22d-426b-a942-67736b47e19b",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "e65975f3-75b2-4c6a-97af-b55706c907dd",
+      "position": 6,
+      "properties": {
+        "description": "####Review Strategies",
+        "duration": "35",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "e65975f3-75b2-4c6a-97af-b55706c907dd",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "e4eaa8fe-23cd-4cb1-91df-655f179d6ea2",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What strategies have you used before to help you plan and write your answers to free-response questions?*\n\n**Discussion Goal:** Use this discussion to allow students to share any strategies they have used in the past, even from other subjects. You may also push students to think about things they wish they had done in approaching the practice they've encountered throughout the year."
+      },
+      "seeding_key": {
+        "activity_section.key": "e4eaa8fe-23cd-4cb1-91df-655f179d6ea2",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "fd2d9fb8-10cb-4a36-b7ff-1dbd03e2a056",
+      "position": 8,
+      "properties": {
+        "description": "**Distribute**:\n*Personalized Project References (PPR)*\n\nChoose one of the activity guide options:\n\n* [Activity Guide (Version A) - Create PT Mock Exam](https://docs.google.com/document/d/1uteRO991dirupYOQ31OQwP9NQrfxZA2rvvy1vtK-5FA/edit?usp=sharing)\n\n* [Activity Guide (Version B) - Create PT Mock Exam](https://docs.google.com/document/d/1AVi-LnwebAmTkmN10LxjVNPISMpvu9GNH08F6YE44dM/edit?usp=sharing)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Differentiation Opportunity**\n\nIn recognizing the diverse learning preferences and needs of our students, we present two annotation strategies: Version A and Version B. **Version A** involves circling key terms in the question for a focused response. It's a concise approach suitable for those who prefer simplicity and efficiency. \n\n**Version B**, on the other hand, adds a more detailed layer to the process. It includes circling key terms, numbering them, writing short summaries, and freewriting ideas. This method aims to stimulate creativity and build a comprehensive resource during response writing. \n\nTeachers and students are encouraged to choose the annotation strategy that aligns best with their preferences, learning styles, and objectives."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fd2d9fb8-10cb-4a36-b7ff-1dbd03e2a056",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "6a823bcd-96fe-42ab-ba17-dd8229de9915",
+      "position": 9,
+      "properties": {
+        "description": "Answering free response questions on test day can be intimidating, but it doesn't have to be. Today you will learn a variety of strategies for planning, organizing, and writing each of your responses. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6a823bcd-96fe-42ab-ba17-dd8229de9915",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "b05f16ad-4ca8-418e-aa4f-6397e768b798",
+      "position": 10,
+      "properties": {
+        "description": "**Do This**:  Turn to page 1 of the activity guide and review the strategies. Have students read through the strategies, and ask clarifying questions as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While it is important to expose students to these strategies, don’t spend too long explaining each of them. Practicing with the strategies, and then reflectingn on them and asking questions about them, will be a much more effective way of checking for understanding. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b05f16ad-4ca8-418e-aa4f-6397e768b798",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "1b5d5f37-5f8c-4cc4-8719-ee37badab3af",
+      "position": 11,
+      "properties": {
+        "description": "####Planning\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Planning\" section instructions slide."
+      },
+      "seeding_key": {
+        "activity_section.key": "1b5d5f37-5f8c-4cc4-8719-ee37badab3af",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "68e43177-def4-49c1-90f3-e4cd0b7a20fe",
+      "position": 12,
+      "properties": {
+        "description": "When you get your exam, you will see two questions that make up a total of four prompts. On exam day, you will have 60 minutes to complete all four prompts. Today, you will only answer two questions. \n \nBefore answering the questions, it will be important to read each question, and prioritize them based on your confidence level, strengths, and difficulty. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "68e43177-def4-49c1-90f3-e4cd0b7a20fe",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "e280c582-f5f6-42b5-9b5a-7d4b1ac50cba",
+      "position": 13,
+      "properties": {
+        "description": "**Circulate**: The teacher should ensure students complete the planning page in their activity guide rather than jumping straight into answering the questions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For those with a bit more time, this activity can be a powerful way to engage students in the planning part of the process. \n\nThe teacher designates areas of the room for each question. Students use sticky notes to jot down their “priority level” (1-4) for each, and posts their notes in the designated area. The teacher has students quickly share their reasoning for prioritizing each question, rotating students through each area and reminding students that it is okay to change their priorities if they hear a convincing argument."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e280c582-f5f6-42b5-9b5a-7d4b1ac50cba",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "db40425e-a507-4147-a0d5-4571b9bd0106",
+      "position": 14,
+      "properties": {
+        "description": "####Annotating and Writing\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The \"Annotating and Writing\" instructions slide.\n\n*Version A and B of this activity are presented below. Teachers may choose one or both options depending on the needs of the learners.*\n\n::: details [**Version A: Streamlined Approach**]\n</br>\nThis straightforward strategy provides a quick and efficient approach for those who prefer a more streamlined process. This strategy also mirrors the practice exercises students may have engaged in throughout the curriculum. \n\n1. **Annotating**: Circle key terms: Identify and circle key terms to focus your response.\n2. **Create a Rough Outline**: Organize your main points in a logical order and ensure that your outline aligns with the main points from your annotations. Write responses and cross off key terms: Following the outline you created. As you address each numbered key term in your response, visually cross it off on your annotated plan.\n3. **Reflect**: Reflect on your experience so that you can grow your written response skills.\n:::\n\n</br>\n\n::: details [**Version B: Detail-Oriented Approach**]\n</br>\nThis comprehensive strategy provides multiple opportunities for students to engage with the prompts, organize their thoughts, brainstorm ideas, and write their responses. \n\nReview and practice annotation strategies with students using sample Create Performance Task Question #1 and Question #2(a).\n\n1. **Circle Key Terms**: Identify and circle key terms in the question to ensure a focused response on critical elements.\n2. **Number Key Terms**: Organize thoughts by numbering the key terms, and then use those numbers in outlining the response\n3. **Snapshot Your Thoughts**: Capture your thoughts about each key term in a snapshot. Make it quick and straightforward – this isn't about writing a lot, just enough to jog your memory when answering.\n4. **Freewrite / Annotate each key term with example ideas**:  Jot down potential examples or ideas related to the question to stimulate creativity and provide content for the response.\n:::"
+      },
+      "seeding_key": {
+        "activity_section.key": "db40425e-a507-4147-a0d5-4571b9bd0106",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "edae65bb-7c35-4419-8fa6-f140d13561b8",
+      "position": 15,
+      "properties": {
+        "description": "Annotate the key terms for your first priority question. Once you've finished the annotations, begin writing. Make sure that, as you write, you are crossing off the key terms you annotated as you address them in your response. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "edae65bb-7c35-4419-8fa6-f140d13561b8",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "825bed6c-caa0-47ea-a553-24a5409144ca",
+      "position": 16,
+      "properties": {
+        "description": "**Circulate**: Monitor the room as students annotate and write. Encourage students to use the annotation strategies before they begin their response. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Be sure to stress to students that they will only be answering two questions. Attempting to answer all four questions in the limited timeframe will likely result in superficial, shallow responses. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "825bed6c-caa0-47ea-a553-24a5409144ca",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "e18a2832-9dce-42e1-bae9-58ee4de066da",
+      "position": 17,
+      "properties": {
+        "description": "####Retrieve-Pair-Share (2 min)\n",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e18a2832-9dce-42e1-bae9-58ee4de066da",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "71b7e729-4a7e-4ade-bcfd-306edd82ef9b",
+      "position": 18,
+      "properties": {
+        "description": "You have made good progress today, and are halfway done with the free response portion of this mock exam. We will conclude tomorrow with the remaining two questions. To end today, let's reflect on what has been done so far. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71b7e729-4a7e-4ade-bcfd-306edd82ef9b",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "d8f432f4-27bb-4296-80ba-fb5564664c9b",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: the \"Retrieve-Pair-Share\" instructions slide.\n\n**Do This**: After the practice session, provide time for students to reflect on their annotation and response strategies.\n\n####Revisit Parking Lot (3 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: the \"Parking Lot Want to Know\" instructions slide.\n\n**Do This**:  Revisit the Parking Lot from the warm up and facilitate a discussion around the “want to knows” students had. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, have students share responses from their graphic organizer. Find cause for celebration and praise in this mock exam. Encourage students to take pride in whatever they were able to accomplish, and to be ready to return in the next lesson ready to go!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d8f432f4-27bb-4296-80ba-fb5564664c9b",
+        "lesson_activity.key": "aabd28ef-d3f6-4550-92d7-baa2605aa144"
+      }
+    },
+    {
+      "key": "2d04609d-2469-4817-80b8-4da4b8dded3f",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Revisit Parking Lot:** You may want to spend time before the lesson or at the very beginning of the lesson reviewing the items added to the Parking Lot the day before, reminding students which themes were addressed the previous day and which will be addressed during the second day."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d04609d-2469-4817-80b8-4da4b8dded3f",
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41"
+      }
+    },
+    {
+      "key": "0fd34a89-db88-42fb-b6c8-859f8c6329cf",
+      "position": 2,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: FRQ Annotation Strategies slide\n\n**Model**: Use the next three slides to help students visualize the annotation and writing process they will use to answer the free response questions. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Do not spend overlong re-explaining these strategies. Students should have ample opportunity to put them to use during the mock-exam, wherein the teacher can monitor and assist as needed. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0fd34a89-db88-42fb-b6c8-859f8c6329cf",
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41"
+      }
+    },
+    {
+      "key": "337da9ce-9fd1-4012-9d29-5c29ed346a07",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The \"You Should Have\" slide.\n\n**Distribute**: If collected last class, redistribute the PPR and activity guide. ",
+        "duration": "30",
+        "name": "Activity ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Today you will answer the remaining two questions. Remember to use the annotation strategies we have been learning, and to pace yourself according to the priority you have set. You will have about 30 minutes to answer the remaining two questions. \n\nStudents who finish early should review their previous answers and revise as needed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "337da9ce-9fd1-4012-9d29-5c29ed346a07",
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41"
+      }
+    },
+    {
+      "key": "18f03ee4-deaa-4b0d-841c-330e118c2828",
+      "position": 4,
+      "properties": {
+        "description": "**Circulate**: Monitor students as they work, offering encouragement and reinforcing the use of the annotation strategies. "
+      },
+      "seeding_key": {
+        "activity_section.key": "18f03ee4-deaa-4b0d-841c-330e118c2828",
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41"
+      }
+    },
+    {
+      "key": "d20f190b-2c91-40bd-bff5-f15813202689",
+      "position": 5,
+      "properties": {
+        "description": "####Reflection (5 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The reflections instructions slide.\n",
+        "duration": "10",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d20f190b-2c91-40bd-bff5-f15813202689",
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41"
+      }
+    },
+    {
+      "key": "c6326351-d7dc-41b0-8caa-2a39fcf40f89",
+      "position": 6,
+      "properties": {
+        "description": "Flip to the last page of your activity guide and complete the three reflection questions. You can jot ideas, bullet points, or complete sentences. ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Given the varied experiences students may have had during the exam, it's important to acknowledge that everyone's journey is unique. If some students face challenges, reassure them that struggling in these mock exams is a common part of the process. The aim of these practices is to gradually ease difficulties, fostering increased confidence for the actual exam day. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c6326351-d7dc-41b0-8caa-2a39fcf40f89",
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41"
+      }
+    },
+    {
+      "key": "1608e717-664a-45f3-8019-33eebe4e4d9b",
+      "position": 7,
+      "properties": {
+        "description": "####Glows, Grows, Want to Knows\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The reflections instructions slide.\n\n**Discuss**: *The areas students felt went well (\"Glows\"), areas to improve upon (\"Grows\"), and areas of confusion (\"Want to Knows\")*\n\n**Discussion Goal**: Help guide students towards understanding the purpose of these practice exams, to give them an opportunity to prepare for the actual exam, and celebrate successes students had.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Extension Opportunity**  If time allows, the teacher can select one or more sample responses (either prepared ahead of time, or from actual student responses), identifies whether the response(s) is emerging, approaching expectations, or on target, and leads a whole-class discussion of the “glows” and “grows” for that response. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1608e717-664a-45f3-8019-33eebe4e4d9b",
+        "lesson_activity.key": "369b4140-e5c0-4307-a623-d8b2786d3e41"
+      }
+    },
+    {
+      "key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3",
+        "lesson_activity.key": "50bb656c-34a2-463b-ac0d-21d459e091f6"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Tech Setup and Tools for Create PT"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools2022_2025"
+        ],
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025",
+        "activity_section.key": "55389b37-3c63-4f77-bad8-0eb545872696"
+      },
+      "level_keys": [
+        "csp-pt-tech-setup-and-tools2022_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create PT Coding Workspace"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Create PT Workspace 2020_2025"
+        ],
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025",
+        "activity_section.key": "7b2c2920-7c62-4993-a14b-f4a05d60f1f7"
+      },
+      "level_keys": [
+        "Create PT Workspace 2020_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp8_2025"
+        ],
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025",
+        "activity_section.key": "abf79b71-f8c7-409c-b340-dae37427699f"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp8_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2025",
+        "activity_section.key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp-pt-tech-setup-and-tools2022_2025",
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools2022_2025"
+        ],
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025",
+        "activity_section.key": "55389b37-3c63-4f77-bad8-0eb545872696"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Create PT Workspace 2020_2025",
+        "script_level.level_keys": [
+          "Create PT Workspace 2020_2025"
+        ],
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025",
+        "activity_section.key": "7b2c2920-7c62-4993-a14b-f4a05d60f1f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp8_2025",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp8_2025"
+        ],
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2025",
+        "activity_section.key": "abf79b71-f8c7-409c-b340-dae37427699f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp9-2025",
+        "activity_section.key": "daea4167-b1e2-41d8-9f4b-0e0b0f08ebe3"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Create PT Survival Guide 23-24",
+      "url": "https://docs.google.com/document/d/1W2Rr1AaABirBXR2leyUsKct-CJSQu8PbutRzSYxKw34/edit?usp=sharing",
+      "key": "_key_create_pt_survival_guide_23-24",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "name": "Activity Guide (Version A) - Create PT Mock Exam",
+      "url": "https://docs.google.com/document/d/1_EaG_lr-0CPFqQlPgesAb1GUfc0gLz51qIhYIsy9gSM/edit?usp=drive_link",
+      "key": "activity_guide_version_a_-_create_pt_mock_exam",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_version_a_-_create_pt_mock_exam"
+      }
+    },
+    {
+      "name": "Activity Guide (Version B) - Create PT Mock Exam",
+      "url": "https://docs.google.com/document/d/1fXMYzRmNV_O54AJQEL5SjqSfNHxvOHM7mELDwUvuKvw/edit?usp=drive_link",
+      "key": "activity_guide_version_b_-_create_pt_mock_exam",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_version_b_-_create_pt_mock_exam"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csp9-2023/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp9-2023/standards",
+      "key": "all_standards_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_8"
+      }
+    },
+    {
+      "name": "AP Classroom",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/classroom-resources",
+      "key": "ap_classroom",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_classroom"
+      }
+    },
+    {
+      "name": "AP Computer Science Principles: Student Handouts",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-csp-student-task-directions.pdf",
+      "key": "ap_computer_science_principles_student_handouts",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://apcentral.collegeboard.org/media/pdf/ap-csp-student-task-directions.pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_computer_science_principles_student_handouts"
+      }
+    },
+    {
+      "name": "AP CS Principles Course and Exam Description (CED)",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course",
+      "key": "ap_cs_principles_course_and_exam_description_ced_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_cs_principles_course_and_exam_description_ced_"
+      }
+    },
+    {
+      "name": "Code.org CSP Topic Coverage",
+      "url": "https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing",
+      "key": "code_org_csp_topic_coverage",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
+      "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Create Performance Task: Categories and Questions",
+      "url": "https://apclassroom.collegeboard.org/d/bpc8h31z4a?sui=103,0",
+      "key": "create_performance_task_categories_and_questions",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "create_performance_task_categories_and_questions"
+      }
+    },
+    {
+      "name": "Create Performance Task: Guidelines",
+      "url": "https://apclassroom.collegeboard.org/d/hc0ay18ltr?sui=103,0",
+      "key": "create_performance_task_guidelines",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "create_performance_task_guidelines"
+      }
+    },
+    {
+      "name": "Create Performance Task: Overview",
+      "url": "https://apclassroom.collegeboard.org/d/7wv87bhksv?sui=103,0",
+      "key": "create_performance_task_overview",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "create_performance_task_overview"
+      }
+    },
+    {
+      "name": "Create Performance Task: Pacing Your Project",
+      "url": "https://apclassroom.collegeboard.org/d/95jn7506hh?sui=103,0",
+      "key": "create_performance_task_pacing_your_project",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "create_performance_task_pacing_your_project"
+      }
+    },
+    {
+      "name": "Create PT Mock Exam Description",
+      "url": "https://docs.google.com/document/d/1yjtoFV0skP5iHRRPDJ30ZWHtPx9dU6rMtLHlcqIYfA4/edit?usp=drive_link",
+      "key": "create_pt_mock_exam_description",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_mock_exam_description"
+      }
+    },
+    {
+      "name": "Create PT Prep Unit Slides",
+      "url": "https://docs.google.com/presentation/d/1ZrbWqbI3vLGUJgtYpkByMFP63Wm2knDgy6r_YEtjqnM/template/preview",
+      "key": "create_pt_prep_unit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_prep_unit_slides"
+      }
+    },
+    {
+      "name": "Create PT Survival Guide 23-24",
+      "url": "https://docs.google.com/document/d/1TgVzXFCMqLLu8U2wHCWfj6rC9yUSBAWLOsdaEV8xxF8/edit?usp=sharing",
+      "key": "create_pt_survival_guide_23-24",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 1 - Deep Dive",
+      "url": "https://docs.google.com/presentation/d/1JS5mum0fYIPzMalI2BAj3z7OWcapT6cCx0vP03BYEXI/template/preview",
+      "key": "csp_unit_9_-_lesson_1_-_deep_dive",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_1_-_deep_dive"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 2 - Make a Plan",
+      "url": "https://docs.google.com/presentation/d/18xTvcFOYsOneiO_Dgm99FhFxaitTNhtEjSAClidvDok/template/preview",
+      "key": "csp_unit_9_-_lesson_2_-_make_a_plan",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_2_-_make_a_plan"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Lesson 3 - Complete the Task",
+      "url": "https://docs.google.com/presentation/d/1f1CTBIYAY24GzUz0Z1nm2UseiDDatXzPEQcDAGk3jbg/template/preview",
+      "key": "csp_unit_9_-_lesson_3_-_complete_the_task",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_lesson_3_-_complete_the_task"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Slides",
+      "url": "https://docs.google.com/presentation/d/1ZrbWqbI3vLGUJgtYpkByMFP63Wm2knDgy6r_YEtjqnM/template/preview",
+      "key": "csp_unit_9_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides"
+      }
+    },
+    {
+      "name": "Help Students Sign Up For The AP Exam",
+      "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
+      "key": "help_students_sign_up_for_the_ap_exam",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_for_the_ap_exam"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Unit 9 Lesson 4 - Create PT Mock Exam - Slides",
+      "url": "https://docs.google.com/presentation/d/1Rpvj3kbGbce1x9ednUVH1NSndvefY84s9Q5tU160-ac/template/preview",
+      "key": "unit_9_lesson_4_-_create_pt_mock_exam_-_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_9_lesson_4_-_create_pt_mock_exam_-_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT   Make a Plan",
+        "resource.key": "_key_create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT   Make a Plan",
+        "resource.key": "create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT   Make a Plan",
+        "resource.key": "csp_unit_9_-_lesson_2_-_make_a_plan"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "resource.key": "create_performance_task_categories_and_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "resource.key": "create_performance_task_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "resource.key": "create_performance_task_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "resource.key": "create_performance_task_pacing_your_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "resource.key": "csp_unit_9_-_lesson_3_-_complete_the_task"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "_key_create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "ap_computer_science_principles_student_handouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "create_pt_prep_unit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "csp_unit_9_-_lesson_1_-_deep_dive"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "resource.key": "activity_guide_version_a_-_create_pt_mock_exam"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "resource.key": "activity_guide_version_b_-_create_pt_mock_exam"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "resource.key": "ap_classroom"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "resource.key": "ap_cs_principles_course_and_exam_description_ced_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "resource.key": "create_pt_mock_exam_description"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "resource.key": "unit_9_lesson_4_-_create_pt_mock_exam_-_slides"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_8",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_8",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_for_the_ap_exam",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp9-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp9-2025"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "2e227ddb-3605-4a09-8292-f81c5ca07c53",
+      "properties": {
+        "description": "Describe the scoring guidelines for the Create PT"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "objective.key": "2e227ddb-3605-4a09-8292-f81c5ca07c53"
+      }
+    },
+    {
+      "key": "38adaca5-e4ef-4956-a222-9454c14174fa",
+      "properties": {
+        "description": "Develop strategies for narrowing down topics for the Create PT"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT   Make a Plan",
+        "objective.key": "38adaca5-e4ef-4956-a222-9454c14174fa"
+      }
+    },
+    {
+      "key": "4eede141-bd09-49d2-af73-274f9fb3cab3",
+      "properties": {
+        "description": "Describe the elements and purpose of the Create PT"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT   Make a Plan",
+        "objective.key": "4eede141-bd09-49d2-af73-274f9fb3cab3"
+      }
+    },
+    {
+      "key": "a0ea7e48-30af-4957-923e-7fb68d1c2a64",
+      "properties": {
+        "description": "Evaluate sample Create PT components by applying the scoring guidelines"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "objective.key": "a0ea7e48-30af-4957-923e-7fb68d1c2a64"
+      }
+    },
+    {
+      "key": "cc45d2ef-d4ed-48a7-9b82-2d10d5bc8879",
+      "properties": {
+        "description": "Begin to develop a plan for completing the Create PT"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT   Make a Plan",
+        "objective.key": "cc45d2ef-d4ed-48a7-9b82-2d10d5bc8879"
+      }
+    },
+    {
+      "key": "da58d800-8948-4808-a6b5-c9b5ba95792f",
+      "properties": {
+        "description": "Craft a response to four sample Create PT Prompts"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "objective.key": "da58d800-8948-4808-a6b5-c9b5ba95792f"
+      }
+    },
+    {
+      "key": "eda5aef2-2057-46f4-97cd-8eaef154ed8c",
+      "properties": {
+        "description": "Identify and incorporate a variety of strategies for answering free response questions."
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "objective.key": "eda5aef2-2057-46f4-97cd-8eaef154ed8c"
+      }
+    },
+    {
+      "key": "fd2f9f61-1c24-41de-8c58-d75334266f44",
+      "properties": {
+        "description": "Complete and submit the Create Performance Task."
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "objective.key": "fd2f9f61-1c24-41de-8c58-d75334266f44"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (9 hrs)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.J"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.P.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Written Response Mock Exam",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.J.1"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

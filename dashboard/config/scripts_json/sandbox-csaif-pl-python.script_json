@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-10 15:28:41 UTC",
+    "serialized_at": "2025-03-11 17:06:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -286,6 +286,28 @@
       },
       "seeding_key": {
         "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39",
+        "lesson_activity.key": "3bcc2f96-8fe7-4116-909c-89192e857892"
+      }
+    },
+    {
+      "key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267",
+      "position": 3,
+      "properties": {
+        "progression_name": "Two-way and Nested Selection"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267",
+        "lesson_activity.key": "3bcc2f96-8fe7-4116-909c-89192e857892"
+      }
+    },
+    {
+      "key": "404182a6-1f2b-4dc6-85be-449d549535a8",
+      "position": 4,
+      "properties": {
+        "progression_name": "Ethical Algorithmic Decision Making"
+      },
+      "seeding_key": {
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8",
         "lesson_activity.key": "3bcc2f96-8fe7-4116-909c-89192e857892"
       }
     }
@@ -1420,6 +1442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_advanced_alg_L1_python"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1442,6 +1467,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_loops_L2-Python"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1464,6 +1492,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-loop-modify-code_L3-python"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1486,6 +1517,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-loop-code-L4-python"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1508,6 +1542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_loop-open-response-L5_python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1530,6 +1567,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_conditionals-L6_python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1552,6 +1592,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_methos-conditional-L7-Python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1574,6 +1617,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-conditional-code-L8-python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1596,6 +1642,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_if-while-L9_python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1618,6 +1667,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-conditional-practice-L10-python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1632,6 +1684,226 @@
       },
       "level_keys": [
         "csaif-pl-conditional-practice-L10-python"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_algorithm_review-L11-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      },
+      "level_keys": [
+        "csaif_pl_algorithm_review-L11-Python"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_flowChart_L12_Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      },
+      "level_keys": [
+        "csaif_pl_flowChart_L12_Python"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-predict-nested-L13-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      },
+      "level_keys": [
+        "csaif-PL-predict-nested-L13-python"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 14,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_else-compare-L14-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      },
+      "level_keys": [
+        "csaif_pl_else-compare-L14-python"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 15,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nested-L15-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      },
+      "level_keys": [
+        "csaif-pl-nested-L15-python"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 16,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-assessment-L16-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      },
+      "level_keys": [
+        "csaif-pl-assessment-L16-python"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_real-life-alg_forum_L17_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
+      },
+      "level_keys": [
+        "csaif-pl-_real-life-alg_forum_L17_python"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ethical-algorithmic-decision-L18-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
+      },
+      "level_keys": [
+        "csaif_pl_ethical-algorithmic-decision-L18-python"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 19,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L19-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
+      },
+      "level_keys": [
+        "csaif_pl_ethic-teaching-tips-L19-python"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 20,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson4-L20_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
+      },
+      "level_keys": [
+        "csaif_pl_teacher_Lesson4-L20_python"
       ]
     }
   ],
@@ -2294,6 +2566,126 @@
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-python",
         "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_algorithm_review-L11-Python",
+        "script_level.level_keys": [
+          "csaif_pl_algorithm_review-L11-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_flowChart_L12_Python",
+        "script_level.level_keys": [
+          "csaif_pl_flowChart_L12_Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-predict-nested-L13-python",
+        "script_level.level_keys": [
+          "csaif-PL-predict-nested-L13-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_else-compare-L14-python",
+        "script_level.level_keys": [
+          "csaif_pl_else-compare-L14-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nested-L15-python",
+        "script_level.level_keys": [
+          "csaif-pl-nested-L15-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-assessment-L16-python",
+        "script_level.level_keys": [
+          "csaif-pl-assessment-L16-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_real-life-alg_forum_L17_python",
+        "script_level.level_keys": [
+          "csaif-pl-_real-life-alg_forum_L17_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ethical-algorithmic-decision-L18-python",
+        "script_level.level_keys": [
+          "csaif_pl_ethical-algorithmic-decision-L18-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ethic-teaching-tips-L19-python",
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L19-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_teacher_Lesson4-L20_python",
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson4-L20_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "404182a6-1f2b-4dc6-85be-449d549535a8"
       }
     }
   ],

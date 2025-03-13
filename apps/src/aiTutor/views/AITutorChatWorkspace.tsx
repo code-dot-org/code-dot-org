@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -14,6 +14,7 @@ import style from './ai-tutor.module.scss';
 
 const AITutorChatWorkspace: React.FunctionComponent = () => {
   const conversationContainerRef = useRef<HTMLDivElement>(null);
+  const lastAssistantMessageRef = useRef<HTMLDivElement | null>(null);
   const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
@@ -23,22 +24,59 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   );
 
   const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
+  const prevMessagesCountRef = useRef(storedMessages.length);
+  const prevFeedbackDetailsOpenRef = useRef(feedbackDetailsOpen);
+
+  const lastAssistantMessageIndex = useMemo(
+    () => storedMessages.map(msg => msg.role).lastIndexOf(Role.ASSISTANT),
+    [storedMessages]
+  );
+  const isLastMessageFromAssistant =
+    lastAssistantMessageIndex === storedMessages.length - 1;
+
+  const scrollToBottom = () => {
+    conversationContainerRef.current?.scrollTo({
+      top: conversationContainerRef.current.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollToAssistantMessage = () => {
+    lastAssistantMessageRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   useEffect(() => {
-    // Autoscroll to the bottom of the workspace when new messages, suggested prompts,
-    // or waiting animation is displayed.
+    if (!conversationContainerRef.current) {
+      return;
+    }
+
+    const isNewMessage = storedMessages.length !== prevMessagesCountRef.current;
+    // Tracks if assistant feedback details section was just opened.
+    const isFeedbackOpened =
+      feedbackDetailsOpen && !prevFeedbackDetailsOpenRef.current;
+
     setTimeout(() => {
-      if (conversationContainerRef.current) {
-        conversationContainerRef.current.scrollTo({
-          top: conversationContainerRef.current.scrollHeight,
-          behavior: 'smooth',
-        });
+      if (isNewMessage) {
+        isLastMessageFromAssistant
+          ? scrollToAssistantMessage()
+          : scrollToBottom();
+      } else if (isFeedbackOpened || showSuggestedPrompts) {
+        scrollToBottom();
       }
-    }, 250); // Small delay to ensure DOM updates before scrolling.
+
+      // Update refs to track changes in number of stored messages and whether
+      // assistant feedback details is open.
+      prevMessagesCountRef.current = storedMessages.length;
+      prevFeedbackDetailsOpenRef.current = feedbackDetailsOpen;
+    }, 200); // Small delay to allow DOM updates
   }, [
     storedMessages.length,
-    isWaitingForChatResponse,
     showSuggestedPrompts,
     feedbackDetailsOpen,
+    isLastMessageFromAssistant,
   ]);
 
   return (
@@ -47,23 +85,30 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
         className={style.conversationContainer}
         ref={conversationContainerRef}
       >
-        {storedMessages.map((message, index) => (
-          <ChatMessage
-            key={message.id ?? `message-${index}`}
-            text={message.chatMessageText}
-            role={message.role}
-            customStyles={style}
-            footer={
-              message.role === Role.ASSISTANT &&
-              message.chatMessageText !== initialAssistantGreeting ? (
-                <AssistantMessageFeedback
-                  messageId={message.id}
-                  onDetailsOpenChange={setFeedbackDetailsOpen}
-                />
-              ) : null
-            }
-          />
-        ))}
+        {storedMessages.map((message, index) => {
+          const isLastAssistantMessage = index === lastAssistantMessageIndex;
+          return (
+            <div
+              key={message.id ?? `message-${index}`}
+              ref={isLastAssistantMessage ? lastAssistantMessageRef : null}
+            >
+              <ChatMessage
+                text={message.chatMessageText}
+                role={message.role}
+                customStyles={style}
+                footer={
+                  message.role === Role.ASSISTANT &&
+                  message.chatMessageText !== initialAssistantGreeting ? (
+                    <AssistantMessageFeedback
+                      messageId={message.id}
+                      onDetailsOpenChange={setFeedbackDetailsOpen}
+                    />
+                  ) : null
+                }
+              />
+            </div>
+          );
+        })}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
         <AITutorSuggestedPrompts />
       </div>
@@ -80,7 +125,7 @@ const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
       <div className={style.waitingAnimationWrapper}>
         <img
           src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
+          alt="Waiting for response"
           className={style.waitingForResponse}
         />
       </div>
@@ -88,4 +133,5 @@ const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
   }
   return null;
 };
+
 export default AITutorChatWorkspace;
