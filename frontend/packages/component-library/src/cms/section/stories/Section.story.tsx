@@ -29,6 +29,7 @@ const MultipleTemplate: StoryFn<{components: SectionProps[]}> = args => (
 export const DefaultSection: Story = {
   args: {
     padding: 'l',
+    backgroundImageUrl: bgPattern,
     children: (
       <>
         <Heading2>This is a default section</Heading2>
@@ -101,7 +102,7 @@ export const SectionWithBackgroundPattern: Story = {
     const section = heading.closest('section');
     if (section) {
       const backgroundImage = section.style.backgroundImage;
-      await expect(backgroundImage).toContain('bg-pattern.png');
+      await expect(backgroundImage).toContain('bg-pattern');
     }
   },
 };
@@ -180,6 +181,6 @@ MultipleSections.play = async ({
   // check if the fourth section has the background image set
   if (sectionWithPattern) {
     const backgroundImage = sectionWithPattern.style.backgroundImage;
-    await expect(backgroundImage).toContain('bg-pattern.png');
+    await expect(backgroundImage).toContain('bg-pattern');
   }
 };
