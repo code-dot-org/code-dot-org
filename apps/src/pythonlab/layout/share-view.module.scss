@@ -1,16 +1,30 @@
 @import '@code-dot-org/component-library-styles/colors';
 .shareContainer {
-  display: flex;
-  color: var(--text-neutral-white-fixed);
+  display: inline-grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "sidebar preview";
+  color: var(--text-neutral-primary);
   height: 100%;
+  width: 100%;
 }
 
 .sidebar {
-  width: 300px;
+  grid-area: sidebar;
   margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  gap: 8px;
 }
 
-.consoleContainer {
-  height: 100%;
-  width: 100%;
+.previewContainer {
+  grid-area: preview;
+  width: auto;
+}
+
+.consoleToggle {
+  margin-left: 8px;
+  margin-bottom: 8px;
 }

@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-12T20:43:36.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "# Changing Base Models\nYou can choose different base models to use with your chatbot.\n\nClick the Compare Models button to view more information",
+        "imageUrl": "https://images.code.org/d3b9564983cfced568583feacc244391-Slide41.PNG",
+        "key": "gen-ai-panels-chatbot-overview-d3f0947e-62e1-42b4-a1af-7c29c6c57ed8",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Changing Base Models:\nUse the dropdown to view different base models and compare them. Compare the overview and training data of both models",
+        "imageUrl": "https://images.code.org/c9e2dbaafd9f35f4687a2b99ac552c30-Slide42.PNG",
+        "key": "gen-ai-panels-finetune-overview-1040630f-bae3-4ae1-af7c-f61818318c04",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Changing Base Models:\nUse the dropdown to select your model, then click the Update button",
+        "imageUrl": "https://images.code.org/017a4dd4e0e0e594a680171d86a739e7-Slide43.PNG",
+        "key": "gen-ai-panels-finetune-overview-ecaaeb77-0787-4f88-b9cf-a15700a6e1dd"
+      },
+      {
+        "text": "# Changing Base Models:\nDifferent models can respond differently to the same prompt. Experiment with each model to see what their strengths and weaknesses are!",
+        "imageUrl": "https://images.code.org/c7f96c67151529b75e533a245d045f9b-Slide44.PNG",
+        "key": "gen-ai-panels-finetune-overview_2024-1ba37311-a3ab-4cdc-b23a-b45bb3dd5bb1",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025",
+    "offer_browser_tts": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:43:36.060+00:00\",\"changed\":[\"cloned from \\\"gen-ai-panels-finetune-overview_2024\\\"\"],\"cloned_from\":\"gen-ai-panels-finetune-overview_2024\"}]"
+}]]></config>
+</Panels>

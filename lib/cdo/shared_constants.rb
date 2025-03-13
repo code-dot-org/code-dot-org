@@ -853,6 +853,10 @@ module SharedConstants
     "/join/",
     "/milestone/",
     "/projects/",
-    "/sections/"
+    "/sections/",
+    "/r",
+    "/c",
+    "/oauth_sign_out/",
+    "/certificates/"
   ].freeze
 end
