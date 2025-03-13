@@ -87,16 +87,16 @@
   height: 32px;
 }
 
-// Marketing announcements
+// Teacher promotions
 
-.announcements {
+.promotions {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-inline-start: 40px;
 }
 
-.announcement {
+.promotion {
   width: 280px;
   max-width: 280px;
   min-height: 150px;
@@ -108,13 +108,13 @@
   background-color: $neutral_light;
 }
 
-.announcementImage {
+.promotionImage {
   width: 280px;
   min-height: 160px;
   margin-bottom: 20px;
 }
 
-.announcementButton {
+.promotionButton {
   width: fit-content;
 }
 

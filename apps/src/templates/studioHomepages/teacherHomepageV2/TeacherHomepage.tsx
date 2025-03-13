@@ -13,8 +13,8 @@ import {
   beginEditingSection,
 } from '../../teacherDashboard/teacherSectionsRedux';
 
-import {MarketingAnnouncements} from './MarketingAnnouncements';
 import {SectionList} from './SectionList';
+import {TeacherPromotions} from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -84,7 +84,7 @@ export const TeacherHomepage: React.FC = () => {
               showHiddenOnly={selectedArchiveToggle === 'archived'}
             />
           </div>
-          <MarketingAnnouncements />
+          <TeacherPromotions />
         </div>
       </div>
       <AddSectionDialog />
