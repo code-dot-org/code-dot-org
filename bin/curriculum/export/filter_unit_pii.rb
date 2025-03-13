@@ -38,7 +38,7 @@ $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'exported/filtered', $options[:output_dir])
 FileUtils.mkdir_p($output_dir)
 
-require_relative '../../deployment'
+require_relative '../../../deployment'
 
 start_time = Time.now
 puts "Loading Rails environment..."

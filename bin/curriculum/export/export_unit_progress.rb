@@ -38,7 +38,7 @@ end.parse!
 
 raise "Unit name is required" unless $options[:unit]
 
-require_relative '../../deployment'
+require_relative '../../../deployment'
 require_relative '../../lib/cdo/redshift' if rack_env?(:production)
 
 start_time = Time.now
@@ -53,7 +53,7 @@ def fetch_progress(simple:, unit_name:, level_id:, output_dir:)
     filename =
       simple ?
         'select_user_levels.sql.erb' :
-        'csd3_including_contained_levels_for_stanford.sql.erb'
+        'export_unit_progress.sql.erb'
     pathname = File.expand_path(filename, __dir__)
     query_template = File.read(pathname)
     params = {
