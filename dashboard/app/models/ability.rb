@@ -500,6 +500,10 @@ class Ability
         user.has_ai_tutor_access?
       end
 
+      can :evaluate, :openai_evaluate do
+        user.verified_instructor?
+      end
+
       can [:start_chat_completion, :chat_request], :aichat_request do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end

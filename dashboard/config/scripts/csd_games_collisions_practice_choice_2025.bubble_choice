@@ -1,0 +1,9 @@
+name 'CSD games collisions practice choice_2025'
+display_name 'Collisions Practice'
+description 'Practice using the new collisions blocks.'
+
+sublevels
+level 'CSD U3 collisions types_2025'
+level 'CSD U3 collisions types2_2025'
+level 'CSD U3 collisions types3_2025'
+level 'CSD U3 collisions types4_2025'

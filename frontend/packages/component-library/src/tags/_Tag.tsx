@@ -45,7 +45,11 @@ export interface ClosableTagProps extends BaseTagProps {
   type: 'closable';
   /** onClose callback gives the tag an accessible close button on the
    * right side of the label */
-  onClose: () => void;
+  onClose: (
+    e?:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.KeyboardEvent<HTMLButtonElement>,
+  ) => void;
 }
 
 export type TagProps = DefaultTagProps | ClosableTagProps;
