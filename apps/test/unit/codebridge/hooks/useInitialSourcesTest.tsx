@@ -322,7 +322,11 @@ describe('useInitialSources', () => {
     levelProperties.exemplarSources = {
       ...withExemplarLevelProperties.exemplarSources!,
       files: {
-        ...withExemplarLevelProperties.exemplarSources?.files,
+        ...(
+          withExemplarLevelProperties.exemplarSources as
+            | MultiFileSource
+            | undefined
+        )?.files,
         '1': generateMazeFile([[]], '1'),
       },
     };
@@ -331,7 +335,7 @@ describe('useInitialSources', () => {
     mockAppOptions({isViewingExemplar: true});
 
     const expectedInitialSources = getExpectedMazeSources(
-      withExemplarLevelProperties.exemplarSources,
+      (withExemplarLevelProperties.exemplarSources as MultiFileSource)!,
       levelProperties.serializedMaze!,
       '1'
     );

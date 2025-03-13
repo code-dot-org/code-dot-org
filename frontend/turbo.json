@@ -13,7 +13,7 @@
     "//#format": {},
     "//#format:fix": {},
     "release:dryrun": {
-      "dependsOn": ["lint", "test", "build"]
+      "dependsOn": ["build", "lint", "test"]
     },
     "lint": {
       "dependsOn": ["^lint", "prettier", "stylelint", "typecheck", "//#format"]

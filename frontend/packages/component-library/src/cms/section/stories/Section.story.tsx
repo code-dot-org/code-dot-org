@@ -1,6 +1,8 @@
 import type {Meta, StoryObj, StoryFn} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
+import bgPattern from '@public/images/bg-pattern.png';
+
 import Section, {SectionProps, sectionBackground} from '../index';
 import {BodyOneText, Heading2} from '@/typography';
 
@@ -27,6 +29,7 @@ const MultipleTemplate: StoryFn<{components: SectionProps[]}> = args => (
 export const DefaultSection: Story = {
   args: {
     padding: 'l',
+    backgroundImageUrl: bgPattern,
     children: (
       <>
         <Heading2>This is a default section</Heading2>
@@ -34,12 +37,12 @@ export const DefaultSection: Story = {
       </>
     ),
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText('This is a default section');
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   },
 };
 
@@ -54,22 +57,21 @@ export const SectionWithBackgroundColor: Story = {
       </>
     ),
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText(
       'This is a section with a background color',
     );
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   },
 };
 
 export const SectionWithBackgroundPattern: Story = {
   args: {
     background: sectionBackground.patternPrimary,
-    backgroundImageUrl:
-      'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+    backgroundImageUrl: bgPattern,
     padding: 'l',
     children: (
       <>
@@ -87,20 +89,20 @@ export const SectionWithBackgroundPattern: Story = {
       },
     },
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText(
       'This is a section with a background pattern',
     );
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
 
     // check if background image is set
     const section = heading.closest('section');
     if (section) {
       const backgroundImage = section.style.backgroundImage;
-      expect(backgroundImage).toContain('banner-bg-lines-neutral-light.png');
+      await expect(backgroundImage).toContain('bg-pattern');
     }
   },
 };
@@ -140,8 +142,7 @@ MultipleSections.args = {
     },
     {
       background: sectionBackground.patternDark,
-      backgroundImageUrl:
-        'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+      backgroundImageUrl: bgPattern,
       padding: 'l',
       children: (
         <>
@@ -166,11 +167,20 @@ MultipleSections.play = async ({
     'This is section three',
     'This is section four',
   ];
+  const sectionWithPattern = canvas
+    .getByText('This is section four')
+    .closest('section');
 
   headings.forEach(async headingText => {
     const heading = await canvas.findByText(headingText);
 
     // check if children content is in each section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   });
+
+  // check if the fourth section has the background image set
+  if (sectionWithPattern) {
+    const backgroundImage = sectionWithPattern.style.backgroundImage;
+    await expect(backgroundImage).toContain('bg-pattern');
+  }
 };

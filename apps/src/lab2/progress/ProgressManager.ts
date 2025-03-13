@@ -1,7 +1,9 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {Condition, Validation} from '@cdo/apps/lab2/types';
+import {Condition, ExemplarSettings, Validation} from '@cdo/apps/lab2/types';
+
+import {getAppOptionsEditingExemplar} from '../projects/utils';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
@@ -12,6 +14,9 @@ export abstract class Validator {
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
+  didPassExemplarValidation(): boolean {
+    return false;
+  }
 }
 
 // The current progress validation state.
@@ -51,6 +56,7 @@ export default class ProgressManager {
   private validator: Validator | undefined;
   private onProgressChange: () => void;
   private currentValidationState: ValidationState;
+  private exemplarSettings: ExemplarSettings | undefined;
 
   constructor(onProgressChange: () => void) {
     this.currentValidations = undefined;
@@ -62,8 +68,12 @@ export default class ProgressManager {
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(validations?: Validation[]) {
+  onLevelChange(
+    validations?: Validation[],
+    exemplarSettings?: ExemplarSettings
+  ) {
     this.currentValidations = validations;
+    this.exemplarSettings = exemplarSettings;
     this.resetValidation();
   }
 
@@ -92,6 +102,10 @@ export default class ProgressManager {
     // can be used by multiple validations.
     this.validator.checkConditions();
 
+    const exemplarSettings = this.exemplarSettings;
+    const shouldValidateExample =
+      !getAppOptionsEditingExemplar() && exemplarSettings?.validationEnabled;
+
     // Go through each validation to see if we have a match.
     for (const validation of this.currentValidations) {
       // If it's a non-successful validation (i.e. validation.next is false), then
@@ -110,6 +124,18 @@ export default class ProgressManager {
             this.currentValidationState.satisfied = validation.next;
             this.currentValidationState.message = validation.message;
             this.currentValidationState.callout = validation.callout;
+            if (this.currentValidationState.satisfied && validation.next) {
+              if (shouldValidateExample) {
+                const satisfied = this.validator.didPassExemplarValidation();
+                this.currentValidationState = {
+                  ...this.currentValidationState,
+                  satisfied,
+                  message: satisfied
+                    ? exemplarSettings.validationSuccessMessage!
+                    : exemplarSettings.validationFailureMessage!,
+                };
+              }
+            }
             this.onProgressChange();
           }
           return;
