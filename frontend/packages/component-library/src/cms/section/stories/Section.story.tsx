@@ -166,6 +166,9 @@ MultipleSections.play = async ({
     'This is section three',
     'This is section four',
   ];
+  const sectionWithPattern = canvas
+    .getByText('This is section four')
+    .closest('section');
 
   headings.forEach(async headingText => {
     const heading = await canvas.findByText(headingText);
@@ -173,4 +176,10 @@ MultipleSections.play = async ({
     // check if children content is in each section
     expect(heading).toBeInTheDocument();
   });
+
+  // check if the fourth section has the background image set
+  if (sectionWithPattern) {
+    const backgroundImage = sectionWithPattern.style.backgroundImage;
+    expect(backgroundImage).toContain('bg-pattern.png');
+  }
 };
