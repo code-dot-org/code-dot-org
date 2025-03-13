@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-20 21:12:54 UTC",
+    "serialized_at": "2025-03-11 16:37:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3314,6 +3314,27 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jamila-test-free-response-teacher-stop"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "54869b94-67a8-45ea-b14d-e09c4a980b92"
+      },
+      "level_keys": [
+        "jamila-test-free-response-teacher-stop"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-intro-to-programming-lesson12-level1"
         ],
@@ -3334,7 +3355,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3359,7 +3380,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3384,7 +3405,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3409,7 +3430,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3434,7 +3455,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -3459,7 +3480,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3484,7 +3505,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3509,7 +3530,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3534,7 +3555,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3559,7 +3580,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3584,7 +3605,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3609,7 +3630,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3634,7 +3655,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3659,7 +3680,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3684,7 +3705,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3709,7 +3730,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3734,11 +3755,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson7-slides"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -3756,11 +3780,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson7-parameters"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -3778,11 +3805,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-python-console-lesson7-cfu"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -3800,7 +3830,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3825,7 +3855,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -3850,7 +3880,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3875,7 +3905,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3900,7 +3930,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3925,7 +3955,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3950,7 +3980,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3975,7 +4005,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4000,7 +4030,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4025,7 +4055,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4050,7 +4080,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4075,7 +4105,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4100,7 +4130,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4125,7 +4155,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4150,7 +4180,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4175,7 +4205,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4200,7 +4230,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4225,7 +4255,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4250,7 +4280,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4275,7 +4305,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -4300,7 +4330,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4325,7 +4355,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4350,7 +4380,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4375,7 +4405,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4400,7 +4430,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4425,7 +4455,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4450,7 +4480,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4475,7 +4505,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4500,7 +4530,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4525,7 +4555,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4550,7 +4580,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4575,7 +4605,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4600,7 +4630,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4625,7 +4655,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4650,7 +4680,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4675,7 +4705,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4700,7 +4730,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4725,11 +4755,14 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson5-variables-1b-clone"
+        ],
         "progression": "Variables with AI"
       },
       "bonus": false,
@@ -4747,7 +4780,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4772,7 +4805,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4797,7 +4830,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4822,7 +4855,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4847,7 +4880,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4872,7 +4905,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4897,7 +4930,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4922,7 +4955,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4947,7 +4980,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4972,7 +5005,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4997,7 +5030,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5021,7 +5054,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5046,7 +5079,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5071,7 +5104,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5096,7 +5129,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5121,7 +5154,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5146,7 +5179,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5171,7 +5204,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5196,7 +5229,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5221,7 +5254,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5246,11 +5279,14 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level1-AI-Tutor"
+        ],
         "progression": "Investigate Strategies"
       },
       "bonus": false,
@@ -5268,11 +5304,14 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level3-AI-Tutor"
+        ],
         "progression": "Investigate Strategies"
       },
       "bonus": false,
@@ -5290,11 +5329,14 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level2-AI-Tutor"
+        ],
         "progression": "Investigate Strategies"
       },
       "bonus": false,
@@ -5312,11 +5354,14 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-debugging-strategies-CFU-AI-Tutor"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5334,11 +5379,14 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level6choice-AI-Tutor"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5356,7 +5404,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5381,7 +5429,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5406,7 +5454,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5431,7 +5479,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5456,7 +5504,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 142,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5481,7 +5529,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 143,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5506,7 +5554,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5531,7 +5579,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 145,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5556,7 +5604,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 146,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5581,7 +5629,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 147,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5606,7 +5654,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 148,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5631,7 +5679,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 149,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5656,7 +5704,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 150,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5681,7 +5729,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5706,7 +5754,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 152,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5731,7 +5779,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 153,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5756,7 +5804,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 154,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5781,7 +5829,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 155,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5806,7 +5854,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 156,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5831,7 +5879,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 157,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5856,7 +5904,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 158,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6516,6 +6564,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-intro-to-programming-python",
         "activity_section.key": "4845b095-12e5-4110-b568-684a4336e324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jamila-test-free-response-teacher-stop",
+        "script_level.level_keys": [
+          "jamila-test-free-response-teacher-stop"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "54869b94-67a8-45ea-b14d-e09c4a980b92"
       }
     },
     {

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-04T17:32:06.000Z",
   "level_num": "custom",
@@ -13,16 +14,6 @@
     "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
-      "toolbox": {
-        "type": "category",
-        "blocks": {
-          "Functions": [
-
-          ]
-        },
-        "addFunctionDefinition": true,
-        "addFunctionCalls": true
-      },
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -34,74 +25,83 @@
               "y": 30,
               "deletable": false,
               "movable": false,
+              "editable": false,
               "next": {
                 "block": {
                   "type": "play_sounds_together",
-                  "id": "~{?r[wpL8o2)3;3VQ:v$",
+                  "id": "play_sounds_together",
                   "deletable": false,
-                  "movable": false,
+                  "editable": false,
                   "extraState": {
-                    "disableNextConnection": true
+                    "disableNextConnection": false
                   },
                   "inputs": {
                     "code": {
                       "block": {
-                        "type": "repeat_simple2",
-                        "id": "repeat_simple2",
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
                         "deletable": false,
                         "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
                         "fields": {
-                          "times": 2
+                          "sound": "sabrina_carpenter_espresso/drums_intro"
                         },
-                        "inputs": {
-                          "code": {
-                            "block": {
-                              "type": "play_sounds_together",
-                              "id": "play_sounds_together",
-                              "deletable": false,
-                              "extraState": {
-                                "disableNextConnection": true
-                              },
-                              "inputs": {
-                                "code": {
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "LGD=?aqBflay_b6/r{gD",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/keys_intro"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "6k1FNV..BC5]e|t:+nOs",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                },
+                                "next": {
                                   "block": {
-                                    "type": "play_sound_at_current_location_simple2",
-                                    "id": "play_sound_at_current_location_simple2",
+                                    "type": "play_sounds_sequential",
+                                    "id": ".Z/Y-od?^|]:m}?y}6qc",
                                     "deletable": false,
                                     "editable": false,
                                     "extraState": {
-                                      "disableNextConnection": false
+                                      "disableNextConnection": true
                                     },
-                                    "fields": {
-                                      "sound": "lady_gaga_born_this_way/bass_sub"
-                                    },
-                                    "next": {
-                                      "block": {
-                                        "type": "repeat_simple2",
-                                        "id": ".NgPCO),_L9L`$Q4/7io",
-                                        "deletable": false,
-                                        "editable": false,
-                                        "extraState": {
-                                          "disableNextConnection": true
-                                        },
-                                        "fields": {
-                                          "times": 2
-                                        },
-                                        "inputs": {
-                                          "code": {
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_rest_at_current_location_simple2",
+                                          "id": "XOAaBbg6QGaT7|bN%fGG",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "fields": {
+                                            "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                          },
+                                          "next": {
                                             "block": {
                                               "type": "play_sound_at_current_location_simple2",
-                                              "id": "Z!w}zs5J_n0BnRGhx?K9",
+                                              "id": "Sf{C_hdWrEq`.[Yq;=wZ",
                                               "deletable": false,
                                               "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": true
                                               },
                                               "fields": {
-                                                "sound": "lady_gaga_born_this_way/drums_intro"
+                                                "sound": "sabrina_carpenter_espresso/vocals_now_hes"
                                               }
                                             }
                                           }
@@ -113,39 +113,137 @@
                               }
                             }
                           }
-                        },
-                        "next": {
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "%WAmt@J89hW+xthz.:tB",
+                      "deletable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
                           "block": {
-                            "type": "play_sounds_sequential",
-                            "id": "XB4rmL{|K6i;Rv]?i`M+",
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "Dn}~A`9,5Kd/guZUiFJc",
                             "deletable": false,
+                            "editable": false,
                             "extraState": {
-                              "disableNextConnection": true
+                              "disableNextConnection": false
                             },
-                            "inputs": {
-                              "code": {
-                                "block": {
-                                  "type": "play_sound_at_current_location_simple2",
-                                  "id": "?5QO64cQ`PR?5YH(6Wg$",
-                                  "deletable": false,
-                                  "editable": false,
-                                  "extraState": {
-                                    "disableNextConnection": false
-                                  },
-                                  "fields": {
-                                    "sound": "lady_gaga_born_this_way/vocals_spoken_intro_1"
-                                  },
-                                  "next": {
-                                    "block": {
-                                      "type": "play_sound_at_current_location_simple2",
-                                      "id": "/q4H47aRjU]Pare^=Sry",
-                                      "deletable": false,
-                                      "editable": false,
-                                      "extraState": {
-                                        "disableNextConnection": true
-                                      },
-                                      "fields": {
-                                        "sound": "lady_gaga_born_this_way/vocals_spoken_intro_2"
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "7BP)7oZ9g7@=~Z9d7E}e",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/bass_main"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "KG/v#AEX2Ug@e+2/8)Z[",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "]]F^o2@:j;5p?c|V4^(|",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/guitar_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "R?fM?9Ez1Qu.{Y8sKW^o",
+                                            "deletable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "{Jm2j%%%h2jYA6pa0u8~",
+                          "deletable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "@~hTw|6;PsK8Zx%K;OXz",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": ")n$w/2Q49ej@-ko}_1qU",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "sabrina_carpenter_espresso/bass_main"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "gnjW])VK37D^@],wBe0=",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/vocals_verse_1"
+                                        }
                                       }
                                     }
                                   }
@@ -159,27 +257,127 @@
                   }
                 }
               }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "intro_function",
+              "x": 310,
+              "y": 110,
+              "deletable": false,
+              "extraState": {
+                "procedureId": "9W1hx*?#%gwx-J:D]*F4",
+                "initialDeleteConfig": false,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "intro"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "IRsBu28Oft4/!Y?42#GD",
+              "x": 430,
+              "y": 110,
+              "deletable": false,
+              "extraState": {
+                "procedureId": ",]v_.:K])YS#Mh(JL!u2",
+                "initialDeleteConfig": false,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "verse_function",
+              "x": 550,
+              "y": 110,
+              "deletable": false,
+              "extraState": {
+                "procedureId": "RbcW_#y$GEV6Q5FbFJQp",
+                "initialDeleteConfig": false,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "tu?Q|4E2=}JEQ?AZV+xC",
+              "x": 310,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "name": "intro"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "3r4q9yx`2ZHQ4^B8Wu6A",
+              "x": 550,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "name": "verse"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "=v[tEk92$N=1y-7vRqkX",
+              "x": 430,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "name": "chorus"
+              }
             }
           ]
-        }
-      },
-      "allowChangeStartingPlayheadPosition": true,
-      "packId": "lady_gaga_born_this_way",
-      "sounds": {
-        "lady_gaga_born_this_way": [
-          "vocals_spoken_intro_1",
-          "vocals_spoken_intro_2",
-          "drums_intro",
-          "bass_sub"
+        },
+        "procedures": [
+          {
+            "id": "9W1hx*?#%gwx-J:D]*F4",
+            "name": "intro",
+            "returnTypes": null
+          },
+          {
+            "id": ",]v_.:K])YS#Mh(JL!u2",
+            "name": "chorus",
+            "returnTypes": null
+          },
+          {
+            "id": "RbcW_#y$GEV6Q5FbFJQp",
+            "name": "verse",
+            "returnTypes": null
+          }
         ]
+      },
+      "packId": "sabrina_carpenter_espresso",
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
       }
     },
-    "long_instructions": "Create 2 functions using the existing code: one representing the backing beats and bass, and another representing the spoken lyrics. Then call your functions to recreate the song.\r\n\r\nThe final song should sound identical to the starting song - the only difference is it uses two functions instead of one large chunk of code. For example:\r\n\r\n![](https://images.code.org/d272581c5506d92ee2c04a65893015c8-image-1741111113634.png)",
+    "long_instructions": "Organize this song into `intro`, `chorus`, and `verse` functions. The song itself should not change; only how it is organized. You can accomplish this by dragging-and-dropping the existing code into the functions that are already provided, then dragging the function calls underneath When Run. When you are finished, you should have 3 functions being called in your program:\r\n\r\n![](https://images.code.org/8569ef83b4f04d7f087838d319aadb43-image-1740586923318.png)\r\n\r\n\r\n<details>\r\n  <summary>Validation Details</summary>\r\n  Exemplar Validation, and...\r\n  \r\n  <table>\r\n  <tr style=\"border: 1px solid black; padding: 1px\">\r\n\t  <td>Condition</td>\r\n\t  <td>S/F?</td>\r\n\t  <td>Message</td>\r\n  </tr>\r\n  <tr style=\"border: 1px solid black; padding: 1px\">\r\n\t  <td>3 functions are called in the program</td>\r\n\t  <td>S</td>\r\n\t  <td>You did it!</td>\r\n  </tr>\r\n  <tr style=\"border: 1px solid black; padding: 1px\">\r\n\t  <td>Less than 3 functions are called in the program</td>\r\n\t  <td>F</td>\r\n\t  <td>It looks like your functions are not being called in your program!</td>\r\n  </tr>\r\n  </table>\r\n</details>",
     "encrypted_exemplar_sources": "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\ntXckm9f9ysctf8vD+A1Gks8=\n",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-04T17:32:06.550+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-04 17:35:23 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:38:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:42:19 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:44:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:45:36 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:57:44 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:58:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 18:00:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-04T17:32:06.550+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-04 17:35:23 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:38:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:42:19 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:44:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:45:36 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:57:44 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 17:58:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-04 18:00:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-06 20:21:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-06 20:31:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-06 20:32:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-09 02:43:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-11 23:38:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

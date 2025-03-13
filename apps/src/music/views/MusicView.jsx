@@ -133,6 +133,7 @@ class UnconnectedMusicView extends React.Component {
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
+    exemplarPlaybackEvents: PropTypes.array,
     validationState: PropTypes.object,
   };
 
@@ -153,6 +154,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
+      this.getExemplarPlaybackEvents,
       this.getValidationTimeout,
       this.player,
       this.getPlayingTriggers
@@ -316,12 +318,13 @@ class UnconnectedMusicView extends React.Component {
 
     let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
 
-    // Prevent "Select a track" dialog from showing in Toolbox Mode.
-    if (isToolboxMode) {
+    // Prevent "Select a track" dialog from special mode.
+    if (isToolboxMode || isStartMode || isEditingExemplar) {
       packId = packId || DEFAULT_PACK;
     }
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
+    this.setExemplarPlaybackEvents();
 
     this.props.isPlayView
       ? this.musicBlocklyWorkspace.initHeadless()
@@ -479,15 +482,23 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    const isEditingExemplar = getAppOptionsEditingExemplar();
+
+    let packId = this.props.levelProperties?.levelData?.packId;
+    // Prevent "Select a track" dialog from special mode.
+    if (isToolboxMode || isStartMode || isEditingExemplar) {
+      packId = packId || DEFAULT_PACK;
+    }
+
     // Clear the pack, unless it came from the level data itself.
-    if (!this.props.levelProperties?.levelData?.packId) {
+    if (!packId) {
       this.props.setPackId(null);
       this.library.setCurrentPackId(null);
     }
 
-    // Check if we are in start mode, and if so, load sources from the default JSON.
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    // In Start mode, load sources from the default JSON.
     if (isStartMode) {
       const startSourcesFilename = 'startSources' + this.props.blockMode;
       const defaultSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
@@ -525,6 +536,25 @@ class UnconnectedMusicView extends React.Component {
 
   getExemplarSources = () => {
     return this.props.levelProperties?.exemplarSources;
+  };
+
+  getExemplarPlaybackEvents = () => {
+    return this.exemplarPlaybackEvents || [];
+  };
+
+  setExemplarPlaybackEvents = () => {
+    const exemplarSources = this.getExemplarSources();
+    if (!exemplarSources) {
+      return [];
+    }
+    const workspace = new MusicBlocklyWorkspace();
+    const sequencer = new Simple2Sequencer();
+    workspace.initHeadless();
+    workspace.loadCode(exemplarSources);
+    workspace.compileSong({Sequencer: sequencer}, BlockMode.SIMPLE2);
+    workspace.executeCompiledSong();
+    this.exemplarPlaybackEvents = sequencer.getPlaybackEvents();
+    workspace.dispose();
   };
 
   onBlockSpaceChange = e => {
@@ -854,6 +884,7 @@ class UnconnectedMusicView extends React.Component {
           }
           analyticsReporter={this.analyticsReporter}
           blocklyWorkspace={this.musicBlocklyWorkspace}
+          exemplarPlaybackEvents={this.getExemplarPlaybackEvents()}
         />
         <Callouts />
       </AnalyticsContext.Provider>

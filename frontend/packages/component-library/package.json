@@ -18,6 +18,22 @@
   "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
+    "./accordion": {
+      "types": {
+        "import": "./dist/esm/accordion/index.d.ts",
+        "require": "./dist/cjs/accordion/index.d.ts"
+      },
+      "import": "./dist/esm/accordion/index.mjs",
+      "require": "./dist/cjs/accordion/index.js"
+    },
+    "./accordrion/faqAccordion": {
+      "types": {
+        "import": "./dist/esm/accordion/faqAccordion/index.d.ts",
+        "require": "./dist/cjs/accordion/faqAccordion/index.d.ts"
+      },
+      "import": "./dist/esm/accordion/faqAccordion/index.mjs",
+      "require": "./dist/cjs/accordion/faqAccordion/index.js"
+    },
     "./alert": {
       "types": {
         "import": "./dist/esm/alert/index.d.ts",
@@ -43,6 +59,15 @@
       "require": "./dist/cjs/button/index.js"
     },
     "./button/index.css": "./dist/esm/button/index.css",
+    "./carousel": {
+      "types": {
+        "import": "./dist/esm/carousel/index.d.ts",
+        "require": "./dist/cjs/carousel/index.d.ts"
+      },
+      "import": "./dist/esm/carousel/index.mjs",
+      "require": "./dist/cjs/carousel/index.js"
+    },
+    "./carousel/index.css": "./dist/esm/carousel/index.css",
     "./checkbox": {
       "types": {
         "import": "./dist/esm/checkbox/index.d.ts",
@@ -180,6 +205,14 @@
       "import": "./dist/esm/formFieldWrapper/index.mjs",
       "require": "./dist/cjs/formFieldWrapper/index.js"
     },
+    "./cms/image": {
+      "types": {
+        "import": "./dist/esm/cms/image/index.d.ts",
+        "require": "./dist/cjs/cms/image/index.d.ts"
+      },
+      "import": "./dist/esm/cms/image/index.mjs",
+      "require": "./dist/cjs/cms/image/index.js"
+    },
     "./link": {
       "types": {
         "import": "./dist/esm/link/index.d.ts",
@@ -212,6 +245,14 @@
       },
       "import": "./dist/esm/radioButton/index.mjs",
       "require": "./dist/cjs/radioButton/index.js"
+    },
+    "./cms/iframe": {
+      "types": {
+        "import": "./dist/esm/cms/iframe/index.d.ts",
+        "require": "./dist/cjs/cms/iframe/index.d.ts"
+      },
+      "import": "./dist/esm/cms/iframe/index.mjs",
+      "require": "./dist/cjs/cms/iframe/index.js"
     },
     "./cms/section": {
       "types": {
@@ -323,13 +364,13 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "dompurify": "^3.2.4",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
-    "@contentful/experiences-sdk-react": "1.30.3",
     "@eslint/js": "^9.15.0",
     "@release-it/conventional-changelog": "^10.0.0",
     "@swc/core": "^1.9.3",
@@ -371,6 +412,7 @@
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
+    "dompurify": "^3.2.4",
     "react": ">=16",
     "react-dom": ">=16",
     "swiper": "^11.0.5"

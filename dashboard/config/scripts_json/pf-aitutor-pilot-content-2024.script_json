@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-04 22:51:07 UTC",
+    "serialized_at": "2025-03-12 18:13:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9002,6 +9002,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/pf-aitutor-pilot-content-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/pf-aitutor-pilot-content-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/pf-aitutor-pilot-content-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Career Exploration",
       "url": "https://docs.google.com/document/d/1U4hP8EoWpT9LciVkr6JpCZhdyTAGoXpq6mwrTUOoHLY/edit?tab=t.0",
       "key": "career_exploration",
@@ -9556,6 +9589,24 @@
     {
       "seeding_key": {
         "resource.key": "ai_chat_lab_faq",
+        "script.name": "pf-aitutor-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "pf-aitutor-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "pf-aitutor-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "pf-aitutor-pilot-content-2024"
       }
     },
@@ -10303,7 +10354,160 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms IRL",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms IRL",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms IRL",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computing Careers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditional Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging Strategies",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging Strategies",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging Strategies",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Decomposition",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions and Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Way and Nested Selection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Way and Nested Selection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Two-Way and Nested Selection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables and Data Flow",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Working with Objects",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Working with Objects",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -4,10 +4,7 @@ import {
   SOURCE_REDUCER_ACTIONS,
   useSourceUtilities,
 } from '@codebridge/codebridgeContext';
-import {FileBrowser} from '@codebridge/FileBrowser';
 import {useReducerWithCallback} from '@codebridge/hooks';
-import {InfoPanel} from '@codebridge/InfoPanel';
-import {SideBar} from '@codebridge/SideBar';
 import {
   ConfigType,
   SetProjectFunction,
@@ -18,13 +15,11 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
-import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import Workspace from './Workspace';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
@@ -61,6 +56,7 @@ export const Codebridge = React.memo(
       new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
     );
     const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
+    const isShareView = useAppSelector(state => state.lab.isShareView);
 
     const sourceUtilities = useSourceUtilities(dispatch);
 
@@ -73,80 +69,19 @@ export const Codebridge = React.memo(
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
     const innerLayout = useMemo(() => {
+      if (
+        isShareView &&
+        config.layoutComponents.share &&
+        experiments.isEnabled(experiments.CODEBRIDGE_SHARE)
+      ) {
+        return config.layoutComponents.share;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = 'horizontal';
       }
-      if (config.layoutComponents) {
-        // If we were provided layout components, use them directly.
-        return {
-          children: config.layoutComponents[currentLayout],
-          style: undefined,
-          className: undefined,
-        };
-      } else {
-        // Otherwise, get the components from the grid layout.
-        const ComponentMap = {
-          'file-browser': FileBrowser,
-          'side-bar': SideBar,
-          'file-preview': FilePreview,
-          'info-panel': config.Instructions || InfoPanel,
-          workspace: Workspace,
-        };
-        let gridLayout: string;
-        let gridLayoutRows: string;
-        let gridLayoutColumns: string;
-        if (
-          config.gridLayout &&
-          config.gridLayoutRows &&
-          config.gridLayoutColumns
-        ) {
-          gridLayout = config.gridLayout;
-          gridLayoutRows = config.gridLayoutRows;
-          gridLayoutColumns = config.gridLayoutColumns;
-        } else if (config.labeledGridLayouts && config.activeLayout) {
-          const labeledLayout = config.labeledGridLayouts[config.activeLayout];
-          gridLayout = labeledLayout.gridLayout;
-          gridLayoutRows = labeledLayout.gridLayoutRows;
-          gridLayoutColumns = labeledLayout.gridLayoutColumns;
-        } else {
-          throw new Error('Cannot render codebridge - no layout provided');
-        }
-        // gridLayout is a css string that defines the components in the grid layout.
-        // In order to find which components are in the grid layout, we remove all quotes
-        // from the string and tokenize it.
-        const gridLayoutKeys = gridLayout
-          .trim()
-          .replaceAll(`"`, '')
-          .split(' ')
-          .map(key => key.trim());
-        const children = (
-          Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>
-        )
-          .filter(key => gridLayoutKeys.includes(key))
-          .map(key => {
-            const Component = ComponentMap[key];
-            return <Component key={key} />;
-          });
-        return {
-          children,
-          style: {
-            gridTemplateAreas: gridLayout,
-            gridTemplateRows: gridLayoutRows,
-            gridTemplateColumns: gridLayoutColumns,
-          },
-          className: moduleStyles.codebridgeGridContainer,
-        };
-      }
-    }, [
-      config.Instructions,
-      config.activeLayout,
-      config.gridLayout,
-      config.gridLayoutColumns,
-      config.gridLayoutRows,
-      config.labeledGridLayouts,
-      config.layoutComponents,
-    ]);
+      return config.layoutComponents[currentLayout];
+    }, [config.activeLayout, config.layoutComponents, isShareView]);
 
     const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
@@ -171,14 +106,8 @@ export const Codebridge = React.memo(
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>
-          <div
-            className={classNames(
-              moduleStyles.codebridgeContainer,
-              innerLayout.className
-            )}
-            style={innerLayout.style}
-          >
-            {innerLayout.children}
+          <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {innerLayout}
           </div>
         </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>

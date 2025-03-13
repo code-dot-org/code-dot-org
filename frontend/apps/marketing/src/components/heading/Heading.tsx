@@ -1,4 +1,3 @@
-import '@code-dot-org/component-library/typography/index.css';
 import {
   default as Typography,
   VisualAppearance,
@@ -6,6 +5,8 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {ReactNode} from 'react';
 import classNames from 'classnames';
+
+import {RemoveMarginBottomProps} from '@/components/common/types';
 
 import moduleStyles from './heading.module.scss';
 
@@ -23,7 +24,7 @@ type HeadingSemanticTag = Extract<
   'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 >;
 
-type HeadingProps = {
+type HeadingProps = RemoveMarginBottomProps & {
   /** Heading content */
   children: ReactNode;
   /** Heading visual appearance */
@@ -47,11 +48,16 @@ const headingVisualAppearanceToSemanticTagMap: Record<
 const Heading: React.FunctionComponent<HeadingProps> = ({
   visualAppearance,
   children,
+  removeMarginBottom,
   className,
 }) => (
   <Typography
     semanticTag={headingVisualAppearanceToSemanticTagMap[visualAppearance]}
-    className={classNames(moduleStyles.heading, className)}
+    className={classNames(
+      moduleStyles.heading,
+      removeMarginBottom && moduleStyles['heading-removeMarginBottom'],
+      className,
+    )}
     visualAppearance={visualAppearance}
   >
     {children}

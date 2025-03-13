@@ -10,4 +10,8 @@ h6 {
   &.heading {
     margin-top: 0;
   }
+
+  &.heading-removeMarginBottom {
+    @include mixins.common-margin-bottom-none;
+  }
 }

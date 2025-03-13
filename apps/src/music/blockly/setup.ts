@@ -37,19 +37,17 @@ import {BlockConfig} from './types';
  */
 export function setUpBlocklyForMusicLab() {
   backupFunctionDefinitons();
-  Blockly.Extensions.register(
+
+  safeRegisterExtension(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
   );
+  safeRegisterExtension(FIELD_EFFECTS_EXTENSION, effectsFieldExtension);
+  safeRegisterExtension(FIELD_SOUNDS_VALIDATOR, fieldSoundsValidator);
+  safeRegisterExtension(FIELD_PATTERNS_VALIDATOR, fieldPatternsValidator);
 
-  Blockly.Extensions.register(FIELD_EFFECTS_EXTENSION, effectsFieldExtension);
-  Blockly.Extensions.register(FIELD_SOUNDS_VALIDATOR, fieldSoundsValidator);
-  Blockly.Extensions.register(FIELD_PATTERNS_VALIDATOR, fieldPatternsValidator);
-  Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
-  Blockly.Extensions.registerMutator(
-    NEXT_CONNECTION_MUTATOR,
-    nextConnectionMutator
-  );
+  safeRegisterMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
+  safeRegisterMutator(NEXT_CONNECTION_MUTATOR, nextConnectionMutator);
 
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
   // after converting musicBlocks to TypeScript.
@@ -76,4 +74,21 @@ export function setUpBlocklyForMusicLab() {
   // Rename the new function placeholder text for Music Lab specifically.
   Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
     musicI18n.blockly_functionNamePlaceholder();
+}
+
+// Register an extension after checking if it is already registered.
+function safeRegisterExtension(name: string, initFn: () => void) {
+  if (Blockly.Extensions.isRegistered(name)) {
+    Blockly.Extensions.unregister(name);
+  }
+  Blockly.Extensions.register(name, initFn);
+}
+
+// Mixin objects use an any type in Blockly core
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function safeRegisterMutator(name: string, mixinObj: any) {
+  if (Blockly.Extensions.isRegistered(name)) {
+    Blockly.Extensions.unregister(name);
+  }
+  Blockly.Extensions.registerMutator(name, mixinObj);
 }

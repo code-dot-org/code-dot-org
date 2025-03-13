@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-26 20:09:49 UTC",
+    "serialized_at": "2025-03-12 18:43:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -464,6 +464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_02"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -486,6 +489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_data"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -508,6 +514,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_data_02"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -530,6 +539,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_privacy"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -552,6 +564,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_privacy_02"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -574,6 +589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption_03"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -596,12 +614,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_02"
+          "csaif_pl_2_encryption"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -609,7 +630,7 @@
         "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
       },
       "level_keys": [
-        "csaif_pl_2_encryption_02"
+        "csaif_pl_2_encryption"
       ]
     },
     {
@@ -618,6 +639,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption_04"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -640,12 +664,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_encryption_02"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_encryption"
+          "csaif_pl_2_encryption_02"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -653,7 +680,7 @@
         "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
       },
       "level_keys": [
-        "csaif_pl_2_encryption"
+        "csaif_pl_2_encryption_02"
       ]
     },
     {
@@ -662,6 +689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_vocabulary"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -898,9 +928,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_encryption_02",
+        "level.key": "csaif_pl_2_encryption",
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_02"
+          "csaif_pl_2_encryption"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -922,9 +952,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_encryption",
+        "level.key": "csaif_pl_2_encryption_02",
         "script_level.level_keys": [
-          "csaif_pl_2_encryption"
+          "csaif_pl_2_encryption_02"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

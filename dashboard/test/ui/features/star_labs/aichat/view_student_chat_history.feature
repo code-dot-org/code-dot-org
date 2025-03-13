@@ -1,5 +1,4 @@
 @no_mobile
-@no_ci
 Feature: Teacher viewing student chat history in AI Chat Lab
 
   Teachers can view student chat history and interact with the student's customized models in AI Chat Lab.
@@ -22,6 +21,8 @@ Background:
   And I click selector "#uitest-chat-submit"
   Then I wait until element "[aria-label='AI bot chat message']" is visible
   And element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(224, 248, 249)"
+  # Note that it's important that we use the word "Damn" here, as our stubbed version of our content moderation service
+  # used in Drone is configured to flag this word.
   When I press keys "Damn" for element "#uitest-chat-textarea"
   And I wait until element "#uitest-chat-submit" is enabled
   And I click selector "#uitest-chat-submit"

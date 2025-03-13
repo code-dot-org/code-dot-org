@@ -304,6 +304,8 @@ module LevelsHelper
 
     view_options(server_level_id: @level.id)
 
+    view_options(stay_on_level_after_submit: @level.stay_on_level_after_submit?)
+
     if @script_level
       view_options(
         lesson_position: @script_level.lesson.absolute_position,

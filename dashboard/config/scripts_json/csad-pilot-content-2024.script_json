@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-04 22:46:30 UTC",
+    "serialized_at": "2025-03-12 18:50:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -463,6 +463,7 @@
       "key": "b47a161b-512e-41aa-9137-ecd18ed38994",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1633,7 +1634,7 @@
       "key": "117b6be0-5df6-44fc-a0f8-3dab6ff1f612",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
         "duration": "20",
         "name": "Troubleshooting",
         "progression_name": "Troubleshooting",
@@ -1720,7 +1721,7 @@
       "key": "bb84d681-fc09-42d6-b0e1-7dd501e7288d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 6, Level 3. Students complete the activity guide with the chatbot.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.",
         "progression_name": "Optimization"
       },
       "seeding_key": {
@@ -1746,17 +1747,6 @@
       }
     },
     {
-      "key": "b31db3d4-1d44-435f-8219-8cac1689f551",
-      "position": 9,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551",
-        "lesson_activity.key": "2fb2e33e-2059-4da7-a118-e5f682bc10fb"
-      }
-    },
-    {
       "key": "91bc4ab2-c2fb-45f2-85f2-936fd28261bb",
       "position": 1,
       "properties": {
@@ -1770,6 +1760,17 @@
       },
       "seeding_key": {
         "activity_section.key": "91bc4ab2-c2fb-45f2-85f2-936fd28261bb",
+        "lesson_activity.key": "0dfb56cb-e7ae-4854-a62e-aa625e25fcfd"
+      }
+    },
+    {
+      "key": "59c70782-a572-4788-a9fd-b248c1039eb4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4",
         "lesson_activity.key": "0dfb56cb-e7ae-4854-a62e-aa625e25fcfd"
       }
     },
@@ -4092,7 +4093,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4"
       },
       "level_keys": [
         "computer-systems-lesson5-level4-2024"
@@ -5256,7 +5257,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4"
       }
     },
     {
@@ -5751,6 +5752,39 @@
       },
       "seeding_key": {
         "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csad-pilot-content-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csad-pilot-content-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csad-pilot-content-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -6664,6 +6698,24 @@
     },
     {
       "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "computer_systems_devices_unit_guide",
         "script.name": "csad-pilot-content-2024"
       }
@@ -7312,7 +7364,237 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -1,4 +1,3 @@
-import '@code-dot-org/component-library/button/index.css';
 import {
   ButtonColor,
   ButtonType,

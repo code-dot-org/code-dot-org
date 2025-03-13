@@ -38,14 +38,29 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
   const [tooltipStyles, setTooltipStyles] = useState<React.CSSProperties>({});
   const tooltipRef = useRef<HTMLDivElement | null>(null);
+  const hideTimeoutRef = useRef<number | null>(null);
 
   // Define the additional event handlers
   const handleShowTooltip = (
     show: boolean,
     event: React.SyntheticEvent<HTMLElement>,
+    isTooltip: boolean = false,
   ) => {
     setShowTooltip(show);
-    setNodePosition(show ? (event.target as HTMLElement) : null);
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+      hideTimeoutRef.current = null;
+    }
+    if (!isTooltip) {
+      setNodePosition(show ? (event.target as HTMLElement) : null);
+    }
+  };
+
+  const handleHideTooltip = () => {
+    hideTimeoutRef.current = window.setTimeout(() => {
+      setShowTooltip(false);
+      setNodePosition(null);
+    }, 100); // Allows for small but visible close delay
   };
 
   const tailLength = tailLengths[tooltipProps.size || 'm'];
@@ -85,12 +100,31 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     updateTooltipStyles,
   ]);
 
+  // Effect to handle the Escape key to close the tooltip
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && !event.defaultPrevented) {
+        if (event.target instanceof HTMLElement) {
+          event.target.blur(); // Remove focus from the container
+        } else {
+          handleHideTooltip(); // Hide the tooltip if unable to remove focus natively
+        }
+      }
+    };
+    if (showTooltip) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [showTooltip]);
+
   const tooltipStyleProps: React.CSSProperties = {
     visibility: showTooltip ? 'visible' : 'hidden',
     ...tooltipStyles,
   };
 
-  // Check if children is a valid React element and clone it with ariaDescribedBy attribute
+  // Check if children prop is a valid React element and clone it with ariaDescribedBy attribute
   // and additional event handlers to make sure the tooltip is displayed correctly
   const componentToWrap =
     isValidElement<HTMLAttributes<HTMLElement>>(children) &&
@@ -100,8 +134,8 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         handleShowTooltip(true, event);
         children.props.onFocus?.(event);
       },
-      onBlur: (event: React.FocusEvent<HTMLElement, Element>) => {
-        handleShowTooltip(false, event);
+      onBlur: (event: React.FocusEvent<HTMLElement>) => {
+        handleHideTooltip();
         children.props.onBlur?.(event);
       },
       onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
@@ -109,7 +143,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         children.props.onMouseEnter?.(event);
       },
       onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-        handleShowTooltip(false, event);
+        handleHideTooltip();
         children.props.onMouseLeave?.(event);
       },
     });
@@ -123,6 +157,8 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
             {...tooltipProps}
             ref={tooltipRef}
             style={tooltipStyleProps}
+            onMouseEnter={event => handleShowTooltip(true, event, true)}
+            onMouseLeave={handleHideTooltip}
           />,
           document.body,
         )}
