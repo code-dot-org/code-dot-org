@@ -23,6 +23,7 @@ import teacherSections, {
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {
@@ -33,6 +34,7 @@ import {
   stubFetch,
   studentAlice,
   successJsonAll,
+  csp2025Rubric,
 } from './rubricTestHelper';
 
 async function wait() {
@@ -529,5 +531,41 @@ describe('RubricFloatingActionButton', () => {
       name: i18n.openOrCloseTeachingAssistant(),
     });
     expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
+  });
+
+  it('does not show FAB when rubric is for csp-2025 and experiment is not enabled', async () => {
+    experiments.isEnabled = jest.fn(() => false);
+    render(
+      <Provider store={store}>
+        <RubricFloatingActionButton
+          {...defaultProps}
+          rubric={csp2025Rubric}
+          sectionId={sectionId}
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    expect(
+      screen.queryByRole('img', {name: 'TA overlay'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('does show FAB when rubric is for csp-2025 and experiment is enabled', async () => {
+    experiments.isEnabled = jest.fn(() => true);
+    render(
+      <Provider store={store}>
+        <RubricFloatingActionButton
+          {...defaultProps}
+          rubric={csp2025Rubric}
+          sectionId={sectionId}
+        />
+      </Provider>
+    );
+
+    await wait();
+
+    expect(screen.getByRole('img', {name: 'TA overlay'})).toBeInTheDocument();
   });
 });

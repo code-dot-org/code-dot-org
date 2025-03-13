@@ -89,6 +89,45 @@ export const defaultRubric = {
     name: 'test_level',
     position: 7,
   },
+  course: {
+    name: 'csd-2024',
+  },
+};
+
+export const csp2025Rubric = {
+  id: 1,
+  learningGoals: [
+    {
+      id: 1,
+      key: '1',
+      learningGoal: 'goal 1',
+      aiEnabled: false,
+      evidenceLevels: [{understanding: 1, id: 1, teacherDescription: 'test'}],
+    },
+    {
+      id: 2,
+      key: '2',
+      learningGoal: 'goal 2',
+      aiEnabled: true,
+      evidenceLevels: [{understanding: 1, id: 2, teacherDescription: 'test'}],
+    },
+  ],
+  script: {
+    id: 42,
+  },
+  lesson: {
+    id: 33,
+    position: 3,
+    name: 'Data Structures',
+  },
+  level: {
+    id: 107,
+    name: 'test_level',
+    position: 7,
+  },
+  course: {
+    name: 'csp-2025',
+  },
 };
 
 // students

@@ -215,7 +215,7 @@ function RubricFloatingActionButton({
     : style.floatingActionButton;
 
   if (
-    rubric.course !== 'csp-2025' ||
+    rubric.course.name !== 'csp-2025' ||
     experiments.isEnabled('csp-rubrics-enabled')
   ) {
     return (
