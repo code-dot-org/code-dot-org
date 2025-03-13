@@ -2,7 +2,11 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {capitalizeFirstLetter} from '@cdo/apps/blockly/utils';
-import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLesson,
+  canChangeLevelWithoutFade,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -13,7 +17,7 @@ export interface LoadingProps {
   isLoading: boolean;
 }
 
-const noFade = window.location.href.includes('lab2-no-fade');
+const noFade = queryParams('lab2-no-fade') === 'true';
 
 const Loading: React.FunctionComponent<LoadingProps> = ({
   isLoading,
@@ -29,6 +33,12 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
   const backgroundSuffix = useAppSelector(state =>
     capitalizeFirstLetter(getCurrentLesson(state)?.background || 'dark')
   );
+
+  const skipFade = useAppSelector(state => canChangeLevelWithoutFade(state));
+
+  if (skipFade) {
+    return null;
+  }
 
   return (
     <div

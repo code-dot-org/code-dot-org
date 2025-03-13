@@ -3,6 +3,7 @@
 
 import _ from 'lodash';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
@@ -95,6 +96,22 @@ export const getProgressLevelType = state => {
   } else {
     return undefined;
   }
+};
+
+export const canChangeLevelWithoutFade = state => {
+  const currentLevel = getCurrentLevel(state);
+  const previousLevel = levelById(
+    state.progress,
+    state.progress.currentLessonId,
+    state.progress.previousLevelId
+  );
+
+  return (
+    queryParams('lab2-no-fade-template') === 'true' &&
+    currentLevel?.projectTemplateLevelName &&
+    currentLevel?.projectTemplateLevelName ===
+      previousLevel?.projectTemplateLevelName
+  );
 };
 
 /**

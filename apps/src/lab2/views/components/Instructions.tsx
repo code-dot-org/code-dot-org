@@ -15,6 +15,7 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {isLabLoading} from '../../lab2Redux';
 import {ThemeContext} from '../ThemeWrapper';
 
 import PredictQuestion from './PredictQuestion';
@@ -72,6 +73,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
 
+  const isLoading: boolean = useSelector(isLabLoading);
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
@@ -83,7 +85,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   return (
     <InstructionsPanel
-      text={instructionsText}
+      text={isLoading ? undefined : instructionsText}
       message={message || undefined}
       messageIndex={index}
       theme={theme}
@@ -105,7 +107,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
 interface InstructionsPanelProps {
   /** Primary instructions text to display. */
-  text: string;
+  text?: string;
   /** Optional message to display under the main text. This is typically a validation message. */
   message?: string;
   /** Key for rendering the optional message. A unique value ensures the appearance animation shows. */
@@ -245,7 +247,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             </div>
           </div>
         )}
-        {(useMessage || canShowNextButton) && (
+        {(useMessage || canShowNextButton) && text && (
           <div
             key={useMessageIndex + ' - ' + useMessage}
             id="instructions-feedback"

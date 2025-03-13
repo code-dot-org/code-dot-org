@@ -63,6 +63,7 @@ export interface Level {
   title: number;
   url: string;
   path: string;
+  project_template_level_name: string | null;
   scriptLevelId: string;
   status?: string;
   sublevels?: Level[];

@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 
 import './small-footer-music-overrides.scss';
 
+import {canChangeLevelWithoutFade} from '@cdo/apps/code-studio/progressReduxSelectors';
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {
@@ -135,6 +136,7 @@ class UnconnectedMusicView extends React.Component {
     playbackEvents: PropTypes.array,
     exemplarPlaybackEvents: PropTypes.array,
     validationState: PropTypes.object,
+    canChangeLevelWithoutFade: PropTypes.bool,
   };
 
   constructor(props) {
@@ -230,7 +232,10 @@ class UnconnectedMusicView extends React.Component {
         hasLoadedInitialSounds: false,
       });
       this.props.clearCallout();
-      this.musicBlocklyWorkspace.dispose();
+
+      if (!this.props.canChangeLevelWithoutFade) {
+        this.musicBlocklyWorkspace.dispose();
+      }
 
       // Clear any coypright information in the footer.
       setExtraCopyrightContent(undefined);
@@ -917,6 +922,7 @@ const MusicView = connect(
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
     validationState: state.lab.validationState,
+    canChangeLevelWithoutFade: canChangeLevelWithoutFade(state),
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
