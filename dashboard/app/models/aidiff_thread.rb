@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: aichat_threads
+# Table name: aidiff_threads
 #
 #  id          :bigint           not null, primary key
 #  user_id     :bigint           not null
@@ -14,9 +14,9 @@
 #
 # Indexes
 #
-#  index_aichat_threads_on_user_id  (user_id)
+#  index_aidiff_threads_on_user_id  (user_id)
 #
-class AichatThread < ApplicationRecord
+class AidiffThread < ApplicationRecord
   belongs_to :user
-  has_many :aichat_messages
+  has_many :aidiff_messages
 end

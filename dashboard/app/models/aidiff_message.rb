@@ -1,9 +1,9 @@
 # == Schema Information
 #
-# Table name: aichat_messages
+# Table name: aidiff_messages
 #
 #  id               :bigint           not null, primary key
-#  aichat_thread_id :bigint           not null
+#  aidiff_thread_id :bigint           not null
 #  external_id      :text(65535)      not null
 #  role             :integer          not null
 #  content          :text(65535)      not null
@@ -13,11 +13,11 @@
 #
 # Indexes
 #
-#  index_aichat_messages_on_aichat_thread_id  (aichat_thread_id)
+#  index_aidiff_messages_on_aidiff_thread_id  (aidiff_thread_id)
 #
-class AichatMessage < ApplicationRecord
-  belongs_to :aichat_thread
-  has_one :aichat_message_feedback, dependent: :destroy
+class AidiffMessage < ApplicationRecord
+  belongs_to :aidiff_thread
+  has_one :aidiff_message_feedback, dependent: :destroy
 
   enum role: {
     user: 1,

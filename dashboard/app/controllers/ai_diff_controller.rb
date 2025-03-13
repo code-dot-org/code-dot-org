@@ -20,7 +20,7 @@ class AiDiffController < ApplicationController
     response_body = get_response_body(session_id)
     # get or create thread obj
     begin
-      @thread = AichatThread.find_or_create_by!(
+      @thread = AidiffThread.find_or_create_by!(
         user_id: current_user.id,
         external_id: response_body[:session_id],
         llm_version: AiDiffBedrockHelper::MODEL_ID,
@@ -35,8 +35,8 @@ class AiDiffController < ApplicationController
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
       # Add user message to thread
       begin
-        AichatMessage.create!(
-          aichat_thread_id: @thread.id,
+        AidiffMessage.create!(
+          aidiff_thread_id: @thread.id,
           external_id: @thread.external_id,
           role: :user,
           content: params[:inputText],
@@ -48,8 +48,8 @@ class AiDiffController < ApplicationController
 
       # Add response message to thread
       begin
-        assistant_message = AichatMessage.create!(
-          aichat_thread_id: @thread.id,
+        assistant_message = AidiffMessage.create!(
+          aidiff_thread_id: @thread.id,
           external_id: @thread.external_id,
           role: :assistant,
           content: response_body[:chat_message_text],
