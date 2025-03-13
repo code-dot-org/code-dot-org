@@ -7,6 +7,7 @@ import i18n from '@cdo/locale';
 import {asyncLoadTeacherHomepageSectionData} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {Header} from './Header';
+import {MarketingAnnouncements} from './MarketingAnnouncements';
 import {SectionList} from './SectionList';
 
 import styles from './teacherHomepage.module.scss';
@@ -40,7 +41,7 @@ export const TeacherHomepage: React.FC = () => {
               showHiddenOnly={selectedArchiveToggle === 'archived'}
             />
           </div>
-          <div className={styles.blankAnnouncement} />
+          <MarketingAnnouncements />
         </div>
       </div>
     </div>
