@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-04 22:46:30 UTC",
+    "serialized_at": "2025-03-10 14:38:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1633,7 +1633,7 @@
       "key": "117b6be0-5df6-44fc-a0f8-3dab6ff1f612",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
         "duration": "20",
         "name": "Troubleshooting",
         "progression_name": "Troubleshooting",
@@ -1720,7 +1720,7 @@
       "key": "bb84d681-fc09-42d6-b0e1-7dd501e7288d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 6, Level 3. Students complete the activity guide with the chatbot.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.",
         "progression_name": "Optimization"
       },
       "seeding_key": {
@@ -1746,17 +1746,6 @@
       }
     },
     {
-      "key": "b31db3d4-1d44-435f-8219-8cac1689f551",
-      "position": 9,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551",
-        "lesson_activity.key": "2fb2e33e-2059-4da7-a118-e5f682bc10fb"
-      }
-    },
-    {
       "key": "91bc4ab2-c2fb-45f2-85f2-936fd28261bb",
       "position": 1,
       "properties": {
@@ -1770,6 +1759,17 @@
       },
       "seeding_key": {
         "activity_section.key": "91bc4ab2-c2fb-45f2-85f2-936fd28261bb",
+        "lesson_activity.key": "0dfb56cb-e7ae-4854-a62e-aa625e25fcfd"
+      }
+    },
+    {
+      "key": "59c70782-a572-4788-a9fd-b248c1039eb4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4",
         "lesson_activity.key": "0dfb56cb-e7ae-4854-a62e-aa625e25fcfd"
       }
     },
@@ -4079,9 +4079,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "computer-systems-lesson5-level4-2024"
-        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4092,7 +4089,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4"
       },
       "level_keys": [
         "computer-systems-lesson5-level4-2024"
@@ -5256,7 +5253,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4"
       }
     },
     {

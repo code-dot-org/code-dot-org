@@ -6,24 +6,6 @@
   color: rgb(26,172,186);
 }
 
-#map-footer {
-  font-size: 13px;
-  padding-top: 5px;
-}
-
-#map-footer #left {
-  float: left;
-  margin-right: 40px;
-}
-
-#map-footer #left a {
-  font-family: var(--main-font);
-}
-
-#map-footer #right {
-  float: right;
-}
-
 #mapbox {
   width: 100%;
   padding-bottom: 56.25%;

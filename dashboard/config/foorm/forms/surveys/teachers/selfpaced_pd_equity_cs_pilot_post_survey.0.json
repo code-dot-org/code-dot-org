@@ -184,11 +184,6 @@
           "maxRateDescription": "Strongly agree"
         },
         {
-          "type": "text",
-          "name": "engagement_components",
-          "title": "What specific components of the Equity in CS module did you find most effective or engaging?"
-        },
-        {
           "type": "rating",
           "name": "easy_navigation",
           "title": "Course navigation was clear and easy to follow.",
@@ -265,7 +260,7 @@
         {
           "type": "matrix",
           "name": "equity_supported_learning",
-          "title": "Which of the following supported your learning the most?",
+          "title": "Which of the following components of the module supported your learning the most?",
           "description": "Rank the options from most helpful (5) to least helpful (1).",
           "columns": [
             {
@@ -296,7 +291,7 @@
             },
             {
               "value": "making_a_plan",
-              "text": " to foster equitable access, diversity, and inclusion in my CS classroom."
+              "text": "Making a plan to foster equitable access, diversity, and inclusion in my CS classroom."
             },
             {
               "value": "reflections",
@@ -311,6 +306,12 @@
               "text": "Engaging with video content."
             }
           ]
+        },
+        {
+          "type": "comment",
+          "name": "engagement_components",
+          "title": "Is there any feedback you would like to share about what made these components more or less engaging?",
+          "rows": 2
         },
         {
           "type": "radiogroup",

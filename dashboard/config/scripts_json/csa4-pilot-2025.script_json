@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:15:11 UTC",
+    "serialized_at": "2025-03-11 05:21:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1522,7 +1522,7 @@
       "key": "cfae8cfa-11df-4d11-8ec0-79756b65058a",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and exception for static methods accessing / changing the values of instance variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
         "progression_name": "Practice: Static Variables and Methods",
         "tips": [
           {

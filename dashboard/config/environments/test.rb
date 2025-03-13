@@ -37,10 +37,11 @@ Dashboard::Application.configure do
     config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
   end
 
-  # In CI environments (ie, Drone), stub relevant AWS services (currently just SageMaker)
+  # In CI environments (ie, Drone), stub relevant third-party services
+  # (currently SageMaker, our safety check via OpenAI, and currently unused AWS Comprehend safety check)
   # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
-  if is_ci
-    config.stub_aichat_aws_services = true
+  if CI::Utils.ci_job_ui_tests?
+    config.stub_aichat_external_services = true
   end
 
   config.assets.quiet = true

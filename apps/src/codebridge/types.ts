@@ -47,7 +47,11 @@ export type ConfigType = {
   activeLayout?: LayoutKey;
   showFileBrowser: boolean;
   validMimeTypes?: string[];
-  layoutComponents: {horizontal: React.ReactNode; vertical: React.ReactNode};
+  layoutComponents: {
+    horizontal: React.ReactNode;
+    vertical: React.ReactNode;
+    share?: React.ReactNode;
+  };
 };
 
 export type SetProjectFunction = (project: ProjectSources) => void;

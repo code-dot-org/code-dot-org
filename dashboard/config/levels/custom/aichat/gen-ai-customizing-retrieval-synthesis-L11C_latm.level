@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:48:24.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": "0.5",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -40,8 +41,9 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "project_template_level_name": "gen-ai-customizing-retrieval-templateC_latm",
     "display_name": "Self-Help and Wellness",
@@ -49,7 +51,6 @@
     "thumbnail_url": "https://images.code.org/b35a73f301a1dce3c0883037ddae09f2-Lesson 6 - Level 9C - Self-Help and Wellness.png",
     "name_suffix": "_latm"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:48:24.673+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L11C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L11C_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:48:24.673+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L11C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L11C_2024\"},{\"changed_at\":\"2025-03-07 20:11:22 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

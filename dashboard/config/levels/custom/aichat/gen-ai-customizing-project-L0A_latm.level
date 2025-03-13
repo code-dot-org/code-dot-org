@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:49:16.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
         "systemPrompt": "Your goal  is to teach more people about how wonderful cats are as pets.  Act as if you are a manager of a animal shelter. To give advice and information on how to take care of a cat. Only answer questions about cats and animal shelters.  If a question is asked about something other than cats, respond with \"That's interesting, but let's talk more about cats.\"  Respond positive and passionate.  Respond in a conversational manner. ",
         "retrievalContexts": [
@@ -51,14 +52,14 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
-      ]
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "name_suffix": "_latm",
     "display_name": "Cats - Your Feline Friend",
     "bubble_choice_description": "This chatbot teaches people about how wonderful cats are as pets and gives advice and information on how to take care of a cat."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:16.270+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0A_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:49:16.270+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0A_2024\"},{\"changed_at\":\"2025-03-07 20:16:14 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

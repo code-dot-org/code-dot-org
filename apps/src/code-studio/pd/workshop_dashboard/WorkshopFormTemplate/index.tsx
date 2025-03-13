@@ -1,8 +1,18 @@
+import {Heading1} from '@code-dot-org/component-library/typography';
 import React, {FC, useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
+import {workshopLabel} from '../utils/workshopLabel';
+
+import {AdditionalInfo} from './sections/AdditionalInfo';
+import {Basics} from './sections/Basics';
+import {EmailsReminders} from './sections/EmailsReminders';
+import {PartnerFacilitator} from './sections/PartnerFacilitator';
+import {PublishCancelButtons} from './sections/PublishCancelButtons';
+import {PublishSettings} from './sections/PublishSettings';
+import {Schedule} from './sections/Schedule';
 import {
   CourseOffering,
   Session,
@@ -11,6 +21,8 @@ import {
   WorkshopFormState,
   WorkshopFormTemplateProps,
 } from './types';
+
+import styles from './styles.module.scss';
 
 export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   course: data.course ?? '',
@@ -59,11 +71,9 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     ? '/course_offerings/self_paced_pl_course_offerings'
     : '';
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const {data: courseOfferings} =
     useFetch<CourseOffering[]>(courseOfferingsUrl);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [workshopFormState, setWorkshopFormState] = useState<WorkshopFormState>(
     {
       course: '',
@@ -88,7 +98,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     }
   );
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [sessionFormState, setSessionFormState] = useState<SessionFormState[]>(
     []
   );
@@ -100,7 +109,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     }
   }, [workshop]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleChange = <K extends keyof WorkshopFormState>(
     update: Record<K, WorkshopFormState[K]>
   ) => {
@@ -110,5 +118,39 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     }));
   };
 
-  return <h1>{config.label}</h1>;
+  const heading = workshopLabel(`New ${config.label}`);
+
+  return (
+    <form id="workshop-form-template" className={styles.container}>
+      <Heading1 visualAppearance="heading-xl">{heading}</Heading1>
+      <Basics
+        state={workshopFormState}
+        courseOfferings={courseOfferings}
+        handleChange={handleChange}
+        config={config}
+      />
+      <Schedule state={sessionFormState} />
+      <PartnerFacilitator
+        state={workshopFormState}
+        handleChange={handleChange}
+        config={config}
+      />
+      <EmailsReminders
+        state={workshopFormState}
+        handleChange={handleChange}
+        config={config}
+      />
+      <AdditionalInfo
+        state={workshopFormState}
+        handleChange={handleChange}
+        config={config}
+      />
+      <PublishSettings
+        state={workshopFormState}
+        handleChange={handleChange}
+        config={config}
+      />
+      <PublishCancelButtons publish={() => {}} cancel={() => {}} />
+    </form>
+  );
 };

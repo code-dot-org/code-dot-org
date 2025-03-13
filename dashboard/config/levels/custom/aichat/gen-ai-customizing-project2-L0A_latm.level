@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:53:34.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
         "systemPrompt": "Your job is to help people plan their day with activities that are good for them. The topic is about starting the day. Make sure to always be kind and respectful to the user. Ask them questions about what they are good at to get an idea of what they should do. Respond only to questions about starting the day. If the user says something off topic respond with \"I don't know\". \n1. Do not respond to off topic questions such as i like waffles or something.\n2. Make sure the list of activities to start the day does not involve electronics.\n3. Make sure this list is for adults about the age of 30-50 years old.\n4. if \"starting the day\" is not the topic respond saying  \"I don't know.\" and don't talk to the user.",
         "retrievalContexts": [
@@ -50,15 +51,14 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
+        "gpt-4o-mini"
       ],
-      "levelSystemPrompt": ""
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "name_suffix": "_latm",
     "display_name": "Activity Helper 5000",
     "bubble_choice_description": "This chatbot is meant to help adults who don't know how to get their day started by asking them certain questions about what they like and want to accomplish today."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:53:34.764+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0A_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:53:34.764+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0A_2024\"},{\"changed_at\":\"2025-03-07 20:34:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

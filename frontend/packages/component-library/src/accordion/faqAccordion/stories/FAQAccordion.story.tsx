@@ -91,3 +91,94 @@ export const WithLongAnswers: Story = {
     ],
   },
 };
+
+export const WithMultipleParagraphsAsContent: Story = {
+  args: {
+    items: [
+      {
+        id: 'what-is-code-org',
+        label: 'What is Code.org?',
+        questionString: 'What is Code.org?',
+        content: (
+          <>
+            <p>
+              Code.org is a nonprofit dedicated to expanding access to computer
+              science in schools and increasing participation by young women and
+              students from underrepresented groups.
+            </p>
+            <p>
+              Our vision is that every student in every school should have the
+              opportunity to learn computer science.
+            </p>
+            <p>
+              We provide curriculum, training, and advocacy to support computer
+              science education worldwide.
+            </p>
+          </>
+        ),
+        answerString: `
+              <p>
+                Code.org is a nonprofit dedicated to expanding access to computer
+                science in schools and increasing participation by young women and
+                students from underrepresented groups.
+              </p>
+              <p>
+                Our vision is that every student in every school should have the
+                opportunity to learn computer science.
+              </p>
+              <p>
+                We provide curriculum, training, and advocacy to support computer
+                science education worldwide.
+              </p>
+            `,
+      },
+      {
+        id: 'how-can-i-start-learning',
+        label: 'How can I start learning?',
+        questionString: 'How can I start learning?',
+        content: (
+          <>
+            <p>You can start learning by:</p>
+            <ul>
+              <li>Exploring our free online courses</li>
+              <li>Participating in Hour of Code events</li>
+              <li>Joining local coding clubs</li>
+            </ul>
+          </>
+        ),
+        answerString: `
+              <p>You can start learning by:</p>
+              <ul>
+                <li>Exploring our free online courses</li>
+                <li>Participating in Hour of Code events</li>
+                <li>Joining local coding clubs</li>
+              </ul>
+            </>
+        `,
+      },
+      {
+        id: 'is-code-org-curriculum-free',
+        label: 'Is Code.org curriculum free?',
+        questionString: 'Is Code.org curriculum free?',
+        content: (
+          <>
+            <p>
+              Yes! Code.org provides free curriculum and tools for teachers.
+            </p>
+            <p>
+              Teachers can access our resources, training, and support at no
+              cost.
+            </p>
+          </>
+        ),
+        answerString: `
+              <p>Yes! Code.org provides free curriculum and tools for teachers.</p>
+              <p>
+                Teachers can access our resources, training, and support at no
+                cost.
+              </p>
+            `,
+      },
+    ],
+  },
+};

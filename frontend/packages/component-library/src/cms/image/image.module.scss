@@ -1,0 +1,20 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+// Image common styles
+.image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: $regular-border-radius;
+}
+
+// Image border styles
+.image-hasBorder {
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+// Image box shadow styles
+.image-hasBoxShadow {
+  box-shadow: 0.5rem 0.5rem 0 0 var(--background-brand-teal-light);
+}

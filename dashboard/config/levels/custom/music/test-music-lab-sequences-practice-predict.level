@@ -1,0 +1,223 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-10T20:16:23.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Make a Prediction \r\n\r\nThe `chorus` sound is 4 measures long and the `drum beat pause` sound is 2-measures long. \r\n\r\nWhen you press \"Run,\" what do you think this code will sound like? ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_intro",
+          "drums_main_beat",
+          "drums_hats",
+          "drums_fill",
+          "drums_percussion_1",
+          "drums_percussion_2",
+          "bass_intro",
+          "bass_main",
+          "keys_intro",
+          "keys_chorus_1",
+          "keys_chorus_2",
+          "keys_prechorus",
+          "synth",
+          "guitar_intro",
+          "guitar_1",
+          "guitar_2",
+          "crash",
+          "wow",
+          "mmm",
+          "reverse_vocal",
+          "vocals_now_hes",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_backgrounds",
+          "vocals_adlib_i_know",
+          "vocals_adlib_espresso",
+          "vocals_adlib"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "wormhole"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run",
+          "blip",
+          "clap",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "bcQWj)aJg!hgj39Y@@RS",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "5z)Bj5h-M2bc_^[aY(v,",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "electro/drum_beat_pause"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "zc6SsCh9#w7^OXcJ3WDf",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "electro/drum_beat_pause"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-10 21:04:19 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:07:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:07:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:08:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

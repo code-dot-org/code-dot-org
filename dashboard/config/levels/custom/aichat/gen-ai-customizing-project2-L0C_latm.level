@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-06T22:53:35.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
         "systemPrompt": "Your job is to recommend a career to students in college who are undecided, based on their interests. Respond in a happy, joyful tone. \nDo not answer any off topic questions. Say \" Hi! I am a Career Finder Chatbot.\" All the steps must be done in order. No steps can be skipped.\n\nStep 1: Say\"  To take the career quiz, type START\"\n\nStep 2: If input = \"START\", then ask 'What are your top interests/hobbies?\" \nStep 3: Ask \"What are your top skills or strengths?\"\nStep 4: Say \"What are your top values or motivations?\"\nStep 5: Say \"What type of work environment do you prefer?\"\nStep 6: Ask \"\nWhat is your preferred level of education or training?\"\nStep 7:  Ask \"What is your preferred salary range?\"\nStep 8: Say one common career from the field that matches the user's responses. Ex. User would do good in social service. suggest a career as a teacher\nStep 9: Say \"The quiz is now over. Thank you for your participation!\"",
         "retrievalContexts": [
@@ -52,15 +53,14 @@
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
+        "gpt-4o-mini"
       ],
-      "levelSystemPrompt": ""
+      "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
     "name_suffix": "_latm",
     "display_name": "Career Finder v.1",
     "bubble_choice_description": "This chatbot that suggests careers to undecided college students, based on their preferences."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-06T22:53:35.091+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0C_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T22:53:35.091+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0C_2024\"},{\"changed_at\":\"2025-03-07 20:35:03 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

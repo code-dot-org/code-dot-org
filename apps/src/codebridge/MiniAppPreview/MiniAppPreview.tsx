@@ -18,6 +18,8 @@ interface MiniAppPreviewProps {
   minimizeMiniApp: () => void;
   isMaximized: boolean;
   style?: React.CSSProperties;
+  showMaximizeButton?: boolean;
+  handleScaling?: boolean;
 }
 
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
@@ -25,13 +27,17 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   minimizeMiniApp,
   isMaximized,
   style,
+  showMaximizeButton = true,
+  handleScaling,
 }) => {
   const {labConfig} = useCodebridgeContext();
 
   const miniApp = labConfig?.miniApp?.name;
 
   const miniAppComponent =
-    miniApp === MiniApps.Neighborhood ? <NeighborhoodPreview /> : null;
+    miniApp === MiniApps.Neighborhood ? (
+      <NeighborhoodPreview handleScaling={handleScaling} />
+    ) : null;
 
   return (
     <PanelContainer
@@ -41,26 +47,30 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
       rightHeaderContent={
-        <Button
-          onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
-          icon={{
-            iconStyle: 'solid',
-            iconName: isMaximized ? 'compress' : 'expand',
-          }}
-          size={'xs'}
-          type={'tertiary'}
-          className={classNames(darkModeStyles.tertiaryButton)}
-          isIconOnly={true}
-          color={'white'}
-          ariaLabel={
-            isMaximized
-              ? codebridgeI18n.minimizePreview()
-              : codebridgeI18n.maximizePreview()
-          }
-        />
+        showMaximizeButton && (
+          <Button
+            onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
+            icon={{
+              iconStyle: 'solid',
+              iconName: isMaximized ? 'compress' : 'expand',
+            }}
+            size={'xs'}
+            type={'tertiary'}
+            className={classNames(darkModeStyles.tertiaryButton)}
+            isIconOnly={true}
+            color={'white'}
+            ariaLabel={
+              isMaximized
+                ? codebridgeI18n.minimizePreview()
+                : codebridgeI18n.maximizePreview()
+            }
+          />
+        )
       }
     >
-      <div style={style}>{miniAppComponent}</div>
+      <div style={style} className={moduleStyles.miniAppContainer}>
+        {miniAppComponent}
+      </div>
     </PanelContainer>
   );
 };

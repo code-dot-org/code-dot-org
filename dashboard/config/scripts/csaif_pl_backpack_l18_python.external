@@ -9,13 +9,24 @@ markdown <<MARKDOWN
 
 #### This is especially useful for students as it enables them to store commonly used functions, avoid repetitive coding, and build on their work efficiently over time.
 
-## How to use the backpack
+## How to Save to the Backpack
 
 - #### Click the three-dot menu icon next to the `custom.py` file name.
 - #### Select "Save to backpack" from the drop-down menu.
 - #### Click the "Save to backpack" button in the pop-up dialog box.
 
 <img src="https://images.code.org/a5083c7ccc54bfa4ea561fa29adf2902-image-1740077664809.gif" alt="gif of how to use the backpack" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+## How to Import the Backpack 
+
+
+- #### Click the `+` icon next to the File menu.
+- #### Select "Import from backpack" from the drop-down menu.
+- #### Select your file and click the "Import to project" button.
+
+<img src="https://images.code.org/f53f681651f42c532cf0c7078fc14099-image-1740078209718.gif" alt="gif of how to use the backpack" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
 
 
 

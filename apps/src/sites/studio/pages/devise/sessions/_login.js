@@ -65,4 +65,17 @@ $(document).ready(() => {
       PLATFORMS.BOTH
     );
   });
+
+  const courseBlocks = document.querySelectorAll('.courseblock-tall');
+  courseBlocks.forEach(courseBlock => {
+    const courseTitle = courseBlock.querySelector('h3').textContent;
+    const courseUrl = courseBlock.querySelector('a').href;
+    courseBlock.addEventListener('click', () => {
+      analyticsReporter.sendEvent(
+        EVENTS.LOGIN_PAGE_COURSE_BLOCK_CLICKED,
+        {courseTitle, courseUrl},
+        PLATFORMS.BOTH
+      );
+    });
+  });
 });

@@ -33,7 +33,7 @@ import {sendAnalytics} from './sendAnalytics';
 // the user messages.
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
-  async (newUserMessageText: string, thunkAPI) => {
+  async (newUserMessageInput: {text: string; assets?: string[]}, thunkAPI) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
     const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
@@ -48,7 +48,8 @@ export const submitChatContents = createAsyncThunk(
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: newUserMessageText,
+      chatMessageText: newUserMessageInput.text,
+      assets: newUserMessageInput.assets,
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));
@@ -70,7 +71,7 @@ export const submitChatContents = createAsyncThunk(
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
           levelPath: window.location.pathname,
-          userMessage: newUserMessageText,
+          userMessage: newUserMessageInput.text,
         })
       );
     } catch (error) {

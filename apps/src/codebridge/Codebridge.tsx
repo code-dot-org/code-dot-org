@@ -18,6 +18,7 @@ import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
@@ -55,6 +56,7 @@ export const Codebridge = React.memo(
       new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
     );
     const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
+    const isShareView = useAppSelector(state => state.lab.isShareView);
 
     const sourceUtilities = useSourceUtilities(dispatch);
 
@@ -67,12 +69,19 @@ export const Codebridge = React.memo(
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
     const innerLayout = useMemo(() => {
+      if (
+        isShareView &&
+        config.layoutComponents.share &&
+        experiments.isEnabled(experiments.CODEBRIDGE_SHARE)
+      ) {
+        return config.layoutComponents.share;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = 'horizontal';
       }
       return config.layoutComponents[currentLayout];
-    }, [config.activeLayout, config.layoutComponents]);
+    }, [config.activeLayout, config.layoutComponents, isShareView]);
 
     const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
