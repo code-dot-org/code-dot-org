@@ -250,6 +250,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');
+  const [isFocusSet, setIsFocusSet] = useState(false);
 
   const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
@@ -279,6 +280,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   const currentSoundRefCallback = (ref: HTMLDivElement) => {
     currentSoundRef.current = ref;
+    if (!isFocusSet && ref) {
+      setTimeout(() => {
+        ref.focus();
+        setIsFocusSet(true);
+      }, 0);
+    }
   };
 
   let possibleSoundEntries: SoundEntry[] = [];
