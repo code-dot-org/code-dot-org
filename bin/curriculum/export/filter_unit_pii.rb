@@ -39,7 +39,7 @@ require_relative '../../../deployment'
 
 start_time = Time.now
 puts "Loading Rails environment..."
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
 $comprehend = Aws::Comprehend::Client.new
