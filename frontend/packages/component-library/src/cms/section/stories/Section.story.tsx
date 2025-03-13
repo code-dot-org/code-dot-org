@@ -36,12 +36,12 @@ export const DefaultSection: Story = {
       </>
     ),
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText('This is a default section');
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   },
 };
 
@@ -56,14 +56,14 @@ export const SectionWithBackgroundColor: Story = {
       </>
     ),
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText(
       'This is a section with a background color',
     );
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   },
 };
 
@@ -88,20 +88,20 @@ export const SectionWithBackgroundPattern: Story = {
       },
     },
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText(
       'This is a section with a background pattern',
     );
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
 
     // check if background image is set
     const section = heading.closest('section');
     if (section) {
       const backgroundImage = section.style.backgroundImage;
-      expect(backgroundImage).toContain('bg-pattern.png');
+      await expect(backgroundImage).toContain('bg-pattern.png');
     }
   },
 };
@@ -174,12 +174,12 @@ MultipleSections.play = async ({
     const heading = await canvas.findByText(headingText);
 
     // check if children content is in each section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   });
 
   // check if the fourth section has the background image set
   if (sectionWithPattern) {
     const backgroundImage = sectionWithPattern.style.backgroundImage;
-    expect(backgroundImage).toContain('bg-pattern.png');
+    await expect(backgroundImage).toContain('bg-pattern.png');
   }
 };
