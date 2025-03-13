@@ -20,7 +20,9 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     outDir: `dist/${format}`,
     target: 'es2019',
     format: [format],
+    external: ['./index.css'],
     dts: false, // See typescript generator below
+    splitting: false,
     async onSuccess() {
       console.log(`Generating typescript types...`);
       // This generates the .d.ts files using the official typescript compiler, `tsc`
@@ -55,10 +57,7 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     sourcemap: true,
     esbuildPlugins: [
       sassPlugin({
-        // In ESM mode, CSS Modules are generated which can be cached via the CSS loader.
-        // In CJS mode, styles are injected into the DOM (resulting in a lengthy DOM and lower performance)
-        // CJS mode is utilized by `code-dot-org/apps`, whereas newer applications (such as `marketing`) use ESM mode by default.
-        type: format === 'esm' ? 'css' : 'style',
+        type: 'css',
         transform: postcssModules({
           generateScopedName: '[name]__[local]___[hash:base64:5]',
         }),

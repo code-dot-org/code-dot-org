@@ -647,6 +647,30 @@ describe('LearningGoals - React Testing Library', () => {
       fetchStub.mockRestore();
     });
   });
+
+  it('renders AiAssessment with the annotated list of evidence only once editor loads', () => {
+    const aiEvidence = annotateLines(
+      aiEvaluations[0].evidence,
+      aiEvaluations[0].observations
+    );
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={aiEvaluations}
+      />
+    );
+
+    const regex = new RegExp(aiEvidence[0].message, 'i');
+    expect(screen.queryByText(regex)).toEqual(null);
+
+    loadEditor();
+
+    screen.getByText(regex);
+  });
 });
 
 function getSuggestedButtonNames() {
@@ -698,14 +722,6 @@ describe('LearningGoals - Enzyme', () => {
     studioApp().editor = oldEditor;
     studioApp().removeAllListeners('afterInit');
     restoreStudioApp();
-  }
-
-  function loadEditor() {
-    // Kinda emulate the set editor
-    studioApp().editor = true;
-
-    // Fire the init event from the application backend
-    studioApp().emit('afterInit');
   }
 
   beforeEach(() => {
@@ -773,33 +789,6 @@ describe('LearningGoals - Enzyme', () => {
     deprecatedExpect(
       wrapper.find('AiAssessment').props().isAiAssessed
     ).to.equal(true);
-  });
-
-  it('renders AiAssessment with the annotated list of evidence only once editor loads', () => {
-    const aiEvidence = annotateLines(
-      aiEvaluations[0].evidence,
-      aiEvaluations[0].observations
-    );
-
-    const wrapper = shallow(
-      <LearningGoals
-        learningGoals={learningGoals}
-        teacherHasEnabledAi={true}
-        aiUnderstanding={3}
-        studentLevelInfo={studentLevelInfo}
-        aiEvaluations={aiEvaluations}
-      />
-    );
-
-    deprecatedExpect(wrapper.find('AiAssessment').props().aiEvidence).to.equal(
-      undefined
-    );
-
-    loadEditor();
-
-    deprecatedExpect(
-      wrapper.find('AiAssessment').props().aiEvidence
-    ).to.deep.equal(aiEvidence);
   });
 
   it('does not renders AiAssessment when teacher has disabled ai', () => {

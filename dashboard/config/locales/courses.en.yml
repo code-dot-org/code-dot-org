@@ -1438,3 +1438,21 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        customizing-llms-latm-pilot:
+          title: Customizing LLMs (LATM Pilot)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-teaching-computer-science-discoveries-music-lab:
+          title: Teaching Programming with Game Lab
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csp-2025:
+          title: csp-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

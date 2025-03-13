@@ -55,9 +55,9 @@ markdown <<MARKDOWN
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;"><strong>As you teach</strong>, consider ways to make these career connections meaningful:</p>
         <ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">
-            <li><strong>Highlight Diverse Roles</strong> – Showcase a range of computing careers, from software development to AI ethics, to help students see multiple pathways.</li>
-            <li><strong>Encourage Reflection</strong> – Have students consider how their personal interests—whether in gaming, art, science, or social issues—connect to computing careers.</li>
-            <li><strong>Invite Guest Speakers</strong> – Bringing in professionals (virtually or in person) can provide insight into different career journeys and inspire students.</li>
+            <li><strong>Highlight Diverse Roles</strong> – Showcase a range of computing careers, from software development to AI ethics, to help students see multiple pathways.</li><br>
+            <li><strong>Encourage Reflection</strong> – Have students consider how their personal interests—whether in gaming, art, science, or social issues—connect to computing careers.</li><br>
+            <li><strong>Invite Guest Speakers</strong> – Bringing in professionals (virtually or in person) can provide insight into different career journeys and inspire students.</li><br>
             <li><strong>Make Connections Ongoing</strong> – Reinforce career relevance throughout the unit, not just at the beginning, by tying discussions back to real-world applications.</li>
         </ul>
     </div>

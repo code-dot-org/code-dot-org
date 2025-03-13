@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:15:03 UTC",
+    "serialized_at": "2025-03-09 03:00:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -224,7 +224,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Ethical and Social Issues Around Data Collection",
+      "name": "Ethics in Data",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -242,7 +242,7 @@
     },
     {
       "key": "Polymorphism",
-      "name": "Polymorphism",
+      "name": "(Optional) Polymorphism",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,

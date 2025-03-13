@@ -65,8 +65,6 @@ updates:
       codemirror:
         patterns:
         - "@codemirror/*"
-        - "codemirror"
-        - "codemirror-*"
       dnd-kit:
         patterns:
         - "@dnd-kit/*"

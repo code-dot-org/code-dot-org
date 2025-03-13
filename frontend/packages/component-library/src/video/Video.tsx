@@ -71,7 +71,7 @@ const Video: React.FC<VideoProps> = ({
             // eslint-disable-next-line jsx-a11y/media-has-caption
             <video
               className={classNames(className)}
-              title={videoTitle}
+              title={videoTitle || 'Video player'}
               poster={posterThumbnail}
               src={videoFallback}
               controls
@@ -95,16 +95,14 @@ const Video: React.FC<VideoProps> = ({
           <iframe
             className={classNames(className)}
             src={`https://www.youtube-nocookie.com/embed/${youTubeId}`}
-            title={videoTitle}
+            title={videoTitle || 'YouTube video player'}
             allowFullScreen
             {...HTMLAttributes}
           />
         )}
       </div>
       <div className={moduleStyles.footer}>
-        {showCaption && (
-          <Figcaption className={moduleStyles.caption}>{videoTitle}</Figcaption>
-        )}
+        {showCaption && <Figcaption>{videoTitle}</Figcaption>}
         {videoFallback && (
           <LinkButton
             className={moduleStyles.download}

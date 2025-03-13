@@ -57,6 +57,8 @@ Dashboard::Application.routes.draw do
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
+    resources :user_level_evaluations, only: [:create]
+
     resources :user_level_interactions, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
@@ -1221,6 +1223,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
+    post 'aichat_messages/:aichat_message_id/submit_feedback', to: 'aichat_messages#submit_feedback'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

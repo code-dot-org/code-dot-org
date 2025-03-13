@@ -87,6 +87,18 @@ describe('FinishStudentAccount', () => {
     );
   });
 
+  it('redirects user back to account type page if invalid user type set', async () => {
+    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'invalid');
+
+    await waitFor(() => {
+      renderDefault(true, false, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/sign_up/account_type'
+    );
+  });
+
   it('redirects user back to login type page if they have not selected login type', async () => {
     await waitFor(() => {
       renderDefault(true, true, false);

@@ -1,4 +1,3 @@
-import '@code-dot-org/component-library/typography/index.css';
 import {
   default as Typography,
   VisualAppearance,
@@ -7,6 +6,8 @@ import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classNames from 'classnames';
 import React, {ReactNode} from 'react';
 
+import {RemoveMarginBottomProps} from '@/components/common/types';
+
 import moduleStyles from './overline.module.scss';
 
 type OverlineVisualAppearance = Extract<
@@ -14,7 +15,7 @@ type OverlineVisualAppearance = Extract<
   'overline-one' | 'overline-two' | 'overline-three'
 >;
 
-type OverlineProps = {
+type OverlineProps = RemoveMarginBottomProps & {
   /** Overline content */
   children: ReactNode;
   /** Overline size */
@@ -38,6 +39,7 @@ const Overline: React.FunctionComponent<OverlineProps> = ({
   size,
   children,
   color,
+  removeMarginBottom,
   className,
 }) => {
   return (
@@ -45,6 +47,7 @@ const Overline: React.FunctionComponent<OverlineProps> = ({
       className={classNames(
         moduleStyles.overline,
         moduleStyles[`overline-color-${color}`],
+        removeMarginBottom && moduleStyles['overline-removeMarginBottom'],
         className,
       )}
       semanticTag="p"

@@ -1,0 +1,14 @@
+@import '@code-dot-org/component-library-styles/primitiveColors';
+@import '@code-dot-org/component-library-styles/colors';
+@import 'breakpoints';
+
+.popover {
+  right: 0;
+  top: 3rem;
+  white-space: normal;
+  text-align: start;
+}
+
+.calloutIcon {
+  color: var(--brand-purple-50);
+}

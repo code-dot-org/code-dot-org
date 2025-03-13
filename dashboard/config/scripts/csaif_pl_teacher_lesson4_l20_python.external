@@ -1,0 +1,36 @@
+name 'csaif_pl_teacher_Lesson4-L20_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrapping up Lesson 4
+
+#### In this lesson on advanced algorithms with Python, we explored key concepts like sequencing, selection, and iteration, applied them to real-world scenarios, and examined the ethical implications of algorithmic decision-making. 
+
+#### By understanding how algorithms shape technology and practicing ways to improve them, students gain both technical skills and critical thinking abilities essential for responsible computing.
+
+
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You've finished the fourth lesson in this professional learning module! <br><br><b> Preparing for the Final Project</b> is up next! 
+    </p>
+</div>
+
+
+<table width="100%" cellspacing="0" cellpadding="15">
+    <tr>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Intro to <br>Programming</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson Two</b><br>Compuational <br> Thinking</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson Three</b><br>Python<br> Basics</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson Four</b><br>Advanced<br>Algorithms</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Five</b><br>Preparing for the<br>Final Project</tr>
+</table>
+
+
+
+
+MARKDOWN
