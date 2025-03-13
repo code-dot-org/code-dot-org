@@ -240,5 +240,6 @@ where
 $$)
 to 's3://cdo-data-sharing-internal/stanford/unload/<%=output_dir%>/<%=unit_name%>_'
 FORMAT JSON
+EXTENSION 'jsonl'
 iam_role 'arn:aws:iam::475661607190:role/redshift-s3';
 ;
