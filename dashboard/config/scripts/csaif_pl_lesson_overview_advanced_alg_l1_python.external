@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 3: Python Basics
+# Lesson 4: Advanced Algorithms
  
 #### In this lesson, you will explore key programming concepts that help control the flow of a program: while loops, if statements, and nested/two-way selection.
 

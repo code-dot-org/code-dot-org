@@ -5,7 +5,7 @@ import {removeMarginBottomDefinition} from '@/components/common/definitions';
 export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
   id: 'paragraph',
   name: 'Paragraph',
-  category: 'Typography',
+  category: '02: Typography',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/5hP7jqXdP90BtLxMi6FSWm/09a555420c3313133d16e87a84e22826/component_paragraph_thumbnail.png',
   tooltip: {

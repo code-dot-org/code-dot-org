@@ -86,13 +86,14 @@ onmessage = async event => {
   const {id, python, source, validationFile} = event.data;
   let results = undefined;
   let sourceToWrite = source;
-  // Add the validation file to the source if it exists.
+  // Add the validation file to the source if it exists. Use the id "validation"
+  // so the validation file does not overwrite a user file (user files have stringified numeric ids).
   if (validationFile) {
     sourceToWrite = {
       ...source,
       files: {
         ...source.files,
-        [validationFile.id]: validationFile,
+        validation: {...validationFile, id: 'validation'},
       },
     };
   }

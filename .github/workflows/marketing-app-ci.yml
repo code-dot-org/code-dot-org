@@ -1,6 +1,7 @@
 name: Marketing-CI
 
 on:
+  workflow_call:
   pull_request:
     branches:
       - staging
@@ -14,52 +15,94 @@ defaults:
     working-directory: ./frontend
 
 jobs:
-    build:
-        runs-on: ubuntu-24.04
+  build:
+    runs-on: ubuntu-24.04
 
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                lfs: true
-                sparse-checkout: |
-                  frontend
-                  .github
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
 
-            - name: Setup Frontend
-              uses: ./.github/actions/frontend/setup
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
 
-            - name: Lint
-              run: yarn lint --filter @code-dot-org/marketing
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
 
-            - name: Build
-              run: yarn build --filter @code-dot-org/marketing
+  dryrun-release:
+    runs-on: ubuntu-24.04
+    needs: build
 
-            - name: Unit Tests
-              run: yarn test --filter @code-dot-org/marketing
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
 
-    ui-tests:
-      runs-on: ubuntu-24.04
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
 
-      steps:
-        - uses: actions/checkout@v4
-          with:
-            lfs: true
-            sparse-checkout: |
-              frontend
-              .github
+      - name: Dryrun Release
+        run: yarn release:dryrun --filter @code-dot-org/marketing
 
-        - name: Setup Frontend
-          uses: ./.github/actions/frontend/setup
+  ui-tests:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-24.04
+    needs: build
 
-        - name: Build
-          run: yarn build --filter @code-dot-org/marketing
-          working-directory: ./frontend
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
 
-        - name: UI Tests
-          uses: ./.github/actions/frontend/marketing/ui-tests
-          with:
-            STAGE: pr
-            CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
-            CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
-            APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
+
+      - name: Build Docker image
+        id: build-docker-image
+        uses: docker/build-push-action@v6.10.0
+        with:
+          context: frontend
+          file: frontend/apps/marketing/Dockerfile
+          tags: marketing:test
+          push: false
+
+      - name: Prepare Test Environment
+        shell: bash
+        run: |
+          echo "CONTENTFUL_SPACE_ID=${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENV_ID=master
+          CONTENTFUL_API_HOST=cdn.contentful.com
+          CONTENTFUL_TOKEN=${{ secrets.CONTENTFUL_TOKEN }}
+          CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID=experience
+          HOSTNAME=0.0.0.0
+          " > .env
+
+      - name: Run Docker Container
+        run: |
+          docker run -d --env-file .env --rm --name marketing \
+            -p 3001:3000 \
+            marketing:test
+          
+          # Tail the docker logs
+          docker logs -f marketing &
+
+      - name: UI Tests
+        uses: ./.github/actions/frontend/marketing/ui-tests
+        with:
+          STAGE: pr
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
 

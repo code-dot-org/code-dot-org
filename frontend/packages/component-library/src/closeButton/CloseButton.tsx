@@ -8,7 +8,11 @@ import moduleStyles from './closeButton.module.scss';
 
 export interface CloseButtonProps extends HTMLAttributes<HTMLButtonElement> {
   /** Close Button onClick */
-  onClick: () => void;
+  onClick: (
+    e?:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.KeyboardEvent<HTMLButtonElement>,
+  ) => void;
   /** Close Button size */
   size?: ComponentSizeXSToL;
   /** Close Button Color*/
