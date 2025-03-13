@@ -40,7 +40,6 @@ OptionParser.new do |parser|
     options[:destination_bucket] = destination_bucket
   end
   parser.on("-q", "--destination-prefix DESTINATION-PREFIX", "The destination S3 prefix, not including leading/trailing slashes.") do |destination_prefix|
-    puts destination_prefix
     options[:destination_prefix] = destination_prefix.delete_prefix('/').delete_suffix('/')
   end
   parser.on("-l", "--log-filename", "Set the log filename") do |log_filename|
