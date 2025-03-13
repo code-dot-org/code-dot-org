@@ -157,26 +157,22 @@ RUN curl --output /tmp/firefox.deb https://s3.amazonaws.com/circle-downloads/fir
     rm /tmp/firefox.deb && \
     true
 
-# Install Chrome for Testing and the corresponding chromedriver; see
-# https://googlechromelabs.github.io/chrome-for-testing/ for more details.
-# We could also attempt to automatically detect and install dependencies; see
-# https://github.com/GoogleChromeLabs/chrome-for-testing?tab=readme-ov-file#how-to-install-the-system-level-dependencies-required-for-archived-linux64-binaries
+# install chrome
+RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    dpkg -i google-chrome-stable_current_amd64.deb || apt-get -fy install && \
+    rm google-chrome-stable_current_amd64.deb && \
+    sed -i \
+        's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' \
+        "/opt/google/chrome/google-chrome"
+
+# install chromedriver
 RUN export CHROME_STABLE_VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json | jq -r .channels.Stable.version) && \
-    # chrome \
-    curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_STABLE_VERSION/linux64/chrome-linux64.zip" && \
-    unzip chrome-linux64.zip && \
-    mv chrome-linux64 /opt/chrome && \
-    ln -s /opt/chrome/chrome /usr/local/bin/chrome && \
-    rm chrome-linux64.zip && \
-    # chromedriver \
     curl -sSLOJ "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_STABLE_VERSION/linux64/chromedriver-linux64.zip" && \
     unzip chromedriver-linux64.zip && \
     mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
     chmod +x /usr/local/bin/chromedriver && \
     rm -r chromedriver-linux64 && \
     rm chromedriver-linux64.zip
-
-ENV CHROME_BIN=/usr/local/bin/chrome
 
 # install pdftk & tidy
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
