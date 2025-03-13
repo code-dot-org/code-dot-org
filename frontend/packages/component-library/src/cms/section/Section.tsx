@@ -51,6 +51,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  *
  * Design System: Section Component.
  * Acts as a container for section content in the Contentful CMS.
+ * Supports Light and Dark themes automatically based on background color.
  */
 const Section: React.FC<SectionProps> = ({
   background = 'primary',
