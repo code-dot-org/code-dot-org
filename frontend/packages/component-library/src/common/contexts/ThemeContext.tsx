@@ -63,7 +63,9 @@ export const ThemeProvider = ({children}: {children: ReactNode}) => {
    * */
   return (
     <ThemeContext.Provider value={{theme, toggleTheme, setTheme}}>
-      <div data-theme={theme}>{children}</div>
+      <div data-theme={theme} style={{width: '100%'}}>
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 };
