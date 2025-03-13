@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const ImageContentfulComponentDefinition: ComponentDefinition = {
   id: 'image',
   name: 'Image',
-  category: 'Custom Components',
+  category: '03: Basic',
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
   thumbnailUrl:
