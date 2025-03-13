@@ -54,7 +54,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const visibleItems = useSelector(selectAllVisibleMessages);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
