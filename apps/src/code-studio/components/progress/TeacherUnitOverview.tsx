@@ -13,6 +13,7 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import {
   TEACHER_NAVIGATION_PATHS,
   getBasePath,
+  LABELED_TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -43,18 +44,18 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const {courseVersionName, unitPosition} = useParams();
   const unitDefined = unitName || (courseVersionName && unitPosition);
 
-  // React.useEffect(() => {
-  //   if (!unitName && selectedSection?.unitName) {
-  //     navigate(
-  //       generatePath(
-  //         LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
-  //         {unitName: selectedSection.unitName, sectionId: selectedSection.id}
-  //       ),
-  //       {replace: true}
-  //     );
-  //     return;
-  //   }
-  // }, [unitName, selectedSection, navigate]);
+  React.useEffect(() => {
+    if (!unitDefined && selectedSection?.unitName) {
+      navigate(
+        generatePath(
+          LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
+          {unitName: selectedSection.unitName, sectionId: selectedSection.id}
+        ),
+        {replace: true}
+      );
+      return;
+    }
+  }, [unitDefined, selectedSection, navigate]);
 
   React.useEffect(() => {
     if (!unitDefined || !userType || !userId) {
