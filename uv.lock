@@ -979,7 +979,7 @@ wheels = [
 
 [[package]]
 name = "unittest-runner"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "python/pythonlab/unittest_runner" }
 dependencies = [
     { name = "neighborhood" },
