@@ -29,12 +29,8 @@ import {
   SetFileTypeFunction,
 } from './types';
 
-// optionally, we can hand in the validationFileId as the second argument. If it's included, then we'll use that as well
-// when we figure out the next file id. If we're not given one, then just set it to '0' so it doesn't interfere with id generation.
-export const getNextFileId = (files: ProjectFile[], validationFileId = '0') => {
-  return String(
-    Math.max(0, Number(validationFileId), ...files.map(f => Number(f.id))) + 1
-  );
+export const getNextFileId = (files: ProjectFile[]) => {
+  return String(Math.max(0, ...files.map(f => Number(f.id))) + 1);
 };
 
 export const getNextFolderId = (folders: ProjectFolder[]) => {
@@ -80,7 +76,6 @@ export const useSourceUtilities = (dispatch: React.Dispatch<ReducerAction>) => {
         // this line causes the apparent circular dependency issue
         // contents = codebridgeI18n.defaultNewFileContents({fileName}),
         contents = DEFAULT_NEW_FILE_CONTENTS,
-        validationFileId,
       }) => {
         dispatch({
           type: SOURCE_REDUCER_ACTIONS.NEW_FILE,
@@ -88,7 +83,6 @@ export const useSourceUtilities = (dispatch: React.Dispatch<ReducerAction>) => {
             fileName,
             folderId,
             contents: contents.replace(/\${fileName}/g, fileName),
-            validationFileId,
           },
         });
       }),
