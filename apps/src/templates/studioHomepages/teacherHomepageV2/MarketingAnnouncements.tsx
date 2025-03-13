@@ -9,29 +9,50 @@ import {
 
 import styles from './teacherHomepage.module.scss';
 
-const TEST_ANNOUNCEMENT = {
-  title: 'Test Announcement',
-  description: 'This is a test announcement',
-  buttonText: 'Click me',
-  buttonLink: 'https://code.org',
-  imageURL: 'https://code.org/images/logo.png',
-  isCloseable: true,
-};
+interface ServerAnnouncementType {
+  announcement_type: string;
+  background_color: string;
+  title: string;
+  description: string;
+  button_label: string;
+  button_target: string;
+  image: string;
+  is_closeable: boolean;
+}
+
+const serverAnnouncementToAnnouncement = (
+  serverAnnouncement: ServerAnnouncementType
+) => ({
+  announcementType: serverAnnouncement.announcement_type,
+  backgroundColor: serverAnnouncement.background_color,
+  title: serverAnnouncement.title,
+  description: serverAnnouncement.description,
+  buttonLabel: serverAnnouncement.button_label,
+  buttonTarget: serverAnnouncement.button_target,
+  image: serverAnnouncement.image,
+  // TODO(lfm): make sure this is working with contentful.
+  isCloseable:
+    serverAnnouncement.is_closeable === undefined
+      ? true
+      : serverAnnouncement.is_closeable,
+});
 
 export const MarketingAnnouncements: React.FC = () => {
   const [announcements, setAnnouncements] = React.useState<
     MarketingAnnouncementInfo[]
   >([]);
 
+  const [isLoading, setIsLoading] = React.useState(true);
+
   React.useEffect(() => {
     HttpClient.get('/marketing/teacher/promotions/55R4y1NlZ0qJG9O0qgyq0Q')
       .then(response => response.json())
       .then(data => {
-        console.log('lfm', {data});
+        setAnnouncements(data.map(serverAnnouncementToAnnouncement));
+        setIsLoading(false);
       })
       .catch(error => {
-        setAnnouncements([TEST_ANNOUNCEMENT]);
-        console.error('lfm', {error});
+        console.error('Error retrieving marketing promotions', {error});
       });
   }, []);
 
@@ -46,13 +67,14 @@ export const MarketingAnnouncements: React.FC = () => {
 
   return (
     <div className={styles.announcements}>
+      {isLoading && <div>Loading...</div>}
+      {/* TODO(lfm): Add a skeleton here */}
       {announcements.map((announcement, ind) => (
         <MarketingAnnouncement
           {...announcement}
           closeAnnouncementCallback={() => closeAnnouncementCallback(ind)}
         />
       ))}
-      <div className={styles.blankAnnouncement} />
     </div>
   );
 };

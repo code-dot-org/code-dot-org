@@ -9,11 +9,13 @@ import React from 'react';
 import styles from './teacherHomepage.module.scss';
 
 export interface MarketingAnnouncementInfo {
+  announcementType: string;
+  backgroundColor: string; //TODO(lfm) add background color
+  buttonLabel: string;
+  buttonTarget: string;
   title: string;
   description: string;
-  buttonText: string;
-  buttonLink: string;
-  imageURL: string;
+  image: string;
   isCloseable: boolean;
 }
 
@@ -27,9 +29,9 @@ type MarketingAnnouncementProps = MarketingAnnouncementInfo &
 export const MarketingAnnouncement: React.FC<MarketingAnnouncementProps> = ({
   title,
   description,
-  buttonText,
-  buttonLink,
-  imageURL,
+  buttonLabel,
+  buttonTarget,
+  image,
   isCloseable,
   closeAnnouncementCallback,
 }) => {
@@ -42,13 +44,13 @@ export const MarketingAnnouncement: React.FC<MarketingAnnouncementProps> = ({
           </button>
         </div>
       )}
-      <img src={imageURL} alt={title} className={styles.announcementImage} />
+      <img src={image} alt={title} className={styles.announcementImage} />
       <Heading3>{title}</Heading3>
       <BodyThreeText>{description}</BodyThreeText>
       <LinkButton
-        href={buttonLink}
+        href={buttonTarget}
         color="black"
-        text={buttonText}
+        text={buttonLabel}
         type="secondary"
         size="s"
         className={styles.announcementButton}
