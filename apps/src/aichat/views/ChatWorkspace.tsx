@@ -50,6 +50,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const {showModalType, studentChatHistory} = useAppSelector(
     state => state.aichat
   );
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const visibleItems = useSelector(selectAllVisibleMessages);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
@@ -72,7 +73,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
       );
     }
-  }, [selectedStudent, dispatch]);
+  }, [selectedStudent, currentLevelId, dispatch]);
 
   useEffect(() => {
     dispatch(clearChatMessages());

@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-02-24T19:34:32.000Z",
   "level_num": "custom",
@@ -362,17 +361,32 @@
           "language": "py",
           "contents": "from neighborhood import Painter\n#add the painter object below\n\n#add methods below to move the painter\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
     "display_name": "BONUS Practice",
     "bubble_choice_description": "Use what you have learned so far to paint a design of your choice. ",
-    "thumbnail_url": "https://images.code.org/5575a7f45df153ed5cc6d2db1a727bfb-paint-roller.png"
+    "thumbnail_url": "https://images.code.org/5575a7f45df153ed5cc6d2db1a727bfb-paint-roller.png",
+    "validation_file": {
+      "id": "2",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass TestPainterDesign(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Retrieve the neighborhood log once for all tests.\"\"\"\n        cls.neighborhood_log = ValidationProtocol().get_neighborhood_log()\n        painter_logs = cls.neighborhood_log.painter_logs\n        cls.painter_log = painter_logs[0] if painter_logs else None\n\n    def test_step1_create_painter(self):\n        \"\"\"\n        A Painter object is created.\n        \"\"\"\n        self.assertIsNotNone(\n            self.painter_log,\n            \"No Painter object found. Make sure you create one!\"\n        )\n\n    def test_step2_paint_something(self):\n        \"\"\"\n        The Painter painted at least once.\n        Skip if there's no Painter.\n        \"\"\"\n        if self.painter_log is None:\n            self.skipTest(\"No Painter found.\")\n\n        self.assertTrue(\n            self.painter_log.did_action_at_least(\"PAINT\", 1),\n            \"It looks like your Painter never painted. Call paint() at least once to create a design!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-24T19:34:32.480+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-levelbonus-ai-tutor\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-levelbonus-ai-tutor\"},{\"changed_at\":\"2025-02-24 19:35:55 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:10:40 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-24T19:34:32.480+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-levelbonus-ai-tutor\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-levelbonus-ai-tutor\"},{\"changed_at\":\"2025-02-24 19:35:55 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:10:40 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-12 21:00:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

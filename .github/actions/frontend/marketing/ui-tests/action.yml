@@ -65,4 +65,4 @@ runs:
         urls: ${{ inputs.MARKETING_BASE_URL || 'http://localhost:3001' }}/en-US/all-the-things
         uploadArtifacts: true
         temporaryPublicStorage: true
-        configPath: './frontend/apps/marketing/lighthouserc.json'
+        configPath: './frontend/apps/marketing/.lighthouserc.js'
