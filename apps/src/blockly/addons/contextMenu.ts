@@ -214,6 +214,51 @@ const registerUnshadow = function (weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+const registerToggleShadowStack = function (weight: number) {
+  const toggleShadowStackOption = {
+    displayText: (scope: GoogleBlockly.ContextMenuRegistry.Scope) => {
+      if (
+        scope.block &&
+        shadowChildCount(scope.block) === scope.block.getChildren(false).length
+      ) {
+        return 'Make All Blocks in Stack Non-Shadow';
+      } else {
+        return 'Make All Blocks in Stack Shadow';
+      }
+    },
+    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (
+        Blockly.isStartMode &&
+        scope.block &&
+        scope.block.isEnabled() &&
+        scope.block === scope.block.getRootBlock()
+      ) {
+        return MenuOptionStates.ENABLED;
+      }
+      return MenuOptionStates.HIDDEN;
+    },
+    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      const workspace = scope.block?.workspace;
+      if (scope.block && workspace) {
+        const shouldShadow =
+          shadowChildCount(scope.block) !==
+          scope.block.getChildren(false).length;
+        workspace
+          .getAllBlocks()
+          .filter(
+            block =>
+              block !== scope.block && block.getRootBlock() === scope.block
+          )
+          .forEach(block => block.setShadow(shouldShadow));
+      }
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
+    id: 'stackToggleShadow',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(toggleShadowStackOption);
+};
+
 const registerAllBlocksUndeletable = function (weight: number) {
   const workspaceBlocksUndeletableOption = {
     displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
@@ -648,6 +693,7 @@ function registerCustomBlockOptions() {
   registerEditable(nextWeight++);
   registerShadow(nextWeight++);
   registerUnshadow(nextWeight++);
+  registerToggleShadowStack(nextWeight++);
 }
 
 function registerCustomWorkspaceOptions() {

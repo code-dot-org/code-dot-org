@@ -41,6 +41,7 @@ class Music < Blockly
     level_data
     validations
     encrypted_exemplar_sources
+    exemplar_settings
   )
 
   def self.create_from_level_builder(params, level_params)

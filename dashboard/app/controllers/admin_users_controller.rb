@@ -67,7 +67,7 @@ class AdminUsersController < ApplicationController
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
     end
-    redirect_to :find_students
+    redirect_to :find_students_admin_search_index
   end
 
   def undelete_user
@@ -78,7 +78,7 @@ class AdminUsersController < ApplicationController
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
     end
-    redirect_to :find_students
+    redirect_to :find_students_admin_search_index
   end
 
   def manual_pass_form

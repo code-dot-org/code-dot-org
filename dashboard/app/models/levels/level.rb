@@ -750,6 +750,38 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_exemplar_settings
+    exemplar = get_exemplar_settings
+    if should_localize?
+      exemplar_clone = exemplar.clone
+
+      exemplar_clone['validationSuccessMessage'] = I18n.t(
+        'validationSuccessMessage',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['validationSuccessMessage'],
+        smart: true
+      )
+
+      exemplar_clone['validationFailureMessage'] = I18n.t(
+        'validationFailureMessage',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['validationFailureMessage'],
+        smart: true
+      )
+
+      exemplar_clone['playerTitle'] = I18n.t(
+        'playerTitle',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['playerTitle'],
+        smart: true
+      )
+
+      exemplar_clone
+    else
+      exemplar
+    end
+  end
+
   def localized_panels
     if should_localize?
       panels_clone = panels.map(&:clone)
@@ -868,16 +900,20 @@ class Level < ApplicationRecord
 
     # Localized properties
     properties_camelized["validations"] = localized_validations if get_validations
+    properties_camelized["exemplarSettings"] = localized_exemplar_settings if get_exemplar_settings
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     if script_level
       properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil)
     end
-    if current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
+    is_verified_instructor = current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
+    if is_verified_instructor || try(:exemplar_settings)
       # Verified instructors can view exemplars and levelbuilders can edit them, so we include them in the properties
       # for these users.
+      # For levels that support exemplar validation or an exemplar music player, we also need to include the exemplar sources.
       properties_camelized[:exemplarSources] = try(:exemplar_sources)
-    else
+    end
+    unless is_verified_instructor
       # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
@@ -906,6 +942,9 @@ class Level < ApplicationRecord
     properties['validations']
   end
 
+  def get_exemplar_settings
+    properties['exemplar_settings']
+  end
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.
