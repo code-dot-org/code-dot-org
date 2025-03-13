@@ -37,6 +37,6 @@ class ValidationProtocol(object):
     file_path = file_path or 'main.py'
     try:
       with open(file_path) as main_file:
-        exec(main_file.read())
+        exec(main_file.read(), globals())
     except Exception:
       pass
