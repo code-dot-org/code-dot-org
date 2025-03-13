@@ -153,7 +153,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   protected generateSecondaryColour_(inputColour: string): string {
     if (Blockly.isDarkTheme) {
       return (
-        Blockly.utils.colour.blend('#000', inputColour, 0.6) || inputColour
+        Blockly.utils.colour.blend('#000', inputColour, 0.4) || inputColour
       );
     }
     return super.generateSecondaryColour_(inputColour);
