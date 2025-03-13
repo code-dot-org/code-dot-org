@@ -89,7 +89,8 @@ GIT
     full-name-splitter (0.1.2)
 
 PATH
-  remote: dashboard/engines/marketing
+  remote: .
+  glob: **/engines/marketing/marketing.gemspec
   specs:
     marketing (0.0.0)
       contentful
