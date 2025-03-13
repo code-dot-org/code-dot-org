@@ -53,7 +53,7 @@ const UploadButton: React.FC = () => {
     for (const [key, filename, file] of allowedFiles) {
       try {
         await HttpClient.put(
-          `/v3/assets/${currentChannelId}/${filename}`,
+          `/v3/assets/${currentChannelId}/${encodeURIComponent(filename)}`,
           file
         );
         dispatch(stagedFileUploadFinished({key, status: 'uploaded'}));

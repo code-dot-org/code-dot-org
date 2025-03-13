@@ -84,7 +84,7 @@ const FilePreview: React.FC<{
       className={styles[`preview-${type}`]}
       title={filename}
       style={
-        !isLoading && type === 'image' ? {backgroundImage: `url(${url})`} : {}
+        !isLoading && type === 'image' ? {backgroundImage: `url('${url}')`} : {}
       }
     >
       {isLoading ? (
