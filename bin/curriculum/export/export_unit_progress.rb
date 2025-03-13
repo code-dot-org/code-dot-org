@@ -14,20 +14,14 @@ require 'erb'
 $options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: export_unit_progress.rb [options]"
-  opts.on("-s", "--use-simple-query", "Use simplified query to speed up testing") do
-    $options[:simple] = true
-  end
   opts.on("-u", "--unit-name UNIT", "Unit name") do |unit_name|
     $options[:unit_name] = unit_name
   end
-  opts.on("-z", "--level-id LEVEL", "Level id") do |level_id|
+  opts.on("-l", "--level-id LEVEL", "Level id") do |level_id|
     $options[:level_id] = level_id
   end
   opts.on("-o", "--output-dir OUTPUT_DIR", "Output directory name in S3") do |output_dir|
     $options[:output_dir] = output_dir
-  end
-  opts.on('-p', "--pretty-print") do
-    $options[:pretty] = true
   end
 
   opts.on("-h", "--help", "Prints this help") do
@@ -39,21 +33,21 @@ end.parse!
 raise "Unit name is required" unless $options[:unit]
 
 require_relative '../../../deployment'
-require_relative '../../lib/cdo/redshift' if rack_env?(:production)
+
+raise "Unsupported environment: #{rack_env}" unless rack_env?(:production)
+
+require_relative '../../lib/cdo/redshift'
 
 start_time = Time.now
 puts "Loading Rails environment..."
 require_relative '../../dashboard/config/environment'
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
-def fetch_progress(simple:, unit_name:, level_id:, output_dir:)
+def fetch_progress(unit_name:, level_id:, output_dir:)
   if Rails.env.production?
-    # fetch the data from redshift in production, because it relies on an unindexed query on
+    # fetch the data from redshift, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
-    filename =
-      simple ?
-        'select_user_levels.sql.erb' :
-        'export_unit_progress.sql.erb'
+    filename = 'export_unit_progress.sql.erb'
     pathname = File.expand_path(filename, __dir__)
     query_template = File.read(pathname)
     params = {
@@ -67,16 +61,6 @@ def fetch_progress(simple:, unit_name:, level_id:, output_dir:)
     puts "Querying redshift using #{filename} with #{params}..."
     execute_redshift_query(client, query)
     puts "Redshift progress query executed in: #{(Time.now - start_time).round(2)} seconds"
-  elsif Rails.env.development?
-    # fetch the data from the local db instead of redshift when running in
-    # development. this allows us to test the codepaths for project fetch
-    # and pii detection without needing to run the script in production.
-    unit_progress = UserLevel.where(script_id: unit_id).pluck(:user_id, :level_id, :script_id)
-    keys = [:user_id, :level_id, :script_id]
-    unit_progress.map! {|row| keys.zip(row).to_h.with_indifferent_access}
-    unit_progress
-  else
-    raise "Unsupported environment: #{Rails.env}"
   end
 end
 
@@ -88,9 +72,7 @@ rescue => exception
 end
 
 def main
-  simple = $options[:simple]
-
-  unit_name = $options[:unit].presence || 'csd3-2023'
+  unit_name = $options[:unit].presence
   Unit.find_by!(name: unit_name)
 
   level_id = $options[:level_id].presence
@@ -99,7 +81,6 @@ def main
   output_dir = $options[:output_dir].presence || unit_name
 
   fetch_progress(
-    simple: simple,
     unit_name: unit_name,
     level_id: level_id,
     output_dir: output_dir

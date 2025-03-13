@@ -14,9 +14,6 @@ OptionParser.new do |opts|
   opts.on("-o", "--output-dir DIR", "Name of output directory in local filesystem under /mnt/tmp-curriculum-export/exported/unfiltered/. default: INPUT_DIR") do |output_dir|
     $options[:output_dir] = output_dir
   end
-  opts.on('-p', "--pretty-print") do
-    $options[:pretty] = true
-  end
 
   opts.on("-h", "--help", "Prints this help") do
     puts opts

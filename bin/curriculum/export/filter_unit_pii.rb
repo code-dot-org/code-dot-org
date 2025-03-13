@@ -17,9 +17,6 @@ OptionParser.new do |opts|
   opts.on("-f", "--filename FILENAME", "Name of input file within input directory.") do |filename|
     $options[:filename] = filename
   end
-  opts.on('-p', "--pretty-print") do
-    $options[:pretty] = true
-  end
 
   opts.on("-h", "--help", "Prints this help") do
     puts opts
@@ -86,7 +83,7 @@ def process_file(input_filename)
   rows = Parallel.map(rows, in_processes: $max_processes) do |row|
     data = JSON.parse(row, symbolize_names: true)
     process_row_pii(data)
-    $options[:pretty] ? JSON.pretty_generate(data) : data.to_json
+    data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception.message}. row:\n#{row}"
     row
