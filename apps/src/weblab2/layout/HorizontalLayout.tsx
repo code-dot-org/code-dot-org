@@ -1,0 +1,69 @@
+import {FilePreview} from '@codebridge/FilePreview/FilePreview';
+import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
+import Workspace from '@codebridge/Workspace/Workspace';
+import React from 'react';
+
+import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
+import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
+
+const MIN_INFO_PANEL_WIDTH = 150;
+const INITIAL_INFO_PANEL_WIDTH = 300;
+const MIN_EDITOR_HEIGHT = 200;
+const MIN_PREVIEW_HEIGHT = 200;
+const INITIAL_PREVIEW_HEIGHT = 400;
+const MIN_RIGHT_PANEL_WIDTH = 300;
+
+const HorizontalLayout: React.FunctionComponent = () => {
+  const {
+    leftPanelWidth,
+    rightPanelWidth,
+    rightTopPanelHeight,
+    rightBottomPanelHeight,
+    rightBottomPanelSeparatorProps,
+    rightBottomPanelDragging,
+  } = useHorizontalLayout({
+    leftPanel: {
+      minWidth: MIN_INFO_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
+      name: 'instructions',
+    },
+    rightTopPanel: {
+      minHeight: MIN_EDITOR_HEIGHT,
+      name: 'editor',
+    },
+    rightBottomPanel: {
+      minHeight: MIN_PREVIEW_HEIGHT,
+      initialHeight: INITIAL_PREVIEW_HEIGHT,
+      name: 'preview',
+    },
+    minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
+  });
+
+  return (
+    <div className={moduleStyles.layoutContainer}>
+      <InfoPanel
+        style={{width: leftPanelWidth}}
+        className={moduleStyles.flexShrink0}
+      />
+      {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
+         can only drag left, not right (something about the mouse events getting 
+         captured by the preview?).
+         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
+      <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
+        <Workspace style={{height: rightTopPanelHeight}} />
+        <ResizeBar
+          isVertical={false}
+          separatorProps={rightBottomPanelSeparatorProps}
+          isDragging={rightBottomPanelDragging}
+        />
+        <div style={{height: rightBottomPanelHeight}}>
+          <FilePreview />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HorizontalLayout;

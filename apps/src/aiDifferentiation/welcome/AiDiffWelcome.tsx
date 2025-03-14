@@ -16,15 +16,22 @@ import Confetti from 'react-dom-confetti';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
-import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import AiDiffChat, {
+import AiDiffChat from '../AiDiffChat';
+import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
   EXTRA_PRACTICE_PROMPT,
   FINISH_EARLY_PROMPT,
-} from '../AiDiffChat';
+  ADJUST_TIMING_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  REAL_WORLD_PROMPT,
+  EXIT_TICKET_PROMPT,
+  MINI_LESSON_PROMPT,
+  LESSON_HOOK_PROMPT,
+} from '../AiDiffPredefinedPrompts';
 import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
@@ -44,9 +51,10 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: string;
-  scriptId: number;
-  scriptName: string;
-  unitDisplayName: string;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
+  firstState?: WelcomeState;
 }
 
 const SUGGESTED_PROMPTS_FOR_SELECTION: {
@@ -55,12 +63,24 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
   plan: {
     initialMessage:
       'Lets iterate together! What would you like to change? Below are some of the tasks I can help you with.',
-    suggestedPrompts: [EXPLAIN_CONCEPT_PROMPT, EXAMPLE_PROMPT],
+    suggestedPrompts: [
+      EXPLAIN_CONCEPT_PROMPT,
+      EXAMPLE_PROMPT,
+      ADJUST_TIMING_PROMPT,
+      DEBUG_MISTAKES_PROMPT,
+      REAL_WORLD_PROMPT,
+    ],
   },
   create: {
     initialMessage:
       'Lets work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.',
-    suggestedPrompts: [FINISH_EARLY_PROMPT, EXTRA_PRACTICE_PROMPT],
+    suggestedPrompts: [
+      FINISH_EARLY_PROMPT,
+      EXTRA_PRACTICE_PROMPT,
+      EXIT_TICKET_PROMPT,
+      MINI_LESSON_PROMPT,
+      LESSON_HOOK_PROMPT,
+    ],
   },
 };
 
@@ -79,6 +99,7 @@ const optionButton = (
       )}
       onClick={onClick}
       type="button"
+      aria-label={title}
     >
       <FontAwesomeV6Icon
         iconName={iconName}
@@ -110,12 +131,8 @@ const getStartedPage = (onClick: () => void) => {
             className={style.botScanning}
             alt={'AI Teaching Assistant'}
           />
-          <Heading1 className={style.getStartedTitle}>
-            AI Teaching Assistant
-          </Heading1>
-          <BodyOneText className={style.getStartedSubtitle}>
-            Empowering teachers. Enhancing learning.
-          </BodyOneText>
+          <Heading1>AI Teaching Assistant</Heading1>
+          <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
         </div>
         <Button onClick={onClick} text="Get Started" />
       </div>
@@ -126,7 +143,12 @@ const getStartedPage = (onClick: () => void) => {
 const progressBarHeader = (percentage: number, onBack: () => void) => {
   return (
     <div className={style.progressBarHeader}>
-      <button className={style.headerBackButton} type="button" onClick={onBack}>
+      <button
+        className={style.headerBackButton}
+        type="button"
+        onClick={onBack}
+        aria-label="Back"
+      >
         <FontAwesomeV6Icon
           iconName="arrow-left"
           className={style.headerBackIcon}
@@ -148,9 +170,11 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   scriptId,
   scriptName,
   unitDisplayName,
+  // This should only be used for testing purposes
+  firstState = 'get_started',
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
-    React.useState<WelcomeState>('get_started');
+    React.useState<WelcomeState>(firstState);
 
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
@@ -204,7 +228,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 selectedOption === 'plan',
                 () => setSelectedOption('plan'),
                 'folder-tree',
-                'Plan',
+                'Ideate',
                 'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
               )}
               {optionButton(
@@ -241,8 +265,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <Confetti active={confettiActive} />
           </div>
           <img
-            src={aiBotConfetti}
-            className={style.botConfetti}
+            src={aiBotHappy}
+            className={style.botHappy}
             alt={'Congratulations!'}
           />
           <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
@@ -276,7 +300,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <img
               src={ai101Thumnail}
               className={style.ai101Thumbnail}
-              alt={'AI 101 professional learning course'}
+              alt={''}
             />
           </a>
         </div>
@@ -287,6 +311,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
+      // Default to something so we don't just show a blank page
+      setSelectedOption('plan');
       return null;
     }
     const {initialMessage, suggestedPrompts} =

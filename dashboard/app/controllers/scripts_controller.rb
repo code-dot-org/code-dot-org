@@ -2,6 +2,7 @@ require 'cdo/i18n'
 
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
+  include TeacherDashboardUtils
 
   before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
@@ -10,6 +11,7 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
+  before_action :redirect_to_canonical_path, only: [:show]
   authorize_resource class: 'Unit', except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
@@ -26,7 +28,7 @@ class ScriptsController < ApplicationController
       return
     end
 
-    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+    if TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
       if request.query_parameters.include? "user_id"
         redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
         if redirect_query_string.empty?
@@ -99,6 +101,12 @@ class ScriptsController < ApplicationController
     }
 
     @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
+
+    @page_title = "Unit: #{@script.localized_title}"
+    @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
+
+    link = Unit.latest_stable_version(@script.family_name)&.link
+    @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -410,5 +418,11 @@ class ScriptsController < ApplicationController
     return nil if redirect_unit == unit
 
     redirect_unit
+  end
+
+  # Redirect /s/... to /courses/.../units/...
+  private def redirect_to_canonical_path
+    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
+    redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "3-2-1 Synthesis",
-    "long_instructions": "\r\n<p style=\"font-size:16px\">\r\nReflect on the following:\r\n<ul style=\"font-size:16px\">\r\n\r\n<li>3 things you learned about computing careers</li><br/>\r\n<li>2 careers you would like to learn more about</li><br/>\r\n<li>1 way that computer systems impact the world around us</li>\r\n</ul>\r\n<br/><br/>\r\n",
+    "long_instructions": "## Computing Careers Reflection\r\n\r\n* 3 things you learned about computing careers\r\n* 2 careers you would like to learn more about\r\n* 1 way that computer systems impact the world around us",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -18,7 +18,7 @@
     "skip_sound": true,
     "height": "100"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T16:45:58.027+00:00\",\"changed\":[\"cloned from \\\"computing-systems-lesson9-reflection3\\\"\"],\"cloned_from\":\"computing-systems-lesson9-reflection3\"},{\"changed_at\":\"2025-01-31 16:49:17 +0000\",\"changed\":[\"name\",\"title\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:50:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-01-31T16:45:58.027+00:00\",\"changed\":[\"cloned from \\\"computing-systems-lesson9-reflection3\\\"\"],\"cloned_from\":\"computing-systems-lesson9-reflection3\"},{\"changed_at\":\"2025-01-31 16:49:17 +0000\",\"changed\":[\"name\",\"title\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:50:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-16 19:23:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -4,13 +4,22 @@
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
+import VideoCarousel, {
+  VideoCarouselContentfulComponentDefinition,
+} from '@/components/carousels/videoCarousel';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
+import FAQAccordion, {
+  FAQAccordionContentfulComponentDefinition,
+} from '@/components/faqAccordion';
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
+import Overline, {
+  OverlineContentfulComponentDefinition,
+} from '@/components/overline';
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
@@ -28,11 +37,19 @@ defineComponents(
   [
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
+      component: VideoCarousel,
+      definition: VideoCarouselContentfulComponentDefinition,
+    },
+    {
       component: Divider,
       definition: DividerContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: FAQAccordion,
+      definition: FAQAccordionContentfulComponentDefinition,
     },
     {
       component: Heading,
@@ -42,6 +59,7 @@ defineComponents(
       component: Link,
       definition: LinkContentfulComponentDefinition,
     },
+    {component: Overline, definition: OverlineContentfulComponentDefinition},
     {
       component: Paragraph,
       definition: ParagraphContentfulComponentDefinition,

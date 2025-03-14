@@ -1,22 +1,18 @@
-import '@code-dot-org/component-library/link/index.css';
 import {default as DSCOLink} from '@code-dot-org/component-library/link';
-import {
-  ComponentSizeXSToL,
-  SpacingNoneToM,
-} from '@code-dot-org/component-library/common/types';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {ReactNode} from 'react';
 import classNames from 'classnames';
 
+import {RemoveMarginBottomProps} from '@/components/common/types';
+
 import moduleStyles from './link.module.scss';
 
-export type LinkProps = {
+export type LinkProps = RemoveMarginBottomProps & {
   /** Link Label */
   children: ReactNode;
   /** Link URL */
   href: string;
-  /** Link margin bottom */
-  marginBottom: SpacingNoneToM;
   /** Link size */
   size: ComponentSizeXSToL;
   /** Whether Link is for internal code.org pages, or external web page. (external links are opened in new tab) */
@@ -27,8 +23,8 @@ const Link: React.FunctionComponent<LinkProps> = ({
   children,
   href,
   size,
-  marginBottom,
   isLinkExternal,
+  removeMarginBottom,
 }) => (
   <DSCOLink
     href={href}
@@ -37,7 +33,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
     className={classNames(
       moduleStyles.link,
       moduleStyles[`link-size-${size}`],
-      moduleStyles[`link-margin-bottom-${marginBottom}`],
+      removeMarginBottom && moduleStyles['link-removeMarginBottom'],
     )}
   >
     {children}

@@ -98,6 +98,7 @@ class Level < ApplicationRecord
     offer_browser_tts
     use_secondary_finish_button
     skip_url
+    stay_on_level_after_submit
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -855,10 +856,16 @@ class Level < ApplicationRecord
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
     properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user) if script_level
     properties_camelized[:baseAssetUrl] = Blockly.base_url
+    properties_camelized[:isAssessment] = script_level&.assessment
+    properties_camelized[:progressionType] = script_level&.primm_progression_type
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
+    elsif (level_data = try(:project_template_level).try(:level_data)) && level_data['startSources']
+      # Music Lab's sources are part of level_data
+      properties_camelized['templateSources'] = try(:project_template_level).try(:level_data)['startSources']
     end
+
     # Localized properties
     properties_camelized["validations"] = localized_validations if get_validations
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]

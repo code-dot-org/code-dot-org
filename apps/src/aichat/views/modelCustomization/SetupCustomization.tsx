@@ -112,10 +112,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             onClick={() => setIsShowingModelDialog(true)}
             type="secondary"
             color="gray"
-            className={classNames(
-              styles.updateButton,
-              styles.compareModelsButton
-            )}
+            className={classNames(styles.compareModelsButton)}
             disabled={readOnlyWorkspace}
           />
         )}
@@ -173,7 +170,12 @@ const SetupCustomization: React.FunctionComponent = () => {
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
           <>
-            <div className={styles.horizontalFlexContainer}>
+            <div
+              className={classNames(
+                styles.horizontalFlexContainer,
+                'uitest-temperature-container'
+              )}
+            >
               <FieldLabel
                 id="temperature"
                 label={aichatI18n.technicalInfoHeader_temperature()}

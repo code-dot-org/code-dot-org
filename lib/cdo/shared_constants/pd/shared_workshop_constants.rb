@@ -302,7 +302,7 @@ module Pd
 
     PD_SESSION_FORMATS = [
       {value: 'in_person', label: 'In-Person', enum_value: 0},
-      {value: 'virtual', label: 'Digital', enum_value: 1}
+      {value: 'virtual', label: 'Virtual', enum_value: 1}
     ].freeze
 
     SESSION_FIELDS = {
@@ -334,6 +334,12 @@ module Pd
       capacity: {
         required: true
       },
+      grades: {
+        required: true
+      },
+      description: {
+        required: true
+      },
       notes: {
         required: false
       },
@@ -347,6 +353,18 @@ module Pd
         required: false
       },
       facilitators: {
+        required: false
+      },
+      fee: {
+        required: false
+      },
+      prereq: {
+        required: false
+      },
+      hidden: {
+        required: false
+      },
+      registration_link: {
         required: false
       },
     }

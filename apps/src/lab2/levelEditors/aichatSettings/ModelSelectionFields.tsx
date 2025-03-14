@@ -1,10 +1,10 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import React, {useContext, useState, useCallback} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {Visibility} from '@cdo/apps/aichat/types';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 

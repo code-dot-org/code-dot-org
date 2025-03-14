@@ -216,9 +216,9 @@ class RegistrationsControllerTest < ActionController::TestCase
     ]
 
     urls.each do |url|
-      session.delete(:user_return_to)
       get :new, params: {user_return_to: url}
-      assert_equal url, session[:user_return_to]
+      user_return_to_url = users_sign_up_account_type_url + "?user_return_to=#{url}"
+      assert_redirected_to user_return_to_url
     end
   end
 
@@ -529,8 +529,17 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     teacher_params = set_up_partial_registration(@default_params)
 
-    exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: teacher_params}}
-    assert_equal("Validation failed: Email has already been taken", exception.message)
+    post :create, params: {new_sign_up: true, user: teacher_params}
+    assert_includes response.body, "Validation failed: Email has already been taken"
+  end
+
+  test "create user with invalid fields throws 400 error" do
+    name_longer_than_70_char = '12345678901234567890123456789012345678901234567890123456789012345678901234567890'
+    teacher_params = set_up_partial_registration(@default_params.merge({name: name_longer_than_70_char}))
+
+    post :create, params: {new_sign_up: true, user: teacher_params}
+    assert_equal response.status, 400
+    assert_includes response.body, "Validation failed: Display Name is too long (maximum is 70 characters)"
   end
 
   test "create as student with age [new sign up flow]" do
@@ -580,8 +589,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     params_without_age = set_up_partial_registration(@default_params.update(age: ''))
 
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: params_without_age}}
-      assert_equal("Validation failed: Age is required", exception.message)
+      post :create, params: {new_sign_up: true, user: params_without_age}
+      assert_includes response.body, "Validation failed: Age is required"
     end
   end
 
@@ -600,8 +609,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: params_with_panda_email}}
-      assert exception.message.include?("Email is invalid")
+      post :create, params: {new_sign_up: true, user: params_with_panda_email}
+      assert_includes response.body, "Email is invalid"
     end
   end
 
@@ -669,8 +678,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     eu_student_params = set_up_partial_registration(@default_params.update(data_transfer_agreement_required: "1"))
 
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: eu_student_params}}
-      assert_equal "Validation failed: Data transfer agreement accepted must be accepted", exception.message
+      post :create, params: {new_sign_up: true, user: eu_student_params}
+      assert_includes response.body, "Validation failed: Data transfer agreement accepted must be accepted"
     end
   end
 
@@ -695,8 +704,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     @default_params.delete(:email)
     set_up_partial_registration(@default_params)
     assert_does_not_create(User) do
-      exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: @default_params}}
-      assert exception.message.include?("Email is required")
+      post :create, params: {new_sign_up: true, user: @default_params}
+      assert_includes response.body, "Email is required"
     end
   end
 
@@ -777,13 +786,12 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   # USING NEW SIGN-UP FLOW [END]
 
-  ### TODO: Create an equivalent test for this in new sign up flow ACQ-2871
-  # test "existing account sign in/up links redirect to user edit page" do
-  #   get :existing_account, params: {email: "test@email.com", provider: "facebook"}
-  #   assert_response :success
-  #   assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
-  #   assert_select "a[href=?]", "/users/sign_up?user_return_to=%2Fusers%2Fedit"
-  # end
+  test "existing account sign in/up links redirect to user edit page" do
+    get :existing_account, params: {email: "test@email.com", provider: "facebook"}
+    assert_response :success
+    assert_select "a[href=?]", "/users/sign_in?user_return_to=%2Fusers%2Fedit"
+    assert_select "a[href=?]", "/users/sign_up/account_type?user_return_to=%2Fusers%2Fedit"
+  end
 
   test "the us_state and country_code attributes can be set and updated" do
     user = create :student, us_state: "CO", country_code: "US"
@@ -808,20 +816,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     student.reload
     assert_equal "male", student.gender_student_input
     assert_equal "m", student.gender
-  end
-
-  test 'does not render the parent email section for LTI users' do
-    user = create :student, :with_lti_auth
-    PartialRegistration.persist_attributes session, user
-
-    post :new, params: {
-      user: {
-        email: 'test@code.org'
-      }
-    }
-
-    assert_template partial: '_finish_sign_up'
-    assert_select '#parent_email-container', 0
   end
 
   test 'verifies lti users if they are a teacher' do

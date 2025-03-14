@@ -1,0 +1,17 @@
+name 'networks-postassessment-question2-2024'
+title 'Networks and the Internet Post-Assessment: Question 1'
+
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+question
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson x
+MARKDOWN

@@ -1,7 +1,7 @@
 @import 'color';
-@import 'font';
-@import '@cdo/apps/componentLibrary/typography/typography.module';
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/typography.module';
+@import '@code-dot-org/component-library-styles/mixins';
 
 @keyframes pulse {
   0% {
@@ -20,7 +20,7 @@
 .aiDiffContainer {
   position: fixed;
   left: 10px;
-  bottom: 120px;
+  bottom: 106px;
   z-index: 2000;
   width: 512px;
 
@@ -116,6 +116,18 @@
   .aiBotOutlineIcon {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .headerTag {
+    margin-left: 4px;
+
+    div {
+      background-color: $neutral_dark80;
+
+      span {
+        color: $neutral_white;
+      }
+    }
   }
 }
 
@@ -216,6 +228,9 @@
   &Confirm i {
     color: $light_affirmative_500;
   }
+  &Negative i {
+    color: $light_negative_500;
+  }
 }
 
 .chips fieldset div {
@@ -225,11 +240,11 @@
 .floatingActionButton {
   position: fixed;
   left: 10px;
-  bottom: 48px;
+  bottom: 33px;
 
-  height: 66px;
-  width: 66px;
-  background-size: 66px;
+  height: 60px;
+  width: 60px;
+  background-size: 60px;
   padding: 0;
   background-color: transparent;
 

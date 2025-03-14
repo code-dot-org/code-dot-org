@@ -1,0 +1,58 @@
+name 'csaif_pl_algorithm_review-L11-Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reviewing Algorithms 
+
+<img src="https://images.code.org/304337796cc2c249691d622fb078c3fc-image-1741021380057.png" alt="clipboard with flowchart" style="border-radius:10px; float: right; ; height: 120px; margin: 0px 20px 0px 10px; ">
+
+#### An **algorithm** is a set of step-by-step instructions designed to accomplish a specific task. 
+
+#### Just like a recipe guides a chef or a GPS provides directions, algorithms help computers solve problems efficiently. 
+
+
+## Key Concepts in Algorithms
+
+<div style="clear:both;"></div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/51d8d9887e70f4231a245da5e7796e8b-image-1741706991947.png" alt="icon showing a sequence" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Sequencing</b></h3>
+           <p style = "font-size: 14pt";>The order of steps matters. Just like you wouldn't bake a cake before mixing the ingredients, algorithms must follow a logical order to produce the correct outcome.
+</p>
+           </div>
+    </div>
+<br>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/fe5ed8bec32d2c9b8f70ed17e61a2dfb-image-1741707077930.png" alt="flowchart showing selection" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Selection</b></h3>
+            <p style = "font-size: 14pt";>Sometimes, decisions need to be made. Using conditions like "if this, then that," selection allows an algorithm to take different paths based on the situation.<br><br> For example, a weather app might check if it’s raining before suggesting you bring an umbrella.
+</p>
+        </div>
+    </div>
+<br>
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/47d5b24861d22ac00cb18d144bfcb650-image-1741707243958.png" alt="iteration icon" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Iteration </b></h3>
+            <p style = "font-size: 14pt";> Repeating steps is essential for efficiency. Instead of writing out the same instructions multiple times, iteration (looping) allows an algorithm to repeat a process until a certain condition is met.<br><br> A fitness tracker, for instance, continuously counts steps until you stop walking.</p>
+        </div>
+    </div>
+
+---
+
+
+#### Now that we’ve explored each of these building blocks, it’s time to combine them into more advanced algorithms! 
+
+#### By integrating sequencing, selection, and iteration, we can create algorithms that solve complex problems, from sorting data to recognizing patterns in images.
+
+
+## Let's practice and building algorithms!
+
+
+MARKDOWN

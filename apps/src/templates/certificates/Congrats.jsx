@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
-import {hasQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {
   BodyTwoText,
   Heading3,
   Heading4,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import {hasQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';

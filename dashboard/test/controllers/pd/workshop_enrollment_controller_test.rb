@@ -127,6 +127,18 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     assert_template :missing_application
   end
 
+  test 'teacher already enrolled in workshop cannot enroll again' do
+    teacher = create :teacher
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    workshop = create :workshop
+    create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
+
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :already_enrolled
+  end
+
   test 'teacher with required application gets new view' do
     teacher = create :teacher
     create :pd_teacher_application, user: teacher, status: 'accepted'

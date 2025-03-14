@@ -1,5 +1,5 @@
 name 'test-intro-to-programming-lesson7-cfu'
-title 'Functions and Parameters'
+title 'Check for Understanding'
 
 wrong '`paint_square`'
 right '`color`'

@@ -1,7 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
-
-import {Button} from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './preview-controls.module.scss';
 
