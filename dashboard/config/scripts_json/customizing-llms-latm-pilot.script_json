@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-07 20:49:32 UTC",
+    "serialized_at": "2025-03-13 16:35:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -38,7 +38,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "("
+        "display_name": "Customizing Models"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -86,7 +86,7 @@
       },
       "seeding_key": {
         "lesson.key": "(Optional) Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "customizing-llms-latm-pilot"
       }
     },
@@ -377,7 +377,7 @@
       "seeding_key": {
         "lesson_activity.key": "d9349bd1-392b-4d9d-b3ea-f61198d844c8",
         "lesson.key": "(Optional) Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "customizing-llms-latm-pilot"
       }
     },
@@ -391,7 +391,7 @@
       "seeding_key": {
         "lesson_activity.key": "bd91f5ef-6025-4203-876a-cbbf1b649469",
         "lesson.key": "(Optional) Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "customizing-llms-latm-pilot"
       }
     },
@@ -405,7 +405,7 @@
       "seeding_key": {
         "lesson_activity.key": "524b610e-238b-40a8-a5a9-427afd0116ae",
         "lesson.key": "(Optional) Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "customizing-llms-latm-pilot"
       }
     },
@@ -419,7 +419,7 @@
       "seeding_key": {
         "lesson_activity.key": "9966a80f-0674-423a-9ea8-0b8931b2ba2f",
         "lesson.key": "(Optional) Introduction to Generative AI",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "customizing-llms-latm-pilot"
       }
     },

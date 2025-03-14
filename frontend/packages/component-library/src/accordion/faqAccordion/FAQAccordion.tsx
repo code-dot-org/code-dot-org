@@ -3,7 +3,7 @@ import {ReactNode} from 'react';
 
 import Accordion, {AccordionProps} from './../Accordion';
 
-export type FAQItem = {
+export type FAQAccordionItem = {
   id: string;
   label: string | ReactNode;
   questionString: string;
@@ -13,7 +13,7 @@ export type FAQItem = {
 
 export interface FAQAccordionProps extends AccordionProps {
   /** List of FAQ items */
-  items: FAQItem[];
+  items: FAQAccordionItem[];
   /** Custom className for additional styling */
   className?: string;
 }

@@ -79,7 +79,7 @@
 
 .countText {
   margin-top: 1px;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   padding: 0 2px;
 
   color: var(--light-white, #FFF);

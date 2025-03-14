@@ -11,7 +11,7 @@
     "long_instructions": "#### will.i.am's \"I Like to Move It\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Build the song with code. \r\n",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
@@ -66,13 +66,14 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "Recreate \"Move it\" ",
     "thumbnail_url": "https://images.code.org/68f60897bb2ab85e6cddb4ee76bd8d9c-Screenshot 2025-03-07 at 3.08.52 PM.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T22:59:24.705+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-a\"},{\"changed_at\":\"2025-03-07 23:00:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:02:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:11:02 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T22:59:24.705+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-a\"},{\"changed_at\":\"2025-03-07 23:00:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:02:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:11:02 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:26:34 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

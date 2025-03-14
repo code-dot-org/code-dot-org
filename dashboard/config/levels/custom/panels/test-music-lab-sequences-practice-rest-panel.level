@@ -1,11 +1,26 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-10T20:23:38.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "some panels on how the `rest` block works. ",
+        "imageUrl": "",
+        "key": "test-music-lab-sequences-practice-rest-panel-18ead53c-578a-4f5b-a4ee-9b67dea847e4"
+      },
+      {
+        "text": "Here's another. ",
+        "imageUrl": "",
+        "key": "test-music-lab-sequences-practice-rest-panel-8f0f3e39-c985-452b-a49b-a19df1a00f17"
+      }
+    ]
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2025-03-11 18:30:56 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>
