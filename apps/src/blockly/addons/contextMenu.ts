@@ -620,6 +620,12 @@ function hasShadowChildren(block: GoogleBlockly.Block) {
   return shadowChildCount(block) > 0;
 }
 
+/**
+ * Resets the shadow state of a block's connections after converting
+ * shadow blocks back to normal blocks. This is needed to ensure that
+ * the parent doesn't continue to have shadow blocks below the converted
+ * blocks.
+ **/
 function clearShadowState(block: GoogleBlockly.Block) {
   const connections = block.getConnections_(true);
   connections?.forEach(connection => {
