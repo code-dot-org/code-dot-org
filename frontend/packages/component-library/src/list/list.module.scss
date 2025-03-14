@@ -1,0 +1,116 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+// List common styles
+.list {
+  list-style-type: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+
+  .listItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .listItemLabel {
+      margin: 0;
+    }
+  }
+}
+
+// List types
+.list.list-type {
+  &-primary {
+    .listItemIcon {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  &-secondary {
+    .listItemIcon {
+      color: var(--text-neutral-placeholder);
+    }
+  }
+
+  &-brand {
+    .listItemIcon {
+      color: var(--text-brand-teal-primary);
+    }
+  }
+}
+
+// List sizes
+.list-size {
+  &-l {
+    &.list,
+    .listItem {
+      gap: 0.625rem;
+    }
+
+    .listItemIcon {
+      @include typography.body-one-font-size;
+
+      &.listItemBullet {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  &-m {
+    &.list,
+    .listItem {
+      gap: 0.5rem;
+    }
+
+    .listItemIcon {
+      @include typography.body-two-font-size;
+
+      &.listItemBullet {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  &-s {
+    &.list,
+    .listItem {
+      gap: 0.375rem;
+    }
+
+    .listItemIcon {
+      @include typography.body-three-font-size;
+
+      &.listItemBullet {
+        font-size: 0.625rem;
+      }
+    }
+  }
+
+  &-xs {
+    &.list,
+    .listItem {
+      gap: 0.25rem;
+    }
+
+    .listItemIcon {
+      @include typography.body-four-font-size;
+
+      &.listItemBullet {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+// List text weight
+.list-weight {
+  &-bold {
+    .listItemLabel {
+      @include typography.strong;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+import List, {ListProps} from '../List';
+
+describe('Design System - List', () => {
+  const items = [{label: 'Item A'}, {label: 'Item B'}];
+
+  const renderListEmbedContainer = (props: Partial<ListProps> = {}) => {
+    render(<List {...props} {...{items}} />);
+  };
+
+  const getList = () => screen.getByRole('list');
+
+  it('renders list', () => {
+    renderListEmbedContainer();
+    expect(getList()).toBeVisible();
+  });
+
+  it('renders list items', () => {
+    renderListEmbedContainer();
+
+    items.forEach(({label}) => {
+      expect(screen.getByText(label)).toBeVisible();
+    });
+  });
+
+  it('renders list with provided className styles', () => {
+    const className = 'customClass';
+    const classStyle = 'color: red;';
+
+    renderListEmbedContainer({className});
+    const list = getList();
+
+    expect(list).not.toHaveStyle(classStyle);
+
+    // Add custom CSS directly in the test
+    const style = document.createElement('style');
+    style.innerHTML = `.${className} { ${classStyle} }`;
+    document.head.appendChild(style);
+
+    expect(list).toHaveStyle(classStyle);
+  });
+});

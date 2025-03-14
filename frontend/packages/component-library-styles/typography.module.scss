@@ -127,27 +127,43 @@ html {
   margin-bottom: 1em;
 }
 
+@mixin body-one-font-size {
+  font-size: 1.25rem;
+}
+
+@mixin body-two-font-size {
+  font-size: 1rem;
+}
+
+@mixin body-three-font-size {
+  font-size: 0.875rem;
+}
+
+@mixin body-four-font-size {
+  font-size: 0.813rem;
+}
+
 @mixin body-one {
   @include paragraph-common;
-  font-size: 1.25rem;
+  @include body-one-font-size;
   line-height: 1.4;
 }
 
 @mixin body-two {
   @include paragraph-common;
-  font-size: 1rem;
+  @include body-two-font-size;
   line-height: 1.48;
 }
 
 @mixin body-three {
   @include paragraph-common;
-  font-size: 0.875rem;
+  @include body-three-font-size;
   line-height: 1.54;
 }
 
 @mixin body-four {
   @include paragraph-common;
-  font-size: 0.813rem;
+  @include body-four-font-size;
   line-height: 1.64;
 }
 
