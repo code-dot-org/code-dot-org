@@ -245,7 +245,7 @@
     "blockly": "11.1.1",
     "bootstrap-sass": "^3.4.1",
     "buffer": "^6.0.3",
-    "canvg": "gabelerner/canvg",
+    "canvg": "^4.0.3",
     "classnames": "^2.3.2",
     "codemirror": "5.5",
     "codemirror-spell-checker": "^1.1.2",
