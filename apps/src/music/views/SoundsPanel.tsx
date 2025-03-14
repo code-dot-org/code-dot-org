@@ -254,8 +254,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
-  const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
-    useRef(null);
 
   const onModeChange = useCallback((value: Mode) => {
     setMode(value);
@@ -270,7 +268,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     // when wrapping the content with FocusLock.
     setTimeout(() => {
       currentFolderRef.current?.scrollIntoView();
-      currentSoundRef.current?.scrollIntoView();
     }, 0);
   }, []);
 
@@ -279,7 +276,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   };
 
   const currentSoundRefCallback = (ref: HTMLDivElement) => {
-    currentSoundRef.current = ref;
     if (!isFocusSet && ref) {
       setTimeout(() => {
         ref.focus();
