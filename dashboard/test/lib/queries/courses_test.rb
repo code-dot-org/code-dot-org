@@ -23,7 +23,7 @@ class Queries::CoursesTest < ActiveSupport::TestCase
 
       before do
         allow(unit).to receive(:id).and_return(1)
-        allow(UnitGroupUnit).to receive(:find_by).and_return(unit_group_unit)
+        allow(UnitGroupUnit).to receive(:get_with_unit_from_cache).and_return([unit_group_unit])
       end
 
       context 'unit_group_unit is nil' do
@@ -38,7 +38,6 @@ class Queries::CoursesTest < ActiveSupport::TestCase
 
         before do
           allow(course).to receive(:id).and_return(1)
-          allow(UnitGroupUnit).to receive(:where).and_return([unit_group_unit])
           allow(unit_group_unit).to receive(:course_id).and_return(course.id)
           allow(UnitGroup).to receive(:get_from_cache).and_return(course)
         end
@@ -47,6 +46,7 @@ class Queries::CoursesTest < ActiveSupport::TestCase
           expected_course_context = {
             course: course,
             unit_group_unit: unit_group_unit,
+            unit: unit,
           }
           _(Queries::Courses.get_course_context(script_name)).must_equal expected_course_context
         end

@@ -2,7 +2,7 @@ class Queries::Courses
   def self.get_unit_context(course_name, unit_position)
     course = UnitGroup.get_from_cache(course_name)
     return nil unless course
-    unit_group_unit = UnitGroupUnit.find_by(course_id: course.id, position: unit_position)
+    unit_group_unit = UnitGroupUnit.get_with_position_from_cache(course.id, unit_position)
     return nil unless unit_group_unit
     unit = Unit.get_from_cache(unit_group_unit.script_id)
     {course: course, unit_group_unit: unit_group_unit, unit: unit}
