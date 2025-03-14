@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import React, {useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
@@ -230,7 +231,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              {predictSettings?.isPredictLevel && <PredictSummary />}
               <EnhancedSafeMarkdown
                 markdown={text}
                 className={moduleStyles.markdownText}
@@ -242,6 +242,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 setPredictResponse={setPredictResponse}
                 predictAnswerLocked={predictAnswerLocked}
               />
+              {predictSettings?.isPredictLevel && (
+                <InstructorsOnly>
+                  <div className={moduleStyles['message-' + theme]}>
+                    <PredictSummary />
+                  </div>
+                </InstructorsOnly>
+              )}
             </div>
           </div>
         )}
