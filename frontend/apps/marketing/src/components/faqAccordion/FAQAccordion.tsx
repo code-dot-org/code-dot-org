@@ -64,7 +64,7 @@ const FAQAccordionContentful: React.FunctionComponent<
   // Workaround for the experience builder not working with Array
   if (!faqItems.length) {
     return (
-      <div>
+      <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>✍ FAQ Accordion placeholder.</strong> Please add a "FAQs"
           content type entry in the FAQ Accordion sidebar, save, and open the
