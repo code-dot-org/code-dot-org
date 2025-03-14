@@ -480,8 +480,10 @@ Resources:
 <% if frontends -%>
               # Manage Frontends autoscaling group
               - Effect: Allow
-                Action:
-                  - 'autoscaling:StartInstanceRefresh'
+                Action: 'autoscaling:DescribeAutoScalingGroups'
+                Resource: '*'
+              - Effect: Allow
+                Action: 'autoscaling:StartInstanceRefresh'
                 Resource:
                   # TODO: if `!Ref Frontends` works, we can eliminate the manual arn
                   - !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
