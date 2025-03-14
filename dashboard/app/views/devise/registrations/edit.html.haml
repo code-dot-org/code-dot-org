@@ -88,6 +88,9 @@
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 
+- if current_user.teacher?
+  %div#turn-off-ai-diff
+
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
@@ -163,6 +166,15 @@
     .farSide
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
+
+- if DCDO.get('enable-expire-other-sessions', false) # TODO: remove flag once feature is stable
+  %div#expire-other-sessions
+    %hr
+    %h2= t('user.expire_other_sessions')
+    %p= t('user.expire_other_sessions_description')
+    = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |expire_other_form|
+      .farSide
+        = expire_other_form.submit t('user.expire_other_sessions_button'), class: 'btn btn-warning'
 
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.

@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .soundsPanel {
   user-select: none;
@@ -102,6 +102,10 @@
 
     &:hover {
       background-color: $neutral_dark90;
+
+      .lengthNoMarginRight {
+        color: $neutral_dark30;
+      }
     }
 
     &:focus-visible {
@@ -162,6 +166,10 @@
 
     &NoMarginRight {
       margin-right: 0;
+
+      &Selected {
+        color: $neutral_dark20;
+      }
     }
   }
 

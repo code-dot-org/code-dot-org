@@ -7,18 +7,19 @@ require_relative '../../utils/selenium_browser'
 require 'retryable'
 
 UI_TEST_DIR = File.expand_path('../..', __dir__)
-$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, "browsers.json"))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
+$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json'))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
+SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
 
 # Run all feature scenarios in a single session.
 def single_session?
   $browser_config['mobile'] || $single_session
 end
 
-def saucelabs_browser(test_run_name)
-  raise "Please define CDO.saucelabs_username" if CDO.saucelabs_username.blank?
-  raise "Please define CDO.saucelabs_authkey"  if CDO.saucelabs_authkey.blank?
+def saucelabs_browser(test_run_name, http_client: nil)
+  raise 'Please define CDO.saucelabs_username' if CDO.saucelabs_username.blank?
+  raise 'Please define CDO.saucelabs_authkey'  if CDO.saucelabs_authkey.blank?
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
 
@@ -34,36 +35,44 @@ def saucelabs_browser(test_run_name)
   }
 
   sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
-  capabilities["sauce:options"] ||= {}
-  capabilities["sauce:options"].merge!(sauce_options)
+  capabilities['sauce:options'] ||= {}
+  capabilities['sauce:options'].merge!(sauce_options)
 
-  very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
-
-  $http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
-  with_read_timeout(5.minutes) do
-    Selenium::WebDriver.for(:remote,
-      url: "https://ondemand.us-west-1.saucelabs.com/wd/hub",
-      capabilities: capabilities,
-      http_client: $http_client
-    )
-  end
+  browser = SeleniumBrowser.remote(
+    SAUCELABS_SELENIUM_URL,
+    capabilities: capabilities,
+    http_client: http_client
+  )
+  return browser
 end
 
 # Set HTTP read timeout to the specified value during the block.
+# Invocable from Cucumber steps.
 def with_read_timeout(timeout, &block)
-  $http_client ?
-    $http_client.with_read_timeout(timeout, &block) :
+  $selenium_http_client ?
+    $selenium_http_client.with_read_timeout(timeout, &block) :
     yield
+end
+
+# Set the virtual browser to either portrait or landscape orientation.
+# Invocable from Cucumber steps.
+def change_orientation(orientation)
+  $selenium_http_client.call(
+    :post,
+    "/wd/hub/session/#{$browser.session_id}/orientation",
+    {orientation: orientation.upcase}
+  )
 end
 
 def get_browser(test_run_name)
   browser = nil
+  $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
   if ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-      saucelabs_browser(test_run_name)
+      saucelabs_browser(test_run_name, http_client: $selenium_http_client)
     end
     $session_id = browser.session_id
     visual_log_url = "https://saucelabs.com/tests/#{$session_id}"

@@ -2805,6 +2805,13 @@ StudioApp.prototype.validateCodeChanged = function () {
   return project.isCurrentCodeDifferent(level.startBlocks);
 };
 
+StudioApp.prototype.analyticsData = function () {
+  return {
+    levelId: this.config.serverLevelId,
+    scriptId: this.config.scriptId,
+  };
+};
+
 /**
  * Set whether to alert user to empty blocks, short-circuiting all other tests.
  * @param {boolean} checkBlocks Whether to check for empty blocks.

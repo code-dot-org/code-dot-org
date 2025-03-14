@@ -4,6 +4,7 @@ import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 
 // Register custom components server-side
 import '@/contentful/register-custom-components';
+import FontLoader from '@code-dot-org/fonts/FontLoader';
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; preview?: string}>;
@@ -30,6 +31,7 @@ export default async function ExperiencePage({
   const experienceJSON = experience ? JSON.stringify(experience) : null;
   return (
     <main style={{width: '100%'}}>
+      <FontLoader locale={locale} />
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader experienceJSON={experienceJSON} locale={locale} />
     </main>

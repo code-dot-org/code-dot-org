@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include Minitest::RSpecMocks
 
   setup_all do
     seed_deprecated_unit_fixtures
@@ -60,6 +61,41 @@ class ScriptsControllerTest < ActionController::TestCase
 
       assert_response :forbidden
     end
+  end
+
+  test 'show includes correct SEO data' do
+    get :show, params: {
+      id: Unit::TWENTY_HOUR_NAME,
+    }
+    assert_response :ok
+    assert_includes(@response.body, "<title>Unit: Accelerated Intro to CS Course - Code.org [test]</title>")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!\" />")
+  end
+
+  test 'canonical url is added if it is a single unit course' do
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    unit = create :script, published_state: nil, family_name: 'my-script'
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+
+    get :show, params: {
+      id: unit.name,
+    }
+    assert_response :ok
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/s/bogus-script")
+  end
+
+  test 'canonical url is not added if is not single unit course' do
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    unit2 = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit2, position: 2
+
+    get :show, params: {
+      id: unit.name,
+    }
+    assert_response :ok
+    refute_includes(@response.body, "<link rel=\"canonical\"")
   end
 
   test "should get show of hoc" do
@@ -1855,6 +1891,50 @@ class ScriptsControllerTest < ActionController::TestCase
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
     File.stubs(:write).with do |filename, _|
       filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts.en.yml')
+    end
+  end
+
+  describe '#redirect_to_canonical_path' do
+    let!(:user) {create :teacher}
+    let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
+    let(:modularity_enabled) {false}
+
+    before do
+      allow(Experiment).to receive(:enabled?).and_call_original
+      allow(Experiment).to receive(:enabled?).with(user: user, experiment_name: 'modularity').and_return(modularity_enabled)
+    end
+
+    context 'modularity is off' do
+      it '/s/:id/ does not redirect' do
+        sign_in user
+        get :show, params: {id: unit.name}
+        assert_response :success
+      end
+
+      it '/courses/:course_course_name/units/:position/ does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, position: unit_position}
+        assert_response :success
+      end
+    end
+
+    context 'modularity is on' do
+      let(:modularity_enabled) {true}
+
+      it '/s/:id/ does redirect' do
+        sign_in user
+        get :show, params: {id: unit.name}
+        assert_redirected_to "/courses/#{course.name}/units/#{unit_position}"
+      end
+
+      it '/courses/:course_course_name/units/:position/ does not redirect' do
+        sign_in user
+        get :show, params: {course_course_name: course.name, position: unit_position}
+        assert_response :success
+      end
     end
   end
 end

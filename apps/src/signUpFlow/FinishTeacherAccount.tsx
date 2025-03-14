@@ -1,19 +1,19 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
-import classNames from 'classnames';
-import cookies from 'js-cookie';
-import React, {useState, useEffect, useMemo} from 'react';
-
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import {
   BodyThreeText,
   BodyFourText,
   BodyTwoText,
   Heading2,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import cookies from 'js-cookie';
+import React, {useState, useEffect, useMemo} from 'react';
+
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
@@ -72,14 +72,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isGdprLoaded, setIsGdprLoaded] = useState(false);
   const [userReturnTo, setUserReturnTo] = useState('/home');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
-    useState(false);
-
-  const isInSchoolRequiredExperiment = statsigReporter.getIsInExperiment(
-    'require_school_in_signup_v1',
-    'requireInfo',
-    false
-  );
+  const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
+    useState('');
 
   const showEducatorRole = statsigReporter.getIsInExperiment(
     'educator_role',
@@ -98,13 +92,15 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
-    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
-      navigateToHref('/users/new_sign_up/account_type');
+    if (
+      sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) !== UserTypes.TEACHER
+    ) {
+      navigateToHref('/users/sign_up/account_type');
     } else if (
       sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
       sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
     ) {
-      navigateToHref('/users/new_sign_up/login_type');
+      navigateToHref('/users/sign_up/login_type');
     }
 
     analyticsReporter.sendEvent(
@@ -152,16 +148,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
       name?.trim() === '' ||
       name?.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
-      (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo)) ||
+      schoolInfoInvalid(schoolInfo) ||
       (requireEducatorRole && !educatorRole),
-    [
-      gdprValid,
-      isInSchoolRequiredExperiment,
-      name,
-      schoolInfo,
-      requireEducatorRole,
-      educatorRole,
-    ]
+    [gdprValid, name, schoolInfo, requireEducatorRole, educatorRole]
   );
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -187,7 +176,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
     setIsSubmitting(true);
     sendFinishEvent();
-    showErrorCreatingAccountMessage(false);
+    setErrorCreatingAccountMessage('');
 
     const signUpParams = {
       new_sign_up: true,
@@ -220,8 +209,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
       clearSignUpSessionStorage(true);
       navigateToHref(userReturnTo);
     } else {
+      if (response.status === 400) {
+        response
+          .json()
+          .then(badRequest => setErrorCreatingAccountMessage(badRequest.error));
+      } else {
+        setErrorCreatingAccountMessage(locale.error_signing_up_message());
+      }
       setIsSubmitting(false);
-      showErrorCreatingAccountMessage(true);
     }
   };
 
@@ -274,12 +269,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
                 className={style.xIcon}
               />
               <SafeMarkdown
-                markdown={locale.error_signing_up_message()}
+                markdown={errorCreatingAccountMessage}
                 className={style.errorMessageText}
               />
             </div>
             <CloseButton
-              onClick={() => showErrorCreatingAccountMessage(false)}
+              onClick={() => setErrorCreatingAccountMessage('')}
               aria-label={locale.error_signing_up_message_aria_label()}
             />
           </div>
@@ -318,11 +313,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               dropdownTextThickness="thin"
             />
           )}
-          <SchoolDataInputs
-            {...schoolInfo}
-            includeHeaders={false}
-            markFieldsAsRequired={isInSchoolRequiredExperiment}
-          />
+          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
               <BodyThreeText

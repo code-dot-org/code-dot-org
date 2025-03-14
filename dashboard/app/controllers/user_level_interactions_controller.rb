@@ -8,7 +8,8 @@ class UserLevelInteractionsController < ApplicationController
 
   # POST /user_level_interactions
   def create
-    if should_create_uli?(user_level_interaction_params[:metadata])
+    version_year = JSON.parse(user_level_interaction_params[:metadata])["version_year"]
+    if should_create_uli?(version_year)
       @user_level_interaction = UserLevelInteraction.new(user_level_interaction_params)
       if @user_level_interaction.save
         render(status: :created, json: {message: "Successfully created UserLevelInteraction.", id: @user_level_interaction.id})
@@ -16,26 +17,15 @@ class UserLevelInteractionsController < ApplicationController
         render(status: :not_acceptable, json: {error: 'There was an error creating a new UserLevelInteraction.'})
       end
     else
-      render(status: :bad_request, json: {message: 'UserLevelInteraction not created because this is not a CSP 2024+ script.'})
+      render(status: :bad_request, json: {message: 'UserLevelInteraction not created because this level is not in a 2024+ script.'})
     end
   end
 
   # The UserLevelInteractions table has the potential to grow very quickly.
   # Given that we are still experimenting with the best way to store and use this data,
   # we are going to cautiously limit the number of interactions we store to only
-  # CSP units from 2024 and beyond.
-  def should_create_uli?(metadata)
-    parsed_metadata = JSON.parse(metadata)
-    course_offering = parsed_metadata["course_offering"]
-    version_year = parsed_metadata["version_year"]
-    csp_unit?(course_offering) && recent_unit?(version_year)
-  end
-
-  def csp_unit?(course_offering)
-    course_offering == Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP
-  end
-
-  def recent_unit?(version_year)
+  # units from 2024 and beyond.
+  def should_create_uli?(version_year)
     version_year.to_i >= 2024
   end
 

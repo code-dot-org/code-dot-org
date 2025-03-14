@@ -69,19 +69,13 @@
   align-items: start;
   gap: 1rem;
 
-  // This will be updated in DESIGN2-266 to use
-  // new styles and can be deleted afterwards.
-  .caption {
-    font-weight: 600;
-  }
-
   .download {
     margin-top: 0.25rem;
   }
 
   // Align the download button to the right
   // when there is no caption shown.
-  &:not(:has(.caption)) {
+  &:not(:has(figcaption)) {
     justify-content: flex-end;
   }
 }

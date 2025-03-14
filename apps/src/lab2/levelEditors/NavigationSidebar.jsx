@@ -1,6 +1,5 @@
+import {Heading3} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
-
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './navigation.module.scss';
 

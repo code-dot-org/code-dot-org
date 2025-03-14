@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-01-24T22:34:36.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Running Club\r\n\r\n::: details [**✅ Step 1**]\r\nLoad the data and print a summary using `info()` and `describe()`.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nConvert the **Distance** attribute from *float64* to *int64*.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nConvert the **Date** attribute from an *object* to *datetime*.\r\n:::\r\n\r\n::: details [**✅ Step 5**]\r\nPrint a new summary using `info()` to verify your changes worked.\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Running Club\r\n\r\n::: details [**✅ Step 1**]\r\nLoad the data and print a summary using `info()` and `describe()`.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nConvert the **Distance** attribute from *float64* to *int64*.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nConvert the **Date** attribute from an *object* to *datetime*.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nPrint a new summary using `info()` to verify your changes worked.\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -56,9 +57,9 @@
       "open": false,
       "type": "validation"
     },
-    "name_suffix": "_pilot-2024"
+    "name_suffix": "_pilot-2024",
+    "enable_micro_bit": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-24T22:34:36.947+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L7a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L7a_2024-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-24T22:34:36.947+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L7a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L7a_2024-pilot\"},{\"changed_at\":\"2025-02-20 23:53:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,13 +1,14 @@
+import {Heading2} from '@code-dot-org/component-library/typography';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactTooltip from 'react-tooltip';
 
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import * as utils from '../../../utils';
+import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {
   DATE_FORMAT,
@@ -170,18 +171,23 @@ export default class LandingPageWorkshopsTable extends React.Component {
         </td>
         <td>
           {workshop.sessions.map((session, i) => {
-            return (
-              <p key={i}>{moment.utc(session.start).format(DATE_FORMAT)}</p>
-            );
+            const date = getSessionDate({
+              session,
+              format: DATE_FORMAT,
+              isLocal: !workshop.time_zone,
+            });
+            return <p key={i}>{date}</p>;
           })}
         </td>
         <td>
           {workshop.sessions.map((session, i) => {
+            const {startTime, endTime, tzAbbreviation} = getSessionTimes({
+              session,
+              format: TIME_FORMAT,
+              isLocal: !workshop.time_zone,
+            });
             return (
-              <p key={i}>
-                {`${moment.utc(session.start).format(TIME_FORMAT)} -
-                     ${moment.utc(session.end).format(TIME_FORMAT)}`}
-              </p>
+              <p key={i}>{`${startTime} - ${endTime} ${tzAbbreviation}`}</p>
             );
           })}
         </td>

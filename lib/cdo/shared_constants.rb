@@ -49,6 +49,8 @@ module SharedConstants
       click_help_and_tips: "click_help_and_tips",
       click_keep_working: "click_keep_working",
       click_run: "click_run",
+      click_submit: "click_submit",
+      click_validate: "click_validate",
     }
   ).freeze
 
@@ -734,7 +736,7 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
+  AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   # These reflect the 'status' of an AI Interaction,
@@ -755,6 +757,7 @@ module SharedConstants
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
     COMPLETION: 'completion',
+    GENERIC_HELP: 'generic_help',
   }.freeze
 
   USER_TYPES = OpenStruct.new(
@@ -833,5 +836,27 @@ module SharedConstants
     {value: "district_admin", category: "admin"},
     {value: "parent", category: 'other'},
     {value: "other", category: 'other'}
+  ].freeze
+
+  AI_DIFF_CONTEXT = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    GENERAL: "general"
+  }.freeze
+
+  DISALLOWED_ROUTES = [
+    "/admin/",
+    "/api/",
+    "/blockly/",
+    "/dashboardapi/",
+    "/join/",
+    "/milestone/",
+    "/projects/",
+    "/sections/",
+    "/r",
+    "/c",
+    "/oauth_sign_out/",
+    "/certificates/"
   ].freeze
 end

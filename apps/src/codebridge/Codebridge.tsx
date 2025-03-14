@@ -4,10 +4,7 @@ import {
   SOURCE_REDUCER_ACTIONS,
   useSourceUtilities,
 } from '@codebridge/codebridgeContext';
-import {FileBrowser} from '@codebridge/FileBrowser';
 import {useReducerWithCallback} from '@codebridge/hooks';
-import {InfoPanel} from '@codebridge/InfoPanel';
-import {SideBar} from '@codebridge/SideBar';
 import {
   ConfigType,
   SetProjectFunction,
@@ -15,16 +12,16 @@ import {
   OnRunFunction,
   SendConsoleInputFunction,
 } from '@codebridge/types';
-import React, {useEffect, useReducer, useRef} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
-import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import experiments from '@cdo/apps/util/experiments';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import Workspace from './Workspace';
-import Output from './Workspace/Output';
-import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
-
-import moduleStyles from './styles/cdoIDE.module.scss';
+import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
 
 type CodebridgeProps = {
@@ -59,6 +56,7 @@ export const Codebridge = React.memo(
       new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
     );
     const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
+    const isShareView = useAppSelector(state => state.lab.isShareView);
 
     const sourceUtilities = useSourceUtilities(dispatch);
 
@@ -70,43 +68,27 @@ export const Codebridge = React.memo(
       }
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
-    const ComponentMap = {
-      'file-browser': FileBrowser,
-      'side-bar': SideBar,
-      'file-preview': FilePreview,
-      'info-panel': config.Instructions || InfoPanel,
-      workspace: Workspace,
-      output: Output,
-      'workspace-and-output': WorkspaceAndOutput,
-    };
+    const innerLayout = useMemo(() => {
+      if (
+        isShareView &&
+        config.layoutComponents.share &&
+        experiments.isEnabled(experiments.CODEBRIDGE_SHARE)
+      ) {
+        return config.layoutComponents.share;
+      }
+      let currentLayout = config.activeLayout;
+      if (!currentLayout) {
+        currentLayout = 'horizontal';
+      }
+      return config.layoutComponents[currentLayout];
+    }, [config.activeLayout, config.layoutComponents, isShareView]);
 
-    let gridLayout: string;
-    let gridLayoutRows: string;
-    let gridLayoutColumns: string;
-    if (
-      config.gridLayout &&
-      config.gridLayoutRows &&
-      config.gridLayoutColumns
-    ) {
-      gridLayout = config.gridLayout;
-      gridLayoutRows = config.gridLayoutRows;
-      gridLayoutColumns = config.gridLayoutColumns;
-    } else if (config.labeledGridLayouts && config.activeGridLayout) {
-      const labeledLayout = config.labeledGridLayouts[config.activeGridLayout];
-      gridLayout = labeledLayout.gridLayout;
-      gridLayoutRows = labeledLayout.gridLayoutRows;
-      gridLayoutColumns = labeledLayout.gridLayoutColumns;
-    } else {
-      throw new Error('Cannot render codebridge - no layout provided');
-    }
-    // gridLayout is a css string that defines the components in the grid layout.
-    // In order to find which components are in the grid layout, we remove all quotes
-    // from the string and tokenize it.
-    const gridLayoutKeys = gridLayout
-      .trim()
-      .replaceAll(`"`, '')
-      .split(' ')
-      .map(key => key.trim());
+    const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+    const backpackApi = useMemo(
+      () => new BackpackClientApi(appName, null),
+      [appName]
+    );
 
     return (
       <CodebridgeContextProvider
@@ -123,23 +105,11 @@ export const Codebridge = React.memo(
           sendConsoleInput,
         }}
       >
-        <div
-          className={moduleStyles['cdoide-container']}
-          style={{
-            gridTemplateAreas: gridLayout,
-            gridTemplateRows: gridLayoutRows,
-            gridTemplateColumns: gridLayoutColumns,
-          }}
-        >
-          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => gridLayoutKeys.includes(key))
-            .map(key => {
-              const Component = ComponentMap[key];
-              return <Component key={key} />;
-            })}
-
-          {/*<Search />*/}
-        </div>
+        <BackpackAPIContext.Provider value={backpackApi}>
+          <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {innerLayout}
+          </div>
+        </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>
     );
   }

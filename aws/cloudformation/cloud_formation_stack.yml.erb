@@ -221,6 +221,12 @@ Resources:
               - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA'
           - Effect: Allow
             Action:
+              - 'bedrock:Retrieve'
+            Resource:
+              # TODO: Deploy KB with Cloudformation and !Ref it here
+              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/ODWSNBOEZG'
+          - Effect: Allow
+            Action:
               - 'bedrock:InvokeModel'
             Resource:
               - 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'

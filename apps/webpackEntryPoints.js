@@ -65,6 +65,7 @@ const CODE_STUDIO_ENTRIES = {
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
   'followers/student_user_new': './src/sites/studio/pages/followers/student_user_new.js',
   'followers/students_cannot_join': './src/sites/studio/pages/followers/students_cannot_join.js',
+  'followers/join_logged_out': './src/sites/studio/pages/followers/join_logged_out.js',
   'essential': './src/sites/studio/pages/essential.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
@@ -126,7 +127,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
-  'ai_tutor/tester': './src/sites/studio/pages/ai_tutor/tester.js',
+  'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
   'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',
@@ -254,6 +255,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/workshop_enrollment/students_cannot_enroll': './src/sites/studio/pages/pd/workshop_enrollment/students_cannot_enroll.js',
   'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
   'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
+  'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
   'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',

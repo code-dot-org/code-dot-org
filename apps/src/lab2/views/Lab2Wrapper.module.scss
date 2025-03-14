@@ -23,20 +23,20 @@
     animation: fadein 0.5s;
 
     .pageError {
+      display: flex;
       background-color: $neutral_light;
+      flex-direction: column;
+      align-items: center;
       border-radius: 5px;
       padding: 20px;
-      text-align: center;
+      gap: 20px;
 
       &Image {
         width: 120px;
-        display: block;
-        margin: 2px auto 15px auto;
       }
 
       &Message {
         color: $neutral_dark70;
-        margin-top: 10px;
       }
     }
   }
@@ -58,5 +58,4 @@
     width: 100%;
     z-index: 80;
   }
-
 }

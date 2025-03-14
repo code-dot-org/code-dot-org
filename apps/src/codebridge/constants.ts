@@ -5,3 +5,5 @@ export enum MiniApps {
 }
 
 export const MAZE_FILE_NAME = 'serialized_maze.txt';
+
+export type LayoutKey = 'horizontal' | 'vertical';

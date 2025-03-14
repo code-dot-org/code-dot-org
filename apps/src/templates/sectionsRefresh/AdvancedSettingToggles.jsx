@@ -1,7 +1,7 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';

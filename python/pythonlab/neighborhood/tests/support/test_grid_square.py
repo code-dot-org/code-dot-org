@@ -12,7 +12,7 @@ def test_cannot_set_invalid_color():
         grid_square.set_color("invalid_color")
         assert False
     except NeighborhoodRuntimeException as e:
-        assert str(e) == "NeighborhoodRuntimeException: INVALID_COLOR"
+        assert str(e) == "INVALID_COLOR"
 
 def test_cannot_set_color_on_wall():
     grid_square = GridSquare(0, 0)

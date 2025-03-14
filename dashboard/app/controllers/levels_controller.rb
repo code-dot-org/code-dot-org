@@ -545,9 +545,7 @@ class LevelsController < ApplicationController
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
         if [Javalab, Music, Pythonlab, Weblab2].include?(@level.class)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
-          if @level.class != Music
-            links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
-          end
+          links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
           if [Music].include?(@level.class)
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end

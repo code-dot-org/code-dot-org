@@ -37,6 +37,7 @@ export default class SessionListFormPart extends React.Component {
         .format(DATE_FORMAT),
       startTime: lastSession.startTime,
       endTime: lastSession.endTime,
+      format: lastSession.format,
     };
 
     sessions.push(newSession);

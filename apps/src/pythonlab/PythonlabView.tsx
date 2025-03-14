@@ -18,11 +18,14 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import HorizontalLayout from './layout/HorizontalLayout';
+import ShareView from './layout/ShareView';
+import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
@@ -54,22 +57,6 @@ const defaultProject: ProjectSources = {
   },
 };
 
-const labeledGridLayouts = {
-  horizontal: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '340px minmax(0, 1fr)',
-    gridLayout: `
-  "info-panel workspace-and-output"
-  `,
-  },
-  vertical: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '340px minmax(0, 1fr) 400px',
-    gridLayout: `
-    "info-panel workspace output"
-    `,
-  },
-};
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   languageMapping: pythonlabLangMapping,
@@ -101,13 +88,17 @@ const defaultConfig: ConfigType = {
     },
   ],
 
-  labeledGridLayouts,
-  activeGridLayout: 'horizontal',
+  activeLayout: 'horizontal',
   showFileBrowser: true,
   validMimeTypes: ['text/'],
+  layoutComponents: {
+    horizontal: <HorizontalLayout />,
+    vertical: <VerticalLayout />,
+    share: <ShareView />,
+  },
 };
 
-const PythonlabView: React.FunctionComponent = () => {
+const PythonlabView: React.FunctionComponent<LabProps> = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {
     source,

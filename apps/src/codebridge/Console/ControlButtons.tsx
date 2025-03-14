@@ -6,6 +6,7 @@ import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterH
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
+import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -14,11 +15,15 @@ import {
   setHasRun,
   setIsRunning,
   setIsValidating,
+  setHasValidated,
+  setHasError,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './console.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
@@ -29,6 +34,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {onRun, onStop} = useCodebridgeContext();
 
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
@@ -54,6 +61,8 @@ const ControlButtons: React.FunctionComponent = () => {
     dispatch(setHasRun(false));
     dispatch(setIsRunning(false));
     dispatch(setIsValidating(false));
+    dispatch(setHasValidated(false));
+    dispatch(setHasError(false));
   }, [dispatch]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
@@ -62,10 +71,16 @@ const ControlButtons: React.FunctionComponent = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_run,
+      });
       onRun(/*runTests*/ false, dispatch, source).finally(() =>
         dispatch(setIsRunning(false))
       );
       dispatch(setHasRun(true));
+      dispatch(setShowSuggestedPrompts(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

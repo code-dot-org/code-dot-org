@@ -4,7 +4,7 @@ import React, {useCallback, useMemo} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../../locale';
-import {setModelCardProperty} from '../../redux/aichatRedux';
+import {setModelCardProperty} from '../../redux';
 import {Visibility} from '../../types';
 
 import MultiInputCustomization from './MultiInputCustomization';

@@ -40,6 +40,7 @@ class Music < Blockly
     background
     level_data
     validations
+    encrypted_exemplar_sources
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -51,10 +52,6 @@ class Music < Blockly
         properties: {}
       )
     )
-  end
-
-  def uses_google_blockly?
-    true
   end
 
   def uses_lab2?

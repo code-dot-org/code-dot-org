@@ -41,7 +41,7 @@
         "1"
       ]
     },
-    "display_name": "Hearth Health",
+    "display_name": "Heart Health",
     "project_template_level_name": "datascience-U2L4-L6cTempl_2024-pilot_pilot-2024",
     "teacher_markdown": "Students might run into errors if they have typos in the file name or forget the .csv. Remind students that these are common errors and how to resolve them.\r\n",
     "bubble_choice_description": "Practice loading the dataset into a variable and printing the first few rows.",
@@ -59,6 +59,6 @@
     "name_suffix": "_pilot-2024"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-24T22:34:30.928+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L7c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L7c_2024-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-24T22:34:30.928+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L7c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L7c_2024-pilot\"},{\"changed_at\":\"2025-02-20 23:26:17 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

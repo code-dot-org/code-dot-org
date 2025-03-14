@@ -1,3 +1,8 @@
+import {
+  BodyThreeText,
+  Heading2,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -17,11 +22,6 @@ import Notification from '@cdo/apps/sharedComponents/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {currentLocation} from '@cdo/apps/utils';
 
-import {
-  BodyThreeText,
-  Heading2,
-  Heading3,
-} from '../componentLibrary/typography';
 import * as color from '../util/color';
 
 const WorkshopCard = props => {

@@ -1,0 +1,77 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+
+  .row {
+    display: flex;
+    gap: 1rem;
+
+    > * {
+      flex: 1;
+    }
+
+    .card {
+      border-radius: $regular-border-radius;
+      padding: 1rem;
+      background-color: var(--background-neutral-secondary);
+      border: 1px solid var(--borders-neutral-primary);
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    &.required {
+      > span::after,
+      &[id='grades-dropdown'] > div:first-of-type > span::after {
+        content: '*';
+      }
+    }
+
+    textarea {
+      height: 6rem;
+      margin-bottom: 0;
+      border-radius: 0.25rem;
+      border: 1px solid;
+      box-sizing: border-box;
+      resize: vertical;
+
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .tag_button_container {
+    position: relative;
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+
+    button {
+      all: unset;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+}

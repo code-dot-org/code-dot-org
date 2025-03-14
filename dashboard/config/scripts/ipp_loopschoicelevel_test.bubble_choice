@@ -1,6 +1,6 @@
 name 'IPP-loopsChoiceLevel-test'
-display_name 'Variables Choice Level'
-description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+display_name 'Loops Practice'
+description 'Pick one of the levels below!'
 
 sublevels
 level 'test-intro-to-programming-lesson9-level5a'

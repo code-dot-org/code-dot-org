@@ -30,6 +30,9 @@
                 "block": {
                   "type": "repeat_simple2",
                   "id": "repeat_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "fields": {
                     "times": 10
                   },
@@ -53,7 +56,7 @@
               "x": 330,
               "y": 210,
               "extraState": {
-                "procedureId": "battle_function",
+                "procedureId": "Y4}Z-{zDxTmYp3yz5[$$",
                 "initialDeleteConfig": true,
                 "initialEditConfig": true,
                 "initialMoveConfig": true
@@ -70,17 +73,6 @@
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger1</field>",
                 "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
-              },
-              "next": {
-                "block": {
-                  "type": "procedures_callnoreturn",
-                  "id": "battle",
-                  "deletable": false,
-                  "movable": false,
-                  "extraState": {
-                    "name": "battle"
-                  }
-                }
               }
             },
             {
@@ -102,11 +94,17 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "play_sounds_together",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
                     "inputs": {
                       "code": {
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "myVqMPQ$[a]6_^uNJ8[H",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
                           "fields": {
                             "sound": "groove/bass_sub_pogo"
                           },
@@ -114,6 +112,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "play_sound_at_current_location_simple2",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
                               "fields": {
                                 "sound": "electro/drum_beat_tom"
                               }
@@ -130,13 +131,13 @@
         },
         "procedures": [
           {
-            "id": "-N4d_:@v^+X$d8UXjaV^",
-            "name": "battle",
+            "id": "}g/7xv0|iv~WsP5{h^5|",
+            "name": "background",
             "returnTypes": null
           },
           {
-            "id": "}g/7xv0|iv~WsP5{h^5|",
-            "name": "background",
+            "id": "Y4}Z-{zDxTmYp3yz5[$$",
+            "name": "battle",
             "returnTypes": null
           }
         ]
@@ -155,6 +156,55 @@
             "play_sound_at_current_location_simple2"
           ]
         }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "procedures_defnoreturn",
+            "extraState": {
+              "procedureId": "KFN^~V%M!eSeBJR`W0Er",
+              "initialDeleteConfig": true,
+              "initialEditConfig": true,
+              "initialMoveConfig": true
+            },
+            "fields": {
+              "NAME": "battle"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
       }
     },
     "validations": [
@@ -185,7 +235,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:29.754+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-functions\\\"\"],\"cloned_from\":\"music-coding-intro-event-functions\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:29.754+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-functions\\\"\"],\"cloned_from\":\"music-coding-intro-event-functions\"},{\"changed_at\":\"2025-02-07 20:39:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-07 20:41:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

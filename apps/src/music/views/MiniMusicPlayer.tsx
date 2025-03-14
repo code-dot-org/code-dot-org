@@ -1,7 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';

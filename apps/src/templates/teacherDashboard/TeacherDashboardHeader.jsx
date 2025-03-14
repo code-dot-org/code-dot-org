@@ -1,9 +1,9 @@
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
-import Link from '@cdo/apps/componentLibrary/link';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';

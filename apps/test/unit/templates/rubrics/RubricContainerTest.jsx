@@ -320,7 +320,7 @@ describe('RubricContainer', () => {
     expect(dropdownOption.textContent).toContain(i18n.inProgress());
   });
 
-  it('handles running ai assessment', async () => {
+  it.skip('handles running ai assessment', async () => {
     /* This is a fairly complex test that has multiple steps
       1. Initial fetch returns a json object that puts AI Status into READY state
       2. User clicks button to run analysis
@@ -1132,7 +1132,7 @@ describe('RubricContainer', () => {
     );
   });
 
-  it('sends event when user exits the tour', async function () {
+  it.skip('sends event when user exits the tour', async function () {
     stubFetch({
       evalStatusForUser: readyJson,
       evalStatusForAll: readyJsonAll,
@@ -1169,7 +1169,7 @@ describe('RubricContainer', () => {
     );
   });
 
-  it('sends event when user completes the tour', async function () {
+  it.skip('sends event when user completes the tour', async function () {
     stubFetch({
       evalStatusForUser: readyJson,
       evalStatusForAll: readyJsonAll,

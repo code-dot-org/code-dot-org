@@ -62,6 +62,7 @@ class HttpCache
 
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script
+  # TODO TEACH-1634 support the /courses/ path
   UNCACHED_UNIT_LEVEL_PATHS = [
     '/s/dance-2019/lessons/1/levels/10',
     '/s/dance-ai-2023/lessons/1/levels/10',

@@ -3,7 +3,7 @@ title 'Check for Understanding'
 description 'Match each strategy to when you would use it.'
 height '100'
 
-question 'Code Tracing & Print Statements'
+question 'Code Tracing and Print Statements'
 answer 'When your program runs but does not behave as expected, and you need to track what is happening'
 
 question 'Error Message Clarifications'

@@ -1,10 +1,10 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useMemo} from 'react';
 import {connect} from 'react-redux';
 
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Toggle from '@cdo/apps/componentLibrary/toggle';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -39,7 +39,8 @@ const SummaryResponses = ({
   const isMulti =
     scriptData.levels[levelNumber].type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
-
+  const levelInstructions =
+    scriptData.levels[levelNumber].properties?.long_instructions;
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [showStudentNames, setShowStudentNames] = useState(false);
 
@@ -179,6 +180,8 @@ const SummaryResponses = ({
         {isFreeResponse && (
           <FreeResponseResponses
             responses={scriptData.responses[levelNumber]}
+            levelInstructions={levelInstructions}
+            unitName={scriptData.reportingData.unitName}
             showStudentNames={showStudentNames}
             eventData={eventData}
           />

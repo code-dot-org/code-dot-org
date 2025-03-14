@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-thai/scss/mixins' as NotoSansThai;
+@include NotoSansThai.faces($family: 'Noto Sans Thai');
+
+.className {
+  font-family: 'Noto Sans Thai', sans-serif;
+}

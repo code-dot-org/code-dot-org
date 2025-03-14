@@ -40,7 +40,12 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
       )}
     >
       {isLoading && (
-        <div className={moduleStyles.slowLoadContainer}>
+        <div
+          className={classNames(
+            moduleStyles.slowLoadContainer,
+            'uitest-is-loading-overlay'
+          )}
+        >
           <div className={moduleStyles.spinnerContainer}>
             <FontAwesome
               title={undefined}

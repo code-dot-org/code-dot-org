@@ -156,13 +156,13 @@ const getOrderedByWhenSoundEvents = (soundEvents: PlaybackEvent[]) => {
 interface TimelineSimple2EventsProps {
   paddingOffset: number;
   barWidth: number;
-  eventVerticalSpace: number;
   getEventHeight: (numUniqueRows: number, availableHeight?: number) => number;
+  getEventVerticalSpace: (eventHeight: number) => number;
 }
 
 const TimelineSimple2Events: React.FunctionComponent<
   TimelineSimple2EventsProps
-> = ({paddingOffset, barWidth, eventVerticalSpace, getEventHeight}) => {
+> = ({paddingOffset, barWidth, getEventHeight, getEventVerticalSpace}) => {
   const soundEventsOriginal = useMusicSelector(
     state => state.music.playbackEvents
   );
@@ -198,14 +198,17 @@ const TimelineSimple2Events: React.FunctionComponent<
 
   const eventHeight = useMemo(
     () => getEventHeight(currentUniqueSounds.length),
-    [currentUniqueSounds.length, getEventHeight]
+    [getEventHeight, currentUniqueSounds.length]
+  );
+
+  const eventVerticalSpace = useMemo(
+    () => getEventVerticalSpace(eventHeight),
+    [getEventVerticalSpace, eventHeight]
   );
 
   const getVerticalOffsetForEventId = useCallback(
-    (id: string) =>
-      currentUniqueSounds.indexOf(id) *
-      getEventHeight(currentUniqueSounds.length),
-    [currentUniqueSounds, getEventHeight]
+    (id: string) => currentUniqueSounds.indexOf(id) * eventHeight,
+    [currentUniqueSounds, eventHeight]
   );
 
   // For each function, determine the pixel extents of the sound events
@@ -243,7 +246,7 @@ const TimelineSimple2Events: React.FunctionComponent<
           key={index}
           eventData={eventData}
           barWidth={barWidth}
-          height={eventHeight - eventVerticalSpace - 1}
+          height={eventHeight - eventVerticalSpace}
           top={
             32 +
             getVerticalOffsetForEventId(

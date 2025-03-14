@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {setLevel} from '../aiTutor/redux/aiTutorRedux';
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {
   setProjectUpdatedAt,
@@ -44,6 +45,7 @@ import {
 import ProjectManager from './projects/ProjectManager';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {getPredictResponse} from './projects/userLevelsApi';
+import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {LevelPropertiesValidator} from './responseValidators';
 import {
   AppName,
@@ -55,6 +57,18 @@ import {
   Validation,
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
+
+const mapLevelPropertiesToAITutorLevel = (
+  levelProperties: LevelProperties
+) => ({
+  id: levelProperties.id,
+  type: levelProperties.type || '',
+  aiTutorAvailable: !!levelProperties.aiTutorAvailable,
+  hasValidation:
+    !!levelProperties.validations && levelProperties.validations.length > 0,
+  isAssessment: !!levelProperties.isAssessment,
+  progressionType: levelProperties.progressionType || '',
+});
 
 interface PageError {
   errorMessage: string;
@@ -80,6 +94,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // Script id for the current level.
+  scriptId: number | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
@@ -96,6 +112,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  scriptId: undefined,
   isShareView: undefined,
   isBlocked: undefined,
   overrideValidations: undefined,
@@ -141,6 +158,11 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
+    thunkAPI.dispatch(setScriptId(payload.scriptId));
+
+    // Massage levelProperties to match aiTutor's format
+    const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
+    thunkAPI.dispatch(setLevel(aiTutorLevel));
 
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -316,13 +338,15 @@ export const isLabLoading = (state: {lab: LabState}) =>
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
-  const isEditingExemplarMode = getAppOptionsEditingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   // Exemplar and block edit modes do not have a channel.
-  if (isEditMode || isEditingExemplarMode) {
+  if (isEditMode || isEditingExemplar) {
     return false;
+  } else if (isViewingExemplar) {
+    return true;
   }
-
   // Otherwise, we are in read only mode if we are not the owner of the channel,
   // the level is frozen, the level is a read only predict level, the level has been submitted.
   // or this is a lab that should be read only while running and the code is currently running.
@@ -384,6 +408,9 @@ const labSlice = createSlice({
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
+    },
+    setScriptId(state, action: PayloadAction<number | undefined>) {
+      state.scriptId = action.payload;
     },
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
@@ -512,6 +539,8 @@ async function setUpAndLoadProject(
   projectManager.addSaveSuccessListener(channel => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
     dispatch(setChannel(channel));
+    // If we had a successful save, we know the project is not too large.
+    dispatch(setProjectTooLarge(false));
   });
   projectManager.addSaveNoopListener(channel => {
     if (channel) {
@@ -521,7 +550,13 @@ async function setUpAndLoadProject(
       dispatch(setProjectUpdatedSaved());
     }
   });
-  projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
+  projectManager.addSaveFailListener(error => {
+    dispatch(setProjectUpdatedError());
+    if (error.message?.includes('413')) {
+      // The user's project is too large to save. Mark it as too large.
+      dispatch(setProjectTooLarge(true));
+    }
+  });
   // Figure out if we should reset to start sources. This happens if the url parameter
   // ?reset=true is present.
   // This parameter is only used by levelbuilders.
@@ -636,11 +671,10 @@ export const {
   setValidationState,
   setIsShareView,
   setOverrideValidations,
+  setScriptId,
   onLevelChange,
   setPermissions,
+  setChannel,
 } = labSlice.actions;
-
-// These should not be set outside of the lab slice.
-const {setChannel} = labSlice.actions;
 
 export default labSlice.reducer;

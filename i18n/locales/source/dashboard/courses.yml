@@ -559,7 +559,7 @@ en:
           description_teacher: "#### The micro:bit course bridges the gap between digital and physical worlds, and enables students to transfer their computer programs into real-world applications.\n\n#### **In this module, you will:**\n\n-   #### Prepare to teach foundational coding concepts like events, loops, conditionals, variables and functions.\n-   #### Gain practical experience in how hardware and software can work together.\n-   #### Practice key concepts included in the unit.\n-   #### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses.\n\n#### **Suggested total time:**  150 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
           version_title: ''
         foundations-of-cs-beta-2024:
-          title: Foundations of Computer Science BETA
+          title: Foundations of Computer Science BETA (now called CS and AI Foundations BETA)
           description_short: ''
           description_student: |-
             Welcome to Foundations of Computer Science! This exciting course is your gateway to the powerful world of computer science. Whether you're curious about how apps work or want to know more about the impact of technology on society, this course has something for you. Over the semester, you'll learn the basics of programming, dive into how the Internet functions, and even create your own projects that could solve real-world problems.
@@ -642,7 +642,7 @@ en:
           description_teacher: ''
           version_title: '2024'
         self-paced-pl-csa-2024:
-          title: self-paced-pl-csa-2024
+          title: Teaching AP Computer Science A
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -678,7 +678,7 @@ en:
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - The Design Process** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 4 - The Design Process. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           version_title: "'24 - '25"
         self-paced-pl-ai-101-2024:
-          title: AI 101 Self Paced Professional Learning for Educators
+          title: AI 101 Professional Learning for Educators
           description_short: ''
           description_student: "## Welcome!\n\nWelcome to Code.org's self-paced online course for educators to get started with AI.\n\nThis is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.\n\nIn this five-part series we'll demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes.\n\nJoin us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**"
           description_teacher: "## Welcome!\n\nWelcome to Code.org's self-paced online course for educators to get started with AI.\n\nThis is a free, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.\n\nIn this five-part series we'll demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes.\n\nJoin us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to AI. However, you can **engage with the content in the order that best meets your needs.**"
@@ -805,7 +805,7 @@ en:
             -   You can access the [Getting Started Guide][2] to learn more about getting started.
           version_title: "'24-'25"
         self-paced-foundations-cs-2024:
-          title: Teaching Foundations of Computer Science
+          title: Teaching CS and AI Foundations
           description_short: ''
           description_student: "## Welcome!\n\n##### Welcome to Code.org's free self-paced online course for educators to get started teaching <a href=\"https://studio.code.org/courses/foundations-of-cs-beta-2024\" target=\"blank\" rel=\"noopener noreferrer\">**Foundations of Computer Science**</a>! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.\n\n### **Find the learning that works for you**\n\n-   ##### **Start with Introduction to Teaching Foundations of Computer Science:** This section will introduce you to this course and help you customize your learning path.\n-   ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.\n-   ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of Computer Science. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started."
           description_teacher: "## Welcome!\n\n##### Welcome to Code.org's free self-paced online course for educators to get started teaching <a href=\"https://studio.code.org/courses/foundations-of-cs-beta-2024\" target=\"blank\" rel=\"noopener noreferrer\">**Foundations of Computer Science**</a>! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.\n\n### **Find the learning that works for you**\n\n-   ##### **Start with Introduction to Teaching Foundations of Computer Science:** This section will introduce you to this course and help you customize your learning path.\n-   ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.\n-   ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of Computer Science. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started."
@@ -823,19 +823,19 @@ en:
           description_teacher: ''
           version_title: ''
         3-5gamedesign-2024:
-          title: Preparing to Teach Elementary Game Design
+          title: Teaching Elementary Game Design
           description_short: ''
           description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         microbitmakermodule-2024:
-          title: Preparing to Teach Maker with micro:bit
+          title: Teaching Maker with micro:bit
           description_short: ''
           description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         elementaryai-2024:
-          title: Preparing to Teach How AI Makes Decisions
+          title: Teaching How AI Makes Decisions
           description_short: ''
           description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
@@ -929,7 +929,7 @@ en:
           description_teacher: ''
           version_title: "'24-'25"
         self-paced-exploring-gen-ai-2024:
-          title: Exploring Generative AI Self-Paced Professional Learning
+          title: Exploring Generative AI Professional Learning
           description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_student: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_teacher: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
@@ -981,6 +981,198 @@ en:
           version_title: ''
         data-science-with-python-pilot-2024:
           title: "[PILOT] Data Science with Python"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        alloftheplaygrounds:
+          title: All of the Playgrounds
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pilot-pl-teaching-k5-music-lab:
+          title: pilot-pl-teaching-k5-music-lab
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        computer-systems-and-devices-2024:
+          title: "[PILOT] Computer Systems and Devices"
+          description_short: ''
+          description_student: |-
+            This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+
+            -   Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            -   Investigate and optimize computing systems to improve performance and achieve specific goals.
+            -   Design computing solutions that integrate hardware and software to collect and exchange data.
+            -   Apply human-centered design principles to create effective and inclusive systems or protocols.
+            -   Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            -   Assess the benefits and risks of AI in various industries and real-world applications.
+            -   Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            -   Apply AI to analyze data, improve workflows, and develop creative solutions.
+            -   Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            -   Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            -   Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            -   Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+                :::
+          description_teacher: |-
+            This unit introduces students to AI and computing systems, exploring how they process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, students design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. Using AI Chat, they unpack abstracted system layers, optimize software, and critique AI-generated outputs for accuracy and fairness. Activities like examining bias, and debating AI’s societal role foster creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit equips students to engage critically with AI, explore career pathways, and leverage technology for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            -   Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            -   Investigate and optimize computing systems to improve performance and achieve specific goals.
+            -   Design computing solutions that integrate hardware and software to collect and exchange data.
+            -   Apply human-centered design principles to create effective and inclusive systems or protocols.
+            -   Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            -   Assess the benefits and risks of AI in various industries and real-world applications.
+            -   Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            -   Apply AI to analyze data, improve workflows, and develop creative solutions.
+            -   Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            -   Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            -   Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            -   Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+                :::
+          version_title: "'24-'25"
+        programming-fundamentals-2024:
+          title: "[PILOT] Programming Fundamentals"
+          description_short: ''
+          description_student: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+
+            -   Define and explain the purpose of algorithms and their applications.
+            -   Design algorithms using sequence, selection, and iteration.
+            -   Analyze the functionality of algorithms and propose improvements.
+            -   Write Python programs using variables, conditional statements, loops, and functions.
+            -   Debug and test Python programs systematically to ensure correctness and reliability.
+            -   Use modular design principles to write reusable functions with parameters and return values.
+            -   Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            -   Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            -   Identify career pathways in computing and connect programming skills to real-world opportunities.
+            -   Use computational thinking principles to design, analyze, and troubleshoot programs.
+            -   Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+                :::
+          description_teacher: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            -   Define and explain the purpose of algorithms and their applications.
+            -   Design algorithms using sequence, selection, and iteration.
+            -   Analyze the functionality of algorithms and propose improvements.
+            -   Write Python programs using variables, conditional statements, loops, and functions.
+            -   Debug and test Python programs systematically to ensure correctness and reliability.
+            -   Use modular design principles to write reusable functions with parameters and return values.
+            -   Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            -   Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            -   Identify career pathways in computing and connect programming skills to real-world opportunities.
+            -   Use computational thinking principles to design, analyze, and troubleshoot programs.
+            -   Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+                :::
+          version_title: "'24-'25"
+        networks-and-the-internet-2024:
+          title: "[PILOT] Networks and the Internet"
+          description_short: ''
+          description_student: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+
+            -   Describe how data is transmitted, routed, and reassembled over the Internet.
+            -   Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            -   Analyze the role of AI in enhancing network security.
+            -   Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            -   Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            -   Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            -   Analyze how these careers contribute to addressing societal challenges and improving technology.
+            -   Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            -   Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+                :::
+          description_teacher: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            -   Describe how data is transmitted, routed, and reassembled over the Internet.
+            -   Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            -   Analyze the role of AI in enhancing network security.
+            -   Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            -   Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            -   Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            -   Analyze how these careers contribute to addressing societal challenges and improving technology.
+            -   Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            -   Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+                :::
+          version_title: "'24-'25"
+        programming-fundamentals-aitutor-2024:
+          title: "[PILOT] Programming Fundamentals (with AI Tutor)"
+          description_short: ''
+          description_student: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+
+            -   Define and explain the purpose of algorithms and their applications.
+            -   Design algorithms using sequence, selection, and iteration.
+            -   Analyze the functionality of algorithms and propose improvements.
+            -   Write Python programs using variables, conditional statements, loops, and functions.
+            -   Debug and test Python programs systematically to ensure correctness and reliability.
+            -   Use modular design principles to write reusable functions with parameters and return values.
+            -   Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            -   Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            -   Identify career pathways in computing and connect programming skills to real-world opportunities.
+            -   Use computational thinking principles to design, analyze, and troubleshoot programs.
+            -   Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+                :::
+          description_teacher: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            -   Define and explain the purpose of algorithms and their applications.
+            -   Design algorithms using sequence, selection, and iteration.
+            -   Analyze the functionality of algorithms and propose improvements.
+            -   Write Python programs using variables, conditional statements, loops, and functions.
+            -   Debug and test Python programs systematically to ensure correctness and reliability.
+            -   Use modular design principles to write reusable functions with parameters and return values.
+            -   Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            -   Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            -   Identify career pathways in computing and connect programming skills to real-world opportunities.
+            -   Use computational thinking principles to design, analyze, and troubleshoot programs.
+            -   Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+                :::
+          version_title: "'24-'25"
+        teaching-data-science-pilot:
+          title: teaching-data-science-pilot
+          description_short: ''
+          description_student: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.\n\n#### The Data Science unit is part of the **_Computer Science and AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs."
+          description_teacher: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.\n\n#### The Data Science unit is part of the **_Computer Science and AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs."
+          version_title: ''
+        ui-test-single-unit-course-2025:
+          title: Single Unit Course 2025
+          description_short: This is the short description for Single-Unit Course 2025.
+          description_student: This is the student description for Single-Unit Course 2025.
+          description_teacher: This is the teacher description for Single-Unit Course 2025.
+          version_title: '2025'
+        ui-test-single-unit-course-2026:
+          title: Single-Unit Course 2026
+          description_short: This is the short description for Single-Unit Course 2026.
+          description_student: This is the student description for Single-Unit Course 2026.
+          description_teacher: This is the teacher description for Single-Unit Course 2026.
+          version_title: '2026'
+        sandbox-csaif-pl:
+          title: CSAIF PL Sandbox
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        gen-ai-spanish-test-a:
+          title: Gen AI Spanish A
           description_short: ''
           description_student: ''
           description_teacher: ''

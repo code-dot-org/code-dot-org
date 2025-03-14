@@ -90,41 +90,6 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def self.migrated_skins
-    [
-      # Star Wars
-      "hoc2015", "hoc2015x",
-      # Maze
-      "birds", "pvz", "scrat",
-      # Karel
-      "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter",
-      # Spelling Bee
-      "letters",
-      # Artist
-      "artist", "artist_zombie", "elsa", "anna",
-      # Jigsaw
-      "jigsaw"
-    ]
-  end
-
-  def self.playlab_skins
-    [
-      # To be merged with migrated_skins after DCDO check is removed.
-      "studio", "infinity", "iceage", "gumball"
-    ]
-  end
-
-  def uses_google_blockly?
-    skin = properties['skin']
-    if self.class.migrated_skins.include?(skin)
-      true
-    elsif self.class.playlab_skins.include?(skin)
-      DCDO.get('playlab_google_blockly', true)
-    else
-      false
-    end
-  end
-
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]

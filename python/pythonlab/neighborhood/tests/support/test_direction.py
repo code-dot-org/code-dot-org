@@ -15,7 +15,7 @@ def test_cannot_create_invalid_direction():
     Direction('invalid')
     assert False
   except Exception as e:
-    assert str(e) == "NeighborhoodRuntimeException: INVALID_DIRECTION"
+    assert str(e) == "INVALID_DIRECTION"
 
 def test_turn_left():
   direction = Direction('north')

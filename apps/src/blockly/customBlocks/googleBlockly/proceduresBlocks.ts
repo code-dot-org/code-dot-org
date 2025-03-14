@@ -93,7 +93,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
-      'procedure_call_do_update',
+      'procedure_call_overrides',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -238,12 +238,8 @@ GoogleBlockly.Extensions.register(
   }
 );
 
-// Override the doProcedureUpdate function to heal the stack. Without this,
-// any child blocks connected to a call block would also get deleted.
-// Copied directly from
-// https://github.com/BeksOmega/blockly-samples/blob/7954a8fff50e41fa7c0f891e957bf9ed616361d6/plugins/block-shareable-procedures/src/blocks.ts#L1068
 GoogleBlockly.Extensions.register(
-  'procedure_call_do_update',
+  'procedure_call_overrides',
   function (this: ProcedureBlock) {
     const mixin = {
       /**
@@ -254,12 +250,19 @@ GoogleBlockly.Extensions.register(
 
       /**
        * Updates the shape of this block to reflect the state of the data model.
+       * Overriden to prevent deleting call blocks in a flyout.
+       * https://github.com/google/blockly-samples/issues/2484
        */
       doProcedureUpdate: function (this: ProcedureBlock) {
         if (!this.getProcedureModel()) return;
         const id = this.getProcedureModel().getId();
-        if (!this.getTargetWorkspace_().getProcedureMap().has(id)) {
-          this.dispose(/* Begin Customization*/ true /* End Customization*/);
+        if (
+          !this.getTargetWorkspace_().getProcedureMap().has(id) &&
+          // Begin customization
+          !this.workspace.isFlyout
+          // End customization
+        ) {
+          this.dispose(true);
           return;
         }
         this.updateName_();

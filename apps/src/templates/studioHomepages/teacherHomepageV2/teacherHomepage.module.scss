@@ -1,0 +1,164 @@
+@import 'color';
+
+// TeacherHomepage
+.teacherHomepage {
+  display: flex;
+  justify-content: center;
+  padding: 24px 40px;
+}
+
+.teacherHomepageBody {
+  display: flex;
+  flex-direction: column;
+  max-width: 1160px;
+  width: 100%;
+}
+
+.teacherHomepageContent {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  width: 100%;
+}
+
+.teacherHomepageLeftContent {
+  width: 100%;
+  max-width: 800px;
+  min-width: 500px;
+}
+
+.headerButtonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.headerButtonRowRight {
+  display: flex;
+  gap: 6px;
+}
+
+.blankAnnouncement {
+  width: 320px;
+  min-width: 320px;
+  height: 600px;
+  background-color: var(--background-brand-purple-light);
+  margin-inline-start: 40px;
+}
+
+// SectionList
+.sectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// SectionCard
+.sectionCardWrapper {
+  border: 1px solid var(--neutral-gray-20);
+  border-radius: 4px;
+  background-color: var(--neutral-gray-5);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.sectionCardHeader {
+  padding: 16px;
+  border-bottom: 1px solid var(--neutral-gray-20);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.sectionCardHeaderLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionCardHeaderRight {
+  display: flex;
+}
+
+.sectionCardHeaderText {
+  height: 28px;
+}
+
+.sectionCardCode {
+  height: 22px;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--brand-teal-50);
+  }
+}
+
+// SectionOptionsDropdown
+.dropdownButton {
+  width: 32px;
+  height: 32px;
+}
+
+// SectionCardBody
+.sectionCardBody {
+  padding: 0 16px 16px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.sectionCardBodyRight {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  gap: 16px;
+}
+
+.taskButtons {
+  border: 1px solid var(--neutral-gray-40);
+  display: flex;
+  flex-direction: row;
+  background-color: var(--neutral-base-white);
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.taskButtonLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: 0;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.taskButtonIcons {
+  color: var(--brand-teal-50);
+}
+
+.taskButtonArrow {
+  color: var(--neutral-gray-80);
+}
+
+// CourseContentDropdown
+.courseContentDropdownContainer {
+  background-color: var(--neutral-base-white);
+  border: 1px solid var(--neutral-gray-20);
+  border-radius: 4px;
+  padding: 12px;
+  gap: 8px;
+  width: 375px;
+}

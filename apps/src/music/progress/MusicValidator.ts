@@ -72,6 +72,9 @@ export default class MusicValidator extends Validator {
     // A map of ids for blocks in loops and the count of playback events associated with them.
     const blockIdLoopRepetitions: {[key: string]: number} = {};
 
+    // A map of ids for blocks in nested loops and the count of playback events associated with them.
+    const blockIdNestedLoopRepetitions: {[key: string]: number} = {};
+
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
     let playedNumberEmptyPatterns = 0;
@@ -187,9 +190,9 @@ export default class MusicValidator extends Validator {
         }
       }
 
-      // Check for a block nested within an if/else block causing something to play.
       const validationInfo = eventData.validationInfo;
       if (validationInfo) {
+        // Check for a block nested within an if/else block causing something to play.
         if (validationInfo.parentControlTypes?.includes(BlockTypes.IF_ELSE)) {
           this.conditionsChecker.addSatisfiedCondition({
             name: MusicConditions.PLAYED_ANYTHING_IN_CONDITIONAL.name,
@@ -227,6 +230,23 @@ export default class MusicValidator extends Validator {
           this.addPlayedConditions(
             MusicConditions.PLAYED_ANYTHING_IN_SAME_LOOP.name,
             Math.max(...Object.values(blockIdLoopRepetitions))
+          );
+        }
+
+        // Check for a block within a nested loop block causing something to play.
+        if (
+          validationInfo.parentControlTypes?.filter(type =>
+            LoopBlockTypes.includes(type)
+          ).length >= 2
+        ) {
+          if (!blockIdNestedLoopRepetitions[blockId]) {
+            blockIdNestedLoopRepetitions[blockId] = 1;
+          } else {
+            blockIdNestedLoopRepetitions[blockId]++;
+          }
+          this.addPlayedConditions(
+            MusicConditions.PLAYED_ANYTHING_IN_SAME_NESTED_LOOP.name,
+            Math.max(...Object.values(blockIdNestedLoopRepetitions))
           );
         }
       }

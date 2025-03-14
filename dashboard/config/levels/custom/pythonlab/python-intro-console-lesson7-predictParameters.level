@@ -20,7 +20,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "\n# This function updates every instance of the character's name, so you don't have to change it in each print statement. \n\ndef plant_garden(character):\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n\nplant_garden(\"Dash\")\n",
+          "contents": "\n# This function updates every instance of the character's name, so you don't have to change it in each print statement. \n\ndef plant_garden(character):\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n\nplant_garden(\"Dash\") #Modify the character's name. This is the parameter. \n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -37,7 +37,7 @@
       "id": "1",
       "name": "test.py",
       "language": "py",
-      "contents": "import unittest\n\nclass TestChangeParameter(unittest.TestCase):\n\n    def test_change_dash_parameter(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if the parameter \"Dash\" in the function call has been changed\n            if 'plant_garden(\"Dash\")' in content or \"plant_garden('Dash')\" in content:\n                self.fail(\"You haven't changed the parameter 'Dash' in the function call. Please modify it to something else.\")\n\n            print(\"Success! You've changed the parameter 'Dash' in the function call.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "contents": "import unittest\n\nclass TestChangeParameter(unittest.TestCase):\n\n    def test_change_dash_parameter(self):\n        \"\"\"Change the parameter \"Dash\" in the function call.\"\"\"\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if the parameter \"Dash\" in the function call has been changed\n            if 'plant_garden(\"Dash\")' in content or \"plant_garden('Dash')\" in content:\n                self.fail(\"You haven't changed the parameter 'Dash' in the function call. Please modify it to something else.\")\n\n            print(\"Success! You've changed the parameter 'Dash' in the function call.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
       "folderId": "0",
       "active": false,
       "open": false,
@@ -45,6 +45,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-23T00:15:15.282+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-parameters\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-parameters\"},{\"changed_at\":\"2025-01-23 00:19:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-23 00:28:09 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-23T00:15:15.282+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-parameters\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-parameters\"},{\"changed_at\":\"2025-01-23 00:19:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-23 00:28:09 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-03 17:29:26 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>

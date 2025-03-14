@@ -29,7 +29,7 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
         <div
           id={`embedded-block-${blockName}`}
           ref={blockRef}
-          style={{paddingBottom: 5}}
+          style={{paddingBottom: 5, verticalAlign: 'middle'}}
           aria-label={ariaLabel || blockName}
         />
       </Link>

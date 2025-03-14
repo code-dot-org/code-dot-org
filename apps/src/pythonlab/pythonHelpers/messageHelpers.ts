@@ -6,6 +6,7 @@ import {
   NeighborhoodExceptionMessage,
 } from '@cdo/apps/miniApps/neighborhood/constants';
 import {NeighborhoodSignal} from '@cdo/apps/miniApps/neighborhood/types';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import commonI18n from '@cdo/locale';
 
 import {HOME_FOLDER} from './constants';
@@ -31,7 +32,7 @@ export function parseErrorMessage(errorMessage: string): string {
     /ModuleNotFoundError: The module '([^']+)' is included in the Pyodide distribution, but it is not installed./;
   if (importErrorRegex.test(errorMessage)) {
     const [, module] = errorMessage.match(importErrorRegex)!;
-    return `ModuleNotFoundError: The module '${module}' is not supported in Python Lab.`;
+    return pythonlabI18n.moduleNotSupported({module});
   }
   // Look for Neighborhood exception.
   const neighborhoodExceptionType =
@@ -108,12 +109,12 @@ export function extractNeighborhoodExceptionType(
   }
 }
 
-// This function parses the message string (example: '[PAINTER] PAINT {"color": "Blue"}') to a NeighborhoodSignal.
+// This function parses the message string (example: '[NEIGHBORHOOD] PAINT {"color": "Blue"}') to a NeighborhoodSignal.
 export function parseMessageToNeighborhoodSignal(
   message: string
 ): NeighborhoodSignal | null {
   /*
-    \[(\w+)]\ captures the signal type inside square brackets, e.g., PAINTER
+    \[(\w+)]\ captures the signal type inside square brackets, e.g., NEIGHBORHOOD
     \s+ matches one or more spaces
     ([^\s]+) captures the value, e.g., PAINT.
     (\{.*\})? optionally captures the detail json if it exists, e.g., {"color": "Blue"}

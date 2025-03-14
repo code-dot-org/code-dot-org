@@ -113,6 +113,7 @@ export default class MusicLibrary {
     this.name = name;
     this.libraryJson = libraryJson;
     this.allowedSounds = null;
+    this.availableSoundTypes = {};
 
     // Add notes for drum kits based on index if they don't already have them.
     for (const kit of libraryJson.kits) {
@@ -146,7 +147,6 @@ export default class MusicLibrary {
     this.hasRestrictedPacks = libraryJson.packs.some(pack => pack.restricted);
 
     // Take this opportunity to determine the available sound types in this library.
-    this.availableSoundTypes = {};
     this.determineAvailableSoundTypes();
   }
 
@@ -156,6 +156,9 @@ export default class MusicLibrary {
 
   setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
+
+    // Take this opportunity to update the available sound types in this library.
+    this.determineAvailableSoundTypes();
   }
 
   getHasRestrictedPacks(): boolean {
@@ -165,7 +168,9 @@ export default class MusicLibrary {
   // Determine the available sound types available in this library.
   // Only currently-allowed sounds from packs are included.
   private determineAvailableSoundTypes() {
-    const folders = this.getAllowedSounds();
+    const folders = this.getAvailableSounds();
+
+    this.availableSoundTypes = {};
 
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {

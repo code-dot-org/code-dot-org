@@ -1,3 +1,4 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -7,7 +8,6 @@ import {
   setUnitSummaryReduxData,
   UnitSummaryResponse,
 } from '@cdo/apps/code-studio/components/progress/UnitSummaryUtils';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -59,9 +59,7 @@ const UnitCalendar: React.FC = () => {
 
   const unitToLoad = React.useMemo(
     () =>
-      selectedSection.unitName !== null
-        ? unitName || selectedSection.unitName
-        : null,
+      !!selectedSection.unitName ? unitName || selectedSection.unitName : null,
     [unitName, selectedSection.unitName]
   );
 
@@ -81,11 +79,7 @@ const UnitCalendar: React.FC = () => {
           versionYear: null,
         })
       );
-      setHasInitialLoad(true);
-      return;
-    }
-
-    if (
+    } else if (
       !isLoading &&
       unitToLoad &&
       userType &&
@@ -95,7 +89,6 @@ const UnitCalendar: React.FC = () => {
         (unitToLoad !== calendarUnitName && unitName !== null))
     ) {
       setIsLoading(true);
-      setHasInitialLoad(true);
       HttpClient.fetchJson<UnitSummaryResponse>(
         `/dashboardapi/unit_summary/${unitToLoad}`
       )
@@ -118,6 +111,8 @@ const UnitCalendar: React.FC = () => {
           return null;
         });
     }
+
+    setHasInitialLoad(true);
   }, [
     unitName,
     userId,

@@ -20,18 +20,31 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "def create_message():\n    # Ask for the user's name\n\n    \n    # Ask for the user's favorite animal\n\n    \n    # Print a personalized message\n    print(name + \" loves \" + animal + \"s!\")\n    \ncreate_message()",
+          "contents": "def create_message():\n    # Ask for the user's name\n    name = input(\"\")\n\n    # Ask for the user's favorite animal\n    animal = input(\"\")\n\n    # Print a personalized message\n    print(name + \" loves \" + animal + \"s!\")\n\ncreate_message()\n",
           "folderId": "0",
           "active": true,
           "open": true
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzqegGZo0rqTwE8rzL40M1/4GErY5Baxl\nSq7h1og/D9W99vD+qvVx6ogeCRokY1BvLZt3PxmyMO4i7yBO3OqrcvzLE/F4\nbbxVoDf6FqfcO3g17zfC9G3tCU3pY4+YCZgzFfh+jVlAgPK3D/GZyj9osnDH\ndtRl/pDYZzYv8Gb+q19L7FXu5gv106f6slrBO+VVe7vVSyshMi+xvqbPPQSL\nLzCoQIj1HPV8saNRVPWH9u7Y8Xxlca2XTmR73YdENT4l2vni26cXDDsgXor9\nfOGEbIPgsNTFn2i6Ek/+i4rx1ylWMkjESoXbSCHjdfa1ZArxzzzkLsmP3UUF\nR5vNghIkpXPocjpBAD36xRcuxd6n2mqvtSr+oeExBhKiXZ9YJ8FLCvQBZ/YX\nynVhyxIEnz59jHM6Mws/e9svU2fnjm44/QyVNYQ14G0QCPTzbECrlAxdtmJ6\nLqfpcOAAnYndBRye3tYDCogLGsM6hiGRcOkuL6BYfbOZuVa6Anr3rz1fgP6w\nYA==\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzqegGZo0rqTwE8rzL40M1/4GErY5Baxl\nSq7h1og/D9W99vD+qvVx6ogeCRokY1BvLZt3PxmyMO4i7yBO3OqrcvzLE/F4\nbbxVoDf6FqfcO3g17zfC9G3tCU3pY4+YCZgzFfh+jVlAgPK3D/GZyj9osnDH\ndtRl/pDYZzYv8Gb+q19L7FXu5gv106f6slrBO+VVe7vVSyshMi+xvqbPPQSL\nLzCoQIj1HPV8saNRVPWH9u7Y8Xxlca2XTmR73YdENT4l2vni26cXDDsgXor9\nfOGEbIPgsNTFn2i6Ek/+i4rx1ylWMkjESoXbSCHjdfa1ZArxzzzkLsmP3UUF\nR5vNghIkpXPocjpBAD36xRcuxd6n2mqvtSr+oeExBhKiXZ9YJ8FLCvQBZ/YX\nynVhyxIEnz59jHM6Mws/e9svU2fnjm44/QyVNYQ14G0QCPTzbECrlAxdtmJ6\nLqfpcOAAnYndBRye3tYDCogLGsM6hiGRcOkuL6BYfbOZuVa6Anr3rz1fgP6w\nYA==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestCreateMessage(unittest.TestCase):\n\n    def test_input_prompts_filled(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Find all function calls to input()\n            input_statements = [\n                node for node in ast.walk(tree)\n                if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == \"input\"\n            ]\n\n            # Ensure there are at least two input() calls (one for name, one for animal)\n            if len(input_statements) < 2:\n                self.fail(\n                    \"The function `create_message()` must contain two `input()` statements. \"\n                    \"Ensure one asks for the user's name and the other asks for their favorite animal.\"\n                )\n\n            # Check that both input() statements have non-empty prompt strings\n            for i, statement in enumerate(input_statements):\n                if not statement.args or not isinstance(statement.args[0], ast.Str) or statement.args[0].s.strip() == \"\":\n                    self.fail(\n                        f\"The prompt for input() statement {i+1} is empty. \"\n                        \"Please modify both input statements to ask a meaningful question.\"\n                    )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-28T00:19:52.096+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson8-predictReturn\\\"\"],\"cloned_from\":\"python-intro-console-lesson8-predictReturn\"},{\"changed_at\":\"2025-01-28 00:20:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:20:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:20:33 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:21:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:21:21 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-28T00:19:52.096+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson8-predictReturn\\\"\"],\"cloned_from\":\"python-intro-console-lesson8-predictReturn\"},{\"changed_at\":\"2025-01-28 00:20:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:20:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:20:33 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:21:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 00:21:21 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-31 21:47:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-31 21:48:46 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>

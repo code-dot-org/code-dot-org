@@ -1,7 +1,8 @@
 // Styles for studio.code.org/my-professional-learning
 
 @use 'color.scss';
-@import 'typography';
+@import '@code-dot-org/component-library-styles/typography.module';
+@import 'breakpoints';
 
 main.wrapper {
   max-width: 60rem;
@@ -42,13 +43,102 @@ section {
   place-content: center;
   display: flex;
   text-align: center;
+  width: 100%;
 
   img {
     width: 264px;
   }
 
-  .containerMargin {
-    margin: 1rem;
+  h2, h3, h6, p {
+    margin-bottom: 0;
+  }
+
+  hr {
+    margin: 0;
+    border-color: color.$light_gray_200;
+  }
+
+  .dialogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.25rem 2.5rem;
+
+    .contentContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .calendarButtonContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+  
+      .calendarButtons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+      }
+    }
+  }
+
+  .showMultipleSessionDialogContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 0.5rem 1rem;
+    gap: 1rem;
+
+    table {
+      border: 1px solid;
+      border-radius: 0.25rem;
+      border-color: color.$light_gray_200;
+
+      .calendarTableHeaderCell {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: color.$light_gray_50;
+        border: none;
+
+        @media screen and (min-width: $width-sm) {
+          width: fit-content;
+        }
+      }
+
+      tbody {
+        tr {
+          border-top: 1px solid;
+          border-color: color.$light_gray_200;
+        }
+      }
+
+      td {
+        border: none;
+        
+        @media screen and (min-width: $width-sm) {
+          width: fit-content;
+        }
+      }
+
+      .addSessionToCalendarButton {
+        padding: 0.125rem 0.5rem;
+        border-color: color.$light_gray_400;
+
+        span {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .closeMultipleSessionDialogContainer {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 

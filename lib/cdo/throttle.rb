@@ -53,11 +53,10 @@ module Cdo
       # this entry could possibly be relevant.
       max_data_relevancy = period + throttle_for
 
-      # We saw singificantly increased CPU usage on the cluster after
-      # implementing expiration, and theorize that it may be because we were
-      # expiring entries TOO quickly. Speculatively add a minimum expiration to
-      # see if it smoothes things out.
-      # TODO infra: verify this fix and update either comment or code as necessary
+      # Expiring entries too quickly can result in increased CPU usage on the
+      # cluster if we end up repeatedly expiring and recreating them. To avoid
+      # that, set a generous minimum expiration which should avoid thrashing
+      # while also preventing unbounded growth.
       return [max_data_relevancy, MINIMUM_EXPIRATION].max
     end
   end

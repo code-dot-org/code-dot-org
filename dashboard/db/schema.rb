@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_01_29_162309) do
+ActiveRecord::Schema.define(version: 2025_03_05_163452) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -81,6 +81,16 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.bigint "request_id"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
+  end
+
+  create_table "aichat_message_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "aichat_message_id", null: false
+    t.bigint "teacher_id", null: false
+    t.boolean "approval"
+    t.boolean "flagged"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aichat_message_id"], name: "index_aichat_message_feedbacks_on_aichat_message_id", unique: true
   end
 
   create_table "aichat_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -192,8 +202,9 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.integer "storage_app_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "game_id"
     t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
-    t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
+    t.index ["user_id", "game_id"], name: "index_backpacks_on_user_id_and_game_id", unique: true
   end
 
   create_table "blocks", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -492,10 +503,7 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.integer "course_id", null: false
     t.integer "script_id", null: false
     t.integer "position", null: false
-    t.string "experiment_name", comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
-    t.integer "default_script_id", comment: "If present, indicates the default script which this script will replace when the corresponding experiment is enabled. Should be null for default scripts (those that show up without experiments)."
     t.index ["course_id"], name: "index_course_scripts_on_course_id"
-    t.index ["default_script_id"], name: "index_course_scripts_on_default_script_id"
     t.index ["script_id"], name: "index_course_scripts_on_script_id"
   end
 
@@ -1417,6 +1425,9 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.string "code"
     t.integer "session_format"
     t.string "time_zone"
+    t.text "meeting_link"
+    t.string "location_name"
+    t.string "location_address"
     t.index ["code"], name: "index_pd_sessions_on_code", unique: true
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id"
   end
@@ -1542,6 +1553,9 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.string "module"
     t.string "name"
     t.string "participant_group_type"
+    t.text "description"
+    t.text "registration_link"
+    t.boolean "hidden"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id"
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end
@@ -1923,6 +1937,8 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "community_type", limit: 16, comment: "Urban-centric community type"
+    t.integer "student_female"
+    t.integer "student_male"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 
@@ -1943,6 +1959,8 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
     t.string "school_category"
     t.string "last_known_school_year_open", limit: 9
+    t.string "county_id"
+    t.string "county_name"
     t.index ["id"], name: "index_schools_on_id", unique: true
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
@@ -2267,6 +2285,21 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
+  create_table "user_level_evaluations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id", null: false
+    t.integer "script_id", null: false
+    t.string "school_year", null: false
+    t.text "evaluation_criteria"
+    t.text "ai_evaluation"
+    t.text "ai_reasoning"
+    t.string "ai_model_version"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_id"], name: "index_user_level_evaluations_on_level_id"
+    t.index ["user_id"], name: "index_user_level_evaluations_on_user_id"
+  end
+
   create_table "user_level_interactions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
@@ -2514,6 +2547,7 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
+  add_foreign_key "aichat_message_feedbacks", "aichat_messages"
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"

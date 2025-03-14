@@ -10,10 +10,15 @@ import {
 } from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -109,9 +114,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
 
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
@@ -128,6 +136,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         };
         return {level_data: updatedLevelData};
       });
+    } else if (isEditingExemplar) {
+      header.showLevelBuilderSaveButton(
+        () => ({exemplar_sources: blocklyWorkspace.getCode()}),
+        'Levelbuilder: Edit Exemplar',
+        `/levels/${levelId}/update_exemplar_code`
+      );
     } else if (isToolboxMode) {
       header.showLevelBuilderSaveButton(() => {
         const updatedLevelData = {
@@ -137,7 +151,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         return {level_data: updatedLevelData};
       }, 'Levelbuilder: Edit toolbox blocks');
     }
-  }, [blocklyWorkspace, isStartMode, isToolboxMode, levelData]);
+  }, [
+    blocklyWorkspace,
+    isStartMode,
+    isEditingExemplar,
+    isToolboxMode,
+    levelData,
+    levelId,
+  ]);
 
   // Use the Lab2 generic prompt for Blockly prompt dialogs.
   const showGenericPrompt = useCallback(
@@ -197,7 +218,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
     // Show a little extra playback.  If there are any triggers, then play for longer in case
     // the user wants to trigger another sound.
-    const extraMeasures = blocklyWorkspace.hasAnyTriggers() ? 4 : 1;
+    const extraMeasures = blocklyWorkspace.hasAnyTriggers() ? 4 : 2;
 
     if (currentPlayheadPosition >= stopMeasure + extraMeasures) {
       setPlaying(false);
@@ -323,6 +344,17 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
+  const headerContent = (
+    <div className={moduleStyles.centerHeaderContent}>
+      <div className={moduleStyles.centerHeaderContentText}>
+        {musicI18n.panelHeaderWorkspace()}
+      </div>
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
+      )}
+    </div>
+  );
+
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
       {allowPackSelection && <PackDialog player={player} />}
@@ -347,7 +379,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           <PanelContainer
             id="workspace-panel"
-            headerContent={musicI18n.panelHeaderWorkspace()}
+            headerContent={headerContent}
             hideHeaders={hideHeaders}
             rightHeaderContent={
               <HeaderButtons
@@ -359,6 +391,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 hideChaff={hideChaff}
               />
             }
+            headerClassName={moduleStyles.panelContainerHeader}
           >
             {isStartMode && (
               <div
@@ -370,6 +403,22 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : WARNING_BANNER_MESSAGES.STANDARD}
               </div>
             )}
+            {isEditingExemplar && (
+              <div
+                id="toolboxModeWarningBanner"
+                className={moduleStyles.warningBanner}
+              >
+                {WARNING_BANNER_MESSAGES.EXEMPLAR_MODE}
+              </div>
+            )}
+            {isViewingExemplar && (
+              <div
+                id="toolboxModeWarningBanner"
+                className={moduleStyles.warningBanner}
+              >
+                {WARNING_BANNER_MESSAGES.VIEWING_EXEMPLAR}
+              </div>
+            )}
             {isToolboxMode && (
               <div
                 id="toolboxModeWarningBanner"
@@ -378,7 +427,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 {WARNING_BANNER_MESSAGES.TOOLBOX_MODE}
               </div>
             )}
-            <div id={blocklyDivId} />
+            <div role="application" id={blocklyDivId} />
             {showAdvancedControls && (
               <div className={moduleStyles.advancedControlsContainer}>
                 <AdvancedControls />

@@ -58,13 +58,6 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
     return created_uli, metadata
   end
 
-  test "do not create User Level Interaction for non-CSP units" do
-    @csf_2024_script = create(:csf_script, :with_levels, version_year: '2024', family_name: 'csf', is_course: true)
-    CourseOffering.add_course_offering(@csf_2024_script)
-    @csf_2024_level = @csf_2024_script.levels.first
-    refute_creates_uli(@csf_2024_script, @csf_2024_level)
-  end
-
   test "do not create User Level Interaction for units before 2024" do
     @csp_2017_script = create(:csp_script, :with_levels, version_year: '2017', family_name: 'csp', is_course: true)
     CourseOffering.add_course_offering(@csp_2017_script)
