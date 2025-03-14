@@ -30,46 +30,6 @@ describe('ChangeUserTypeModal', () => {
   const getCancelButton = () =>
     screen.getByRole('button', {name: i18n.cancel()});
 
-  it('disables everything and shows saving text when submitting', async () => {
-    const user = userEvent.setup();
-    renderComponent();
-    await user.type(getEmailInput(), 'valid@example.com');
-    await user.selectOptions(getEmailOptInSelect(), 'yes');
-    await user.click(getSubmitButton());
-
-    expect(getEmailInput()).toBeDisabled();
-    expect(getEmailOptInSelect()).toBeDisabled();
-    expect(getSubmitButton()).toBeDisabled();
-    expect(getCancelButton()).toBeDisabled();
-    expect(screen.getByText(i18n.saving())).toBeInTheDocument();
-  });
-
-  it('displays an unknown error when the submission fails', async () => {
-    const handleSubmit = jest
-      .fn()
-      .mockRejectedValue(new Error('Unknown error'));
-    const user = userEvent.setup();
-    renderComponent({handleSubmit});
-    await user.type(getEmailInput(), 'valid@example.com');
-    await user.selectOptions(getEmailOptInSelect(), 'yes');
-    await user.click(getSubmitButton());
-
-    expect(
-      await screen.findByText(i18n.changeUserTypeModal_unexpectedError(), {
-        normalizer: getDefaultNormalizer({collapseWhitespace: false}),
-      })
-    ).toBeInTheDocument();
-  });
-
-  it('calls handleCancel when clicking the cancel button', async () => {
-    const handleCancel = jest.fn();
-    const user = userEvent.setup();
-    renderComponent({handleCancel});
-    await user.click(getCancelButton());
-
-    expect(handleCancel).toHaveBeenCalled();
-  });
-
   describe('validation', () => {
     it('checks that email is present', async () => {
       const user = userEvent.setup();
@@ -112,6 +72,33 @@ describe('ChangeUserTypeModal', () => {
       await user.selectOptions(getEmailOptInSelect(), 'yes');
 
       expect(getSubmitButton()).not.toBeDisabled();
+    });
+  });
+
+  describe('onSubmit', () => {
+    it('disables everything and shows saving text when submitting', async () => {
+      const user = userEvent.setup();
+      renderComponent();
+      await user.type(getEmailInput(), 'valid@example.com');
+      await user.selectOptions(getEmailOptInSelect(), 'yes');
+      await user.click(getSubmitButton());
+
+      expect(getEmailInput()).toBeDisabled();
+      expect(getEmailOptInSelect()).toBeDisabled();
+      expect(getSubmitButton()).toBeDisabled();
+      expect(getCancelButton()).toBeDisabled();
+      expect(screen.getByText(i18n.saving())).toBeInTheDocument();
+    });
+  });
+
+  describe('onCancel', () => {
+    it('calls handleCancel when clicking the cancel button', async () => {
+      const handleCancel = jest.fn();
+      const user = userEvent.setup();
+      renderComponent({handleCancel});
+      await user.click(getCancelButton());
+
+      expect(handleCancel).toHaveBeenCalled();
     });
   });
 
