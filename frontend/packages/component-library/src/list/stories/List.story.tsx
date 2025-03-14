@@ -8,7 +8,7 @@ type Story = StoryObj<typeof List> & {
 };
 
 export default {
-  title: 'CMS/List',
+  title: 'DesignSystem/List',
   component: List,
   render: args => {
     const components: ListProps[] = args[0] ? Object.values(args) : [args];
