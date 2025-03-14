@@ -193,6 +193,7 @@ html {
 // Caption styles
 @mixin figcaption {
   @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
   font-size: 0.875rem;
   line-height: 1.54;
   margin: 0.5em 0 1em;

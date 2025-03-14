@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Help William Make his Song\r\nWilliam wants to add a laser sound in the last measure of this 6-measure song. Right now, it’s playing at measure 5. How would you code this to make the laser sound play at measure 6?",
+    "long_instructions": "### Help William Make his Song\r\nWilliam wants to add a laser sound in the last measure of this 6-measure song. How would you code this to make the laser sound play at measure 6?\r\n\r\n![](https://images.code.org/cf37b1aaca52a847b847a444ba6628bb-image-1741912960354.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "will_i_am_i_like_to_move_it",
@@ -85,7 +85,7 @@
                             "movable": false,
                             "editable": false,
                             "extraState": {
-                              "disableNextConnection": true
+                              "disableNextConnection": false
                             },
                             "inputs": {
                               "code": {
@@ -109,7 +109,7 @@
                                       "movable": false,
                                       "editable": false,
                                       "extraState": {
-                                        "disableNextConnection": true
+                                        "disableNextConnection": false
                                       },
                                       "fields": {
                                         "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
@@ -132,7 +132,7 @@
                       "movable": false,
                       "editable": false,
                       "extraState": {
-                        "disableNextConnection": true
+                        "disableNextConnection": false
                       },
                       "inputs": {
                         "code": {
@@ -160,18 +160,6 @@
                                 },
                                 "fields": {
                                   "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
-                                },
-                                "next": {
-                                  "block": {
-                                    "type": "play_sound_at_current_location_simple2",
-                                    "id": "XEE0wCF?g^4^sTq63P.W",
-                                    "extraState": {
-                                      "disableNextConnection": false
-                                    },
-                                    "fields": {
-                                      "sound": "will_i_am_i_like_to_move_it/laser"
-                                    }
-                                  }
                                 }
                               }
                             }
@@ -182,6 +170,51 @@
                   }
                 }
               }
+            },
+            {
+              "type": "play_sounds_sequential",
+              "id": ",wxvm|ZVP!u#i1_}siQK",
+              "x": 470,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_rest_at_current_location_simple2",
+              "id": "]z9hEU`ICih-OJ/rh[lD",
+              "x": 470,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "fields": {
+                "rest_duration": "<field name=\"rest_duration\">1</field>"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "XEE0wCF?g^4^sTq63P.W",
+              "x": 470,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "will_i_am_i_like_to_move_it/laser"
+              }
             }
           ]
         }
@@ -189,21 +222,13 @@
       "toolbox": {
         "type": "flyout",
         "blocks": {
-          "Functions": [
-
-          ],
-          "Play": [
-            "play_rest_at_current_location_simple2"
-          ],
-          "Control": [
-            "play_sounds_sequential"
-          ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-11 18:32:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 18:37:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 18:38:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11 18:32:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 18:37:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 18:38:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:29:16 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 00:41:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 00:41:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 00:42:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 00:43:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

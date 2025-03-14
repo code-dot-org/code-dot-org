@@ -11,10 +11,66 @@
     "long_instructions": "#### Sharkira's \"Amarillo\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Build the song with code. \r\n",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
+        "shakira_amarillo": [
+          "drums_verse_1",
+          "drums_verse_2",
+          "drums_prechorus_1",
+          "drums_prechorus_2",
+          "drums_prechorus_build",
+          "drums_chorus_crash",
+          "drums_chorus_main",
+          "drums_chorus_fill",
+          "bass_verse_1",
+          "bass_verse_2",
+          "bass_verse_3",
+          "bass_verse_4",
+          "bass_prechorus_1",
+          "bass_prechorus_2",
+          "bass_prechorus_pause",
+          "bass_chorus_1",
+          "bass_chorus_2",
+          "piano_note",
+          "piano_run",
+          "synth_verse_1",
+          "synth_verse_2",
+          "synth_verse_3",
+          "synth_verse_4",
+          "synth_prechorus_1",
+          "synth_prechorus_2",
+          "synth_prechorus_pause",
+          "synth_chorus_1",
+          "synth_chorus_2",
+          "synth_break_1",
+          "synth_break_2",
+          "guitar_prechorus_1",
+          "guitar_prechorus_2",
+          "guitar_prechorus_pause",
+          "guitar_chorus_1",
+          "guitar_chorus_2",
+          "slide_1",
+          "slide_2",
+          "slide_3",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_verse_5",
+          "vocals_verse_6",
+          "vocals_verse_7",
+          "vocals_verse_8",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4"
+        ]
       },
       "toolbox": {
         "blocks": {
@@ -44,13 +100,14 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "\"Amarillo\"",
-    "thumbnail_url": "https://images.code.org/edf2bc137fc34454a83518041a932240-Screenshot 2025-03-11 at 1.41.02 PM.png",
+    "thumbnail_url": "https://images.code.org/6d46542f3c97701e1226a1210c9e52ed-shakira.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-11T20:38:31.508+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-b\"},{\"changed_at\":\"2025-03-11 20:41:17 +0000\",\"changed\":[\"long_instructions\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 20:42:05 +0000\",\"changed\":[\"level_data\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T20:38:31.508+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-b\"},{\"changed_at\":\"2025-03-11 20:41:17 +0000\",\"changed\":[\"long_instructions\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 20:42:05 +0000\",\"changed\":[\"level_data\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:30:43 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:31:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -738,6 +738,7 @@ module SharedConstants
   # reference: https://platform.openai.com/docs/models/gpt-3-5
   AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.

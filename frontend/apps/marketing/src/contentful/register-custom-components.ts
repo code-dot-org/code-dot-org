@@ -17,6 +17,7 @@ import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
 import Iframe, {IframeContentfulComponentDefinition} from '@/components/iframe';
+import Image, {ImageContentfulComponentDefinition} from '@/components/image';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
 import Overline, {
   OverlineContentfulComponentDefinition,
@@ -29,10 +30,7 @@ import Section, {
 } from '@/components/section';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
-import {
-  defineComponents,
-  CONTENTFUL_COMPONENTS,
-} from '@contentful/experiences-sdk-react';
+import {defineComponents} from '@contentful/experiences-sdk-react';
 
 defineComponents(
   [
@@ -64,6 +62,10 @@ defineComponents(
       },
     },
     {
+      component: Image,
+      definition: ImageContentfulComponentDefinition,
+    },
+    {
       component: Link,
       definition: LinkContentfulComponentDefinition,
     },
@@ -88,6 +90,6 @@ defineComponents(
     },
   ],
   {
-    enabledBuiltInComponents: [CONTENTFUL_COMPONENTS.image.id],
+    enabledBuiltInComponents: [],
   },
 );

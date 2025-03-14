@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 20:00:03 UTC",
+    "serialized_at": "2025-03-13 15:13:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -37,7 +37,7 @@
       "name": "Teaching Computer Systems and Devices",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -94,16 +94,352 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a0f43d1f-193f-41ab-af46-3eb73aea9dc5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0f43d1f-193f-41ab-af46-3eb73aea9dc5",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5",
+        "lesson_activity.key": "a0f43d1f-193f-41ab-af46-3eb73aea9dc5"
+      }
+    },
+    {
+      "key": "e92b2d47-4762-49a1-a427-cde42d07e8aa",
+      "position": 2,
+      "properties": {
+        "progression_name": "Course Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa",
+        "lesson_activity.key": "a0f43d1f-193f-41ab-af46-3eb73aea9dc5"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      },
+      "level_keys": [
+        "csaif_pl_overview_objectives_cs-devices"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cert_L2-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      },
+      "level_keys": [
+        "csaif_pl_cert_L2-cs-devices"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_l3-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      },
+      "level_keys": [
+        "csaif_pl_module_overview_l3-cs-devices"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_l4-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      },
+      "level_keys": [
+        "csaif_pl_course_overview_l4-cs-devices"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_L5-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      },
+      "level_keys": [
+        "csaif_pl_course_structure_L5-cs-devices"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_L6-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_resources_L6-cs-devices"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_L7-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      },
+      "level_keys": [
+        "csaif_pl_career_overview_L7-cs-devices"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_L8-cs-devicesn"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      },
+      "level_keys": [
+        "csaif_pl_AI_chatbot_overview_L8-cs-devicesn"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_L9-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      },
+      "level_keys": [
+        "csaif_pl_teacher_Lesson1_L9-cs-devices"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_overview_objectives_cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_overview_objectives_cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cert_L2-cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_cert_L2-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_overview_l3-cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_module_overview_l3-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_overview_l4-cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_course_overview_l4-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_course_structure_L5-cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_course_structure_L5-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "14dbdacd-64d3-4e8e-8446-cd0c0138b7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_resources_L6-cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_resources_L6-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_career_overview_L7-cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_career_overview_L7-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_chatbot_overview_L8-cs-devicesn",
+        "script_level.level_keys": [
+          "csaif_pl_AI_chatbot_overview_L8-cs-devicesn"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_teacher_Lesson1_L9-cs-devices",
+        "script_level.level_keys": [
+          "csaif_pl_teacher_Lesson1_L9-cs-devices"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "e92b2d47-4762-49a1-a427-cde42d07e8aa"
+      }
+    }
   ],
   "resources": [
 

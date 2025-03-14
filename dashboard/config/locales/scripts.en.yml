@@ -20766,7 +20766,7 @@ en:
             lessonGroup-3:
               display_name: "(Optional) Foundations in a Day"
             lessonGroup-2:
-              display_name: "("
+              display_name: Customizing Models
             lessonGroup-4:
               display_name: User-Centered Design
           name: customizing-llms-latm-pilot

@@ -11,7 +11,7 @@
     "long_instructions": "#### Welcome to Music Lab! \r\n\r\nTry this: \r\n- Drag a `play sound` block under `when run`. \r\n- Use the dropdown menu in the `play sound` block to explore and choose a sound you like. \r\n- Drag at least three sound blocks under `when run` and experiment with different sequences of sounds. \r\n- Want to delete a sound? Drag it back to the toolbox to delete it from the Workspace. \r\n- Want to start all over? Click on the Restart button at the top of your Workspace. This will delete all the code in your workspace so you can start fresh again. \r\n<img src=\"https://images.code.org/37051c35df1873d2f1ccf26319681686-image-1741368264847.24.18 AM.png\" style=\"width: 30px\">\r\n\r\n\r\n\r\n",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
@@ -41,11 +41,12 @@
         },
         "type": "flyout"
       },
-      "packId": "default"
+      "packId": "default",
+      "allowChangeStartingPlayheadPosition": true
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T19:44:43.387+00:00\",\"changed\":[\"cloned from \\\"test-musicLab-sequences-explore-investigate\\\"\"],\"cloned_from\":\"test-musicLab-sequences-explore-investigate\"},{\"changed_at\":\"2025-03-07 19:44:46 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:06:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:08:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:11:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T19:44:43.387+00:00\",\"changed\":[\"cloned from \\\"test-musicLab-sequences-explore-investigate\\\"\"],\"cloned_from\":\"test-musicLab-sequences-explore-investigate\"},{\"changed_at\":\"2025-03-07 19:44:46 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:06:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:08:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:11:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:21:57 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

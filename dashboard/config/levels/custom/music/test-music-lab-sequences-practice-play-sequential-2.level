@@ -10,7 +10,7 @@
     "long_instructions": "### Add More Layers \r\n\r\nJesse, the music producer, loves what you've done with the beats to Sabrina's chorus. They're looking for more sounds to layer into each vocal and beat combination you made. \r\n\r\n**Try this:** \r\n- Use a `play together` block around each beat you added. Then, add more sounds like bass and instruments to create a fuller sound in each measure. ",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "sabrina_carpenter_espresso",
@@ -163,6 +163,7 @@
                             "id": ";[,xuveuqSH6-S=#$[DO",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": true
                             }
@@ -183,6 +184,7 @@
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -193,6 +195,7 @@
                     "id": "Tk,Kq~Y2kwe7.Vr51ugB",
                     "deletable": false,
                     "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -205,6 +208,7 @@
                         "id": "b6^%3uLWZAix%_-?Kn]u",
                         "deletable": false,
                         "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -217,6 +221,7 @@
                             "id": "_g-b@~siK}(DGSA,fD`Z",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": true
                             },
@@ -240,6 +245,7 @@
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -250,6 +256,7 @@
                     "id": "_vDalYWN[=@#2T3x/K=9",
                     "deletable": false,
                     "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -262,6 +269,7 @@
                         "id": "]a`B)Iqf-:CVe#%)^VA~",
                         "deletable": false,
                         "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -274,6 +282,7 @@
                             "id": "URK)q(P*`dm,?RIKC~2;",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": true
                             },
@@ -297,6 +306,7 @@
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -307,6 +317,7 @@
                     "id": "b.D4G#ht9e//$uP-Bd%[",
                     "deletable": false,
                     "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -319,6 +330,7 @@
                         "id": "j{s:~s6sEt%*syanqh}j",
                         "deletable": false,
                         "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -331,6 +343,7 @@
                             "id": "gKd8KwB_i]J68TX#/saH",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": true
                             },
@@ -354,6 +367,7 @@
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -364,6 +378,7 @@
                     "id": "waQ`-_9PpEk4T_kV=7(J",
                     "deletable": false,
                     "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -376,6 +391,7 @@
                         "id": "RD%Ty@qw*w*/8Bc1~902",
                         "deletable": false,
                         "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -388,6 +404,7 @@
                             "id": "{!dH(.53iO8+T2Y*8;#L",
                             "deletable": false,
                             "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": true
                             },
@@ -404,12 +421,13 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-10 21:29:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:31:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:32:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:33:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:40:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 18:02:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:34:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-10 21:29:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:31:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:32:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:33:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:40:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 18:02:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:34:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:28:32 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 00:38:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

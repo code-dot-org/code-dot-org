@@ -1,0 +1,688 @@
+{
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/1": {
+    "display_name": "How to Make a Sprite"
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/2": {
+    "short_instructions": "Set the background and add a new sprite for player one.",
+    "long_instructions": "**Game design starts with choosing the background and the players.**\n\n1.  Connect a `set background` block to `when run`\n\n2.  Add a new sprite and choose a costume for player one\n\n3.  Press `Run`",
+    "authored_hints": {
+      "hint1": "Connect a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block under <code style=\"color:black; background-color:#FFBD46\">When run</code>.",
+      "hint2": "Select a background from the dropdown menu\n\n[blockly block][0]",
+      "hint3": "Connect a  <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block under <code style=\"color:black; background-color:#FFBD46\">When run</code>."
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/3": {
+    "short_instructions": "Make a player two sprite with a <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block. Then set the location using the <code style=\"color:black; background-color:#EBD546\">location pin</code>.",
+    "long_instructions": "**Add more sprites and set their location.**\n\n1.  Make another new sprite and choose a costume for player two<img src=\"https://images.code.org/51ad72f6ba72c16b8094566622e310ab-image-1683905416875.gif\" style=\"width: 20%; float: right; padding-top: 20px\">\n\n2.  Click the <code style=\"color:black; background-color:#EBD546\">location pin</code> to move the new sprite \n\n3.  Press `Run`",
+    "authored_hints": {
+      "hint1": "The <code style=\"color:black; background-color:#EBD546\">location</code> block is attached to the <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block.\n\nTo change a sprite's location, click the pin on the location block, then click where you want it to go.\n\n[][0]",
+      "Hint2": "You can choose the costume from the dropdown menu.\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/4": {
+    "display_name": "Create a Sprite Lab project",
+    "short_instructions": "Add the new block to your program. Click on the grid to create place sprites exactly where you want them.",
+    "long_instructions": "**Making Lots of Sprites with a Grid**\n\n1.  Add the `make sprites using grid` block\n    <img src=\"https://images.code.org/166f495ee24fe3f22839ba19a8263b64-image-1710796817915.gif\" style=\"height: 200px; margin-right: 40px; float: right\"> \n\n2.  **Click on the grid** to choose exactly where you want to place lots of sprites",
+    "authored_hints": {
+      "Hint1": "Click on the grid after you move the block into your workspace. \n[blockly block][0]\n\nThen select the boxes where you want the sprite to go. \n\nClick off the grid when you are finished."
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/5": {
+    "short_instructions": "Try out some sprite behaviors! Press run to see them in action. Try different behaviors if you like. ",
+    "long_instructions": "**Try it: Animated sprites using behaviors!** \n\nBehaviors are actions that happen over and over while the program runs.\n\n1.  Look over the code.\n2.  Press `Run` to see the sprites in action!\n\n* * *\n\n**Bonus:** Try choosing a few different behaviors!",
+    "authored_hints": {
+      "hint1": "You can choose a new behavior from the dropdown menu.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/6": {
+    "short_instructions": "Make one sprite chase the other. Add `moving with arrow keys` behavior to a sprite.",
+    "long_instructions": "**Set up a game of chase using behavior blocks.**\n\n1.  Code the dragon sprites to `begin moving with arrow keys`.\n\n2.  Press `Run` and use the arrows to get moving!",
+    "authored_hints": {
+      "hint": "Connect two <code style=\"color:black; background-color:#5ED5DD\">sprite begins</code> behavior block to your program. One for each of the sprites.",
+      "hint2": "Choose the <code style=\"color:black; background-color:#6AF36C\">wandering</code> behavior from the dropdown menu of one behavior and <code style=\"color:black; background-color:#6AF36C\">moving with arrow keys</code> from the other.\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "arrows": "Move the sprite with the arrows!"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/7": {
+    "display_name": "Create a Sprite Lab project",
+    "short_instructions": "Add the new block to your program. Click on the grid to create place sprites exactly where you want them.",
+    "long_instructions": "**Change the behavior of many sprites.**\n\n1.  Add the `sprite begins behavior` block\n\n2.  Press `Run`. What do you notice? \n\n* * *\n\n**Bonus:** You can change the behavior if you would like. ",
+    "authored_hints": {
+      "Hint1": "Is the costume the same on your `make new sprite` and `sprite begins behavior` blocks? ",
+      "Hint2": "Try adding this block to your program.\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/8": {
+    "display_name": "How to Make a Sprite"
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/9": {
+    "panels": {
+      "game_design_panel_events-adeb522e-b960-4614-8df7-dfe6a2d2c354": "### Using Events\n\nEvents do not snap into your main program.\n\nThey create little programs of their own.",
+      "game_design_panel_events-820d9730-1582-4839-93d4-7b84cc78ae60": "#### When Sprite Clicked\n\nThe computer waits for the user to click. \n\nWhen there is a click, it executes the code under the event.\n\n[][0]",
+      "game_design_panel_events-b0361be1-a7c8-43c1-a70b-e9a0b2dc4ce5": "#### When sprite touches sprite\n\nThe computer waits for the sprites to be touching. \n\nAs soon as they touch, it executes the code under the event. \n\n[][0]",
+      "game_design_panel_events-068701d9-edca-4086-99eb-27a027450240": "#### Event Toolbox\n\nClick the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox.\n\nYou can use the blocks from the toolbox when you have a group of sprite but only want the action to apply to one sprite at a time. "
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/10": {
+    "short_instructions": "Make your sprite grow when you click on it.",
+    "long_instructions": "**Make your sprite grow when you click it.**\n\n<div style=\"float: right;\">\n\n</div>\n\n1.  Connect a `change size` block under the event `when sprite clicked`\n\n2.  Click on the sprite after you press `Run`",
+    "authored_hints": {
+      "hint1": "Connect a sprite <code style=\"color:black; background-color:#5ED5DD\">change size</code> block to the <code style=\"color:black; background-color:#6AF36C\">when sprite touches sprite</code> event.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/11": {
+    "short_instructions": "Write a program to change the size of each sprite when it is clicked.",
+    "long_instructions": "**Events with Sprite Groups**\n\n<img src=\"https://images.code.org/d6f63b693844071ec6cd9e32587171e3-image-1715705071588.gif\" style=\"margin-right: 10%; float: right; width: 25%\">\n\n1.  Click the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox\n\n2.  Drag the `clicked sprite` block into the `change size` block below\n\n3.  Click on each sprite to change their size after pressing Run. ",
+    "authored_hints": {
+      "expand_click_event": "Click the `+` button on the event block. Use the block inside to finish the program.\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "mini-toolbox-blue-button": "Click the blue button to open or close."
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/12": {
+    "short_instructions": "Code your program so that clicking on a sprite removes it. ",
+    "long_instructions": "**Collect one sprite at a time.**\n\n1.  Click the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox\n\n2.  Drag down the `clicked sprite` and connect it to `remove`\n\n3.  Tap on each sprite after clicking `Run`.",
+    "authored_hints": {
+      "groups_click_hint": "You will need an event block. Make sure to click your sprites after pressing \"Run!\"\n\n[blockly block][0]",
+      "groups_say_hint": "Add a `clicked` block to a `remove` block. You can find it inside the event block!\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/13": {
+    "short_instructions": "Code a sound to play when the two sprites touch.",
+    "long_instructions": "**What happens when sprites touch?** Try a new type of event.\n\n1.  Add a `play sound` block to the `when sprites touch` event\n\n2.  Press `Run` and watch what happens when the sprites touch!",
+    "authored_hints": {
+      "hint1": "Connect a play sound under the when sprite touches sprite event block:\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/14": {
+    "short_instructions": "Change the costume of a sprite when they touch. ",
+    "long_instructions": "**Remove a sprite when they touch.**\n\n1.  Click the the <code style=\"color:white; background-color:#4334eb\">+</code> to open the event toolbox\n\n2.  Drag the `object` egg block down to the `remove` block\n\n3.  Press `Run` then use the arrows to move the ramen sprite",
+    "authored_hints": {
+      "groups_touch_hint": "Click the `+` button on the event block. Use the `object` block inside to finish the program. \n\n[blockly block][0]",
+      "sprites_touch_hint": "Use the arrows to move sprites to touch after pressing \"Run!\""
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/1/levels/15": {
+    "dsls": {
+      "description": "Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with events and groups of sprites!",
+      "display_name": "Lots of Sprites Practice"
+    },
+    "sublevels": {
+      "game_design_practice_lots_choice_a_independent": {
+        "display_name": "Blast Off!",
+        "bubble_choice_description": "Make the sprites move when they are clicked.",
+        "short_instructions": "Make the sprites move when they are clicked.",
+        "long_instructions": "**Finish the game.** Make the sprites move when they are clicked.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/371f4ba22b3a2b81d63da7059d84590a-image-1641824534552.2022-01-10 09_21_44.gif)\r\n\r\n</div>\r\n\r\n\r\n1. Drag out the `when sprite clicked` event and open the toolbox `+`\r\n\r\n- Make the `object sprite` begin a behavior when clicked\r\n- Press `Run` then click each sprite\r\n\r\n***\r\n\r\n***Note:*** *This code starts with three `make new sprite` blocks so that the location of each could be set to an exact spot.*\r\n\r\n*You could use the `make 3 new sprites` block if you don't mind a random starting location.* \r\n"
+      },
+      "game_design_practice_lots_choice_b_independent": {
+        "display_name": "Carrot Grabber",
+        "bubble_choice_description": "Finish the game and help the bunny collect the carrots.",
+        "short_instructions": "Remove the carrot sprites when the bunny touches them.",
+        "long_instructions": "**Finish this game!** Make the carrot sprites get removed when the bunny touches them.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/dd88bcd240491e58f95fcb2127ad181c-image-1641827026540.2022-01-10 10_02_39.gif)\r\n\r\n</div>\r\n\r\n\r\n1.  Use a `when touches` event and a `remove` block to finish the game.\r\n\r\n*Extra Challenge:* Change the size of the bunny sprite each time a carrot is touched."
+      },
+      "game_design_practice_lots_choice_c_independent": {
+        "display_name": "Rainbow Sheep",
+        "bubble_choice_description": "Change the color of sprites using events.",
+        "short_instructions": "Change the color of the sprites using events.",
+        "long_instructions": "**Finish the game!** Change the color of the sprites using events.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/39306839858f0b3a39b05463f99755bb-image-1641584970345.2022-01-07 14_48_51.gif)\r\n\r\n</div>\r\n\r\n1.  Use a `when sprite touches sprite` event \r\n\r\n- Change the color of the `object sprite` when they touch another sprite\r\n- Press `Run` and play!\r\n\r\n***\r\n\r\n**Extra Challenge:** Can you make the sprites change to a *random color* each time?"
+      },
+      "game_design_practice_lots_choice_d_independent": {
+        "display_name": "Candy Collector",
+        "bubble_choice_description": "Remove the sprites when they are clicked.",
+        "short_instructions": "Remove the sprites using events.",
+        "long_instructions": "**Finish the game!** Remove the sprites using events.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/137b0a8b6261d07e40cbacbc75c28335-image-1641587649737.2022-01-07 15_33_36.gif)\r\n\r\n</div>\r\n\r\n\r\n1. Create a program that makes at least 3 sprites.\r\n\r\n- Then, each sprite is removed when it is clicked.\r\n\r\n***\r\n\r\n**Extra Challenge:** Make (and remove) two or more different kinds of sprites.\r\n",
+        "behavior_names": {
+          "wandering": "wandering",
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "swimming left and right": "swimming left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling",
+          "moving with arrow keys": "moving with arrow keys",
+          "driving with arrow keys": "driving with arrow keys",
+          "fluttering": "fluttering",
+          "wobbling": "wobbling",
+          "moving west and looping": "moving west and looping",
+          "moving east and looping": "moving east and looping",
+          "moving north and looping": "moving north and looping",
+          "moving south and looping": "moving south and looping"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+        }
+      },
+      "game_design_practice_lots_choice_e_independent": {
+        "display_name": "Changing Costumes",
+        "bubble_choice_description": "Practice changing each sprite's costume using events.",
+        "short_instructions": "Practice changing each sprite's costume using events.",
+        "long_instructions": "**Finish the game!** Practice changing each sprite's costume using events.\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/29dc89dbaa522a5cc418620013717af4-image-1641833820697.2022-01-10 11_55_38.gif)\r\n\r\n</div>\r\n\r\n1. Make at least 3 sprites with the same costume\r\n\r\n - Make each sprite change costumes when it is clicked\r\n - Press `Run` and try it out\r\n\r\n**Extra challenge:** Create another group of sprites that all change costume _**at the same time**_ when one is clicked. \r\n\r\n\r\n",
+        "behavior_names": {
+          "wandering": "wandering",
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "swimming left and right": "swimming left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling",
+          "moving with arrow keys": "moving with arrow keys",
+          "driving with arrow keys": "driving with arrow keys",
+          "fluttering": "fluttering",
+          "wobbling": "wobbling",
+          "moving west and looping": "moving west and looping",
+          "moving east and looping": "moving east and looping",
+          "moving north and looping": "moving north and looping",
+          "moving south and looping": "moving south and looping",
+          "wandering2": "wandering2",
+          "moving east2": "moving east2",
+          "spinning left2": "spinning left2",
+          "spinning right2": "spinning right2",
+          "shrinking2": "shrinking2",
+          "growing2": "growing2",
+          "moving south2": "moving south2",
+          "swimming left and right2": "swimming left and right2",
+          "moving north2": "moving north2",
+          "jittering2": "jittering2",
+          "moving west2": "moving west2",
+          "patrolling2": "patrolling2",
+          "moving with arrow keys2": "moving with arrow keys2",
+          "driving with arrow keys2": "driving with arrow keys2",
+          "fluttering2": "fluttering2",
+          "wobbling2": "wobbling2",
+          "moving west and looping2": "moving west and looping2",
+          "moving east and looping2": "moving east and looping2",
+          "moving north and looping2": "moving north and looping2",
+          "moving south and looping2": "moving south and looping2",
+          "wandering3": "wandering3",
+          "moving east3": "moving east3",
+          "spinning left3": "spinning left3",
+          "spinning right3": "spinning right3",
+          "shrinking3": "shrinking3",
+          "growing3": "growing3",
+          "moving south3": "moving south3",
+          "swimming left and right3": "swimming left and right3",
+          "moving north3": "moving north3",
+          "jittering3": "jittering3",
+          "moving west3": "moving west3",
+          "patrolling3": "patrolling3",
+          "moving with arrow keys3": "moving with arrow keys3",
+          "driving with arrow keys3": "driving with arrow keys3",
+          "fluttering3": "fluttering3",
+          "wobbling3": "wobbling3",
+          "moving west and looping3": "moving west and looping3",
+          "moving east and looping3": "moving east and looping3",
+          "moving north and looping3": "moving north and looping3",
+          "moving south and looping3": "moving south and looping3",
+          "wandering4": "wandering4",
+          "moving east4": "moving east4",
+          "spinning left4": "spinning left4",
+          "spinning right4": "spinning right4",
+          "shrinking4": "shrinking4",
+          "growing4": "growing4",
+          "moving south4": "moving south4",
+          "swimming left and right4": "swimming left and right4",
+          "moving north4": "moving north4",
+          "jittering4": "jittering4",
+          "moving west4": "moving west4",
+          "patrolling4": "patrolling4",
+          "moving with arrow keys4": "moving with arrow keys4",
+          "driving with arrow keys4": "driving with arrow keys4",
+          "fluttering4": "fluttering4",
+          "wobbling4": "wobbling4",
+          "moving west and looping4": "moving west and looping4",
+          "moving east and looping4": "moving east and looping4",
+          "moving north and looping4": "moving north and looping4",
+          "moving south and looping4": "moving south and looping4",
+          "wandering5": "wandering5",
+          "moving east5": "moving east5",
+          "spinning left5": "spinning left5",
+          "spinning right5": "spinning right5",
+          "shrinking5": "shrinking5",
+          "growing5": "growing5",
+          "moving south5": "moving south5",
+          "swimming left and right5": "swimming left and right5",
+          "moving north5": "moving north5",
+          "jittering5": "jittering5",
+          "moving west5": "moving west5",
+          "patrolling5": "patrolling5",
+          "moving with arrow keys5": "moving with arrow keys5",
+          "driving with arrow keys5": "driving with arrow keys5",
+          "fluttering5": "fluttering5",
+          "wobbling5": "wobbling5",
+          "moving west and looping5": "moving west and looping5",
+          "moving east and looping5": "moving east and looping5",
+          "moving north and looping5": "moving north and looping5",
+          "moving south and looping5": "moving south and looping5",
+          "wandering6": "wandering6",
+          "moving east6": "moving east6",
+          "spinning left6": "spinning left6",
+          "spinning right6": "spinning right6",
+          "shrinking6": "shrinking6",
+          "growing6": "growing6",
+          "moving south6": "moving south6",
+          "swimming left and right6": "swimming left and right6",
+          "moving north6": "moving north6",
+          "jittering6": "jittering6",
+          "moving west6": "moving west6",
+          "patrolling6": "patrolling6",
+          "moving with arrow keys6": "moving with arrow keys6",
+          "driving with arrow keys6": "driving with arrow keys6",
+          "fluttering6": "fluttering6",
+          "wobbling6": "wobbling6",
+          "moving west and looping6": "moving west and looping6",
+          "moving east and looping6": "moving east and looping6",
+          "moving north and looping6": "moving north and looping6",
+          "moving south and looping6": "moving south and looping6"
+        },
+        "behavior_descriptions": {
+          "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+          "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+          "rotate a sprite to its left": "rotate a sprite to its left",
+          "rotate a sprite to its right": "rotate a sprite to its right",
+          "change the size of a sprite": "change the size of a sprite",
+          "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+          "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+          "randomly change the size of a sprite": "randomly change the size of a sprite",
+          "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+          "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+          "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+          "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+          "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/1": {
+    "dsls": {
+      "description": "**Try out one of these simple games!** How does the scoring work? When you are ready to code your own scoreboard click Finish!\n\nThe spicy peppers indicate how difficult the game is to win. \n\n🌶️: Mild and easy \n\n🌶️🌶️: Medium with some spice\n\n🌶️🌶️🌶️: Spicy! Difficult! \n\n🌶️🌶️🌶️🌶️: Extra hot! Can you handle it? ",
+      "display_name": "Games with variables as score"
+    },
+    "sublevels": {
+      "game_variables_intro_choices_a_independent": {
+        "display_name": "Jewels of the Arctic ",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Collect  \r\n\r\n**How to win:** Use the arrows to get 6 arctic jewels. ",
+        "short_instructions": " **Play the game!**",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+        "authored_hints": {
+          "Hint1": "Press the `Run` button then use the arrow keys to move the fox to the jewels."
+        }
+      },
+      "game_variables_intro_choices_b_independent": {
+        "display_name": "Star Catcher ",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Moving & Collecting \r\n\r\n**How to win:** Use the arrows to catch 10 stars\r\n\r\n",
+        "short_instructions": "Play the game!",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on."
+      },
+      "game_variables_intro_choices_c_independent": {
+        "display_name": "Sports Ball",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Game Mechanics:** Click & Collect \r\n\r\n**How to win:** Click on 12 of the bouncing balls!",
+        "short_instructions": "Play the game!",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+        "authored_hints": {
+          "Hint1": "Press `Run` then try to click on the bouncing balls!"
+        }
+      },
+      "game_variables_intro_choices_d_independent": {
+        "display_name": "Freeze Tag",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️🌶️\r\n\r\n**Game Mechanic:** Chase\r\n\r\n**How to win:** Freeze all 5 opponents. When you tag an opponent they freeze. But they can unfreeze each other! ",
+        "short_instructions": "Play the game!",
+        "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+        "authored_hints": {
+          "Hint1": "It's freeze tag. Use the arrows and chase the wizzards!"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/2": {
+    "display_name": "How to Make a Sprite"
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/3": {
+    "panels": {
+      "games_dev_variables_panel-c730ee2c-1d3b-499e-a393-32e37657bc0f": "## Use variables in a game!\n\nVariables are like boxes with labels that store information.\n\nThe information inside these boxes while the game is being played, helping you keep track of important details throughout the game.",
+      "games_dev_variables_panel-f291fa1b-ba53-4654-87a6-7c35376e6659": "# STEP 1️⃣\n\n## Show the variable\n\nPut the variable name and current value onto the play space. Use the location pin to choose where it goes. \n\n<img src=\"https://images.code.org/6f1c0e732048341363872c838625a146-image-1712095465172.jpg\" style=\"margin-right: 40px; width: 75%\">",
+      "games_dev_variables_panel-a8841bd0-4808-48cc-85ac-2d43ce210226": "# STEP 2️⃣\n\n## Set variable\n\nSet the value of the variable with this block.\n\n<img src=\"https://images.code.org/fe305474ecbaffc5475149eb9977c2f2-image-1712095484307.jpg\" style=\"margin-right: 40px; width: 75%\">\n\nWhat should the starting score be?",
+      "games_dev_variables_panel-68fde408-b74c-4b53-8a8c-39dd7456bf02": "# STEP 3️⃣\n\n## Change variable\n\nThis block changes the value of the variable. \n\nFor example, you could add points to the score variable or decrease the value of a health variable.\n\n<img src=\"https://images.code.org/a0e8b3cabe987ebe9b165983735ddfc4-image-1712095475591.jpg\" style=\"margin-right: 40px;  width: 75%\">"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/4": {
+    "short_instructions": "Set the score to 0 and show the score variable in the playspace.",
+    "long_instructions": "**Scoreboard Setup**\n\n1.  Add `show variable score` block to the `when run` program\n\n2.  Then connect a `set score to 0` block \n\n3.  Press `Run` \n\nNext, we'll learn how to change the score!",
+    "authored_hints": {
+      "Hint1": "This block will show your variable on the playspace:\n[blockly block][0]",
+      "Hint2": "The starting value of your variable is set using this block: \n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/5": {
+    "short_instructions": "Change the score by 1 and check that the scoreboard updated.",
+    "long_instructions": "**Click the sprite to change the score.**\n\n1.  Add a `change score by 1` under the event `when sprite clicked`  \n\n2.  Click the coin after pressing `Run`.  Does the scoreboard change?",
+    "authored_hints": {
+      "Hint1": "The score will change by adding this block **under** the event:\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_03": "⬆️ Use this block. "
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/6": {
+    "short_instructions": "Set the `health` variable to change by -1 every time the bomb sprite is clicked.",
+    "long_instructions": "**Health decreases when the sprite is clicked.**\n\n1.  Add a `change health by -1` under the event `when sprite clicked` \n\n2.  Press `Run` and watch the variable change when you click on the sprite",
+    "authored_hints": {
+      "Hint1": "This time the variable should decrease when the player sprite touches the enemy sprite. To decrease the value, you will use a negative number.\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/7": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/6698ec412ee301462adf0b1981eb201a-image-1711145088166.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/0a0af041ba7ce8ac8fd713a44699931a-image-1715270187376.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/f53c8d2daeffc871ce0fdf31cf426a36-image-1717177602287.png)"
+        }
+      ],
+      "markdown": "Look at these coding blocks using variables. Match the correct code to the animation.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/fc9ce7945e934cbaa95ad46c34988dae-image-1709767957304.gif)"
+        },
+        {
+          "text": "![](https://images.code.org/8dd2cd7fd35c125e7771cea0de8fb5d2-image-1715270087301.gif)"
+        },
+        {
+          "text": "![](https://images.code.org/333af8ec3526d2756a0c405263466952-image-1717177614880.gif)"
+        }
+      ],
+      "title": "Match the code to the animation"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/8": {
+    "panels": {
+      "games_dev_variables_panel-5fea9700-21a2-42af-8226-aad824e7b531": "# STEP 4️⃣\n\n## Check the value\n\nThis block checks to see if the condition is true. If it is true it will run the code inside.\n\n<img src=\"https://images.code.org/009a6cd754f5e172b4274f888f956ef7-image-1712095627200.jpg\" style=\"margin-right: 40px;  width: 75%\">"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/9": {
+    "short_instructions": "Make an effect happen when the player scores 5 points.",
+    "long_instructions": "**How do you win?** Check if the player has a winning score.\n\n1.  Connect the `if score = 3` block at the end of the `when sprite clicked` program\n\n2.  Add a `do starburst effect block` _inside_ the new block\n\n3.  Press `Run` then click on the coin. Can you win?",
+    "authored_hints": {
+      "Hint1": "This conditional block will check to see if the value of the variable equals a certain value.\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/10": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/be7a48af8f98a58601bbc77616896ff9-image-1715379516509.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/924ce0f736d18092eafbb5ce51e6c0f1-image-1715379529970.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/cdddd2dd3a55ba22e88da5c9c33a63e1-image-1715379537572.jpg)"
+        }
+      ],
+      "markdown": "Look at these coding blocks using conditionals. Match the correct code to the picture.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/c2bc23e6741cf4d56429e9afbceb2c06-image-1715379511851.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/3ab41f167b6994734714071c9ae25b4c-image-1715379524754.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/d41816d671e9b82d3cf764802e29dc1e-image-1715379533515.jpg)"
+        }
+      ],
+      "title": "Match the code to the animation"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/11": {
+    "dsls": {
+      "description": "Choose a game to fix.",
+      "display_name": "These games do not work!"
+    },
+    "sublevels": {
+      "game_variables_fix_choices_d_independent": {
+        "display_name": "Coin Collector",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect & Avoid\r\n\r\n**Problem:** We don't know what the score is!",
+        "short_instructions": "Update the scoreboard to show the number of coins you collected.",
+        "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** How many coins do I have?\r\n\r\n**Fix:** Add the scoreboard with the block `show coins`",
+        "authored_hints": {
+          "Hint1": "We need to `show variable` in order for the user to know how many coins they have collected!"
+        }
+      },
+      "game_variables_fix_choices_e_independent": {
+        "display_name": "Carrot Chaser",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Chasing\r\n\r\n**Problem:** The bunny moves too slow to catch the carrot!",
+        "short_instructions": "Increase the rabbit's speed to 3 or more so it can catch the carrot!",
+        "long_instructions": "##Game Mechanic: CHASING\r\n**Problem:** The rabbit is too slow to get the carrot!\r\n\r\n**Fix:** Change the rabbit's speed by updating the `speed` variable to 3 or faster.",
+        "authored_hints": {
+          "Hint1": "Look for the speed variable at the top of the program. Try changing the value.\n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"variables_set\" id=\"J?iD?dAxk:5a|{3*vPkd\" deletable=\"false\">\n  <field name=\"VAR\" id=\"r[GkJc@uY0o`[{8pH_Om\">speed</field>\n  <value name=\"VALUE\">\n    <block type=\"math_number\" id=\"oeoAo)P9r?JyFZaYez^P\" deletable=\"false\">\n      <field name=\"NUM\">1</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      },
+      "game_variables_fix_choices_f_independent": {
+        "display_name": "Crab Walk",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Avoiding\r\n\r\n**Problem:** The crab is too hard to escape!",
+        "short_instructions": "Adjust the crab's speed by setting the difficultyLevel to 3 or 4.",
+        "long_instructions": "##Game Mechanic: AVOIDING\r\n**Problem:** The crab moves too fast.\r\n\r\n**Fix:** Adjust the crab's speed by setting the `difficultyLevel` to 3 or 4."
+      },
+      "game_variables_fix_choices_g_independent": {
+        "display_name": "Hay Collector",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect\r\n\r\n**Problem:** The hay bundle is too hard to catch!",
+        "short_instructions": "Adjust the hay bundle's speed by setting the `difficultyLevel` to 3 or 4.",
+        "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** The bundle moves too fast.\r\n\r\n**Fix:** Adjust the hay bundle's speed by setting the `difficultyLevel` to 3 or 4.",
+        "authored_hints": {
+          "Hint1": "To change the speed of the hay bundle, look for the variable named `difficultyLevel` near the top of the program and try changing the value. \n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"variables_set\" id=\"0po+N0fQV1d@mGOMvfn2\" deletable=\"false\">\n  <field name=\"VAR\" id=\"GCYV(/}|5rKLotga]K0U\">difficultyLevel</field>\n  <value name=\"VALUE\">\n    <block type=\"math_number\" id=\":fx{-4c^^pOg:L}Ynr%G\" deletable=\"false\">\n      <field name=\"NUM\">15</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      },
+      "game_variables_fix_choices_c_independent": {
+        "display_name": "Sports Ball",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Game Mechanics:** Click & Collect \r\n\r\n**Problem:** Nothing happens if the player wins",
+        "short_instructions": "Add to your program so something happens if a player wins the game!",
+        "long_instructions": " **Fix the game!**\r\n \r\n1. Press `Run` and try out the game\r\n\r\n- Program something to happen if a player wins the game\r\n- Click `Finish` when you are finished\r\n\r\n***\r\n\r\n***Hint:*** *In level 6 we learned how to check if the variable equals winning condition.*",
+        "authored_hints": {
+          "Hint1": "Did you add a conditional to one of your events?\n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"gamelab_ifVarEquals\" id=\"M/gCD$xcQAi@;(xYGB%;\">\n  <field name=\"NUM\" id=\"TPks;#qQ]AsS/}K=XrX$\">ballCount</field>\n  <value name=\"VAL\">\n    <block type=\"math_number\" id=\"4k.$ts7E5)WO(|_4LA29\">\n      <field name=\"NUM\">8</field>\n    </block>\n  </value>\n</block>\n</xml>",
+          "Hint2": "You can code anything to happen when the ballCount reaches 8! Just nest the block you want to happen **within** the `if ballCount = 8` block."
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/2/levels/12": {
+    "short_instructions": "It's time to create whatever you want!",
+    "long_instructions": "**Practice designing and developing your own game!** Now you can start creating whatever you want.\n\n1.  Setup your game with player sprites and a background\n2.  Program the sprites to move with behaviors\n3.  Design or upload your own characters by clicking the _costumes_ tab\n4.  Make the variable change using events\n5.  Check if the player has a winning score, then code a celebration",
+    "authored_hints": {
+      "hint1": "**It's time to get creative.** Use the checklist in the instructions to get started. "
+    },
+    "callouts": {
+      "costumes_tab": "Click here to add costumes to your project."
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/1": {
+    "dsls": {
+      "description": "Choose a game to check out how environment type sprites block all of the others!",
+      "display_name": "Sprite Type: Environment"
+    },
+    "sublevels": {
+      "game_mechanics_type_choice1_independent": {
+        "display_name": "Lost in Space",
+        "short_instructions": "Try out this game! Use the arrows to move the astronaut to find their friend.",
+        "long_instructions": "**Try it out!**\r\n- Move the astronaut to find their friend\r\n- The moon sprites block the player so you'll have to go around them\r\n\r\n- Press `Finish` when you are ready to move on"
+      },
+      "game_new3_environment_choice1_independent": {
+        "display_name": "Desert Dog",
+        "short_instructions": "Try out this game! Use the arrows to move the dog to collect the bones.",
+        "long_instructions": "**Try it out!**\r\n\r\n- Move the dog to collect the bones \r\n\r\n- Watch out for the cactus!\r\n- Press `Finish` when you're ready to move on\r\n\r\n"
+      },
+      "game_new3_environment_choice2_independent": {
+        "display_name": "Get the corn!",
+        "short_instructions": "Try out this game! Use the arrows to pig to get the corn.",
+        "long_instructions": "**Try it out!**\r\n\r\n- Move the pig to get the corn\r\n\r\n- The grass sprites block the pig so you will have to stay on the dirt path\r\n\r\n- Press `Finish` when you are ready to move on"
+      }
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/2": {
+    "panels": {
+      "game_new_panel-dcd59a3f-edf7-45b3-af02-d61f32eb3e58": "#### Sprite types\n\nSetting a sprite’s type determines how it interacts with other sprites. \n\nWatch this game in action. **What do you notice about the three sprites?**\n\n<img src=\"https://images.code.org/86695b7e9c4d73fa146bad283c3d8da4-image-1715799719293.jpg\" style=\"margin-right: 40px; width: 75%\">",
+      "game_new_panel-e5efed81-986d-4e21-8002-fc66f595b1e0": "#### Environment sprites\n\nWhen sprites are set to environment, they stop all other sprites from moving.\n\n<img src=\"https://images.code.org/53d9d2dc7654fda0de590191b6b69935-image-1712165117321.jpg\" style=\"margin-right: 40px; width: 75%\">"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/3": {
+    "short_instructions": "Use the new `set sprite type to environment` block so the wall sprites block the player.",
+    "long_instructions": "**Set the wall sprite type to environment to make this game more challenging.**\n\n1.  Add the `set sprite type to environment` block to `when run`. \n\n2.  Press `Run` and use the arrow keys to move the player. \n    -   Are the wall sprites blocking the player?",
+    "authored_hints": {
+      "Hint1": "With this new block you can set a sprite's type. Environment sprites won't allow other sprites to pass through them.\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/4": {
+    "short_instructions": "Use the new `set sprite type to environment` block so the wall sprites block the enemies!",
+    "long_instructions": "**Set the walls sprite type to environment to block the enemies.**\n\n1.  Use the `set sprite type to environment` under `when run`.\n\n2.  Press `Run` and use the arrow keys to move the player. \n    -   Are the wall sprites blocking the enemies?",
+    "authored_hints": {
+      "Hint1": "[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/5": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "### **Player sprites**\n\nPlayer sprites gradually fall downwards (as if there was gravity!)\n\n<img src=\"https://images.code.org/a7be7e5af13d565e2126c01bb0331d93-image-1712070173734.jpg\" >",
+      "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013": "### **Player sprites**\n\nWhen sprites are set to player, they cannot move past environment sprites (but can stand on them!)\n\n<img src=\"https://images.code.org/2a6170a9d5488629f326059adddea023-image-1715800170501.jpg\" >",
+      "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b": "### **Player sprites**\n\nPlayer sprites can be programmed to jump (but cannot automatically do it).\n\n<img src=\"https://images.code.org/924a4a96e3e6242738631660cd3bc31a-image-1715800116663.jpg\" >"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/6": {
+    "short_instructions": "Explore what happens when we apply gravity! Click `Finish` when you're ready to continue on.",
+    "long_instructions": "**Set the sprite's type to player.**\n\n1.  Add the `set sprite type to player`.\n\n2.  The player sprite follows the rules of gravity, and it can't move past `environment` type sprites.\n\n3.  Click `Run` and watch the player drop and land on the ground",
+    "authored_hints": {
+      "Hint1": "Practice setting the sprite's type to **player.**\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/7": {
+    "short_instructions": " Program the player to `begin moving with arrow keys` and `jump`. Choose the jump size.",
+    "long_instructions": "**Make your player jump!**\n\n1.  Add a `make player do jump` block to the `when up pressed` event and choose the jump size\n\n2.  Press `Run` then tap the arrows to move and jump!",
+    "authored_hints": {
+      "Hint2": "There is a new block that makes any player type sprites jump! Attach it to the <code style=\"color:black; background-color:#6AF36C\">when up pressed</code> event. \n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/8": {
+    "short_instructions": "Explore what happens when we apply gravity! Click `Finish` when you're ready to continue on.",
+    "long_instructions": "**Set the sprite types.**\n\n1.  Add a `set alien sprite type to player` block to the end of program\n\n2.  Add a `set stone sprite type to environment` to the end of the program\n\n3.  Click `Run` and watch the player drop and land on the ground",
+    "authored_hints": {
+      "Hint1": "Practice setting the sprite's type to **player.**\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/9": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/a1e5d5a9143348f2c5112eac432b9ff1-image-1715802833266.jpg)"
+        },
+        {
+          "text": "![](https://images.code.org/ca4ccc51afff0f819676b21edd326b7c-image-1715802855383.jpg)"
+        }
+      ],
+      "markdown": "Look at these coding blocks using variables. Match the correct code to the animation.\n\n\n",
+      "questions": [
+        {
+          "text": "![](https://images.code.org/05437fe2286b685f2189d7c257c42e90-image-1715212532562.gif)"
+        },
+        {
+          "text": "![](https://images.code.org/d5319a0c592f8f983f40d52a49ebddcc-image-1715212582221.gif)"
+        }
+      ],
+      "title": "Match the code to the animation"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/3/levels/10": {
+    "dsls": {
+      "description": "Choose a game to fix.",
+      "display_name": "These games do not work!"
+    },
+    "sublevels": {
+      "game_development_try_it_independent": {
+        "display_name": "Hippity Hoppity",
+        "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Problem:** The penguin player can not reach the gems!",
+        "short_instructions": "Try out this game! Press up to jump and use the arrows to move. Collect 5 gems to win.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The player can't jump high enough to get the gems.\r\n\r\n**Fix:** Change the size of the player's jump."
+      },
+      "game_development_environ_independent": {
+        "display_name": "Air Time",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Problem:** The maze of clouds keeps falling away!",
+        "short_instructions": "Add another `set sprite type to environment` so the monster can land on the green platforms.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The maze of clouds falls down!\r\n\r\n**Fix:** Make sure the sprites are all set to the correct type.\r\n",
+        "authored_hints": {
+          "Hint1": "The clouds are falling like player sprites. Set the clouds type to environment instead. \n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\" id=\"s0~~e0!}K[fm;ShKs2sG\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" id=\"x,sMj}}CfvGtzA+U2wfm\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      },
+      "game_development_player_independent": {
+        "display_name": "Under the Sea",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Problem:** The mermaid isn't jumping.",
+        "short_instructions": "Add another `set sprite type to environment` so the monster can land on the green platforms.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The mermaid isn't jumping to get to her friend. \r\n\r\n**Fix:** Make sure the sprites are all set to the correct type. A sprite must be set to the type player to jump.",
+        "authored_hints": {
+          "Hint1": "The clouds are falling like player sprites. Set the clouds type to environment instead. \n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\" id=\"s0~~e0!}K[fm;ShKs2sG\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" id=\"x,sMj}}CfvGtzA+U2wfm\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      },
+      "game_development_platform_independent": {
+        "display_name": "Platform Monster",
+        "bubble_choice_description": "**Difficulty:** 🌶️🌶️🌶️\r\n\r\n**Problem:** The monster falls through the green platforms!",
+        "short_instructions": "Add another `set sprite type to environment` so the monster can land on the green platforms.",
+        "long_instructions": "##Debugging Practice\r\n**Problem:** The monster falls through the green platforms.\r\n\r\n**Fix:** Add another `set sprite type to environment` for the green platforms.",
+        "authored_hints": {
+          "Hint1": "The gray platforms are set to the correct type, but you need to add this code so the green platforms are also environment types. \n<xml>\n<block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\" id=\"s0~~e0!}K[fm;ShKs2sG\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" id=\"x,sMj}}CfvGtzA+U2wfm\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block>\n</xml>"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/4/levels/1": {
+    "long_instructions": "## Game Jam Theme Generator\n\n### Click on each character to roll the dice that selects your theme!"
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/4/levels/2": {
+    "dsls": {
+      "markdown": "##Make a quick plan\n\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png\" style= \"width:40%; display: block; margin: auto;\">\n\n<br>\n\n<span style=\"margin:auto; display:table;font-size: 1.3em\"><strong>Answer the following questions in your <a href=\"https://docs.google.com/document/d/1hTmxVocE21LqVcYnLQT5b1xTqdcKZsP9SFV7QvnWeFA/template/preview\n\" target=\"_blank\"> activity guide</a>:</strong></span>\n\n<div style=\"background-color: #ede9f7; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px; width: 60%; display: block; margin: auto;\">\n\n1. **What is the theme of your game?** \n\n   - Adjective: ________\n   - Noun: ________\n   - Game Mechanic: ________\n\n<br>\n\n2. **Decide on sprites.** \n\n   - Main Character costume: ________  \n   - Collectible or Enemy costume:  ________\n   - (Optional) Other: ________\n\n<br>\n\n3. **What is the objective of the game?** ________\n\n4. **Winning Condition**\n   - How does the player win the game? ________\n   - What will you need to keep track of? ________\n\n<br>\n\n5. **[Optional] Losing Condition** \n   - How does the player lose the game? ________\n   - What will you need to keep track of? ________\n   </div>\n"
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/4/levels/3": {
+    "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
+    "long_instructions": "**Develop your game!**\n\n1.  Set up the environment\n\n2.  Add the player sprite & code their movement\n\n3.  Add the collectible or enemy sprite(s) & code their movement\n\n4.  Add your variable & code it to change with an event\n\n5.  Add a winning and/or losing condition",
+    "authored_hints": {
+      "Hint1": "You will find all of the blocks organized into categories in the toolbox. "
+    }
+  },
+  "https://studio.code.org/s/elem-game-design-2024/lessons/5/levels/1": {
+    "dsls": {
+      "markdown": "##Time to play some games!\n\n<img src=\"https://images.code.org/876b68692526c02f120244c3ea2f1800-image-1711400418402.jpg\" style= \"width:40%; display: block; margin: auto;\">\n\n<br>\n\n<span style=\"margin:auto; display:table;font-size: 1.3em\"><strong>After you try out each game, answer the following questions in your <a href=\"https://docs.google.com/document/d/1xjTLfwzxeMKtqlC2yd8iIvhGXP-JqkfsmhCVHCSHGF4/template/preview\n\" target=\"_blank\"> activity guide</a>:</strong></span>\n\n\n\n<div style=\"background-color: #ede9f7; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px; width: 40%; display: block; margin: auto;\">\n\n1. **How fun was the game?** \n\n2. **How challenging was the game?** \n\n3. **Was it easy to figure out how to play?**\n\n4. **Did the scoreboard work?**\n\n5. **What was the label of the variable(s)?**\n\n6. **Glows - What is great about this game?**\n\n7. **Grows - What should the developers improve?**\n\n</div>\n"
+    }
+  }
+}

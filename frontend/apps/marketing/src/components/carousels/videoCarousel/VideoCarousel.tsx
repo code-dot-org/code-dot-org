@@ -23,7 +23,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
   // Workaround for the experience builder not working with Array
   if (slides == null) {
     return (
-      <div>
+      <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>✍ Video carousel placeholder.</strong> Please add a
           "Carousel" content type entry in the Content sidebar, save, and open

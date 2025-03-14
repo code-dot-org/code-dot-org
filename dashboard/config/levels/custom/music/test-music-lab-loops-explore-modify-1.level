@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-12T20:33:39.000Z",
   "level_num": "custom",
@@ -10,7 +11,7 @@
     "long_instructions": "### Change the Number of Times the Code will Repeat\r\nEvie is making a song and she wants the Drum Beat Disco sound to loop twice. She also wants the Crackle sound to play every measure the Drum Beat Disco plays. \r\n\r\nChange the numbers in each repeat block to match Evie’s vision. \r\n\r\n![](https://images.code.org/569ccfce7ff4710f7139dce5b0e94272-image-1741813610662.06.46 PM.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "default",
@@ -41,6 +42,8 @@
                 "block": {
                   "type": "play_sounds_together",
                   "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -49,6 +52,8 @@
                       "block": {
                         "type": "repeat_simple2",
                         "id": "repeat_simple2",
+                        "deletable": false,
+                        "movable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -60,6 +65,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "vTb~_m]}UGwx;#Q6ezu/",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -73,6 +81,8 @@
                           "block": {
                             "type": "repeat_simple2",
                             "id": "J;GqK5|BGH8T+*Q`1}Y:",
+                            "deletable": false,
+                            "movable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -84,6 +94,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "play_sound_at_current_location_simple2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -103,12 +116,12 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12 21:07:56 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 21:21:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12 21:07:56 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 21:21:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:43:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:42:44 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
