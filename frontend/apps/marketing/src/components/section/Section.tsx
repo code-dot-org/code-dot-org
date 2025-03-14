@@ -1,5 +1,3 @@
-'use client';
-
 import DSCOSection, {
   SectionProps,
 } from '@code-dot-org/component-library/cms/section';

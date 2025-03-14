@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {SpacingNoneToS, SpacingNoneToL} from '@/common/types';
-import {ThemeProvider} from '@/common/contexts/ThemeContext';
 import moduleStyles from './section.module.scss';
 
 export type SectionBackground =
@@ -70,31 +69,29 @@ const Section: React.FC<SectionProps> = ({
     hasPatternBackground || background === sectionBackground.dark;
 
   return (
-    <ThemeProvider>
-      <section
-        data-theme={hasPatternBackground || useDarkTheme ? 'Dark' : theme}
-        className={classNames(
-          moduleStyles.section,
-          moduleStyles[`section-background-${background}`],
-          moduleStyles[`section-padding-${padding}`],
-          className,
-        )}
-        {...HTMLAttributes}
-        style={{
-          ...(hasPatternBackground
-            ? backgroundImageUrl
-              ? {
-                  backgroundImage: `url(${backgroundImageUrl})`,
-                  backgroundRepeat: 'repeat',
-                  backgroundSize: '18rem',
-                }
-              : {}
-            : {}),
-        }}
-      >
-        <div className={classNames(moduleStyles.container)}>{children}</div>
-      </section>
-    </ThemeProvider>
+    <section
+      data-theme={hasPatternBackground || useDarkTheme ? 'Dark' : theme}
+      className={classNames(
+        moduleStyles.section,
+        moduleStyles[`section-background-${background}`],
+        moduleStyles[`section-padding-${padding}`],
+        className,
+      )}
+      {...HTMLAttributes}
+      style={{
+        ...(hasPatternBackground
+          ? backgroundImageUrl
+            ? {
+                backgroundImage: `url(${backgroundImageUrl})`,
+                backgroundRepeat: 'repeat',
+                backgroundSize: '18rem',
+              }
+            : {}
+          : {}),
+      }}
+    >
+      <div className={classNames(moduleStyles.container)}>{children}</div>
+    </section>
   );
 };
 
