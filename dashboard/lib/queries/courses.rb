@@ -15,7 +15,7 @@ class Queries::Courses
   def self.get_course_context(unit_name)
     unit = Unit.get_from_cache(unit_name)
     return nil unless unit
-    unit_group_unit = UnitGroupUnit.where(script_id: unit.id).first
+    unit_group_unit = UnitGroupUnit.get_with_unit_from_cache(unit.id).first
     return nil unless unit_group_unit
     course = UnitGroup.get_from_cache(unit_group_unit.course_id)
     {course: course, unit_group_unit: unit_group_unit}
