@@ -1,8 +1,9 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect, useState, useMemo} from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import styles from './teacherHomepage.module.scss';
@@ -11,30 +12,39 @@ interface CourseContentDropdownProps {
   section: Section;
 }
 
+interface UnitLessons {
+  value: string;
+  text: string;
+}
+
+/**
+ * CourseContentDropdown component.
+ * Used to render a dropdown for selecting a lesson to navigate to.
+ * @param section - Section object containing the course display name.
+ */
 export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   section,
 }) => {
-  const dropdownItems = [
-    {
-      value: 'Go to a lesson',
-      text: 'Go to a lesson',
-    },
-    {
-      value: 'test1',
-      text: 'test1',
-    },
-    {
-      value: 'test2',
-      text: 'test2',
-    },
-    {
-      value: 'test3',
-      text: 'test3',
-    },
-  ];
+  const [unitLessons, setUnitLessons] = useState<UnitLessons[]>([]);
+
+  // Retrieve units and lessons for the section
+  useEffect(() => {
+    HttpClient.fetchJson<UnitLessons[]>(
+      `/sections/retrieve_units_and_lessons/${section.id}`
+    )
+      .then(response => setUnitLessons(response.value))
+      .catch(error => console.error(error));
+  }, [section.id]);
+
+  const dropdownOptions = useMemo(() => {
+    const options = [{value: 'Go to a lesson', text: 'Go to a lesson'}];
+    options.push(...unitLessons);
+    return options;
+  }, [unitLessons]);
 
   const onDropdownChange = (args: React.ChangeEvent<HTMLSelectElement>) => {
     console.log(args.target.value);
+    window.location.href = `..${args.target.value}`;
   };
 
   return (
@@ -48,7 +58,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         name="go-to-lesson-dropdown"
         labelText="Go to a lesson"
         isLabelVisible={false}
-        items={dropdownItems}
+        items={dropdownOptions}
         selectedValue="Go to a lesson"
         size="m"
         color="gray"

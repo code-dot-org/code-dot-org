@@ -85,6 +85,23 @@ class SectionsController < ApplicationController
     render json: {num_hidden: num_hidden}
   end
 
+  def retrieve_units_and_lessons
+    section = Section.find(params[:section_id])
+    unit_lessons = []
+    if section.course_id
+      course = UnitGroup.find(section.course_id)
+      course.default_units.each do |unit|
+        lessons = []
+        unit.lesson_groups.each do |lesson_group|
+          lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map {|lesson| {text: lesson.localized_name, value: script_lesson_path(unit, lesson) << '/levels/1'}})
+        end
+        unit_lessons << {text: unit.title_for_display, value: unit.link}
+        unit_lessons.concat(lessons)
+      end
+    end
+    render json: unit_lessons
+  end
+
   private def redirect_to_section_script_or_course
     if @section.script
       redirect_to script_path(@section.script)
