@@ -7,15 +7,15 @@ import ConfirmRemoveStudentDialog, {
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
 
+const DEFAULT_PROPS = {
+  ...MINIMUM_TEST_PROPS,
+  onConfirm: jest.fn(),
+  onCancel: jest.fn(),
+};
+
+const studentName = DEFAULT_PROPS.studentName;
+
 describe('ConfirmRemoveStudentDialog', () => {
-  const DEFAULT_PROPS = {
-    ...MINIMUM_TEST_PROPS,
-    onConfirm: jest.fn(),
-    onCancel: jest.fn(),
-  };
-
-  const studentName = DEFAULT_PROPS.studentName;
-
   const renderComponent = (props = {}) => {
     return render(<ConfirmRemoveStudentDialog {...DEFAULT_PROPS} {...props} />);
   };
