@@ -66,7 +66,9 @@ end
 
 def use_local_selenium?
   # as opposed to saucelabs
-  return ENV['TEST_LOCAL'] == 'true' || ENV['CI'] == 'true' # TODO: only on first try
+  return true if ENV['TEST_LOCAL'] == 'true'
+  return true if ENV['CI'] == 'true' && ENV.fetch('RERUNS', 0).to_i < 1
+  return false
 end
 
 def get_browser(test_run_name)

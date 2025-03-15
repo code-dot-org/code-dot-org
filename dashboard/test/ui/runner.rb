@@ -790,6 +790,7 @@ def run_feature(browser, feature, options)
   while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
     retry_again_msg = reruns < max_reruns ? " once, will retry" : ", not going to retry"
+    run_environment['RERUNS'] = reruns.to_s
 
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
