@@ -8,15 +8,20 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
+import {SectionCardBody} from './SectionCardBody';
 import {SectionOptionsDropdown} from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
   section: Section;
+  onDeleteClickCallback: (sectionId: number) => void;
 }
 
-export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
+export const SectionCard: React.FC<SectionCardProps> = ({
+  section,
+  onDeleteClickCallback,
+}) => {
   return (
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
@@ -34,9 +39,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <SectionOptionsDropdown sectionId={section.id} />
+          <SectionOptionsDropdown
+            section={section}
+            onDeleteClickCallback={onDeleteClickCallback}
+          />
         </div>
       </div>
+      {!section.hidden && <SectionCardBody section={section} />}
     </div>
   );
 };

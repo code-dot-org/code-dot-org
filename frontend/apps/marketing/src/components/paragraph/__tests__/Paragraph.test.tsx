@@ -1,5 +1,6 @@
-import Paragraph from '@/components/paragraph';
 import {render, screen} from '@testing-library/react';
+
+import Paragraph from '@/components/paragraph';
 
 describe('Paragraph Component', () => {
   it('should render out the text', async () => {

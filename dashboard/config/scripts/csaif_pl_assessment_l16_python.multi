@@ -1,0 +1,16 @@
+name 'csaif-pl-assessment-L16-python'
+title 'Multiple Choice: Algorithms'
+description ''
+question 'A robot vacuum follows a decision-making algorithm to clean a house efficiently. The algorithm works as follows:
+1. If the battery is low, the vacuum returns to the charging station.
+2. If the battery is sufficient, it checks whether the room is dirty:
+- If the room is dirty, it starts cleaning.
+- If the room is clean, it moves to the next room.
+3. If all rooms are clean, the vacuum returns to the charging station.
+ Which of the following best describes the structure of the algorithm?'
+
+wrong 'Sequencing – The vacuum follows a set of instructions in a specific order without making decisions.'
+wrong 'Two-Way Selection – The vacuum makes decisions between two options, such as whether to clean or move to the next room.'
+wrong 'Iteration – The vacuum repeats its process for multiple rooms until all rooms are clean.'
+right ' Nested Selection – The vacuum makes a decision inside another decision, like checking if a room is dirty only if the battery is sufficient.'
+allow_multiple_attempts true

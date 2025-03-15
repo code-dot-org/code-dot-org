@@ -1,11 +1,11 @@
-import '@code-dot-org/component-library/typography/index.css';
+import classNames from 'classnames';
+import React, {ReactNode} from 'react';
+
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import {
   default as Typography,
   VisualAppearance,
 } from '@code-dot-org/component-library/typography';
-import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
-import classNames from 'classnames';
-import React, {ReactNode} from 'react';
 
 import {RemoveMarginBottomProps} from '@/components/common/types';
 

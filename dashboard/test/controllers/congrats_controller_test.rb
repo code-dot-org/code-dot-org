@@ -14,6 +14,17 @@ class CongratsControllerTest < ActionController::TestCase
     assert_equal hoc_unit.name, certificate_data[0][:courseName]
   end
 
+  test "shows congrats page for single-unit course if unit allows congrats page" do
+    single_unit_course = create :single_unit_course
+    Policies::ScriptActivity.stubs(:can_view_congrats_page?).returns(true)
+    get :index, params: {s: Base64.urlsafe_encode64(single_unit_course.name)}
+    assert_response :success
+
+    certificate_data = assigns(:certificate_data)
+    assert_equal 1, certificate_data.length
+    assert_equal single_unit_course.name, certificate_data[0][:courseName]
+  end
+
   test "cached query test for hoc course" do
     hoc_unit = create(:hoc_script)
 

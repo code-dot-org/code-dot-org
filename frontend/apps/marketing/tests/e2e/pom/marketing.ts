@@ -1,11 +1,12 @@
 import {type Page} from '@playwright/test';
+
 import {loadFonts, FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
 
 export class MarketingPage {
-  readonly locale: string;
+  readonly locale: string | undefined;
   readonly page: Page;
 
-  constructor(page: Page, locale: string) {
+  constructor(page: Page, locale?: string) {
     this.page = page;
     this.locale = locale;
   }
@@ -20,6 +21,7 @@ export class MarketingPage {
     }
 
     switch (stage) {
+      default:
       case 'localhost':
       case 'pr':
         return 'http://localhost:3001';
@@ -31,7 +33,11 @@ export class MarketingPage {
   }
 
   getBasePath() {
-    return `${this.getBaseUrl()}/${this.locale}`;
+    if (this.locale) {
+      return `${this.getBaseUrl()}/${this.locale}`;
+    }
+
+    return this.getBaseUrl();
   }
 
   async goto(subPath: string) {

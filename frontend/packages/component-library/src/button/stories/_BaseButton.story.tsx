@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import {buttonColors} from '../index';
 import _BaseButton, {_BaseButtonProps} from '../_BaseButton';
+import {buttonColors} from '../index';
 
 export default {
   title: 'DesignSystem/Button/_BaseButton',

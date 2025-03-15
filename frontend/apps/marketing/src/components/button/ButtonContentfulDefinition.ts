@@ -3,7 +3,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   id: 'button',
   name: 'Button',
-  category: 'Custom Components',
+  category: '03: Basic',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/6fRMP55wwDZF2C4ubzygTO/bad1643a5db519e1e3f6886f0f7bc7cd/component_button_thumbnail.png',
   tooltip: {

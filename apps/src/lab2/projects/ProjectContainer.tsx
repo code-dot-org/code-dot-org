@@ -91,10 +91,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // This path should only be used for lab pages that don't have a level, such as
       // /projectbeats previously. App name also must be provided if using this path.
       promise = dispatch(setUpWithoutLevel({channelId, appName}));
-    } else if (channelId || appName) {
-      console.warn(
-        'If loading a lab without a level, channel ID and app name must both be provided'
-      );
     }
     return () => {
       // If we have an early return, we will abort the promise in progress.

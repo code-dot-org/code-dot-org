@@ -1,8 +1,10 @@
+import bgPattern from '@public/images/bg-pattern.png';
 import type {Meta, StoryObj, StoryFn} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import Section, {SectionProps, sectionBackground} from '../index';
 import {BodyOneText, Heading2} from '@/typography';
+
+import Section, {SectionProps, sectionBackground} from '../index';
 
 export default {
   title: 'CMS/Section',
@@ -27,6 +29,7 @@ const MultipleTemplate: StoryFn<{components: SectionProps[]}> = args => (
 export const DefaultSection: Story = {
   args: {
     padding: 'l',
+    backgroundImageUrl: bgPattern,
     children: (
       <>
         <Heading2>This is a default section</Heading2>
@@ -34,12 +37,12 @@ export const DefaultSection: Story = {
       </>
     ),
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText('This is a default section');
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   },
 };
 
@@ -54,29 +57,26 @@ export const SectionWithBackgroundColor: Story = {
       </>
     ),
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText(
       'This is a section with a background color',
     );
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
   },
 };
 
 export const SectionWithBackgroundPattern: Story = {
   args: {
     background: sectionBackground.patternPrimary,
-    backgroundImageUrl:
-      'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+    backgroundImageUrl: bgPattern,
     padding: 'l',
     children: (
       <>
-        <Heading2 style={{color: 'white'}}>
-          This is a section with a background pattern
-        </Heading2>
-        <BodyOneText style={{color: 'white'}}>I'm just a sentence.</BodyOneText>
+        <Heading2>This is a section with a background pattern</Heading2>
+        <BodyOneText>I'm just a sentence.</BodyOneText>
       </>
     ),
   },
@@ -87,20 +87,20 @@ export const SectionWithBackgroundPattern: Story = {
       },
     },
   },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+  play: async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
     const heading = canvas.getByText(
       'This is a section with a background pattern',
     );
 
     // check if children content is in the section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
 
     // check if background image is set
     const section = heading.closest('section');
     if (section) {
       const backgroundImage = section.style.backgroundImage;
-      expect(backgroundImage).toContain('banner-bg-lines-neutral-light.png');
+      await expect(backgroundImage).toContain('bg-pattern');
     }
   },
 };
@@ -113,7 +113,7 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2>This is section one</Heading2>
+          <Heading2>Primary section</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
@@ -123,7 +123,17 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2>This is section two</Heading2>
+          <Heading2>Secondary section</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
+        </>
+      ),
+    },
+    {
+      background: sectionBackground.dark,
+      padding: 'l',
+      children: (
+        <>
+          <Heading2>Dark section</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
@@ -133,22 +143,40 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2>This is section three</Heading2>
+          <Heading2>Brand Light Primary section</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
+        </>
+      ),
+    },
+    {
+      background: sectionBackground.brandLightSecondary,
+      padding: 'l',
+      children: (
+        <>
+          <Heading2>Brand Light Secondary section</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
     },
     {
       background: sectionBackground.patternDark,
-      backgroundImageUrl:
-        'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+      backgroundImageUrl: bgPattern,
       padding: 'l',
       children: (
         <>
-          <Heading2 style={{color: 'white'}}>This is section four</Heading2>
-          <BodyOneText style={{color: 'white'}}>
-            I'm just a sentence.
-          </BodyOneText>
+          <Heading2>Pattern Dark section</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
+        </>
+      ),
+    },
+    {
+      background: sectionBackground.patternPrimary,
+      backgroundImageUrl: bgPattern,
+      padding: 'l',
+      children: (
+        <>
+          <Heading2>Pattern Primary section</Heading2>
+          <BodyOneText>I'm just a sentence.</BodyOneText>
         </>
       ),
     },
@@ -161,16 +189,72 @@ MultipleSections.play = async ({
 }) => {
   const canvas = within(canvasElement);
   const headings = [
-    'This is section one',
-    'This is section two',
-    'This is section three',
-    'This is section four',
+    'Primary section',
+    'Secondary section',
+    'Dark section',
+    'Brand Light Primary section',
+    'Brand Light Secondary section',
+    'Pattern Dark section',
+    'Pattern Primary section',
   ];
+  const sectionPrimary = canvas.getByText('Primary section').closest('section');
+  const sectionSecondary = canvas
+    .getByText('Secondary section')
+    .closest('section');
+  const sectionDark = canvas.getByText('Dark section').closest('section');
+  const sectionBrandLightPrimary = canvas
+    .getByText('Brand Light Primary section')
+    .closest('section');
+  const sectionBrandLightSecondary = canvas
+    .getByText('Brand Light Secondary section')
+    .closest('section');
+  const sectionPatternDark = canvas
+    .getByText('Pattern Dark section')
+    .closest('section');
+  const sectionPatternPrimary = canvas
+    .getByText('Pattern Primary section')
+    .closest('section');
 
   headings.forEach(async headingText => {
     const heading = await canvas.findByText(headingText);
 
     // check if children content is in each section
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
+  });
+
+  // check if the right sections have the Light data-theme
+  const sectionsWithLightTheme = [
+    sectionPrimary,
+    sectionSecondary,
+    sectionBrandLightPrimary,
+    sectionBrandLightSecondary,
+  ];
+  sectionsWithLightTheme.forEach(async section => {
+    if (section) {
+      const dataTheme = section.getAttribute('data-theme');
+      await expect(dataTheme).toBe('Light');
+    }
+  });
+
+  // check if the right sections have the Dark data-theme
+  const sectionsWithDarkTheme = [
+    sectionDark,
+    sectionPatternDark,
+    sectionPatternPrimary,
+  ];
+  sectionsWithDarkTheme.forEach(async section => {
+    if (section) {
+      const dataTheme = section.getAttribute('data-theme');
+      await expect(dataTheme).toBe('Dark');
+    }
+  });
+
+  // check if the right sections have the background image
+  const sectionsWithBgPattern = [sectionPatternDark, sectionPatternPrimary];
+  sectionsWithBgPattern.forEach(async section => {
+    if (section) {
+      const backgroundImage = section.style.backgroundImage;
+      await expect(backgroundImage).toContain('bg-pattern');
+    }
   });
 };

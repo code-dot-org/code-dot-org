@@ -65,17 +65,12 @@ describe('AiDiffChat', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
+    screen.getByRole('checkbox', {name: 'Give me an example'});
     screen.getByRole('checkbox', {name: 'Explain a concept'});
-    screen.getByRole('checkbox', {
-      name: 'Give an example to use with my class',
-    });
-    screen.getByRole('checkbox', {
-      name: 'Write an extension activity for students who finish early',
-    });
-    screen.getByRole('checkbox', {
-      name: 'Write an extension activity for students who need extra practice',
-    });
+    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
+    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
+    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
   });
 
   it('Selecting a suggested prompt gives response', async () => {
@@ -235,7 +230,7 @@ describe('AiDiffChat', () => {
 
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/aichat_messages/42/submit_feedback',
+        '/aidiff_messages/42/submit_feedback',
         JSON.stringify({
           approval: true,
           flagged: false,
@@ -415,11 +410,21 @@ describe('AiDiffChat', () => {
 
   it('Suggest prompt button is present and works', () => {
     render(<AiDiffChat {...defaultProps} />);
-    expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
     const suggest_prompt = screen.getByRole('button', {
       name: i18n.aiDifferentiation_suggest_prompt(),
     });
     fireEvent.click(suggest_prompt);
-    expect(screen.getAllByRole('checkbox')).toHaveLength(8);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(10);
+    // Check the last new prompt is from the second set.
+    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+      'Real world connection'
+    );
+    fireEvent.click(suggest_prompt);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(15);
+    // Check the last new prompt is from the first set.
+    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+      'Write an exit ticket'
+    );
   });
 });

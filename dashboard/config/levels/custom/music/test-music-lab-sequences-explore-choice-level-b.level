@@ -11,7 +11,7 @@
     "long_instructions": "#### Recreate a Song #2\r\n\r\nYour friend, Dylan, loves rock music. His band made this great intro riff for a new song they're working on. Use the timeline and the sounds given to you to recreate the intro to his song. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Use the sounds given to you to build the song. \r\n- Look at this timeline for reference. \r\n\r\n![](https://images.code.org/77e775bf2b3eb6aecb35cc41718c6d15-image-1741386018301.17.20 PM.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
@@ -49,13 +49,14 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "Recreate a Song #2",
     "thumbnail_url": "https://images.code.org/77e775bf2b3eb6aecb35cc41718c6d15-image-1741386018301.17.20 PM.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T22:17:44.135+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-a\"},{\"changed_at\":\"2025-03-07 22:20:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:22:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:39:44 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T22:17:44.135+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-a\"},{\"changed_at\":\"2025-03-07 22:20:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:22:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:39:44 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:25:11 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

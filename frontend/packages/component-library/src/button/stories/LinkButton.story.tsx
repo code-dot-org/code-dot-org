@@ -1,8 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import LinkButton, {LinkButtonProps} from '../LinkButton';
-
 import {buttonColors} from '../index';
+import LinkButton, {LinkButtonProps} from '../LinkButton';
 
 export default {
   title: 'DesignSystem/Button/LinkButton',

@@ -272,7 +272,7 @@ class Ability
 
       if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
-        can :submit_feedback, AichatMessage
+        can :submit_feedback, AidiffMessage
       end
     end
 
@@ -498,6 +498,10 @@ class Ability
 
       can :chat_completion, :openai_chat do
         user.has_ai_tutor_access?
+      end
+
+      can :evaluate, :openai_evaluate do
+        user.verified_instructor?
       end
 
       can [:start_chat_completion, :chat_request], :aichat_request do

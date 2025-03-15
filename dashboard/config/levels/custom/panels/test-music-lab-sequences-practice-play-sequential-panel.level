@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-03-10T20:17:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "panels that explain how `play sequential` works. ",
+        "imageUrl": "",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-77c61549-a2c5-4165-a211-283d47d9b82a"
+      },
+      {
+        "text": "another one. ",
+        "imageUrl": "",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-44ddc497-1a7a-4252-a306-a19ab550d8cf"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-10 21:10:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

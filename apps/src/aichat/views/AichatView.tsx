@@ -263,16 +263,17 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
                   headerContent={aichatI18n.modelCustomizationHeader()}
                   className={moduleStyles.panelContainer}
                   headerClassName={moduleStyles.panelHeader}
-                  rightHeaderContent={renderModelCustomizationHeaderRight(
-                    () => {
+                  rightHeaderContent={
+                    !viewAsUserId &&
+                    renderModelCustomizationHeaderRight(() => {
                       onClickStartOver();
                       dispatch(
                         sendAnalytics(EVENTS.AICHAT_START_OVER, {
                           levelPath: window.location.pathname,
                         })
                       );
-                    }
-                  )}
+                    })
+                  }
                 >
                   <ModelCustomizationWorkspace />
                 </PanelContainer>

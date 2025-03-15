@@ -11,7 +11,7 @@
     "long_instructions": "#### Benson Boone's \"In the Stars\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Build the song with code. \r\n",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
@@ -95,13 +95,14 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "Recreate \"In the Stars\"",
     "thumbnail_url": "https://images.code.org/436c0cc957896420f040d6c29060cde0-Screenshot 2025-03-07 at 3.07.34 PM.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T22:56:06.646+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-c\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-c\"},{\"changed_at\":\"2025-03-07 22:58:32 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:09:38 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T22:56:06.646+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-c\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-c\"},{\"changed_at\":\"2025-03-07 22:58:32 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 23:09:38 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:26:10 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

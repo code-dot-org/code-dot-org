@@ -79,6 +79,7 @@ const routeConfigs = [
     breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
     component: WorkshopFormTemplate,
     props: {config},
+    noRouter: true,
   })),
   {
     path: 'workshops/:workshopId',
@@ -172,13 +173,21 @@ const WorkshopDashboard = ({
           <Routes>
             <Route path="/" element={<HeaderWrapper />}>
               <Route index element={<Navigate to="/workshops" replace />} />
-              {routeConfigs.map(({path, component, props = {}}) => (
-                <Route
-                  key={path}
-                  path={path}
-                  element={<WithRouterProps component={component} {...props} />}
-                />
-              ))}
+              {routeConfigs.map(
+                ({path, component: Component, noRouter, props = {}}) => (
+                  <Route
+                    key={path}
+                    path={path}
+                    element={
+                      noRouter ? (
+                        <Component {...props} />
+                      ) : (
+                        <WithRouterProps component={Component} {...props} />
+                      )
+                    }
+                  />
+                )
+              )}
             </Route>
           </Routes>
         </RouterProvider>

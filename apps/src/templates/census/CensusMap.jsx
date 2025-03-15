@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import i18n from '@cdo/locale';
-
 class CensusMapInfoWindow extends Component {
   static propTypes = {
     onTakeSurveyClick: PropTypes.func,
@@ -401,20 +399,6 @@ export default class CensusMap extends Component {
           <div className="caption">No CS opportunities</div>
           <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
-        </div>
-        <div id="map-footer">
-          <div id="left">
-            <a href="/yourschool/about" target="_blank">
-              Summary of the data sources we use
-            </a>
-          </div>
-          <div id="right">
-            <span id="footer-text">In partnership with</span>
-            <img
-              src="/images/fit-100/avatars/computer_science_teachers_association.png"
-              alt={i18n.CSTALogo()}
-            />
-          </div>
         </div>
         <br />
         <br />
