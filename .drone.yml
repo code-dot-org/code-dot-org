@@ -215,7 +215,7 @@ steps:
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:local-selenium
+    image: codedotorg/code-dot-org:1.15
     pull: always
     volumes:
       - name: rbenv

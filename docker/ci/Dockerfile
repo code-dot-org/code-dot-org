@@ -158,7 +158,6 @@ RUN curl --output /tmp/firefox.deb https://s3.amazonaws.com/circle-downloads/fir
     true
 
 # install chrome
-# TODO: install from https://googlechromelabs.github.io/chrome-for-testing/ instead
 RUN curl -sSLOJ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     dpkg -i google-chrome-stable_current_amd64.deb || apt-get -fy install && \
     rm google-chrome-stable_current_amd64.deb && \
