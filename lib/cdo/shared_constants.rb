@@ -855,8 +855,8 @@ module SharedConstants
     "/milestone/",
     "/projects/",
     "/sections/",
-    "/r",
-    "/c",
+    "/r/",
+    "/c/",
     "/oauth_sign_out/",
     "/certificates/"
   ].freeze
