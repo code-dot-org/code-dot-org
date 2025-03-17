@@ -508,8 +508,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email does not have to be unique when existing user has LTI authentication" do
-    user = create :teacher, :with_lti_auth
-    dupe_user = create(:teacher, email: user.email)
+    email = "duplicated_email@foo.com"
+    create :teacher, :with_lti_auth, email: email
+    dupe_user = create(:teacher, email: email)
     assert dupe_user.valid?
   end
 
