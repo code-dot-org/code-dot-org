@@ -6,15 +6,17 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2025-03-13 19:29:50 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "family_name": "angelina-playground",
+    "serialized_at": "2025-01-27 18:57:39 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "angelina-playground"
     }
@@ -905,9 +907,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson4-level2a0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -929,9 +928,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson4-level2b0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -953,9 +949,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson4-level2c0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -977,9 +970,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson4-level2d0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1001,9 +991,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson4-level2e0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1025,9 +1012,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson4-level3-0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
