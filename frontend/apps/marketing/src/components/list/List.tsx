@@ -30,7 +30,7 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
     [items],
   );
 
-  // Workaround for the experience builder not working with Array
+  // Show placeholder text until a content entry is added
   if (!listItems.length) {
     return (
       <em>
