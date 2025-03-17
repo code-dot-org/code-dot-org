@@ -3,8 +3,8 @@ import {ReactNode, HTMLAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
-import Typography from '@/typography';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import Typography from '@/typography';
 
 import moduleStyles from './list.module.scss';
 
