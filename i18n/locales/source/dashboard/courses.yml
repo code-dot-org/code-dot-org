@@ -1195,6 +1195,24 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        exploring-gen-ai-2025:
+          title: exploring-gen-ai-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-2025:
+          title: csd-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        computer-science-and-artificial-intelligence-foundations-2025:
+          title: CS and AI Foundations (CSAIF)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
     resources:
       curriculum/csd/2017:
         name: Curriculum
