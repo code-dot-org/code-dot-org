@@ -1,0 +1,12 @@
+ECS Support Legacy:
+  id: 61
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-11-11 11:45:40.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2021-11-11 11:45:40.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-11-11 11:45:40.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:45:40.000000000 Z
+  course_id: 104

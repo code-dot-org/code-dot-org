@@ -1,0 +1,11 @@
+milestone:
+  - rule:
+  - rule:
+    where:
+      script_id: 38
+    value: true
+
+feature2:
+  - rule:
+    value: true
+

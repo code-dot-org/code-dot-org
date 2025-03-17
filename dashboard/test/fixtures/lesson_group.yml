@@ -1,0 +1,556 @@
+lesson_group_6765:
+  id: 6765
+  key: ''
+  script_id: 2161
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:42.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2024-04-22 22:49:42.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:42.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:42.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7612:
+  id: 7612
+  key: ''
+  script_id: 2520
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:41.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:41.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7684:
+  id: 7684
+  key: ''
+  script_id: 2561
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:10.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:10.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:10.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:10.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7679:
+  id: 7679
+  key: ''
+  script_id: 2557
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:02.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:02.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:02.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:02.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7795:
+  id: 7795
+  key: ''
+  script_id: 2657
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:58:28.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:58:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:58:28.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:58:28.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7661:
+  id: 7661
+  key: ''
+  script_id: 2538
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:56:57.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:56:57.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:56:57.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:56:57.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7733:
+  id: 7733
+  key: ''
+  script_id: 2593
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:51.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:51.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:51.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:51.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6819:
+  id: 6819
+  key: ''
+  script_id: 2206
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:02.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:02.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:02.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:02.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6784:
+  id: 6784
+  key: ''
+  script_id: 2177
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:51.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:51.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:51.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:51.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7655:
+  id: 7655
+  key: ''
+  script_id: 2532
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:56:16.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:56:16.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:56:16.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:56:16.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6721:
+  id: 6721
+  key: ''
+  script_id: 1
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6844:
+  id: 6844
+  key: ''
+  script_id: 2222
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:10.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:10.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:10.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:10.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6846:
+  id: 6846
+  key: ''
+  script_id: 2223
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:11.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:11.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:11.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:11.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6848:
+  id: 6848
+  key: ''
+  script_id: 2224
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:12.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:12.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:12.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:12.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6850:
+  id: 6850
+  key: ''
+  script_id: 2225
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:13.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:13.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:13.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:13.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7538:
+  id: 7538
+  key: ''
+  script_id: 2465
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:18.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:18.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:18.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:18.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7539:
+  id: 7539
+  key: ''
+  script_id: 2466
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:18.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:18.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:18.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:18.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7540:
+  id: 7540
+  key: ''
+  script_id: 2467
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:19.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:19.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:19.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:19.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7542:
+  id: 7542
+  key: ''
+  script_id: 2469
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:22.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:22.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:22.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:22.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7544:
+  id: 7544
+  key: ''
+  script_id: 2471
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:23.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:23.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:23.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:23.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_7545:
+  id: 7545
+  key: ''
+  script_id: 2472
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:23.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:23.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:23.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:23.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6754:
+  id: 6754
+  key: ''
+  script_id: 2150
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:39.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:39.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:39.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:39.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6807:
+  id: 6807
+  key: ''
+  script_id: 2196
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:57.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:57.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:49:57.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:57.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6852:
+  id: 6852
+  key: ''
+  script_id: 2226
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:14.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:14.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:14.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:14.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6872:
+  id: 6872
+  key: ''
+  script_id: 2232
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:21.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:21.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:21.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:21.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6895:
+  id: 6895
+  key: ''
+  script_id: 2238
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:27.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:27.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:27.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:27.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6922:
+  id: 6922
+  key: ''
+  script_id: 2244
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:41.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:41.000000000 Z
+  position: 1
+  properties: "{}"
+lesson_group_6950:
+  id: 6950
+  key: csf_e_1
+  script_id: 2251
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  position: 1
+  properties: '{"display_name":"Ramp Up to Course E (Optional)"}'
+lesson_group_6951:
+  id: 6951
+  key: csf_e_2
+  script_id: 2251
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  position: 2
+  properties: '{"display_name":"Course E Content"}'
+lesson_group_6952:
+  id: 6952
+  key: end_of_course_project
+  script_id: 2251
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  position: 3
+  properties: '{"display_name":"End of Course Project"}'
+lesson_group_6953:
+  id: 6953
+  key: extra_course_content
+  script_id: 2251
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:50:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:50:54.000000000 Z
+  position: 4
+  properties: '{"display_name":"Extra Course Content"}'
+lesson_group_6987:
+  id: 6987
+  key: csf_f_1
+  script_id: 2258
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:51:07.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:51:07.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:51:07.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:51:07.000000000 Z
+  position: 1
+  properties: '{"display_name":"Ramp Up to Course F (Optional)"}'
+lesson_group_6988:
+  id: 6988
+  key: csf_f_2
+  script_id: 2258
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:51:07.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:51:07.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:51:07.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:51:07.000000000 Z
+  position: 2
+  properties: '{"display_name":"Course F Content"}'
+lesson_group_6989:
+  id: 6989
+  key: end_of_course_project
+  script_id: 2258
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:51:07.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:51:07.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:51:07.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:51:07.000000000 Z
+  position: 3
+  properties: '{"display_name":"End of Course Project"}'
+lesson_group_7615:
+  id: 7615
+  key: content
+  script_id: 2522
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:41.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:41.000000000 Z
+  position: 1
+  properties: '{"display_name":"Content"}'
+lesson_group_7616:
+  id: 7616
+  key: end_of_course_project
+  script_id: 2522
+  user_facing: true
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:41.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:55:41.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:55:41.000000000 Z
+  position: 2
+  properties: '{"display_name":"End of Course Project"}'
+lesson_group_7746:
+  id: 7746
+  key: ''
+  script_id: 2605
+  user_facing: false
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:54.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2024-04-22 22:57:54.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:57:54.000000000 Z
+  position: 1
+  properties: "{}"

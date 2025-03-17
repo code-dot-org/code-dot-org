@@ -1,0 +1,511 @@
+hour-of-code-unversioned:
+  id: 2189
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2161
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:57:51.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: 2022-10-18 00:57:51.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:57:51.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:57:51.000000000 Z
+  course_offering_id: 353
+  published_state: beta
+events-unversioned:
+  id: 2408
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2520
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:11.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:11.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:11.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:11.000000000 Z
+  course_offering_id: 319
+  published_state: beta
+jigsaw-unversioned:
+  id: 2451
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2561
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:47.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:47.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:47.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:47.000000000 Z
+  course_offering_id: 202
+  published_state: stable
+hourofcode-unversioned:
+  id: 2447
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2557
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:44.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:44.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:44.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:44.000000000 Z
+  course_offering_id: 199
+  published_state: stable
+starwars-unversioned:
+  id: 2522
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2657
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:04:43.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:04:43.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:04:43.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:04:43.000000000 Z
+  course_offering_id: 219
+  published_state: stable
+frozen-unversioned:
+  id: 2425
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2538
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:39.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:39.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:39.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:39.000000000 Z
+  course_offering_id: 191
+  published_state: stable
+playlab-unversioned:
+  id: 2486
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2593
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:04:15.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:04:15.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:04:15.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:04:15.000000000 Z
+  course_offering_id: 209
+  published_state: stable
+artist-unversioned:
+  id: 2217
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2206
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:12.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:12.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:12.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:12.000000000 Z
+  course_offering_id: 160
+  published_state: stable
+algebra-unversioned:
+  id: 2202
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2177
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:57:58.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:57:58.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:57:58.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:57:58.000000000 Z
+  course_offering_id: 156
+  published_state: preview
+flappy-unversioned:
+  id: 2419
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2532
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:38.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:38.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:38.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:38.000000000 Z
+  course_offering_id: 190
+  published_state: stable
+20-hour-unversioned:
+  id: 2661
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-12-14 02:48:48.000000000 Z
+    zone: *1
+    time: 2023-12-14 02:48:48.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-12-14 02:48:48.000000000 Z
+    zone: *1
+    time: 2023-12-14 02:48:48.000000000 Z
+  course_offering_id: 151
+  published_state: stable
+course1-unversioned:
+  id: 2233
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2222
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:18.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:18.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:18.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:18.000000000 Z
+  course_offering_id: 165
+  published_state: preview
+course2-unversioned:
+  id: 2234
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2223
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:19.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:19.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:19.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:19.000000000 Z
+  course_offering_id: 166
+  published_state: preview
+course3-unversioned:
+  id: 2235
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2224
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:20.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:20.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:20.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:20.000000000 Z
+  course_offering_id: 167
+  published_state: preview
+course4-unversioned:
+  id: 2236
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2225
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:22.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:22.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-05-09 01:41:45.000000000 Z
+    zone: *1
+    time: 2023-05-09 01:41:45.000000000 Z
+  course_offering_id: 168
+  published_state: stable
+cspunit1-unversioned:
+  id: 2378
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2465
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:50.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:50.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:50.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:50.000000000 Z
+  course_offering_id: 374
+  published_state: beta
+cspunit2-unversioned:
+  id: 2379
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2466
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:51.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:51.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:51.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:51.000000000 Z
+  course_offering_id: 392
+  published_state: beta
+cspunit3-unversioned:
+  id: 2380
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2467
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:52.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:52.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:52.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:52.000000000 Z
+  course_offering_id: 454
+  published_state: beta
+cspunit4-unversioned:
+  id: 2382
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2469
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:56.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:56.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:56.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:56.000000000 Z
+  course_offering_id: 484
+  published_state: beta
+cspunit5-unversioned:
+  id: 2384
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2471
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:57.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:57.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:57.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:57.000000000 Z
+  course_offering_id: 502
+  published_state: beta
+cspunit6-unversioned:
+  id: 2385
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2472
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:58.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:58.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:02:58.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:02:58.000000000 Z
+  course_offering_id: 292
+  published_state: beta
+allthethingscourse-unversioned:
+  id: 636
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: UnitGroup
+  content_root_id: 129
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-04-14 00:02:11.000000000 Z
+    zone: *1
+    time: 2022-04-14 00:02:11.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-04-14 00:02:11.000000000 Z
+    zone: *1
+    time: 2022-04-14 00:02:11.000000000 Z
+  course_offering_id: 394
+  published_state: beta
+coursea-2017:
+  id: 2237
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2226
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:23.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:23.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:23.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:23.000000000 Z
+  course_offering_id: 169
+  published_state: stable
+courseb-2017:
+  id: 2244
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2232
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:28.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:28.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:28.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:28.000000000 Z
+  course_offering_id: 170
+  published_state: stable
+coursec-2017:
+  id: 2251
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2238
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:33.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:33.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:33.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:33.000000000 Z
+  course_offering_id: 171
+  published_state: stable
+coursed-2017:
+  id: 2258
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2244
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:40.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:40.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:40.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:40.000000000 Z
+  course_offering_id: 172
+  published_state: stable
+coursee-2017:
+  id: 2266
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2251
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:50.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:50.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:58:50.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:58:50.000000000 Z
+  course_offering_id: 173
+  published_state: stable
+coursef-2017:
+  id: 2274
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2258
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:59:02.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:59:02.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 00:59:02.000000000 Z
+    zone: *1
+    time: 2022-10-18 00:59:02.000000000 Z
+  course_offering_id: 174
+  published_state: stable
+express-2017:
+  id: 2410
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2522
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:11.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:11.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:03:11.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:03:11.000000000 Z
+  course_offering_id: 188
+  published_state: stable
+pre-express-2017:
+  id: 2497
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Unit
+  content_root_id: 2605
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:04:18.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:04:18.000000000 Z
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2022-10-18 01:04:18.000000000 Z
+    zone: *1
+    time: 2022-10-18 01:04:18.000000000 Z
+  course_offering_id: 214
+  published_state: stable
