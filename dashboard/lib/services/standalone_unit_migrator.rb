@@ -58,8 +58,8 @@ module Services
       passed_checks
     end
 
-    def self.rollback(unit, verbose: false, log_file: nil)
-      new(unit, verbose: verbose, log_file: log_file).rollback
+    def self.rollback(unit, verbose: false, log_file: nil, file_system_changes: true)
+      new(unit, verbose: verbose, log_file: log_file, file_system_changes: file_system_changes).rollback
     end
 
     def rollback
@@ -226,9 +226,11 @@ module Services
     end
 
     private def rollback_unit_settings
-      @unit.properties["is_course"] = true
-      @unit.properties["version_year"] = @unit_group.version_year
-      @unit.update_columns(properties: @unit.properties, family_name: @unit_group.family_name, published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type, instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience)
+      @unit.update!(is_course: true, version_year: @unit_group.version_year, family_name: @unit_group.family_name,
+                    published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type,
+                    instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience,
+                    skip_name_format_validation: true
+      )
     end
 
     private def rollback_levelbuilder_files

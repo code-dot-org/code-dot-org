@@ -146,7 +146,7 @@ def rollback_units(options)
 
   units.each do |unit|
     begin
-      result = Services::StandaloneUnitMigrator.rollback(unit, verbose: $verbose, log_file: log_file)
+      result = Services::StandaloneUnitMigrator.rollback(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
     rescue Exception => exception
       filtered_backtrace = exception.backtrace.select {|line| line.include?("standalone_unit_migrator.rb")}
       puts "ERROR: Caught an exception while rolling back #{unit.name}: #{exception.class} - #{exception.message}\n\tBacktrace: #{filtered_backtrace}"
