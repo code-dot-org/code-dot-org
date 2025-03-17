@@ -681,10 +681,9 @@ class TopInstructions extends Component {
       (levelVideos && levelVideos.length > 0) || !!levelResourcesAvailable;
 
     const displayFeedbackTab =
-      !taRubric &&
-      (!!miniRubric ||
-        (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
-        (this.isViewingAsStudent && !!latestFeedback));
+      !!miniRubric ||
+      (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
+      (this.isViewingAsStudent && !!latestFeedback);
 
     const displayTaRubricTab =
       !!taRubric && !teacherViewingStudentWork && this.isViewingAsStudent;

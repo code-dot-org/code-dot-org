@@ -380,9 +380,9 @@ a.button-l {
     width: 1.5rem;
   }
 
-  &.button-iconOnly,
-  .button-iconBorder {
+  &.button-iconOnly {
     padding: 0.75rem;
+    min-width: 3rem;
   }
 }
 
@@ -402,9 +402,9 @@ a.button-m {
     width: 1.25rem;
   }
 
-  &.button-iconOnly,
-  &.button-iconBorder {
+  &.button-iconOnly {
     padding: 0.625rem;
+    min-width: 2.5rem;
   }
 }
 
@@ -424,9 +424,9 @@ a.button-s {
     width: 1.125rem;
   }
 
-  &.button-iconOnly,
-  &.button-iconBorder {
+  &.button-iconOnly {
     padding: 0.4375rem;
+    min-width: 2rem;
   }
 }
 
@@ -446,8 +446,8 @@ a.button-xs {
     width: 1rem;
   }
 
-  &.button-iconOnly,
-  &.button-iconBorder {
+  &.button-iconOnly {
     padding: 0.25rem;
+    min-width: 1.5rem;
   }
 }

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-12 18:43:07 UTC",
+    "serialized_at": "2025-03-13 20:01:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -135,10 +135,21 @@
       }
     },
     {
-      "key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4",
+      "key": "d75b7b81-86ca-4d0f-8183-0a01d389e470",
       "position": 3,
       "properties": {
-        "progression_name": "Encryption"
+        "progression_name": "Security Risks"
+      },
+      "seeding_key": {
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470",
+        "lesson_activity.key": "112c9257-5390-4089-bdad-9583a727d4c2"
+      }
+    },
+    {
+      "key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Protecting Data"
       },
       "seeding_key": {
         "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4",
@@ -147,9 +158,9 @@
     },
     {
       "key": "6b154d47-7c75-46bd-891d-f44d9a4d4747",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "progression_name": "Vocabulary"
+        "progression_name": "Wrap-Up"
       },
       "seeding_key": {
         "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747",
@@ -589,10 +600,32 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Security Risks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_security"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
+      },
+      "level_keys": [
+        "csaif_pl_security"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "csaif_pl_2_encryption_03"
         ],
-        "progression": "Encryption"
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -609,15 +642,15 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 7,
+      "chapter": 20,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csaif_pl_2_encryption"
         ],
-        "progression": "Encryption"
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -634,15 +667,15 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 8,
+      "chapter": 21,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csaif_pl_2_encryption_04"
         ],
-        "progression": "Encryption"
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -659,15 +692,15 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 9,
+      "chapter": 22,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csaif_pl_2_encryption_02"
         ],
-        "progression": "Encryption"
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -684,15 +717,37 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 10,
+      "chapter": 23,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Protecting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_encrypt"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+      },
+      "level_keys": [
+        "csaif_pl_2_encrypt"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csaif_pl_vocabulary"
         ],
-        "progression": "Vocabulary"
+        "progression": "Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -706,6 +761,28 @@
       },
       "level_keys": [
         "csaif_pl_vocabulary"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-cyber"
       ]
     }
   ],
@@ -916,6 +993,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csaif_pl_security",
+        "script_level.level_keys": [
+          "csaif_pl_security"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csaif_pl_2_encryption_03",
         "script_level.level_keys": [
           "csaif_pl_2_encryption_03"
@@ -964,9 +1053,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "csaif_pl_2_encrypt",
+        "script_level.level_keys": [
+          "csaif_pl_2_encrypt"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csaif_pl_vocabulary",
         "script_level.level_keys": [
           "csaif_pl_vocabulary"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-cyber",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-cyber"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

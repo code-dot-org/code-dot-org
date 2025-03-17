@@ -359,9 +359,9 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n#add the painter object below\n\n#add methods below to move the painter\n",
+          "contents": "from neighborhood import Painter\n#add the painter object below\n\n#add methods below to move the painter\n\n",
           "folderId": "0",
-          "active": false,
+          "active": true,
           "open": true,
           "type": "locked_starter"
         }
@@ -387,6 +387,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-21T15:57:51.853+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level4\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level4\"},{\"changed_at\":\"2025-02-21 15:59:01 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 01:53:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 01:56:34 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:00:22 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:02:47 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:03:48 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-21T15:57:51.853+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level4\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level4\"},{\"changed_at\":\"2025-02-21 15:59:01 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 01:53:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 01:56:34 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:00:22 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:02:47 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 02:03:48 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-13 21:55:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-13 22:10:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

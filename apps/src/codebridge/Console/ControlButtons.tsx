@@ -2,6 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
+import {MiniApps} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
@@ -32,7 +33,7 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const {onRun, onStop} = useCodebridgeContext();
+  const {onRun, onStop, labConfig} = useCodebridgeContext();
 
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -57,6 +58,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
+  const miniApp = labConfig?.miniApp?.name;
+
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));
     dispatch(setIsRunning(false));
@@ -76,9 +79,14 @@ const ControlButtons: React.FunctionComponent = () => {
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_run,
       });
-      onRun(/*runTests*/ false, dispatch, source).finally(() =>
-        dispatch(setIsRunning(false))
-      );
+      onRun(/*runTests*/ false, dispatch, source).finally(() => {
+        // We don't set isRunning to false when running the neighborhood,
+        // as the neighborhood animation handles setting isRunning to false
+        // once it is done.
+        if (miniApp !== MiniApps.Neighborhood) {
+          dispatch(setIsRunning(false));
+        }
+      });
       dispatch(setHasRun(true));
       dispatch(setShowSuggestedPrompts(true));
     } else {

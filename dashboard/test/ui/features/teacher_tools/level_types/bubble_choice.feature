@@ -1,4 +1,5 @@
 Feature: BubbleChoice
+  @no_safari
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 

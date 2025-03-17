@@ -1,0 +1,587 @@
+{
+  "script": {
+    "name": "6-12-problem-solving-with-ai",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-14 18:35:27 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "6-12-problem-solving-with-ai"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-2",
+      "name": "Talking to Machines",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Beyond Words",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "The AI's Brain",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Smart or Just Predictable?",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Uncovering Contradictions",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Understanding Bias",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "AI's Wild Imagination",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Debugging and Refining Outputs",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "AI as a Co-Creator",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Remixing, Creativity, and Originality",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Ownership, Ethics, and Creativity",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "AI's Role in Society",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "AI Time Capsule Project",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "eb47d34e-de5a-4f69-95fd-9d3b6804627a",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb47d34e-de5a-4f69-95fd-9d3b6804627a",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "ef998428-d574-4c7c-8208-cc100c9f6376",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef998428-d574-4c7c-8208-cc100c9f6376",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    },
+    {
+      "key": "1be39748-59e1-4ab1-ad79-cfe6d953924c",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1be39748-59e1-4ab1-ad79-cfe6d953924c",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2acb1cc3-9385-44f3-93fd-ea431d50d26c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2acb1cc3-9385-44f3-93fd-ea431d50d26c",
+        "lesson_activity.key": "eb47d34e-de5a-4f69-95fd-9d3b6804627a"
+      }
+    },
+    {
+      "key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Chatbot Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2",
+        "lesson_activity.key": "ef998428-d574-4c7c-8208-cc100c9f6376"
+      }
+    },
+    {
+      "key": "2f70f9f4-237f-4264-a011-86d9539590b2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Panel: Prompting Techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f70f9f4-237f-4264-a011-86d9539590b2",
+        "lesson_activity.key": "ef998428-d574-4c7c-8208-cc100c9f6376"
+      }
+    },
+    {
+      "key": "aab40003-f496-42b2-a251-b4adb9696e8d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Choice Level: Practice with Prompting"
+      },
+      "seeding_key": {
+        "activity_section.key": "aab40003-f496-42b2-a251-b4adb9696e8d",
+        "lesson_activity.key": "ef998428-d574-4c7c-8208-cc100c9f6376"
+      }
+    },
+    {
+      "key": "ca306fc7-788c-426c-9ec7-e52cfe4c0fee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca306fc7-788c-426c-9ec7-e52cfe4c0fee",
+        "lesson_activity.key": "1be39748-59e1-4ab1-ad79-cfe6d953924c"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson1-level1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson1-level2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson1-level3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Chatbot Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson1-level4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Panel: Prompting Techniques"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "2f70f9f4-237f-4264-a011-86d9539590b2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson1-level5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Level: Practice with Prompting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level6"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "aab40003-f496-42b2-a251-b4adb9696e8d"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson1-level6"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson1-level1",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson1-level2",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson1-level3",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson1-level4",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "5feff7de-31d2-4736-bc46-c30cf12bd2e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson1-level5",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "2f70f9f4-237f-4264-a011-86d9539590b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson1-level6",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson1-level6"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "aab40003-f496-42b2-a251-b4adb9696e8d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

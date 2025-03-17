@@ -16,7 +16,6 @@ import React, {useState, useEffect, useMemo} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
@@ -74,18 +73,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
     useState('');
-
-  const showEducatorRole = statsigReporter.getIsInExperiment(
-    'educator_role',
-    'showEducatorRole',
-    false
-  );
-
-  const requireEducatorRole = statsigReporter.getIsInExperiment(
-    'educator_role',
-    'requireEducatorRole',
-    false
-  );
 
   // Remove oauth user_type cookie if it exists
   cookies.remove(NEW_SIGN_UP_USER_TYPE);
@@ -149,8 +136,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
       name?.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
       schoolInfoInvalid(schoolInfo) ||
-      (requireEducatorRole && !educatorRole),
-    [gdprValid, name, schoolInfo, requireEducatorRole, educatorRole]
+      !educatorRole,
+    [gdprValid, name, schoolInfo, educatorRole]
   );
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -243,6 +230,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'has school': hasSchool,
         'has marketing value selected': true,
         'has display name': !nameErrorMessage,
+        'educator role': educatorRole,
         country: countryCode,
       },
       PLATFORMS.BOTH
@@ -298,21 +286,18 @@ const FinishTeacherAccount: React.FunctionComponent<{
               </BodyThreeText>
             )}
           </div>
-          {showEducatorRole && (
-            <SimpleDropdown
-              className={classNames(style.dropdownContainer, {
-                [style.requiredLabel]: requireEducatorRole,
-              })}
-              labelText={locale.what_is_your_role()}
-              name="educator_role"
-              selectedValue={educatorRole}
-              onChange={e => {
-                setEducatorRole(e.target.value);
-              }}
-              itemGroups={roleItemGroups}
-              dropdownTextThickness="thin"
-            />
-          )}
+          <SimpleDropdown
+            id="uitest-educator-role"
+            className={classNames(style.dropdownContainer, style.requiredLabel)}
+            labelText={locale.what_is_your_role()}
+            name="educator_role"
+            selectedValue={educatorRole}
+            onChange={e => {
+              setEducatorRole(e.target.value);
+            }}
+            itemGroups={roleItemGroups}
+            dropdownTextThickness="thin"
+          />
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>

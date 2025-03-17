@@ -2,6 +2,7 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {
   clearChatMessagePending,
+  clearStagedFiles,
   setChatMessagePending,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -38,6 +39,9 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
       state.aichat;
+
+    // Clear any staged files if present (used with multimodal models)
+    thunkAPI.dispatch(clearStagedFiles());
 
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),

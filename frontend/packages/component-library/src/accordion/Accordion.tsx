@@ -1,5 +1,5 @@
-import {HTMLAttributes, ReactNode} from 'react';
 import classNames from 'classnames';
+import {HTMLAttributes, ReactNode} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, StrongText} from '@/typography';

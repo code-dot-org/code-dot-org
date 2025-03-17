@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-12 18:59:08 UTC",
+    "serialized_at": "2025-03-13 20:09:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4902,6 +4902,18 @@
       }
     },
     {
+      "name": "Persona Fact Sheet",
+      "url": "https://docs.google.com/document/d/1iFRJ0FFfPQM7t8AFOqBJ_czuksxKspBjFxPst-_jCrY/edit?usp=sharing",
+      "key": "persona_fact_sheet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
       "name": "Routers and Redundancy",
       "url": "https://docs.google.com/presentation/d/1hCYLx0XdBCgBmr6yxpnsXwDO-yiD2JdnYZ-FYCsTd5U/view",
       "key": "routers_and_redundancy",
@@ -4927,7 +4939,7 @@
     },
     {
       "name": "Teacher Guide: Packets Unplugged",
-      "url": "https://docs.google.com/document/d/185D5Us8IyEd5iwRh1_-e9jhPY2AdNO1zgkxOOtNStP8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1zg2NuvjecV5-ayCORwy6_Cf1UZ0CJ1rKyMWPbPzDVhE/edit?usp=sharing",
       "key": "teacher_guide_packets_unplugged",
       "properties": {
         "audience": "Verified Teacher",
@@ -5262,6 +5274,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "peer_feedback_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "persona_fact_sheet"
       }
     },
     {
