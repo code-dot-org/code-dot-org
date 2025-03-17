@@ -9,10 +9,30 @@ export default {
 } as Meta;
 type Story = StoryObj<typeof Video>;
 
+const COMMON_PARAMETERS = {
+  eyes: {
+    ignoreRegions: [
+      {
+        left: 0,
+        top: 625,
+        width: 230,
+        height: 50,
+      },
+      {
+        left: 975,
+        top: 625,
+        width: 230,
+        height: 50,
+      },
+    ],
+  },
+};
+
 //
 // TEMPLATE
 //
 export const DefaultVideo: Story = {
+  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
@@ -23,11 +43,12 @@ export const DefaultVideo: Story = {
     const video = await canvas.findByTitle("What Most Schools Don't Teach");
 
     // check if video is visible
-    expect(video).toBeVisible();
+    await expect(video).toBeVisible();
   },
 };
 
 export const VideoWithCaption: Story = {
+  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
@@ -45,14 +66,15 @@ export const VideoWithCaption: Story = {
     const caption = canvas.getByText("What Most Schools Don't Teach");
 
     // check if video is visible
-    expect(video).toBeVisible();
+    await expect(video).toBeVisible();
 
     // check if caption is visible
-    expect(caption).toBeVisible();
+    await expect(caption).toBeVisible();
   },
 };
 
 export const VideoWithFallback: Story = {
+  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     videoFallback:
@@ -75,20 +97,24 @@ export const VideoWithFallback: Story = {
     const download = canvas.getByRole('link');
 
     // check if video is visible
-    expect(video).toBeVisible();
+    await expect(video).toBeVisible();
 
     // check if download button is visible
-    expect(download).toBeVisible();
+    await expect(download).toBeVisible();
   },
 };
 
 export const VideoWithCaptionAndFallback: Story = {
+  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     videoFallback:
       'https://videos.code.org/social/what-most-schools-dont-teach.mp4',
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
+  },
+  parameters: {
+    eyes: {},
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -98,12 +124,12 @@ export const VideoWithCaptionAndFallback: Story = {
     const download = canvas.getByRole('link');
 
     // check if video is visible
-    expect(video).toBeVisible();
+    await expect(video).toBeVisible();
 
     // check if caption is visible
-    expect(caption).toBeVisible();
+    await expect(caption).toBeVisible();
 
     // check if download button is visible
-    expect(download).toBeVisible();
+    await expect(download).toBeVisible();
   },
 };
