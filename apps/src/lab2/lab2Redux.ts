@@ -48,7 +48,6 @@ import {getPredictResponse} from './projects/userLevelsApi';
 import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {LevelPropertiesValidator} from './responseValidators';
 import {
-  AppName,
   Channel,
   LevelProperties,
   ProjectManagerStorageType,
@@ -281,54 +280,6 @@ export const setUpWithLevel = createAsyncThunk<
   }
 });
 
-// Given a channel id and app name as the payload, set up the lab for that channel id.
-// This consists of cleaning up the existing project manager (if applicable), then
-// creating a project manager and loading the project data.
-// This method is used for loading a lab that is not associated with a level.
-// (This was previously used for /projectbeats).
-// If we get an aborted signal, we will exit early.
-export const setUpWithoutLevel = createAsyncThunk(
-  'lab/setUpWithoutLevel',
-  async (payload: {channelId: string; appName: AppName}, thunkAPI) => {
-    try {
-      // Update properties for reporting as early as possible in case of errors.
-      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
-        channelId: payload.channelId,
-        appName: payload.appName,
-      });
-
-      await cleanUpProjectManager();
-
-      Lab2Registry.getInstance().setAppName(payload.appName);
-
-      // Create the new project manager.
-      const projectManager = ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.REMOTE,
-        payload.channelId
-      );
-      Lab2Registry.getInstance().setProjectManager(projectManager);
-
-      // Load channel and source.
-      const {sources, channel} = await setUpAndLoadProject(
-        projectManager,
-        thunkAPI.dispatch
-      );
-      setProjectAndLevelData(
-        {
-          initialSources: sources,
-          channel,
-          levelProperties: {id: 0, name: '', appName: payload.appName},
-        },
-        thunkAPI.signal.aborted,
-        thunkAPI.dispatch,
-        thunkAPI.getState as () => RootState
-      );
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
-    }
-  }
-);
-
 // Selectors
 
 // If any load is currently in progress.
@@ -463,24 +414,6 @@ const labSlice = createSlice({
       }
     });
     builder.addCase(setUpWithLevel.pending, state => {
-      state.isLoadingProjectOrLevel = true;
-    });
-    builder.addCase(setUpWithoutLevel.fulfilled, state => {
-      state.isLoadingProjectOrLevel = false;
-    });
-    builder.addCase(setUpWithoutLevel.rejected, (state, action) => {
-      // If the set up was aborted, that means another load got started
-      // before we finished. Therefore we only set loading to false
-      // and set the page error if the action was not aborted.
-      if (!action.meta.aborted) {
-        state.isLoadingProjectOrLevel = false;
-        state.pageError = getErrorFromThunkAction(
-          action,
-          'setUpWithoutLevel failed'
-        );
-      }
-    });
-    builder.addCase(setUpWithoutLevel.pending, state => {
       state.isLoadingProjectOrLevel = true;
     });
   },
