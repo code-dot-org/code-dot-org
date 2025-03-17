@@ -1,4 +1,4 @@
 import './index.css';
 
-export type {DEFAULT_ICON, ListProps, ListItem} from './List';
-export {default as default} from './List';
+export type {ListProps, ListItem} from './List';
+export {default as default, DEFAULT_ICON} from './List';
