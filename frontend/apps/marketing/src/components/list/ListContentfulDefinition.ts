@@ -1,4 +1,4 @@
-// Creates a definition for the FAQ Accordion component to be used in Contentful Studio
+// Creates a definition for the List component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 import {DEFAULT_ICON} from '@code-dot-org/component-library/list';
