@@ -1,0 +1,20 @@
+{
+  "name": "fmscsd3preview",
+  "script_names": [
+    "fmscsd3preview"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "fmscsd3preview",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

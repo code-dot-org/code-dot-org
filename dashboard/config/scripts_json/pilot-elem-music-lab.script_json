@@ -7,21 +7,19 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "pilot-intro-programming-music-lab",
       "topic_tags": [
         "music_lab"
-      ],
-      "version_year": "unversioned"
+      ]
     },
     "new_name": null,
-    "family_name": "pilot-elem-music-lab",
-    "serialized_at": "2025-03-05 20:51:45 UTC",
+    "family_name": null,
+    "serialized_at": "2025-03-13 19:31:02 UTC",
     "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "pilot-elem-music-lab"
     }

@@ -1,0 +1,20 @@
+{
+  "name": "csa-self-paced-pl",
+  "script_names": [
+    "csa-self-paced-pl"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csa-self-paced-pl",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

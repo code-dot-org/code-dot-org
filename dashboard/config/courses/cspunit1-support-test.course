@@ -1,0 +1,20 @@
+{
+  "name": "cspunit1-support-test",
+  "script_names": [
+    "cspunit1-support-test"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "cspunit1-support-test",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

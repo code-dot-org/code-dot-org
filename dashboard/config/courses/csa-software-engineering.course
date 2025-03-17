@@ -1,0 +1,20 @@
+{
+  "name": "csa-software-engineering",
+  "script_names": [
+    "csa-software-engineering"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csa-software-engineering",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

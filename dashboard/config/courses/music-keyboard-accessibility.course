@@ -1,0 +1,20 @@
+{
+  "name": "music-keyboard-accessibility",
+  "script_names": [
+    "music-keyboard-accessibility"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "music-keyboard-accessibility",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

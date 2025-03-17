@@ -1,0 +1,20 @@
+{
+  "name": "cspexam2-akwgah1ac5",
+  "script_names": [
+    "cspexam2-AKwgAh1ac5"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "cspexam2-akwgah1ac5",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

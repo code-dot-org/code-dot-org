@@ -1,0 +1,20 @@
+{
+  "name": "flappy-impact-study",
+  "script_names": [
+    "flappy-impact-study"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "flappy-impact-study",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
