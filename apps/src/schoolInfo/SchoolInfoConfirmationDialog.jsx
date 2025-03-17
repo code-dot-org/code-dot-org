@@ -6,7 +6,6 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -50,7 +49,9 @@ class SchoolInfoConfirmationDialog extends Component {
   static propTypes = {
     schoolName: PropTypes.string,
     scriptData: PropTypes.shape({
-      usIp: PropTypes.bool.isRequired,
+      formUrl: PropTypes.string.isRequired,
+      authTokenName: PropTypes.string.isRequired,
+      authTokenValue: PropTypes.string.isRequired,
       existingSchoolInfo: PropTypes.shape({
         id: PropTypes.number,
         user_school_info_id: PropTypes.number,
@@ -85,21 +86,20 @@ class SchoolInfoConfirmationDialog extends Component {
     this.props.onClose();
   };
 
-  handleClickYes = async () => {
+  handleClickYes = () => {
     analyticsReporter.sendEvent(
       EVENTS.CONFIRM_SCHOOL_CLICKED,
       {},
       PLATFORMS.BOTH
     );
+    const {authTokenName, authTokenValue} = this.props.scriptData;
     const formData = new FormData();
+    formData.append(authTokenName, authTokenValue);
     fetch(
       `/api/v1/user_school_infos/${this.props.scriptData.existingSchoolInfo.user_school_info_id}/update_last_confirmation_date`,
       {
         method: 'PATCH',
         body: formData,
-        headers: {
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
       }
     )
       .then(this.closeModal)

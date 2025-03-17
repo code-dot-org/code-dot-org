@@ -389,7 +389,7 @@ Dashboard::Application.routes.draw do
       member do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
-        delete '/:filename', to: 'level_starter_assets#destroy'
+        delete '/:filename', to: 'level_starter_assets#destroy', format: true
       end
     end
 

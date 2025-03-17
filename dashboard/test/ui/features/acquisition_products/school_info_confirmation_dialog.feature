@@ -42,14 +42,13 @@ Scenario: School Info Confirmation Dialog
   Then I reload the page
   And element ".modal" is not visible
 
-  # One year later, the teacher sees the school info confirmation dialog and confirms at the same school
+  # One year later, the teacher sees the school info confirmation dialog
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal-body" is visible
-  Then I press "#yes-button" using jQuery
-  And element ".modal" is not visible
-
-  # One week later, the teacher does not see the prompt
-  And eight days pass for user "Teacher_Chuba"
-  Then I reload the page
-  And element ".modal" is not visible
+  Then I press "#update-button" using jQuery
+  And element ".modal" is visible
+  Then element "#uitest-country-dropdown" has value "US"
+  Then element "#uitest-school-zip" has value "31513"
+  # value is school_id for "Appling County High School"
+  Then I wait until element "#uitest-school-dropdown" has the value "130006000010"
