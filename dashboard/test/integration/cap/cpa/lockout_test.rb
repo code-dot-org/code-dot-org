@@ -66,12 +66,7 @@ module CAP
           end
 
           context 'when student provider is Google' do
-            before do
-              # Remove the email option that a student defaults to
-              student.authentication_options.first.destroy!
-              student.reload
-              create(:google_authentication_option, user: student)
-            end
+            let(:student) {create(:cpa_non_compliant_student, :predates_policy, :without_email_auth_option, :with_google_authentication_option)}
 
             it 'student should not be locked out yet' do
               assert_student_is_not_locked_out
