@@ -287,8 +287,8 @@ ActionBlockCarousel.parameters = {
   },
 };
 
-export const VideoCarousels = MultipleTemplate.bind({});
-VideoCarousels.args = {
+export const VideoCarouselsTest = MultipleTemplate.bind({});
+VideoCarouselsTest.args = {
   components: [
     {
       slides: [
@@ -380,7 +380,7 @@ VideoCarousels.args = {
     },
   ],
 };
-VideoCarousels.parameters = {
+VideoCarouselsTest.parameters = {
   docs: {
     description: {
       story:
@@ -421,7 +421,11 @@ VideoCarousels.parameters = {
     ],
   },
 };
-VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
+VideoCarouselsTest.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
   const canvas = within(canvasElement);
   const navArrowPrev = await canvas.findAllByLabelText('Previous slide');
   const navArrowNext = await canvas.findAllByLabelText('Next slide');
