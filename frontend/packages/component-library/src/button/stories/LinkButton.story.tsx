@@ -308,5 +308,33 @@ GroupOfSizesOfLinkButtons.args = {
       size: 'l',
       href: 'https://www.google.com',
     },
+    {
+      isIconOnly: true,
+      size: 'xs',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only xs',
+    },
+    {
+      isIconOnly: true,
+      size: 's',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only s',
+    },
+    {
+      isIconOnly: true,
+      size: 'm',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only m',
+    },
+    {
+      isIconOnly: true,
+      size: 'l',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      href: 'https://www.google.com',
+      'aria-label': 'Icon only l',
+    },
   ],
 };

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Help Sophia with her code\r\nSophia wrote this code to repeat a set of sounds she really likes together. However, she doesn't know how to use loops yet. Can you rewrite her code with a loop? \r\n\r\nHint: Use the timeline below and listen to the song for reference. \r\n\r\n![](https://images.code.org/5adb863d58deadcbe12f622baff43528-image-1741898305409.38.23 PM.png)",
+    "long_instructions": "#### Help Sophia with her code\r\nSophia wrote this code to repeat a set of sounds she really likes together. However, she doesn't know how to use loops yet. Can you rewrite her code with a loop? \r\n\r\nHint: Use the timeline below and listen to the music player for reference. \r\n\r\n![](https://images.code.org/5adb863d58deadcbe12f622baff43528-image-1741898305409.38.23 PM.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -53,9 +53,15 @@
     },
     "display_name": "Help Sophia use Loops!",
     "thumbnail_url": "https://images.code.org/5adb863d58deadcbe12f622baff43528-image-1741898305409.38.23 PM.png",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6dATAqvqCNBaL7gcusy6Gy2fnwYBnaYjrEyWA22GQe18mHEDAVVuD+erp\n6+LrpK8JgB2eI/Ulu4eZqf6lTA7dPp626yOV2OvZc7htytjKgxmHS76xpLc/\naAkr1+2YNgJfhOH9uEbZItirogbpz/SGPN6Y7kV+p00P8H7kPMapxRHsARQ9\nNv9hDKoF7/8ztX7SFmGSaEQvrwv901Uyvh3VqLnIxsc2fdJZwrqahKdHYDxi\np3dm2ld9t/6rMnLhb2/e29zjM/xkXIScGAtEsv46omeGrWwKsiXQhQk6uRNV\nL91APsnuaGekXLP78PUXKfkoFl5ZFodiji+Bncce9NBW384W5LFStOjea/rv\nlhKfgwBYks6BjMvyWoyditwL1MuZUnr4YmONDb9nWczLZ/fa5pwxQ8v18Fo/\nw/pZPjrKhZavC1/lLyrQ4e+uTvufrlHa9bMsMjeR5Uecq5e6avfK5p9w6Hv6\nN/v2+rfvNmBLmvwnB6jjxWNouYqFxT73Wo8vSqD1JfdDCPpjfjvwu8p8trXI\nd36wwv8TOXuYKHwpLSTmaXlM4/mh3n5zNOvP3hf9XSgPHvGuHQDbA8SLzt11\nRSOW/FYEGHAnUBEMRnOFSEndzdApfU6YRNf39neC4/dhs1iUZNswBG/ZJqnC\nlsZ0Yel+KaoyjlmEZ5uj3M1tt8h2Rae0yBIhIrEuEtp+NDDJZdTt1MinH+cF\n8GezLTQNSJ4XBAbV7yZGkED1IrejRTCCx5UdQc4v5Ekh6AxFKaPZ9yl9z/5R\nY2XtMcBWvxlgGP/UHpf/LtAVfpjAqqU6koRvTIoje+x0wphYpRCoDXI8EMXS\nHZFqJfm5S17EgLn1EbVERcGzW+gAP+XtP5CVI8DAKrH7uzL7bdR4tTiQC+rm\nTLQCpwfX5f+pVzsN492Kb8CCREIPL2Bgk87BXhKvq4mRYA1mcHY5jgriEyQr\ndCN18/sxyYJDCnJm2XPiU07+kQRH4VJiKx/bZyFRoUYUhEXBMglNpkdgsMrJ\nhWz1+CjDQA60/rTA8XSlqQaFT84nXc6xYOhmfwnqioI8kOLD/jAHv86ob0tV\n0m3bBONviVNpLVWzuO3/UHfmDsNTQplhBK6GzqSkfUxuAxN9+Qo4zQeUff1D\nbI6kSFDDbdJ2FhLZ8Lg+ysXE2u8eRehwtNWPmg==\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Sophia's Song"
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-13T20:37:21.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-challenge-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-challenge-choice-a\"},{\"changed_at\":\"2025-03-13 21:17:46 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 21:24:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 21:37:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 21:38:00 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:46:17 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T20:37:21.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-challenge-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-challenge-choice-a\"},{\"changed_at\":\"2025-03-13 21:17:46 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 21:24:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 21:37:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 21:38:00 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:46:17 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 20:15:21 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 20:15:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

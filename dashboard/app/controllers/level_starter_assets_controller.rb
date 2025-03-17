@@ -64,7 +64,7 @@ class LevelStarterAssetsController < ApplicationController
   # but does not delete the asset from S3 as other levels may still be
   # using it.
   def destroy
-    if @level.remove_starter_asset!(params[:filename])
+    if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
       return head :no_content
     else
       return head :unprocessable_entity

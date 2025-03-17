@@ -118,6 +118,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
 
     assert_equal body["id"], level.id
+    assert_equal body["name"], level.name
     assert_equal body["levelData"], {"hello" => "there"}
     assert_equal body["other"], "other"
     assert_equal body["preloadAssetList"], nil

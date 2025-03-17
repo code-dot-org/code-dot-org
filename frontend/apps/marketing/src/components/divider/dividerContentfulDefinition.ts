@@ -31,7 +31,7 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
     margin: {
       displayName: 'Margin',
       type: 'Text',
-      defaultValue: 'none',
+      defaultValue: 'm',
       group: 'style',
       validations: {
         in: [
