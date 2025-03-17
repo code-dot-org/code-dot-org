@@ -201,9 +201,30 @@
       },
       "allowChangeStartingPlayheadPosition": true
     },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor6BCPkf6utFvuIj3W7tTG5Be81z3rwi0UJuctz78mOQv4\nh0WOnZ1OAR3zAoHtp499SbIuCEChopt2BUka5LPbQ7EPAyWey8kP658x9a9x\nprUVBsYlcjdpGvnm81/SqL3FgD2dEUvlojdJiKv7ByxN0pLY6mxRQdAo+qGY\nYgfwe1sR3p0Dgnl6f5XAI7jcqtCeUmo5wV4q9cFxdwEQt2hAZ8NlBBCAZmmh\ndF37a8Vfz9e4ev0mUWEYP8QSLYRvkf8Wyvqd8mprQlzZMOR/qV4x4byhmuDr\nRxJEOAzqn1MsfKZZu7ChuyuCheiLtAewa96Mj15uhCmOSGvwOMh/M6+bJaX6\nI+kH/yEZBf2ddOIgao5If6KOxeZqubqiJOJUKRLHDYu7TfBAZzM0Jsb7G7Rd\nTo3IygaouhHdQg5LiwwpI5AUS/UNByX/kBj5+WTMqLe+BrvphIhzmAWMq34e\n1Y1IuiYHE9OJahXZpHdpKOSjs5bxHrz2Ye25riUXX/dTtz7NVZ9FYivsVdf5\nFXsB8QH09fyNN9DraspIRUaEc4FVr3ThF9EqTlr2mXznpOlaNsrbufua7p3q\nOHjeTHsgyWsevpTIWwlLq4sVVegBzETReJdZW5iz/OXSCP/gESUq2P7mD6Yv\nkR9w2fJJk+Xu7pBWzRINQCnIft17cB1YF+hB6ZhIFARmQc6SLanzqTrC8BVP\niBAoWRcruvi5v/Q3cNAuJ1euKB6rF6mWQ3PKjkCIp0dOoq3LiC9EVyAuzFC2\n+Y6Sb8y/WpYT9FcmP1QKDxcyuuROJQIBL48O9BnNF59llMsCr2/7OMERqCcO\nVfCYy/aVX1EFN5Jtyo7bXi74pfh0oOpPYNCPiHMrgPe+roKGKlM56i7fbEhL\nB9UTqc506vfy7S+3YE5iLg8c/I/40Dqi4TPy/zkAGw1qvPxlEtBFQzbF/NPJ\nXOZzVJXP7qpUUy0uqo2r3D39MvCV5kKz/AqXYO4Pzpz5EENE9JjVpre0HYd/\ntLfIh+FB8W8CurB8mZgBYNcUAKVtcfYseoTdegw77g==\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-modify-2_99acf886-d323-4a10-a01a-97f7f2855ed0",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "That sounds awesome! ",
+      "validationFailureMessage": "Change the numbers in the loops to make all sounds match the length of the first sound. ",
+      "playerTitle": "Evie's Song #2"
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-13 16:45:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:45:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:47:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:49:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:51:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:43:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13 16:45:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:45:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:47:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:49:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:51:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:43:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:23:17 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:24:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:26:45 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

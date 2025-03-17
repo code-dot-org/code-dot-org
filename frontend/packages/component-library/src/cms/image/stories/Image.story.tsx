@@ -1,8 +1,7 @@
-import {useState} from 'react';
+import imageFile from '@public/images/image-component.png';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
-
-import imageFile from '@public/images/image-component.png';
+import {useState} from 'react';
 
 import Image, {ImageProps} from '../index';
 

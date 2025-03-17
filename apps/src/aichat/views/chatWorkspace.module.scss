@@ -13,12 +13,6 @@ $tabs-default-spacing: 4px;
   overflow: hidden;
 }
 
-.messageEditorRow {
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-}
-
 %conversation-area,
 .conversationArea {
   flex-grow: 1;

@@ -136,7 +136,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "returns success when experiment is enabled and sets session_id if session_id is absent" do
       sign_in @teacher
 
-      assert_equal 0, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
+      assert_equal 0, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
 
       post :chat_completion, params: {
         context: "lesson",
@@ -146,12 +146,12 @@ class AiDiffControllerTest < ActionController::TestCase
         isPreset: false
       }
 
-      assert_equal 1, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
-      thread = AichatThread.where(user_id: @teacher.id, external_id: @session_id).first
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
+      thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
 
-      assert_equal 2, thread.aichat_messages.count
+      assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
@@ -163,7 +163,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "returns success when experiment is enabled and sets session_id if session_id is nil" do
       sign_in @teacher
 
-      assert_equal 0, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
+      assert_equal 0, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
 
       post :chat_completion, params: {
         context: "lesson",
@@ -174,12 +174,12 @@ class AiDiffControllerTest < ActionController::TestCase
         isPreset: false
       }
 
-      assert_equal 1, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
-      thread = AichatThread.where(user_id: @teacher.id, external_id: @session_id).first
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
+      thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
 
-      assert_equal 2, thread.aichat_messages.count
+      assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
@@ -190,7 +190,7 @@ class AiDiffControllerTest < ActionController::TestCase
 
     test "returns success when experiment is enabled and session_id is present" do
       sign_in @teacher
-      @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: @lesson.id)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: @lesson.id)
 
       post :chat_completion, params: {
         context: "lesson",
@@ -201,12 +201,12 @@ class AiDiffControllerTest < ActionController::TestCase
         isPreset: false
       }
 
-      assert_equal 1, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
-      thread = AichatThread.where(user_id: @teacher.id, external_id: @session_id).first
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
+      thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
 
-      assert_equal 2, thread.aichat_messages.count
+      assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
@@ -218,7 +218,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "returns success with unit context and session_id set" do
       sign_in @teacher
 
-      @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: nil)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: nil)
 
       post :chat_completion, params: {
         context: "unit",
@@ -229,12 +229,12 @@ class AiDiffControllerTest < ActionController::TestCase
         isPreset: false
       }
 
-      assert_equal 1, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
-      thread = AichatThread.where(user_id: @teacher.id, external_id: @session_id).first
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
+      thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
 
-      assert_equal 2, thread.aichat_messages.count
+      assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
@@ -246,7 +246,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "returns success with course context and session_id set" do
       sign_in @teacher
 
-      @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
 
       post :chat_completion, params: {
         context: "course",
@@ -257,12 +257,12 @@ class AiDiffControllerTest < ActionController::TestCase
         isPreset: false
       }
 
-      assert_equal 1, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
-      thread = AichatThread.where(user_id: @teacher.id, external_id: @session_id).first
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
+      thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
 
-      assert_equal 2, thread.aichat_messages.count
+      assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
@@ -280,7 +280,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "return PII violation status if PII detected in the prompt" do
       sign_in @teacher
 
-      @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
 
       post :chat_completion, params: {
         context: "course",

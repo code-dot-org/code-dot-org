@@ -1,9 +1,9 @@
 import {Meta, StoryFn} from '@storybook/react';
 import {useState, useCallback} from 'react';
 
-import {dropdownColors} from './../../index';
-
 import IconDropdown, {IconDropdownProps, IconDropdownOption} from '../index';
+
+import {dropdownColors} from './../../index';
 
 export default {
   title: 'DesignSystem/Dropdown/Icon Dropdown',

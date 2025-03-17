@@ -8,19 +8,20 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Recreate a Song #2\r\n\r\nYour friend, Dylan, loves rock music. His band made this great intro riff for a new song they're working on. Use the timeline and the sounds given to you to recreate the intro to his song. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Use the sounds given to you to build the song. \r\n- Look at this timeline for reference. \r\n\r\n![](https://images.code.org/77e775bf2b3eb6aecb35cc41718c6d15-image-1741386018301.17.20 PM.png)",
+    "long_instructions": "#### Recreate a Song #2\r\n\r\nYour friend, Dylan, loves rock music. His band made this great intro riff for a new song they're working on. Use the timeline and the sounds given to you to recreate the intro to his song. \r\n\r\nDo this: \r\n\r\n- Listen to \"Dylan's Song\" in the music player. \r\n- Use the sounds given to you to build the song. \r\n- Look at this timeline image for reference. \r\n\r\n![](https://images.code.org/77e775bf2b3eb6aecb35cc41718c6d15-image-1741386018301.17.20 PM.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
-        "groove": [
-          "drum_beat_patter",
-          "funky_bass",
-          "boom_bass",
-          "guitar_cloud",
-          "guitar_funnel"
+        "rock": [
+          "arena_beat",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "synth_screech",
+          "crash",
+          "bass_fuzz_drop"
         ]
       },
       "toolbox": {
@@ -54,9 +55,30 @@
     },
     "display_name": "Recreate a Song #2",
     "thumbnail_url": "https://images.code.org/77e775bf2b3eb6aecb35cc41718c6d15-image-1741386018301.17.20 PM.png",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-b_2e55a93b-b8df-407d-a1ad-0d57bfbcc041",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "That sounds awesome! ",
+      "validationFailureMessage": "Listen to the example song in the music player below. Does your song sound the same? ",
+      "playerTitle": "Dylan's Song"
+    },
+    "encrypted_exemplar_sources": "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\nP1e8KIL0wzjdbZwE0p0/qg==\n",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T22:17:44.135+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-a\"},{\"changed_at\":\"2025-03-07 22:20:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:22:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:39:44 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:25:11 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T22:17:44.135+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-a\"},{\"changed_at\":\"2025-03-07 22:20:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:22:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:39:44 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:25:11 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 17:08:49 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 17:15:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 17:16:27 +0000\",\"changed\":[\"exemplar_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 17:27:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -21083,3 +21083,44 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        6-12-problem-solving-with-ai:
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Talking to Machines
+            lesson-3:
+              name: Beyond Words
+            lesson-4:
+              name: The AI's Brain
+            lesson-5:
+              name: Smart or Just Predictable?
+            lesson-6:
+              name: Uncovering Contradictions
+            lesson-7:
+              name: Understanding Bias
+            lesson-8:
+              name: AI's Wild Imagination
+            lesson-9:
+              name: Debugging and Refining Outputs
+            lesson-10:
+              name: AI as a Co-Creator
+            lesson-11:
+              name: Remixing, Creativity, and Originality
+            lesson-12:
+              name: Ownership, Ethics, and Creativity
+            lesson-13:
+              name: AI's Role in Society
+            lesson-14:
+              name: AI Time Capsule Project
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+          name: 6-12-problem-solving-with-ai
+          title: Problem Solving with AI [DEV]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -1,9 +1,9 @@
 'use client';
 
 import '@code-dot-org/component-library/carousel/index.css';
-import DSCOCarousel from '@code-dot-org/component-library/carousel';
 import React, {ReactNode, useMemo} from 'react';
 
+import DSCOCarousel from '@code-dot-org/component-library/carousel';
 import Video from '@code-dot-org/component-library/video';
 
 export type VideoCarouselProps = {

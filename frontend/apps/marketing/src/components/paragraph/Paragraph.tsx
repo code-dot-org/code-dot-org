@@ -1,10 +1,11 @@
+import classNames from 'classnames';
+import React, {ReactNode} from 'react';
+
 import {
   default as Typography,
   StrongText,
   VisualAppearance,
 } from '@code-dot-org/component-library/typography';
-import React, {ReactNode} from 'react';
-import classNames from 'classnames';
 
 import {RemoveMarginBottomProps} from '@/components/common/types';
 

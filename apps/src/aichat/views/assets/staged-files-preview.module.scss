@@ -1,0 +1,99 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '../../../mixins.scss';
+@import '../mixins.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 10px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+%preview {
+  border: 1px solid var(--neutral-gray-20);
+  border-radius: 4px;
+  padding: 8px;
+  position: relative;
+}
+
+.topRightIcon {
+  @include remove-button-styles;
+  z-index: 1;
+  font-size: 16px;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  color: var(--text-neutral-quaternary);
+  transition: opacity 0.2s ease, color 0.2s ease;
+
+  i {
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  &Close {
+    color: var(--text-neutral-primary);
+    &:hover {
+      color: var(--text-error-primary);
+    }
+  }
+}
+
+.closeTooltipOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.closeTooltip {
+  @include fade-in(0.3s);
+}
+
+.preview-pdf {
+  @extend %preview;
+  display: flex;
+  gap: 8px;
+
+  .fileIcon {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: var(--accent-strawberry-40);
+
+    i {
+      margin: auto;
+      font-size: 24px;
+      color: white;
+    }
+  }
+
+  .filenameContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 120px;
+
+    strong {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.preview-image {
+  @extend %preview;
+  height: 36px;
+  width: 36px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}

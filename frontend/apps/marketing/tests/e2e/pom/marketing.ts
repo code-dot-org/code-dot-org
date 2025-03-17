@@ -1,4 +1,5 @@
 import {type Page} from '@playwright/test';
+
 import {loadFonts, FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
 
 export class MarketingPage {

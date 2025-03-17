@@ -138,10 +138,14 @@
       "allowChangeStartingPlayheadPosition": true
     },
     "display_name": "Lyric on Lyric on Lyric",
-    "thumbnail_url": "https://images.code.org/f977ed718b631fad7911c3eb43062aac-Screenshot 2025-03-11 at 2.24.46 PM.png",
+    "thumbnail_url": "https://images.code.org/1a8f256186c1659c75f5170f652ed39c-Screenshot 2025-03-14 at 12.05.11 PM.png",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-11T21:16:43.310+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-a\"},{\"changed_at\":\"2025-03-11 21:18:52 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:25:01 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:36:21 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T21:16:43.310+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-a\"},{\"changed_at\":\"2025-03-11 21:18:52 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:25:01 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:36:21 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:07:22 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

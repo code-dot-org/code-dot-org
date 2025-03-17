@@ -1,10 +1,10 @@
+import bgPattern from '@public/images/bg-pattern.png';
 import type {Meta, StoryObj, StoryFn} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import bgPattern from '@public/images/bg-pattern.png';
+import {BodyOneText, Heading2} from '@/typography';
 
 import Section, {SectionProps, sectionBackground} from '../index';
-import {BodyOneText, Heading2} from '@/typography';
 
 export default {
   title: 'CMS/Section',

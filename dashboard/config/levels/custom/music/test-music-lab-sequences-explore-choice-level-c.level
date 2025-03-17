@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Recreate a Song #3\r\n\r\nZoe is working on a new mixtape and she wants a fun way to end her opening song. She has an idea and sketched out what it should look like and sound like for you. Recreate her song with the sounds you are given. \r\n\r\nDo this: \r\n\r\n- Listen to the song in the media player. \r\n- Use the sounds given to you to build the song. \r\n- Look at this timeline for reference. \r\n\r\n![](https://images.code.org/d7545817531994b2bca8432f73194d1e-image-1741386714261.29.57 PM.png)",
+    "long_instructions": "#### Recreate a Song #3\r\n\r\nZoe is working on a new mixtape and she wants a fun way to end her opening song. She has an idea and sketched out what it should look like and sound like for you. Recreate her song with the sounds you are given. \r\n\r\nDo this: \r\n\r\n- Listen to \"Zoe's Song\" in the music player. \r\n- Use the sounds given to you to build the song. \r\n- Look at this timeline image for reference. \r\n\r\n![](https://images.code.org/d7545817531994b2bca8432f73194d1e-image-1741386714261.29.57 PM.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -56,9 +56,30 @@
     },
     "display_name": "Recreate a Song #3",
     "thumbnail_url": "https://images.code.org/d7545817531994b2bca8432f73194d1e-image-1741386714261.29.57 PM.png",
+    "encrypted_exemplar_sources": "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\nsmuVXxM=\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-choice-level-c_ddafd1af-a716-4d59-81d2-a00080c0232d",
+        "message": "",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "Nice work, that sounds so good! ",
+      "validationFailureMessage": "Your song must match the song in the timeline image. Use the music player below as reference.",
+      "playerTitle": "Zoe's Song"
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T22:25:36.006+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-b\"},{\"changed_at\":\"2025-03-07 22:33:10 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:40:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:25:40 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T22:25:36.006+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-choice-level-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-choice-level-b\"},{\"changed_at\":\"2025-03-07 22:33:10 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 22:40:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:25:40 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 17:23:35 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 17:25:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 17:27:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

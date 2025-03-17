@@ -1,0 +1,59 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-15T20:03:57.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Healthcare Data Scientist\n\n💡 **What They Do:**  They help people by using computers to understand health problems. Their work helps hospitals figure out how to keep people from getting sick and find better ways to help patients get better.\n\n💻 **How They Use Computer Science:**  They write programs and use AI to study huge amounts of health data, finding patterns that doctors can use to take better care of patients.",
+        "imageUrl": "https://images.code.org/54e5c5247211b8fdda647b77fbb3df88-DALL·E 2025-03-15 13.27.34 - A digital representation of AI analyzing medical data, with a futuristic interface showing charts, patient health stats, and predictive analytics. The.webp",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-top-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Healthcare Data Scientist\n\n💰 **Average Salary:** $100,000+ per year\n\n🎓 **Pathway:** Start with a strong foundation in math and science. Then, study computer science and data science in college.",
+        "imageUrl": "https://images.code.org/38c50766939248722a3602b3c965823f-salary.jpg",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Healthcare Data Scientist\n\n🌟 **Great for People Who Are:** Curious problem-solvers who like finding patterns and want to help people stay healthy.",
+        "imageUrl": "https://images.code.org/66af68f948e2e73cda3692a4b3ee0cef-DALL·E 2025-03-15 13.28.50 - A fun infographic showing a salary figure of '$100,000+' with a healthcare and technology theme. The image includes a stethoscope, a computer, and fin.webp",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Fitness App Developer\n\n💡 **What They Do:** They help people stay strong and healthy by creating apps that track workouts, give exercise tips, and keep users motivated.\n\n💻 **How They Use CS:** They write code to build apps that can track steps, set fitness goals, and even use AI to suggest personalized workouts.",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels-efeae7e1-8db4-4614-b904-07eedf4ef555",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Fitness App Developer\n\n💰 **Average Salary:** $90,000+ per year\n\n🎓 **Pathway:** Strong math and problem-solving skills lead to a degree in computer science or app development. Many learn programming languages like Swift or Java. ",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels-462ee39b-80a6-44bf-ad5e-e38b2f5b3965",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Fitness App Developer\n\n🌟 **Great for People Who Are:** Creative thinkers who like technology, enjoy fitness, and want to help others live healthier lives.",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels-876d59b6-ac29-4f21-841e-2fa252862857",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "display_name": "Careers that Create ",
+    "thumbnail_url": "https://images.code.org/0231b02d74bf572f62253ca729343e54-art3.jpg",
+    "bubble_choice_description": "* Sound producer\n\n* Wearable fashion designer"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-15T20:03:57.704+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels\"},{\"changed_at\":\"2025-03-15 20:18:59 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:23:34 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:26:21 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:48:02 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:59:49 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
