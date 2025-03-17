@@ -86,6 +86,13 @@ body.background-dark, body.background-light {
   }
 }
 
+// For modern Lab2 labs, prevent the entire body from scrolling.
+// All content is typically displayed on the page at once, and
+// internal components manage their own scroll behavior.
+body:has(#lab2-container) {
+  overflow: hidden;
+}
+
 h1 {
   @include main-font-bold;
   font-size: 32px;
