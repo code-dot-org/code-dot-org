@@ -148,7 +148,8 @@ Dashboard::Application.routes.draw do
       collection do
         post 'section_instructors_verified'
         post 'archive_all'
-        get 'retrieve_units_and_lessons/:section_id', to: 'sections#retrieve_units_and_lessons'
+        get 'retrieve_lessons_for_dropdown/:section_id', to: 'sections#retrieve_lessons_for_dropdown'
+        get 'retrieve_units_for_dropdown/:section_id', to: 'sections#retrieve_units_for_dropdown'
       end
     end
     # Section API routes (JSON only)
