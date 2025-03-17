@@ -30,4 +30,16 @@ markdown <<MARKDOWN
     ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Hint
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### If you get stuck trying to decrypt the message try moving around the letters to make possible matches. The frequency meter may help you get started - especially in matching letters in short words.
+</p></div>
+</details>
+
 MARKDOWN

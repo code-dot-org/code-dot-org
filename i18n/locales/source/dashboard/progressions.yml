@@ -10,6 +10,7 @@ en:
       AI Lab and Isaac's Data: AI Lab and Isaac's Data
       AI Lab and Kim's Data: AI Lab and Kim's Data
       AI Machine Learning - Video: AI Machine Learning - Video
+      AI and ethics: AI and ethics
       'AI for Oceans: Fish vs Not Fish': 'AI for Oceans: Fish vs Not Fish'
       'AI for Oceans: Types of Fish': 'AI for Oceans: Types of Fish'
       'AI: Impact on Society - Video': 'AI: Impact on Society - Video'
@@ -29,6 +30,7 @@ en:
       Adding New Screens: Adding New Screens
       Adding Pages: Adding Pages
       Adding Screens: Adding Screens
+      Additional Support for Teachers: Additional Support for Teachers
       Alien Defender: Alien Defender
       Alternative Datasets: Alternative Datasets
       Analog Sensors: Analog Sensors
@@ -125,13 +127,18 @@ en:
       Changing Screens: Changing Screens
       Changing Sensor Scale: Changing Sensor Scale
       Check For Understanding: Check For Understanding
+      'Check For Understanding: Emojis': 'Check For Understanding: Emojis'
+      'Check For Understanding: Food': 'Check For Understanding: Food'
       Check Your Work: Check Your Work
       Check for Understanding: Check for Understanding
+      'Check for Understanding: Matching Level': 'Check for Understanding: Matching Level'
       Check-In: Check-In
       Check-In Survey: Check-In Survey
       Checking for a Winner: Checking for a Winner
       Choice: Choice
+      Choice Level: Choice Level
       'Choice Level: Add Effects': 'Choice Level: Add Effects'
+      'Choice Level: Share Your Voice': 'Choice Level: Share Your Voice'
       'Choice Levels: Customize Your App': 'Choice Levels: Customize Your App'
       Choose Your Own Adventure: Choose Your Own Adventure
       Choosing Good IDs: Choosing Good IDs
@@ -140,11 +147,13 @@ en:
       'Circuit Playground: Introduction': 'Circuit Playground: Introduction'
       'Circuit Playground: LEDs': 'Circuit Playground: LEDs'
       Circuits and Logic: Circuits and Logic
+      Classroom Implementation: Classroom Implementation
       Club Datasets: Club Datasets
       Code My Poem: Code My Poem
       Code Prediction: Code Prediction
       Code Your Own Flappy Game: Code Your Own Flappy Game
       Code Your Page: Code Your Page
+      'Coding with AI ': 'Coding with AI '
       Coding with Algorithms and Sequences: Coding with Algorithms and Sequences
       Coding with Conditionals: Coding with Conditionals
       Coding with Loops: Coding with Loops
@@ -161,8 +170,10 @@ en:
       Conditionals with Cards - Video: Conditionals with Cards - Video
       'Conditionals: If Statements': 'Conditionals: If Statements'
       'Conditionals: If and If/Else Statements': 'Conditionals: If and If/Else Statements'
+      Connect with the CS community: Connect with the CS community
       Continuing your CS Journey: Continuing your CS Journey
       Control Your Player: Control Your Player
+      Course Design: Course Design
       Course E Artist Project: Course E Artist Project
       Course E Sprite Lab Project: Course E Sprite Lab Project
       'Course E: Play Lab Project': 'Course E: Play Lab Project'
@@ -172,8 +183,10 @@ en:
       'Course F: Artist Project - Revise': 'Course F: Artist Project - Revise'
       'Course F: Play Lab Project': 'Course F: Play Lab Project'
       'Course F: Play Lab Project - Revise': 'Course F: Play Lab Project - Revise'
+      Course Overview: Course Overview
       Crack Random Substitution: Crack Random Substitution
       Crack a Caesar Cipher: Crack a Caesar Cipher
+      Create: Create
       Create Your Own Animation: Create Your Own Animation
       Create Your Robot Face: Create Your Robot Face
       Create Your Sprites: Create Your Sprites
@@ -211,6 +224,7 @@ en:
       Designing Screens with Code: Designing Screens with Code
       Designing for Accessibility: Designing for Accessibility
       Designing for Accessibility - Student Discussion: Designing for Accessibility - Student Discussion
+      Differentiation: Differentiation
       Digital Sharing - Discussion Questions: Digital Sharing - Discussion Questions
       Digital Sharing - Unplugged Activity: Digital Sharing - Unplugged Activity
       Digital Sharing - Video: Digital Sharing - Video
@@ -224,11 +238,13 @@ en:
       Ecosystems Simulation: Ecosystems Simulation
       Ecosystems Video: Ecosystems Video
       Editing Images: Editing Images
+      Emoji Feature Vector: Emoji Feature Vector
       Emotion Machine Example: Emotion Machine Example
       End of Course Projects: End of Course Projects
       End-Of-Unit Assessment: End-Of-Unit Assessment
       End-Of-Unit Survey: End-Of-Unit Survey
       End-of-Unit Survey: End-of-Unit Survey
+      Engaging in this course: Engaging in this course
       Escape Room Example: Escape Room Example
       Ethics Exploration: Ethics Exploration
       Event Types: Event Types
@@ -258,9 +274,14 @@ en:
       'Exploration: Sample Programs': 'Exploration: Sample Programs'
       'Exploration: Sample Project': 'Exploration: Sample Project'
       Explore: Explore
+      Explore Additional Teacher Resources: Explore Additional Teacher Resources
+      Explore Course Lesson Plans: Explore Course Lesson Plans
       Explore HTML: Explore HTML
       Explore a Chatbot: Explore a Chatbot
       Explore a Digital Book Cover Example: Explore a Digital Book Cover Example
+      Explore machine learning apps: Explore machine learning apps
+      Explore the Student View: Explore the Student View
+      Explore the first week of curriculum: Explore the first week of curriculum
       Explore!: Explore!
       Exploring CS in Entertainment: Exploring CS in Entertainment
       Exploring more CSS: Exploring more CSS
@@ -272,6 +293,8 @@ en:
       Final Dance Party Project: Final Dance Party Project
       Final Personal Website: Final Personal Website
       Final Project: Final Project
+      Final Project (5 min): Final Project (5 min)
+      Final Project (8 min): Final Project (8 min)
       Final Room Escape App: Final Room Escape App
       Find the Wizard: Find the Wizard
       Finish a Screen: Finish a Screen
@@ -284,6 +307,7 @@ en:
       Follow the Mouse: Follow the Mouse
       Fonts and Style: Fonts and Style
       Food Chain Setup: Food Chain Setup
+      Food Feature Vector: Food Feature Vector
       FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: For Loop Fun - Unplugged Activity
       For Loops: For Loops
@@ -299,7 +323,12 @@ en:
       Functions: Functions
       Functions Review: Functions Review
       Functions with Parameters: Functions with Parameters
+      Game Design Set Up: Game Design Set Up
+      Game Design Setup: Game Design Setup
+      Game Jam Theme Generator: Game Jam Theme Generator
+      'Game Jam: Play': 'Game Jam: Play'
       Garden Image Files: Garden Image Files
+      Generative AI Lesson Structure (5 min): Generative AI Lesson Structure (5 min)
       Geometric Sun: Geometric Sun
       Get In Formation: Get In Formation
       Getters and Setters: Getters and Setters
@@ -320,6 +349,7 @@ en:
       Headings: Headings
       Headings in HTML: Headings in HTML
       Hello World: Hello World
+      How is it Sorted?: How is it Sorted?
       How to Create a Simple Function: How to Create a Simple Function
       How to Make a Sprite: How to Make a Sprite
       Human Device Interaction: Human Device Interaction
@@ -336,6 +366,7 @@ en:
       Importing Your Model: Importing Your Model
       Improve Your Game: Improve Your Game
       Improved Shoe Recommender: Improved Shoe Recommender
+      Inclusion: Inclusion
       Incorporate Feedback: Incorporate Feedback
       Initial Scenario: Initial Scenario
       Innovation Research: Innovation Research
@@ -354,12 +385,15 @@ en:
       Intro to Design Mode: Intro to Design Mode
       Intro to Flyer Game: Intro to Flyer Game
       Intro to For Loops: Intro to For Loops
+      Intro to Gen. AI (10 min): Intro to Gen. AI (10 min)
       Intro to Side Scrollers: Intro to Side Scrollers
       Intro to Sprites: Intro to Sprites
       Intro to Variables: Intro to Variables
+      'Intro to Variables ': 'Intro to Variables '
       Introducing Events: Introducing Events
       Introducing Sprite Lab: Introducing Sprite Lab
       Introduction: Introduction
+      Introduction to AI Lab: Introduction to AI Lab
       Introduction to Arrays: Introduction to Arrays
       Introduction to Game Lab: Introduction to Game Lab
       Introduction to Variables: Introduction to Variables
@@ -379,10 +413,17 @@ en:
       LED Apps: LED Apps
       Layout Properties: Layout Properties
       Layout with CSS: Layout with CSS
+      Lead Learner: Lead Learner
       Learning from Simulations: Learning from Simulations
+      'Lesson 1: Making Predictions': 'Lesson 1: Making Predictions'
+      'Lesson 2: Training AI': 'Lesson 2: Training AI'
+      'Lesson 3: Using AI Bot': 'Lesson 3: Using AI Bot'
+      'Lesson 4: AI Tools in School': 'Lesson 4: AI Tools in School'
+      'Lesson 5: Share Students'' Voice': 'Lesson 5: Share Students'' Voice'
       Lesson Extra: Lesson Extra
       Lesson Extras: Lesson Extras
       Lesson Overview: Lesson Overview
+      Lesson Previews (20 min): Lesson Previews (20 min)
       Level Overview: Level Overview
       Levels: Levels
       Light Show: Light Show
@@ -393,10 +434,13 @@ en:
       Looking for Patterns: Looking for Patterns
       Looping: Looping
       Loops with the Artist: Loops with the Artist
+      Machine Learning Video: Machine Learning Video
       Make: Make
       Make Dancer & Dance Move: Make Dancer & Dance Move
       Make Your Sprites: Make Your Sprites
       Make a Prediction: Make a Prediction
+      Make a plan: Make a plan
+      Make an Implementation Plan: Make an Implementation Plan
       Make an Interactive Card: Make an Interactive Card
       Make it Interactive: Make it Interactive
       Make it Your Own: Make it Your Own
@@ -467,6 +511,7 @@ en:
       Orientation: Orientation
       Outro: Outro
       Overview: Overview
+      Overview of Teaching Gen AI (15 min): Overview of Teaching Gen AI (15 min)
       'Overview: Design Mode': 'Overview: Design Mode'
       'Overview: If Statements': 'Overview: If Statements'
       'Overview: Images': 'Overview: Images'
@@ -481,6 +526,7 @@ en:
       Picturing Data: Picturing Data
       Pizza Party Data: Pizza Party Data
       Pizza Recommendations: Pizza Recommendations
+      Plan: Plan
       Plan Your Project: Plan Your Project
       Plan Your Scene: Plan Your Scene
       Plane Jumper: Plane Jumper
@@ -491,6 +537,7 @@ en:
       Platform Jumper - Platforms: Platform Jumper - Platforms
       Platform Jumper - Player: Platform Jumper - Player
       Platform Jumper Review: Platform Jumper Review
+      Play: Play
       Play AI Drums: Play AI Drums
       Play Sound: Play Sound
       Play Together: Play Together
@@ -506,7 +553,11 @@ en:
       Post-Course Survey Instructions: Post-Course Survey Instructions
       Post-Module Survey: Post-Module Survey
       Practice: Practice
+      Practice & Free Play: Practice & Free Play
+      Practice Choices: Practice Choices
       Practice Levels: Practice Levels
+      'Practice training A.I. Bot ': 'Practice training A.I. Bot '
+      Practice training a machine learning model: Practice training a machine learning model
       Practicing Block-Based Coding: Practicing Block-Based Coding
       'Practicing CS Skills ': 'Practicing CS Skills '
       Pre-Assessment: Pre-Assessment
@@ -555,6 +606,7 @@ en:
       Responding to Board Events: Responding to Board Events
       Responding to User Input: Responding to User Input
       Retrieval: Retrieval
+      Retrieval (10 min): Retrieval (10 min)
       Review: Review
       Review - Choice Level: Review - Choice Level
       Review Shape Blocks: Review Shape Blocks
@@ -592,6 +644,7 @@ en:
       Sensor Experiment: Sensor Experiment
       Sensors to Colors: Sensors to Colors
       Set Up Sprites: Set Up Sprites
+      Set Up a Class Section: Set Up a Class Section
       Setting Properties: Setting Properties
       Setup: Setup
       Shapes and Parameters: Shapes and Parameters
@@ -623,8 +676,11 @@ en:
       Songwriting - Functions Unplugged Activity: Songwriting - Functions Unplugged Activity
       'Songwriting - Functions Video ': 'Songwriting - Functions Video '
       Songwriting - Student Resources: Songwriting - Student Resources
+      Sort It Out: Sort It Out
+      Sorting Items: Sorting Items
       Specialized Information: Specialized Information
       Speed it Up, Slow it Down: Speed it Up, Slow it Down
+      Sprite Behaviors: Sprite Behaviors
       Sprite Interactions: Sprite Interactions
       Sprite Interactions Review: Sprite Interactions Review
       Sprite Lab Example Project: Sprite Lab Example Project
@@ -632,6 +688,9 @@ en:
       Sprite Movement: Sprite Movement
       Sprite Properties: Sprite Properties
       Sprite Scenes: Sprite Scenes
+      'Sprite Type: Environment': 'Sprite Type: Environment'
+      'Sprite Type: Environment ': 'Sprite Type: Environment '
+      'Sprite Type: Player': 'Sprite Type: Player'
       Sprite Velocity: Sprite Velocity
       Sprites and Backgrounds: Sprites and Backgrounds
       Sprites and the Draw Loop: Sprites and the Draw Loop
@@ -641,9 +700,11 @@ en:
       'Step 5: Make a Model Card': 'Step 5: Make a Model Card'
       Student Post-Survey: Student Post-Survey
       Student Pre-Survey: Student Pre-Survey
+      Student Survey: Student Survey
       Styling Text: Styling Text
       Styling with Classes: Styling with Classes
       Styling your Website: Styling your Website
+      System Prompting (15 min): System Prompting (15 min)
       Teach A.I. a new word: Teach A.I. a new word
       Teach AI a New Word: Teach AI a New Word
       Teachable Machine: Teachable Machine
@@ -668,19 +729,30 @@ en:
       The Internet - Student Resources: The Internet - Student Resources
       The Internet - Unplugged Activity: The Internet - Unplugged Activity
       The Power of Words - Unplugged Activity: The Power of Words - Unplugged Activity
+      The Problem Solving Process: The Problem Solving Process
       The Right App - Student Resource: The Right App - Student Resource
       The Right App - Unplugged Activity: The Right App - Unplugged Activity
       The Search for Pixel: The Search for Pixel
       Title, Author, Background: Title, Author, Background
+      'Tools ': 'Tools '
       Top Websites: Top Websites
       Tour of Design Mode: Tour of Design Mode
+      Tour the Code.org Learning Platform: Tour the Code.org Learning Platform
+      Track Student Progress and Provide Feedback: Track Student Progress and Provide Feedback
+      Train AI on Fish: Train AI on Fish
+      Train AI on Sea Creatures: Train AI on Sea Creatures
       Train AI to Clean the Ocean: Train AI to Clean the Ocean
       Train a Model in AI Lab: Train a Model in AI Lab
       Train an AI to Clean the Ocean: Train an AI to Clean the Ocean
       Triggers: Triggers
+      Try out AI Chat Lab (15 min): Try out AI Chat Lab (15 min)
       UI Element Properties: UI Element Properties
       Ultimate Shoe Recommender: Ultimate Shoe Recommender
       Unit 5 Lesson 1 Overview: Unit 5 Lesson 1 Overview
+      Unit Overview: Unit Overview
+      Unit Overview (2 min): Unit Overview (2 min)
+      Unit Overview (5 min): Unit Overview (5 min)
+      Unit projects: Unit projects
       Unplugged Activity: Unplugged Activity
       Unplugged Activity - Hardware and Software Skits: Unplugged Activity - Hardware and Software Skits
       Updating Your Prototype: Updating Your Prototype
@@ -690,11 +762,13 @@ en:
       "User Story #1: Sarah Thompson": "User Story #1: Sarah Thompson"
       "User Story #2: Janet Lee": "User Story #2: Janet Lee"
       User Testing: User Testing
+      Using AI Tools in School (Online Version): Using AI Tools in School (Online Version)
       Using Accelerometer Events: Using Accelerometer Events
       Using Arrays: Using Arrays
       Using Getters and Setters: Using Getters and Setters
       Using HTML Tags: Using HTML Tags
       Using Random Numbers: Using Random Numbers
+      Using Resources: Using Resources
       Using Training Data: Using Training Data
       Using a System Prompt: Using a System Prompt
       Using the Grid: Using the Grid
@@ -757,6 +831,7 @@ en:
       'Video: Hello World: Do What You Want': 'Video: Hello World: Do What You Want'
       'Video: Hello World: Programming with Events': 'Video: Hello World: Programming with Events'
       'Video: Hello World: Welcome to Sprite Lab': 'Video: Hello World: Welcome to Sprite Lab'
+      'Video: How AI Works': 'Video: How AI Works'
       'Video: How Search Works': 'Video: How Search Works'
       'Video: How to Create a Simple Function': 'Video: How to Create a Simple Function'
       'Video: How to Make a Sprite': 'Video: How to Make a Sprite'
@@ -841,19 +916,25 @@ en:
       WeTube Video Recommendations (Beta): WeTube Video Recommendations (Beta)
       Website Project: Website Project
       Welcome and Introduction: Welcome and Introduction
+      Welcome to CS Discoveries: Welcome to CS Discoveries
+      Welcome to Code.org: Welcome to Code.org
       Welcome to Monster Town: Welcome to Monster Town
       What Is a Time Capsule?: What Is a Time Capsule?
+      What is AI?: What is AI?
+      What is a Game Jam?: What is a Game Jam?
       Where'd They Go?: Where'd They Go?
       While Loops with the Farmer: While Loops with the Farmer
       'Widget: Text Compression': 'Widget: Text Compression'
       Wrap Up: Wrap Up
       Wrap-up: Wrap-up
+      Wrapping Up the Unit (10 min): Wrapping Up the Unit (10 min)
       Written Voice Simulator Widget: Written Voice Simulator Widget
       'You Choose: Improve Your App': 'You Choose: Improve Your App'
       'You Choose: Restaurant Recommendations': 'You Choose: Restaurant Recommendations'
       You Decide!: You Decide!
       Your Personal Website: Your Personal Website
       Your Team Project: Your Team Project
+      Your Turn!: Your Turn!
       Zoo Predictions: Zoo Predictions
       "[For Teachers] Mad Lib Widget": "[For Teachers] Mad Lib Widget"
       getNumber: getNumber

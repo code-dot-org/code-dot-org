@@ -1,5 +1,5 @@
-import {mergeTests} from '@playwright/test';
 import {test as eyesTest} from '@applitools/eyes-playwright/fixture';
+import {mergeTests} from '@playwright/test';
 
 export const test = mergeTests(eyesTest);
 

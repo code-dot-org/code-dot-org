@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Sequence the Effects \r\n\r\nYou have one sound to manipulate with effects. Use at least one delay effect (high or low) and one filter effect (medium or low) to change the sound. ",
+    "long_instructions": "### Sequence the Effects \r\n\r\nYou have one sound to manipulate with effects. \r\n\r\nDo this:\r\n- Use at least one delay effect (high or low) \r\n- Use at least one filter effect (medium or low)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "default",
@@ -32,11 +32,17 @@
             "set_delay_effect_at_current_location_simple2"
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": false
     },
+    "reference_links": [
+      "/courses/alloftheplaygrounds/guides/music-lab-effects/"
+    ],
+    "map_reference": "/courses/alloftheplaygrounds/guides/music-lab-effects/",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12 18:13:15 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12 18:13:15 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:34:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 17:04:00 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-13 23:37:37 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:37:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

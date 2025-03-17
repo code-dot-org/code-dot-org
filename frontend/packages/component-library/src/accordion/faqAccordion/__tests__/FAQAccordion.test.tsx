@@ -1,4 +1,5 @@
 import {render, screen} from '@testing-library/react';
+
 import FAQAccordion, {FAQAccordionProps} from '../FAQAccordion';
 
 const mockFAQItems: FAQAccordionProps['items'] = [

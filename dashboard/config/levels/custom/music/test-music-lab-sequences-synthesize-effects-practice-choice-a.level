@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-12T16:20:25.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "instructions_important": "false",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "lady_gaga_born_this_way",
@@ -357,14 +358,15 @@
           "stomp",
           "trashy_crash"
         ]
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
     },
     "long_instructions": "### Sound Design Challenge: Dynamic Volume Shifts\r\n\r\n🎧 **The Scenario:**\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement.\r\n\r\n🎼 **Your challenge:**\r\n- Control the Volume: Make some sections whisper quiet and others bold and loud for contrast.\r\n- Sequence the Shifts: Time your volume changes so they follow a pattern (e.g., after a certain number of measures).\r\n- Layer & Offset: Use rests and layering to emphasize the difference between soft and loud moments.\r\n- Use Effects: Try filters, delays, or fades to make the transitions smoother or more intense.",
     "display_name": "Loud & Quiet",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T16:20:25.361+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-b\"},{\"changed_at\":\"2025-03-12 16:20:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:11:39 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:24:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:25:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:26:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:20:25.361+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-b\"},{\"changed_at\":\"2025-03-12 16:20:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:11:39 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:24:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:25:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:26:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:39:26 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

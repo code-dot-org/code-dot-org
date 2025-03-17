@@ -1,8 +1,9 @@
+import {Brand} from '@/config/brand';
+
 import {
   getGoogleAnalyticsMeasurementId,
   GOOGLE_ANALYTICS_CONFIG,
 } from '../index';
-import {Brand} from '@/config/brand';
 
 describe('Google Analytics Config', () => {
   it('should return the correct measurement ID for CODE_DOT_ORG', () => {

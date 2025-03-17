@@ -230,7 +230,7 @@ describe('AiDiffChat', () => {
 
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/aichat_messages/42/submit_feedback',
+        '/aidiff_messages/42/submit_feedback',
         JSON.stringify({
           approval: true,
           flagged: false,

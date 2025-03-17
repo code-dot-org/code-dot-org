@@ -49,7 +49,6 @@ export const useHandleFileUpload = (
         fileName,
         folderId,
         contents,
-        validationFileId: validationFile?.id,
       });
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,

@@ -96,3 +96,8 @@
     }
   }
 }
+
+// In share view, there is no header so we want the overlay to be at the top of the screen.
+.shareViewOverlay {
+  top: 0;
+}

@@ -1,18 +1,18 @@
 import classNames from 'classnames';
 import {HTMLAttributes, ReactNode, useId} from 'react';
-
 // Import Swiper React components
 // See Swiper documentation here: https://swiperjs.com/react
-import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination, A11y} from 'swiper/modules';
+import {Swiper, SwiperSlide} from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import moduleStyles from './carousel.module.scss';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
+
+import moduleStyles from './carousel.module.scss';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   /** Unique identifier for the carousel instance */
