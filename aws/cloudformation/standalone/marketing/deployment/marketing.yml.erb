@@ -294,6 +294,8 @@ Resources:
               Value: cdn.contentful.com
             - Name: CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID
               Value: experience
+            - Name: STAGE
+              Value: test
           Essential: true
           Image:
             Fn::Join:
@@ -307,6 +309,10 @@ Resources:
           Secrets:
             - Name: CONTENTFUL_TOKEN
               ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_TOKEN::'
+            - Name: STATSIG_CLIENT_KEY
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_CLIENT_KEY::'
+            - Name: STATSIG_SERVER_KEY
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_SERVER_KEY::'
       Cpu: "256"
       ExecutionRoleArn:
         Fn::GetAtt:

@@ -314,7 +314,20 @@ class ScriptsController < ApplicationController
       return script
     end
 
-    return nil
+    # Redirect to the latest version or the assigned version of a single-unit course
+    if UnitGroup.family_names.include?(unit_name)
+      unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
+        UnitGroup.latest_stable_version(unit_name)
+      if unit_group.can_be_participant?(current_user)
+        unit_group = UnitGroup.latest_assigned_version(unit_name, current_user) || unit_group
+      end
+      if unit_group&.single_unit_course?
+        script = unit_group.units_for_user(current_user).first
+        return script
+      end
+    end
+
+    nil
   end
 
   private def set_unit
@@ -413,6 +426,12 @@ class ScriptsController < ApplicationController
     # none are assigned.
     redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
     redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
+
+    if unit.unit_group&.single_unit_course?
+      redirect_unit_group = UnitGroup.latest_assigned_version(unit.unit_group.family_name, current_user)
+      redirect_unit_group ||= UnitGroup.latest_stable_version(unit.unit_group.family_name, locale: locale)
+      redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
+    end
 
     # Do not redirect if we are already on the correct unit.
     return nil if redirect_unit == unit

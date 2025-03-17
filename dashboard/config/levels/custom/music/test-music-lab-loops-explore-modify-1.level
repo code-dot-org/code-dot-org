@@ -119,9 +119,30 @@
       },
       "allowChangeStartingPlayheadPosition": true
     },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor6BCPkf6utFvuIj3W7tTG5Be81z3rwi0UJuctz78mOQv4\nh0WOnZ1OAR3zAoHtp499SbIuCEChopt2BUka5LPbQ7EPAyWey8kP658x9a9x\nprUVBsYlcjdpGvnm81/SqL3FgD2dEUvlojdJiKv7ByxN0pLY6mxRQdAo+qGY\nYgfwe1sR3p0Dgnl6f5XAI7jcqtCe1HBZrq879I2gC/ywkaAvQknU8fVmHfBg\nXMSQT35zHune/5qq1TZxTmFa0VLr6QnLTc563IXA3f1XGO4r+aztlzCP7kXE\ngkvL0fHI5HnXgKMwD07sHoXTa9MLup9UxnvlNaynGv3S32JVqxSOvRs7WgH4\nDdAcruSlb4PEqteCcsThPkynPRXalYM2N+iN9C7uKmVTMpUOVJYLPxdz5lA4\n50ocao5OfrlzGy+S3yHklCjE98aV0vIIWY7p1+FHdCGOtuqWyOTi30JzBG6a\n4L6Wriu8KZjiTDdmC43ftF5111kRwRRkWgTUf/b3Y0+/aKF19Bt2LegNUQEd\nwSAZ4Um3gj6qKyUnuSkCtFkQbnBuRRVNnKXP5Zg2fSKrycbpmRes3FQUMvmv\nQimzEWX6GjxHCoIuo21UAhReXNRMGac6/W53ytyx0tzz9YAVkmLr2sdL7WRH\n38KE4YSQ0/cFJXewSuMP9sM23pwo6qpLPAdtIUDImKcp+Uj22tqu1afYWqiq\nLLC+yRVvpqKrakNrJHcPbuEZLUTt5D2yi+oRtn1C3nVrwZueliKRE+wz11Wo\nI3i6oRaWz2sR7uRloBKqdDeFg7CMMI/5791uyhrJM6PFTkmc4eowHRwHMBDR\nL9sj0S4/jJnrCSha23RdsPk/j3S25Q==\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-modify-1_1f63b156-307e-4d0c-b449-7601ed28aea6",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "Great work using a loop to match the sound lengths. ",
+      "validationFailureMessage": "Change the number in the second loop to match the length of the first sound. ",
+      "playerTitle": "Evie's Song #1"
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12 21:07:56 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 21:21:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:43:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:42:44 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12 21:07:56 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 21:21:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:43:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:42:44 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:21:35 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:22:45 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

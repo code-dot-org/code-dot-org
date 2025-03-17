@@ -1,8 +1,9 @@
 import {EntryFields, BaseEntry} from 'contentful';
+import {useMemo} from 'react';
+
 import FAQAccordion, {
   FAQAccordionItem,
 } from '@code-dot-org/component-library/accordrion/faqAccordion';
-import {useMemo} from 'react';
 
 type FAQAccordionContentfulProps = {
   faqs?: (BaseEntry & {

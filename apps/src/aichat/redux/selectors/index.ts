@@ -1,6 +1,8 @@
 import {createSelector} from '@reduxjs/toolkit';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import type {RootState} from '@cdo/apps/types/redux';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   allFieldsHidden,
@@ -45,3 +47,10 @@ export const selectHavePropertiesChanged = (state: RootState) =>
     state.aichat.savedAiCustomizations,
     state.aichat.currentAiCustomizations
   ).length > 0;
+
+export const selectMultimodalEnabled = (state: RootState) => {
+  const isChatGpt =
+    state.aichat.currentAiCustomizations.selectedModelId ===
+    AiChatModelIds.CHATGPT;
+  return isChatGpt && queryParams('multimodal') === 'true';
+};

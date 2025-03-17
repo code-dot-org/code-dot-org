@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2025-03-04 20:58:34 UTC",
+    "serialized_at": "2025-03-15 20:06:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4090,6 +4090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4115,7 +4118,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-elem-career-journeys-explore-panels"
+          "test-elem-career-journeys-video-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -4123,7 +4126,7 @@
         "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
       },
       "level_keys": [
-        "test-elem-career-journeys-explore-panels"
+        "test-elem-career-journeys-video-choices"
       ]
     },
     {
@@ -4136,7 +4139,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-elem-career-journeys-sprite-location"
+          "test-elem-career-journeys-panel-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -4144,7 +4147,7 @@
         "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
       },
       "level_keys": [
-        "test-elem-career-journeys-sprite-location"
+        "test-elem-career-journeys-panel-choices"
       ]
     },
     {
@@ -4157,7 +4160,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-elem-career-journeys-backgrounds"
+          "test-elem-career-journeys-basic-skills-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -4165,7 +4168,7 @@
         "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
       },
       "level_keys": [
-        "test-elem-career-journeys-backgrounds"
+        "test-elem-career-journeys-basic-skills-choices"
       ]
     },
     {
@@ -4178,7 +4181,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-elem-career-journeys-event-say"
+          "test-elem-career-journeys-extra-skills-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -4186,7 +4189,7 @@
         "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
       },
       "level_keys": [
-        "test-elem-career-journeys-event-say"
+        "test-elem-career-journeys-extra-skills-choices"
       ]
     },
     {
@@ -4195,6 +4198,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-project"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5582,9 +5588,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-elem-career-journeys-explore-panels",
+        "level.key": "test-elem-career-journeys-video-choices",
         "script_level.level_keys": [
-          "test-elem-career-journeys-explore-panels"
+          "test-elem-career-journeys-video-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -5594,9 +5600,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-elem-career-journeys-sprite-location",
+        "level.key": "test-elem-career-journeys-panel-choices",
         "script_level.level_keys": [
-          "test-elem-career-journeys-sprite-location"
+          "test-elem-career-journeys-panel-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -5606,9 +5612,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-elem-career-journeys-backgrounds",
+        "level.key": "test-elem-career-journeys-basic-skills-choices",
         "script_level.level_keys": [
-          "test-elem-career-journeys-backgrounds"
+          "test-elem-career-journeys-basic-skills-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -5618,9 +5624,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-elem-career-journeys-event-say",
+        "level.key": "test-elem-career-journeys-extra-skills-choices",
         "script_level.level_keys": [
-          "test-elem-career-journeys-event-say"
+          "test-elem-career-journeys-extra-skills-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",

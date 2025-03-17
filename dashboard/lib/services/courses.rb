@@ -1,6 +1,4 @@
 class Services::Courses
-  MODULARITY_PILOT = 'modularity'
-
   # This method returns the canonical version of a given path related to a UnitGroup/Course
   # for example given a /s/.../ URL it will return the appropriate /courses/.../units/...
   # URL because /s/.../ is being deprecated.
@@ -10,7 +8,7 @@ class Services::Courses
   # @param current_user [User] the currently authenticated user object, used for experiment checks
   # @return [String] the transformed canonical path if applicable, or the original path if no transformation is made
   def self.canonical_path(path, params, current_user)
-    return path unless Experiment.enabled?(user: current_user, experiment_name: MODULARITY_PILOT)
+    return path unless Policies::Courses.modularity_enabled?(current_user)
 
     # :script_id is defined only for /s/ URLs
     script_name = params[:script_id] || params[:id]

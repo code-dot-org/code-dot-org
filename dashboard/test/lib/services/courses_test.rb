@@ -7,9 +7,10 @@ class Services::CoursesTest < ActiveSupport::TestCase
     let(:current_user) {instance_double(User)}
     let(:path) {'/s/script-1/some-path'}
     let(:params) {{}}
+    let(:modularity_enabled) {false}
 
     before do
-      allow(Experiment).to receive(:enabled?).with(user: current_user, experiment_name: 'modularity').and_return(false)
+      allow(Policies::Courses).to receive(:modularity_enabled?).with(current_user).and_return(modularity_enabled)
       allow(Queries::Courses).to receive(:get_course_context).and_return(nil)
     end
 
@@ -20,9 +21,7 @@ class Services::CoursesTest < ActiveSupport::TestCase
     end
 
     context 'the modularity experiment is enabled' do
-      before do
-        allow(Experiment).to receive(:enabled?).with(user: current_user, experiment_name: 'modularity').and_return(true)
-      end
+      let(:modularity_enabled) {true}
 
       context 'script_name is not present in params' do
         it 'returns the original path' do

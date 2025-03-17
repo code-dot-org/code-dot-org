@@ -170,9 +170,9 @@ async function loadPackages() {
       'matplotlib',
       // These are custom packages that we have built. They are defined in the
       // python/pythonlab/ folder in the codebase.
-      `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/unittest_runner-0.2.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/neighborhood-0.2.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/neighborhood-0.3.0-py3-none-any.whl`,
     ],
     {
       errorCallback: (message: string) => {

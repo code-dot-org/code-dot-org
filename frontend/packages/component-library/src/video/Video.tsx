@@ -1,12 +1,12 @@
-import {useState, useEffect, HTMLAttributes} from 'react';
 import classNames from 'classnames';
+import {useState, useEffect, HTMLAttributes} from 'react';
 
-import moduleStyles from './video.module.scss';
 import {LinkButton} from '@/button';
+import {checkIfYouTubeIsBlocked} from '@/common/helpers';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
 
-import {checkIfYouTubeIsBlocked} from '@/common/helpers';
+import moduleStyles from './video.module.scss';
 
 export interface VideoProps extends HTMLAttributes<HTMLElement> {
   /** Video title */

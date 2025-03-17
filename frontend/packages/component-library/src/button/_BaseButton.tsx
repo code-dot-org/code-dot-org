@@ -5,6 +5,7 @@ import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import {ButtonType, ButtonColor} from './types';
+
 import moduleStyles from './_baseButton.module.scss';
 
 export interface TextButtonSpecificProps {

@@ -1265,6 +1265,9 @@ __metadata:
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@next/third-parties": "npm:^15.2.1"
     "@playwright/test": "npm:~1.49.1"
+    "@statsig/react-bindings": "npm:^3.14.1"
+    "@statsig/statsig-node-core": "npm:^0.0.8"
+    "@statsig/web-analytics": "npm:^3.14.1"
     "@testing-library/dom": "npm:^10.4.0"
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.2.0"
@@ -3894,6 +3897,133 @@ __metadata:
   dependencies:
     "@sinonjs/commons": "npm:^3.0.0"
   checksum: 10c0/2e2fb6cc57f227912814085b7b01fede050cd4746ea8d49a1e44d5a0e56a804663b0340ae2f11af7559ea9bf4d087a11f2f646197a660ea3cb04e19efc04aa63
+  languageName: node
+  linkType: hard
+
+"@statsig/client-core@npm:3.14.1":
+  version: 3.14.1
+  resolution: "@statsig/client-core@npm:3.14.1"
+  checksum: 10c0/45fa123d6566a22d89a7ff235b91e6585000af0e0ccdc1f9f1a31467f7a7c0ef3aa2b8fca153304878ad3441123644fd9f0159420fc5dd616d8e4738fac0a48b
+  languageName: node
+  linkType: hard
+
+"@statsig/js-client@npm:3.14.1":
+  version: 3.14.1
+  resolution: "@statsig/js-client@npm:3.14.1"
+  dependencies:
+    "@statsig/client-core": "npm:3.14.1"
+  checksum: 10c0/670207ddfff32a628abc89e74254716c04d519e24ebc030116786ecca88d0b433235e9ffc05e31ac725fd761024722be6a2f1a58243849b6ef75155fdb690643
+  languageName: node
+  linkType: hard
+
+"@statsig/react-bindings@npm:^3.14.1":
+  version: 3.14.1
+  resolution: "@statsig/react-bindings@npm:3.14.1"
+  dependencies:
+    "@statsig/client-core": "npm:3.14.1"
+    "@statsig/js-client": "npm:3.14.1"
+  peerDependencies:
+    react: ^16.6.3 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/e4b08df703f3b85869e952c71f3fe234892e34ff8a1384704b4ea74e160954336915f8948a6f4e6513ed4b06e0fdd85a087ee42ccfba238d901c7346f20dc998
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-darwin-arm64@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-darwin-arm64@npm:0.0.8"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-darwin-x64@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-darwin-x64@npm:0.0.8"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-linux-arm64-gnu@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-linux-arm64-gnu@npm:0.0.8"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-linux-arm64-musl@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-linux-arm64-musl@npm:0.0.8"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-linux-x64-gnu@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-linux-x64-gnu@npm:0.0.8"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-linux-x64-musl@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-linux-x64-musl@npm:0.0.8"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-win32-ia32-msvc@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-win32-ia32-msvc@npm:0.0.8"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core-win32-x64-msvc@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core-win32-x64-msvc@npm:0.0.8"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@statsig/statsig-node-core@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "@statsig/statsig-node-core@npm:0.0.8"
+  dependencies:
+    "@statsig/statsig-node-core-darwin-arm64": "npm:0.0.8"
+    "@statsig/statsig-node-core-darwin-x64": "npm:0.0.8"
+    "@statsig/statsig-node-core-linux-arm64-gnu": "npm:0.0.8"
+    "@statsig/statsig-node-core-linux-arm64-musl": "npm:0.0.8"
+    "@statsig/statsig-node-core-linux-x64-gnu": "npm:0.0.8"
+    "@statsig/statsig-node-core-linux-x64-musl": "npm:0.0.8"
+    "@statsig/statsig-node-core-win32-ia32-msvc": "npm:0.0.8"
+    "@statsig/statsig-node-core-win32-x64-msvc": "npm:0.0.8"
+  dependenciesMeta:
+    "@statsig/statsig-node-core-darwin-arm64":
+      optional: true
+    "@statsig/statsig-node-core-darwin-x64":
+      optional: true
+    "@statsig/statsig-node-core-linux-arm64-gnu":
+      optional: true
+    "@statsig/statsig-node-core-linux-arm64-musl":
+      optional: true
+    "@statsig/statsig-node-core-linux-x64-gnu":
+      optional: true
+    "@statsig/statsig-node-core-linux-x64-musl":
+      optional: true
+    "@statsig/statsig-node-core-win32-ia32-msvc":
+      optional: true
+    "@statsig/statsig-node-core-win32-x64-msvc":
+      optional: true
+  checksum: 10c0/8f2fe91a62196360a459d0a648c9c904e4d079a5be88bb401de48c9fb3f7d093a08ec7a5eb18759ae741ebfcf1cc985eb210788e2815024617c67ca44f6459da
+  languageName: node
+  linkType: hard
+
+"@statsig/web-analytics@npm:^3.14.1":
+  version: 3.14.1
+  resolution: "@statsig/web-analytics@npm:3.14.1"
+  dependencies:
+    "@statsig/client-core": "npm:3.14.1"
+    "@statsig/js-client": "npm:3.14.1"
+  checksum: 10c0/ca1638ad2bfc2698486f2d15ac7603878fd6457939dda17ca1620bfaebc6ff6c91a6eea6082fecb5c764cc13e062f51d649d99694fe9217cbd1f581d45bc911c
   languageName: node
   linkType: hard
 

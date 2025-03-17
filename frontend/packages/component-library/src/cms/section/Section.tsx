@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {SpacingNoneToS, SpacingNoneToL} from '@/common/types';
+
 import moduleStyles from './section.module.scss';
 
 export type SectionBackground =
