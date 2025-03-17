@@ -45,7 +45,7 @@ namespace :install do
         RakeUtils.python_venv_install
 
         puts CDO.dashboard_db_writer
-        if ENV['CI']
+        if ENV['CI'] && ENV['CI_JOB'] == 'unit_tests'
           # Prepare for dashboard unit tests to run. We can't seed UI test data
           # yet because doing so would break unit tests.
           RakeUtils.rake 'db:create db:test:prepare'
