@@ -8,7 +8,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './list.module.scss';
 
-const DEFAULT_ICON = 'circle-small';
+export const DEFAULT_ICON = 'circle-small';
 
 export type ListItem = {
   label: string | ReactNode;
