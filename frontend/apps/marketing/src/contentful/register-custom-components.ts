@@ -17,6 +17,7 @@ import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
+import List, {ListContentfulComponentDefinition} from '@/components/list';
 import Overline, {
   OverlineContentfulComponentDefinition,
 } from '@/components/overline';
@@ -58,6 +59,10 @@ defineComponents(
     {
       component: Link,
       definition: LinkContentfulComponentDefinition,
+    },
+    {
+      component: List,
+      definition: ListContentfulComponentDefinition,
     },
     {component: Overline, definition: OverlineContentfulComponentDefinition},
     {
