@@ -35,8 +35,7 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
     return (
       <em>
         <strong>✍ List placeholder.</strong> Please add a "List" content type
-        entry in the List sidebar, save it, and open the preview tab to view the
-        list.
+        entry in the List sidebar.
       </em>
     );
   }
