@@ -62,7 +62,7 @@ const FAQAccordionContentful: React.FunctionComponent<
     [faqs],
   );
 
-  // Show placeholder text until content entry is added
+  // Show placeholder text until a content entry is added
   if (!faqItems.length) {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
