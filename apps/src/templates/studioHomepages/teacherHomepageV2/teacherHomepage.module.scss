@@ -116,6 +116,7 @@
 .sectionCardBodyRight {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 375px;
   gap: 16px;
 }
@@ -157,18 +158,30 @@
 
 // CourseContentDropdown
 .courseContentDropdownContainer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--neutral-base-white);
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
   padding: 12px;
-  gap: 8px;
   width: 375px;
+  gap: 8px;
+
+  p {
+    margin: 0;
+  }
 }
 
 .courseContentDropdown {
+  height: 40px;
   width: 100%;
 
   div {
+    height: 40px;
     width: 100%;
+
+    select {
+      border-color: var(--neutral-gray-40);
+    }
   }
 }
