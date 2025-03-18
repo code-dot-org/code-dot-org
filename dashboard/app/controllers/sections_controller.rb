@@ -85,18 +85,6 @@ class SectionsController < ApplicationController
     render json: {num_hidden: num_hidden}
   end
 
-  def retrieve_units_for_dropdown
-    section = Section.find(params[:section_id])
-    units = []
-    if section.course_id
-      course = UnitGroup.find(section.course_id)
-      course.default_units.each do |unit|
-        units << {text: unit.title_for_display, value: unit.link}
-      end
-    end
-    render json: units
-  end
-
   def retrieve_lessons_for_dropdown
     section = Section.find(params[:section_id])
     lessons = []
@@ -106,9 +94,6 @@ class SectionsController < ApplicationController
       unit.lesson_groups.each do |lesson_group|
         lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map {|lesson| {text: lesson.relative_position.to_s + ': ' + lesson.localized_name, value: script_lesson_path(unit, lesson) << '/levels/1'}})
       end
-    else
-      retrieve_units_for_dropdown
-      return
     end
     render json: lessons
   end

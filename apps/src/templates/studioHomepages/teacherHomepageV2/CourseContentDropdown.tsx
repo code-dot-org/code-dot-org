@@ -9,6 +9,8 @@ import i18n from '@cdo/locale';
 
 import {TEACHER_NAVIGATION_SECTIONS_URL} from '../../teacherNavigation/TeacherNavigationPaths';
 
+import {TaskButton} from './TaskButton';
+
 import styles from './teacherHomepage.module.scss';
 
 interface CourseContentDropdownProps {
@@ -29,32 +31,34 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   section,
 }) => {
   const navigate = useNavigate();
-  const [unitLessons, setUnitLessons] = useState<UnitLessons[]>([]);
+  const [lessonList, setLessonList] = useState<UnitLessons[]>([]);
 
   // Retrieve units and lessons for the section
   useEffect(() => {
-    HttpClient.fetchJson<UnitLessons[]>(
-      `/sections/retrieve_lessons_for_dropdown/${section.id}`
-    )
-      .then(response => {
-        const lessons: UnitLessons[] = response.value.map(lesson => {
-          if (lesson.text.includes('Unit')) {
-            lesson.text = lesson.text.replace(' - ', ': ');
-          } else {
-            lesson.text = `${i18n.lesson()} ${lesson.text}`;
-          }
-          return lesson;
-        });
-        setUnitLessons(lessons);
-      })
-      .catch(error => console.error(error));
+    if (section.unitId) {
+      HttpClient.fetchJson<UnitLessons[]>(
+        `/sections/retrieve_lessons_for_dropdown/${section.id}`
+      )
+        .then(response => {
+          const lessons: UnitLessons[] = response.value.map(lesson => {
+            if (lesson.text.includes('Unit')) {
+              lesson.text = lesson.text.replace(' - ', ': ');
+            } else {
+              lesson.text = `${i18n.lesson()} ${lesson.text}`;
+            }
+            return lesson;
+          });
+          setLessonList(lessons);
+        })
+        .catch(error => console.error(error));
+    }
   }, [section.id, section.unitId]);
 
   const dropdownOptions = useMemo(() => {
-    const options = [{value: 'Go to', text: i18n.goTo()}];
-    options.push(...unitLessons);
+    const options = [{value: i18n.goToLesson(), text: i18n.goToLesson()}];
+    options.push(...lessonList);
     return options;
-  }, [unitLessons]);
+  }, [lessonList]);
 
   const onDropdownChange = (args: React.ChangeEvent<HTMLSelectElement>) => {
     if (args.target.value !== 'Go to') {
@@ -75,17 +79,26 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         <b>{`${i18n.course()}: `}</b>
         {section.courseDisplayName}
       </BodyThreeText>
-      <SimpleDropdown
-        className={styles.courseContentDropdown}
-        name="go-to-lesson-dropdown"
-        labelText="Go to a lesson"
-        isLabelVisible={false}
-        items={dropdownOptions}
-        selectedValue="Go to a lesson"
-        size="m"
-        dropdownTextThickness="thin"
-        onChange={args => onDropdownChange(args)}
-      />
+      {section.unitId ? (
+        <SimpleDropdown
+          className={styles.courseContentDropdown}
+          name="go-to-lesson-dropdown"
+          labelText={i18n.goToLesson()}
+          isLabelVisible={false}
+          items={dropdownOptions}
+          selectedValue={i18n.goToLesson()}
+          size="m"
+          dropdownTextThickness="thin"
+          onChange={args => onDropdownChange(args)}
+        />
+      ) : (
+        <TaskButton
+          buttonText={i18n.goToCourse()}
+          icon="desktop"
+          sectionId={section.id}
+          path={`courses/${section.courseVersionName}`}
+        />
+      )}
     </div>
   );
 };
