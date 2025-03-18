@@ -56,11 +56,10 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
     <Modal
       id="starter-assets-dialog"
       onClose={onClose}
-      title={'Select'}
+      title={'Library'}
       primaryButtonProps={{
         text: 'Open',
         onClick: primaryOnClick,
-        iconLeft: {iconName: 'check'},
         disabled: selectedFiles.length === 0,
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
