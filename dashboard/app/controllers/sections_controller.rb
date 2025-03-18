@@ -86,7 +86,7 @@ class SectionsController < ApplicationController
   end
 
   def retrieve_lessons_for_dropdown
-    section = Section.find(params[:section_id])
+    section = Section.find(params[:id])
     lessons = []
     if section.script_id
       unit = Unit.find(section.script_id)
