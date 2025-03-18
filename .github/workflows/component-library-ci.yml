@@ -84,3 +84,4 @@ jobs:
         continue-on-error: ${{ github.event_name == 'pull_request' }}
         env:
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+          APPLITOOLS_SHOW_LOGS: true
