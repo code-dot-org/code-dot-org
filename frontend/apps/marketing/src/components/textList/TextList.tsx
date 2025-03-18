@@ -28,8 +28,6 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
   iconName = SIMPLE_LIST_DEFAULT_ICON,
   ...props
 }) => {
-  console.log('items', items);
-
   const listItems: SimpleListItem[] = useMemo(
     () =>
       items.filter(Boolean).map(listItemEntry => ({
