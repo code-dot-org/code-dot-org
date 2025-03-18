@@ -65,7 +65,9 @@ export const VideoWithFallbackT: Story = {
     showCaption: false,
   },
   parameters: {
-    ignoreRegions,
+    eyes: {
+      ignoreRegions,
+    },
     docs: {
       description: {
         story:
