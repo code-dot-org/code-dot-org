@@ -25,7 +25,11 @@ export default {
 } as Meta;
 
 const defaultArgs: SimpleListProps = {
-  items: [{label: 'Item A'}, {label: 'Item B'}, {label: 'Item C'}],
+  items: [
+    {key: 'item-a', label: 'Item A'},
+    {key: 'item-b', label: 'Item B'},
+    {key: 'item-c', label: 'Item C'},
+  ],
 };
 
 const withIconArgs: SimpleListProps = {
@@ -110,27 +114,27 @@ export const Types: Story = {
       ...defaultArgs,
       type: 'primary',
       items: [
-        {label: 'Primary Item A'},
-        {label: 'Primary Item B'},
-        {label: 'Primary Item C'},
+        {key: 'item-a', label: 'Primary Item A'},
+        {key: 'item-b', label: 'Primary Item B'},
+        {key: 'item-c', label: 'Primary Item C'},
       ],
     },
     {
       ...defaultArgs,
       type: 'secondary',
       items: [
-        {label: 'Secondary Item A'},
-        {label: 'Secondary Item B'},
-        {label: 'Secondary Item C'},
+        {key: 'item-a', label: 'Secondary Item A'},
+        {key: 'item-b', label: 'Secondary Item B'},
+        {key: 'item-c', label: 'Secondary Item C'},
       ],
     },
     {
       ...defaultArgs,
       type: 'brand',
       items: [
-        {label: 'Brand Item A'},
-        {label: 'Brand Item B'},
-        {label: 'Brand Item C'},
+        {key: 'item-a', label: 'Brand Item A'},
+        {key: 'item-b', label: 'Brand Item B'},
+        {key: 'item-c', label: 'Brand Item C'},
       ],
     },
   ],
@@ -170,22 +174,38 @@ export const Sizes: Story = {
     {
       ...defaultArgs,
       size: 'xs',
-      items: [{label: 'XS Item A'}, {label: 'XS Item B'}, {label: 'XS Item C'}],
+      items: [
+        {key: 'item-a', label: 'XS Item A'},
+        {key: 'item-b', label: 'XS Item B'},
+        {key: 'item-c', label: 'XS Item C'},
+      ],
     },
     {
       ...defaultArgs,
       size: 's',
-      items: [{label: 'S Item A'}, {label: 'S Item B'}, {label: 'S Item C'}],
+      items: [
+        {key: 'item-a', label: 'S Item A'},
+        {key: 'item-b', label: 'S Item B'},
+        {key: 'item-c', label: 'S Item C'},
+      ],
     },
     {
       ...defaultArgs,
       size: 'm',
-      items: [{label: 'M Item A'}, {label: 'M Item B'}, {label: 'M Item C'}],
+      items: [
+        {key: 'item-a', label: 'M Item A'},
+        {key: 'item-b', label: 'M Item B'},
+        {key: 'item-c', label: 'M Item C'},
+      ],
     },
     {
       ...defaultArgs,
       size: 'l',
-      items: [{label: 'L Item A'}, {label: 'L Item B'}, {label: 'L Item C'}],
+      items: [
+        {key: 'item-a', label: 'L Item A'},
+        {key: 'item-b', label: 'L Item B'},
+        {key: 'item-c', label: 'L Item C'},
+      ],
     },
   ],
   play: ({
@@ -227,17 +247,29 @@ export const CustomIconSizes: Story = {
     {
       ...withIconArgs,
       size: 'xs',
-      items: [{label: 'XS Item A'}, {label: 'XS Item B'}, {label: 'XS Item C'}],
+      items: [
+        {key: 'item-a', label: 'XS Item A'},
+        {key: 'item-b', label: 'XS Item B'},
+        {key: 'item-c', label: 'XS Item C'},
+      ],
     },
     {
       ...withIconArgs,
       size: 's',
-      items: [{label: 'S Item A'}, {label: 'S Item B'}, {label: 'S Item C'}],
+      items: [
+        {key: 'item-a', label: 'S Item A'},
+        {key: 'item-b', label: 'S Item B'},
+        {key: 'item-c', label: 'S Item C'},
+      ],
     },
     {
       ...withIconArgs,
       size: 'm',
-      items: [{label: 'M Item A'}, {label: 'M Item B'}, {label: 'M Item C'}],
+      items: [
+        {key: 'item-a', label: 'M Item A'},
+        {key: 'item-b', label: 'M Item B'},
+        {key: 'item-c', label: 'M Item C'},
+      ],
       icon: {
         iconName: 'check-circle',
       },
@@ -245,7 +277,11 @@ export const CustomIconSizes: Story = {
     {
       ...withIconArgs,
       size: 'l',
-      items: [{label: 'L Item A'}, {label: 'L Item B'}, {label: 'L Item C'}],
+      items: [
+        {key: 'item-a', label: 'L Item A'},
+        {key: 'item-b', label: 'L Item B'},
+        {key: 'item-c', label: 'L Item C'},
+      ],
     },
   ],
   play: ({
@@ -288,18 +324,18 @@ export const Weight: Story = {
       ...defaultArgs,
       weight: 'normal',
       items: [
-        {label: 'Normal Item A'},
-        {label: 'Normal Item B'},
-        {label: 'Normal Item C'},
+        {key: 'item-a', label: 'Normal Item A'},
+        {key: 'item-b', label: 'Normal Item B'},
+        {key: 'item-c', label: 'Normal Item C'},
       ],
     },
     {
       ...defaultArgs,
       weight: 'bold',
       items: [
-        {label: 'Bold Item A'},
-        {label: 'Bold Item B'},
-        {label: 'Bold Item C'},
+        {key: 'item-a', label: 'Bold Item A'},
+        {key: 'item-b', label: 'Bold Item B'},
+        {key: 'item-c', label: 'Bold Item C'},
       ],
     },
   ],

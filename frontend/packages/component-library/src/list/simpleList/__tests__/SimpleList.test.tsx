@@ -4,7 +4,10 @@ import '@testing-library/jest-dom';
 import SimpleList, {SimpleListProps} from '../SimpleList';
 
 describe('Design System - SimpleList', () => {
-  const items = [{label: 'Item A'}, {label: 'Item B'}];
+  const items = [
+    {key: 'item-a', label: 'Item A'},
+    {key: 'item-b', label: 'Item B'},
+  ];
 
   const renderListContainer = (props: Partial<SimpleListProps> = {}) => {
     render(<SimpleList {...props} {...{items}} />);

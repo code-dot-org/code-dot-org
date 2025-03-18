@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ReactNode, HTMLAttributes} from 'react';
+import {Key, ReactNode, HTMLAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
@@ -11,6 +11,7 @@ import moduleStyles from './simpleList.module.scss';
 export const SIMPLE_LIST_DEFAULT_ICON = 'circle-small';
 
 export type SimpleListItem = {
+  key: Key;
   label: string | ReactNode;
 };
 
@@ -64,8 +65,8 @@ const SimpleList: React.FC<SimpleListProps> = ({
     )}
     {...HTMLAttributes}
   >
-    {items.map(({label}, index) => (
-      <li key={index} className={classNames(moduleStyles.simpleListItem)}>
+    {items.map(({key, label}) => (
+      <li key={key} className={classNames(moduleStyles.simpleListItem)}>
         <FontAwesomeV6Icon
           {...icon}
           aria-hidden="true"
