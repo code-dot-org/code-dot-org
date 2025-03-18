@@ -30,7 +30,6 @@ theme: responsive_full_width
       %img{src: "/images/blockchain-works-logo.png", alt: "", style: "width: 100%"}
     .clear
     .video-series
-      = view :"blockchain/blockchain_vid_01_intro"
       = view :"blockchain/blockchain_vid_02_why"
       = view :"blockchain/blockchain_vid_03_hood"
       = view :"blockchain/blockchain_vid_04_beyond"
@@ -93,35 +92,3 @@ theme: responsive_full_width
           %p Students follow along with each video by matching vocabulary from the video, then answering a reflection question about each video.
         .content-footer
           %a{href: CDO.studio_url("/s/blockchain-2023/lessons/6"), class: "link-button", aria:{label: "See lesson details for the Blockchain in a Day lesson"}} See lesson details
-
-= view :section_divider_line
-
-%section
-  .wrapper
-    %h2=hoc_s(:heading_additional_resources)
-    %p=hoc_s(:blockchain_resources_desc)
-    .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %h3=hoc_s(:blockchain_resources_01_heading)
-          %img{src: "/images/blockchain-coinbase-learn.png", alt: ""}
-          %p=hoc_s(:blockchain_resources_01_desc)
-        .content-footer
-          %a{href: "https://www.coinbase.com/learn", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_01_button_label)}}
-            =hoc_s(:call_to_action_learn_more)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %h3=hoc_s(:blockchain_resources_02_heading)
-          %img{src: "/images/blockchain-resource-image-generic.png", alt: ""}
-          %p=hoc_s(:blockchain_resources_02_desc)
-        .content-footer
-          %a{href: "https://www.youtube.com/@WhiteboardCrypto/featured", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_02_button_label)}}
-            =hoc_s(:call_to_action_watch_now)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %h3=hoc_s(:blockchain_resources_03_heading)
-          %img{src: "/images/blockchain-coinbase-hoc-activity.png", alt: ""}
-          %p=hoc_s(:blockchain_resources_03_desc)
-        .content-footer
-          %a{href: "https://coinbase.github.io/memorygame/story.html", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:blockchain_resources_03_button_label)}}
-            =hoc_s(:call_to_action_try_activity)

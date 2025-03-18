@@ -69,7 +69,37 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    ### TODO: Write sign up failure and cancel scenario tests for new sign up flow if applicable ACQ-2871
+    test "student cancel in-progress registration" do
+      mock_oauth
+
+      assert_does_not_create(User) do
+        post "/users/auth/google_oauth2"
+        get '/users/auth/google_oauth2/callback', params: {finish_url: '/users/sign_up/finish_student_account'}
+        assert_template 'omniauth/redirect'
+        assert PartialRegistration.in_progress? session
+
+        PartialRegistration.expects(:delete)
+
+        get '/users/cancel'
+        assert_redirected_to new_user_registration_path
+      end
+    end
+
+    test "teacher cancel in-progress registration" do
+      mock_oauth
+
+      assert_does_not_create(User) do
+        post "/users/auth/google_oauth2"
+        get '/users/auth/google_oauth2/callback', params: {finish_url: '/users/sign_up/finish_teacher_account'}
+        assert_template 'omniauth/redirect'
+        assert PartialRegistration.in_progress? session
+
+        PartialRegistration.expects(:delete)
+
+        get '/users/cancel'
+        assert_redirected_to new_user_registration_path
+      end
+    end
 
     test "student sign-in" do
       auth_hash = mock_oauth
@@ -107,28 +137,18 @@ module OmniauthCallbacksControllerTests
       refute_sign_up_tracking
     end
 
-    ### TODO: Create an equivalent test for this in new sign up flow ACQ-2871
-    # test "sign-in from sign-up page" do
-    #   auth_hash = mock_oauth
+    test "sign-in from sign-up page" do
+      auth_hash = mock_oauth
 
-    #   teacher = create(:teacher, :google_sso_provider, uid: auth_hash.uid)
+      teacher = create(:teacher, :google_sso_provider, uid: auth_hash.uid)
 
-    #   get '/users/sign_up'
-    #   refute_creates(User) {sign_in_through_google}
-    #   assert_redirected_to '/home'
-    #   assert_equal I18n.t('auth.signed_in'), flash[:notice]
+      get '/users/sign_up'
+      refute_creates(User) {sign_in_through_google}
+      assert_redirected_to '/home'
+      assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
-    #   assert_equal teacher.id, signed_in_user_id
-
-    #   assert_sign_up_tracking(
-    #     SignUpTracking::CONTROL_GROUP,
-    #     %w(
-    #       load-sign-up-page
-    #       google_oauth2-callback
-    #       google_oauth2-sign-in
-    #     )
-    #   )
-    # end
+      assert_equal teacher.id, signed_in_user_id
+    end
 
     # @return [OmniAuth::AuthHash] that will be passed to the callback when test-mode OAuth is invoked
     private def mock_oauth

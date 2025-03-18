@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-02-21T15:51:58.000Z",
   "level_num": "custom",
@@ -14,12 +13,16 @@
           "language": "py",
           "contents": "#Add in the missing variables\n\n\n#Modify the print statements to fix the errors\nprint(\"Hi my name is \" + name + \".\")\nprint(\"I am \" + height_float + \" feet tall, which is \" + height_in_inches + \" inches.\")\nprint(\"I am currently taking \" + num_classes + \" classes.\")\nprint(\"I know how to code: \" + can_code)",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
     "encrypted": "false",
     "ai_tutor_available": "false",
@@ -32,8 +35,19 @@
     "display_name": "Variables Galore!",
     "thumbnail_url": "https://images.code.org/0c5e6b83c2f9109e2ec9d254a20773df-Screenshot 2025-02-13 at 4.49.23 PM.png",
     "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzru9ACR/dod9hs+0Mo2nT8x+SLreTEKG\nIZBKmubkundQuY0T6uBc9Hv8l8ARRmgVcRX4VSJjUuzJtZ7arTkM387xHSdm\nxDK5eVVT6afeOVL2Qx3XMniPS2tefx475lk4JwP7wyK5r+YN8ByExUBG7dX8\npnWuW+tnzyvOkWFo1PsQT6FYwCmNb4RrGRW8Bp4zioPAR/KGwjZms65rxOAH\nrb8oZe1BPIMQKYFaSpK6MQANCVhAhQlIQYVspwqB4VpIIIQbD3BWm7c17mHQ\nsLhAy1inSCUvCM3KbnBee9g+7ALTqMDLIhAKSwgWuicxAPfzlvWfSbcRqcA5\n2nqrnoxoEwLCMJr3i62ACt3Ovwzc7On7wJmeiIeQ2lyEJNeb49ZZbxWMU9lA\nLt9oZJN6MtE6byBJTNFihIFGlWz5Hls+88hPMuwdnETZ4s6DpTXrwg4whIFA\n66dWTs9puYdEESDteLU+nW+xSA6PVNrqctQGOikjyT1GvqaxBX5GMlVhIhmu\nyFYAzkvvvJ4kbusMFk07QMcmTZOsYNgPylJ5j9UdX4UQbF+MoaVZNxb16us6\niH1G3mZDDwhi1UuEPeaydRXwaRReaMS/k0cCWXZxF0+tWIQparq0docAaFj+\nQmU2QLXEc3XPBodqh/91feaLYwiDPGs=\n",
-    "long_instructions": "## Do This:\r\n1. Add the missing variables. Give them the same names as in the `print` statements.\r\n2. Modify the `print` statements so that they print out each variable.\r\n\t- *Hint: What do you need to add to your code when printing out a string?*"
+    "long_instructions": "## Do This:\r\n1. Add the missing variables. Give them the same names as in the `print` statements.\r\n2. Modify the `print` statements so that they print out each variable.\r\n\t- *Hint: What do you need to add to your code when printing out a string?*",
+    "validation_file": {
+      "id": "1",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass TestMissingVariables(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Retrieve the program output once for all tests.\"\"\"\n        cls.lines = ValidationProtocol().get_stdout_logs()\n\n    def test_line_1_name(self):\n        \"\"\"\n        Line 1 should be: \"Hi my name is <name>.\"\n        where <name> isn't empty.\n        \"\"\"\n        line_1 = self.lines[0]\n        prefix = \"Hi my name is \"\n        suffix = \".\"\n\n        self.assertTrue(\n            line_1.startswith(prefix), \n            f'Line 1 should start with \"{prefix}\"'\n        )\n        self.assertTrue(\n            line_1.endswith(suffix), \n            f'Line 1 should end with \"{suffix}\"'\n        )\n\n        # Extract the variable part (the student's name)\n        variable_part = line_1[len(prefix):-len(suffix)].strip()\n        self.assertNotEqual(\n            variable_part, \n            \"\", \n            \"Name in line 1 is empty; you should add a variable for the name.\"\n        )\n\n    def test_line_2_height(self):\n        \"\"\"\n        Line 2 should be: \"I am <height_float> feet tall, which is <height_in_inches> inches.\"\n        Both <height_float> and <height_in_inches> should be non-empty.\n        \"\"\"\n        line_2 = self.lines[1]\n        prefix = \"I am \"\n        infix = \" feet tall, which is \"\n        suffix = \" inches.\"\n\n        # Check basic structure\n        self.assertTrue(\n            line_2.startswith(prefix), \n            f'Line 2 should start with \"{prefix}\"'\n        )\n        self.assertTrue(\n            line_2.endswith(suffix), \n            f'Line 2 should end with \"{suffix}\"'\n        )\n        self.assertIn(\n            infix, \n            line_2, \n            f'Line 2 should contain \"{infix}\"'\n        )\n\n        # Extract the variable parts\n        # Format: \"I am <height_float> feet tall, which is <height_in_inches> inches.\"\n        # Remove prefix\n        after_prefix = line_2[len(prefix):]\n        # Split on the infix\n        split_on_infix = after_prefix.split(infix)\n        self.assertEqual(\n            len(split_on_infix), \n            2, \n            f\"Line 2 doesn't contain the phrase '{infix}' exactly once.\"\n        )\n        height_float_str, remainder = split_on_infix[0], split_on_infix[1]\n        # Remove suffix\n        height_in_inches_str = remainder[: -len(suffix)]\n\n        # Ensure the variable parts are not empty\n        self.assertNotEqual(\n            height_float_str.strip(), \n            \"\", \n            \"The height_float portion is empty; you should include a variable.\"\n        )\n        self.assertNotEqual(\n            height_in_inches_str.strip(), \n            \"\", \n            \"The height_in_inches portion is empty; you should include a variable.\"\n        )\n\n    def test_line_3_num_classes(self):\n        \"\"\"\n        Line 3 should be: \"I am currently taking <num_classes> classes.\"\n        <num_classes> should be non-empty.\n        \"\"\"\n        line_3 = self.lines[2]\n        prefix = \"I am currently taking \"\n        suffix = \" classes.\"\n\n        self.assertTrue(\n            line_3.startswith(prefix), \n            f'Line 3 should start with \"{prefix}\"'\n        )\n        self.assertTrue(\n            line_3.endswith(suffix), \n            f'Line 3 should end with \"{suffix}\"'\n        )\n\n        # Extract the variable part\n        variable_part = line_3[len(prefix):-len(suffix)].strip()\n        self.assertNotEqual(\n            variable_part, \n            \"\", \n            \"The num_classes portion is empty; you should include a variable.\"\n        )\n\n    def test_line_4_can_code(self):\n        \"\"\"\n        Line 4 should be: \"I know how to code: <can_code>\"\n        <can_code> should be non-empty.\n        \"\"\"\n        line_4 = self.lines[3]\n        prefix = \"I know how to code: \"\n\n        self.assertTrue(\n            line_4.startswith(prefix), \n            f'Line 4 should start with \"{prefix}\"'\n        )\n\n        # Extract the variable part\n        variable_part = line_4[len(prefix):].strip()\n        self.assertNotEqual(\n            variable_part, \n            \"\", \n            \"The can_code portion is empty; you should include a variable.\"\n        )\n\nif __name__ == '__main__':\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-21T15:51:58.455+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson5-variables-5c\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson5-variables-5c\"},{\"changed_at\":\"2025-02-21 15:52:00 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-21T15:51:58.455+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson5-variables-5c\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson5-variables-5c\"},{\"changed_at\":\"2025-02-21 15:52:00 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-07 23:01:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-07 23:02:34 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

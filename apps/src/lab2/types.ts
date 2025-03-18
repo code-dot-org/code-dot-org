@@ -168,6 +168,7 @@ export interface ProjectFolder {
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
   id: number;
+  name: string;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;
@@ -194,7 +195,8 @@ export interface LevelProperties {
   helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
-  exemplarSources?: MultiFileSource;
+  exemplarSources?: Source;
+  exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
@@ -237,6 +239,17 @@ interface VideoData extends VideoLevelData {
   key?: string;
   enable_fallback?: boolean;
   autoplay?: boolean;
+}
+
+// Exemplar settings for a level.
+export interface ExemplarSettings {
+  // Validation settings (always expected)
+  validationEnabled: boolean;
+  validationSuccessMessage: string;
+  validationFailureMessage: string;
+  // Player settings (optional, only used for Music)
+  playerEnabled?: boolean;
+  playerTitle?: string;
 }
 
 // Python Lab specific property

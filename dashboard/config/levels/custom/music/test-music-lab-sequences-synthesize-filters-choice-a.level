@@ -1,0 +1,85 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-12T16:09:35.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "beethoven_symphony_no_6",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "sounds": {
+        "beethoven_symphony_no_6": [
+          "strings_repeating",
+          "main_theme_1",
+          "main_theme_2",
+          "main_theme_3",
+          "main_theme_4",
+          "hit",
+          "fanfare",
+          "strings_legato",
+          "strings_build",
+          "strings_open",
+          "strings_ascending",
+          "strings_resolve",
+          "strings_punch",
+          "flute_sustain",
+          "flute_theme",
+          "strings_sneaky",
+          "strings_up_and_down",
+          "strings_arpeggio",
+          "strings_melody",
+          "call_and_response"
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Make a song that will wake you up\r\nUse Beethoven’s 5th as an alarm clock ringtone. You have to slowly turn up the volume to wake yourself up for school. ",
+    "display_name": "Time to Wake Up",
+    "thumbnail_url": "https://images.code.org/63e2b15e381dd58b61d6c4a006e3ab89-Screenshot 2025-03-12 at 12.55.53 PM.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:09:35.833+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-predict\"},{\"changed_at\":\"2025-03-12 16:11:10 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 19:52:29 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 19:53:05 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 19:57:13 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:00:02 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:01:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:02:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:02:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:08:15 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:38:36 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

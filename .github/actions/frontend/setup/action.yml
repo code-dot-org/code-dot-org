@@ -8,6 +8,14 @@ runs:
       shell: bash
       run: corepack enable
 
+    - name: Cache turborepo
+      uses: actions/cache@v4
+      with:
+        path: frontend/.turbo
+        key: "${{ runner.os }}-turbo-${{ github.sha }}"
+        restore-keys: |
+          ${{ runner.os }}-turbo-
+
     - uses: actions/setup-node@v4
       with:
         node-version-file: ".nvmrc"

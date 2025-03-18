@@ -19,12 +19,19 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import AiDiffChat, {
+import AiDiffChat from '../AiDiffChat';
+import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
   EXTRA_PRACTICE_PROMPT,
   FINISH_EARLY_PROMPT,
-} from '../AiDiffChat';
+  ADJUST_TIMING_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  REAL_WORLD_PROMPT,
+  EXIT_TICKET_PROMPT,
+  MINI_LESSON_PROMPT,
+  LESSON_HOOK_PROMPT,
+} from '../AiDiffPredefinedPrompts';
 import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
@@ -44,9 +51,9 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: string;
-  scriptId: number;
-  scriptName: string;
-  unitDisplayName: string;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
   firstState?: WelcomeState;
 }
 
@@ -56,12 +63,24 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
   plan: {
     initialMessage:
       'Lets iterate together! What would you like to change? Below are some of the tasks I can help you with.',
-    suggestedPrompts: [EXPLAIN_CONCEPT_PROMPT, EXAMPLE_PROMPT],
+    suggestedPrompts: [
+      EXPLAIN_CONCEPT_PROMPT,
+      EXAMPLE_PROMPT,
+      ADJUST_TIMING_PROMPT,
+      DEBUG_MISTAKES_PROMPT,
+      REAL_WORLD_PROMPT,
+    ],
   },
   create: {
     initialMessage:
       'Lets work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.',
-    suggestedPrompts: [FINISH_EARLY_PROMPT, EXTRA_PRACTICE_PROMPT],
+    suggestedPrompts: [
+      FINISH_EARLY_PROMPT,
+      EXTRA_PRACTICE_PROMPT,
+      EXIT_TICKET_PROMPT,
+      MINI_LESSON_PROMPT,
+      LESSON_HOOK_PROMPT,
+    ],
   },
 };
 
@@ -209,7 +228,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 selectedOption === 'plan',
                 () => setSelectedOption('plan'),
                 'folder-tree',
-                'Plan',
+                'Ideate',
                 'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
               )}
               {optionButton(

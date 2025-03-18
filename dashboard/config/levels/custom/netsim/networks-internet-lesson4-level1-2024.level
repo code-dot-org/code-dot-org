@@ -17,7 +17,7 @@
     "can_connect_to_routers": "true",
     "show_add_router_button": "true",
     "show_log_browser_button": "true",
-    "message_granularity": "bits",
+    "message_granularity": "packets",
     "automatic_receive": "true",
     "broadcast_mode": "false",
     "connected_routers": "true",
@@ -31,7 +31,7 @@
     "show_add_packet_button": "false",
     "show_packet_size_control": "false",
     "show_tabs": "[\"instructions\", \"my_device\", \"router\"]",
-    "default_tab_index": "-3",
+    "default_tab_index": "0",
     "show_pulse_rate_slider": "false",
     "show_metronome": "false",
     "show_encoding_controls": "[\"binary\", \"hexadecimal\", \"decimal\", \"ascii\"]",
@@ -49,9 +49,10 @@
     "default_random_drop_chance": "0",
     "show_dns_mode_control": "false",
     "default_dns_mode": "none",
+    "default_packet_size_limit": "Infinity",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-20T03:07:53.061+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson5-level1\\\"\"],\"cloned_from\":\"test-networks-internet-lesson5-level1\"},{\"changed_at\":\"2025-02-20 03:08:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-20T03:07:53.061+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson5-level1\\\"\"],\"cloned_from\":\"test-networks-internet-lesson5-level1\"},{\"changed_at\":\"2025-02-20 03:08:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-12 19:54:31 +0000\",\"changed\":[\"message_granularity\",\"default_tab_index\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
   <blocks/>
 </NetSim>

@@ -31,16 +31,16 @@ class CoursesController < ApplicationController
   end
 
   def show
+    # If this is a single-unit course, redirect to the unit overview
+    if @unit_group.single_unit_course?
+      redirect_to script_path(@unit_group.default_units.first)
+      return
+    end
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
       redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
-      return
-    end
-
-    # If this is a single-unit course, redirect to the unit overview
-    if @unit_group.single_unit_course?
-      redirect_to script_path(@unit_group.default_units.first)
       return
     end
 

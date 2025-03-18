@@ -2,3 +2,4 @@
 // therefore, tell typescript to stub out scss modules
 declare module '*.module.scss';
 declare module '*.scss';
+declare module '*.png';

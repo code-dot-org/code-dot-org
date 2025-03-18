@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-04 22:46:30 UTC",
+    "serialized_at": "2025-03-13 20:33:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -463,6 +463,7 @@
       "key": "b47a161b-512e-41aa-9137-ecd18ed38994",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1519,10 +1520,27 @@
       }
     },
     {
-      "key": "27080514-4c97-4164-9139-cc8f263c8883",
+      "key": "e9b531cc-fb35-4d82-844f-67a79fc3f1cc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the components of a computer system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to introduce operating systems, application software, and utility software.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students work on the Scavenger Hunt.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working encourage them to share task solutions with each other as they explore where to find these. Push them to consider looking in multiple places and on different devices for the tasks they might get stuck on. They don’t need to find all the solutions on a single device or platform. If students finish early, push them to find as many examples for the bonus tasks as possible.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to answer the questions.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the components of a computer system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to introduce operating systems, application software, and utility software.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students work on the Scavenger Hunt.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working encourage them to share task solutions with each other as they explore where to find these. Push them to consider looking in multiple places and on different devices for the tasks they might get stuck on. They don’t need to find all the solutions on a single device or platform. If students finish early, push them to find as many examples for the bonus tasks as possible.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are some resources that can help students get unstuck if they can't get going on the scavenger hunt.\n- [Puter](https://www.loom.com/share/ae0b0be8276a44c3b8f99f294f6b049a?sid=82a38b15-d003-4dc6-8cd2-428d6f809e02)\n- [Mac and Windows](https://support.home.sophos.com/hc/en-us/articles/115005340066-Finding-Operating-System-Information-on-Windows-and-Mac)\n- [Chromebooks](https://youtu.be/8Oy6Uiix7U0?si=O2b7CFDJSL0z6v-L)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e9b531cc-fb35-4d82-844f-67a79fc3f1cc",
+        "lesson_activity.key": "a8868a21-1a73-4fda-a988-c89e910be198"
+      }
+    },
+    {
+      "key": "27080514-4c97-4164-9139-cc8f263c8883",
+      "position": 5,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to answer the questions.",
         "progression_name": "Software Scavenger Hunt Debrief",
         "tips": [
           {
@@ -1538,7 +1556,7 @@
     },
     {
       "key": "506322ae-556e-44e3-a52f-18e49410a0ae",
-      "position": 5,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -1548,7 +1566,7 @@
     },
     {
       "key": "98dd11d7-28d4-43e9-8367-27640e06c4c7",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you learn about the roles of operating systems, application software, and utility software?*\n- *Which of these types of software do you use most often, and why?*\n- *How do you think understanding these tools will help you in the future?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ensure students can clearly articulate the distinct roles of each type of software: operating systems manage hardware and software, application software helps users complete tasks, and utility software keeps systems running smoothly. Help students connect the lesson to their own lives by identifying the software they use regularly. Highlight how each type of software impacts their day-to-day activities, such as gaming, communicating, or studying. Prompt students to consider why some types of software might feel more \"invisible\" (like utility software) compared to application software they interact with directly. Discuss how knowledge of these software types applies to future careers or problem-solving scenarios (e.g., using applications in a job, troubleshooting operating systems, optimizing devices with utilities). Emphasize how understanding software roles can make students more independent when troubleshooting or choosing the right tools for a task. Help students see the value of learning about software now to prepare for challenges in technology-driven fields or daily life.",
         "tips": [
@@ -1565,7 +1583,7 @@
     },
     {
       "key": "2a41510e-152a-480b-a0be-3d25facb20b2",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1633,7 +1651,7 @@
       "key": "117b6be0-5df6-44fc-a0f8-3dab6ff1f612",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
         "duration": "20",
         "name": "Troubleshooting",
         "progression_name": "Troubleshooting",
@@ -1720,7 +1738,7 @@
       "key": "bb84d681-fc09-42d6-b0e1-7dd501e7288d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 6, Level 3. Students complete the activity guide with the chatbot.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.",
         "progression_name": "Optimization"
       },
       "seeding_key": {
@@ -1746,17 +1764,6 @@
       }
     },
     {
-      "key": "b31db3d4-1d44-435f-8219-8cac1689f551",
-      "position": 9,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551",
-        "lesson_activity.key": "2fb2e33e-2059-4da7-a118-e5f682bc10fb"
-      }
-    },
-    {
       "key": "91bc4ab2-c2fb-45f2-85f2-936fd28261bb",
       "position": 1,
       "properties": {
@@ -1770,6 +1777,17 @@
       },
       "seeding_key": {
         "activity_section.key": "91bc4ab2-c2fb-45f2-85f2-936fd28261bb",
+        "lesson_activity.key": "0dfb56cb-e7ae-4854-a62e-aa625e25fcfd"
+      }
+    },
+    {
+      "key": "59c70782-a572-4788-a9fd-b248c1039eb4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4",
         "lesson_activity.key": "0dfb56cb-e7ae-4854-a62e-aa625e25fcfd"
       }
     },
@@ -4092,7 +4110,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4"
       },
       "level_keys": [
         "computer-systems-lesson5-level4-2024"
@@ -5256,7 +5274,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
-        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+        "activity_section.key": "59c70782-a572-4788-a9fd-b248c1039eb4"
       }
     },
     {
@@ -5751,6 +5769,39 @@
       },
       "seeding_key": {
         "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csad-pilot-content-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csad-pilot-content-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csad-pilot-content-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -6664,6 +6715,24 @@
     },
     {
       "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "computer_systems_devices_unit_guide",
         "script.name": "csad-pilot-content-2024"
       }
@@ -7312,7 +7381,237 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

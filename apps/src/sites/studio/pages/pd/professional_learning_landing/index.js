@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -37,4 +38,5 @@ $(() => {
     </Provider>,
     document.getElementById('pl-landing-page-container')
   );
+  displayDifferentiationChat();
 });

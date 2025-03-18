@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import {buttonColors} from '../index';
 import _BaseButton, {_BaseButtonProps} from '../_BaseButton';
+import {buttonColors} from '../index';
 
 export default {
   title: 'DesignSystem/Button/_BaseButton',
@@ -337,6 +337,34 @@ GroupOfSizesOf_BaseButtons.args = {
       text: 'Button l',
       size: 'l',
       onClick: () => null,
+    },
+    {
+      isIconOnly: true,
+      size: 'xs',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      onClick: () => null,
+      'aria-label': 'Icon only xs',
+    },
+    {
+      isIconOnly: true,
+      size: 's',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      onClick: () => null,
+      'aria-label': 'Icon only s',
+    },
+    {
+      isIconOnly: true,
+      size: 'm',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      onClick: () => null,
+      'aria-label': 'Icon only m',
+    },
+    {
+      isIconOnly: true,
+      size: 'l',
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      onClick: () => null,
+      'aria-label': 'Icon only l',
     },
   ],
 };

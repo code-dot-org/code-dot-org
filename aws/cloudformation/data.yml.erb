@@ -623,3 +623,89 @@ Resources:
     Properties:
       AliasName: alias/auditlogs
       TargetKeyId: !Ref AuditLogsKey
+  # WAF WebACL Logs S3 Bucket
+  WebApplicationFirewallAccessControlListLogsBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "aws-waf-logs-cdo"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          - Id: "Expire old Versions after 15 months"
+            NoncurrentVersionExpirationInDays: 455
+            Status: "Enabled"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  WAFLogsDatabase:
+    Type: "AWS::Glue::Database"
+    Properties:
+      CatalogId: !Ref "AWS::AccountId"
+      DatabaseInput:
+        Name: "waf_logs_db"
+        Description: "Database for WAF WebACL logs"
+  GlobalWebACLLogsTable:
+    Type: "AWS::Glue::Table"
+    Properties:
+      CatalogId: !Ref "AWS::AccountId"
+      DatabaseName: !Ref WAFLogsDatabase
+      TableInput:
+        Name: "waf_logs_code_dot_org"
+        Description: "WAF WebACL logs table for code-dot-org Global WebACL"
+        TableType: "EXTERNAL_TABLE"
+        Parameters: {
+          "classification": "json",
+          "projection.enabled": "true",
+          "projection.year.type": "integer",
+          "projection.year.range": "2020,2030",
+          "projection.month.type": "integer",
+          "projection.month.range": "1,12",
+          "projection.day.type": "integer",
+          "projection.day.range": "1,31"
+        }
+        PartitionKeys:
+          - Name: "year"
+            Type: "int"
+          - Name: "month"
+            Type: "int"
+          - Name: "day"
+            Type: "int"
+        StorageDescriptor:
+          Location: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/"
+          InputFormat: "org.apache.hadoop.mapred.TextInputFormat"
+          OutputFormat: "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat"
+          SerdeInfo:
+            SerializationLibrary: "org.openx.data.jsonserde.JsonSerDe"
+          Columns:
+            - Name: "timestamp"
+              Type: "bigint"
+            - Name: "formatVersion"
+              Type: "int"
+            - Name: "webaclId"
+              Type: "string"
+            - Name: "terminatingRuleId"
+              Type: "string"
+            - Name: "terminatingRuleType"
+              Type: "string"
+            - Name: "action"
+              Type: "string"
+            - Name: "httpSourceName"
+              Type: "string"
+            - Name: "httpSourceId"
+              Type: "string"
+            - Name: "ruleGroupList"
+              Type: "array<struct<ruleGroupId:string,terminatingRule:struct<ruleId:string,action:string,ruleMatchDetails:array<struct<conditionType:string,sensitivityLevel:string,location:string,matchedData:array<string>>>>,nonTerminatingMatchingRules:array<struct<ruleId:string,action:string,ruleMatchDetails:array<struct<conditionType:string,sensitivityLevel:string,location:string,matchedData:array<string>>>>>>"
+            - Name: "rateBasedRuleList"
+              Type: "array<struct<rateBasedRuleId:string,limitKey:string,maxRateAllowed:int>>"
+            - Name: "nonTerminatingMatchingRules"
+              Type: "array<struct<ruleId:string,action:string,ruleMatchDetails:array<struct<conditionType:string,sensitivityLevel:string,location:string,matchedData:array<string>>>>>"
+            - Name: "httpRequest"
+              Type: "struct<clientIp:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpVersion:string,httpMethod:string,requestId:string>"

@@ -435,6 +435,10 @@ export default class ProjectManager {
       this.forceReloading = true;
       this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
       reload();
+    } else if (error.message.includes('413')) {
+      // Log 413s as warnings. The save fail listener should handle these errors and labs should
+      // show a reasonable error message to the user.
+      this.metricsReporter.logWarning('Project too large to save');
     } else {
       // Otherwise, we log the error, including the message as details.
       this.metricsReporter.logError(errorMessage, error, {

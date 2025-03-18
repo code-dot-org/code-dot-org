@@ -1,12 +1,12 @@
-import {useState, useEffect, HTMLAttributes} from 'react';
 import classNames from 'classnames';
+import {useState, useEffect, HTMLAttributes} from 'react';
 
-import moduleStyles from './video.module.scss';
 import {LinkButton} from '@/button';
+import {checkIfYouTubeIsBlocked} from '@/common/helpers';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
 
-import {checkIfYouTubeIsBlocked} from '@/common/helpers';
+import moduleStyles from './video.module.scss';
 
 export interface VideoProps extends HTMLAttributes<HTMLElement> {
   /** Video title */
@@ -71,7 +71,7 @@ const Video: React.FC<VideoProps> = ({
             // eslint-disable-next-line jsx-a11y/media-has-caption
             <video
               className={classNames(className)}
-              title={videoTitle}
+              title={videoTitle || 'Video player'}
               poster={posterThumbnail}
               src={videoFallback}
               controls
@@ -95,16 +95,14 @@ const Video: React.FC<VideoProps> = ({
           <iframe
             className={classNames(className)}
             src={`https://www.youtube-nocookie.com/embed/${youTubeId}`}
-            title={videoTitle}
+            title={videoTitle || 'YouTube video player'}
             allowFullScreen
             {...HTMLAttributes}
           />
         )}
       </div>
       <div className={moduleStyles.footer}>
-        {showCaption && (
-          <Figcaption className={moduleStyles.caption}>{videoTitle}</Figcaption>
-        )}
+        {showCaption && <Figcaption>{videoTitle}</Figcaption>}
         {videoFallback && (
           <LinkButton
             className={moduleStyles.download}

@@ -18,6 +18,18 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "f3c10536-3737-41e8-abad-070fd5750abe",
+        "notice": "AP CS Assessments Focus Group",
+        "details": "Join us in investigating disparities in AP CSP and AP CSA assessments. We are aiming to learn more about performance gaps among students from underrepresented backgrounds and exploring potential solutions to improve equity in CS education. Your insights will contribute to informing these solutions to support all learners.",
+        "link": "https://usabi.li/do/24a50b8956e8/dfad",
+        "type": "feedback",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Sign up now!"
+      }
+    ],
     "family_name": "csp",
     "has_numbered_units": true,
     "has_verified_resources": true,

@@ -1,0 +1,118 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-12T16:04:16.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "set_effect_at_current_location_simple2",
+                  "id": "[D1MMru.60!tLi9?F^c_",
+                  "fields": {
+                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                    "effects_value": "<field name=\"effects_value\">low</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "electro/drum_beat_cowbell"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "6bw`c79?_DE6Dx6_e~J!",
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "Rbszx7Iu^K6f2[|)P+)0",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "electro/drum_beat_cowbell"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "krj`]KUwMmoJf*sK[(Xs",
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "t#oJ30TI|.n0kN{)2;O9",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "electro/drum_beat_cowbell"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Make a Prediction \r\nNotice there is are new blocks in this code. What do you think the first cowbell will sound like? What about the second?",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:04:16.095+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict\"},{\"changed_at\":\"2025-03-12 16:05:19 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 17:21:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:37:03 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

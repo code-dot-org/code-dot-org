@@ -1,0 +1,11 @@
+name 'test-elem-career-journeys-basic-skills-choices'
+display_name 'Practice Recreating these Timelines with Code'
+description 'Choose an option below to try to recreate with code.'
+
+sublevels
+level 'test-elem-career-journeys-sprite-location'
+level 'test-elem-career-journeys-backgrounds'
+level'test-elem-career-journeys-event-say'
+
+
+

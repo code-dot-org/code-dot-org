@@ -1,6 +1,7 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  mount Marketing::Engine => '/marketing'
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
@@ -56,6 +57,8 @@ Dashboard::Application.routes.draw do
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
+
+    resources :user_level_evaluations, only: [:create]
 
     resources :user_level_interactions, only: [:create]
 
@@ -145,6 +148,7 @@ Dashboard::Application.routes.draw do
       end
       collection do
         post 'section_instructors_verified'
+        post 'archive_all'
       end
     end
     # Section API routes (JSON only)
@@ -385,7 +389,7 @@ Dashboard::Application.routes.draw do
       member do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
-        delete '/:filename', to: 'level_starter_assets#destroy'
+        delete '/:filename', to: 'level_starter_assets#destroy', format: true
       end
     end
 
@@ -607,15 +611,21 @@ Dashboard::Application.routes.draw do
     get '/admin/debug', to: 'admin_reports#debug'
 
     # internal search tools
-    get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-    get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
-    post '/admin/lookup_section', to: 'admin_search#lookup_section'
-    post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
-    get '/admin/pilots/', to: 'admin_search#pilots', as: 'pilots'
-    post '/admin/pilots/', to: 'admin_search#create_pilot', as: 'create_pilot'
-    get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
-    post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
-    post '/admin/remove_from_pilot', to: 'admin_search#remove_from_pilot', as: 'remove_from_pilot'
+    resources :admin_search, only: [], path: '/admin' do
+      collection do
+        get :find_students
+        get :lookup_section
+        post :lookup_section
+        post :undelete_section
+      end
+    end
+
+    resources :admin_pilots, only: [:index, :create, :show], path: '/admin/pilots', param: 'pilot_name' do
+      collection do
+        post :add_to_pilot
+        post :remove_from_pilot
+      end
+    end
 
     # internal engineering dashboards
     get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
@@ -1209,6 +1219,7 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+    post '/openai/evaluate', to: 'openai_evaluate#evaluate'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
@@ -1221,6 +1232,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
+    post 'aidiff_messages/:aidiff_message_id/submit_feedback', to: 'aidiff_messages#submit_feedback'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

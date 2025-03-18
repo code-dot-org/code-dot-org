@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-03-05T17:56:43.000Z",
   "level_num": "custom",
@@ -352,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "## Do This: \r\n1. Add `painter = Painter()` to create a `Painter` object.\r\n    - Hint: Look at the the code comments.\r\n    - Press Run to test your code.\r\n    - *Discuss: Did the `Painter` object appear where you expected it to?*\r\n2. Add `painter.move()` to make the `Painter` move forward.\r\n    - *Discuss: Which direction do you expect the `Painter` to move?*\r\n    - Press Run to test your code.\r\n3. Add more `painter.move()` methods to move the `Painter` to the cone.\r\n\t- Press Run to test your code.",
+    "long_instructions": "## Do This: \r\n1. Add `painter = Painter()` to create a `Painter` object.\r\n    - Hint: Look at the the code comments.\r\n    - Press Run to test your code.\r\n    - *Discuss: Did the `Painter` object appear where you expected it to?*\r\n2. Add `painter.move()` to make the `Painter` move forward.\r\n    - *Consider: Which direction do you expect the `Painter` to move?*\r\n    - Press Run to test your code.\r\n3. Add more `painter.move()` methods to move the `Painter` to the cone.\r\n\t- Press Run to test your code.",
     "start_sources": {
       "files": {
         "0": {
@@ -372,7 +373,6 @@
       ]
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-05T17:56:43.510+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-05T17:56:43.510+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1\"},{\"changed_at\":\"2025-03-06 16:31:04 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -302,7 +302,7 @@ module Pd
 
     PD_SESSION_FORMATS = [
       {value: 'in_person', label: 'In-Person', enum_value: 0},
-      {value: 'virtual', label: 'Digital', enum_value: 1}
+      {value: 'virtual', label: 'Virtual', enum_value: 1}
     ].freeze
 
     SESSION_FIELDS = {

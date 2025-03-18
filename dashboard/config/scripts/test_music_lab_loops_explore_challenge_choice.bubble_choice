@@ -1,0 +1,9 @@
+name 'test-music-lab-loops-explore-challenge-choice'
+display_name 'Help Other Coders Use Loops'
+description 'These coders made songs they love. Help them use loops in their code to loop repeating patterns.'
+
+sublevels
+level 'test-music-lab-loops-explore-challenge-choice-a'
+level 'test-music-lab-loops-explore-challenge-choice-b'
+
+
