@@ -1,12 +1,12 @@
 // Creates a definition for the List component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-import {LIST_DEFAULT_ICON} from '@code-dot-org/component-library/list';
+import {SIMPLE_LIST_DEFAULT_ICON} from '@code-dot-org/component-library/list';
 
 import {componentSizeXSToLDefinition} from '@/components/common/definitions';
 
-export const ListContentfulComponentDefinition: ComponentDefinition = {
-  id: 'list',
+export const TextListContentfulComponentDefinition: ComponentDefinition = {
+  id: 'simpleList',
   name: 'Text List',
   category: '03: Basic',
   thumbnailUrl:
@@ -51,7 +51,7 @@ export const ListContentfulComponentDefinition: ComponentDefinition = {
       group: 'style',
       description:
         'Font Awesome icon name to be displayed next to each list item',
-      defaultValue: LIST_DEFAULT_ICON,
+      defaultValue: SIMPLE_LIST_DEFAULT_ICON,
     },
     type: {
       displayName: 'Icon color',

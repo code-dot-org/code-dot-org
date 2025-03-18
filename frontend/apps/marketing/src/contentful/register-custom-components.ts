@@ -17,7 +17,6 @@ import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
-import List, {ListContentfulComponentDefinition} from '@/components/list';
 import Overline, {
   OverlineContentfulComponentDefinition,
 } from '@/components/overline';
@@ -27,6 +26,9 @@ import Paragraph, {
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
+import TextList, {
+  TextListContentfulComponentDefinition,
+} from '@/components/textList';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 import {
@@ -60,10 +62,6 @@ defineComponents(
       component: Link,
       definition: LinkContentfulComponentDefinition,
     },
-    {
-      component: List,
-      definition: ListContentfulComponentDefinition,
-    },
     {component: Overline, definition: OverlineContentfulComponentDefinition},
     {
       component: Paragraph,
@@ -75,6 +73,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: TextList,
+      definition: TextListContentfulComponentDefinition,
     },
     {
       component: Video,

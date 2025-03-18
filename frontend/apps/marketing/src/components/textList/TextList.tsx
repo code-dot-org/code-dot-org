@@ -1,32 +1,39 @@
 import {Entry, EntryFields} from 'contentful';
-import List, {
-  LIST_DEFAULT_ICON,
-  ListProps,
-  ListItem,
+import {
+  SimpleList,
+  SIMPLE_LIST_DEFAULT_ICON,
+  SimpleListProps,
+  SimpleListItem,
 } from '@code-dot-org/component-library/list';
 import {useMemo} from 'react';
 
 import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
 
 type ListItemEntry = Entry & {
+  sys: {
+    id: string;
+  };
   fields: {
     shortText: EntryFields.Text;
   };
 };
 
-interface ListContentfulProps extends Omit<ListProps, 'items'> {
+interface ListContentfulProps extends Omit<SimpleListProps, 'items'> {
   items?: ListItemEntry[];
   iconName?: string;
 }
 
 const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
   items = [],
-  iconName = LIST_DEFAULT_ICON,
+  iconName = SIMPLE_LIST_DEFAULT_ICON,
   ...props
 }) => {
-  const listItems: ListItem[] = useMemo(
+  console.log('items', items);
+
+  const listItems: SimpleListItem[] = useMemo(
     () =>
       items.filter(Boolean).map(listItemEntry => ({
+        key: listItemEntry.sys.id,
         label: listItemEntry.fields.shortText,
       })),
     [items],
@@ -43,7 +50,7 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
   }
 
   return (
-    <List
+    <SimpleList
       {...props}
       items={listItems}
       icon={{
