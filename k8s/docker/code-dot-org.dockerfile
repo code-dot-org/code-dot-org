@@ -22,6 +22,8 @@ COPY --chown=${UID} \
   Gemfile.lock \
   ./
 
+# /Gemfile includes '**/engines/*/*.gemspec', these will need to be added to this dockerfile
+# one by one as they are defined, or the build will be broken.
 COPY --chown=${UID} \
   ./dashboard/engines/marketing/marketing.gemspec \
   ./dashboard/engines/marketing/
