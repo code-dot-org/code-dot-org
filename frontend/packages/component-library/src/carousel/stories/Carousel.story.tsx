@@ -389,15 +389,6 @@ VideoCarouselsTest.parameters = {
   },
   eyes: {
     waitBeforeCapture: 4000,
-    ignoreRegions: [
-      // Top left logo
-      {
-        left: 390,
-        top: 210,
-        width: 195,
-        height: 60,
-      },
-    ],
   },
 };
 VideoCarouselsTest.play = async ({
