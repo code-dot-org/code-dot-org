@@ -11,7 +11,7 @@
     "long_instructions": "#### Add more sounds to Play Together\r\n\r\nTry this: \r\n- Move the `bass` sound into the `play together` block. \r\n- Find and add a `drum` sound to the `play together` block. \r\n- Layer as many sounds as you'd like!\r\n\r\n\r\n",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
@@ -101,7 +101,8 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "project_template_level_name": "test-music-lab-sequences-explore-play-template-parent",
     "validations": [
@@ -116,7 +117,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T19:59:27.227+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-predict\"},{\"changed_at\":\"2025-03-07 20:03:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:13:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:14:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:17:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:18:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:21:52 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:23:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 21:14:13 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 21:21:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T19:59:27.227+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-predict\"},{\"changed_at\":\"2025-03-07 20:03:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:13:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:14:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:17:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:18:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:21:52 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:23:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 21:14:13 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 21:21:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:23:26 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,8 +1,9 @@
-import {expect, Locator} from '@playwright/test';
-import {test} from './fixtures/base';
-import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
-import {AllTheThingsPage} from './pom/all-the-things';
 import AxeBuilder from '@axe-core/playwright';
+import {expect, Locator} from '@playwright/test';
+
+import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
+import {test} from './fixtures/base';
+import {AllTheThingsPage} from './pom/all-the-things';
 
 test.describe('All the things UI e2e test', () => {
   test.describe('a11y', () => {

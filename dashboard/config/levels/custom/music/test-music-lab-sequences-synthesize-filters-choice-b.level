@@ -10,7 +10,7 @@
     "instructions_important": "false",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "beethoven_symphony_no_6",
@@ -138,14 +138,15 @@
           }
         ],
         "kind": "flyoutToolbox"
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "long_instructions": "### Make a song that will make you fall asleep\r\nUse effects to create a lullaby that gently puts the listener to sleep. ",
     "display_name": "Time to go to sleep",
     "thumbnail_url": "https://images.code.org/119ef3955b83bfd95d2a078f03cce047-Screenshot 2025-03-12 at 12.56.21 PM.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12T16:11:48.612+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-a\"},{\"changed_at\":\"2025-03-12 16:12:10 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 19:52:34 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:00:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:06:57 +0000\",\"changed\":[\"level_data\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:07:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:08:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:09:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:10:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:11:48.612+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-a\"},{\"changed_at\":\"2025-03-12 16:12:10 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 19:52:34 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:00:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:06:57 +0000\",\"changed\":[\"level_data\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:07:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:08:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:09:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:10:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:39:00 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

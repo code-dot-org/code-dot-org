@@ -40,6 +40,8 @@ const initialState: AichatState = {
   saveInProgress: false,
   currentSaveType: undefined,
   userHasAichatAccess: false,
+  stagedFiles: [],
+  stagedFilesAlert: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -215,6 +217,50 @@ const aichatSlice = createSlice({
       state.saveInProgress = false;
       state.currentSaveType = undefined;
     },
+    addStagedFile(
+      state,
+      action: PayloadAction<{key: string; filename: string}>
+    ) {
+      state.stagedFiles.push({
+        ...action.payload,
+        status: 'uploading',
+      });
+    },
+    stagedFileUploadFinished(
+      state,
+      action: PayloadAction<{
+        key: string;
+        status: 'uploaded' | 'uploadFailed' | 'sizeLimitExceeded';
+      }>
+    ) {
+      const {key, status} = action.payload;
+      if (status === 'uploaded') {
+        const fileIndex = state.stagedFiles.findIndex(file => file.key === key);
+        if (fileIndex !== -1) {
+          state.stagedFiles[fileIndex].status = 'uploaded';
+        }
+      } else {
+        // Remove from staged files and set alert
+        state.stagedFiles = state.stagedFiles.filter(file => file.key !== key);
+        state.stagedFilesAlert = status;
+      }
+    },
+    stagedFilesLimitExceeded(state) {
+      state.stagedFilesAlert = 'fileLimitExceeded';
+    },
+    clearStagedFilesAlert(state) {
+      state.stagedFilesAlert = undefined;
+    },
+    removeStagedFile(state, action: PayloadAction<string>) {
+      state.stagedFiles = state.stagedFiles.filter(
+        file => file.key !== action.payload
+      );
+      state.stagedFilesAlert = undefined;
+    },
+    clearStagedFiles(state) {
+      state.stagedFiles = [];
+      state.stagedFilesAlert = undefined;
+    },
   },
 });
 
@@ -263,4 +309,10 @@ export const {
   setStudentChatHistory,
   setUserHasAichatAccess,
   setViewMode,
+  addStagedFile,
+  stagedFileUploadFinished,
+  removeStagedFile,
+  clearStagedFiles,
+  stagedFilesLimitExceeded,
+  clearStagedFilesAlert,
 } = aichatSlice.actions;

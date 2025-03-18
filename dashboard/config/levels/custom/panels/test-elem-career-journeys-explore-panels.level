@@ -6,41 +6,54 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "### Random Access Memory (RAM)\n\n**RAM** is a type of temporary memory that stores active applications and data while the computer is running. It allows the computer to access information quickly, making programs and multitasking smoother. However, RAM is **volatile**, meaning everything is erased when the computer shuts down.\n\n**Example**: When you switch between open tabs in a web browser, RAM helps keep them loaded instantly.\n",
-        "imageUrl": "https://images.code.org/d57d7953fd4ba28a62d2cb8efea4f878-photo-1562976540-1502c2145186.jpg",
-        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
-        "layout": "text-bottom-right",
-        "typing": false,
-        "fadeInOverPrevious": true
-      },
-      {
-        "text": "### Hard Disk Drive (HDD)\n\nAn **HDD** is a traditional storage device that saves data using spinning disks. It can store **large amounts of information** but is slower than newer storage technologies because it relies on moving parts. HDDs are often used for **long-term storage and backups** where speed isn’t the priority.\n\n**Example**: When you save photos and videos on an external hard drive, it can store thousands of files, but retrieving them takes longer compared to a phone or tablet with faster storage.",
-        "imageUrl": "https://images.code.org/432b490c2ed2f51b517a1c5c2d9825e9-hard-disk-isolated-on-white-background-2024-10-18-05-43-48-utc.jpg",
+        "text": "###Healthcare Data Scientist\n\n💡 **What They Do:**  They help people by using computers to understand health problems. Their work helps hospitals figure out how to keep people from getting sick and find better ways to help patients get better.\n\n💻 **How They Use Computer Science:**  They write programs and use AI to study huge amounts of health data, finding patterns that doctors can use to take better care of patients.",
+        "imageUrl": "https://images.code.org/54e5c5247211b8fdda647b77fbb3df88-DALL·E 2025-03-15 13.27.34 - A digital representation of AI analyzing medical data, with a futuristic interface showing charts, patient health stats, and predictive analytics. The.webp",
         "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
-        "layout": "text-bottom-right",
+        "layout": "text-top-left",
         "typing": false,
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Solid State Drive (SSD)\n\nA **SSD** is a modern storage device that keeps files, applications, and the operating system saved **permanently**. Unlike HDDs, SSDs have no moving parts, making them faster, quieter, and more reliable. They significantly improve a computer’s boot-up time and performance.\n\n**Example**: A laptop with an SSD starts up in seconds, while one with an HDD takes much longer.",
-        "imageUrl": "https://images.code.org/7710f5e391be68b4e66517d5461e8fba-clipboard-image-1740061552.png",
+        "text": "###Healthcare Data Scientist\n\n💰 **Average Salary:** $100,000+ per year\n\n🎓 **Pathway:** Start with a strong foundation in math and science. Then, study computer science and data science in college.",
+        "imageUrl": "https://images.code.org/38c50766939248722a3602b3c965823f-salary.jpg",
         "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
-        "layout": "text-bottom-right",
+        "layout": "text-top-left",
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Flash Storage\n\n**Flash storage** is a type of **permanent storage** that has no moving parts, making it faster and more durable than traditional hard drives. It is often used for **small, portable storage devices** and is found in USB drives, memory cards, and even smartphones.\n\n**Example**: A USB flash drive lets you quickly save and transfer files between computers, while an SD card is used in cameras to store photos.",
-        "imageUrl": "https://images.code.org/da69bec3f16a4a3279ffc58d4b18ee52-clipboard-image-1740061662.png",
+        "text": "###Healthcare Data Scientist\n\n🌟 **Great for People Who Are:** Curious problem-solvers who like finding patterns and want to help people stay healthy.",
+        "imageUrl": "https://images.code.org/66af68f948e2e73cda3692a4b3ee0cef-DALL·E 2025-03-15 13.28.50 - A fun infographic showing a salary figure of '$100,000+' with a healthcare and technology theme. The image includes a stethoscope, a computer, and fin.webp",
         "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
-        "layout": "text-bottom-right",
+        "layout": "text-top-left",
         "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Fitness App Developer\n\n💡 **What They Do:** They help people stay strong and healthy by creating apps that track workouts, give exercise tips, and keep users motivated.\n\n💻 **How They Use CS:** They write code to build apps that can track steps, set fitness goals, and even use AI to suggest personalized workouts.",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels-efeae7e1-8db4-4614-b904-07eedf4ef555",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Fitness App Developer\n\n💰 **Average Salary:** $90,000+ per year\n\n🎓 **Pathway:** Strong math and problem-solving skills lead to a degree in computer science or app development. Many learn programming languages like Swift or Java. ",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels-462ee39b-80a6-44bf-ad5e-e38b2f5b3965",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Fitness App Developer\n\n🌟 **Great for People Who Are:** Creative thinkers who like technology, enjoy fitness, and want to help others live healthier lives.",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels-876d59b6-ac29-4f21-841e-2fa252862857",
+        "layout": "text-bottom-right"
       }
-    ]
+    ],
+    "display_name": "Careers that Help People",
+    "thumbnail_url": "https://images.code.org/9bba03198891d21acac6d718603039dc-hand.jpg",
+    "bubble_choice_description": "**Learn more about:**\n* Healthcare Data Scientists\n\n* Fitness App Developers"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-04T20:58:11.007+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level1-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level1-2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-04T20:58:11.007+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level1-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level1-2023\"},{\"changed_at\":\"2025-03-15 19:17:40 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:28:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:30:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:33:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:34:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:34:35 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:35:24 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:41:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:42:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:48:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:52:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:53:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:54:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 19:55:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:24:59 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 21:03:33 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 16:55:16 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:00:12 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:01:55 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

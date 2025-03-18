@@ -1,0 +1,139 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-13T21:59:22.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Make another Offbeat Song\r\n\r\nRecreate the song shown in this timeline using what you know about loops and rests. \r\n\r\n![](https://images.code.org/be22c02a63103fc636577f77e9e48e29-image-1741994669927.24.27 PM.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "shakira_maluma_chantaje",
+      "sounds": {
+        "pop": [
+          "blip"
+        ],
+        "shakira_maluma_chantaje": [
+          "drums_intro"
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "JDhoo5pGN*^[8~W5r?,k",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 5
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "shakira_maluma_chantaje/drums_intro"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "repeat_simple2",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 4
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_rest_at_current_location_simple2",
+                                        "id": "play_rest_at_current_location_simple2",
+                                        "fields": {
+                                          "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "rE;ETP[zj9gJRPP*q:0~",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "pop/blip"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2",
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Offbeat Song #2"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RBy6R6Qp27Bc8tEeT1/BpaaV6\nJxqhmbceXAe5rwfSd7aBgL20+nly3OLrOtjhYGhDKrvD9Kso9HsxunZDz651\nl6HlOWWIccQjRIjInbY4lZbQgC2gDKLHxa2ISeg0HGVpQd+Zs1pRcaqmvagX\ntP00FOaNcShincm96fpaoFYIMeqlOCUV+m14wYYCGdqnTUKBj+1UrzwIDHwU\nSmX0h7sulKbR+96gNyKaicvQlTglmEN2o3vd+2IBzjSkPu/ozjJmCUr/sJHn\nNcIqagvTRYr+ozByReU3wgRu+hBHY/QPwmpY0wfF9ehtVjMnw2obfVByDTm8\nMW+mE8WQNbtufn7MuhnpND+8XbwGnwSh0+4Rpi59ZBPPU/keAJMGgWUMSUlz\nZgqwPuYwa6/+SWfqyVbBBdzR1KlEV9u8r/0yyTtUk77osQCRftgVBFeC5et9\npelkKC2ExLZMhOgRxKF3gvaLLWAmJmVNKpPyRKld0VSznuDOwCwlTVpDZXmR\nL1KeH4yONbIZDQGFZ0kYvvs+Djw7KOnh1T0wCSk8iT9tgnLPB6QJ7b7tvpoQ\nyuyOFkLv0xkf6ti7brCm5WoGe47EnF8ZtjwDnYlyYtJqsO4gvy6ifrhshU9y\nCkUgZQHvYgVvpp82HjLzgpmiaM9B2Afro++I8rBPKPFkgNjnf0yt5rX7afzx\nybhR1HetYZgL7tZeZNK8wXQUqkwjy4Gx5TOLz8nv5ylnvHY0LH9+Ot03Zes9\n88kkaZVbWgCElV9mJkHRJiNViJi/bONb5ojnnHkNocdN1I9QXcukRVrT8Q4p\ndOdmfKAlHS7poaBz2FNqIold9r9wcijzTdoIWJtQtsiApb4ycwQRQDFjZlyN\n6/dpQ+QZc1n6VNjynJKHec9lfxo6oWuzFk2bh+1PP8a//otF+z+QvmySHndW\nz2y5hp89EUjO3LkD/X/VkNh+qjKH75ReaMbHuuWCD8eVSiqnGpuUTU7qJnmv\np02Wtx27Z/w93Gl65Gop\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-14 23:14:13 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:25:11 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:25:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:26:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:26:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:26:31 +0000\",\"changed\":[\"exemplar_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:27:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

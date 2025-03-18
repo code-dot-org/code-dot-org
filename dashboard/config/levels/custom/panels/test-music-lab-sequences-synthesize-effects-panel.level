@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "This is how effects work",
+        "text": "Delay: creates an echo effect. High = more echo, low = less echo, off = no echo\n\nFilter: muffles or dampens the sound. Medium = some muffling, low = more muffling, off = no muffling",
         "imageUrl": "",
         "key": "test-music-lab-sequences-synthesize-effects-panel-7e5c491e-8f2d-458f-bd0d-931757763830"
       },
@@ -21,6 +21,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12 17:22:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 17:22:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12 17:22:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 17:22:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:35:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

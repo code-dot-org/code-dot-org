@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-12T16:20:35.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "instructions_important": "false",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "denzel_kennedy_sing_for_me",
@@ -327,14 +328,15 @@
           "stomp",
           "trashy_crash"
         ]
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
     },
     "long_instructions": "### Sound Design Challenge: The Ocean’s Rhythm\r\nYou're now a sound artist, and your challenge is to capture the motion of the ocean using sound!\r\n\r\n🎧 **The Scenario:**\r\nDenzel just got back from a sailing trip, and he’s inspired by the rising and falling waves of the sea. He wants his song to mimic that movement—growing louder and more intense, then fading back into calm.\r\n\r\n🎼 **Your challenge:**\r\n- Choose Your Effects: Use delays, volume changes, and filters to create a smooth ebb and flow.\r\n- Create the Motion: Gradually increase and decrease the intensity of your effects—just like waves rolling in and out.\r\n- Layer Sounds: Offset different sounds with rests and sequencing to create a natural movement.\r\n- Adjust the Levels: Experiment with low, medium, and high settings on your effects to control the shape of your waves.\r\n- Fine-Tune the Flow: Listen to your track—does it feel like the ocean? If not, tweak the effects to enhance the wave-like motion.\r\n",
     "display_name": "Undulating Effects ",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T16:20:35.500+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a\"},{\"changed_at\":\"2025-03-12 16:20:38 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:11:58 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:28:00 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:28:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:28:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:20:35.500+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a\"},{\"changed_at\":\"2025-03-12 16:20:38 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:11:58 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:28:00 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:28:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:28:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:39:48 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

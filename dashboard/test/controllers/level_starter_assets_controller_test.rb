@@ -25,29 +25,39 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     key_1 = "starter_assets/#{uuid_name_1}"
     uuid_name_2 = "#{SecureRandom.uuid}.jpg"
     key_2 = "starter_assets/#{uuid_name_2}"
+    uuid_name_3 = "#{SecureRandom.uuid}.pdf"
+    key_3 = "starter_assets/#{uuid_name_2}"
     file_objs = [
       MockS3ObjectSummary.new(key_1, 123, 1.day.ago),
-      MockS3ObjectSummary.new(key_2, 321, 2.days.ago)
+      MockS3ObjectSummary.new(key_2, 321, 2.days.ago),
+      MockS3ObjectSummary.new(key_3, 111, 3.days.ago)
     ]
     LevelStarterAssetsController.any_instance.
-      expects(:get_object).twice.
-      returns(file_objs[0], file_objs[1])
+      expects(:get_object).times(3).
+      returns(file_objs[0], file_objs[1], file_objs[2])
     level_starter_assets = {
       'ty.png' => uuid_name_1,
-      'welcome.jpg' => uuid_name_2
+      'welcome.jpg' => uuid_name_2,
+      'document.pdf' => uuid_name_3
     }
     level = create(:applab, starter_assets: level_starter_assets)
 
     get :show, params: {level_name: level.name}
     starter_assets = JSON.parse(response.body)['starter_assets']
 
-    assert_equal 2, starter_assets.count
+    assert_equal 3, starter_assets.count
+
     assert_equal 'ty.png', starter_assets[0]['filename']
     assert_equal 'image', starter_assets[0]['category']
     assert_equal file_objs[0].size, starter_assets[0]['size']
+
     assert_equal 'welcome.jpg', starter_assets[1]['filename']
     assert_equal 'image', starter_assets[1]['category']
     assert_equal file_objs[1].size, starter_assets[1]['size']
+
+    assert_equal 'document.pdf', starter_assets[2]['filename']
+    assert_equal 'pdf', starter_assets[2]['category']
+    assert_equal file_objs[2].size, starter_assets[2]['size']
   end
 
   test 'show: returns template level starter_assets when defined' do
@@ -224,7 +234,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
   test 'destroy: forbidden for non-levelbuilders' do
     sign_in create(:student)
-    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
 
     assert_response :forbidden
   end
@@ -233,7 +243,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns(false)
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
 
     assert_response :forbidden
   end
@@ -242,18 +252,20 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: level.name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-file', format: 'png'}
 
     assert_response :no_content
+    assert_nil level.reload.starter_assets
   end
 
   test 'destroy: returns no_content if starter asset does not exist' do
     level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: level.name, filename: 'my-other-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-other-file', format: 'png'}
 
     assert_response :no_content
+    assert level.reload.starter_assets.key?('my-file.png')
   end
 
   test 'destroy: raises if starter asset fails to be deleted' do
@@ -261,7 +273,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
     sign_in create(:levelbuilder)
     assert_raises ActiveRecord::RecordInvalid do
-      delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+      delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
     end
   end
 end

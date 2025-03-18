@@ -1,0 +1,13 @@
+name 'music-lab-functions-explore-practice-choice'
+display_name 'Practice'
+description 'Choose at least 2 options below to practice'
+
+sublevels
+level 'music-lab-functions-practiceA'
+# level 'music-lab-functions-practiceB'
+# level 'music-lab-functions-practiceC'
+level 'music-lab-functions-practiceD'
+level 'music-lab-functions-practiceE'
+level 'music-lab-functions-practiceF'
+
+

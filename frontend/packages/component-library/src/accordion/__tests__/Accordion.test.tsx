@@ -1,4 +1,5 @@
 import {render, screen, fireEvent} from '@testing-library/react';
+
 import Accordion, {AccordionProps} from './../Accordion';
 
 const mockAccordionItems: AccordionProps['items'] = [
