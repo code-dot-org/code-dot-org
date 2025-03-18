@@ -360,7 +360,6 @@ class LevelsController < ApplicationController
 
     # Handle thumbnail_url
     if @level.respond_to?(:thumbnail_url) || !@level.properties.key?("thumbnail_url")
-      puts changes["thumbnail_url"]
       @level.properties["thumbnail_url"] = changes["thumbnail_url"]
     end
 

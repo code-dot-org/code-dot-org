@@ -17,7 +17,8 @@ interface CourseContentDropdownProps {
   section: Section;
 }
 
-interface UnitLessons {
+// Interface for the unit lessons dropdown
+interface UnitLessonOptions {
   value: string;
   text: string;
 }
@@ -31,17 +32,16 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   section,
 }) => {
   const navigate = useNavigate();
-  const [lessonList, setLessonList] = useState<UnitLessons[]>([]);
+  const [lessonList, setLessonList] = useState<UnitLessonOptions[]>([]);
 
   // Retrieve units and lessons for the section
   useEffect(() => {
     if (section.unitId) {
-      HttpClient.fetchJson<UnitLessons[]>(
-        `/sections/retrieve_lessons_for_dropdown/${section.id}`
+      HttpClient.fetchJson<UnitLessonOptions[]>(
+        `/sections/${section.id}/retrieve_lessons_for_dropdown`
       )
         .then(response => {
-          console.log(response.value);
-          const lessons: UnitLessons[] = response.value.map(lesson => {
+          const lessons: UnitLessonOptions[] = response.value.map(lesson => {
             if (lesson.text.includes('Unit')) {
               lesson.text = lesson.text.replace(' - ', ': ');
             } else if (!lesson.text.includes('Lesson')) {

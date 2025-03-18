@@ -144,11 +144,11 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+        get :retrieve_lessons_for_dropdown
       end
       collection do
         post 'section_instructors_verified'
         post 'archive_all'
-        get 'retrieve_lessons_for_dropdown/:section_id', to: 'sections#retrieve_lessons_for_dropdown'
       end
     end
     # Section API routes (JSON only)
