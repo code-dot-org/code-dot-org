@@ -163,3 +163,10 @@
 @mixin transition-all {
   transition: all 0.2s ease;
 }
+
+// Icon styles
+@mixin icon-dimensions($font-size, $line-height: 1.25) {
+  font-size: $font-size;
+  line-height: $line-height;
+  width: calc(#{$font-size} * #{$line-height});
+}
