@@ -10,6 +10,8 @@ export interface ActionBlockProps extends React.HTMLAttributes<HTMLElement> {
   title: string;
   /** Action Block description */
   description: string;
+  /** Action Block image */
+  imageSrc?: string;
   /** Primary button label */
   primaryButtonLabel?: string;
   /** Primary button link */
@@ -47,6 +49,7 @@ export interface ActionBlockProps extends React.HTMLAttributes<HTMLElement> {
 const ActionBlock: React.FC<ActionBlockProps> = ({
   title,
   description,
+  imageSrc,
   primaryButtonLabel,
   primaryButtonUrl,
   primaryButtonAriaLabel,
@@ -67,6 +70,7 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
       )}
       {...HTMLAttributes}
     >
+      {imageSrc && <img src={imageSrc} alt={''} />}
       {overline && <OverlineTwoText>{overline}</OverlineTwoText>}
       <Heading3 visualAppearance="heading-md">{title}</Heading3>
       <BodyThreeText>{description}</BodyThreeText>
