@@ -75,9 +75,10 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
   const dialogProps = {
     assets,
     loading,
+    showError,
+    // Used by UploadAssetDialog
     addAsset,
     removeAsset,
-    showError,
     setError,
   };
 

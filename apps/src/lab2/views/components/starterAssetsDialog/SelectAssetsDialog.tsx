@@ -51,6 +51,7 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
     onSelect(selectedFiles);
     onClose();
   };
+
   return (
     <Modal
       id="starter-assets-dialog"
