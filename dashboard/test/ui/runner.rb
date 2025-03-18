@@ -767,6 +767,11 @@ def run_feature(browser, feature, options)
 
   max_reruns = how_many_reruns?(test_run_string)
 
+  # TODO: find a better way to do this
+  if ENV['CI']
+    max_reruns += 1
+  end
+
   html_log = html_output_filename(test_run_string, options)
   rerun_file = rerun_filename test_run_string
   FileUtils.rm rerun_file, force: true
