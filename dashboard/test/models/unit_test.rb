@@ -36,7 +36,9 @@ class UnitTest < ActiveSupport::TestCase
 
     @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
 
-    @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
+    @csf_unit_2019 = create :csf_script, name: 'csf-2019'
+    @csf_course_2019 = create :unit_group, name: 'csf-2019', version_year: '2019'
+    create(:unit_group_unit, position: 1, unit_group: @csf_course_2019, script: @csf_unit_2019)
 
     # To test level caching, we have to make sure to create a level in a script
     # *before* generating the caches.
@@ -2058,6 +2060,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test "has_standards_associations?" do
+    @csf_unit_2019.reload
     assert @csf_unit_2019.has_standards_associations?
     refute @csp_unit.has_standards_associations?
   end
