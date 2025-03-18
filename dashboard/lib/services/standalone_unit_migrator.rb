@@ -51,13 +51,15 @@ module Services
 
       update_section_assignments
 
+      update_levelbuilder_files
+
       passed_checks = run_checks(course_version, unit_copy, original_course_version_id)
       rollback unless passed_checks
       passed_checks
     end
 
-    def self.rollback(unit, verbose: false, log_file: nil)
-      new(unit, verbose: verbose, log_file: log_file).rollback
+    def self.rollback(unit, verbose: false, log_file: nil, file_system_changes: true)
+      new(unit, verbose: verbose, log_file: log_file, file_system_changes: file_system_changes).rollback
     end
 
     def rollback
@@ -92,6 +94,8 @@ module Services
       @unit.reload
 
       @unit_group.destroy!
+
+      rollback_levelbuilder_files
 
       rollback_checks(unit_group_id)
     end
@@ -169,6 +173,13 @@ module Services
       log "Updated #{sections_updated} sections for unit #{@unit.name}" if @verbose
     end
 
+    private def update_levelbuilder_files
+      if @file_system_changes
+        @unit.write_script_json
+        @unit_group.write_serialization
+      end
+    end
+
     private def log(message, type: 'info')
       @logger.send(type, message)
     end
@@ -215,9 +226,18 @@ module Services
     end
 
     private def rollback_unit_settings
-      @unit.properties["is_course"] = true
-      @unit.properties["version_year"] = @unit_group.version_year
-      @unit.update_columns(properties: @unit.properties, family_name: @unit_group.family_name, published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type, instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience)
+      @unit.update!(is_course: true, version_year: @unit_group.version_year, family_name: @unit_group.family_name,
+                    published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type,
+                    instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience,
+                    skip_name_format_validation: true
+      )
+    end
+
+    private def rollback_levelbuilder_files
+      if @file_system_changes
+        @unit.write_script_json
+        File.delete(UnitGroup.file_path(@unit_group.name))
+      end
     end
 
     private def rollback_checks(unit_group_id)

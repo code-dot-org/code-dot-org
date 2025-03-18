@@ -214,7 +214,7 @@ class UnitGroup < ApplicationRecord
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
         unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
-          unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
+          unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
           unit.course_version&.destroy
 
           unit.reload
