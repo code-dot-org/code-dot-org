@@ -16,6 +16,10 @@
     justify-content: flex-start;
     align-items: center;
 
+    .listItemIcon {
+      text-align: center;
+    }
+
     .listItemLabel {
       margin: 0;
     }
@@ -53,9 +57,15 @@
 
     .listItemIcon {
       @include typography.body-one-font-size;
+      line-height: 1.25rem;
+      height: 1.25rem;
+      width: 1.25rem;
 
       &.listItemBullet {
         font-size: 0.875rem;
+        line-height: 0.875rem;
+        height: 0.875rem;
+        width: 0.875rem;
       }
     }
   }
@@ -68,9 +78,15 @@
 
     .listItemIcon {
       @include typography.body-two-font-size;
+      line-height: 1rem;
+      height: 1rem;
+      width: 1rem;
 
       &.listItemBullet {
         font-size: 0.75rem;
+        line-height: 0.75rem;
+        height: 0.75rem;
+        width: 0.75rem;
       }
     }
   }
@@ -83,9 +99,15 @@
 
     .listItemIcon {
       @include typography.body-three-font-size;
+      line-height: 0.875rem;
+      height: 0.875rem;
+      width: 0.875rem;
 
       &.listItemBullet {
         font-size: 0.625rem;
+        line-height: 0.625rem;
+        height: 0.625rem;
+        width: 0.625rem;
       }
     }
   }
@@ -98,9 +120,15 @@
 
     .listItemIcon {
       @include typography.body-four-font-size;
+      line-height: 0.813rem;
+      height: 0.813rem;
+      width: 0.813rem;
 
       &.listItemBullet {
         font-size: 0.5rem;
+        line-height: 0.5rem;
+        height: 0.5rem;
+        width: 0.5rem;
       }
     }
   }
