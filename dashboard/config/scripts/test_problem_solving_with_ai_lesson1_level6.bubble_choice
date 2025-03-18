@@ -1,6 +1,6 @@
 name 'test-problem-solving-with-ai-lesson1-level6'
-display_name 'Variables Practice'
-description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+display_name 'Prompting AI Chat'
+description 'Pick one of the levels below. Prompt the AI Chat to get the relevant information.'
 
 sublevels
 level 'test-problem-solving-with-ai-lesson1-level6-choice1'

@@ -1,0 +1,52 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-17T21:33:17.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-loops-sythesize-skill-template",
+    "long_instructions": "### Play a set of sound with Play Sequential\r\n\r\nAdd in more than one sound in a queue by building a set of sounds that will play sequentially with the backtrack. \r\n\r\n**Do this:** \r\n- Add at least four Leads sounds into a `play sequential` block. \r\n- Practice your timing by adding that block of code into the backtrack's `play together` block when a new measure starts. ",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-17T21:33:17.125+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-3\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-3\"},{\"changed_at\":\"2025-03-17 21:36:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -12,6 +12,7 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/6B9UVqsphQR9MUnNf4tYHU/94e6f32fcb793401f02399ceb0069722/component_button_tooltip.png',
   },
+  builtInStyles: ['cfTextAlign'],
   variables: {
     color: {
       displayName: 'Color',

@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-17T17:50:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Historical Event\r\n\r\nUse AI Chat to help learn about a historical event.\r\n\r\n### Do This:\r\n\r\n1. Look at the images already uploaded to this level and decide if you'd like to use those or images of an event more relevant to you.\r\n2. Decide on specific areas you'd like to learn more about related to the even in the picture(s) you plan to use. Here are some common topics:\r\n\t- Context & Background\r\n    - Subjects & People\r\n    - Physical Setting & Environment\r\n    - Symbols & Messages\r\n    - (You can use AI chat to help you brainstorm more ideas if you'd like)\r\n3. Add the images you want to include in your input to your prompt.\r\n2. **Copy and paste** the following prompt:\r\n\r\n>Help me learn about the [insert area of interest] of the event shown in this picture.\r\n3. Press **Send**.\r\n4. Change and add to your prompt to see if you can get AI Chat to provide you more useful responses.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Historical Event",
+    "bubble_choice_description": "See what you can learn about history.",
+    "thumbnail_url": "https://images.code.org/a96b568de37731ddcc42bdaea82bcf0a-Historical Sources.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-17T17:50:05.133+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice2\"},{\"changed_at\":\"2025-03-17 17:50:41 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 17:53:12 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 19:13:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 20:48:30 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-18 05:02:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>
