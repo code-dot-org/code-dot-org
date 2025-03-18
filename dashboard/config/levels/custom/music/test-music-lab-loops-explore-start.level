@@ -1,0 +1,124 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-12T20:33:14.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "shadow": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  },
+                  "next": {
+                    "shadow": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "x5%$s}EduR6(CBowiTm%",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "electro/drum_beat_cowbell"
+                      },
+                      "next": {
+                        "shadow": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "|9,Vq!aa33Xc?98ww.h*",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "electro/drum_beat_cowbell"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 290,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 3
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "UB4i~zJYt@P}a(EMnjyy",
+              "x": 290,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/drum_beat_cowbell"
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Repeat Three Times\r\nPress play and observe the pattern in the timeline. Now, use the repeat 3 times block and the play drum beat cowbell block to recreate that pattern.\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12 20:41:21 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:42:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:46:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:41:52 +0000\",\"changed\":[\"level_data\",\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 00:55:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 00:55:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,0 +1,13 @@
+name 'music-lab-functions-synthesis-challenge-choice'
+display_name 'Challenge'
+description 'Choose at least 2 options below to practice'
+
+sublevels
+level 'music-lab-functions-synthesis-challengeA'
+level 'music-lab-functions-synthesis-challengeB'
+level 'music-lab-functions-synthesis-challengeC'
+level 'music-lab-functions-synthesis-challengeD'
+level 'music-lab-functions-synthesis-challengeE'
+level 'music-lab-functions-synthesis-challengeF'
+
+

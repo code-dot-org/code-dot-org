@@ -1,5 +1,4 @@
 @no_mobile
-@no_ci
 Feature: Model customizations and interactions in AI Chat Lab
 
   "AI Chat" is our lab that introduces students to generative AI
@@ -19,6 +18,8 @@ Feature: Model customizations and interactions in AI Chat Lab
     And I wait until element "[aria-label='AI bot chat message']" is visible
     Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(224, 248, 249)"
 
+    # Note that it's important that we use the word "Damn" here, as our stubbed version of our content moderation service
+    # used in Drone is configured to flag this word.
     When I press keys "Damn" for element "#uitest-chat-textarea"
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"

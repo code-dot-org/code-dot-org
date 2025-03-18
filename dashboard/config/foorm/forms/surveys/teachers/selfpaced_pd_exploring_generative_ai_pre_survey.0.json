@@ -239,24 +239,28 @@
           "title": "Which of the following best represents your racial or ethnic background? Please select all that apply. (optional)",
           "choices": [
             {
-              "value": "white",
-              "text": "White/Caucasian"
+              "value": "black",
+              "text": "African American/Black"
+            },
+            {
+              "value": "asian",
+              "text": "Asian"
+            },
+            {
+              "value": "hawaiian_pi",
+              "text": "Hawaiian, or Pacific Islander"
             },
             {
               "value": "hispanic",
               "text": "Hispanic or Latino/Latina"
             },
             {
-              "value": "black",
-              "text": "African American/Black"
-            },
-            {
-              "value": "hawaiian_pi",
-              "text": "Asian, Hawaiian, or Pacific Islander"
-            },
-            {
               "value": "native_am",
               "text": "Native American or American Indian"
+            },
+            {
+              "value": "white",
+              "text": "White/Caucasian"
             },
             {
               "value": "not_listed",

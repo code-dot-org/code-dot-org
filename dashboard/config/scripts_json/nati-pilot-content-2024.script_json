@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "nati-2025-pilot",
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2024",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-03 22:08:09 UTC",
+    "serialized_at": "2025-03-13 20:09:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1303,7 +1304,7 @@
       "key": "a67a4fda-1abe-4c02-8e33-b2714112c94e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the IP Addressing and Visualizing Networks activity guide. Ensure that each pair has access to at least three different colored pens (or pencils, highlighters, etc.) for visualizing AI driven solutions in later scenarios. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to assign the correct IP addresses to the devices on the Network Diagram of their handout.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are correctly labeling devices based on the routing table. Watch for students mistakenly assigning the same IP to multiple devices or skipping octets.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click on the animated slide to display the prompts:\n- *Why do devices on a network need unique IP addresses?*\n- *What might happen if two devices had the same IP address? How could this impact communication?*\n- *How does the router know where to send data packets when multiple devices are connected to it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand why unique IP addresses are essential for clear and reliable communication within a network. Guide students to draw parallels to real-world addressing systems (e.g., postal addresses, phone numbers) and discuss how unique identifiers prevent confusion. Encourage them to consider the consequences of duplicate IP addresses, such as misdirected or lost data, similar to multiple people sharing the same phone number. Additionally, students should connect this concept to the routing table, recognizing how routers use IP addresses to efficiently direct network traffic. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *IP address*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 4 to illustrate the flow of information in each level’s scenario on their network diagrams by connecting devices, drawing arrows, and using colors for AI solutions.\n- **Level 1:** Students illustrate the flow of information in a local network scenario.\n- **Level 2:** Students illustrate the flow of information in a scenario with a local network that is connected to an ISP.**\nLevel 3:\n- **Level 3:** Students illustrate the flow of information in a scenario involving requesting and receiving data from a website server.\n- **Level 4:** Students illustrate the flow of information in three scenarios involving AI-based solutions for network efficiency.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the IP Addressing and Visualizing Networks activity guide. Ensure that each pair has access to at least three different colored pens (or pencils, highlighters, etc.) for visualizing AI driven solutions in later scenarios. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to assign the correct IP addresses to the devices on the Network Diagram of their handout.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are correctly labeling devices based on the routing table. Watch for students mistakenly assigning the same IP to multiple devices or skipping octets.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click on the animated slide to display the prompts:\n- *Why do devices on a network need unique IP addresses?*\n- *What might happen if two devices had the same IP address? How could this impact communication?*\n- *How does the router know where to send data packets when multiple devices are connected to it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand why unique IP addresses are essential for clear and reliable communication within a network. Guide students to draw parallels to real-world addressing systems (e.g., postal addresses, phone numbers) and discuss how unique identifiers prevent confusion. Encourage them to consider the consequences of duplicate IP addresses, such as misdirected or lost data, similar to multiple people sharing the same phone number. Additionally, students should connect this concept to the routing table, recognizing how routers use IP addresses to efficiently direct network traffic. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *IP address*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 4 to illustrate the flow of information in each level’s scenario on their network diagrams by connecting devices, drawing arrows, and using colors for AI solutions.\n- **Level 1:** Students illustrate the flow of information in a local network scenario.\n- **Level 2:** Students illustrate the flow of information in a scenario with a local network that is connected to an ISP.\n- **Level 3:** Students illustrate the flow of information in a scenario involving requesting and receiving data from a website server.\n- **Level 4:** Students illustrate the flow of information in three scenarios involving AI-based solutions for network efficiency.",
         "name": "IP Addressing and Visualizing Networks",
         "progression_name": "IP Addressing and Visualizing"
       },
@@ -4590,6 +4591,18 @@
       }
     },
     {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
       "name": "AI Networks Chat",
       "url": "https://docs.google.com/document/d/1aZKiP8iWpEHYO8y19GfwrbGsV7xQkm4P5khDwrhrrjo/edit?usp=sharing",
       "key": "ai_networks_chat",
@@ -4720,7 +4733,7 @@
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Slides"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "internet_access_irl"
@@ -4889,6 +4902,18 @@
       }
     },
     {
+      "name": "Persona Fact Sheet",
+      "url": "https://docs.google.com/document/d/1iFRJ0FFfPQM7t8AFOqBJ_czuksxKspBjFxPst-_jCrY/edit?usp=sharing",
+      "key": "persona_fact_sheet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
       "name": "Routers and Redundancy",
       "url": "https://docs.google.com/presentation/d/1hCYLx0XdBCgBmr6yxpnsXwDO-yiD2JdnYZ-FYCsTd5U/view",
       "key": "routers_and_redundancy",
@@ -4914,7 +4939,7 @@
     },
     {
       "name": "Teacher Guide: Packets Unplugged",
-      "url": "https://docs.google.com/document/d/185D5Us8IyEd5iwRh1_-e9jhPY2AdNO1zgkxOOtNStP8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1zg2NuvjecV5-ayCORwy6_Cf1UZ0CJ1rKyMWPbPzDVhE/edit?usp=sharing",
       "key": "teacher_guide_packets_unplugged",
       "properties": {
         "audience": "Verified Teacher",
@@ -5008,6 +5033,18 @@
       "seeding_key": {
         "resource.key": "threat_detection_guided_notes"
       }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
     }
   ],
   "lessons_resources": [
@@ -5015,6 +5052,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_key_ai_networks_chat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "ai_chat_lab_faq"
       }
     },
     {
@@ -5033,6 +5076,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "networks_and_the_internet_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     },
     {
@@ -5229,6 +5278,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "how_cyber_attacks_happen_in_real_life"
       }
@@ -5241,7 +5296,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "nati-pilot-content-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -5682,7 +5748,181 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

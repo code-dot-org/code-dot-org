@@ -43,7 +43,7 @@ markdown <<MARKDOWN
     <p style="font-size: 12pt; margin-top: 5px;">This is an example of a self-paced experience with two units.</p>
 </div>
 
-#### This self-paced experience has <mark>NUMBER</mark> units: <mark>UNIT TITLE</mark> and <mark>UNIT TITLE</mark>.
+
 
 </div>
 </details>

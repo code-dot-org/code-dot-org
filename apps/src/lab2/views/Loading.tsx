@@ -29,6 +29,7 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
   const backgroundSuffix = useAppSelector(state =>
     capitalizeFirstLetter(getCurrentLesson(state)?.background || 'dark')
   );
+  const isShare = useAppSelector(state => state.lab.isShareView);
 
   return (
     <div
@@ -36,7 +37,8 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
       className={classNames(
         moduleStyles.solidBlock,
         moduleStyles[`solidBlock${backgroundSuffix}`],
-        overlayStyle
+        overlayStyle,
+        isShare && moduleStyles.shareViewOverlay
       )}
     >
       {isLoading && (

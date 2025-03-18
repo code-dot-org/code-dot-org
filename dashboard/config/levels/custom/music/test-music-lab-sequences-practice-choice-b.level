@@ -1,0 +1,151 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-11T21:16:43.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Layering Lyrics\r\n\r\nMilo needs help making a song with only lyrics! Create a  10-measure backbeat that only uses lyrics to make something unexpected. \r\n\r\nChallenge: Try to recreate this timline that plays one sound, then overlaps the same sound before it's done.\r\n\r\n![](https://images.code.org/60a1f6188af913cc3da589748adbc393-image-1741728188516.22.57 PM.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "crunch",
+          "hey",
+          "rustle",
+          "scratch",
+          "swipe"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "clap",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "vibraslap",
+          "bubble",
+          "kick_impact",
+          "dive",
+          "dark_sweep_crash",
+          "brass"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "trashy_crash",
+          "stomp",
+          "pick_scrape",
+          "gong",
+          "feedback"
+        ],
+        "shakira_maluma_chantaje": [
+          "vocals_maluma_chorus_1",
+          "vocals_maluma_chorus_2",
+          "vocals_shakira_chorus_1",
+          "vocals_shakira_chorus_2",
+          "vocals_sample_1",
+          "vocals_sample_2",
+          "vocals_chop",
+          "vocals_maluma_1",
+          "vocals_maluma_2",
+          "vocals_maluma_3",
+          "vocals_maluma_4",
+          "vocals_shakira_1",
+          "vocals_shakira_2",
+          "vocals_shakira_3",
+          "vocals_shakira_maluma_4"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "shakira_maluma_chantaje",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Lyric on Lyric on Lyric",
+    "thumbnail_url": "https://images.code.org/1a8f256186c1659c75f5170f652ed39c-Screenshot 2025-03-14 at 12.05.11 PM.png",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-11T21:16:43.310+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-a\"},{\"changed_at\":\"2025-03-11 21:18:52 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-11 21:25:01 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:36:21 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:07:22 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

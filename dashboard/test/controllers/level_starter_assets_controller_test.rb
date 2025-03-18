@@ -224,7 +224,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
   test 'destroy: forbidden for non-levelbuilders' do
     sign_in create(:student)
-    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
 
     assert_response :forbidden
   end
@@ -233,7 +233,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns(false)
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
 
     assert_response :forbidden
   end
@@ -242,18 +242,20 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: level.name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-file', format: 'png'}
 
     assert_response :no_content
+    assert_nil level.reload.starter_assets
   end
 
   test 'destroy: returns no_content if starter asset does not exist' do
     level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: level.name, filename: 'my-other-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-other-file', format: 'png'}
 
     assert_response :no_content
+    assert level.reload.starter_assets.key?('my-file.png')
   end
 
   test 'destroy: raises if starter asset fails to be deleted' do
@@ -261,7 +263,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
     sign_in create(:levelbuilder)
     assert_raises ActiveRecord::RecordInvalid do
-      delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+      delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
     end
   end
 end

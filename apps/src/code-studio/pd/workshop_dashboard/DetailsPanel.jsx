@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import ConfirmationDialog from '../components/confirmation_dialog';
 
 import WorkshopForm from './components/workshop_form';
@@ -22,9 +24,7 @@ export default class DetailsPanel extends React.Component {
     onWorkshopSaved: PropTypes.func.isRequired,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   state = {
     showAdminEditConfirmation: false,

@@ -134,7 +134,7 @@ class Policies::AiTest < ActiveSupport::TestCase
     end
 
     context 'when the user is a teacher and has enabled access to ai diff' do
-      let(:user) {build_stubbed(:user, user_type: 'teacher', ai_differentiation_enabled: true)}
+      let(:user) {build_stubbed(:user, user_type: 'teacher', ai_differentiation_toggled_off: false)}
 
       it 'returns true' do
         _(ai_differentiation_enabled?).must_equal true
@@ -142,7 +142,7 @@ class Policies::AiTest < ActiveSupport::TestCase
     end
 
     context 'when the user is a teacher and has disabled access to ai diff' do
-      let(:user) {build_stubbed(:user, user_type: 'teacher', ai_differentiation_enabled: false)}
+      let(:user) {build_stubbed(:user, user_type: 'teacher', ai_differentiation_toggled_off: true)}
 
       it 'returns true' do
         _(ai_differentiation_enabled?).must_equal false

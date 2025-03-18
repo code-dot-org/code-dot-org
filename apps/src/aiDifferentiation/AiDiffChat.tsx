@@ -10,6 +10,18 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
+import {
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  EXTRA_PRACTICE_PROMPT,
+  FINISH_EARLY_PROMPT,
+  ADJUST_TIMING_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  REAL_WORLD_PROMPT,
+  EXIT_TICKET_PROMPT,
+  MINI_LESSON_PROMPT,
+  LESSON_HOOK_PROMPT,
+} from './AiDiffPredefinedPrompts';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {ChatItem, ChatPrompt} from './types';
 
@@ -17,44 +29,30 @@ import style from './ai-differentiation.module.scss';
 
 const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
 
-export const EXPLAIN_CONCEPT_PROMPT = {
-  label: 'Explain a concept',
-  prompt:
-    'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-};
-
-export const EXAMPLE_PROMPT = {
-  label: 'Give an example to use with my class',
-  prompt:
-    'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
-};
-
-export const FINISH_EARLY_PROMPT = {
-  label: 'Write an extension activity for students who finish early',
-  prompt:
-    'Write an extension activity for this lesson for students who finish early',
-};
-
-export const EXTRA_PRACTICE_PROMPT = {
-  label: 'Write an extension activity for students who need extra practice',
-  prompt:
-    'Write an extension activity for this lesson for students who need extra practice',
-};
-
 const SUGGESTED_PROMPTS = [
-  EXPLAIN_CONCEPT_PROMPT,
-  EXAMPLE_PROMPT,
-  FINISH_EARLY_PROMPT,
-  EXTRA_PRACTICE_PROMPT,
+  [
+    EXAMPLE_PROMPT,
+    EXPLAIN_CONCEPT_PROMPT,
+    DEBUG_MISTAKES_PROMPT,
+    MINI_LESSON_PROMPT,
+    EXIT_TICKET_PROMPT,
+  ],
+  [
+    FINISH_EARLY_PROMPT,
+    EXTRA_PRACTICE_PROMPT,
+    LESSON_HOOK_PROMPT,
+    ADJUST_TIMING_PROMPT,
+    REAL_WORLD_PROMPT,
+  ],
 ];
 
 const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
 
 interface AiDiffChatProps {
   context: string;
-  scriptId: number;
-  scriptName: string;
-  unitDisplayName: string;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
@@ -68,7 +66,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   unitDisplayName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
-  suggestedPrompts = SUGGESTED_PROMPTS,
+  suggestedPrompts = SUGGESTED_PROMPTS[0],
   disableEndButtons = false,
 }) => {
   const reportingData = React.useMemo(() => {
@@ -83,6 +81,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const [sessionId, setSessionId] = useState(null);
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
+
+  const [suggestionPage, setSuggestionPage] = useState(0);
 
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
@@ -109,7 +109,12 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   };
 
   const onSuggestPrompts = () => {
-    setMessageHistory(prevMessages => [...prevMessages, suggestedPrompts]);
+    const nextPage = (suggestionPage + 1) % SUGGESTED_PROMPTS.length;
+    setSuggestionPage(nextPage);
+    setMessageHistory(prevMessages => [
+      ...prevMessages,
+      SUGGESTED_PROMPTS[nextPage],
+    ]);
   };
 
   const sendChatEvent = React.useCallback(
@@ -156,6 +161,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             role: Role.ASSISTANT,
             chatMessageText: json.chat_message_text,
             status: json.status,
+            id: json.messageId,
           };
 
           // logging here because on the first user message the sessionId is null
@@ -214,7 +220,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
               isTA={true}
               footer={
                 item.role === Role.ASSISTANT && (
-                  <AiDiffBotMessageFooter message={item} />
+                  <AiDiffBotMessageFooter
+                    message={item}
+                    reportingData={reportingData}
+                  />
                 )
               }
             />

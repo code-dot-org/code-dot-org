@@ -3,48 +3,42 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Next Steps
-#### Congratulations! You completed Code.org's Getting Started with Professional Learning module. In this module, you: 
-<div style="font-size: 18px;">
-   <div> 
-        ✅ Got an introduction to Code.org's mission.
-    </div>
-       <br>
-   <div>
-        ✅ Became a  <a href="https://www.example.com" target="_blank">verified teacher</a>
-    </div><br>
-   <div>
-        ✅ Learned how to navigate the Code.org website and teacher tools.
-     
-    </div>
-    <br>
-    <div>
-      ✅ Set up a  <a href="https://www.example.com" target="_blank">classroom section</a>
-    </div>
-<br>
-   <div>
-        ✅ Added a <a href="https://www.example.com" target="_blank">course</a>
-    </div>
-<br>
-   <div>
-        ✅ Located and used course  <a href="https://www.example.com" target="_blank">lesson plans</a> and <a href="https://www.example.com" target="_blank">teacher resources.</a>
-    </div>
-    <br>
-   <div>
-        ✅ Posted on the <a href="https://www.example.com" target="_blank"> Teacher Forum</a>
-    </div>
-<br>
-   <div>
-        ✅ Learned how to  <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula.
+# Congratulations! You completed the module! 
+
+
+
+<body>
+    <div style="text-align: center; padding: 20px;">
+        <h1 style="color: #0093A4;">You are ready to start teaching if you:  </h1>
+ <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+              ✅ Became a  <a href="https://www.example.com" target="_blank">verified teacher</a>
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                   ✅ Posted on the <a href="https://www.example.com" target="_blank"> Teacher Forum</a>
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                ✅ Set up a  <a href="https://www.example.com" target="_blank">classroom section</a>
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+               ✅ Added a <a href="https://www.example.com" target="_blank">course</a>
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                   ✅ Located and used course  <a href="https://www.example.com" target="_blank">lesson plans</a> and <a href="https://www.example.com" target="_blank">teacher resources.</a>
+            </div>
+            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
+                         ✅ Learned how to  <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula.
+            </div>
+        </div>
     </div>
 
 
 
-##What Do I Do Next? 
+##What Next?
 
 
 ### <b>Never Coded before? </b>
-####<a href="https://studio.code.org/courses/self-paced-pl-k5-2024" target="_blank">CS Basics</a> is Code.org's free self-paced online learning for educators to get familiar with Computer Science Basics! After completing this professional learning experience, you'll be comfortable with basic K-5 grade coding concepts.
+####<a href="https://studio.code.org/courses/self-paced-pl-k5-2024" target="_blank">CS Basics</a> is Code.org's free self-paced online learning for educators to get familiar with Computer Science Basics! After completing this professional learning experience, you'll be comfortable with basic coding concepts.
 
 
 

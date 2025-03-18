@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {memo, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -5,6 +6,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -16,6 +18,8 @@ import {
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
+import styles from './chatWorkspace.module.scss';
+
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
@@ -26,7 +30,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   isChatHistoryView,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText} = chatMessage;
+  const {status, role, chatMessageText, assets} = chatMessage;
+  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -79,6 +84,31 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       messageVisible && isAssistant ? (
         <CopyButton copyText={chatMessage.chatMessageText} />
       ) : null;
+  }
+
+  if (!isAssistant && !isChatHistoryView && assets && currentChannelId) {
+    footer = (
+      <div className={styles.assetRow}>
+        {assets.map(asset => {
+          return asset.endsWith('.pdf') ? (
+            <div key={asset} className={styles.pdfPreview}>
+              <FontAwesomeV6Icon
+                iconName="file-pdf"
+                className={styles.pdfIcon}
+              />
+              <span>{asset}</span>
+            </div>
+          ) : (
+            <img
+              key={asset}
+              alt=""
+              className={styles.imagePreview}
+              src={`/v3/assets/${currentChannelId}/${asset}`}
+            />
+          );
+        })}
+      </div>
+    );
   }
 
   return (

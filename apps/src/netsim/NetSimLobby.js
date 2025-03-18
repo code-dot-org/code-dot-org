@@ -10,6 +10,7 @@ import $ from 'jquery';
 import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
 var _ = require('lodash');
+var md5 = require('md5');
 
 var i18n = require('@cdo/netsim/locale');
 
@@ -595,7 +596,9 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
  * @private
  */
 NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
-  return ('ns_' + this.levelKey_ + '_' + seed).substr(0, 48);
+  // md5 returns a 32-character hex string so these should always be 35-character strings
+  // Previously we truncated to 48 characters
+  return 'ns_' + md5(this.levelKey_ + '_' + seed);
 };
 
 /**

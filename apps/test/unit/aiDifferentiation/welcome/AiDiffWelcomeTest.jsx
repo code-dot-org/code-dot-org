@@ -58,14 +58,14 @@ describe('AiDiffWelcome', () => {
     fireEvent.click(screen.getByText('Get Started'));
 
     screen.getByText('Pick a skill to practice');
-    screen.getByRole('button', {name: 'Plan'});
+    screen.getByRole('button', {name: 'Ideate'});
     screen.getByRole('button', {name: 'Create'});
   });
 
   test('selecting an option and clicking "Continue" transitions to practice page', () => {
     render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'select_option'} />);
 
-    fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Ideate'}));
 
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 

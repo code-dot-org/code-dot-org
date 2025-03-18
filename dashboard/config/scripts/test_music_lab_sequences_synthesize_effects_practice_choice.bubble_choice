@@ -1,0 +1,9 @@
+name 'test-music-lab-sequences-synthesize-effects-practice-choice'
+display_name 'Help These Artists Modify Their Songs'
+description 'Choose one of the option below. Read the instructions and help each artist add the right effects to their songs.'
+
+sublevels
+level 'test-music-lab-sequences-synthesize-effects-practice-choice-a'
+level 'test-music-lab-sequences-synthesize-effects-practice-choice-b'
+level 'test-music-lab-sequences-synthesize-effects-practice-choice-c'
+

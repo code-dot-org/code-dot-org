@@ -1,5 +1,5 @@
 = render 'devise/registrations/new_sign_up_locale'
 
-%script{src: webpack_asset_path('js/devise/registrations/account_type.js')}
+%script{src: webpack_asset_path('js/devise/registrations/account_type.js'), data: {isSignedOut: @is_signed_out.to_json}}
 #account-type
   -# Populated by React

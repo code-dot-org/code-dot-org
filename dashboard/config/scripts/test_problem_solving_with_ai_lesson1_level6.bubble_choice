@@ -1,0 +1,13 @@
+name 'test-problem-solving-with-ai-lesson1-level6'
+display_name 'Variables Practice'
+description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson1-level6-choice1'
+level 'test-problem-solving-with-ai-lesson1-level6-choice2'
+level 'test-problem-solving-with-ai-lesson1-level6-choice3'
+
+
+
+
+

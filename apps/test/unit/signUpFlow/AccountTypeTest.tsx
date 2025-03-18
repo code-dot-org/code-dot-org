@@ -15,7 +15,7 @@ const navigateToHrefMock = navigateToHref as jest.Mock;
 
 describe('SelectAccountType', () => {
   function renderDefault() {
-    render(<AccountType />);
+    render(<AccountType isSignedOut={true} />);
   }
 
   it('renders student and teacher account type card options', () => {
