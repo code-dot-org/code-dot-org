@@ -1,0 +1,41 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+// ExpandedList common styles
+.expandedList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  list-style-type: none;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+
+  .expandedListItem {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
+    column-gap: 1rem;
+    row-gap: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .expandedListItemIcon {
+      @include mixins.icon-dimensions(2rem, 1);
+      color: var(--text-neutral-primary);
+      text-align: center;
+    }
+
+    .expandedListItemLabel {
+      margin: 0;
+    }
+
+    .expandedListItemContent {
+      grid-row: 2;
+      grid-column: 2;
+      margin: 0;
+    }
+  }
+}

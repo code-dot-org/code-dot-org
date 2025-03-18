@@ -230,6 +230,14 @@
       "import": "./dist/esm/list/index.mjs",
       "require": "./dist/cjs/list/index.js"
     },
+    "./list/expandedList": {
+      "types": {
+        "import": "./dist/esm/list/expandedList/index.d.ts",
+        "require": "./dist/cjs/list/expandedList/index.d.ts"
+      },
+      "import": "./dist/esm/list/expandedList/index.mjs",
+      "require": "./dist/cjs/list/expandedList/index.js"
+    },
     "./list/simpleList": {
       "types": {
         "import": "./dist/esm/list/simpleList/index.d.ts",
