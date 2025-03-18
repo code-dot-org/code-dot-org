@@ -1,4 +1,9 @@
 import './index.css';
 
-export type {ListProps, ListItem} from './List';
-export {default as default, LIST_DEFAULT_ICON} from './List';
+import SimpleList, {
+  SIMPLE_LIST_DEFAULT_ICON,
+  SimpleListItem,
+  SimpleListProps,
+} from './simpleList';
+
+export {SimpleList, SIMPLE_LIST_DEFAULT_ICON, SimpleListItem, SimpleListProps};

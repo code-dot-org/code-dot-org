@@ -3,7 +3,7 @@
   typography;
 
 // List common styles
-.list {
+.simpleList {
   list-style-type: none;
   display: inline-flex;
   flex-direction: column;
@@ -11,57 +11,57 @@
   padding: 0;
   margin: 0;
 
-  .listItem {
+  .simpleListItem {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
-    .listItemIcon {
+    .simpleListItemIcon {
       text-align: center;
     }
 
-    .listItemLabel {
+    .simpleListItemLabel {
       margin: 0;
     }
   }
 }
 
 // List types
-.list.list-type {
+.simpleList.simpleList-type {
   &-primary {
-    .listItemIcon {
+    .simpleListItemIcon {
       color: var(--text-neutral-primary);
     }
   }
 
   &-secondary {
-    .listItemIcon {
+    .simpleListItemIcon {
       color: var(--text-neutral-placeholder);
     }
   }
 
   &-brand {
-    .listItemIcon {
+    .simpleListItemIcon {
       color: var(--text-brand-teal-primary);
     }
   }
 }
 
 // List sizes
-.list-size {
+.simpleList-size {
   &-l {
-    &.list,
-    .listItem {
+    &.simpleList,
+    .simpleListItem {
       gap: 0.625rem;
     }
 
-    .listItemIcon {
+    .simpleListItemIcon {
       @include typography.body-one-font-size;
       line-height: 1.25rem;
       height: 1.25rem;
       width: 1.25rem;
 
-      &.listItemBullet {
+      &.simpleListItemBullet {
         font-size: 0.875rem;
         line-height: 0.875rem;
         height: 0.875rem;
@@ -71,18 +71,18 @@
   }
 
   &-m {
-    &.list,
-    .listItem {
+    &.simpleList,
+    .simpleListItem {
       gap: 0.5rem;
     }
 
-    .listItemIcon {
+    .simpleListItemIcon {
       @include typography.body-two-font-size;
       line-height: 1rem;
       height: 1rem;
       width: 1rem;
 
-      &.listItemBullet {
+      &.simpleListItemBullet {
         font-size: 0.75rem;
         line-height: 0.75rem;
         height: 0.75rem;
@@ -92,18 +92,18 @@
   }
 
   &-s {
-    &.list,
-    .listItem {
+    &.simpleList,
+    .simpleListItem {
       gap: 0.375rem;
     }
 
-    .listItemIcon {
+    .simpleListItemIcon {
       @include typography.body-three-font-size;
       line-height: 0.875rem;
       height: 0.875rem;
       width: 0.875rem;
 
-      &.listItemBullet {
+      &.simpleListItemBullet {
         font-size: 0.625rem;
         line-height: 0.625rem;
         height: 0.625rem;
@@ -113,18 +113,18 @@
   }
 
   &-xs {
-    &.list,
-    .listItem {
+    &.simpleList,
+    .simpleListItem {
       gap: 0.25rem;
     }
 
-    .listItemIcon {
+    .simpleListItemIcon {
       @include typography.body-four-font-size;
       line-height: 0.813rem;
       height: 0.813rem;
       width: 0.813rem;
 
-      &.listItemBullet {
+      &.simpleListItemBullet {
         font-size: 0.5rem;
         line-height: 0.5rem;
         height: 0.5rem;
@@ -135,9 +135,9 @@
 }
 
 // List text weight
-.list-weight {
+.simpleList-weight {
   &-bold {
-    .listItemLabel {
+    .simpleListItemLabel {
       @include typography.strong;
     }
   }

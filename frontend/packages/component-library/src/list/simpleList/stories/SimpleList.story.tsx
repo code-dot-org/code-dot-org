@@ -1,32 +1,34 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import List, {ListProps} from '..';
+import SimpleList, {SimpleListProps} from '..';
 
-type Story = StoryObj<typeof List> & {
-  args: ListProps | ListProps[];
+type Story = StoryObj<typeof SimpleList> & {
+  args: SimpleListProps | SimpleListProps[];
 };
 
 export default {
-  title: 'DesignSystem/List',
-  component: List,
+  title: 'DesignSystem/List/SimpleList',
+  component: SimpleList,
   render: args => {
-    const components: ListProps[] = args[0] ? Object.values(args) : [args];
+    const components: SimpleListProps[] = args[0]
+      ? Object.values(args)
+      : [args];
     return (
       <div style={{display: 'flex', gap: '5em'}}>
         {components.map((component, index) => (
-          <List key={index} {...component} />
+          <SimpleList key={index} {...component} />
         ))}
       </div>
     );
   },
 } as Meta;
 
-const defaultArgs: ListProps = {
+const defaultArgs: SimpleListProps = {
   items: [{label: 'Item A'}, {label: 'Item B'}, {label: 'Item C'}],
 };
 
-const withIconArgs: ListProps = {
+const withIconArgs: SimpleListProps = {
   ...defaultArgs,
   icon: {
     iconName: 'check-circle',
@@ -48,7 +50,7 @@ export const Playground: Story = {
     args,
   }: {
     canvasElement: HTMLElement;
-    args: ListProps;
+    args: SimpleListProps;
   }) => {
     const canvas = within(canvasElement);
 
@@ -84,7 +86,7 @@ export const WithCustomIcon: Story = {
     args,
   }: {
     canvasElement: HTMLElement;
-    args: ListProps;
+    args: SimpleListProps;
   }) => {
     const canvas = within(canvasElement);
 
@@ -148,7 +150,7 @@ export const Types: Story = {
     ].forEach(({iconColor}, index) => {
       const list = canvas.getAllByRole('list')[index];
 
-      (args as ListProps[])[index].items.forEach(item => {
+      (args as SimpleListProps[])[index].items.forEach(item => {
         const listItemText = within(list).getByText(item.label as string);
         expect(listItemText).toHaveStyle(
           `color: ${getComputedStylePropValue('--text-neutral-primary')};`,
@@ -205,7 +207,7 @@ export const Sizes: Story = {
       expect(list).toHaveStyle(`row-gap: ${gap};`);
       expect(list).toHaveStyle(`column-gap: ${gap};`);
 
-      (args as ListProps[])[index].items.forEach(item => {
+      (args as SimpleListProps[])[index].items.forEach(item => {
         const listItemText = within(list).getByText(item.label as string);
         expect(listItemText).toHaveStyle(`font-size: ${labelSize};`);
 
@@ -265,7 +267,7 @@ export const CustomIconSizes: Story = {
       expect(list).toHaveStyle(`row-gap: ${gap};`);
       expect(list).toHaveStyle(`column-gap: ${gap};`);
 
-      (args as ListProps[])[index].items.forEach(item => {
+      (args as SimpleListProps[])[index].items.forEach(item => {
         const listItemText = within(list).getByText(item.label as string);
         expect(listItemText).toHaveStyle(`font-size: ${labelSize};`);
 
@@ -316,7 +318,7 @@ export const Weight: Story = {
     ].forEach(({iconWeight, labelWeight}, index) => {
       const list = canvas.getAllByRole('list')[index];
 
-      (args as ListProps[])[index].items.forEach(item => {
+      (args as SimpleListProps[])[index].items.forEach(item => {
         const listItemText = within(list).getByText(item.label as string);
         expect(listItemText).toHaveStyle(`font-weight: ${labelWeight};`);
 

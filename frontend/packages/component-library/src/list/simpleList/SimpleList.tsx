@@ -6,24 +6,24 @@ import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Typography from '@/typography';
 
-import moduleStyles from './list.module.scss';
+import moduleStyles from './simpleList.module.scss';
 
-export const LIST_DEFAULT_ICON = 'circle-small';
+export const SIMPLE_LIST_DEFAULT_ICON = 'circle-small';
 
-export type ListItem = {
+export type SimpleListItem = {
   label: string | ReactNode;
 };
 
-export interface ListProps extends HTMLAttributes<HTMLUListElement> {
-  /** List items */
-  items: ListItem[];
-  /** List icon */
+export interface SimpleListProps extends HTMLAttributes<HTMLUListElement> {
+  /** SimpleList items */
+  items: SimpleListItem[];
+  /** SimpleList icon */
   icon?: FontAwesomeV6IconProps;
-  /** List size */
+  /** SimpleList size */
   size?: ComponentSizeXSToL;
-  /** List type */
+  /** SimpleList type */
   type?: 'primary' | 'secondary' | 'brand';
-  /** List text weight */
+  /** SimpleList text weight */
   weight?: 'normal' | 'bold';
   /** Class of the list */
   className?: string;
@@ -34,51 +34,52 @@ export interface ListProps extends HTMLAttributes<HTMLUListElement> {
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/List.test.tsx)
+ *  * (see ./__tests__/SimpleList.test.tsx)
  *  * (✔) passes accessibility checks;
  *
  * ### Status: ```Ready for dev```
  *
- * Design System: List Component.
+ * Design System: SimpleList Component.
  * Renders a list of items.
  */
-const List: React.FC<ListProps> = ({
+const SimpleList: React.FC<SimpleListProps> = ({
   items,
   className,
   size = 'm',
   type = 'primary',
   weight = 'normal',
   icon = {
-    iconName: LIST_DEFAULT_ICON,
+    iconName: SIMPLE_LIST_DEFAULT_ICON,
     iconStyle: 'solid',
   },
   ...HTMLAttributes
-}: ListProps) => (
+}: SimpleListProps) => (
   <ul
     className={classNames(
-      moduleStyles.list,
-      moduleStyles[`list-type-${type}`],
-      moduleStyles[`list-size-${size}`],
-      moduleStyles[`list-weight-${weight}`],
+      moduleStyles.simpleList,
+      moduleStyles[`simpleList-type-${type}`],
+      moduleStyles[`simpleList-size-${size}`],
+      moduleStyles[`simpleList-weight-${weight}`],
       className,
     )}
     {...HTMLAttributes}
   >
     {items.map(({label}, index) => (
-      <li key={index} className={classNames(moduleStyles.listItem)}>
+      <li key={index} className={classNames(moduleStyles.simpleListItem)}>
         <FontAwesomeV6Icon
           {...icon}
           aria-hidden="true"
           className={classNames(
-            moduleStyles.listItemIcon,
-            icon.iconName == LIST_DEFAULT_ICON && moduleStyles.listItemBullet,
+            moduleStyles.simpleListItemIcon,
+            icon.iconName == SIMPLE_LIST_DEFAULT_ICON &&
+              moduleStyles.simpleListItemBullet,
             icon.className,
           )}
         />
 
         <Typography
           semanticTag="span"
-          className={moduleStyles.listItemLabel}
+          className={moduleStyles.simpleListItemLabel}
           visualAppearance={componentSizeToBodyTextSizeMap[size]}
         >
           {label}
@@ -88,4 +89,4 @@ const List: React.FC<ListProps> = ({
   </ul>
 );
 
-export default List;
+export default SimpleList;

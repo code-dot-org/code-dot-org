@@ -1,24 +1,24 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import List, {ListProps} from '../List';
+import SimpleList, {SimpleListProps} from '../SimpleList';
 
-describe('Design System - List', () => {
+describe('Design System - SimpleList', () => {
   const items = [{label: 'Item A'}, {label: 'Item B'}];
 
-  const renderListEmbedContainer = (props: Partial<ListProps> = {}) => {
-    render(<List {...props} {...{items}} />);
+  const renderListContainer = (props: Partial<SimpleListProps> = {}) => {
+    render(<SimpleList {...props} {...{items}} />);
   };
 
   const getList = () => screen.getByRole('list');
 
   it('renders list', () => {
-    renderListEmbedContainer();
+    renderListContainer();
     expect(getList()).toBeVisible();
   });
 
   it('renders list items', () => {
-    renderListEmbedContainer();
+    renderListContainer();
 
     items.forEach(({label}) => {
       expect(screen.getByText(label)).toBeVisible();
@@ -29,7 +29,7 @@ describe('Design System - List', () => {
     const className = 'customClass';
     const classStyle = 'color: red;';
 
-    renderListEmbedContainer({className});
+    renderListContainer({className});
     const list = getList();
 
     expect(list).not.toHaveStyle(classStyle);
