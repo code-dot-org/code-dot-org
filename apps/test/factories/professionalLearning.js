@@ -11,7 +11,6 @@ export const serializedWorkshopFactory = Factory.define('serializedWorkshop')
     workshop_type: 'workshopType',
     course: 'course',
     subject: 'subject',
-    name: '',
     enrolled_teacher_count: 10,
     capacity: 15,
     facilitators: [],

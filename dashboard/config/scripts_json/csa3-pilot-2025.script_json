@@ -14,12 +14,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 00:15:44 UTC",
+    "serialized_at": "2024-11-19 01:15:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -225,7 +224,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Ethics in Data",
+      "name": "Ethical and Social Issues Around Data Collection",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -243,7 +242,7 @@
     },
     {
       "key": "Polymorphism",
-      "name": "(Optional) Polymorphism",
+      "name": "Polymorphism",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,

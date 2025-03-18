@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import StatsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
@@ -78,18 +79,6 @@ describe('FinishTeacherAccount', () => {
     );
   });
 
-  it('redirects user back to account type page if invalid user type set', async () => {
-    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'invalid');
-
-    await waitFor(() => {
-      renderDefault(true, false, false);
-    });
-
-    expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/sign_up/account_type'
-    );
-  });
-
   it('redirects user back to login type page if they have not selected login type', async () => {
     await waitFor(() => {
       renderDefault(true, true, false);
@@ -153,13 +142,13 @@ describe('FinishTeacherAccount', () => {
     const schoolName = 'Seattle Academy';
 
     // Fill out zip code and add school by name
-    fireEvent.change(screen.getByLabelText(i18n.enterYourSchoolZip()), {
+    fireEvent.change(screen.getAllByRole('textbox')[1], {
       target: {value: zipCode},
     });
-    fireEvent.change(screen.getByLabelText(i18n.selectYourSchool()), {
+    fireEvent.change(screen.getAllByRole('combobox')[1], {
       target: {value: NonSchoolOptions.CLICK_TO_ADD},
     });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+    fireEvent.change(screen.getAllByRole('textbox')[2], {
       target: {value: schoolName},
     });
 
@@ -256,17 +245,12 @@ describe('FinishTeacherAccount', () => {
     await screen.findByText(locale.data_transfer_notice());
 
     // Check that button is disabled until GDPR is checked (and other required fields are filled)
-    const displayNameInput = screen.getByLabelText(
-      locale.what_do_you_want_to_be_called()
-    );
+    const displayNameInput = screen.getAllByRole('textbox')[0];
     fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'AU'},
     });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: 'Test School'},
     });
     const finishSignUpButton = screen.getByRole('button', {
@@ -303,7 +287,7 @@ describe('FinishTeacherAccount', () => {
           school_name: 'Test School',
         },
         country_code: 'US',
-        educator_role: 'classroom_teacher',
+        educator_role: null,
       },
     };
     sessionStorage.setItem('email', email);
@@ -320,17 +304,13 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
     });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'AU'},
     });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
@@ -385,7 +365,7 @@ describe('FinishTeacherAccount', () => {
           school_name: 'Test School',
         },
         country_code: 'US',
-        educator_role: 'classroom_teacher',
+        educator_role: null,
       },
     };
     sessionStorage.setItem('email', email);
@@ -402,17 +382,13 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
     });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'AU'},
     });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
@@ -475,7 +451,7 @@ describe('FinishTeacherAccount', () => {
           school_name: 'Test School',
         },
         country_code: 'US',
-        educator_role: 'classroom_teacher',
+        educator_role: null,
       },
     };
     sessionStorage.setItem('email', email);
@@ -490,17 +466,13 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
     });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'AU'},
     });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
@@ -561,7 +533,7 @@ describe('FinishTeacherAccount', () => {
           school_name: 'Test School',
         },
         country_code: 'US',
-        educator_role: 'classroom_teacher',
+        educator_role: null,
       },
     };
     sessionStorage.setItem('email', email);
@@ -579,17 +551,13 @@ describe('FinishTeacherAccount', () => {
     finishSignUpButton.onclick = handleClick;
 
     // Fill in fields
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
-      target: {value: 'classroom_teacher'},
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
     });
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'AU'},
     });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
@@ -617,34 +585,117 @@ describe('FinishTeacherAccount', () => {
     });
   });
 
-  it('requires educator role', async () => {
-    await waitFor(renderDefault);
+  // TODO: when experiment ends, move relevant tests above and remove this describe block
+  describe('Educator role experiment', () => {
+    let getIsInExperimentSpy: jest.SpyInstance;
 
-    const roleDropdown = screen.getByLabelText(locale.what_is_your_role());
-    expect(roleDropdown).toBeInTheDocument();
-
-    fireEvent.change(
-      screen.getByLabelText(locale.what_do_you_want_to_be_called()),
-      {target: {value: 'FirstName'}}
-    );
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'AU'},
-    });
-    fireEvent.change(screen.getByLabelText(i18n.schoolOrganizationQuestion()), {
-      target: {value: 'Test School'},
+    beforeEach(() => {
+      getIsInExperimentSpy = jest
+        .spyOn(StatsigReporter, 'getIsInExperiment')
+        .mockReturnValue(false);
     });
 
-    let finishSignUpButton = screen.getByRole('button', {
-      name: locale.go_to_my_account(),
-    });
-    expect(finishSignUpButton).toBeDisabled();
-
-    fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
-
-    finishSignUpButton = screen.getByRole('button', {
-      name: locale.go_to_my_account(),
+    afterEach(() => {
+      jest.restoreAllMocks();
     });
 
-    expect(finishSignUpButton).toBeEnabled();
+    it('hides educator_role dropdown if not in experiment', async () => {
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.queryByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).not.toBeInTheDocument();
+    });
+
+    it('renders educator_role dropdown if in experiment', async () => {
+      getIsInExperimentSpy.mockImplementation((experiment, param) => {
+        if (experiment !== 'educator_role') {
+          return false;
+        }
+        if (param === 'showEducatorRole') {
+          return true;
+        }
+        return false;
+      });
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.queryByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).toBeInTheDocument();
+    });
+
+    it('does not require educator_role if not in experiment', async () => {
+      getIsInExperimentSpy.mockImplementation((experiment, param) => {
+        if (experiment !== 'educator_role') {
+          return false;
+        }
+        if (param === 'showEducatorRole') {
+          return true;
+        }
+        if (param === 'requireEducatorRole') {
+          return false;
+        }
+        return false;
+      });
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.queryByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).toBeInTheDocument();
+
+      const displayNameInput = screen.getAllByRole('textbox')[0];
+      fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+      fireEvent.change(screen.getAllByRole('combobox')[1], {
+        target: {value: 'AU'},
+      });
+      fireEvent.change(screen.getAllByDisplayValue('')[0], {
+        target: {value: 'Test School'},
+      });
+
+      const finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+      expect(finishSignUpButton).toBeEnabled();
+    });
+
+    it('requires educator_role if in experiment', async () => {
+      getIsInExperimentSpy.mockImplementation((experiment, param) => {
+        if (experiment !== 'educator_role') {
+          return false;
+        }
+        if (param === 'showEducatorRole') {
+          return true;
+        }
+        if (param === 'requireEducatorRole') {
+          return true;
+        }
+        return false;
+      });
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.getByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).toBeInTheDocument();
+
+      const displayNameInput = screen.getAllByRole('textbox')[0];
+      fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+      fireEvent.change(screen.getAllByRole('combobox')[1], {
+        target: {value: 'AU'},
+      });
+      fireEvent.change(screen.getAllByDisplayValue('')[0], {
+        target: {value: 'Test School'},
+      });
+
+      let finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+      expect(finishSignUpButton).toBeDisabled();
+
+      fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
+
+      finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+
+      expect(finishSignUpButton).toBeEnabled();
+    });
   });
 });

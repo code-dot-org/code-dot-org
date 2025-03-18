@@ -2,7 +2,6 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import * as helpers from '@/common/helpers';
-
 import {WithPopover, PopoverProps} from './../index';
 
 jest.mock('./../../common/helpers', () => ({

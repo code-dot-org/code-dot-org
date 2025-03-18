@@ -80,10 +80,7 @@ body.music-black, body.background-dark {
 }
 
 body.background-dark, body.background-light {
-  .header-wrapper .header {
-    position: fixed;
-    z-index: 1;
-  }
+  overscroll-behavior: none;
 }
 
 h1 {

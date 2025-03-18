@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {selectMultimodalEnabled, submitChatContents} from '../redux';
+import {submitChatContents} from '../redux';
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
@@ -16,36 +16,21 @@ const UserChatMessageEditor: React.FunctionComponent<{
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
-  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
-  const stagedFilenames = useAppSelector(state =>
-    state.aichat.stagedFiles.map(file => file.filename)
-  );
-  const uploadsPending = useAppSelector(state =>
-    state.aichat.stagedFiles.some(file => file.status === 'uploading')
-  );
 
   const dispatch = useAppDispatch();
 
-  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement | null>(null);
 
   const handleSubmit = useCallback(
     (userMessage: string) => {
       if (!isWaitingForChatResponse) {
-        dispatch(
-          submitChatContents({
-            text: userMessage,
-            assets:
-              multimodalEnabled && stagedFilenames.length > 0
-                ? stagedFilenames
-                : undefined,
-          })
-        );
+        dispatch(submitChatContents(userMessage));
       }
     },
-    [isWaitingForChatResponse, multimodalEnabled, stagedFilenames, dispatch]
+    [isWaitingForChatResponse, dispatch]
   );
 
-  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
+  const disabled = isWaitingForChatResponse || saveInProgress;
 
   useEffect(() => {
     if (!disabled) {

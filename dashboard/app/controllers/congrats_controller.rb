@@ -20,40 +20,23 @@ class CongratsController < ApplicationController
     if curriculum.is_a?(UnitGroup)
       @curriculum_url = course_path(curriculum)
       units = curriculum.units_for_user(current_user)
-      if curriculum.single_unit_course?
-        @certificate_data =
-          if Policies::ScriptActivity.can_view_congrats_page?(current_user, units.first)
-            [
-              {
-                courseName: @course_name,
-                courseTitle: curriculum.localized_title,
-                coursePath: @curriculum_url,
-              }
-            ]
-          else
-            []
+      completed_units = units.filter {|unit| Policies::ScriptActivity.completed?(current_user, unit)}
+      @certificate_data =
+        if completed_units.length == units.length
+          [{
+            courseName: @course_name,
+            courseTitle: curriculum.localized_title,
+            coursePath: course_path(curriculum),
+          }]
+        else
+          completed_units.map do |unit|
+            {
+              courseName: unit.name,
+              courseTitle: unit.localized_title,
+              coursePath: script_path(unit),
+            }
           end
-      else
-        completed_units = units.filter {|unit| Policies::ScriptActivity.completed?(current_user, unit)}
-        @certificate_data =
-          if completed_units.length == units.length
-            [
-              {
-                courseName: @course_name,
-                courseTitle: curriculum.localized_title,
-                coursePath: course_path(curriculum),
-              }
-            ]
-          else
-            completed_units.map do |unit|
-              {
-                courseName: unit.name,
-                courseTitle: unit.localized_title,
-                coursePath: script_path(unit),
-              }
-            end
-          end
-      end
+        end
     elsif curriculum.nil?
       # This occurs when the user completes a third party tutorial
       @curriculum_url = script_path('hourofcode')

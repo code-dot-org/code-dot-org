@@ -8,7 +8,7 @@ import {
   Location,
 } from 'react-router-dom';
 
-interface WithRouterPropsType {
+interface WithRouterProps {
   component: React.ComponentType<
     {
       params: Readonly<Params<string>>;
@@ -27,7 +27,7 @@ interface RouteConfig {
 }
 
 export const WithRouterProps: React.FC<
-  WithRouterPropsType & Record<string, unknown>
+  WithRouterProps & Record<string, unknown>
 > = ({component: Component, routeConfigs, ...props}) => {
   const params = useParams();
   const location = useLocation();
@@ -48,13 +48,11 @@ export const WithRouterProps: React.FC<
     {breadcrumbs},
   ];
   return (
-    <div className="legacy-bs">
-      <Component
-        {...props}
-        params={params}
-        location={locationWithQuery}
-        routes={routes}
-      />
-    </div>
+    <Component
+      {...props}
+      params={params}
+      location={locationWithQuery}
+      routes={routes}
+    />
   );
 };

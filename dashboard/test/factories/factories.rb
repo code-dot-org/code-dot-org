@@ -2109,19 +2109,11 @@ FactoryBot.define do
     project_id {1}
   end
 
-  factory :aidiff_thread do
+  factory :aichat_thread do
     association :user
     external_id {"1234"}
     llm_version {"dummy_llm"}
     unit_id {1}
     level_id {1}
-  end
-
-  factory :aidiff_message do
-    association :aidiff_thread, factory: :aidiff_thread
-    external_id {"1234"}
-    role {:assistant}
-    content {"Lorem ipsum"}
-    is_preset {false}
   end
 end

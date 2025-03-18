@@ -6,10 +6,6 @@ p {
     margin-top: 0;
   }
 
-  &.paragraph-removeMarginBottom {
-    @include mixins.common-margin-bottom-none;
-  }
-
   // Paragraph colors
   &.paragraph-color {
     &-primary {

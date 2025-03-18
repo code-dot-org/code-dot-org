@@ -1,5 +1,4 @@
 import {render, screen} from '@testing-library/react';
-
 import Section, {SectionProps, sectionBackground} from '../Section';
 
 describe('Section Component', () => {

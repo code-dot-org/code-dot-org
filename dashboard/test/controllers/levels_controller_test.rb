@@ -87,7 +87,6 @@ class LevelsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     expected_body = {
       "id" => level.id,
-      "name" => level.name,
       "levelData" => {"hello" => "there"},
       "other" => "other",
       "preloadAssetList" => nil,

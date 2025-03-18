@@ -1,12 +1,11 @@
-import nextPlugin from '@next/eslint-plugin-next';
-
-import cdoJestConfig from '@code-dot-org/lint-config/eslint/jest.mjs';
 import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
+import cdoJestConfig from '@code-dot-org/lint-config/eslint/jest.mjs';
+import nextPlugin from '@next/eslint-plugin-next';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['.next/*', 'playwright-report', 'test-results'],
+    ignores: ['.next/*'],
   },
   {
     // TODO: Remove this once the following Github Issue is resolved:

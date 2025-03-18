@@ -348,11 +348,10 @@ class Pd::Workshop < ApplicationRecord
 
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
-    course_title = name.presence || (subject ? "#{course} #{subject}" : course)
-    course_title += ' workshop' unless course_title.downcase.end_with?('workshop')
+    course_subject = subject ? "#{course} #{subject}" : course
 
     # Limit the friendly name to 255 chars
-    name = "#{course_title} on #{start_time} at #{location_name}"
+    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
     name += " in #{friendly_location}" if friendly_location.present?
     name[0...255]
   end
@@ -952,7 +951,6 @@ class Pd::Workshop < ApplicationRecord
       id: id,
       course: course_name,
       subject: subject,
-      name: name,
       dates: workshop_date_range_string,
       location: location_address,
       sessions: sessions,

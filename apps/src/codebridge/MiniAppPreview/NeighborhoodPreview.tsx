@@ -6,8 +6,7 @@ import {
   MiniApps,
 } from '@codebridge/constants';
 import {findFile} from '@codebridge/utils';
-import {throttle} from 'lodash';
-import React, {useCallback, useEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useMemo} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeCell} from '@cdo/apps/lab2/types';
@@ -16,19 +15,8 @@ import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
-import {scaleMiniApp} from '../Workspace/outputHelpers';
-
-import moduleStyles from './mini-app-preview.module.scss';
-
-interface NeighborhoodPreviewProps {
-  handleScaling?: boolean;
-}
-
 // Preview panel for the neighborhood mini app.
-const NeighborhoodPreview: React.FunctionComponent<
-  NeighborhoodPreviewProps
-> = ({handleScaling}) => {
+const NeighborhoodPreview: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const {source, config} = useCodebridgeContext();
   const serializedMaze = findFile(
@@ -38,28 +26,6 @@ const NeighborhoodPreview: React.FunctionComponent<
   )?.contents;
   const dispatch = useAppDispatch();
   const isVertical = config.activeLayout === 'vertical';
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const scaleNeighborhood = useCallback(() => {
-    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_SIZE;
-    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_SIZE;
-    scaleMiniApp(height, width);
-  }, []);
-
-  const throttledScaleNeighborhood = useMemo(
-    () => throttle(scaleNeighborhood, 30),
-    [scaleNeighborhood]
-  );
-
-  // If handleScaling is true, scale neighborhood on load, and on resize.
-  useEffect(() => {
-    if (handleScaling) {
-      throttledScaleNeighborhood();
-      window.addEventListener('resize', throttledScaleNeighborhood);
-      return () =>
-        window.removeEventListener('resize', throttledScaleNeighborhood);
-    }
-  }, [throttledScaleNeighborhood, handleScaling]);
 
   const neighborhood = useMemo(() => {
     const neighborhoodRef = new Neighborhood(
@@ -125,9 +91,7 @@ const NeighborhoodPreview: React.FunctionComponent<
   ]);
 
   return (
-    <div ref={containerRef} className={moduleStyles.miniAppContainer}>
-      <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
-    </div>
+    <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
   );
 };
 

@@ -14,7 +14,6 @@ import {
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
-
 import moduleStyles from './../customDropdown.module.scss';
 
 export interface IconDropdownOption extends _CustomDropdownOption {

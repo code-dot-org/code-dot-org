@@ -1,5 +1,5 @@
-import {InternationalFontLocale} from '@/constants';
 import {getFontByLocale} from '@/resolver';
+import {InternationalFontLocale} from '@/constants';
 
 /**
  * Injects an empty div with the CSS module className that references the web font appropriate for the given locale.

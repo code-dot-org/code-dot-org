@@ -11,7 +11,6 @@ import {
 } from '@/common/types';
 
 import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
-
 import moduleStyles from './../customDropdown.module.scss';
 
 export type CheckboxDropdownOption = _CustomDropdownOption;

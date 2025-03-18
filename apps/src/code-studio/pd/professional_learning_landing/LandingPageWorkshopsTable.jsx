@@ -165,7 +165,7 @@ export default class LandingPageWorkshopsTable extends React.Component {
     return (
       <tr key={workshop.id}>
         <td>
-          {workshop.name ? workshop.name : workshop.course}
+          {workshop.course}
           <br />
           {workshop.subject}
         </td>

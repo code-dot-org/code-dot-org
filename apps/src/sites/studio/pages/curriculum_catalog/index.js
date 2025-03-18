@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -47,5 +46,4 @@ $(document).ready(function () {
     </Provider>,
     document.getElementById('curriculum-catalog-container')
   );
-  displayDifferentiationChat();
 });

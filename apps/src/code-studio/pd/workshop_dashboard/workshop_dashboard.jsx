@@ -12,7 +12,6 @@ import {
   RouterProvider,
   WithRouterProps,
 } from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
-import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 import Header from '../components/header';
@@ -37,11 +36,9 @@ import workshopDashboardReducers, {
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
 import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
-import {workshopLabel} from './utils/workshopLabel';
 import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
-import {WorkshopFormTemplate} from './WorkshopFormTemplate';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
 
@@ -74,13 +71,6 @@ const routeConfigs = [
     breadcrumbs: 'Workshops,New Workshop',
     component: NewWorkshop,
   },
-  ...WorkshopCourseConfigs.map(config => ({
-    path: `workshops/new/${config.slug}`,
-    breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
-    component: WorkshopFormTemplate,
-    props: {config},
-    noRouter: true,
-  })),
   {
     path: 'workshops/:workshopId',
     breadcrumbs: 'Workshops,View Workshop',
@@ -173,21 +163,13 @@ const WorkshopDashboard = ({
           <Routes>
             <Route path="/" element={<HeaderWrapper />}>
               <Route index element={<Navigate to="/workshops" replace />} />
-              {routeConfigs.map(
-                ({path, component: Component, noRouter, props = {}}) => (
-                  <Route
-                    key={path}
-                    path={path}
-                    element={
-                      noRouter ? (
-                        <Component {...props} />
-                      ) : (
-                        <WithRouterProps component={Component} {...props} />
-                      )
-                    }
-                  />
-                )
-              )}
+              {routeConfigs.map(({path, component, props = {}}) => (
+                <Route
+                  key={path}
+                  path={path}
+                  element={<WithRouterProps component={component} {...props} />}
+                />
+              ))}
             </Route>
           </Routes>
         </RouterProvider>

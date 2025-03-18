@@ -5,7 +5,6 @@
 
 $border-color: $light_gray_800;
 $border-width: 1px;
-$default-spacing: 16px;
 
 .aiTutorContainer {
   position: fixed;
@@ -14,10 +13,6 @@ $default-spacing: 16px;
   z-index: 2000;
   width: 760px;
   color: $default_text;
-}
-
-.aiTutorChatWorkspace {
-  max-height: 100%;
 }
 
 button.buttonStyle {
@@ -169,15 +164,3 @@ button.buttonStyle {
 .feedbackButton {
   margin-right: 5px;
 }
-
-.conversationContainer {
-  display: flex;
-  flex-direction: column;
-  gap: $default-spacing;
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
-  box-sizing: border-box;
-  padding: $default-spacing;
-}
-

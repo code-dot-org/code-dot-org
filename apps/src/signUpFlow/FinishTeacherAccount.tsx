@@ -16,6 +16,7 @@ import React, {useState, useEffect, useMemo} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
@@ -74,14 +75,24 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
     useState('');
 
+  const showEducatorRole = statsigReporter.getIsInExperiment(
+    'educator_role',
+    'showEducatorRole',
+    false
+  );
+
+  const requireEducatorRole = statsigReporter.getIsInExperiment(
+    'educator_role',
+    'requireEducatorRole',
+    false
+  );
+
   // Remove oauth user_type cookie if it exists
   cookies.remove(NEW_SIGN_UP_USER_TYPE);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
-    if (
-      sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) !== UserTypes.TEACHER
-    ) {
+    if (sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === null) {
       navigateToHref('/users/sign_up/account_type');
     } else if (
       sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
@@ -136,8 +147,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
       name?.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
       schoolInfoInvalid(schoolInfo) ||
-      !educatorRole,
-    [gdprValid, name, schoolInfo, educatorRole]
+      (requireEducatorRole && !educatorRole),
+    [gdprValid, name, schoolInfo, requireEducatorRole, educatorRole]
   );
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -230,7 +241,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'has school': hasSchool,
         'has marketing value selected': true,
         'has display name': !nameErrorMessage,
-        'educator role': educatorRole,
         country: countryCode,
       },
       PLATFORMS.BOTH
@@ -286,18 +296,21 @@ const FinishTeacherAccount: React.FunctionComponent<{
               </BodyThreeText>
             )}
           </div>
-          <SimpleDropdown
-            id="uitest-educator-role"
-            className={classNames(style.dropdownContainer, style.requiredLabel)}
-            labelText={locale.what_is_your_role()}
-            name="educator_role"
-            selectedValue={educatorRole}
-            onChange={e => {
-              setEducatorRole(e.target.value);
-            }}
-            itemGroups={roleItemGroups}
-            dropdownTextThickness="thin"
-          />
+          {showEducatorRole && (
+            <SimpleDropdown
+              className={classNames(style.dropdownContainer, {
+                [style.requiredLabel]: requireEducatorRole,
+              })}
+              labelText={locale.what_is_your_role()}
+              name="educator_role"
+              selectedValue={educatorRole}
+              onChange={e => {
+                setEducatorRole(e.target.value);
+              }}
+              itemGroups={roleItemGroups}
+              dropdownTextThickness="thin"
+            />
+          )}
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>

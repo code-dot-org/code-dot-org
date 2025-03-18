@@ -1,4 +1,3 @@
-import {act, waitFor} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -44,9 +43,7 @@ describe('useFetch', () => {
       Promise.resolve({ok: true, json: () => expectedData})
     );
 
-    await act(async () => {
-      mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
-    });
+    mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
     expect(fetchSpy).toHaveBeenCalledTimes(1);
@@ -58,25 +55,19 @@ describe('useFetch', () => {
   it('returns error on fetch error', async () => {
     fetchSpy.mockReturnValue(Promise.reject('some network error'));
 
-    await act(async () => {
-      mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
-    });
+    mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
     expect(fetchSpy).toHaveBeenCalledTimes(1);
-    await waitFor(() => {
-      const {data, error} = useFetchReturnValue.current;
-      expect(data).toBeNull();
-      expect(error).not.toBeNull();
-    });
+    const {data, error} = useFetchReturnValue.current;
+    expect(data).toBeNull();
+    expect(error).not.toBeNull();
   });
 
   it('returns error on HTTP error', async () => {
     fetchSpy.mockReturnValue(Promise.resolve({ok: false, status: 500}));
 
-    await act(async () => {
-      mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
-    });
+    mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
     expect(fetchSpy).toHaveBeenCalledTimes(1);
@@ -92,32 +83,15 @@ describe('useFetch', () => {
     });
     fetchSpy.mockReturnValue(promise);
 
-    await act(async () => {
-      mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
-    });
+    mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
     expect(useFetchReturnValue.current.loading).toBe(true);
 
     const data = {};
-    await act(async () => {
-      resolvePromise({ok: true, json: () => data});
-    });
+    resolvePromise({ok: true, json: () => data});
     await processEventLoop();
 
     expect(useFetchReturnValue.current.loading).toBe(false);
-  });
-
-  it('returns correct values for empty url', async () => {
-    await act(async () => {
-      mount(<UseFetchHarness url={''} options={{}} deps={[]} />);
-    });
-    await processEventLoop();
-
-    expect(fetchSpy).not.toHaveBeenCalled();
-    expect(useFetchReturnValue.current.loading).toBe(false);
-    const {data, error} = useFetchReturnValue.current;
-    expect(data).toBeNull();
-    expect(error).toBeNull();
   });
 });

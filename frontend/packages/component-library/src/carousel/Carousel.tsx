@@ -1,18 +1,18 @@
 import classNames from 'classnames';
-import {HTMLAttributes, ReactNode, useId} from 'react';
+import {HTMLAttributes, ReactNode} from 'react';
+
 // Import Swiper React components
 // See Swiper documentation here: https://swiperjs.com/react
-import {Navigation, Pagination, A11y} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation, Pagination, A11y} from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
-
 import moduleStyles from './carousel.module.scss';
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   /** Unique identifier for the carousel instance */
@@ -29,8 +29,6 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   showNavArrows?: boolean;
   /** Carousel content */
   slides: {id: string; slide: ReactNode}[];
-  /** Carousel custom class name */
-  className?: string;
 }
 
 /**
@@ -48,7 +46,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
  * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
  */
 const Carousel: React.FC<CarouselProps> = ({
-  carouselId = `id-${useId().replaceAll(':', '')}`,
+  carouselId = 'id-' + crypto.randomUUID(),
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
@@ -68,7 +66,7 @@ const Carousel: React.FC<CarouselProps> = ({
       className={classNames(moduleStyles.carouselWrapper, className)}
       {...HTMLAttributes}
     >
-      <div className={classNames(moduleStyles.carousel)}>
+      <div className={classNames(moduleStyles.carousel, className)}>
         {/* Swiper carousel */}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
@@ -97,8 +95,10 @@ const Carousel: React.FC<CarouselProps> = ({
             },
           }}
         >
-          {slides?.map(({id, slide}) => (
-            <SwiperSlide key={id}>{slide}</SwiperSlide>
+          {slides.map(({id, slide}) => (
+            <SwiperSlide key={id} className={className}>
+              {slide}
+            </SwiperSlide>
           ))}
         </Swiper>
         {showNavArrows && (
@@ -107,7 +107,6 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               id={`${carouselId}-prev`}
               className={classNames(moduleStyles.swiperNavPrev)}
-              aria-label={'Previous slide'}
             >
               <FontAwesomeV6Icon iconName="arrow-left" />
             </button>
@@ -115,7 +114,6 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               id={`${carouselId}-next`}
               className={classNames(moduleStyles.swiperNavNext)}
-              aria-label={'Next slide'}
             >
               <FontAwesomeV6Icon iconName="arrow-right" />
             </button>

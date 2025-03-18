@@ -1,0 +1,72 @@
+:ruby
+  # The locale the user has set in the browser e.g. en-US.
+  locale ||= nil
+  show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
+
+  tall_blocks = [
+    Unit::COURSE1_NAME,
+    Unit::COURSE2_NAME,
+    Unit::COURSE3_NAME,
+    Unit::COURSE4_NAME,
+    Unit::MINECRAFT_AQUATIC_NAME,
+    Unit::MINECRAFT_HERO_NAME,
+    Unit::STARWARS_NAME,
+    Unit::FROZEN_NAME,
+    Unit::HOC_NAME,
+    Unit::FLAPPY_NAME,
+    Unit::INFINITY_NAME,
+    Unit::PLAYLAB_NAME,
+    Unit::ARTIST_NAME,
+    Unit::APPLAB_INTRO,
+    Unit::DANCE_PARTY_NAME,
+    Unit::DANCE_PARTY_2019_NAME,
+    Unit::OCEANS_NAME
+  ]
+
+  wide_blocks = [
+    Unit::TWENTY_HOUR_NAME,
+    "unplugged",
+  ]
+
+  # Family name for a set of courses. A block will be generated for the recommended one.
+  family_wide_blocks = [
+    Unit::EXPRESS,
+    Unit::PREEXPRESS,
+  ]
+
+  # Family name for a set of courses. A block will be generated for the recommended one.
+  family_tall_blocks = [
+    Unit::COURSEA,
+    Unit::COURSEB,
+    Unit::COURSEC,
+    Unit::COURSED,
+    Unit::COURSEE,
+    Unit::COURSEF,
+  ]
+
+.all-course-blocks
+  - tall_blocks.each do |script_name|
+    %div{id: script_name}
+      = render partial: 'shared/course_tall_block', locals: { id: script_name, family_name: nil}
+
+  - wide_blocks.each do |script_name|
+    %div{id: script_name}
+      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small" }
+
+  -# Creates a block for the recommended course version in the given course family.
+  - family_tall_blocks.each do |family_name|
+    - script = Unit.latest_stable_version(family_name, locale: locale)
+    - next unless script
+    %div{id: family_name}
+      = render partial: 'shared/course_tall_block', locals: { id: script.name, family_name: family_name}
+
+  -# Creates a block for the recommended course version in the given course family.
+  - family_wide_blocks.each do |family_name|
+    - script = Unit.latest_stable_version(family_name, locale: locale)
+    - next unless script
+    %div{id: family_name}
+      = render partial: 'shared/course_wide_block', locals: { id: script.name, view: "small", family_name: family_name }
+
+.csf-courses-header
+  .row
+    .span12.twolineheader!= t('home.heading_elementary_markdown', markdown: true)

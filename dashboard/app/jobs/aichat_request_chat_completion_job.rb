@@ -50,12 +50,11 @@ class AichatRequestChatCompletionJob < ApplicationJob
     stored_messages = request.stored_messages
     new_message = request.new_message
     level_id = request.level_id
-    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(request.user_id), request.project_id)
-    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale, encrypted_channel_id)
+    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     request.update!(response: response, execution_status: status)
   end
 
-  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale, encrypted_channel_id)
+  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     # Moderate user input for toxicity.
     user_toxicity = AichatSafetyHelper.find_toxicity('user', new_message['chatMessageText'], locale, level_id)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
@@ -70,8 +69,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
           model_customizations,
           stored_messages,
           new_message,
-          level_id,
-          encrypted_channel_id
+          level_id
         ) :
         AichatSagemakerHelper.get_sagemaker_assistant_response(
           model_customizations,

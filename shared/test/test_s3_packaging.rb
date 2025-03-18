@@ -10,27 +10,21 @@ class S3PackagingTest < Minitest::Test
   include SetupTest
 
   def create_packager(commit_hash = ORIGINAL_HASH)
-    application1_location = Dir.mktmpdir
-    application2_location = Dir.mktmpdir
+    source_location = Dir.mktmpdir
     target_location = Dir.mktmpdir
-    Dir.chdir(application1_location) do
+    Dir.chdir(source_location) do
       FileUtils.mkdir('src')
       File.write('src/one.js', "file one")
       File.write('src/two.js', "file two")
       FileUtils.mkdir('build')
       File.write('build/output.js', "output")
     end
-
-    Dir.chdir(application2_location) do
-      FileUtils.mkdir('src')
-      File.write('src/three.js', "file three")
-    end
     RakeUtils.stubs(:git_folder_hash).returns(commit_hash)
-    packager = S3Packaging.new('test-package', application1_location, [application1_location, application2_location], target_location).tap do |s3|
+    packager = S3Packaging.new('test-package', source_location, target_location).tap do |s3|
       s3.instance_variable_get(:@logger).level = Logger::Severity::WARN
     end
     RakeUtils.unstub(:git_folder_hash)
-    [application1_location, application2_location, target_location, packager]
+    [source_location, target_location, packager]
   end
 
   def cleanup_packager(source_location, target_location)
@@ -39,14 +33,12 @@ class S3PackagingTest < Minitest::Test
   end
 
   def setup
-    @application1_location, @application2_location, @target_location, @packager = create_packager
+    @source_location, @target_location, @packager = create_packager
     CDO.log.level = Logger::Severity::WARN
   end
 
   def teardown
-    FileUtils.remove_entry_secure @application1_location
-    FileUtils.remove_entry_secure @application2_location
-    FileUtils.remove_entry_secure @target_location
+    cleanup_packager(@source_location, @target_location)
     CDO.log.level = Logger::Severity::INFO
   end
 
@@ -90,7 +82,7 @@ class S3PackagingTest < Minitest::Test
   end
 
   def test_download_nonexistent
-    alt_application_loc, alt_source_loc, alt_target_loc, alt_packager = create_packager('fake-nonexistent-hash')
+    alt_source_loc, alt_target_loc, alt_packager = create_packager('fake-nonexistent-hash')
 
     begin
       threw = false
@@ -102,13 +94,12 @@ class S3PackagingTest < Minitest::Test
       assert threw
     ensure
       cleanup_packager(alt_source_loc, alt_target_loc)
-      FileUtils.remove_entry_secure alt_application_loc
     end
   end
 
   def test_ensure_updated_package
     alt_hash = 'alternate-hash'
-    alt_application_loc, _, alt_target_loc, alt_packager = create_packager(alt_hash)
+    alt_source_loc, alt_target_loc, alt_packager = create_packager(alt_hash)
     begin
       # upload package for ORIGINAL_HASH
       RakeUtils.expects(:git_folder_hash).returns(ORIGINAL_HASH)
@@ -141,8 +132,8 @@ class S3PackagingTest < Minitest::Test
       assert File.exist?(alt_target_loc + '/output.js')
 
       # if there is no package to download, we throw
-      cleanup_packager(alt_application_loc, alt_target_loc)
-      alt_application_loc, _, alt_target_loc, alt_packager = create_packager('fake-nonexistent-hash')
+      cleanup_packager(alt_source_loc, alt_target_loc)
+      alt_source_loc, alt_target_loc, alt_packager = create_packager('fake-nonexistent-hash')
       threw = false
       begin
         alt_packager.send(:ensure_updated_package)
@@ -151,7 +142,7 @@ class S3PackagingTest < Minitest::Test
       end
       assert threw
     ensure
-      cleanup_packager(alt_application_loc, alt_target_loc)
+      cleanup_packager(alt_source_loc, alt_target_loc)
     end
   end
 

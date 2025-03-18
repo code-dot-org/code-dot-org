@@ -1,5 +1,4 @@
 import {fetchBySlug} from '@contentful/experiences-sdk-react';
-
 import client from './client';
 
 /**

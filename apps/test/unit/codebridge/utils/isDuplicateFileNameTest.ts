@@ -184,6 +184,7 @@ describe('isDuplicateFileName', function () {
   });
 
   it('can determine isDuplicateFileName not startMode, w/ system support file', function () {
+    console.log(testProject.files);
     expect(
       isDuplicateFileName({
         fileName: 'system_support_file.vld',

@@ -1,5 +1,6 @@
 import type {TestRunnerConfig} from '@storybook/test-runner';
 import {getStoryContext} from '@storybook/test-runner';
+
 import {injectAxe, checkA11y} from 'axe-playwright';
 
 /*

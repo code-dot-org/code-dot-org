@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import Incubator from '@cdo/apps/templates/studioHomepages/Incubator';
 
@@ -14,5 +13,4 @@ $(document).ready(function () {
     </Provider>,
     document.getElementById('incubator-container')
   );
-  displayDifferentiationChat();
 });

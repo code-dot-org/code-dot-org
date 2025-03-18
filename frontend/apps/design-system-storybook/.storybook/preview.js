@@ -1,5 +1,4 @@
 import {default as RtlPreview} from 'storybook-addon-rtl/preview';
-
 import {loadFonts} from '@code-dot-org/fonts';
 
 import '@code-dot-org/fonts/index.css';

@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import {HTMLAttributes} from 'react';
 
 import {SpacingNoneToL} from './../common/types';
-
 import moduleStyles from './divider.module.scss';
 
 export interface DividerProps extends HTMLAttributes<HTMLElement> {

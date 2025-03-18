@@ -1,71 +1,33 @@
-const { RDSClient,
-  DescribeDBClusterSnapshotsCommand,
-  RestoreDBClusterFromSnapshotCommand,
-  CreateDBInstanceCommand,
-  ModifyDBClusterCommand,
-  DescribeDBInstancesCommand,
-  DeleteDBInstanceCommand,
-  DeleteDBClusterCommand
-} = require("@aws-sdk/client-rds");
+/* Script for verifying that our daily backups of our database are working.
+ * Does the following:
+ *
+ * 1). Find the latest aurora snapshot created by our backup cron job:
+ * https://github.com/code-dot-org/code-dot-org/blob/staging/bin/cron/push_latest_aurora_backup_to_secondary_account
+ * 2). Restore an Aurora cluster from that snapshot
+ * 3). Reset the admin user password (to avoid using the production password)
+ * 4). Make a basic query to verify data is successfully restored (count number of users)
+ * 5). Delete cluster
+ *
+ * Intended to be run once a day on our offsite account.
+ */
+
+const AWS = require("aws-sdk");
 const mysqlPromise = require("promise-mysql");
+// Uses API key from HONEYBADGER_API_KEY env variable
 const Honeybadger = require("honeybadger");
-const crypto = require('crypto');
-
-function generateSimplePassword(length = 16) {
-  const chars = 'abcdefghijklmnopqrstuvwxyz';
-  let password = '';
-
-  for (let i = 0; i < length; i++) {
-    password += chars[crypto.randomInt(chars.length)];
-  }
-
-  return password;
-}
 
 const DB_CLUSTER_ID = process.env.DB_CLUSTER_ID;
 const DB_INSTANCE_ID = process.env.DB_INSTANCE_ID;
 const DB_SNAPSHOT_IDENTIFIER_PREFIX = process.env.DB_SNAPSHOT_IDENTIFIER_PREFIX;
 const DB_SUBNET_GROUP_NAME = process.env.DB_SUBNET_GROUP_NAME;
-const DB_SECURITY_GROUP_ID = process.env.DB_SECURITY_GROUP_ID;
 const REGION = process.env.REGION;
-const DB_INSTANCE_CLASS = process.env.DB_INSTANCE_CLASS;
-const DB_ENGINE = process.env.DB_ENGINE;
-const DB_NAME = process.env.DB_NAME;
-const NEW_PASSWORD = generateSimplePassword(32);
 
-const main = async () => {
-  const rdsClient = new RDSClient({ region: REGION });
+const DB_INSTANCE_CLASS = "db.t3.medium";
+const DB_ENGINE = "aurora-mysql";
+const DB_NAME = "dashboard_production";
+const NEW_PASSWORD = "asdfasdf";
 
-  try {
-    console.log("Starting restore of database from latest snapshot");
-
-    await restoreLatestSnapshot(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
-    console.log("Database restored and available");
-
-    await changePassword(rdsClient, DB_CLUSTER_ID, NEW_PASSWORD);
-    console.log("Successfully changed password");
-    // Sleep for 30 seconds to wait for password change to take effect
-    await sleepMs(30000);
-
-    await verifyDb(rdsClient, DB_INSTANCE_ID, NEW_PASSWORD);
-    console.log("verified");
-  } catch (error) {
-    Honeybadger.notify(error, {
-      name: "Offsite account snapshot verification"
-    });
-    console.log(error);
-    throw error;
-  } finally {
-    console.log("deleting cluster");
-    await deleteCluster(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);
-  }
-};
-
-if (require.main === module) {
-  main();
-}
-
-const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
+const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
   // Ignore snapshots with "retain" in the name or any automated snapshots
   const snapshotFilterFunction = function(snapshot) {
     return (
@@ -88,84 +50,65 @@ const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
     return filtered.sort(snapshotSortFunction)[0];
   };
 
-  const describeCommand = new DescribeDBClusterSnapshotsCommand({});
-  const describeResult = await rdsClient.send(describeCommand);
+  const describeResult = await rds.describeDBClusterSnapshots({}).promise();
 
   const mostRecentSnapshot = getMostRecentSnapshot(
     describeResult.DBClusterSnapshots
   );
 
-  const restoreClusterCommand = new RestoreDBClusterFromSnapshotCommand({
+  const restoreClusterParams = {
     DBClusterIdentifier: clusterId,
     SnapshotIdentifier: mostRecentSnapshot.DBClusterSnapshotIdentifier,
     Engine: DB_ENGINE,
     EngineVersion: mostRecentSnapshot.EngineVersion,
-    DBSubnetGroupName: DB_SUBNET_GROUP_NAME,
-    VpcSecurityGroupIds: [DB_SECURITY_GROUP_ID]
-  });
+    DBSubnetGroupName: DB_SUBNET_GROUP_NAME
+  };
 
-  await rdsClient.send(restoreClusterCommand);
+  await rds.restoreDBClusterFromSnapshot(restoreClusterParams).promise();
 
-  const createInstanceCommand = new CreateDBInstanceCommand({
+  const createInstanceParams = {
     DBInstanceClass: DB_INSTANCE_CLASS,
     DBClusterIdentifier: clusterId,
     DBInstanceIdentifier: instanceId,
     Engine: DB_ENGINE,
     EngineVersion: mostRecentSnapshot.EngineVersion
-  });
+  };
 
-  await rdsClient.send(createInstanceCommand);
+  await rds.createDBInstance(createInstanceParams).promise();
 
-  // Wait for instance to be available
-  let instanceAvailable = false;
-  let attempts = 0;
-  const maxAttempts = 120;
-  const delaySeconds = 60;
-
-  while (!instanceAvailable && attempts < maxAttempts) {
-    try {
-      const describeInstanceCommand = new DescribeDBInstancesCommand({
-        DBInstanceIdentifier: instanceId
-      });
-      const response = await rdsClient.send(describeInstanceCommand);
-
-      if (response.DBInstances[0].DBInstanceStatus === 'available') {
-        instanceAvailable = true;
-      } else {
-        attempts++;
-        await sleepMs(delaySeconds * 1000);
+  await rds
+    .waitFor("dBInstanceAvailable", {
+      DBInstanceIdentifier: instanceId,
+      $waiter: {
+        maxAttempts: 120,
+        delay: 60 // seconds
       }
-    } catch (error) {
-      attempts++;
-      await sleepMs(delaySeconds * 1000);
-    }
-  }
-
-  if (!instanceAvailable) {
-    throw new Error(`Instance ${instanceId} did not become available after ${maxAttempts} attempts`);
-  }
+    })
+    .promise();
 };
 
+// https://stackoverflow.com/a/49139664
 const sleepMs = millis => {
   return new Promise(resolve => setTimeout(resolve, millis));
 };
 
-const changePassword = async (rdsClient, clusterId, newPassword) => {
-  const modifyCommand = new ModifyDBClusterCommand({
-    DBClusterIdentifier: clusterId,
-    MasterUserPassword: newPassword,
-    ApplyImmediately: true
-  });
-
-  await rdsClient.send(modifyCommand);
+const changePassword = async (rds, clusterId, newPassword) => {
+  // Update cluster password so we can connect without using production password.
+  await rds
+    .modifyDBCluster({
+      DBClusterIdentifier: clusterId,
+      MasterUserPassword: newPassword,
+      ApplyImmediately: true
+    })
+    .promise();
 };
 
-const verifyDb = async (rdsClient, instanceId, password) => {
-  const describeCommand = new DescribeDBInstancesCommand({
-    DBInstanceIdentifier: instanceId
-  });
-
-  const describeResponse = await rdsClient.send(describeCommand);
+const verifyDb = async (rds, instanceId, password) => {
+  const describeResponse = await rds
+    .describeDBInstances({
+      DBInstanceIdentifier: instanceId
+    })
+    .promise();
   const masterUsername = describeResponse.DBInstances[0].MasterUsername;
   const endpoint = describeResponse.DBInstances[0].Endpoint.Address;
 
@@ -177,44 +120,72 @@ const verifyDb = async (rdsClient, instanceId, password) => {
   });
 
   try {
-    // Get the last (most recent) row from the `users` table.
     const rows = await mysqlConnection.query(
-      "SELECT id, updated_at FROM users ORDER BY id DESC LIMIT 1"
+      "SELECT count(*) AS number_of_users, max(updated_at) AS last_updated_at FROM users"
     );
 
-    const updatedAt = new Date(rows[0].updated_at);
-    const oneDayAgo = new Date();
-    oneDayAgo.setDate(oneDayAgo.getDate() - 1);
-
-    const statusMessage = `Queried offsite backup of database.
-      The most recently created User in the restored database has ID ${rows[0].id} and was Updated At ${updatedAt}.`;
+    const statusMessage =
+      "Successfully queried offsite backup of database.  " +
+      "Number of Users = " +
+      rows[0].number_of_users +
+      ", Last Updated = " +
+      rows[0].last_updated_at;
     console.log(statusMessage);
-
-    if (updatedAt < oneDayAgo) {
-      throw new Error(`Latest user updated date/time (${updatedAt.toISOString()}) from the most recent offsite database
-       backup is more than 24 hours old. Recent database backups are not available/restorable in the offsite account.`);
-    }
   } finally {
     mysqlConnection.end();
   }
 };
 
-const deleteCluster = async (rdsClient, clusterId, instanceId) => {
-  const deleteInstanceCommand = new DeleteDBInstanceCommand({
-    DBInstanceIdentifier: instanceId,
-    SkipFinalSnapshot: true
-  });
+const deleteCluster = async (rds, clusterId, instanceId) => {
+  await rds
+    .deleteDBInstance({
+      DBInstanceIdentifier: instanceId,
+      SkipFinalSnapshot: true
+    })
+    .promise();
 
-  await rdsClient.send(deleteInstanceCommand);
-
-  const deleteClusterCommand = new DeleteDBClusterCommand({
-    DBClusterIdentifier: clusterId,
-    SkipFinalSnapshot: true
-  });
-
-  await rdsClient.send(deleteClusterCommand);
+  await rds
+    .deleteDBCluster({
+      DBClusterIdentifier: clusterId,
+      SkipFinalSnapshot: true
+    })
+    .promise();
 };
 
+const main = async () => {
+  const rds = new AWS.RDS({ region: REGION });
+
+  try {
+    console.log("Starting restore of database from latest snapshot");
+
+    await restoreLatestSnapshot(rds, DB_CLUSTER_ID, DB_INSTANCE_ID);
+    console.log("Database restored and available");
+
+    // change the password so we don't need production password to query DB
+    await changePassword(rds, DB_CLUSTER_ID, NEW_PASSWORD);
+    console.log("Successfully changed password");
+    // Sleep for 30 seconds to wait for password change to take effect
+    await sleepMs(30000);
+
+    await verifyDb(rds, DB_INSTANCE_ID, NEW_PASSWORD);
+    console.log("verified");
+  } catch (error) {
+    Honeybadger.notify(error, {
+      name: "Offsite account snapshot verification"
+    });
+    console.log(error);
+    throw error;
+  } finally {
+    console.log("deleting cluster");
+    await deleteCluster(rds, DB_CLUSTER_ID, DB_INSTANCE_ID);
+  }
+};
+
+if (require.main === module) {
+  main();
+}
+
+// exports are for unit testing only
 module.exports = {
   restoreLatestSnapshot,
   changePassword,

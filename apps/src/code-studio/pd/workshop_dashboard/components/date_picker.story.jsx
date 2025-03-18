@@ -10,13 +10,11 @@ export default {
 
 const Template = args => (
   // Currently the Bootstrap 3 styles required by React-Bootstrap are
-  // only applied inside #workshop-container .legacy-bs
+  // only applied inside div#workshop-container.
   // This is to prevent conflicts with other parts of Code Studio using Bootstrap 2.
   // See pd.scss. Without this container div it won't render properly.
   <div id="workshop-container" style={{width: 300}}>
-    <div className="legacy-bs">
-      <DatePicker {...args} />
-    </div>
+    <DatePicker {...args} />
   </div>
 );
 

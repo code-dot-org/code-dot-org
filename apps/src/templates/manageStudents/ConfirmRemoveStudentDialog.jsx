@@ -1,8 +1,8 @@
-import LinkButton, {buttonColors} from '@code-dot-org/component-library/button';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
@@ -78,15 +78,16 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
               {dependsOnThisSectionForLogin && (
                 <div>
                   <p>{i18n.removeStudentBody2()}</p>
-                  <LinkButton
-                    useAsLink={true}
+                  <Button
+                    __useDeprecatedTag
                     text={i18n.removeStudentSendHomeInstructions()}
                     target="_blank"
                     rel="noopener noreferrer"
                     href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-                    color={buttonColors.purple}
-                    size="m"
+                    color={Button.ButtonColor.blue}
+                    size={Button.ButtonSize.large}
                     style={styles.sendHomeInstructionsButton}
+                    tabIndex="1"
                   />
                 </div>
               )}
@@ -94,11 +95,12 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
           )}
           <ConfirmCancelFooter
             confirmText={i18n.removeStudent()}
-            confirmColor={buttonColors.destructive}
+            confirmColor={Button.ButtonColor.red}
             onConfirm={onConfirm}
             onCancel={onCancel}
             disableConfirm={!!disabled}
             disableCancel={!!disabled}
+            tabIndex="1"
           />
         </div>
       </BaseDialog>

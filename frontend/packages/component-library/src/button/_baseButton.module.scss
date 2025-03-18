@@ -1,4 +1,5 @@
-@use '@code-dot-org/component-library-styles/colors';
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/primitiveColors.scss';
 @import '@code-dot-org/component-library-styles/mixins.scss';
 
 // Button common styles
@@ -43,7 +44,7 @@ a.button {
   }
 
   &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
+    outline: 2px solid var(--brand-teal-50);
     outline-offset: 2px;
     border-radius: 0.375rem;
   }
@@ -56,7 +57,7 @@ a.button {
   &:disabled,
   &[aria-disabled='true'] {
     cursor: not-allowed;
-    border-color: var(--borders-neutral-disabled);
+    border-color: var(--neutral-gray-20);
   }
 }
 
@@ -64,66 +65,66 @@ a.button {
 .button-primary,
 a.button-primary {
   &.button-purple {
-    background-color: var(--background-brand-purple-primary);
-    color: var(--text-neutral-inverse);
+    background-color: var(--brand-purple-50);
+    color: var(--neutral-base-white);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-brand-purple-strong);
+      background-color: var(--brand-purple-70);
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      background-color: var(--background-neutral-disabled);
-      color: var(--text-neutral-disabled-inverse);
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-white);
     }
   }
 
   &.button-black {
-    background: var(--background-neutral-primary-inverse);
-    color: var(--text-neutral-inverse);
+    background-color: var(--neutral-base-black);
+    color: var(--neutral-base-white);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-neutral-octonary);
+      background-color: var(--neutral-gray-80);
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      background-color: var(--background-neutral-disabled);
-      color: var(--text-neutral-disabled-inverse);
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-white);
     }
   }
 
   &.button-white {
-    background-color: var(--background-neutral-white-fixed);
-    color: var(--text-neutral-primary);
+    background-color: var(--neutral-base-white);
+    color: var(--neutral-base-black);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-neutral-quaternary);
+      background-color: var(--neutral-gray-20);
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      background-color: var(--background-neutral-octonary);
-      color: var(--text-neutral-primary);
+      background-color: var(--neutral-gray-80);
+      color: var(--neutral-gray-90);
     }
   }
 
   &.button-destructive {
-    background-color: var(--background-error-primary);
-    color: var(--text-neutral-white-fixed);
+    background-color: var(--sentiment-error-50);
+    color: var(--neutral-base-white);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-error-strong);
+      background-color: var(--sentiment-error-70);
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      background-color: var(--background-neutral-disabled);
-      color: var(--text-neutral-disabled-inverse);
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-white);
     }
   }
 }
@@ -132,76 +133,76 @@ a.button-primary {
 a.button-secondary {
   // ! Warning!! Secondary purple button is deprecated and will be removed soon.
   &.button-purple {
-    border: 1px solid var(--borders-brand-purple-primary);
-    color: var(--text-brand-purple-primary);
+    border: 1px solid var(--brand-purple-50);
+    color: var(--brand-purple-50);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-brand-purple-hover);
-      border: 1px solid var(--borders-brand-purple-primary);
-      color: var(--text-brand-purple-primary);
+      background-color: var(--brand-purple-10);
+      border: 1px solid var(--brand-purple-50);
+      color: var(--brand-purple-50);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid var(--borders-brand-purple-primary) !important;
+      border: 1px solid var(--brand-purple-50) !important;
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      border-color: var(--borders-neutral-disabled) !important;
-      color: var(--text-neutral-disabled);
-      background-color: var(--background-neutral-primary);
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
+      background-color: unset;
     }
   }
 
   &.button-black {
-    border: 1px solid var(--borders-neutral-solid);
-    background-color: var(--background-neutral-primary);
-    color: var(--text-neutral-primary);
+    border: 1px solid var(--neutral-base-black);
+    background-color: var(--neutral-base-white);
+    color: var(--neutral-base-black);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-neutral-tertiary);
-      border: 1px solid var(--borders-neutral-solid);
-      color: var(--text-neutral-primary);
+      background-color: var(--neutral-gray-10);
+      border: 1px solid var(--neutral-base-black);
+      color: var(--neutral-base-black);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid var(--borders-neutral-solid) !important;
+      border: 1px solid var(--neutral-base-black) !important;
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      border-color: var(--borders-neutral-disabled) !important;
-      color: var(--text-neutral-disabled);
-      background-color: var(--background-neutral-primary);
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
+      background-color: unset;
     }
   }
 
   &.button-gray {
-    border: 1px solid var(--borders-neutral-strong);
-    background-color: var(--background-neutral-primary);
-    color: var(--text-neutral-primary);
+    border: 1px solid var(--neutral-gray-40);
+    background-color: var(--neutral-base-white);
+    color: var(--neutral-base-black);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-neutral-tertiary);
-      border: 1px solid var(--borders-neutral-strong);
-      color: var(--text-neutral-primary);
+      background-color: var(--neutral-gray-10);
+      border: 1px solid var(--neutral-gray-40);
+      color: var(--neutral-base-black);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid var(--borders-neutral-strong) !important;
+      border: 1px solid var(--neutral-gray-40) !important;
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      border-color: var(--borders-neutral-disabled) !important;
-      color: var(--text-neutral-disabled);
-      background-color: var(--background-neutral-primary);
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
+      background-color: unset;
     }
   }
 
@@ -231,26 +232,26 @@ a.button-secondary {
   }
 
   &.button-destructive {
-    border: 1px solid var(--borders-error-primary);
-    color: var(--text-error-primary);
+    border: 1px solid var(--sentiment-error-50);
+    color: var(--sentiment-error-50);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-error-light);
-      border: 1px solid var(--borders-error-primary);
-      color: var(--text-error-primary);
+      background-color: var(--sentiment-error-10);
+      border: 1px solid var(--sentiment-error-50);
+      color: var(--sentiment-error-50);
     }
 
     &:active {
       // !important is used here to override the ./apps/style/common.scss line 655 styles
-      border: 1px solid var(--borders-error-primary) !important;
+      border: 1px solid var(--sentiment-error-50) !important;
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      border-color: var(--borders-neutral-disabled) !important;
-      color: var(--text-neutral-disabled);
-      background-color: var(--background-neutral-primary);
+      border-color: var(--neutral-gray-20) !important;
+      color: var(--neutral-gray-20);
+      background-color: unset;
     }
   }
 }
@@ -258,54 +259,54 @@ a.button-secondary {
 .button-tertiary,
 a.button-tertiary {
   &.button-purple {
-    color: var(--text-brand-purple-primary);
+    color: var(--brand-purple-50);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-brand-purple-hover);
-      color: var(--text-brand-purple-primary);
+      background-color: var(--brand-purple-10);
+      color: var(--brand-purple-50);
     }
 
     &:active {
-      background-color: var(--background-brand-purple-hover);
-      color: var(--text-brand-purple-secondary);
+      background-color: var(--brand-purple-10);
+      color: var(--brand-purple-70);
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      color: var(--text-neutral-disabled);
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
 
   &.button-black {
-    color: var(--text-neutral-primary);
+    color: var(--neutral-base-black);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-neutral-quaternary);
-      color: var(--text-neutral-primary);
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-base-black);
     }
 
     &:active {
-      background-color: var(--background-neutral-quaternary);
-      color: var(--text-neutral-tertiary);
+      background-color: var(--neutral-gray-20);
+      color: var(--neutral-gray-80);
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      color: var(--text-neutral-disabled);
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
 
   &.button-white {
-    color: var(--text-neutral-inverse);
+    color: var(--neutral-base-white);
 
     &:hover,
     &.button-withForcedHover {
       background-color: var(--neutral-white-alpha-30);
-      color: var(--text-neutral-inverse);
+      color: var(--neutral-base-white);
     }
 
     &:active {
@@ -315,7 +316,7 @@ a.button-tertiary {
 
     &:disabled,
     &[aria-disabled='true'] {
-      color: var(--text-neutral-tertiary);
+      color: var(--neutral-gray-80);
       background-color: unset;
     }
   }
@@ -342,22 +343,22 @@ a.button-tertiary {
   }
 
   &.button-destructive {
-    color: var(--text-error-primary);
+    color: var(--sentiment-error-50);
 
     &:hover,
     &.button-withForcedHover {
-      background-color: var(--background-error-light);
-      color: var(--text-error-primary);
+      background-color: var(--sentiment-error-10);
+      color: var(--sentiment-error-50);
     }
 
     &:active {
-      background-color: var(--background-error-light);
-      color: var(--text-error-secondary);
+      background-color: var(--sentiment-error-10);
+      color: var(--sentiment-error-70);
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-      color: var(--text-neutral-disabled);
+      color: var(--neutral-gray-20);
       background-color: unset;
     }
   }
@@ -380,9 +381,9 @@ a.button-l {
     width: 1.5rem;
   }
 
-  &.button-iconOnly {
+  &.button-iconOnly,
+  .button-iconBorder {
     padding: 0.75rem;
-    min-width: 3rem;
   }
 }
 
@@ -402,9 +403,9 @@ a.button-m {
     width: 1.25rem;
   }
 
-  &.button-iconOnly {
+  &.button-iconOnly,
+  &.button-iconBorder {
     padding: 0.625rem;
-    min-width: 2.5rem;
   }
 }
 
@@ -424,9 +425,9 @@ a.button-s {
     width: 1.125rem;
   }
 
-  &.button-iconOnly {
+  &.button-iconOnly,
+  &.button-iconBorder {
     padding: 0.4375rem;
-    min-width: 2rem;
   }
 }
 
@@ -446,8 +447,8 @@ a.button-xs {
     width: 1rem;
   }
 
-  &.button-iconOnly {
+  &.button-iconOnly,
+  &.button-iconBorder {
     padding: 0.25rem;
-    min-width: 1.5rem;
   }
 }

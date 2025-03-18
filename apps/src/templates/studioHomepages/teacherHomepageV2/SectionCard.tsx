@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import {
   Heading5,
   OverlineOneText,
@@ -8,20 +9,17 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
-import {SectionCardBody} from './SectionCardBody';
-import {SectionOptionsDropdown} from './SectionOptionsDropdown';
-
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
   section: Section;
-  onDeleteClickCallback: (sectionId: number) => void;
 }
 
-export const SectionCard: React.FC<SectionCardProps> = ({
-  section,
-  onDeleteClickCallback,
-}) => {
+export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
+  const onDropdownButtonClick = () => {
+    // open dropdown modal
+  };
+
   return (
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
@@ -39,13 +37,18 @@ export const SectionCard: React.FC<SectionCardProps> = ({
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <SectionOptionsDropdown
-            section={section}
-            onDeleteClickCallback={onDeleteClickCallback}
+          <Button
+            isIconOnly
+            icon={{iconName: 'ellipsis-vertical'}}
+            onClick={onDropdownButtonClick}
+            color={'gray'}
+            type={'tertiary'}
+            size={'s'}
+            className={styles.dropdownButton}
+            ariaLabel={i18n.sectionOptionsDropdown()}
           />
         </div>
       </div>
-      {!section.hidden && <SectionCardBody section={section} />}
     </div>
   );
 };

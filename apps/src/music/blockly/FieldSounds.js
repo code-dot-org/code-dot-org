@@ -67,34 +67,6 @@ class FieldSounds extends GoogleBlockly.Field {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
     }
-
-    if (Blockly.isDarkTheme) {
-      // Darken the field rectangle and text for shadow blocks.
-      const blockIsShadow = this.getSourceBlock()?.isShadow();
-      if (this.rect) {
-        if (blockIsShadow) {
-          Blockly.utils.dom.addClass(this.rect, 'blocklyShadowMusicFieldRect');
-        } else {
-          Blockly.utils.dom.removeClass(
-            this.rect,
-            'blocklyShadowMusicFieldRect'
-          );
-        }
-      }
-      if (this.textElement) {
-        if (blockIsShadow) {
-          Blockly.utils.dom.addClass(
-            this.textElement,
-            'blocklyShadowFieldText'
-          );
-        } else {
-          Blockly.utils.dom.removeClass(
-            this.textElement,
-            'blocklyShadowFieldText'
-          );
-        }
-      }
-    }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
         this.textElement_.style.fill = color.neutral_light;
@@ -194,7 +166,7 @@ class FieldSounds extends GoogleBlockly.Field {
     const constants = this.getConstants();
 
     // Create the text element so we can measure it.
-    this.textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+    const textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
       fill: color.neutral_light,
       x: 27,
       y: 16,
@@ -207,18 +179,18 @@ class FieldSounds extends GoogleBlockly.Field {
     )?.type;
 
     if (soundType === 'vocal') {
-      this.textElement.setAttribute('font-style', 'italic');
+      textElement.setAttribute('font-style', 'italic');
     }
 
     // Attach the actual text.
-    this.textElement.appendChild(document.createTextNode(fieldText));
+    textElement.appendChild(document.createTextNode(fieldText));
 
     // Convert our 13px font size to 9.75pt for the measurement.
     const fontSize = 9.75;
 
     // Measure the rendered text.
     const textWidth = GoogleBlockly.utils.dom.getFastTextWidth(
-      this.textElement,
+      textElement,
       fontSize,
       constants.FIELD_TEXT_FONTWEIGHT,
       constants.FIELD_TEXT_FONTFAMILY
@@ -230,7 +202,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Create the background rectangle and attach it to the background
     // parent.
-    this.rect = GoogleBlockly.utils.dom.createSvgElement(
+    GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark90,
@@ -266,7 +238,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Now attach the text element to the background parent.  It will
     // render on top of the background rectangle.
-    this.backgroundElement.appendChild(this.textElement);
+    this.backgroundElement.appendChild(textElement);
 
     // Similarly, add the icon text element to the background parent.
     if (iconElement) {
@@ -275,9 +247,6 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Update the field size.
     this.updateSize_();
-
-    // Update the colour of the field and its text.
-    this.applyColour();
 
     // Possibly render the panel contents.
     this.renderContent();

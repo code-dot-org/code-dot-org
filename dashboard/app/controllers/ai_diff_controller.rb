@@ -20,7 +20,7 @@ class AiDiffController < ApplicationController
     response_body = get_response_body(session_id)
     # get or create thread obj
     begin
-      @thread = AidiffThread.find_or_create_by!(
+      @thread = AichatThread.find_or_create_by!(
         user_id: current_user.id,
         external_id: response_body[:session_id],
         llm_version: AiDiffBedrockHelper::MODEL_ID,
@@ -35,8 +35,8 @@ class AiDiffController < ApplicationController
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
       # Add user message to thread
       begin
-        AidiffMessage.create!(
-          aidiff_thread_id: @thread.id,
+        AichatMessage.create!(
+          aichat_thread_id: @thread.id,
           external_id: @thread.external_id,
           role: :user,
           content: params[:inputText],
@@ -48,15 +48,13 @@ class AiDiffController < ApplicationController
 
       # Add response message to thread
       begin
-        assistant_message = AidiffMessage.create!(
-          aidiff_thread_id: @thread.id,
+        AichatMessage.create!(
+          aichat_thread_id: @thread.id,
           external_id: @thread.external_id,
           role: :assistant,
           content: response_body[:chat_message_text],
           is_preset: params[:isPreset],
         )
-        response_body[:messageId] = assistant_message.id
-        response_body[:threadId] = @thread.id
       rescue StandardError => exception
         return render status: :bad_request, json: {error: exception.message}
       end
@@ -120,7 +118,7 @@ class AiDiffController < ApplicationController
     course_name = @unit_group.present? ? @unit_group.name : @unit&.name
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name, params[:isPreset])
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name)
 
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_name, session_id)
     #TODO: check for profanity/PII in model response

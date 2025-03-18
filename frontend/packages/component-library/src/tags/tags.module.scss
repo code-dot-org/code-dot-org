@@ -32,8 +32,7 @@
       padding-inline-start: 8px;
     }
 
-    &:has(i:last-child),
-    &:has(button:last-child) {
+    &:has(i:not(:first-child)) {
       padding-inline-end: 8px;
     }
   }

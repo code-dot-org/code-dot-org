@@ -1,10 +1,7 @@
-import Popover from '@code-dot-org/component-library/popover';
 import cookies from 'js-cookie';
 import React from 'react';
 
-import i18n from '@cdo/locale';
-
-import styles from './sign-in-callout-wrapper.module.scss';
+import SignInCallout from './SignInCallout';
 
 const HideSignInCallout = 'hide_signin_callout';
 
@@ -61,17 +58,7 @@ export default class SignInCalloutWrapper extends React.Component {
     } else {
       return (
         <div className="uitest-signincallout">
-          <Popover
-            title={i18n.notSignedInHeader()}
-            icon={{
-              iconName: 'person-circle-question',
-              className: styles.calloutIcon,
-            }}
-            content={i18n.notSignedInBody()}
-            direction={'none'}
-            className={styles.popover}
-            onClose={this.closeCallout}
-          />
+          <SignInCallout handleClose={this.closeCallout} />
         </div>
       );
     }

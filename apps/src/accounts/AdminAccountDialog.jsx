@@ -31,6 +31,7 @@ const AdminAccountDialog = ({isOpen, onCancel, onConfirm}) => {
           confirmText={i18n.continue()}
           onConfirm={onConfirm}
           onCancel={onCancel}
+          tabIndex="1"
         />
       </div>
     </BaseDialog>

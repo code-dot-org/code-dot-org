@@ -125,24 +125,17 @@ const Callouts: React.FunctionComponent = () => {
     const splitId = calloutId.split(':');
     if (splitId.length === 2) {
       const dataId = splitId[1];
-      if (splitId[0] === 'flyout-id') {
-        validCallouts.push({
-          selector: `.blocklyFlyout g[data-id="${dataId}"] path`,
-          direction: 'left',
-        });
-      } else {
-        validCallouts.push({
-          selector: `.blocklyWorkspace g[data-id="${dataId}"] path`,
-          direction:
-            splitId[0] === 'id-left'
-              ? 'left'
-              : splitId[0] === 'id-up-inside'
-              ? 'up-inside'
-              : splitId[0] === 'id-up-left'
-              ? 'up-left'
-              : 'up',
-        });
-      }
+      validCallouts.push({
+        selector: `.blocklyWorkspace g[data-id="${dataId}"] path`,
+        direction:
+          splitId[0] === 'id-left'
+            ? 'left'
+            : splitId[0] === 'id-up-inside'
+            ? 'up-inside'
+            : splitId[0] === 'id-up-left'
+            ? 'up-left'
+            : 'up',
+      });
     } else if (availableCallouts[calloutId]) {
       validCallouts.push({
         selector: availableCallouts[calloutId].selector,

@@ -1,8 +1,7 @@
 const AWS = require("aws-sdk");
 
-// Use environment variables with fallback default values
-const NUM_SNAPSHOTS_TO_KEEP = parseInt(process.env.NUM_SNAPSHOTS_TO_KEEP, 10) || 5;
-const DB_SNAPSHOT_IDENTIFIER_PREFIX = process.env.DB_SNAPSHOT_IDENTIFIER_PREFIX || "autoscale-prod-cluster";
+const NUM_SNAPSHOTS_TO_KEEP = 5;
+const DB_SNAPSHOT_IDENTIFIER_PREFIX = "production";
 
 // Delete each of the snapshots in the list
 const deleteSnapshots = async function(rds, snapshots) {

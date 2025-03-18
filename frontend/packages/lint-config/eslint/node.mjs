@@ -1,5 +1,4 @@
 import globals from 'globals';
-
 import cdoBase from './base.mjs';
 
 /** @type {import('eslint').Linter.Config[]} */

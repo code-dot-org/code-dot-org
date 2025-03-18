@@ -95,7 +95,6 @@ class Ability
       can :create, Activity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
-      can :create, UserLevelEvaluation, user_id: user.id
       can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower do |follower|
@@ -184,9 +183,6 @@ class Ability
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
         end
-        can :create, UserLevelEvaluation do |ule|
-          !user.students.where(id: ule.user_id).empty?
-        end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|
           !script.old_professional_learning_course?
@@ -272,7 +268,6 @@ class Ability
 
       if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
-        can :submit_feedback, AidiffMessage
       end
     end
 
@@ -498,10 +493,6 @@ class Ability
 
       can :chat_completion, :openai_chat do
         user.has_ai_tutor_access?
-      end
-
-      can :evaluate, :openai_evaluate do
-        user.verified_instructor?
       end
 
       can [:start_chat_completion, :chat_request], :aichat_request do

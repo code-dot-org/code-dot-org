@@ -1,5 +1,5 @@
-@use '@code-dot-org/component-library-styles/colors';
-@use '@code-dot-org/component-library-styles/mixins' as mixins;
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
 
 :root {
   // Swiper CSS custom properties
@@ -15,9 +15,6 @@
 .carouselWrapper {
   max-width: 100%;
   margin: 0 auto;
-  // Added min-height so there's workable space in the Contentful experiences editor,
-  // it won't have an effect on anything visually once slides are added.
-  min-height: 50px;
 }
 
 // Navigation button styles
@@ -38,7 +35,7 @@
     min-width: 3rem;
     height: 3rem;
 
-    @include mixins.transition-all;
+    @include transition-all;
 
     // Flips the buttons for RTL languages
     html[dir='rtl'] & {
@@ -50,7 +47,7 @@
       font-size: 1.5rem;
       color: var(--text-neutral-tertiary);
 
-      @include mixins.transition-all;
+      @include transition-all;
     }
 
     // Hover styles
@@ -64,7 +61,7 @@
 
     // Focus styles
     &:focus-visible {
-      @include mixins.focus-styles;
+      @include focus-styles;
     }
 
     // Disabled styles
@@ -95,7 +92,7 @@
   margin-top: 1.5rem;
 
   :global(.swiper-pagination-bullet) {
-    @include mixins.transition-all;
+    @include transition-all;
 
     // Hover styles
     @media (min-width: 1024px) {
@@ -106,7 +103,7 @@
 
     // Focus styles
     &:focus-visible {
-      @include mixins.focus-styles;
+      @include focus-styles;
     }
   }
 }
@@ -128,7 +125,7 @@
   &:has(figcaption) {
     .swiperNavPrev,
     .swiperNavNext {
-      top: 37%;
+      top: 34%;
     }
   }
 }

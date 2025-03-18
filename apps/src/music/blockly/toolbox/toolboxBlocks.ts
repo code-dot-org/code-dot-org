@@ -131,7 +131,6 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   },
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     levelbuilderText: 'Rest',
-    id: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -140,7 +139,6 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   },
   [BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
     levelbuilderText: 'Set Volume',
-    id: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -150,7 +148,6 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   },
   [BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
     levelbuilderText: 'Set Filter',
-    id: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -160,7 +157,6 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   },
   [BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
     levelbuilderText: 'Set Delay',
-    id: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     fields: {
@@ -182,13 +178,11 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   },
   [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
     levelbuilderText: 'Play Sequential',
-    id: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
   },
   [BlockTypes.PLAY_SOUNDS_RANDOM]: {
     levelbuilderText: 'Play Random',
-    id: BlockTypes.PLAY_SOUNDS_RANDOM,
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_RANDOM,
   },
@@ -263,7 +257,6 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
   },
   [BlockTypes.TRIGGERED_AT_SIMPLE2]: {
     levelbuilderText: 'Trigger',
-    id: BlockTypes.TRIGGERED_AT_SIMPLE2,
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
     fields: {

@@ -1,37 +1,39 @@
 import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import {
-  AIResponse,
-  StudentAnswer,
-  StudentWorkEvaluation,
-  evaluateStudentWork,
-  summarizeEvaluations,
-} from '@cdo/apps/aiEvaluation/evaluationApi';
+import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+
+import SafeMarkdown from '../SafeMarkdown';
 
 import style from '@cdo/apps/levelbuilder/ai-iteration-tools/ai-tutor/ai-tutor-tester.module.scss';
 
-interface LevelData {
-  levelInstructions: string;
-  levelId: number;
-  unitId: number;
+interface StudentResponse {
+  user_id: number;
+  text: string;
+  student_display_name: string;
+  aiEvaluation: string;
 }
 
 interface FreeResponseAIEvaluationProps {
-  responses: StudentAnswer[];
-  levelData: LevelData;
+  responses: StudentResponse[];
+  levelInstructions: string;
 }
-
 const FreeResponseAIEvaluation: React.FunctionComponent<
   FreeResponseAIEvaluationProps
-> = ({responses, levelData}) => {
+> = ({responses, levelInstructions}) => {
   const [evaluationsPending, setEvaluationsPending] = useState<boolean>(false);
-  const [evaluations, setEvaluations] = useState<StudentWorkEvaluation[]>([]);
+  const [evaluations, setEvaluations] = useState<StudentResponse[]>([]);
   const [evaluationCount, setEvaluationCount] = useState<number>(0);
-  const [aiSummary, setAiSummary] = useState<AIResponse>();
-  const evaluationComplete =
-    evaluationCount > 0 && responses.length === evaluationCount;
+  const [aiSummary, setAiSummary] = useState<string>('');
+  const evaluationComplete = responses.length === evaluationCount;
+
+  useEffect(() => {
+    if (evaluationComplete) {
+      setEvaluationsPending(false);
+      summarizeStudentEvaluations(evaluations);
+    }
+  }, [evaluations, evaluationComplete]);
 
   const basePrompt =
     'You are a teaching assistant for a high school AP Computer Science class where the students are learning JavaScript.';
@@ -42,60 +44,44 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       return evaluateStudentResponse(studentResponse);
     });
 
-    await Promise.allSettled(responsePromises).then(() =>
-      summarizeStudentEvaluations(evaluations)
-    );
+    await Promise.allSettled(responsePromises);
   };
 
-  const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
-    const systemPrompt = `${basePrompt} Please review the student's work. Respond in correctly formatted JSON.
-    evaluationCriteria should just be a copy of ${levelData.levelInstructions}.
-    aiEvaluation should be your assessment of the student's work. Respond with "great", "ok", or "needs revision".
-    aiReasoning should be one sentence with your reasoning.`;
-    const aiResponse = await evaluateStudentWork(
-      studentAnswer,
-      levelData.levelId,
-      levelData.unitId,
-      systemPrompt
+  const evaluateStudentResponse = async (studentResponse: StudentResponse) => {
+    const studentPrompt = `${basePrompt} Please review the student's responses and indicate whether the response is "great", "ok", or "needs revision". Provide one sentence with your reasoning. The student's instructions are: ${levelInstructions}.`;
+    const studentResponseString = `${studentResponse.student_display_name} replied ${studentResponse.text}`;
+    const chatApiResponse = await getChatCompletionMessage(
+      studentResponseString,
+      [],
+      studentPrompt
     );
-    const evaluation = {
-      ...studentAnswer,
-      aiEvaluation: aiResponse.aiEvaluation,
-      aiReasoning: aiResponse.aiReasoning,
-    };
-    setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
-    setEvaluationCount(prevCount => prevCount + 1);
+    const aiEvaluation = chatApiResponse.assistantResponse;
+    if (aiEvaluation) {
+      const evaluation = {
+        ...studentResponse,
+        aiEvaluation: aiEvaluation,
+      };
+      setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
+      setEvaluationCount(prevCount => prevCount + 1);
+    }
   };
 
   const summarizeStudentEvaluations = async (
-    evaluations: StudentWorkEvaluation[]
+    evaluations: StudentResponse[]
   ) => {
-    const sectionPrompt = `${basePrompt} Please review the evaluations of the student responses. Respond in correctly formatted JSON.
-    evaluationCriteria should just be a copy of "Summarize".
-    aiEvaluation should be your assessment of the class's overall work. Respond with "review the concept" or "move on to the next lesson".
-    aiReasoning should be one sentence with your reasoning including the names of any students who need more help.`;
-    const aiSummary = await summarizeEvaluations(
-      evaluations,
-      levelData.levelId,
-      levelData.unitId,
+    const sectionPrompt = `${basePrompt} Please review the evaluations of the student responses and based on the results indicate whether the teacher should "review the concept" or "move on to the next lesson". Provide one sentence with your reasoning.`;
+    const chatApiResponse = await getChatCompletionMessage(
+      evaluations.map(evaluation => evaluation.aiEvaluation).join(' '),
+      [],
       sectionPrompt
     );
-    const summary = aiSummary;
+    const summary = chatApiResponse.assistantResponse;
     if (summary) {
       setAiSummary(summary);
     } else {
-      setAiSummary({
-        aiEvaluation: 'Uh oh!',
-        aiReasoning: 'Something went wrong',
-      });
+      setAiSummary('Uh oh!');
     }
   };
-
-  useEffect(() => {
-    if (evaluationComplete) {
-      setEvaluationsPending(false);
-    }
-  }, [evaluationComplete]);
 
   return (
     <div>
@@ -109,8 +95,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       {evaluationComplete && aiSummary && (
         <div>
           <br />
-          <h3>Reccommendation: {aiSummary.aiEvaluation}</h3>
-          <h4>Reasoning: {aiSummary.aiReasoning}</h4>
+          <SafeMarkdown markdown={aiSummary} />
           <CollapsibleSection
             headerContent={
               <h3>AI Evaluations of Individual Student Responses</h3>
@@ -119,16 +104,15 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
             <table>
               <thead>
                 {evaluations.map(evaluation => (
-                  <tr key={evaluation.studentId} className={style.row}>
+                  <tr key={evaluation.user_id} className={style.row}>
                     <td className={style.cell}>
-                      <div>{evaluation.studentDisplayName}</div>
+                      <div>{evaluation.student_display_name}</div>
                     </td>
                     <td className={style.cell}>
-                      <div>{evaluation.studentWork}</div>
+                      <div>{evaluation.text}</div>
                     </td>
                     <td className={style.cell}>
                       <div>{evaluation.aiEvaluation}</div>
-                      <div>{evaluation.aiReasoning}</div>
                     </td>
                   </tr>
                 ))}

@@ -1,7 +1,5 @@
 # Code.org Marketing Application
 
-...
-
 ## Getting Started
 
 ### Secrets

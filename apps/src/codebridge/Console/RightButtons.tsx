@@ -7,7 +7,6 @@ import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './right-buttons.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
@@ -27,8 +26,6 @@ const tooltipProps: TooltipProps = {
 const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   clearOutput,
 }) => {
-  const isShareView = useAppSelector(state => state.lab.isShareView);
-
   return (
     <>
       <div className={moduleStyles.buttonContainer}>
@@ -44,7 +41,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
             className={darkModeStyles.tertiaryButton}
           />
         </WithTooltip>
-        {!isShareView && <SwapLayoutDropdown />}
+        <SwapLayoutDropdown />
       </div>
     </>
   );

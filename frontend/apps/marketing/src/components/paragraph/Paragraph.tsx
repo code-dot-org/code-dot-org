@@ -1,13 +1,11 @@
-import classNames from 'classnames';
-import React, {ReactNode} from 'react';
-
+import '@code-dot-org/component-library/typography/index.css';
 import {
   default as Typography,
   StrongText,
   VisualAppearance,
 } from '@code-dot-org/component-library/typography';
-
-import {RemoveMarginBottomProps} from '@/components/common/types';
+import React, {ReactNode} from 'react';
+import classNames from 'classnames';
 
 import moduleStyles from './paragraph.module.scss';
 
@@ -16,7 +14,7 @@ type ParagraphVisualAppearance = Extract<
   'body-one' | 'body-two' | 'body-three' | 'body-four'
 >;
 
-type ParagraphProps = RemoveMarginBottomProps & {
+type ParagraphProps = {
   /** Paragraph content */
   children: ReactNode;
   /** Paragraph visual appearance */
@@ -34,7 +32,6 @@ const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   isStrong,
   color,
   children,
-  removeMarginBottom,
   className,
 }) => (
   <Typography
@@ -43,7 +40,6 @@ const Paragraph: React.FunctionComponent<ParagraphProps> = ({
     className={classNames(
       moduleStyles.paragraph,
       moduleStyles[`paragraph-color-${color}`],
-      removeMarginBottom && moduleStyles['paragraph-removeMarginBottom'],
       className,
     )}
   >

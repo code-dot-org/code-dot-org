@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-02-24T21:03:13.000Z",
   "level_num": "custom",
@@ -361,33 +362,18 @@
           "language": "py",
           "contents": "from neighborhood import Painter\n\njoy = Painter()\n\ndef paint_step():\n    joy.painter(\"red\")\n    joy.move()\n    joy.pant(\"green\")  \n\npaint_step()\n",
           "folderId": "0",
-          "active": false,
-          "open": true,
-          "type": "locked_starter"
+          "active": true,
+          "open": true
         }
       },
       "folders": {
-      },
-      "openFiles": [
-        "0"
-      ]
+      }
     },
     "teacher_markdown": "**Error Type**: Syntax Error (Code won’t run due to a typo)\r\n\r\n**Expected Outcome**: The `Painter` should move forward and paint a red and green tile.\r\n\r\nDebugging Challenge\r\n\r\n- The program throws an `AttributeError` because `.painter()` and `.pant()` are not a valid `Painter` methods.\r\n- Students must determine what’s wrong with these method calls and correct them.\r\n- Hint for students: Carefully check function and method names.",
     "bubble_choice_description": "You’re sure you wrote everything correctly, but your program refuses to run. There’s an issue hiding in plain sight — something small but critical is causing everything to break. Can you spot the problem?",
     "thumbnail_url": "https://images.code.org/90ca4a7e331a1716e0aea9c488104d91-virus-scan.png",
-    "display_name": "Debugging Challenge 4",
-    "validation_file": {
-      "id": "2",
-      "name": "main_test.py",
-      "language": "py",
-      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass TestDebugPaintStep(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"\n        Retrieve the NeighborhoodLog once for all tests.\n        \"\"\"\n        cls.neighborhood_log = ValidationProtocol().get_neighborhood_log()\n        painter_logs = cls.neighborhood_log.painter_logs\n        cls.painter_log = painter_logs[0] if painter_logs else None\n\n    def test_step1_single_painter(self):\n        \"\"\"\n        A Painter object is created.\n        \"\"\"\n        self.assertIsNotNone(\n            self.painter_log,\n            \"No Painter object found. Did you create one?\"\n        )\n        self.assertEqual(\n            len(self.neighborhood_log.painter_logs),\n            1,\n            \"We found zero or more than one Painter object.\"\n        )\n\n    def test_step2_total_paint_actions(self):\n        \"\"\"\n        Paint two times.\n        \"\"\"\n        if self.painter_log is None:\n            self.skipTest(\"No Painter found.\")\n\n        # We expect exactly 2 total paint actions\n        self.assertTrue(\n            self.painter_log.did_action_exactly(\"PAINT\", 2),\n            \"We expected exactly 2 paint actions total.\"\n        )\n\n    def test_step3_final_colors(self):\n        \"\"\"\n        One space is red and another space is green.\n        \"\"\"\n        if self.painter_log is None:\n            self.skipTest(\"No Painter found.\")\n\n        final_output = self.neighborhood_log.final_output\n        grid_size = len(final_output)\n\n        red_count = 0\n        green_count = 0\n        other_paint = 0\n\n        # Count how many cells have 'red', 'green', or something else\n        for y in range(grid_size):\n            for x in range(grid_size):\n                color = final_output[y][x]\n                if color == \"red\":\n                    red_count += 1\n                elif color == \"green\":\n                    green_count += 1\n                elif color is not None:\n                    other_paint += 1\n\n        # Ensure exactly one 'red' cell, exactly one 'green' cell, and no extras\n        self.assertEqual(\n            red_count, 1,\n            f\"We found {red_count} squares painted 'red', but expected exactly 1.\"\n        )\n        self.assertEqual(\n            green_count, 1,\n            f\"We found {green_count} squares painted 'green', but expected exactly 1.\"\n        )\n        self.assertEqual(\n            other_paint, 0,\n            f\"We found {other_paint} squares painted with other colors. \"\n            \"Only one 'red' and one 'green' are expected.\"\n        )\n",
-      "folderId": "0",
-      "active": false,
-      "open": false,
-      "type": "validation"
-    }
+    "display_name": "Debugging Challenge 4"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-24T21:03:13.710+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson8-level6d-AI-Tutor\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson8-level6d-AI-Tutor\"},{\"changed_at\":\"2025-02-24 21:03:15 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-08 04:32:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-13 01:47:35 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-24T21:03:13.710+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson8-level6d-AI-Tutor\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson8-level6d-AI-Tutor\"},{\"changed_at\":\"2025-02-24 21:03:15 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

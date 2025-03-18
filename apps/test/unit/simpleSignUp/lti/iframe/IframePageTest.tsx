@@ -19,10 +19,7 @@ const DEFAULT_PROPS = {
 
 describe('LTI Iframe Page Test', () => {
   beforeEach(() => sinon.stub(window, 'open'));
-  afterEach(() => {
-    (window.open as SinonStub).restore();
-    jest.useRealTimers();
-  });
+  afterEach(() => (window.open as SinonStub).restore());
 
   it('should open a new window when the button is pressed', async () => {
     const user = userEvent.setup();

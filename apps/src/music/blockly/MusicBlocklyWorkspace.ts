@@ -671,7 +671,6 @@ export default class MusicBlocklyWorkspace {
       blockList.push({
         kind: 'block',
         type: BLOCK_TYPES.procedureDefinition,
-        id: BLOCK_TYPES.procedureDefinition,
         fields: {
           NAME: musicI18n.blockly_functionNamePlaceholder(),
         },

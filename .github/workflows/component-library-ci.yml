@@ -22,7 +22,6 @@ jobs:
                   frontend
                   shared/fonts
                   .github
-                lfs: true
 
             - name: Setup Frontend
               uses: ./.github/actions/frontend/setup
@@ -31,12 +30,12 @@ jobs:
               run: npx playwright install --with-deps
               working-directory: ./frontend/apps/design-system-storybook
 
-            - name: Build
-              run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
-              working-directory: ./frontend
-
             - name: Lint
               run: yarn lint --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+              working-directory: ./frontend
+
+            - name: Build
+              run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: Unit Tests
@@ -68,7 +67,6 @@ jobs:
           sparse-checkout: |
             frontend
             .github
-          lfs: true
 
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup

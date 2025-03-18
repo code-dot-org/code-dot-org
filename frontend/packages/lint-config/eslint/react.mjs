@@ -1,8 +1,7 @@
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
-
 import cdoBase from './base.mjs';
+import pluginReact from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [

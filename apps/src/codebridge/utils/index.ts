@@ -15,7 +15,6 @@ export * from './getFolderPath';
 export * from './getOpenFiles';
 export * from './getPossibleDestinationFoldersForFile';
 export * from './getPossibleDestinationFoldersForFolder';
-export * from './hasPreview';
 export * from './previewFileType';
 export * from './sortFilesByName';
 export * from './validateFileName';

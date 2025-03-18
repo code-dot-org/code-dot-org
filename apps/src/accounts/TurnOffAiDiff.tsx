@@ -16,28 +16,36 @@ import i18n from '@cdo/locale';
 import moduleStyles from './accountSettings.module.scss';
 
 const TurnOffAiDiff: React.FC = () => {
-  const aiDifferentiationEnabled = useAppSelector(
+  const reduxState = useAppSelector(
     state => state.currentUser.aiDifferentiationEnabled
   );
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
+  const startingState = () => {
+    if (reduxState === null) {
+      new UserPreferences().setAiDifferentiationEnabled(true);
+      return true;
+    } else {
+      return reduxState;
+    }
+  };
+
+  const [hasAIDiffAccess, setHasAIDiffAccess] = React.useState(startingState);
+
   const handleToggle = () => {
     analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_TOGGLED, {
       'user id': currentUserId,
-      state: aiDifferentiationEnabled ? 'off' : 'on',
+      state: !hasAIDiffAccess ? 'on' : 'off',
     });
-    new UserPreferences().setAiDifferentiationEnabled(
-      !aiDifferentiationEnabled
-    );
-    dispatch(setAiDifferentiationEnabled(!aiDifferentiationEnabled));
+    dispatch(setAiDifferentiationEnabled(!hasAIDiffAccess));
+    new UserPreferences().setAiDifferentiationEnabled(!hasAIDiffAccess);
+    setHasAIDiffAccess(!hasAIDiffAccess);
   };
 
   const dispatch = useAppDispatch();
 
-  const setEnabled = aiDifferentiationEnabled
-    ? i18n.enabled()
-    : i18n.disabled();
+  const setEnabled = hasAIDiffAccess ? i18n.enabled() : i18n.disabled();
 
   return (
     <div>
@@ -52,7 +60,7 @@ const TurnOffAiDiff: React.FC = () => {
         />
       </BodyTwoText>
       <Toggle
-        checked={aiDifferentiationEnabled}
+        checked={hasAIDiffAccess}
         onChange={handleToggle}
         name="aiTeacherDiffToggle"
         position={'left'}

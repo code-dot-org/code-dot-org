@@ -347,10 +347,6 @@ export default class MusicLibrary {
     );
   }
 
-  getCurrentPackId(): string | null {
-    return this.currentPackId;
-  }
-
   // Returns true if the sound id is associated with an available sound; false otherwise
   isSoundIdAvailable(id: string): boolean {
     const lastSlashIndex = id.lastIndexOf('/');

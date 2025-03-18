@@ -1,7 +1,7 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -15,20 +15,21 @@ export default class ConfirmCancelFooter extends React.Component {
   static propTypes = {
     onConfirm: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
-    confirmText: PropTypes.string,
-    cancelText: PropTypes.string,
-    confirmColor: PropTypes.oneOf(Object.values(buttonColors)),
-    cancelColor: PropTypes.oneOf(Object.values(buttonColors)),
+    confirmText: Button.propTypes.text,
+    cancelText: Button.propTypes.text,
+    confirmColor: Button.propTypes.color.isRequired,
+    cancelColor: Button.propTypes.color.isRequired,
     disableConfirm: PropTypes.bool,
     disableCancel: PropTypes.bool,
+    tabIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     children: PropTypes.any,
   };
 
   static defaultProps = {
     confirmText: i18n.dialogOK(),
     cancelText: i18n.cancel(),
-    confirmColor: buttonColors.purple,
-    cancelColor: buttonColors.black,
+    confirmColor: Button.ButtonColor.brandSecondaryDefault,
+    cancelColor: Button.ButtonColor.gray,
   };
 
   render() {
@@ -41,27 +42,28 @@ export default class ConfirmCancelFooter extends React.Component {
       cancelColor,
       disableConfirm,
       disableCancel,
+      tabIndex,
       children,
     } = this.props;
     return (
       <div style={style}>
         <Button
-          text={confirmText}
+          __useDeprecatedTag
           onClick={onConfirm}
-          size="s"
-          type="primary"
+          text={confirmText}
           color={confirmColor}
           disabled={disableConfirm}
+          tabIndex={tabIndex}
           style={buttonStyle}
         />
         <span style={messageStyle}>{children}</span>
         <Button
-          text={cancelText}
+          __useDeprecatedTag
           onClick={onCancel}
-          size="s"
-          type="secondary"
+          text={cancelText}
           color={cancelColor}
           disabled={disableCancel}
+          tabIndex={tabIndex}
           style={buttonStyle}
         />
       </div>
