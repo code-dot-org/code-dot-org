@@ -1,10 +1,6 @@
 import {getNextFileId} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
-import {
-  CodebridgeLevelProperties,
-  CodebridgeProjectSources,
-  MazeCell,
-} from '@codebridge/types';
+import {CodebridgeLevelProperties, MazeCell} from '@codebridge/types';
 import {combineStartSourcesAndValidation, findFile} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
@@ -37,7 +33,7 @@ import {
 export const useInitialSources = (
   defaultSources: ProjectSources,
   levelProperties: CodebridgeLevelProperties,
-  initialServerSource: CodebridgeProjectSources | undefined
+  initialServerSource: ProjectSources | undefined
 ) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const exemplarSources = levelProperties.exemplarSources as MultiFileSource;

@@ -87,7 +87,3 @@ export interface MazeCell {
   value: number;
   assetId: number;
 }
-
-export interface CodebridgeProjectSources extends ProjectSources {
-  source: MultiFileSource;
-}

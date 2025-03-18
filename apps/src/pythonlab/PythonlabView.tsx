@@ -1,11 +1,7 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
-import {
-  CodebridgeLevelProperties,
-  CodebridgeProjectSources,
-  ConfigType,
-} from '@codebridge/types';
+import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useState} from 'react';
@@ -103,7 +99,7 @@ const defaultConfig: ConfigType = {
 };
 
 const PythonlabView: React.FunctionComponent<
-  LabProps<CodebridgeLevelProperties, CodebridgeProjectSources>
+  LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {

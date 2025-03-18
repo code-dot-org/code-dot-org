@@ -3,11 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
-import {
-  CodebridgeLevelProperties,
-  CodebridgeProjectSources,
-  MazeCell,
-} from '@cdo/apps/codebridge';
+import {CodebridgeLevelProperties, MazeCell} from '@cdo/apps/codebridge';
 import {
   DEFAULT_FOLDER_ID,
   MAZE_FILE_NAME,
@@ -18,6 +14,7 @@ import {
   MultiFileSource,
   ProjectFile,
   ProjectFileType,
+  ProjectSources,
 } from '@cdo/apps/lab2/types';
 import {
   getStore,
@@ -96,7 +93,7 @@ describe('useInitialSources', () => {
 
   function renderDefault(
     levelProperties?: CodebridgeLevelProperties,
-    initialServerSources?: CodebridgeProjectSources
+    initialServerSources?: ProjectSources
   ) {
     const wrapper = ({children}: {children?: React.ReactNode}) => (
       <Provider store={store}>{children}</Provider>

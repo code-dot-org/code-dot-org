@@ -1,7 +1,4 @@
-import {
-  CodebridgeLevelProperties,
-  CodebridgeProjectSources,
-} from '@codebridge/types';
+import {CodebridgeLevelProperties} from '@codebridge/types';
 import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
 import {debounce, isEqual} from 'lodash';
 import {useEffect, useMemo, useRef} from 'react';
@@ -34,7 +31,7 @@ import {useInitialSources} from './useInitialSources';
 export const useSource = (
   defaultSources: ProjectSources,
   levelProperties: CodebridgeLevelProperties,
-  initiaServerSources: CodebridgeProjectSources | undefined
+  initiaServerSources: ProjectSources | undefined
 ) => {
   const dispatch = useAppDispatch();
   const projectSource = useAppSelector(
