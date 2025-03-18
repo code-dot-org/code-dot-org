@@ -6,6 +6,8 @@ import List, {
 } from '@code-dot-org/component-library/list';
 import {useMemo} from 'react';
 
+import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
+
 type ListItemEntry = Entry & {
   fields: {
     shortText: EntryFields.Text;
@@ -40,7 +42,19 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
     );
   }
 
-  return <List {...props} items={listItems} icon={{iconName}} />;
+  return (
+    <List
+      {...props}
+      items={listItems}
+      icon={{
+        iconName,
+        iconStyle: 'solid',
+        iconFamily: fontAwesomeV6BrandIconsMap.has(iconName)
+          ? 'brands'
+          : undefined,
+      }}
+    />
+  );
 };
 
 export default ListContentful;
