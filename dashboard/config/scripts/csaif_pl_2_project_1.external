@@ -1,0 +1,121 @@
+name 'csaif_pl_2_project_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit Project: Innovation Simulation
+
+#### On day one of this unit, the class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School.
+
+## Project Description
+<p style="text-align:center; font-size: 18px">
+Welcome to the Future School Convention! You have been chosen to attend this convention because you represent an important stakeholder in the broader school community. Together with a small group you will brainstorm and research computing innovations that you believe will have a positive impact on schools. At the end of the convention, your team will pitch your best idea to a panel of judges. 
+</p>
+
+## Project Calendar
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 1
+    </p>
+    
+    <p style="font-size: 14px">
+	Students brainstorm and research three different computing innovations.
+    </p>
+    
+    <p style="font-size: 16px">
+    <a href='https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 1</a>
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 2
+    </p>
+    
+    <p style="font-size: 14px">
+	Teams discuss potential unintended consequences, narrow down ideas, and refine their proposals.
+    </p>
+    
+    <p style="font-size: 16px">
+    <a href='https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4</a>
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 3
+    </p>
+    
+    <p style="font-size: 14px">
+	Students complete individual innovation one-pagers and align them with their teams' proposals.
+    </p>
+    
+    <p style="font-size: 16px">
+    <a href='https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7</a>
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 4
+    </p>
+    
+    <p style="font-size: 14px">
+	Teams develop a shared artifact or presentation for their innovation proposal.
+    </p>
+    
+    <p style="font-size: 16px">
+    <a href='https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 10</a>
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 5
+    </p>
+    
+    <p style="font-size: 14px">
+	Teams provide peer feedback and make final refinements to their proposals.
+    </p>
+    
+    <p style="font-size: 16px">
+    <a href='https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 10</a>
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 6
+    </p>
+    
+    <p style="font-size: 14px">
+	Teams present their proposals, participate in a gallery walk, and vote on the most compelling innovation.
+    </p>
+    
+    <p style="font-size: 16px">
+    <a href='https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 10</a>
+    </p>
+    
+</div>
+</div>
+
+## Student Deliverables
+- #### Individual project guide
+- #### Individual computing innovation proposal
+- #### Team artifact displaying innovations
+- #### Team presentation of the top innovation
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ If you have time, check out the full <a href='https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Project Guide</a>.
+</p>
+
+MARKDOWN

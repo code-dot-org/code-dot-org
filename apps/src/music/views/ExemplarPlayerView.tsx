@@ -46,6 +46,14 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     dispatch(setIsPlaying(false));
     playerRef.current?.stopSong();
 
+    const currentLibrary = MusicLibrary.getInstance();
+    if (currentLibrary) {
+      playerRef.current?.updateConfiguration(
+        currentLibrary.getBPM(),
+        currentLibrary.getKey()
+      );
+    }
+
     // Play the song using the compiled events.
     playerRef.current?.playSong(playbackEvents);
 

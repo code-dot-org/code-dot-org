@@ -4114,7 +4114,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-elem-career-journeys-explore-panels"
+          "test-elem-career-journeys-video-choices"
         ]
       },
       "bonus": false,
@@ -4138,7 +4138,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-elem-career-journeys-sprite-location"
+          "test-elem-career-journeys-panel-choices"
         ]
       },
       "bonus": false,
@@ -4162,7 +4162,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-elem-career-journeys-backgrounds"
+          "test-elem-career-journeys-basic-skills-choices"
         ]
       },
       "bonus": false,
@@ -4186,7 +4186,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-elem-career-journeys-event-say"
+          "test-elem-career-journeys-extra-skills-choices"
+
         ]
       },
       "bonus": false,
@@ -4207,6 +4208,27 @@
       "chapter": 119,
       "position": 6,
       "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-planning"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-planning"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5638,6 +5660,18 @@
         "level.key": "test-elem-career-journeys-extra-skills-choices",
         "script_level.level_keys": [
           "test-elem-career-journeys-extra-skills-choices"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-planning",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-planning"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",

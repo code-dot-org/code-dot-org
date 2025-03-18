@@ -20,6 +20,9 @@ const Template = args => <SchoolInfoInterstitial {...args} />;
 export const Overview = Template.bind({});
 Overview.args = {
   scriptData: {
+    formUrl: '',
+    authTokenName: 'auth_token',
+    authTokenValue: 'fake_auth_token',
     usIp: false,
     existingSchoolInfo: {
       country: '',

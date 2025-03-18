@@ -1,0 +1,96 @@
+name 'csaif_pl-hardwarelesson-debrief-L8-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sticky Note Algorithm Design
+
+
+<img src="https://images.code.org/304337796cc2c249691d622fb078c3fc-image-1741021380057.png" alt="clipboard with flowchart" style="border-radius:10px; float: right; ; height: 200px; margin: 20px 20px 0px 10px; ">
+
+## Introduction
+
+#### Before jumping into code, it's important to think through how an algorithm will work. In this unplugged activity from Lesson 3, students will use sticky notes to visually design an algorithm for comment moderation. 
+
+#### By organizing their ideas in a structured way, they will practice decomposition, decision-making, and logical sequencing—essential skills for programming.
+
+<div style="clear:both;"></div>
+
+---
+
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h2>Steps for Designing an Algorithm</h2>
+  <ul style = "font-size:14pt;">
+    <li><strong>Understand the Problem</strong> – Identify the task and key goals.</li>
+    <li><strong>Plan the Steps (Decomposition)</strong> – Break down the process into clear actions.</li>
+    <li><strong>Identify Decision Points</strong> – Determine where the algorithm will make choices.</li>
+    <li><strong>Visualize the Flow</strong> – Arrange and refine steps into a structured process.</li>
+</ul>
+</div>
+
+---
+
+## Activity: Designing an Algorithm with Sticky Notes
+
+#### Let's practice visualizing problem-solving patterns using sticky notes.
+
+#### To get started, use scratch paper or sticky notes to map out an algorithm that moderates comments for a content creator.
+
+#### **Follow these steps to guide your thinking:** 
+
+
+<br>
+
+<div style="background-color: #f8f8f8; padding: 15px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); max-width: 800px; margin: auto;">
+<ol style="font-size: 14pt;">
+<li>
+            <strong>Understand the Problem</strong>
+            <p style="font-size: 14pt;">First, define the goal: How should an algorithm moderate comments for a creator? What types of comments should be kept, deleted, or highlighted?</p>
+        </li>
+<li style="display: flex; align-items: center; font-size: 14pt;">
+            <div style="flex: 1;">
+                <strong>Plan the Steps and Identify Decision Points</strong><br><br>
+                <p style="font-size: 14pt;">Using one color of sticky notes, write the <strong>steps</strong> the algorithm will take.</p>
+                <p style="font-size: 14pt;"><em>Example:</em> Scan comment for keywords.</p>
+                <p style="font-size: 14pt;">Using another color of sticky notes, they write the <strong>decision points</strong> in the process.</p>
+                <p style="font-size: 14pt;"><em>Example:</em> Does the comment contain flagged words?</p>
+            </div>
+            <div style="margin-left: 15px;">
+                <img src="https://images.code.org/0ef1b8e8ce557a318f0607badece607e-image-1741024159420.png" alt="Example of sticky note algorithm" width="200">
+            </div>
+        </li>
+
+<li>
+            <strong>Visualize the Algorithm</strong>
+            <p style="font-size: 14pt;">Arrange their sticky notes into a flowchart, adjusting as needed to improve clarity. Consider how decisions affect the flow of the algorithm and whether additional steps are needed.</p>
+        </li>
+    </ol>
+</div>
+
+
+## Example 
+
+<div style="text-align: center;">
+    <img src="https://images.code.org/200b924c5b9a82b7ef3022b52cfed8c8-image-1741023184811.png" 
+         alt="A sample of a chat conversation with an AI bot." 
+         width="350px" 
+         style="border-radius: 5px; border: 2px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+</div>
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Teacher Tip</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Encourage students to reflect on how breaking down a problem and mapping out decisions helps them write more efficient algorithms.<br><br> Taking time to visualize an algorithm before coding prevents confusion, reveals gaps in logic, and ensures a clear, structured approach to problem-solving.
+    </p>
+</div>
+
+<br>
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+## Let's try one more unplugged activity!
+
+MARKDOWN

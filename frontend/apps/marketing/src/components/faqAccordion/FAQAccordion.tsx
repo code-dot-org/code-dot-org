@@ -62,15 +62,14 @@ const FAQAccordionContentful: React.FunctionComponent<
     [faqs],
   );
 
-  // Workaround for the experience builder not working with Array
+  // Show placeholder text until a content entry is added
   if (!faqItems.length) {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>✍ FAQ Accordion placeholder.</strong> Please add a "FAQs"
           content type entry in the FAQ Accordion sidebar, save, and open the
-          preview tab to see the carousel. An empty FAQ Accordion will show in
-          this editor, but it's here.
+          preview tab to see the accordions in action.
         </em>
       </div>
     );

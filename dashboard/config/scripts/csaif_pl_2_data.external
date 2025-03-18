@@ -8,16 +8,19 @@ markdown <<MARKDOWN
 #### In today's digital world, data plays a crucial role in everything from social media and online shopping to healthcare and government systems. Data can be anything from a simple username to sensitive information like bank details or medical records. 
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">🔍 <strong>Personally Identifiable Information (PII)</strong> includes any data that identifies, links, or describes a person, such as a name, address, or phone number.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Personally Identifiable Information (PII)</strong> includes any data that identifies, links, or describes a person, such as a name, address, or phone number.</p>
 </div>
 
 #### Apps and websites rely on large amounts of data, much of which may be private or personal. Companies, governments, and hackers all seek access to data—sometimes for beneficial reasons, like improving services, but other times for malicious purposes, such as identity theft or fraud.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">🔍 <strong>Cybersecurity</strong> is the practice of protecting data from unauthorized access, theft, or damage.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Cybersecurity</strong> is the practice of protecting data from unauthorized access, theft, or damage.</p>
 </div>
 
-#### Understanding what information is personal and how to protect it is essential to staying safe online. Reflect on which of the following pieces of information you would consider to be "personal," as in you wouldn't want it shared with just anyone.
+#### Understanding what information is personal and how to protect it is essential to staying safe online. 
+
+## 📝 To Do
+#### Reflect on which of the following pieces of information you would consider to be "personal," as in you wouldn't want it shared with just anyone.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 15px;">
     <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">

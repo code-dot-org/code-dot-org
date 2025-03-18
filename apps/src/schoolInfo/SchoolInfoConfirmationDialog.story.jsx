@@ -20,7 +20,9 @@ const Template = args => <SchoolInfoConfirmationDialog {...args} />;
 export const DisplaySchoolInfoConfirmationDialog = Template.bind({});
 DisplaySchoolInfoConfirmationDialog.args = {
   scriptData: {
-    usIp: false,
+    formUrl: '',
+    authTokenName: 'auth_token',
+    authTokenValue: 'fake_auth_token',
     existingSchoolInfo: {},
   },
   onClose: action('onClose callback'),

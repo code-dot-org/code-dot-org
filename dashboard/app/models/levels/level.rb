@@ -879,6 +879,7 @@ class Level < ApplicationRecord
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
+    properties_camelized[:name] = name
     properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
     properties_camelized[:helpVideos] = related_videos.map(&:summarize)
