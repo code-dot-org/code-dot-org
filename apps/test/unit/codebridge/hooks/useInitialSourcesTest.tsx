@@ -4,13 +4,17 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import {
+  CodebridgeLevelProperties,
+  CodebridgeProjectSources,
+  MazeCell,
+} from '@cdo/apps/codebridge';
+import {
   DEFAULT_FOLDER_ID,
   MAZE_FILE_NAME,
 } from '@cdo/apps/codebridge/constants';
 import {useInitialSources} from '@cdo/apps/codebridge/hooks';
-import lab, {onLevelChange} from '@cdo/apps/lab2/lab2Redux';
+import lab from '@cdo/apps/lab2/lab2Redux';
 import {
-  MazeCell,
   MultiFileSource,
   ProjectFile,
   ProjectFileType,
@@ -25,6 +29,7 @@ import {
 import {
   neighborhoodLevelProperties,
   nonValidatedLevelProperties,
+  noStartSourcesLevelProperties,
   predictLevelProperties,
   smallProject,
   smallProjectSources,
@@ -89,13 +94,24 @@ describe('useInitialSources', () => {
     jest.resetAllMocks();
   });
 
-  function renderDefault() {
+  function renderDefault(
+    levelProperties?: CodebridgeLevelProperties,
+    initialServerSources?: CodebridgeProjectSources
+  ) {
     const wrapper = ({children}: {children?: React.ReactNode}) => (
       <Provider store={store}>{children}</Provider>
     );
-    const {result} = renderHook(() => useInitialSources(smallProjectSources), {
-      wrapper,
-    });
+    const {result} = renderHook(
+      () =>
+        useInitialSources(
+          smallProjectSources,
+          levelProperties || noStartSourcesLevelProperties,
+          initialServerSources
+        ),
+      {
+        wrapper,
+      }
+    );
     const {
       initialSources,
       levelStartSources,
@@ -124,15 +140,12 @@ describe('useInitialSources', () => {
   });
 
   it('returns start sources for a non-template level', () => {
-    store.dispatch(
-      onLevelChange({levelProperties: nonValidatedLevelProperties})
-    );
     const {
       initialSources,
       levelStartSources,
       templateStartSources,
       parsedDefaultSources,
-    } = renderDefault();
+    } = renderDefault(nonValidatedLevelProperties);
     const expectedSources = {
       source: nonValidatedLevelProperties.startSources,
       labConfig: undefined,
@@ -144,15 +157,12 @@ describe('useInitialSources', () => {
   });
 
   it('returns template sources for a template-backed level', () => {
-    store.dispatch(
-      onLevelChange({levelProperties: templateBackedLevelProperties})
-    );
     const {
       initialSources,
       levelStartSources,
       templateStartSources,
       parsedDefaultSources,
-    } = renderDefault();
+    } = renderDefault(templateBackedLevelProperties);
     const expectedLevelSources = {
       source: templateBackedLevelProperties.startSources,
       labConfig: undefined,
@@ -168,15 +178,12 @@ describe('useInitialSources', () => {
   });
 
   it('populates labConfig and serializedMaze for a neighborhood level', () => {
-    store.dispatch(
-      onLevelChange({levelProperties: neighborhoodLevelProperties})
-    );
     const {
       initialSources,
       levelStartSources,
       templateStartSources,
       parsedDefaultSources,
-    } = renderDefault();
+    } = renderDefault(neighborhoodLevelProperties);
     const expectedSources = getExpectedMazeSources(
       neighborhoodLevelProperties.startSources,
       neighborhoodLevelProperties.serializedMaze!,
@@ -199,13 +206,12 @@ describe('useInitialSources', () => {
     const levelProperties = {...neighborhoodLevelProperties};
     levelProperties.templateSources =
       templateBackedLevelProperties.templateSources;
-    store.dispatch(onLevelChange({levelProperties}));
     const {
       initialSources,
       levelStartSources,
       templateStartSources,
       parsedDefaultSources,
-    } = renderDefault();
+    } = renderDefault(levelProperties);
     const expectedLevelSources = getExpectedMazeSources(
       levelProperties.startSources,
       levelProperties.serializedMaze!,
@@ -228,18 +234,12 @@ describe('useInitialSources', () => {
   });
 
   it('sets initial sources as lab initial sources if they exist', () => {
-    store.dispatch(
-      onLevelChange({
-        levelProperties: nonValidatedLevelProperties,
-        initialSources: sampleInitialSources,
-      })
-    );
     const {
       initialSources,
       levelStartSources,
       templateStartSources,
       parsedDefaultSources,
-    } = renderDefault();
+    } = renderDefault(nonValidatedLevelProperties, sampleInitialSources);
 
     const expectedStartSources = {
       source: nonValidatedLevelProperties.startSources,
@@ -253,14 +253,11 @@ describe('useInitialSources', () => {
 
   it('sets start sources as initial sources in start mode', () => {
     mockAppOptions({editBlocks: 'start_sources'});
-    store.dispatch(
-      onLevelChange({
-        levelProperties: nonValidatedLevelProperties,
-        initialSources: sampleInitialSources,
-      })
-    );
 
-    const {initialSources} = renderDefault();
+    const {initialSources} = renderDefault(
+      nonValidatedLevelProperties,
+      sampleInitialSources
+    );
 
     const expectedStartSources = {
       source: nonValidatedLevelProperties.startSources,
@@ -271,13 +268,10 @@ describe('useInitialSources', () => {
 
   it('uses exemplar code in exemplar mode', () => {
     mockAppOptions({isEditingExemplar: true});
-    store.dispatch(
-      onLevelChange({
-        levelProperties: withExemplarLevelProperties,
-        initialSources: sampleInitialSources,
-      })
+    const {initialSources} = renderDefault(
+      withExemplarLevelProperties,
+      sampleInitialSources
     );
-    const {initialSources} = renderDefault();
 
     const expectedInitialSources = {
       source: withExemplarLevelProperties.exemplarSources,
@@ -289,13 +283,10 @@ describe('useInitialSources', () => {
 
   it('uses exemplar code in viewing exemplar mode', () => {
     mockAppOptions({isViewingExemplar: true});
-    store.dispatch(
-      onLevelChange({
-        levelProperties: withExemplarLevelProperties,
-        initialSources: sampleInitialSources,
-      })
+    const {initialSources} = renderDefault(
+      withExemplarLevelProperties,
+      sampleInitialSources
     );
-    const {initialSources} = renderDefault();
 
     const expectedInitialSources = {
       source: withExemplarLevelProperties.exemplarSources,
@@ -306,13 +297,10 @@ describe('useInitialSources', () => {
   });
 
   it('does not use exemplar in standard mode', () => {
-    store.dispatch(
-      onLevelChange({
-        levelProperties: withExemplarLevelProperties,
-        initialSources: sampleInitialSources,
-      })
+    const {initialSources} = renderDefault(
+      withExemplarLevelProperties,
+      sampleInitialSources
     );
-    const {initialSources} = renderDefault();
 
     expect(initialSources).toEqual(sampleInitialSources);
   });
@@ -330,7 +318,6 @@ describe('useInitialSources', () => {
         '1': generateMazeFile([[]], '1'),
       },
     };
-    store.dispatch(onLevelChange({levelProperties}));
 
     mockAppOptions({isViewingExemplar: true});
 
@@ -339,20 +326,16 @@ describe('useInitialSources', () => {
       levelProperties.serializedMaze!,
       '1'
     );
-    const {initialSources} = renderDefault();
+    const {initialSources} = renderDefault(levelProperties);
 
     expect(initialSources).toEqual(expectedInitialSources);
   });
 
   it('predict levels always use start code', () => {
-    store.dispatch(
-      onLevelChange({
-        levelProperties: predictLevelProperties,
-        initialSources: sampleInitialSources,
-      })
+    const {initialSources} = renderDefault(
+      predictLevelProperties,
+      sampleInitialSources
     );
-
-    const {initialSources} = renderDefault();
     const expectedInitialSources = {
       source: predictLevelProperties.startSources,
       labConfig: undefined,

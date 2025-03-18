@@ -1,3 +1,7 @@
+import {
+  CodebridgeLevelProperties,
+  CodebridgeProjectSources,
+} from '@codebridge/types';
 import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
 import {debounce, isEqual} from 'lodash';
 import {useEffect, useMemo, useRef} from 'react';
@@ -27,7 +31,11 @@ import {useInitialSources} from './useInitialSources';
 // Hook for handling the project source for the current level.
 // Returns the current project source and a function to save the source.
 // This also handles displaying the levelbuilder save button in start mode.
-export const useSource = (defaultSources: ProjectSources) => {
+export const useSource = (
+  defaultSources: ProjectSources,
+  levelProperties: CodebridgeLevelProperties,
+  initiaServerSources: CodebridgeProjectSources | undefined
+) => {
   const dispatch = useAppDispatch();
   const projectSource = useAppSelector(
     state => state.lab2Project.projectSources
@@ -40,13 +48,9 @@ export const useSource = (defaultSources: ProjectSources) => {
     levelStartSources,
     templateStartSources,
     parsedDefaultSources,
-  } = useInitialSources(defaultSources);
+  } = useInitialSources(defaultSources, levelProperties, initiaServerSources);
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
@@ -54,7 +58,6 @@ export const useSource = (defaultSources: ProjectSources) => {
   // keep an internal version number for the project used in the <Codebridge/> component.
   // This lets us replace the project if it was swapped out externally.
   const projectVersionRef = useRef(0);
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
@@ -70,8 +73,10 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
 
   const debouncedProgressReport = debounce(() => {
-    if (appName) {
-      dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
+    if (levelProperties.appName) {
+      dispatch(
+        sendProgressReport(levelProperties.appName, TestResults.LEVEL_STARTED)
+      );
     }
   }, 100);
 
@@ -135,17 +140,18 @@ export const useSource = (defaultSources: ProjectSources) => {
       header.showLevelBuilderSaveButton(
         () => ({exemplar_sources: source}),
         'Levelbuilder: Edit Exemplar',
-        `/levels/${levelId}/update_exemplar_code`
+        `/levels/${levelProperties.id}/update_exemplar_code`
       );
     }
-  }, [isStartMode, isEditingExemplarMode, levelId, source]);
+  }, [isStartMode, isEditingExemplarMode, source, levelProperties.id]);
 
   useEffect(() => {
     // We reset the project when the levelId changes, as this means we are on a new level.
     // We also reset if the initialSources changed; this could occur if we are a teacher
     // viewing a student's project.
     if (
-      (levelId && previousLevelIdRef.current !== levelId) ||
+      (levelProperties.id &&
+        previousLevelIdRef.current !== levelProperties.id) ||
       initialSources !== previousInitialSources.current
     ) {
       if (initialSources) {
@@ -159,12 +165,12 @@ export const useSource = (defaultSources: ProjectSources) => {
           ?.setLastSource(initialSources);
         setSourceHelper(initialSources);
       }
-      if (levelId) {
-        previousLevelIdRef.current = levelId;
+      if (levelProperties.id) {
+        previousLevelIdRef.current = levelProperties.id;
       }
       previousInitialSources.current = initialSources;
     }
-  }, [initialSources, levelId, setSourceHelper]);
+  }, [initialSources, levelProperties.id, setSourceHelper]);
 
   // If the source retrieved from redux is the same as our localProject, then there haven't been any external
   // changes so we don't increment the key and keep the current layout in place.
@@ -185,7 +191,7 @@ export const useSource = (defaultSources: ProjectSources) => {
     setProject,
     startSources,
     projectVersion,
-    validationFile,
+    validationFile: levelProperties.validationFile,
     labConfig: projectSource?.labConfig,
   };
 };

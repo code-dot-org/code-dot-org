@@ -3,7 +3,11 @@
 import './styles/Weblab2View.css';
 
 import {Codebridge} from '@codebridge/Codebridge';
-import {ConfigType} from '@codebridge/types';
+import {
+  CodebridgeLevelProperties,
+  CodebridgeProjectSources,
+  ConfigType,
+} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
@@ -136,10 +140,15 @@ const defaultSource: MultiFileSource = {
 
 const defaultProject: ProjectSources = {source: defaultSource};
 
-const Weblab2View: React.FC<LabProps> = () => {
+const Weblab2View: React.FC<
+  LabProps<CodebridgeLevelProperties, CodebridgeProjectSources>
+> = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject, startSources, projectVersion} =
-    useSource(defaultProject);
+  const {source, setProject, startSources, projectVersion} = useSource(
+    defaultProject,
+    levelProperties,
+    initialSources
+  );
 
   return (
     <div className="app-wrapper">
