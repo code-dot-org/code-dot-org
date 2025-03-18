@@ -167,7 +167,7 @@
     "/course_content/other/vigenere.json": "50c39ab52210288bf352edd9048e671c",
     "/course_content/projects.json": "50c39ab52210288bf352edd9048e671c",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "50c39ab52210288bf352edd9048e671c",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "d32dad9c8246e4c648a94311cf65f710",
@@ -197,7 +197,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "az-AZ": {
     "/course_content/2017/coursea-2017.json": "a1bb6a02832371f8b784d4be46ed6479",
@@ -367,7 +367,7 @@
     "/course_content/other/vigenere.json": "de7afbf71d2f0344a1b8302d025a8ee6",
     "/course_content/projects.json": "de7afbf71d2f0344a1b8302d025a8ee6",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "de7afbf71d2f0344a1b8302d025a8ee6",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "54a983da354cd369bd624f3c6c96de6f",
@@ -397,7 +397,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "bg-BG": {
     "/course_content/2017/coursea-2017.json": "63483464096b988d34ccb6338fc1f566",
@@ -567,7 +567,7 @@
     "/course_content/other/vigenere.json": "63483464096b988d34ccb6338fc1f566",
     "/course_content/projects.json": "63483464096b988d34ccb6338fc1f566",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "790afae4be4d8d9ceb24373ca40531c2",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "342fe357b0abf412c50c1765509e7a03",
@@ -597,7 +597,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "bn-BD": {
     "/course_content/2017/coursea-2017.json": "04673e51606970e37c45c88cf5f858be",
@@ -941,7 +941,7 @@
     "/course_content/other/vigenere.json": "d327371dc25ac39f8e69d0a448ccb9b3",
     "/course_content/projects.json": "d327371dc25ac39f8e69d0a448ccb9b3",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "d327371dc25ac39f8e69d0a448ccb9b3",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "3f6909578180dbebe4c8f94a0267f989",
@@ -971,7 +971,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ca-ES": {
     "/course_content/2017/coursea-2017.json": "d86edd53098b6843a4fe8f45768a8180",
@@ -1141,7 +1141,7 @@
     "/course_content/other/vigenere.json": "d86edd53098b6843a4fe8f45768a8180",
     "/course_content/projects.json": "d86edd53098b6843a4fe8f45768a8180",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "9fcc09600970296d2398b539d7ee4f69",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "881f28bfb128211471abdba708ee1ff4",
@@ -1171,7 +1171,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "co-CO": {
     "/course_content/2017/coursea-2017.json": "e3871a51347656ff99e34d0f49607d69",
@@ -1515,7 +1515,7 @@
     "/course_content/other/vigenere.json": "5b22f15de54de6aa599ff9bcc4580af0",
     "/course_content/projects.json": "b06e7baa690223dd1f68038ea0cb8a13",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "b06e7baa690223dd1f68038ea0cb8a13",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "e59e38dbabf035bd4f0f5a57d0ced12c",
@@ -1545,7 +1545,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "da-DK": {
     "/course_content/2017/coursea-2017.json": "555cdc02609ed48fd39f16e6620cbac1",
@@ -1715,7 +1715,7 @@
     "/course_content/other/vigenere.json": "db203d27801db6e9073233d4077cea0c",
     "/course_content/projects.json": "db203d27801db6e9073233d4077cea0c",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "db203d27801db6e9073233d4077cea0c",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "744e40348675483f11e12786b35b9adb",
@@ -1745,7 +1745,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "de-DE": {
     "/course_content/2017/coursea-2017.json": "151b4d75257aa4738d91b59f7a120670",
@@ -1839,9 +1839,9 @@
     "/course_content/2023/csd1-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
     "/course_content/2023/csd2-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
     "/course_content/2023/csd3-2023.json": "ad10eef17a3e84aacd7fa01ed4167538",
-    "/course_content/2023/csd4-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
+    "/course_content/2023/csd4-2023.json": "5d933044ba7bc33f4e98d2d574aa16d1",
     "/course_content/2023/csd5-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
-    "/course_content/2023/csd6a-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
+    "/course_content/2023/csd6a-2023.json": "5d933044ba7bc33f4e98d2d574aa16d1",
     "/course_content/2023/csd7-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
     "/course_content/2023/dance-ai-2023.json": "5d0c86f014a45e15a6397b4b31c74830",
     "/course_content/2023/express-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
@@ -1898,7 +1898,7 @@
     "/course_content/other/csd4-2021.json": "285e372844bc5bc28ef2e99003c8204a",
     "/course_content/other/csd5-2021.json": "285e372844bc5bc28ef2e99003c8204a",
     "/course_content/other/csd6-2022.json": "07db3f61791452b60f09c2f45681c23e",
-    "/course_content/other/csd6b-2023.json": "c0e785d93fea9c9b309edbed99b1a382",
+    "/course_content/other/csd6b-2023.json": "5d933044ba7bc33f4e98d2d574aa16d1",
     "/course_content/other/csd7-2021.json": "73bbdc01e559569c95e5a60c68726692",
     "/course_content/other/deepdive-debugging.json": "151b4d75257aa4738d91b59f7a120670",
     "/course_content/other/frequency_analysis.json": "151b4d75257aa4738d91b59f7a120670",
@@ -1915,7 +1915,7 @@
     "/course_content/other/vigenere.json": "151b4d75257aa4738d91b59f7a120670",
     "/course_content/projects.json": "4cd6533a6a7a7d95ee72fa044d65a585",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "4cd6533a6a7a7d95ee72fa044d65a585",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "c0e785d93fea9c9b309edbed99b1a382",
@@ -1936,16 +1936,16 @@
     "/course_content/2024/music-jam-2024.json": "105cf948e1de4ea5070553696f7016fb",
     "/course_content/Hour of Code/music-jam-2024.json": "c0e785d93fea9c9b309edbed99b1a382",
     "/course_content/2024/exploring-gen-ai2-2024.json": "c85d0ba4ebbcfa8196b3f2b986c89e27",
-    "/course_content/2024/elem-game-design-2024.json": "a9b73a5e5f7cd1204c7d92dcf06ec77d",
-    "/course_content/2024/k5-ai-data-2024.json": "cf9fd732a014e8ffd6e333447c0628f9",
+    "/course_content/2024/elem-game-design-2024.json": "4b23e37f13d460061599e40c920688d2",
+    "/course_content/2024/k5-ai-data-2024.json": "888bbd5ea25c2585dd2e13be122ba539",
     "/course_content/other/k5howaimakesdecisions.json": "3f39a845e8b4b1023ab2ed2e18568561",
-    "/course_content/other/k5plgamedesign.json": "0854057181df7757328ceb1b565bf9c3",
+    "/course_content/other/k5plgamedesign.json": "4b23e37f13d460061599e40c920688d2",
     "/course_content/other/self-paced-pl-csd1-2024.json": "5b59936030d3fa96ddc67a86e4761af7",
     "/course_content/other/self-paced-pl-csd2-2024.json": "89b72605bbe6d8516bb8bb0110997a8a",
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "dv-MV": {
     "/course_content/2017/coursea-2017.json": "fd2966878cc4b9f8c5381ccd583e1150",
@@ -2115,7 +2115,7 @@
     "/course_content/other/vigenere.json": "db87ac1c89b48a4bfa12eb887233b44e",
     "/course_content/projects.json": "db87ac1c89b48a4bfa12eb887233b44e",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "db87ac1c89b48a4bfa12eb887233b44e",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "637e36ead2e1fc6d89b6b8e459558dda",
@@ -2145,7 +2145,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "el-GR": {
     "/course_content/2017/coursea-2017.json": "88841f3c802f368fbb95af3789243798",
@@ -2315,7 +2315,7 @@
     "/course_content/other/vigenere.json": "e7227715022df26706342dd72dd572aa",
     "/course_content/projects.json": "e7227715022df26706342dd72dd572aa",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "e7227715022df26706342dd72dd572aa",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "450de1fad00e4d9e2696a1e2512d0d7d",
@@ -2345,7 +2345,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "en-GB": {
     "/course_content/2017/coursea-2017.json": "a95c4a8c53dde9d862c2db28ae61b50c",
@@ -2515,7 +2515,7 @@
     "/course_content/other/vigenere.json": "2bb3d68f07681ab9d695c0284ba8a4ba",
     "/course_content/projects.json": "2bb3d68f07681ab9d695c0284ba8a4ba",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "2bb3d68f07681ab9d695c0284ba8a4ba",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "8241a1cbbc15402e1ab4ff264d5137ef",
@@ -2545,7 +2545,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "es-ES": {
     "/course_content/2017/coursea-2017.json": "b99051ef0a9e47e2e2b97922a691aedd",
@@ -2580,7 +2580,7 @@
     "/course_content/2019/coursea-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/2019/courseb-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/2019/coursec-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
-    "/course_content/2019/coursed-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
+    "/course_content/2019/coursed-2019.json": "a30a4106af15001b2bdd66f7b9ccaba9",
     "/course_content/2019/coursee-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/2019/coursef-2019.json": "1cf864922c74a76378944a6730df9d9b",
     "/course_content/2019/csd1-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
@@ -2589,31 +2589,31 @@
     "/course_content/2019/csd4-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/2019/csd5-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/2019/csd6-2019.json": "b99051ef0a9e47e2e2b97922a691aedd",
-    "/course_content/2019/express-2019.json": "534fcc4fbccf8798cd51939971c8e0fc",
+    "/course_content/2019/express-2019.json": "a30a4106af15001b2bdd66f7b9ccaba9",
     "/course_content/2019/k5-onlinepd-2019.json": "081ba626becf795b4b771bcacc60650d",
     "/course_content/2019/pre-express-2019.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2020/coursea-2020.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2020/courseb-2020.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2020/coursec-2020.json": "534fcc4fbccf8798cd51939971c8e0fc",
-    "/course_content/2020/coursed-2020.json": "534fcc4fbccf8798cd51939971c8e0fc",
+    "/course_content/2020/coursed-2020.json": "e4ae6e5d98231b3cd521bca2ac991702",
     "/course_content/2020/coursee-2020.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2020/coursef-2020.json": "534fcc4fbccf8798cd51939971c8e0fc",
-    "/course_content/2020/express-2020.json": "51a3353ca93029d6a5a7daa7ac04973c",
+    "/course_content/2020/express-2020.json": "e4ae6e5d98231b3cd521bca2ac991702",
     "/course_content/2020/pre-express-2020.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2021/coursea-2021.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2021/courseb-2021.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2021/coursec-2021.json": "534fcc4fbccf8798cd51939971c8e0fc",
-    "/course_content/2021/coursed-2021.json": "534fcc4fbccf8798cd51939971c8e0fc",
+    "/course_content/2021/coursed-2021.json": "e4ae6e5d98231b3cd521bca2ac991702",
     "/course_content/2021/coursee-2021.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2021/coursef-2021.json": "e58ffa33984a9281e33b3958a4279bde",
     "/course_content/2021/csd6-2021.json": "ea165de6cefb0467d8dae55c0009a29e",
-    "/course_content/2021/express-2021.json": "534fcc4fbccf8798cd51939971c8e0fc",
+    "/course_content/2021/express-2021.json": "e4ae6e5d98231b3cd521bca2ac991702",
     "/course_content/2021/pre-express-2021.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/2022/coursea-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
     "/course_content/2022/courseb-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
     "/course_content/2022/coursec-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
-    "/course_content/2022/coursed-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
-    "/course_content/2022/coursee-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
+    "/course_content/2022/coursed-2022.json": "e4ae6e5d98231b3cd521bca2ac991702",
+    "/course_content/2022/coursee-2022.json": "afeeae68cb0032b0f6505c4453e2c786",
     "/course_content/2022/coursef-2022.json": "56fe089eb943adfcd534fa0bdb79c0db",
     "/course_content/2022/csd1-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
     "/course_content/2022/csd2-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
@@ -2621,14 +2621,14 @@
     "/course_content/2022/csd4-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
     "/course_content/2022/csd5-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
     "/course_content/2022/csd7-2022.json": "4262a61a63d9342d141abc233e4d6d64",
-    "/course_content/2022/express-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
+    "/course_content/2022/express-2022.json": "e4ae6e5d98231b3cd521bca2ac991702",
     "/course_content/2022/pre-express-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
     "/course_content/2023/ai-ethics-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/coursea-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/courseb-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/coursec-2023.json": "e29155badf1f28131c120e7be1cf778f",
-    "/course_content/2023/coursed-2023.json": "e29155badf1f28131c120e7be1cf778f",
-    "/course_content/2023/coursee-2023.json": "e29155badf1f28131c120e7be1cf778f",
+    "/course_content/2023/coursed-2023.json": "e4ae6e5d98231b3cd521bca2ac991702",
+    "/course_content/2023/coursee-2023.json": "afeeae68cb0032b0f6505c4453e2c786",
     "/course_content/2023/coursef-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/csc-adaptations-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/csc-bookcovers-2023.json": "42beca28de9ef0a4da5162506a7c6853",
@@ -2636,7 +2636,7 @@
     "/course_content/2023/csc-mappinglandmarks-2023.json": "28db5822c77efa262f107865c3744d82",
     "/course_content/2023/csc-starquilts-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/csc-timecapsule-2023.json": "e29155badf1f28131c120e7be1cf778f",
-    "/course_content/2023/csd1-2023.json": "e29155badf1f28131c120e7be1cf778f",
+    "/course_content/2023/csd1-2023.json": "9a1bd6154ad03a26bf96775f638d4e2f",
     "/course_content/2023/csd2-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/csd3-2023.json": "f722d5760ca5bcd6d9f57b4cd3d40bb5",
     "/course_content/2023/csd4-2023.json": "e29155badf1f28131c120e7be1cf778f",
@@ -2644,28 +2644,28 @@
     "/course_content/2023/csd6a-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/csd7-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/2023/dance-ai-2023.json": "edc84ceb5f46ad0f686e2278542f6aa5",
-    "/course_content/2023/express-2023.json": "e29155badf1f28131c120e7be1cf778f",
-    "/course_content/2023/how-ai-works-2023.json": "e29155badf1f28131c120e7be1cf778f",
-    "/course_content/2023/poetry-2023.json": "e29155badf1f28131c120e7be1cf778f",
+    "/course_content/2023/express-2023.json": "e4ae6e5d98231b3cd521bca2ac991702",
+    "/course_content/2023/how-ai-works-2023.json": "7b2d2373e8e98803edf65b00bf5bd3ce",
+    "/course_content/2023/poetry-2023.json": "afeeae68cb0032b0f6505c4453e2c786",
     "/course_content/2023/pre-express-2023.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/Hour of Code/Hour of Code.json": "002f2c79e0aa7ddc8c21fef5f1b063d5",
     "/course_content/Hour of Code/applab-intro.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/Hour of Code/aquatic.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/Hour of Code/artist.json": "b99051ef0a9e47e2e2b97922a691aedd",
-    "/course_content/Hour of Code/basketball.json": "b99051ef0a9e47e2e2b97922a691aedd",
-    "/course_content/Hour of Code/dance-2019.json": "534fcc4fbccf8798cd51939971c8e0fc",
+    "/course_content/Hour of Code/basketball.json": "d184b694f3b3314999554439a33e60cc",
+    "/course_content/Hour of Code/dance-2019.json": "e4ae6e5d98231b3cd521bca2ac991702",
     "/course_content/Hour of Code/dance-extras-2019.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/Hour of Code/dance-extras.json": "b99051ef0a9e47e2e2b97922a691aedd",
-    "/course_content/Hour of Code/dance.json": "beb06f0087b62c60c6ad64602d169a56",
+    "/course_content/Hour of Code/dance.json": "a30a4106af15001b2bdd66f7b9ccaba9",
     "/course_content/Hour of Code/flappy.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/Hour of Code/frozen.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/Hour of Code/gumball.json": "b99051ef0a9e47e2e2b97922a691aedd",
-    "/course_content/Hour of Code/hello-world-animals-2021.json": "6383a4dc51240a896f5dc7b1fb54bdc7",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4eaabbc9a709cd1738295ad2d320ef88",
-    "/course_content/Hour of Code/hello-world-food-2021.json": "9d6b3548e18b557df9bd0c8d461a9752",
-    "/course_content/Hour of Code/hello-world-retro-2021.json": "6383a4dc51240a896f5dc7b1fb54bdc7",
-    "/course_content/Hour of Code/hello-world-soccer-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
-    "/course_content/Hour of Code/hello-world-space-2022.json": "ea165de6cefb0467d8dae55c0009a29e",
+    "/course_content/Hour of Code/hello-world-animals-2021.json": "afeeae68cb0032b0f6505c4453e2c786",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "afeeae68cb0032b0f6505c4453e2c786",
+    "/course_content/Hour of Code/hello-world-food-2021.json": "afeeae68cb0032b0f6505c4453e2c786",
+    "/course_content/Hour of Code/hello-world-retro-2021.json": "afeeae68cb0032b0f6505c4453e2c786",
+    "/course_content/Hour of Code/hello-world-soccer-2022.json": "afeeae68cb0032b0f6505c4453e2c786",
+    "/course_content/Hour of Code/hello-world-space-2022.json": "afeeae68cb0032b0f6505c4453e2c786",
     "/course_content/Hour of Code/hero.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/Hour of Code/hoc-encryption.json": "6f22390b571e752c1fe4016da94f29b9",
     "/course_content/Hour of Code/hourofcode.json": "b99051ef0a9e47e2e2b97922a691aedd",
@@ -2676,7 +2676,7 @@
     "/course_content/Hour of Code/oceans.json": "96951646a6652fc7a5fb9a66d948b159",
     "/course_content/Hour of Code/outbreak.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/Hour of Code/playlab.json": "b99051ef0a9e47e2e2b97922a691aedd",
-    "/course_content/Hour of Code/poem-art-2021.json": "6383a4dc51240a896f5dc7b1fb54bdc7",
+    "/course_content/Hour of Code/poem-art-2021.json": "afeeae68cb0032b0f6505c4453e2c786",
     "/course_content/Hour of Code/sports.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/Hour of Code/starwars.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/Hour of Code/starwarsblocks.json": "b99051ef0a9e47e2e2b97922a691aedd",
@@ -2711,13 +2711,13 @@
     "/course_content/other/odometer.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/course_content/other/outbreak.json": "002f2c79e0aa7ddc8c21fef5f1b063d5",
     "/course_content/other/pixelation.json": "002f2c79e0aa7ddc8c21fef5f1b063d5",
-    "/course_content/other/poetry-hoc3.json": "7236bcedf7838198920e5609cf8142e8",
+    "/course_content/other/poetry-hoc3.json": "afeeae68cb0032b0f6505c4453e2c786",
     "/course_content/other/vigenere.json": "b99051ef0a9e47e2e2b97922a691aedd",
     "/course_content/projects.json": "534fcc4fbccf8798cd51939971c8e0fc",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "534fcc4fbccf8798cd51939971c8e0fc",
-    "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
+    "/dashboard/variable_names.yml": "cc79e9671bd81084dd6c6fbbfea6738a",
     "/course_content/2024/music-intro-2024.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/other/music-onboard.json": "e29155badf1f28131c120e7be1cf778f",
     "/course_content/other/music-tutorial-2024.json": "e29155badf1f28131c120e7be1cf778f",
@@ -2737,15 +2737,15 @@
     "/course_content/Hour of Code/music-jam-2024.json": "3e3c840e43aeb6d453310448a87415cc",
     "/course_content/2024/exploring-gen-ai2-2024.json": "de2aa87af94a36d5920c0aa530353ba7",
     "/course_content/2024/elem-game-design-2024.json": "4eaabbc9a709cd1738295ad2d320ef88",
-    "/course_content/2024/k5-ai-data-2024.json": "cf9fd732a014e8ffd6e333447c0628f9",
-    "/course_content/other/k5howaimakesdecisions.json": "3f39a845e8b4b1023ab2ed2e18568561",
+    "/course_content/2024/k5-ai-data-2024.json": "afeeae68cb0032b0f6505c4453e2c786",
+    "/course_content/other/k5howaimakesdecisions.json": "afeeae68cb0032b0f6505c4453e2c786",
     "/course_content/other/k5plgamedesign.json": "0854057181df7757328ceb1b565bf9c3",
     "/course_content/other/self-paced-pl-csd1-2024.json": "5b59936030d3fa96ddc67a86e4761af7",
     "/course_content/other/self-paced-pl-csd2-2024.json": "e7ff6aeaf214ac6ec997b5422ac6482c",
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "es-MX": {
     "/course_content/2017/coursea-2017.json": "c2b6d7902f38351cbfa3119790216d22",
@@ -2915,7 +2915,7 @@
     "/course_content/other/vigenere.json": "c2b6d7902f38351cbfa3119790216d22",
     "/course_content/projects.json": "a7a5d8db255d544d939639dabc500dd9",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "a7a5d8db255d544d939639dabc500dd9",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "2e320f603e76a5789ebea3f66c475902",
@@ -2945,7 +2945,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "et-EE": {
     "/course_content/2017/coursea-2017.json": "aaccf170c24cc0c82a57952f122ea399",
@@ -3115,7 +3115,7 @@
     "/course_content/other/vigenere.json": "aaccf170c24cc0c82a57952f122ea399",
     "/course_content/projects.json": "aaccf170c24cc0c82a57952f122ea399",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "b77ead9b90cce9fa794fe4240d8ccf6c",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "4d801ad850b30ad1af5531771f0f7967",
@@ -3145,7 +3145,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "eu-ES": {
     "/course_content/2017/coursea-2017.json": "e7735523c0d40a42396fb4cdb5a55c44",
@@ -3315,7 +3315,7 @@
     "/course_content/other/vigenere.json": "e7735523c0d40a42396fb4cdb5a55c44",
     "/course_content/projects.json": "e7735523c0d40a42396fb4cdb5a55c44",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "29b7ba10dd72525c3999ed6e249abd83",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "a149a286feb9d3456a381d8082dc9535",
@@ -3345,7 +3345,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "fa-AF": {
     "/course_content/2017/coursea-2017.json": "17e1863245d0b2d9055709afaea67637",
@@ -3689,7 +3689,7 @@
     "/course_content/other/vigenere.json": "1f8f2dc041bd69142245c247a5c1e51b",
     "/course_content/projects.json": "1f8f2dc041bd69142245c247a5c1e51b",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "1f8f2dc041bd69142245c247a5c1e51b",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "b0b74fa082f28787427454cb5d0b6b60",
@@ -3719,7 +3719,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "fi-FI": {
     "/course_content/2017/coursea-2017.json": "8608b3834f8952960b44cab53b26ee93",
@@ -3889,7 +3889,7 @@
     "/course_content/other/vigenere.json": "e3756526c1ade094c35e405d43140b69",
     "/course_content/projects.json": "e3756526c1ade094c35e405d43140b69",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "e3756526c1ade094c35e405d43140b69",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "08f7b87e64a5d4448f1d5b1796319e47",
@@ -3919,7 +3919,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "fil-PH": {
     "/course_content/2017/coursea-2017.json": "83b1e286fae9b7ef3588ed70f1ef5d63",
@@ -4089,7 +4089,7 @@
     "/course_content/other/vigenere.json": "83b1e286fae9b7ef3588ed70f1ef5d63",
     "/course_content/projects.json": "4217381c976b393da0b798a0a24d9717",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "4217381c976b393da0b798a0a24d9717",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "c7c0497fdb08b7905430425e4c97435e",
@@ -4119,7 +4119,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "fr-FR": {
     "/course_content/2017/coursea-2017.json": "aeaeda72121cb634851a8cb2d64ac560",
@@ -4128,9 +4128,9 @@
     "/course_content/2017/coursed-2017.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2017/coursee-2017.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2017/coursef-2017.json": "aeaeda72121cb634851a8cb2d64ac560",
-    "/course_content/2017/csd1-2017.json": "aeaeda72121cb634851a8cb2d64ac560",
+    "/course_content/2017/csd1-2017.json": "2765d82d9ed674dd710a3247284d7b5c",
     "/course_content/2017/csd2-2017.json": "aeaeda72121cb634851a8cb2d64ac560",
-    "/course_content/2017/csd3-2017.json": "aeaeda72121cb634851a8cb2d64ac560",
+    "/course_content/2017/csd3-2017.json": "55ff3cff04afd7271819b7c3238aec62",
     "/course_content/2017/csd4-2017.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2017/csd5-2017.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2017/csd6-2017.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
@@ -4141,86 +4141,86 @@
     "/course_content/2018/courseb-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2018/coursec-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2018/coursed-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2018/coursee-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2018/coursef-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2018/csd1-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
+    "/course_content/2018/coursee-2018.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2018/coursef-2018.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2018/csd1-2018.json": "2765d82d9ed674dd710a3247284d7b5c",
     "/course_content/2018/csd2-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2018/csd3-2018.json": "b96e1f58798cfe67d10f878f1129482a",
+    "/course_content/2018/csd3-2018.json": "55ff3cff04afd7271819b7c3238aec62",
     "/course_content/2018/csd4-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2018/csd5-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2018/csd6-2018.json": "6488a6133e4d8e1feb740f11f90b34ed",
-    "/course_content/2018/express-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
+    "/course_content/2018/express-2018.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/2018/pre-express-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2019/coursea-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2019/courseb-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2019/coursec-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2019/coursed-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/coursee-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/coursef-2019.json": "73bbdc01e559569c95e5a60c68726692",
-    "/course_content/2019/csd1-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/csd2-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/csd3-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/csd4-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/csd5-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/csd6-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/2019/express-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
+    "/course_content/2019/coursee-2019.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2019/coursef-2019.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2019/csd1-2019.json": "1a3055096a3d27cf18ffdc2a996f11d9",
+    "/course_content/2019/csd2-2019.json": "9c359ac7a3279ffcaa17ea9928be4c6a",
+    "/course_content/2019/csd3-2019.json": "9c359ac7a3279ffcaa17ea9928be4c6a",
+    "/course_content/2019/csd4-2019.json": "9c359ac7a3279ffcaa17ea9928be4c6a",
+    "/course_content/2019/csd5-2019.json": "04c30fa02aea854db9953baf9db25aac",
+    "/course_content/2019/csd6-2019.json": "9c359ac7a3279ffcaa17ea9928be4c6a",
+    "/course_content/2019/express-2019.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/2019/k5-onlinepd-2019.json": "081ba626becf795b4b771bcacc60650d",
     "/course_content/2019/pre-express-2019.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2020/coursea-2020.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2020/courseb-2020.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2020/coursec-2020.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2020/coursed-2020.json": "926c1a19c606971e409b3273f0ba3411",
-    "/course_content/2020/coursee-2020.json": "926c1a19c606971e409b3273f0ba3411",
-    "/course_content/2020/coursef-2020.json": "926c1a19c606971e409b3273f0ba3411",
-    "/course_content/2020/express-2020.json": "51a3353ca93029d6a5a7daa7ac04973c",
+    "/course_content/2020/coursee-2020.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2020/coursef-2020.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2020/express-2020.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/2020/pre-express-2020.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2021/coursea-2021.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2021/courseb-2021.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2021/coursec-2021.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2021/coursed-2021.json": "926c1a19c606971e409b3273f0ba3411",
-    "/course_content/2021/coursee-2021.json": "926c1a19c606971e409b3273f0ba3411",
-    "/course_content/2021/coursef-2021.json": "6e58dfd878a7d31659dbf51a5ccfaef3",
+    "/course_content/2021/coursee-2021.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2021/coursef-2021.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/2021/csd6-2021.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
-    "/course_content/2021/express-2021.json": "926c1a19c606971e409b3273f0ba3411",
+    "/course_content/2021/express-2021.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/2021/pre-express-2021.json": "926c1a19c606971e409b3273f0ba3411",
     "/course_content/2022/coursea-2022.json": "5f8225f59e1be198877857316e7cd709",
     "/course_content/2022/courseb-2022.json": "5f8225f59e1be198877857316e7cd709",
     "/course_content/2022/coursec-2022.json": "5f8225f59e1be198877857316e7cd709",
     "/course_content/2022/coursed-2022.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/2022/coursee-2022.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/2022/coursef-2022.json": "56fe089eb943adfcd534fa0bdb79c0db",
-    "/course_content/2022/csd1-2022.json": "5f8225f59e1be198877857316e7cd709",
+    "/course_content/2022/coursee-2022.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2022/coursef-2022.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2022/csd1-2022.json": "55ff3cff04afd7271819b7c3238aec62",
     "/course_content/2022/csd2-2022.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
     "/course_content/2022/csd3-2022.json": "96951646a6652fc7a5fb9a66d948b159",
     "/course_content/2022/csd4-2022.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/2022/csd5-2022.json": "5f8225f59e1be198877857316e7cd709",
+    "/course_content/2022/csd5-2022.json": "04c30fa02aea854db9953baf9db25aac",
     "/course_content/2022/csd7-2022.json": "b6419aa97e6a6408bd1bb704f837f55c",
-    "/course_content/2022/express-2022.json": "5f8225f59e1be198877857316e7cd709",
+    "/course_content/2022/express-2022.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/2022/pre-express-2022.json": "5f8225f59e1be198877857316e7cd709",
     "/course_content/2023/ai-ethics-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/2023/coursea-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/2023/courseb-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/2023/coursec-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/2023/coursed-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
-    "/course_content/2023/coursee-2023.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/2023/coursef-2023.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/2023/csc-adaptations-2023.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/2023/csc-bookcovers-2023.json": "42beca28de9ef0a4da5162506a7c6853",
-    "/course_content/2023/csc-ecosystems-2023.json": "94b8b6ac9fc388536096fbfc9230a779",
-    "/course_content/2023/csc-mappinglandmarks-2023.json": "128e199d5a72ea088c7bbf5027acdf39",
+    "/course_content/2023/coursee-2023.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2023/coursef-2023.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2023/csc-adaptations-2023.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2023/csc-bookcovers-2023.json": "20b75fc905a847219f8abff67263f2ad",
+    "/course_content/2023/csc-ecosystems-2023.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2023/csc-mappinglandmarks-2023.json": "20b75fc905a847219f8abff67263f2ad",
     "/course_content/2023/csc-starquilts-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/2023/csc-timecapsule-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
-    "/course_content/2023/csd1-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/2023/csd1-2023.json": "55ff3cff04afd7271819b7c3238aec62",
     "/course_content/2023/csd2-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/2023/csd3-2023.json": "ad10eef17a3e84aacd7fa01ed4167538",
-    "/course_content/2023/csd4-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/2023/csd4-2023.json": "00aa0f7e3790b51cdc88098613a4a6cb",
     "/course_content/2023/csd5-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
-    "/course_content/2023/csd6a-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/2023/csd6a-2023.json": "5a0c05203122c7fb02cc754759f18326",
     "/course_content/2023/csd7-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/2023/dance-ai-2023.json": "b5166cb0838b7a3f6dba0a5c8fb653c0",
-    "/course_content/2023/express-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/2023/express-2023.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/2023/how-ai-works-2023.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/2023/poetry-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/2023/poetry-2023.json": "2b6fa215b4ee0d778be340a9bd7428a4",
     "/course_content/2023/pre-express-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/Hour of Code/Hour of Code.json": "1c0bea67b46c86768a61eea60bdb7db8",
     "/course_content/Hour of Code/applab-intro.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
@@ -4234,12 +4234,12 @@
     "/course_content/Hour of Code/flappy.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/Hour of Code/frozen.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/Hour of Code/gumball.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/Hour of Code/hello-world-animals-2021.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
-    "/course_content/Hour of Code/hello-world-emoji-2021.json": "4eaabbc9a709cd1738295ad2d320ef88",
-    "/course_content/Hour of Code/hello-world-food-2021.json": "da17c63178d99a1a868fd002d5263fdc",
-    "/course_content/Hour of Code/hello-world-retro-2021.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
-    "/course_content/Hour of Code/hello-world-soccer-2022.json": "5f8225f59e1be198877857316e7cd709",
-    "/course_content/Hour of Code/hello-world-space-2022.json": "5f8225f59e1be198877857316e7cd709",
+    "/course_content/Hour of Code/hello-world-animals-2021.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/Hour of Code/hello-world-emoji-2021.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/Hour of Code/hello-world-food-2021.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/Hour of Code/hello-world-retro-2021.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/Hour of Code/hello-world-soccer-2022.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/Hour of Code/hello-world-space-2022.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/Hour of Code/hero.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/Hour of Code/hoc-encryption.json": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/Hour of Code/hourofcode.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
@@ -4248,7 +4248,7 @@
     "/course_content/Hour of Code/mc.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/Hour of Code/minecraft.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/Hour of Code/oceans.json": "1cf864922c74a76378944a6730df9d9b",
-    "/course_content/Hour of Code/outbreak.json": "926c1a19c606971e409b3273f0ba3411",
+    "/course_content/Hour of Code/outbreak.json": "ade57235ba7fefdcdee7019035a96d68",
     "/course_content/Hour of Code/playlab.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/Hour of Code/poem-art-2021.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
     "/course_content/Hour of Code/sports.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
@@ -4257,22 +4257,22 @@
     "/course_content/Hour of Code/text-compression.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/20-hour.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/K5-OnlinePD.json": "1c0bea67b46c86768a61eea60bdb7db8",
-    "/course_content/other/allthethings.json": "0793358b4dcb414e67024c1dc901f599",
+    "/course_content/other/allthethings.json": "cc561ff675bebe6208d1f16f55aad03f",
     "/course_content/other/applab-1hour.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/applab-2hour.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/course1.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/course2.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/course3.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/course4.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/other/csd-post-survey-2018.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/other/csd-post-survey.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
-    "/course_content/other/csd1-2021.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
+    "/course_content/other/csd-post-survey-2018.json": "f27812fbd917cbaf4fb6230cd55e09d2",
+    "/course_content/other/csd-post-survey.json": "55ff3cff04afd7271819b7c3238aec62",
+    "/course_content/other/csd1-2021.json": "55ff3cff04afd7271819b7c3238aec62",
     "/course_content/other/csd2-2021.json": "c96cb19707b6f12df1a5c0f622f14e67",
     "/course_content/other/csd3-2021.json": "2c3d2ba5b806b45f4f7e869421fd1589",
     "/course_content/other/csd4-2021.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
-    "/course_content/other/csd5-2021.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
+    "/course_content/other/csd5-2021.json": "04c30fa02aea854db9953baf9db25aac",
     "/course_content/other/csd6-2022.json": "a05cdcd8b38a729b4d9f5c6bb6eceefd",
-    "/course_content/other/csd6b-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/other/csd6b-2023.json": "b7095733957b44309cb29634ee11834c",
     "/course_content/other/csd7-2021.json": "73bbdc01e559569c95e5a60c68726692",
     "/course_content/other/deepdive-debugging.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/frequency_analysis.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
@@ -4289,37 +4289,37 @@
     "/course_content/other/vigenere.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/projects.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "926c1a19c606971e409b3273f0ba3411",
-    "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
-    "/course_content/2024/music-intro-2024.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/dashboard/variable_names.yml": "76b4295eb00bb3a20b9cebe921070ca6",
+    "/course_content/2024/music-intro-2024.json": "ceb7ee1b57a4805c98d8ba95137bc0c2",
     "/course_content/other/music-onboard.json": "1aba6c954ff82d8a494ff49aa7729a0f",
-    "/course_content/other/music-tutorial-2024.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/other/music-tutorial-2024.json": "994cb88c36507124986ba06e75455b85",
     "/course_content/2021/kodea-pd-2021.json": "4262a61a63d9342d141abc233e4d6d64",
     "/course_content/Hour of Code/dance-ai-2023.json": "a472847ea74d24b9892be9cdf4bee2ac",
     "/course_content/Hour of Code/pixelation.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/other/Hour of Code.json": "d5f76e5dc691c4ef42af1559b1d2d6f8",
     "/course_content/2023/csd2-2024.json": "1aba6c954ff82d8a494ff49aa7729a0f",
-    "/course_content/other/computer-vision.json": "782598b677c8f2c8237ee99e6ddde229",
+    "/course_content/other/computer-vision.json": "9c359ac7a3279ffcaa17ea9928be4c6a",
     "/course_content/other/k5-unplugged.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/other/self-paced-pl-k5-2024.json": "1aba6c954ff82d8a494ff49aa7729a0f",
     "/course_content/other/self-paced-pl-k5-2024-1.json": "1aba6c954ff82d8a494ff49aa7729a0f",
-    "/course_content/other/self-paced-pl-k5-2024-2.json": "8d4005a459c8c79d6ea4cf89bbc30d65",
-    "/course_content/2023/k5-onlinepd-2023.json": "1aba6c954ff82d8a494ff49aa7729a0f",
-    "/course_content/2024/foundations-gen-ai-2024.json": "70832d35a0927b7743c3df4080eebd48",
+    "/course_content/other/self-paced-pl-k5-2024-2.json": "20b75fc905a847219f8abff67263f2ad",
+    "/course_content/2023/k5-onlinepd-2023.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/2024/foundations-gen-ai-2024.json": "f287309025e7708083a1ffbd6a19f2b6",
     "/course_content/2024/music-jam-2024.json": "8b6919bc750c3ee0103864b19154e567",
-    "/course_content/Hour of Code/music-jam-2024.json": "1aba6c954ff82d8a494ff49aa7729a0f",
+    "/course_content/Hour of Code/music-jam-2024.json": "ceb7ee1b57a4805c98d8ba95137bc0c2",
     "/course_content/2024/exploring-gen-ai2-2024.json": "c85d0ba4ebbcfa8196b3f2b986c89e27",
-    "/course_content/2024/elem-game-design-2024.json": "a9b73a5e5f7cd1204c7d92dcf06ec77d",
-    "/course_content/2024/k5-ai-data-2024.json": "cf9fd732a014e8ffd6e333447c0628f9",
-    "/course_content/other/k5howaimakesdecisions.json": "3f39a845e8b4b1023ab2ed2e18568561",
-    "/course_content/other/k5plgamedesign.json": "0854057181df7757328ceb1b565bf9c3",
+    "/course_content/2024/elem-game-design-2024.json": "0f751e5bca4e989141231499c010db8b",
+    "/course_content/2024/k5-ai-data-2024.json": "27a47abb10b8400879392544812d21dd",
+    "/course_content/other/k5howaimakesdecisions.json": "ade57235ba7fefdcdee7019035a96d68",
+    "/course_content/other/k5plgamedesign.json": "27a47abb10b8400879392544812d21dd",
     "/course_content/other/self-paced-pl-csd1-2024.json": "5b59936030d3fa96ddc67a86e4761af7",
     "/course_content/other/self-paced-pl-csd2-2024.json": "89b72605bbe6d8516bb8bb0110997a8a",
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ga-IE": {
     "/course_content/2017/coursea-2017.json": "bc6b481633da13cec6728bae07c97d00",
@@ -4489,7 +4489,7 @@
     "/course_content/other/vigenere.json": "a75e7af684891bbc2cf2052765e6fb0e",
     "/course_content/projects.json": "a75e7af684891bbc2cf2052765e6fb0e",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "a75e7af684891bbc2cf2052765e6fb0e",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "db0c1f247e7cb30d47d9a122772bba2f",
@@ -4519,7 +4519,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "gl-ES": {
     "/course_content/2017/coursea-2017.json": "a031f28efb8cb80c112dccb917151bc7",
@@ -4689,7 +4689,7 @@
     "/course_content/other/vigenere.json": "34d594ed8c20059fc3e046d773460b09",
     "/course_content/projects.json": "34d594ed8c20059fc3e046d773460b09",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "34d594ed8c20059fc3e046d773460b09",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "a4f6c144db7b59855028b15176fcf9fb",
@@ -4719,7 +4719,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "haw-HI": {
     "/course_content/2017/coursea-2017.json": "14ae428f73d849964e8d97e6512cd88e",
@@ -4889,7 +4889,7 @@
     "/course_content/other/vigenere.json": "0a8c9d340ecfeb04cb3efaf0c0617818",
     "/course_content/projects.json": "0a8c9d340ecfeb04cb3efaf0c0617818",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "0a8c9d340ecfeb04cb3efaf0c0617818",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "861c90b84fca3627cbe7e5007986a55a",
@@ -4919,7 +4919,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "he-IL": {
     "/course_content/2017/coursea-2017.json": "f5d27df447b5ef7dd4642146c4a1f9fc",
@@ -5089,7 +5089,7 @@
     "/course_content/other/vigenere.json": "6be931a04a338b32855679ddbbcec52b",
     "/course_content/projects.json": "6be931a04a338b32855679ddbbcec52b",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "6be931a04a338b32855679ddbbcec52b",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "5272a245ba7b9a43afc15c187b2143a3",
@@ -5119,7 +5119,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "hi-IN": {
     "/course_content/2017/coursea-2017.json": "bc901ee5a6e6eea4d6b453a15cd4b838",
@@ -5289,7 +5289,7 @@
     "/course_content/other/vigenere.json": "bc901ee5a6e6eea4d6b453a15cd4b838",
     "/course_content/projects.json": "068eb7c70d853feba4b290dffac8f067",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "068eb7c70d853feba4b290dffac8f067",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "156637c0fae568551b38b0ba76cbc0db",
@@ -5319,7 +5319,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "hr-HR": {
     "/course_content/2017/coursea-2017.json": "69a6b46a4a042e1a9ae5275653351346",
@@ -5489,7 +5489,7 @@
     "/course_content/other/vigenere.json": "69a6b46a4a042e1a9ae5275653351346",
     "/course_content/projects.json": "4dfad98a6a83b536b0e7fccbbadf9be2",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "4dfad98a6a83b536b0e7fccbbadf9be2",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "91865824ea5898cd7cd291cecc4363b4",
@@ -5519,7 +5519,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "hu-HU": {
     "/course_content/2017/coursea-2017.json": "1f8819a7e0ee9815e62cc9c98170fe53",
@@ -5689,7 +5689,7 @@
     "/course_content/other/vigenere.json": "8bcd99d650ccf4be6fdee8cf2445638d",
     "/course_content/projects.json": "8bcd99d650ccf4be6fdee8cf2445638d",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "8bcd99d650ccf4be6fdee8cf2445638d",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "ea5990ebe19e98838884b9fab384d785",
@@ -5719,7 +5719,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "hy-AM": {
     "/course_content/2017/coursea-2017.json": "3894af910792b7a76d124cb4072db52c",
@@ -5889,7 +5889,7 @@
     "/course_content/other/vigenere.json": "06908a82ca851992b6778c400cb71903",
     "/course_content/projects.json": "06908a82ca851992b6778c400cb71903",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "06908a82ca851992b6778c400cb71903",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "05f3cbcb8bcee72956d3d46861dc305b",
@@ -5919,7 +5919,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "id-ID": {
     "/course_content/2017/coursea-2017.json": "257d7d94bdecc26d5f0b5c9ef59d2219",
@@ -6089,7 +6089,7 @@
     "/course_content/other/vigenere.json": "257d7d94bdecc26d5f0b5c9ef59d2219",
     "/course_content/projects.json": "257d7d94bdecc26d5f0b5c9ef59d2219",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "695d1e86f1cbf228d57580cf4abf33e1",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "120c751c37fd95d3dc3df452c56c37d6",
@@ -6119,7 +6119,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "is-IS": {
     "/course_content/2017/coursea-2017.json": "f72a7e58bd9d8fa580de048ffba7a57b",
@@ -6179,7 +6179,7 @@
     "/course_content/2021/coursec-2021.json": "8c14631bd8214235906d50c9a2d5e055",
     "/course_content/2021/coursed-2021.json": "8c14631bd8214235906d50c9a2d5e055",
     "/course_content/2021/coursee-2021.json": "8c14631bd8214235906d50c9a2d5e055",
-    "/course_content/2021/coursef-2021.json": "035b14a2fdcec7c5ab93bdb565abe33f",
+    "/course_content/2021/coursef-2021.json": "ce6c01fcc4d7524ec07346bedce9382d",
     "/course_content/2021/csd6-2021.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2021/express-2021.json": "8c14631bd8214235906d50c9a2d5e055",
     "/course_content/2021/pre-express-2021.json": "8c14631bd8214235906d50c9a2d5e055",
@@ -6188,14 +6188,14 @@
     "/course_content/2022/coursec-2022.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2022/coursed-2022.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2022/coursee-2022.json": "1a7e241e27e7995b66d420c374336aa2",
-    "/course_content/2022/coursef-2022.json": "56fe089eb943adfcd534fa0bdb79c0db",
+    "/course_content/2022/coursef-2022.json": "ce6c01fcc4d7524ec07346bedce9382d",
     "/course_content/2022/csd1-2022.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2022/csd2-2022.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2022/csd3-2022.json": "96951646a6652fc7a5fb9a66d948b159",
     "/course_content/2022/csd4-2022.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2022/csd5-2022.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2022/csd7-2022.json": "b6419aa97e6a6408bd1bb704f837f55c",
-    "/course_content/2022/express-2022.json": "1a7e241e27e7995b66d420c374336aa2",
+    "/course_content/2022/express-2022.json": "ce6c01fcc4d7524ec07346bedce9382d",
     "/course_content/2022/pre-express-2022.json": "1a7e241e27e7995b66d420c374336aa2",
     "/course_content/2023/ai-ethics-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/coursea-2023.json": "a81029353df36765326f61c263bff61c",
@@ -6203,10 +6203,10 @@
     "/course_content/2023/coursec-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/coursed-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/coursee-2023.json": "a81029353df36765326f61c263bff61c",
-    "/course_content/2023/coursef-2023.json": "a81029353df36765326f61c263bff61c",
+    "/course_content/2023/coursef-2023.json": "ce6c01fcc4d7524ec07346bedce9382d",
     "/course_content/2023/csc-adaptations-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/csc-bookcovers-2023.json": "42beca28de9ef0a4da5162506a7c6853",
-    "/course_content/2023/csc-ecosystems-2023.json": "94b8b6ac9fc388536096fbfc9230a779",
+    "/course_content/2023/csc-ecosystems-2023.json": "ff90dfa780a0941e54cdca580b6069ec",
     "/course_content/2023/csc-mappinglandmarks-2023.json": "128e199d5a72ea088c7bbf5027acdf39",
     "/course_content/2023/csc-starquilts-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/csc-timecapsule-2023.json": "a81029353df36765326f61c263bff61c",
@@ -6218,7 +6218,7 @@
     "/course_content/2023/csd6a-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/csd7-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/dance-ai-2023.json": "ed4716a4b91585f6a8a73f98b7ac6b99",
-    "/course_content/2023/express-2023.json": "a81029353df36765326f61c263bff61c",
+    "/course_content/2023/express-2023.json": "ce6c01fcc4d7524ec07346bedce9382d",
     "/course_content/2023/how-ai-works-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/poetry-2023.json": "a81029353df36765326f61c263bff61c",
     "/course_content/2023/pre-express-2023.json": "a81029353df36765326f61c263bff61c",
@@ -6289,9 +6289,9 @@
     "/course_content/other/vigenere.json": "7c1e3fec7c6a2f859ddc6e4232409055",
     "/course_content/projects.json": "7c1e3fec7c6a2f859ddc6e4232409055",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "7c1e3fec7c6a2f859ddc6e4232409055",
-    "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
+    "/dashboard/variable_names.yml": "9c32f4b57ebec0b3d33b8f70b340d031",
     "/course_content/2024/music-intro-2024.json": "a81029353df36765326f61c263bff61c",
     "/course_content/other/music-onboard.json": "a81029353df36765326f61c263bff61c",
     "/course_content/other/music-tutorial-2024.json": "a81029353df36765326f61c263bff61c",
@@ -6305,8 +6305,8 @@
     "/course_content/other/self-paced-pl-k5-2024.json": "40208a32207ebba0689b93e4d17cde3b",
     "/course_content/other/self-paced-pl-k5-2024-1.json": "40208a32207ebba0689b93e4d17cde3b",
     "/course_content/other/self-paced-pl-k5-2024-2.json": "8d4005a459c8c79d6ea4cf89bbc30d65",
-    "/course_content/2023/k5-onlinepd-2023.json": "40208a32207ebba0689b93e4d17cde3b",
-    "/course_content/2024/foundations-gen-ai-2024.json": "70832d35a0927b7743c3df4080eebd48",
+    "/course_content/2023/k5-onlinepd-2023.json": "ce6c01fcc4d7524ec07346bedce9382d",
+    "/course_content/2024/foundations-gen-ai-2024.json": "c15715635fb41ad0a91a1fb8dba87825",
     "/course_content/2024/music-jam-2024.json": "93b617b2f09d91be771dd9a886f99caf",
     "/course_content/Hour of Code/music-jam-2024.json": "40208a32207ebba0689b93e4d17cde3b",
     "/course_content/2024/exploring-gen-ai2-2024.json": "c85d0ba4ebbcfa8196b3f2b986c89e27",
@@ -6319,7 +6319,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "it-IT": {
     "/course_content/2017/coursea-2017.json": "148a777fae911f781c17ef74eda52176",
@@ -6489,9 +6489,9 @@
     "/course_content/other/vigenere.json": "f3e476697884269e5c3ae76f70c3472a",
     "/course_content/projects.json": "f3e476697884269e5c3ae76f70c3472a",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "738820e11e21d071a9ca1c5d13d0a049",
-    "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
+    "/dashboard/variable_names.yml": "ed41390be4331b5951b21a95f95a51c8",
     "/course_content/2024/music-intro-2024.json": "8190a1b376f08911eb4c808bef1dead2",
     "/course_content/other/music-onboard.json": "8190a1b376f08911eb4c808bef1dead2",
     "/course_content/other/music-tutorial-2024.json": "8190a1b376f08911eb4c808bef1dead2",
@@ -6500,13 +6500,13 @@
     "/course_content/Hour of Code/pixelation.json": "f3e476697884269e5c3ae76f70c3472a",
     "/course_content/other/Hour of Code.json": "f3e476697884269e5c3ae76f70c3472a",
     "/course_content/2023/csd2-2024.json": "8190a1b376f08911eb4c808bef1dead2",
-    "/course_content/other/computer-vision.json": "782598b677c8f2c8237ee99e6ddde229",
+    "/course_content/other/computer-vision.json": "8c47c64705cf5cfdffce1b09336cf22e",
     "/course_content/other/k5-unplugged.json": "8190a1b376f08911eb4c808bef1dead2",
     "/course_content/other/self-paced-pl-k5-2024.json": "8190a1b376f08911eb4c808bef1dead2",
     "/course_content/other/self-paced-pl-k5-2024-1.json": "8190a1b376f08911eb4c808bef1dead2",
     "/course_content/other/self-paced-pl-k5-2024-2.json": "8d4005a459c8c79d6ea4cf89bbc30d65",
     "/course_content/2023/k5-onlinepd-2023.json": "8190a1b376f08911eb4c808bef1dead2",
-    "/course_content/2024/foundations-gen-ai-2024.json": "70832d35a0927b7743c3df4080eebd48",
+    "/course_content/2024/foundations-gen-ai-2024.json": "8259b96c8909304c1819de32bbd91630",
     "/course_content/2024/music-jam-2024.json": "200233f9f38d6bbd05e5e2bfc69322ad",
     "/course_content/Hour of Code/music-jam-2024.json": "8190a1b376f08911eb4c808bef1dead2",
     "/course_content/2024/exploring-gen-ai2-2024.json": "c85d0ba4ebbcfa8196b3f2b986c89e27",
@@ -6519,7 +6519,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ja-JP": {
     "/course_content/2017/coursea-2017.json": "4b3c22871ccb2c87ed39bdec0c0c4d2d",
@@ -6689,7 +6689,7 @@
     "/course_content/other/vigenere.json": "330307e78d3e5f37eb37b9c9f76aa83c",
     "/course_content/projects.json": "330307e78d3e5f37eb37b9c9f76aa83c",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "330307e78d3e5f37eb37b9c9f76aa83c",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "d2240dfc73d8fc249e38d462254896d7",
@@ -6719,7 +6719,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ka-GE": {
     "/course_content/2017/coursea-2017.json": "b0e6d26dbff9326f724dbe39b4735b74",
@@ -6889,7 +6889,7 @@
     "/course_content/other/vigenere.json": "cc448991222712845e67d0667d11af95",
     "/course_content/projects.json": "cc448991222712845e67d0667d11af95",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "cc448991222712845e67d0667d11af95",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "959451d093027c9f450aab94e73da0e3",
@@ -6919,7 +6919,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "kk-KZ": {
     "/course_content/2017/coursea-2017.json": "2eecd07da9907be38820a828af030db8",
@@ -7089,7 +7089,7 @@
     "/course_content/other/vigenere.json": "a08840462f5f7a5486f19082f76b1e9c",
     "/course_content/projects.json": "a08840462f5f7a5486f19082f76b1e9c",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "a08840462f5f7a5486f19082f76b1e9c",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "f2080a082ea469223a6dcee3a8ba7253",
@@ -7119,7 +7119,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "kn-IN": {
     "/course_content/2017/coursea-2017.json": "0a469a2128418f5c7416554dc6e18c63",
@@ -7289,7 +7289,7 @@
     "/course_content/other/vigenere.json": "0a469a2128418f5c7416554dc6e18c63",
     "/course_content/projects.json": "bffc20db277acb51a54948bf0b60ec71",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "bffc20db277acb51a54948bf0b60ec71",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "cf318103ac3215f6899be16cbca0ab50",
@@ -7319,7 +7319,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "km-KH": {
     "/course_content/2017/coursea-2017.json": "b41012e4bc4e28d0e3a8008aa10e7132",
@@ -7489,7 +7489,7 @@
     "/course_content/other/vigenere.json": "908176450d142aff37bd891dd5bd8798",
     "/course_content/projects.json": "908176450d142aff37bd891dd5bd8798",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "908176450d142aff37bd891dd5bd8798",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "c65dba3b9911556918cc5cf8635bffc6",
@@ -7519,7 +7519,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ko-KR": {
     "/course_content/2017/coursea-2017.json": "41aad37fdb5dc94856853c71d24069ae",
@@ -7689,7 +7689,7 @@
     "/course_content/other/vigenere.json": "7116dc6200c101939a861fec00996eb6",
     "/course_content/projects.json": "7116dc6200c101939a861fec00996eb6",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "7116dc6200c101939a861fec00996eb6",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "e5f014503735014d626afce26bded362",
@@ -7719,7 +7719,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ku-IQ": {
     "/course_content/2017/coursea-2017.json": "7dd9dcca13159966b55d7058647fd49d",
@@ -7889,7 +7889,7 @@
     "/course_content/other/vigenere.json": "7dd9dcca13159966b55d7058647fd49d",
     "/course_content/projects.json": "7dd9dcca13159966b55d7058647fd49d",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "15c142dec9112980eb751696a3a701ce",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "ca1b24baf3e9cff8e762893962912ac8",
@@ -7919,7 +7919,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ky-KG": {
     "/course_content/2017/coursea-2017.json": "c600a058278ab48652aaf1cf74c6e566",
@@ -8263,7 +8263,7 @@
     "/course_content/other/vigenere.json": "c20a10da54353a769a9d90da0d6e5349",
     "/course_content/projects.json": "c20a10da54353a769a9d90da0d6e5349",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "ad2b05f36850a7d3f3b1f25316d5546f",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "1c6b24d2da5722414e59c225e21a3f12",
@@ -8293,7 +8293,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "lv-LV": {
     "/course_content/2017/coursea-2017.json": "e97f8264da2c4362f4a973a3d07bcb3c",
@@ -8463,7 +8463,7 @@
     "/course_content/other/vigenere.json": "e97f8264da2c4362f4a973a3d07bcb3c",
     "/course_content/projects.json": "e97f8264da2c4362f4a973a3d07bcb3c",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "6a7d235da3451618e5790fe0c95d2c5a",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "95da31a669c2de57300fe09ba6d0cde3",
@@ -8493,7 +8493,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "mi-NZ": {
     "/course_content/2017/coursea-2017.json": "46b61adb62bfb96ee142033c64bb7382",
@@ -8663,7 +8663,7 @@
     "/course_content/other/vigenere.json": "46b61adb62bfb96ee142033c64bb7382",
     "/course_content/projects.json": "6b0e55dca99150ebad3521d83ee31f20",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "6b0e55dca99150ebad3521d83ee31f20",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "e5003e1ba194973724a31341d217ef3e",
@@ -8693,7 +8693,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "mk-MK": {
     "/course_content/2017/coursea-2017.json": "f9a1fda0ac3a3526ed1c2c4e0c0a3cda",
@@ -8863,7 +8863,7 @@
     "/course_content/other/vigenere.json": "f9a1fda0ac3a3526ed1c2c4e0c0a3cda",
     "/course_content/projects.json": "f9a1fda0ac3a3526ed1c2c4e0c0a3cda",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "2b0bfb52bfbe52e5d038eb46af108f02",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "be1f562c3d3e201b07705999a74381df",
@@ -8893,7 +8893,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "mn-MN": {
     "/course_content/2017/coursea-2017.json": "bc1aab3568eac40fa79c1fa6b1a97eb6",
@@ -9063,7 +9063,7 @@
     "/course_content/other/vigenere.json": "55af38c57e173a979fef96e8bef3c7dc",
     "/course_content/projects.json": "55af38c57e173a979fef96e8bef3c7dc",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "55af38c57e173a979fef96e8bef3c7dc",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "e548f4f20d46104f76c43148be087003",
@@ -9093,7 +9093,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "mr-IN": {
     "/course_content/2017/coursea-2017.json": "53f14894b82e7c42a72ce66cda166859",
@@ -9263,7 +9263,7 @@
     "/course_content/other/vigenere.json": "53f14894b82e7c42a72ce66cda166859",
     "/course_content/projects.json": "850c7b1a0bc8525738de1559b40ed21d",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "850c7b1a0bc8525738de1559b40ed21d",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "97deb7b931c49632b760a59847ecd806",
@@ -9293,7 +9293,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "ms-MY": {
     "/course_content/2017/coursea-2017.json": "51a4d0003b9af3ac89706b4a2dd8d688",
@@ -9463,7 +9463,7 @@
     "/course_content/other/vigenere.json": "51a4d0003b9af3ac89706b4a2dd8d688",
     "/course_content/projects.json": "2fb440e40f2347e2ba90d16d2d9d52c7",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "2fb440e40f2347e2ba90d16d2d9d52c7",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "76529ddcbfecd9f24aa23f5897551544",
@@ -9493,7 +9493,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "mt-MT": {
     "/course_content/2017/coursea-2017.json": "cf87b289baf5104cea984c39f433b6f9",
@@ -9663,7 +9663,7 @@
     "/course_content/other/vigenere.json": "cf87b289baf5104cea984c39f433b6f9",
     "/course_content/projects.json": "1b33cb4cf7322c611caebed6a481b882",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "1b33cb4cf7322c611caebed6a481b882",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "e5d403af4df474d97fdd220a64a5e888",
@@ -9693,7 +9693,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "my-MM": {
     "/course_content/2017/coursea-2017.json": "e7768d4d15f0e100fdc75ab8f23e2f3a",
@@ -9863,7 +9863,7 @@
     "/course_content/other/vigenere.json": "e7768d4d15f0e100fdc75ab8f23e2f3a",
     "/course_content/projects.json": "e7768d4d15f0e100fdc75ab8f23e2f3a",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "c4d6b296b76bf52db349d8488194e620",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "e66fa82e4409bb97891a3757122bf5e3",
@@ -9893,7 +9893,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "ne-NP": {
     "/course_content/2017/coursea-2017.json": "84a32160a67122e6d77b95c02271b691",
@@ -10063,7 +10063,7 @@
     "/course_content/other/vigenere.json": "57620ad58ba34849eb750a462c39f4e2",
     "/course_content/projects.json": "57620ad58ba34849eb750a462c39f4e2",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "57620ad58ba34849eb750a462c39f4e2",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "a858d780925fac96ca7df8ec3125331b",
@@ -10093,7 +10093,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "nl-NL": {
     "/course_content/2017/coursea-2017.json": "c262c37abdfb55a88cbed24e29e1b993",
@@ -10263,7 +10263,7 @@
     "/course_content/other/vigenere.json": "3381f1c1c6dc031f17b8e36a4c62aa3f",
     "/course_content/projects.json": "3381f1c1c6dc031f17b8e36a4c62aa3f",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "3381f1c1c6dc031f17b8e36a4c62aa3f",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "a95c4a8c53dde9d862c2db28ae61b50c",
@@ -10293,7 +10293,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "nn-NO": {
     "/course_content/2017/coursea-2017.json": "4f7cfd452a4960abb4ff1e657793581e",
@@ -10463,7 +10463,7 @@
     "/course_content/other/vigenere.json": "37f1f0938d234b2454742b5dc6b67042",
     "/course_content/projects.json": "37f1f0938d234b2454742b5dc6b67042",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "37f1f0938d234b2454742b5dc6b67042",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "132469d222300a49e2d9a8179335e6aa",
@@ -10493,7 +10493,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "no-NO": {
     "/course_content/2017/coursea-2017.json": "d0c8ab0d022684e13c0e4608c1f73277",
@@ -10663,7 +10663,7 @@
     "/course_content/other/vigenere.json": "636b7af18ecedf2f98cc6d2eddc49c5c",
     "/course_content/projects.json": "636b7af18ecedf2f98cc6d2eddc49c5c",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "636b7af18ecedf2f98cc6d2eddc49c5c",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "9834e09e1552f23275051be0ace22cb4",
@@ -10693,7 +10693,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "pl-PL": {
     "/course_content/2017/coursea-2017.json": "85d5264ae926ffde319e926ac06f5ad8",
@@ -10863,7 +10863,7 @@
     "/course_content/other/vigenere.json": "c74d97eb8af717719122e67bc36bcc20",
     "/course_content/projects.json": "c74d97eb8af717719122e67bc36bcc20",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "c74d97eb8af717719122e67bc36bcc20",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "900020e80bc9e5d341aea3e4fb192dd2",
@@ -10893,7 +10893,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "ps-AF": {
     "/course_content/2017/coursea-2017.json": "bbad23a18d888478f9970bb77efae3d8",
@@ -11237,7 +11237,7 @@
     "/course_content/other/vigenere.json": "9873a63b9c9792ba28b1a5ab0518cb1c",
     "/course_content/projects.json": "9873a63b9c9792ba28b1a5ab0518cb1c",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "9873a63b9c9792ba28b1a5ab0518cb1c",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "846c372f62b5ed902c17f9262c86cb12",
@@ -11267,7 +11267,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "pt-PT": {
     "/course_content/2017/coursea-2017.json": "ade31c0142c7274850e521f33fd03c42",
@@ -11437,7 +11437,7 @@
     "/course_content/other/vigenere.json": "ade31c0142c7274850e521f33fd03c42",
     "/course_content/projects.json": "ade31c0142c7274850e521f33fd03c42",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "867100ddf003eb296fda97b86a5aa384",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "07f0679b8914fa8e842c6dc375b41b55",
@@ -11467,7 +11467,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "ro-RO": {
     "/course_content/2017/coursea-2017.json": "78732b9fcbb34cd442d512b67bde49ee",
@@ -11637,7 +11637,7 @@
     "/course_content/other/vigenere.json": "78732b9fcbb34cd442d512b67bde49ee",
     "/course_content/projects.json": "38a94a7ada79de810dbd03dbaf684198",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "38a94a7ada79de810dbd03dbaf684198",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "96543cae6af93885c8ea9fba61c79dc0",
@@ -11667,7 +11667,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "ru-RU": {
     "/course_content/2017/coursea-2017.json": "31d0b6346244271fb368530657ad3493",
@@ -11837,7 +11837,7 @@
     "/course_content/other/vigenere.json": "1b8e04e14411d6cd075b4385f7ac5458",
     "/course_content/projects.json": "1b8e04e14411d6cd075b4385f7ac5458",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "faa53e842918ef4bcd86b12cd7234a81",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "437c27d91b505c677b818e44b35a8338",
@@ -11867,7 +11867,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "se-FI": {
     "/course_content/2017/coursea-2017.json": "fa47e6058eda9f028e04fe3278242dbf",
@@ -12037,7 +12037,7 @@
     "/course_content/other/vigenere.json": "2cd4ae963ee64def1e004a27b01e4a11",
     "/course_content/projects.json": "2cd4ae963ee64def1e004a27b01e4a11",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "c294a9e6f2386246e362183ec746e311",
+    "/dashboard/progressions.yml": "48f6a838a2a3b53991c424480b1978e8",
     "/dashboard/parameter_names.yml": "2cd4ae963ee64def1e004a27b01e4a11",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "34f51375395a21ea60264bc2659d295d",
@@ -12067,7 +12067,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "sm-WS": {
     "/course_content/2017/coursea-2017.json": "9979c2e2ab76b476a3e2c7050796ede1",
@@ -12237,7 +12237,7 @@
     "/course_content/other/vigenere.json": "9979c2e2ab76b476a3e2c7050796ede1",
     "/course_content/projects.json": "d99419b8153357bbe8f560cd3f05af89",
     "/dashboard/block_categories.yml": "b8e632a7332e3fc9558b478da7f0f522",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "d99419b8153357bbe8f560cd3f05af89",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "1086cc008dc6d09912ba0893a70092a6",
@@ -12267,7 +12267,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "89b72605bbe6d8516bb8bb0110997a8a",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "b96e1f58798cfe67d10f878f1129482a",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "si-LK": {
     "/course_content/2017/coursea-2017.json": "2fa7e09e12f9f9ebe35eff90cb75283d",
@@ -12437,7 +12437,7 @@
     "/course_content/other/vigenere.json": "2fa7e09e12f9f9ebe35eff90cb75283d",
     "/course_content/projects.json": "2fa7e09e12f9f9ebe35eff90cb75283d",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "51b1acc53ac11bc8e02d302325d35b0d",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "43e4dd4a2f44854a054982dc697506f2",
@@ -12467,7 +12467,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "sk-SK": {
     "/course_content/2017/coursea-2017.json": "90007c7731de051a756ec692925e3dc5",
@@ -12637,7 +12637,7 @@
     "/course_content/other/vigenere.json": "d83f3a0e37b3aa1c1d98b01cd3b0cd0e",
     "/course_content/projects.json": "d83f3a0e37b3aa1c1d98b01cd3b0cd0e",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "d83f3a0e37b3aa1c1d98b01cd3b0cd0e",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "b6e131b5c5fb67554ff94335c0e112fa",
@@ -12667,7 +12667,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "sl-SI": {
     "/course_content/2017/coursea-2017.json": "ce2aacfd01385c2e5f8b580d9ac8126c",
@@ -12761,9 +12761,9 @@
     "/course_content/2023/csd1-2023.json": "8da954e619a5a974ee984a8d38d75888",
     "/course_content/2023/csd2-2023.json": "8da954e619a5a974ee984a8d38d75888",
     "/course_content/2023/csd3-2023.json": "f722d5760ca5bcd6d9f57b4cd3d40bb5",
-    "/course_content/2023/csd4-2023.json": "8da954e619a5a974ee984a8d38d75888",
+    "/course_content/2023/csd4-2023.json": "2142da91cc1a5f6a919c2b6ee341b22f",
     "/course_content/2023/csd5-2023.json": "8da954e619a5a974ee984a8d38d75888",
-    "/course_content/2023/csd6a-2023.json": "8da954e619a5a974ee984a8d38d75888",
+    "/course_content/2023/csd6a-2023.json": "f19ebeb3219e4a7f30537af3de81ab78",
     "/course_content/2023/csd7-2023.json": "8da954e619a5a974ee984a8d38d75888",
     "/course_content/2023/dance-ai-2023.json": "6131334c3de8ff1f94d76c991612605c",
     "/course_content/2023/express-2023.json": "8da954e619a5a974ee984a8d38d75888",
@@ -12820,7 +12820,7 @@
     "/course_content/other/csd4-2021.json": "7ccb805edb53f50dbfe919e2a3aa0d28",
     "/course_content/other/csd5-2021.json": "7ccb805edb53f50dbfe919e2a3aa0d28",
     "/course_content/other/csd6-2022.json": "7ccb805edb53f50dbfe919e2a3aa0d28",
-    "/course_content/other/csd6b-2023.json": "8da954e619a5a974ee984a8d38d75888",
+    "/course_content/other/csd6b-2023.json": "f19ebeb3219e4a7f30537af3de81ab78",
     "/course_content/other/csd7-2021.json": "73bbdc01e559569c95e5a60c68726692",
     "/course_content/other/deepdive-debugging.json": "f7ba997bd14f7f428f9ed60bfdd0d139",
     "/course_content/other/frequency_analysis.json": "f7ba997bd14f7f428f9ed60bfdd0d139",
@@ -12837,7 +12837,7 @@
     "/course_content/other/vigenere.json": "f7ba997bd14f7f428f9ed60bfdd0d139",
     "/course_content/projects.json": "f7ba997bd14f7f428f9ed60bfdd0d139",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "f7ba997bd14f7f428f9ed60bfdd0d139",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "aae47a60c70bb1b61256087ebd41ecee",
@@ -12867,7 +12867,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "sq-AL": {
     "/course_content/2017/coursea-2017.json": "9b166685af1c0e06ed2bad2262ea5aa7",
@@ -12960,7 +12960,7 @@
     "/course_content/2023/csc-timecapsule-2023.json": "36975d07f44db2da0487cc3c8252269c",
     "/course_content/2023/csd1-2023.json": "36975d07f44db2da0487cc3c8252269c",
     "/course_content/2023/csd2-2023.json": "36975d07f44db2da0487cc3c8252269c",
-    "/course_content/2023/csd3-2023.json": "868ec1b5581519b4c03fdaedafbb0e7a",
+    "/course_content/2023/csd3-2023.json": "1279b57b7e06ad19f5f1ed5cb5ab0017",
     "/course_content/2023/csd4-2023.json": "36975d07f44db2da0487cc3c8252269c",
     "/course_content/2023/csd5-2023.json": "36975d07f44db2da0487cc3c8252269c",
     "/course_content/2023/csd6a-2023.json": "36975d07f44db2da0487cc3c8252269c",
@@ -13037,7 +13037,7 @@
     "/course_content/other/vigenere.json": "7e11359ff1742bc907dafc2009a6a1ce",
     "/course_content/projects.json": "7e11359ff1742bc907dafc2009a6a1ce",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "7e11359ff1742bc907dafc2009a6a1ce",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "273b8215841c3b4ccaf3f136a248bead",
@@ -13067,7 +13067,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "sr-SP": {
     "/course_content/2017/coursea-2017.json": "a7cc3dceeadf5898ead99139aeb5de69",
@@ -13237,7 +13237,7 @@
     "/course_content/other/vigenere.json": "a7cc3dceeadf5898ead99139aeb5de69",
     "/course_content/projects.json": "f7588b975a4e1c3d8360d4f9557709bc",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "f7588b975a4e1c3d8360d4f9557709bc",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "49de5fd50bcfd4977bb11f22655c597f",
@@ -13267,7 +13267,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "sv-SE": {
     "/course_content/2017/coursea-2017.json": "c92c056aae840b412e7a3f9291b0067e",
@@ -13437,7 +13437,7 @@
     "/course_content/other/vigenere.json": "c92c056aae840b412e7a3f9291b0067e",
     "/course_content/projects.json": "c92c056aae840b412e7a3f9291b0067e",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "c92c056aae840b412e7a3f9291b0067e",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "d5814bb5961637433dae3dbc80f43319",
@@ -13467,7 +13467,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "ta-IN": {
     "/course_content/2017/coursea-2017.json": "71358f9f631dddff3ddb182d53cdbb1a",
@@ -13637,7 +13637,7 @@
     "/course_content/other/vigenere.json": "71358f9f631dddff3ddb182d53cdbb1a",
     "/course_content/projects.json": "71358f9f631dddff3ddb182d53cdbb1a",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "05b82912d2c141dd8f69339a26b4bbcb",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "f9f1bdd1df2046de84f3aee6795a931e",
@@ -13667,7 +13667,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "te-IN": {
     "/course_content/2017/coursea-2017.json": "732ea0fa2b08764bed471147ce877d55",
@@ -13837,7 +13837,7 @@
     "/course_content/other/vigenere.json": "732ea0fa2b08764bed471147ce877d55",
     "/course_content/projects.json": "33b58491f877d04f18448e209370f157",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "33b58491f877d04f18448e209370f157",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "10d59feb5fa6b9ecb6d3d526e9b8fc84",
@@ -13867,7 +13867,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "tg-TJ": {
     "/course_content/2017/coursea-2017.json": "8521b0f45977e5f220ccc87b6f6916c6",
@@ -14211,7 +14211,7 @@
     "/course_content/other/vigenere.json": "aa13c06f1d3ba018572b90da1f988385",
     "/course_content/projects.json": "77281d0dc43ec8bb827f0d9482d15249",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "77281d0dc43ec8bb827f0d9482d15249",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "03d977cdd564ad0b5afdf363f465bbc8",
@@ -14241,7 +14241,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "tr-TR": {
     "/course_content/2017/coursea-2017.json": "56ff8916609b08ef4089f2aa5bd6039e",
@@ -14411,7 +14411,7 @@
     "/course_content/other/vigenere.json": "37d9c0376a25bb1112031daa41838e7b",
     "/course_content/projects.json": "37d9c0376a25bb1112031daa41838e7b",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "09637027591b7c39ebe22f2694e1aef2",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "a9172656459123c6b3eca7bbca951a08",
@@ -14441,7 +14441,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "uk-UA": {
     "/course_content/2017/coursea-2017.json": "fdaa523421fe3a08510b661474994521",
@@ -14611,7 +14611,7 @@
     "/course_content/other/vigenere.json": "0b51ea37027caef3bde1510457b65ce5",
     "/course_content/projects.json": "0b51ea37027caef3bde1510457b65ce5",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "0b51ea37027caef3bde1510457b65ce5",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "f085e515a6bfcb4bbd112badbbed2dbc",
@@ -14641,7 +14641,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "ur-PK": {
     "/course_content/2017/coursea-2017.json": "e1fac4bc7dcf1040f06f58f58512bd44",
@@ -14811,7 +14811,7 @@
     "/course_content/other/vigenere.json": "e1fac4bc7dcf1040f06f58f58512bd44",
     "/course_content/projects.json": "e1fac4bc7dcf1040f06f58f58512bd44",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "3f466accb8fd6b13082b54ecddaf2b34",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "084e1da2209aac58c9b7d4bdf3c29cbd",
@@ -14841,7 +14841,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "uz-UZ": {
     "/course_content/2017/coursea-2017.json": "91c3a5a23b249f9b4d9465f5bbc233ca",
@@ -15011,7 +15011,7 @@
     "/course_content/other/vigenere.json": "95aff92436136091f2ffcee6d6067c33",
     "/course_content/projects.json": "95aff92436136091f2ffcee6d6067c33",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "95aff92436136091f2ffcee6d6067c33",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "16e707b4728be17e27f392fffd482262",
@@ -15041,7 +15041,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "b96e1f58798cfe67d10f878f1129482a",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "vi-VN": {
     "/course_content/2017/coursea-2017.json": "b7e72db086b300e2dbc5c3ebbfc4668b",
@@ -15211,7 +15211,7 @@
     "/course_content/other/vigenere.json": "aa0e491cfd5e088331148dfa3ee7fab4",
     "/course_content/projects.json": "aa0e491cfd5e088331148dfa3ee7fab4",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "222b42bd73b2d39a8dc114e881eb2e42",
+    "/dashboard/progressions.yml": "468621730c762d4e7b13dbc4f156508d",
     "/dashboard/parameter_names.yml": "aa0e491cfd5e088331148dfa3ee7fab4",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "02728a12fb073890baf7b001d52cb3e3",
@@ -15241,7 +15241,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "b5b1b4491a4a7fa61a6d472e3d314f29",
     "/course_content/other/self-paced-pl-csd5-2024.json": "b96e1f58798cfe67d10f878f1129482a",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "051628210910d0bf4ddeb3fb081e39c8"
   },
   "zh-CN": {
     "/course_content/2017/coursea-2017.json": "a0d542791b63f57c92f043462163bc9b",
@@ -15411,7 +15411,7 @@
     "/course_content/other/vigenere.json": "a19b4120a600762fb81068c655de49da",
     "/course_content/projects.json": "a19b4120a600762fb81068c655de49da",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "a19b4120a600762fb81068c655de49da",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "cd7d8d0a771ccf30984657964c23beaa",
@@ -15441,7 +15441,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "zh-TW": {
     "/course_content/2017/coursea-2017.json": "7c3284701fe9d7910dc2d69480c1103f",
@@ -15611,7 +15611,7 @@
     "/course_content/other/vigenere.json": "944ef511f3d67938eabb4706b6395330",
     "/course_content/projects.json": "944ef511f3d67938eabb4706b6395330",
     "/dashboard/block_categories.yml": "53034315e27f220897cd87345da0fe4c",
-    "/dashboard/progressions.yml": "af2c34d60092080179d3447c03dc7d7d",
+    "/dashboard/progressions.yml": "9a5dda6900ba9eae542a1f03f78435ec",
     "/dashboard/parameter_names.yml": "944ef511f3d67938eabb4706b6395330",
     "/dashboard/variable_names.yml": "95ea55949adcdd5ab92d01da60e49698",
     "/course_content/2024/music-intro-2024.json": "4aac16c1f426d55fb9701af02490d1a3",
@@ -15641,7 +15641,7 @@
     "/course_content/other/self-paced-pl-csd3-2024.json": "244e423758b332ff1f186f7ccee8cb80",
     "/course_content/other/self-paced-pl-csd4-2024.json": "c5dbc937e7b8f597a4177185e202d4f3",
     "/course_content/other/self-paced-pl-csd5-2024.json": "e00c7c73dc08aa70ed6681ff693ba94f",
-    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "d96493f81b1b6beafa5f48aa205939c3"
+    "/course_content/other/self-paced-pl-exploring-gen-ai.json": "60371582a8e76389c3158175423eead9"
   },
   "zu-ZA": {
     "/course_content/2017/coursea-2017.json": "3544ae2f87c0e4208be3fb12b9943eaa",
