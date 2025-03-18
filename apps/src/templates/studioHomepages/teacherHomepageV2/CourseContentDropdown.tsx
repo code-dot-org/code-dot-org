@@ -40,10 +40,11 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         `/sections/retrieve_lessons_for_dropdown/${section.id}`
       )
         .then(response => {
+          console.log(response.value);
           const lessons: UnitLessons[] = response.value.map(lesson => {
             if (lesson.text.includes('Unit')) {
               lesson.text = lesson.text.replace(' - ', ': ');
-            } else {
+            } else if (!lesson.text.includes('Lesson')) {
               lesson.text = `${i18n.lesson()} ${lesson.text}`;
             }
             return lesson;
@@ -68,7 +69,6 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           `../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/unit/${unit}`
         );
       }
-      console.log(args.target.value);
       window.location.href = `..${args.target.value}`;
     }
   };
