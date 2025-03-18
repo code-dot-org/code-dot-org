@@ -55,9 +55,7 @@ export const VideoWithCaptionT: Story = {
     showCaption: true,
   },
   parameters: {
-    eyes: {
-      ignoreRegions: [{selector: '.ytp-impression-link'}],
-    },
+    ...COMMON_PARAMETERS,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -89,6 +87,7 @@ export const VideoWithFallbackT: Story = {
           'This is a video component with a fallback HTML video player. The fallback player will show up if YouTube is blocked, and a Download button will also show up. To test this block _www.youtube.com_ and _www.youtube-nocookie.com_ in the Network tab in DevTools.',
       },
     },
+    ...COMMON_PARAMETERS,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -105,7 +104,6 @@ export const VideoWithFallbackT: Story = {
 };
 
 export const VideoWithCaptionAndFallback: Story = {
-  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     videoFallback:
@@ -114,7 +112,7 @@ export const VideoWithCaptionAndFallback: Story = {
     showCaption: true,
   },
   parameters: {
-    eyes: {},
+    ...COMMON_PARAMETERS,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
