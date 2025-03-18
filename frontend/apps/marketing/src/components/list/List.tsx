@@ -1,6 +1,6 @@
 import {Entry, EntryFields} from 'contentful';
 import List, {
-  DEFAULT_ICON,
+  LIST_DEFAULT_ICON,
   ListProps,
   ListItem,
 } from '@code-dot-org/component-library/list';
@@ -19,7 +19,7 @@ interface ListContentfulProps extends Omit<ListProps, 'items'> {
 
 const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
   items = [],
-  iconName = DEFAULT_ICON,
+  iconName = LIST_DEFAULT_ICON,
   ...props
 }) => {
   const listItems: ListItem[] = useMemo(
@@ -40,13 +40,7 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
     );
   }
 
-  return (
-    <List
-      {...props}
-      items={listItems}
-      icon={{iconName: iconName || DEFAULT_ICON}}
-    />
-  );
+  return <List {...props} items={listItems} icon={{iconName}} />;
 };
 
 export default ListContentful;
