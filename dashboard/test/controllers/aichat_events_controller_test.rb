@@ -7,8 +7,8 @@ class AichatEventsControllerTest < ActionController::TestCase
     @authorized_teacher1 = create :authorized_teacher
     @authorized_teacher2 = create :authorized_teacher
     unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
-    section = create :section, user: @authorized_teacher1, unit_group: unit_group
-    @authorized_student1 = create(:follower, section: section).student_user
+    @section = create :section, user: @authorized_teacher1, unit_group: unit_group
+    @authorized_student1 = create(:follower, section: @section).student_user
 
     @level = create(:level)
     @script = create(:script)
@@ -122,10 +122,17 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test 'student of authorized teacher has access to chat_history' do
+  test 'student of authorized teacher has access to their own chat_history' do
     sign_in(@authorized_student1)
     get :chat_history, params: @valid_params_student1_chat_history, as: :json
     assert_response :success
+  end
+
+  test 'student of authorized teacher does not have access to chat_history of another student' do
+    another_student = create(:follower, section: @section).student_user
+    sign_in(another_student)
+    get :chat_history, params: @valid_params_student1_chat_history, as: :json
+    assert_response :forbidden
   end
 
   test 'authorized teacher has access to chat_history if teacher of student' do

@@ -67,19 +67,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    dispatch(clearChatMessages());
+
     if (selectedStudent) {
       dispatch(
         fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
       );
-    }
-  }, [selectedStudent, currentLevelId, dispatch]);
-
-  useEffect(() => {
-    dispatch(clearChatMessages());
-
-    // Do not seed the conversation with previous chat history if we are viewing a student's work,
-    // as we do not record the teacher's chat history with the student's model.
-    if (!selectedStudent) {
+    } else {
       dispatch(
         fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
       );

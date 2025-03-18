@@ -16,12 +16,11 @@ import {
   Visibility,
   isModelUpdate,
   isNotification,
+  isUserActionEvent,
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
   PendingChatMessage,
-  UserActionEvent,
-  ModelUpdate,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -65,11 +64,14 @@ const aichatSlice = createSlice({
       const events = action.payload;
       let lastResetIndex = -1;
       for (let i = events.length - 1; i >= 0; i--) {
+        const event = events[i];
+
         if (
-          RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
-            (events[i] as ModelUpdate)?.updatedField
-          ) ||
-          (events[i] as UserActionEvent)?.descriptionKey === 'CLEAR_CHAT'
+          (isModelUpdate(event) &&
+            RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
+              event.updatedField
+            )) ||
+          (isUserActionEvent(event) && event.descriptionKey === 'CLEAR_CHAT')
         ) {
           lastResetIndex = i;
           break;
