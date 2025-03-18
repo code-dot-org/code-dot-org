@@ -1,4 +1,4 @@
-# `componentLibrary/list/simpleLsit`
+# `componentLibrary/list/simpleList`
 
 ### Status: `Ready for dev`
 
@@ -8,6 +8,10 @@ This package exports one styled React component: [SimpleList](SimpleList.tsx). Y
 
 ```javascript
 import {SimpleList} from '@code-dot-org/component-library/list';
+```
+
+```javascript
+import SimpleList from '@code-dot-org/component-library/list/simpleList';
 ```
 
 For guidelines on how to use these components and the features they
