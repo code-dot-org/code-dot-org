@@ -86,7 +86,21 @@ export default class ProgressManager {
   }
 
   updateProgress(): void {
-    if (!this.currentValidations || !this.validator) {
+    if (!this.validator) {
+      return;
+    }
+    const exemplarSettings = this.exemplarSettings;
+    const shouldValidateExemplar =
+      !getAppOptionsEditingExemplar() && exemplarSettings?.validationEnabled;
+
+    // If there are no validations, we still might run the exemplar validation.
+    if (!this.currentValidations?.length && shouldValidateExemplar) {
+      this.setValidationStateWithExemplar();
+      this.onProgressChange();
+      return;
+    }
+
+    if (!this.currentValidations) {
       return;
     }
 
@@ -101,10 +115,6 @@ export default class ProgressManager {
     // it once each update in case it's expensive, and since conditions
     // can be used by multiple validations.
     this.validator.checkConditions();
-
-    const exemplarSettings = this.exemplarSettings;
-    const shouldValidateExample =
-      !getAppOptionsEditingExemplar() && exemplarSettings?.validationEnabled;
 
     // Go through each validation to see if we have a match.
     for (const validation of this.currentValidations) {
@@ -125,15 +135,8 @@ export default class ProgressManager {
             this.currentValidationState.message = validation.message;
             this.currentValidationState.callout = validation.callout;
             if (this.currentValidationState.satisfied && validation.next) {
-              if (shouldValidateExample) {
-                const satisfied = this.validator.didPassExemplarValidation();
-                this.currentValidationState = {
-                  ...this.currentValidationState,
-                  satisfied,
-                  message: satisfied
-                    ? exemplarSettings.validationSuccessMessage!
-                    : exemplarSettings.validationFailureMessage!,
-                };
+              if (shouldValidateExemplar) {
+                this.setValidationStateWithExemplar();
               }
             }
             this.onProgressChange();
@@ -170,5 +173,18 @@ export default class ProgressManager {
     };
 
     this.onProgressChange();
+  }
+
+  private setValidationStateWithExemplar(): void {
+    if (this.exemplarSettings) {
+      const passed = this.validator!.didPassExemplarValidation();
+      this.currentValidationState = {
+        ...this.currentValidationState,
+        satisfied: passed,
+        message: passed
+          ? this.exemplarSettings.validationSuccessMessage!
+          : this.exemplarSettings.validationFailureMessage!,
+      };
+    }
   }
 }

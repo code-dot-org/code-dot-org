@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:41:18.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A social media analyst wants to store data about the age groups of users on different social media platforms to create a visual to represent each platform. They have the following values:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nRow 1: 22, 29, 39, 47\r\nRow 2: 41, 38, 37, 37\r\nRow 3: 23, 21, 18, 12\r\nRow 4: 15, 12, 6, 4\r\n</pre>\r\n\r\nwhere each row represents ages 18-29, ages 30-49, ages 50-64, and ages 65 and up, respectively. Each column represents the percentages of users on Facebook, YouTube, Twitter, and Instagram, respectively.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMediaScene</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMaxPercentages()</code> method to find and return the largest percentage of users for each column in percentages.\r\n\r\n1. Create a 1D array that is the same length as the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">icons</code> array.\r\n\r\n2. Traverse the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">percentages</code> array to find the largest percentage of users for each column.\r\n\r\n3. Add the largest percentage found for the column to the 1D array.\r\n\r\n4. Return the 1D array containing the largest percentages found for each column.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMediaScene</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMaxAgeGroups()</code> method to find and return the age groups with the largest percentage of users for each column in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">percentages</code>.\r\n\r\n1. Create a 1D array that is the same length as the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">icons</code> array.\r\n\r\n2. Traverse the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">percentages</code> array to find the largest percentage of users for each column.\r\n\r\n3. Add the age group from the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ageGroups</code> array with the largest percentage found to the 1D array.\r\n\r\n4. Return the 1D array containing the age groups with the largest percentages found for each column.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with traversing a two-dimensional (2D) array in column-major order.\r\n</div>",
+    "long_instructions": "A social media analyst wants to analyze user demographics and create a visual representation of platform usage across different age groups. The analyst needs to check if any social media platform has duplicate percentage values across age groups, as duplicate values may indicate common trends in user engagement.\r\n\r\nThey have the following values:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nRow 1: 22, 29, 39, 47\r\nRow 2: 41, 38, 37, 37\r\nRow 3: 23, 21, 18, 12\r\nRow 4: 15, 12, 6, 4\r\n</pre>\r\n\r\nwhere each row represents ages 18-29, ages 30-49, ages 50-64, and ages 65 and up, respectively. Each column represents the percentages of users on Facebook, YouTube, Twitter, and Instagram, respectively.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black;\">SocialMediaScene</code> class, write the <code style=\"background-color: #ececec; color: black;\">hasDuplicatePercentages()</code> method to determine if any social media platform has duplicate percentage values across the age groups.\r\n\r\n1. Traverse each column in the <code style=\"background-color: #ececec; color: black;\">percentages</code> array.\r\n2. Compare every percentage in the column with every other percentage in the same column.\r\n3. If any duplicate is found, return <code style=\"background-color: #ececec; color: black;\">true</code>.\r\n4. If no duplicates are found after checking all columns, return <code style=\"background-color: #ececec; color: black;\">false</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black;\">TheaterRunner</code> class, call the <code style=\"background-color: #ececec; color: black;\">hasDuplicatePercentages()</code> method and print the result to indicate whether any duplicate values were found.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with traversing a two-dimensional (2D) array in column-major order.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,7 +17,7 @@
       "/courses/csa-2023/guides/two-dimensional-arrays"
     ],
     "display_name": "Social Media Users",
-    "bubble_choice_description": "Write a method to find age group with the largest percentage of users for each social media platform and create a scene to visualize the results.",
+    "bubble_choice_description": "Write a method to check for duplicate percentage values within each social media platform's age group data. ",
     "thumbnail_url": "https://images.code.org/555c9c7bbec2eaf3760ae4df3c33bbfb-image-1650990657328.png",
     "starter_assets": {
       "instagram.png": "0d9fa7ff-1f31-4125-9e44-971004e03f67.png",
@@ -39,9 +40,11 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:41:18.765+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L3c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L4-L3c_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:41:18.765+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L3c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L4-L3c_pilot-2025\"},{\"changed_at\":\"2025-03-18 07:29:14 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>
