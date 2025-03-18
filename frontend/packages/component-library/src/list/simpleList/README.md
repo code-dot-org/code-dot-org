@@ -1,4 +1,4 @@
-# `componentLibrary/list/SimpleLsit`
+# `componentLibrary/list/simpleLsit`
 
 ### Status: `Ready for dev`
 
