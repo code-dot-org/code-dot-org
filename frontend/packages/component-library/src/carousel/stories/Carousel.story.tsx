@@ -390,33 +390,8 @@ VideoCarouselsTest.parameters = {
   eyes: {
     waitBeforeCapture: 4000,
     ignoreRegions: [
-      // Top left logo
       {
-        left: 390,
-        top: 210,
-        width: 195,
-        height: 60,
-      },
-      // Top right logo
-      {
-        left: 800,
-        top: 210,
-        width: 185,
-        height: 60,
-      },
-      // Bottom left logo
-      {
-        left: 390,
-        top: 540,
-        width: 195,
-        height: 60,
-      },
-      // Bottom right logo
-      {
-        left: 800,
-        top: 535,
-        width: 15,
-        height: 60,
+        selector: '.ytp-impression-link',
       },
     ],
   },

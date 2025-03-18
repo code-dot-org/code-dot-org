@@ -3,36 +3,25 @@ import {within, expect} from '@storybook/test';
 
 import Video from '../index';
 
+const ignoreRegions = [
+  {
+    selector: '.ytp-impression-link',
+  },
+];
+
 export default {
   title: 'DesignSystem/Video',
   component: Video,
+  parameters: {
+    ignoreRegions,
+  },
 } as Meta;
 type Story = StoryObj<typeof Video>;
-
-const COMMON_PARAMETERS = {
-  eyes: {
-    ignoreRegions: [
-      {
-        left: 0,
-        top: 625,
-        width: 230,
-        height: 50,
-      },
-      {
-        left: 975,
-        top: 625,
-        width: 230,
-        height: 50,
-      },
-    ],
-  },
-};
 
 //
 // TEMPLATE
 //
 export const DefaultVideoT: Story = {
-  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
@@ -48,14 +37,10 @@ export const DefaultVideoT: Story = {
 };
 
 export const VideoWithCaptionT: Story = {
-  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
-  },
-  parameters: {
-    ...COMMON_PARAMETERS,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -72,7 +57,6 @@ export const VideoWithCaptionT: Story = {
 };
 
 export const VideoWithFallbackT: Story = {
-  ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
     videoFallback:
@@ -81,13 +65,13 @@ export const VideoWithFallbackT: Story = {
     showCaption: false,
   },
   parameters: {
+    ignoreRegions,
     docs: {
       description: {
         story:
           'This is a video component with a fallback HTML video player. The fallback player will show up if YouTube is blocked, and a Download button will also show up. To test this block _www.youtube.com_ and _www.youtube-nocookie.com_ in the Network tab in DevTools.',
       },
     },
-    ...COMMON_PARAMETERS,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -110,9 +94,6 @@ export const VideoWithCaptionAndFallback: Story = {
       'https://videos.code.org/social/what-most-schools-dont-teach.mp4',
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
-  },
-  parameters: {
-    ...COMMON_PARAMETERS,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
