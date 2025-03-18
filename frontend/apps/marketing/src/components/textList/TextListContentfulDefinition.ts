@@ -54,7 +54,7 @@ export const TextListContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: SIMPLE_LIST_DEFAULT_ICON,
     },
     type: {
-      displayName: 'Icon color',
+      displayName: 'Icon type',
       type: 'Text',
       group: 'style',
       defaultValue: 'primary',
