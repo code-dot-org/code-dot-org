@@ -162,3 +162,9 @@ use_my_apps: true
 # Number of workers to start when running `bin/restart-active-job-workers`:
 # active_job_backend_n_workers_to_start: 2
 # active_job_backend_rolling_restart_in_n_batches: 1
+
+# Contentful CMS variables. For local development, use the preview endpoint.
+# The preview key can be found in the Contentful UI under settings -> API keys -> Code.org Local Development.
+#contentful_space_id: "90t6bu6vlf76"
+#contentful_api_key: ""
+#contentful_hostname: "preview.contentful.com"

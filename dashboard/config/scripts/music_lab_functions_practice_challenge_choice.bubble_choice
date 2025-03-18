@@ -1,0 +1,13 @@
+name 'music-lab-functions-practice-challenge-choice'
+display_name 'Practice'
+description 'Choose at least 2 options below to practice'
+
+sublevels
+level 'music-lab-functions-practice-challengeA'
+level 'music-lab-functions-practice-challengeB'
+level 'music-lab-functions-practice-challengeC'
+level 'music-lab-functions-practice-challengeD'
+level 'music-lab-functions-practice-challengeE'
+level 'music-lab-functions-practice-challengeF'
+
+

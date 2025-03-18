@@ -118,6 +118,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
 
     assert_equal body["id"], level.id
+    assert_equal body["name"], level.name
     assert_equal body["levelData"], {"hello" => "there"}
     assert_equal body["other"], "other"
     assert_equal body["preloadAssetList"], nil
@@ -2400,8 +2401,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     let(:modularity_enabled) {false}
 
     before do
-      allow(Experiment).to receive(:enabled?).and_call_original
-      allow(Experiment).to receive(:enabled?).with(user: user, experiment_name: 'modularity').and_return(modularity_enabled)
+      allow(Policies::Courses).to receive(:modularity_enabled?).with(user).and_return(modularity_enabled)
     end
 
     context 'modularity is off' do

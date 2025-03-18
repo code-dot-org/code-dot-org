@@ -1,5 +1,5 @@
-import {join, dirname, resolve} from 'node:path';
 import {StorybookConfig} from '@storybook/react-webpack5';
+import {join, dirname, resolve} from 'node:path';
 import {IgnorePlugin} from 'webpack';
 
 /**

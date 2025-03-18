@@ -5,6 +5,7 @@ import {ComponentSizeXSToL} from '@/common/types';
 
 import _Tab, {TabModel} from './_Tab';
 import _TabPanel from './_TabPanel';
+
 import moduleStyles from './tabs.module.scss';
 
 export interface TabsProps {

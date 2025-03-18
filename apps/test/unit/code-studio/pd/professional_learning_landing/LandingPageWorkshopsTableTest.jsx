@@ -34,6 +34,36 @@ describe('LandingPageWorkshopsTable', () => {
     utils.windowOpen.restore();
   });
 
+  it('shows workshop name if available otherwise shows workshop course', () => {
+    const sampleWorkshopName = 'Sample Workshop Name';
+    const workshopWithName = serializedWorkshopFactory.build({
+      name: sampleWorkshopName,
+    });
+    const workshopsTable = shallow(
+      <LandingPageWorkshopsTable
+        workshops={[...workshops, workshopWithName]}
+        participantView
+      />
+    );
+
+    // Each of the workshops found in the `workshop` array shows its course in the "Name" column
+    workshops.forEach((ws, i) =>
+      expect(
+        workshopsTable.find('tbody tr').at(i).find('td').first().text()
+      ).to.contain(ws.course)
+    );
+
+    // Workshop with a name shows its name in the "Name" column
+    expect(
+      workshopsTable
+        .find('tbody tr')
+        .at(workshops.length)
+        .find('td')
+        .first()
+        .text()
+    ).to.contain(sampleWorkshopName);
+  });
+
   it('Clicking cancel enrollment cancels the enrollment', () => {
     const workshopsTable = shallow(
       <LandingPageWorkshopsTable workshops={workshops} participantView />

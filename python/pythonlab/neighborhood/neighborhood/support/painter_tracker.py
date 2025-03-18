@@ -5,12 +5,12 @@ from ..painter_log import PainterLog
 from .constants import NORTH, SOUTH, EAST, WEST
 
 class PainterTracker:
-    def __init__(self, painter_id: str, position: Position, paint_count: int):
+    def __init__(self, painter_id: str, position: Position, paint_count: int | None):
         self.painter_id = painter_id
         self.starting_position = position
         self.current_position = position
-        self.starting_paint_count = paint_count
-        self.current_paint_count = paint_count
+        self.starting_paint_count = paint_count or 0
+        self.current_paint_count = paint_count or 0
         self.signals: list[NeighborhoodSignalMessage] = []
     
     # Record the given signal, updating position and paint count if necessary.

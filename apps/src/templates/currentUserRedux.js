@@ -267,6 +267,7 @@ export default function currentUser(state = initialState, action) {
       created_at,
       is_verified_instructor,
       has_completed_ai_differentiation_welcome,
+      educator_role,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -275,12 +276,13 @@ export default function currentUser(state = initialState, action) {
     );
     // Calling Statsig separately to emphasize different user integrations
     // and because dual reporting is aspirationally temporary (March 2024)
-    statsigReporter.setUserProperties(
-      id,
-      user_type,
-      is_verified_instructor,
-      experiments.getEnabledExperiments()
-    );
+    statsigReporter.setUserProperties({
+      userId: id,
+      userType: user_type,
+      isVerifiedInstructor: is_verified_instructor,
+      enabledExperiments: experiments.getEnabledExperiments(),
+      educatorRole: educator_role,
+    });
     return {
       ...state,
       userId: id,

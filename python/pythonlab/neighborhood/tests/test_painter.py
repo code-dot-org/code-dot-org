@@ -1,7 +1,7 @@
 from neighborhood.painter import Painter
 from neighborhood.support.world import World
 from neighborhood.support.neighborhood_context_type import NeighborhoodContextType
-from support.constants import SAMPLE_MAZE, ALL_PASSABLE_MAZE, BUCKET_MAZE
+from support.constants import SAMPLE_MAZE, ALL_PASSABLE_MAZE, BUCKET_MAZE, LARGE_MAZE
 
 def setUp():
   world = World()
@@ -126,3 +126,13 @@ def test_can_move():
   assert painter.can_move() is True
   painter.move() # Now painter is on 1,0.
   assert painter.can_move("east") is False
+
+def test_has_paint_large_maze():
+  # In a large maze, the painter has infinite paint, so has_paint should always return true.
+  world = World()
+  world.set_grid_from_string(LARGE_MAZE)
+  painter = Painter()
+  assert painter.has_paint() is True
+  painter.paint("green")
+  painter.paint("blue")
+  assert painter.has_paint() is True

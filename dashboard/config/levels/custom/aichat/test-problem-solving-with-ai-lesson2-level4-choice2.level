@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-17T17:49:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Interior Design\r\n\r\nUse AI Chat to help plan out ideas for decorating a room.\r\n\r\n### Do This:\r\n\r\n1. Look at the images already uploaded to this level and decide if you'd like to use those or images of a room more relevant to you.\r\n2. Decide on new areas you'd like to come up with ideas for. Here are some common topics:\r\n\t- Furniture & Layout\r\n    - Lighting\r\n    - Color & Walls\r\n    - Texture & Fabrics\r\n    - Decor & Accessories\r\n    - Technology & Smart Features\r\n    - (You can use AI chat to help you brainstorm more ideas if you'd like)\r\n3. Add the images you want to include in your input to your prompt.\r\n2. **Copy and paste** the following prompt:\r\n\r\n>Help me brainstorm ideas around [insert area of interest here] in this room.\r\n3. Press **Send**.\r\n4. Change and add to your prompt to see if you can get AI Chat to provide you more useful responses.\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Interior Design",
+    "bubble_choice_description": "Help decide on how to decorate a room.",
+    "thumbnail_url": "https://images.code.org/bbbc56b8e05633cd9018daf6e0ee28c9-Interior Design Staircase.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-17T17:49:50.015+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice1\"},{\"changed_at\":\"2025-03-17 17:49:52 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 17:52:46 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 20:48:31 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-18 04:55:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

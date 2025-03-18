@@ -3,7 +3,8 @@ display_name 'Practice Recreating these Timelines with Code'
 description 'Choose an option below to try to recreate with code.'
 
 sublevels
-level 'test-music-lab-sequences-explore-song-choice-level-a'
-level 'test-music-lab-sequences-explore-song-choice-level-b'
-level 'test-music-lab-sequences-explore-song-choice-level-c'
+level 'test-music-lab-loops-explore-practice-choice-a'
+level 'test-music-lab-loops-explore-practice-choice-b'
+level 'test-music-lab-loops-explore-practice-choice-c'
+
 

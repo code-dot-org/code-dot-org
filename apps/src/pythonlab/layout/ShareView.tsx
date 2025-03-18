@@ -38,6 +38,7 @@ const ShareView: React.FunctionComponent = () => {
 
   const [previewWidth, setPreviewWidth] = useState(getAvailablePreviewWidth());
   const [previewHeight, setPreviewHeight] = useState(window.innerHeight);
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -63,6 +64,7 @@ const ShareView: React.FunctionComponent = () => {
               label={pythonlabI18n.console()}
               position={'right'}
               size={'xs'}
+              disabled={isRunning}
             />
           </div>
         )}

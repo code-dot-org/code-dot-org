@@ -70,7 +70,7 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message, reportingData}) => {
       flagged: flaggedBtn,
     });
     HttpClient.post(
-      `/aichat_messages/${message.id}/submit_feedback`,
+      `/aidiff_messages/${message.id}/submit_feedback`,
       body,
       true,
       {

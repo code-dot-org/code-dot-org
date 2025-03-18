@@ -3,7 +3,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   id: 'button',
   name: 'Button',
-  category: 'Custom Components',
+  category: '03: Basic',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/6fRMP55wwDZF2C4ubzygTO/bad1643a5db519e1e3f6886f0f7bc7cd/component_button_thumbnail.png',
   tooltip: {
@@ -12,6 +12,7 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/6B9UVqsphQR9MUnNf4tYHU/94e6f32fcb793401f02399ceb0069722/component_button_tooltip.png',
   },
+  builtInStyles: ['cfTextAlign'],
   variables: {
     color: {
       displayName: 'Color',

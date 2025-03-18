@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const VideoCarouselContentfulComponentDefinition: ComponentDefinition = {
   id: 'carousel-video',
   name: 'Video Carousel',
-  category: 'Carousels',
+  category: '05: Carousels',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/6YMaK6meOohBICfHq6CAZf/fa536c664bb65bc2435cb12c1ca48b89/component_carousel_video_thumbnail.png',
   tooltip: {
