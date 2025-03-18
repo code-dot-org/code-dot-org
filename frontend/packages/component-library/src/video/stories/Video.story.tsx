@@ -31,7 +31,7 @@ const COMMON_PARAMETERS = {
 //
 // TEMPLATE
 //
-export const DefaultVideo: Story = {
+export const DefaultVideoT: Story = {
   ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
@@ -47,7 +47,7 @@ export const DefaultVideo: Story = {
   },
 };
 
-export const VideoWithCaption: Story = {
+export const VideoWithCaptionT: Story = {
   ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",
@@ -73,7 +73,7 @@ export const VideoWithCaption: Story = {
   },
 };
 
-export const VideoWithFallback: Story = {
+export const VideoWithFallbackT: Story = {
   ...COMMON_PARAMETERS,
   args: {
     videoTitle: "What Most Schools Don't Teach",

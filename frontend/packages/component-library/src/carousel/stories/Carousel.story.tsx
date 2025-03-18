@@ -401,7 +401,7 @@ VideoCarouselsTest.parameters = {
       {
         left: 800,
         top: 210,
-        width: 195,
+        width: 185,
         height: 60,
       },
       // Bottom left logo
@@ -415,7 +415,7 @@ VideoCarouselsTest.parameters = {
       {
         left: 800,
         top: 535,
-        width: 195,
+        width: 185,
         height: 60,
       },
     ],
