@@ -8,7 +8,7 @@ import Typography from '@/typography';
 
 import moduleStyles from './list.module.scss';
 
-export const DEFAULT_ICON = 'circle-small';
+export const LIST_DEFAULT_ICON = 'circle-small';
 
 export type ListItem = {
   label: string | ReactNode;
@@ -49,7 +49,7 @@ const List: React.FC<ListProps> = ({
   type = 'primary',
   weight = 'normal',
   icon = {
-    iconName: DEFAULT_ICON,
+    iconName: LIST_DEFAULT_ICON,
     iconStyle: 'solid',
   },
   ...HTMLAttributes
@@ -71,7 +71,7 @@ const List: React.FC<ListProps> = ({
           aria-hidden="true"
           className={classNames(
             moduleStyles.listItemIcon,
-            icon.iconName == DEFAULT_ICON && moduleStyles.listItemBullet,
+            icon.iconName == LIST_DEFAULT_ICON && moduleStyles.listItemBullet,
             icon.className,
           )}
         />
