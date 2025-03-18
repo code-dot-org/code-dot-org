@@ -168,6 +168,7 @@ export interface ProjectFolder {
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
   id: number;
+  name: string;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;

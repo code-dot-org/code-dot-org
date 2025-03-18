@@ -1,10 +1,10 @@
 import type {Meta, StoryFn} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import Carousel, {CarouselProps} from '../index';
-
 import {Heading2} from '@/typography';
+
 import Video from '../../video/Video';
+import Carousel, {CarouselProps} from '../index';
 
 export default {
   title: 'DesignSystem/Carousel',

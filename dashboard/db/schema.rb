@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_03_05_163452) do
+ActiveRecord::Schema.define(version: 2025_03_14_144822) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -83,27 +83,6 @@ ActiveRecord::Schema.define(version: 2025_03_05_163452) do
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
   end
 
-  create_table "aichat_message_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.bigint "aichat_message_id", null: false
-    t.bigint "teacher_id", null: false
-    t.boolean "approval"
-    t.boolean "flagged"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["aichat_message_id"], name: "index_aichat_message_feedbacks_on_aichat_message_id", unique: true
-  end
-
-  create_table "aichat_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.bigint "aichat_thread_id", null: false
-    t.text "external_id", null: false
-    t.integer "role", null: false
-    t.text "content", null: false
-    t.boolean "is_preset", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["aichat_thread_id"], name: "index_aichat_messages_on_aichat_thread_id"
-  end
-
   create_table "aichat_requests", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id"
@@ -131,7 +110,28 @@ ActiveRecord::Schema.define(version: 2025_03_05_163452) do
     t.index ["user_id", "level_id", "script_id"], name: "index_acs_user_level_script"
   end
 
-  create_table "aichat_threads", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "aidiff_message_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "aidiff_message_id", null: false
+    t.bigint "teacher_id", null: false
+    t.boolean "approval"
+    t.boolean "flagged"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aidiff_message_id"], name: "index_aidiff_message_feedbacks_on_aidiff_message_id", unique: true
+  end
+
+  create_table "aidiff_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "aidiff_thread_id", null: false
+    t.text "external_id", null: false
+    t.integer "role", null: false
+    t.text "content", null: false
+    t.boolean "is_preset", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aidiff_thread_id"], name: "index_aidiff_messages_on_aidiff_thread_id"
+  end
+
+  create_table "aidiff_threads", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.text "external_id", null: false
     t.text "llm_version", null: false
@@ -140,7 +140,7 @@ ActiveRecord::Schema.define(version: 2025_03_05_163452) do
     t.integer "level_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_aichat_threads_on_user_id"
+    t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2296,6 +2296,7 @@ ActiveRecord::Schema.define(version: 2025_03_05_163452) do
     t.string "ai_model_version"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "code_version"
     t.index ["level_id"], name: "index_user_level_evaluations_on_level_id"
     t.index ["user_id"], name: "index_user_level_evaluations_on_user_id"
   end
@@ -2547,7 +2548,7 @@ ActiveRecord::Schema.define(version: 2025_03_05_163452) do
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
-  add_foreign_key "aichat_message_feedbacks", "aichat_messages"
+  add_foreign_key "aidiff_message_feedbacks", "aidiff_messages"
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"

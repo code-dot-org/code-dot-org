@@ -1,8 +1,8 @@
-import {defineConfig} from 'tsup';
 import {postcssModules, sassPlugin} from 'esbuild-sass-plugin';
-import type {Options} from 'tsup';
 import {glob} from 'glob';
 import {spawnSync} from 'node:child_process';
+import type {Options} from 'tsup';
+import {defineConfig} from 'tsup';
 
 const entryPoints = glob.sync('./src/**/index.ts', {
   posix: true,

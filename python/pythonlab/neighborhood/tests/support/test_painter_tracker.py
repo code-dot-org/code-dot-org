@@ -24,3 +24,8 @@ def test_initialize_painter_tracker():
     turn_left_message = NeighborhoodSignalMessage(SignalMessageType.NEIGHBORHOOD, NeighborhoodSignalKey.TURN_LEFT,{"direction": "north"})
     painter_tracker.track_signal(turn_left_message)
     assert painter_tracker.current_position.direction == 'north'
+
+def test_sets_correct_default_paint():
+    painter_tracker = PainterTracker("painter-1", Position(0,0,'East'), None)
+    assert painter_tracker.starting_paint_count == 0
+    assert painter_tracker.current_paint_count == 0

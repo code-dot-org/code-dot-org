@@ -1,13 +1,121 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-12T20:33:49.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Play Multiple Sounds Together in a Loop \r\nIn Sam’s new song, he wants to repeat a group of sounds twice and then repeat another group of sounds twice. Add different combinations of play sound blocks in each play together block. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "groove": [
+          "drum_beat_congas",
+          "drum_kit_disco",
+          "groovy_alternate_beat",
+          "reggaeton_beat",
+          "drum_beat_patter",
+          "guitar_cloud",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "strings",
+          "reverse_blip"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 2
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "deletable": false,
+                        "movable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "repeat_simple2",
+                      "id": "bfmYCMsNp_%@jj^]PD.:",
+                      "deletable": false,
+                      "movable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "times": 2
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": "^HShm22R0k^XEHX.iRLq",
+                            "deletable": false,
+                            "movable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
     "preload_asset_list": null
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2025-03-13 17:06:19 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 17:14:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 17:15:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:43:17 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

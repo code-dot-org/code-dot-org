@@ -5,9 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Cybersecurity and Global Impacts Unit Overview
  
-#### While the Cybersecurity and Global Impacts Unit is part of the **Computer Science and AI Foundations** course, they can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
-
-#### This unit consists of 10 lessons, takes about three weeks to complete, and does not have Python programming.
+#### While the Cybersecurity and Global Impacts Unit is part of the **Computer Science and AI Foundations** course, it can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
@@ -27,19 +25,16 @@ markdown <<MARKDOWN
 </div>
 
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Explore the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
-</p>
-
+#### This unit consists of 11 lessons, takes about three weeks to complete, and does not have Python programming.
 
 <div style="clear:both;"></div>
-​
-Space saved for unit calendar this is data science  
-​
+
 <p align="center">
-​
-<img src="https://images.code.org/3a51a38f20b8caa26203575fdef4042f-image-1730743808088.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+<img src="https://images.code.org/f6b28b41ad1b4680f92938c23c1360a6-Screenshot 2025-03-17 at 1.04.19 PM.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
 </p>
 
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview the full <a href='https://studio.code.org/s/csp8-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
+</p>
 
 MARKDOWN

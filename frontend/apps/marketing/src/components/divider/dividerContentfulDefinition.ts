@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const DividerContentfulComponentDefinition: ComponentDefinition = {
   id: 'divider',
   name: 'Divider',
-  category: 'Custom Components',
+  category: '01: Page Structure',
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
   thumbnailUrl:
@@ -31,7 +31,7 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
     margin: {
       displayName: 'Margin',
       type: 'Text',
-      defaultValue: 'none',
+      defaultValue: 'm',
       group: 'style',
       validations: {
         in: [

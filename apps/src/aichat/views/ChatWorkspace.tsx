@@ -15,10 +15,13 @@ import {
   clearChatMessages,
   fetchUserChatHistory,
   selectAllVisibleMessages,
+  selectMultimodalEnabled,
   setShowModalType,
 } from '../redux';
 import {getShortName} from '../utils';
 
+import StagedFilesPreview from './assets/StagedFilesPreview';
+import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -182,6 +185,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     dispatch(setShowModalType(undefined));
   }, [dispatch, isUserTeacher, showModalType]);
 
+  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {ChatModal && <ChatModal onClose={onCloseModal} />}
@@ -192,12 +197,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       )}
 
       <div className={moduleStyles.footer}>
+        {multimodalEnabled && <StagedFilesPreview />}
         {canChatWithModel && (
           <UserChatMessageEditor
             editorContainerClassName={moduleStyles.messageEditorContainer}
           />
         )}
         <div className={moduleStyles.buttonRow}>
+          {multimodalEnabled && <UploadButton />}
           <Button
             text={aichatI18n.clearChatButtonText()}
             disabled={!canChatWithModel}

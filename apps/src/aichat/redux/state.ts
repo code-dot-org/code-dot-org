@@ -31,4 +31,16 @@ export interface AichatState {
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
   userHasAichatAccess: boolean;
+  // List of files that have been staged for upload to the model.
+  stagedFiles: {
+    key: string;
+    filename: string;
+    status: 'uploading' | 'uploaded';
+  }[];
+  // Alert to display for staged files if something went wrong.
+  stagedFilesAlert:
+    | 'uploadFailed'
+    | 'fileLimitExceeded'
+    | 'sizeLimitExceeded'
+    | undefined;
 }

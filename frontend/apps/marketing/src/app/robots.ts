@@ -1,4 +1,5 @@
 import type {MetadataRoute} from 'next';
+
 import {getStage} from '@/config/stage';
 
 const DISALLOW_ALL = {

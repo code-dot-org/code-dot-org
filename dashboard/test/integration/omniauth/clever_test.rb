@@ -10,10 +10,6 @@ module OmniauthCallbacksControllerTests
 
     setup do
       stub_firehose
-
-      # Force split-test on
-      # Even with split test on, Clever should use old sign-up flow
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
     end
 
     test "student sign-up" do
@@ -28,14 +24,6 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_student created_user
       assert_credentials auth_hash, created_user
-
-      assert_sign_up_tracking(
-        SignUpTracking::NOT_IN_STUDY_GROUP,
-        %w(
-          clever-callback
-          clever-sign-up-success
-        )
-      )
     ensure
       created_user&.destroy!
     end
@@ -50,14 +38,6 @@ module OmniauthCallbacksControllerTests
       created_user = User.find signed_in_user_id
       assert_valid_teacher created_user, expected_email: auth_hash.info.email
       assert_credentials auth_hash, created_user
-
-      assert_sign_up_tracking(
-        SignUpTracking::NOT_IN_STUDY_GROUP,
-        %w(
-          clever-callback
-          clever-sign-up-success
-        )
-      )
     ensure
       created_user&.destroy!
     end
@@ -76,8 +56,6 @@ module OmniauthCallbacksControllerTests
       assert_equal student.id, signed_in_user_id
       student.reload
       assert_credentials auth_hash, student
-
-      refute_sign_up_tracking
     end
 
     test "teacher sign-in" do
@@ -92,8 +70,6 @@ module OmniauthCallbacksControllerTests
       assert_equal teacher.id, signed_in_user_id
       teacher.reload
       assert_credentials auth_hash, teacher
-
-      refute_sign_up_tracking
     end
 
     test 'user_type queryparam has no effect on Clever sign-up' do
@@ -128,7 +104,7 @@ module OmniauthCallbacksControllerTests
     end
 
     # The user signs in through Clever, which hits the oauth callback
-    # and redirects to something else: homepage, finish_sign_up, etc.
+    # and redirects to something else: homepage, finish_teacher_account, etc.
     private def sign_in_through_clever
       sign_in_through AuthenticationOption::CLEVER
     end

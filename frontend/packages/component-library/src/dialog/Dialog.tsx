@@ -6,6 +6,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {BodyTwoText, Heading2} from '@/typography';
 
 import CustomDialog from './CustomDialog';
+
 import moduleStyles from './dialog.module.scss';
 
 export interface DialogProps extends HTMLAttributes<HTMLDivElement> {

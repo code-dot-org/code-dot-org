@@ -1,11 +1,12 @@
 // Creates a definition for the Overline component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+
 import {removeMarginBottomDefinition} from '@/components/common/definitions';
 
 export const OverlineContentfulComponentDefinition: ComponentDefinition = {
   id: 'overline',
   name: 'Overline',
-  category: 'Typography',
+  category: '02: Typography',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/30ubXKEp07H0liw3w6jad/222daf47eb2d7f14dfef4e9711522217/component_overline_thumbnail.png',
   tooltip: {

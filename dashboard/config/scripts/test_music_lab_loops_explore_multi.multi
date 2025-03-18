@@ -1,0 +1,19 @@
+name 'test-music-lab-loops-explore-multi'
+title 'Which timeline matches the code?'
+
+wrong '![](https://images.code.org/e87a20f22b2628f4e9027aef054819d8-image-1741979935794.18.22 PM.png)'
+wrong '![](https://images.code.org/9acceb3a0d701608815fee162a4cc988-image-1741979993449.19.44 PM.png)'
+right '![](https://images.code.org/8a3ae35d4a57e3ecdd168b6b9dd68c44-image-1741979775582.15.58 PM.png)'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+**Read this code. Which timeline correctly matches it?**
+
+![](https://images.code.org/b1f2947549962f237a216da32b3b5b7a-image-1741979817513.16.54 PM.png)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
