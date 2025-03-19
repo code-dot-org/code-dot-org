@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "#What is a Multimodal Model?\n\n##A multimodal model is an AI system that can process information from multiple types of input or “modalities”\n",
+        "text": "#What is a Multimodal Model?\n\nA multimodal model is an AI system that can process information from multiple types of input.\n",
         "imageUrl": "https://images.code.org/86642ade3620a934f9ddfcc16f191ae5-multimodal.gif",
         "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67",
         "layout": "text-top-left"
@@ -23,6 +23,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T17:50:25.679+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level5\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level5\"},{\"changed_at\":\"2025-03-17 17:50:28 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:16:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17T17:50:25.679+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level5\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level5\"},{\"changed_at\":\"2025-03-17 17:50:28 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:16:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 03:04:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Panels>

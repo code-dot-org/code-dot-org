@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## ADD TITLE\r\n\r\nADD TEXT HERE \r\n\r\n### Do This:\r\n1. ADD TEXT HERE \r\n2. **Copy and paste** the following prompt: \r\n\r\n>ADD TEXT HERE \r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n\r\n**Try it out!**\r\n",
+    "long_instructions": "## AI as a Technical Expert\r\n\r\nUse AI Chat to fact check a historical event, recite a quote, or verify a scientific concept.\r\n\r\n### Do This:\r\n1. Find the section in your **Unit Guide** labeled \"Providing historical or technical information\". \r\n2. Choose one of the questions below and rank how well you think a human would do.\r\n3. **Copy and paste** the prompt into AI Chat.\r\n4. Press **Send**.\r\n5. Then read **AI Chat's response**.\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\nChoose one of the questions below. Click to expand:\r\n\r\n::: details [**Fact Check a Historical Event**] \r\n>Who was the first woman to fly solo across the Atlantic Ocean?\r\n\r\nOR\r\n\r\n>When was the lightbulb invented, and by whom?\r\n:::\r\n\r\n::: details [**Look Up a Famous Quote**]\r\n>Give me a motivational quote by Maya Angelou.\r\n\r\nOR\r\n\r\n>What is a famous quote from Albert Einstein?\r\n:::\r\n\r\n::: details [**Verify a Scientific Concept**]\r\n>Explain how photosynthesis works in one paragraph.\r\n\r\nOR\r\n>What is the freezing point of mercury?\r\n:::\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -35,13 +35,13 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "Only respond to questions about history, science, famous quotes, famous people, or other technical knowledge. ",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T21:06:53.303+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson4-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson4-level2\"},{\"changed_at\":\"2025-03-17 21:06:55 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17T21:06:53.303+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson4-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson4-level2\"},{\"changed_at\":\"2025-03-17 21:06:55 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-18 17:46:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-18 19:52:12 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

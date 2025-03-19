@@ -154,9 +154,9 @@ class Painter:
     Returns:
       True if the painter has any paint in their personal bucket
     """
-    if self.has_infinite_paint:
-      return True
-    return self.remaining_paint > 0
+    has_paint = self.has_infinite_paint or self.remaining_paint > 0
+    self._send_boolean_message(NeighborhoodSignalKey.HAS_PAINT, has_paint)
+    return has_paint
   
   def can_move(self, direction=None):
     """

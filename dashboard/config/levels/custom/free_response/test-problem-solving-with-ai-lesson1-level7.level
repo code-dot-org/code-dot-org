@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "title": "Assessment - Free Response",
+    "title": "Check Your Understanding",
     "long_instructions": "Think back to your exploration with the AI chatbot in Level 5. \r\n\r\n**How did your AI-generated output change as you made updates to your prompt?** ",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -16,9 +16,9 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "stay_on_level_after_submit": "false"
+    "stay_on_level_after_submit": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T15:24:41.604+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson1-level4-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson1-level4-2024\"},{\"changed_at\":\"2025-03-17 15:28:50 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 20:48:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 20:49:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-17T15:24:41.604+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson1-level4-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson1-level4-2024\"},{\"changed_at\":\"2025-03-17 15:28:50 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 20:48:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 20:49:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 02:02:16 +0000\",\"changed\":[\"title\",\"stay_on_level_after_submit\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

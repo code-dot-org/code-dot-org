@@ -80,7 +80,6 @@ require 'cdo/aws/metrics'
 require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
-require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
@@ -2412,7 +2411,6 @@ class User < ApplicationRecord
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
       omniauth_user.save
-      SignUpTracking.log_sign_up_result(omniauth_user, request)
     end
 
     omniauth_user.update_oauth_credential_tokens(auth)

@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-18T18:32:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Government\r\n\r\nPractice asking the same question in different ways about local community programs for youth.\r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the following prompt:\r\n\r\n>Why is it important to have local community programs for youth?\r\n2. Press **Send**.\r\n3. **Copy and paste** the following prompt:\r\n\r\n>Why is it bad to have local community programs for youth?\r\n4. Press **Send**.\r\n5. **Copy and paste** the following prompt:\r\n\r\n>Why are local community programs important for youth development?\r\n6. Press **Send**.\r\n7. **Copy and paste** the following prompt:\r\n\r\n>According to the National League of Cities, why are local community programs important for youth?\r\n8. Press **Send**.\r\n9. Read back through all the responses you got to the various framing of this question and reflect on these two questions\r\n\t- <i class=\"fas fa-user-circle\"></i> How does the way we phrase a prompt influence AI contradictions?\r\n    - <i class=\"fas fa-user-circle\"></i> Why does AI provide inconsistent responses even when asked the same question differently?\r\n10. Now **try out your own example of a question** related to government. Frame it in as many ways possible to see if you can produce contradictions in the AI responses.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Government",
+    "bubble_choice_description": "Practice asking the same question in different ways about local community programs for youth."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-18T18:32:48.455+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice3\"},{\"changed_at\":\"2025-03-18 18:35:49 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 05:39:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 05:43:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 05:44:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -18,7 +18,6 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {
   isReadOnlyWorkspace,
   setUpWithLevel,
-  setUpWithoutLevel,
   shouldHideShareAndRemix,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -86,11 +85,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           channelId,
         })
       );
-    } else if (channelId && appName) {
-      // Otherwise, if we have a channel id, set up the lab using the channel id.
-      // This path should only be used for lab pages that don't have a level, such as
-      // /projectbeats previously. App name also must be provided if using this path.
-      promise = dispatch(setUpWithoutLevel({channelId, appName}));
     }
     return () => {
       // If we have an early return, we will abort the promise in progress.

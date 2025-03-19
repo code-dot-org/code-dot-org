@@ -222,6 +222,22 @@
       "require": "./dist/cjs/link/index.js"
     },
     "./link/index.css": "./dist/esm/link/index.css",
+    "./list": {
+      "types": {
+        "import": "./dist/esm/list/index.d.ts",
+        "require": "./dist/cjs/list/index.d.ts"
+      },
+      "import": "./dist/esm/list/index.mjs",
+      "require": "./dist/cjs/list/index.js"
+    },
+    "./list/simpleList": {
+      "types": {
+        "import": "./dist/esm/list/simpleList/index.d.ts",
+        "require": "./dist/cjs/list/simpleList/index.d.ts"
+      },
+      "import": "./dist/esm/list/simpleList/index.mjs",
+      "require": "./dist/cjs/list/simpleList/index.js"
+    },
     "./modal": {
       "types": {
         "import": "./dist/esm/modal/index.d.ts",

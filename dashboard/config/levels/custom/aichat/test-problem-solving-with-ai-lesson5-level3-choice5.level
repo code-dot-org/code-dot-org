@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-18T18:39:18.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Update\r\nSocial Media Choice\r\n\r\n## Historical Event\r\n\r\nUse AI Chat to help learn about a historical event.\r\n\r\n### Do This:\r\n\r\n1. Look at the images already uploaded to this level and decide if you'd like to use those or images of an event more relevant to you.\r\n2. Decide on specific areas you'd like to learn more about related to the even in the picture(s) you plan to use. Here are some common topics:\r\n\t- Context & Background\r\n    - Subjects & People\r\n    - Physical Setting & Environment\r\n    - Symbols & Messages\r\n    - (You can use AI chat to help you brainstorm more ideas if you'd like)\r\n3. Add the images you want to include in your input to your prompt.\r\n2. **Copy and paste** the following prompt:\r\n\r\n>Help me learn about the [insert area of interest] of the event shown in this picture.\r\n3. Press **Send**.\r\n4. Change and add to your prompt to see if you can get AI Chat to provide you more useful responses.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Social Media"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-18T18:39:18.276+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice4\"},{\"changed_at\":\"2025-03-18 18:39:30 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

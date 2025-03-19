@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-17T15:52:19.000Z",
   "level_num": "custom",
@@ -8,6 +9,12 @@
     "encrypted": "false",
     "offer_browser_tts": "false",
     "panels": [
+      {
+        "text": "<h2>Troubleshooting Hardware Activity</h2>\n<h4> Use the <a href=\"https://docs.google.com/document/d/12cuoprpjClVYBoBw0B7FdqrGaKGaOlexuj8VK3-vZds/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a>  to explore the panels and analyze each step of the SNOT strategy. <br><br>In the next level, you'll refine your analysis using an AI chatbot. You don’t need to complete the activity—just get a sense of what your students will be doing.</h4>",
+        "imageUrl": "https://images.code.org/cd323b7eb544b46819f5a1284e33106c-panel slides (3).png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev-7c7a6d39-26e4-4c8d-9ec3-d898b6b27d27",
+        "layout": "text-top-left"
+      },
       {
         "text": "",
         "imageUrl": "https://images.code.org/c79d5d876d7624f36fea0c5b92ba2d15-scenario1_a.png",
@@ -44,7 +51,6 @@
       }
     ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-17T15:52:19.667+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson3-onlineresources-1\\\"\"],\"cloned_from\":\"computer-systems-lesson3-onlineresources-1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17T15:52:19.667+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson3-onlineresources-1\\\"\"],\"cloned_from\":\"computer-systems-lesson3-onlineresources-1\"},{\"changed_at\":\"2025-03-18 14:35:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-18 14:36:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-18 14:38:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-18 14:39:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
