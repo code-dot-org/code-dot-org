@@ -58,6 +58,7 @@ export const useSource = (
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const {appName, id: levelId} = levelProperties;
 
   const setSourceHelper = useMemo(
     () => (newProjectSource: ProjectSources) => {
@@ -70,10 +71,8 @@ export const useSource = (
   );
 
   const debouncedProgressReport = debounce(() => {
-    if (levelProperties.appName) {
-      dispatch(
-        sendProgressReport(levelProperties.appName, TestResults.LEVEL_STARTED)
-      );
+    if (appName) {
+      dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
     }
   }, 100);
 
@@ -137,18 +136,17 @@ export const useSource = (
       header.showLevelBuilderSaveButton(
         () => ({exemplar_sources: source}),
         'Levelbuilder: Edit Exemplar',
-        `/levels/${levelProperties.id}/update_exemplar_code`
+        `/levels/${levelId}/update_exemplar_code`
       );
     }
-  }, [isStartMode, isEditingExemplarMode, source, levelProperties.id]);
+  }, [isStartMode, isEditingExemplarMode, source, levelId]);
 
   useEffect(() => {
     // We reset the project when the levelId changes, as this means we are on a new level.
     // We also reset if the initialSources changed; this could occur if we are a teacher
     // viewing a student's project.
     if (
-      (levelProperties.id &&
-        previousLevelIdRef.current !== levelProperties.id) ||
+      (levelId && previousLevelIdRef.current !== levelId) ||
       initialSources !== previousInitialSources.current
     ) {
       if (initialSources) {
@@ -162,12 +160,12 @@ export const useSource = (
           ?.setLastSource(initialSources);
         setSourceHelper(initialSources);
       }
-      if (levelProperties.id) {
-        previousLevelIdRef.current = levelProperties.id;
+      if (levelId) {
+        previousLevelIdRef.current = levelId;
       }
       previousInitialSources.current = initialSources;
     }
-  }, [initialSources, levelProperties.id, setSourceHelper]);
+  }, [initialSources, levelId, setSourceHelper]);
 
   // If the source retrieved from redux is the same as our localProject, then there haven't been any external
   // changes so we don't increment the key and keep the current layout in place.
