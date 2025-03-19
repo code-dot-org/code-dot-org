@@ -34,7 +34,7 @@ export interface ExpandedListProps extends HTMLAttributes<HTMLUListElement> {
  * ### Status: ```Ready for dev```
  *
  * Design System: ExpandedList Component.
- * Renders a list of items with content.
+ * Renders a list of items with content including a customizable icon, heading, description, and optional links.
  */
 const ExpandedList: React.FC<ExpandedListProps> = ({
   items,
