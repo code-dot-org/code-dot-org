@@ -14,6 +14,7 @@ import {
   isCompletedChatMessage,
   isServerChatEvent,
 } from '../types';
+import {getAssetUrl} from '../utils';
 
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
@@ -32,6 +33,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {status, role, chatMessageText, assets} = chatMessage;
   const currentChannelId = useAppSelector(state => state.lab.channel?.id);
+  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -90,20 +92,21 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     footer = (
       <div className={styles.assetRow}>
         {assets.map(asset => {
-          return asset.endsWith('.pdf') ? (
-            <div key={asset} className={styles.pdfPreview}>
+          const filename = asset.filename;
+          return filename.endsWith('.pdf') ? (
+            <div key={filename} className={styles.pdfPreview}>
               <FontAwesomeV6Icon
                 iconName="file-pdf"
                 className={styles.pdfIcon}
               />
-              <span>{asset}</span>
+              <span>{filename}</span>
             </div>
           ) : (
             <img
-              key={asset}
+              key={filename}
               alt=""
               className={styles.imagePreview}
-              src={`/v3/assets/${currentChannelId}/${asset}`}
+              src={getAssetUrl(asset, currentChannelId, levelName)}
             />
           );
         })}

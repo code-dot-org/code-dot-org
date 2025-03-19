@@ -17,8 +17,8 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
-  const stagedFilenames = useAppSelector(state =>
-    state.aichat.stagedFiles.map(file => file.filename)
+  const chatAssets = useAppSelector(state =>
+    state.aichat.stagedFiles.map(file => file.asset)
   );
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
@@ -35,14 +35,14 @@ const UserChatMessageEditor: React.FunctionComponent<{
           submitChatContents({
             text: userMessage,
             assets:
-              multimodalEnabled && stagedFilenames.length > 0
-                ? stagedFilenames
+              multimodalEnabled && chatAssets.length > 0
+                ? chatAssets
                 : undefined,
           })
         );
       }
     },
-    [isWaitingForChatResponse, multimodalEnabled, stagedFilenames, dispatch]
+    [isWaitingForChatResponse, multimodalEnabled, chatAssets, dispatch]
   );
 
   const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;

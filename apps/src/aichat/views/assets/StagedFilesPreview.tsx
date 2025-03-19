@@ -1,4 +1,4 @@
-import Alert from '@code-dot-org/component-library/alert';
+import Alert, {type AlertProps} from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {StrongText} from '@code-dot-org/component-library/typography';
@@ -10,6 +10,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
 import aichatI18n from '../../locale';
 import {clearStagedFilesAlert, removeStagedFile} from '../../redux';
+import {getAssetUrl} from '../../utils';
 
 import styles from './staged-files-preview.module.scss';
 
@@ -23,12 +24,13 @@ const alerts = {
     aichatI18n.uploadSizeLimitExceededAlert({maximum: MAX_FILE_SIZE_MB}),
     'danger',
   ] as const,
-};
+} satisfies {[key: string]: [string, AlertProps['type']]};
 
 const StagedFilesPreview: React.FC = () => {
   const dispatch = useAppDispatch();
   const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
   const currentChannelId = useAppSelector(state => state.lab.channel?.id);
+  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
 
   const [alertMessage, style] = useAppSelector(state => {
     if (!state.aichat.stagedFilesAlert) {
@@ -45,14 +47,13 @@ const StagedFilesPreview: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        {stagedFiles.map(({key, filename, status}) => {
+        {stagedFiles.map(({key, asset, status}) => {
+          const filename = asset.filename;
           return (
             <FilePreview
               key={key}
               type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
-              url={`/v3/assets/${currentChannelId}/${encodeURIComponent(
-                filename
-              )}`}
+              url={getAssetUrl(asset, currentChannelId, levelName)}
               filename={filename}
               isLoading={status === 'uploading'}
               onRemove={() => dispatch(removeStagedFile(key))}

@@ -21,6 +21,7 @@ import {
   ServerChatEvent,
   isCompletedChatMessage,
   PendingChatMessage,
+  ChatAsset,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -249,11 +250,11 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; filename: string}>
+      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
     ) {
       state.stagedFiles.push({
         ...action.payload,
-        status: 'uploading',
+        status: action.payload.loaded ? 'uploaded' : 'uploading',
       });
     },
     stagedFileUploadFinished(
