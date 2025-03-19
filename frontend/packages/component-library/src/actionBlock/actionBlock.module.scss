@@ -1,11 +1,70 @@
-@use '@code-dot-org/component-library-styles/colors.scss';
-@use '@code-dot-org/component-library-styles/variables.scss';
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+$width-md: 900px;
 
 // ActionBlock common styles
 .actionBlock {
-  @include mixin.regular-border-styles;
+  @include mixins.regular-border-styles;
+  max-width: 100%;
   text-align: initial;
-  display: flex;
-  align-content: baseline;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  &.isFullWidth {
+    @media (min-width: $width-md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 460 / 258;
+  }
+
+  .overline {
+    color: var(--text-brand-teal-primary);
+    margin-top: 0;
+  }
+
+  .description {
+    margin-block: 0 1rem;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    & > a {
+      width: fit-content;
+    }
+  }
+}
+
+// Action block background styles
+.actionBlock-background {
+  &-primary {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &-secondary {
+    background-color: var(--background-neutral-primary);
+  }
+}
+
+.oneColActionBlock {
+  grid-template-columns: 1fr !important;
+
+  @media (min-width: $width-md) {
+    grid-template-columns: 1fr;
+  }
 }

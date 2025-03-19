@@ -1,7 +1,7 @@
 @use 'primitiveColors';
 @use 'colors';
+@use 'variables' as variables;
 @import 'font.scss';
-@use 'variables';
 
 // Typography - Label styles
 @mixin label-common {
@@ -175,5 +175,5 @@
 // Border styles
 @mixin regular-border-styles {
   border: 1px solid var(--borders-neutral-primary);
-  border-radius: $regular-border-radius;
+  border-radius: variables.$regular-border-radius;
 }

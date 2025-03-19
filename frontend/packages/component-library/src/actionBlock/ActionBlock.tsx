@@ -1,17 +1,20 @@
 import classNames from 'classnames';
+import React, {HTMLAttributes} from 'react';
 
 import {LinkButton} from '@/button';
 import {Heading3, BodyThreeText, OverlineTwoText} from '@/typography';
 
 import moduleStyles from './actionBlock.module.scss';
 
-export interface ActionBlockProps extends React.HTMLAttributes<HTMLElement> {
+export interface ActionBlockProps extends HTMLAttributes<HTMLElement> {
   /** Action Block title */
-  title: string;
+  title?: string;
   /** Action Block description */
-  description: string;
+  description?: string;
   /** Action Block image */
   imageSrc?: string;
+  /** Action Block overline */
+  overline?: string;
   /** Primary button label */
   primaryButtonLabel?: string;
   /** Primary button link */
@@ -24,10 +27,10 @@ export interface ActionBlockProps extends React.HTMLAttributes<HTMLElement> {
   secondaryButtonUrl?: string;
   /** Secondary button aria label */
   secondaryButtonAriaLabel?: string;
-  /** Action Block overline */
-  overline?: string;
   /** Action Block background */
   background?: 'primary' | 'secondary';
+  /** Action Block is full width */
+  isFullWidth?: boolean;
   /** Action Block custom className */
   className?: string;
 }
@@ -50,14 +53,15 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
   title,
   description,
   imageSrc,
+  overline,
   primaryButtonLabel,
   primaryButtonUrl,
   primaryButtonAriaLabel,
   secondaryButtonLabel,
   secondaryButtonUrl,
   secondaryButtonAriaLabel,
-  overline,
   background = 'primary',
+  isFullWidth = true,
   className,
   ...HTMLAttributes
 }: ActionBlockProps) => {
@@ -66,37 +70,62 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
       className={classNames(
         moduleStyles.actionBlock,
         moduleStyles[`actionBlock-background-${background}`],
+        moduleStyles[isFullWidth ? `isFullWidth` : ''],
         className,
       )}
       {...HTMLAttributes}
     >
-      {imageSrc && <img src={imageSrc} alt={''} />}
-      {overline && <OverlineTwoText>{overline}</OverlineTwoText>}
-      <Heading3 visualAppearance="heading-md">{title}</Heading3>
-      <BodyThreeText>{description}</BodyThreeText>
-      <div className={moduleStyles.buttons}>
-        {primaryButtonLabel && primaryButtonUrl && (
-          <LinkButton
-            href={primaryButtonUrl}
-            text={primaryButtonLabel}
-            type="primary"
-            size="m"
-            ariaLabel={primaryButtonAriaLabel}
-          >
-            {primaryButtonLabel}
-          </LinkButton>
+      {imageSrc && (
+        <img
+          className={moduleStyles.image}
+          src={imageSrc}
+          alt={''}
+          style={{
+            background: `url(${imageSrc}) center center no-repeat`,
+            backgroundSize: 'cover',
+          }}
+        />
+      )}
+      <div className={moduleStyles.contentWrapper}>
+        {overline && (
+          <OverlineTwoText className={classNames(moduleStyles.overline)}>
+            {overline}
+          </OverlineTwoText>
         )}
-        {secondaryButtonLabel && secondaryButtonUrl && (
-          <LinkButton
-            href={secondaryButtonUrl}
-            text={secondaryButtonLabel}
-            type="secondary"
-            size="m"
-            ariaLabel={secondaryButtonAriaLabel}
-          >
-            {secondaryButtonLabel}
-          </LinkButton>
-        )}
+        <Heading3
+          className={classNames(moduleStyles.title)}
+          visualAppearance={isFullWidth ? 'heading-sm' : 'heading-md'}
+        >
+          {title}
+        </Heading3>
+        <BodyThreeText className={classNames(moduleStyles.description)}>
+          {description}
+        </BodyThreeText>
+        <div className={moduleStyles.buttonWrapper}>
+          {primaryButtonLabel && primaryButtonUrl && (
+            <LinkButton
+              href={primaryButtonUrl}
+              text={primaryButtonLabel}
+              type="primary"
+              size="m"
+              ariaLabel={primaryButtonAriaLabel}
+            >
+              {primaryButtonLabel}
+            </LinkButton>
+          )}
+          {secondaryButtonLabel && secondaryButtonUrl && (
+            <LinkButton
+              href={secondaryButtonUrl}
+              text={secondaryButtonLabel}
+              type="secondary"
+              size="m"
+              color="black"
+              ariaLabel={secondaryButtonAriaLabel}
+            >
+              {secondaryButtonLabel}
+            </LinkButton>
+          )}
+        </div>
       </div>
     </div>
   );
