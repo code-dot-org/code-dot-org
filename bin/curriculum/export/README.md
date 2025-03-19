@@ -23,8 +23,6 @@ note that we write to:
 * **s3://cdo-data-sharing-internal** in the first step because this is where redshift has permission to write to, and
 * **s3://cdo-data-sharing** in the last step because this is a more appropriate location for data to be shared externally.
 
-some of the above steps can fail. to make this less painful, the add_unit_source and filter_unit_pii steps are safe to rerun, as they are designed to skip over any input files if the output file already exists.
-
 ## Usage
 
 To export progress for a given unit:
@@ -82,6 +80,11 @@ Once you are happy with the data you've uploaded to S3, you should clean up the 
 rm -rf /mnt/tmp-curriculum-export/sourced/<unit-name>
 rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name>
 ```
+## Troubleshooting
+
+* some of the above steps can fail. to make this less painful, `add_unit_source.rb` and `filter_unit_pii.rb` are safe to rerun, as they are designed to skip over any input files if the output file already exists.
+* if you need to rerun any of the scripts and the output location dir is already in use from a previous run, you can specify a new output location with `-o`
+* for more options, see the `--help` output for each script.
 
 ## Development
 
