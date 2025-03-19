@@ -1211,6 +1211,7 @@ class Unit < ApplicationRecord
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name!(destination_unit_group_name) :
       nil
+    puts "#{destination_unit_group.nil?} || #{destination_professional_learning_course.nil?} || #{destination_unit_group.course_version}"
     raise 'Destination unit group must have a course version. please try saving the course edit page again.' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
 
     begin
@@ -1234,7 +1235,7 @@ class Unit < ApplicationRecord
           copied_unit.professional_learning_course = destination_professional_learning_course
           copied_unit.peer_reviews_to_complete = peer_reviews_to_complete
         elsif destination_unit_group
-          raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
+          raise 'Destination unit group must be in a course version. please try saving the course edit page again.' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.reload
         else
