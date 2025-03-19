@@ -1211,7 +1211,6 @@ class Unit < ApplicationRecord
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name!(destination_unit_group_name) :
       nil
-    puts "#{destination_unit_group.nil?} || #{destination_professional_learning_course.nil?} || #{destination_unit_group.course_version}"
     raise 'Destination unit group must have a course version. please try saving the course edit page again.' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
 
     begin
