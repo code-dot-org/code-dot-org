@@ -892,6 +892,11 @@ en:
         csaif-pilot-content-creator: Content Creator
         csaif-pilot-graphic-designer: Graphic Designer
         convenience_v_privacy: Convenience vs Privacy - Facial Recognition
+        cs_is_everything: Computer Science is Everything
+        musiclab_shakira: Shakira Singer Songwriter
+        musiclab_rosa_linn: Rosa Linn, Singer Songwriter
+        musiclab_henny: Henny tha Bizness, Record Producer
+        musiclab_aloe_blacc: Aloe Blacc, Singer Songwriter
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -1,0 +1,85 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '../../../../mixins.scss';
+
+.loading {
+  width: 100%;
+  display: flex;
+  padding: 75px 0;
+  i {
+    margin: auto;
+    font-size: 50px;
+    color: var(--text-neutral-placeholder);
+  }
+}
+
+.modalBody {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-evenly;
+}
+
+.file {
+  width: 100px;
+  text-align: center;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+.fileIconWrapper {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  align-items: flex-start;
+}
+
+%file-icon {
+  @include remove-button-styles;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+  text-align: center;
+  gap: 8px;
+
+  .filename {
+    width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+.file-icon-image {
+  @extend %file-icon;
+  img {
+    opacity: 1;
+    max-height: 75px;
+    width: auto;
+    border-radius: 0;
+  }
+}
+
+.file-icon-pdf {
+  @extend %file-icon;
+  .pdfIcon {
+    display: flex;
+    border-radius: 4px;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-strawberry-40);
+
+    i {
+      margin: auto;
+      color: white;
+      font-size: 35px;
+    }
+  }
+}
+
+.alertContainer {
+  width: 100%;
+  display: flex;
+
+  .alert {
+    flex: 1;
+  }
+}

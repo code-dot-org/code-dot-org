@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-15T20:03:53.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "###Video Game Developer\n\n💡 **What They Do:**\nVideo game developers build video games! They write the instructions that make characters move, jump, and battle. Without them, games wouldn’t work!\n\n💻 **How They Use Computer Science:**\nThey use coding to make games fun. They create rules, control how things move, and even make computer players (AI) that can play against you! In the future, AI will help make games even smarter, creating worlds that change as you play and characters that learn from your actions.\n",
+        "imageUrl": "https://images.code.org/54e5c5247211b8fdda647b77fbb3df88-DALL·E 2025-03-15 13.27.34 - A digital representation of AI analyzing medical data, with a futuristic interface showing charts, patient health stats, and predictive analytics. The.webp",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-top-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Video Game Developer\n\n🎓 Pathway:\nGame developers learn coding in school or online. Many study computer science.\n\n💰 Salary:\nThey can earn $85,000 - $120,000 per year.\n",
+        "imageUrl": "https://images.code.org/38c50766939248722a3602b3c965823f-salary.jpg",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Video Game Developer\n\n🌟 Great For:\n✔️ People who love video games\n✔️ Creative problem-solvers\n✔️ Anyone who enjoys computers",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels2-b19d1578-5635-4f72-930c-55acf997cef8",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "###Sound Designer\n\n💡 **What They Do:**\nSound designers create the sounds in video games! They make footsteps, voices, music, and cool effects like explosions.\n\n💻 **How They Use Computer Science:**\nThey use special computer programs to record and mix sounds. They also work with game developers to play sounds at the right time.",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels2-369fb635-8efc-417d-a2c8-97f0b7a9a470",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Sound Designer\n\n🎓 **Pathway:**\nSound designers study music or audio in school and learn special sound programs.\n\n💰 **Salary:**\nThey can earn $50,000 - $90,000 per year.",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels2-0f69595a-200e-4239-ba79-cdd97513aa19",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Sound Designer\n\n🌟 **Great For:**\n✔️ People who love music and sound\n✔️ Creative thinkers\n✔️ Anyone who enjoys working with technology",
+        "imageUrl": "",
+        "key": "test-elem-career-journeys-explore-panels2-48fe4cf0-97bb-4a48-8679-84ce1c0df141",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "display_name": "Careers in Video Games",
+    "thumbnail_url": "https://images.code.org/1ebf6fc415cfb8666c21059dc025f4ea-game2.jpg",
+    "bubble_choice_description": "**Learn more about:**\n- Video game developers\n\n- Sound designers"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-15T20:03:53.329+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels\"},{\"changed_at\":\"2025-03-15 20:20:49 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:21:53 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:27:40 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:43:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:44:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:45:05 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 21:03:46 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:00:23 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:02:06 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

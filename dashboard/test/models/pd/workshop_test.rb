@@ -520,17 +520,31 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly name' do
     Geocoder.expects(:search).returns([])
-    workshop = create :admin_workshop,
+    workshop = create :pd_workshop,
+      course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
+      subject: nil,
+      name: "Test Workshop",
+      course_offerings: [] << (create :course_offering),
+      num_facilitators: 1,
       location_name: 'Code.org',
       location_address: 'Seattle, WA',
       sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
-    # no subject
+    # with name ending in 'Workshop'
+    assert_equal 'Test Workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+
+    # with name not ending in 'Workshop' (appends ' workshop' to the name)
+    workshop.update!(name: 'New Name')
+    assert_equal 'New Name workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+
+    # with course that doesn't require a name, and no subject
+    workshop.update!(course: Pd::Workshop::COURSE_ADMIN, name: '')
     assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
     assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
+
     # truncated at 255 chars
     workshop.update!(location_name: "blah" * 60)
     assert workshop.friendly_name.start_with? 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at blahblahblah'

@@ -29,7 +29,7 @@ import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
-  NEW_SIGN_UP_USER_TYPE,
+  SIGN_UP_USER_TYPE,
   USER_RETURN_TO_SESSION_KEY,
   setUserReturnToUrl,
 } from './signUpFlowConstants';
@@ -69,7 +69,7 @@ const LoginTypeSelection: React.FunctionComponent<{
   const finishAccountUrl = isTeacher
     ? studio('/users/sign_up/finish_teacher_account')
     : studio('/users/sign_up/finish_student_account');
-  cookies.set(NEW_SIGN_UP_USER_TYPE, userType, {path: '/'});
+  cookies.set(SIGN_UP_USER_TYPE, userType, {path: '/'});
 
   useEffect(() => {
     async function getToken() {
@@ -170,7 +170,6 @@ const LoginTypeSelection: React.FunctionComponent<{
       return;
     }
     const submitLoginTypeParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,

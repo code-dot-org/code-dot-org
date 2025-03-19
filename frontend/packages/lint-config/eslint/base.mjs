@@ -1,6 +1,6 @@
+import js from '@eslint/js';
 import importPlugin from 'eslint-plugin-import-x';
 import {configs as tseslintConfig} from 'typescript-eslint';
-import js from '@eslint/js';
 
 export default [
   js.configs.recommended,
@@ -10,7 +10,43 @@ export default [
   {
     rules: {
       'import-x/no-cycle': 'error',
-      'import-x/no-unresolved': 'off', // https://codedotorg.atlassian.net/browse/ACQ-2875
+      'import-x/no-duplicates': 'error',
+      'import-x/order': [
+        'error',
+        {
+          'newlines-between': 'always',
+          groups: [
+            ['builtin', 'external'],
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],
+          pathGroups: [
+            {
+              pattern: '*.scss',
+              group: 'index',
+              position: 'after',
+              patternOptions: {matchBase: true},
+            },
+            {
+              pattern: '@code-dot-org/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@cdo/**',
+              group: 'internal',
+              position: 'before',
+            },
+          ],
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+          pathGroupsExcludedImportTypes: ['builtin', 'object'],
+        },
+      ],
     },
   },
 ];

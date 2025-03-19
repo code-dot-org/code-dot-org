@@ -35,6 +35,17 @@ def test_get_neighborhood_log_returns_expected_info():
   assert neighborhood_log.one_painter_did_action('TURN_LEFT', 2)
   assert neighborhood_log.action_happened('TURN_LEFT', 3)
 
+def test_main_with_function_returns_expected_info():
+  validation_protocol = ValidationProtocol()
+  neighborhood_world = World()
+  neighborhood_world.set_grid_from_string(SAMPLE_MAZE)
+  neighborhood_world.set_context_type(NeighborhoodContextType.VALIDATE)
+  main_path = os.path.join(os.path.dirname(__file__), 'sample_main_with_function.py')
+  neighborhood_log = validation_protocol.get_neighborhood_log(main_path)
+  painter_logs = neighborhood_log.painter_logs
+  assert len(painter_logs) == 2
+  painter_log_1 = painter_logs[0]
+  assert painter_log_1.did_action_exactly
 
 def test_get_neighborhood_log_with_invalid_main_resets_context():
   validation_protocol = ValidationProtocol()

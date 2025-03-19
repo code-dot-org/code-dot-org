@@ -468,6 +468,46 @@ class School < ApplicationRecord
           }
         end
       end
+
+      # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
+      CDO.log.info "Seeding 2023-2024 public school data."
+      AWS::S3.seed_from_file('cdo-nces', "2023-2024/ccd/schools_public.csv") do |filename|
+        merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
+          {
+            id:                           row['School ID (12-digit) - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+            name:                         row['School Name'].upcase,
+            address_line1:                row['Location Address 1 [Public School] 2023-24'].to_s.upcase.truncate(50).presence,
+            address_line2:                row['Location Address 2 [Public School] 2023-24'].to_s.upcase.truncate(30).presence,
+            address_line3:                row['Location Address 3 [Public School] 2023-24'].to_s.upcase.presence,
+            city:                         row['Location City [Public School] 2023-24'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [Public School] 2023-24'].to_s.strip.upcase.presence,
+            zip:                          row['Location ZIP [Public School] 2023-24'],
+            latitude:                     row['Latitude [Public School] 2023-24'].to_f,
+            longitude:                    row['Longitude [Public School] 2023-24'].to_f,
+            school_type:                  CHARTER_SCHOOL_MAP[row['Charter School [Public School] 2023-24'].to_s] || 'public',
+            school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
+            school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2023-24']].presence,
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2023-24']) ? '2023-2024' : nil
+          }
+        end
+      end
+    end
+    School.transaction do
+      AWS::S3.seed_from_file('cdo-nces', "2023-2024/ccd/locale_public.csv") do |filename|
+        CSV.read(filename, **{headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}).each do |row|
+          row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
+          begin
+            school = School.find(row['NCESSCH'].to_i.to_s)
+            school&.update!(
+              county_id:    row['CNTY'].to_i.to_s,
+              county_name:  row['NMCNTY']
+            )
+          rescue ActiveRecord::RecordNotFound
+            CDO.log.info "Could not find school with id: #{row['NCESSCH'].to_i}"
+          end
+        end
+      end
     end
   end
 

@@ -55,6 +55,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@csp_unit_group_soft_launched)
     @csp_unit_group.reload
 
+    @single_unit_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(@single_unit_course)
+    @single_unit_course.reload
+
     Unit.clear_cache
   end
 
@@ -810,6 +814,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 0, @teacher.scripts.size
   end
 
+  test 'creating a section with a single-unit course also assigns the single-unit' do
+    sign_in @teacher
+    assert_equal 0, @teacher.scripts.size
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: @single_unit_course.course_version.id,
+    }
+    assert_response :success
+    @teacher.reload
+    assert_equal 1, @teacher.scripts.size
+    assert_equal @single_unit_course.default_units.first, returned_section.script
+  end
+
   test 'creating a section with a coteacher adds both teachers' do
     sign_in @teacher
 
@@ -1068,6 +1087,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_equal(@csp_unit_group.id, section.course_id)
     assert_equal(@csp_script.id, section.script_id)
+  end
+
+  test "update: assigning a single-unit course also assigns the single-unit" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: @csp_unit_group.id)
+
+    post :update, as: :json, params: {
+      id: section.id,
+      course_version_id: @single_unit_course.course_version.id
+    }
+    assert_response :success
+    section.reload
+    assert_equal(@single_unit_course.id, section.course_id)
+    assert_equal(@single_unit_course.default_units.first.id, section.script_id)
   end
 
   test "update: non-matching course_version and script rejected" do

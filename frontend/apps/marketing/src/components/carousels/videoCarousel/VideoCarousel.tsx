@@ -1,9 +1,9 @@
 'use client';
 
 import '@code-dot-org/component-library/carousel/index.css';
-import DSCOCarousel from '@code-dot-org/component-library/carousel';
 import React, {ReactNode, useMemo} from 'react';
 
+import DSCOCarousel from '@code-dot-org/component-library/carousel';
 import Video from '@code-dot-org/component-library/video';
 
 export type VideoCarouselProps = {
@@ -20,15 +20,14 @@ export type VideoCarouselProps = {
 };
 
 const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
-  // Workaround for the experience builder not working with Array
+  // Show placeholder text until a content entry is added
   if (slides == null) {
     return (
-      <div>
+      <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>✍ Video carousel placeholder.</strong> Please add a
           "Carousel" content type entry in the Content sidebar, save, and open
-          the preview tab to see the carousel. An empty carousel will show in
-          this editor, but it's here.
+          the preview tab to see the carousel in action.
         </em>
       </div>
     );

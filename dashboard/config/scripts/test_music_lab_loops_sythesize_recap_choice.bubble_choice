@@ -1,0 +1,11 @@
+name 'test-music-lab-loops-sythesize-recap-choice'
+display_name 'Review What You Learned'
+description 'Choose any of the concepts below to review before moving on.'
+
+sublevels
+level 'test-music-lab-loops-sythesize-recap-choice-a'
+level 'test-music-lab-loops-sythesize-recap-choice-b'
+level 'test-music-lab-loops-sythesize-recap-choice-c'
+level 'test-music-lab-loops-sythesize-recap-choice-d'
+
+
