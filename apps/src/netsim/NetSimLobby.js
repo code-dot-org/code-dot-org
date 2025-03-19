@@ -206,6 +206,12 @@ NetSimLobby.prototype.render = function () {
   } else {
     // Node selection panel: The lobby list of who we can connect to, and
     // controls for picking one and connecting.
+    const selectedShard = _.find(
+      this.shardChoices_,
+      s => s.shardID === this.selectedShardID_
+    );
+    const sectionID = selectedShard ? selectedShard.shardSeed : null;
+
     this.nodeSelectionPanel_ = new NetSimRemoteNodeSelectionPanel(
       this.rootDiv_,
       {
@@ -218,6 +224,7 @@ NetSimLobby.prototype.render = function () {
         remoteNode: this.remoteNode_,
         myNodeID: this.myNode_.entityID,
         disableControls: this.isEverythingDisabled(),
+        sectionID,
       },
       {
         addRouterCallback: this.addRouterToLobby.bind(this),

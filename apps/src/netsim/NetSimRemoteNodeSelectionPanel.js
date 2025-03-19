@@ -76,6 +76,12 @@ var NetSimRemoteNodeSelectionPanel = (module.exports = function (
    * @type {string}
    * @private
    */
+  this.sectionID_ = options.sectionID;
+
+  /**
+   * @type {string}
+   * @private
+   */
   this.shardDisplayName_ = options.shardDisplayName;
 
   /**
@@ -398,12 +404,12 @@ NetSimRemoteNodeSelectionPanel.prototype.isUserInMultipleSections =
  */
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard =
   function () {
-    return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+    return NetSimUtils.doesUserOwnShard(this.user_, this.sectionID_);
   };
 
 NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserSeeTeacherLog_ =
   function () {
-    return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+    return NetSimUtils.doesUserOwnShard(this.user_, this.sectionID_);
   };
 
 /**
