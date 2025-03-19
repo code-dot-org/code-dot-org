@@ -21124,3 +21124,12 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        introduction-to-programming-in-music-lab-for-elementary:
+          lessons: {}
+          lesson_groups: {}
+          name: introduction-to-programming-in-music-lab-for-elementary
+          title: Introduction to Programming in Music Lab
+          description_audience: Elementary Students
+          description_short: ''
+          description: ''
+          student_description: ''

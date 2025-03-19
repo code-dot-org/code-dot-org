@@ -20,11 +20,6 @@
             "play_sound_at_current_location_simple2",
             "play_rest_at_current_location_simple2"
           ],
-          "Effects": [
-            "set_volume_effect_at_current_location_simple2",
-            "set_filter_effect_at_current_location_simple2",
-            "set_delay_effect_at_current_location_simple2"
-          ],
           "Functions": [
 
           ],
@@ -46,7 +41,7 @@
     "long_instructions": "### Getting started with a backtrack\r\n\r\nA backtrack is a pre-made audio track that plays during a live performance to add extra layers of sound. It supports the live musician by providing a beat, harmony, or atmosphere while they perform and add new elements in real-time.\r\n\r\n**Do this:** \r\n- Create a simple backtrack with at least one drum and one bass sound played together. \r\n- Loop that backtrack so it plays for at least 30 measures. ",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17 20:51:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-17 21:10:48 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17 20:51:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-17 21:10:48 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 15:50:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

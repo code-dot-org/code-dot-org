@@ -1,0 +1,92 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-18T18:10:10.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2",
+            "play_sounds_random",
+            "triggered_at_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 5
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_random",
+                        "id": "play_sounds_random",
+                        "extraState": {
+                          "disableNextConnection": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### The “Surprise Cue” Challenge: Turning Mistakes into Creative Opportunities\r\n\r\nGreat performers know that surprises—planned or not—are part of the magic of live music. Just like a DJ adjusting a mix on the fly or a band improvising during a concert, you'll practice reacting to unexpected changes in your performance by using the new `random` block.\r\n\r\n![](https://images.code.org/589b9aa091a4c02498a0a87f45d3d5aa-image-1742321504908.11.38 AM.png)\r\n\r\n**Do This**:\r\n- Choose three sounds and pair each with a sound action. (For example: when the cowbell plays, add a delay filter and trigger a blip sound.)\r\n- Add your three sounds into the `play random` block. \r\n- Set up your triggers so there's an action for each sound in your `play random` block.\r\n- Perform! As you play, react in real-time to each sound cue, adjusting your timing and effects as needed.\r\n\r\n",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "The \"Surprise Cue\" Challenge",
+    "thumbnail_url": "https://images.code.org/bffd0ed4e2b96456e7b989f45039504f-DALL·E 2025-03-18 11.23.58 - A vibrant background featuring a dynamic gradient transitioning from orange to blue. In the foreground, symbolic icons representing 'The Surprise Cue'.webp",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-18T18:10:10.185+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-a\"},{\"changed_at\":\"2025-03-18 18:13:10 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:13:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:14:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:16:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:24:30 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:25:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

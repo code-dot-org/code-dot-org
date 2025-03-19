@@ -10,7 +10,7 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
-  # Redirect old sign up flow to new sign up flow
+  # Redirect old sign up flow to current sign up flow
   get "/users/sign_up", to: redirect("/users/sign_up/account_type")
 
   # Redirect uses of "new_sign_up" to "sign_up"
@@ -145,6 +145,7 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+        get :retrieve_lessons_for_dropdown
       end
       collection do
         post 'section_instructors_verified'

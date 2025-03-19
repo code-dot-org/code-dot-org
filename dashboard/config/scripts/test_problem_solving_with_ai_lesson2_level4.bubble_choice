@@ -1,6 +1,6 @@
 name 'test-problem-solving-with-ai-lesson2-level4'
 display_name 'Multimodal Input'
-description 'Pick one of the levels below.'
+description 'Pick one of the levels below. Practice prompting the AI for suggestions using images and text.'
 
 sublevels
 level 'test-problem-solving-with-ai-lesson2-level4-choice1'

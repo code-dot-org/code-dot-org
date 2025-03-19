@@ -25,29 +25,39 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     key_1 = "starter_assets/#{uuid_name_1}"
     uuid_name_2 = "#{SecureRandom.uuid}.jpg"
     key_2 = "starter_assets/#{uuid_name_2}"
+    uuid_name_3 = "#{SecureRandom.uuid}.pdf"
+    key_3 = "starter_assets/#{uuid_name_2}"
     file_objs = [
       MockS3ObjectSummary.new(key_1, 123, 1.day.ago),
-      MockS3ObjectSummary.new(key_2, 321, 2.days.ago)
+      MockS3ObjectSummary.new(key_2, 321, 2.days.ago),
+      MockS3ObjectSummary.new(key_3, 111, 3.days.ago)
     ]
     LevelStarterAssetsController.any_instance.
-      expects(:get_object).twice.
-      returns(file_objs[0], file_objs[1])
+      expects(:get_object).times(3).
+      returns(file_objs[0], file_objs[1], file_objs[2])
     level_starter_assets = {
       'ty.png' => uuid_name_1,
-      'welcome.jpg' => uuid_name_2
+      'welcome.jpg' => uuid_name_2,
+      'document.pdf' => uuid_name_3
     }
     level = create(:applab, starter_assets: level_starter_assets)
 
     get :show, params: {level_name: level.name}
     starter_assets = JSON.parse(response.body)['starter_assets']
 
-    assert_equal 2, starter_assets.count
+    assert_equal 3, starter_assets.count
+
     assert_equal 'ty.png', starter_assets[0]['filename']
     assert_equal 'image', starter_assets[0]['category']
     assert_equal file_objs[0].size, starter_assets[0]['size']
+
     assert_equal 'welcome.jpg', starter_assets[1]['filename']
     assert_equal 'image', starter_assets[1]['category']
     assert_equal file_objs[1].size, starter_assets[1]['size']
+
+    assert_equal 'document.pdf', starter_assets[2]['filename']
+    assert_equal 'pdf', starter_assets[2]['category']
+    assert_equal file_objs[2].size, starter_assets[2]['size']
   end
 
   test 'show: returns template level starter_assets when defined' do
