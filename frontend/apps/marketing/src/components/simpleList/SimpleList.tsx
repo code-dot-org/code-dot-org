@@ -10,7 +10,7 @@ import {
 
 import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
 
-type SimpleListItemEntry = Entry & {
+export type SimpleListItemEntry = Entry & {
   sys: {
     id: string;
   };
