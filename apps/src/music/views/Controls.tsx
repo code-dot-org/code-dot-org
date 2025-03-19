@@ -3,8 +3,11 @@ import classNames from 'classnames';
 import React, {useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
+import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
+import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {Triggers} from '@cdo/apps/music/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   moveStartPlayheadPositionBackward,
@@ -116,10 +119,20 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
   hasTrigger,
   enableSkipControls = false,
 }) => {
+  const dispatch = useAppDispatch();
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
   const isLoading = useMusicSelector(
     state => state.music.soundLoadingProgress < 1
   );
+  const hasPredictResponse = useAppSelector(
+    state => !!state.predictLevel.response
+  );
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+  const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const disableRun = isLoading || (isPredictLevel && !hasPredictResponse);
 
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
@@ -128,11 +141,23 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
           id="run-button"
           className={classNames(
             moduleStyles.runButton,
-            isLoading && moduleStyles.disabled
+            disableRun && moduleStyles.disabled
           )}
-          onClick={() => setPlaying(!isPlaying)}
+          onClick={() => {
+            // Only send a predict level report if this is a predict level and the predict
+            // answer was not locked.
+            if (isPredictLevel && !predictAnswerLocked) {
+              dispatch(
+                sendPredictLevelReport({
+                  appType: 'music',
+                  predictResponse: predictResponse,
+                })
+              );
+            }
+            setPlaying(!isPlaying);
+          }}
           type="button"
-          disabled={isLoading}
+          disabled={disableRun}
         >
           <FontAwesomeV6Icon
             iconName={isPlaying ? 'stop' : 'play'}

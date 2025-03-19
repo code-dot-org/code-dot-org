@@ -82,6 +82,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     return null;
   }
 
+  const canShowNextButton =
+    manageNavigation &&
+    (!hasConditions || satisfied) &&
+    (!predictSettings?.isPredictLevel || predictAnswerLocked);
+
   return (
     <InstructionsPanel
       text={instructionsText}
@@ -96,7 +101,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       handleInstructionsTextClick={handleInstructionsTextClick}
       offerBrowserTts={offerBrowserTts}
       className={className}
-      canShowNextButton={manageNavigation && (!hasConditions || satisfied)}
+      canShowNextButton={canShowNextButton}
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
