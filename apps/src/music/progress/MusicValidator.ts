@@ -12,7 +12,7 @@ import {
   FunctionDefinitionBlockTypes,
   LoopBlockTypes,
 } from '../blockly/blockTypes';
-import {PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
+import {PATTERN_AI_NUM_SEED_EVENTS, Triggers} from '../constants';
 import {isChordEvent} from '../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
@@ -126,7 +126,13 @@ export default class MusicValidator extends Validator {
           }
 
           if (eventData.functionContext) {
-            if (eventData.functionContext.name !== 'when_run') {
+            if (
+              // Exclude 'when run' and trigger contexts.
+              eventData.functionContext.name !== 'when_run' &&
+              !Triggers.map(trigger => trigger.id).includes(
+                eventData.functionContext.name
+              )
+            ) {
               this.conditionsChecker.addSatisfiedCondition({
                 name: MusicConditions.PLAYED_SOUND_IN_ANY_FUNCTION.name,
               });
