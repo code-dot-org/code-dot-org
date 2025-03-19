@@ -196,8 +196,8 @@ export class LevelTokenContents extends Component {
         <div
           style={styles.edit}
           onClick={() => {
-            const win = window.open(activeLevel.url, 'noopener', 'noreferrer');
-            win.focus();
+            window.open(activeLevel.url, '_blank', 'noreferrer');
+            // win.focus();
           }}
         >
           <i className="fa fa-pencil" />
