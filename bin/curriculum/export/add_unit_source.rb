@@ -7,7 +7,7 @@ require 'fileutils'
 
 $options = {}
 OptionParser.new do |opts|
-  opts.banner = "Usage: add_unit_source.rb [options]"
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
   opts.on("-i", "--s3-input-dir DIR", "Name of input directory under s3://cdo-data-sharing-internal/stanford/unloaded/ .") do |input_dir|
     $options[:input_dir] = input_dir
   end

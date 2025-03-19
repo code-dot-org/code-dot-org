@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require 'optparse'
 require 'parallel'
 require 'json'
@@ -7,7 +5,7 @@ require 'fileutils'
 
 $options = {}
 OptionParser.new do |opts|
-  opts.banner = "Usage: add_unit_source.rb [options]"
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
   opts.on("-i", "--s3-input-dir DIR", "Name of input directory under /mnt/tmp-curriculum-export/exported/sourced/ .") do |input_dir|
     $options[:input_dir] = input_dir
   end
@@ -30,6 +28,10 @@ raise 'Input directory is required' unless $options[:input_dir] && !$options[:in
 $input_dir = File.join(home, 'exported/sourced', $options[:input_dir])
 raise "Input directory must exist: #{$input_dir}" unless Dir.exist?($input_dir)
 raise "Input directory must not be empty: #{$input_dir}" if Dir.empty?($input_dir)
+
+# work around a bug where the second call to Parallel.map fails with Parallel::DeadWorker
+# by temporarily requiring this script to be called on a single input file.
+raise "must specify a filename, or use filter_unit_pii.rb to process an entire directory." unless $options[:filename]
 
 $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'exported/filtered', $options[:output_dir])
@@ -61,7 +63,7 @@ def get_input_filenames
   if $options[:filename]
     input_filename = File.join($input_dir, $options[:filename])
     raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
-    puts "Found input file: #{input_filename}"
+    puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
     return [input_filename]
   end
   input_filenames = Dir.glob(File.join($input_dir, '*.jsonl'))

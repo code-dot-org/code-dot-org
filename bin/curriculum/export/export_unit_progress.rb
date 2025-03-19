@@ -13,7 +13,7 @@ require 'erb'
 
 $options = {}
 OptionParser.new do |opts|
-  opts.banner = "Usage: export_unit_progress.rb [options]"
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
   opts.on("-u", "--unit-name UNIT_NAME", "Unit name") do |unit_name|
     $options[:unit_name] = unit_name
   end
