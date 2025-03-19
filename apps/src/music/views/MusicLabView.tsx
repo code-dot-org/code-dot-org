@@ -300,6 +300,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 <ExemplarPlayerView
                   playbackEvents={exemplarPlaybackEvents}
                   title={exemplarSettings.playerTitle!}
+                  player={player}
                 />
               )}
           </PanelContainer>
@@ -313,6 +314,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       isEditingExemplar,
       onInstructionsTextClick,
       exemplarPlaybackEvents,
+      player,
     ]
   );
 
