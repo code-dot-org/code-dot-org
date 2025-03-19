@@ -48,9 +48,9 @@ less /mnt/tmp-curriculum-export/filtered/<unit-name>/<filename>
 7. upload the filtered output to S3
 ```bash
 # s3 dir should be empty to start
-aws s3 ls s3://cdo-data-sharing/unit-progress/<unit-name>/
+aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name>/
 # if the dir is empty, go ahead and upload 
-aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name> s3://cdo-data-sharing/unit-progress/<unit-name>
+aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name> s3://cdo-data-sharing/filtered-unit-progress/<unit-name>
 ```
 
 8. share the data with the requester
