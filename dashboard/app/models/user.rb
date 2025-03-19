@@ -229,31 +229,53 @@ class User < ApplicationRecord
     :child_users,
   )
 
-  # Include default Devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :timeoutable
-  devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable, :lockable
+  ## Association Macros
 
-  # Make sure to include this Concern after we include the default Devise
-  # modules, since it's trying to extend some methods added by those modules
-  # that would be overridden by them if we included it before.
-  include Devise::Models::ManualSessionExpiration
-
-  acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
-
-  after_create_commit :migrate_to_multi_auth
-
-  validates_presence_of :user_type
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
-
-  validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
-
-  validate :educator_role_allowed_for_teacher, on: :create
-
+  belongs_to :invited_by, polymorphic: true, optional: true
+  belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
+  belongs_to :school_info, optional: true
+  belongs_to :secret_picture, optional: true
   belongs_to :studio_person, optional: true
+
   has_many :hint_view_requests
+  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
+
+  has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
+
+  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
+
+  has_many :user_school_infos
+  accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
+
+  has_many :pd_applications,
+    class_name: 'Pd::Application::ApplicationBase',
+    dependent: :destroy
+
+  has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
+
+  has_many :sign_ins
+  has_many :user_geos, -> {order(updated_at: :desc)}
+
+  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
+  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
+
+  # Relationships (sections_as_students/followeds/teachers) from being a
+  # student.
+  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
+  has_many :sections_as_student, through: :followeds, source: :section
+  has_many :teachers, through: :sections_as_student, source: :instructors
+
+  # Relationships (sections/followers/students) from being a teacher.
+  has_many :sections_owned, dependent: :destroy, class_name: 'Section'
+  has_many :followers, -> {without_deleted}, through: :sections_instructed
+  has_many :students, through: :followers, source: :student_user
+
+  # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
+  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
+  has_many :scripts, through: :user_scripts, source: :script
 
   # courses a facilitator is able to teach
   has_many :courses_as_facilitator,
@@ -271,11 +293,57 @@ class User < ApplicationRecord
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
-  belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
 
   has_many :lti_user_identities, dependent: :destroy
 
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
+
+  ## Validation Macros
+  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
+  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
+  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
+
+  validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
+
+  validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
+  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
+  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
+
+  validates :email, no_utf8mb4: true
+  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
+  validate :presence_of_email, if: :teacher_email_required?
+  validate :presence_of_email_or_hashed_email, if:
+      :email_or_hashed_email_required?, on: :create
+  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
+  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
+
+  validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
+  validates :gender_teacher_input, no_utf8mb4: true
+
+  validates :name, presence: true, unless: -> {purged_at}
+  validates :name, length: {within: 1..70}, allow_blank: true
+
+  validates :terms_of_service_version,
+  inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
+  allow_nil: true
+
+  validate :admins_must_be_teachers_without_followeds
+  validate :educator_role_allowed_for_teacher, on: :create
+
+  # Only allow admin permission for studio accounts with Google OAuth authentication.
+  validate :enforce_google_sso_for_admin
+
+  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
+    self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  end
+
+  validate :no_family_name_for_teachers
+
+  validate :validate_parent_email
+
+  validate :validate_us_state, if: :should_validate_us_state?
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -302,54 +370,48 @@ class User < ApplicationRecord
     user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
   end
 
-  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
+  # Username validations
+  before_validation :generate_username, on: :create
+  validates_length_of :username, within: 5..20, allow_blank: true
+  validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
+  validates_presence_of :username, if: :username_required?
 
-  belongs_to :school_info, optional: true
-  accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
+  validates_presence_of :user_type
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
-  has_many :user_school_infos
-  after_save :update_and_add_users_school_infos, if: -> {saved_change_to_school_info_id? || (school_info_id.present? && user_school_infos.empty?)}
-  validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
+  validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
 
-  has_many :pd_applications,
-    class_name: 'Pd::Application::ApplicationBase',
-    dependent: :destroy
+  validates_presence_of     :password, if: :password_required?
+  validates_confirmation_of :password, if: :password_required?
+  validates_length_of       :password, within: 6..128, allow_blank: true
 
-  has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
+  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
+  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
-  has_many :sign_ins
-  has_many :user_geos, -> {order(updated_at: :desc)}
+  # Validations for adding parent email notifications
+  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
 
-  before_validation :normalize_parent_email
-  validate :validate_parent_email
+  ## Callback Macros
 
-  after_create :associate_with_potential_pd_enrollments
+  with_options if: :sponsored? do
+    before_create :generate_secret_picture
+    before_create :generate_secret_words
+  end
+
+  before_create :update_default_share_setting
 
   before_create :save_show_progress_table_v2
 
-  after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
-
-  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
-
-  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
-
-  after_create if: -> {Policies::Lti.lti? self} do
-    Services::Lti.create_lti_user_identity(self)
-  end
-
-  after_update if: -> {cap_status? && property_previously_changed?(:us_state)} do
-    Services::ChildAccount.remove_compliance(self)
-  end
-
-  before_destroy :soft_delete_channels
-
-  before_validation on: :create, if: -> {gender.present?} do
-    self.gender = Services::User::GenderNormalizer.call(raw_input: gender)
-  end
+  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
 
   before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
-
-  validate :validate_us_state, if: :should_validate_us_state?
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Services::User::GenderNormalizer.call(raw_input: gender_teacher_input)
@@ -360,12 +422,65 @@ class User < ApplicationRecord
     self.gender = Services::User::GenderNormalizer.call(raw_input: gender_student_input)
   end
 
-  validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
-  validates :gender_teacher_input, no_utf8mb4: true
-
-  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
-    self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  before_validation on: :create, if: -> {gender.present?} do
+    self.gender = Services::User::GenderNormalizer.call(raw_input: gender)
   end
+
+  before_validation on: [:create, :update], if: -> {name&.utf8mb4?} do
+    self.name = name.sanitize_utf8mb4
+  end
+
+  before_validation :normalize_parent_email
+
+  before_validation :update_share_setting, unless: :under_13?
+
+  # NOTE: Order is important here.
+  before_save :make_teachers_21,
+    :normalize_email,
+    :hash_email,
+    :sanitize_race_data_set_urm,
+    :fix_by_user_type
+
+  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
+
+  before_save :strip_display_family_names
+
+  before_destroy :soft_delete_channels
+
+  after_create :associate_with_potential_pd_enrollments
+
+  after_create if: -> {Policies::Lti.lti? self} do
+    Services::Lti.create_lti_user_identity(self)
+  end
+
+  after_create_commit :migrate_to_multi_auth
+
+  after_update if: -> {cap_status? && property_previously_changed?(:us_state)} do
+    Services::ChildAccount.remove_compliance(self)
+  end
+
+  after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
+
+  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
+
+  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
+
+  after_save :update_and_add_users_school_infos, if: -> {saved_change_to_school_info_id? || (school_info_id.present? && user_school_infos.empty?)}
+
+  after_destroy :record_soft_delete
+
+  scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
+  # Include default Devise modules. Others available are:
+  # :token_authenticatable, :confirmable, :timeoutable
+  devise :invitable, :database_authenticatable, :registerable, :omniauthable,
+    :recoverable, :rememberable, :trackable, :lockable
+
+  # Make sure to include this Concern after we include the default Devise
+  # modules, since it's trying to extend some methods added by those modules
+  # that would be overridden by them if we included it before.
+  include Devise::Models::ManualSessionExpiration
+
+  acts_as_paranoid # use deleted_at column instead of deleting rows
 
   def save_email_preference
     if teacher?
@@ -457,10 +572,6 @@ class User < ApplicationRecord
     end
   end
 
-  belongs_to :invited_by, polymorphic: true, optional: true
-
-  validate :admins_must_be_teachers_without_followeds
-
   def admins_must_be_teachers_without_followeds
     if admin
       errors.add(:admin, 'must be a teacher') unless teacher?
@@ -492,78 +603,10 @@ class User < ApplicationRecord
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
-  has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
-
-  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
-
-  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
-  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
-
   # "sections" previously referred to what is now called :sections_owned.
   def sections
     sections_instructed
   end
-
-  # Relationships (sections/followers/students) from being a teacher.
-  has_many :sections_owned, dependent: :destroy, class_name: 'Section'
-  has_many :followers, -> {without_deleted}, through: :sections_instructed
-  has_many :students, through: :followers, source: :student_user
-
-  # Relationships (sections_as_students/followeds/teachers) from being a
-  # student.
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
-  has_many :sections_as_student, through: :followeds, source: :section
-  has_many :teachers, through: :sections_as_student, source: :instructors
-
-  belongs_to :secret_picture, optional: true
-
-  with_options if: :sponsored? do
-    before_create :generate_secret_picture
-    before_create :generate_secret_words
-  end
-
-  before_create :update_default_share_setting
-
-  # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  # This SQL string is not at risk for injection vulnerabilites because it's
-  # just a hardcoded string, so it's safe to wrap in Arel.sql
-  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
-  has_many :scripts, through: :user_scripts, source: :script
-
-  before_validation on: [:create, :update], if: -> {name&.utf8mb4?} do
-    self.name = name.sanitize_utf8mb4
-  end
-  validates :name, presence: true, unless: -> {purged_at}
-  validates :name, length: {within: 1..70}, allow_blank: true
-
-  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
-
-  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
-  validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
-  validates_presence_of :username, if: :username_required?
-  before_validation :generate_username, on: :create
-
-  validates_presence_of     :password, if: :password_required?
-  validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, within: 6..128, allow_blank: true
-
-  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
-  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
-
-  # Validations for adding parent email notifications
-  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
-  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
 
   def parent_email_preference_opt_in_required?
     # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
@@ -583,39 +626,16 @@ class User < ApplicationRecord
     @memoized_teachers ||= teachers.to_a
   end
 
-  validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
-  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
-  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
-  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
-  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
-
-  validates :terms_of_service_version,
-    inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
-    allow_nil: true
-
-  # NOTE: Order is important here.
-  before_save :make_teachers_21,
-    :normalize_email,
-    :hash_email,
-    :sanitize_race_data_set_urm,
-    :fix_by_user_type
-
-  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
-
-  before_save :strip_display_family_names
   def strip_display_family_names
     self.name = name.strip if name && will_save_change_to_name?
     self.family_name = family_name.strip if family_name && will_save_change_to_properties?
   end
 
-  validate :no_family_name_for_teachers
   def no_family_name_for_teachers
     if family_name && (teacher? || sections_as_pl_participant.any?)
       errors.add(:family_name, "can't be set for teachers or PL participants")
     end
   end
-
-  before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
     return unless teacher?
@@ -644,8 +664,6 @@ class User < ApplicationRecord
     true
   end
 
-  # Only allow admin permission for studio accounts with Google OAuth authentication.
-  validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
     return unless admin
 
@@ -711,14 +729,6 @@ class User < ApplicationRecord
       {authentication_id: uid, credential_type: provider}
     end
   end
-
-  validate :presence_of_email, if: :teacher_email_required?
-  validate :presence_of_email_or_hashed_email, if:
-      :email_or_hashed_email_required?, on: :create
-  validates :email, no_utf8mb4: true
-  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
-  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
-  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
   def requires_email?
     provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
@@ -2135,7 +2145,6 @@ class User < ApplicationRecord
     end
   end
 
-  after_destroy :record_soft_delete
   def record_soft_delete
     Cdo::Metrics.push(
       'User',

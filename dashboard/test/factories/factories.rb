@@ -28,6 +28,19 @@ FactoryBot.define do
         create(:course_version, :with_unit_group, course_offering: course_offering)
       end
     end
+
+    factory :csp_course_offering do
+      sequence(:key, 'a') {|c| "csp-course-offering-#{c}"}
+      sequence(:display_name, 'a') {|c| "csp-course-offering-#{c}"}
+      assignable {true}
+      grade_levels {"9,10,11,12"}
+
+      trait :with_units do
+        after(:create) do |csp_course_offering|
+          create(:course_version, :with_csp_unit, course_offering: csp_course_offering)
+        end
+      end
+    end
   end
 
   factory :course_version do
@@ -42,6 +55,10 @@ FactoryBot.define do
 
     trait :with_unit do
       association(:content_root, factory: :script, is_course: true)
+    end
+
+    trait :with_csp_unit do
+      association(:content_root, factory: :csp_script, is_course: true)
     end
   end
 
@@ -1223,6 +1240,13 @@ FactoryBot.define do
       after(:create) do |csf_script_level|
         csf_script_level.script.curriculum_umbrella = 'CSF'
         csf_script_level.save
+      end
+    end
+
+    factory :csp_script_level do
+      after(:create) do |csp_script_level|
+        csp_script_level.script.curriculum_umbrella = 'CSP'
+        csp_script_level.save
       end
     end
 

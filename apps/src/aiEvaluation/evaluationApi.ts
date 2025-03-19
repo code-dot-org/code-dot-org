@@ -9,6 +9,7 @@ export interface StudentAnswer {
   studentId: number;
   studentDisplayName: string;
   studentWork: string;
+  codeVersion?: string;
 }
 
 export interface AIResponse {
@@ -40,6 +41,7 @@ export async function evaluateStudentWork(
       evaluationCriteria: parsedResponse.evaluationCriteria,
       aiEvaluation: parsedResponse.aiEvaluation,
       aiReasoning: parsedResponse.aiReasoning,
+      codeVersion: studentWorkSample.codeVersion,
     });
   }
   return parsedResponse;

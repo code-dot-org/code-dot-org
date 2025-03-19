@@ -2,7 +2,7 @@
 # Future iterations of this workflow will include a matrix strategy to build and publish Docker images for all apps that have Dockerfiles.
 
 # The name does not use spaces due to https://github.com/integrations/slack/issues/1790
-name: Marketing-App-CICD
+name: Marketing-App-Deploy
 
 # Configures this workflow to run every time a change is pushed to `frontend`
 on:

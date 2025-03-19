@@ -1,5 +1,5 @@
 export {addChatEvent} from './addChatEvent';
-export {fetchStudentChatHistory} from './fetchStudentChatHistory';
+export {fetchUserChatHistory} from './fetchUserChatHistory';
 export {onSaveComplete} from './onSaveComplete';
 export {onSaveFail} from './onSaveFail';
 export {onSaveNoop} from './onSaveNoop';

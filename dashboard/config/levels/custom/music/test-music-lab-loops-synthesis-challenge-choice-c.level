@@ -1,0 +1,69 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-18T18:17:15.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2",
+            "play_sounds_random",
+            "triggered_at_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Free Play: Create Your Own Live Performance!\r\n\r\nNow it’s your turn to take everything you’ve learned and make it your own! In this level, you’ll explore, experiment, and build a live performance using loops, triggers, and effects..\r\n\r\n![](https://images.code.org/589b9aa091a4c02498a0a87f45d3d5aa-image-1742321504908.11.38 AM.png)\r\n\r\n**Do This**:\r\n- Set up your sound – Create a backtrack or start from scratch.\r\n- Use triggers – Add sounds, loops, or effects in real-time to shape your performance.\r\n- Create variations – Experiment with filters, timing, and layering to make your music dynamic.\r\n- Perform live! Play around, improvise, and see where the music takes you.\r\n\r\n",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Free Play: Code it Your Way",
+    "thumbnail_url": "https://images.code.org/b2ff82268c778e3266ed5d9e812f01db-DALL·E 2025-03-18 11.25.38 - A vibrant background featuring a dynamic gradient transitioning from yellow to purple. In the foreground, symbolic icons representing 'Free Play' and .webp",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-18T18:17:15.360+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-b\"},{\"changed_at\":\"2025-03-18 18:18:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:18:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:26:04 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

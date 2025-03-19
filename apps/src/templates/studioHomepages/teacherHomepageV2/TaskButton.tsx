@@ -14,6 +14,14 @@ interface TaskButtonProps {
   path: string;
 }
 
+/**
+ * TaskButton component.
+ * Used to render a button that navigates to a specific page in the teacher dashboard.
+ * @param buttonText - Text to display on the button.
+ * @param icon - FontAwesome Icon to display on the left of the button.
+ * @param sectionId - Section ID to navigate to in teacher dashboard
+ * @param path - Path to navigate to in teacher dashboard
+ */
 export const TaskButton: React.FC<TaskButtonProps> = ({
   buttonText,
   icon,

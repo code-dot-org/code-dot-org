@@ -145,6 +145,7 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+        get :retrieve_lessons_for_dropdown
       end
       collection do
         post 'section_instructors_verified'
@@ -1226,7 +1227,7 @@ Dashboard::Application.routes.draw do
 
     post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
-    get '/aichat_events/student_chat_history', to: 'aichat_events#student_chat_history'
+    get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'

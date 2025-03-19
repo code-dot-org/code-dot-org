@@ -116,10 +116,12 @@
 .sectionCardBodyRight {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 375px;
   gap: 16px;
 }
 
+// Task Button
 .taskButtons {
   border: 1px solid var(--neutral-gray-40);
   display: flex;
@@ -131,6 +133,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
+  width: 100%;
 }
 
 .taskButtonLeft {
@@ -155,10 +158,27 @@
 
 // CourseContentDropdown
 .courseContentDropdownContainer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--neutral-base-white);
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
   padding: 12px;
-  gap: 8px;
   width: 375px;
+  gap: 8px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.courseContentDropdown {
+  div {
+    height: 40px;
+    width: 100%;
+
+    select {
+      border-color: var(--neutral-gray-40);
+    }
+  }
 }
