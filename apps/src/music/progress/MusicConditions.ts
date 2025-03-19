@@ -74,6 +74,11 @@ export const MusicConditions: ConditionNames = {
     description:
       'Checks if a specific sound is playing. Ex. Value: beats/drum_kit_disco',
   },
+  PLAYED_SOUND_TYPE: {
+    name: 'played_sound_type',
+    valueType: 'soundType',
+    description: 'Checks if a certain sound type is playing.',
+  },
   PLAYED_EMPTY_CHORDS: {
     name: 'played_empty_chords',
     valueType: 'number',

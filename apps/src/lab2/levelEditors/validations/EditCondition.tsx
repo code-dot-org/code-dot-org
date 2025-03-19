@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {SoundType} from '@cdo/apps/music/player/MusicLibrary';
 
 import {Condition, ConditionType} from '../../types';
 
@@ -28,8 +29,36 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
     return conditionType.name === condition.name;
   });
 
-  const isNumeric = currentConditionType?.valueType === 'number';
   const hasValue = currentConditionType?.valueType !== undefined;
+  const isNumeric = currentConditionType?.valueType === 'number';
+  const isString = currentConditionType?.valueType === 'string';
+  const isSoundType = currentConditionType?.valueType === 'soundType';
+  const useInput = isNumeric || isString;
+  const useDropdown = isSoundType;
+
+  const allSoundTypes: SoundType[] = ['beat', 'bass', 'lead', 'fx', 'vocal'];
+  const dropdownOptions = isSoundType
+    ? allSoundTypes.map(soundType => ({
+        name: soundType,
+        value: soundType,
+      }))
+    : [{name: `no values for ${currentConditionType?.valueType}`, value: ''}];
+  const initialDropdownValue = dropdownOptions[0].value;
+
+  // Ensure that conditions with dropdowns have a value set
+  useEffect(() => {
+    if (hasValue && useDropdown && condition.value === undefined) {
+      condition.value = initialDropdownValue;
+      onConditionChange(condition, index);
+    }
+  }, [
+    hasValue,
+    condition,
+    initialDropdownValue,
+    index,
+    useDropdown,
+    onConditionChange,
+  ]);
 
   return (
     <div className={moduleStyles.row}>
@@ -62,18 +91,41 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           <label htmlFor="conditionValue" className={moduleStyles.label}>
             Value:
           </label>
-          <input
-            type={isNumeric ? 'number' : 'text'}
-            name="conditionValue"
-            id="conditionValue"
-            value={condition.value}
-            onChange={e => {
-              condition.value = isNumeric
-                ? parseInt(e.target.value)
-                : e.target.value;
-              onConditionChange(condition, index);
-            }}
-          />
+          {useInput && (
+            <input
+              type={isNumeric ? 'number' : 'text'}
+              name="conditionValue"
+              id="conditionValue"
+              value={condition.value}
+              onChange={e => {
+                condition.value = isNumeric
+                  ? parseInt(e.target.value)
+                  : e.target.value;
+                onConditionChange(condition, index);
+              }}
+            />
+          )}
+          {useDropdown && (
+            <select
+              className={moduleStyles.conditionValueDropdown}
+              name="conditionValue"
+              id="conditionValue"
+              value={condition.value || dropdownOptions[0].value}
+              onChange={e => {
+                condition.value = e.target.value;
+                console.log({condition});
+                onConditionChange(condition, index);
+              }}
+            >
+              {dropdownOptions.map((option, index) => {
+                return (
+                  <option key={index} value={option.value}>
+                    {option.name}
+                  </option>
+                );
+              })}
+            </select>
+          )}
         </>
       )}
       <button
