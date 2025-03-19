@@ -35,12 +35,12 @@ cd production
 
 2. export unit progress from redshift
 ```bash
-bin/curriculum/export/export_unit_progress.rb -u unit_name
+SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit_name
 ```
 
 3. add student source code from S3
 ```bash
-bin/curriculum/export/add_unit_source.rb -i unit_name
+SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/add_unit_source.rb -i unit_name
 ```
 
 4. inspect the output for validity before performing the expensive PII filtering step
