@@ -127,6 +127,25 @@
   gap: 16px;
 }
 
+.studentsAddedAlert {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--sentiment-success-10);
+}
+
+.studentAddedAlertIcon {
+  color: var(--sentiment-success-50);
+}
+
 // Task Button
 .taskButtons {
   border: 1px solid var(--neutral-gray-40);

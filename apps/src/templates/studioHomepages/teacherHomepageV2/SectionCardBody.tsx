@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -31,13 +33,26 @@ export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
         )}
       </div>
       <div className={styles.sectionCardBodyRight}>
-        {section.studentCount > 0 ? (
+        {section.studentCount > 0 && section.courseId ? (
           <TaskButton
             buttonText={i18n.viewProgressButton()}
             icon={'chart-line'}
             sectionId={section.id}
             path={TEACHER_NAVIGATION_PATHS.progress}
           />
+        ) : section.studentCount > 0 && !section.courseId ? (
+          <div className={styles.studentsAddedAlert}>
+            <div className={styles.taskButtonLeft}>
+              <FontAwesomeV6Icon
+                className={styles.studentAddedAlertIcon}
+                iconName={'check-circle'}
+                iconStyle={'solid'}
+              />
+              <BodyThreeText>
+                {i18n.studentsAdded({numStudents: section.studentCount})}
+              </BodyThreeText>
+            </div>
+          </div>
         ) : (
           <EmptyStateButton
             buttonText={i18n.addStudents()}

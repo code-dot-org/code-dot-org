@@ -94,7 +94,7 @@ describe('SectionCardBody', () => {
     restrictSection: false,
     sectionInstructors: [],
     sharingDisabled: false,
-    studentCount: 1,
+    studentCount: 2,
     syncEnabled: false,
     ttsAutoplayEnabled: false,
     unitId: null,
@@ -235,6 +235,11 @@ describe('SectionCardBody', () => {
   it('renders empty state button when no course is assigned', () => {
     renderComponent(noCourseSection);
     screen.getByText('Assign a course');
+  });
+
+  it('renders student count alert when no course is assigned but students are enrolled', () => {
+    renderComponent(noCourseSection);
+    screen.getByText('2 students added');
   });
 
   it('renders empty state button when no students have been added', () => {
