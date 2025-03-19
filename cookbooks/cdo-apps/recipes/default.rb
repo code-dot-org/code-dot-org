@@ -23,6 +23,18 @@ apt_package %w(
   fonts-noto
 )
 
+replace_or_add 'Enable PDF in ImageMagick policy.xml' do
+  path '/etc/ImageMagick-6/policy.xml'
+  pattern '.*<policy domain="coder" rights="none" pattern="PDF".*'
+  line '  <policy domain="coder" rights="read|write|execute" pattern="PDF" />'
+  notifies :restart, 'service[imagemagick]', :immediately
+end
+
+service 'imagemagick' do
+  service_name 'imagemagick'
+  action :nothing
+end
+
 # Used by lesson plan generator; we install on staging so the actual
 # functionality will work, on test so we can test that functionality, and on
 # adhoc so we can verify that installation continues to work
