@@ -1120,7 +1120,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     postcss: "npm:^8.4.49"
     postcss-modules: "npm:^6.0.1"
-    prettier: "npm:3.3.3"
+    prettier: "npm:3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     release-it: "npm:^18.1.2"
@@ -1155,7 +1155,7 @@ __metadata:
     "@storybook/addon-interactions": "npm:^8.4.4"
     "@storybook/addon-storysource": "npm:^8.4.4"
     "@storybook/addon-styling-webpack": "npm:^1.0.1"
-    "@storybook/addon-webpack5-compiler-swc": "npm:^1.0.5"
+    "@storybook/addon-webpack5-compiler-swc": "npm:^1.0.6"
     "@storybook/blocks": "npm:^8.4.4"
     "@storybook/react": "npm:^8.4.4"
     "@storybook/react-webpack5": "npm:^8.4.4"
@@ -1166,7 +1166,7 @@ __metadata:
     eslint: "npm:^9.16.0"
     globals: "npm:^15.13.0"
     http-server: "npm:^14.1.1"
-    prettier: "npm:3.3.3"
+    prettier: "npm:3.4.2"
     sass-loader: "npm:^16.0.3"
     storybook: "npm:^8.4.4"
     storybook-addon-rtl: "npm:^1.0.1"
@@ -1208,7 +1208,7 @@ __metadata:
     "@fontsource/noto-sans-sc": "npm:^5.1.1"
     "@fontsource/noto-sans-tc": "npm:^5.1.1"
     eslint: "npm:^9.16.0"
-    prettier: "npm:3.3.3"
+    prettier: "npm:3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     sass: "npm:^1.85.0"
@@ -1227,7 +1227,7 @@ __metadata:
     "@axe-core/playwright": "npm:^4.10.1"
     "@storybook/test-runner": "npm:^0.19.1"
     lint-staged: "npm:^15.4.3"
-    prettier: "npm:3.3.3"
+    prettier: "npm:3.4.2"
     rimraf: "npm:^6.0.1"
     turbo: "npm:^2.3.0"
     typescript: "npm:5.5.4"
@@ -1246,7 +1246,7 @@ __metadata:
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
     eslint-plugin-react: "npm:^7.37.2"
     globals: "npm:^15.12.0"
-    prettier: "npm:3.3.3"
+    prettier: "npm:3.4.2"
     prettier-plugin-packagejson: "npm:^2.5.5"
     stylelint: "npm:^16.14.1"
     stylelint-config-standard-scss: "npm:^14.0.0"
@@ -1283,7 +1283,7 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     next: "npm:^15.1.2"
     playwright-core: "npm:~1.49.1"
-    prettier: "npm:3.3.3"
+    prettier: "npm:3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     stylelint: "npm:^16.14.1"
@@ -4211,13 +4211,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-webpack5-compiler-swc@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "@storybook/addon-webpack5-compiler-swc@npm:1.0.5"
+"@storybook/addon-webpack5-compiler-swc@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@storybook/addon-webpack5-compiler-swc@npm:1.0.6"
   dependencies:
     "@swc/core": "npm:^1.7.3"
     swc-loader: "npm:^0.2.3"
-  checksum: 10c0/8e3035b12f8381277f767d8eb41090525a1244b697540591be0b3d1583aa939d703b3705ef11350a7d780ccc1eb5129891107d363654a0f89cab5885a72d2a8f
+  checksum: 10c0/1f5e2f9415f84962bd28cc2e81b3ca18aaa795009c49acf1d1e168354b208fa78c37eab545caa9de9c03d4135115b119b7e35e1ae78425a679bb584fa206b989
   languageName: node
   linkType: hard
 
@@ -15036,7 +15036,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.3.3, prettier@npm:^3.1.1":
+"prettier@npm:3.4.2":
+  version: 3.4.2
+  resolution: "prettier@npm:3.4.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10c0/99e076a26ed0aba4ebc043880d0f08bbb8c59a4c6641cdee6cdadf2205bdd87aa1d7823f50c3aea41e015e99878d37c58d7b5f0e663bba0ef047f94e36b96446
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.1.1":
   version: 3.3.3
   resolution: "prettier@npm:3.3.3"
   bin:

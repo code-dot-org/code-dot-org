@@ -1,0 +1,30 @@
+name 'csaif_pl_optimizing-lesson-L18-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Computational Thinking
+
+
+#### Computational thinking is a problem-solving approach that involves breaking problems down into smaller parts, recognizing patterns, focusing on important details, and creating step-by-step solutions that a computer or person can follow.
+ 
+
+<h2 style="text-align: center;">Pillars of Computational Thinking</h2>
+
+<img src="https://images.code.org/42f7bdbc45d2125c133c936645763e02-image-1741018711487.png" alt="Pillars with icons for computational thinking: decomposition, pattern recognition, abstraction, algorithm design." width="600px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+---
+
+#### In **Programming Fundamentals**, students explore computational thinking skills before diving into the programing lessons. 
+
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+      
+        <p style="font-size: 14pt;">
+        Computational thinking builds the problem-solving skills students need for programming by helping them organize their ideas, identify useful patterns, and develop clear, logical steps—preparing them to become effective Python programmers.
+        </p>
+    </div>
+
+
+MARKDOWN

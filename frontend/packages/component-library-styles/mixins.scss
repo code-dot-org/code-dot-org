@@ -165,6 +165,13 @@
   transition: all 0.2s ease;
 }
 
+// Icon styles
+@mixin icon-dimensions($font-size, $line-height: 1.25) {
+  font-size: $font-size;
+  line-height: $line-height;
+  width: calc(#{$font-size} * #{$line-height});
+}
+
 // Border styles
 @mixin regular-border-styles {
   border: 1px solid var(--borders-neutral-primary);

@@ -2,14 +2,6 @@ name: Component-Library-CI
 
 on:
   workflow_call:
-  pull_request:
-    branches:
-      - staging
-      - staging-next
-    paths:
-        - 'frontend/packages/component-library/**'
-        - 'frontend/packages/component-library-styles/**'
-        - 'shared/**'
 
 jobs:
     build:
@@ -82,12 +74,10 @@ jobs:
         run: |
           EYES_REPORT=$(COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn eyes-storybook)
           echo "$EYES_REPORT"
-
           # Send multiline report to environment var
           echo "EYES_REPORT<<EOF" >> $GITHUB_OUTPUT
           echo "$EYES_REPORT" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
           # Check if the report was successful, failing if not.
           if echo "$EYES_REPORT" | grep -q "✅"; then
             echo "✅ Eyes report was successful, exiting with 0"
@@ -96,7 +86,6 @@ jobs:
             echo "❌ Eyes report unsuccessful, exiting with 1"
             exit 1
           fi
-
         working-directory: ./frontend/apps/design-system-storybook
         continue-on-error: ${{ github.event_name == 'pull_request' }}
         env:

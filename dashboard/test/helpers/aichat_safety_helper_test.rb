@@ -61,6 +61,9 @@ class AichatSafetyHelperTest < ActionView::TestCase
     AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
     mock_response = create_stubbed_response(@openai_response_profanity_json)
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
+
+    @english_script = create(:script, :with_levels, name: 'customizing-llms-2024')
+    @spanish_script = create(:script, :with_levels, name: 'customizing-llms-latm-pilot')
   end
 
   ROLES.each do |role|
@@ -123,6 +126,28 @@ class AichatSafetyHelperTest < ActionView::TestCase
     assert_raises do
       AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
     end
+  end
+
+  test "Open AI safety check uses American safety prompt if not in Spanish script" do
+    stub_safety_services('openai', 'user')
+
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).with do |messages, _|
+      assert_includes messages[0][:content], "American"
+      return true
+    end
+
+    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', @english_script.levels.first)
+  end
+
+  test "Open AI safety check uses Spanish safety prompt if in Spanish script" do
+    stub_safety_services('openai', 'user')
+
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).with do |messages, _|
+      assert_includes messages[0][:content], "Spanish"
+      return true
+    end
+
+    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', @spanish_script.levels.first)
   end
 
   def stub_safety_services(enabled_service, enabled_role)

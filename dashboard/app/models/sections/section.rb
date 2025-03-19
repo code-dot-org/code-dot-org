@@ -657,6 +657,7 @@ class Section < ApplicationRecord
       exploring-gen-ai2-2024
       foundations-gen-ai-2024
       customizing-llms-2024
+      customizing-llms-latm-pilot
     ]
     gen_ai_course = 'exploring-gen-ai-2024'
 

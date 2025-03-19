@@ -5,14 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Using AI in Careers
 
-### Choose a career from the list below or pick your own:
+### **Choose a career from the list below or pick your own:**
 
 ###
-- Travel agent
-- Doctor
-- Lawyer
-- Science fiction author
-- Mathematician
+- #### Travel agent
+- #### Doctor
+- #### Lawyer
+- #### Science fiction author
+- #### Mathematician
 
 
 MARKDOWN

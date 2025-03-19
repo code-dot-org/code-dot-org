@@ -1,11 +1,41 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-17T20:46:14.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Performing Music = changing code live in front of an audience",
+        "imageUrl": "",
+        "key": "test-music-lab-loops-sythesize-project-panels-25e9b5d9-07a8-4064-9fb2-75fa8d2262e3"
+      },
+      {
+        "text": "Focus on how and when to make sounds occur \n",
+        "imageUrl": "",
+        "key": "test-music-lab-loops-sythesize-project-panels-0b5eb9b2-25d6-472d-9f49-a3c50f1a0b1a"
+      },
+      {
+        "text": "Start with a backtrack of drums and ambient sounds",
+        "imageUrl": "",
+        "key": "test-music-lab-loops-sythesize-project-panels-d145b67c-8a93-4174-92c5-f1215a77cb2b"
+      },
+      {
+        "text": "Mistakes are part of the performance - the human element\n\n",
+        "imageUrl": "",
+        "key": "test-music-lab-loops-sythesize-project-panels-fb2f98b1-b7e5-4636-a99b-1450c3ccae64"
+      },
+      {
+        "text": "Planning vs. Improvisation - Start with a plan, improv when you feel you’ve mastered certain techniques",
+        "imageUrl": "",
+        "key": "test-music-lab-loops-sythesize-project-panels-0e55f57b-3524-4334-b2fc-6cc466c0e847"
+      }
+    ]
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2025-03-18 18:28:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

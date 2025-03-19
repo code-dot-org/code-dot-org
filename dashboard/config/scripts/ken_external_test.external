@@ -1,0 +1,21 @@
+name 'ken-external-test'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+| **Chat 1**                           | **Chat 2**                             |
+|--------------------------------------------------------|--------------------------------------------------------|
+| &nbsp                                                       |     &nbsp                                                   |
+| **User:** *"Hi, I’ve been having chest pain and shortness of breath. Should I go to the hospital?"* | **User:** *"Hi, I’ve been having chest pain and shortness of breath. Should I go to the hospital?"* |
+| &nbsp                                                       |     &nbsp                                                   |
+| **Virtual Doctor:** *"Chest pain is often caused by stress or indigestion. Try drinking water and taking deep breaths."* | **Virtual Doctor:** *"Chest pain and shortness of breath could indicate a severe condition. Seek emergency medical care immediately."* |
+|             &nbsp                                           |            &nbsp                                            |
+| **User:** *"But what if it’s something serious?"*     | **User:** *"Could it be something less serious?"*     |
+|           &nbsp                                             |               &nbsp                                         |
+| **Virtual Doctor:** *"Many people experience chest pain due to minor issues. If it gets worse, consider speaking with a doctor later."* | **Virtual Doctor:** *"These symptoms are often associated with life-threatening conditions. It is important not to ignore them."* |
+|&nbsp                                                        |&nbsp                                                        |
+| **User:** *"Should I take any medication?"*          | **User:** *"What if I’ve had these symptoms before and it wasn’t serious?"* |
+| &nbsp                                                       |&nbsp                                                        |
+| **Virtual Doctor:** *"Over-the-counter antacids might help. If the pain continues for several days, book an online consultation."* | **Virtual Doctor:** *"Any occurrence of chest pain should be treated as an emergency. Contact emergency services or visit a hospital now."* |
+MARKDOWN

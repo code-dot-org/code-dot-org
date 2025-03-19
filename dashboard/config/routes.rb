@@ -145,6 +145,7 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+        get :retrieve_lessons_for_dropdown
       end
       collection do
         post 'section_instructors_verified'

@@ -4,4 +4,4 @@ args=("$@")
 if [ $# -eq 0 ]; then
   args=(/bin/zsh)
 fi
-kubectl exec -it deployment/cdo -- "${args[@]}"
+kubectl exec -it deployment/cdo-dashboard -- "${args[@]}"

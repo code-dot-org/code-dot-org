@@ -1,0 +1,121 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+// List common styles
+.simpleList {
+  list-style-type: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+
+  .simpleListItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .simpleListItemIcon {
+      text-align: center;
+    }
+
+    .simpleListItemLabel {
+      margin: 0;
+    }
+  }
+}
+
+// List types
+.simpleList.simpleList-type {
+  &-primary {
+    .simpleListItemIcon {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  &-secondary {
+    .simpleListItemIcon {
+      color: var(--text-neutral-placeholder);
+    }
+  }
+
+  &-brand {
+    .simpleListItemIcon {
+      color: var(--text-brand-teal-primary);
+    }
+  }
+}
+
+// List sizes
+.simpleList-size {
+  &-l {
+    &.simpleList,
+    .simpleListItem {
+      gap: 0.625rem;
+    }
+
+    .simpleListItemIcon {
+      @include mixins.icon-dimensions(var(--font-size-body-lg));
+
+      &.simpleListItemBullet {
+        @include mixins.icon-dimensions(0.875rem);
+      }
+    }
+  }
+
+  &-m {
+    &.simpleList,
+    .simpleListItem {
+      gap: 0.5rem;
+    }
+
+    .simpleListItemIcon {
+      @include mixins.icon-dimensions(var(--font-size-body-md));
+
+      &.simpleListItemBullet {
+        @include mixins.icon-dimensions(0.75rem);
+      }
+    }
+  }
+
+  &-s {
+    &.simpleList,
+    .simpleListItem {
+      gap: 0.375rem;
+    }
+
+    .simpleListItemIcon {
+      @include mixins.icon-dimensions(var(--font-size-body-sm));
+
+      &.simpleListItemBullet {
+        @include mixins.icon-dimensions(0.625rem);
+      }
+    }
+  }
+
+  &-xs {
+    &.simpleList,
+    .simpleListItem {
+      gap: 0.25rem;
+    }
+
+    .simpleListItemIcon {
+      @include mixins.icon-dimensions(var(--font-size-body-xs));
+
+      &.simpleListItemBullet {
+        @include mixins.icon-dimensions(0.5rem);
+      }
+    }
+  }
+}
+
+// List text weight
+.simpleList-weight {
+  &-bold {
+    .simpleListItemLabel {
+      @include typography.strong;
+    }
+  }
+}
