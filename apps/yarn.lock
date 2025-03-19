@@ -87,6 +87,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astral-sh/ruff-wasm-web@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@astral-sh/ruff-wasm-web@npm:0.11.0"
+  checksum: 10/2335cbdc1aa6eb3e9848c61e0d2f6466cb8ab6369332559ca0cab0c3422dec2f579a9124d1e8508e59c35f1e1ee34a3fb510b43a0adb282502cba8ab86e39769
+  languageName: node
+  linkType: hard
+
 "@aw-web-design/x-default-browser@npm:1.4.126":
   version: 1.4.126
   resolution: "@aw-web-design/x-default-browser@npm:1.4.126"
@@ -10130,6 +10137,7 @@ __metadata:
   resolution: "blockly-mooc@workspace:."
   dependencies:
     "@amplitude/analytics-browser": "npm:^1.5.4"
+    "@astral-sh/ruff-wasm-web": "npm:^0.11.0"
     "@babel/core": "npm:^7.26.0"
     "@babel/eslint-parser": "npm:7.25.9"
     "@babel/plugin-proposal-object-rest-spread": "npm:^7.20.7"

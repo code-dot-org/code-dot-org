@@ -177,6 +177,7 @@
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^1.5.4",
+    "@astral-sh/ruff-wasm-web": "^0.11.0",
     "@blockly/block-shareable-procedures": "~5.0.9",
     "@blockly/field-bitmap": "^5.0.9",
     "@blockly/field-colour": "^5.0.9",
