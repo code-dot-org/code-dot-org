@@ -1,12 +1,14 @@
-import init, {
-  Workspace,
-  Diagnostic as RuffDiagnostic,
-} from '@astral-sh/ruff-api';
-import {Diagnostic as CodeMirrorDiagnostic, linter} from '@codemirror/lint';
+// import {
+//   Workspace,
+//   Diagnostic as RuffDiagnostic,
+//   initSync,
+// } from '@astral-sh/ruff-api';
+import * as ruff_wasm from '@astral-sh/ruff-wasm-bundler';
+import {linter} from '@codemirror/lint';
 
-export async function getPythonLinter() {
-  await init();
-  const ruffWorkspace = new Workspace({
+export function getPythonLinter() {
+  ruff_wasm.initSync();
+  const ruffWorkspace = new ruff_wasm.Workspace({
     'line-length': 88,
     'indent-width': 2,
     format: {
@@ -16,9 +18,9 @@ export async function getPythonLinter() {
   });
   return linter(view => {
     const doc = view.state.doc;
-    const diagnostics: CodeMirrorDiagnostic[] = [];
+    const diagnostics = [];
     const diagnosticResults = ruffWorkspace.check(doc.toString());
-    diagnosticResults.forEach((d: typeof RuffDiagnostic) => {
+    diagnosticResults.forEach(d => {
       diagnostics.push({
         from: doc.line(d.location.row).from + d.location.column - 1,
         to: doc.line(d.end_location.row).from + d.end_location.column - 1,

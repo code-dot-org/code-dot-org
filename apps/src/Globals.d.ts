@@ -40,4 +40,4 @@ declare module '@blockly/field-bitmap';
 declare module '@blockly/field-colour';
 declare module '@cdo/locale';
 declare module '@code-dot-org/maze';
-declare module '@astral-sh/ruff-api';
+//declare module '@astral-sh/ruff-api';

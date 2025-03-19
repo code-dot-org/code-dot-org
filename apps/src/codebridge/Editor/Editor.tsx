@@ -1,11 +1,13 @@
 import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {LanguageSupport} from '@codemirror/language';
+import {Extension} from '@codemirror/state';
 import React, {useCallback, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import {getPythonLinter} from '@cdo/apps/lab2/views/components/editor/pythonLinter';
 
 import {editableFileType, viewableImageFileType} from '../utils';
 
@@ -31,11 +33,14 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   );
 
   const editorConfigExtensions = useMemo(() => {
+    const extensions: Extension[] = [];
     if (file?.language && langMapping[file.language]) {
-      return [langMapping[file.language]];
-    } else {
-      return [];
+      extensions.push([langMapping[file.language]]);
     }
+    if (file?.language === 'py') {
+      extensions.push(getPythonLinter());
+    }
+    return extensions;
   }, [file?.language, langMapping]);
 
   if (file && viewableImageFileType(file.language)) {

@@ -731,6 +731,9 @@ function createWebpackConfig({
           },
         }
       : undefined,
+    experiments: {
+      asyncWebAssembly: true,
+    },
   };
 
   //////////////////////////////////////////////
