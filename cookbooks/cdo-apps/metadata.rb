@@ -7,6 +7,7 @@ long_description File.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.2.658'
 
 depends 'apt'
+depends 'line'
 
 depends 'cdo-cloudwatch-agent'
 depends 'cdo-repository'
