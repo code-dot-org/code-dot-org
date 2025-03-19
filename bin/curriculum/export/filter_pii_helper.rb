@@ -6,10 +6,10 @@ require 'fileutils'
 $options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
-  opts.on("-i", "--s3-input-dir DIR", "Name of input directory under /mnt/tmp-curriculum-export/exported/sourced/ .") do |input_dir|
+  opts.on("-i", "--s3-input-dir DIR", "Name of input directory under /mnt/tmp-curriculum-export/sourced/ .") do |input_dir|
     $options[:input_dir] = input_dir
   end
-  opts.on("-o", "--output-dir DIR", "Name of output directory  under /mnt/tmp-curriculum-export/exported/filtered/. default: INPUT_DIR") do |output_dir|
+  opts.on("-o", "--output-dir DIR", "Name of output directory  under /mnt/tmp-curriculum-export/filtered/. default: INPUT_DIR") do |output_dir|
     $options[:output_dir] = output_dir
   end
   opts.on("-f", "--filename FILENAME", "Name of input file within input directory.") do |filename|
@@ -25,7 +25,7 @@ end.parse!
 home = '/mnt/tmp-curriculum-export'
 
 raise 'Input directory is required' unless $options[:input_dir] && !$options[:input_dir].to_s.strip.empty?
-$input_dir = File.join(home, 'exported/sourced', $options[:input_dir])
+$input_dir = File.join(home, 'sourced', $options[:input_dir])
 raise "Input directory must exist: #{$input_dir}" unless Dir.exist?($input_dir)
 raise "Input directory must not be empty: #{$input_dir}" if Dir.empty?($input_dir)
 
@@ -34,7 +34,7 @@ raise "Input directory must not be empty: #{$input_dir}" if Dir.empty?($input_di
 raise "must specify a filename, or use filter_unit_pii.rb to process an entire directory." unless $options[:filename]
 
 $options[:output_dir] ||= $options[:input_dir]
-$output_dir = File.join(home, 'exported/filtered', $options[:output_dir])
+$output_dir = File.join(home, 'filtered', $options[:output_dir])
 FileUtils.mkdir_p($output_dir)
 
 require_relative '../../../deployment'
