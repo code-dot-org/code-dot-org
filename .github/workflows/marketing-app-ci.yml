@@ -2,12 +2,6 @@ name: Marketing-CI
 
 on:
   workflow_call:
-  pull_request:
-    branches:
-      - staging
-      - staging-next
-    paths:
-        - 'frontend/**'
 
 defaults:
   run:
@@ -106,3 +100,10 @@ jobs:
           CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
 
+      - name: Run Google Lighthouse Audits
+        uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8
+        with:
+          urls: ${{ inputs.MARKETING_BASE_URL || 'http://localhost:3001' }}/en-US/all-the-things
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: './frontend/apps/marketing/.lighthouserc.js'

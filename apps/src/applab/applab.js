@@ -1139,6 +1139,7 @@ Applab.runButtonClick = function () {
         studentId: config.userId,
         studentDisplayName: config.codeOwnersName,
         studentWork: config.getCode(),
+        codeVersion: project.getCurrentSourceVersionId(),
       },
       analyticsData.levelId,
       analyticsData.scriptId,

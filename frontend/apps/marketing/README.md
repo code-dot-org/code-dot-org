@@ -1,6 +1,4 @@
-# Code.org Marketing Application
-
-...
+# Code.org Marketing Application.
 
 ## Getting Started
 

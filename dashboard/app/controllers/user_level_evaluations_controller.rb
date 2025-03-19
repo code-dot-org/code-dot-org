@@ -25,12 +25,11 @@ class UserLevelEvaluationsController < ApplicationController
       :ai_evaluation,
       :ai_reasoning,
       :ai_model_version,
+      :code_version
     )
     user_level_evaluation_params[:script_id] = params["unitId"]
     user_level_evaluation_params[:school_year] = school_year
-    # We're currently 'borrowing' the AI Tutor openAI model implementation.
-    # TODO: update to an EVALUATE_STUDENT_LEARNING_MODEL_VERSION when we settle on a model.
-    user_level_evaluation_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
+    user_level_evaluation_params[:ai_model_version] = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
     user_level_evaluation_params
   end
 end
