@@ -8,7 +8,7 @@ require 'fileutils'
 $options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
-  opts.on("-i", "--s3-input-dir DIR", "Name of input directory under s3://cdo-data-sharing-internal/stanford/unloaded/ .") do |input_dir|
+  opts.on("-i", "--s3-input-dir DIR", "Name of input directory under s3://cdo-data-sharing-internal/unloaded-unit-progress/ .") do |input_dir|
     $options[:input_dir] = input_dir
   end
   opts.on("-o", "--output-dir DIR", "Name of output directory in local filesystem under /mnt/tmp-curriculum-export/sourced/. default: INPUT_DIR") do |output_dir|
@@ -97,8 +97,8 @@ end
 
 def main
   start_time = Time.now
-  keys = list_s3_files('cdo-data-sharing-internal', "stanford/unloaded/#{$options[:input_dir]}/")
-  puts "Found #{keys.size} files in s3://cdo-data-sharing-internal/stanford/unloaded/#{$options[:input_dir]}/"
+  keys = list_s3_files('cdo-data-sharing-internal', "unloaded-unit-progress/#{$options[:input_dir]}/")
+  puts "Found #{keys.size} files in s3://cdo-data-sharing-internal/unloaded-unit-progress/#{$options[:input_dir]}/"
 
   keys.each do |key|
     process_s3_file('cdo-data-sharing-internal', key)

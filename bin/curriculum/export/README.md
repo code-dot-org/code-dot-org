@@ -75,13 +75,13 @@ to minimize time and costs while iterating during development, you should work o
 ```bash
 mkdir /mnt/tmp-curriculum-export/unloaded/
 cd /mnt/tmp-curriculum-export/unloaded/
-aws s3 cp s3://cdo-data-sharing-internal/stanford/unloaded/csd3-2023/csd3-2023_0000_part_00.jsonl csd3-2023/
+aws s3 cp s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023/csd3-2023_0000_part_00.jsonl csd3-2023/
 head -n 1000 csd3-2023/csd3-2023_0000_part_00.jsonl > csd3-2023-1K/csd3-2023_0000_part_00.jsonl 
-aws s3 cp --recursive csd3-2023-1K/ s3://cdo-data-sharing-internal/stanford/unloaded/csd3-2023-1K/    
+aws s3 cp --recursive csd3-2023-1K/ s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023-1K/    
 ```
 then use `csd3-2023-1K` as the unit name for subsequent steps. 
 * To use a dataset that's already been trimmed, look at:
 ```bash
-aws s3 ls s3://cdo-data-sharing-internal/stanford/unloaded/csd3-2023-30K/
+aws s3 ls s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023-30K/
 ```
  
