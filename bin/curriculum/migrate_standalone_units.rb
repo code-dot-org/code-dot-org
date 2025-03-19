@@ -93,12 +93,9 @@ def migrate_units(options)
   elsif options[:unit_names]
     standalone_units = Unit.where(name: options[:unit_names])
   elsif options[:unit_names_file]
-    standalone_units = File.read(options[:unit_names_file]).split("\n").map do |unit_name|
+    standalone_units = File.read(options[:unit_names_file]).split("\n").filter_map do |unit_name|
       unit = Unit.find_by(name: unit_name)
-      if unit.nil?
-        puts "Unit not found: #{unit_name}"
-        next
-      end
+      puts "Unit not found: #{unit_name}" if unit.nil?
       unit
     end
   else
@@ -132,12 +129,9 @@ def rollback_units(options)
   if options[:unit_names]
     units = Unit.where(name: options[:unit_names])
   elsif options[:unit_names_file]
-    units = File.read(options[:unit_names_file]).split("\n").map do |unit_name|
+    units = File.read(options[:unit_names_file]).split("\n").filter_map do |unit_name|
       unit = Unit.find_by(name: unit_name)
-      if unit.nil?
-        puts "Unit not found: #{unit_name}"
-        next
-      end
+      puts "Unit not found: #{unit_name}" if unit.nil?
       unit
     end
   else
