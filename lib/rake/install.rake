@@ -45,9 +45,16 @@ namespace :install do
         RakeUtils.python_venv_install
 
         puts CDO.dashboard_db_writer
-        if ENV['CI'] && ENV['CI_JOB'] == 'unit_tests'
-          # Prepare for dashboard unit tests to run.
-          RakeUtils.rake 'db:create db:test:prepare'
+        if ENV['CI']
+          if ENV['CI_JOB'] == 'unit_tests'
+            # Prepare for dashboard unit tests to run.
+            RakeUtils.rake 'db:create db:test:prepare'
+          elsif ENV['CI_JOB'] == 'ui_tests'
+            # skip seeding for now. we'll do that later in ui_tests.sh.
+            RakeUtils.rake 'db:setup_or_migrate'
+          else
+            raise "Unknown CI job: #{ENV['CI_JOB']}"
+          end
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end
