@@ -30,9 +30,9 @@ import Paragraph, {
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
-import TextList, {
-  TextListContentfulComponentDefinition,
-} from '@/components/textList';
+import SimpleList, {
+  SimpleListContentfulComponentDefinition,
+} from '@/components/simpleList';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
@@ -85,8 +85,8 @@ defineComponents(
       },
     },
     {
-      component: TextList,
-      definition: TextListContentfulComponentDefinition,
+      component: SimpleList,
+      definition: SimpleListContentfulComponentDefinition,
     },
     {
       component: Video,

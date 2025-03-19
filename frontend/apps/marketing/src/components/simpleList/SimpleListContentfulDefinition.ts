@@ -1,13 +1,13 @@
-// Creates a definition for the List component to be used in Contentful Studio
+// Creates a definition for the Simple List component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 import {SIMPLE_LIST_DEFAULT_ICON} from '@code-dot-org/component-library/list';
 
 import {componentSizeXSToLDefinition} from '@/components/common/definitions';
 
-export const TextListContentfulComponentDefinition: ComponentDefinition = {
+export const SimpleListContentfulComponentDefinition: ComponentDefinition = {
   id: 'simpleList',
-  name: 'Text List',
+  name: 'Simple List',
   category: '03: Basic',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/bkW5Mm9owpcZWnexKTRCq/0554f4990e4165ff8907f425bb501eee/component_list_thumbnail.png',

@@ -1,15 +1,16 @@
 import {Entry, EntryFields} from 'contentful';
+import {useMemo} from 'react';
+
 import {
   SimpleList,
   SIMPLE_LIST_DEFAULT_ICON,
   SimpleListProps,
   SimpleListItem,
 } from '@code-dot-org/component-library/list';
-import {useMemo} from 'react';
 
 import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
 
-type ListItemEntry = Entry & {
+type SimpleListItemEntry = Entry & {
   sys: {
     id: string;
   };
@@ -18,16 +19,15 @@ type ListItemEntry = Entry & {
   };
 };
 
-interface ListContentfulProps extends Omit<SimpleListProps, 'items'> {
-  items?: ListItemEntry[];
+export interface SimpleListContentfulProps
+  extends Omit<SimpleListProps, 'items'> {
+  items?: SimpleListItemEntry[];
   iconName?: string;
 }
 
-const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
-  items = [],
-  iconName = SIMPLE_LIST_DEFAULT_ICON,
-  ...props
-}) => {
+const SimpleListContentful: React.FunctionComponent<
+  SimpleListContentfulProps
+> = ({items = [], iconName = SIMPLE_LIST_DEFAULT_ICON, ...props}) => {
   const listItems: SimpleListItem[] = useMemo(
     () =>
       items.filter(Boolean).map(listItemEntry => ({
@@ -41,8 +41,8 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
   if (!listItems.length) {
     return (
       <em>
-        <strong>✍ List placeholder.</strong> Please add a "List" content type
-        entry in the List sidebar.
+        <strong>🗂️ Simple List placeholder.</strong> Please add a "List" content
+        type entry in the List sidebar.
       </em>
     );
   }
@@ -62,4 +62,4 @@ const ListContentful: React.FunctionComponent<ListContentfulProps> = ({
   );
 };
 
-export default ListContentful;
+export default SimpleListContentful;
