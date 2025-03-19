@@ -50,8 +50,9 @@ namespace :install do
             # Prepare for dashboard unit tests to run.
             RakeUtils.rake 'db:create db:test:prepare'
           elsif ENV['CI_JOB'] == 'ui_tests'
-            # skip seeding for now. we'll do that later in ui_tests.sh.
-            RakeUtils.rake 'db:setup_or_migrate'
+            # Start preparing for ui tests to run by creating database and tables.
+            # Seeding will be performed in a later step.
+            RakeUtils.rake 'db:create db:schema:load'
           else
             raise "Unknown CI job: #{ENV['CI_JOB']}"
           end
