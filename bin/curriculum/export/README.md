@@ -7,8 +7,10 @@ is done using AWS Comprehend.
 ## 💰💰 WARNING 💰💰
 
 The PII filtering step can incur substantial costs. Please be sure to
-double-check your requirements before running through these steps, and check to
-see if the data you need is already in the output location in S3.
+double-check your requirements before running through these steps. Also check to
+see if the data you need is already available by checking the 
+[unit progress shares](https://docs.google.com/spreadsheets/d/1BiK3a3rlEEto1x9_ITjX7l0CsbhO0WZQrdYNdISWKQA/edit)
+gsheet which should contain links to the data in S3.
 
 ## Overview
   
@@ -31,41 +33,44 @@ note that we write to:
 
 To export progress for a given unit:
 
-1. connect to production-daemon
+1. check the [unit progress shares](https://docs.google.com/spreadsheets/d/1BiK3a3rlEEto1x9_ITjX7l0CsbhO0WZQrdYNdISWKQA/edit)
+   gsheet to confirm that the data you need is not already available.
+
+2. connect to production-daemon
 ```bash
 ssh -t gateway ssh production-daemon
 cd production
 ```
 
-2. export unit progress from redshift
+3. export unit progress from redshift
 ```bash
 SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit_name
 ```
 the above command runs a redshift query whose results are written to s3://cdo-data-sharing-internal via the `UNLOAD` command.
 
-3. add student source code from S3
+4. add student source code from S3
 ```bash
 SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/add_unit_source.rb -i unit_name
 ```
 
-4. inspect the output for validity before performing the expensive PII filtering step
+5. inspect the output for validity before performing the expensive PII filtering step
 ```bash
 ls -l /mnt/tmp-curriculum-export/sourced/<unit-name>
 less /mnt/tmp-curriculum-export/sourced/<unit-name>/<filename>
 ```
 
-5. filter the output to exclude PII
+6. filter the output to exclude PII
 ```bash
 bin/curriculum/export/filter_unit_pii.rb -i unit_name
 ```
 
-6. inspect the output for validity before uploading to S3
+7. inspect the output for validity before uploading to S3
 ```bash
 ls -l /mnt/tmp-curriculum-export/filtered/<unit-name>
 less /mnt/tmp-curriculum-export/filtered/<unit-name>/<filename>
 ```
 
-7. upload the filtered output to S3
+8. upload the filtered output to S3
 ```bash
 # s3 dir should be empty to start
 aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name>/
@@ -73,12 +78,16 @@ aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name>/
 aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name> s3://cdo-data-sharing/filtered-unit-progress/<unit-name>
 ```
 
-8. share the data with the requester
+9. add a row to the 
+   [unit progress shares](https://docs.google.com/spreadsheets/d/1BiK3a3rlEEto1x9_ITjX7l0CsbhO0WZQrdYNdISWKQA/edit)
+   gsheet describing your data so that it can be used again by others.
 
-- login to AWS console in your web browser
-- navigate to https://us-east-1.console.aws.amazon.com/s3/buckets/cdo-data-sharing?region=us-east-1&bucketType=general&prefix=unit-export/&showversions=false 
+10. share the data with the requester
 
-9. clean up
+    - login to AWS console in your web browser
+    - navigate to https://us-east-1.console.aws.amazon.com/s3/buckets/cdo-data-sharing?region=us-east-1&bucketType=general&prefix=unit-export/&showversions=false 
+
+11. clean up
 
 Once you are happy with the data you've uploaded to S3, you should clean up the temporary files on production-daemon:
 ```bash
