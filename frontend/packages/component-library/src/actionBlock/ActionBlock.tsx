@@ -87,9 +87,10 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
       {...HTMLAttributes}
     >
       {image && (
+        // The image is decorative, so using a <figure> element instead of <img>
+        // to avoid adding a border when the src is empty. The image is set as a
+        // background to maintain the aspect ratio so any image size can be used.
         <figure
-          // Setting the image as a background so it maintains the
-          // aspect ratio of the image to work with any size image.
           style={{
             background: `url(${image}) center / cover no-repeat`,
           }}

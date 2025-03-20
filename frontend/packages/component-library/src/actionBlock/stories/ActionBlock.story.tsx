@@ -43,7 +43,7 @@ export const DefaultActionBlock: Story = {
     docs: {
       description: {
         story:
-          'The `isFullWidth` prop is set to `true` by default, which means the Action Block will take up the full width of the page. If you want it to fit within two or three columns, set `isFullWidth` to `false`. (See stories below)',
+          'The `isFullWidth` prop is set to `true` by default, which means the Action Block will take up the full width of the page. If you want it to fit within two or three columns, set `isFullWidth` to `false`. (See additional stories below)',
       },
     },
   },
