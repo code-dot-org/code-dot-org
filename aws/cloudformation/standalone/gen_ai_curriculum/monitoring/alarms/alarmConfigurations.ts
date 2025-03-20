@@ -76,15 +76,9 @@ const failureMetrics = modelIds.map((modelId, index) => ({
   ),
 }));
 
-
-// Strings to sum the failure (eg, "m7, m8, m9, m10, m11, m12" if 6 models)
-// and total jobs (eg, "m1, m2, m3, m4, m5, m6" if 6 models) metrics for the alarm expressions.
-const failureMetricsSumString = modelIds
-  .map((_, index) => `m${index + 1 + modelIds.length}`)
-  .join(', ');
-const totalJobsSumString = modelIds
-  .map((_, index) => `m${index + 1}`)
-  .join(', ');
+const metricsSumExpression = (metrics: { Id: string }[]): string => {
+  return `SUM[${metrics.map(m => m.Id).join(",")}]`;
+};
 
 export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAlarmInput =
   {
@@ -115,14 +109,14 @@ export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAl
         Id: 'failures',
         Label: 'failures',
         ReturnData: false,
-        Expression: `SUM([${failureMetricsSumString}])`,
+        Expression: metricsSumExpression(failureMetrics),
       },
       ...failureMetrics,
       {
         Id: 'total',
         Label: 'total_jobs',
         ReturnData: false,
-        Expression: `SUM([${totalJobsSumString}])`,
+        Expression: metricsSumExpression(startMetrics),
       },
       ...startMetrics,
     ],
