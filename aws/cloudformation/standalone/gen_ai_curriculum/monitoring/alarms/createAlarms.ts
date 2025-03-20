@@ -7,7 +7,8 @@ import {REGION} from '../constants';
 
 import {
   openaiSafetyHighFailureRateConfiguration,
-  chatCompletionJobExecutionHighFailureRateConfiguration,
+  chatCompletionJobExecutionHighFailureRateConfigurationOpenai,
+  chatCompletionJobExecutionHighFailureRateConfigurationSagemaker,
   chatCompletionHighBrowserFailureRateConfiguration,
 } from './alarmConfigurations';
 
@@ -17,7 +18,8 @@ const cloudwatch = new CloudWatchClient({region: REGION});
 // Array of alarm configurations.
 const alarmConfigurations = [
   openaiSafetyHighFailureRateConfiguration,
-  chatCompletionJobExecutionHighFailureRateConfiguration,
+  chatCompletionJobExecutionHighFailureRateConfigurationOpenai,
+  chatCompletionJobExecutionHighFailureRateConfigurationSagemaker,
   chatCompletionHighBrowserFailureRateConfiguration,
 ];
 

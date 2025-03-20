@@ -15,10 +15,10 @@ import {
 const SL_HANDBOOK_LINK =
   'https://docs.google.com/document/d/1T0Vwwg22isdgsf66mYiRtUZVKaSxHo1PW89HAnW_twk/edit?tab=t.0#heading=h.npwykn5tc2b4';
 
-const gpt4MiniModelId = 'gpt-4o-mini';
+const openaiModelIds = ['gpt-4o-mini'];
 const sagemakerModelIds = ['gen-ai-mistral-7b-inst-v01', 'gen-ai-biomistral-7b', 'gen-ai-mistral-pirate-7b', 'gen-ai-karen-creative-mistral-7b', 'gen-ai-arithmo2-mistral-7b'];
 
-if (sagemakerModelIds.length + gpt4MiniModelId.length !== modelDescriptions.length) {
+if (sagemakerModelIds.length + openaiModelIds.length !== modelDescriptions.length) {
   throw new Error('All model IDs must be included in the alarm configurations.');
 };
 
@@ -85,10 +85,10 @@ const metricsSumExpression = (metrics: { Id: string }[]): string => {
   return `SUM[${metrics.map(m => m.Id).join(",")}]`;
 };
 
-export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAlarmInput =
+export const chatCompletionJobExecutionHighFailureRateConfigurationSagemaker: PutMetricAlarmInput =
   {
-    AlarmName: 'genai_chat_completion_job_execution_high_failure_rate',
-    AlarmDescription: `Chat completion jobs are experiencing a high failure rate.
+    AlarmName: 'genai_chat_completion_job_execution_high_failure_rate_sagemaker',
+    AlarmDescription: `Chat completion jobs using Sagemaker are experiencing a high failure rate.
     
 *Next Steps*:
 - Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
@@ -126,6 +126,68 @@ export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAl
       ...sagemakerStartMetrics,
     ],
   };
+
+// Start(total) jobs metrics for each Sagemaker model
+const openaiStartMetrics = openaiModelIds.map((modelId, index) => ({
+    Id: `m${index + 1}`,
+    ...createJobExecutionMetricStat(
+        'AichatRequestChatCompletionJob.Start',
+        null,
+        modelId
+    ),
+}));
+
+// Failure job metrics for each model (IDs are indexed to begin one after the total jobs metrics end)
+const openaiFailureMetrics = openaiModelIds.map((modelId, index) => ({
+    Id: `m${index + 1 + openaiModelIds.length}`,
+    ...createJobExecutionMetricStat(
+        'AichatRequestChatCompletionJob.Finish',
+        'FAILURE',
+        modelId
+    ),
+}));
+
+export const chatCompletionJobExecutionHighFailureRateConfigurationOpenai: PutMetricAlarmInput =
+    {
+        AlarmName: 'genai_chat_completion_job_execution_high_failure_rate_openai',
+        AlarmDescription: `Chat completion jobs using OpenAI are experiencing a high failure rate.
+    
+*Next Steps*:
+- Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
+- Check HoneyBadger for **AichatRequestChatCompletionJob** errors
+- Check [Student Learning Tips & Tricks](${SL_HANDBOOK_LINK}) for more details.`,
+        ActionsEnabled: true,
+        OKActions: [],
+        AlarmActions: [SNS_TOPIC],
+        InsufficientDataActions: [],
+        EvaluationPeriods: 5,
+        DatapointsToAlarm: 5,
+        Threshold: 10,
+        ComparisonOperator: ComparisonOperator.GreaterThanThreshold,
+        TreatMissingData: 'missing',
+        Metrics: [
+            {
+                Id: 'failure_rate',
+                Label: 'failure_rate',
+                ReturnData: true,
+                Expression: '100*(failures/total)',
+            },
+            {
+                Id: 'failures',
+                Label: 'failures',
+                ReturnData: false,
+                Expression: metricsSumExpression(openaiFailureMetrics),
+            },
+            ...openaiFailureMetrics,
+            {
+                Id: 'total',
+                Label: 'total_jobs',
+                ReturnData: false,
+                Expression: metricsSumExpression(openaiStartMetrics),
+            },
+            ...openaiStartMetrics,
+        ],
+    };
 
 const browserIndices = BROWSERS.map((_, i) => i + 1);
 
