@@ -34,6 +34,14 @@
       "import": "./dist/esm/accordion/faqAccordion/index.mjs",
       "require": "./dist/cjs/accordion/faqAccordion/index.js"
     },
+    "./actionBlock": {
+      "types": {
+        "import": "./dist/esm/actionBlock/index.d.ts",
+        "require": "./dist/cjs/actionBlock/index.d.ts"
+      },
+      "import": "./dist/esm/actionBlock/index.mjs",
+      "require": "./dist/cjs/actionBlock/index.js"
+    },
     "./alert": {
       "types": {
         "import": "./dist/esm/alert/index.d.ts",
