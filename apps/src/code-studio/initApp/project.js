@@ -1502,6 +1502,9 @@ var projects = (module.exports = {
       callCallback();
       return;
     }
+
+    // `getLevelSource()` is expensive for Blockly so only call
+    // if the project workspace has changed.
     if (!appOptions.droplet && !hasProjectChanged) {
       callCallback();
       return;
