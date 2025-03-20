@@ -46,7 +46,6 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -747,9 +746,6 @@ var projects = (module.exports = {
               });
           }.bind(this)
         );
-        $(window).on(events.workspaceChange, function () {
-          hasProjectChanged = true;
-        });
 
         if (!appOptions.level.skipAutosave) {
           // Autosave every AUTOSAVE_INTERVAL milliseconds
