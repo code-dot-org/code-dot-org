@@ -65,7 +65,7 @@ describe('VersionHistoryButton', () => {
           buttonRef={{} as jest.Mocked<React.RefObject<HTMLDivElement>>}
           listLoading={false}
           listLoadError={false}
-          selectedVersion={''}
+          selectedVersion={'abc'}
           setSelectedVersion={setSelectedVersion}
         />
       </Provider>

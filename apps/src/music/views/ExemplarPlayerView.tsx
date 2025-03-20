@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -13,62 +13,53 @@ import MusicPlayer from '../player/MusicPlayer';
 import {setIsPlaying} from '../redux/musicRedux';
 
 import moduleStyles from './ExemplarPlayer.module.scss';
+
 interface ExemplarPlayerViewProps {
   playbackEvents: PlaybackEvent[];
   title: string;
+  player: MusicPlayer;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   playbackEvents,
   title,
+  player,
 }) => {
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-
-  const playerRef = useRef<MusicPlayer | null>(null);
-  if (playerRef.current === null) {
-    playerRef.current = new MusicPlayer();
-  }
   const [exemplarIsPlaying, setExemplarIsPlaying] = useState<boolean>(false);
 
   const onMount = useCallback(async () => {
-    await playerRef.current?.preloadSounds(playbackEvents, () => {});
-  }, [playbackEvents]);
+    await player.preloadSounds(playbackEvents, () => {});
+  }, [player, playbackEvents]);
 
   useEffect(() => {
     onMount();
   }, [onMount]);
 
-  // Play the already compiled song with the pre-loads sounds.
+  // Play the already compiled song with the pre-loaded sounds.
   const onPlaySong = useCallback(async () => {
     Blockly.getMainWorkspace().hideChaff();
     // Stop the main lab view player.
     dispatch(setIsPlaying(false));
-    playerRef.current?.stopSong();
+    player.stopSong();
 
-    const currentLibrary = MusicLibrary.getInstance();
-    if (currentLibrary) {
-      playerRef.current?.updateConfiguration(
-        currentLibrary.getBPM(),
-        currentLibrary.getKey()
-      );
-    }
-
+    // Since the player is shared, it should already have the correct configuration.
     // Play the song using the compiled events.
-    playerRef.current?.playSong(playbackEvents);
+    player.playSong(playbackEvents);
 
     setExemplarIsPlaying(true);
-  }, [dispatch, playbackEvents]);
+  }, [dispatch, player, playbackEvents]);
 
   // Stop the exemplar song, updating Redux and local state.
   const onStopSong = useCallback(() => {
     if (!isPlaying) {
       // If the player was stopped by the Run button, we do not want to interfere with
       // MusicLabView's control of the player.
-      playerRef.current?.stopSong();
+      player.stopSong();
     }
     setExemplarIsPlaying(false);
-  }, [isPlaying]);
+  }, [isPlaying, player]);
 
   useLifecycleNotifier(LifecycleEvent.LevelChangeRequested, () => {
     if (exemplarIsPlaying) {

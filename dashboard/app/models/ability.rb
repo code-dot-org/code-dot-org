@@ -167,6 +167,8 @@ class Ability
       # all signed in users can get their level source
       can :get_level_source, UserLevel
 
+      can :evaluate, :openai_evaluate
+
       if user.teacher?
         can :manage, Section do |s|
           s.instructors.include?(user)
@@ -498,10 +500,6 @@ class Ability
 
       can :chat_completion, :openai_chat do
         user.has_ai_tutor_access?
-      end
-
-      can :evaluate, :openai_evaluate do
-        user.verified_instructor?
       end
 
       can [:start_chat_completion, :chat_request], :aichat_request do
