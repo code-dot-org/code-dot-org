@@ -24,7 +24,7 @@ const BlocklySourceResponseValidator: ResponseValidator<
       throw new ValidationError('Error parsing JSON: ' + e);
     }
     if (blocklySource.blocks === undefined) {
-      throwMissingFieldError('blocks');
+      throw missingFieldError('blocks');
     }
   };
 
@@ -89,8 +89,8 @@ export const SourceResponseValidator: ResponseValidator<
 export const LevelPropertiesValidator: ResponseValidator<
   LevelProperties
 > = response => {
-  if (!response.appName) {
-    throwMissingFieldError('appName');
+  if (Array.isArray(response) || !response.appName) {
+    throw missingFieldError('appName');
   }
 
   // Convert stringified booleans to actual booleans.
@@ -118,16 +118,16 @@ export class ValidationError extends Error {
 }
 
 function sourceValidatorHelper(
-  response: Record<string, unknown>,
+  response: Record<string, unknown> | unknown[],
   appSpecificValidator: (response: Record<string, unknown>) => void
 ): ProjectSources {
-  if (!response.source) {
-    throwMissingFieldError('source');
+  if (Array.isArray(response) || !response.source) {
+    throw missingFieldError('source');
   }
   appSpecificValidator(response);
   return response as unknown as ProjectSources;
 }
 
-function throwMissingFieldError(fieldName: string) {
-  throw new ValidationError('Missing required field: ' + fieldName);
+function missingFieldError(fieldName: string) {
+  return new ValidationError('Missing required field :' + fieldName);
 }
