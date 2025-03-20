@@ -124,7 +124,12 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
           </BodyThreeText>
         )}
         {primaryButtonLabel && primaryButtonUrl && (
-          <div className={moduleStyles.buttonWrapper}>
+          <div
+            className={classNames(
+              moduleStyles.buttonWrapper,
+              isFullWidth ? moduleStyles.isFullWidth : '',
+            )}
+          >
             {primaryButtonLabel && primaryButtonUrl && (
               <LinkButton
                 href={primaryButtonUrl}

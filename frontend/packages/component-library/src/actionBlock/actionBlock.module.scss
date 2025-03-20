@@ -45,8 +45,10 @@ $mobileBreakpoint: 900px;
       flex-direction: column;
       gap: 0.75rem;
 
-      & > a {
-        width: fit-content;
+      @media (min-width: $mobileBreakpoint) {
+        &.isFullWidth > a {
+          width: fit-content;
+        }
       }
     }
   }
