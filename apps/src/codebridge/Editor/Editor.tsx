@@ -2,7 +2,7 @@ import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {LanguageSupport} from '@codemirror/language';
 import {Extension} from '@codemirror/state';
-import React, {useCallback, useMemo} from 'react';
+import React, {useCallback, useEffect} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
@@ -20,6 +20,8 @@ interface EditorProps {
 
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   const {source, saveFile} = useCodebridgeContext();
+  const [loading, setLoading] = React.useState(true);
+  const [extensions, setExtensions] = React.useState<Extension[]>([]);
 
   const file = getActiveFileForSource(source);
 
@@ -32,16 +34,34 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     [file?.id, saveFile]
   );
 
-  const editorConfigExtensions = useMemo(() => {
+  useEffect(() => {
+    setLoading(true);
     const extensions: Extension[] = [];
     if (file?.language && langMapping[file.language]) {
       extensions.push([langMapping[file.language]]);
     }
     if (file?.language === 'py') {
-      extensions.push(getPythonLinter());
+      getPythonLinter().then(linter => {
+        extensions.push(linter);
+        setExtensions(extensions);
+        setLoading(false);
+      });
+    } else {
+      setExtensions(extensions);
+      setLoading(false);
     }
-    return extensions;
   }, [file?.language, langMapping]);
+
+  // const editorConfigExtensions = useMemo(() => {
+  //   const extensions: Extension[] = [];
+  //   if (file?.language && langMapping[file.language]) {
+  //     extensions.push([langMapping[file.language]]);
+  //   }
+  //   if (file?.language === 'py') {
+  //     extensions.push(getPythonLinter());
+  //   }
+  //   return extensions;
+  // }, [file?.language, langMapping]);
 
   if (file && viewableImageFileType(file.language)) {
     const base64 = window.btoa(file.contents);
@@ -60,18 +80,22 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
   return (
     <div className={moduleStyles.editorContainer}>
-      {file ? (
-        <CodeEditor
-          key={`${file.id}/${1}`}
-          darkMode={true}
-          onCodeChange={onChange}
-          startCode={file.contents}
-          editorConfigExtensions={editorConfigExtensions}
-        />
+      {!loading ? (
+        file ? (
+          <CodeEditor
+            key={`${file.id}/${1}`}
+            darkMode={true}
+            onCodeChange={onChange}
+            startCode={file.contents}
+            editorConfigExtensions={extensions}
+          />
+        ) : (
+          <BodyOneText className={moduleStyles.noOpenFilesMessage}>
+            {codebridgeI18n.noOpenFiles()}
+          </BodyOneText>
+        )
       ) : (
-        <BodyOneText className={moduleStyles.noOpenFilesMessage}>
-          {codebridgeI18n.noOpenFiles()}
-        </BodyOneText>
+        <div>Loading...</div>
       )}
     </div>
   );

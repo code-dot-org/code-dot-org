@@ -3,12 +3,13 @@
 //   Diagnostic as RuffDiagnostic,
 //   initSync,
 // } from '@astral-sh/ruff-api';
-import * as ruff_wasm from '@astral-sh/ruff-wasm-bundler';
+//import * as ruff_wasm from '@astral-sh/ruff-wasm-bundler';
+import ruffInit, {Workspace} from '@astral-sh/ruff-wasm-bundler';
 import {linter} from '@codemirror/lint';
 
-export function getPythonLinter() {
-  ruff_wasm.initSync();
-  const ruffWorkspace = new ruff_wasm.Workspace({
+export async function getPythonLinter() {
+  await ruffInit();
+  const ruffWorkspace = new Workspace({
     'line-length': 88,
     'indent-width': 2,
     format: {
