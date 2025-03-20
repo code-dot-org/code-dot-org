@@ -57,7 +57,9 @@ export const submitPredictResponse = createAsyncThunk<
   'predictLevel/submitPredictResponse',
   async ({appType}, {getState, dispatch}) => {
     const state = getState();
-    const isPredictLevel = Boolean(state.lab.levelProperties?.predictSettings);
+    const isPredictLevel = Boolean(
+      state.lab.levelProperties?.predictSettings?.isPredictLevel
+    );
     const predictAnswerLocked = isPredictAnswerLocked(state);
 
     if (isPredictLevel && !predictAnswerLocked) {
