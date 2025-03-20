@@ -1,7 +1,7 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
-import {ConfigType} from '@codebridge/types';
+import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useState} from 'react';
@@ -24,6 +24,7 @@ import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import HorizontalLayout from './layout/HorizontalLayout';
+import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
@@ -93,10 +94,13 @@ const defaultConfig: ConfigType = {
   layoutComponents: {
     horizontal: <HorizontalLayout />,
     vertical: <VerticalLayout />,
+    share: <ShareView />,
   },
 };
 
-const PythonlabView: React.FunctionComponent<LabProps> = () => {
+const PythonlabView: React.FunctionComponent<
+  LabProps<CodebridgeLevelProperties, ProjectSources>
+> = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {
     source,
@@ -105,25 +109,22 @@ const PythonlabView: React.FunctionComponent<LabProps> = () => {
     projectVersion,
     validationFile,
     labConfig,
-  } = useSource(defaultProject);
-  const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
-  );
+  } = useSource(defaultProject, levelProperties, initialSources);
+  const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const progressManager = useContext(ProgressManagerContext);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
 
   useEffect(() => {
-    if (progressManager && appName === 'pythonlab') {
+    if (progressManager && levelProperties.appName === 'pythonlab') {
       progressManager.setValidator(
         new PythonValidator(PythonValidationTracker.getInstance())
       );
     }
-  }, [progressManager, appName]);
+  }, [progressManager, levelProperties.appName]);
 
   // Ensure any in-progress program is stopped when the level is switched.
   useLifecycleNotifier(
@@ -156,7 +157,12 @@ const PythonlabView: React.FunctionComponent<LabProps> = () => {
     ) {
       // If this is not a predict level and the current status is not tried,
       // send a level started progress report.
-      dispatch(sendProgressReport(appName || '', TestResults.LEVEL_STARTED));
+      dispatch(
+        sendProgressReport(
+          levelProperties.appName || '',
+          TestResults.LEVEL_STARTED
+        )
+      );
     }
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.

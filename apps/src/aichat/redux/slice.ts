@@ -2,7 +2,10 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
 
-import {ModalTypes} from '../constants';
+import {
+  ModalTypes,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
 import {
   AiCustomizations,
   ChatEvent,
@@ -13,6 +16,7 @@ import {
   Visibility,
   isModelUpdate,
   isNotification,
+  isUserActionEvent,
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
@@ -40,6 +44,8 @@ const initialState: AichatState = {
   saveInProgress: false,
   currentSaveType: undefined,
   userHasAichatAccess: false,
+  stagedFiles: [],
+  stagedFilesAlert: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -54,6 +60,32 @@ const aichatSlice = createSlice({
       action: PayloadAction<ServerChatEvent[]>
     ) => {
       state.studentChatHistory = action.payload;
+    },
+    setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
+      // Find the last index of an event that marks the start a new conversation with the model.
+      const events = action.payload;
+      let lastResetIndex = -1;
+      for (let i = events.length - 1; i >= 0; i--) {
+        const event = events[i];
+
+        if (
+          (isModelUpdate(event) &&
+            RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
+              event.updatedField
+            )) ||
+          (isUserActionEvent(event) && event.descriptionKey === 'CLEAR_CHAT')
+        ) {
+          lastResetIndex = i;
+          break;
+        }
+      }
+
+      if (lastResetIndex >= 0) {
+        state.chatEventsPast = action.payload.slice(0, lastResetIndex + 1);
+        state.chatEventsCurrent = action.payload.slice(lastResetIndex + 1);
+      } else {
+        state.chatEventsCurrent = action.payload;
+      }
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
@@ -215,6 +247,50 @@ const aichatSlice = createSlice({
       state.saveInProgress = false;
       state.currentSaveType = undefined;
     },
+    addStagedFile(
+      state,
+      action: PayloadAction<{key: string; filename: string}>
+    ) {
+      state.stagedFiles.push({
+        ...action.payload,
+        status: 'uploading',
+      });
+    },
+    stagedFileUploadFinished(
+      state,
+      action: PayloadAction<{
+        key: string;
+        status: 'uploaded' | 'uploadFailed' | 'sizeLimitExceeded';
+      }>
+    ) {
+      const {key, status} = action.payload;
+      if (status === 'uploaded') {
+        const fileIndex = state.stagedFiles.findIndex(file => file.key === key);
+        if (fileIndex !== -1) {
+          state.stagedFiles[fileIndex].status = 'uploaded';
+        }
+      } else {
+        // Remove from staged files and set alert
+        state.stagedFiles = state.stagedFiles.filter(file => file.key !== key);
+        state.stagedFilesAlert = status;
+      }
+    },
+    stagedFilesLimitExceeded(state) {
+      state.stagedFilesAlert = 'fileLimitExceeded';
+    },
+    clearStagedFilesAlert(state) {
+      state.stagedFilesAlert = undefined;
+    },
+    removeStagedFile(state, action: PayloadAction<string>) {
+      state.stagedFiles = state.stagedFiles.filter(
+        file => file.key !== action.payload
+      );
+      state.stagedFilesAlert = undefined;
+    },
+    clearStagedFiles(state) {
+      state.stagedFiles = [];
+      state.stagedFilesAlert = undefined;
+    },
   },
 });
 
@@ -261,6 +337,13 @@ export const {
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
+  setOwnChatHistory,
   setUserHasAichatAccess,
   setViewMode,
+  addStagedFile,
+  stagedFileUploadFinished,
+  removeStagedFile,
+  clearStagedFiles,
+  stagedFilesLimitExceeded,
+  clearStagedFilesAlert,
 } = aichatSlice.actions;

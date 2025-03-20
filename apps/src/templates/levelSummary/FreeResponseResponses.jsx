@@ -10,11 +10,25 @@ import React, {useEffect} from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+import FreeResponseAIEvaluation from './FreeResponseAIEvaluation';
 
 import styles from './summary.module.scss';
 
-const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
+const FreeResponseResponses = ({
+  responses,
+  showStudentNames,
+  eventData,
+  unitName,
+  levelInstructions,
+}) => {
+  const levelData = {
+    levelInstructions: levelInstructions,
+    levelId: eventData.levelId,
+    unitId: eventData.unitId,
+  };
   const constructStudentName = response =>
     getFullName(response.student_display_name, response.student_family_name);
 
@@ -109,6 +123,16 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
       </div>
     </div>
   );
+
+  const AiEvaluationMVPUnits = ['csp4-2024', 'csp6-2024'];
+  const showAIAnalysis =
+    experiments.isEnabled(experiments.FREE_RESPONSE_AI_ANALYSIS) &&
+    AiEvaluationMVPUnits.includes(unitName);
+  const responsesForAi = responses.map(response => ({
+    studentId: response.user_id,
+    studentDisplayName: response.student_display_name,
+    studentWork: response.text,
+  }));
 
   return (
     <div className={styles.studentResponsesContent}>
@@ -205,6 +229,12 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
           type="gray"
         />
       )}
+      {showAIAnalysis && (
+        <FreeResponseAIEvaluation
+          responses={responsesForAi}
+          levelData={levelData}
+        />
+      )}
     </div>
   );
 };
@@ -213,6 +243,8 @@ FreeResponseResponses.propTypes = {
   responses: PropTypes.arrayOf(PropTypes.object),
   showStudentNames: PropTypes.bool,
   eventData: PropTypes.object,
+  unitName: PropTypes.string,
+  levelInstructions: PropTypes.string,
 };
 
 export default FreeResponseResponses;

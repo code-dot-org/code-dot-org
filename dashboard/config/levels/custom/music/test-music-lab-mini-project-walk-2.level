@@ -1,0 +1,67 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-19T17:57:33.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "triggered_at_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default"
+    },
+    "long_instructions": "### Make your second character's \"Walk Up\" song\r\n\r\nNow do it all over again for your next character! \r\n\r\n**Do This:**\r\n- Choose your second character. \r\n- Code a sequence of sounds under `when run`. \r\n- Make sure the beginning (Measures 1-2) build up to the middle (Measures 4-6) and that leads to the ending (Measures 7-8). *Note: Your song can be longer, but do not exceed 12 measures*. \r\n- When you have a sequence you like, drag the `2 triggered immediately` block to your workspace and move all the code under `when run` to the trigger block. \r\n- Press \"Run\" and then practice pressing \"1\" or \"2\" to trigger each walk up song you've made so far. ",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-mini-project-walk-template",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-19T17:57:33.928+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-1\"},{\"changed_at\":\"2025-03-19 17:59:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

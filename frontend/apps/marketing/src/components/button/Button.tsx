@@ -1,10 +1,10 @@
-import '@code-dot-org/component-library/button/index.css';
+import React, {useMemo} from 'react';
+
 import {
   ButtonColor,
   ButtonType,
   LinkButton,
 } from '@code-dot-org/component-library/button';
-import React, {useMemo} from 'react';
 
 import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
 

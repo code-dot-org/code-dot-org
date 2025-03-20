@@ -4,6 +4,8 @@ class SectionsController < ApplicationController
   load_and_authorize_resource :section, only: [:edit]
   authorize_resource :section, only: [:new]
 
+  skip_before_action :verify_authenticity_token, only: [:archive_all]
+
   def new
     redirect_to home_path unless params[:loginType] && params[:participantType]
     @user_country = helpers.country_code(current_user, request)
@@ -66,6 +68,34 @@ class SectionsController < ApplicationController
     else
       render json: {verified: false}
     end
+  end
+
+  # POST /api/sections/archive
+  # Archive all sections owned by the current user.
+  # Note: does not archive co-taught sections created by another user.
+  def archive_all
+    sections = current_user.sections_instructed
+
+    num_hidden = sections.count {|s| !s.hidden}
+
+    sections.each do |section|
+      section.update!(hidden: true)
+    end
+
+    render json: {num_hidden: num_hidden}
+  end
+
+  def retrieve_lessons_for_dropdown
+    section = Section.find(params[:id])
+    lessons = []
+    if section.script_id
+      unit = Unit.find(section.script_id)
+      lessons << {text: unit.title_for_display, value: unit.link}
+      unit.lesson_groups.each do |lesson_group|
+        lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map {|lesson| {text: lesson.relative_position.to_s + ': ' + lesson.localized_name, value: script_lesson_path(unit, lesson) << '/levels/1'}})
+      end
+    end
+    render json: lessons
   end
 
   private def redirect_to_section_script_or_course

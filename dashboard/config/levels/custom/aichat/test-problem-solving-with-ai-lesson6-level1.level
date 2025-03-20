@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-18T20:01:51.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Describe a ________\r\n\r\nUse AI Chat to define specific terms.\r\n\r\n### Do This:\r\n1. **Copy and paste** the prompt below into AI Chat and press **Send**: \r\n\r\n>Describe a nurse\r\n2. Then **copy and paste** the new prompt into AI Chat and press **Send**: \r\n\r\n>Describe a doctor\r\n3. Compare **AI Chat's responses**. Discuss:\r\n    - Did AI Chat assume a default identity in either of the prompts?\r\n    - Did AI Chat's responses differ in the tone, assumptions, or characteristics it included?\r\n    \r\n4. Refine one of the prompts above to reduce bias in the AI-generated response.\r\n\r\n\r\n::: details [Not sure how to refine your prompt?]\r\n- Try instructing AI to consider a diverse set of people in its description.\r\n- Give AI an example of how you would describe someone in this profession.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-18T20:01:51.102+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson4-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson4-level2\"},{\"changed_at\":\"2025-03-18 20:05:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 18:10:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

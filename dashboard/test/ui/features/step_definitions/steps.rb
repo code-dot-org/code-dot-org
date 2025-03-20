@@ -397,11 +397,7 @@ end
 
 When /^I rotate to (landscape|portrait)$/ do |orientation|
   if ENV['BS_ROTATABLE'] == "true"
-    $http_client.call(
-      :post,
-      "/wd/hub/session/#{@browser.session_id}/orientation",
-      {orientation: orientation.upcase}
-    )
+    change_orientation(orientation)
   end
 end
 
@@ -1177,8 +1173,8 @@ end
 
 And /^I dismiss the login reminder$/ do
   steps <<~GHERKIN
-    And I click selector ".modal-backdrop" if I see it
-    And I wait until I don't see selector ".uitest-login-callout"
+    And I click selector "[aria-label='Close']" if I see it
+    And I wait until I don't see selector ".uitest-signincallout"
   GHERKIN
 end
 

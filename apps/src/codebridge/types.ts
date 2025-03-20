@@ -2,6 +2,7 @@ import {LanguageSupport} from '@codemirror/language';
 import {AnyAction, Dispatch} from 'redux';
 
 import {
+  LevelProperties,
   MultiFileSource,
   ProjectFile,
   ProjectSources,
@@ -44,17 +45,14 @@ export type ConfigType = {
   previewFileTypes?: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
-  labeledGridLayouts?: {
-    [key: string]: {
-      gridLayout: string;
-      gridLayoutRows: string;
-      gridLayoutColumns: string;
-    };
-  };
   activeLayout?: LayoutKey;
   showFileBrowser: boolean;
   validMimeTypes?: string[];
-  layoutComponents?: {horizontal: React.ReactNode; vertical: React.ReactNode};
+  layoutComponents: {
+    horizontal: React.ReactNode;
+    vertical: React.ReactNode;
+    share?: React.ReactNode;
+  };
 };
 
 export type SetProjectFunction = (project: ProjectSources) => void;
@@ -74,3 +72,18 @@ export type ReducerAction = {
 };
 
 export type EditorTheme = 'light' | 'dark';
+
+export interface CodebridgeLevelProperties extends LevelProperties {
+  validationFile?: ProjectFile;
+  enableMicroBit?: boolean;
+  miniApp?: string;
+  serializedMaze?: MazeCell[][];
+  startDirection?: number;
+}
+
+// Python Lab specific property
+export interface MazeCell {
+  tileType: number;
+  value: number;
+  assetId: number;
+}

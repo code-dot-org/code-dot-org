@@ -5,29 +5,6 @@
    Updating styles in this file will require a manual sync of the that file.
 */
 
-// TODO: [DSCO-64] (https://codedotorg.atlassian.net/browse/DSCO-64)
-//  Once we move Typography to DSCO_ - make sure we delete apps/fonts/ folder,
-//  since that folder is only needed for scss modules
-@font-face {
-  font-family: 'Barlow Semi Condensed Semibold';
-  font-style: normal;
-  font-weight: 600;
-  src:
-    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf')
-      format('truetype'),
-    local('?');
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed Medium';
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf')
-      format('truetype'),
-    local('?');
-}
-
 html {
   font-size: 100%;
 }
@@ -92,6 +69,13 @@ html {
     }
 */
 
+:root {
+  --font-size-body-xs: 0.813rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-body-md: 1rem;
+  --font-size-body-lg: 1.25rem;
+}
+
 @mixin heading-common {
   color: var(--text-neutral-primary);
   margin: 0 0 0.5em 0;
@@ -100,6 +84,7 @@ html {
 @mixin heading-xxl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 3rem;
   line-height: 1.16;
 }
@@ -107,6 +92,7 @@ html {
 @mixin heading-xl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 2.125rem;
   line-height: 1.24;
 }
@@ -114,13 +100,15 @@ html {
 @mixin heading-lg {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 1.75rem;
   line-height: 1.28;
 }
 
 @mixin heading-md {
   @include heading-common;
-  font-family: $barlowSemiCondensed-medium;
+  font-family: $barlowSemiCondensed-semibold;
+  font-weight: $semi-bold-font-weight;
   font-size: 1.5rem;
   line-height: 1.32;
 }
@@ -148,25 +136,25 @@ html {
 
 @mixin body-one {
   @include paragraph-common;
-  font-size: 1.25rem;
+  font-size: var(--font-size-body-lg);
   line-height: 1.4;
 }
 
 @mixin body-two {
   @include paragraph-common;
-  font-size: 1rem;
+  font-size: var(--font-size-body-md);
   line-height: 1.48;
 }
 
 @mixin body-three {
   @include paragraph-common;
-  font-size: 0.875rem;
+  font-size: var(--font-size-body-sm);
   line-height: 1.54;
 }
 
 @mixin body-four {
   @include paragraph-common;
-  font-size: 0.813rem;
+  font-size: var(--font-size-body-xs);
   line-height: 1.64;
 }
 
@@ -181,7 +169,7 @@ html {
 @mixin overline-one {
   @include overline-common;
   font-size: 0.875rem;
-  line-height: 1.6;
+  line-height: 1.54;
 }
 
 @mixin overline-two {
@@ -198,31 +186,24 @@ html {
 
 // Strong and Em styles
 @mixin strong {
-  @include main-font-semi-bold;
+  font-weight: $semi-bold-font-weight;
 }
 
 @mixin extra-strong {
-  @include main-font-bold;
+  font-weight: $bold-font-weight;
 }
 
 @mixin em {
-  @include main-font-regular-italic;
-}
-
-@mixin strong-em {
-  @include main-font-semi-bold-italic;
-}
-
-@mixin extra-strong-em {
-  @include main-font-bold-italic;
+  font-style: italic;
 }
 
 // Caption styles
 @mixin figcaption {
-  @include main-font-regular;
-  font-size: 0.813rem;
+  @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
+  font-size: 0.875rem;
+  line-height: 1.54;
   margin: 0.5em 0 1em;
-  line-height: 1.64;
 }
 
 // ----------------------------------------
@@ -306,20 +287,6 @@ strong,
 em,
 .em {
   @include em;
-}
-
-strong em,
-em strong,
-.em .strong,
-.strong .em {
-  @include strong-em;
-}
-
-.em .extra-strong,
-.extra-strong .em,
-em .extra-strong,
-.extra-strong em {
-  @include extra-strong-em;
 }
 
 // Captions

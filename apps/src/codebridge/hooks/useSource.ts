@@ -1,3 +1,4 @@
+import {CodebridgeLevelProperties} from '@codebridge/types';
 import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
 import {debounce, isEqual} from 'lodash';
 import {useEffect, useMemo, useRef} from 'react';
@@ -8,6 +9,7 @@ import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
@@ -26,7 +28,11 @@ import {useInitialSources} from './useInitialSources';
 // Hook for handling the project source for the current level.
 // Returns the current project source and a function to save the source.
 // This also handles displaying the levelbuilder save button in start mode.
-export const useSource = (defaultSources: ProjectSources) => {
+export const useSource = (
+  defaultSources: ProjectSources,
+  levelProperties: CodebridgeLevelProperties,
+  initiaServerSources: ProjectSources | undefined
+) => {
   const dispatch = useAppDispatch();
   const projectSource = useAppSelector(
     state => state.lab2Project.projectSources
@@ -39,13 +45,9 @@ export const useSource = (defaultSources: ProjectSources) => {
     levelStartSources,
     templateStartSources,
     parsedDefaultSources,
-  } = useInitialSources(defaultSources);
+  } = useInitialSources(defaultSources, levelProperties, initiaServerSources);
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
@@ -53,10 +55,10 @@ export const useSource = (defaultSources: ProjectSources) => {
   // keep an internal version number for the project used in the <Codebridge/> component.
   // This lets us replace the project if it was swapped out externally.
   const projectVersionRef = useRef(0);
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const {appName, id: levelId} = levelProperties;
 
   const setSourceHelper = useMemo(
     () => (newProjectSource: ProjectSources) => {
@@ -137,7 +139,7 @@ export const useSource = (defaultSources: ProjectSources) => {
         `/levels/${levelId}/update_exemplar_code`
       );
     }
-  }, [isStartMode, isEditingExemplarMode, levelId, source]);
+  }, [isStartMode, isEditingExemplarMode, source, levelId]);
 
   useEffect(() => {
     // We reset the project when the levelId changes, as this means we are on a new level.
@@ -148,6 +150,14 @@ export const useSource = (defaultSources: ProjectSources) => {
       initialSources !== previousInitialSources.current
     ) {
       if (initialSources) {
+        // Set the last source in project manager to initial sources.
+        // This prevents us from immediately saving the source on load,
+        // as we only want to save when the user makes a change.
+        // Initial sources always comes from the server, so we never need to save
+        // it again.
+        Lab2Registry.getInstance()
+          .getProjectManager()
+          ?.setLastSource(initialSources);
         setSourceHelper(initialSources);
       }
       if (levelId) {
@@ -176,7 +186,7 @@ export const useSource = (defaultSources: ProjectSources) => {
     setProject,
     startSources,
     projectVersion,
-    validationFile,
+    validationFile: levelProperties.validationFile,
     labConfig: projectSource?.labConfig,
   };
 };

@@ -3,41 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Navigating this Module 
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
-#### 🎉 Congratulations on completing this lesson.
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You've finished the first lesson in this professional learning module!
+    </p>
+</div>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📝 Engage with our Learning Community!
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:0px;">
-    <p>
+<table width="100%" cellspacing="0" cellpadding="15">
+    <tr>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Cybersecurity <br> and Global Impact</td>
+        <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Lesson Exploration</td>
+</table>
 
-####Participating in the <a href="https://padlet.com/codeorgpl/exploring-generative-ai-self-paced-professional-learning-dgb4yws61unrun" target="_blank">Gen AI Self-Paced PL Learning Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Gen AI learner community. 
-
-#### **Please share your motivation for teaching the Exploring Generative AI course.**
-</p></div>
-</details>
-
-#### **What’s next?** This professional learning module includes three additional lessons to enhance your understanding and teaching of the Exploring Generative AI course.
-
-- #### **Lesson 1: Introduction to Teaching Exploring Generative AI**-  This lesson gives an overview of the curriculum features in Exploring Generative AI. 
-
-
-#### ➡️ You are here! 
-
-
-- #### **Lesson 2: Foundations of Generative AI** - This lesson covers basic concepts on Generative AI introduced in the first unit of the course. 
-
-- #### **Lesson 3: Customizing Large Language Models** - This lesson covers the second unit in the Exploring Generative AI course and focuses on practicing skills for the hands-on activities that involve exploring, customizing, and creating AI bots.
-
-## Let's continue this exciting journey!
-
-
-
-
-
-
-
-
+## Let's continue to Lesson Two!
 MARKDOWN

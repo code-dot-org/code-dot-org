@@ -120,6 +120,7 @@ import {
   handleCodeGenerationFailure,
   strip,
   interpolateMsg,
+  isDarkTheme,
 } from './utils';
 
 const MAX_GET_CODE_RETRIES = 2;
@@ -844,6 +845,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
+    blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -923,7 +925,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     );
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
-    scrollOptionsPlugin.init();
+    scrollOptionsPlugin.init({
+      // Rather than using the block edge, we always use the mouse cursor (plus a margin)
+      // to activate block-based scrolling.
+      edgeScrollOptions: {oversizeBlockThreshold: 0},
+    });
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();

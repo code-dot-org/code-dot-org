@@ -28,10 +28,10 @@
     %a{href: "/users/sign_in?user_return_to=/join/#{params[:section_code]}"} sign into your account
     before joining the section.
   %p{style: 'margin-bottom: 30px;'} If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
-  - if @user.errors.any?
+  - if current_user.errors.any?
     #error_explanation.padded_container
       %ul
-        - @user.errors.full_messages.each do |msg|
+        - current_user.errors.full_messages.each do |msg|
           %li= msg
 
   -# Hack to look for a specific pattern in the class name to decide if it's a workshop.
@@ -40,7 +40,7 @@
   #signup
     .row
       .span10.signupblock
-        = form_for(@user, url: { action: :student_register }) do |f|
+        = form_for(current_user, url: { action: :student_register }) do |f|
 
           = hidden_field_tag :section_code, params[:section_code]
           = f.hidden_field :user_type, value: user_type

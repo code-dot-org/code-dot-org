@@ -4,7 +4,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import $ from 'jquery';
 import _ from 'lodash';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
 /* eslint-disable no-restricted-imports */
@@ -26,6 +26,7 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   Subjects,
   SubjectNames,
@@ -83,9 +84,7 @@ const INPUT_HEIGHT = 34;
 // These two things are stored as separate attributes in the workshop model.
 
 export class WorkshopForm extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,
@@ -116,6 +115,7 @@ export class WorkshopForm extends React.Component {
       module: PropTypes.string,
       course_offerings: PropTypes.array,
       participant_group_type: PropTypes.string,
+      time_zone: PropTypes.string,
     }),
     onSaved: PropTypes.func,
     today: PropTypes.instanceOf(Date),
@@ -250,9 +250,18 @@ export class WorkshopForm extends React.Component {
       return {
         id: session.id,
         format: session.session_format,
-        date: moment.utc(session.start).format(DATE_FORMAT),
-        startTime: moment.utc(session.start).format(TIME_FORMAT),
-        endTime: moment.utc(session.end).format(TIME_FORMAT),
+        date: moment
+          .utc(session.start)
+          .tz(this.workshopTimezone || 'UTC')
+          .format(DATE_FORMAT),
+        startTime: moment
+          .utc(session.start)
+          .tz(this.workshopTimezone || 'UTC')
+          .format(TIME_FORMAT),
+        endTime: moment
+          .utc(session.end)
+          .tz(this.workshopTimezone || 'UTC')
+          .format(TIME_FORMAT),
       };
     });
   }
@@ -265,11 +274,21 @@ export class WorkshopForm extends React.Component {
           id: session.id,
           session_format: session.format,
           start: moment
-            .utc(session.date + ' ' + session.startTime, DATETIME_FORMAT)
-            .format(),
+            .tz(
+              `${session.date} ${session.startTime}`,
+              DATETIME_FORMAT,
+              this.workshopTimezone
+            )
+            .utc()
+            .toISOString(),
           end: moment
-            .utc(session.date + ' ' + session.endTime, DATETIME_FORMAT)
-            .format(),
+            .tz(
+              `${session.date} ${session.endTime}`,
+              DATETIME_FORMAT,
+              this.workshopTimezone
+            )
+            .utc()
+            .toISOString(),
         };
       })
       .concat(
@@ -280,6 +299,15 @@ export class WorkshopForm extends React.Component {
           };
         })
       );
+  }
+
+  get workshopTimezone() {
+    const {workshop} = this.props;
+    // if editing an existing workshop, use the existing time zone
+    // if creating a new workshop, use the user's current time zone
+    return workshop
+      ? workshop.time_zone
+      : Intl.DateTimeFormat().resolvedOptions().timeZone;
   }
 
   // Convert from [id, name, email] to an array of ids.
@@ -818,6 +846,7 @@ export class WorkshopForm extends React.Component {
       regional_partner_id: this.state.regional_partner_id,
       course_offerings: this.state.course_offerings,
       participant_group_type: this.state.participant_group_type,
+      time_zone: this.workshopTimezone,
     };
 
     if (this.state.organizer) {
@@ -1016,7 +1045,9 @@ export class WorkshopForm extends React.Component {
       <Grid>
         <form>
           <Row>
-            <Col sm={4}>All workshop times are local:</Col>
+            <Col sm={4}>
+              All workshop times are {this.workshopTimezone ?? 'local'}:
+            </Col>
           </Row>
           <SessionListFormPart
             sessions={this.state.sessions}

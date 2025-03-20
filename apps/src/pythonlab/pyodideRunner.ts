@@ -126,6 +126,7 @@ export async function runAllTests(
 
 function isNeighborhoodLevel() {
   return (
-    getStore().getState().lab.levelProperties?.miniApp === MiniApps.Neighborhood
+    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+      ?.name === MiniApps.Neighborhood
   );
 }

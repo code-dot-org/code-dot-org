@@ -20,7 +20,7 @@ class AiDiffController < ApplicationController
     response_body = get_response_body(session_id)
     # get or create thread obj
     begin
-      @thread = AichatThread.find_or_create_by!(
+      @thread = AidiffThread.find_or_create_by!(
         user_id: current_user.id,
         external_id: response_body[:session_id],
         llm_version: AiDiffBedrockHelper::MODEL_ID,
@@ -31,37 +31,72 @@ class AiDiffController < ApplicationController
       return render status: :bad_request, json: {error: exception.message}
     end
 
-    # Add user message to thread
-    begin
-      AichatMessage.create!(
-        aichat_thread_id: @thread.id,
-        external_id: @thread.external_id,
-        role: :user,
-        content: params[:inputText],
-        is_preset: params[:isPreset],
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
-    end
+    # Log messages if the response was successful and not flagged for PII.
+    if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
+      # Add user message to thread
+      begin
+        AidiffMessage.create!(
+          aidiff_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :user,
+          content: params[:inputText],
+          is_preset: params[:isPreset],
+        )
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
 
-    # Add response message to thread
-    begin
-      AichatMessage.create!(
-        aichat_thread_id: @thread.id,
-        external_id: @thread.external_id,
-        role: :assistant,
-        content: response_body[:chat_message_text],
-        is_preset: params[:isPreset],
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
+      # Add response message to thread
+      begin
+        assistant_message = AidiffMessage.create!(
+          aidiff_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :assistant,
+          content: response_body[:chat_message_text],
+          is_preset: params[:isPreset],
+        )
+        response_body[:messageId] = assistant_message.id
+        response_body[:threadId] = @thread.id
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
     end
 
     render(status: :ok, json: response_body)
   end
 
+  private def contains_pii?
+    response = Aws::Comprehend::Client.new.detect_pii_entities(
+      {language_code: 'en', text: params[:inputText]}
+    )
+
+    # a string without pii concerns will contain no entities. example responses:
+    # {
+    #   "source": "the quick brown fox jumped over the lazy dog",
+    #   "response": []
+    # }
+    # {
+    #   "source": "the quick brown fox (206) 555-1212 jumped over the lazy dog at 55 main st",
+    #   "response": [
+    #     "{:score=>0.9999105930328369, :type=>\"PHONE\", :begin_offset=>20, :end_offset=>34}",
+    #     "{:score=>0.9999832510948181, :type=>\"ADDRESS\", :begin_offset=>63, :end_offset=>73}"
+    #   ]
+    # }
+
+    max_score = response.entities.map(&:score).max || 0
+
+    max_score > 0.9
+  end
+
   private def get_response_body(session_id)
-    # TODO: Check for profanity/ PII in input text
+    if contains_pii?
+      return {
+        role: "assistant",
+        status: SharedConstants::AI_INTERACTION_STATUS[:PII_VIOLATION],
+        chat_message_text: 'Sorry, I cannot accept messages that contain personal information.',
+        session_id: session_id
+      }
+    end
 
     # get lesson info for prompt generation
 
@@ -82,10 +117,10 @@ class AiDiffController < ApplicationController
 
     unit_num = @unit&.unit_group_units&.first&.position
 
-    course_name = @unit_group.name
+    course_name = @unit_group.present? ? @unit_group.name : @unit&.name
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name)
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name, params[:isPreset])
 
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_name, session_id)
     #TODO: check for profanity/PII in model response
@@ -99,8 +134,14 @@ class AiDiffController < ApplicationController
   end
 
   private def has_required_params?
+    return false if params[:context].nil?
+
     begin
-      params.require([:context, :inputText, :contextId, :unitDisplayName, :isPreset])
+      if params[:context] == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+        params.require([:inputText, :isPreset])
+      elsif params[:context] == SharedConstants::AI_DIFF_CONTEXT[:LESSON] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:UNIT] || params[:context] == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+        params.require([:inputText, :contextId, :unitDisplayName, :isPreset])
+      end
     rescue ActionController::ParameterMissing
       return false
     end

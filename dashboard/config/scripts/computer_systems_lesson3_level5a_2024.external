@@ -1,6 +1,9 @@
 name 'computer-systems-lesson3-level5a-2024'
 title 'Wearable Technology'
 description 'Discover how engineers create smart devices that integrate with the body and everyday life.'
+display_name 'Wearable Technology'
+bubble_choice_description 'Discover how engineers create smart devices that integrate with the body and everyday life.'
+thumbnail_url 'https://images.code.org/fc3e310f2a251c9087b228640fd14fce-Wearable-Technology.png'
 
 markdown <<MARKDOWN
 # Wearable Technology

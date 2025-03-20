@@ -4,6 +4,7 @@ class LessonsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
+  before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
 
   include LevelsHelper
   include CachedUnitHelper
@@ -33,7 +34,12 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
+    lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
+
+    @page_title = "#{t('lesson_plan')}: #{lesson_data[:displayName]}"
+    @page_description = lesson_data[:overview].truncate(200, separator: '.', omission: '.')
+
+    @lesson_data = lesson_data
   end
 
   # GET /lessons/2345
@@ -247,5 +253,10 @@ class LessonsController < ApplicationController
       return Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
     end
     raise ActiveRecord::RecordNotFound
+  end
+
+  private def redirect_to_canonical_path
+    canonical_path = Services::Courses.canonical_path(request.fullpath, params, current_user)
+    redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end

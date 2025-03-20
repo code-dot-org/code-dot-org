@@ -22,6 +22,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         id: current_user.id,
         uuid: current_user.uuid,
         username: current_user.username,
+        display_name: current_user.name,
         user_type: current_user.user_type,
         is_signed_in: true,
         short_name: current_user.short_name,
@@ -44,8 +45,9 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         in_section: current_user.student? ? current_user.sections_as_student.present? : nil,
         created_at: current_user.created_at,
         has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
-        ai_differentiation_enabled: current_user.ai_differentiation_enabled?,
+        ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
+        educator_role: current_user.educator_role,
       }
     else
       render json: {
@@ -250,7 +252,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_ai_differentiation_enabled
     return head :unauthorized unless current_user
 
-    current_user.ai_differentiation_enabled = !!params[:ai_differentiation_enabled].try(:to_bool)
+    current_user.ai_differentiation_toggled_off = !params[:ai_differentiation_enabled].try(:to_bool)
     current_user.save
 
     head :no_content

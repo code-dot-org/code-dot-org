@@ -1,0 +1,76 @@
+@import 'color.scss';
+
+$bar-width: 1px;
+$visible-area: 3px;
+$visible-area-offset: calc(($visible-area - $bar-width) / 2);
+$visible-negative-area-offset: calc(-1 * $visible-area-offset);
+$bar-width-grab-area: 7px;
+$grab-area-offset: calc(($bar-width-grab-area - $visible-area) / 2);
+$negative-grab-area-offset: calc(-1 * $grab-area-offset);
+
+
+.resizeBar {
+  background-color: $light_gray_800;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.verticalBar {
+  width: $bar-width;
+  height: 100%;
+}
+
+.horizontalBar {
+  width: 100%;
+  height: $bar-width;
+}
+
+.absoluteBar {
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  background-color: transparent;
+}
+
+@mixin vertical-absolute-bar($width, $left, $right) {
+  width: $width;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: $left;
+  right: $right;
+  cursor: col-resize;
+}
+
+@mixin horizontal-absolute-bar($width, $top, $bottom) {
+  height: $width;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: $top;
+  bottom: $bottom;
+  cursor: row-resize;
+}
+
+
+.horizontalGrabbable {
+  @include horizontal-absolute-bar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
+}
+
+.verticalGrabbable {
+  @include vertical-absolute-bar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
+}
+
+.verticalResizing {
+  @include vertical-absolute-bar($visible-area, $visible-negative-area-offset, $visible-area-offset);
+}
+
+.horizontalResizing {
+  @include horizontal-absolute-bar($visible-area, $visible-negative-area-offset, $visible-area-offset);
+}
+
+.visible {
+  opacity: 1;
+  background-color: $light_gray_800;
+}

@@ -3,11 +3,16 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '@cdo/apps/code-studio/utils';
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  USER_RETURN_TO_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -32,7 +37,7 @@ describe('LoginTypeSelection', () => {
     if (userType) {
       sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
     }
-    render(<LoginTypeSelection />);
+    render(<LoginTypeSelection isSignedOut={true} />);
   }
 
   it('redirects user back to account type page if they have not selected account type', async () => {
@@ -41,8 +46,42 @@ describe('LoginTypeSelection', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/account_type'
+      '/users/sign_up/account_type'
     );
+  });
+
+  it('redirects user back to account type page if sent here with invalid user type url params', async () => {
+    await waitFor(() => {
+      setWindowLocation({
+        search: `?user_type=invalidUserType`,
+      });
+      renderDefault(null);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/sign_up/account_type'
+    );
+
+    resetWindowLocation();
+  });
+
+  it('sets appropriate sessionStorage values if sent here with valid url params', async () => {
+    const userType = 'student';
+    const userReturnTo = '/testReturnToUrl';
+
+    await waitFor(() => {
+      setWindowLocation({
+        search: `?user_type=${userType}&user_return_to=${userReturnTo}`,
+      });
+      renderDefault(null);
+    });
+
+    expect(sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY)).toEqual(userType);
+    expect(sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY)).toEqual(
+      userReturnTo
+    );
+
+    resetWindowLocation();
   });
 
   it('renders headers, buttons and inputs', async () => {
@@ -185,7 +224,6 @@ describe('LoginTypeSelection', () => {
       locale.confirm_password()
     );
     const beginSignUpParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,
@@ -219,7 +257,7 @@ describe('LoginTypeSelection', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(
-        '/users/new_sign_up/finish_student_account'
+        '/users/sign_up/finish_student_account'
       );
     });
 
@@ -261,7 +299,6 @@ describe('LoginTypeSelection', () => {
       locale.confirm_password()
     );
     const beginSignUpParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,
@@ -316,7 +353,6 @@ describe('LoginTypeSelection', () => {
       locale.confirm_password()
     );
     const beginSignUpParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,
@@ -375,7 +411,7 @@ describe('LoginTypeSelection', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(
-        '/users/new_sign_up/finish_student_account'
+        '/users/sign_up/finish_student_account'
       );
     });
 
@@ -393,7 +429,7 @@ describe('LoginTypeSelection', () => {
     expect(
       finishSignUpButton
         .toString()
-        .includes("href: '/users/new_sign_up/finish_student_account'")
+        .includes("href: '/users/sign_up/finish_student_account'")
     ).toBeTruthy;
 
     // Checks that the page is displaying student-facing LMS content
@@ -414,7 +450,7 @@ describe('LoginTypeSelection', () => {
     expect(
       finishSignUpButton
         .toString()
-        .includes("href: '/users/new_sign_up/finish_teacher_account'")
+        .includes("href: '/users/sign_up/finish_teacher_account'")
     ).toBeTruthy;
 
     // Checks that the page is displaying teacher-facing LMS content

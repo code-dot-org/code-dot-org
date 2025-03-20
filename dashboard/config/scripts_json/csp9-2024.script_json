@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-22 19:00:05 UTC",
+    "serialized_at": "2025-03-06 21:11:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -627,7 +627,7 @@
       "key": "d4ad2fc4-918b-4ff7-8230-0807744acbe3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 12 class hours to track their progress and make sure they have every component needed to answer the questions.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 9 class hours to track their progress and make sure they have every component needed to answer the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
         "name": "Make a Plan\r"
       },
       "seeding_key": {

@@ -7,6 +7,9 @@ import Permission, {
 import {UnconnectedWorkshopFilter as WorkshopFilter} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_filter';
 
 describe('WorkshopFilter component', () => {
+  const context = {
+    router: {},
+  };
   it('can create and combine subject options', () => {
     const currentSubjects = {
       CSF: [],
@@ -81,7 +84,8 @@ describe('WorkshopFilter component', () => {
         permission={permission}
         location={{query: {state: 'Not Started'}}}
         regionalPartnerFilter={{value: 'all', label: 'All'}}
-      />
+      />,
+      {context}
     );
 
     expect(
@@ -106,7 +110,8 @@ describe('WorkshopFilter component', () => {
         permission={permission}
         location={{query: {state: 'In Progress'}}}
         regionalPartnerFilter={{value: 'all', label: 'All'}}
-      />
+      />,
+      {context}
     );
 
     expect(
@@ -131,7 +136,8 @@ describe('WorkshopFilter component', () => {
         permission={permission}
         location={{query: {state: 'Ended'}}}
         regionalPartnerFilter={{value: 'all', label: 'All'}}
-      />
+      />,
+      {context}
     );
 
     expect(

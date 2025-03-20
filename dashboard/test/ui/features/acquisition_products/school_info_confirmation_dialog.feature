@@ -17,7 +17,7 @@ Feature: School Info Confirmation Dialog
 Scenario: School Info Confirmation Dialog
   # Teacher account is created with partial school info
   Given I create a teacher named "Teacher_Chuba" and go home
-   # Wait for homepage to load before reloading the page.
+  # Wait for homepage to load before reloading the page.
   Then I wait until element "h1" contains text "My Dashboard"
   # The date of the teacher's account is updated to 7 days ago to simulate time travel
   # This enables the condition (see school_info_interstitial helper.rb) that checks
@@ -42,13 +42,14 @@ Scenario: School Info Confirmation Dialog
   Then I reload the page
   And element ".modal" is not visible
 
-  # One year later, the teacher sees the school info confirmation dialog
+  # One year later, the teacher sees the school info confirmation dialog and confirms at the same school
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal-body" is visible
-  Then I press "#update-button" using jQuery
-  And element ".modal" is visible
-  Then element "#uitest-country-dropdown" has value "US"
-  Then element "#uitest-school-zip" has value "31513"
-  # value is school_id for "Appling County High School"
-  Then I wait until element "#uitest-school-dropdown" has the value "130006000010"
+  Then I press "#yes-button" using jQuery
+  And I wait until element ".modal" is gone
+
+  # One week later, the teacher does not see the prompt
+  And eight days pass for user "Teacher_Chuba"
+  Then I reload the page
+  And element ".modal" is not visible

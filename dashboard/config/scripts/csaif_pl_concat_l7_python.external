@@ -1,0 +1,38 @@
+name 'csaif_pl_concat_L7_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# String Concatenation   
+
+
+#### In the previous levels, you worked with **print statements** and **string Concatenation**.
+
+
+<img src="https://images.code.org/0d5ccbdeb31cf38001ebb37338ac81cc-image-1741191408570.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### **Concatenation** simply means joining things together, like two pieces of text or data and uses `+` symbol. In the picture above, the symbol connects the variable value to the string message in the print statement.
+
+## Non-string variables
+
+#### Since `print` statements in Python output text, any non-string variable (such as an `int`, `float`, or `boolean`) must be converted to a string before being printed.
+
+<img src="https://images.code.org/ce76a8a8e439f4b531fcc6d3df6c7e48-image-1741191203136.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+---
+
+<div style="background-color: #F7F8FA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+
+  <p style="font-size: 14pt; font-weight: bold; margin: 0;">Casting a Variable to String</p>
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Use the <code>str()</code> function to convert non-string data types into a string so they can be printed or combined with other text.<br><br> Use the <code>+</code> operator to join the text.
+    </p>
+    <img src="https://images.code.org/ec0cc4e98ddf8f2830d54a8064b9c923-image-1741193014924.png" alt="design process graph of the cycle" width="400px" style="display: block; margin-left: auto; margin-right: auto;"><br>
+    <p style="font-size: 14pt;">
+    Without <code>str()</code>, this would cause a <code>TypeError</code> because Python cannot concatenate a string and an integer directly.
+    </p>
+</div>
+
+## Let's practice with a choice level!
+MARKDOWN
