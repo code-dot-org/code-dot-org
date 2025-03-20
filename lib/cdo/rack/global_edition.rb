@@ -30,6 +30,7 @@ module Rack
         "/v3/assets/",
         "/v3/animations/",
         "/api/v1/animation-library/",
+        "/api/v1/sound-library/",
         "/datablock_storage/",
       ].compact.freeze
 
