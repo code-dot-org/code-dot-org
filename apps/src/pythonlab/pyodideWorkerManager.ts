@@ -11,10 +11,13 @@ import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
+import {addCodeError, clearCodeErrors} from '../codebridge/redux/editorRedux';
+
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
+  getErrorFileDetails,
 } from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
@@ -81,14 +84,19 @@ const setUpPyodideWorker = () => {
       case 'updated_source':
         getStore().dispatch(setAndSaveSource(message));
         break;
-      case 'error':
+      case 'error': {
         getStore().dispatch(setHasError(true));
         if (message.includes(MessageTag.INPUT_FAILED)) {
           consoleManager?.writeErrorMessage(pythonlabI18n.inputFailed());
           break;
         }
         consoleManager?.writeErrorMessage(parseErrorMessage(message));
+        const errorDetails = getErrorFileDetails(message);
+        if (errorDetails) {
+          getStore().dispatch(addCodeError(errorDetails));
+        }
         break;
+      }
       case 'system_error':
         getStore().dispatch(setHasError(true));
         consoleManager?.writeSystemError(message, appName);
@@ -205,6 +213,7 @@ const asyncRun = (() => {
     await initializeServiceWorker();
     // Reset error state
     getStore().dispatch(setHasError(false));
+    getStore().dispatch(clearCodeErrors());
 
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;

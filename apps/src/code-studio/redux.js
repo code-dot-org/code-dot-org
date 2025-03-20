@@ -1,4 +1,5 @@
 /* eslint no-unused-vars: "error" */
+import codebridgeEditor from '@codebridge/redux/editorRedux';
 import codebridgeWorkspace from '@codebridge/redux/workspaceRedux';
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
@@ -59,6 +60,7 @@ registerReducers({
   predictLevel,
   lab2System,
   codebridgeWorkspace,
+  codebridgeEditor,
   calendar,
   teacherRubric,
 });

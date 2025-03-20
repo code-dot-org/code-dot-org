@@ -87,3 +87,9 @@ export interface MazeCell {
   value: number;
   assetId: number;
 }
+
+export interface ErrorDetails {
+  filePath: string;
+  lineNumber: number;
+  message: string;
+}

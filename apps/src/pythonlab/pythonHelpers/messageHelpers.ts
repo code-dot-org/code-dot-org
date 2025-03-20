@@ -1,3 +1,5 @@
+import {ErrorDetails} from '@codebridge/types';
+
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -46,7 +48,8 @@ export function parseErrorMessage(errorMessage: string): string {
   // Parse to find the main.py error line.
   const errorLines = errorMessage.trim().split('\n');
   const mainErrorRegex = new RegExp(
-    `File "\/${HOME_FOLDER}\/${MAIN_PYTHON_FILE}", line \\d+.*`
+    `File "\/${HOME_FOLDER}\/${MAIN_PYTHON_FILE}", line \\d+.*`,
+    'g'
   );
   let mainErrorLine = 0;
   while (
@@ -68,6 +71,26 @@ export function parseErrorMessage(errorMessage: string): string {
   return neighborhoodExceptionMessage
     ? `${neighborhoodExceptionMessage}\n${adjustedErrorLines}`
     : adjustedErrorLines;
+}
+
+export function getErrorFileDetails(
+  errorMessage: string
+): ErrorDetails | undefined {
+  const errorRegex = new RegExp(
+    `File "\/${HOME_FOLDER}\/([^"]+)", line (\\d+)`,
+    'g'
+  );
+  const matches = [...errorMessage.matchAll(errorRegex)];
+  if (matches.length > 0) {
+    const [, filePath, lineNumber] = matches[matches.length - 1];
+    const errorLines = errorMessage.trim().split('\n');
+    return {
+      filePath,
+      lineNumber: parseInt(lineNumber),
+      message: errorLines[errorLines.length - 1],
+    };
+  }
+  return undefined;
 }
 
 /**
