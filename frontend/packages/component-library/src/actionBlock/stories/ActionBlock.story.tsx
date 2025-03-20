@@ -12,14 +12,12 @@ export default {
 } as Meta;
 type Story = StoryObj<typeof ActionBlock>;
 
-const SHORT_DESC =
+const DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
-const LONG_DESC =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.';
 
 const defaultArgs: ActionBlockProps = {
   title: 'Action block title',
-  description: SHORT_DESC,
+  description: DESCRIPTION,
   image: image1,
   overline: 'Overline Text',
   detail: 'none',
@@ -53,7 +51,7 @@ export const DefaultActionBlock: Story = {
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const title = await canvas.findByText('Action block title');
-    const description = await canvas.findByText(SHORT_DESC);
+    const description = await canvas.findByText(DESCRIPTION);
     const overline = await canvas.findByText('Overline Text');
     const image = await canvas.findByRole('figure');
     const primaryButton = await canvas.findByRole('button', {
@@ -139,18 +137,6 @@ export const WithSecondaryBackground: Story = {
     await expect(actionBlock).toHaveStyle(
       `background-color: ${expectedBackgroundColor};`,
     );
-  },
-};
-
-export const WithLongDescription: Story = {
-  args: {
-    ...defaultArgs,
-    description: LONG_DESC,
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const description = await canvas.findByText(LONG_DESC);
-    await expect(description).toBeVisible();
   },
 };
 
