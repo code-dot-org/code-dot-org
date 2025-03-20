@@ -74,6 +74,7 @@ module Rack
           setup_region_redirect(request.cookies[REGION_KEY])
         elsif (locale_region = Cdo::GlobalEdition.region_locked_locales[request.cookies[LOCALE_KEY]])
           # Redirects to the regional version of the locale if it is possible.
+          setup_region(locale_region)
           setup_region_redirect(locale_region)
         end
 
