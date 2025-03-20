@@ -74,14 +74,14 @@ Feature: Global Edition - Region Select
 
     When I select the "فارسی" option in dropdown named "locale" to load a new page
     And I wait for the lab page to fully load
-    Then check that the URL matches "/global/fa/projects/artist/.*/edit\?lang=fa-IR"
+    Then check that the URL matches "/projects/artist/.*/edit\?lang=fa-IR"
     And I wait until element ".uitest-instructionsTab" contains text "دستورالعمل"
     And element "#localeForm option:contains(فارسی)" is checked
     And element "#localeForm" has escaped text "Englishفارسی"
 
     When I select the "English" option in dropdown named "locale" to load a new page
     And I wait for the lab page to fully load
-    Then check that the URL matches "/global/fa/projects/artist/.*/edit\?lang=en-US"
+    Then check that the URL matches "/projects/artist/.*/edit\?lang=en-US"
     And I wait until element ".uitest-instructionsTab" contains text "Instructions"
     And element "#localeForm option:contains(English)" is checked
     And element "#localeForm" has escaped text "Englishفارسی"
