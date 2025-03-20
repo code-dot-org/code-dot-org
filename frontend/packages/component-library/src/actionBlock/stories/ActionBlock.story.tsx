@@ -1,4 +1,6 @@
-import image from '@public/images/image-component.png';
+import image1 from '@public/images/action-block-01.png';
+import image2 from '@public/images/action-block-02.png';
+import image3 from '@public/images/action-block-03.png';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
@@ -18,7 +20,7 @@ const LONG_DESC =
 const defaultArgs: ActionBlockProps = {
   title: 'Action block title',
   description: SHORT_DESC,
-  image: image,
+  image: image1,
   overline: 'Overline Text',
   detail: 'none',
   detailString: undefined,
@@ -172,6 +174,7 @@ export const WithDetails: Story = {
           {...args}
           detail={'labProject'}
           detailString={'A lab project'}
+          image={image2}
         />
       </div>
     );
@@ -202,7 +205,7 @@ export const MultipleActionBlocksTwoAcross: Story = {
     return (
       <div style={{display: 'flex', gap: '1.5rem'}}>
         <ActionBlock {...args} />
-        <ActionBlock {...args} />
+        <ActionBlock {...args} image={image2} />
       </div>
     );
   },
@@ -233,8 +236,8 @@ export const MultipleActionBlocksThreeAcross: Story = {
     return (
       <div style={{display: 'flex', gap: '1.5rem'}}>
         <ActionBlock {...args} />
-        <ActionBlock {...args} />
-        <ActionBlock {...args} />
+        <ActionBlock {...args} image={image2} />
+        <ActionBlock {...args} image={image3} />
       </div>
     );
   },
