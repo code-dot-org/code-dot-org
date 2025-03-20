@@ -69,6 +69,13 @@ html {
     }
 */
 
+:root {
+  --font-size-body-xs: 0.813rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-body-md: 1rem;
+  --font-size-body-lg: 1.25rem;
+}
+
 @mixin heading-common {
   color: var(--text-neutral-primary);
   margin: 0 0 0.5em 0;
@@ -129,25 +136,25 @@ html {
 
 @mixin body-one {
   @include paragraph-common;
-  font-size: 1.25rem;
+  font-size: var(--font-size-body-lg);
   line-height: 1.4;
 }
 
 @mixin body-two {
   @include paragraph-common;
-  font-size: 1rem;
+  font-size: var(--font-size-body-md);
   line-height: 1.48;
 }
 
 @mixin body-three {
   @include paragraph-common;
-  font-size: 0.875rem;
+  font-size: var(--font-size-body-sm);
   line-height: 1.54;
 }
 
 @mixin body-four {
   @include paragraph-common;
-  font-size: 0.813rem;
+  font-size: var(--font-size-body-xs);
   line-height: 1.64;
 }
 

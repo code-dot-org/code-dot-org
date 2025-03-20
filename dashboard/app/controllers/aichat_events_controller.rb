@@ -39,24 +39,24 @@ class AichatEventsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # params are studentUserId: number, levelId: number, scriptId: number
-  # GET /aichat_events/student_chat_history
-  def student_chat_history
-    # Request all chat events for a student at a given level/script.
+  # params are userId: number, levelId: number, scriptId: number
+  # GET /aichat_events/chat_history
+  def chat_history
+    # Request all chat events for a user at a given level/script.
     begin
-      params.require([:studentUserId, :levelId, :scriptId])
+      params.require([:userId, :levelId, :scriptId])
     rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
     end
 
     script_id = params[:scriptId]
     level_id = params[:levelId]
-    student_user_id = params[:studentUserId]
-    unless can_view_student_chat_history?(student_user_id)
-      return render(status: :forbidden, json: {error: "Access denied for student chat history."})
+    user_id = params[:userId].to_i
+    unless can_view_chat_history?(user_id)
+      return render(status: :forbidden, json: {error: "Access denied for chat history."})
     end
 
-    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
+    aichat_events = AichatEvent.where(user_id: user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
       chat_event = event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
       {
         id: event.id,
@@ -84,7 +84,7 @@ class AichatEventsController < ApplicationController
 
     begin
       chat_event = AichatEvent.find(chat_event_id)
-      unless can_view_student_chat_history?(chat_event.user_id)
+      unless can_submit_feedback?(chat_event.user_id)
         return render(status: :forbidden, json: {error: "Access denied for submitting teacher feedback."})
       end
 
@@ -101,7 +101,11 @@ class AichatEventsController < ApplicationController
     render status: :ok, json: {}
   end
 
-  private def can_view_student_chat_history?(student_user_id)
-    User.find_by_id(student_user_id)&.student_of?(current_user)
+  private def can_view_chat_history?(user_id)
+    User.find_by_id(user_id)&.student_of?(current_user) || current_user.id == user_id
+  end
+
+  private def can_submit_feedback?(user_id)
+    User.find_by_id(user_id)&.student_of?(current_user)
   end
 end

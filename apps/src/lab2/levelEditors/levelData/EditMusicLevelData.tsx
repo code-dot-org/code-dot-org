@@ -225,9 +225,29 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             name="showSoundFilters"
             label="Show Sound Filters in Sound Picker"
             onChange={event => {
+              const showSoundFilters = event.target.checked;
               setLevelData({
                 ...levelData,
-                showSoundFilters: event.target.checked,
+                showSoundFilters,
+                ...(showSoundFilters
+                  ? {}
+                  : {showSoundsPanelInSoundsMode: false}),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.showSoundsPanelInSoundsMode}
+            name="showSoundsPanelInSoundsMode"
+            label="Default to 'Sounds' mode in Sound Picker"
+            onChange={event => {
+              const showSoundsPanelInSoundsMode = event.target.checked;
+              setLevelData({
+                ...levelData,
+                showSoundsPanelInSoundsMode,
+                ...(showSoundsPanelInSoundsMode
+                  ? {showSoundFilters: true}
+                  : {}),
               });
             }}
             size="s"

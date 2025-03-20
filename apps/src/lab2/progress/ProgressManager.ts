@@ -93,9 +93,19 @@ export default class ProgressManager {
     const shouldValidateExemplar =
       !getAppOptionsEditingExemplar() && exemplarSettings?.validationEnabled;
 
+    // Compute exemplar validation result and message only once if needed.
+    let passedExemplar = false;
+    let exemplarMessage = '';
+    if (shouldValidateExemplar) {
+      passedExemplar = this.validator.didPassExemplarValidation();
+      exemplarMessage = passedExemplar
+        ? exemplarSettings!.validationSuccessMessage!
+        : exemplarSettings!.validationFailureMessage!;
+    }
+
     // If there are no validations, we still might run the exemplar validation.
     if (!this.currentValidations?.length && shouldValidateExemplar) {
-      this.setValidationStateWithExemplar();
+      this.setValidationStateWithExemplar(passedExemplar, exemplarMessage);
       this.onProgressChange();
       return;
     }
@@ -136,7 +146,10 @@ export default class ProgressManager {
             this.currentValidationState.callout = validation.callout;
             if (this.currentValidationState.satisfied && validation.next) {
               if (shouldValidateExemplar) {
-                this.setValidationStateWithExemplar();
+                this.setValidationStateWithExemplar(
+                  passedExemplar,
+                  exemplarMessage
+                );
               }
             }
             this.onProgressChange();
@@ -175,16 +188,15 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  private setValidationStateWithExemplar(): void {
-    if (this.exemplarSettings) {
-      const passed = this.validator!.didPassExemplarValidation();
-      this.currentValidationState = {
-        ...this.currentValidationState,
-        satisfied: passed,
-        message: passed
-          ? this.exemplarSettings.validationSuccessMessage!
-          : this.exemplarSettings.validationFailureMessage!,
-      };
-    }
+  // Set exemplar validation status using precomputed exemplar values.
+  private setValidationStateWithExemplar(
+    passedExemplar: boolean,
+    exemplarMessage: string
+  ): void {
+    this.currentValidationState = {
+      ...this.currentValidationState,
+      satisfied: passedExemplar,
+      message: exemplarMessage,
+    };
   }
 }

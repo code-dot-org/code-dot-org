@@ -222,6 +222,22 @@
       "require": "./dist/cjs/link/index.js"
     },
     "./link/index.css": "./dist/esm/link/index.css",
+    "./list": {
+      "types": {
+        "import": "./dist/esm/list/index.d.ts",
+        "require": "./dist/cjs/list/index.d.ts"
+      },
+      "import": "./dist/esm/list/index.mjs",
+      "require": "./dist/cjs/list/index.js"
+    },
+    "./list/simpleList": {
+      "types": {
+        "import": "./dist/esm/list/simpleList/index.d.ts",
+        "require": "./dist/cjs/list/simpleList/index.d.ts"
+      },
+      "import": "./dist/esm/list/simpleList/index.mjs",
+      "require": "./dist/cjs/list/simpleList/index.js"
+    },
     "./modal": {
       "types": {
         "import": "./dist/esm/modal/index.d.ts",
@@ -398,7 +414,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.49",
     "postcss-modules": "^6.0.1",
-    "prettier": "3.3.3",
+    "prettier": "3.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "release-it": "^18.1.2",

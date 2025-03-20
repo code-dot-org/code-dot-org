@@ -4210,6 +4210,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-planning"
+        ]
       },
       "bonus": false,
       "seeding_key": {

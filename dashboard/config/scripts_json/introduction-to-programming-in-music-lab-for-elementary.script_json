@@ -1,0 +1,2167 @@
+{
+  "script": {
+    "name": "introduction-to-programming-in-music-lab-for-elementary",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "topic_tags": [
+        "music_lab"
+      ],
+      "version_year": "2025",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "introduction-to-programming-in-music-lab-for-elementary",
+    "serialized_at": "2025-03-19 19:42:47 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Songwriter's Toolbox",
+      "name": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "background": "dark",
+        "overview": "In this lesson, students will be exploring the foundational concepts of sequencing and loops in programming as they step into the role of a songwriter using Music Lab. They will learn that computers only follow the instructions given to them in the order specified, emphasizing the importance of clear and logical step-by-step directions. Students will discover how to identify repeating patterns in their code and use loops to make it more efficient. By layering musical sounds and breaking down complex tasks, students will develop problem-solving skills while also gaining insight into how technology is used in music careers to bring creative ideas to life."
+      },
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "Producer Power",
+      "name": "✨FOR LAUNCH!!!!✨Producer Power",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "background": "dark",
+        "overview": "In this lesson, students will act as music producers, refining remixes in Music Lab while learning how functions can simplify and organize their code. They will learn how to make a new function and then call it into the main program. This lesson demonstrates how producers combine technology and creativity with a song's structure to create polished tracks."
+      },
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "Sound Designer's Studio",
+      "name": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "background": "dark",
+        "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
+      },
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "d43e8caa-1832-424e-8e08-469f0ce73a6b",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d43e8caa-1832-424e-8e08-469f0ce73a6b",
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7",
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "54811cc2-5273-4374-972e-182fd49db3e8",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54811cc2-5273-4374-972e-182fd49db3e8",
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "ae7f1c03-e67f-4bf6-a09f-4e213e5f1fd1",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae7f1c03-e67f-4bf6-a09f-4e213e5f1fd1",
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364",
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "bf029be1-faa4-4a35-bd77-b0c12af7fc32",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf029be1-faa4-4a35-bd77-b0c12af7fc32",
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "a0111bad-4a0f-428b-9b88-50570e07a43f",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0111bad-4a0f-428b-9b88-50570e07a43f",
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7",
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    },
+    {
+      "key": "7ad3be3a-fdb0-4240-be54-378acb6705ce",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ad3be3a-fdb0-4240-be54-378acb6705ce",
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b53897b4-968e-4864-b3b8-822d0e27f5cd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b53897b4-968e-4864-b3b8-822d0e27f5cd",
+        "lesson_activity.key": "d43e8caa-1832-424e-8e08-469f0ce73a6b"
+      }
+    },
+    {
+      "key": "515176f6-a6e7-4043-9202-1a15e06bb279",
+      "position": 1,
+      "properties": {
+        "name": "Programming Levels:",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "515176f6-a6e7-4043-9202-1a15e06bb279",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "2698fc62-190e-4a71-9734-1ac159a987fc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "615167db-875e-4764-9486-c336c00b7785",
+      "position": 3,
+      "properties": {
+        "progression_name": "Music Integration Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "615167db-875e-4764-9486-c336c00b7785",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "113e6612-aa7d-4b60-a733-6098f5bfe479",
+      "position": 5,
+      "properties": {
+        "progression_name": "Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "08bf6cda-2ecc-4375-8fab-410d75e151fe",
+      "position": 6,
+      "properties": {
+        "name": "Lesson Plan:"
+      },
+      "seeding_key": {
+        "activity_section.key": "08bf6cda-2ecc-4375-8fab-410d75e151fe",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "abdfff4e-50aa-4eb9-8aa7-09e1b538d1ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "abdfff4e-50aa-4eb9-8aa7-09e1b538d1ac",
+        "lesson_activity.key": "54811cc2-5273-4374-972e-182fd49db3e8"
+      }
+    },
+    {
+      "key": "4ea2ace9-1e76-419f-be5b-574730181363",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ac3d5d744975ee355a92b77b55ed37c0-Slide29.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e2ce27c30228425469740920f31f0aca-Slide30.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are the benefits of efficient code? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Using the definition of efficient as a guide, students might start to guess that efficient code is shorter code. \n\t\t<br />\n\t\t<br />Teaching Tip\n\t\t<br />It is okay if there are not many ideas or connections at this point in the lesson. They will be learning all about functions and efficient code throughout the lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/1046c1c0833e38737642cd0bd899c9e1-Slide31.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we will get to experiment with a very powerful code in our programs! We will learn how to save a list of actions and reuse them without reprogramming them using something called a function. The shorter our programs are, the easier it is for the computer to read them, plus they’re easier for us to change if we need to.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a5c05178c30cc678b76923bb38e8f352-Slide32.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Dance routines are very similar to functions in computer science! \n\t\t<br />\u000b<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click the slide to trigger the animation and show the dance function being named and defined. \u000b<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> First, the routine is named and the dance steps are defined. Once they learn the routine, the dancer remembers the steps and the order to do them whenever they hear the​​ name of the dance. \n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click the slide to trigger the animation to show the Macarena function being used (called). \n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It is much easier to tell the dancer to do the dance using just one word: Macarena!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/34a8c48edea6391f96c071e238a0bbfc-Slide33.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Do This:</strong> Explain the warm up activity and allow students to work independently or in pairs. They will make a new dance using the dance moves in the chart. \n\t\t<br />\n\t\t<br />Teacher Tip \n\t\t<br />In this activity the 3 part dance in equivalent to a computer program. The dance moves are like functions and the steps are like individual coding blocks.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a38e29e439c10bcac61758f3bb470153-Slide34.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how functions can be used to make code more efficient and easier to use. They will be practicing customizing and creating functions in code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "4ea2ace9-1e76-419f-be5b-574730181363",
+        "lesson_activity.key": "ae7f1c03-e67f-4bf6-a09f-4e213e5f1fd1"
+      }
+    },
+    {
+      "key": "f531f38e-7142-431c-8b59-96e04a453dd0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video Intro"
+      },
+      "seeding_key": {
+        "activity_section.key": "f531f38e-7142-431c-8b59-96e04a453dd0",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "09bfb736-752a-40e7-abaf-2ea4278c2379",
+      "position": 3,
+      "properties": {
+        "progression_name": "Remix & Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "fc9b743e-20a1-4932-81b3-004a10011ede",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/316cd8cb919274618ef529ae01b6230a-Slide36.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) What does a music producer do?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will understand that a producer is someone who puts all of the pieces of the music together. They will  move and work on functions with chunks of music to make it sound great.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/9a6cbeb483fb1aac2bbff69d8dcd6a9a-Slide37.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Run level 2 together as a class. Guide students to notice the repetition of the play together block. Make a connection to the activity in the warm up and encourage students to consider the use of a function in place of the repeated code.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 3-10 independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0eab112102f8425ecf5e88ec6f02b52f-Slide38.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Read the instructions for each level and try to complete the code. Press the Run button to try it out. If something is not quite right you will get a hint under the instructions. When you’ve successfully completed the challenge, a new message and a Continue button will appear. Click Continue to move to the next level and move at your speed. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage students to read the instructions and hints on each level as you circulate. Ask guiding questions to support students if they get stuck.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "fc9b743e-20a1-4932-81b3-004a10011ede",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "2cd93f46-82cb-4a99-a539-55eb1dfd69f9",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/203e17237687c91827071a89369f675d-Slide40.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2f412e651130ff9d47bf98949cc032d8-Slide41.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. Some supportive leading questions might be: Why do we use functions instead of rewwriting out every single line of code? If you were a computer could you read a short paragraph or a long story quicker? What if we want to make a change to the code? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "2cd93f46-82cb-4a99-a539-55eb1dfd69f9",
+        "lesson_activity.key": "bf029be1-faa4-4a35-bd77-b0c12af7fc32"
+      }
+    },
+    {
+      "key": "b9ea5ada-cb79-46ff-92cf-2e05ee11dd97",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b9ea5ada-cb79-46ff-92cf-2e05ee11dd97",
+        "lesson_activity.key": "a0111bad-4a0f-428b-9b88-50570e07a43f"
+      }
+    },
+    {
+      "key": "25c7741d-9c12-447a-84f9-b8fb2ff3a8c9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "25c7741d-9c12-447a-84f9-b8fb2ff3a8c9",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "d6a8aaea-c7a2-45db-a951-80dc471387a0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "0353181f-6c32-40a0-95dc-930ee1578205",
+      "position": 3,
+      "properties": {
+        "progression_name": "Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "0353181f-6c32-40a0-95dc-930ee1578205",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "f356bf02-6e33-442f-9ae6-76bd0e813913",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f356bf02-6e33-442f-9ae6-76bd0e813913",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "2cd7b449-5201-4406-ba43-a96580ce0edd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2cd7b449-5201-4406-ba43-a96580ce0edd",
+        "lesson_activity.key": "7ad3be3a-fdb0-4240-be54-378acb6705ce"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-video"
+        ],
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-video"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "515176f6-a6e7-4043-9202-1a15e06bb279"
+      },
+      "level_keys": [
+        "music-coding-intro-video"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-play-sound_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      },
+      "level_keys": [
+        "music-coding-intro-play-sound_launch"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-play-two_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      },
+      "level_keys": [
+        "music-coding-intro-play-two_launch"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-seq-panel_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      },
+      "level_keys": [
+        "music-coding-intro-seq-panel_launch"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-together1_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-together1_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      },
+      "level_keys": [
+        "music-coding-intro-together1_launch"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-ingro-loop1_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      },
+      "level_keys": [
+        "music-coding-ingro-loop1_launch"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-5sounds_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      },
+      "level_keys": [
+        "music-coding-intro-5sounds_launch"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel-rests_launch"
+        ],
+        "progression": "Music Integration Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-seq-panel-rests_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "615167db-875e-4764-9486-c336c00b7785"
+      },
+      "level_keys": [
+        "music-coding-intro-seq-panel-rests_launch"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-loop-beat_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-loop-beat_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      },
+      "level_keys": [
+        "music-coding-intro-loop-beat_launch"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-layer_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-layer_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      },
+      "level_keys": [
+        "music-coding-intro-layer_launch"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-match_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-seq-match_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      },
+      "level_keys": [
+        "music-coding-intro-seq-match_launch"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-drop2_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-drop2_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      },
+      "level_keys": [
+        "music-coding-intro-drop2_launch"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-drop3_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-drop3_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      },
+      "level_keys": [
+        "music-coding-intro-drop3_launch"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-songwriter-videos"
+        ],
+        "progression": "Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-songwriter-videos"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479"
+      },
+      "level_keys": [
+        "music-coding-intro-songwriter-videos"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-make_launch"
+        ],
+        "progression": "Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-make_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479"
+      },
+      "level_keys": [
+        "music-coding-intro-make_launch"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold_launch"
+        ],
+        "progression": "Video Intro"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-video-hold_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "f531f38e-7142-431c-8b59-96e04a453dd0"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-video-hold_launch"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-need_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-need_launch"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-panel_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-panel_launch"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-call_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-call_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-call_launch"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-define_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-define_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-define_launch"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-use_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-use_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-use_launch"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-chorus_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-chorus_launch"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus2_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-chorus2_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-chorus2_launch"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-match_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-match_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-match_launch"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel2_launch"
+        ],
+        "progression": "Remix & Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-panel2_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-panel2_launch"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-beat_launch"
+        ],
+        "progression": "Remix & Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-beat_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-beat_launch"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-layer_launch"
+        ],
+        "progression": "Remix & Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-layer_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-layer_launch"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
+        ],
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "25c7741d-9c12-447a-84f9-b8fb2ff3a8c9"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-video-hold3_launch"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-event-try_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-event-try_launch"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-scenes-panel_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-scenes-panel_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-scenes-panel_launch"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-event-sound_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-event-sound_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-event-sound_launch"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-event-function_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-event-function_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-event-function_launch"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-event-functions_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-event-functions_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-event-functions_launch"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-effects-panel_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-effects-panel_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-effects-panel_launch"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-effects_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-effects_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-effects_launch"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-events-match_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-events-match_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-intro-coding-events-match_launch"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-review-panel_launch"
+        ],
+        "progression": "Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-review-panel_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "0353181f-6c32-40a0-95dc-930ee1578205"
+      },
+      "level_keys": [
+        "music-coding-intro-review-panel_launch"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-coding-intro-freeplay3_launch"
+        ],
+        "progression": "Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-freeplay3_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "0353181f-6c32-40a0-95dc-930ee1578205"
+      },
+      "level_keys": [
+        "music-coding-intro-freeplay3_launch"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-video",
+        "script_level.level_keys": [
+          "music-coding-intro-video"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "515176f6-a6e7-4043-9202-1a15e06bb279"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-play-sound_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-play-sound_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-play-two_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-play-two_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-seq-panel_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-seq-panel_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-together1_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-together1_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-ingro-loop1_launch",
+        "script_level.level_keys": [
+          "music-coding-ingro-loop1_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-5sounds_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-5sounds_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-seq-panel-rests_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-seq-panel-rests_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "615167db-875e-4764-9486-c336c00b7785"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-loop-beat_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-loop-beat_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-layer_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-layer_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-seq-match_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-seq-match_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-drop2_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-drop2_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-drop3_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-drop3_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-songwriter-videos",
+        "script_level.level_keys": [
+          "music-coding-intro-songwriter-videos"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-make_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-make_launch"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-video-hold_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-video-hold_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "f531f38e-7142-431c-8b59-96e04a453dd0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-need_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-need_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-panel_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-panel_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-call_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-call_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-define_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-define_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-use_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-use_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-chorus_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-chorus_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-chorus2_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-chorus2_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-match_launch",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-match_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-panel2_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-panel2_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-beat_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-beat_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-layer_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-layer_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-video-hold3_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "25c7741d-9c12-447a-84f9-b8fb2ff3a8c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-event-try_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-event-try_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-scenes-panel_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-scenes-panel_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-event-sound_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-event-sound_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-event-function_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-event-function_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-event-functions_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-event-functions_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-effects-panel_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-effects-panel_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-effects_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-effects_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-events-match_launch",
+        "script_level.level_keys": [
+          "music-intro-coding-events-match_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-review-panel_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-review-panel_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "0353181f-6c32-40a0-95dc-930ee1578205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-freeplay3_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-freeplay3_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "0353181f-6c32-40a0-95dc-930ee1578205"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
+      "key": "lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "name": "Music Lab Inspiration",
+      "url": "https://www.youtube.com/watch?v=GqlP5s7KTl4",
+      "key": "music_lab_inspiration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "music_lab_inspiration"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "resource.key": "music_lab_inspiration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "resource.key": "lesson_slides"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "efficient",
+      "word": "Efficient",
+      "definition": "Doing something in the easiest and quickest way. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficient"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "function",
+      "word": "Function",
+      "definition": "A piece of code that you can call over and over again",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "A way to tell the computer to do the same thing over and over.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "A set of instructions that tells a computer what to do.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "sequence",
+      "word": "Sequence",
+      "definition": "The order of steps in a program or task.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequence"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "vocabulary.key": "efficient"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "vocabulary.key": "sequence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "vocabulary.key": "event"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "4914c48e-3dc3-495e-bbe6-a66c86d1080a",
+      "properties": {
+        "description": "**Order matters** - Write steps in a clear order to make your program do what you want."
+      },
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "objective.key": "4914c48e-3dc3-495e-bbe6-a66c86d1080a"
+      }
+    },
+    {
+      "key": "53289561-15f8-449c-8670-8b77e99b1ac1",
+      "properties": {
+        "description": "**Find patterns**- Use loops to repeat parts of your code."
+      },
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "objective.key": "53289561-15f8-449c-8670-8b77e99b1ac1"
+      }
+    },
+    {
+      "key": "55bf4154-0388-4b67-ac89-db5a10ccee57",
+      "properties": {
+        "description": "Create events to control actions."
+      },
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "objective.key": "55bf4154-0388-4b67-ac89-db5a10ccee57"
+      }
+    },
+    {
+      "key": "7d1c2165-3c39-46f1-92ee-9016c413d8c9",
+      "properties": {
+        "description": "Customize and call functions that organize and simplify your code "
+      },
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "objective.key": "7d1c2165-3c39-46f1-92ee-9016c413d8c9"
+      }
+    },
+    {
+      "key": "866ae302-39d3-4545-b609-fbf08785d8d4",
+      "properties": {
+        "description": "Choose sounds to set the mood of the music."
+      },
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "objective.key": "866ae302-39d3-4545-b609-fbf08785d8d4"
+      }
+    },
+    {
+      "key": "d9a430f1-8252-4e7d-8f80-74b09024f9ac",
+      "properties": {
+        "description": "**Break it down** - Learn how to solve big problems by breaking them into smaller, easier steps."
+      },
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "objective.key": "d9a430f1-8252-4e7d-8f80-74b09024f9ac"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

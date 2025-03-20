@@ -1,5 +1,6 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {OpenaiChatCompletionMessage} from '../aiTutor/chatApi';
 
@@ -9,6 +10,7 @@ export interface StudentAnswer {
   studentId: number;
   studentDisplayName: string;
   studentWork: string;
+  codeVersion?: string;
 }
 
 export interface AIResponse {
@@ -21,14 +23,13 @@ export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {}
 export async function evaluateStudentWork(
   studentWorkSample: StudentAnswer,
   levelId: number,
-  unitId: number,
-  systemPrompt?: string
+  unitId: number
 ): Promise<AIResponse> {
   const response = await evaluationFromOpenAI(
     studentWorkSample.studentWork,
     levelId,
     unitId,
-    systemPrompt
+    AiEvaluationTypes.SINGLE_STUDENT
   );
   let parsedResponse;
   if (response?.content) {
@@ -40,6 +41,7 @@ export async function evaluateStudentWork(
       evaluationCriteria: parsedResponse.evaluationCriteria,
       aiEvaluation: parsedResponse.aiEvaluation,
       aiReasoning: parsedResponse.aiReasoning,
+      codeVersion: studentWorkSample.codeVersion,
     });
   }
   return parsedResponse;
@@ -48,8 +50,7 @@ export async function evaluateStudentWork(
 export async function summarizeEvaluations(
   studentWorkEvaluations: StudentWorkEvaluation[],
   levelId: number,
-  unitId: number,
-  systemPrompt?: string
+  unitId: number
 ): Promise<AIResponse> {
   const formattedStudentWork = studentWorkEvaluations
     .map(
@@ -61,7 +62,7 @@ export async function summarizeEvaluations(
     formattedStudentWork,
     levelId,
     unitId,
-    systemPrompt
+    AiEvaluationTypes.SECTION_SUMMARY
   );
   let parsedResponse;
   if (response?.content) {
@@ -72,17 +73,20 @@ export async function summarizeEvaluations(
 
 const EVALUATE_URL = '/openai/evaluate';
 
+type ValueOf<T> = T[keyof T];
+type EvaluationType = ValueOf<typeof AiEvaluationTypes>;
+
 async function evaluationFromOpenAI(
   studentWork?: string,
   levelId?: number,
   unitId?: number,
-  systemPrompt?: string
+  evaluationType?: EvaluationType
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
     studentWork: [{role: Role.USER, content: studentWork}],
     levelId: levelId,
     unitId: unitId,
-    systemPrompt: systemPrompt,
+    evaluationType: evaluationType,
   };
 
   const response = await HttpClient.post(

@@ -1,0 +1,57 @@
+name 'csaif_pl-analyzedatea-L4-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrapping Up Wearable Troubleshooting
+
+
+<img src="https://images.code.org/65a1930c29f18c356c0b61822358df2f-image-1742310097775.png" alt="clipboard with flowchart" style="border-radius:10px; float: right; ; height: 150px; margin: 0px 20px 0px 20px; ">
+
+#### Now that you've explored the troubleshooting process with Maya's wearable, take a moment to reflect on what your students will experience.
+
+#### This activity walks them through the **SNOT strategy**, a structured approach to problem-solving, encouraging them to use self-reflection, peer discussion, and online resources before turning to AI for assistance.
+
+<div style="clear:both;"></div>
+
+---
+
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h2>Key Takeaways for Teaching this Lesson:</h2>
+  <ul style = "font-size:14pt;">
+    <li><strong>✅ Model Deductive Reasoning</strong> – Students may need help narrowing down their solutions. Consider demonstrating how to eliminate unlikely causes based on new information.</li><br>
+    <li><strong>✅ Encourage Thoughtful AI Interactions</strong> – Students will refine their analysis using the AI chatbot. Remind them that the AI isn’t just giving answers—it’s simulating a conversation that requires critical thinking and logical questioning.</li>
+  </ul>
+</div>
+
+---
+## AI Chat Lab
+
+#### Code.org’s AI Chat Lab plays a key role in this lesson by giving students a chance to apply their troubleshooting skills in a dynamic, interactive way. 
+
+#### This AI-powered chatbot is designed to support learning in a responsible, structured environment, encouraging critical thinking as students work through the problem. 
+
+#### Content is monitored to ensure appropriateness and productive engagement, making it a safe space for exploration.
+
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "> Want to know more about how the chatbot works? Check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank" rel="noopener noreferrer"> FAQ page</a> for details on privacy, content moderation, and how to guide students in their interactions.     
+</p>
+</div>
+
+<br>
+
+#### By preparing for this step ahead of time, you’ll be ready to support your students as they apply their troubleshooting skills in a real-world context. 🚀
+
+
+
+  <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">  ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/s/csad-pilot-content-2024/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+
+
+MARKDOWN

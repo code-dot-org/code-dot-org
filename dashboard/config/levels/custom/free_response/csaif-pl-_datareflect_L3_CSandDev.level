@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-19T19:31:58.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Bringing Computer Systems to the Classroom",
+    "long_instructions": "<div style=\"background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;\">\r\n    \r\n<p style=\"font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;\">🎉🎉🎉</p><br>\r\n<p style=\"font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;\">Congratulations!</p>\r\n\r\n<p style=\"font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;\">\r\n        You've finished the second lesson in this professional learning module! <br> Data in Computer Systems is up next! \r\n    </p>\r\n</div>\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"15\">\r\n    <tr>\r\n        <td style=\"background-color: #b2dee3; text-align: center;\"><b>Lesson One</b><br>Teaching Computer<br>Systems & Devices</td>\r\n        <td style=\"background-color: #b2dee3; text-align: center;\"><b>Lesson Two</b><br>Hardware, Software  <br> & Operating Systems</td>\r\n        <td style=\"background-color: #f7f8fa; text-align: center;\"><b>Lesson Three</b><br>Data in<br> Computer Systems</td>\r\n        <td style=\"background-color: #f7f8fa; text-align: center;\"><b>Lesson Four</b><br>Ethical Use<br>& Final Project</td>\r\n        \r\n</table>\r\n\r\n#### **Reflecting on teaching computational thinking:**\r\n \r\n- #### Which topics (troubleshooting, optimization, system performance) might be the most challenging for students, and how can you support their understanding?\r\n\r\n- #### How can you incorporate AI chatbots effectively to help students troubleshoot system issues while ensuring they critically evaluate the responses?\r\n\r\n- #### What strategies will you use to help students connect hardware and software concepts to real-world applications?\r\n\r\n#### *These questions are just starting points for reflection and discussion—there’s no need to answer all of them. Focus on the ones that resonate most with your teaching experience and goals.*\r\n\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/t/about-the-cs-ai-foundations-category/40251?u=plteam\" target=\"_blank\">Computer Science and AI Foundations PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Computer Science learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n*update link*\r\n### <a href=\"https://forum.code.org/t/reflecting-on-your-experience-with-codap/40257?u=plteam\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n\r\n</p></div>\r\n</details>\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T19:31:58.453+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_hardware-software_forum_L21_CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-_hardware-software_forum_L21_CSandDev\"}]"
+}]]></config>
+</FreeResponse>

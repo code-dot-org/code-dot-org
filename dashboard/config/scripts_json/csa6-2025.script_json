@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 00:58:12 UTC",
+    "serialized_at": "2025-03-19 22:06:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,21 +53,9 @@
       }
     },
     {
-      "key": "lessonGroup-5",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa6-2025"
-      }
-    },
-    {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Alternate Lessons",
         "description": "This section contains the one-day version of the Natural Language Processing Project."
@@ -80,7 +68,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -319,27 +307,12 @@
       }
     },
     {
-      "key": "Unit 6 Survey",
-      "name": "Unit 6 Survey",
-      "absolute_position": 13,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Unit 6 Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa6-2025"
-      }
-    },
-    {
       "key": "Natural Language Processing Project [1-Day Version]",
       "name": "Natural Language Processing Project [1-Day Version]",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "assessment": true,
         "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
@@ -355,10 +328,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -370,10 +343,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -385,10 +358,10 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -898,18 +871,6 @@
         "lesson_activity.key": "e3485770-547e-4530-8409-2029e4ac8edd",
         "lesson.key": "Unit 6 Assessment",
         "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa6-2025"
-      }
-    },
-    {
-      "key": "485c9658-3fa1-4b95-acc8-21023bec1246",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "485c9658-3fa1-4b95-acc8-21023bec1246",
-        "lesson.key": "Unit 6 Survey",
-        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa6-2025"
       }
     },
@@ -3834,8 +3795,27 @@
       }
     },
     {
-      "key": "23bb1a02-2695-4183-bfac-4f04f3dbd56c",
+      "key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5",
       "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) as well. Your feedback is valued and appreciated!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5",
+        "lesson_activity.key": "95352afb-de13-497f-a80e-11f764300bd6"
+      }
+    },
+    {
+      "key": "23bb1a02-2695-4183-bfac-4f04f3dbd56c",
+      "position": 12,
       "properties": {
         "description": "---"
       },
@@ -3846,7 +3826,7 @@
     },
     {
       "key": "fc81df3c-3d8c-40b1-b807-59a9eb26f596",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "**Natural Language Processing Project Planning Guide:** Use the rubric in the Natural Language Processing Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -4054,17 +4034,6 @@
       }
     },
     {
-      "key": "6568b905-d360-47aa-9bf2-395abc38f042",
-      "position": 1,
-      "properties": {
-        "progression_name": "Unit 6 Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "6568b905-d360-47aa-9bf2-395abc38f042",
-        "lesson_activity.key": "485c9658-3fa1-4b95-acc8-21023bec1246"
-      }
-    },
-    {
       "key": "3e694dd3-ee4c-4a56-a216-2693544f71c4",
       "position": 1,
       "properties": {
@@ -4241,6 +4210,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L1_pilot_oo2025"
+        ],
         "progression": "Natural Language Processing Projects"
       },
       "bonus": false,
@@ -4263,6 +4235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L2_pilot_oo2025"
+        ],
         "progression": "Practice: Javadocs Comments"
       },
       "bonus": false,
@@ -4285,6 +4260,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L3_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4307,6 +4285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: The substring() Method"
       },
       "bonus": false,
@@ -4329,6 +4310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4351,6 +4335,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4373,6 +4360,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4395,6 +4385,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L5_pilot_oo2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4417,6 +4410,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6_pilot_oo2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4439,6 +4435,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L7_pilot_oo2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4461,6 +4460,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L8_pilot_oo2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4483,6 +4485,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L9_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4505,6 +4510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Wrapper Classes"
       },
       "bonus": false,
@@ -4527,6 +4535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4549,6 +4560,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4571,6 +4585,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4593,6 +4610,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4615,6 +4635,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4637,6 +4660,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4659,6 +4685,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4681,6 +4710,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: The ArrayList Class"
       },
       "bonus": false,
@@ -4703,6 +4735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4725,6 +4760,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4747,6 +4785,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4769,6 +4810,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4791,6 +4835,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4813,6 +4860,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4835,6 +4885,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4857,6 +4910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Manipulating Elements"
       },
       "bonus": false,
@@ -4879,6 +4935,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4901,6 +4960,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4923,6 +4985,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4945,6 +5010,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -4967,6 +5035,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -4989,6 +5060,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -5011,6 +5085,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5033,6 +5110,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: The compareTo() Method"
       },
       "bonus": false,
@@ -5055,6 +5135,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5077,6 +5160,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5099,6 +5185,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5121,6 +5210,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5143,6 +5235,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5165,6 +5260,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5187,6 +5285,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5209,6 +5310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Lists of Objects"
       },
       "bonus": false,
@@ -5231,6 +5335,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5253,6 +5360,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5275,6 +5385,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5297,6 +5410,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5319,6 +5435,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5341,6 +5460,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5363,6 +5485,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5385,6 +5510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Removing Elements"
       },
       "bonus": false,
@@ -5407,6 +5535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5429,6 +5560,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5451,6 +5585,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5473,6 +5610,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5495,6 +5635,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5517,6 +5660,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5539,6 +5685,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5561,6 +5710,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: NLP Techniques"
       },
       "bonus": false,
@@ -5583,6 +5735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5605,6 +5760,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5627,6 +5785,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5649,6 +5810,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L5_pilot_oo2025"
+        ],
         "progression": "Practice: NLP Techniques"
       },
       "bonus": false,
@@ -5671,6 +5835,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L6_pilot_oo2025"
+        ],
         "progression": "Practice: NLP Techniques"
       },
       "bonus": false,
@@ -5693,6 +5860,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L7_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5716,26 +5886,98 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csa6_2025"
+          "CSA U6 Natural Language Processing Project_pilot_oo2025"
         ],
-        "progression": "Unit 6 Survey"
+        "progression": "Natural Language Processing Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project_pilot_oo2025"
+        ],
+        "lesson.key": "Natural Language Processing Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "0e632aa7-f9a9-4994-802e-4db5966e611f"
+      },
+      "level_keys": [
+        "CSA U6 Natural Language Processing Project_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Student End of Unit Survey_csa6_2025"
         ],
-        "lesson.key": "Unit 6 Survey",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "Natural Language Processing Project",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "csa6-2025",
-        "activity_section.key": "6568b905-d360-47aa-9bf2-395abc38f042"
+        "activity_section.key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5"
       },
       "level_keys": [
         "Student End of Unit Survey_csa6_2025"
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 6 Assessment_pilot_oo2025"
+        ],
+        "progression": "Unit 6 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 6 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 6 Assessment",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "97179d20-996e-4b5e-a513-afeaeca14f05"
+      },
+      "level_keys": [
+        "CSA Unit 6 Assessment_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Natural Language Processing Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2025",
+        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
+      },
+      "level_keys": [
+        "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5759,7 +6001,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5784,7 +6026,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5809,7 +6051,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5830,72 +6072,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 73,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Natural Language Processing Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6 Natural Language Processing Project_pilot_oo2025"
-        ],
-        "lesson.key": "Natural Language Processing Project",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa6-2025",
-        "activity_section.key": "0e632aa7-f9a9-4994-802e-4db5966e611f"
-      },
-      "level_keys": [
-        "CSA U6 Natural Language Processing Project_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Unit 6 Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA Unit 6 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 6 Assessment",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa6-2025",
-        "activity_section.key": "97179d20-996e-4b5e-a513-afeaeca14f05"
-      },
-      "level_keys": [
-        "CSA Unit 6 Assessment_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 75,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Natural Language Processing Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa6-2025",
-        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
-      },
-      "level_keys": [
-        "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
       ]
     }
   ],
@@ -6706,14 +6882,50 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U6 Natural Language Processing Project_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project_pilot_oo2025"
+        ],
+        "lesson.key": "Natural Language Processing Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "0e632aa7-f9a9-4994-802e-4db5966e611f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Student End of Unit Survey_csa6_2025",
         "script_level.level_keys": [
           "Student End of Unit Survey_csa6_2025"
         ],
-        "lesson.key": "Unit 6 Survey",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "Natural Language Processing Project",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "csa6-2025",
-        "activity_section.key": "6568b905-d360-47aa-9bf2-395abc38f042"
+        "activity_section.key": "187cfc37-c70a-4cf8-87fd-4d24297cf8d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 6 Assessment_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA Unit 6 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 6 Assessment",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa6-2025",
+        "activity_section.key": "97179d20-996e-4b5e-a513-afeaeca14f05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2025",
+        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
       }
     },
     {
@@ -6762,42 +6974,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa6-2025",
         "activity_section.key": "8adde027-fd42-4ae4-af31-42c4cd0c0e0c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6 Natural Language Processing Project_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U6 Natural Language Processing Project_pilot_oo2025"
-        ],
-        "lesson.key": "Natural Language Processing Project",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa6-2025",
-        "activity_section.key": "0e632aa7-f9a9-4994-802e-4db5966e611f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA Unit 6 Assessment_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA Unit 6 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 6 Assessment",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa6-2025",
-        "activity_section.key": "97179d20-996e-4b5e-a513-afeaeca14f05"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa6-2025",
-        "activity_section.key": "22046679-a811-43d2-9586-d4b342c157cc"
       }
     }
   ],

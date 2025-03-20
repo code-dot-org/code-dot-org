@@ -25,7 +25,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
-          <strong>✍ Video carousel placeholder.</strong> Please add a
+          <strong>🎠 Video carousel placeholder.</strong> Please add a
           "Carousel" content type entry in the Content sidebar, save, and open
           the preview tab to see the carousel in action.
         </em>
