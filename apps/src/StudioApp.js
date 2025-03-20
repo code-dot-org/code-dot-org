@@ -3471,6 +3471,9 @@ if (IN_UNIT_TEST) {
     if (instance.hiddenWorkspaceChangeListener) {
       Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
     }
+    if (instance.mainWorkspaceChangeListener) {
+      Blockly.removeChangeListener(instance.mainWorkspaceChangeListener);
+    }
     instance = __oldInstance;
     __oldInstance = null;
   };
