@@ -10,6 +10,6 @@ import ActionBlock from '@code-dot-org/component-library/actionBlock';
 ```
 
 For guidelines on how to use this component and the features it
-offers, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-action-block--docs).
+offers, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-actionblock--docs).
 Or run storybook locally and go
-to [Design System / Action Block](http://localhost:6006/?path=/docs/designsystem-action-block--docs).
+to [Design System / Action Block](http://localhost:6006/?path=/docs/designsystem-actionblock--docs).
