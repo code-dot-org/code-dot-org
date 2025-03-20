@@ -74,6 +74,31 @@ export const DefaultActionBlock: Story = {
   },
 };
 
+export const WithDetail: Story = {
+  args: {
+    ...defaultArgs,
+    detailLabel: 'Duration',
+    detailDescription: '1 hour',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Sets a detail on the action block like duration, projects, or any other relevant information..',
+      },
+    },
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const detailLabel = await canvas.findByText('Duration:');
+    const detailDescription = await canvas.findByText('1 hour');
+
+    // check if details are visible
+    await expect(detailLabel).toBeVisible();
+    await expect(detailDescription).toBeVisible();
+  },
+};
+
 export const WithoutSecondaryButton: Story = {
   args: {
     ...defaultArgs,
@@ -139,31 +164,6 @@ export const WithSecondaryBackground: Story = {
   },
 };
 
-export const WithDetail: Story = {
-  args: {
-    ...defaultArgs,
-    detailLabel: 'Duration',
-    detailDescription: '1 hour',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Sets a detail on the action block like duration, projects, or any other relevant information..',
-      },
-    },
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const detailLabel = await canvas.findByText('Duration:');
-    const detailDescription = await canvas.findByText('1 hour');
-
-    // check if details are visible
-    await expect(detailLabel).toBeVisible();
-    await expect(detailDescription).toBeVisible();
-  },
-};
-
 export const MultipleActionBlocksTwoAcross: Story = {
   args: {
     ...defaultArgs,
@@ -173,13 +173,19 @@ export const MultipleActionBlocksTwoAcross: Story = {
     docs: {
       description: {
         story:
-          'When `isFullWidth` is set to `false`, the Action Block will fit within multiple columns. You will need to create a wrapper to control the layout. In this case, we are using a flexbox with a gap of `1.5rem` to create space between the Action Blocks.',
+          'When `isFullWidth` is set to `false`, the Action Block will fit within multiple columns. You will need to create a wrapper to control the layout.',
       },
     },
   },
   render: args => {
     return (
-      <div style={{display: 'flex', gap: '1.5rem'}}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
         <ActionBlock {...args} />
         <ActionBlock {...args} image={image2} />
       </div>
@@ -210,7 +216,13 @@ export const MultipleActionBlocksThreeAcross: Story = {
   },
   render: args => {
     return (
-      <div style={{display: 'flex', gap: '1.5rem'}}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
         <ActionBlock {...args} />
         <ActionBlock {...args} image={image2} />
         <ActionBlock {...args} image={image3} />
