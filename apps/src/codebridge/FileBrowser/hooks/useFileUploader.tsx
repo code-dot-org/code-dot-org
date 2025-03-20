@@ -11,7 +11,6 @@ import {
 } from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 type UseFileUploaderArgs = Exclude<FileUploaderProps, 'sendAnalyticsEvent'>;
 
@@ -19,12 +18,9 @@ export const useFileUploader = (
   args: UseFileUploaderArgs,
   folderId: string
 ) => {
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const {source} = useCodebridgeContext();
+  const {source, levelProperties} = useCodebridgeContext();
+  const {appName, validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {

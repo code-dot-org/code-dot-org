@@ -9,6 +9,7 @@ import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/use
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
+import {useCodebridgeContext} from '../codebridgeContext';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ForTeachersOnly from './ForTeachersOnly';
@@ -56,17 +57,16 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   style,
   className,
 }) => {
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const {levelProperties} = useCodebridgeContext();
+  const {
+    id: levelId,
+    mapReference,
+    referenceLinks,
+    teacherMarkdown,
+    predictSettings,
+    appName,
+  } = levelProperties;
   const scriptId = useAppSelector(state => state.lab.scriptId);
-  const mapReference = useAppSelector(
-    state => state.lab.levelProperties?.mapReference
-  );
-  const referenceLinks = useAppSelector(
-    state => state.lab.levelProperties?.referenceLinks
-  );
-  const teacherMarkdown = useAppSelector(
-    state => state.lab.levelProperties?.teacherMarkdown
-  );
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
   const [currentPanelHeader, setCurrentPanelHeader] = useState(
@@ -76,10 +76,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
     Panels.Instructions,
   ]);
-  const hasPredictSolution = useAppSelector(
-    state => !!state.lab.levelProperties?.predictSettings?.solution
-  );
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const hasPredictSolution = predictSettings?.solution;
 
   useEffect(() => {
     // For now, always include Instructions panel.

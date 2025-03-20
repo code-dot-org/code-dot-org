@@ -29,8 +29,7 @@ interface NeighborhoodPreviewProps {
 const NeighborhoodPreview: React.FunctionComponent<
   NeighborhoodPreviewProps
 > = ({handleScaling}) => {
-  const levelProperties = useAppSelector(state => state.lab.levelProperties);
-  const {source, config} = useCodebridgeContext();
+  const {source, config, levelProperties} = useCodebridgeContext();
   const serializedMaze = findFile(
     source,
     MAZE_FILE_NAME,
