@@ -11,7 +11,7 @@ import {
 
 import moduleStyles from './actionBlock.module.scss';
 
-export interface ActionBlockProps extends HTMLAttributes<HTMLElement> {
+export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
   /** Action Block title */
   title: string;
   /** Action Block description */
@@ -22,6 +22,8 @@ export interface ActionBlockProps extends HTMLAttributes<HTMLElement> {
   overline?: string;
   /** Action Block detail */
   detail?: 'none' | 'duration' | 'labProject';
+  /** Detail label */
+  detailLabel?: string;
   /** Detail string */
   detailString?: string;
   /** Primary button label */
@@ -64,6 +66,7 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
   image,
   overline,
   detail = 'none',
+  detailLabel,
   detailString,
   primaryButtonLabel,
   primaryButtonUrl,
@@ -75,7 +78,7 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
   isFullWidth = true,
   className,
   ...HTMLAttributes
-}: ActionBlockProps) => {
+}) => {
   return (
     <div
       className={classNames(
@@ -114,7 +117,8 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
         {(detail === 'duration' || detail === 'labProject') && detailString && (
           <BodyThreeText className={classNames(moduleStyles.detail)}>
             <StrongText>
-              {detail === 'duration' ? 'Duration:' : 'What you can make:'}
+              {detail === 'duration' ? 'Duration:' : detailLabel}
+              {detail === 'labProject' ? 'What you can make:' : detailLabel}
             </StrongText>
             {' ' + detailString}
           </BodyThreeText>
