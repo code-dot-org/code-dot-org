@@ -67,7 +67,7 @@ const FAQAccordionContentful: React.FunctionComponent<
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
-          <strong>✍ FAQ Accordion placeholder.</strong> Please add a "FAQs"
+          <strong>❓ FAQ Accordion placeholder.</strong> Please add a "FAQs"
           content type entry in the FAQ Accordion sidebar, save, and open the
           preview tab to see the accordions in action.
         </em>

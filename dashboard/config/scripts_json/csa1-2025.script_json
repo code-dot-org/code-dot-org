@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 00:01:24 UTC",
+    "serialized_at": "2025-03-19 22:07:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,24 +65,12 @@
       }
     },
     {
-      "key": "lessonGroup-6",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "lessonGroup-5",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Asphalt Art Project."
+        "display_name": "Alternate and Optional Lessons",
+        "description": "This section contains the one-day version of the Asphalt Art Project and optional lessons."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -92,7 +80,7 @@
     {
       "key": "lessonGroup-7",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -246,14 +234,14 @@
     },
     {
       "key": "AI-Generated Code (non-AI Tutor)",
-      "name": "AI-Generated Code (non-AI Tutor)",
+      "name": "AI-Generated Code",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
         "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how AI can help to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing prompts in order to more effectively make use of AI-assistance in developing programs. ",
-        "preparation": "- Print copies of the [Planning Programs](https://docs.google.com/document/d/1VRFumOTI2Gidc3L2v7So9nw3iQCSbaKuazUbdBrkIaI/edit?usp=drive_link) handout \n- Preview the *Are We Automating Racism* video",
+        "preparation": "- Print copies of the Planning Programs handout \n- Preview the *Are We Automating Racism* video",
         "student_overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) is a big part of modern life. In this lesson, you'll first recognize how AI programs and data sets can have built-in biases. Then, you'll learn how AI can develop code while understanding the challenges that come with AI-created code. Finally, you'll practice designing prompts to make better use of AI when developing programs."
       },
       "seeding_key": {
@@ -353,30 +341,12 @@
       }
     },
     {
-      "key": "(Optional) Decomposition and Design",
-      "name": "(Optional) Decomposition and Design",
+      "key": "Two-Way Selection Statements",
+      "name": "Two-Way Selection Statements",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
-      "properties": {
-        "overview": "**How can I write efficient code?**\n\nStudents build on their knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. Students are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and consider how they can plan and organize their solutions to be more efficient. Students then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass.",
-        "preparation": "* **(Optional)** Print copies of the Decomposition and Design Guided Notes (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Decomposition handout (one for each student)",
-        "student_overview": "**How can I write efficient code?**\n\nIn this lesson, you build on your knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. You are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and develop algorithms for these tasks and consider how you can plan and organize their solutions to be more efficient. You then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass."
-      },
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "Two-Way Selection Statements",
-      "name": "Two-Way Selection Statements",
-      "absolute_position": 16,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 15,
       "properties": {
         "overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nStudents expand their knowledge of selection statements and Boolean values to learn how to use two-way selection statements and the NOT ( `!` ) logical operator. Students explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms they have developed so far. Students then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class.",
         "preparation": "* **(Optional)** Print copies of the Two-Way Selection Statements Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Print copies of the Unit 1 Study Guide (one for each student)\n* Preview the *Two-Way Selection and NOT* video",
@@ -391,10 +361,10 @@
     {
       "key": "Asphalt Art Project",
       "name": "Asphalt Art Project",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
         "assessment": true,
         "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
@@ -410,10 +380,10 @@
     {
       "key": "SpiralPainter FRQ",
       "name": "SpiralPainter FRQ",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource *or* have students make a copy of the SpiralPainter FRQ Digital Manipulatives\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student",
@@ -428,10 +398,10 @@
     {
       "key": "Unit 1 Assessment",
       "name": "Unit 1 Assessment",
-      "absolute_position": 19,
+      "absolute_position": 18,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -445,27 +415,12 @@
       }
     },
     {
-      "key": "Unit 1 Survey",
-      "name": "Unit 1 Survey",
-      "absolute_position": 20,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 19,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Unit 1 Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
       "key": "Asphalt Art Project [1-Day Version]",
       "name": "Asphalt Art Project [1-Day Version]",
-      "absolute_position": 21,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 18,
       "properties": {
         "assessment": true,
         "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
@@ -478,69 +433,19 @@
       }
     },
     {
-      "key": "lesson-2",
-      "name": "Introduction to Algorithms",
-      "absolute_position": 22,
+      "key": "(Optional) Decomposition and Design",
+      "name": "Decomposition and Design",
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 19,
       "properties": {
+        "overview": "**How can I write efficient code?**\n\nStudents build on their knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. Students are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and consider how they can plan and organize their solutions to be more efficient. Students then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass.",
+        "preparation": "* **(Optional)** Print copies of the Decomposition and Design Guided Notes (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Decomposition handout (one for each student)",
+        "student_overview": "**How can I write efficient code?**\n\nIn this lesson, you build on your knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. You are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and develop algorithms for these tasks and consider how you can plan and organize their solutions to be more efficient. You then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass."
       },
       "seeding_key": {
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "Static Variables and Methods",
-      "name": "Calling Class Methods",
-      "absolute_position": 23,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 22,
-      "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
-        "overview": "**Why would I use static variables and methods?**\n\nStudents have written instance variables and methods that require an object to be created. In this lesson, students learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. Students explore the functionality of static variables and methods, then practice using these to solve problems.",
-        "preparation": "* **(Optional)** Print copies of the U4L2 Guided Notes (one for each student)\n* Preview the *Static Variables* and *Static Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-2-static-variables-and-methods/37898) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**Why would I use static variables and methods?**\n\nYou have written instance variables and methods that require an object to be created. In this lesson, you learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. You explore the functionality of static variables and methods, then practice using these to solve problems."
-      },
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "Casting and Range of Variables",
-      "absolute_position": 24,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 23,
-      "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* To Be Updated\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, students explore what it means for computers to have a specified amount of memory for data storage, and how different data types have storage allotted. They discover the minimum and maximum values for integers and how exceeding these limits causes overflow or underflow errors. They investigate strategies for avoiding overflow errors, and adapt those strategies to avoid roundoff errors. Students then practice writing methods to check for and avoid overflow errors. \n",
-        "preparation": "* **(Optional)** Print copies of the Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What happens if a value in your program falls beyond the maximum or minimum range of values?**\n\nIn this lesson, you will dive into how computers store data and the limits each data type has. You'll uncover the boundaries for integers and what happens if you go beyond them, leading to overflow or underflow errors. We'll explore ways to prevent these errors and also learn about roundoff errors. Finally, you'll get hands-on experience writing methods to detect and steer clear of overflow errors."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "lesson-5",
-      "name": "Programming Style and Feedback",
-      "absolute_position": 25,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 24,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025"
       }
@@ -548,10 +453,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 26,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 25,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -1134,48 +1039,6 @@
       }
     },
     {
-      "key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a",
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "1becc2f6-f135-46d6-96f8-3374eefc615c",
-      "position": 2,
-      "properties": {
-        "duration": 75,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c",
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff",
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
       "key": "3a535330-c335-42b8-ade5-0fff08dba8ee",
       "position": 1,
       "properties": {
@@ -1342,18 +1205,6 @@
       }
     },
     {
-      "key": "f750a8c1-2015-4901-a353-ae49e8922e73",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f750a8c1-2015-4901-a353-ae49e8922e73",
-        "lesson.key": "Unit 1 Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
       "key": "a024bbbe-0d34-45da-8efa-7003e7f995dd",
       "position": 1,
       "properties": {
@@ -1396,97 +1247,43 @@
       }
     },
     {
-      "key": "52907eac-fc43-457c-9168-f632231a9182",
+      "key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a",
       "position": 1,
       "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "52907eac-fc43-457c-9168-f632231a9182",
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "53d14cf3-c2d7-4209-ae17-3c41e945169b",
-      "position": 1,
-      "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "53d14cf3-c2d7-4209-ae17-3c41e945169b",
-        "lesson.key": "Static Variables and Methods",
+        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025"
       }
     },
     {
-      "key": "ee0827e9-d17f-4128-80df-fc42f27b3b15",
+      "key": "1becc2f6-f135-46d6-96f8-3374eefc615c",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 75,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15",
-        "lesson.key": "Static Variables and Methods",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025"
       }
     },
     {
-      "key": "4a9bb76a-8f04-42af-83d3-18fb65e43625",
+      "key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625",
-        "lesson.key": "Static Variables and Methods",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "30e66e2c-4845-4ce0-baaf-11315079d9f6",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up "
-      },
-      "seeding_key": {
-        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098",
-      "position": 2,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098",
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "36396447-a8a1-4c70-bfa1-72f615be4575",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575",
-        "lesson.key": "lesson-4",
+        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025"
       }
@@ -5149,386 +4946,6 @@
       }
     },
     {
-      "key": "1933d277-024f-411f-bde3-c8f412632656",
-      "position": 1,
-      "properties": {
-        "description": "Computer science is all about problem-solving. Solving problems is a core component of a software engineer's work, and we have learned about ways to create and improve solutions in The Neighborhood. Let's consider how we solve problems in our daily lives.",
-        "name": "Solving Problems",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "1933d277-024f-411f-bde3-c8f412632656",
-        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a"
-      }
-    },
-    {
-      "key": "310f030d-e35a-49aa-a844-5222b1662a17",
-      "position": 2,
-      "properties": {
-        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their groups to write an algorithm for the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What process did you take to decide on your algorithm?*\n\n**Discussion Goal:** Students share the approaches they took to develop their algorithm. Students discuss how they broke the problem down into smaller tasks, such as sorting the colors into piles and then counting the number of M&M's in each pile.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Prompt students to identify the steps they took to solve the problem and consider how these steps are related to smaller chunks of the larger problem."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "310f030d-e35a-49aa-a844-5222b1662a17",
-        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a"
-      }
-    },
-    {
-      "key": "9e42971d-d7bf-4dc4-8b23-35d46874b1be",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
-        "duration": "10",
-        "name": "Decomposition"
-      },
-      "seeding_key": {
-        "activity_section.key": "9e42971d-d7bf-4dc4-8b23-35d46874b1be",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "7a75b539-78f7-43fb-9e1e-ad055bc4190f",
-      "position": 2,
-      "properties": {
-        "description": "Sometimes, problems are so big that we need to break them down into manageable tasks first. This process is called decomposition, and we will learn how to use this approach to break down problems.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7a75b539-78f7-43fb-9e1e-ad055bc4190f",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "3fa223d5-025b-49eb-b76e-fc4cdf35fd1f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***decomposition***.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Revisit the scenario from the warm up or an example of a personal interest or daily activity. Briefly discuss how the scenario would be broken down into specific tasks or steps."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3fa223d5-025b-49eb-b76e-fc4cdf35fd1f",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4",
-      "position": 4,
-      "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 4. Students investigate the program by making modifications to the program as prompted and observing the results.",
-        "progression_name": "Investigate and Modify: Decomposition"
-      },
-      "seeding_key": {
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "e5c5dcf8-723d-4d1b-a1a6-e14c27d48939",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Prompt students to share what the `setPaint()` method does and how they might use this method in their programs. You could also ask students to identify how the `setPaint()` method is similar and different from the `getMyPaint()` method.\n\nYou do not need to discuss accessor or mutator methods here, as these topics are discussed in an upcoming lesson."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e5c5dcf8-723d-4d1b-a1a6-e14c27d48939",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "dd5425f2-b491-4da3-9094-7928a4e5af8b",
-      "position": 6,
-      "properties": {
-        "description": "When software engineers develop solutions, they try to account for potential errors and different ways a user might use the program. However, they have to be careful about being redundant to keep their programs efficient.",
-        "duration": "10",
-        "name": "Developing Efficient Solutions",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "dd5425f2-b491-4da3-9094-7928a4e5af8b",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "a85390be-07bd-49b4-8ee9-b5cd1aa4895e",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does it mean to you for something to be efficient?*\n\n**Discussion Goal:** Students suggest definitions and examples, such as being fast or organized. Students might share examples from their personal lives, such as something being energy-efficient or having tools and resources to make chores or work more efficient.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nPrompt students to consider examples where the lack of organization or resources cause a task to be inefficient. For example, you could ask students to compare washing dishes by hand and using a dishwasher. Have students share reasons why one approach to completing the task is more efficient than the other, such as the amount of time and energy it takes to complete the task."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a85390be-07bd-49b4-8ee9-b5cd1aa4895e",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "0b7e67ca-451a-481e-9c99-a06dadf161f3",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***redundant code*** and ***efficient***.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Prompt students to make connections between efficiency in daily tasks and efficiency in writing code. Have students consider why efficiency in programs would be important and guide them to realize how this helps with development, maintainability, and the overall speed of the program."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0b7e67ca-451a-481e-9c99-a06dadf161f3",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "a6aa7344-9335-499f-97bc-cdf6a10bc3a6",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we make sure we are writing efficient code?*\n\n**Discussion Goal:** Students suggest eliminating redundant code by writing methods for repetitive tasks. They may also suggest writing methods that perform only one task and calling these from other methods that represent larger tasks.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nPrompt students to consider the code they saw in the Investigate level and what structures were implemented to make writing and editing the code more efficient."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a6aa7344-9335-499f-97bc-cdf6a10bc3a6",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "005b223f-cb94-4d58-99a9-be0cc8db1105",
-      "position": 10,
-      "properties": {
-        "description": "You have used the problem solving process to break down problems and plan your algorithms. When we do this, it can help us identify any repetitive tasks that we can write methods for. These methods then represent a smaller task as part of the larger solution and consist of their own algorithms. To plan algorithms for a problem or a method, you have actually been using a tool that software engineers often use to plan their own algorithms.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "005b223f-cb94-4d58-99a9-be0cc8db1105",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "86e9a638-fed2-42e3-a499-517d0aa6f326",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***pseudocode***."
-      },
-      "seeding_key": {
-        "activity_section.key": "86e9a638-fed2-42e3-a499-517d0aa6f326",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "532a1d91-2ddc-4a58-8074-51aa11575456",
-      "position": 12,
-      "properties": {
-        "description": "As you work through these problems, use the problem solving process and decomposition strategies to break them down into manageable tasks. Write your algorithms in pseudocode so you can easily implement and refine them in Java.",
-        "duration": "30",
-        "name": "Creating Murals",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "532a1d91-2ddc-4a58-8074-51aa11575456",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "723646c0-47d1-44ba-9be6-a23b98beadc1",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Decomposition handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution and write pseudocode for their algorithms.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize the use of natural language when writing pseudocode. Allow students to write their pseudocode in whichever language they are most comfortable to support the focus on planning their algorithms rather than focusing on specific structures or languages."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "723646c0-47d1-44ba-9be6-a23b98beadc1",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "e15deba9-5eac-42f7-84b1-67549b7f543e",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio complete Levels 5 and 6. Students complete a Check for Understanding on Level 6, then continue to Level 6 to create a subclass of the `PainterPlus` class and implement their algorithm for their chosen problem.",
-        "progression_name": "Practice: Decomposing a Problem",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of planning and using decomposition, the problem solving process, and pseudocode to plan and implement algorithms."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "d80f8226-d677-4d12-b4bc-f26af00ee7f0",
-      "position": 15,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new `PainterPlus` subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit our work in case we need to go back to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d80f8226-d677-4d12-b4bc-f26af00ee7f0",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "2b3069d3-8c42-4d35-aadd-b023bbad56a6",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2b3069d3-8c42-4d35-aadd-b023bbad56a6",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "2287f274-2bea-4e2e-b022-99e70b1827de",
-      "position": 17,
-      "properties": {
-        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
-        "duration": "25",
-        "name": "Code Review",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "2287f274-2bea-4e2e-b022-99e70b1827de",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "2aae0de1-b4ff-48f1-bba4-db52821167c5",
-      "position": 18,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed. Students should then review the feedback and make improvements to their code and repeat the process as needed until they are satisfied with their solution."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2aae0de1-b4ff-48f1-bba4-db52821167c5",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "61aae0ae-e665-428a-852f-a8f11c1d303c",
-      "position": 1,
-      "properties": {
-        "description": "You have made a lot of progress developing your software engineering skills. Let's take a moment to reflect on our progress and growth.",
-        "name": "Software Engineering Skills",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "61aae0ae-e665-428a-852f-a8f11c1d303c",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "404ec1f4-c0bc-47bf-bcae-2c541e8cadbd",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How have you grown as a software engineer so far?*\n\n**Discussion Goal:** Students share the growth and progress they have made and identify specific characteristics where they feel they have improved.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 1 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "404ec1f4-c0bc-47bf-bcae-2c541e8cadbd",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "649e4ce3-2255-49dd-8637-263e4ed37d20",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "649e4ce3-2255-49dd-8637-263e4ed37d20",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "4f47e933-7216-445b-aa30-796866506aac",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "4f47e933-7216-445b-aa30-796866506aac",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "d40151fe-459a-41c3-a3b2-2e36a2529f02",
-      "position": 5,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "d40151fe-459a-41c3-a3b2-2e36a2529f02",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf",
-      "position": 6,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding",
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
       "key": "c50213ab-49bf-4ac8-b9d9-3ac5226c7fd3",
       "position": 1,
       "properties": {
@@ -6301,8 +5718,37 @@
       }
     },
     {
-      "key": "c3aa8d58-7d50-42ec-833d-9cd723c48a66",
+      "key": "3ecc7ff0-40db-4299-8461-ea35babfff7d",
       "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) as well. Your feedback is valued and appreciated!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ecc7ff0-40db-4299-8461-ea35babfff7d",
+        "lesson_activity.key": "4433734c-b7a5-410b-8e4b-6e423dbe4ba8"
+      }
+    },
+    {
+      "key": "00f83a6e-0c7f-4e65-9d60-093021934fcd",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "00f83a6e-0c7f-4e65-9d60-093021934fcd",
+        "lesson_activity.key": "4433734c-b7a5-410b-8e4b-6e423dbe4ba8"
+      }
+    },
+    {
+      "key": "c3aa8d58-7d50-42ec-833d-9cd723c48a66",
+      "position": 13,
       "properties": {
         "description": "---"
       },
@@ -6313,7 +5759,7 @@
     },
     {
       "key": "96beeaca-d777-4828-8a65-54e9e45f0abf",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -6499,17 +5945,6 @@
       }
     },
     {
-      "key": "d280f8fc-b964-4fed-a47e-9761e2c7ade2",
-      "position": 1,
-      "properties": {
-        "progression_name": "Unit 1 Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "d280f8fc-b964-4fed-a47e-9761e2c7ade2",
-        "lesson_activity.key": "f750a8c1-2015-4901-a353-ae49e8922e73"
-      }
-    },
-    {
       "key": "548942e1-4d54-49df-a3b6-d89791861a03",
       "position": 1,
       "properties": {
@@ -6649,285 +6084,374 @@
       }
     },
     {
-      "key": "5d28c2b3-3be9-428b-9997-e8f8b7b9a66c",
+      "key": "1933d277-024f-411f-bde3-c8f412632656",
       "position": 1,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5d28c2b3-3be9-428b-9997-e8f8b7b9a66c",
-        "lesson_activity.key": "52907eac-fc43-457c-9168-f632231a9182"
-      }
-    },
-    {
-      "key": "4179c792-ab7c-4917-a633-ffbbb2af1617",
-      "position": 1,
-      "properties": {
-        "description": "We can customize almost anything in the digital world these days, but oftentimes, software engineers need to establish a simple default value for those things we might want to customize. ",
-        "name": "Telling a Story",
+        "description": "Computer science is all about problem-solving. Solving problems is a core component of a software engineer's work, and we have learned about ways to create and improve solutions in The Neighborhood. Let's consider how we solve problems in our daily lives.",
+        "name": "Solving Problems",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "4179c792-ab7c-4917-a633-ffbbb2af1617",
-        "lesson_activity.key": "53d14cf3-c2d7-4209-ae17-3c41e945169b"
+        "activity_section.key": "1933d277-024f-411f-bde3-c8f412632656",
+        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a"
       }
     },
     {
-      "key": "52fafddd-7a56-48e8-8e99-c58d6ac950f0",
+      "key": "310f030d-e35a-49aa-a844-5222b1662a17",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Can you think of a situation in your life where you interact with software or apps that have default values? \n\nHow do you think software engineers choose these default values, and how do they affect your experience? \n*\n\n**Discussion Goal:** Students share various default values from apps / software, and mention possible considerations such as accessibility, current trends, and common usages.",
+        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their groups to write an algorithm for the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What process did you take to decide on your algorithm?*\n\n**Discussion Goal:** Students share the approaches they took to develop their algorithm. Students discuss how they broke the problem down into smaller tasks, such as sorting the colors into piles and then counting the number of M&M's in each pile.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students have interacted with Painter and The Neighborhood, have them consider what sort of default values they would like to see in a Painter. "
+            "markdown": "Prompt students to identify the steps they took to solve the problem and consider how these steps are related to smaller chunks of the larger problem."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "52fafddd-7a56-48e8-8e99-c58d6ac950f0",
-        "lesson_activity.key": "53d14cf3-c2d7-4209-ae17-3c41e945169b"
+        "activity_section.key": "310f030d-e35a-49aa-a844-5222b1662a17",
+        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a"
       }
     },
     {
-      "key": "5ea21ed9-ef99-49f8-974f-9971b3c0d85b",
+      "key": "9e42971d-d7bf-4dc4-8b23-35d46874b1be",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
-        "duration": "5",
-        "name": "Introduction"
+        "duration": "10",
+        "name": "Decomposition"
       },
       "seeding_key": {
-        "activity_section.key": "5ea21ed9-ef99-49f8-974f-9971b3c0d85b",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "9e42971d-d7bf-4dc4-8b23-35d46874b1be",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "d7b23d9b-724a-41cf-a9ef-bfa250b7d080",
+      "key": "7a75b539-78f7-43fb-9e1e-ad055bc4190f",
       "position": 2,
       "properties": {
-        "description": "So far, the instance variables and methods we have written in our classes can only be accessed by an instance of the class. However, there are special types of variables and methods that can be used without an object. Today, we'll learn about using the static keyword to create and use class methods.",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Vocabulary Note:** The updated AP CS A framework refers to static variables as class variables. These terms are often used interchangeably, but the Code.org curriculum uses the term static variable. A note regarding this vocabulary can be found in the slides for this lesson."
-          }
-        ]
+        "description": "Sometimes, problems are so big that we need to break them down into manageable tasks first. This process is called decomposition, and we will learn how to use this approach to break down problems.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "d7b23d9b-724a-41cf-a9ef-bfa250b7d080",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "7a75b539-78f7-43fb-9e1e-ad055bc4190f",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "1b3d7639-425a-48ac-a259-94e476d4e59c",
+      "key": "3fa223d5-025b-49eb-b76e-fc4cdf35fd1f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
-        "progression_name": "Predict and Run: Static Variables and Methods"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***decomposition***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Revisit the scenario from the warm up or an example of a personal interest or daily activity. Briefly discuss how the scenario would be broken down into specific tasks or steps."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "1b3d7639-425a-48ac-a259-94e476d4e59c",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "3fa223d5-025b-49eb-b76e-fc4cdf35fd1f",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "943daf70-cc40-4378-bb4e-c23a83e06e86",
+      "key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the class contains a static variable that is increased by one in the constructor. They also notice that the value is updated each time an object is created, and that the `static` keyword is also used in the method signature. Students may wonder what the `static` keyword means and when they might use static variables and methods instead of instance variables and methods they call on an object."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 4. Students investigate the program by making modifications to the program as prompted and observing the results.",
+        "progression_name": "Investigate and Modify: Decomposition"
       },
       "seeding_key": {
-        "activity_section.key": "943daf70-cc40-4378-bb4e-c23a83e06e86",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "5427dfce-ada3-4f98-b406-6ca87e57b11c",
+      "key": "e5c5dcf8-723d-4d1b-a1a6-e14c27d48939",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that each object gets its own copy of the instance variables that are declared in a class.",
-        "duration": "15",
-        "name": "Static Variables"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share what the `setPaint()` method does and how they might use this method in their programs. You could also ask students to identify how the `setPaint()` method is similar and different from the `getMyPaint()` method.\n\nYou do not need to discuss accessor or mutator methods here, as these topics are discussed in an upcoming lesson."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "5427dfce-ada3-4f98-b406-6ca87e57b11c",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "e5c5dcf8-723d-4d1b-a1a6-e14c27d48939",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "1b6dd84d-9192-4162-bc32-fe4f6e8524f2",
+      "key": "dd5425f2-b491-4da3-9094-7928a4e5af8b",
       "position": 6,
       "properties": {
-        "description": "Sometimes we need to represent information that is shared by all instances of a class. Rather than declaring instance variables for these values, we can use static variables.",
+        "description": "When software engineers develop solutions, they try to account for potential errors and different ways a user might use the program. However, they have to be careful about being redundant to keep their programs efficient.",
+        "duration": "10",
+        "name": "Developing Efficient Solutions",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1b6dd84d-9192-4162-bc32-fe4f6e8524f2",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "dd5425f2-b491-4da3-9094-7928a4e5af8b",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd",
+      "key": "a85390be-07bd-49b4-8ee9-b5cd1aa4895e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
-        "progression_name": "Investigate and Modify: The static Keyword"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does it mean to you for something to be efficient?*\n\n**Discussion Goal:** Students suggest definitions and examples, such as being fast or organized. Students might share examples from their personal lives, such as something being energy-efficient or having tools and resources to make chores or work more efficient.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nPrompt students to consider examples where the lack of organization or resources cause a task to be inefficient. For example, you could ask students to compare washing dishes by hand and using a dishwasher. Have students share reasons why one approach to completing the task is more efficient than the other, such as the amount of time and energy it takes to complete the task."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "a85390be-07bd-49b4-8ee9-b5cd1aa4895e",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "ca03ae33-9d27-4671-a759-ab7d56f1d6f6",
+      "key": "0b7e67ca-451a-481e-9c99-a06dadf161f3",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `static` keyword and define ***static variable***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Variables*.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***redundant code*** and ***efficient***.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+            "markdown": "Prompt students to make connections between efficiency in daily tasks and efficiency in writing code. Have students consider why efficiency in programs would be important and guide them to realize how this helps with development, maintainability, and the overall speed of the program."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ca03ae33-9d27-4671-a759-ab7d56f1d6f6",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "0b7e67ca-451a-481e-9c99-a06dadf161f3",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "6738b6eb-fd14-4c38-8e95-ffcfa83a25e0",
+      "key": "a6aa7344-9335-499f-97bc-cdf6a10bc3a6",
       "position": 9,
       "properties": {
-        "description": "Static variables allow us to represent values that are shared by all instances of a class. The syntax for declaring and accessing a static variable is similar to other types of variables, but there are some differences as well.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "6738b6eb-fd14-4c38-8e95-ffcfa83a25e0",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
-      }
-    },
-    {
-      "key": "b860eebd-d648-4a65-9632-a85d28b04f37",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that static variables belong to the class and introduce the syntax for accessing a static variable.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we make sure we are writing efficient code?*\n\n**Discussion Goal:** Students suggest eliminating redundant code by writing methods for repetitive tasks. They may also suggest writing methods that perform only one task and calling these from other methods that represent larger tasks.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students consider what they think it means in the `main` method. Guide students to realizing that since the `main` method is where the program starts running, Java does not need an object of the class to be created to access it. You can ask questions like:\n* *What is the purpose of the `main` method?*\n* *Where do we typically write the `main` method?*\n* *Would it make sense to need to create an object before Java can execute the `main` method?*"
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nPrompt students to consider the code they saw in the Investigate level and what structures were implemented to make writing and editing the code more efficient."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b860eebd-d648-4a65-9632-a85d28b04f37",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "a6aa7344-9335-499f-97bc-cdf6a10bc3a6",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "9db56a63-c74a-4841-a0c7-df864abcd0dd",
-      "position": 11,
+      "key": "005b223f-cb94-4d58-99a9-be0cc8db1105",
+      "position": 10,
       "properties": {
-        "description": "The `static` keyword can also be used with methods. Like static variables, these can be called on the class instead of an object.",
-        "duration": "15",
-        "name": "Static Methods",
+        "description": "You have used the problem solving process to break down problems and plan your algorithms. When we do this, it can help us identify any repetitive tasks that we can write methods for. These methods then represent a smaller task as part of the larger solution and consist of their own algorithms. To plan algorithms for a problem or a method, you have actually been using a tool that software engineers often use to plan their own algorithms.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "9db56a63-c74a-4841-a0c7-df864abcd0dd",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "005b223f-cb94-4d58-99a9-be0cc8db1105",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f",
+      "key": "86e9a638-fed2-42e3-a499-517d0aa6f326",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***pseudocode***."
+      },
+      "seeding_key": {
+        "activity_section.key": "86e9a638-fed2-42e3-a499-517d0aa6f326",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
+      }
+    },
+    {
+      "key": "532a1d91-2ddc-4a58-8074-51aa11575456",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
-        "progression_name": "Practice: Static Variables and Methods",
+        "description": "As you work through these problems, use the problem solving process and decomposition strategies to break them down into manageable tasks. Write your algorithms in pseudocode so you can easily implement and refine them in Java.",
+        "duration": "30",
+        "name": "Creating Murals",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "532a1d91-2ddc-4a58-8074-51aa11575456",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
+      }
+    },
+    {
+      "key": "723646c0-47d1-44ba-9be6-a23b98beadc1",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Decomposition handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution and write pseudocode for their algorithms.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize the use of natural language when writing pseudocode. Allow students to write their pseudocode in whichever language they are most comfortable to support the focus on planning their algorithms rather than focusing on specific structures or languages."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "723646c0-47d1-44ba-9be6-a23b98beadc1",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
+      }
+    },
+    {
+      "key": "e15deba9-5eac-42f7-84b1-67549b7f543e",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio complete Levels 5 and 6. Students complete a Check for Understanding on Level 6, then continue to Level 6 to create a subclass of the `PainterPlus` class and implement their algorithm for their chosen problem.",
+        "progression_name": "Practice: Decomposing a Problem",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of static methods.\n\nThe practice levels can be used as a formative assessment to gauge understanding of creating and using static variables and methods."
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of planning and using decomposition, the problem solving process, and pseudocode to plan and implement algorithms."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f",
-        "lesson_activity.key": "ee0827e9-d17f-4128-80df-fc42f27b3b15"
+        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "4cc5066e-d035-492e-b4a3-a2d56c07fc93",
-      "position": 1,
+      "key": "d80f8226-d677-4d12-b4bc-f26af00ee7f0",
+      "position": 15,
       "properties": {
-        "description": "We've now seen how static variables and methods work and some ways that they are used in different programs. Depending on the needs of our programs, there are several reasons why we might use a static variable instead of an instance variable or a static method instead of an instance method.",
-        "name": "Using Static Variables and Methods",
+        "description": "This is a good time to commit our code and save our new `PainterPlus` subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit our work in case we need to go back to a previous version.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "4cc5066e-d035-492e-b4a3-a2d56c07fc93",
-        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+        "activity_section.key": "d80f8226-d677-4d12-b4bc-f26af00ee7f0",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "75548f21-bcb8-4f2f-af05-194f200fb4d3",
-      "position": 2,
+      "key": "2b3069d3-8c42-4d35-aadd-b023bbad56a6",
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When do you think static variables and methods would be useful?*\n\n**Discussion Goal:** Students suggest scenarios for using static variables, such as to keep track of the number of `Student` objects in a program for a school or to represent a discount on an item. Students also suggest scenarios for using static methods, such as to perform calculations in a `Calculator` class or to represent a behavior that does not use any instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce example uses for static methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Prompt students to share additional ideas for scenarios where static variables and methods would be useful."
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "75548f21-bcb8-4f2f-af05-194f200fb4d3",
-        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+        "activity_section.key": "2b3069d3-8c42-4d35-aadd-b023bbad56a6",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
       }
     },
     {
-      "key": "7af8e7f3-bd65-4607-89ae-3210b1ffbfcd",
+      "key": "2287f274-2bea-4e2e-b022-99e70b1827de",
+      "position": 17,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "duration": "25",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2287f274-2bea-4e2e-b022-99e70b1827de",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
+      }
+    },
+    {
+      "key": "2aae0de1-b4ff-48f1-bba4-db52821167c5",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed. Students should then review the feedback and make improvements to their code and repeat the process as needed until they are satisfied with their solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2aae0de1-b4ff-48f1-bba4-db52821167c5",
+        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
+      }
+    },
+    {
+      "key": "61aae0ae-e665-428a-852f-a8f11c1d303c",
+      "position": 1,
+      "properties": {
+        "description": "You have made a lot of progress developing your software engineering skills. Let's take a moment to reflect on our progress and growth.",
+        "name": "Software Engineering Skills",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "61aae0ae-e665-428a-852f-a8f11c1d303c",
+        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
+      }
+    },
+    {
+      "key": "404ec1f4-c0bc-47bf-bcae-2c541e8cadbd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How have you grown as a software engineer so far?*\n\n**Discussion Goal:** Students share the growth and progress they have made and identify specific characteristics where they feel they have improved.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "404ec1f4-c0bc-47bf-bcae-2c541e8cadbd",
+        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
+      }
+    },
+    {
+      "key": "649e4ce3-2255-49dd-8637-263e4ed37d20",
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Guided Notes include the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "7af8e7f3-bd65-4607-89ae-3210b1ffbfcd",
-        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+        "activity_section.key": "649e4ce3-2255-49dd-8637-263e4ed37d20",
+        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
       }
     },
     {
-      "key": "f919069e-f0de-420d-b8fd-721c0a6b5dda",
+      "key": "4f47e933-7216-445b-aa30-796866506aac",
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "f919069e-f0de-420d-b8fd-721c0a6b5dda",
-        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+        "activity_section.key": "4f47e933-7216-445b-aa30-796866506aac",
+        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
       }
     },
     {
-      "key": "a4899655-ba47-46f2-9650-60710b4efbaf",
+      "key": "d40151fe-459a-41c3-a3b2-2e36a2529f02",
       "position": 5,
       "properties": {
         "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "a4899655-ba47-46f2-9650-60710b4efbaf",
-        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
+        "activity_section.key": "d40151fe-459a-41c3-a3b2-2e36a2529f02",
+        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
       }
     },
     {
-      "key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0",
+      "key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf",
       "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
@@ -6935,185 +6459,8 @@
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0",
-        "lesson_activity.key": "4a9bb76a-8f04-42af-83d3-18fb65e43625"
-      }
-    },
-    {
-      "key": "d61f294f-b384-4edb-853d-0a8b92de752c",
-      "position": 1,
-      "properties": {
-        "description": "There are many examples in software engineering of real-world consequences for a computer’s storage limitations. Let’s watch a short clip and see an example of one situation where the consequences cost hundreds of millions of dollars..",
-        "name": "Overflow Errors",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d61f294f-b384-4edb-853d-0a8b92de752c",
-        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
-      }
-    },
-    {
-      "key": "0602f79e-4fad-42e3-ad14-4afae49a3724",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – Ariane 5 rocket launch explosion.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The first two minutes of the video are a valuable support for the warm-up discussion. Teachers may choose to show the entire five minute video, but it is not necessary for the discussion to be productive.\n\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0602f79e-4fad-42e3-ad14-4afae49a3724",
-        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
-      }
-    },
-    {
-      "key": "4302b825-e2ab-4dd7-b252-ded32f6bf236",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *What other situations involving very large numbers might be impacted by overflow errors?.*\n\n**Discussion Goal:** Students should recognize that there is a maximum value that computers can hold. They might point to examples like Gangnam Style overflowing YouTube, an odometer overflowing, or Y2K.."
-      },
-      "seeding_key": {
-        "activity_section.key": "4302b825-e2ab-4dd7-b252-ded32f6bf236",
-        "lesson_activity.key": "30e66e2c-4845-4ce0-baaf-11315079d9f6"
-      }
-    },
-    {
-      "key": "0abc9855-530c-4a9a-a021-9a557c6c2a8a",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Introduce the lesson objectives.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Introduce the Question of the Day.",
-        "duration": "10",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "0abc9855-530c-4a9a-a021-9a557c6c2a8a",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "ae39ba84-75d0-47e1-8d7f-3c9c023e7e73",
-      "position": 2,
-      "properties": {
-        "description": "We have seen an example of the consequences of overflow errors. Now let’s take a look at some of the ways to anticipate overflow errors in Java.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ae39ba84-75d0-47e1-8d7f-3c9c023e7e73",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "baa2d793-a062-4572-bdb0-3bdcebca7b77",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
-        "progression_name": "Predict and Run: Overflow Errors"
-      },
-      "seeding_key": {
-        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "7d22722d-2249-49aa-b34f-b3a8f6e76fa4",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts\n\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that in the overflow example, the value becomes negative, and in the underflow example, the negative value becomes positive. Students may wonder about how the Integer class works and how to avoid overflow errors. "
-      },
-      "seeding_key": {
-        "activity_section.key": "7d22722d-2249-49aa-b34f-b3a8f6e76fa4",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "ca429f0f-11a1-46a9-8047-fe080682c965",
-      "position": 5,
-      "properties": {
-        "description": "The `Integer` and `Double` classes are known as wrapper classes. Java provides a wrapper class for each primitive type, which also gives us access to constants we can use for `int` and `double` values. We will learn much more about wrapper classes later in the course.",
-        "duration": "15",
-        "name": "Exploring Overflow and Roundoff",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ca429f0f-11a1-46a9-8047-fe080682c965",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "6f298776-4cc3-40e4-825d-e1ddba4dd761",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to introduce the `Integer` and `Double` classes and their constants.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.\n",
-        "progression_name": "Investigate and Modify: Roundoff Errors"
-      },
-      "seeding_key": {
-        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "2e5f7ed0-833d-4da4-a77f-c5d1130a5e50",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Discussion Goal:** Students should notice a different behavior from exceeding the maximum value of `Double` objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the minimum and maximum values for integers:\n* Integers in Java have 32 bits of space\n* `Integer.MIN_VALUE`\n* `Integer.MAX_VALUE`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **overflow**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **underflow**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the connection between doubles and **round-off errors.**"
-      },
-      "seeding_key": {
-        "activity_section.key": "2e5f7ed0-833d-4da4-a77f-c5d1130a5e50",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "70a73d92-2ec0-4cae-988f-d98ffc1208a2",
-      "position": 8,
-      "properties": {
-        "description": "As we saw in the discussion we had during the warm up, overflow errors do have consequences in many situations. By recognizing the possibility of a round-off error occurring, software engineers can design programs that anticipate and prevent roundoff errors. ",
-        "duration": "15",
-        "name": "Practice: Handling Overflow ",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "70a73d92-2ec0-4cae-988f-d98ffc1208a2",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "22349c1a-2761-475e-b951-b59c2b1fa37e",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a Check for Understanding, then continue to complete a choice level on Level 5 to practice anticipating and working around potential overflow errors.",
-        "progression_name": "Practice: Handling Overflow"
-      },
-      "seeding_key": {
-        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e",
-        "lesson_activity.key": "d1092d5d-0ec2-4b42-90b8-b6ad0c444098"
-      }
-    },
-    {
-      "key": "ba020374-d2a2-40a5-b339-6f8c95ad7046",
-      "position": 1,
-      "properties": {
-        "description": "We’ve talked a lot about overflow errors, and had a chance to experiment with overflow errors in our own programs. Now think back to the impact an overflow error had on the Ariane 5 rocket disaster. ",
-        "duration": "5",
-        "name": "Avoiding Overflow Errors",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ba020374-d2a2-40a5-b339-6f8c95ad7046",
-        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575"
-      }
-    },
-    {
-      "key": "01580ef3-3a84-4333-9cc2-8157ebf6980f",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you know now about the range of variables, do you think this was an avoidable error? What could the engineers have done differently?*\n\n**Discussion Goal:** Students may suggest that the error made with the Ariane 5 rocket was avoidable. They could mention a variety of strategies for avoiding overflow errors, such as peer reviewing code, using conditionals, and widening data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Review the concepts covered in this lesson\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "01580ef3-3a84-4333-9cc2-8157ebf6980f",
-        "lesson_activity.key": "36396447-a8a1-4c70-bfa1-72f615be4575"
+        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf",
+        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
       }
     },
     {
@@ -7170,6 +6517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: A Java Program"
       },
       "bonus": false,
@@ -7192,6 +6542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Working with Java Files"
       },
       "bonus": false,
@@ -7214,6 +6567,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Syntax Errors"
       },
       "bonus": false,
@@ -7236,6 +6592,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Syntax Errors"
       },
       "bonus": false,
@@ -7258,6 +6617,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L5_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7280,6 +6642,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Predict_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Classes and Objects"
       },
       "bonus": false,
@@ -7302,6 +6667,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Investigate_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The Painter Class"
       },
       "bonus": false,
@@ -7324,6 +6692,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Exit_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7346,6 +6717,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Skill Building_pilot_oo2025"
+        ],
         "progression": "Skill Building: Painter Objects"
       },
       "bonus": false,
@@ -7368,6 +6742,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 CFU_pilot_oo2025"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -7390,6 +6767,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -7412,6 +6792,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -7434,6 +6817,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L7_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7456,6 +6842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Painter Class Methods"
       },
       "bonus": false,
@@ -7478,6 +6867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
@@ -7500,6 +6892,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2-2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
@@ -7522,6 +6917,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -7544,6 +6942,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -7566,6 +6967,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7588,6 +6992,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Predict Code_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Painting"
       },
       "bonus": false,
@@ -7610,6 +7017,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -7632,6 +7042,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -7654,6 +7067,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -7676,6 +7092,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 CFU_pilot_oo2025"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -7698,6 +7117,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Practice_pilot_oo2025"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -7720,6 +7142,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Exit CFU_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7742,6 +7167,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7764,6 +7192,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7786,6 +7217,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7808,6 +7242,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7830,6 +7267,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7852,6 +7292,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7874,6 +7317,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7896,6 +7342,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7918,6 +7367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_oo2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -7940,6 +7392,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_oo2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -7962,6 +7417,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7984,6 +7442,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1_pilot_oo2025"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -8006,6 +7467,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2_pilot_oo2025"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -8028,6 +7492,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -8050,6 +7517,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8072,6 +7542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Writing Methods"
       },
       "bonus": false,
@@ -8094,6 +7567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -8116,6 +7592,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -8138,6 +7617,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -8160,6 +7642,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -8182,6 +7667,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -8204,6 +7692,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -8226,6 +7717,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L6_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8248,6 +7742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1_pilot_oo2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -8270,6 +7767,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2_pilot_oo2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -8292,6 +7792,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3_pilot_oo2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -8314,6 +7817,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L4_pilot_oo2025"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -8336,6 +7842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Conducting a Code Review"
       },
       "bonus": false,
@@ -8358,6 +7867,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L6_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8380,6 +7892,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Selection Statements"
       },
       "bonus": false,
@@ -8402,6 +7917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Selection Statements"
       },
       "bonus": false,
@@ -8424,6 +7942,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -8446,6 +7967,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -8468,6 +7992,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8490,6 +8017,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Variables and Printing"
       },
       "bonus": false,
@@ -8512,6 +8042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Debugging"
       },
       "bonus": false,
@@ -8534,6 +8067,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -8556,6 +8092,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -8578,6 +8117,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8600,160 +8142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1_pilot_oo2025"
+        "level_keys": [
+          "CSA U1L12-L1_pilot_oo2025"
         ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 68,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1-2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1-2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 69,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1-3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1-3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 70,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1-4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1-4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 71,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Practice: Decomposing a Problem"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      },
-      "level_keys": [
-        "CSA U1L11-L2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 72,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: Decomposing a Problem"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      },
-      "level_keys": [
-        "CSA U1L11-L3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 73,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf"
-      },
-      "level_keys": [
-        "CSA U1L11-L4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Predict and Run: Selection and Logic"
       },
       "bonus": false,
@@ -8771,11 +8162,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Selection and Logic"
       },
       "bonus": false,
@@ -8793,11 +8187,14 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -8815,11 +8212,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -8837,11 +8237,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8859,11 +8262,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project_pilot_oo2025"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -8881,11 +8287,36 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa1_2025"
+        ],
+        "lesson.key": "Asphalt Art Project",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025",
+        "activity_section.key": "3ecc7ff0-40db-4299-8461-ea35babfff7d"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa1_2025"
+      ]
+    },
+    {
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Assessment_pilot_oo2025"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -8903,382 +8334,207 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csa1_2025"
+          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
         ],
-        "progression": "Unit 1 Survey"
+        "progression": "Asphalt Art Project"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025"
+          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
         ],
-        "lesson.key": "Unit 1 Survey",
-        "lesson_group.key": "lessonGroup-6",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "d280f8fc-b964-4fed-a47e-9761e2c7ade2"
+        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa1_2025"
+        "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L2-L1_modular"
+          "CSA U1L11-L1_pilot_oo2025"
         ],
-        "progression": "Predict and Run: Static Variables and Methods"
+        "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L2-L1_modular"
+          "CSA U1L11-L1_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "1b3d7639-425a-48ac-a259-94e476d4e59c"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
       },
       "level_keys": [
-        "CSA U4L2-L1_modular"
+        "CSA U1L11-L1_pilot_oo2025"
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 77,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U4L2-L2_modular"
-        ],
-        "progression": "Investigate and Modify: The static Keyword"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4L2-L2_modular"
-        ],
-        "lesson.key": "Static Variables and Methods",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
-      },
-      "level_keys": [
-        "CSA U4L2-L2_modular"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L2-L3_modular"
+          "CSA U1L11-L1-2_pilot_oo2025"
         ],
-        "progression": "Investigate and Modify: The static Keyword"
+        "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L2-L3_modular"
+          "CSA U1L11-L1-2_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
       },
       "level_keys": [
-        "CSA U4L2-L3_modular"
+        "CSA U1L11-L1-2_pilot_oo2025"
       ]
     },
     {
-      "chapter": 85,
-      "position": 4,
+      "chapter": 78,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L2-L4_modular"
+          "CSA U1L11-L1-3_pilot_oo2025"
         ],
-        "progression": "Investigate and Modify: The static Keyword"
+        "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L2-L4_modular"
+          "CSA U1L11-L1-3_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
       },
       "level_keys": [
-        "CSA U4L2-L4_modular"
+        "CSA U1L11-L1-3_pilot_oo2025"
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 79,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-4_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Decomposition"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L11-L1-4_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Decomposition and Design",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2025",
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
+      },
+      "level_keys": [
+        "CSA U1L11-L1-4_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U4L2-L5_modular"
+          "CSA U1L11-L2_pilot_oo2025"
         ],
-        "progression": "Practice: Static Variables and Methods"
+        "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L2-L5_modular"
+          "CSA U1L11-L2_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
       },
       "level_keys": [
-        "CSA U4L2-L5_modular"
+        "CSA U1L11-L2_pilot_oo2025"
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U4L2-L6_modular"
+          "CSA U1L11-L3_pilot_oo2025"
         ],
-        "progression": "Practice: Static Variables and Methods"
+        "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L2-L6_modular"
+          "CSA U1L11-L3_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
       },
       "level_keys": [
-        "CSA U4L2-L6_modular"
+        "CSA U1L11-L3_pilot_oo2025"
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 82,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U4L2-L7_modular"
-        ],
-        "progression": "Practice: Static Variables and Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4L2-L7_modular"
-        ],
-        "lesson.key": "Static Variables and Methods",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
-      },
-      "level_keys": [
-        "CSA U4L2-L7_modular"
-      ]
-    },
-    {
-      "chapter": 89,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U4L2-L8_modular"
-        ],
-        "progression": "Practice: Static Variables and Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4L2-L8_modular"
-        ],
-        "lesson.key": "Static Variables and Methods",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
-      },
-      "level_keys": [
-        "CSA U4L2-L8_modular"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U4L2-L9_modular"
+          "CSA U1L11-L4_pilot_oo2025"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U4L2-L9_modular"
+          "CSA U1L11-L4_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0"
+        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf"
       },
       "level_keys": [
-        "CSA U4L2-L9_modular"
+        "CSA U1L11-L4_pilot_oo2025"
       ]
     },
     {
-      "chapter": 91,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L1"
-        ],
-        "progression": "Predict and Run: Overflow Errors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L1"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77"
-      },
-      "level_keys": [
-        "CSA U2_Casting-and-range-of-variables-L1"
-      ]
-    },
-    {
-      "chapter": 92,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L2"
-        ],
-        "progression": "Investigate and Modify: Roundoff Errors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L2"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
-      },
-      "level_keys": [
-        "CSA U2_Casting-and-range-of-variables-L2"
-      ]
-    },
-    {
-      "chapter": 93,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L3"
-        ],
-        "progression": "Investigate and Modify: Roundoff Errors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L3"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
-      },
-      "level_keys": [
-        "CSA U2_Casting-and-range-of-variables-L3"
-      ]
-    },
-    {
-      "chapter": 94,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L4"
-        ],
-        "progression": "Practice: Handling Overflow"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L4"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
-      },
-      "level_keys": [
-        "CSA U2_Casting-and-range-of-variables-L4"
-      ]
-    },
-    {
-      "chapter": 95,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L5-parent"
-        ],
-        "progression": "Practice: Handling Overflow"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L5-parent"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
-      },
-      "level_keys": [
-        "CSA U2_Casting-and-range-of-variables-L5-parent"
-      ]
-    },
-    {
-      "chapter": 96,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9303,7 +8559,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9325,28 +8581,6 @@
       },
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 98,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Asphalt Art Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
-      },
-      "level_keys": [
-        "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
       ]
     }
   ],
@@ -10145,90 +9379,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L11-L1_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L1-2_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1-2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L1-3_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1-3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L1-4_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1-4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L2_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L3_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L4_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa1-2025",
-        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U1L12-L1_pilot_oo2025",
         "script_level.level_keys": [
           "CSA U1L12-L1_pilot_oo2025"
@@ -10301,6 +9451,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa1_2025",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa1_2025"
+        ],
+        "lesson.key": "Asphalt Art Project",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025",
+        "activity_section.key": "3ecc7ff0-40db-4299-8461-ea35babfff7d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 1 Assessment_pilot_oo2025",
         "script_level.level_keys": [
           "CSA Unit 1 Assessment_pilot_oo2025"
@@ -10313,182 +9475,98 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa1_2025",
+        "level.key": "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025"
+          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
         ],
-        "lesson.key": "Unit 1 Survey",
-        "lesson_group.key": "lessonGroup-6",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "d280f8fc-b964-4fed-a47e-9761e2c7ade2"
+        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L2-L1_modular",
+        "level.key": "CSA U1L11-L1_pilot_oo2025",
         "script_level.level_keys": [
-          "CSA U4L2-L1_modular"
+          "CSA U1L11-L1_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "1b3d7639-425a-48ac-a259-94e476d4e59c"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L2-L2_modular",
+        "level.key": "CSA U1L11-L1-2_pilot_oo2025",
         "script_level.level_keys": [
-          "CSA U4L2-L2_modular"
+          "CSA U1L11-L1-2_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L2-L3_modular",
+        "level.key": "CSA U1L11-L1-3_pilot_oo2025",
         "script_level.level_keys": [
-          "CSA U4L2-L3_modular"
+          "CSA U1L11-L1-3_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L2-L4_modular",
+        "level.key": "CSA U1L11-L1-4_pilot_oo2025",
         "script_level.level_keys": [
-          "CSA U4L2-L4_modular"
+          "CSA U1L11-L1-4_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "0e8b96aa-6f9a-4b6c-be1f-0ab71f0266dd"
+        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L2-L5_modular",
+        "level.key": "CSA U1L11-L2_pilot_oo2025",
         "script_level.level_keys": [
-          "CSA U4L2-L5_modular"
+          "CSA U1L11-L2_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L2-L6_modular",
+        "level.key": "CSA U1L11-L3_pilot_oo2025",
         "script_level.level_keys": [
-          "CSA U4L2-L6_modular"
+          "CSA U1L11-L3_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
+        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L2-L7_modular",
+        "level.key": "CSA U1L11-L4_pilot_oo2025",
         "script_level.level_keys": [
-          "CSA U4L2-L7_modular"
+          "CSA U1L11-L4_pilot_oo2025"
         ],
-        "lesson.key": "Static Variables and Methods",
+        "lesson.key": "(Optional) Decomposition and Design",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4L2-L8_modular",
-        "script_level.level_keys": [
-          "CSA U4L2-L8_modular"
-        ],
-        "lesson.key": "Static Variables and Methods",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4L2-L9_modular",
-        "script_level.level_keys": [
-          "CSA U4L2-L9_modular"
-        ],
-        "lesson.key": "Static Variables and Methods",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "a6b49b2d-d124-40df-a0e8-c2fc3af708c0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2_Casting-and-range-of-variables-L1",
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L1"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "baa2d793-a062-4572-bdb0-3bdcebca7b77"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2_Casting-and-range-of-variables-L2",
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L2"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2_Casting-and-range-of-variables-L3",
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L3"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "6f298776-4cc3-40e4-825d-e1ddba4dd761"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2_Casting-and-range-of-variables-L4",
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L4"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2_Casting-and-range-of-variables-L5-parent",
-        "script_level.level_keys": [
-          "CSA U2_Casting-and-range-of-variables-L5-parent"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "22349c1a-2761-475e-b951-b59c2b1fa37e"
+        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf"
       }
     },
     {
@@ -10513,18 +9591,6 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2025",
         "activity_section.key": "82b12e33-6eea-4f1a-a197-e8180b2ef351"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
       }
     }
   ],
@@ -10731,18 +9797,6 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_writing_methods_guided_notes"
-      }
-    },
-    {
-      "name": "[KEY] Calling Class Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1E5BWPgoZT0qvUVLPs08pCF8EFJIql-4TqLkcKn1sSy4/edit?usp=sharing",
-      "key": "_key_calling_class_methods_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_calling_class_methods_extra_practice"
       }
     },
     {
@@ -11118,42 +10172,6 @@
       }
     },
     {
-      "name": "casting and range of variables",
-      "url": "https://docs.google.com/presentation/d/1NMPI0Mf7W41-kjwFLJBetDnIFuJ57LuyjbWtWVbrC30/edit?usp=sharing",
-      "key": "casting_and_range_of_variables",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "casting_and_range_of_variables"
-      }
-    },
-    {
-      "name": "casting and range of variables extra practice",
-      "url": "https://docs.google.com/document/d/1IUs2z8VnyCE7wNwFopqg11MOFKPgrfW16SxNbjMnKPE/edit?usp=sharing",
-      "key": "casting_and_range_of_variables_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "casting_and_range_of_variables_extra_practice"
-      }
-    },
-    {
-      "name": "casting and range of variables guided notes ",
-      "url": "https://docs.google.com/document/d/1vjMmIwHGFTmcZ-DUSCQqJcLH2SgZRNNzbS5dcOcK5TI/edit?usp=drive_link",
-      "key": "casting_and_range_of_variables_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "casting_and_range_of_variables_guided_notes"
-      }
-    },
-    {
       "name": "Change the Face of Computer Science",
       "url": "https://youtu.be/uhcA6K8rWp0",
       "key": "change_the_face_of_computer_science",
@@ -11390,30 +10408,6 @@
       }
     },
     {
-      "name": "exemplar casting and range of variables guided notes",
-      "url": "https://docs.google.com/document/d/1EWPtEdKfAYIQLbxblFu-1PJWnk3wA-2ZdLHoBx83n_I/edit?usp=drive_link",
-      "key": "exemplar_casting_and_range_of_variables_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_casting_and_range_of_variables_guided_notes"
-      }
-    },
-    {
-      "name": "Exemplar Guided Notes - Calling Class Methods",
-      "url": "https://docs.google.com/document/d/1QM1zE8fWVTTNSDbmSCV0ez7yknjlKXE29UUERnB2kgY/edit?usp=sharing",
-      "key": "exemplar_guided_notes_-_calling_class_methods_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
-      }
-    },
-    {
       "name": "Guide to Creating and Using Word Walls",
       "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
       "key": "guide_to_creating_and_using_word_walls",
@@ -11435,18 +10429,6 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "name": "Guided Notes - CSA [01] Calling Class Methods ",
-      "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
-      "key": "guided_notes_-_csa_01_calling_class_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
       }
     },
     {
@@ -11650,18 +10632,6 @@
       },
       "seeding_key": {
         "resource.key": "java_lab_guided_notes"
-      }
-    },
-    {
-      "name": "key casting and range of variables extra practice",
-      "url": "https://docs.google.com/document/d/1aSYW76WE82e2bNi-rlYadED-7N8NX3rlQ-QerpWH428/edit?usp=sharing",
-      "key": "key_casting_and_range_of_variables_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "key_casting_and_range_of_variables_extra_practice"
       }
     },
     {
@@ -11989,42 +10959,6 @@
       }
     },
     {
-      "name": "Static Methods",
-      "url": "https://youtu.be/k3QLkzascYI",
-      "key": "static_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "static_methods"
-      }
-    },
-    {
-      "name": "Static Variables",
-      "url": "https://youtu.be/4dffzoEfufA",
-      "key": "static_variables",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "static_variables"
-      }
-    },
-    {
-      "name": "Calling Class Methods",
-      "url": "https://docs.google.com/presentation/d/1CXDiY2N7sOYjQknX3QVpQ-MInBK9TnY26HoRKoxOA4o/edit?usp=sharing",
-      "key": "static_variables_and_methods",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "static_variables_and_methods"
-      }
-    },
-    {
       "name": "The Painter",
       "url": "https://docs.google.com/document/d/15HyWi-dLQfXJJV68FHkG3keFLyxbgS35yq8O3QZ_i7g/edit?usp=drive_link",
       "key": "the_painter_1",
@@ -12085,19 +11019,6 @@
       },
       "seeding_key": {
         "resource.key": "two-way_selection_statements_guided_notes"
-      }
-    },
-    {
-      "name": "Calling Class Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1PaTObYefkKM0Jw3TzJf30s_MVo7_135HQ_QmPPRxtFM/edit?usp=sharing",
-      "key": "u4l2_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l2_extra_practice"
       }
     },
     {
@@ -12963,54 +11884,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "_key_calling_class_methods_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "static_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "static_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "static_variables_and_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "u4l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "resource.key": "_exemplar_two-way_selection_statements_guided_notes"
       }
@@ -13157,42 +12030,6 @@
       "seeding_key": {
         "lesson.key": "Writing Methods",
         "resource.key": "writing_methods_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "casting_and_range_of_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "casting_and_range_of_variables_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "casting_and_range_of_variables_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "exemplar_casting_and_range_of_variables_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "key_casting_and_range_of_variables_extra_practice"
       }
     }
   ],
@@ -13479,16 +12316,6 @@
       }
     },
     {
-      "key": "instance_method",
-      "word": "instance method",
-      "definition": "a method that requires an object of the class to be created before it can be called",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "instance_method"
-      }
-    },
-    {
       "key": "instantiate",
       "word": "instantiate",
       "definition": "to call the constructor to create an object",
@@ -13589,16 +12416,6 @@
       }
     },
     {
-      "key": "overflow_error",
-      "word": "overflow error",
-      "definition": "an error that occurs when an operation makes an integer value greater than its maximum",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "overflow_error"
-      }
-    },
-    {
       "key": "parameter",
       "word": "parameter",
       "definition": "defines the type of value to receive when a method or constructor is called",
@@ -13669,16 +12486,6 @@
       }
     },
     {
-      "key": "round_off_error",
-      "word": "round-off error",
-      "definition": "an error due to limited floating-point precision, causing discrepancies in computation.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "round_off_error"
-      }
-    },
-    {
       "key": "run_time_error",
       "word": "run-time error",
       "definition": "a mistake in the program that occurs during the execution of a program",
@@ -13716,26 +12523,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "source_code"
-      }
-    },
-    {
-      "key": "static_method",
-      "word": "static method",
-      "definition": "a method that can be called without creating an object of the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "static_method"
-      }
-    },
-    {
-      "key": "static_variable",
-      "word": "static variable",
-      "definition": "a variable that is shared by all instances of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "static_variable"
       }
     },
     {
@@ -13809,16 +12596,6 @@
       }
     },
     {
-      "key": "underflow_error",
-      "word": "underflow error",
-      "definition": "an error that occurs when an operation makes an integer value less than its minimum",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "underflow_error"
-      }
-    },
-    {
       "key": "variable",
       "word": "variable",
       "definition": "a container that stores a value in memory",
@@ -13826,16 +12603,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "vocabulary_note",
-      "word": "Vocabulary Note",
-      "definition": "The updated AP CS A framework refers to static variables as class variables. These terms are often used interchangeably, but the Code.org curriculum uses the term static variable. A note regarding this vocabulary can be found in the slides for this lesson.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "vocabulary_note"
       }
     },
     {
@@ -14116,30 +12883,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "vocabulary.key": "instance_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "vocabulary.key": "static_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "vocabulary.key": "static_variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "vocabulary.key": "vocabulary_note"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "vocabulary.key": "logical_operator"
       }
@@ -14179,24 +12922,6 @@
         "lesson.key": "Writing Methods",
         "vocabulary.key": "void"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "overflow_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "round_off_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "underflow_error"
-      }
     }
   ],
   "lessons_programming_expressions": [
@@ -14231,16 +12956,6 @@
       "seeding_key": {
         "lesson.key": "AI-Generated Code (non-AI Tutor)",
         "objective.key": "07e6d1ff-b606-4335-b21a-b16e837ad473"
-      }
-    },
-    {
-      "key": "0a16cfe9-92ca-4600-93af-933d3d951dc5",
-      "properties": {
-        "description": "Write a static method to represent a behavior that doesn't require object state or to use a static variable"
-      },
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "objective.key": "0a16cfe9-92ca-4600-93af-933d3d951dc5"
       }
     },
     {
@@ -14301,16 +13016,6 @@
       "seeding_key": {
         "lesson.key": "Instantiating Objects",
         "objective.key": "4435f896-9877-4b0b-9ce9-b17fbba69f87"
-      }
-    },
-    {
-      "key": "4ae23693-adbf-4a43-b0cd-bcf053020a18",
-      "properties": {
-        "description": "Understand that computers allot a specified amount of memory to store data based on the data type. "
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "4ae23693-adbf-4a43-b0cd-bcf053020a18"
       }
     },
     {
@@ -14584,26 +13289,6 @@
       }
     },
     {
-      "key": "c2360744-daec-46e0-87f2-b41450ef1f32",
-      "properties": {
-        "description": "Access a static variable that is declared in another class"
-      },
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "objective.key": "c2360744-daec-46e0-87f2-b41450ef1f32"
-      }
-    },
-    {
-      "key": "cc9612aa-409f-43ee-ac7e-2afd7bf7cf70",
-      "properties": {
-        "description": "Call a static method that is defined in another class"
-      },
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "objective.key": "cc9612aa-409f-43ee-ac7e-2afd7bf7cf70"
-      }
-    },
-    {
       "key": "ccfdbe57-40c8-4111-ab9b-e908a7394291",
       "properties": {
         "description": "Design a class to extend an existing class and implement a new method"
@@ -14654,16 +13339,6 @@
       }
     },
     {
-      "key": "dea83bb5-db8a-4f01-a2e2-6df11b8c0b7b",
-      "properties": {
-        "description": "Use Integer.MIN_VALUE and Integer.MAX_VALUE to describe the range of possible int values."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "dea83bb5-db8a-4f01-a2e2-6df11b8c0b7b"
-      }
-    },
-    {
       "key": "e08d205f-91cd-4332-9ec6-3d4c7b69f112",
       "properties": {
         "description": "Explain the purpose and functionality of a two-way selection statement"
@@ -14674,16 +13349,6 @@
       }
     },
     {
-      "key": "e0a0ec14-758a-4cb4-b0e4-4844cc4f2919",
-      "properties": {
-        "description": "Describe roundoff errors and one strategy to avoid them. "
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "e0a0ec14-758a-4cb4-b0e4-4844cc4f2919"
-      }
-    },
-    {
       "key": "e0ac3aac-9653-4b05-8216-18e97eba7932",
       "properties": {
         "description": "Write clear comments to help the reader understand the code"
@@ -14691,16 +13356,6 @@
       "seeding_key": {
         "lesson.key": "Programming Style and Feedback",
         "objective.key": "e0ac3aac-9653-4b05-8216-18e97eba7932"
-      }
-    },
-    {
-      "key": "e458dc4a-ee55-46bd-a666-9e6db46af92e",
-      "properties": {
-        "description": "Describe the result of exceeding the maximum or falling below the minimum values for an int. "
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "e458dc4a-ee55-46bd-a666-9e6db46af92e"
       }
     },
     {
@@ -14721,16 +13376,6 @@
       "seeding_key": {
         "lesson.key": "Welcome to CSA",
         "objective.key": "ea341de2-070c-4dc9-a7d9-fb6f89c8426a"
-      }
-    },
-    {
-      "key": "f07d3237-17b2-4c53-a6f7-a73443b09b7b",
-      "properties": {
-        "description": "Declare and initialize a static variable to represent a value shared by all instances of a class"
-      },
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "objective.key": "f07d3237-17b2-4c53-a6f7-a73443b09b7b"
       }
     },
     {
@@ -15252,76 +13897,6 @@
     {
       "seeding_key": {
         "lesson.key": "Selection Statements",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.H.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.H.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.H.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.H.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-22"
       }

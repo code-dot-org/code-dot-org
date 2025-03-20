@@ -1,12 +1,12 @@
-module AitutorSystemPromptHelper
+module AiSystemPrompts::AitutorSystemPromptHelper
   def self.get_system_prompt(level_id, unit_id)
-    level = get_level(level_id)
-    unit = get_unit(unit_id)
+    level = AiSystemPrompts::SystemPromptHelper.get_level(level_id)
+    unit = AiSystemPrompts::SystemPromptHelper.get_unit(unit_id)
 
     system_prompt = get_base_system_prompt
     system_prompt << get_programming_language_system_prompt(unit) if unit
-    system_prompt << get_level_instructions(level) if level
-    system_prompt << get_validated_level_test_file_contents(level) if level
+    system_prompt << AiSystemPrompts::SystemPromptHelper.get_level_instructions(level) if level
+    system_prompt << AiSystemPrompts::SystemPromptHelper.get_validated_level_test_file_contents(level) if level
 
     end_of_prompt = "next message should start with [fixed-code-solution], followed by [pedagogical-guiding-answer-markdown], and end with [end-of-response]."
     system_prompt << "\n\n#{end_of_prompt}"
@@ -72,67 +72,8 @@ module AitutorSystemPromptHelper
   end
 
   def self.get_programming_language_system_prompt(unit)
-    language = unit.csa? ? 'Java' : 'Python'
+    language = AiSystemPrompts::SystemPromptHelper.get_programming_language(unit)
     "\n Specific Exclusions: Refrain from discussing topics not explicitly related to computer
     science or #{language} programming."
-  end
-
-  def self.get_level_instructions(level)
-    level_instructions = level.properties["long_instructions"]
-    "\n Here are the student instructions for this level: #{level_instructions}"
-  end
-
-  def self.get_validated_level_test_file_contents(level)
-    test_file_contents = ""
-
-    # Note: Not all Lab2 levels have the same validation structure
-    if level.type == 'Pythonlab'
-      validation_file = level.properties["validation_file"]
-      if validation_file && validation_file["contents"]
-        test_file_contents += validation_file["contents"]
-      end
-    elsif level.respond_to?(:validation) && level.validation && level.validation.values.any?
-      level.validation.each_value do |validation|
-        test_file_contents += validation["text"]
-      end
-    end
-
-    test_file_contents.empty? ?
-      "\n There are no tests for this level." :
-      "\n The contents of the test file are: #{test_file_contents}"
-  end
-
-  def self.get_level(level_id)
-    level = nil
-    if level_id
-      level = begin Level.find(level_id)
-      rescue ActiveRecord::RecordNotFound
-        Honeybadger.notify(exception,
-            error_message: 'Invalid level_id in AI Tutor system prompt helper',
-            context: {
-              level_id: level_id,
-              user_id: current_user.id
-            }
-          )
-      end
-    end
-    level
-  end
-
-  def self.get_unit(unit_id)
-    unit = nil
-    if unit_id
-      unit = begin Unit.find(unit_id)
-      rescue ActiveRecord::RecordNotFound
-        Honeybadger.notify(exception,
-            error_message: 'Invalid unit_id in AI Tutor system prompt helper',
-            context: {
-              unit_id: unit_id,
-              user_id: current_user.id
-            }
-          )
-      end
-    end
-    unit
   end
 end

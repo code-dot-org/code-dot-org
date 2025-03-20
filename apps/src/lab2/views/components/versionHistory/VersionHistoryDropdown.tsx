@@ -303,7 +303,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   // if the user is viewing an old version, then close the dropdown.
   const handleCancel = useCallback(() => {
     // Go back to current version if we are viewing an old version
-    if (!isLatestVersion(selectedVersion)) {
+    if (selectedVersion && !isLatestVersion(selectedVersion)) {
       dispatch(resetToCurrentVersion());
     }
     closeDropdown();

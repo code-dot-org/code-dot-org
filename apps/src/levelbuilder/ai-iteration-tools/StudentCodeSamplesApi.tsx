@@ -1,21 +1,24 @@
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
+interface StudentWorkRequest {
+  includeAiEvaluations: boolean;
+  numSamples: number;
+  unitId: number;
+  levelId: number;
+}
+
 export async function fetchStudentCodeSamples(
-  numSamples: number,
-  scriptId: number,
-  levelId: number
+  studentWorkRequest: StudentWorkRequest
 ): Promise<string | null> {
   try {
-    const response = await fetch(
-      `/student_code_sample/${numSamples}/${scriptId}/${levelId}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-      }
-    );
+    const response = await fetch(`/student_code_samples`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify(studentWorkRequest),
+    });
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

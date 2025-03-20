@@ -14743,7 +14743,7 @@ en:
             lessonGroup-6:
               display_name: End of Unit Survey
             lessonGroup-5:
-              display_name: Alternate Lessons
+              display_name: Alternate and Optional Lessons
             lessonGroup-7:
               display_name: Sandboxes
             lessonGroup-8:
@@ -18976,6 +18976,12 @@ en:
           lessons:
             lesson-6:
               name: User Input
+            lesson-25:
+              name: Introduction to Algorithms
+            lesson-26:
+              name: Casting and Range of Variables
+            lesson-27:
+              name: Programming Style and Feedback (new)
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -18986,7 +18992,9 @@ en:
           description: ''
           student_description: ''
         csa2-alt-2025:
-          lessons: {}
+          lessons:
+            lesson-12:
+              name: Informal Run-Time Analysis
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -19027,6 +19035,8 @@ en:
               name: Text Files
             lesson-19:
               name: Enhanced For Loops (2D)
+            lesson-30:
+              name: Array of Objects
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -20384,6 +20394,10 @@ en:
               name: Functions - Practice
             lesson-11:
               name: Functions - Synthesis
+            lesson-12:
+              name: 'Mini Project: Walk Up Songs'
+            lesson-13:
+              name: 'Mini Project: Cat GIF Loops'
           lesson_groups: {}
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
@@ -21128,7 +21142,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: introduction-to-programming-in-music-lab-for-elementary
-          title: Introduction to Programming in Music Lab
+          title: "✨FOR LAUNCH!!!! ✨  Introduction to Programming in Music Lab"
           description_audience: Elementary Students
           description_short: ''
           description: ''

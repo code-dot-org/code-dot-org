@@ -110,15 +110,40 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  align-items: stretch;
+  justify-content: space-between;
+}
+
+.sectionCardBodyLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .sectionCardBodyRight {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 375px;
+  width: 50%;
   gap: 16px;
+}
+
+.studentsAddedAlert {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--sentiment-success-10);
+}
+
+.studentAddedAlertIcon {
+  color: var(--sentiment-success-50);
 }
 
 // Task Button
@@ -160,11 +185,12 @@
 .courseContentDropdownContainer {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   background-color: var(--neutral-base-white);
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
   padding: 12px;
-  width: 375px;
+  width: 100%;
   gap: 8px;
 
   p {
@@ -181,4 +207,24 @@
       border-color: var(--neutral-gray-40);
     }
   }
+}
+
+// Empty state button
+.emptyStateButton {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+  border: 1px dashed var(--brand-purple-50);
+  border-radius: 4px;
+  background-color: var(--neutral-gray-5);
+}
+
+.emptyStateButtonIcon {
+  color: var(--brand-purple-50);
 }

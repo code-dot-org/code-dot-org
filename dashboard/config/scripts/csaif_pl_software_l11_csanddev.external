@@ -3,67 +3,37 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The IPSO Model 
+# Software and Operating Systems
 
-#### The IPSO model describes how a computer system works in four steps:
+#### Software and hardware are like a team. The **hardware performs** the physical tasks — like displaying images on the screen, printing a document, or saving files on a hard drive.
+
+#### The **software** that decides what to display, print, or save and how to do it.
+
+
+<img src="https://images.code.org/3378f9afce385d56deb8bb6e38a41455-image-1742394518945.png" alt="diagram of the componets of a computer - hardware: input, outptu, storage, and internal and software: system software, application software, and utlity software" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+## Computer Software 
+
+#### **Software** is a set of instructions that tells a computer what to do. It’s like the thoughts or instructions of a computer, controlling how it runs and what tasks it performs. 
+
+## Types of Software
+
+- #### **System Software**-Manages hardware and software, enables basic functionality.
+- #### **Application Software**- Helps users perform specific tasks.
+- #### **Utility Software**- Maintains, optimizes, and secures the system.
 
 
 <br>
 
-<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
-
-  
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/ab4f314ff8c8b78849708e3ba67d1812-image-1742231775315.png" alt="typing on a keyboard" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-            <h3><b>Input</b></h3>
-                    <p style = "font-size: 14pt";> The computer receives data (e.g., typing on a keyboard, clicking a mouse, or scanning a barcode).
-
-</p>
-           </div>
-    </div>
-
-   
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/987ec8ea8af830d785dfe304f5e57ee2-image-1742231824649.png" alt="gears" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
-            <h3> <b>Processing</b></h3>
-           <p style = "font-size: 14pt";>Allows students to focus on problem-solving without worrying about programming syntax.
-</p>
-           </div>
-    </div>
-
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/77b40b59dc8e7ddf420a7eb3217164c5-image-1742231897660.png" alt="server and computer storage" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3><b>Storage</b></h3>
-            <p style = "font-size: 14pt";>The data is saved temporarily (RAM) or permanently (hard drive, SSD).
-</p>
-        </div>
-    </div>
-
-   
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/a0713497a65120875815c5bae5d5755d-image-1742231958711.png" alt="monitor showing output" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3><b>Output</b></h3>
-            <p style = "font-size: 14pt";> The processed data is displayed or used (e.g., shown on a screen, printed, or played as sound).</p>
-        </div>
-    </div>
 
 
-</div>
-
----
-
-#### Together, these steps allow a computer system to take in information, process it, store it, and produce useful results.
-
-<img src="https://images.code.org/1cb9b1b8758e284d818deb82bb7d7aad-image-1742232231538.png" alt="diagram showing input processing storage and output" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://images.code.org/5ee5ee363d83b7a2882235524c86b13d-image-1742394326783.png" alt="diagram of software: system software, application software, and utlity software with examples of icons of each" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-#### The next level covers different types of **hardware.**
 
-#### ▶️ As you click through the panels, consider which part of the **IPSO model** each part belongs to.  
+
+
+
 
 
 MARKDOWN

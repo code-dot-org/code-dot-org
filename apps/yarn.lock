@@ -28514,9 +28514,11 @@ canvg@gabelerner/canvg:
   linkType: hard
 
 "ua-parser-js@npm:^0.7.18, ua-parser-js@npm:^0.7.30":
-  version: 0.7.31
-  resolution: "ua-parser-js@npm:0.7.31"
-  checksum: 10/0d8b5de803869da94f9331467a109154d0b138bac3d65813e406986a6ca19c7e32a636b2dfe814ecab470f3445a2a0e39d364c6c622e3559141fe556b4f0b4ef
+  version: 0.7.40
+  resolution: "ua-parser-js@npm:0.7.40"
+  bin:
+    ua-parser-js: script/cli.js
+  checksum: 10/914b8134894e0060a695e519c4b25625613572911466fdcd60f995babc2a61e75a318d98f5e777961ab428069b6ee2f7c5e3a4595eee858a1e86de694579baac
   languageName: node
   linkType: hard
 

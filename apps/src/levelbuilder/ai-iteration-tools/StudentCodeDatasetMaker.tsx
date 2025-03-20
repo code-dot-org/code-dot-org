@@ -1,4 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
@@ -8,14 +9,20 @@ import {fetchStudentCodeSamples} from './StudentCodeSamplesApi';
 interface StudentCodeSample {
   projectId: string;
   studentCode: string | undefined;
+  codeVersion?: string;
   userId: number | undefined;
+  aiEvaluation?: string;
+  aiReasoning?: string;
+  evaluationCriteria?: string;
 }
 
 const StudentCodeDatasetMaker: React.FC = () => {
   const [datasetName, setDatasetName] = useState<string>('');
   const [levelId, setLevelId] = useState<string>('');
-  const [scriptId, setScriptId] = useState<string>('');
+  const [unitId, setUnitId] = useState<string>('');
   const [numSamples, setNumSamples] = useState<string>('25');
+  const [includeAiEvaluations, setIncludeAiEvaluations] =
+    useState<boolean>(false);
   const [pending, setPending] = useState<boolean>(false);
   const [fetchedSamples, setFetchedSamples] = useState<StudentCodeSample[]>([]);
 
@@ -31,11 +38,13 @@ const StudentCodeDatasetMaker: React.FC = () => {
 
   const getStudentCodeSamples = async () => {
     setPending(true);
-    const codeSamples = await fetchStudentCodeSamples(
-      Number(numSamples),
-      Number(scriptId),
-      Number(levelId)
-    );
+    const studentWorkRequest = {
+      includeAiEvaluations: includeAiEvaluations,
+      numSamples: Number(numSamples),
+      unitId: Number(unitId),
+      levelId: Number(levelId),
+    };
+    const codeSamples = await fetchStudentCodeSamples(studentWorkRequest);
     setFetchedSamples(codeSamples as unknown as StudentCodeSample[]);
     setPending(false);
   };
@@ -52,13 +61,19 @@ const StudentCodeDatasetMaker: React.FC = () => {
           value={levelId}
         />
         <TextField
-          name="Script Id"
-          label="Script Id"
-          onChange={e => setScriptId(e.target.value)}
-          value={scriptId}
+          name="Unit Id"
+          label="Unit Id"
+          onChange={e => setUnitId(e.target.value)}
+          value={unitId}
         />
         <br />
         <br />
+        <Checkbox
+          name="include AI evaluations"
+          label="Include AI evaluations"
+          onChange={() => setIncludeAiEvaluations(!includeAiEvaluations)}
+          checked={includeAiEvaluations}
+        />
         <TextField
           name="Number of Samples"
           label="How many samples of student work do you want?"
