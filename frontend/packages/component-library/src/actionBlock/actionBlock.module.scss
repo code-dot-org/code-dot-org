@@ -1,6 +1,6 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
-$width-md: 900px;
+$mobileBreakpoint: 900px;
 
 // ActionBlock common styles
 .actionBlock {
@@ -13,39 +13,41 @@ $width-md: 900px;
   gap: 1rem;
 
   &.isFullWidth {
-    @media (min-width: $width-md) {
+    @media (min-width: $mobileBreakpoint) {
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
   }
 
+  figure {
+    align-self: flex-start;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin: 0;
+  }
+
   .contentWrapper {
     display: flex;
     flex-direction: column;
-  }
 
-  .image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 460 / 258;
-  }
+    .overline {
+      color: var(--text-brand-teal-primary);
+      margin-top: 0;
+    }
 
-  .overline {
-    color: var(--text-brand-teal-primary);
-    margin-top: 0;
-  }
+    p {
+      margin-block: 0 1rem;
+    }
 
-  .description {
-    margin-block: 0 1rem;
-  }
+    .buttonWrapper {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
 
-  .buttonWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-
-    & > a {
-      width: fit-content;
+      & > a {
+        width: fit-content;
+      }
     }
   }
 }
@@ -58,13 +60,5 @@ $width-md: 900px;
 
   &-secondary {
     background-color: var(--background-neutral-primary);
-  }
-}
-
-.oneColActionBlock {
-  grid-template-columns: 1fr !important;
-
-  @media (min-width: $width-md) {
-    grid-template-columns: 1fr;
   }
 }

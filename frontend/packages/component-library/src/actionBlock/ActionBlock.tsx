@@ -2,19 +2,28 @@ import classNames from 'classnames';
 import React, {HTMLAttributes} from 'react';
 
 import {LinkButton} from '@/button';
-import {Heading3, BodyThreeText, OverlineTwoText} from '@/typography';
+import {
+  Heading3,
+  BodyThreeText,
+  OverlineTwoText,
+  StrongText,
+} from '@/typography';
 
 import moduleStyles from './actionBlock.module.scss';
 
 export interface ActionBlockProps extends HTMLAttributes<HTMLElement> {
   /** Action Block title */
-  title?: string;
+  title: string;
   /** Action Block description */
-  description?: string;
+  description: string;
   /** Action Block image */
-  imageSrc?: string;
+  image?: string;
   /** Action Block overline */
   overline?: string;
+  /** Action Block detail */
+  detail?: 'none' | 'duration' | 'labProject';
+  /** Detail string */
+  detailString?: string;
   /** Primary button label */
   primaryButtonLabel?: string;
   /** Primary button link */
@@ -52,8 +61,10 @@ export interface ActionBlockProps extends HTMLAttributes<HTMLElement> {
 const ActionBlock: React.FC<ActionBlockProps> = ({
   title,
   description,
-  imageSrc,
+  image,
   overline,
+  detail = 'none',
+  detailString,
   primaryButtonLabel,
   primaryButtonUrl,
   primaryButtonAriaLabel,
@@ -75,14 +86,12 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
       )}
       {...HTMLAttributes}
     >
-      {imageSrc && (
-        <img
-          className={moduleStyles.image}
-          src={imageSrc}
-          alt={''}
+      {image && (
+        <figure
+          // Setting the image as a background so it maintains the
+          // aspect ratio of the image to work with any size image.
           style={{
-            background: `url(${imageSrc}) center center no-repeat`,
-            backgroundSize: 'cover',
+            background: `url(${image}) center / cover no-repeat`,
           }}
         />
       )}
@@ -101,6 +110,14 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
         <BodyThreeText className={classNames(moduleStyles.description)}>
           {description}
         </BodyThreeText>
+        {(detail === 'duration' || detail === 'labProject') && detailString && (
+          <BodyThreeText className={classNames(moduleStyles.detail)}>
+            <StrongText>
+              {detail === 'duration' ? 'Duration:' : 'What you can make:'}
+            </StrongText>
+            {' ' + detailString}
+          </BodyThreeText>
+        )}
         <div className={moduleStyles.buttonWrapper}>
           {primaryButtonLabel && primaryButtonUrl && (
             <LinkButton
@@ -109,6 +126,7 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
               type="primary"
               size="m"
               ariaLabel={primaryButtonAriaLabel}
+              role={'button'}
             >
               {primaryButtonLabel}
             </LinkButton>
@@ -121,6 +139,7 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
               size="m"
               color="black"
               ariaLabel={secondaryButtonAriaLabel}
+              role={'button'}
             >
               {secondaryButtonLabel}
             </LinkButton>
