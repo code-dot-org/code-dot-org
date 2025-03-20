@@ -2,6 +2,11 @@ name: Marketing-CI
 
 on:
   workflow_call:
+    inputs:
+      eyes-batch-id:
+        description: "The consistent batch id for Eyes to use to reference all eyes tests for this PR"
+        required: true
+        type: string
 
 defaults:
   run:
@@ -99,6 +104,7 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
+          APPLITOOLS_BATCH_ID: ${{ inputs.eyes-batch-id }}
 
       - name: Run Google Lighthouse Audits
         uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8

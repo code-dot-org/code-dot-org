@@ -18,8 +18,12 @@ jobs:
   setup:
     runs-on: ubuntu-24.04
     outputs:
+      eyes-batch-id: ${{ steps.eyes.outputs.batch-id }}
       component-library-changed: ${{ steps.changes.outputs.component-library }}
     steps:
+      - name: Generate Eyes Batch ID
+        id: eyes
+        run: echo "batch-id=$APPLITOOLS_BATCH_ID" >> $GITHUB_OUTPUT
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
       # changes. Root level applications (such as marketing) are not skipped as its dependency tree always changes
@@ -40,6 +44,8 @@ jobs:
     needs: setup
     uses: ./.github/workflows/marketing-app-ci.yml
     secrets: inherit
+    with:
+      eyes-batch-id: ${{ needs.eyes-uuid.outputs.eyes-batch-id }}
 
   # Start the component library CI workflow
   component-library:
@@ -47,6 +53,8 @@ jobs:
     needs: setup
     uses: ./.github/workflows/component-library-ci.yml
     secrets: inherit
+    with:
+      eyes-batch-id: ${{ needs.eyes-uuid.outputs.eyes-batch-id }}
 
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
