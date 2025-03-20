@@ -1506,12 +1506,6 @@ var projects = (module.exports = {
       callCallback();
       return;
     }
-    // `getLevelSource()` is expensive for Blockly so only call
-    // after `workspaceChange` has fired
-    if (!appOptions.droplet && !hasProjectChanged) {
-      callCallback();
-      return;
-    }
 
     if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
       callCallback();
