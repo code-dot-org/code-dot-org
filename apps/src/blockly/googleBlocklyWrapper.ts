@@ -4,7 +4,6 @@ import {
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {KeyboardNavigation} from '@blockly/keyboard-experiment';
-import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
   ScrollOptions,
@@ -122,14 +121,6 @@ import {
   strip,
   interpolateMsg,
 } from './utils';
-
-const options = {
-  contextMenu: true,
-  shortcut: true,
-};
-
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
 
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
