@@ -15,7 +15,12 @@ import {
 const SL_HANDBOOK_LINK =
   'https://docs.google.com/document/d/1T0Vwwg22isdgsf66mYiRtUZVKaSxHo1PW89HAnW_twk/edit?tab=t.0#heading=h.npwykn5tc2b4';
 
-const modelIds = modelDescriptions.map((model: {id: string}) => model.id);
+const gpt4MiniModelId = 'gpt-4o-mini';
+const sagemakerModelIds = ['gen-ai-mistral-7b-inst-v01', 'gen-ai-biomistral-7b', 'gen-ai-mistral-pirate-7b', 'gen-ai-karen-creative-mistral-7b', 'gen-ai-arithmo2-mistral-7b'];
+
+if (sagemakerModelIds.length + gpt4MiniModelId.length !== modelDescriptions.length) {
+  throw new Error('All model IDs must be included in the alarm configurations.');
+};
 
 export const openaiSafetyHighFailureRateConfiguration: PutMetricAlarmInput = {
   AlarmName: 'genai_openai_safety_high_failure_rate',
@@ -56,8 +61,8 @@ export const openaiSafetyHighFailureRateConfiguration: PutMetricAlarmInput = {
   ],
 };
 
-// Start(total) jobs metrics for each model
-const startMetrics = modelIds.map((modelId, index) => ({
+// Start(total) jobs metrics for each Sagemaker model
+const sagemakerStartMetrics = sagemakerModelIds.map((modelId, index) => ({
   Id: `m${index + 1}`,
   ...createJobExecutionMetricStat(
     'AichatRequestChatCompletionJob.Start',
@@ -67,8 +72,8 @@ const startMetrics = modelIds.map((modelId, index) => ({
 }));
 
 // Failure job metrics for each model (IDs are indexed to begin one after the total jobs metrics end)
-const failureMetrics = modelIds.map((modelId, index) => ({
-  Id: `m${index + 1 + modelIds.length}`,
+const sagemakerFailureMetrics = sagemakerModelIds.map((modelId, index) => ({
+  Id: `m${index + 1 + sagemakerModelIds.length}`,
   ...createJobExecutionMetricStat(
     'AichatRequestChatCompletionJob.Finish',
     'FAILURE',
@@ -109,16 +114,16 @@ export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAl
         Id: 'failures',
         Label: 'failures',
         ReturnData: false,
-        Expression: metricsSumExpression(failureMetrics),
+        Expression: metricsSumExpression(sagemakerFailureMetrics),
       },
-      ...failureMetrics,
+      ...sagemakerFailureMetrics,
       {
         Id: 'total',
         Label: 'total_jobs',
         ReturnData: false,
-        Expression: metricsSumExpression(startMetrics),
+        Expression: metricsSumExpression(sagemakerStartMetrics),
       },
-      ...startMetrics,
+      ...sagemakerStartMetrics,
     ],
   };
 
