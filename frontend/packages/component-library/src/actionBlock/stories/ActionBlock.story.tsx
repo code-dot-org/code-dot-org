@@ -153,41 +153,6 @@ export const WithLongDescription: Story = {
   },
 };
 
-export const WithDetails: Story = {
-  args: {
-    ...defaultArgs,
-    isFullWidth: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Sets a detail on the action block. These can be used with Curriculum, Self-paced PL, and Lab content types.',
-      },
-    },
-  },
-  render: args => {
-    return (
-      <div style={{display: 'flex', gap: '1.5rem'}}>
-        <ActionBlock {...args} detail={'duration'} detailString={'1 hour'} />
-        <ActionBlock
-          {...args}
-          detail={'labProject'}
-          detailString={'A lab project'}
-          image={image2}
-        />
-      </div>
-    );
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const duration = await canvas.findByText('1 hour');
-    const labProject = await canvas.findByText('A lab project');
-    await expect(duration).toBeVisible();
-    await expect(labProject).toBeVisible();
-  },
-};
-
 export const MultipleActionBlocksTwoAcross: Story = {
   args: {
     ...defaultArgs,
@@ -247,5 +212,40 @@ export const MultipleActionBlocksThreeAcross: Story = {
 
     // check if two Action Blocks are rendered
     await expect(actionBlocks).toHaveLength(3);
+  },
+};
+
+export const MultipleActionBlocksWithDetails: Story = {
+  args: {
+    ...defaultArgs,
+    isFullWidth: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Sets a detail on the action block. These can be used with Curriculum, Self-paced PL, and Lab content types.',
+      },
+    },
+  },
+  render: args => {
+    return (
+      <div style={{display: 'flex', gap: '1.5rem'}}>
+        <ActionBlock {...args} detail={'duration'} detailString={'1 hour'} />
+        <ActionBlock
+          {...args}
+          detail={'labProject'}
+          detailString={'A lab project'}
+          image={image2}
+        />
+      </div>
+    );
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const duration = await canvas.findByText('1 hour');
+    const labProject = await canvas.findByText('A lab project');
+    await expect(duration).toBeVisible();
+    await expect(labProject).toBeVisible();
   },
 };
