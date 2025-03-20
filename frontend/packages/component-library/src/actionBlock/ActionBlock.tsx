@@ -123,33 +123,35 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
             {' ' + detailString}
           </BodyThreeText>
         )}
-        <div className={moduleStyles.buttonWrapper}>
-          {primaryButtonLabel && primaryButtonUrl && (
-            <LinkButton
-              href={primaryButtonUrl}
-              text={primaryButtonLabel}
-              type="primary"
-              size="m"
-              ariaLabel={primaryButtonAriaLabel}
-              role={'button'}
-            >
-              {primaryButtonLabel}
-            </LinkButton>
-          )}
-          {secondaryButtonLabel && secondaryButtonUrl && (
-            <LinkButton
-              href={secondaryButtonUrl}
-              text={secondaryButtonLabel}
-              type="secondary"
-              size="m"
-              color="black"
-              ariaLabel={secondaryButtonAriaLabel}
-              role={'button'}
-            >
-              {secondaryButtonLabel}
-            </LinkButton>
-          )}
-        </div>
+        {primaryButtonLabel && primaryButtonUrl && (
+          <div className={moduleStyles.buttonWrapper}>
+            {primaryButtonLabel && primaryButtonUrl && (
+              <LinkButton
+                href={primaryButtonUrl}
+                text={primaryButtonLabel}
+                type="primary"
+                size="m"
+                ariaLabel={primaryButtonAriaLabel}
+                role={'button'}
+              >
+                {primaryButtonLabel}
+              </LinkButton>
+            )}
+            {secondaryButtonLabel && secondaryButtonUrl && (
+              <LinkButton
+                href={secondaryButtonUrl}
+                text={secondaryButtonLabel}
+                type="secondary"
+                size="m"
+                color="black"
+                ariaLabel={secondaryButtonAriaLabel}
+                role={'button'}
+              >
+                {secondaryButtonLabel}
+              </LinkButton>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
