@@ -6,7 +6,7 @@ class LevelStarterAssetsController < ApplicationController
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
-  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav)
+  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav .pdf)
 
   # GET /level_starter_assets/:level_name
   def show
@@ -102,7 +102,11 @@ class LevelStarterAssetsController < ApplicationController
   end
 
   private def file_mime_type(extension)
-    MIME::Types.type_for(extension)&.first&.raw_media_type
+    type = MIME::Types.type_for(extension)&.first
+    if type == MIME::Types['application/pdf']
+      return 'pdf'
+    end
+    type&.raw_media_type
   end
 
   private def file_content_type(extension)

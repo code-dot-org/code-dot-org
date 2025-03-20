@@ -292,7 +292,6 @@ describe('FinishTeacherAccount', () => {
     const name = 'FirstName';
     const email = 'fake@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.TEACHER,
         email: email,
@@ -374,7 +373,6 @@ describe('FinishTeacherAccount', () => {
     const name = 'FirstName';
     const email = 'fake@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.TEACHER,
         email: email,
@@ -464,7 +462,6 @@ describe('FinishTeacherAccount', () => {
     const name = 'FirstName';
     const email = 'fake@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.TEACHER,
         email: email,
@@ -550,7 +547,6 @@ describe('FinishTeacherAccount', () => {
     const email = 'fake@email.com';
     const userReturnToUrl = '/sample/url';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.TEACHER,
         email: email,

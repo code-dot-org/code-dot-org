@@ -165,12 +165,15 @@ module Services
     end
 
     private def update_section_assignments
-      sections_updated = 0
-      Section.where(script_id: @unit.id).each do |section|
-        section.update!(course_id: @unit_group.id)
-        sections_updated += 1
+      count = Section.where(script_id: @unit.id).update_all(course_id: @unit_group.id)
+      log "Updated #{count} sections for unit #{@unit.name}" if @verbose
+    end
+
+    private def update_levelbuilder_files
+      if @file_system_changes
+        @unit.write_script_json
+        @unit_group.write_serialization
       end
-      log "Updated #{sections_updated} sections for unit #{@unit.name}" if @verbose
     end
 
     private def update_levelbuilder_files
@@ -217,12 +220,8 @@ module Services
     end
 
     private def rollback_section_assignments
-      sections_rollback = 0
-      Section.where(course_id: @unit_group.id).each do |section|
-        section.update!(course_id: nil)
-        sections_rollback += 1
-      end
-      log "Rolled back #{sections_rollback} sections for unit #{@unit.name}" if @verbose
+      count = Section.where(course_id: @unit_group.id).update_all(course_id: nil)
+      log "Rolled back #{count} sections for unit #{@unit.name}" if @verbose
     end
 
     private def rollback_unit_settings

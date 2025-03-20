@@ -34,7 +34,7 @@ import {
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
-  NEW_SIGN_UP_USER_TYPE,
+  SIGN_UP_USER_TYPE,
   MAX_DISPLAY_NAME_LENGTH,
 } from './signUpFlowConstants';
 
@@ -75,7 +75,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     useState('');
 
   // Remove oauth user_type cookie if it exists
-  cookies.remove(NEW_SIGN_UP_USER_TYPE);
+  cookies.remove(SIGN_UP_USER_TYPE);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -166,7 +166,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
     setErrorCreatingAccountMessage('');
 
     const signUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.TEACHER,
         email: sessionStorage.getItem(EMAIL_SESSION_KEY),
