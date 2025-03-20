@@ -94,7 +94,7 @@ var firstSaveTimestamp;
 let lastNewSourceVersionTime = 0;
 // Force a new source version if it has been this many milliseconds since we
 // last did so.
-let newSourceVersionInterval = 5 * 60 * 1000; // 5 minutes
+let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
