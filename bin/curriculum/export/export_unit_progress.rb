@@ -45,8 +45,10 @@ puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
 def fetch_progress(unit_name:, level_id:, output_dir:)
   if Rails.env.production?
-    # fetch the data from redshift, because it relies on an unindexed query on
-    # user_levels as well as views that are only available in redshift.
+    # fetch the data from redshift, because:
+    # 1. the query relies on views that only exist in redshift
+    # 2. the query would run slowly against the production database because
+    #    it references columns in user_levels that are not indexed
     filename = 'export_unit_progress.sql.erb'
     pathname = File.expand_path(filename, __dir__)
     query_template = File.read(pathname)

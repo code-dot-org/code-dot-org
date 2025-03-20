@@ -6,8 +6,9 @@ is done using AWS Comprehend.
 
 ## 💰💰 WARNING 💰💰
 
-The PII filtering step can incur substantial costs. Please be sure to double-check your requirements
-before running through these steps.
+The PII filtering step can incur substantial costs. Please be sure to
+double-check your requirements before running through these steps, and check to
+see if the data you need is already in the output location in S3.
 
 ## Overview
   
@@ -93,7 +94,9 @@ rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name>
 
 ## Development
 
-to minimize time and cost while iterating during development, you should work on a small dataset.  In case the unit you're working on has many progress rows, ways you can accomlish this include:
+to minimize time and cost while iterating during development, you should work on
+a small dataset.  In case the unit you're working on has many progress rows,
+ways you can accomplish this include:
 * pass `-l <level_id>` to `export_unit_progress.rb` 
 * truncate the files output by `export_unit_progress.rb`, for example:
 ```bash
