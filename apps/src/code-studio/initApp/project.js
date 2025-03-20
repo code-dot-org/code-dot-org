@@ -1502,6 +1502,10 @@ var projects = (module.exports = {
       callCallback();
       return;
     }
+    if (!appOptions.droplet && !hasProjectChanged) {
+      callCallback();
+      return;
+    }
 
     if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
       callCallback();

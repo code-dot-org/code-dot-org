@@ -554,6 +554,12 @@ StudioApp.prototype.init = function (config) {
           }, this)
         );
     }
+    this.mainWorkspaceChangeListener =
+      Blockly.getMainWorkspace().addChangeListener(
+        _.bind(function () {
+          project.projectChanged();
+        }, this)
+      );
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
