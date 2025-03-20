@@ -596,9 +596,18 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
  * @private
  */
 NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
-  // md5 returns a 32-character hex string so these should always be 35-character strings
-  // Previously we truncated to 48 characters
-  return 'ns_' + md5(this.levelKey_ + '_' + seed);
+  const MAX_LENGTH = 48;
+  const NET_SIM_PREFIX = 'ns_';
+  const UNDERSCORE = '_';
+  // md5 returns a 32-character hex string.
+  const hash = md5(this.levelKey_ + seed);
+  // Calculate the max possible length for the md5 hash so that seed is intact.
+  const maxHashLength =
+    MAX_LENGTH - NET_SIM_PREFIX.length - UNDERSCORE.length - seed.length;
+  // If necessary, truncate hash.
+  const truncatedHash = hash.substring(0, maxHashLength);
+
+  return NET_SIM_PREFIX + truncatedHash + UNDERSCORE + seed;
 };
 
 /**
