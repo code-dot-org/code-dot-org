@@ -1,6 +1,7 @@
 import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {LanguageSupport} from '@codemirror/language';
+import {lintGutter} from '@codemirror/lint';
 import React, {useCallback, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -8,6 +9,8 @@ import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 import {editableFileType, viewableImageFileType} from '../utils';
+
+import {getErrorLinter} from './errorLinter';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -32,11 +35,13 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
   const editorConfigExtensions = useMemo(() => {
     if (file?.language && langMapping[file.language]) {
-      return [langMapping[file.language]];
+      return [langMapping[file.language], getErrorLinter(file), lintGutter()];
+    } else if (file) {
+      return [getErrorLinter(file), lintGutter()];
     } else {
       return [];
     }
-  }, [file?.language, langMapping]);
+  }, [file, langMapping]);
 
   if (file && viewableImageFileType(file.language)) {
     const base64 = window.btoa(file.contents);
