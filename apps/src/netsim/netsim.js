@@ -1109,7 +1109,7 @@ NetSim.prototype.render = function () {
  * @param {NetSimLocalClientNode} localNode - null if disconnected
  * @private
  */
-NetSim.prototype.onShardChange_ = function (shard, localNode) {
+NetSim.prototype.onShardChange_ = function (shard, localNode, sectionID) {
   // Unregister old handlers
   if (this.eventKeys.registeredWithLocalNode) {
     this.eventKeys.registeredWithLocalNode.remoteChange.unregister(
@@ -1128,7 +1128,8 @@ NetSim.prototype.onShardChange_ = function (shard, localNode) {
 
   // Update the log viewer's shard reference so it can get current data.
   if (this.routerLogModal_) {
-    this.routerLogModal_.onShardChange(shard, localNode);
+    // TODO: This is where NetSimRouterLogModal.onShardChange is called I think
+    this.routerLogModal_.onShardChange(shard, localNode, sectionID);
   }
 
   // Shard changes almost ALWAYS require a re-render

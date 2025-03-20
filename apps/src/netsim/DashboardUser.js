@@ -128,6 +128,8 @@ DashboardUser.prototype.whenReady = function (callback) {
  * @returns {boolean}
  */
 DashboardUser.prototype.ownsSection = function (sectionID) {
+  console.log('this.ownedSections', this.ownedSections);
+  console.log('sectionID', sectionID);
   return this.ownedSections.some(function (section) {
     return section.id === sectionID;
   });

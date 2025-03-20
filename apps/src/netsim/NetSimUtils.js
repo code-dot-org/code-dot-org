@@ -421,14 +421,6 @@ exports.doesUserOwnShard = function (user, sectionID) {
     return true;
   }
 
-  // // Find a section ID in the current shard ID
-  // var matches = /_(\d+)$/.exec(shardID);
-  // if (!matches) {
-  //   return false;
-  // }
-
-  // // matches[1] is the first capture group (\d+), the numeric section ID.
-  // var sectionID = parseInt(matches[1], 10);
   return user.ownsSection(sectionID);
 };
 

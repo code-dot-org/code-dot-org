@@ -186,6 +186,8 @@ var NetSimLobby = (module.exports = function (rootDiv, netsim, options) {
  * Recreate markup within panel body.
  */
 NetSimLobby.prototype.render = function () {
+  console.log('shardChoices', this.shardChoices_);
+
   var isConnectedToShard = this.shard_ !== null;
   if (!isConnectedToShard) {
     // Shard selection panel: Controls for setting display name and picking
@@ -297,6 +299,13 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
 
   this.shard_ = shard;
   this.myNode_ = myNode;
+
+  // Extract sectionID from the current shard selection
+  const selectedShard = _.find(
+    this.shardChoices_,
+    s => s.shardID === this.selectedShardID_
+  );
+  this.sectionID_ = selectedShard ? selectedShard.shardSeed : null; // Store section ID
 
   if (this.shard_) {
     // We got connected to a shard!
@@ -558,6 +567,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
 
   // If we have a shared shard seed, put it first in the list:
   if (sharedShardSeed) {
+    console.log('using sharedShardSeed', sharedShardSeed);
     var sharedShardID = this.makeShardIDFromSeed_(sharedShardSeed);
     this.shardChoices_.push({
       shardSeed: sharedShardSeed,
@@ -571,6 +581,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
   this.shardChoices_ = this.shardChoices_.concat(
     unarchivedSections.map(
       function (section) {
+        console.log('using sectionID as shardSeed', section.id);
         return {
           shardSeed: section.id,
           shardID: this.makeShardIDFromSeed_(section.id),
@@ -584,6 +595,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
   if (this.shardChoices_.length === 0) {
     var seed = utils.createUuid();
     var randomShardID = this.makeShardIDFromSeed_(seed);
+    console.log('using random UUID as shardSeed', seed);
     this.shardChoices_.push({
       shardSeed: seed,
       shardID: randomShardID,

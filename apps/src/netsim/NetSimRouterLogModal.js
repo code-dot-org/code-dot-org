@@ -183,7 +183,9 @@ NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
 NetSimRouterLogModal.prototype.show = function (teacherView = false) {
   // Extra check for setting teacherView here - must own the shard
   this.teacherView_ =
-    teacherView && this.shard_ && doesUserOwnShard(this.user_, this.shard_.id);
+    teacherView &&
+    this.shard_ &&
+    doesUserOwnShard(this.user_, this.shard_.id, this.sectionID_);
   this.onShow_();
 };
 
@@ -379,7 +381,11 @@ NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
  * @param {NetSimShard|null} newShard
  * @param {NetSimLocalClientNode|null} localNode
  */
-NetSimRouterLogModal.prototype.onShardChange = function (newShard, localNode) {
+NetSimRouterLogModal.prototype.onShardChange = function (
+  newShard,
+  localNode,
+  sectionID
+) {
   if (this.eventKeys_.registeredWithShard) {
     this.eventKeys_.registeredWithShard.logTable.tableChange.unregister(
       this.eventKeys_.logTableChange
@@ -400,6 +406,7 @@ NetSimRouterLogModal.prototype.onShardChange = function (newShard, localNode) {
   this.latestRowID_ = 0;
   this.shard_ = newShard;
   this.localNode_ = localNode;
+  this.sectionID_ = sectionID;
 };
 
 /**
