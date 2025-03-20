@@ -20,12 +20,10 @@ export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
   image?: string;
   /** Action Block overline */
   overline?: string;
-  /** Action Block detail */
-  detail?: 'none' | 'duration' | 'labProject';
   /** Detail label */
   detailLabel?: string;
-  /** Detail string */
-  detailString?: string;
+  /** Detail text */
+  detailDescription?: string;
   /** Primary button label */
   primaryButtonLabel?: string;
   /** Primary button link */
@@ -65,9 +63,8 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
   description,
   image,
   overline,
-  detail = 'none',
   detailLabel,
-  detailString,
+  detailDescription,
   primaryButtonLabel,
   primaryButtonUrl,
   primaryButtonAriaLabel,
@@ -114,13 +111,10 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
         <BodyThreeText className={classNames(moduleStyles.description)}>
           {description}
         </BodyThreeText>
-        {(detail === 'duration' || detail === 'labProject') && detailString && (
+        {detailLabel && detailDescription && (
           <BodyThreeText className={classNames(moduleStyles.detail)}>
-            <StrongText>
-              {detail === 'duration' ? 'Duration:' : detailLabel}
-              {detail === 'labProject' ? 'What you can make:' : detailLabel}
-            </StrongText>
-            {' ' + detailString}
+            <StrongText>{`${detailLabel}: `}</StrongText>
+            {detailDescription}
           </BodyThreeText>
         )}
         {primaryButtonLabel && primaryButtonUrl && (

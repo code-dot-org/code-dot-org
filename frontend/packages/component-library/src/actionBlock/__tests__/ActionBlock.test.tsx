@@ -32,30 +32,17 @@ describe('ActionBlock', () => {
     expect(screen.getByText('Overline Text')).toBeInTheDocument();
   });
 
-  it('renders duration detail', () => {
+  it('renders detail', () => {
     render(
       <ActionBlock
         {...defaultProps}
-        detail="duration"
-        detailString="2 hours"
+        detailLabel="Duration"
+        detailDescription="2 hours"
       />,
     );
 
     expect(screen.getByText('Duration:')).toBeInTheDocument();
     expect(screen.getByText('2 hours')).toBeInTheDocument();
-  });
-
-  it('renders labProject detail', () => {
-    render(
-      <ActionBlock
-        {...defaultProps}
-        detail="labProject"
-        detailString="Create a web app"
-      />,
-    );
-
-    expect(screen.getByText('What you can make:')).toBeInTheDocument();
-    expect(screen.getByText('Create a web app')).toBeInTheDocument();
   });
 
   it('renders buttons', () => {

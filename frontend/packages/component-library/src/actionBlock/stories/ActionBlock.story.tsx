@@ -20,9 +20,8 @@ const defaultArgs: ActionBlockProps = {
   description: DESCRIPTION,
   image: image1,
   overline: 'Overline Text',
-  detail: 'none',
   detailLabel: '',
-  detailString: '',
+  detailDescription: '',
   primaryButtonLabel: 'Primary action button',
   primaryButtonUrl: '#',
   primaryButtonAriaLabel: '',
@@ -92,7 +91,7 @@ export const WithoutSecondaryButton: Story = {
     // check if primary button is visible
     await expect(primaryButton).toBeVisible();
 
-    // check if secondary button is not visible
+    // check that secondary button is not visible
     if (secondaryButton) {
       await expect(secondaryButton).not.toBeVisible();
     }
@@ -137,6 +136,31 @@ export const WithSecondaryBackground: Story = {
     await expect(actionBlock).toHaveStyle(
       `background-color: ${expectedBackgroundColor};`,
     );
+  },
+};
+
+export const WithDetail: Story = {
+  args: {
+    ...defaultArgs,
+    detailLabel: 'Duration',
+    detailDescription: '1 hour',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Sets a detail on the action block like duration, projects, or any other relevant information..',
+      },
+    },
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const detailLabel = await canvas.findByText('Duration:');
+    const detailDescription = await canvas.findByText('1 hour');
+
+    // check if details are visible
+    await expect(detailLabel).toBeVisible();
+    await expect(detailDescription).toBeVisible();
   },
 };
 
@@ -197,42 +221,7 @@ export const MultipleActionBlocksThreeAcross: Story = {
     const canvas = within(canvasElement);
     const actionBlocks = await canvas.findAllByText('Action block title');
 
-    // check if two Action Blocks are rendered
+    // check if three Action Blocks are rendered
     await expect(actionBlocks).toHaveLength(3);
-  },
-};
-
-export const MultipleActionBlocksWithDetails: Story = {
-  args: {
-    ...defaultArgs,
-    isFullWidth: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Sets a detail on the action block. These can be used with Curriculum, Self-paced PL, and Lab content types.',
-      },
-    },
-  },
-  render: args => {
-    return (
-      <div style={{display: 'flex', gap: '1.5rem'}}>
-        <ActionBlock {...args} detail={'duration'} detailString={'1 hour'} />
-        <ActionBlock
-          {...args}
-          detail={'labProject'}
-          detailString={'A lab project'}
-          image={image2}
-        />
-      </div>
-    );
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const duration = await canvas.findByText('1 hour');
-    const labProject = await canvas.findByText('A lab project');
-    await expect(duration).toBeVisible();
-    await expect(labProject).toBeVisible();
   },
 };
