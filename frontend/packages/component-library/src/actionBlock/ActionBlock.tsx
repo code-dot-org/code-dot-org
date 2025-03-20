@@ -44,6 +44,93 @@ export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
+const getImage = (image?: string) => {
+  if (!image) return null;
+  return (
+    // The image is decorative, so using a <figure> element instead of <img>
+    // to avoid adding a border when the src is empty. The image is set as a
+    // background to maintain the aspect ratio so any image size can be used.
+    <figure
+      style={{
+        background: `url(${image}) center / cover no-repeat`,
+      }}
+    />
+  );
+};
+
+const getText = (
+  title: string,
+  description: string,
+  overline?: string,
+  detailLabel?: string,
+  detailDescription?: string,
+  isFullWidth?: boolean,
+) => {
+  return (
+    <div className={moduleStyles.textWrapper}>
+      {overline && (
+        <OverlineTwoText className={classNames(moduleStyles.overline)}>
+          {overline}
+        </OverlineTwoText>
+      )}
+      <Heading3
+        className={classNames(moduleStyles.title)}
+        visualAppearance={isFullWidth ? 'heading-sm' : 'heading-md'}
+      >
+        {title}
+      </Heading3>
+      <BodyThreeText className={classNames(moduleStyles.description)}>
+        {description}
+      </BodyThreeText>
+      {detailLabel && detailDescription && (
+        <BodyThreeText className={classNames(moduleStyles.detail)}>
+          <StrongText>{`${detailLabel}: `}</StrongText>
+          {detailDescription}
+        </BodyThreeText>
+      )}
+    </div>
+  );
+};
+
+const getButtons = (
+  primaryButtonLabel?: string,
+  primaryButtonUrl?: string,
+  primaryButtonAriaLabel?: string,
+  secondaryButtonLabel?: string,
+  secondaryButtonUrl?: string,
+  secondaryButtonAriaLabel?: string,
+) => {
+  return (
+    <div className={moduleStyles.buttonWrapper}>
+      {primaryButtonLabel && primaryButtonUrl && (
+        <LinkButton
+          href={primaryButtonUrl}
+          text={primaryButtonLabel}
+          type="primary"
+          size="m"
+          ariaLabel={primaryButtonAriaLabel}
+          role={'button'}
+        >
+          {primaryButtonLabel}
+        </LinkButton>
+      )}
+      {secondaryButtonLabel && secondaryButtonUrl && (
+        <LinkButton
+          href={secondaryButtonUrl}
+          text={secondaryButtonLabel}
+          type="secondary"
+          size="m"
+          color="black"
+          ariaLabel={secondaryButtonAriaLabel}
+          role={'button'}
+        >
+          {secondaryButtonLabel}
+        </LinkButton>
+      )}
+    </div>
+  );
+};
+
 /**
  * ### Production-ready Checklist:
  * * (✔) implementation of component approved by design team;
@@ -86,72 +173,61 @@ const ActionBlock: React.FC<ActionBlockProps> = ({
       )}
       {...HTMLAttributes}
     >
-      {image && (
-        // The image is decorative, so using a <figure> element instead of <img>
-        // to avoid adding a border when the src is empty. The image is set as a
-        // background to maintain the aspect ratio so any image size can be used.
-        <figure
-          style={{
-            background: `url(${image}) center / cover no-repeat`,
-          }}
-        />
-      )}
-      <div className={moduleStyles.contentWrapper}>
-        {overline && (
-          <OverlineTwoText className={classNames(moduleStyles.overline)}>
-            {overline}
-          </OverlineTwoText>
-        )}
-        <Heading3
-          className={classNames(moduleStyles.title)}
-          visualAppearance={isFullWidth ? 'heading-sm' : 'heading-md'}
-        >
-          {title}
-        </Heading3>
-        <BodyThreeText className={classNames(moduleStyles.description)}>
-          {description}
-        </BodyThreeText>
-        {detailLabel && detailDescription && (
-          <BodyThreeText className={classNames(moduleStyles.detail)}>
-            <StrongText>{`${detailLabel}: `}</StrongText>
-            {detailDescription}
-          </BodyThreeText>
-        )}
-        {primaryButtonLabel && primaryButtonUrl && (
-          <div
-            className={classNames(
-              moduleStyles.buttonWrapper,
-              isFullWidth ? moduleStyles.isFullWidth : '',
+      {/* Organize content to work with layout styles when full width */}
+      {isFullWidth ? (
+        <>
+          {image && <>{getImage(image)}</>}
+          <div>
+            {getText(
+              title,
+              description,
+              overline,
+              detailLabel,
+              detailDescription,
+              isFullWidth,
             )}
-          >
-            {primaryButtonLabel && primaryButtonUrl && (
-              <LinkButton
-                href={primaryButtonUrl}
-                text={primaryButtonLabel}
-                type="primary"
-                size="m"
-                ariaLabel={primaryButtonAriaLabel}
-                role={'button'}
-              >
-                {primaryButtonLabel}
-              </LinkButton>
-            )}
-            {secondaryButtonLabel && secondaryButtonUrl && (
-              <LinkButton
-                href={secondaryButtonUrl}
-                text={secondaryButtonLabel}
-                type="secondary"
-                size="m"
-                color="black"
-                ariaLabel={secondaryButtonAriaLabel}
-                role={'button'}
-              >
-                {secondaryButtonLabel}
-              </LinkButton>
+            {primaryButtonLabel && (
+              <>
+                {getButtons(
+                  primaryButtonLabel,
+                  primaryButtonUrl,
+                  primaryButtonAriaLabel,
+                  secondaryButtonLabel,
+                  secondaryButtonUrl,
+                  secondaryButtonAriaLabel,
+                )}
+              </>
             )}
           </div>
-        )}
-      </div>
+        </>
+      ) : (
+        <>
+          {/* Organize content to work with layout styles when not full width */}
+          <div>
+            {image && <>{getImage(image)}</>}
+            {getText(
+              title,
+              description,
+              overline,
+              detailLabel,
+              detailDescription,
+              isFullWidth,
+            )}
+          </div>
+          {primaryButtonLabel && (
+            <>
+              {getButtons(
+                primaryButtonLabel,
+                primaryButtonUrl,
+                primaryButtonAriaLabel,
+                secondaryButtonLabel,
+                secondaryButtonUrl,
+                secondaryButtonAriaLabel,
+              )}
+            </>
+          )}
+        </>
+      )}
     </div>
   );
 };

@@ -8,25 +8,15 @@ $mobileBreakpoint: 900px;
   max-width: 100%;
   text-align: initial;
   padding: 1.25rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-
-  &.isFullWidth {
-    @media (min-width: $mobileBreakpoint) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-  }
 
   figure {
     align-self: flex-start;
     aspect-ratio: 16 / 9;
     width: 100%;
-    margin: 0;
+    margin: 0 0 1rem 0;
   }
 
-  .contentWrapper {
+  .textWrapper {
     display: flex;
     flex-direction: column;
 
@@ -38,19 +28,36 @@ $mobileBreakpoint: 900px;
     p {
       margin-block: 0 1rem;
     }
+  }
 
-    .buttonWrapper {
-      margin-top: 0.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
+  .buttonWrapper {
+    margin-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-      @media (min-width: $mobileBreakpoint) {
-        &.isFullWidth > a {
-          width: fit-content;
-        }
+  // Action block layout styles
+  &.isFullWidth {
+    @media (min-width: $mobileBreakpoint) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+
+      figure {
+        margin-bottom: 0;
+      }
+
+      .buttonWrapper > a {
+        width: fit-content;
       }
     }
+  }
+
+  &:not(.isFullWidth) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 

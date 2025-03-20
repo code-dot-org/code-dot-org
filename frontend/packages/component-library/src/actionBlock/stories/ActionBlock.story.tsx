@@ -29,6 +29,10 @@ type Story = StoryObj<typeof ActionBlock>;
 
 const DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
+const DESCRIPTION_MED =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+const DESCRIPTION_LONG =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
 
 const defaultArgs: ActionBlockProps = {
   title: 'Action block title',
@@ -202,7 +206,7 @@ export const MultipleActionBlocksTwoAcross: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} />
+        <ActionBlock {...args} image={image2} description={DESCRIPTION_LONG} />
       </div>
     );
   },
@@ -239,8 +243,8 @@ export const MultipleActionBlocksThreeAcross: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} />
-        <ActionBlock {...args} image={image3} />
+        <ActionBlock {...args} image={image2} description={DESCRIPTION_LONG} />
+        <ActionBlock {...args} image={image3} description={DESCRIPTION_MED} />
       </div>
     );
   },
