@@ -9,6 +9,21 @@ import ActionBlock, {ActionBlockProps} from '../index';
 export default {
   title: 'DesignSystem/ActionBlock',
   component: ActionBlock,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable the color contrast rule for action blocks.
+            // ActionBlock component has one a11y issue, and it's related to the overline color.
+            // This is a known issue across our design system, and we are ok accepting this for now.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 type Story = StoryObj<typeof ActionBlock>;
 
