@@ -330,10 +330,10 @@ const WEBPACK_BASE_CONFIG = {
         ],
         exclude: /node_modules/,
       },
-      {
-        test: /\.wasm$/,
-        use: ['wasm-loader'],
-      },
+      // {
+      //   test: /\.wasm$/,
+      //   use: ['wasm-loader'],
+      // },
       ...(process.env.DEV
         ? [
             // Enable source maps locally for Blockly for easier debugging.
@@ -737,6 +737,7 @@ function createWebpackConfig({
       : undefined,
     experiments: {
       asyncWebAssembly: true,
+      syncWebAssembly: true,
     },
   };
 
