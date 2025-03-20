@@ -49,13 +49,9 @@ export const resetPredictProgress = createAsyncThunk<
   }
 });
 
-export const submitPredictResponse = createAsyncThunk<
-  void,
-  {appType: string},
-  {dispatch: AppDispatch; state: RootState}
->(
-  'predictLevel/submitPredictResponse',
-  async ({appType}, {getState, dispatch}) => {
+export const submitPredictResponse =
+  ({appType}: {appType: string}) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
     const state = getState();
     const isPredictLevel = Boolean(
       state.lab.levelProperties?.predictSettings?.isPredictLevel
@@ -64,15 +60,14 @@ export const submitPredictResponse = createAsyncThunk<
 
     if (isPredictLevel && !predictAnswerLocked) {
       const predictResponse = state.predictLevel.response;
-      await dispatch(
+      dispatch(
         sendPredictLevelReport({
           appType,
           predictResponse,
         })
       );
     }
-  }
-);
+  };
 
 // SELECTORS
 
