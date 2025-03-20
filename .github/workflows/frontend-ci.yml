@@ -45,7 +45,7 @@ jobs:
     uses: ./.github/workflows/marketing-app-ci.yml
     secrets: inherit
     with:
-      eyes-batch-id: ${{ needs.eyes-uuid.outputs.eyes-batch-id }}
+      eyes-batch-id: ${{ needs.setup.outputs.eyes-batch-id }}
 
   # Start the component library CI workflow
   component-library:
@@ -54,7 +54,7 @@ jobs:
     uses: ./.github/workflows/component-library-ci.yml
     secrets: inherit
     with:
-      eyes-batch-id: ${{ needs.eyes-uuid.outputs.eyes-batch-id }}
+      eyes-batch-id: ${{ needs.setup.outputs.eyes-batch-id }}
 
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
