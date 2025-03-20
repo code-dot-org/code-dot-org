@@ -1,7 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import i18n from '@cdo/locale';
