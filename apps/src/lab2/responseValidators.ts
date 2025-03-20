@@ -129,5 +129,5 @@ function sourceValidatorHelper(
 }
 
 function missingFieldError(fieldName: string) {
-  return new ValidationError('Missing required field :' + fieldName);
+  return new ValidationError('Missing required field: ' + fieldName);
 }
