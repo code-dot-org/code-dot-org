@@ -1,7 +1,8 @@
 ## export unit progress
 
 This directory contains ruby scripts for exporting unit progress data from the database,
-adding student source code from S3, and filtering the results to exclude PII.
+adding student source code from S3, and filtering the results to exclude PII. the PII filtering
+is done using AWS Comprehend.
 
 ## 💰💰 WARNING 💰💰
 
@@ -23,6 +24,8 @@ note that we write to:
 * **s3://cdo-data-sharing-internal** in the first step because this is where redshift has permission to write to, and
 * **s3://cdo-data-sharing** in the last step because this is a more appropriate location for data to be shared externally.
 
+
+
 ## Usage
 
 To export progress for a given unit:
@@ -37,6 +40,7 @@ cd production
 ```bash
 SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit_name
 ```
+the above command runs a redshift query whose results are written to s3://cdo-data-sharing-internal via the `UNLOAD` command.
 
 3. add student source code from S3
 ```bash
@@ -82,9 +86,10 @@ rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name>
 ```
 ## Troubleshooting
 
-* some of the above steps can fail. to make this less painful, `add_unit_source.rb` and `filter_unit_pii.rb` are safe to rerun, as they are designed to skip over any input files if the output file already exists.
-* if you need to rerun any of the scripts and the output location dir is already in use from a previous run, you can specify a new output location with `-o`
+* if you run out of disk space on /mnt/tmp-curriculum-export, you can clean up old files from `/mnt/tmp-curriculum-export/sourced/` and `/mnt/tmp-curriculum-export/filtered/` and try again. `add_unit_source.rb` and `filter_unit_pii.rb` are safe to rerun, as they are designed to skip over any input files if the output file already exists.
+* if you need to rerun any of the scripts and the output location dir is already in use from a previous run which you do not want to throw away, you can specify a new output location with `-o`.
 * for more options, see the `--help` output for each script.
+ 
 
 ## Development
 
