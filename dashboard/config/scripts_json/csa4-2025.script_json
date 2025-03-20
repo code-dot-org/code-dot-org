@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 00:36:45 UTC",
+    "serialized_at": "2025-03-19 22:01:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,21 +53,9 @@
       }
     },
     {
-      "key": "lessonGroup-5",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-2025"
-      }
-    },
-    {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Alternate Lessons",
         "description": "This section contains the one-day version of the Abstract Data Art Project."
@@ -80,7 +68,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -337,27 +325,12 @@
       }
     },
     {
-      "key": "Unit 4 Survey",
-      "name": "Unit 4 Survey",
-      "absolute_position": 14,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Unit 4 Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-2025"
-      }
-    },
-    {
       "key": "Abstract Data Art Project [1-Day Version]",
       "name": "Abstract Data Art Project [1-Day Version]",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "assessment": true,
         "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file and create a visual representation for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
@@ -373,10 +346,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -388,10 +361,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -403,10 +376,10 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -958,18 +931,6 @@
         "lesson_activity.key": "ccae698e-40ea-4a49-9aa3-285c276fec8e",
         "lesson.key": "Unit 4 Assessment",
         "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa4-2025"
-      }
-    },
-    {
-      "key": "02af01fa-e17d-4bb6-ac2c-51041bc29209",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "02af01fa-e17d-4bb6-ac2c-51041bc29209",
-        "lesson.key": "Unit 4 Survey",
-        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa4-2025"
       }
     },
@@ -4336,8 +4297,27 @@
       }
     },
     {
-      "key": "d8af53e7-0bc3-4d49-b299-32a2811687fb",
+      "key": "a98ae55a-e902-4358-85c4-2b18a4485b3f",
       "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4) as well. Your feedback is valued and appreciated!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a98ae55a-e902-4358-85c4-2b18a4485b3f",
+        "lesson_activity.key": "c59aeb68-fb38-4d8e-a104-ce50da3530a5"
+      }
+    },
+    {
+      "key": "d8af53e7-0bc3-4d49-b299-32a2811687fb",
+      "position": 12,
       "properties": {
         "description": "---"
       },
@@ -4348,7 +4328,7 @@
     },
     {
       "key": "242989da-6b2e-4b18-bacc-dd30538a736b",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "**Abstract Data Art Project:** Use the rubric in the Abstract Data Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -4564,17 +4544,6 @@
       }
     },
     {
-      "key": "29d60117-55a9-4174-ac55-17729309f437",
-      "position": 1,
-      "properties": {
-        "progression_name": "Unit 4 Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "29d60117-55a9-4174-ac55-17729309f437",
-        "lesson_activity.key": "02af01fa-e17d-4bb6-ac2c-51041bc29209"
-      }
-    },
-    {
       "key": "73f9fda3-3110-40c2-b90a-10d4e2b3db98",
       "position": 1,
       "properties": {
@@ -4751,6 +4720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: The Theater"
       },
       "bonus": false,
@@ -4773,6 +4745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The Theater"
       },
       "bonus": false,
@@ -4795,6 +4770,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L3_pilot_oo2025"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4817,6 +4795,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4839,6 +4820,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4861,6 +4845,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4883,6 +4870,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L7_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4905,6 +4895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -4927,6 +4920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4949,6 +4945,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4971,6 +4970,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4993,6 +4995,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5015,6 +5020,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5037,6 +5045,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5059,6 +5070,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_pilot_oo2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5081,6 +5095,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5103,6 +5120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: The Math Class"
       },
       "bonus": false,
@@ -5125,6 +5145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: The Math Class"
       },
       "bonus": false,
@@ -5147,6 +5170,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3_pilot_oo2025"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5169,6 +5195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4_pilot_oo2025"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5191,6 +5220,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L5_pilot_oo2025"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5213,6 +5245,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L6_pilot_oo2025"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5235,6 +5270,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L7_pilot_oo2025"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5257,6 +5295,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5279,6 +5320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Casting"
       },
       "bonus": false,
@@ -5301,6 +5345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Division"
       },
       "bonus": false,
@@ -5323,6 +5370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Rounding"
       },
       "bonus": false,
@@ -5345,6 +5395,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L4_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5367,6 +5420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Random Numbers"
       },
       "bonus": false,
@@ -5389,6 +5445,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -5411,6 +5470,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -5433,6 +5495,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5455,6 +5520,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5477,6 +5545,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5499,6 +5570,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L7_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5521,6 +5595,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Comparing Objects"
       },
       "bonus": false,
@@ -5543,6 +5620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5565,6 +5645,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5587,6 +5670,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5609,6 +5695,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5_pilot_oo2025"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5631,6 +5720,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6_pilot_oo2025"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5653,6 +5745,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7_pilot_oo2025"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5675,6 +5770,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5697,6 +5795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Nested if Statements"
       },
       "bonus": false,
@@ -5719,6 +5820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -5741,6 +5845,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -5763,6 +5870,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5785,6 +5895,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5807,6 +5920,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5829,6 +5945,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L7_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5851,6 +5970,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Logical Operators"
       },
       "bonus": false,
@@ -5873,6 +5995,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5895,6 +6020,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5917,6 +6045,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5939,6 +6070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5 Finding Patterns_pilot_oo2025"
+        ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
@@ -5961,6 +6095,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L6_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5983,6 +6120,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6005,6 +6145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6027,6 +6170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6049,6 +6195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6071,6 +6220,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6093,6 +6245,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6115,6 +6270,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6137,6 +6295,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6159,6 +6320,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6182,26 +6346,98 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csa4_2025"
+          "CSA U4 Abstract Data Art Project_pilot_oo2025"
         ],
-        "progression": "Unit 4 Survey"
+        "progression": "Abstract Data Art Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project_pilot_oo2025"
+        ],
+        "lesson.key": "Abstract Data Art Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "a8cadcfb-bc5a-441c-a1bf-f69e22ecf172"
+      },
+      "level_keys": [
+        "CSA U4 Abstract Data Art Project_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Student End of Unit Survey_csa4_2025"
         ],
-        "lesson.key": "Unit 4 Survey",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "Abstract Data Art Project",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "csa4-2025",
-        "activity_section.key": "29d60117-55a9-4174-ac55-17729309f437"
+        "activity_section.key": "a98ae55a-e902-4358-85c4-2b18a4485b3f"
       },
       "level_keys": [
         "Student End of Unit Survey_csa4_2025"
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 4 Assessment_pilot_oo2025"
+        ],
+        "progression": "Unit 4 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 4 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 4 Assessment",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "acf04902-5d1b-4199-88a5-febe90e22a97"
+      },
+      "level_keys": [
+        "CSA Unit 4 Assessment_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Abstract Data Art Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2025",
+        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
+      },
+      "level_keys": [
+        "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6225,7 +6461,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6250,7 +6486,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6275,7 +6511,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6296,72 +6532,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 71,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Abstract Data Art Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project_pilot_oo2025"
-        ],
-        "lesson.key": "Abstract Data Art Project",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa4-2025",
-        "activity_section.key": "a8cadcfb-bc5a-441c-a1bf-f69e22ecf172"
-      },
-      "level_keys": [
-        "CSA U4 Abstract Data Art Project_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 72,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Unit 4 Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA Unit 4 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 4 Assessment",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa4-2025",
-        "activity_section.key": "acf04902-5d1b-4199-88a5-febe90e22a97"
-      },
-      "level_keys": [
-        "CSA Unit 4 Assessment_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 73,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Abstract Data Art Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025",
-        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
-      },
-      "level_keys": [
-        "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
       ]
     }
   ],
@@ -7148,14 +7318,50 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U4 Abstract Data Art Project_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project_pilot_oo2025"
+        ],
+        "lesson.key": "Abstract Data Art Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "a8cadcfb-bc5a-441c-a1bf-f69e22ecf172"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Student End of Unit Survey_csa4_2025",
         "script_level.level_keys": [
           "Student End of Unit Survey_csa4_2025"
         ],
-        "lesson.key": "Unit 4 Survey",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "Abstract Data Art Project",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "csa4-2025",
-        "activity_section.key": "29d60117-55a9-4174-ac55-17729309f437"
+        "activity_section.key": "a98ae55a-e902-4358-85c4-2b18a4485b3f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 4 Assessment_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA Unit 4 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 4 Assessment",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "acf04902-5d1b-4199-88a5-febe90e22a97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2025",
+        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
       }
     },
     {
@@ -7204,42 +7410,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa4-2025",
         "activity_section.key": "a7c51331-a554-409d-b11b-b67aabbb507f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4 Abstract Data Art Project_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project_pilot_oo2025"
-        ],
-        "lesson.key": "Abstract Data Art Project",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa4-2025",
-        "activity_section.key": "a8cadcfb-bc5a-441c-a1bf-f69e22ecf172"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA Unit 4 Assessment_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA Unit 4 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 4 Assessment",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa4-2025",
-        "activity_section.key": "acf04902-5d1b-4199-88a5-febe90e22a97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025",
-        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
       }
     }
   ],

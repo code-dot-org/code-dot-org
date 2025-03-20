@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {MouseEvent, useCallback, useRef} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
+import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';
@@ -168,6 +169,11 @@ const Timeline: React.FunctionComponent = () => {
   }, [playheadRef]);
 
   usePlaybackUpdate(scrollPlayheadForward, scrollToPlayhead, scrollToPlayhead);
+  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+  const canPopulateTimeline = !isPredictLevel || predictAnswerLocked;
 
   return (
     <div
@@ -227,11 +233,12 @@ const Timeline: React.FunctionComponent = () => {
       </div>
 
       <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
-        {blockMode === BlockMode.SIMPLE2 ? (
-          <TimelineSimple2Events {...timelineElementProps} />
-        ) : (
-          <TimelineSampleEvents {...timelineElementProps} />
-        )}
+        {canPopulateTimeline &&
+          (blockMode === BlockMode.SIMPLE2 ? (
+            <TimelineSimple2Events {...timelineElementProps} />
+          ) : (
+            <TimelineSampleEvents {...timelineElementProps} />
+          ))}
       </div>
 
       <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>

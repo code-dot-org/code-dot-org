@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 01:08:24 UTC",
+    "serialized_at": "2025-03-19 22:07:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,21 +53,9 @@
       }
     },
     {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Alternate Lessons",
         "description": "This section contains the one-day version of the Creative Coding with The Theater Project."
@@ -80,7 +68,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -316,27 +304,12 @@
       }
     },
     {
-      "key": "Unit 7 Survey",
-      "name": "Unit 7 Survey",
-      "absolute_position": 13,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Unit 7 Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
       "key": "Creative Coding with The Theater Project [1-Day Version]",
       "name": "Creative Coding with The Theater Project [1-Day Version]",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
@@ -351,10 +324,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -366,10 +339,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -381,10 +354,10 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -907,18 +880,6 @@
         "lesson_activity.key": "4187877c-3a88-4f91-ac74-de46bd541e83",
         "lesson.key": "Unit 7 Assessment",
         "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "2a883aa6-6d28-47bb-a620-4cf35c9291cf",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2a883aa6-6d28-47bb-a620-4cf35c9291cf",
-        "lesson.key": "Unit 7 Survey",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa7-2025"
       }
     },
@@ -3393,8 +3354,27 @@
       }
     },
     {
-      "key": "1f8b6467-80d2-4bf0-a3b3-6e12ce7485f7",
+      "key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999",
       "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) as well. Your feedback is valued and appreciated!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999",
+        "lesson_activity.key": "c662b6a3-f41f-49dc-ae8f-c29812bda139"
+      }
+    },
+    {
+      "key": "1f8b6467-80d2-4bf0-a3b3-6e12ce7485f7",
+      "position": 9,
       "properties": {
         "description": "---"
       },
@@ -3405,7 +3385,7 @@
     },
     {
       "key": "ca5ee9df-080a-491b-a40d-00a8f5becb97",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Creative Coding with The Theater Project Planning Guide:** Use the rubric in the Creative Coding with The Theater Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -3655,17 +3635,6 @@
       }
     },
     {
-      "key": "bde80ddc-97fd-4f81-b643-151724b75b4a",
-      "position": 1,
-      "properties": {
-        "progression_name": "Unit 7 Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "bde80ddc-97fd-4f81-b643-151724b75b4a",
-        "lesson_activity.key": "2a883aa6-6d28-47bb-a620-4cf35c9291cf"
-      }
-    },
-    {
       "key": "bd4d17df-4164-4f7d-93bf-7ecd74f18ad6",
       "position": 1,
       "properties": {
@@ -3857,6 +3826,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1_pilot_oo2025"
+        ],
         "progression": "Creative Coding with The Theater Example Projects"
       },
       "bonus": false,
@@ -3879,6 +3851,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3901,6 +3876,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Object References as Parameters"
       },
       "bonus": false,
@@ -3923,6 +3901,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3945,6 +3926,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3967,6 +3951,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3989,6 +3976,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4011,6 +4001,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4033,6 +4026,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4055,6 +4051,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4077,6 +4076,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1_pilot_oo2025"
+        ],
         "progression": "Predict and Run: Overloaded Methods"
       },
       "bonus": false,
@@ -4099,6 +4101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4121,6 +4126,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4143,6 +4151,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L4_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4165,6 +4176,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4187,6 +4201,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4209,6 +4226,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L7_pilot_oo2025"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4231,6 +4251,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L8_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4253,6 +4276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4275,6 +4301,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4297,6 +4326,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4319,6 +4351,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4341,6 +4376,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4363,6 +4401,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4385,6 +4426,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L7_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4407,6 +4451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4429,6 +4476,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4451,6 +4501,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3_pilot_oo2025"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4473,6 +4526,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4_pilot_oo2025"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4495,6 +4551,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5_pilot_oo2025"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4517,6 +4576,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L6_pilot_oo2025"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4539,6 +4601,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L7_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4561,6 +4626,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4583,6 +4651,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4605,6 +4676,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1_pilot_oo2025"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4627,6 +4701,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4649,6 +4726,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_pilot_oo2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4672,26 +4752,98 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csa7_2025"
+          "CSA U7 Creative Coding with The Theater Project_pilot_oo2025"
         ],
-        "progression": "Unit 7 Survey"
+        "progression": "Creative Coding with The Theater Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7 Creative Coding with The Theater Project_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "2e35cd7c-8bdf-4941-af70-89747c2814cc"
+      },
+      "level_keys": [
+        "CSA U7 Creative Coding with The Theater Project_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Student End of Unit Survey_csa7_2025"
         ],
-        "lesson.key": "Unit 7 Survey",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "Creative Coding with The Theater Project",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "csa7-2025",
-        "activity_section.key": "bde80ddc-97fd-4f81-b643-151724b75b4a"
+        "activity_section.key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999"
       },
       "level_keys": [
         "Student End of Unit Survey_csa7_2025"
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 7 Assessment_pilot_oo2025"
+        ],
+        "progression": "Unit 7 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 7 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 7 Assessment",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "c2d7fdb6-c0b4-4bff-8e25-2169686dc444"
+      },
+      "level_keys": [
+        "CSA Unit 7 Assessment_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Creative Coding with The Theater Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2025",
+        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
+      },
+      "level_keys": [
+        "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4715,7 +4867,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4740,7 +4892,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4765,7 +4917,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4786,72 +4938,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Creative Coding with The Theater Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7 Creative Coding with The Theater Project_pilot_oo2025"
-        ],
-        "lesson.key": "Creative Coding with The Theater Project",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa7-2025",
-        "activity_section.key": "2e35cd7c-8bdf-4941-af70-89747c2814cc"
-      },
-      "level_keys": [
-        "CSA U7 Creative Coding with The Theater Project_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 44,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Unit 7 Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA Unit 7 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 7 Assessment",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa7-2025",
-        "activity_section.key": "c2d7fdb6-c0b4-4bff-8e25-2169686dc444"
-      },
-      "level_keys": [
-        "CSA Unit 7 Assessment_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Creative Coding with The Theater Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa7-2025",
-        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
-      },
-      "level_keys": [
-        "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
       ]
     }
   ],
@@ -5302,14 +5388,50 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U7 Creative Coding with The Theater Project_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U7 Creative Coding with The Theater Project_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "2e35cd7c-8bdf-4941-af70-89747c2814cc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Student End of Unit Survey_csa7_2025",
         "script_level.level_keys": [
           "Student End of Unit Survey_csa7_2025"
         ],
-        "lesson.key": "Unit 7 Survey",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "Creative Coding with The Theater Project",
+        "lesson_group.key": "lessonGroup-8",
         "script.name": "csa7-2025",
-        "activity_section.key": "bde80ddc-97fd-4f81-b643-151724b75b4a"
+        "activity_section.key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 7 Assessment_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA Unit 7 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 7 Assessment",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "c2d7fdb6-c0b4-4bff-8e25-2169686dc444"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-2025",
+        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
       }
     },
     {
@@ -5358,42 +5480,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2025",
         "activity_section.key": "4ceaf51d-ef02-4d53-8c87-f559876dca75"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7 Creative Coding with The Theater Project_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7 Creative Coding with The Theater Project_pilot_oo2025"
-        ],
-        "lesson.key": "Creative Coding with The Theater Project",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa7-2025",
-        "activity_section.key": "2e35cd7c-8bdf-4941-af70-89747c2814cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA Unit 7 Assessment_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA Unit 7 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 7 Assessment",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa7-2025",
-        "activity_section.key": "c2d7fdb6-c0b4-4bff-8e25-2169686dc444"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa7-2025",
-        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
       }
     }
   ],

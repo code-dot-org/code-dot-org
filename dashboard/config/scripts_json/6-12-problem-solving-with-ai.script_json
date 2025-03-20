@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-18 20:14:26 UTC",
+    "serialized_at": "2025-03-19 21:18:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -328,6 +328,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-problem-solving-with-ai"
       }
+    },
+    {
+      "key": "39e7aaf3-f010-4549-921e-cb005d0fe778",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39e7aaf3-f010-4549-921e-cb005d0fe778",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai"
+      }
     }
   ],
   "activity_sections": [
@@ -540,11 +552,74 @@
       "key": "b0536690-8c9f-474b-921f-41bfd546f736",
       "position": 4,
       "properties": {
-        "progression_name": "Choice Level: Practice Prompting AI Chat"
+        "progression_name": "Choice Level: Reviewing Profiles"
       },
       "seeding_key": {
         "activity_section.key": "b0536690-8c9f-474b-921f-41bfd546f736",
         "lesson_activity.key": "aaaa4568-7b3d-4e14-9c4d-60d9a0916516"
+      }
+    },
+    {
+      "key": "9c68ef2e-a716-457c-92a4-3362d8dafc13",
+      "position": 5,
+      "properties": {
+        "progression_name": "Choice Level: Practice Prompting AI Chat"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c68ef2e-a716-457c-92a4-3362d8dafc13",
+        "lesson_activity.key": "aaaa4568-7b3d-4e14-9c4d-60d9a0916516"
+      }
+    },
+    {
+      "key": "c3e4b6f4-1ef1-4cd7-8de6-1ffd87656087",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c3e4b6f4-1ef1-4cd7-8de6-1ffd87656087",
+        "lesson_activity.key": "39e7aaf3-f010-4549-921e-cb005d0fe778"
+      }
+    },
+    {
+      "key": "e57a61b6-27e7-4d7c-8621-39996779cbd8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Hallucination Chain Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e57a61b6-27e7-4d7c-8621-39996779cbd8",
+        "lesson_activity.key": "39e7aaf3-f010-4549-921e-cb005d0fe778"
+      }
+    },
+    {
+      "key": "206eb2fb-a6a6-42cd-8266-e7963e1a1739",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "206eb2fb-a6a6-42cd-8266-e7963e1a1739",
+        "lesson_activity.key": "39e7aaf3-f010-4549-921e-cb005d0fe778"
+      }
+    },
+    {
+      "key": "ced1bbc5-4cc0-4b60-8bc3-f48aea56cc43",
+      "position": 4,
+      "properties": {
+        "progression_name": "Panel Level & Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "ced1bbc5-4cc0-4b60-8bc3-f48aea56cc43",
+        "lesson_activity.key": "39e7aaf3-f010-4549-921e-cb005d0fe778"
+      }
+    },
+    {
+      "key": "1def676b-f8d3-4179-b78f-7abd064aece8",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1def676b-f8d3-4179-b78f-7abd064aece8",
+        "lesson_activity.key": "39e7aaf3-f010-4549-921e-cb005d0fe778"
       }
     }
   ],
@@ -930,6 +1005,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson5-level1"
+        ],
         "progression": "Two Truths and a Lie"
       },
       "bonus": false,
@@ -952,6 +1030,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson5-level2"
+        ],
         "progression": "Telehealth Chatbot"
       },
       "bonus": false,
@@ -974,6 +1055,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson5-level3"
+        ],
         "progression": "Choice: Industry Examples"
       },
       "bonus": false,
@@ -993,9 +1077,100 @@
     {
       "chapter": 19,
       "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice: Industry Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level4-bubblechoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson5-level4-bubblechoice"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice: Industry Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level5-bubblechoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson5-level5-bubblechoice"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice: Industry Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level6-bubblechoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson5-level6-bubblechoice"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice: Industry Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson5-level7"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson5-level4"
+        ],
         "progression": "AI Contradictions and Real-World Consequences"
       },
       "bonus": false,
@@ -1013,11 +1188,14 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 5,
+      "chapter": 24,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson5-level5"
+        ],
         "progression": "AI Contradictions and Real-World Consequences"
       },
       "bonus": false,
@@ -1035,11 +1213,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson6-level1"
+        ],
         "progression": "AI Chat"
       },
       "bonus": false,
@@ -1057,7 +1238,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1079,12 +1260,15 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Choice Level: Practice Prompting AI Chat"
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson6-level3"
+        ],
+        "progression": "Choice Level: Reviewing Profiles"
       },
       "bonus": false,
       "seeding_key": {
@@ -1098,6 +1282,72 @@
       },
       "level_keys": [
         "test-problem-solving-with-ai-lesson6-level3"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Level: Practice Prompting AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson6-level4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "9c68ef2e-a716-457c-92a4-3362d8dafc13"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson6-level4"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Panel Level & Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson7-level3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "ced1bbc5-4cc0-4b60-8bc3-f48aea56cc43"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson7-level3"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Panel Level & Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson7-level4-parent"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "ced1bbc5-4cc0-4b60-8bc3-f48aea56cc43"
+      },
+      "level_keys": [
+        "test-problem-solving-with-ai-lesson7-level4-parent"
       ]
     }
   ],
@@ -1320,6 +1570,54 @@
     },
     {
       "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson5-level4-bubblechoice",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level4-bubblechoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson5-level5-bubblechoice",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level5-bubblechoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson5-level6-bubblechoice",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level6-bubblechoice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson5-level7",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson5-level7"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "52636d78-f2f4-4aa4-b53d-c8bc1dfc70f2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-problem-solving-with-ai-lesson5-level4",
         "script_level.level_keys": [
           "test-problem-solving-with-ai-lesson5-level4"
@@ -1376,6 +1674,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-problem-solving-with-ai",
         "activity_section.key": "b0536690-8c9f-474b-921f-41bfd546f736"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson6-level4",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson6-level4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "9c68ef2e-a716-457c-92a4-3362d8dafc13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson7-level3",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson7-level3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "ced1bbc5-4cc0-4b60-8bc3-f48aea56cc43"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-problem-solving-with-ai-lesson7-level4-parent",
+        "script_level.level_keys": [
+          "test-problem-solving-with-ai-lesson7-level4-parent"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-problem-solving-with-ai",
+        "activity_section.key": "ced1bbc5-4cc0-4b60-8bc3-f48aea56cc43"
       }
     }
   ],

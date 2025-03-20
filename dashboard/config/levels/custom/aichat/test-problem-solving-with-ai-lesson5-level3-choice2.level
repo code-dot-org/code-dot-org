@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Update\r\nLaw Choice\r\n\r\n## Historical Event\r\n\r\nUse AI Chat to help learn about a historical event.\r\n\r\n### Do This:\r\n\r\n1. Look at the images already uploaded to this level and decide if you'd like to use those or images of an event more relevant to you.\r\n2. Decide on specific areas you'd like to learn more about related to the even in the picture(s) you plan to use. Here are some common topics:\r\n\t- Context & Background\r\n    - Subjects & People\r\n    - Physical Setting & Environment\r\n    - Symbols & Messages\r\n    - (You can use AI chat to help you brainstorm more ideas if you'd like)\r\n3. Add the images you want to include in your input to your prompt.\r\n2. **Copy and paste** the following prompt:\r\n\r\n>Help me learn about the [insert area of interest] of the event shown in this picture.\r\n3. Press **Send**.\r\n4. Change and add to your prompt to see if you can get AI Chat to provide you more useful responses.",
+    "long_instructions": "## Law\r\n\r\nPractice asking the same question in different ways about trials in the justice system.\r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the following prompt:\r\n\r\n>Why is it important to have fair trials in the justice system?\r\n2. Press **Send**.\r\n3. Read the response you get.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -41,8 +41,10 @@
         "gpt-4o-mini"
       ]
     },
-    "display_name": "Law"
+    "display_name": "Law",
+    "bubble_choice_description": "Practice asking the same question in different ways about trials in the justice system.",
+    "thumbnail_url": "https://images.code.org/f985d40a5f68b32e8bb0acad954cd330-Justice System Scales.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T18:36:37.711+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice1\"},{\"changed_at\":\"2025-03-18 18:37:02 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T18:36:37.711+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice1\"},{\"changed_at\":\"2025-03-18 18:37:02 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 20:45:20 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 20:46:28 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 21:01:32 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 21:05:33 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

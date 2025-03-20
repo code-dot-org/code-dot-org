@@ -1,11 +1,18 @@
 name 'csaif-pl-matchingsoftware-L12-CSandDev'
 title 'Matching Assessment: Vocabulary'
-description 'Match term with the example'
-question 'Input'
-question 'Output'
-question 'User Interface'
-answer 'The user clicks a button'
-answer 'A song is played'
-answer 'A screen with buttons, images, and text'
+description 'Match career scenario with the software types.'
+
+height '100'
+
+question 'You are a social media influencer who needs to create and publish content on the go, engage with your audience, and track analytics.'
+question 'You are a college student managing coursework, participating in virtual classes, and collaborating on group projects.'
+question 'You are a geologist conducting field research in remote locations. You need to collect and analyze data about rock formations.'
+question 'You are a designer creating a virtual reality experience for an architecture firm to showcase a new building design.'
+answer 'Video editing apps (CapCut/Adobe Premiere Rush), social media platforms (Instagram/TikTok), analytics tools (Google Analytics).'
+answer 'Office suite (e.g., Microsoft Office/Google Workspace), video conferencing software (Zoom/Teams), project management tools (Trello/Notion).'
+answer 'GPS mapping software, data collection tools (ArcGIS Field Maps), note-taking apps optimized for offline use.'
+answer '3D modeling software (Blender/Unity), VR presentation platforms, project collaboration tools.'
+
+
 
 allow_multiple_attempts true

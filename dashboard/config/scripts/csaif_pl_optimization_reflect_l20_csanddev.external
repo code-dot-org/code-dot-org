@@ -3,79 +3,32 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Data Visualization 
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="code.org AI robot character" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
 
+# Lesson Wrap-up
 
+#### You just engaged with an AI chatbot to help optimize a computer system, exploring different actions to improve performance. 
+#### This activity demonstrated how AI can be a valuable tool for analyzing problems, brainstorming solutions, and considering different optimization strategies.
 
-#### There are many ways to visualize data. If you have time to discuss with your class, you may wish to ask what they notice the differences are between the bar charts and the dot plots and when they might use each. 
+<div style="clear:both;"></div>
 
----
+<div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 600px; margin: 10px auto; text-align: left;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Key Takeaways:</p>
+    <ul style="font-size: 14px;line-height: 1.2; margin-top: 10px;">
+    <li><b>A Great Tool for Problem-Solving</b> – AI can provide helpful suggestions, generate ideas, and offer alternative solutions that you may not have considered.</li>
+    <li><b>Not Always Perfect</b> – AI responses are based on patterns and data, but they aren’t always accurate or the best fit for a situation. It’s important to <b>evaluate responses critically</b> and use your own judgment.</li>
+    <li><b>Works Best with Clear Prompts</b> – The way you ask questions affects the quality of the response. Being specific and refining your prompts can lead to better, more relevant answers.</li>
+    <li><b>Encourages Inquiry-Based Thinking</b> – Instead of simply giving answers, AI can help guide exploration, prompting deeper analysis and discussion.</li>
+    <li><b>Requires Responsible Use</b> – When using AI tools with students, it’s important to establish guidelines around <b>ethical use, data privacy, and responsible interactions</b>.</li>
+</ul>
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
-  <td style="text-align: center; padding-bottom: 10px">
-    <img src="https://images.code.org/c8e2e1a6ca32b6e987d8033a4b3e93f1-image-1731425512254.png" alt="Dot Plot Image" width="200">
-  </td>
-  <td style="text-align: center; padding-bottom: 10px;">
-    <img src="https://images.code.org/0c3faaf47fecefab31d4eb9ea5011a61-image-1731425456148.png" alt="Bar Chart Image" width="200">
-  </td>
-  <td style="text-align: center; padding-bottom: 10px">
-    <img src="https://images.code.org/b5dd1ce9a5e6b3d8122a87a21efc7ab0-image-1731425622735.png" alt="Scatter Plot Image" width="200">
-  </td>
-</tr>
-  <tr>
-    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Dot Plot</b></th>
-    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Bar Chart</b></th>
-    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Scatter Plot</b></th>
-  </tr>
-  <tr>
-    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
-      <ul>
-        <li style="font-size: 14pt">Shows individual data points, making it easy to count.</li>
-        <li style="font-size: 14pt">Great for comparing small datasets.</li>
-        <li style="font-size: 14pt">Useful for spotting outliers.</li>
-      </ul>
-    </td>
-    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
-      <ul>
-        <li style="font-size: 14pt">Ideal for comparing quantities across categories.</li>
-        <li style="font-size: 14pt">Clearly shows differences between groups.</li>
-        <li style="font-size: 14pt">Easy to read and interpret.</li>
-      </ul>
-    </td>
-    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
-      <ul>
-        <li style="font-size: 14pt">Displays relationships between two variables.</li>
-        <li style="font-size: 14pt">Helps identify correlations, patterns, or clusters in data.</li>
-        <li style="font-size: 14pt">Useful for spotting trends.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-##
-
-<hr style="clear:both">
-
-<img src="https://images.code.org/984c5b8d41d2e371f98ff81b9af4c7a5-image-1724350333310.png" style="float: left; height: 205px; clear: both; margin: 0 30px 20px 0;">
-
-<div style="background-color: #dccbea; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 10px 10px 1px 10px;">
-
-
-<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="font-size: 16px; line-height: 1.5; margin-left: 10px; margin-right: 30px;">The CODAP website brings data to life and is a great interactive tool. Using the Getting Started tutorials might help struggling learners catch on.
-</p>
-<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
-<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
-</p>
 </div>
 
-  <div style="clear: both;"></div>
+
+#### As we move into reflection, think about how AI supported your learning and how you might use it effectively in your teaching practice.
 
 
-
-
-## Let's continue to data cleaning and interpretation!
+## Let's continue!
 
 
 MARKDOWN
