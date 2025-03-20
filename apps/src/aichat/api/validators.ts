@@ -26,7 +26,7 @@ const chatHistoryValidator: ResponseValidator<ServerChatEvent[]> = bodyJson => {
         }
       }
 
-      // Clear out assets if they were stored in the wrong format.
+      // Clear out assets if they were stored an out of date format.
       if (event.assets && Array.isArray(event.assets)) {
         event.assets = event.assets.filter(
           asset => typeof asset === 'object' && asset.filename && asset.source
