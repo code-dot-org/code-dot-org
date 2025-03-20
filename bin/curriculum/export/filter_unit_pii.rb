@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# This script operates on the output from add_unit_source.rb. It filters out
+# personally identifiable information (PII) from student source code using AWS
+# Comprehend.
+
 require 'optparse'
 require 'fileutils'
 

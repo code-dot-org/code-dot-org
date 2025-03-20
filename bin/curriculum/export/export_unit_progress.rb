@@ -2,10 +2,8 @@
 
 # This script exports source code for every student who has progress in the
 # specified unit or level, and writes it to a file along with metatata in jsonl
-# format. Results containing PII are omitted from the result set.
-#
-# This script will mostly be used for a one-off data export in Jan 2025, but may
-# be used again in the future to gather additional data.
+# format. The query is sent to redshift, and the query instructs redshift to
+# write the result directly to S3.
 
 require 'optparse'
 require 'parallel'

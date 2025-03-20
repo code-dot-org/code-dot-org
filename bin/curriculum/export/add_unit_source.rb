@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
+# This script operates on the output from export_unit_progress.rb. It adds the
+# source code for each project to the output file. Currently it relies on being
+# run in the production environment, because it relies on both dashboard code
+# and production secrets for fetching project source. While the dependency on
+# dashboard code (and the need to load the rails environment) could be removed,
+# the production secret would still be needed.
+
 require 'optparse'
 require 'parallel'
 require 'json'
@@ -29,6 +36,8 @@ $output_dir = File.join('/mnt/tmp-curriculum-export', 'sourced', $options[:outpu
 FileUtils.mkdir_p($output_dir)
 
 require_relative '../../../deployment'
+
+raise "Unsupported environment: #{rack_env}" unless rack_env?(:production)
 
 start_time = Time.now
 puts "Loading Rails environment..."
