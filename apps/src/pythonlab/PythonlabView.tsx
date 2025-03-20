@@ -6,10 +6,7 @@ import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useState} from 'react';
 
-import {
-  sendPredictLevelReport,
-  sendProgressReport,
-} from '@cdo/apps/code-studio/progressRedux';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -17,7 +14,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -111,8 +108,6 @@ const PythonlabView: React.FunctionComponent<
     labConfig,
   } = useSource(defaultProject, levelProperties, initialSources);
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
-  const predictResponse = useAppSelector(state => state.predictLevel.response);
-  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -164,16 +159,7 @@ const PythonlabView: React.FunctionComponent<
         )
       );
     }
-    // Only send a predict level report if this is a predict level and the predict
-    // answer was not locked.
-    if (isPredictLevel && !predictAnswerLocked) {
-      dispatch(
-        sendPredictLevelReport({
-          appType: 'pythonlab',
-          predictResponse: predictResponse,
-        })
-      );
-    }
+    dispatch(submitPredictResponse({appType: 'pythonlab'}));
   };
 
   return (

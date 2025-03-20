@@ -49,6 +49,29 @@ export const resetPredictProgress = createAsyncThunk<
   }
 });
 
+export const submitPredictResponse = createAsyncThunk<
+  void,
+  {appType: string},
+  {dispatch: AppDispatch; state: RootState}
+>(
+  'predictLevel/submitPredictResponse',
+  async ({appType}, {getState, dispatch}) => {
+    const state = getState();
+    const isPredictLevel = Boolean(state.lab.levelProperties?.predictSettings);
+    const predictAnswerLocked = isPredictAnswerLocked(state);
+
+    if (isPredictLevel && !predictAnswerLocked) {
+      const predictResponse = state.predictLevel.response;
+      await dispatch(
+        sendPredictLevelReport({
+          appType,
+          predictResponse,
+        })
+      );
+    }
+  }
+);
+
 // SELECTORS
 
 // The predict answer is locked if the level does not allow multiple predict attempts
