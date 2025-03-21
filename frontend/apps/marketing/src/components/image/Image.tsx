@@ -2,7 +2,7 @@ import React from 'react';
 
 import DSCOImage, {ImageProps} from '@code-dot-org/component-library/cms/image';
 
-const Image: React.FC<ImageProps> = ({src}) => {
+const Image: React.FC<ImageProps> = ({src, ...props}) => {
   // Show placeholder text until a content entry is added
   if (src == null) {
     return (
@@ -15,7 +15,7 @@ const Image: React.FC<ImageProps> = ({src}) => {
     );
   }
 
-  return <DSCOImage src={src} />;
+  return <DSCOImage src={src} {...props} />;
 };
 
 export default Image;
