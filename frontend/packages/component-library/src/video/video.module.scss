@@ -1,6 +1,7 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
-@import '@code-dot-org/component-library-styles/variables.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 // Video common styles
 .videoComponentContainer {
@@ -13,7 +14,7 @@
     width: 100%;
     padding-top: 56.25%; // This maintains a 16:9 aspect ratio
     border: 1px solid var(--background-neutral-tertiary);
-    border-radius: $regular-border-radius;
+    border-radius: variables.$regular-border-radius;
     box-sizing: content-box;
     display: block;
 
@@ -77,5 +78,51 @@
   // when there is no caption shown.
   &:not(:has(figcaption)) {
     justify-content: flex-end;
+  }
+}
+
+// Poster image styles
+:global(.react-player__preview) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.posterImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+// Video play button
+$playButtonIconSize: 64px;
+
+.playButtonBackground {
+  height: $playButtonIconSize;
+  width: $playButtonIconSize;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 100px;
+  background: var(--neutral-base-white);
+  box-shadow:
+    0 3px 4px 0 rgb(255 255 255 / 0.23) inset,
+    0 -4px 4px 0 rgb(0 0 0 / 0.07) inset,
+    0 3px 6px 0 rgb(0 0 0 / 0.2);
+
+  &:focus-visible {
+    @include mixins.focus-styles;
+  }
+
+  .playButton {
+    font-size: 2rem;
+    color: var(--text-brand-purple-primary);
+    // Since the play button is the same in RTL, use margin-left
+    // instead of margin-inline-start which changes based on direction.
+    // This keeps the play button visually centered.
+    margin-left: 4px;
   }
 }

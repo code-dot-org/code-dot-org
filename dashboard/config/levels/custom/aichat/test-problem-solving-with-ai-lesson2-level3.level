@@ -42,6 +42,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T17:46:01.463+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level2\"},{\"changed_at\":\"2025-03-17 17:46:06 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:26:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17T17:46:01.463+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level2\"},{\"changed_at\":\"2025-03-17 17:46:06 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:26:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-20 17:19:12 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

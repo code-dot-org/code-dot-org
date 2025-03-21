@@ -1,15 +1,12 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
-import {ConfigType} from '@codebridge/types';
+import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useState} from 'react';
 
-import {
-  sendPredictLevelReport,
-  sendProgressReport,
-} from '@cdo/apps/code-studio/progressRedux';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -17,7 +14,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -98,7 +95,9 @@ const defaultConfig: ConfigType = {
   },
 };
 
-const PythonlabView: React.FunctionComponent<LabProps> = () => {
+const PythonlabView: React.FunctionComponent<
+  LabProps<CodebridgeLevelProperties, ProjectSources>
+> = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {
     source,
@@ -107,25 +106,20 @@ const PythonlabView: React.FunctionComponent<LabProps> = () => {
     projectVersion,
     validationFile,
     labConfig,
-  } = useSource(defaultProject);
-  const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
-  );
-  const predictResponse = useAppSelector(state => state.predictLevel.response);
-  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  } = useSource(defaultProject, levelProperties, initialSources);
+  const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
 
   useEffect(() => {
-    if (progressManager && appName === 'pythonlab') {
+    if (progressManager && levelProperties.appName === 'pythonlab') {
       progressManager.setValidator(
         new PythonValidator(PythonValidationTracker.getInstance())
       );
     }
-  }, [progressManager, appName]);
+  }, [progressManager, levelProperties.appName]);
 
   // Ensure any in-progress program is stopped when the level is switched.
   useLifecycleNotifier(
@@ -158,18 +152,14 @@ const PythonlabView: React.FunctionComponent<LabProps> = () => {
     ) {
       // If this is not a predict level and the current status is not tried,
       // send a level started progress report.
-      dispatch(sendProgressReport(appName || '', TestResults.LEVEL_STARTED));
-    }
-    // Only send a predict level report if this is a predict level and the predict
-    // answer was not locked.
-    if (isPredictLevel && !predictAnswerLocked) {
       dispatch(
-        sendPredictLevelReport({
-          appType: 'pythonlab',
-          predictResponse: predictResponse,
-        })
+        sendProgressReport(
+          levelProperties.appName || '',
+          TestResults.LEVEL_STARTED
+        )
       );
     }
+    dispatch(submitPredictResponse({appType: 'pythonlab'}));
   };
 
   return (

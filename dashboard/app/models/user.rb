@@ -453,7 +453,7 @@ class User < ApplicationRecord
     Services::Lti.create_lti_user_identity(self)
   end
 
-  after_create_commit :migrate_to_multi_auth
+  after_create :migrate_to_multi_auth
 
   after_update if: -> {cap_status? && property_previously_changed?(:us_state)} do
     Services::ChildAccount.remove_compliance(self)

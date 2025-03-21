@@ -56,7 +56,7 @@ export const openaiSafetyHighFailureRateConfiguration: PutMetricAlarmInput = {
   ],
 };
 
-// Start(total) jobs metrics for each model (m1,...,m5).
+// Start(total) jobs metrics for each model
 const startMetrics = modelIds.map((modelId, index) => ({
   Id: `m${index + 1}`,
   ...createJobExecutionMetricStat(
@@ -66,15 +66,19 @@ const startMetrics = modelIds.map((modelId, index) => ({
   ),
 }));
 
-// Failure job metrics for each model (m6,...,m10).
+// Failure job metrics for each model (IDs are indexed to begin one after the total jobs metrics end)
 const failureMetrics = modelIds.map((modelId, index) => ({
-  Id: `m${index + 6}`,
+  Id: `m${index + 1 + modelIds.length}`,
   ...createJobExecutionMetricStat(
     'AichatRequestChatCompletionJob.Finish',
     'FAILURE',
     modelId
   ),
 }));
+
+const metricsSumExpression = (metrics: { Id: string }[]): string => {
+  return `SUM[${metrics.map(m => m.Id).join(",")}]`;
+};
 
 export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAlarmInput =
   {
@@ -105,14 +109,14 @@ export const chatCompletionJobExecutionHighFailureRateConfiguration: PutMetricAl
         Id: 'failures',
         Label: 'failures',
         ReturnData: false,
-        Expression: 'SUM([m6, m7, m8, m9, m10])',
+        Expression: metricsSumExpression(failureMetrics),
       },
       ...failureMetrics,
       {
         Id: 'total',
         Label: 'total_jobs',
         ReturnData: false,
-        Expression: 'SUM([m1, m2, m3, m4, m5])',
+        Expression: metricsSumExpression(startMetrics),
       },
       ...startMetrics,
     ],

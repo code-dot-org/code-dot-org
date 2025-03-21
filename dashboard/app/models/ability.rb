@@ -272,7 +272,7 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
+      if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
         can :submit_feedback, AidiffMessage
       end

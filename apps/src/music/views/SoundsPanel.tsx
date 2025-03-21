@@ -230,6 +230,7 @@ interface SoundsPanelProps {
   currentValue: string;
   playingPreview: string;
   showSoundFilters: boolean;
+  defaultMode: Mode;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -239,6 +240,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   currentValue,
   playingPreview,
   showSoundFilters,
+  defaultMode,
   onSelect,
   onPreview,
 }) => {
@@ -248,7 +250,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
     library.getAllowedFolderForSoundId(currentValue) || folders[0]
   );
-  const [mode, setMode] = useState<Mode>('packs');
+  const [mode, setMode] = useState<Mode>(defaultMode);
   const [filter, setFilter] = useState<Filter>('all');
   const [isFocusSet, setIsFocusSet] = useState(false);
 

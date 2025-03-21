@@ -521,6 +521,8 @@ FactoryBot.define do
         ao = user.authentication_options.find_by(credential_type: AuthenticationOption::EMAIL)
         ao&.destroy
         user.save
+        # Reload to ensure that further uses of the pre-loaded user don't see the now-destroyed auth option
+        user.reload
       end
     end
 
@@ -528,6 +530,7 @@ FactoryBot.define do
       after(:create) do |user|
         user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
+        user.reload
         lti_user_id = create(:lti_user_identity, user: user)
         user.lti_user_identities << lti_user_id
         auth_id = lti_user_id.lti_integration.issuer + "|" + lti_user_id.lti_integration.client_id + "|" + lti_user_id.subject
@@ -622,6 +625,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -639,6 +643,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -654,6 +659,7 @@ FactoryBot.define do
             oauth_token: 'some-clever-token'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -700,6 +706,11 @@ FactoryBot.define do
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     credential_type {AuthenticationOption::EMAIL}
     authentication_id {SecureRandom.uuid}
+
+    after(:create) do |auth_option|
+      # Ensure that the original user model reloads the auth options list
+      auth_option.user&.reload
+    end
 
     factory :google_authentication_option do
       credential_type {AuthenticationOption::GOOGLE}
