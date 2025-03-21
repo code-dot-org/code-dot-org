@@ -13,6 +13,10 @@ export default {
 const defaultArgs: IconHighlightProps = {
   heading: 'IconHighlight Heading',
   text: 'IconHighlight\nMultiline Text',
+  icon: {
+    iconName: 'message',
+    iconStyle: 'solid',
+  },
 };
 
 const getComputedStylePropValue = (property: string) =>
@@ -44,27 +48,6 @@ export const Playground: Story = {
 
     const cardText = within(card).getByRole('paragraph');
     expect(cardText).toHaveStyle('grid-column-start: 2;');
-  },
-};
-
-export const WithCustomIcon: Story = {
-  args: {
-    ...defaultArgs,
-    icon: {
-      iconName: 'message',
-      iconStyle: 'regular',
-    },
-  },
-  play: ({canvasElement}) => {
-    const canvas = within(canvasElement);
-
-    const cardIcon = canvas.getByRole('complementary').firstElementChild;
-    expect(cardIcon).toHaveRole('presentation');
-    expect(cardIcon).toHaveStyle('font-size: 32px;');
-    expect(cardIcon).toHaveStyle('font-weight: 400;');
-    expect(cardIcon).toHaveStyle(
-      `color: ${getComputedStylePropValue('--text-neutral-primary')};`,
-    );
   },
 };
 

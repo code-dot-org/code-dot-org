@@ -1,13 +1,11 @@
 import classNames from 'classnames';
-import React, {Key, ReactNode, HTMLAttributes} from 'react';
+import {Key, ReactNode, HTMLAttributes} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Link, {LinkProps} from '@/link';
 import {Heading3, BodyThreeText} from '@/typography';
 
 import moduleStyles from './iconHighlight.module.scss';
-
-export const ICON_HIGHLIGHT_DEFAULT_ICON = 'smile';
 
 export type IconHighlightLinkProps = LinkProps & {
   key: Key;
@@ -20,7 +18,7 @@ export interface IconHighlightProps extends HTMLAttributes<HTMLElement> {
   /** IconHighlight content */
   text: string | ReactNode;
   /** IconHighlight icon */
-  icon?: FontAwesomeV6IconProps;
+  icon: FontAwesomeV6IconProps;
   /** IconHighlight links */
   links?: IconHighlightLinkProps[];
   /** IconHighlight class  */
@@ -43,11 +41,8 @@ export interface IconHighlightProps extends HTMLAttributes<HTMLElement> {
 const IconHighlight: React.FC<IconHighlightProps> = ({
   heading,
   text,
+  icon,
   className,
-  icon = {
-    iconName: ICON_HIGHLIGHT_DEFAULT_ICON,
-    iconStyle: 'solid',
-  },
   links = [],
   ...HTMLAttributes
 }: IconHighlightProps) => (
