@@ -13,10 +13,7 @@ export default {
 const defaultArgs: IconHighlightProps = {
   heading: 'IconHighlight Heading',
   text: 'IconHighlight\nMultiline Text',
-  icon: {
-    iconName: 'message',
-    iconStyle: 'solid',
-  },
+  icon: {iconName: 'message'},
 };
 
 const getComputedStylePropValue = (property: string) =>

@@ -6,7 +6,7 @@ import IconHighlight, {IconHighlightProps} from '../IconHighlight';
 describe('CMS IconHighlight', () => {
   const heading = 'IconHighlight Heading';
   const text = 'IconHighlight Text';
-  const icon = {iconName: 'message', iconStyle: 'solid'};
+  const icon = {iconName: 'message'};
 
   const renderCardContainer = (props: Partial<IconHighlightProps> = {}) => {
     render(<IconHighlight {...props} {...{heading, text, icon}} />);
