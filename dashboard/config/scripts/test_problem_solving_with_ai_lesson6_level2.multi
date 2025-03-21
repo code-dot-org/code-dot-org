@@ -1,5 +1,5 @@
 name 'test-problem-solving-with-ai-lesson6-level2'
-title 'Check for Understanding'
+title 'Check Your Understanding'
 
 wrong 'Write new AI code that prevents bias from occurring in the model.'
 right ' Train AI on datasets that better represent diverse perspectives and experiences.'
@@ -13,13 +13,11 @@ MARKDOWN
 
 teacher_markdown <<MARKDOWN
 This activity helps assess student understanding of AI bias mitigation strategies. Based on student responses, take the following actions:
-- If **most students** select the correct answer (B) → Proceed to the next activity (AI Audit).
-- If **some students** are confused → 
-	- Have them pair up and explain their reasoning to each other. 
-    - Then, re-pose the question and have students show their answers using their fingers (1-4) before moving on.
-- If **many students select incorrect answers (A, C, or D)** →
+- If **most students** select the correct answer (B), proceed to the next activity (AI Audit).
+- If **some students** are confused, have them pair up and explain their reasoning to each other. Then, re-pose the question and have students show their answers using their fingers (1-4) before moving on.
+- If **many students select incorrect answers (A, C, or D)**,
 	- Revisit key slides that explain how bias comes from data, not just code.
-	- Clarify that more data isn’t always better—biased data will still lead to biased AI.
+	- Clarify that more data isn't always better—biased data will still lead to biased AI.
 	- Have students answer the question again using a show of fingers before transitioning.
 
 MARKDOWN

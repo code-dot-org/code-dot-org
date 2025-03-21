@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-19 19:36:41 UTC",
+    "serialized_at": "2025-03-20 18:00:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -983,6 +983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_data-L1-CSandDev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1005,28 +1008,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Data in Computer Systems"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl-everyday-data-L2-CSandDev"
+        "level_keys": [
+          "csaif-pl-_datareflect_L3_CSandDev"
         ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-computer-systems",
-        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
-      },
-      "level_keys": [
-        "csaif_pl-everyday-data-L2-CSandDev"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1044,11 +1028,39 @@
       ]
     },
     {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif_pl-everyday-data-L2-CSandDev"
+      ]
+    },
+    {
       "chapter": 34,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1071,6 +1083,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1093,6 +1108,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-librarydata-L6-CSandDev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1115,6 +1133,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1137,6 +1158,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_datacssys-L9-CSandDev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1159,6 +1183,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -1551,9 +1578,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl-everyday-data-L2-CSandDev",
+        "level.key": "csaif-pl-_datareflect_L3_CSandDev",
         "script_level.level_keys": [
-          "csaif_pl-everyday-data-L2-CSandDev"
+          "csaif-pl-_datareflect_L3_CSandDev"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1563,9 +1590,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-_datareflect_L3_CSandDev",
+        "level.key": "csaif_pl-everyday-data-L2-CSandDev",
         "script_level.level_keys": [
-          "csaif-pl-_datareflect_L3_CSandDev"
+          "csaif_pl-everyday-data-L2-CSandDev"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

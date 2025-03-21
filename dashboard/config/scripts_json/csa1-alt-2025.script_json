@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2025",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 00:25:57 UTC",
+    "serialized_at": "2025-03-20 17:28:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8557,6 +8558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-u2-castingandrangeofvariables-level1_alt-2025"
+        ],
         "progression": "Predict and Run: Overflow Errors"
       },
       "bonus": false,
@@ -8579,6 +8583,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-u2-castingandrangeofvariables-level2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Roundoff Errors"
       },
       "bonus": false,
@@ -8601,6 +8608,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-u2-castingandrangeofvariables-level3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Roundoff Errors"
       },
       "bonus": false,
@@ -8623,6 +8633,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csa-u2-castingandrangeofvariables-level5_alt-2025"
+        ],
         "progression": "Practice: Handling Overflow"
       },
       "bonus": false,
@@ -8645,6 +8658,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-u2-castingandrangeofvariables-level4_alt-2025"
+        ],
         "progression": "Practice: Handling Overflow"
       },
       "bonus": false,
@@ -8967,6 +8983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-UserInput-L1_pilot_alt-2025"
+        ],
         "progression": "Predict: Getting User Input"
       },
       "bonus": false,
@@ -8989,6 +9008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-UserInput-L2_pilot_alt-2025"
+        ],
         "progression": "Practice: Getting User Input"
       },
       "bonus": false,
@@ -9011,6 +9033,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-UserInput-L5_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -9108,6 +9133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-programmingstyle-level1_alt-2025"
+        ],
         "progression": "Investigate: Programming Style"
       },
       "bonus": false,
@@ -9130,6 +9158,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-programmingstyle-level2_alt-2025"
+        ],
         "progression": "Investigate: Programming Style"
       },
       "bonus": false,
@@ -9152,6 +9183,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-programmingstyle-level3_alt-2025"
+        ],
         "progression": "Practice: Conducting a Code Review"
       },
       "bonus": false,
@@ -9174,6 +9208,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csa-programmingstyle-level4_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -9196,6 +9233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_modular_alt-2025"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -9218,6 +9258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_modular_alt-2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -9240,6 +9283,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_modular_alt-2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -9262,6 +9308,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_modular_alt-2025"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -9284,6 +9333,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_modular_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -9306,6 +9358,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_modular_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -9328,6 +9383,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_modular_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -9350,6 +9408,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_modular_alt-2025"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -9372,6 +9433,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_modular_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -10294,6 +10358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L1_pilot_alt-2025"
+        ],
         "progression": "Predict and Run: Parameterized Constructors"
       },
       "bonus": false,
@@ -10316,6 +10383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2_pilot_alt-2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -10338,6 +10408,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-2_pilot_alt-2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -10360,6 +10433,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-3_pilot_alt-2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -10382,6 +10458,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3 CFU_pilot_alt-2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -10404,6 +10483,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L3_pilot_alt-2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -10426,6 +10508,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L4_pilot_alt-2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -10448,6 +10533,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L10_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -14830,6 +14918,16 @@
       }
     },
     {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
+      }
+    },
+    {
       "name": "Guide to Programming Levels in CSA",
       "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
       "key": "guide_to_programming_levels_in_csa",
@@ -14839,6 +14937,16 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_1"
       }
     },
     {
@@ -17003,6 +17111,18 @@
         "resource.key": "all_vocabulary",
         "script.name": "csa1-alt-2025"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_1",
+        "script.name": "csa1-alt-2025"
+      }
     }
   ],
   "scripts_student_resources": [
@@ -18821,15 +18941,29 @@
     {
       "seeding_key": {
         "lesson.key": "Classes and Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.B.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.12.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Classes and Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.7.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.1"
       }
     },
     {
@@ -18849,8 +18983,8 @@
     {
       "seeding_key": {
         "lesson.key": "Comparing Strings",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.12"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.B.2"
       }
     },
     {
@@ -18877,57 +19011,8 @@
     {
       "seeding_key": {
         "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.9"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.12.A.3"
       }
     },
     {
@@ -18940,29 +19025,15 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging Strategies",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging Strategies",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.A.1"
       }
     },
     {
@@ -18982,36 +19053,8 @@
     {
       "seeding_key": {
         "lesson.key": "Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.C.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.12.A.2"
       }
     },
     {
@@ -19024,15 +19067,43 @@
     {
       "seeding_key": {
         "lesson.key": "Instantiating Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.C.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Instantiating Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Instantiating Objects",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Instantiating Objects",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Instantiating Objects",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.14.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Instantiating Objects",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.2.A.3"
       }
     },
     {
@@ -19045,15 +19116,29 @@
     {
       "seeding_key": {
         "lesson.key": "Java Lab",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Java Lab",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Java Lab",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Java Lab",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.8.A.1"
       }
     },
     {
@@ -19066,22 +19151,36 @@
     {
       "seeding_key": {
         "lesson.key": "Methods with Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.C.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Methods with Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Methods with Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Methods with Parameters",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Methods with Parameters",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.7"
       }
     },
     {
@@ -19101,15 +19200,29 @@
     {
       "seeding_key": {
         "lesson.key": "Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.14.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Methods",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Methods",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.6"
       }
     },
     {
@@ -19129,85 +19242,64 @@
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.7"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.6"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.8"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.4.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.4.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.6.A.1"
       }
     },
     {
@@ -19220,8 +19312,8 @@
     {
       "seeding_key": {
         "lesson.key": "Overloaded Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.4"
       }
     },
     {
@@ -19304,50 +19396,15 @@
     {
       "seeding_key": {
         "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.11"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.B.3"
       }
     },
     {
@@ -19360,15 +19417,8 @@
     {
       "seeding_key": {
         "lesson.key": "Random",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.D.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.11.A.3"
       }
     },
     {
@@ -19388,64 +19438,50 @@
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.H.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.10.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.10.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.7.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.7.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.7.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.G.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.7.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.H.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.H.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.H.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.7.B.3"
       }
     },
     {
@@ -19458,29 +19494,29 @@
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.10"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.12"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.13"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Substrings",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.B.3"
       }
     },
     {
@@ -19507,29 +19543,15 @@
     {
       "seeding_key": {
         "lesson.key": "The Math Class",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.D.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.11.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Math Class",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Math Class",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.11.A.2"
       }
     },
     {
@@ -19563,43 +19585,50 @@
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.12.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.2.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.2"
       }
     },
     {
@@ -19612,22 +19641,8 @@
     {
       "seeding_key": {
         "lesson.key": "Writing Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.12"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.5"
       }
     },
     {
@@ -19656,6 +19671,55 @@
         "lesson.key": "lesson-25",
         "framework.shortcode": "csa2025",
         "standard.shortcode": "1.1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.5.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.5.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.5.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.5.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.8.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.8.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.8.A.3"
       }
     }
   ],

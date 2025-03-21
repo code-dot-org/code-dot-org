@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-19 22:06:17 UTC",
+    "serialized_at": "2025-03-20 16:51:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5910,6 +5910,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7256,35 +7259,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csa6-2023/resources",
-      "key": "all_resources_5",
+      "url": "/s/csa6-2025/resources",
+      "key": "all_resources_14",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_5"
+        "resource.key": "all_resources_14"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csa6-2023/standards",
-      "key": "all_standards_5",
+      "url": "/s/csa6-2025/standards",
+      "key": "all_standards_13",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_5"
+        "resource.key": "all_standards_13"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csa6-2023/vocab",
-      "key": "all_vocabulary_5",
+      "url": "/s/csa6-2025/vocab",
+      "key": "all_vocabulary_13",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_5"
+        "resource.key": "all_vocabulary_13"
       }
     },
     {
@@ -8474,19 +8477,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_5",
+        "resource.key": "all_resources_14",
         "script.name": "csa6-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_5",
+        "resource.key": "all_standards_13",
         "script.name": "csa6-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_5",
+        "resource.key": "all_vocabulary_13",
         "script.name": "csa6-2025"
       }
     },
@@ -9412,13 +9415,6 @@
         "lesson.key": "Natural Language Processing Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Planning",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.2"
       }
     },
     {

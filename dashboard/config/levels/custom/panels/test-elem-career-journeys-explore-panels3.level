@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-15T20:03:57.000Z",
   "level_num": "custom",
@@ -9,10 +10,10 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "###Healthcare Data Scientist\n\n💡 **What They Do:**  They help people by using computers to understand health problems. Their work helps hospitals figure out how to keep people from getting sick and find better ways to help patients get better.\n\n💻 **How They Use Computer Science:**  They write programs and use AI to study huge amounts of health data, finding patterns that doctors can use to take better care of patients.",
-        "imageUrl": "https://images.code.org/54e5c5247211b8fdda647b77fbb3df88-DALL·E 2025-03-15 13.27.34 - A digital representation of AI analyzing medical data, with a futuristic interface showing charts, patient health stats, and predictive analytics. The.webp",
+        "text": "###Fashion Designer\n\nUse design software to sketch outfits, AI to predict fashion trends, and coding to create digital or interactive clothing.",
+        "imageUrl": "https://images.code.org/387437735b5dc29abdff54b82e917920-fashion panel 1.jpg",
         "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
-        "layout": "text-top-left",
+        "layout": "text-bottom-right",
         "typing": false,
         "fadeInOverPrevious": true
       },
@@ -53,7 +54,6 @@
     "thumbnail_url": "https://images.code.org/0231b02d74bf572f62253ca729343e54-art3.jpg",
     "bubble_choice_description": "**Learn more about:**\n* Sound producers\n\n* Wearable fashion designers"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-15T20:03:57.704+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels\"},{\"changed_at\":\"2025-03-15 20:18:59 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:23:34 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:26:21 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:48:02 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:59:49 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:00:32 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-15T20:03:57.704+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels\"},{\"changed_at\":\"2025-03-15 20:18:59 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:23:34 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:26:21 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:48:02 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-15 20:59:49 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:00:32 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 22:45:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 22:48:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 23:08:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

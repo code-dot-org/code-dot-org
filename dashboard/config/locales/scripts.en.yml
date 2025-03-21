@@ -21147,3 +21147,120 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csaif1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif1-2025
+          title: Problem Solving with AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif2-2025
+          title: Programming Fundamentals
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif3-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif3-2025
+          title: Computer Systems and Devices
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif4-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif4-2025
+          title: Networks and the Internet
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif5-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif5-2025
+          title: Cybersecurity
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif6-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif6-2025
+          title: Introduction to Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pswai-pilot-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pswai-pilot-2024
+          title: "[PILOT] Problem Solving with AI"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif1-preview:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif1-preview
+          title: "[PREVIEW] Problem Solving with AI"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif2-preview:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif2-preview
+          title: "[PREVIEW] Programming Fundamentals"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif3-preview:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif3-preview
+          title: "[PREVIEW] Computer Systems and Devices"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif4-preview:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif4-preview
+          title: "[PREVIEW] Networks and the Internet"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif5-preview:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif5-preview
+          title: "[PREVIEW] Cybersecurity"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csaif6-preview:
+          lessons: {}
+          lesson_groups: {}
+          name: csaif6-preview
+          title: "[PREVIEW] Introduction to Data Science"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

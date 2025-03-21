@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2025",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 00:40:01 UTC",
+    "serialized_at": "2025-03-20 16:44:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5197,6 +5198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1_-modular_alt-2025"
+        ],
         "progression": "Predict and Run: A Standard String Algorithm"
       },
       "bonus": false,
@@ -5219,6 +5223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2_-modular_alt-2025"
+        ],
         "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
@@ -5241,6 +5248,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3_-modular_alt-2025"
+        ],
         "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
@@ -5263,6 +5273,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4_-modular_alt-2025"
+        ],
         "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
@@ -5285,6 +5298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6_-modular_alt-2025"
+        ],
         "progression": "Practice: Implementing String Algorithms"
       },
       "bonus": false,
@@ -5307,6 +5323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L1 _alt-2025"
+        ],
         "progression": "Predict and Run: Nested Loops"
       },
       "bonus": false,
@@ -5329,6 +5348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L2_alt-2025"
+        ],
         "progression": "Investigate & Modify: Nested Iteration"
       },
       "bonus": false,
@@ -5351,6 +5373,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L3_alt-2025"
+        ],
         "progression": "Investigate & Modify: Nested Iteration"
       },
       "bonus": false,
@@ -5373,6 +5398,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L-NestedIteration_L4_alt-2025"
+        ],
         "progression": "Practice: Nested Iteration"
       },
       "bonus": false,
@@ -5395,6 +5423,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2 Nested Iteration-L5_alt-2025"
+        ],
         "progression": "Practice: Nested Iteration"
       },
       "bonus": false,
@@ -5417,6 +5448,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L-NestedIteration_L6_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5439,6 +5473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2LInformalRuntimeAnalysis-L1"
+        ],
         "progression": "Predict: Informal Run-Time Analysis"
       },
       "bonus": false,
@@ -6780,6 +6817,16 @@
       }
     },
     {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls_1"
+      }
+    },
+    {
       "name": "Guide to Programming Levels in CSA",
       "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
       "key": "guide_to_programming_levels_in_csa",
@@ -6789,6 +6836,16 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa_4",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_4"
       }
     },
     {
@@ -7938,6 +7995,18 @@
         "resource.key": "all_vocabulary_1",
         "script.name": "csa2-alt-2025"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls_1",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_4",
+        "script.name": "csa2-alt-2025"
+      }
     }
   ],
   "scripts_student_resources": [
@@ -8544,64 +8613,50 @@
     {
       "seeding_key": {
         "lesson.key": "De Morgan's Laws",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.G.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.6.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "De Morgan's Laws",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.G.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.6.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.6.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.7.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.8.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.8.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.8.A.3"
       }
     },
     {
@@ -8670,22 +8725,15 @@
     {
       "seeding_key": {
         "lesson.key": "Logical Operators",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.5.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Logical Operators",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.F.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Logical Operators",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.G.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.5.A.2"
       }
     },
     {
@@ -8698,43 +8746,99 @@
     {
       "seeding_key": {
         "lesson.key": "Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.C.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.C.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.1.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.C.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.2.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.G.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.2.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.2.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.1.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.1.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.7.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.7.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.7.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.2"
       }
     },
     {
@@ -8761,15 +8865,15 @@
     {
       "seeding_key": {
         "lesson.key": "Multi-Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.4.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Multi-Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.D.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.9.A.1"
       }
     },
     {
@@ -8782,8 +8886,15 @@
     {
       "seeding_key": {
         "lesson.key": "Nested If Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.B.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.4.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested If Statements",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.4.A.2"
       }
     },
     {
@@ -8796,43 +8907,22 @@
     {
       "seeding_key": {
         "lesson.key": "Object Aliases and Equality",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.H.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.6.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object Aliases and Equality",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.H.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.6.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object Aliases and Equality",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.H.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.H.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object Aliases and Equality",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.6.B.3"
       }
     },
     {
@@ -8852,22 +8942,22 @@
     {
       "seeding_key": {
         "lesson.key": "Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.3.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.3.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.3.A.3"
       }
     },
     {
@@ -8887,22 +8977,8 @@
     {
       "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.F.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.F.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way Selection Statements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.3.A.4"
       }
     },
     {

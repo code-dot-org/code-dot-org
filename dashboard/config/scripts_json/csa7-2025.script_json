@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-19 22:07:24 UTC",
+    "serialized_at": "2025-03-20 17:25:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4776,6 +4776,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa7_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -5786,35 +5789,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csa7-2023/resources",
-      "key": "all_resources_6",
+      "url": "/s/csa7-2025/resources",
+      "key": "all_resources_15",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_6"
+        "resource.key": "all_resources_15"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csa7-2023/standards",
-      "key": "all_standards_6",
+      "url": "/s/csa7-2025/standards",
+      "key": "all_standards_14",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_6"
+        "resource.key": "all_standards_14"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csa7-2023/vocab",
-      "key": "all_vocabulary_6",
+      "url": "/s/csa7-2025/vocab",
+      "key": "all_vocabulary_14",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_6"
+        "resource.key": "all_vocabulary_14"
       }
     },
     {
@@ -7117,19 +7120,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_6",
+        "resource.key": "all_resources_15",
         "script.name": "csa7-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_6",
+        "resource.key": "all_standards_14",
         "script.name": "csa7-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_6",
+        "resource.key": "all_vocabulary_14",
         "script.name": "csa7-2025"
       }
     },

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 01:42:53 UTC",
+    "serialized_at": "2025-03-21 04:38:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -185,7 +185,7 @@
     },
     {
       "key": "lesson-11",
-      "name": "Functions - Synthesize",
+      "name": "Functions - Synthesis",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1418,8 +1418,52 @@
       }
     },
     {
-      "key": "720d30ee-60f9-4589-b7d0-d635bb8be09c",
+      "key": "9fdaf611-9059-4fc3-ae50-5c5712d84e21",
       "position": 1,
+      "properties": {
+        "progression_name": "Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fdaf611-9059-4fc3-ae50-5c5712d84e21",
+        "lesson_activity.key": "cb711774-cc5c-4571-91a8-52f3787d3cfa"
+      }
+    },
+    {
+      "key": "68970f5f-1da6-4fc6-a7da-89cb065213cd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "68970f5f-1da6-4fc6-a7da-89cb065213cd",
+        "lesson_activity.key": "cb711774-cc5c-4571-91a8-52f3787d3cfa"
+      }
+    },
+    {
+      "key": "f0bbb1cb-64e2-4696-bf80-fb0f517025f5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Career Journey: Altrice"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0bbb1cb-64e2-4696-bf80-fb0f517025f5",
+        "lesson_activity.key": "cb711774-cc5c-4571-91a8-52f3787d3cfa"
+      }
+    },
+    {
+      "key": "5b585589-7fda-483c-b78f-97e75a5d06c1",
+      "position": 4,
+      "properties": {
+        "progression_name": "\"Only What You Gave Me\" Remixes"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b585589-7fda-483c-b78f-97e75a5d06c1",
+        "lesson_activity.key": "cb711774-cc5c-4571-91a8-52f3787d3cfa"
+      }
+    },
+    {
+      "key": "720d30ee-60f9-4589-b7d0-d635bb8be09c",
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1430,7 +1474,7 @@
     },
     {
       "key": "d7db4671-1a64-4e19-b6d9-7e8724c1a3ef",
-      "position": 2,
+      "position": 6,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -1484,12 +1528,46 @@
       }
     },
     {
-      "key": "412c0355-13e8-4494-8b61-28475d7bf614",
+      "key": "f305346b-dce4-4b08-872a-fd0371b4d4f1",
       "position": 1,
       "properties": {
+        "progression_name": "How to use \"Random\""
+      },
+      "seeding_key": {
+        "activity_section.key": "f305346b-dce4-4b08-872a-fd0371b4d4f1",
+        "lesson_activity.key": "8fe45be5-1223-48d1-88bd-b22d40c35676"
+      }
+    },
+    {
+      "key": "412c0355-13e8-4494-8b61-28475d7bf614",
+      "position": 2,
+      "properties": {
+        "progression_name": "Code Version 1"
       },
       "seeding_key": {
         "activity_section.key": "412c0355-13e8-4494-8b61-28475d7bf614",
+        "lesson_activity.key": "8fe45be5-1223-48d1-88bd-b22d40c35676"
+      }
+    },
+    {
+      "key": "17623f56-d259-4f53-bce2-9420a12fc190",
+      "position": 3,
+      "properties": {
+        "progression_name": "Code Version 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "17623f56-d259-4f53-bce2-9420a12fc190",
+        "lesson_activity.key": "8fe45be5-1223-48d1-88bd-b22d40c35676"
+      }
+    },
+    {
+      "key": "ad7310d0-59bb-4207-a071-b6164c668c3e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Code Version 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad7310d0-59bb-4207-a071-b6164c668c3e",
         "lesson_activity.key": "8fe45be5-1223-48d1-88bd-b22d40c35676"
       }
     }
@@ -3924,6 +4002,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-4a"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -3946,6 +4027,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-4b"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -3968,6 +4052,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-4c"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -4265,6 +4352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract-panel"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4287,6 +4377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract0"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4309,6 +4402,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract-1"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4331,6 +4427,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract-2"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4353,6 +4452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reuse-panel"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -4375,6 +4477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reusable-1"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -4397,6 +4502,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reusable-2"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -4419,6 +4527,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reusable-3"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -4441,6 +4552,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-formative2"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4463,6 +4577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-compose-panel"
+        ],
         "progression": "Composing Functions"
       },
       "bonus": false,
@@ -4485,6 +4602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-compose1"
+        ],
         "progression": "Composing Functions"
       },
       "bonus": false,
@@ -4532,6 +4652,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-evaluative2"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4579,6 +4702,138 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-synthesize-recap-choice-panels"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "9fdaf611-9059-4fc3-ae50-5c5712d84e21"
+      },
+      "level_keys": [
+        "music-lab-functions-synthesize-recap-choice-panels"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-checkin"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "68970f5f-1da6-4fc6-a7da-89cb065213cd"
+      },
+      "level_keys": [
+        "music-lab-functions-synthesis-checkin"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Journey: Altrice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-altrice-panel"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f0bbb1cb-64e2-4696-bf80-fb0f517025f5"
+      },
+      "level_keys": [
+        "music-lab-functions-synthesis-altrice-panel"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "\"Only What You Gave Me\" Remixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-rearrange1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5b585589-7fda-483c-b78f-97e75a5d06c1"
+      },
+      "level_keys": [
+        "music-lab-functions-synthesis-rearrange1"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "\"Only What You Gave Me\" Remixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-rearrange2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5b585589-7fda-483c-b78f-97e75a5d06c1"
+      },
+      "level_keys": [
+        "music-lab-functions-synthesis-rearrange2"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "\"Only What You Gave Me\" Remixes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-rearrange3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5b585589-7fda-483c-b78f-97e75a5d06c1"
+      },
+      "level_keys": [
+        "music-lab-functions-synthesis-rearrange3"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "music-lab-functions-synthesis-practice-choice"
         ],
@@ -4599,8 +4854,8 @@
       ]
     },
     {
-      "chapter": 127,
-      "position": 2,
+      "chapter": 133,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4624,11 +4879,14 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-1"
+        ],
         "progression": "Code your first \"Walk Up\" song"
       },
       "bonus": false,
@@ -4646,11 +4904,14 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-2"
+        ],
         "progression": "Code your second \"Walk Up\" song"
       },
       "bonus": false,
@@ -4668,11 +4929,14 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 136,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-3"
+        ],
         "progression": "Code your third \"Walk Up\" song"
       },
       "bonus": false,
@@ -4690,11 +4954,14 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 137,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-4"
+        ],
         "progression": "Game time!"
       },
       "bonus": false,
@@ -4712,11 +4979,81 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "How to use \"Random\""
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f305346b-dce4-4b08-872a-fd0371b4d4f1"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-random-1"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "How to use \"Random\""
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f305346b-dce4-4b08-872a-fd0371b4d4f1"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-random-2"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "How to use \"Random\""
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f305346b-dce4-4b08-872a-fd0371b4d4f1"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-random-3"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-1"
+        ],
+        "progression": "Code Version 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -4730,6 +5067,50 @@
       },
       "level_keys": [
         "test-music-lab-mini-project-gif-1"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Version 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "17623f56-d259-4f53-bce2-9420a12fc190"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-2"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Version 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "ad7310d0-59bb-4207-a071-b6164c668c3e"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-3"
       ]
     }
   ],
@@ -6236,6 +6617,78 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-functions-synthesize-recap-choice-panels",
+        "script_level.level_keys": [
+          "music-lab-functions-synthesize-recap-choice-panels"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "9fdaf611-9059-4fc3-ae50-5c5712d84e21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-synthesis-checkin",
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-checkin"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "68970f5f-1da6-4fc6-a7da-89cb065213cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-synthesis-altrice-panel",
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-altrice-panel"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f0bbb1cb-64e2-4696-bf80-fb0f517025f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-synthesis-rearrange1",
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-rearrange1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5b585589-7fda-483c-b78f-97e75a5d06c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-synthesis-rearrange2",
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-rearrange2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5b585589-7fda-483c-b78f-97e75a5d06c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-synthesis-rearrange3",
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-rearrange3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "5b585589-7fda-483c-b78f-97e75a5d06c1"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "music-lab-functions-synthesis-practice-choice",
         "script_level.level_keys": [
           "music-lab-functions-synthesis-practice-choice"
@@ -6308,6 +6761,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-random-1",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f305346b-dce4-4b08-872a-fd0371b4d4f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-random-2",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f305346b-dce4-4b08-872a-fd0371b4d4f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-random-3",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f305346b-dce4-4b08-872a-fd0371b4d4f1"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-music-lab-mini-project-gif-1",
         "script_level.level_keys": [
           "test-music-lab-mini-project-gif-1"
@@ -6316,6 +6805,30 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "412c0355-13e8-4494-8b61-28475d7bf614"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-2",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "17623f56-d259-4f53-bce2-9420a12fc190"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-3",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "ad7310d0-59bb-4207-a071-b6164c668c3e"
       }
     }
   ],

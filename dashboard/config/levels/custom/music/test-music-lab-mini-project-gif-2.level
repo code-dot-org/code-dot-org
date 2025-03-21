@@ -1,0 +1,55 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-20T17:10:40.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Create Version 2\r\n\r\n**First, organize your workspace:**\r\n- Drag out a `play random` block into your workspace, but **do not** connect it under `when run`.\r\n- Take your first backtrack loop and place the whole thing inside the `play random` block floating in your workspace. \r\n\r\n**Then, code Version 2**:\r\n- Create a second backtrack for your GIF. \r\n- When you have something you like, take that code and add it inside the play random block. \r\n- Connect the `play random` block with both sets of backtracks back under `when run`. \r\n- Create a second trigger with a new sound effect to go with your new backtrack. \r\n- Press \"Run\" and practice triggering your sound effect based on which backtrack was chosen. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "triggered_at_simple2",
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "play_sounds_random",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-mini-project-gif-template",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-20T17:10:40.965+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-1\"},{\"changed_at\":\"2025-03-20 17:23:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:32:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

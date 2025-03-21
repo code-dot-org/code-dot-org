@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2025",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 00:42:38 UTC",
+    "serialized_at": "2025-03-20 17:34:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -209,12 +210,31 @@
       }
     },
     {
-      "key": "Private Methods",
-      "name": "Private Methods",
+      "key": "Parameterized Constructors",
+      "name": "Parameterized Constructors",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
+      "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
+        "preparation": "* **(Optional)** Print copies of the Parameterized Constructors Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video",
+        "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
+      },
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "Private Methods",
+      "name": "Private Methods",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, students have an opportunity to begin planning their Creative Coding with The Theater project. Students should spend this time creating UML diagrams, planning algorithms, and updating their Project Planning Board with tasks they need to complete. They then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. Students explore how the `private` keyword can be used with methods and consider scenarios where they might want to make a method `private` instead of `public`. They practice writing and calling `private` methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
@@ -223,21 +243,6 @@
       },
       "seeding_key": {
         "lesson.key": "Private Methods",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "lesson-11",
-      "name": "Parameterized Constructors",
-      "absolute_position": 11,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -713,6 +718,48 @@
       "seeding_key": {
         "lesson_activity.key": "9302894c-2109-4cfc-937e-61e83a135993",
         "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "a7be3b9c-09a9-45a5-a270-67e63439e48d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7be3b9c-09a9-45a5-a270-67e63439e48d",
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "99bc1332-0a99-4cb6-bd30-5536c0e14556",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556",
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "14b15638-ef85-46ba-98fc-88732a678f56",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56",
+        "lesson.key": "Parameterized Constructors",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -3170,6 +3217,244 @@
       }
     },
     {
+      "key": "6301b0e3-0242-4c8f-9f68-39dc3f13d6f1",
+      "position": 1,
+      "properties": {
+        "description": "When we created a `Painter` object, it always started at the same location with no paint and facing the same direction. The constructor we used set default values for its attributes.",
+        "name": "Revisiting the Painter Class",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6301b0e3-0242-4c8f-9f68-39dc3f13d6f1",
+        "lesson_activity.key": "a7be3b9c-09a9-45a5-a270-67e63439e48d"
+      }
+    },
+    {
+      "key": "6a1ec1d4-489c-45fd-b497-fad4ccde3a17",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did you wish you could do when creating a `Painter` object?*\n\n**Discussion Goal:** Students recall that the `Painter` class constructor created a `Painter` object at the top-left corner of The Neighborhood with no paint facing east. Students suggest creating a `Painter` object at a specific location with a starting amount of paint and facing a specified direction.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6a1ec1d4-489c-45fd-b497-fad4ccde3a17",
+        "lesson_activity.key": "a7be3b9c-09a9-45a5-a270-67e63439e48d"
+      }
+    },
+    {
+      "key": "b2948bc9-2c91-4480-b048-68ec9aa0343b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2948bc9-2c91-4480-b048-68ec9aa0343b",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "ee0ee9d7-63e2-4e00-b980-c5054173cbb6",
+      "position": 2,
+      "properties": {
+        "description": "We now know how to declare instance variables in a class to represent the attributes of an object and how to write a no-argument constructor to assign default values to these instance variables. Sometimes, though, we want to provide specific values for the instance variables when we instantiate an object. Today, we're going to find out how we can do this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ee0ee9d7-63e2-4e00-b980-c5054173cbb6",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "df954e8c-6781-4135-af12-c13a2cb3817c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Parameterized Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "df954e8c-6781-4135-af12-c13a2cb3817c",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "423b9c1a-a9f6-4969-8046-01c340d60188",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the class has a constructor that has variables inside the parentheses and that these variables are used to assign values to the instance variables. They also notice that the object that is instantiated with specific values now has those values assigned to its instance variables, while the object that is instantiated with the no-argument constructor has the default values assigned to its instance variables. Students may wonder about the syntax and functionality of the additional constructor, whether there is a limit to how many constructors they can have in a class, or when they might use one constructor over another."
+      },
+      "seeding_key": {
+        "activity_section.key": "423b9c1a-a9f6-4969-8046-01c340d60188",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "a05ba491-bc3d-4367-87a5-8f1f529f3687",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***state*** and explain that when a constructor is called, it sets the state of the object by assigning the values to the instance variables.",
+        "duration": "15",
+        "name": "Parameterized Constructors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to recall the state of a `Painter` object when it is instantiated. Ask students about the instance variables of the `Painter` class and what values were assigned to the instance variables when they instantiated a `Painter` object."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a05ba491-bc3d-4367-87a5-8f1f529f3687",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations of a no-argument constructor?*\n\n**Discussion Goal:** Students suggest that a no-argument constructor limits the objects they can create because all objects start with the default values for its instance variables. Students may share examples, such as instantiating a `Painter` object with the no-argument constructor and then needing to navigate to a starting position to paint a mural.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: Parameterized Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "39311488-6b21-4f37-94c9-874b7a4d7234",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "39311488-6b21-4f37-94c9-874b7a4d7234",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "7057676f-c612-4f3b-9917-3bceb25386c6",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***parameterized constructor*** and introduce the parameterized constructor in the `Painter` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***overloading***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.",
+        "duration": "15",
+        "name": "Writing and Using Constructors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7057676f-c612-4f3b-9917-3bceb25386c6",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "3501eaaf-84e1-495f-b6dd-221c4ef800f8",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between a no-argument constructor and a parameterized constructor?*\n\n**Discussion Goal:** Students note that both constructors set the starting values for the instance variables when an object is instantiated. They note that these are different because the no-argument constructor sets default values for the instance variables, while the parameterized constructor sets user-specified values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3501eaaf-84e1-495f-b6dd-221c4ef800f8",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "f132d07c-d5b8-4ee8-9ea8-ed98fcc3f881",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When do you think it's best to use a no-argument constructor? What about a parameterized constructor?*\n\n**Discussion Goal:** Students suggest using a no-argument constructor when a default object is needed because the user has not given specific values. They note that a parameterized constructor is best when the user needs an object to be instantiated with specific starting values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students recall problems from the previous unit that could have been easier if they started at a specific location or with a certain amount of paint. Ask students to consider their Asphalt Art Project and how starting with a certain amount of paint or at a specific location might have impacted their project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f132d07c-d5b8-4ee8-9ea8-ed98fcc3f881",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680",
+      "position": 11,
+      "properties": {
+        "description": "**Do This:** Explain the components of a parameterized constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***formal parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***local variable***\n\n**Do This:** Explain how parameterized constructors are called:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***actual parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate ***call by value***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to practice writing a parameterized constructor in a class. On Level 7, students practice writing multiple parameterized constructors in a class.",
+        "progression_name": "Practice: Parameterized Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "023197a8-d1d6-4f1a-8020-f4861af5b580",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as parameterized constructor, formal parameter, and actual parameter. Students also recall that formal parameters are local variables and explain how the values of the actual parameters are copied to the formal parameters. They should realize that parameterized constructors can provide multiple options for instantiating objects based on the needs of the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "name": "Three W's",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "023197a8-d1d6-4f1a-8020-f4861af5b580",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
+      }
+    },
+    {
+      "key": "90296daa-141b-4c61-a9c1-1ad3ffec2383",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "90296daa-141b-4c61-a9c1-1ad3ffec2383",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
+      }
+    },
+    {
+      "key": "c34cb85a-6800-4bb3-ab91-33ac7cebc35c",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "c34cb85a-6800-4bb3-ab91-33ac7cebc35c",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
+      }
+    },
+    {
+      "key": "d4c85814-6148-43a0-a77d-9bd2cfe98558",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4c85814-6148-43a0-a77d-9bd2cfe98558",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
+      }
+    },
+    {
       "key": "525d341d-88c8-46b8-b19d-7c445479092f",
       "position": 1,
       "properties": {
@@ -5418,6 +5703,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-ProgramDesign-L1_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5465,6 +5753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_alt-2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -5487,6 +5778,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_alt-2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -5509,6 +5803,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5681,6 +5978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1_pilot_alt-2025"
+        ],
         "progression": "Predict and Run: No-Argument Constructors"
       },
       "bonus": false,
@@ -5703,6 +6003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_pilot_alt-2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5725,6 +6028,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-2_pilot_alt-2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5747,6 +6053,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-3_pilot_alt-2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5769,6 +6078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_pilot_alt-2025"
+        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -5791,6 +6103,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L4_pilot_alt-2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5813,6 +6128,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L5_pilot_alt-2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5835,6 +6153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_pilot_alt-2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -5857,6 +6178,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5875,6 +6199,182 @@
     },
     {
       "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L1_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "df954e8c-6781-4135-af12-c13a2cb3817c"
+      },
+      "level_keys": [
+        "CSA U2L3-L1_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      },
+      "level_keys": [
+        "CSA U2L3-L2_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2-2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      },
+      "level_keys": [
+        "CSA U2L3-L2-2_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2-3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      },
+      "level_keys": [
+        "CSA U2L3-L2-3_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3 CFU_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      },
+      "level_keys": [
+        "CSA U2L3 CFU_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      },
+      "level_keys": [
+        "CSA U2L3-L3_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L4_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      },
+      "level_keys": [
+        "CSA U2L3-L4_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L10_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "d4c85814-6148-43a0-a77d-9bd2cfe98558"
+      },
+      "level_keys": [
+        "CSA U2L3-L10_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5899,7 +6399,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5924,7 +6424,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5949,7 +6449,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5974,7 +6474,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5999,7 +6499,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6024,7 +6524,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6049,7 +6549,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6074,7 +6574,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6099,7 +6599,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6124,7 +6624,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6149,7 +6649,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6174,7 +6674,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6199,7 +6699,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6224,7 +6724,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6249,7 +6749,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6274,7 +6774,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6299,7 +6799,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6324,7 +6824,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6349,7 +6849,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6374,7 +6874,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6399,7 +6899,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6424,7 +6924,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 68,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6449,7 +6949,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6474,7 +6974,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6499,7 +6999,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6524,7 +7024,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6549,7 +7049,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6574,7 +7074,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6599,7 +7099,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6624,7 +7124,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6649,7 +7149,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6674,7 +7174,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6699,7 +7199,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6724,7 +7224,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6749,7 +7249,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6774,7 +7274,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6799,7 +7299,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6824,7 +7324,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 84,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6849,7 +7349,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6874,7 +7374,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6899,7 +7399,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6924,7 +7424,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6949,7 +7449,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6974,7 +7474,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6999,7 +7499,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7024,7 +7524,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -7049,7 +7549,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -7517,6 +8017,102 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025",
         "activity_section.key": "c62847b8-b8f8-4f2a-8d18-c35f3556e978"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L1_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L1_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "df954e8c-6781-4135-af12-c13a2cb3817c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2-2_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L2-2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2-3_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L2-3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3 CFU_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3 CFU_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L3_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L4_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L4_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L10_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L10_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "d4c85814-6148-43a0-a77d-9bd2cfe98558"
       }
     },
     {
@@ -8134,6 +8730,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Parameterized Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/18-UR0nbpgcC-vtwRAZv2RYrg1Q_h69ud-RIvRhLBrsk/edit?usp=drive_link",
+      "key": "_exemplar_parameterized_constructors_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_parameterized_constructors_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Planning Programs",
       "url": "https://docs.google.com/document/d/1MZDU4cUUeLgCCcTOSeBrpJ-q6D2fRSdg-1X5O6kLZjQ/edit?usp=drive_link",
       "key": "_exemplar_planning_programs",
@@ -8371,6 +8979,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_open_source_bugs_version_c_"
+      }
+    },
+    {
+      "name": "[KEY] Parameterized Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1RqBDxQ-pL2hP_loVVAyaJ9dRT5j7woKiPAy1UXQJXyc/edit?usp=drive_link",
+      "key": "_key_parameterized_constructors_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_parameterized_constructors_extra_practice"
       }
     },
     {
@@ -8749,6 +9369,16 @@
       }
     },
     {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls_2"
+      }
+    },
+    {
       "name": "Guide to Programming Levels in CSA",
       "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
       "key": "guide_to_programming_levels_in_csa",
@@ -8758,6 +9388,16 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa_3",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_3"
       }
     },
     {
@@ -8932,6 +9572,56 @@
       },
       "seeding_key": {
         "resource.key": "open_source_bugs_version_c_"
+      }
+    },
+    {
+      "name": "Overloaded Constructors",
+      "url": "https://youtu.be/rYTRK8R9ZM8",
+      "key": "overloaded_constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "name": "Parameterized Constructors",
+      "url": "https://docs.google.com/presentation/d/1TQup7LM0JuMMjGxSo7n8w_qpR7L-VojsIGv-yXjzt-o/edit?usp=sharing",
+      "key": "parameterized_constructors_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors_1"
+      }
+    },
+    {
+      "name": "Parameterized Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1r2aVVfshCnwtTHTWUgV9Kr0rqdy3YgCs4vnWPHZYsNw/edit?usp=drive_link",
+      "key": "parameterized_constructors_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors_extra_practice"
+      }
+    },
+    {
+      "name": "Parameterized Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1N-oYh30dn6-FU51O2vqGkYKd2j2tTRYDSklm0MtJx-M/edit?usp=drive_link",
+      "key": "parameterized_constructors_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors_guided_notes"
       }
     },
     {
@@ -9859,6 +10549,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "_exemplar_parameterized_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "_key_parameterized_constructors_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "parameterized_constructors_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "parameterized_constructors_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "parameterized_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Privacy and Security",
         "resource.key": "_exemplar_u8l9_guided_notes"
       }
@@ -10170,6 +10902,18 @@
         "resource.key": "all_vocabulary_2",
         "script.name": "csa3-alt-2025"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls_2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_3",
+        "script.name": "csa3-alt-2025"
+      }
     }
   ],
   "scripts_student_resources": [
@@ -10194,6 +10938,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "accessor_method"
+      }
+    },
+    {
+      "key": "actual_parameter",
+      "word": "actual parameter",
+      "definition": "the value to assign to the formal parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "actual_parameter"
       }
     },
     {
@@ -10224,6 +10978,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "key": "call_by_value",
+      "word": "call by value",
+      "definition": "copying the value of the actual parameter to the constructor's formal parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "call_by_value"
       }
     },
     {
@@ -10297,6 +11061,16 @@
       }
     },
     {
+      "key": "formal_parameter",
+      "word": "formal parameter",
+      "definition": "the value to be passed to a constructor or method",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
       "key": "instance_method",
       "word": "instance method",
       "definition": "a method that requires an object of the class to be created before it can be called",
@@ -10347,6 +11121,16 @@
       }
     },
     {
+      "key": "local_variable",
+      "word": "local variable",
+      "definition": "a variable declared and accessible within a specific block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "local_variable"
+      }
+    },
+    {
       "key": "mutator_method",
       "word": "mutator method",
       "definition": "changes the value assigned to an instance variable",
@@ -10364,6 +11148,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "key": "overloading",
+      "word": "overloading",
+      "definition": "defining two or more constructors or methods with the same name but different signatures",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "key": "parameterized_constructor",
+      "word": "parameterized constructor",
+      "definition": "a constructor that has a specific number of arguments to be passed to assign values to an object's instance variables",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameterized_constructor"
       }
     },
     {
@@ -10434,6 +11238,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "scope"
+      }
+    },
+    {
+      "key": "state",
+      "word": "state",
+      "definition": "the attributes of an object that are represented by its instance variables",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "state"
       }
     },
     {
@@ -10636,6 +11450,48 @@
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
         "vocabulary.key": "user_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "local_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "parameterized_constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "state"
       }
     },
     {
@@ -10930,6 +11786,16 @@
       }
     },
     {
+      "key": "c2201c2c-3a8e-434e-83e6-9442142f23d9",
+      "properties": {
+        "description": "Identify the correct constructor being called based on the constructor signature"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "objective.key": "c2201c2c-3a8e-434e-83e6-9442142f23d9"
+      }
+    },
+    {
       "key": "c43c5c23-e014-4458-b2bb-df35274578a1",
       "properties": {
         "description": "Identify and address invalid values for instance variables"
@@ -11020,6 +11886,16 @@
       }
     },
     {
+      "key": "f7d9bf9c-6a8e-49be-adc3-4a389438d829",
+      "properties": {
+        "description": "Write a parameterized constructor to specify formal parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "objective.key": "f7d9bf9c-6a8e-49be-adc3-4a389438d829"
+      }
+    },
+    {
       "key": "f827f22c-9ef1-4b47-9229-5a322cf39f03",
       "properties": {
         "description": "Refactor code to create class hierarchies with shared attributes"
@@ -11043,51 +11919,58 @@
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.G.1"
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.5"
       }
     },
     {
@@ -11107,36 +11990,36 @@
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.5"
       }
     },
     {
@@ -11184,8 +12067,8 @@
     {
       "seeding_key": {
         "lesson.key": "Impacts of Programs",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.2"
       }
     },
     {
@@ -11198,78 +12081,57 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.7"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.6"
       }
     },
     {
@@ -11324,50 +12186,29 @@
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.8"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.6.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.H.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.6.A.3"
       }
     },
     {
@@ -11386,23 +12227,72 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.B.1"
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.8.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Privacy and Security",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Privacy and Security",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.1.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Private Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.6"
       }
     },
     {
@@ -11499,15 +12389,29 @@
     {
       "seeding_key": {
         "lesson.key": "System Reliability",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The this Keyword",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.H.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.8.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The this Keyword",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.9.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The this Keyword",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.9.A.2"
       }
     },
     {

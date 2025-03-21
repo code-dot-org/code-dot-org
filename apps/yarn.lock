@@ -3768,6 +3768,7 @@ __metadata:
   dependencies:
     dompurify: "npm:^3.2.4"
     lodash: "npm:^4.17.21"
+    react-player: "npm:^3.0.0-canary.4"
   peerDependencies:
     classnames: ^2.5.1
     dompurify: ^3.2.4
@@ -6130,39 +6131,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@statsig/client-core@npm:3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/client-core@npm:3.10.0"
-  checksum: 10/6bc9df1a63dfc3f0aed107f6ec64e33cb2fda669b0f1a823fef6c51c532cf5b50a10e8103adac5cbeeabe918e56fbe7bcbf3b028b1dd92f10b4100255829c689
+"@statsig/client-core@npm:3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/client-core@npm:3.12.2"
+  checksum: 10/742bad80742b16de2fbb454b70c19fce83d78d15d3aed008ffae205aaa852bf1b6477f235d21a212618f951c7ef8db88431ea23b42386c13c673fae13908afba
   languageName: node
   linkType: hard
 
-"@statsig/js-client@npm:3.10.0, @statsig/js-client@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/js-client@npm:3.10.0"
+"@statsig/js-client@npm:3.12.2, @statsig/js-client@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/js-client@npm:3.12.2"
   dependencies:
-    "@statsig/client-core": "npm:3.10.0"
-  checksum: 10/13cefe4f23f33548a943ed70b805ca39b2b5c6e36b7c4a036dd270da8fbb9f58e5a417005a70032301f049b9f7a8c7db4d7a675fa8dfc9764ceb6c619269f157
+    "@statsig/client-core": "npm:3.12.2"
+  checksum: 10/3f8c1e83c65aba2657886bfccadf783945d785c7ffb421916368f18cf6d48c1f86f89d1ee3c3e6f96fc931632498e35c0ed4fa3ca8f0b2b0293d432d5e878f60
   languageName: node
   linkType: hard
 
-"@statsig/session-replay@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/session-replay@npm:3.10.0"
+"@statsig/session-replay@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/session-replay@npm:3.12.2"
   dependencies:
-    "@statsig/client-core": "npm:3.10.0"
+    "@statsig/client-core": "npm:3.12.2"
     rrweb: "npm:2.0.0-alpha.14"
-  checksum: 10/81bcb45d637e6d369581d098dd5d1ec4143983ffbcdacfd21af19c181f1e25b74ce14e9e640107a7a5346952bb88e0e24a2eadc725b4efa722c5bb93f23bea7a
+  checksum: 10/8c377cbb355bbfa7e9c26e5577ea5aa7a7e8a2feaf5b1696ad6a37e4414b38e7a6f882d1a2c2a61928dfd3329429fb9ad9af48477faece48b104ddf0d0d2f151
   languageName: node
   linkType: hard
 
-"@statsig/web-analytics@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@statsig/web-analytics@npm:3.10.0"
+"@statsig/web-analytics@npm:^3.12.2":
+  version: 3.12.2
+  resolution: "@statsig/web-analytics@npm:3.12.2"
   dependencies:
-    "@statsig/client-core": "npm:3.10.0"
-    "@statsig/js-client": "npm:3.10.0"
-  checksum: 10/5c95236909f51c8ebe2ab11bb9e750f3fc97e72adfc99b7b59df15e21dc1c4ccd8ec8aec705f6d0a27a6c11334a28553fb0fd31526c7ad6882053a9ffc0c9892
+    "@statsig/client-core": "npm:3.12.2"
+    "@statsig/js-client": "npm:3.12.2"
+  checksum: 10/2835bbf2c74eb0801a8f49d349adaab99ec45eb24019c6796a420b8949d862cd73c73bff54c5086f69e84290714a4270f646c1c8302ea1d2510730adfaf65299
   languageName: node
   linkType: hard
 
@@ -10194,9 +10195,9 @@ __metadata:
     "@react-pdf/renderer": "npm:3.4.4"
     "@reduxjs/toolkit": "npm:^1.9.3"
     "@selectize/selectize": "npm:^0.15.2"
-    "@statsig/js-client": "npm:^3.10.0"
-    "@statsig/session-replay": "npm:^3.10.0"
-    "@statsig/web-analytics": "npm:^3.10.0"
+    "@statsig/js-client": "npm:^3.12.2"
+    "@statsig/session-replay": "npm:^3.12.2"
+    "@statsig/web-analytics": "npm:^3.12.2"
     "@storybook/addon-a11y": "npm:~8.1.11"
     "@storybook/addon-essentials": "npm:~8.1.11"
     "@storybook/addon-webpack5-compiler-babel": "npm:^3.0.0"
@@ -12598,6 +12599,13 @@ canvg@gabelerner/canvg:
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: 10/ec12d074aef5ae5e81fa470b9317c313142c9e8e2afe3f8efa124db309720db96d1d222b82b84c834e5f87e7a614b44a4684b6683583118b87c833b3be40d4d8
+  languageName: node
+  linkType: hard
+
+"deepmerge@npm:^4.0.0":
+  version: 4.3.1
+  resolution: "deepmerge@npm:4.3.1"
+  checksum: 10/058d9e1b0ff1a154468bf3837aea436abcfea1ba1d165ddaaf48ca93765fdd01a30d33c36173da8fbbed951dd0a267602bc782fe288b0fc4b7e1e7091afc4529
   languageName: node
   linkType: hard
 
@@ -19796,6 +19804,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"load-script@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "load-script@npm:1.0.0"
+  checksum: 10/8458e3f07b4a86f8d9d66e47a987811491a5d013af23ba7b371c6d3c9dc899885b072ccf65abf7874c10cb197d4975eacd8a7a125bfb38dbbcb267539f5dc1e9
+  languageName: node
+  linkType: hard
+
 "loadable-components@npm:2.2.3":
   version: 2.2.3
   resolution: "loadable-components@npm:2.2.3"
@@ -23807,6 +23822,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.0.1":
+  version: 3.2.2
+  resolution: "react-fast-compare@npm:3.2.2"
+  checksum: 10/a6826180ba75cefba1c8d3ac539735f9b627ca05d3d307fe155487f5d0228d376dac6c9708d04a283a7b9f9aee599b637446635b79c8c8753d0b4eece56c125c
+  languageName: node
+  linkType: hard
+
 "react-focus-lock@npm:^2.11.3":
   version: 2.13.2
   resolution: "react-focus-lock@npm:2.13.2"
@@ -24041,6 +24063,23 @@ canvg@gabelerner/canvg:
   peerDependencies:
     react: ^16.0.0
   checksum: 10/3ab4b56d0ef116c967fe327d9394c7a185ccb1f15a619d922ac1a8478f5ffad5f2f3defa009bbb85ab2ab8b79ec8514e323c14a9cc6979544ae2ed72f1194e83
+  languageName: node
+  linkType: hard
+
+"react-player@npm:^3.0.0-canary.4":
+  version: 3.0.0-canary.4
+  resolution: "react-player@npm:3.0.0-canary.4"
+  dependencies:
+    deepmerge: "npm:^4.0.0"
+    load-script: "npm:^1.0.0"
+    memoize-one: "npm:^5.1.1"
+    prop-types: "npm:^15.7.2"
+    react-fast-compare: "npm:^3.0.1"
+  peerDependencies:
+    "@types/react": ^17.0.0 || ^18
+    react: ^17.0.2 || ^18
+    react-dom: ^17.0.2 || ^18
+  checksum: 10/0bccc64af554c7c41dad3c4521843ae23e177dda388846f84d886ccd8b3c3619e8159124902f4117011a2e9c059366e9ae617bcc20042d69466035f83b38e158
   languageName: node
   linkType: hard
 

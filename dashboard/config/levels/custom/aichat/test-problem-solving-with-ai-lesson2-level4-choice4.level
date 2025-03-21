@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-20T17:36:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigative Journalism\r\n\r\nUse AI Chat to analyze an image from a news article and generate a headline.\r\n\r\n### Do This:\r\n\r\n1. Look at the images already uploaded to this level or choose an image related to a recent news event.\r\n2. Start with a general prompt:\r\n\r\n>Write a headline for this image.\r\n\r\n3. Press **Send** and **review AI Chat's response**.\r\n4. **Refine your prompt** by providing **keywords** about the event in the image:\r\n\r\n>Write a headline for this image about a [movie/climate event/sports match].\r\n\r\n5. **Experiment**: \r\n   - Try different **keywords** or **phrasing** and compare how AI’s headlines change.\r\n   - What happens if the **keywords don't match the image** at all?\r\n   - **Upload a related PDF** (e.g., a news article, government report, or historical document). How does AI’s response change when it has additional text to analyze?\r\n\r\n**Try it out!**",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI assistant designed to generate news headlines and summaries based on multimodal inputs, including text, images, and PDFs. Your responses should prioritize clarity and relevance. If given an image, focus on the key visual elements that would influence a news story. If given a PDF, extract the most relevant details while maintaining factual accuracy. If the text prompt contradicts the image or PDF, note the inconsistency and generate a response that best aligns with the provided context. Do not fabricate sources, statistics, or quotes. Instead, acknowledge when information is unclear or missing.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Investigative Journalism",
+    "bubble_choice_description": " Use AI Chat to experiment with how headlines and summaries change based on text, images, and documents. Try different keywords, upload an image, and even include a related PDF to see how AI interprets different types of information.",
+    "thumbnail_url": "https://images.code.org/6ed825ef71c1393355f64d42725fa887-headline.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-20T17:36:48.276+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice3\"},{\"changed_at\":\"2025-03-20 17:41:23 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:41:56 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:42:11 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:42:55 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:44:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:48:44 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:52:06 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:59:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:59:48 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 18:00:29 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

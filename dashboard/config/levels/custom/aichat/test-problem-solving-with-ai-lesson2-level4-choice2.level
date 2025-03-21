@@ -1,6 +1,5 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
   "created_at": "2025-03-17T17:49:50.000Z",
   "level_num": "custom",
@@ -42,9 +41,10 @@
       ]
     },
     "display_name": "Interior Design",
-    "bubble_choice_description": "Help decide on how to decorate a room.",
+    "bubble_choice_description": "Use AI Chat to explore design ideas for a room. Experiment with text descriptions, images of room layouts, and design guides to generate decorating suggestions. Test how AI’s recommendations change based on different details and uploaded visuals.",
     "thumbnail_url": "https://images.code.org/bbbc56b8e05633cd9018daf6e0ee28c9-Interior Design Staircase.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T17:49:50.015+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice1\"},{\"changed_at\":\"2025-03-17 17:49:52 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 17:52:46 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 20:48:31 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-18 04:55:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 03:10:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-19 03:11:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-17T17:49:50.015+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice1\"},{\"changed_at\":\"2025-03-17 17:49:52 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 17:52:46 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 20:48:31 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-18 04:55:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 03:10:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-19 03:11:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-20 17:21:50 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 22:28:30 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
