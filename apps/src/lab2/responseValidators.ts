@@ -121,7 +121,10 @@ function sourceValidatorHelper(
   response: Record<string, unknown> | unknown[],
   appSpecificValidator: (response: Record<string, unknown>) => void
 ): ProjectSources {
-  if (Array.isArray(response) || !response.source) {
+  if (Array.isArray(response)) {
+    throw new Error('Source response should be an object (received array).');
+  }
+  if (!response.source) {
     throw missingFieldError('source');
   }
   appSpecificValidator(response);
