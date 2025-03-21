@@ -134,7 +134,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (selectedVersion === '' && latestVersion !== '') {
+    if (selectedVersion === '') {
       setSelectedVersion(latestVersion);
     }
   }, [versionList, selectedVersion, latestVersion, setSelectedVersion]);
