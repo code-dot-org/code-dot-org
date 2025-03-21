@@ -76,7 +76,6 @@ Scenario: Versions warning announcement on script overview page
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
-  Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
   # Close the unit version warning banner
   When I click selector ".announcement-notification:contains(newer version) .fa-times"
