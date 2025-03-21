@@ -28,7 +28,7 @@ export const createJobExecutionMetricStat = (
   };
 };
 
-export const createOpenaiMetricStat = (
+export const createOpenaiSafetyMetricStat = (
   metricName: string,
   attempts: string | null,
   period = 300,
@@ -56,3 +56,31 @@ export const createOpenaiMetricStat = (
     ReturnData: false,
   };
 };
+
+export const metricsSumExpression = (metrics: { Id: string }[]): string => {
+  return `SUM[${metrics.map(m => m.Id).join(",")}]`;
+};
+
+// Start(total) jobs metric configuration for a set of models
+export const createStartMetricsConfig = (modelIds: string[])  => {
+  return modelIds.map((modelId, index) => ({
+    Id: `m${index + 1}`,
+    ...createJobExecutionMetricStat(
+        'AichatRequestChatCompletionJob.Start',
+        null,
+        modelId
+    ),
+  }));
+}
+
+// Failure job metrics for each model (IDs are indexed to begin one after the total jobs metrics end)
+export const createFailureMetricsConfig = (modelIds: string[]) => {
+    return modelIds.map((modelId, index) => ({
+        Id: `m${index + 1 + modelIds.length}`,
+        ...createJobExecutionMetricStat(
+            'AichatRequestChatCompletionJob.Finish',
+            'FAILURE',
+            modelId
+        ),
+    }));
+}
