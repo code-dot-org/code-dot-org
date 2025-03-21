@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {SoundType} from '@cdo/apps/music/player/MusicLibrary';
 
 import {Condition, ConditionType} from '../../types';
 
@@ -32,18 +31,11 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
   const hasValue = currentConditionType?.valueType !== undefined;
   const isNumeric = currentConditionType?.valueType === 'number';
   const isString = currentConditionType?.valueType === 'string';
-  const isSoundType = currentConditionType?.valueType === 'soundType';
   const useInput = isNumeric || isString;
-  const useDropdown = isSoundType;
 
-  const allSoundTypes: SoundType[] = ['beat', 'bass', 'lead', 'fx', 'vocal'];
-  const dropdownOptions = isSoundType
-    ? allSoundTypes.map(soundType => ({
-        name: soundType,
-        value: soundType,
-      }))
-    : [{name: `no values for ${currentConditionType?.valueType}`, value: ''}];
-  const initialDropdownValue = dropdownOptions[0].value;
+  const useDropdown = currentConditionType?.valueType === 'array';
+  const dropdownOptions = currentConditionType?.valueOptions || [''];
+  const initialDropdownValue = dropdownOptions[0];
 
   // Ensure that conditions with dropdowns have a value set
   useEffect(() => {
@@ -110,7 +102,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
               className={moduleStyles.conditionValueDropdown}
               name="conditionValue"
               id="conditionValue"
-              value={condition.value || dropdownOptions[0].value}
+              value={condition.value || dropdownOptions[0]}
               onChange={e => {
                 condition.value = e.target.value;
                 console.log({condition});
@@ -119,8 +111,8 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
             >
               {dropdownOptions.map((option, index) => {
                 return (
-                  <option key={index} value={option.value}>
-                    {option.name}
+                  <option key={index} value={option}>
+                    {option}
                   </option>
                 );
               })}

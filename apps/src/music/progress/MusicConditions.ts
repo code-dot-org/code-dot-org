@@ -76,8 +76,9 @@ export const MusicConditions: ConditionNames = {
   },
   PLAYED_SOUND_TYPE: {
     name: 'played_sound_type',
-    valueType: 'soundType',
+    valueType: 'array',
     description: 'Checks if a certain sound type is playing.',
+    valueOptions: ['beat', 'bass', 'lead', 'fx', 'vocal'],
   },
   PLAYED_EMPTY_CHORDS: {
     name: 'played_empty_chords',

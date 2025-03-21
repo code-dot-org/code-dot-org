@@ -320,8 +320,9 @@ export interface Condition {
 
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number' | 'soundType';
+  valueType?: 'string' | 'number' | 'array';
   description: string;
+  valueOptions?: string[];
 }
 
 // Validation in the level.
