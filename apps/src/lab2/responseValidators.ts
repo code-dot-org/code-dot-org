@@ -89,7 +89,10 @@ export const SourceResponseValidator: ResponseValidator<
 export const LevelPropertiesValidator: ResponseValidator<
   LevelProperties
 > = response => {
-  if (Array.isArray(response) || !response.appName) {
+  if (Array.isArray(response)) {
+    throw new Error('Level properties should be an object (received array).');
+  }
+  if (!response.appName) {
     throw missingFieldError('appName');
   }
 
