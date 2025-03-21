@@ -74,7 +74,7 @@
   align-items: center;
   flex-shrink: 0;
 
-  background: var(--sentiment-error-50, #e5311a);
+  background: var(--sentiment-error-50, #E5311A);
 }
 
 .countText {
@@ -82,7 +82,7 @@
   margin-bottom: 0 !important;
   padding: 0 2px;
 
-  color: var(--light-white, #fff);
+  color: var(--light-white, #FFF);
   font-variant-ligatures: no-common-ligatures;
 }
 
@@ -101,8 +101,8 @@
   gap: 20px;
 
   border-radius: 4px;
-  border: 1px solid var(--neutral-gray-20, #d1d4d8);
-  background: var(--neutral-base-white, #fff);
+  border: 1px solid var(--neutral-gray-20, #D1D4D8);
+  background: var(--neutral-base-white, #FFF);
 
   box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.25);
 }
@@ -113,7 +113,7 @@
   margin-left: 4px;
   margin-bottom: -24px;
 
-  color: var(--text-neutral-primary, #292f36);
+  color: var(--text-neutral-primary, #292F36);
   font-variant-ligatures: no-common-ligatures;
 }
 
@@ -129,11 +129,11 @@
   flex: 1 0 0;
 
   border-radius: 4px;
-  background: var(--brand-aqua-50, #3cfff7) !important;
+  background: var(--brand-aqua-50, #3CFFF7) !important;
 }
 
 .viewScoresText {
-  color: var(--light-black, #292f36);
+  color: var(--light-black, #292F36);
   font-variant-ligatures: no-common-ligatures;
 
   /* Button/Button 3 */
@@ -443,7 +443,7 @@ button.rubricHeaderTab {
     height: 40px;
     padding: 0 1rem 0 2rem;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     align-self: stretch;
     line-height: 154%;
     position: relative;
@@ -486,7 +486,6 @@ button.rubricHeaderTab {
   gap: 16px;
   font-size: 14px;
   padding-left: 10px;
-  padding-top: 0.5rem;
 }
 
 .learningGoalHeaderRightSide {
@@ -560,6 +559,7 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100px;
   gap: 8px;
   min-height: 92px;
 }
@@ -1113,7 +1113,6 @@ p.evidenceLevelHeaderText {
 .evidenceLevelSetHorizontalV2 {
   display: flex;
   flex-direction: row;
-  height: 100px;
   width: 100%;
   gap: 8px;
 }
@@ -1373,7 +1372,7 @@ p.detailsHidden {
   display: inline;
   margin-right: 17px;
   p {
-    margin-bottom: 0;
+      margin-bottom: 0;
   }
 }
 

@@ -113,7 +113,7 @@ export default function EvidenceLevelsForTeachersV2({
         <BodyThreeText className={style.evidenceLevelHeaderText}>
           <StrongText>{i18n.assignARubricScore()}</StrongText>
         </BodyThreeText>
-        <div className={style.evidenceLevelSetHorizontalV2} ref={ref}>
+        <div className={style.evidenceLevelSetHorizontal} ref={ref}>
           {evidenceLevels.map(evidenceLevel => (
             <button
               data-ai-suggested={
