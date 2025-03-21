@@ -601,10 +601,15 @@ NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
   const UNDERSCORE = '_';
   // md5 returns a 32-character hex string.
   const levelHash = md5(this.levelKey_);
-  return (NET_SIM_PREFIX + levelHash + UNDERSCORE + seed).substring(
-    0,
-    MAX_LENGTH
-  );
+  // Calculate the max possible length for the md5 hash so that seed is intact.
+  const maxHashLength =
+    MAX_LENGTH -
+    NET_SIM_PREFIX.length -
+    UNDERSCORE.length -
+    seed.toString().length;
+  // If necessary, truncate hash.
+  const truncatedLevelHash = levelHash.substring(0, maxHashLength);
+  return NET_SIM_PREFIX + truncatedLevelHash + UNDERSCORE + seed;
 };
 
 /**

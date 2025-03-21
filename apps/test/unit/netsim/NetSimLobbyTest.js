@@ -84,11 +84,12 @@ describe('NetSimLobby', () => {
       expect(shardID.substring(shardID.length - seed.length)).toBe(seed);
     });
 
-    it('should return a string no longer than 48 characters with long shared seed', () => {
+    it('should return a string no longer than 48 characters with long shared seed with seed intact', () => {
       // seed has more than 13 characters.
       const seed = 'thisIsAVeryLongSharedShardSeed';
       const shardID = lobby.makeShardIDFromSeed_(seed);
       expect(shardID.length).toBeLessThanOrEqual(48);
+      expect(shardID.substring(shardID.length - seed.length)).toBe(seed);
     });
 
     it('should generate different shard IDs for different seeds', () => {
