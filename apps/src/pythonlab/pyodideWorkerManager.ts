@@ -26,8 +26,15 @@ let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 
 const setUpPyodideWorker = () => {
-  // @ts-expect-error because TypeScript does not like this syntax.
-  const worker = new Worker(new URL('./pyodideWebWorker.ts', import.meta.url));
+  // The web worker is versioned to ensure the correct version is loaded.
+  // Update the version if you update the web worker.
+  const worker = new Worker(
+    /* webpackChunkName: "pyodide-web-worker-1.0.0" */ new URL(
+      './pyodideWebWorker.ts',
+      // @ts-expect-error because TypeScript does not like this syntax.
+      import.meta.url
+    )
+  );
 
   callbacks = {};
 
@@ -127,8 +134,11 @@ const registerServiceWorker = async () => {
     try {
       // Do not move the url into a variable, because webpack needs it to be passed as
       // a parmaeter to register() directly in order to set up inputServiceWorker as a service worker.
+      // The service worker is versioned to ensure the correct version is loaded.
+      // Update the version if you update the service worker.
       const registration = await navigator.serviceWorker.register(
         new URL(
+          /* webpackChunkName: "input-service-worker-1.0.0" */
           './inputServiceWorker.js',
           // @ts-expect-error because TypeScript does not like this syntax.
           import.meta.url

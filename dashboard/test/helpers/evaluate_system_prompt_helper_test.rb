@@ -13,7 +13,9 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
 
   test "get_system_prompt for AppLab level unit" do
     base_system_prompt_snippet = "Please review the student's work."
-    system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(@applab_level, @csp_unit)
+    system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
+      @applab_level, @csp_unit, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+    )
     assert_includes system_prompt, base_system_prompt_snippet
     assert_includes system_prompt, 'JavaScript'
     assert_includes system_prompt, 'Write a loop.'

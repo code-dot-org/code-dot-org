@@ -1,0 +1,87 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-06T21:40:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Which of the following do you expect to hear?",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "electro/drum_beat_cowbell"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "R5J~yRb]kDJwk*H212se",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "electro/bass_synth_blocks"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "default"
+    },
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "A drum beat and a bass line at the same time",
+      "questionType": "multipleChoice",
+      "allowMultipleAttempts": false,
+      "multipleChoiceOptions": [
+        "A drum beat",
+        "A bass line",
+        "A drum beat followed by a bass line",
+        "A drum beat and a bass line at the same time"
+      ],
+      "codeEditableAfterSubmit": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-06T16:40:34.774-05:00\",\"changed\":[\"cloned from \\\"Music Predict Level 1\\\"\"],\"cloned_from\":\"Music Predict Level 1\"},{\"changed_at\":\"2025-03-06 17:12:18 -0500\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

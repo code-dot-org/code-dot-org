@@ -1,7 +1,12 @@
 {
   "name": "computer-science-and-artificial-intelligence-foundations-2025",
   "script_names": [
-
+    "csaif1-2025",
+    "csaif2-2025",
+    "csaif3-2025",
+    "csaif4-2025",
+    "csaif5-2025",
+    "csaif6-2025"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

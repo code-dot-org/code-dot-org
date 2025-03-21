@@ -2,15 +2,23 @@
   "script": {
     "name": "csa3-alt-2025",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
-      "is_migrated": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:15:02 UTC",
+    "serialized_at": "2025-03-20 17:34:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -72,16 +80,19 @@
       }
     },
     {
-      "key": "lesson-3",
+      "key": "Program Design",
       "name": "Program Design",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "**Why is it helpful to represent programs before we write them? How can you do this?**\n\nIn this lesson, students will review what they learned in Unit 1 about classes—that they are blueprints that contain the attributes and methods of an object, and that classes can inherit from each other—as well as key facets of UML diagrams. After discussing the usefulness of these diagrams, they create some of their own.",
+        "preparation": "- Gather poster paper, markers, and sticky notes (at least 5 for each student)\n- **(Optional)** Print copies of the Program Design Guided Notes (one for each student)\n- Print copies of the Designing with UML handout (one for each student)",
+        "student_overview": "**Why is it helpful to represent programs before we write them? How can you do this?**\n\nIn this lesson, you will act like a software engineer and create a UML diagram to plan your program before you write it."
       },
       "seeding_key": {
-        "lesson.key": "lesson-3",
+        "lesson.key": "Program Design",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -105,16 +116,19 @@
       }
     },
     {
-      "key": "lesson-5",
+      "key": "AI-Generated Code (non-AI Tutor)",
       "name": "AI-Generated Code",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how AI can help to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing prompts in order to more effectively make use of AI-assistance in developing programs. ",
+        "preparation": "- Print copies of the [Planning Programs](https://docs.google.com/document/d/1VRFumOTI2Gidc3L2v7So9nw3iQCSbaKuazUbdBrkIaI/edit?usp=drive_link) handout \n- Preview the *Are We Automating Racism* video",
+        "student_overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) is a big part of modern life. In this lesson, you'll first recognize how AI programs and data sets can have built-in biases. Then, you'll learn how AI can develop code while understanding the challenges that come with AI-created code. Finally, you'll practice designing prompts to make better use of AI when developing programs."
       },
       "seeding_key": {
-        "lesson.key": "lesson-5",
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -177,16 +191,39 @@
       }
     },
     {
-      "key": "lesson-9",
+      "key": "No-Argument Constructors",
       "name": "No-Argument Constructors",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n* Topic Questions 5.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
+        "preparation": "* **(Optional)** Print copies of the No-Argument Constructors Guided Notes (one for each student)\n* Preview the *Constructors* video",
+        "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
       },
       "seeding_key": {
-        "lesson.key": "lesson-9",
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "Parameterized Constructors",
+      "name": "Parameterized Constructors",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
+        "preparation": "* **(Optional)** Print copies of the Parameterized Constructors Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video",
+        "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
+      },
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -194,10 +231,10 @@
     {
       "key": "Private Methods",
       "name": "Private Methods",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How does making a method `private` change its functionality?**\n\nIn this lesson, students have an opportunity to begin planning their Creative Coding with The Theater project. Students should spend this time creating UML diagrams, planning algorithms, and updating their Project Planning Board with tasks they need to complete. They then revisit the `private` keyword and how this access modifier is used to prevent other classes from accessing instance variables. Students explore how the `private` keyword can be used with methods and consider scenarios where they might want to make a method `private` instead of `public`. They practice writing and calling `private` methods and revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
@@ -206,21 +243,6 @@
       },
       "seeding_key": {
         "lesson.key": "Private Methods",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "lesson-11",
-      "name": "Parameterized Constructors",
-      "absolute_position": 11,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -407,6 +429,48 @@
       }
     },
     {
+      "key": "f2cf62c1-6c53-4d1d-a511-e9988ee977b9",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2cf62c1-6c53-4d1d-a511-e9988ee977b9",
+        "lesson.key": "Program Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "288a3868-4380-4dd6-8cd4-87678017a0e7",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7",
+        "lesson.key": "Program Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "80d77f7f-efd7-4151-b3bc-81708ab96354",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80d77f7f-efd7-4151-b3bc-81708ab96354",
+        "lesson.key": "Program Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
       "key": "59e22872-c104-45e3-9423-902d1eb5b27e",
       "position": 1,
       "properties": {
@@ -444,6 +508,48 @@
       "seeding_key": {
         "lesson_activity.key": "f4cb60a7-971e-4461-851f-f3a53538c635",
         "lesson.key": "System Reliability",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "e19ea243-7a74-45ec-9133-5a3de74a8f73",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e19ea243-7a74-45ec-9133-5a3de74a8f73",
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "041fcf20-5a16-43d9-9056-2c41e6899422",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422",
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "9acf38c5-fb75-4487-9076-6aceb7671599",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9acf38c5-fb75-4487-9076-6aceb7671599",
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -570,6 +676,90 @@
       "seeding_key": {
         "lesson_activity.key": "0d1c25c6-f605-4c39-88e9-3268a6c91135",
         "lesson.key": "Intellectual Property",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "f6ad5439-b734-4441-ac5e-267341166468",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6ad5439-b734-4441-ac5e-267341166468",
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "7bdd6161-cef7-4441-af78-7c2f592432b7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7",
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "9302894c-2109-4cfc-937e-61e83a135993",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9302894c-2109-4cfc-937e-61e83a135993",
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "a7be3b9c-09a9-45a5-a270-67e63439e48d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7be3b9c-09a9-45a5-a270-67e63439e48d",
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "99bc1332-0a99-4cb6-bd30-5536c0e14556",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556",
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "14b15638-ef85-46ba-98fc-88732a678f56",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56",
+        "lesson.key": "Parameterized Constructors",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025"
       }
@@ -1530,6 +1720,241 @@
       }
     },
     {
+      "key": "a475d41c-b695-4e61-88f7-6b658d548fcc",
+      "position": 1,
+      "properties": {
+        "description": "In the previous unit, you learned about the characteristics of software engineers and began to develop your software engineering skills. We will be learning more about the structure and design of classes in Java programs and continue to use software engineering characteristics and skills to make design decisions.",
+        "name": "Software Engineering Goals",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a475d41c-b695-4e61-88f7-6b658d548fcc",
+        "lesson_activity.key": "f2cf62c1-6c53-4d1d-a511-e9988ee977b9"
+      }
+    },
+    {
+      "key": "9141a014-c7a7-4185-8cce-d44eeffc92d8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a time where you had to prepare to do something, like go on a trip or make a meal. How can having an effective plan make things easier?*\n\n**Discussion Goal:** Students discuss how having a plan can make tasks easier by reducing stress, saving time, and improving organization. They relate these benefits to their own experiences of preparing for activities or projects.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9141a014-c7a7-4185-8cce-d44eeffc92d8",
+        "lesson_activity.key": "f2cf62c1-6c53-4d1d-a511-e9988ee977b9"
+      }
+    },
+    {
+      "key": "d8092bd5-859c-48ef-983f-a290390df675",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "d8092bd5-859c-48ef-983f-a290390df675",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "b90f628f-955c-4b97-8515-ad128d141c8d",
+      "position": 2,
+      "properties": {
+        "name": "(Optional) Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This section is a 3-question review: what are classes, what are the parts of a UML diagram, and inheritance. If you are confident your students do not need the review, you can skip it, entirely, or just skip the individual questions you . If you are unsure, asking these questions can help you figure out what your students have retained. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b90f628f-955c-4b97-8515-ad128d141c8d",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "e0dd51eb-3ea8-4dd1-acaa-dc6a17baecc4",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0dd51eb-3ea8-4dd1-acaa-dc6a17baecc4",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "9ddb2ee3-4d5d-4ec6-b928-a3315a67910d",
+      "position": 4,
+      "properties": {
+        "description": "One of the tools in a software engineer’s toolbox is to think about how to organize their programs before writing them, and share their ideas with their colleagues. This saves a lot of time later. Today, we’ll practice one way that software engineers organize their thoughts and share ideas before programming. First, let’s ground ourselves in what we already know.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9ddb2ee3-4d5d-4ec6-b928-a3315a67910d",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "de4ee093-fb06-4ca1-9e7a-3b245a4f2129",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students label the parts of the UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction* in terms of class design and UML diagrams.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
+      },
+      "seeding_key": {
+        "activity_section.key": "de4ee093-fb06-4ca1-9e7a-3b245a4f2129",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "403190a5-6752-48f7-9136-90a63821bcd8",
+      "position": 6,
+      "properties": {
+        "description": "In this lesson, you’ll create a UML diagram for an app of your choice. This will help you translate your ideas into a clear, actionable plan for programming. Let's explore how to do this together.",
+        "duration": "10",
+        "name": "Introduction to UML Diagrams",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "403190a5-6752-48f7-9136-90a63821bcd8",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "977391cf-dc93-4ce8-80cb-4a3d3394781f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students identify common elements and differences between the UML diagram and the text description, noting how the diagram provides a structured, visual representation of attributes and methods, while the text offers a descriptive summary of the same information.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students compare the UML diagrams and text to see how the diagrams show the relationship between a superclass and its subclasses, while the text describes the attributes and behaviors of each class. They should understand how the diagrams visually represent these relationships and how the text provides the same information in words."
+      },
+      "seeding_key": {
+        "activity_section.key": "977391cf-dc93-4ce8-80cb-4a3d3394781f",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "8bec1300-2487-4eab-85dc-0802a144a61a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-description of the Pet-Dog-Cat relationship would look like."
+      },
+      "seeding_key": {
+        "activity_section.key": "8bec1300-2487-4eab-85dc-0802a144a61a",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "3031414a-dbcc-48bc-9a5c-7d9e6824ee4a",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a UML Diagram for the Pet-Dog-Cat relationship would look like.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might it be helpful to have these representations before you write a program?*\n\n**Discussion Goal:** Students understand that having UML diagrams and text descriptions helps in planning and organizing the structure of a program, making it easier to write code by providing a clear visual and descriptive reference of the classes and their relationships.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words in a program description make sense to turn into a class?*\n\n**Discussion Goal:** Students identify the nouns in a program description as classes and the verbs as behaviors. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students need more guidance, it may be helpful to get them thinking about parts of speech – nouns are often classes, verbs are often methods. If students need it, remind students that a “noun” is a “person, place or thing” and a “verb” is a “thing something or someone can do.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3031414a-dbcc-48bc-9a5c-7d9e6824ee4a",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "0805ea90-675c-40f6-99db-6cc8b4b90c1a",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Not all nouns should be classes. Which of these is not a class?*\n\n**Discussion Goal:** Students identify that nouns that do not actively hold or do something do not need to be classes. Students might suggest that these nouns can be attributes of classes. For example, the “length” of the run does not need to hold or do anything and can be an attribute of the run. "
+      },
+      "seeding_key": {
+        "activity_section.key": "0805ea90-675c-40f6-99db-6cc8b4b90c1a",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "66682416-0ac3-4ff6-a47f-a5476754a9d7",
+      "position": 11,
+      "properties": {
+        "description": "Now it’s time to practice being a software engineer! You'll now have an opportunity to think critically about how you would design a program and communicate that design to others using a UML diagram. ",
+        "duration": "20",
+        "name": "Designing with UML",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students have their own program ideas, they can use those as the basis for their UML diagram, as long as the focus remains on turning the idea into a clear diagram. You can remind students that the goal is to practice the process of translating program ideas into a visual plan, rather than developing new ideas from scratch."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "66682416-0ac3-4ff6-a47f-a5476754a9d7",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "469b8d1b-22cb-43da-8ac9-c014940a43bc",
+      "position": 12,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a poster paper and marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review each project description and select one.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their activity guides to plan their UML diagram. Students will circle the nouns in the requirements, underline the verbs, and double the circle around nouns representing classes that should be created.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their poster paper to turn their plans into UML diagrams and a program description.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Circulate as students work, offering time reminders, and ask guiding questions to help them identify potential classes and define what each class 'has' and 'does.' Encourage collaboration by asking questions that lead pairs to a shared decision. Celebrate progress, and remind pairs to include both the UML diagram and text description on their poster. Using a visible timer can help students stay aware of how much time remains."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "469b8d1b-22cb-43da-8ac9-c014940a43bc",
+        "lesson_activity.key": "288a3868-4380-4dd6-8cd4-87678017a0e7"
+      }
+    },
+    {
+      "key": "019b4a7d-abd9-4977-adff-44dbcf78c212",
+      "position": 1,
+      "properties": {
+        "description": "It’s exciting to see these ideas coming together! Now that we have a plan, we’ll run it by other people. Since a class diagram is essentially a plan for code, we'll use the same TAG feedback process we apply during code reviews, but with sticky notes. Tell your classmates what in your work you like, ask them questions about why they chose particular classes and offer suggestions.\n",
+        "name": "Gallery Walk",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "019b4a7d-abd9-4977-adff-44dbcf78c212",
+        "lesson_activity.key": "80d77f7f-efd7-4151-b3bc-81708ab96354"
+      }
+    },
+    {
+      "key": "744b4ebc-36ba-4a97-8e3e-4b2ad0bbc116",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each pair several post-it notes, at least five per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to TAG the UML diagrams as they participate in the gallery walk.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students back to their own UML diagrams to review the comments left by their peers. Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper. ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The gallery walk and student reflections can be used as an informal assessment opportunity. Reviewing the comments they leave on various UML diagrams and their responses can give insight into their grasp of class structure and design."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "744b4ebc-36ba-4a97-8e3e-4b2ad0bbc116",
+        "lesson_activity.key": "80d77f7f-efd7-4151-b3bc-81708ab96354"
+      }
+    },
+    {
+      "key": "3434c0d7-6a4f-42b6-aa24-ee26df04d4e3",
+      "position": 3,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3434c0d7-6a4f-42b6-aa24-ee26df04d4e3",
+        "lesson_activity.key": "80d77f7f-efd7-4151-b3bc-81708ab96354"
+      }
+    },
+    {
       "key": "87c32df2-d264-425e-971e-c49a9d51c2b1",
       "position": 1,
       "properties": {
@@ -1706,6 +2131,193 @@
       "seeding_key": {
         "activity_section.key": "ec804dea-2579-416c-8884-c25020787b1c",
         "lesson_activity.key": "f4cb60a7-971e-4461-851f-f3a53538c635"
+      }
+    },
+    {
+      "key": "dd8e374f-7100-4441-a468-0facf8468281",
+      "position": 1,
+      "properties": {
+        "description": "We've seen how AI can be a powerful tool, but today we'll explore both its potential and its risks. We'll start with the \"Are We Automating Racism?\" video to understand how AI can unintentionally reinforce biases. Then, we'll learn how to use AI to write code, considering both its advantages and challenges. By the end, we'll focus on designing programs that make the best use of AI while ensuring fairness and accuracy.",
+        "duration": "5",
+        "name": "Bias in AI-Generated Code",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd8e374f-7100-4441-a468-0facf8468281",
+        "lesson_activity.key": "e19ea243-7a74-45ec-9133-5a3de74a8f73"
+      }
+    },
+    {
+      "key": "4ab0e318-4a9b-499f-aba6-4b7540b33d51",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video - *Are We Automating Racism*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [Guide to Curriculum Videos](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4ab0e318-4a9b-499f-aba6-4b7540b33d51",
+        "lesson_activity.key": "e19ea243-7a74-45ec-9133-5a3de74a8f73"
+      }
+    },
+    {
+      "key": "c2ea0ff6-9a7d-4ad8-8b49-15f3633a203f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can programmers avoid bias in their designs when using AI to help develop their programs?*\n\n**Discussion Goal:** Students discuss systemic issues that are rooted in bias. They explore how these biases can emerge in AI and consider the ways in which programmers might avoid incorporating bias into their designs. Students might share ideas such as using diverse data sets, applying thorough testing across different scenarios, and being mindful of ethical considerations when developing AI-assisted programs."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2ea0ff6-9a7d-4ad8-8b49-15f3633a203f",
+        "lesson_activity.key": "e19ea243-7a74-45ec-9133-5a3de74a8f73"
+      }
+    },
+    {
+      "key": "5095f849-edf1-49bc-91b3-27f459b1a739",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "10",
+        "name": "How does AI Generate Content?"
+      },
+      "seeding_key": {
+        "activity_section.key": "5095f849-edf1-49bc-91b3-27f459b1a739",
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422"
+      }
+    },
+    {
+      "key": "72cfd37d-c991-4c53-8fd8-1373623e7a1d",
+      "position": 2,
+      "properties": {
+        "description": "We have already seen one limitation in the use of AI—namely the possibility of algorithmic bias in programs created by AI. We’ll now deepen our understanding of the power and limitations of AI. Keep in mind the importance of the way humans can make thoughtful, intentional adjustments to AI-generated programs. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "72cfd37d-c991-4c53-8fd8-1373623e7a1d",
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422"
+      }
+    },
+    {
+      "key": "2aebe213-e307-44d8-8a4e-d97420860e47",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Chatbots and Large-Language Models (Part 1)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slideshow to display the prompts.\n* *What are some challenges when using AI to develop code?*\n* *What might a human programmer do to ensure the AI creates accurate and effective programs?*\n\n**Discussion Goal:** Students discuss how large-language models are trained to predict and generate new content. Students also explore the challenges of doing this, such as limited context or incorrect predictions. They surface ideas  about how human programmers can address these challenges in order to improve the effectiveness and accuracy of AI-generated code. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***artificial intelligence***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***large-language model***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Chatbots and Large-Language Models (Part 2)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given some of the limitations of AI and LLMs, what are some ways humans might have to make manual adjustments?*\n\n**Discussion Goal:** Students analyze the limitations of large language models (LLMs) and discuss how human intervention, such as tuning and context adjustments, helps overcome these limitations. They explore specific scenarios where manual adjustments are necessary to improve the accuracy and relevance of AI-generated content.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** A programmer prompted an AI to create a method that would paint the flag of Belgium. Here is the prompt the programmer used: “Write a method to draw the flag of Belgium in Java Lab”\n* *Do you think this prompt would be effective? Why or why not?*\n\n**Discussion Goal:** Students mention the need for clarity and specificity when prompting AI to generate code. They discuss how vague prompts might lead to inaccurate or incomplete outputs. They generate ideas about how more precise instructions can improve the effectiveness of AI-generated code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Here is the method one AI came up with. It is not at all what the programmer was looking for. \n* *What factors might be important for making sure an AI is able to produce the method the programmer is hoping to see?*\n\n**Discussion Goal**: Students identify key favors that influence the accuracy of AI-generated code, such as the prompt being specific and AI’s understanding of the programming context. They discuss how providing examples and clear instructions can guide AI toward generating more accurate code. Students might also mention the need for iterative testing and human fine-tuning when using AI to generate code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how programs should be planned before using AI to generate code. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2aebe213-e307-44d8-8a4e-d97420860e47",
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422"
+      }
+    },
+    {
+      "key": "0621a9b7-357a-4dcf-b6de-062ec0615941",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students investigate the program, make changes to the program as prompted in Levels 1 and 2, and observe the results.",
+        "duration": "10",
+        "name": "Investigating AI-Generated Code",
+        "progression_name": "Investigating AI-Generated Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "0621a9b7-357a-4dcf-b6de-062ec0615941",
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422"
+      }
+    },
+    {
+      "key": "8017554c-e52e-4a6c-a347-f37b30adcc43",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from their investigation into the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "8017554c-e52e-4a6c-a347-f37b30adcc43",
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422"
+      }
+    },
+    {
+      "key": "7f965c2b-5f90-45d5-a8bc-f63f606ccbbc",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Programs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students investigate and analyze prompts for using AI to help generate code in order to draw the Thailand flag in The Neighborhood. Students then write their own prompts before reflecting on how these prompts can improve AI-assisted coding.",
+        "name": "Planning Programs",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Before students begin analyzing prompts, emphasize the importance of planning and problem decomposition. Encourage them to think critically about how clear, detailed prompts lead to more efficient and accurate code generation. Have them focus on identifying the key parts of the task and how precision in their prompts improves AI-assisted programming.\n\nDuring the activity, guide students to approach prompt design iteratively—each refinement should clarify instructions, reducing ambiguity and improving results. Encourage discussion on how specific details, like dimensions and starting points, are essential for developing well-structured programs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7f965c2b-5f90-45d5-a8bc-f63f606ccbbc",
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422"
+      }
+    },
+    {
+      "key": "eee74fff-90ca-4257-8a0c-4beae46ffc84",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Using AI to design methods can speed up coding, but success depends on using specific, well-planned prompts. \nWhat strategies did you use to ensure the prompts would make the most of AI’s capabilities?\n\n**Discussion Goal:** Students share the strategies they tried for generating effective prompts. They discuss the elements of an effective prompt like being specific and providing examples. "
+      },
+      "seeding_key": {
+        "activity_section.key": "eee74fff-90ca-4257-8a0c-4beae46ffc84",
+        "lesson_activity.key": "041fcf20-5a16-43d9-9056-2c41e6899422"
+      }
+    },
+    {
+      "key": "d93190ee-4e98-4f1a-ad94-627943072fd9",
+      "position": 1,
+      "properties": {
+        "description": "We’ve learned a lot of using AI to help develop our programs. Let’s see how we can bring everything we have learned together. ",
+        "duration": "5",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d93190ee-4e98-4f1a-ad94-627943072fd9",
+        "lesson_activity.key": "9acf38c5-fb75-4487-9076-6aceb7671599"
+      }
+    },
+    {
+      "key": "d8c74c9e-aeca-42ee-8c4e-46d8b5a1699d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- What did you learn about the role of clear instructions in using AI to generate code?\n- Identify any challenges AI might face and suggest how better planning could improve its effectiveness.\n- How did changing and improving the prompts help you better understand how to plan a program? \n\n**Discussion Goal:** Students will discuss how the instructions given to AI to generate code must be clear and specific in order to generate high quality responses from the AI. Some challenges students may mention are handling incorrect or partially correct responses, or difficulties in fine-tuning the results of AI-generated code. Finally, students discuss how investigating and refining prompts helped them to identify the specific details that can help make a high-quality prompt for using AI to help develop code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Closing the Loop helps students recap concepts and reflect on their learning process. This discussion is also an opportunity to normalize any confusion students are experiencing. Highlight that this is new information for most students and that there will be times when they feel lost or confused. Share your own experience using AI to help develop programs for the first time. You can also ask students to share strategies for when they are confused, such as consulting additional resources."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d8c74c9e-aeca-42ee-8c4e-46d8b5a1699d",
+        "lesson_activity.key": "9acf38c5-fb75-4487-9076-6aceb7671599"
+      }
+    },
+    {
+      "key": "d24ba8bf-a0c3-46b3-97b2-2bac2b8b6c45",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "d24ba8bf-a0c3-46b3-97b2-2bac2b8b6c45",
+        "lesson_activity.key": "9acf38c5-fb75-4487-9076-6aceb7671599"
+      }
+    },
+    {
+      "key": "2b3ad65c-6d42-450e-b9f8-fed1958e3655",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b3ad65c-6d42-450e-b9f8-fed1958e3655",
+        "lesson_activity.key": "9acf38c5-fb75-4487-9076-6aceb7671599"
       }
     },
     {
@@ -2288,6 +2900,558 @@
       "seeding_key": {
         "activity_section.key": "6ad42ed4-940a-43a9-8193-fa180d953391",
         "lesson_activity.key": "0d1c25c6-f605-4c39-88e9-3268a6c91135"
+      }
+    },
+    {
+      "key": "e9ee550e-b252-41bc-84ac-acb3950cd1bf",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, you started developing a program for Joyful Pastries to help the owner manage the desserts they sell at their food truck. This food truck is actually named after Joy Buolamwini, a poet of code who uses art and research to challenge bias in programs using artificial intelligence.",
+        "name": "Poet of Code",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e9ee550e-b252-41bc-84ac-acb3950cd1bf",
+        "lesson_activity.key": "f6ad5439-b734-4441-ac5e-267341166468"
+      }
+    },
+    {
+      "key": "6eed2397-3e2c-47bc-9798-a93a25a86e44",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this quote make you think about or wonder?*\n\n**Discussion Goal:** Students make connections between the quote and scenarios they have encountered or things they have learned in the course so far. These might include sharing their thoughts on real-world scenarios and issues and how this quote relates to these.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can also show students' parts of the [**Poet of Code**](https://www.poetofcode.com/) website, such as a video from one of the campaigns or parts of one of her talks. Choose one that you feel would be most appropriate and engaging for your students to show different applications of computer science, current issues, and spark inspiration as \"poets of code.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6eed2397-3e2c-47bc-9798-a93a25a86e44",
+        "lesson_activity.key": "f6ad5439-b734-4441-ac5e-267341166468"
+      }
+    },
+    {
+      "key": "cc8faf83-9361-4c35-9948-01c910302133",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc8faf83-9361-4c35-9948-01c910302133",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "84a78846-8519-4420-b522-f005043e4265",
+      "position": 2,
+      "properties": {
+        "description": "In the previous lesson, we declared instance variables to represent attributes of an object. Now that we have these instance variables, we need to tell Java what values these attributes should have when we create an object. Let's find out how we can do this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "84a78846-8519-4420-b522-f005043e4265",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "4974d7f5-28f0-4de9-8483-fecc722a68f7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: No-Argument Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "4974d7f5-28f0-4de9-8483-fecc722a68f7",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "f292c0c4-9231-4dc3-9d3c-1c2a80e27b13",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the constructor that assigns values to each of the instance variables. Students might wonder how these values are determined."
+      },
+      "seeding_key": {
+        "activity_section.key": "f292c0c4-9231-4dc3-9d3c-1c2a80e27b13",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall how objects are instantiated by calling the constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the flow of control when a constructor is called.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***no-argument constructor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "duration": "15",
+        "name": "Constructors",
+        "progression_name": "Investigate and Modify: Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "63a9fb17-460b-40ef-8d55-38165c6c4f44",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to recall the attributes of the `Painter` class. Ask students how they think the no-argument constructor for the `Painter` class might have been written based on what they remember about how a `Painter` object was instantiated.\n\nPoint out that the class has methods to get the current values assigned to the instance variables. Students will learn more about the syntax and functionality of these methods in a later lesson, but you can ask students how these methods are similar to the `getX()`, `getY()`, `getDirection()`, and `getMyPaint()` methods in the `Painter` class that allowed them to get the current values assigned to the instance variables for a `Painter` object."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63a9fb17-460b-40ef-8d55-38165c6c4f44",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "38591b48-76e1-400e-9f0e-c601ee860f87",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Constructors*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "38591b48-76e1-400e-9f0e-c601ee860f87",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "2df51fdd-b70c-4113-83a0-28db0e22b71b",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Explain the components of a constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The access modifier\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the constructor is the same as the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Empty parentheses since there are no parameters\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***constructor signature***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Assign values to the instance variables\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing a no-argument constructor in a class.",
+        "progression_name": "Skill Building: Writing a Constructor"
+      },
+      "seeding_key": {
+        "activity_section.key": "2df51fdd-b70c-4113-83a0-28db0e22b71b",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "bb438912-8fe5-4be3-b830-cbf68c38f947",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***default value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that if a no-argument constructor is not written in the class, Java will automatically provide one and assign the default values for the data type.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students run the tests on the level before writing a no-argument constructor, they may have noticed that the test for the no-argument constructor initially passes. Point this out to students to reinforce this and to note the need to confirm test results if when the test passes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb438912-8fe5-4be3-b830-cbf68c38f947",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "daa536d3-671f-4e3d-ad11-c97f44398947",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How should we decide what the default values should be for an object's instance variables?*\n\n**Discussion Goal:** Students share suggestions for making these decisions and may share examples to support their suggestions. Students should realize that they should establish values for what they would consider a \"default object\" if the user does not specify values, such as the `Painter` object starting at (0, 0) or a new profile page on a social media app starting with a default profile image.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "daa536d3-671f-4e3d-ad11-c97f44398947",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "7950eafc-e9e6-4486-a424-e9348d3a4040",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What was useful about the no-argument constructor in the `Painter` class? What was NOT useful about it?*\n\n**Discussion Goal:** Students suggest that creating `Painter` objects with the no-argument constructor meant that they always knew where the object was going to start, what direction it would be facing, and that it had no paint. Students may make connections with achieving consistency and reliability in their programs since they could trust that an object would always be created the same way. They share how a different approach would have been more useful if they wanted the `Painter` object to start at a specific location or with a certain amount of paint.",
+        "duration": "15",
+        "name": "No-Argument Constructors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You do not need to mention parameterized constructors here since students will learn about these in the next lesson. The goal is to get them to start considering the possibility or need for a different type of constructor to help identify when they would want to use one over the other."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7950eafc-e9e6-4486-a424-e9348d3a4040",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "12c5e147-d008-4694-8032-2005583a26ab",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6, 7, and 8. Students complete a Check for Understanding on Level 6, then continue to Level 7 to write a new class with instance variables and a no-argument constructor. On Level 8, students write a no-argument constructor in the `Dessert` class.",
+        "progression_name": "Practice: Writing a Class"
+      },
+      "seeding_key": {
+        "activity_section.key": "12c5e147-d008-4694-8032-2005583a26ab",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "ee7baa66-4467-4e05-b6b7-57c13a199bc2",
+      "position": 13,
+      "properties": {
+        "progression_name": "Practice: The Food Truck",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice level can be used as a formative assessment to gauge understanding of the key terms and writing no-argument constructors in a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ee7baa66-4467-4e05-b6b7-57c13a199bc2",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "d4bacc6b-5814-4f03-90b3-8089438233ff",
+      "position": 14,
+      "properties": {
+        "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d4bacc6b-5814-4f03-90b3-8089438233ff",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "3b598d00-dc31-4e6d-9487-61548e070679",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3b598d00-dc31-4e6d-9487-61548e070679",
+        "lesson_activity.key": "7bdd6161-cef7-4441-af78-7c2f592432b7"
+      }
+    },
+    {
+      "key": "f922be65-ea7f-4345-a6b5-d2770fd17a0b",
+      "position": 1,
+      "properties": {
+        "description": "We now know how to create several key components of a class – instance variables, constructors, and methods. With these, we are able to define what attributes and behaviors an object should have and provide instructions for how an object should be instantiated.",
+        "name": "Question Stems",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f922be65-ea7f-4345-a6b5-d2770fd17a0b",
+        "lesson_activity.key": "9302894c-2109-4cfc-937e-61e83a135993"
+      }
+    },
+    {
+      "key": "2c702ff9-f43f-43b1-9bae-f86812405fa1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c702ff9-f43f-43b1-9bae-f86812405fa1",
+        "lesson_activity.key": "9302894c-2109-4cfc-937e-61e83a135993"
+      }
+    },
+    {
+      "key": "e04c777a-84f9-4824-bedb-41e05044a03c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "e04c777a-84f9-4824-bedb-41e05044a03c",
+        "lesson_activity.key": "9302894c-2109-4cfc-937e-61e83a135993"
+      }
+    },
+    {
+      "key": "29c36c17-f403-4547-bfba-14ca5e687957",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "29c36c17-f403-4547-bfba-14ca5e687957",
+        "lesson_activity.key": "9302894c-2109-4cfc-937e-61e83a135993"
+      }
+    },
+    {
+      "key": "c62847b8-b8f8-4f2a-8d18-c35f3556e978",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c62847b8-b8f8-4f2a-8d18-c35f3556e978",
+        "lesson_activity.key": "9302894c-2109-4cfc-937e-61e83a135993"
+      }
+    },
+    {
+      "key": "6301b0e3-0242-4c8f-9f68-39dc3f13d6f1",
+      "position": 1,
+      "properties": {
+        "description": "When we created a `Painter` object, it always started at the same location with no paint and facing the same direction. The constructor we used set default values for its attributes.",
+        "name": "Revisiting the Painter Class",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6301b0e3-0242-4c8f-9f68-39dc3f13d6f1",
+        "lesson_activity.key": "a7be3b9c-09a9-45a5-a270-67e63439e48d"
+      }
+    },
+    {
+      "key": "6a1ec1d4-489c-45fd-b497-fad4ccde3a17",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did you wish you could do when creating a `Painter` object?*\n\n**Discussion Goal:** Students recall that the `Painter` class constructor created a `Painter` object at the top-left corner of The Neighborhood with no paint facing east. Students suggest creating a `Painter` object at a specific location with a starting amount of paint and facing a specified direction.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6a1ec1d4-489c-45fd-b497-fad4ccde3a17",
+        "lesson_activity.key": "a7be3b9c-09a9-45a5-a270-67e63439e48d"
+      }
+    },
+    {
+      "key": "b2948bc9-2c91-4480-b048-68ec9aa0343b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2948bc9-2c91-4480-b048-68ec9aa0343b",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "ee0ee9d7-63e2-4e00-b980-c5054173cbb6",
+      "position": 2,
+      "properties": {
+        "description": "We now know how to declare instance variables in a class to represent the attributes of an object and how to write a no-argument constructor to assign default values to these instance variables. Sometimes, though, we want to provide specific values for the instance variables when we instantiate an object. Today, we're going to find out how we can do this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ee0ee9d7-63e2-4e00-b980-c5054173cbb6",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "df954e8c-6781-4135-af12-c13a2cb3817c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Parameterized Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "df954e8c-6781-4135-af12-c13a2cb3817c",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "423b9c1a-a9f6-4969-8046-01c340d60188",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the class has a constructor that has variables inside the parentheses and that these variables are used to assign values to the instance variables. They also notice that the object that is instantiated with specific values now has those values assigned to its instance variables, while the object that is instantiated with the no-argument constructor has the default values assigned to its instance variables. Students may wonder about the syntax and functionality of the additional constructor, whether there is a limit to how many constructors they can have in a class, or when they might use one constructor over another."
+      },
+      "seeding_key": {
+        "activity_section.key": "423b9c1a-a9f6-4969-8046-01c340d60188",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "a05ba491-bc3d-4367-87a5-8f1f529f3687",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***state*** and explain that when a constructor is called, it sets the state of the object by assigning the values to the instance variables.",
+        "duration": "15",
+        "name": "Parameterized Constructors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to recall the state of a `Painter` object when it is instantiated. Ask students about the instance variables of the `Painter` class and what values were assigned to the instance variables when they instantiated a `Painter` object."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a05ba491-bc3d-4367-87a5-8f1f529f3687",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations of a no-argument constructor?*\n\n**Discussion Goal:** Students suggest that a no-argument constructor limits the objects they can create because all objects start with the default values for its instance variables. Students may share examples, such as instantiating a `Painter` object with the no-argument constructor and then needing to navigate to a starting position to paint a mural.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: Parameterized Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "39311488-6b21-4f37-94c9-874b7a4d7234",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "39311488-6b21-4f37-94c9-874b7a4d7234",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "7057676f-c612-4f3b-9917-3bceb25386c6",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***parameterized constructor*** and introduce the parameterized constructor in the `Painter` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***overloading***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.",
+        "duration": "15",
+        "name": "Writing and Using Constructors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7057676f-c612-4f3b-9917-3bceb25386c6",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "3501eaaf-84e1-495f-b6dd-221c4ef800f8",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between a no-argument constructor and a parameterized constructor?*\n\n**Discussion Goal:** Students note that both constructors set the starting values for the instance variables when an object is instantiated. They note that these are different because the no-argument constructor sets default values for the instance variables, while the parameterized constructor sets user-specified values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3501eaaf-84e1-495f-b6dd-221c4ef800f8",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "f132d07c-d5b8-4ee8-9ea8-ed98fcc3f881",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When do you think it's best to use a no-argument constructor? What about a parameterized constructor?*\n\n**Discussion Goal:** Students suggest using a no-argument constructor when a default object is needed because the user has not given specific values. They note that a parameterized constructor is best when the user needs an object to be instantiated with specific starting values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students recall problems from the previous unit that could have been easier if they started at a specific location or with a certain amount of paint. Ask students to consider their Asphalt Art Project and how starting with a certain amount of paint or at a specific location might have impacted their project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f132d07c-d5b8-4ee8-9ea8-ed98fcc3f881",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680",
+      "position": 11,
+      "properties": {
+        "description": "**Do This:** Explain the components of a parameterized constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***formal parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***local variable***\n\n**Do This:** Explain how parameterized constructors are called:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***actual parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate ***call by value***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to practice writing a parameterized constructor in a class. On Level 7, students practice writing multiple parameterized constructors in a class.",
+        "progression_name": "Practice: Parameterized Constructors"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680",
+        "lesson_activity.key": "99bc1332-0a99-4cb6-bd30-5536c0e14556"
+      }
+    },
+    {
+      "key": "023197a8-d1d6-4f1a-8020-f4861af5b580",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as parameterized constructor, formal parameter, and actual parameter. Students also recall that formal parameters are local variables and explain how the values of the actual parameters are copied to the formal parameters. They should realize that parameterized constructors can provide multiple options for instantiating objects based on the needs of the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "name": "Three W's",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 2 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "023197a8-d1d6-4f1a-8020-f4861af5b580",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
+      }
+    },
+    {
+      "key": "90296daa-141b-4c61-a9c1-1ad3ffec2383",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "90296daa-141b-4c61-a9c1-1ad3ffec2383",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
+      }
+    },
+    {
+      "key": "c34cb85a-6800-4bb3-ab91-33ac7cebc35c",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "c34cb85a-6800-4bb3-ab91-33ac7cebc35c",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
+      }
+    },
+    {
+      "key": "d4c85814-6148-43a0-a77d-9bd2cfe98558",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4c85814-6148-43a0-a77d-9bd2cfe98558",
+        "lesson_activity.key": "14b15638-ef85-46ba-98fc-88732a678f56"
       }
     },
     {
@@ -4540,6 +5704,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "CSA-ProgramDesign-L1_pilot_alt-2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-ProgramDesign-L1_pilot_alt-2025"
+        ],
+        "lesson.key": "Program Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "3434c0d7-6a4f-42b6-aa24-ee26df04d4e3"
+      },
+      "level_keys": [
+        "CSA-ProgramDesign-L1_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "CSA U7L9-L1_alt-2025"
         ],
         "progression": "Check for Understanding"
@@ -4559,7 +5748,82 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_alt-2025"
+        ],
+        "progression": "Investigating AI-Generated Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_alt-2025"
+        ],
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "0621a9b7-357a-4dcf-b6de-062ec0615941"
+      },
+      "level_keys": [
+        "CSA-AIGeneratedCode(Alternate)-L1_alt-2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_alt-2025"
+        ],
+        "progression": "Investigating AI-Generated Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_alt-2025"
+        ],
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "0621a9b7-357a-4dcf-b6de-062ec0615941"
+      },
+      "level_keys": [
+        "CSA-AIGeneratedCode(Alternate)-L2_alt-2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_alt-2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_alt-2025"
+        ],
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "2b3ad65c-6d42-450e-b9f8-fed1958e3655"
+      },
+      "level_keys": [
+        "CSA-AIGeneratedCode(Alternate)-L3_alt-2025"
+      ]
+    },
+    {
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4584,7 +5848,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4609,7 +5873,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4634,7 +5898,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4659,7 +5923,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4684,7 +5948,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4709,7 +5973,408 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L1_pilot_alt-2025"
+        ],
+        "progression": "Predict and Run: No-Argument Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L1_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "4974d7f5-28f0-4de9-8483-fecc722a68f7"
+      },
+      "level_keys": [
+        "CSA U2L2-L1_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_pilot_alt-2025"
+        ],
+        "progression": "Investigate and Modify: Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L2_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d"
+      },
+      "level_keys": [
+        "CSA U2L2-L2_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-2_pilot_alt-2025"
+        ],
+        "progression": "Investigate and Modify: Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L2-2_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d"
+      },
+      "level_keys": [
+        "CSA U2L2-L2-2_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-3_pilot_alt-2025"
+        ],
+        "progression": "Investigate and Modify: Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L2-3_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d"
+      },
+      "level_keys": [
+        "CSA U2L2-L2-3_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_pilot_alt-2025"
+        ],
+        "progression": "Skill Building: Writing a Constructor"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L3_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "2df51fdd-b70c-4113-83a0-28db0e22b71b"
+      },
+      "level_keys": [
+        "CSA U2L2-L3_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L4_pilot_alt-2025"
+        ],
+        "progression": "Practice: Writing a Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L4_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "12c5e147-d008-4694-8032-2005583a26ab"
+      },
+      "level_keys": [
+        "CSA U2L2-L4_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L5_pilot_alt-2025"
+        ],
+        "progression": "Practice: Writing a Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L5_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "12c5e147-d008-4694-8032-2005583a26ab"
+      },
+      "level_keys": [
+        "CSA U2L2-L5_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_pilot_alt-2025"
+        ],
+        "progression": "Practice: The Food Truck"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L6_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "ee7baa66-4467-4e05-b6b7-57c13a199bc2"
+      },
+      "level_keys": [
+        "CSA U2L2-L6_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_pilot_alt-2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L7_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c62847b8-b8f8-4f2a-8d18-c35f3556e978"
+      },
+      "level_keys": [
+        "CSA U2L2-L7_pilot_alt-2025"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L1_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "df954e8c-6781-4135-af12-c13a2cb3817c"
+      },
+      "level_keys": [
+        "CSA U2L3-L1_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      },
+      "level_keys": [
+        "CSA U2L3-L2_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2-2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      },
+      "level_keys": [
+        "CSA U2L3-L2-2_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2-3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      },
+      "level_keys": [
+        "CSA U2L3-L2-3_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3 CFU_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      },
+      "level_keys": [
+        "CSA U2L3 CFU_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      },
+      "level_keys": [
+        "CSA U2L3-L3_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L4_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      },
+      "level_keys": [
+        "CSA U2L3-L4_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L10_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "d4c85814-6148-43a0-a77d-9bd2cfe98558"
+      },
+      "level_keys": [
+        "CSA U2L3-L10_pilot_oo2025_alt-2025"
+      ]
+    },
+    {
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4734,7 +6399,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4759,7 +6424,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4784,7 +6449,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4809,7 +6474,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4834,7 +6499,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4859,7 +6524,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -4884,7 +6549,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4909,7 +6574,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4934,7 +6599,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4959,7 +6624,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4984,7 +6649,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5009,7 +6674,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5034,7 +6699,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5059,7 +6724,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5084,7 +6749,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5109,7 +6774,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5134,7 +6799,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5159,7 +6824,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5184,7 +6849,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5209,7 +6874,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5234,7 +6899,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5259,7 +6924,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 68,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5284,7 +6949,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5309,7 +6974,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5334,7 +6999,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5359,7 +7024,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5384,7 +7049,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5409,7 +7074,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5434,7 +7099,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5459,7 +7124,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5484,7 +7149,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5509,7 +7174,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5534,7 +7199,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5559,7 +7224,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 80,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5584,7 +7249,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 81,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5609,7 +7274,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 82,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5634,7 +7299,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 83,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5659,7 +7324,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 84,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5684,7 +7349,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5709,7 +7374,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5734,7 +7399,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5759,7 +7424,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5784,7 +7449,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5809,7 +7474,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5834,7 +7499,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5859,7 +7524,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5884,7 +7549,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6116,6 +7781,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA-ProgramDesign-L1_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA-ProgramDesign-L1_pilot_alt-2025"
+        ],
+        "lesson.key": "Program Design",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "3434c0d7-6a4f-42b6-aa24-ee26df04d4e3"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U7L9-L1_alt-2025",
         "script_level.level_keys": [
           "CSA U7L9-L1_alt-2025"
@@ -6124,6 +7801,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025",
         "activity_section.key": "ec804dea-2579-416c-8884-c25020787b1c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-AIGeneratedCode(Alternate)-L1_alt-2025",
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_alt-2025"
+        ],
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "0621a9b7-357a-4dcf-b6de-062ec0615941"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-AIGeneratedCode(Alternate)-L2_alt-2025",
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_alt-2025"
+        ],
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "0621a9b7-357a-4dcf-b6de-062ec0615941"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-AIGeneratedCode(Alternate)-L3_alt-2025",
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_alt-2025"
+        ],
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "2b3ad65c-6d42-450e-b9f8-fed1958e3655"
       }
     },
     {
@@ -6196,6 +7909,210 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025",
         "activity_section.key": "6ad42ed4-940a-43a9-8193-fa180d953391"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L1_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L1_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "4974d7f5-28f0-4de9-8483-fecc722a68f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L2_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L2_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L2-2_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L2-2_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L2-3_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L2-3_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "45a87737-bb95-4dfa-baa8-4e6a020bf91d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L3_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L3_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "2df51fdd-b70c-4113-83a0-28db0e22b71b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L4_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L4_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "12c5e147-d008-4694-8032-2005583a26ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L5_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L5_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "12c5e147-d008-4694-8032-2005583a26ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L6_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L6_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "ee7baa66-4467-4e05-b6b7-57c13a199bc2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L7_pilot_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L2-L7_pilot_alt-2025"
+        ],
+        "lesson.key": "No-Argument Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c62847b8-b8f8-4f2a-8d18-c35f3556e978"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L1_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L1_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "df954e8c-6781-4135-af12-c13a2cb3817c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2-2_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L2-2_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2-3_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L2-3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "1b559d0d-e835-4fe3-8e36-889b01deb2ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3 CFU_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3 CFU_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L3_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L3_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L4_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L4_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "c1c0ef13-b4f7-4f51-97c5-dab0d5c99680"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L10_pilot_oo2025_alt-2025",
+        "script_level.level_keys": [
+          "CSA U2L3-L10_pilot_oo2025_alt-2025"
+        ],
+        "lesson.key": "Parameterized Constructors",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "d4c85814-6148-43a0-a77d-9bd2cfe98558"
       }
     },
     {
@@ -6777,6 +8694,18 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] AI-Generated Code Guided Notes",
+      "url": "https://docs.google.com/document/d/1wSDmcrNCUr7-qbW5t6f1n6go3XGHrHk-Xrsn9V7tumc/edit?usp=drive_link",
+      "key": "_exemplar_ai-generated_code_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_ai-generated_code_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Guided Notes",
       "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
       "key": "_exemplar_guided_notes",
@@ -6786,6 +8715,54 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] No-Argument Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1M-FTxIut0sp1Mkq7HZPQWp1VXl-h4BafYhZR2UROlcI/edit?usp=drive_link",
+      "key": "_exemplar_no-argument_constructors_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_no-argument_constructors_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Parameterized Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/18-UR0nbpgcC-vtwRAZv2RYrg1Q_h69ud-RIvRhLBrsk/edit?usp=drive_link",
+      "key": "_exemplar_parameterized_constructors_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_parameterized_constructors_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Planning Programs",
+      "url": "https://docs.google.com/document/d/1MZDU4cUUeLgCCcTOSeBrpJ-q6D2fRSdg-1X5O6kLZjQ/edit?usp=drive_link",
+      "key": "_exemplar_planning_programs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_planning_programs"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Program Design Guided Notes",
+      "url": "https://docs.google.com/document/d/1WBBzL3SI3OQJV9eap_cT2SYSjNkq_aLIVEPE9TIisDY/edit?usp=sharing",
+      "key": "_exemplar_program_design_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_program_design_guided_notes"
       }
     },
     {
@@ -6957,6 +8934,18 @@
       }
     },
     {
+      "name": "[KEY] No-Argument Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1p38v4gNRGC59tpf9NIFkhWsd_LXSe_YRR3iZSG86978/edit?usp=drive_link",
+      "key": "_key_no-argument_constructors_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_no-argument_constructors_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] Open Source Bugs (Version A)",
       "url": "https://docs.google.com/document/d/167YRD2GJEjpzg-MQ1ilSdDs2ZZosNvQdKeX8JEdl-vU/edit?usp=sharing",
       "key": "_key_open_source_bugs_version_a_",
@@ -6990,6 +8979,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_open_source_bugs_version_c_"
+      }
+    },
+    {
+      "name": "[KEY] Parameterized Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1RqBDxQ-pL2hP_loVVAyaJ9dRT5j7woKiPAy1UXQJXyc/edit?usp=drive_link",
+      "key": "_key_parameterized_constructors_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_parameterized_constructors_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] Program Design Extra Practice",
+      "url": "https://docs.google.com/document/d/1no84O0SEdUGexfRK87unJZPqR9k06GgkaLpcQ23SfQo/edit?usp=sharing",
+      "key": "_key_program_design_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_program_design_extra_practice"
       }
     },
     {
@@ -7149,6 +9162,31 @@
       }
     },
     {
+      "name": "AI-Generated Code",
+      "url": "https://docs.google.com/presentation/d/11XaM8cXYyzp4CBn6PNbVnGYBMuT1fNBqHG5gLWqytds/edit?usp=drive_link",
+      "key": "ai-generated_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_code"
+      }
+    },
+    {
+      "name": "AI-Generated Code Guided Notes",
+      "url": "https://docs.google.com/document/d/1xj_2Y_s-Qn62mt4i7L4mWrGjXDZ2RYiWQidNX4qxWao/edit?usp=drive_link",
+      "key": "ai-generated_code_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_code_guided_notes"
+      }
+    },
+    {
       "name": "AI Carousel Stations",
       "url": "https://docs.google.com/document/d/1QK4Y2bco4wEqBpHbCKlKGyPf-Vx_D6vMJpSLIgftj_I/edit?usp=sharing",
       "key": "ai_carousel_stations",
@@ -7158,6 +9196,39 @@
       },
       "seeding_key": {
         "resource.key": "ai_carousel_stations"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa3-alt-2025/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa3-alt-2025/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa3-alt-2025/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
       }
     },
     {
@@ -7171,6 +9242,18 @@
       },
       "seeding_key": {
         "resource.key": "anticipation_guide"
+      }
+    },
+    {
+      "name": "Are We Automating Racism",
+      "url": "https://youtu.be/Ok5sKLXqynQ?feature=shared&t=255",
+      "key": "are_we_automating_racism",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "are_we_automating_racism"
       }
     },
     {
@@ -7208,6 +9291,18 @@
       },
       "seeding_key": {
         "resource.key": "calling_class_methods_extra_practice"
+      }
+    },
+    {
+      "name": "Constructors",
+      "url": "https://youtu.be/1vXP8R2i-wg",
+      "key": "constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "constructors"
       }
     },
     {
@@ -7261,6 +9356,29 @@
       }
     },
     {
+      "name": "Designing with UML",
+      "url": "https://docs.google.com/document/d/1qsGd2JgJUdxE2BNSbCfTnL7vAzrjb71ygQB5vhKrXuE/edit?usp=sharing",
+      "key": "designing_with_uml",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "designing_with_uml"
+      }
+    },
+    {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls_2"
+      }
+    },
+    {
       "name": "Guide to Programming Levels in CSA",
       "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
       "key": "guide_to_programming_levels_in_csa",
@@ -7270,6 +9388,16 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa_3",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_3"
       }
     },
     {
@@ -7283,6 +9411,18 @@
       },
       "seeding_key": {
         "resource.key": "guided_notes"
+      }
+    },
+    {
+      "name": "How Chatbots and Large Language Models Work",
+      "url": "https://youtu.be/X-AWdfSFCHQ?feature=shared",
+      "key": "how_chatbots_and_large_language_models_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_chatbots_and_large_language_models_work"
       }
     },
     {
@@ -7346,6 +9486,44 @@
       }
     },
     {
+      "name": "No-Argument Constructors",
+      "url": "https://docs.google.com/presentation/d/1lD7xSqQ8_OkIpn-iwYuaqAUIwh6kPoti-Kx76uX1tJ8/edit?usp=sharing",
+      "key": "no-argument_constructors",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "no-argument_constructors"
+      }
+    },
+    {
+      "name": "No-Argument Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1BtlTqQj-tTlPEbwBbSDzy8COBg5hxAd3ZBuiQRf88Do/edit?usp=sharing",
+      "key": "no-argument_constructors_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "no-argument_constructors_extra_practice"
+      }
+    },
+    {
+      "name": "No-Argument Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1wEN6-WgxtTgR9T5dTL3o7nZ5utAnVF3BgEZE4X_70Bk/edit?usp=drive_link",
+      "key": "no-argument_constructors_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "no-argument_constructors_guided_notes"
+      }
+    },
+    {
       "name": "Object References as Parameters",
       "url": "https://docs.google.com/presentation/d/1yLQ9f0z5aQkHauNgYu-6eiStTUCOa_M6VuD6aXHbVgs/edit?usp=share_link",
       "key": "object_references_as_parameters",
@@ -7397,6 +9575,68 @@
       }
     },
     {
+      "name": "Overloaded Constructors",
+      "url": "https://youtu.be/rYTRK8R9ZM8",
+      "key": "overloaded_constructors",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "name": "Parameterized Constructors",
+      "url": "https://docs.google.com/presentation/d/1TQup7LM0JuMMjGxSo7n8w_qpR7L-VojsIGv-yXjzt-o/edit?usp=sharing",
+      "key": "parameterized_constructors_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors_1"
+      }
+    },
+    {
+      "name": "Parameterized Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1r2aVVfshCnwtTHTWUgV9Kr0rqdy3YgCs4vnWPHZYsNw/edit?usp=drive_link",
+      "key": "parameterized_constructors_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors_extra_practice"
+      }
+    },
+    {
+      "name": "Parameterized Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1N-oYh30dn6-FU51O2vqGkYKd2j2tTRYDSklm0MtJx-M/edit?usp=drive_link",
+      "key": "parameterized_constructors_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors_guided_notes"
+      }
+    },
+    {
+      "name": "Planning Programs",
+      "url": "https://docs.google.com/document/d/1i6j879bZjgxPe9-a20RPOlq_GXglb6UqaGH2rW4iBdg/edit?usp=drive_link",
+      "key": "planning_programs",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "planning_programs"
+      }
+    },
+    {
       "name": "Privacy and Security",
       "url": "https://docs.google.com/presentation/d/1taykJ95cb7Uu6cpoAh_t_5yUhHg7ELu2KLJU1CdIejA/edit?usp=share_link",
       "key": "privacy_and_security",
@@ -7430,6 +9670,44 @@
       },
       "seeding_key": {
         "resource.key": "private_methods_1"
+      }
+    },
+    {
+      "name": "Program Design",
+      "url": "https://docs.google.com/presentation/d/1s0MaMaaeI2u-9ZuglcSpXLbGQQDPCBA3-25ksu1JRDY/edit?usp=sharing",
+      "key": "program_design",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "program_design"
+      }
+    },
+    {
+      "name": "Program Design Extra Practice",
+      "url": "https://docs.google.com/document/d/1sk8EARaEMczFgs4Tq19-pIlEd7L-itmMf2z9zJgBBV8/edit?usp=sharing",
+      "key": "program_design_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "program_design_extra_practice"
+      }
+    },
+    {
+      "name": "Program Design Guided Notes",
+      "url": "https://docs.google.com/document/d/15fmUWT_taAS_mO2w9rwzviZEH1wmIySzGpgqCSN-mmk/edit?usp=drive_link",
+      "key": "program_design_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "program_design_guided_notes"
       }
     },
     {
@@ -7869,6 +10147,48 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "resource.key": "_exemplar_ai-generated_code_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "resource.key": "_exemplar_planning_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "resource.key": "ai-generated_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "resource.key": "ai-generated_code_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "resource.key": "are_we_automating_racism"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "resource.key": "how_chatbots_and_large_language_models_work"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "resource.key": "planning_programs"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Accessor Methods",
         "resource.key": "_exemplar_u2l7_guided_notes_1"
       }
@@ -8145,6 +10465,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "resource.key": "_exemplar_no-argument_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "resource.key": "_key_no-argument_constructors_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "resource.key": "constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "resource.key": "no-argument_constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "resource.key": "no-argument_constructors_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "resource.key": "no-argument_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Object References as Parameters",
         "resource.key": "_exemplar_u7l2_guided_notes"
       }
@@ -8183,6 +10545,48 @@
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
         "resource.key": "u7l2_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "_exemplar_parameterized_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "_key_parameterized_constructors_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "parameterized_constructors_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "parameterized_constructors_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "resource.key": "parameterized_constructors_guided_notes"
       }
     },
     {
@@ -8273,6 +10677,42 @@
       "seeding_key": {
         "lesson.key": "Private Methods",
         "resource.key": "u7l4_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "resource.key": "_exemplar_program_design_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "resource.key": "_key_program_design_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "resource.key": "designing_with_uml"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "resource.key": "program_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "resource.key": "program_design_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "resource.key": "program_design_guided_notes"
       }
     },
     {
@@ -8445,7 +10885,36 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls_2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa_3",
+        "script.name": "csa3-alt-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -8472,6 +10941,16 @@
       }
     },
     {
+      "key": "actual_parameter",
+      "word": "actual parameter",
+      "definition": "the value to assign to the formal parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
       "key": "application_program_interface_api_",
       "word": "application program interface (API)",
       "definition": "a library of prewritten classes",
@@ -8479,6 +10958,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "application_program_interface_api_"
+      }
+    },
+    {
+      "key": "artificial_intelligence_ai_",
+      "word": "Artificial Intelligence (AI)",
+      "definition": "a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_ai_"
       }
     },
     {
@@ -8492,6 +10981,26 @@
       }
     },
     {
+      "key": "call_by_value",
+      "word": "call by value",
+      "definition": "copying the value of the actual parameter to the constructor's formal parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "key": "constructor_signature",
+      "word": "constructor signature",
+      "definition": "the first line of the constructor which includes the `public` keyword, the constructor name, and any parameters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
       "key": "decomposition",
       "word": "decomposition",
       "definition": "the process of breaking a problem down into smaller parts to write methods for each part",
@@ -8499,6 +11008,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "decomposition"
+      }
+    },
+    {
+      "key": "default_value",
+      "word": "default value",
+      "definition": "a predefined value that is used by a program when the user does not provide a value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "default_value"
       }
     },
     {
@@ -8542,6 +11061,16 @@
       }
     },
     {
+      "key": "formal_parameter",
+      "word": "formal parameter",
+      "definition": "the value to be passed to a constructor or method",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
       "key": "instance_method",
       "word": "instance method",
       "definition": "a method that requires an object of the class to be created before it can be called",
@@ -8572,6 +11101,16 @@
       }
     },
     {
+      "key": "large_language_model_llm_",
+      "word": "Large Language Model (LLM)",
+      "definition": "a general purpose form of AI that is trained on a very, very large body of knowledge.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
       "key": "library",
       "word": "library",
       "definition": "a collection of methods or reusable components of code",
@@ -8582,6 +11121,16 @@
       }
     },
     {
+      "key": "local_variable",
+      "word": "local variable",
+      "definition": "a variable declared and accessible within a specific block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "local_variable"
+      }
+    },
+    {
       "key": "mutator_method",
       "word": "mutator method",
       "definition": "changes the value assigned to an instance variable",
@@ -8589,6 +11138,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "mutator_method"
+      }
+    },
+    {
+      "key": "no_argument_constructor",
+      "word": "no-argument constructor",
+      "definition": "a constructor with no parameters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "key": "overloading",
+      "word": "overloading",
+      "definition": "defining two or more constructors or methods with the same name but different signatures",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "key": "parameterized_constructor",
+      "word": "parameterized constructor",
+      "definition": "a constructor that has a specific number of arguments to be passed to assign values to an object's instance variables",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameterized_constructor"
       }
     },
     {
@@ -8662,6 +11241,16 @@
       }
     },
     {
+      "key": "state",
+      "word": "state",
+      "definition": "the attributes of an object that are represented by its instance variables",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "state"
+      }
+    },
+    {
       "key": "static_method",
       "word": "static method",
       "definition": "a method that can be called without creating an object of the class",
@@ -8692,6 +11281,16 @@
       }
     },
     {
+      "key": "uml_diagram",
+      "word": "UML Diagram",
+      "definition": "A standard way of visualizing the design of a program that displays class names, attributes, behaviors and relationships to other classes.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "uml_diagram"
+      }
+    },
+    {
       "key": "user_story",
       "word": "user story",
       "definition": "an informal explanation of a program feature written from the perspective of the user",
@@ -8703,6 +11302,18 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
@@ -8807,6 +11418,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "vocabulary.key": "default_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Object References as Parameters",
         "vocabulary.key": "end_user"
       }
@@ -8821,6 +11450,54 @@
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
         "vocabulary.key": "user_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "local_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "parameterized_constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "vocabulary.key": "state"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "vocabulary.key": "uml_diagram"
       }
     },
     {
@@ -8889,6 +11566,16 @@
       }
     },
     {
+      "key": "165072f2-1c17-43e1-93eb-fde02f902c56",
+      "properties": {
+        "description": "Write a no-argument constructor to assign default values to the instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "objective.key": "165072f2-1c17-43e1-93eb-fde02f902c56"
+      }
+    },
+    {
       "key": "220635a4-e880-4568-8120-69e7a01eab58",
       "properties": {
         "description": "Write pseudocode to plan an algorithm"
@@ -8896,6 +11583,16 @@
       "seeding_key": {
         "lesson.key": "Decomposition and Design",
         "objective.key": "220635a4-e880-4568-8120-69e7a01eab58"
+      }
+    },
+    {
+      "key": "25787950-71aa-4785-98cc-f63d20819dea",
+      "properties": {
+        "description": "Explain how the use of artificial intelligence (AI) can decrease the time it takes to develop code"
+      },
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "objective.key": "25787950-71aa-4785-98cc-f63d20819dea"
       }
     },
     {
@@ -8916,6 +11613,16 @@
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
         "objective.key": "3135e83b-5ddc-42a9-a2d8-9b4091c7be13"
+      }
+    },
+    {
+      "key": "401bffc2-c38b-4305-a2a4-ec8e24613745",
+      "properties": {
+        "description": "Identify the challenges of using AI to develop code "
+      },
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "objective.key": "401bffc2-c38b-4305-a2a4-ec8e24613745"
       }
     },
     {
@@ -8949,6 +11656,16 @@
       }
     },
     {
+      "key": "5f383e43-ce87-4a56-bc3e-5569ca85e9d4",
+      "properties": {
+        "description": "Recognize the risk of bias in programs developed with AI"
+      },
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "objective.key": "5f383e43-ce87-4a56-bc3e-5569ca85e9d4"
+      }
+    },
+    {
       "key": "5fa0ad21-cf8a-4c70-b647-266b3f244a73",
       "properties": {
         "description": "Write an accessor method to return the value stored in an instance variable"
@@ -8966,6 +11683,16 @@
       "seeding_key": {
         "lesson.key": "Accessor Methods",
         "objective.key": "72ac1e30-05e1-473a-ba3e-8b8dc269c3d0"
+      }
+    },
+    {
+      "key": "7d72217b-02f6-4258-b366-66884c7a03b3",
+      "properties": {
+        "description": "Derive a plain text description of classes from a problem description."
+      },
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "objective.key": "7d72217b-02f6-4258-b366-66884c7a03b3"
       }
     },
     {
@@ -8996,6 +11723,16 @@
       "seeding_key": {
         "lesson.key": "Attributes",
         "objective.key": "8997baa9-477b-4960-a6c5-b77a4706ed0c"
+      }
+    },
+    {
+      "key": "92be60d5-008f-4b10-b542-1a451aa5ebe9",
+      "properties": {
+        "description": "Create a well-designed program plan in order to increase the effectiveness of using AI to develop a program"
+      },
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "objective.key": "92be60d5-008f-4b10-b542-1a451aa5ebe9"
       }
     },
     {
@@ -9046,6 +11783,16 @@
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
         "objective.key": "bb6324dc-1ec8-4870-99f9-feb79a810939"
+      }
+    },
+    {
+      "key": "c2201c2c-3a8e-434e-83e6-9442142f23d9",
+      "properties": {
+        "description": "Identify the correct constructor being called based on the constructor signature"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "objective.key": "c2201c2c-3a8e-434e-83e6-9442142f23d9"
       }
     },
     {
@@ -9119,6 +11866,36 @@
       }
     },
     {
+      "key": "f181a277-f49e-4b0f-b833-53ec19cb9555",
+      "properties": {
+        "description": "Write a class with instance variables and a constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "objective.key": "f181a277-f49e-4b0f-b833-53ec19cb9555"
+      }
+    },
+    {
+      "key": "f691bec8-f2c1-4347-8e09-7115ac8be9d1",
+      "properties": {
+        "description": "Create a UML diagram from a problem description."
+      },
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "objective.key": "f691bec8-f2c1-4347-8e09-7115ac8be9d1"
+      }
+    },
+    {
+      "key": "f7d9bf9c-6a8e-49be-adc3-4a389438d829",
+      "properties": {
+        "description": "Write a parameterized constructor to specify formal parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "objective.key": "f7d9bf9c-6a8e-49be-adc3-4a389438d829"
+      }
+    },
+    {
       "key": "f827f22c-9ef1-4b47-9229-5a322cf39f03",
       "properties": {
         "description": "Refactor code to create class hierarchies with shared attributes"
@@ -9142,51 +11919,58 @@
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.G.1"
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI-Generated Code (non-AI Tutor)",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.B.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.5"
       }
     },
     {
@@ -9206,36 +11990,36 @@
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.5"
       }
     },
     {
@@ -9283,8 +12067,8 @@
     {
       "seeding_key": {
         "lesson.key": "Impacts of Programs",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.2"
       }
     },
     {
@@ -9297,78 +12081,57 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.7"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.6"
       }
     },
     {
@@ -9387,51 +12150,65 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.4"
+        "lesson.key": "No-Argument Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "No-Argument Constructors",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.8"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.6.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Object References as Parameters",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.H.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.6.A.3"
       }
     },
     {
@@ -9450,23 +12227,72 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Privacy and Security",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.B.1"
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.8.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameterized Constructors",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Privacy and Security",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Privacy and Security",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.1.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Private Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.6"
       }
     },
     {
@@ -9474,6 +12300,20 @@
         "lesson.key": "Private Methods",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.7"
       }
     },
     {
@@ -9549,15 +12389,29 @@
     {
       "seeding_key": {
         "lesson.key": "System Reliability",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "IOC-1.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.2.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The this Keyword",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.H.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.8.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The this Keyword",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.9.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The this Keyword",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.9.A.2"
       }
     },
     {

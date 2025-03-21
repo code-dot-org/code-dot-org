@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "introduction-to-programming-in-music-lab-for-elementary",
-    "serialized_at": "2025-03-18 20:43:26 UTC",
+    "serialized_at": "2025-03-19 19:42:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -43,7 +43,7 @@
   "lessons": [
     {
       "key": "Songwriter's Toolbox",
-      "name": "Songwriter's Toolbox",
+      "name": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -60,7 +60,7 @@
     },
     {
       "key": "Producer Power",
-      "name": "Producer Power",
+      "name": "✨FOR LAUNCH!!!!✨Producer Power",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -77,7 +77,7 @@
     },
     {
       "key": "Sound Designer's Studio",
-      "name": "Sound Designer's Studio",
+      "name": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -379,7 +379,6 @@
       "key": "b9ea5ada-cb79-46ff-92cf-2e05ee11dd97",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a2ca631a5aa0f2eca0b5bbd322d8d03a-Slide46.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How can we make our programs more interactive and expressive?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Get students thinking about how they can make their programs more fun and creative by adding ways for people to interact with them. Help them imagine how cool it would be if their music changed when someone pressed a key or clicked a button, setting the stage for adding interactivity to their projects.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d98ea715250d811c31e1602823d2f3dc-Slide47.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Welcome to our final lesson! Today, you get to experiment with using music to set the scene of a game or a movie. We will be making our music programs more interactive by adding events.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6d656718bd75d075207f05cc5a25a651-Slide48.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Set students up to play Simon Says [Sounds Edition] using the instructions and example commands on the slide. Rotate the leader, Simon, for as long as time allows. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This game works similarly to events in computer programming. We were always waiting for the “trigger (Simon Says)” to signify we should do an action. If the trigger wasn’t there, we didn’t do anything.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d20320811f4b35188f6244d469ab011a-Slide49.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how events can be used to make code more interactive and respond to user inputs. They will be practicing customizing and creating events in code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "b9ea5ada-cb79-46ff-92cf-2e05ee11dd97",
@@ -423,7 +422,6 @@
       "key": "f356bf02-6e33-442f-9ae6-76bd0e813913",
       "position": 4,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2e07bf6590faf19fe7b3605fb8515827-Slide51.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) What does a music producer do?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will understand that a producer is someone who puts all of the pieces of the music together. They move and work on chunks of music to make it sound great.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/adbacac7f8e541add81e9b74bfdd914d-Slide52.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Run level 2 together as a class. Guide students to notice the green event triggers. They stand alone and do not connecto the main program. The sounds connected only play when the button (on the keyboard or on screen left of Run) is pressed. Make a connection to the activity in the warm up and encourage students to consider the use of a event to make the program interactive and fun.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 3-10 independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e2cc3caed13f589fa1017cb1b77c9bf1-Slide53.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Read the instructions for each level and try to complete the code. Press the Run button to try it out. If something is not quite right you will get a hint under the instructions. When you’ve successfully completed the challenge, a new message and a Continue button will appear. Click Continue to move to the next level and move at your speed. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage students to read the instructions and hints on each level as you circulate. Ask guiding questions to support students if they get stuck.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "f356bf02-6e33-442f-9ae6-76bd0e813913",
@@ -434,7 +432,6 @@
       "key": "2cd7b449-5201-4406-ba43-a96580ce0edd",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7d8f5de836f75e68c644aa3880b84b96-Slide55.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/eaa758bf61e79e1709d4afa58ac2b8e3-Slide56.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the question of the day.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How did we make our programs more interactive and expressive?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Encourage students to reflect on how they made their programs more fun and creative by adding ways for people to interact with them. Have them share examples of the sounds and events they used and why.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/74f756e3f7281ec7125c75820f92aee4-Slide57.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Give students time to write their reflections on paper or any avenue you prefer. If time allows have them share at least one reflection with a partner and and then submit the reflection to you.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "2cd7b449-5201-4406-ba43-a96580ce0edd",
@@ -449,6 +446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-video"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -471,6 +471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -493,6 +496,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -515,6 +521,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -537,6 +546,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together1_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -559,6 +571,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -581,6 +596,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -603,6 +621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel-rests_launch"
+        ],
         "progression": "Music Integration Video"
       },
       "bonus": false,
@@ -625,6 +646,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-loop-beat_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -647,6 +671,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-layer_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -669,6 +696,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-match_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -691,6 +721,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop2_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -713,6 +746,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop3_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -735,6 +771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-songwriter-videos"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -757,6 +796,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-make_launch"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -779,6 +821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold_launch"
+        ],
         "progression": "Video Intro"
       },
       "bonus": false,
@@ -801,6 +846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -823,6 +871,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -845,6 +896,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-call_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -867,6 +921,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-define_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -889,6 +946,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-use_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -911,6 +971,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -933,6 +996,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus2_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -955,6 +1021,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-match_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -977,6 +1046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel2_launch"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -999,6 +1071,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-beat_launch"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -1021,6 +1096,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-layer_launch"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -1043,6 +1121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -1065,6 +1146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1087,6 +1171,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-scenes-panel_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1109,6 +1196,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-sound_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1131,6 +1221,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-function_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1153,6 +1246,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-functions_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1175,6 +1271,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects-panel_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1197,6 +1296,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1219,6 +1321,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-intro-coding-events-match_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1241,6 +1346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-review-panel_launch"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -1263,6 +1371,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-freeplay3_launch"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,

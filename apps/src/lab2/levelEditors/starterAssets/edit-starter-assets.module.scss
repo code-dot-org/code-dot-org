@@ -1,0 +1,4 @@
+// Ensures the dialog and overlay are on top of other level editor content
+div.dialogContainer > div[role='presentation'] {
+  z-index: 5;
+}

@@ -1,0 +1,86 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-06T18:08:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "electro/drum_beat_cowbell"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "R5J~yRb]kDJwk*H212se",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "electro/bass_synth_blocks"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "default"
+    },
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "The program plays the drums and bass at the same time.",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "put your answer here!",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 100,
+      "codeEditableAfterSubmit": true
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-06 13:20:33 -0500\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-03-06 13:22:57 -0500\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-03-06 13:24:32 -0500\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

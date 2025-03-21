@@ -397,6 +397,9 @@ class UnconnectedMusicView extends React.Component {
       (AppConfig.getValue('show-sound-filters') === 'true' ||
         levelData?.showSoundFilters);
 
+    MusicRegistry.showSoundsPanelInSoundsMode =
+      !!levelData?.showSoundsPanelInSoundsMode;
+
     MusicRegistry.hideAiTemperature =
       levelData?.hideAiTemperature ||
       AppConfig.getValue('hide-ai-temperature') === 'true';

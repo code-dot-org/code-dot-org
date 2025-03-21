@@ -59,11 +59,11 @@
       "validationEnabled": false
     },
     "display_name": "Free Play: Code it Your Way",
-    "thumbnail_url": "https://images.code.org/b2ff82268c778e3266ed5d9e812f01db-DALL·E 2025-03-18 11.25.38 - A vibrant background featuring a dynamic gradient transitioning from yellow to purple. In the foreground, symbolic icons representing 'Free Play' and .webp",
+    "thumbnail_url": "https://images.code.org/974dbad59b18818e6b07db00ae3db6e8-DALL·E 2025-03-19 09.58.42 - A playful and youthful background with a teal base accented by hints of purple and black, inspired by the Code.org logo. In the foreground, a vibrant .webp",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T18:17:15.360+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-b\"},{\"changed_at\":\"2025-03-18 18:18:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:18:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:26:04 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T18:17:15.360+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-b\"},{\"changed_at\":\"2025-03-18 18:18:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:18:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:26:04 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-19 16:59:06 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

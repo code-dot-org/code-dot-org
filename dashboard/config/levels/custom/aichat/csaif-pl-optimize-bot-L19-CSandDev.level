@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-18T16:17:52.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Optimization Helper\r\n\r\nThis chatbot is meant to help you understand and pick from the options presented on your [Optimization activity guide](https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing)\r\n\r\n**Prompts to Try on This Level**\r\n- What does [specific action] mean, and how could it impact the system in this situation?\r\n- Would [specific action] help in this scenario, or could it create other problems?\r\n- What are the potential trade-offs or downsides of [specific action]?\r\n- Why might [specific action] work better than other actions in this scenario?\r\n- How does [specific action] relate to optimizing performance for the task described?",
+    "long_instructions": "## Optimization Helper\r\n\r\nThis chatbot is meant to help you understand and pick from the options presented on your [Optimization activity guide](https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing)\r\n\r\nChoose one of the four scenarios presented in the guide and then use the chatbot to help guide you.\r\n\r\n**Prompts to Try on This Level**\r\n- What does [specific action] mean, and how could it impact the system in this situation?\r\n- Would [specific action] help in this scenario, or could it create other problems?\r\n- What are the potential trade-offs or downsides of [specific action]?\r\n- Why might [specific action] work better than other actions in this scenario?\r\n- How does [specific action] relate to optimizing performance for the task described?",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -41,7 +42,6 @@
       ]
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T16:17:52.432+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson5-level3-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson5-level3-2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T16:17:52.432+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson5-level3-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson5-level3-2023\"},{\"changed_at\":\"2025-03-19 17:31:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1480,3 +1480,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        problem-solving-with-ai-2024:
+          title: "[PILOT] Problem Solving with AI"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csaif-preview:
+          title: "[PREVIEW] CS and AI Foundations (CSAIF)"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
