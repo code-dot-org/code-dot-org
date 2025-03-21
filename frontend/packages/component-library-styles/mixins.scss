@@ -173,7 +173,12 @@
 }
 
 // Border styles
-@mixin regular-border-styles {
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: variables.$regular-border-radius;
+@mixin border-styles(
+  $border-color: var(--borders-neutral-primary),
+  $border-width: 1px,
+  $border-style: solid,
+  $border-radius: variables.$regular-border-radius
+) {
+  border: $border-width $border-style $border-color;
+  border-radius: $border-radius;
 }
