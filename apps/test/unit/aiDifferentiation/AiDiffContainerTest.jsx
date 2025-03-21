@@ -68,10 +68,10 @@ describe('AiDiffContainer', () => {
 
   it('moves TA container when user clicks and drags component', async () => {
     renderDefault();
-    const handle_element = await screen.getByText('AI Teaching Assistant');
+    const handle_element = screen.getByText('AI Teaching Assistant');
     // We want to check that the ID is set correctly for dragging.
     // eslint-disable-next-line no-restricted-properties
-    const element = await screen.getByTestId('draggable-test-id');
+    const element = screen.getByTestId('draggable-test-id');
     expect(element.style.transform).toEqual('translate(0px,0px)');
 
     await act(async () => {
@@ -90,10 +90,10 @@ describe('AiDiffContainer', () => {
 
   it('snaps TA container back on screen when dragged off', async () => {
     renderDefault();
-    const handle = await screen.getByText('AI Teaching Assistant');
+    const handle = screen.getByText('AI Teaching Assistant');
     // We want to check that the ID is set correctly for dragging.
     // eslint-disable-next-line no-restricted-properties
-    const element = await screen.getByTestId('draggable-test-id');
+    const element = screen.getByTestId('draggable-test-id');
     expect(element.style.transform).toEqual('translate(0px,0px)');
 
     await act(async () => {
