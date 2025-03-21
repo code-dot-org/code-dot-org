@@ -1,4 +1,5 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {act, render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -65,23 +66,50 @@ describe('AiDiffContainer', () => {
     screen.getByText('Experiment');
   });
 
-  it('moves rubric container when user clicks and drags component', () => {
+  it('moves TA container when user clicks and drags component', async () => {
     renderDefault();
-    const handle_element = screen.getByText('AI Teaching Assistant');
+    const handle_element = await screen.getByText('AI Teaching Assistant');
     // We want to check that the ID is set correctly for dragging.
     // eslint-disable-next-line no-restricted-properties
-    const element = screen.getByTestId('draggable-test-id');
+    const element = await screen.getByTestId('draggable-test-id');
+    expect(element.style.transform).toEqual('translate(0px,0px)');
 
-    const initialPosition = element.style.transform;
+    await act(async () => {
+      userEvent.pointer([
+        {keys: '[MouseLeft>]', target: handle_element},
+        {keys: '[MouseLeft>]', target: handle_element, coords: {x: 50, y: 50}},
+        '[/MouseLeft]',
+      ]);
+    });
 
-    // simulate dragging
-    fireEvent.mouseDown(handle_element, {clientX: 0, clientY: 0});
-    fireEvent.mouseMove(handle_element, {clientX: 100, clientY: 100});
-    fireEvent.mouseUp(handle_element);
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      expect(newPosition).toEqual('translate(50px,50px)');
+    });
+  });
 
-    const newPosition = element.style.transform;
+  it('snaps TA container back on screen when dragged off', async () => {
+    renderDefault();
+    const handle = await screen.getByText('AI Teaching Assistant');
+    // We want to check that the ID is set correctly for dragging.
+    // eslint-disable-next-line no-restricted-properties
+    const element = await screen.getByTestId('draggable-test-id');
+    expect(element.style.transform).toEqual('translate(0px,0px)');
 
-    expect(newPosition).not.toEqual(initialPosition);
+    await act(async () => {
+      userEvent.pointer([
+        {keys: '[MouseLeft>]', target: handle},
+        {keys: '[MouseLeft>]', target: handle, coords: {x: 5000, y: -5000}},
+        '[/MouseLeft]',
+      ]);
+    });
+
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      const expectedX = window.innerWidth - 100;
+      const expectedY = 760 - window.innerHeight;
+      expect(newPosition).toEqual(`translate(${expectedX}px,${expectedY}px)`);
+    });
   });
 
   it('Shows the welcome experience when user property is false', () => {
