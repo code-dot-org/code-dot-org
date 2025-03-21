@@ -965,7 +965,7 @@ class AbilityTest < ActiveSupport::TestCase
       assert Ability.new(teacher).can? action, :aichat_request
     end
     assert Ability.new(teacher).can? :log_chat_event, :aichat_event
-    assert Ability.new(teacher).can? :student_chat_history, :aichat_event
+    assert Ability.new(teacher).can? :chat_history, :aichat_event
   end
 
   test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
@@ -975,7 +975,7 @@ class AbilityTest < ActiveSupport::TestCase
       refute Ability.new(teacher).can? action, :aichat_request
     end
     refute Ability.new(teacher).can? :log_chat_event, :aichat_event
-    refute Ability.new(teacher).can? :student_chat_history, :aichat_event
+    refute Ability.new(teacher).can? :chat_history, :aichat_event
   end
 
   test 'student meeting AI Chat access requirements can perform AI Chat actions' do
@@ -985,6 +985,7 @@ class AbilityTest < ActiveSupport::TestCase
       assert Ability.new(student).can? action, :aichat_request
     end
     assert Ability.new(student).can? :log_chat_event, :aichat_event
+    assert Ability.new(student).can? :chat_history, :aichat_event
   end
 
   test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
@@ -994,6 +995,7 @@ class AbilityTest < ActiveSupport::TestCase
       refute Ability.new(student).can? action, :aichat_request
     end
     refute Ability.new(student).can? :log_chat_event, :aichat_event
+    refute Ability.new(student).can? :chat_history, :aichat_event
   end
 
   private def put_students_in_section_and_code_review_group(students, section)

@@ -1,0 +1,67 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-19T18:57:13.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "triggered_at_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default"
+    },
+    "long_instructions": "### Partner Game\r\nFind out what others think of your songs! \r\n\r\n**Do This:**\r\n- Tell your partners who your three characters are and describe the character's personalities.\r\n- Play one of your Walk-Up songs without saying which character it belongs to.\r\n- Allow your partner to match the song to a character.\r\n- Ask them to explain their choice.\r\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\r\n- Repeat with new partners until someone guesses all three correctly!",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-mini-project-walk-template",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-19T18:57:13.943+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-3\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-3\"},{\"changed_at\":\"2025-03-19 19:03:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-19 19:06:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

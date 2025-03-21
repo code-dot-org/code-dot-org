@@ -1,5 +1,6 @@
 import {getNextFileId} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
+import {CodebridgeLevelProperties, MazeCell} from '@codebridge/types';
 import {combineStartSourcesAndValidation, findFile} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
@@ -10,13 +11,10 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {
-  MazeCell,
   MultiFileSource,
   ProjectFileType,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
 /**
  * Custom hook that determines the initial sources for the current level.
  * It selects various sources including from the student's project, the start sources
@@ -32,29 +30,21 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
  * @returns {ProjectSources} - The initial sources to use.
  */
 
-export const useInitialSources = (defaultSources: ProjectSources) => {
-  const labInitialSources = useAppSelector(state => state.lab.initialSources);
-  const levelSource = useAppSelector(
-    state => state.lab.levelProperties?.startSources
-  );
-  const templateSource = useAppSelector(
-    state => state.lab.levelProperties?.templateSources
-  );
-
-  const exemplarSource = useAppSelector(
-    state => state.lab.levelProperties?.exemplarSources
-  ) as MultiFileSource | undefined;
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
+export const useInitialSources = (
+  defaultSources: ProjectSources,
+  levelProperties: CodebridgeLevelProperties,
+  initialServerSource: ProjectSources | undefined
+) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const serializedMaze = useAppSelector(
-    state => state.lab.levelProperties?.serializedMaze
-  );
-  const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
-  const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
-  );
+  const exemplarSources = levelProperties.exemplarSources as MultiFileSource;
+  const {
+    serializedMaze,
+    miniApp,
+    validationFile,
+    startSources,
+    templateSources,
+    predictSettings,
+  } = levelProperties;
 
   const generateMazeFile = (mazeContents: MazeCell[][], fileId: string) => {
     return {
@@ -98,18 +88,18 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   // We memoize these objects so that they don't cause an unexpected re-render.
   const levelStartSources: ProjectSources | undefined = useMemo(
     () =>
-      levelSource
-        ? generateProjectSourceFromStartSource(levelSource)
+      startSources
+        ? generateProjectSourceFromStartSource(startSources)
         : undefined,
-    [levelSource, generateProjectSourceFromStartSource]
+    [generateProjectSourceFromStartSource, startSources]
   );
 
   const templateStartSources: ProjectSources | undefined = useMemo(
     () =>
-      templateSource
-        ? generateProjectSourceFromStartSource(templateSource)
+      templateSources
+        ? generateProjectSourceFromStartSource(templateSources)
         : undefined,
-    [generateProjectSourceFromStartSource, templateSource]
+    [generateProjectSourceFromStartSource, templateSources]
   );
 
   const parsedDefaultSources = useMemo(
@@ -130,34 +120,34 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     if (isStartMode) {
       return startSources;
     }
-    if (isPredictLevel) {
+    if (predictSettings?.isPredictLevel) {
       // Predict levels never use sources loaded from the server, only the start sources.
       return templateSources || startSources;
     }
     if (isEditingExemplar || isViewingExemplar) {
       // Show the existing exemplar sources when editing or viewing exemplar sources,
       // if they exist.
-      if (exemplarSource) {
+      if (exemplarSources) {
         const parsedExemplarSource: ProjectSources = {
-          source: exemplarSource,
+          source: exemplarSources,
           labConfig: levelStartSources?.labConfig,
         };
         if (serializedMaze) {
           // If there is an existing maze file, we will replace it with the current maze.
           // Otherwise, we will create a new maze file.
           const existingMazeFile = findFile(
-            exemplarSource,
+            exemplarSources,
             MAZE_FILE_NAME,
             DEFAULT_FOLDER_ID
           );
           const mazeFileId =
             existingMazeFile?.id ||
-            getNextFileId(Object.values(exemplarSource.files));
+            getNextFileId(Object.values(exemplarSources.files));
           const mazeFile = generateMazeFile(serializedMaze, mazeFileId);
           parsedExemplarSource.source = {
-            ...exemplarSource,
+            ...exemplarSources,
             files: {
-              ...exemplarSource.files,
+              ...exemplarSources.files,
               [mazeFileId]: mazeFile,
             },
           };
@@ -170,18 +160,18 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
       return templateSources || startSources;
     }
 
-    const projectSources = labInitialSources;
+    const projectSources = initialServerSource;
     return projectSources || templateSources || startSources;
   }, [
     levelStartSources,
     parsedDefaultSources,
     templateStartSources,
     isStartMode,
-    isPredictLevel,
+    predictSettings?.isPredictLevel,
     isEditingExemplar,
     isViewingExemplar,
-    labInitialSources,
-    exemplarSource,
+    initialServerSource,
+    exemplarSources,
     serializedMaze,
   ]);
 

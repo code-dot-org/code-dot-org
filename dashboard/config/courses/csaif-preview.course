@@ -1,0 +1,26 @@
+{
+  "name": "csaif-preview",
+  "script_names": [
+    "csaif1-preview",
+    "csaif2-preview",
+    "csaif3-preview",
+    "csaif4-preview",
+    "csaif5-preview",
+    "csaif6-preview"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csaif-preview",
+    "has_numbered_units": true,
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

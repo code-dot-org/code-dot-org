@@ -5,6 +5,7 @@
   border: 0;
   border-top: 1px solid;
   width: 100%;
+  margin-inline: auto;
 }
 
 // Divider colors
@@ -21,22 +22,22 @@
 // Divider margin
 .divider-margin {
   &-none {
-    margin: 0;
+    margin-block: 0;
   }
 
   &-xs {
-    margin: 0.5rem 0;
+    margin-block: 0.5rem;
   }
 
   &-s {
-    margin: 1rem 0;
+    margin-block: 1rem;
   }
 
   &-m {
-    margin: 2rem 0;
+    margin-block: 2rem;
   }
 
   &-l {
-    margin: 4rem 0;
+    margin-block: 4rem;
   }
 }

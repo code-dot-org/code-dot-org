@@ -3,71 +3,112 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The SNOT Troubleshooting Strategy
+# Teaching about Software
 
 
-<img src="https://images.code.org/52df44bc304a4f077d318253d2b49bdd-image-1742233885762.png" alt="laptop with screwdiver symbolizing troubleshooting" style="border-radius:10px; float: right; ; height: 100px; margin: 20px 20px 0px 10px; ">
+## Real-world Scenarios 
 
-## Troubleshooting
+#### Using real-world scenarios to analyze the software needs of different careers helps students develop **critical thinking** and **problem-solving** skills by connecting classroom learning to practical applications. 
 
-#### Troubleshooting is a form of problem-solving that involves using a logical and systematic search for the source of a problem.
+#### This approach **enhances engagement**, fosters **career awareness**, and encourages students to **think like professionals**, preparing them to make informed decisions about technology in various fields.
 
+<div style="width: 90%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+
+  <!-- First Row -->
+<div style="display: flex; justify-content: center; gap: 20px; width: 100%;">
+    
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
+      <h3><b>Social Media Influencer</b></h3>
+      <img src="https://images.code.org/4d8f7eaf35c246b09762e60d73f183f9-image-1742396640357.png" alt="Social Media Influencer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
+        <li>Video editing apps (CapCut, Adobe Premiere Rush)</li>
+        <li>Social media platforms (Instagram, TikTok)</li>
+        <li>Analytics tools (Google Analytics)</li>
+      </ul>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
+      <h3><b>College Student</b></h3>
+      <img src="https://images.code.org/40771b728a6adbe25587e2a8c48c82ff-image-1742396716246.png" alt="College Student" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
+        <li>Office suite (Microsoft Office, Google Workspace)</li>
+        <li>Video conferencing software (Zoom, Teams)</li>
+        <li>Project management tools (Trello, Notion)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Second Row -->
+<div style="display: flex; justify-content: center; gap: 20px; width: 100%;">
+    
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
+      <h3><b>Geologist</b></h3>
+      <img src="https://images.code.org/785cd94eed8f6282da0a144dc345ee32-image-1742396825378.png" alt="Geologist" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
+        <li>GPS mapping software</li>
+        <li>Data collection tools (ArcGIS Field Maps)</li>
+        <li>Note-taking apps optimized for offline use</li>
+      </ul>
+    </div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
+      <h3><b>VR Designer</b></h3>
+      <img src="https://images.code.org/4f9bb0b308fc1def313f9755c7e73acd-image-1742396949547.png" alt="VR Designer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
+        <li>3D modeling software (Blender, Unity)</li>
+        <li>VR presentation platforms</li>
+        <li>Project collaboration tools</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+---
+
+## Analogies 
+#### Using analogies helps students **visualize** different types of software by relating complex concepts to familiar ideas, making it easier to understand their functions and real-world applications. This approach **builds connections**, enhances **retention**, and makes abstract topics more **accessible and engaging**.
+
+<img src="https://images.code.org/8f9c880432ab28f66bf2c86bf5ee1481-image-1742398827093.png" alt="concert stage with crowd" width="250px" style="border-radius:10px; float:right; margin: 0 0 10px 30px;">
+
+### **The Concert Analogy**
+- ####**Operating System**: The concert organizer
+#### They book the venue, manage the schedule, and make sure the show runs on time.
+- #### **Application Software**: The performers
+#### They sing, play instruments, or DJ, giving the audience the main experience.
+- #### **Utility Software**: The sound technicians and stage crew
+#### They set up the lights, adjust the microphones, and troubleshoot issues so the performers can shine.
 
 <div style="clear:both;"></div>
 
 ---
 
-## Steps for SNOT
+<img src="https://images.code.org/f0f6a6861436040dcbd7162109d0311e-image-1742399059273.png" alt="concert stage with crowd" width="250px" style="border-radius:10px; float:right; margin: 0 0 10px 30px;">
 
-#### The SNOT Strategy provides a structured approach for troubleshooting problems, helping students develop independence and critical thinking skills when faced with challenges.
+### **The House Analogy**  
+- #### **Operating System**: The foundation and structure of the house  
+  #### It holds everything together, provides support, and makes sure all rooms and systems function properly.  
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 1:Self</b></h3>
-  <p style = "font-size:14pt;">
-    Restate the problem and make your best guesses about possible solutions. 
-</p>
-</div>
+- #### **Application Software**: The furniture and appliances  
+  #### They provide the functionality you need for daily life, like a couch for relaxing, a stove for cooking, or a TV for entertainment.  
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 2: Neighbor</b></h3>
-  <p style = "font-size:14pt;">
-    Talk through the problem with someone to share viewpoints and narrow down possibilities.
-</p>
-</div>
+- #### **Utility Software**: The maintenance tools and security systems  
+  #### They help keep the house in good condition, like a vacuum cleaner for cleaning, a thermostat for regulating temperature, or a security system for protection.  
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 3: Online Resouces</b></h3>
-  <p style = "font-size:14pt;">
-    Search message boards, technical manuals, FAQs and other online resources to further narrow down possible solutions.
-</p>
-</div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 4: Technical Expert</b></h3>
-  <p style = "font-size:14pt;">
-    Ask a technical or subject-matter expert that can provide guidance.
-
-</p>
-</div>
-
+---
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+    ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/csad-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;"><br>
-<p style= "font-size: 14px; ">
-<b>Teacher Tip:</b>
-</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> Having a clear troubleshooting strategy like SNOT encourages students to become problem-solvers instead of immediately seeking help. It builds resilience, promotes collaboration, and teaches them how to find and evaluate reliable resources—an essential skill for coding, data science, and beyond.    
-</p>
-</div>
 
 
 
 
 ## Let's try a troubleshooting activity
 
-
+![]()
 MARKDOWN

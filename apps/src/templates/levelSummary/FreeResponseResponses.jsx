@@ -22,10 +22,8 @@ const FreeResponseResponses = ({
   showStudentNames,
   eventData,
   unitName,
-  levelInstructions,
 }) => {
   const levelData = {
-    levelInstructions: levelInstructions,
     levelId: eventData.levelId,
     unitId: eventData.unitId,
   };
@@ -244,7 +242,6 @@ FreeResponseResponses.propTypes = {
   showStudentNames: PropTypes.bool,
   eventData: PropTypes.object,
   unitName: PropTypes.string,
-  levelInstructions: PropTypes.string,
 };
 
 export default FreeResponseResponses;
