@@ -4,7 +4,7 @@ import {
   BodyThreeText,
   BodyTwoText,
 } from '@code-dot-org/component-library/typography';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {
@@ -156,6 +156,22 @@ const EditAichatSettings: React.FunctionComponent<{
     },
     [aichatSettings, setAichatSettings]
   );
+
+  const allModelsMultimodal = useMemo(() => {
+    return aichatSettings.availableModelIds.every(
+      id => modelDescriptions.find(model => model.id === id)?.multimodal
+    );
+  }, [aichatSettings.availableModelIds]);
+
+  // If not all available models support multimodal, automatically uncheck the setting.
+  useEffect(() => {
+    if (!allModelsMultimodal && aichatSettings.multimodalEnabled) {
+      setAichatSettings({
+        ...aichatSettings,
+        multimodalEnabled: false,
+      });
+    }
+  }, [allModelsMultimodal, aichatSettings]);
 
   return (
     <UpdateContext.Provider
@@ -312,6 +328,32 @@ const EditAichatSettings: React.FunctionComponent<{
                   setAichatSettings({
                     ...aichatSettings,
                     hidePresentationPanel: e.target.checked,
+                  });
+                }}
+              />
+            </div>
+            <br />
+            <BodyFourText>
+              <i>
+                Enables multimodal chat. Only available if all the available
+                models support multimodal inputs (like Chat GPT 4o-mini).
+              </i>
+            </BodyFourText>
+            <div className={moduleStyles.fieldRow}>
+              <label
+                htmlFor="multimodalEnabled"
+                className={moduleStyles.inlineLabel}
+              >
+                Enable Multimodal Chat
+              </label>
+              <Checkbox
+                name="multimodalEnabled"
+                disabled={!allModelsMultimodal}
+                checked={aichatSettings.multimodalEnabled || false}
+                onChange={e => {
+                  setAichatSettings({
+                    ...aichatSettings,
+                    multimodalEnabled: e.target.checked,
                   });
                 }}
               />
