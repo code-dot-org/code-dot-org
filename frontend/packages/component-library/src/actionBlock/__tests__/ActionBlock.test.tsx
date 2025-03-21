@@ -36,9 +36,7 @@ describe('ActionBlock', () => {
   it('renders an image', () => {
     render(<ActionBlock {...defaultProps} image="image.png" />);
 
-    expect(screen.getByRole('figure')).toHaveStyle(
-      'background: url(image.jpg) center / cover no-repeat',
-    );
+    expect(screen.getByAltText('')).toHaveAttribute('src', 'image.png');
   });
 
   it('renders an overline', () => {
@@ -117,9 +115,7 @@ describe('FullWidthActionBlock', () => {
   it('renders an image', () => {
     render(<FullWidthActionBlock {...defaultProps} image="image2.png" />);
 
-    expect(screen.getByRole('figure')).toHaveStyle(
-      'background: url(image.jpg) center / cover no-repeat',
-    );
+    expect(screen.getByAltText('')).toHaveAttribute('src', 'image2.png');
   });
 
   it('renders an overline', () => {
