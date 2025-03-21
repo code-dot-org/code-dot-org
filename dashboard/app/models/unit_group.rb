@@ -216,8 +216,9 @@ class UnitGroup < ApplicationRecord
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
         unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
 
-        unit.reload
-        unit.write_script_json
+          unit.reload
+          unit.write_script_json
+        end
       end
       unit_group_unit.update!(position: index + 1)
     end
