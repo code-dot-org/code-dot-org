@@ -3,7 +3,7 @@ import React, {Key, ReactNode, HTMLAttributes} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Link, {LinkProps} from '@/link';
-import {Heading5, BodyThreeText} from '@/typography';
+import {Heading3, BodyThreeText} from '@/typography';
 
 import moduleStyles from './iconHighlight.module.scss';
 
@@ -62,7 +62,12 @@ const IconHighlight: React.FC<IconHighlightProps> = ({
       className={classNames(moduleStyles.iconHighlightIcon, icon.className)}
     />
 
-    <Heading5 className={moduleStyles.iconHighlightHeading}>{heading}</Heading5>
+    <Heading3
+      visualAppearance={'heading-sm'}
+      className={moduleStyles.iconHighlightHeading}
+    >
+      {heading}
+    </Heading3>
 
     <BodyThreeText className={moduleStyles.iconHighlightText}>
       {text}
