@@ -4,10 +4,10 @@ import image3 from '@public/images/action-block-03.png';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import ActionBlock, {ActionBlockProps} from '../index';
+import ActionBlock, {FullWidthActionBlock, ActionBlockProps} from '../index';
 
 export default {
-  title: 'DesignSystem/ActionBlock',
+  title: 'DesignSystem/Action Block/Action Block',
   component: ActionBlock,
   parameters: {
     a11y: {
@@ -39,32 +39,94 @@ const defaultArgs: ActionBlockProps = {
   description: DESCRIPTION,
   image: image1,
   overline: 'Overline Text',
-  detailLabel: '',
-  detailDescription: '',
-  primaryButtonLabel: 'Primary action button',
-  primaryButtonUrl: '#',
-  primaryButtonAriaLabel: '',
-  secondaryButtonLabel: 'Secondary action button',
-  secondaryButtonUrl: '#',
-  secondaryButtonAriaLabel: '',
   background: 'primary',
-  isFullWidth: true,
+  primaryButton: {
+    text: 'Primary Button',
+    href: '#',
+    ariaLabel: 'Primary Button aria label',
+  },
+  secondaryButton: {
+    text: 'Secondary Button',
+    href: '#',
+    ariaLabel: 'Secondary Button aria label',
+  },
 };
 
 //
 // STORIES
 //
-export const DefaultActionBlock: Story = {
+export const DefaultActionBlocks: Story = {
   args: {
     ...defaultArgs,
   },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'The `isFullWidth` prop is set to `true` by default, which means the Action Block will take up the full width of the page. If you want it to fit within two or three columns, set `isFullWidth` to `false`. (See additional stories below)',
-      },
-    },
+  render: args => {
+    return (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
+        <ActionBlock {...args} />
+        <ActionBlock {...args} image={image2} />
+      </div>
+    );
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const titles = await canvas.findAllByText('Action block title');
+    const descriptions = await canvas.findAllByText(DESCRIPTION);
+    const overlines = await canvas.findAllByText('Overline Text');
+    const images = await canvas.findAllByRole('figure');
+    const primaryButtons = await canvas.findAllByLabelText(
+      'Primary Button aria label',
+    );
+    const secondaryButtons = await canvas.findAllByLabelText(
+      'Secondary Button aria label',
+    );
+
+    // check if images are visible
+    await expect(images).toHaveLength(2);
+    for (const image of images) {
+      await expect(image).toBeVisible();
+    }
+
+    // check if text content is visible
+    await expect(titles).toHaveLength(2);
+    for (const title of titles) {
+      await expect(title).toBeVisible();
+    }
+
+    await expect(descriptions).toHaveLength(2);
+    for (const description of descriptions) {
+      await expect(description).toBeVisible();
+    }
+
+    await expect(overlines).toHaveLength(2);
+    for (const overline of overlines) {
+      await expect(overline).toBeVisible();
+    }
+
+    // check if buttons are visible
+    await expect(primaryButtons).toHaveLength(2);
+    for (const primaryButton of primaryButtons) {
+      await expect(primaryButton).toBeVisible();
+    }
+
+    await expect(secondaryButtons).toHaveLength(2);
+    for (const secondaryButton of secondaryButtons) {
+      await expect(secondaryButton).toBeVisible();
+    }
+  },
+};
+
+export const DefaultFullWidthActionBlock: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  render: args => {
+    return <FullWidthActionBlock {...args} />;
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -72,12 +134,12 @@ export const DefaultActionBlock: Story = {
     const description = await canvas.findByText(DESCRIPTION);
     const overline = await canvas.findByText('Overline Text');
     const image = await canvas.findByRole('figure');
-    const primaryButton = await canvas.findByRole('button', {
-      name: 'Primary action button',
-    });
-    const secondaryButton = await canvas.findByRole('button', {
-      name: 'Secondary action button',
-    });
+    const primaryButton = await canvas.findByLabelText(
+      'Primary Button aria label',
+    );
+    const secondaryButton = await canvas.findByLabelText(
+      'Secondary Button aria label',
+    );
 
     // check if image is visible
     await expect(image).toBeVisible();
@@ -96,49 +158,89 @@ export const DefaultActionBlock: Story = {
 export const WithDetail: Story = {
   args: {
     ...defaultArgs,
-    detailLabel: 'Duration',
-    detailDescription: '1 hour',
   },
   parameters: {
     docs: {
       description: {
         story:
-          'Sets a detail on the action block like duration, projects, or any other relevant information..',
+          'Sets a detail on the action block like duration, projects, or any other relevant information.',
       },
     },
   },
+  render: args => {
+    return (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
+        <ActionBlock
+          {...args}
+          details={{label: 'Duration', description: '1 hour'}}
+        />
+        <ActionBlock
+          {...args}
+          image={image2}
+          details={{label: 'Duration', description: '2 weeks'}}
+        />
+      </div>
+    );
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const detailLabel = await canvas.findByText('Duration:');
-    const detailDescription = await canvas.findByText('1 hour');
+    const detailLabels = await canvas.findAllByText('Duration:');
+    const detailDescription1hr = await canvas.findByText('1 hour');
+    const detailDescription2wk = await canvas.findByText('2 weeks');
 
     // check if details are visible
-    await expect(detailLabel).toBeVisible();
-    await expect(detailDescription).toBeVisible();
+    await expect(detailLabels).toHaveLength(2);
+    for (const detailLabel of detailLabels) {
+      await expect(detailLabel).toBeVisible();
+    }
+
+    await expect(detailDescription1hr).toBeVisible();
+    await expect(detailDescription2wk).toBeVisible();
   },
 };
 
 export const WithoutSecondaryButton: Story = {
   args: {
     ...defaultArgs,
-    secondaryButtonLabel: undefined,
+    secondaryButton: undefined,
+  },
+  render: args => {
+    return (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
+        <ActionBlock {...args} />
+        <ActionBlock {...args} image={image2} />
+      </div>
+    );
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const primaryButton = await canvas.findByRole('button', {
-      name: 'Primary action button',
-    });
-    const secondaryButton = canvas.queryByRole('button', {
-      name: 'Secondary action button',
-    });
+    const primaryButtons = await canvas.findAllByLabelText(
+      'Primary Button aria label',
+    );
+    const secondaryButtons = await canvas.queryAllByLabelText(
+      'Secondary Button aria label',
+    );
 
-    // check if primary button is visible
-    await expect(primaryButton).toBeVisible();
-
-    // check that secondary button is not visible
-    if (secondaryButton) {
-      await expect(secondaryButton).not.toBeVisible();
+    // check if primary buttons are visible
+    await expect(primaryButtons).toHaveLength(2);
+    for (const primaryButton of primaryButtons) {
+      await expect(primaryButton).toBeVisible();
     }
+
+    // check that secondary buttons are not visible
+    await expect(secondaryButtons).toHaveLength(0);
   },
 };
 
@@ -163,11 +265,10 @@ export const WithSecondaryBackground: Story = {
           padding: '2rem',
         }}
       >
-        <ActionBlock {...args} />
+        <FullWidthActionBlock {...args} />
       </div>
     );
   },
-
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const image = await canvas.findByRole('figure');
@@ -183,47 +284,9 @@ export const WithSecondaryBackground: Story = {
   },
 };
 
-export const MultipleActionBlocksTwoAcross: Story = {
+export const ThreeAcross: Story = {
   args: {
     ...defaultArgs,
-    isFullWidth: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'When `isFullWidth` is set to `false`, the Action Block will fit within multiple columns. You will need to create a wrapper to control the layout.',
-      },
-    },
-  },
-  render: args => {
-    return (
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '1.5rem',
-        }}
-      >
-        <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} description={DESCRIPTION_LONG} />
-      </div>
-    );
-  },
-
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const actionBlocks = await canvas.findAllByText('Action block title');
-
-    // check if two Action Blocks are rendered
-    await expect(actionBlocks).toHaveLength(2);
-  },
-};
-
-export const MultipleActionBlocksThreeAcross: Story = {
-  args: {
-    ...defaultArgs,
-    isFullWidth: false,
   },
   parameters: {
     docs: {

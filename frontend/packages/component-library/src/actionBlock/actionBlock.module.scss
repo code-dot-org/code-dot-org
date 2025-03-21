@@ -16,18 +16,13 @@ $mobileBreakpoint: 900px;
     margin: 0 0 1rem 0;
   }
 
-  .textWrapper {
-    display: flex;
-    flex-direction: column;
+  .overline {
+    color: var(--text-brand-teal-primary);
+    margin-block: -0.25rem 0.5rem;
+  }
 
-    .overline {
-      color: var(--text-brand-teal-primary);
-      margin-top: 0;
-    }
-
-    p {
-      margin-block: 0 1rem;
-    }
+  p {
+    margin-block: 0 1rem;
   }
 
   .buttonWrapper {
@@ -35,29 +30,6 @@ $mobileBreakpoint: 900px;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-  }
-
-  // Action block layout styles
-  &.isFullWidth {
-    @media (min-width: $mobileBreakpoint) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-
-      figure {
-        margin-bottom: 0;
-      }
-
-      .buttonWrapper > a {
-        width: fit-content;
-      }
-    }
-  }
-
-  &:not(.isFullWidth) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 }
 
@@ -69,5 +41,29 @@ $mobileBreakpoint: 900px;
 
   &-secondary {
     background-color: var(--background-neutral-primary);
+  }
+}
+
+// Basic action block styles
+.oneColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// Full width action block styles
+.fullWidth {
+  @media (min-width: $mobileBreakpoint) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    figure {
+      margin-bottom: 0;
+    }
+
+    .buttonWrapper > a {
+      width: fit-content;
+    }
   }
 }
