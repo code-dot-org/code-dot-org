@@ -6,10 +6,9 @@
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
-  column-gap: 1rem;
-  row-gap: 0.25rem;
-  justify-content: flex-start;
-  align-items: flex-start;
+  gap: 0.25rem 1rem;
+  justify-content: start;
+  align-items: start;
   width: fit-content;
 
   .iconHighlightIcon {
@@ -26,7 +25,7 @@
   }
 
   .iconHighlightText {
-    white-space: pre;
+    white-space: pre-wrap;
   }
 
   .iconHighlightLinkList {
