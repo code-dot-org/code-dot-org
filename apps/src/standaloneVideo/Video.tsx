@@ -1,4 +1,6 @@
-import React, {useLayoutEffect, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
+import useWindowSize from '@cdo/apps/lab2/hooks/useWindowSize';
 
 import standaloneVideoLocale from './locale';
 import testYouTubeAvailable from './testYouTubeAvailable';
@@ -13,24 +15,6 @@ interface VideoProps {
   src: string | undefined;
   download: string | undefined;
   thumbnail: string | undefined;
-}
-
-function useWindowSize() {
-  const [size, setSize] = useState([
-    document.documentElement.clientWidth,
-    document.documentElement.clientHeight,
-  ]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      const width = document.documentElement.clientWidth;
-      const height = document.documentElement.clientHeight;
-      setSize([width, height]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
 }
 
 /**
