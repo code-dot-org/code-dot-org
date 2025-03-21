@@ -393,9 +393,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return undefined;
   };
 
-  // Translate to CDO Blockly's version of getMainWorkspace.
+  // CDO Blockly does not have support getMainWorkspace, so we return undefined here.
   blocklyWrapper.getMainWorkspace = () => {
-    return Blockly.mainBlockSpace;
+    return undefined;
   };
 
   // CDO Blockly does not have a separate workspace for the function editor,
