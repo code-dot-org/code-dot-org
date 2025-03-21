@@ -546,20 +546,20 @@ StudioApp.prototype.init = function (config) {
       }, this)
     );
 
-    if (Blockly.getHiddenDefinitionWorkspace()) {
-      this.hiddenWorkspaceChangeListener =
-        Blockly.getHiddenDefinitionWorkspace().addChangeListener(
-          _.bind(function () {
-            this.updateBlockCount();
-          }, this)
-        );
-    }
+    this.hiddenWorkspaceChangeListener =
+      Blockly.getHiddenDefinitionWorkspace()?.addChangeListener(
+        _.bind(function () {
+          this.updateBlockCount();
+        }, this)
+      );
+
     this.mainWorkspaceChangeListener =
-      Blockly.getMainWorkspace().addChangeListener(
+      Blockly.getMainWorkspace()?.addChangeListener(
         _.bind(function () {
           project.projectChanged();
         }, this)
       );
+
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
