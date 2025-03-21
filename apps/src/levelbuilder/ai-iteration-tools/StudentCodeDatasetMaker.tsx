@@ -4,7 +4,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
-import {fetchStudentCodeSamples} from './StudentWorkSamplesApi';
+import {fetchStudentCodeSamples} from './StudentCodeSamplesApi';
 
 interface StudentCodeSample {
   projectId: string;

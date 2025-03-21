@@ -97,8 +97,7 @@ Dashboard::Application.routes.draw do
     resources :images, only: [:new]
 
     get "/ai_iteration/tools", to: "ai_iteration#tools"
-    post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
-    post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
+    post "/student_code_samples", to: "student_code_sample#fetch_student_code_samples"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'

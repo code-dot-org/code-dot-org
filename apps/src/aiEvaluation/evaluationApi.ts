@@ -16,7 +16,6 @@ export interface StudentAnswer {
 export interface AIResponse {
   aiEvaluation: string;
   aiReasoning: string;
-  evaluationCriteria: string;
 }
 
 export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {}

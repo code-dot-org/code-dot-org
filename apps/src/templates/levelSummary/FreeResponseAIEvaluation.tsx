@@ -53,7 +53,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       ...studentAnswer,
       aiEvaluation: aiResponse.aiEvaluation,
       aiReasoning: aiResponse.aiReasoning,
-      evaluationCriteria: aiResponse.evaluationCriteria,
     };
     setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
     setEvaluationCount(prevCount => prevCount + 1);
@@ -74,7 +73,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       setAiSummary({
         aiEvaluation: 'Uh oh!',
         aiReasoning: 'Something went wrong',
-        evaluationCriteria: 'unknown',
       });
     }
   };
