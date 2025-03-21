@@ -235,7 +235,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
           download,
           title,
         }
-      : {type: buttonTagTypeAttribute, onClick, value, name};
+      : {type: buttonTagTypeAttribute, onClick, value, name, title};
 
   // Check if correct props combination is passed
   useMemo(
