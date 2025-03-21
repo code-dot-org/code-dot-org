@@ -592,22 +592,19 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
 
 /**
  * Generate a unique shard key from the given seed
- * @param {string} seed
+ * @param {string} seed - either the section ID, random UUID, or shared shard seed.
  * @private
  */
 NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
   const MAX_LENGTH = 48;
-  const NET_SIM_PREFIX = 'ns_';
+  const NET_SIM_PREFIX = 'ns-';
   const UNDERSCORE = '_';
   // md5 returns a 32-character hex string.
-  const hash = md5(this.levelKey_ + seed);
-  // Calculate the max possible length for the md5 hash so that seed is intact.
-  const maxHashLength =
-    MAX_LENGTH - NET_SIM_PREFIX.length - UNDERSCORE.length - seed.length;
-  // If necessary, truncate hash.
-  const truncatedHash = hash.substring(0, maxHashLength);
-
-  return NET_SIM_PREFIX + truncatedHash + UNDERSCORE + seed;
+  const levelHash = md5(this.levelKey_);
+  return (NET_SIM_PREFIX + levelHash + UNDERSCORE + seed).substring(
+    0,
+    MAX_LENGTH
+  );
 };
 
 /**

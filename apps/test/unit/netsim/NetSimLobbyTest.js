@@ -70,18 +70,25 @@ describe('NetSimLobby', () => {
       lobby = createLobbyWithLevelKey(sampleLevelKey);
     });
 
-    it("should return a string starting with 'ns_'", () => {
+    it("should return a string starting with 'ns-'", () => {
       const shardID = lobby.makeShardIDFromSeed_('testSeed');
-      expect(shardID.startsWith('ns_')).toBe(true);
+      expect(shardID.startsWith('ns-')).toBe(true);
     });
 
-    it('should return a string no longer than 48 characters with seed intact', () => {
-      // The md5 hash is 32 characters long so that if the seed length is greater than
-      // 13, the hash is truncated so that the seed is intact.
-      const seed = 'aVeryLongTestSeed'; // 17 characters
+    it('should return a string no longer than 48 characters with section id seed intact', () => {
+      // The md5 hash is 32 characters long.
+      // seed is section ID which will be no longer than 13 characters.
+      const seed = '0123456789';
       const shardID = lobby.makeShardIDFromSeed_(seed);
       expect(shardID.length).toBeLessThanOrEqual(48);
       expect(shardID.substring(shardID.length - seed.length)).toBe(seed);
+    });
+
+    it('should return a string no longer than 48 characters with long shared seed', () => {
+      // seed has more than 13 characters.
+      const seed = 'thisIsAVeryLongSharedShardSeed';
+      const shardID = lobby.makeShardIDFromSeed_(seed);
+      expect(shardID.length).toBeLessThanOrEqual(48);
     });
 
     it('should generate different shard IDs for different seeds', () => {
