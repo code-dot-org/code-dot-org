@@ -881,7 +881,7 @@ class Unit < ApplicationRecord
   end
 
   def has_standards_associations?
-    curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
+    curriculum_umbrella == 'CSF' && ((version_year && version_year >= '2019') || (unit_group&.version_year && unit_group.version_year >= '2019'))
   end
 
   def standards
