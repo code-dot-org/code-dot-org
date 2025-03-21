@@ -14,6 +14,7 @@ export interface MusicLevelData extends ProjectLevelData {
   packId?: string;
   showSoundFilters?: boolean;
   showSoundsPanelInSoundsMode?: boolean;
+  sortCdoSoundsByType: boolean;
   blockMode?: ValueOf<typeof BlockMode>;
   hideAiTemperature?: boolean;
   showAiTemperatureExplanation?: boolean;

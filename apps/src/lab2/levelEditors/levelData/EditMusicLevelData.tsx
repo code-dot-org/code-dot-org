@@ -231,7 +231,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 showSoundFilters,
                 ...(showSoundFilters
                   ? {}
-                  : {showSoundsPanelInSoundsMode: false}),
+                  : {
+                      showSoundsPanelInSoundsMode: false,
+                      sortCdoSoundsByType: false,
+                    }),
               });
             }}
             size="s"
@@ -248,6 +251,20 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 ...(showSoundsPanelInSoundsMode
                   ? {showSoundFilters: true}
                   : {}),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.sortCdoSoundsByType}
+            name="sortCdoSoundsByType"
+            label="Sort Code.org sounds by type in Sound Picker"
+            onChange={event => {
+              const sortCdoSoundsByType = event.target.checked;
+              setLevelData({
+                ...levelData,
+                sortCdoSoundsByType,
+                ...(sortCdoSoundsByType ? {showSoundFilters: true} : {}),
               });
             }}
             size="s"

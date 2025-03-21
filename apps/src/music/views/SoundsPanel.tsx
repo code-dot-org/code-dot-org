@@ -231,6 +231,7 @@ interface SoundsPanelProps {
   playingPreview: string;
   showSoundFilters: boolean;
   defaultMode: Mode;
+  sortCdoSoundsByType: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -241,6 +242,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   playingPreview,
   showSoundFilters,
   defaultMode,
+  sortCdoSoundsByType,
   onSelect,
   onPreview,
 }) => {
@@ -303,6 +305,24 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         possibleSoundEntries.push({folder, sound});
       });
     });
+    if (sortCdoSoundsByType) {
+      const SOUND_TYPE_ORDER: {[key in SoundType]: number} = {
+        preview: 0,
+        beat: 1,
+        bass: 2,
+        lead: 3,
+        fx: 4,
+        vocal: 5,
+      };
+      possibleSoundEntries.sort((a, b) => {
+        if (a.folder.artist === 'Code.org' && b.folder.artist === 'Code.org') {
+          const aOrder = SOUND_TYPE_ORDER[a.sound.type];
+          const bOrder = SOUND_TYPE_ORDER[b.sound.type];
+          return aOrder - bOrder;
+        }
+        return 0;
+      });
+    }
   }
 
   if (filter === 'all') {

@@ -146,6 +146,7 @@ class FieldSounds extends GoogleBlockly.Field {
     const defaultMode = MusicRegistry.showSoundsPanelInSoundsMode
       ? 'sounds'
       : 'packs';
+    const sortCdoSoundsByType = MusicRegistry.sortCdoSoundsByType;
 
     ReactDOM.render(
       <SoundsPanel
@@ -154,6 +155,7 @@ class FieldSounds extends GoogleBlockly.Field {
         playingPreview={this.playingPreview}
         showSoundFilters={MusicRegistry.showSoundFilters}
         defaultMode={defaultMode}
+        sortCdoSoundsByType={sortCdoSoundsByType}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();
