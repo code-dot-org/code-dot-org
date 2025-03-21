@@ -78,7 +78,7 @@ export const DefaultActionBlocks: Story = {
     const titles = await canvas.findAllByText('Action block title');
     const descriptions = await canvas.findAllByText(DESCRIPTION);
     const overlines = await canvas.findAllByText('Overline Text');
-    const images = await canvas.findAllByRole('figure');
+    const images = await canvas.findAllByAltText('');
     const primaryButtons = await canvas.findAllByLabelText(
       'Primary Button aria label',
     );
@@ -133,7 +133,7 @@ export const DefaultFullWidthActionBlock: Story = {
     const title = await canvas.findByText('Action block title');
     const description = await canvas.findByText(DESCRIPTION);
     const overline = await canvas.findByText('Overline Text');
-    const image = await canvas.findByRole('figure');
+    const image = await canvas.findByAltText('');
     const primaryButton = await canvas.findByLabelText(
       'Primary Button aria label',
     );
