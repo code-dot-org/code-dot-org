@@ -84,6 +84,9 @@ export const isPredictAnswerLocked = createSelector(
   }
 );
 
+export const isPredictResponseSubmitted = (state: RootState) =>
+  state.predictLevel.hasSubmittedResponse;
+
 // REDUCER
 const predictSlice = createSlice({
   name: 'predictLevel',
