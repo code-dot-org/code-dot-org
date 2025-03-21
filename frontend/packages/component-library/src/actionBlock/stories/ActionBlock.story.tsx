@@ -7,7 +7,7 @@ import {within, expect} from '@storybook/test';
 import ActionBlock, {FullWidthActionBlock, ActionBlockProps} from '../index';
 
 export default {
-  title: 'DesignSystem/Action Block/Action Block',
+  title: 'DesignSystem/Action Block',
   component: ActionBlock,
   parameters: {
     a11y: {

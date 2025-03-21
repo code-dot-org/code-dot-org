@@ -136,10 +136,9 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
   details,
   primaryButton,
   secondaryButton,
-  ...props
 }) => {
   return (
-    <ActionBlockWrapper {...props} className={moduleStyles.oneColumn}>
+    <ActionBlockWrapper className={moduleStyles.oneColumn}>
       <div>
         {overline && (
           <OverlineTwoText className={classNames(moduleStyles.overline)}>
