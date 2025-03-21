@@ -1,4 +1,4 @@
-import {act, render, screen, waitFor} from '@testing-library/react';
+import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -74,13 +74,11 @@ describe('AiDiffContainer', () => {
     const element = screen.getByTestId('draggable-test-id');
     expect(element.style.transform).toEqual('translate(0px,0px)');
 
-    await act(async () => {
-      userEvent.pointer([
-        {keys: '[MouseLeft>]', target: handle_element},
-        {keys: '[MouseLeft>]', target: handle_element, coords: {x: 50, y: 50}},
-        '[/MouseLeft]',
-      ]);
-    });
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle_element},
+      {keys: '[MouseLeft>]', target: handle_element, coords: {x: 50, y: 50}},
+      '[/MouseLeft]',
+    ]);
 
     await waitFor(() => {
       const newPosition = element.style.transform;
@@ -96,13 +94,11 @@ describe('AiDiffContainer', () => {
     const element = screen.getByTestId('draggable-test-id');
     expect(element.style.transform).toEqual('translate(0px,0px)');
 
-    await act(async () => {
-      userEvent.pointer([
-        {keys: '[MouseLeft>]', target: handle},
-        {keys: '[MouseLeft>]', target: handle, coords: {x: 5000, y: -5000}},
-        '[/MouseLeft]',
-      ]);
-    });
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: 5000, y: -5000}},
+      '[/MouseLeft]',
+    ]);
 
     await waitFor(() => {
       const newPosition = element.style.transform;
