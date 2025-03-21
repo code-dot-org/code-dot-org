@@ -51,13 +51,12 @@ describe('ActionBlock', () => {
     render(
       <ActionBlock
         {...defaultProps}
-        detailLabel="Duration"
-        detailDescription="2 hours"
+        details={{label: 'Duration', description: '1 hour'}}
       />,
     );
 
     expect(screen.getByText('Duration:')).toBeInTheDocument();
-    expect(screen.getByText('2 hours')).toBeInTheDocument();
+    expect(screen.getByText('1 hour')).toBeInTheDocument();
   });
 
   it('renders buttons', () => {
@@ -135,8 +134,7 @@ describe('FullWidthActionBlock', () => {
     render(
       <FullWidthActionBlock
         {...defaultProps}
-        detailLabel="Duration"
-        detailDescription="1 week"
+        details={{label: 'Duration', description: '1 week'}}
       />,
     );
 
