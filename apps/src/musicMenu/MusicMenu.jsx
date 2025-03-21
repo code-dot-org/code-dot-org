@@ -164,6 +164,20 @@ const optionsList = [
     ],
   },
   {
+    name: 'sort-cdo-sounds-by-type',
+    type: 'radio',
+    values: [
+      {
+        value: 'true',
+        description: 'Sort all Code.org sounds by type in the sounds panel.',
+      },
+      {
+        value: 'false',
+        description: 'Use the default sort for sounds in the sounds panel.',
+      },
+    ],
+  },
+  {
     name: 'allow-change-starting-playhead-position',
     type: 'radio',
     values: [
