@@ -63,4 +63,5 @@ bundle exec rake install
 bundle exec rake build
 
 bundle exec rake ci:seed_ui_test
+bundle exec rake ci:seed_ui_test
 bundle exec rake ci:run_ui_tests
