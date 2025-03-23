@@ -4200,7 +4200,6 @@ a {
   .clickable-text {
     cursor: pointer;
     position: relative;
-    outline-offset: 2px;
 
     &-with-glow {
       animation: clickable-text-glow-keyframes 2s ease-in-out;
