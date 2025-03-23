@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState, useCallback} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -19,9 +19,6 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
   );
-  const showSuggestedPrompts = useAppSelector(
-    state => state.aiTutor.showSuggestedPrompts
-  );
 
   const [feedbackDetailsOpen, setFeedbackDetailsOpen] = useState(false);
   const prevMessagesCountRef = useRef(storedMessages.length);
@@ -33,6 +30,17 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   );
   const isLastMessageFromAssistant =
     lastAssistantMessageIndex === storedMessages.length - 1;
+
+  const handleSuggestedPromptsRef = useCallback(
+    (node: HTMLDivElement | null) => {
+      if (node !== null) {
+        requestAnimationFrame(() => {
+          scrollToBottom();
+        });
+      }
+    },
+    []
+  );
 
   const scrollToBottom = () => {
     conversationContainerRef.current?.scrollTo({
@@ -58,26 +66,19 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
     const isFeedbackOpened =
       feedbackDetailsOpen && !prevFeedbackDetailsOpenRef.current;
 
-    setTimeout(() => {
-      if (isNewMessage) {
-        isLastMessageFromAssistant
-          ? scrollToAssistantMessage()
-          : scrollToBottom();
-      } else if (isFeedbackOpened || showSuggestedPrompts) {
-        scrollToBottom();
-      }
+    if (isNewMessage) {
+      isLastMessageFromAssistant
+        ? scrollToAssistantMessage()
+        : scrollToBottom();
+    } else if (isFeedbackOpened) {
+      scrollToBottom();
+    }
 
-      // Update refs to track changes in number of stored messages and whether
-      // assistant feedback details is open.
-      prevMessagesCountRef.current = storedMessages.length;
-      prevFeedbackDetailsOpenRef.current = feedbackDetailsOpen;
-    }, 200); // Small delay to allow DOM updates
-  }, [
-    storedMessages.length,
-    showSuggestedPrompts,
-    feedbackDetailsOpen,
-    isLastMessageFromAssistant,
-  ]);
+    // Update refs to track changes in number of stored messages and whether
+    // assistant feedback details is open.
+    prevMessagesCountRef.current = storedMessages.length;
+    prevFeedbackDetailsOpenRef.current = feedbackDetailsOpen;
+  }, [storedMessages.length, feedbackDetailsOpen, isLastMessageFromAssistant]);
 
   return (
     <div id="ai-tutor-chat-workspace" className={style.aiTutorChatWorkspace}>
@@ -110,7 +111,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
           );
         })}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
-        <AITutorSuggestedPrompts />
+        <AITutorSuggestedPrompts innerRef={handleSuggestedPromptsRef} />
       </div>
       <WarningModal />
     </div>

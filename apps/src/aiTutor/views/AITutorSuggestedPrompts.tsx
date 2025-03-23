@@ -42,7 +42,13 @@ const useLabSelectors = () => {
   }));
 };
 
-const AITutorSuggestedPrompts: React.FunctionComponent = () => {
+interface AITutorSuggestedPromptsProps {
+  innerRef?: React.Ref<HTMLDivElement>;
+}
+
+const AITutorSuggestedPrompts: React.FunctionComponent<
+  AITutorSuggestedPromptsProps
+> = ({innerRef}) => {
   const {
     isWaitingForChatResponse,
     level,
@@ -184,7 +190,9 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
   // we do not show a suggested prompt again until the user clicks on the 'Run' or
   // 'Validate'/'Test' buttons.
   return showSuggestedPrompts ? (
-    <SuggestedPrompts suggestedPrompts={suggestedPrompts} />
+    <div ref={innerRef}>
+      <SuggestedPrompts suggestedPrompts={suggestedPrompts} />
+    </div>
   ) : null;
 };
 
