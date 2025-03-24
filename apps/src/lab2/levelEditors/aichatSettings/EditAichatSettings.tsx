@@ -4,7 +4,7 @@ import {
   BodyThreeText,
   BodyTwoText,
 } from '@code-dot-org/component-library/typography';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {
@@ -37,7 +37,7 @@ import VisibilityDropdown from './VisibilityDropdown';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
 
-function sanitizeSettings(settings: LevelAichatSettings) {
+function sanitizeSettings(settings: LevelAichatSettings): LevelAichatSettings {
   const sanitizedModelCardInfo = sanitizeField(
     settings.initialCustomizations.modelCardInfo,
     EMPTY_MODEL_CARD_INFO
@@ -56,6 +56,10 @@ function sanitizeSettings(settings: LevelAichatSettings) {
     modelDescriptions.some(model => model.id === id)
   );
 
+  const multimodalIncluded = (settings.availableModelIds || []).some(
+    id => modelDescriptions.find(model => model.id === id)?.multimodal
+  );
+
   return {
     ...settings,
     availableModelIds: filteredModelIds,
@@ -64,15 +68,17 @@ function sanitizeSettings(settings: LevelAichatSettings) {
       modelCardInfo: sanitizedModelCardInfo,
     },
     visibilities: sanitizedVisibilities,
+    // Disable multimodal if no multimodal models are available
+    multimodalEnabled: !multimodalIncluded ? false : settings.multimodalEnabled,
   };
 }
 
-function sanitizeField<F extends object>(field: F, defaults: F) {
+function sanitizeField<F extends object>(field: F, defaults: F): F {
   // Iterate over default keys, keeping the value from the field if present, and otherwise using the default.
   // This removes any extraneous keys and retains only expected keys.
   return getTypedKeys<keyof F>(defaults).reduce(
     (newField, key) => ({...newField, [key]: field[key] ?? defaults[key]}),
-    {}
+    {} as F
   );
 }
 
@@ -157,21 +163,15 @@ const EditAichatSettings: React.FunctionComponent<{
     [aichatSettings, setAichatSettings]
   );
 
-  const allModelsMultimodal = useMemo(() => {
-    return aichatSettings.availableModelIds.every(
-      id => modelDescriptions.find(model => model.id === id)?.multimodal
-    );
-  }, [aichatSettings.availableModelIds]);
-
-  // If not all available models support multimodal, automatically uncheck the setting.
-  useEffect(() => {
-    if (!allModelsMultimodal && aichatSettings.multimodalEnabled) {
+  const setMultimodalEnabled = useCallback(
+    (value: boolean) => {
       setAichatSettings({
         ...aichatSettings,
-        multimodalEnabled: false,
+        multimodalEnabled: value,
       });
-    }
-  }, [allModelsMultimodal, aichatSettings]);
+    },
+    [aichatSettings, setAichatSettings]
+  );
 
   return (
     <UpdateContext.Provider
@@ -181,6 +181,7 @@ const EditAichatSettings: React.FunctionComponent<{
         setPropertyValue,
         setModelCardPropertyValue,
         setModelSelectionValues,
+        setMultimodalEnabled,
       }}
     >
       <div>
@@ -328,32 +329,6 @@ const EditAichatSettings: React.FunctionComponent<{
                   setAichatSettings({
                     ...aichatSettings,
                     hidePresentationPanel: e.target.checked,
-                  });
-                }}
-              />
-            </div>
-            <br />
-            <BodyFourText>
-              <i>
-                Enables multimodal chat. Only available if all the available
-                models support multimodal inputs (like Chat GPT 4o-mini).
-              </i>
-            </BodyFourText>
-            <div className={moduleStyles.fieldRow}>
-              <label
-                htmlFor="multimodalEnabled"
-                className={moduleStyles.inlineLabel}
-              >
-                Enable Multimodal Chat
-              </label>
-              <Checkbox
-                name="multimodalEnabled"
-                disabled={!allModelsMultimodal}
-                checked={aichatSettings.multimodalEnabled || false}
-                onChange={e => {
-                  setAichatSettings({
-                    ...aichatSettings,
-                    multimodalEnabled: e.target.checked,
                   });
                 }}
               />
