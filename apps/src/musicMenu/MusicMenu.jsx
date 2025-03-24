@@ -168,12 +168,13 @@ const optionsList = [
     type: 'radio',
     values: [
       {
-        value: 'true',
-        description: 'Sort all Code.org sounds by type in the sounds panel.',
+        value: 'false',
+        description:
+          'Use the default sort for sounds in the sounds panel (default).',
       },
       {
-        value: 'false',
-        description: 'Use the default sort for sounds in the sounds panel.',
+        value: 'true',
+        description: 'Sort all Code.org sounds by type in the sounds panel.',
       },
     ],
   },
