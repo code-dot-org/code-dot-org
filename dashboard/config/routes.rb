@@ -565,7 +565,7 @@ Dashboard::Application.routes.draw do
 
     resources :scripts, path: '/s/', &unit_routes
 
-    get '/certificate_images/:filename', to: 'certificate_images#show'
+    resources :certificate_images, only: [:show], param: 'filename'
 
     post '/print_certificates/batch'
     get '/print_certificates/:encoded_params', to: 'print_certificates#show'
