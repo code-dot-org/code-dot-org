@@ -14,7 +14,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
-    And I am on "http://studio.code.org/courses/csp-2024"
+    And I am on "http://studio.code.org/courses/csp-2019"
     And I wait until element "#ui-floatingActionButton" is visible
     And I open my eyes to test "ai diff welcome and chat"
     Then I see no difference for "ai diff floating action button icon"
@@ -69,7 +69,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
-    And I am on "http://studio.code.org/s/csp4-2024"
+    And I am on "http://studio.code.org/s/csp4-2019"
     And I wait until element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
