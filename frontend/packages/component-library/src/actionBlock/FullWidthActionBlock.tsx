@@ -22,10 +22,16 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
   details,
   primaryButton,
   secondaryButton,
-  ...props
+  background,
+  className,
+  ...HTMLAttributes
 }) => {
   return (
-    <ActionBlockWrapper {...props} className={moduleStyles.fullWidth}>
+    <ActionBlockWrapper
+      background={background}
+      className={classNames(moduleStyles.fullWidth, className)}
+      {...HTMLAttributes}
+    >
       {image && getImage(image)}
       <div>
         {overline && (

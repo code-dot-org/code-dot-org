@@ -72,17 +72,18 @@ export const getButtons = (
           text={primaryButton.text}
           href={primaryButton.href}
           ariaLabel={primaryButton.ariaLabel}
+          {...primaryButton}
         />
       )}
       {secondaryButton && (
         <LinkButton
-          {...secondaryButton}
           type="secondary"
           size="m"
           color="black"
           text={secondaryButton.text}
           href={secondaryButton.href}
           ariaLabel={secondaryButton.ariaLabel}
+          {...secondaryButton}
         />
       )}
     </div>
@@ -93,7 +94,6 @@ export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
   background = 'primary',
   className,
   children,
-  ...HTMLAttributes
 }) => {
   return (
     <div
@@ -102,7 +102,6 @@ export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
         moduleStyles[`actionBlock-background-${background}`],
         className,
       )}
-      {...HTMLAttributes}
     >
       {children}
     </div>
@@ -131,9 +130,16 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
   details,
   primaryButton,
   secondaryButton,
+  background,
+  className,
+  ...HTMLAttributes
 }) => {
   return (
-    <ActionBlockWrapper className={moduleStyles.oneColumn}>
+    <ActionBlockWrapper
+      background={background}
+      className={classNames(moduleStyles.oneColumn, className)}
+      {...HTMLAttributes}
+    >
       <div>
         {overline && (
           <OverlineTwoText className={classNames(moduleStyles.overline)}>
