@@ -58,7 +58,7 @@ export const createOpenaiSafetyMetricStat = (
 };
 
 export const metricsSumExpression = (metrics: { Id: string }[]): string => {
-  return `SUM[${metrics.map(m => m.Id).join(",")}]`;
+  return `SUM([${metrics.map(m => m.Id).join(",")}])`;
 };
 
 // Start(total) jobs metric configuration for a set of models
