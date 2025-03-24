@@ -891,7 +891,6 @@ en:
         csaif-pilot-music-producer: Music Producer CPU
         csaif-pilot-content-creator: Content Creator
         csaif-pilot-graphic-designer: Graphic Designer
-        convenience_v_privacy: Convenience vs Privacy - Facial Recognition
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
