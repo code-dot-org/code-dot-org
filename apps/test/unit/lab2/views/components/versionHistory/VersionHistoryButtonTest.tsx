@@ -145,6 +145,30 @@ describe('VersionHistoryButton', () => {
     expect(latestVersion.checked).toBe(true);
   });
 
+  it('selects initial version if there is no version list', async () => {
+    mockedProjectManager = {
+      getVersionList: jest.fn(() => Promise.resolve([])),
+    } as unknown as jest.Mocked<ProjectManager>;
+    Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
+
+    const {getByDisplayValue} = renderDefault();
+    const button = await screen.findByRole('button', {name: 'Version History'});
+
+    const user = userEvent.setup();
+    await act(async () => {
+      user.click(button);
+    });
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+
+    const initialVersion = getByDisplayValue(
+      'initial-version'
+    ) as HTMLInputElement;
+    expect(initialVersion.checked).toBe(true);
+  });
+
   it('restores selected version on restore', async () => {
     const {getByDisplayValue, getByRole, queryByRole} = renderDefault();
 
