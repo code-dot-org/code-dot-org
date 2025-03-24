@@ -1,0 +1,20 @@
+{
+  "name": "musiclab-pdx-test",
+  "script_names": [
+    "musiclab-pdx-test"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "musiclab-pdx-test",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "csd6-projects",
+  "script_names": [
+    "csd6-projects"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd6-projects",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

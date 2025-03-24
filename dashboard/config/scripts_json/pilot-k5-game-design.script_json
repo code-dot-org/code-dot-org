@@ -7,18 +7,16 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "spring-2024-k5-pilot",
-      "version_year": "unversioned"
+      "pilot_experiment": "spring-2024-k5-pilot"
     },
     "new_name": null,
-    "family_name": "pilot-k5-game-design",
-    "serialized_at": "2024-11-19 01:19:17 UTC",
+    "family_name": null,
+    "serialized_at": "2025-03-24 23:13:39 UTC",
     "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "pilot-k5-game-design"
     }

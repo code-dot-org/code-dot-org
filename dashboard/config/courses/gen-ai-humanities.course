@@ -1,0 +1,20 @@
+{
+  "name": "gen-ai-humanities",
+  "script_names": [
+    "gen-ai-humanities"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "gen-ai-humanities",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

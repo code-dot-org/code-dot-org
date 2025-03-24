@@ -1,0 +1,20 @@
+{
+  "name": "csa-u7-dev",
+  "script_names": [
+    "csa-u7-dev"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csa-u7-dev",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

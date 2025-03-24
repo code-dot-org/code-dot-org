@@ -1,0 +1,20 @@
+{
+  "name": "gamelab-hackathon",
+  "script_names": [
+    "gamelab-hackathon"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "gamelab-hackathon",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
