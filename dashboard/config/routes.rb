@@ -567,8 +567,11 @@ Dashboard::Application.routes.draw do
 
     resources :certificate_images, only: [:show], param: 'filename'
 
-    post '/print_certificates/batch'
-    get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+    resources :print_certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        post :batch
+      end
+    end
 
     get '/certificates/blank'
     get '/certificates/batch'
