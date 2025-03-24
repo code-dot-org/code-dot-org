@@ -82,7 +82,7 @@ const aichatSlice = createSlice({
       }
 
       if (lastResetIndex >= 0) {
-        state.chatEventsCurrent = action.payload.slice(lastResetIndex + 1);
+        state.chatEventsCurrent = action.payload.slice(lastResetIndex);
       } else {
         state.chatEventsCurrent = action.payload;
       }
