@@ -493,7 +493,6 @@ const EVENTS = {
   CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
     'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
-  CODEBRIDGE_HELP_TIPS_TOGGLE: 'Toggled to Help and Tips on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
