@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+# This script searches pythonlab .level files in dashboard/config/levels/custom/pythonlab
+# and prints out those that:
+# - Have <Pythonlab> in the XML
+# - Contain a reference_links array in the embedded JSON config
+
+require 'nokogiri'
+require 'json'
+require 'find'
+
+# Target directory: code-dot-org/dashboard/config/levels/custom/pythonlab
+REPO_ROOT = File.expand_path('..', __dir__)
+PYTHONLAB_LEVEL_DIR = File.join(REPO_ROOT, 'dashboard/config/levels/custom/pythonlab')
+
+count_matches = 0
+
+puts "Scanning PythonLab .level files in: #{PYTHONLAB_LEVEL_DIR}"
+
+Find.find(PYTHONLAB_LEVEL_DIR) do |path|
+  next unless path.end_with?('.level')
+
+  begin
+    xml = File.read(path)
+    doc = Nokogiri::XML(xml)
+
+    # Ensure this is a Pythonlab level
+    next unless doc.at_xpath('//Pythonlab')
+
+    # Extract and parse the config block
+    config_node = doc.at_xpath('//Pythonlab/config')
+    next unless config_node
+
+    json_text = config_node.text.strip
+    config = JSON.parse(json_text) rescue nil
+    level_name = path.sub(PYTHONLAB_LEVEL_DIR + '/', '')
+
+    next unless config && config['properties'].is_a?(Hash)
+    next unless config['properties']['reference_links'].is_a?(Array)
+
+    # Match found
+    puts "#{path.sub(PYTHONLAB_LEVEL_DIR + '/', '')}"
+    count_matches += 1
+
+  rescue => exception
+    warn "⚠️ Error reading #{path}: #{exception.message}"
+  end
+end
+
+puts "\nTotal matching PythonLab levels with reference_links: #{count_matches}"
