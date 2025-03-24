@@ -62,7 +62,6 @@ const Section: React.FC<SectionProps> = ({
   backgroundImageUrl,
   padding = 'l',
   theme = 'Light',
-
   id,
   className,
   children,
