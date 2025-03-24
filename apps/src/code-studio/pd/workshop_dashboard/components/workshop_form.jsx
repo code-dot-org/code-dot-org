@@ -783,7 +783,7 @@ export class WorkshopForm extends React.Component {
     });
     this.loadAvailableFacilitators(course);
     if (course === COURSE_BUILD_YOUR_OWN) {
-      this.setState({funded: false, suppress_email: true});
+      this.setState({funded: false});
     }
   };
 

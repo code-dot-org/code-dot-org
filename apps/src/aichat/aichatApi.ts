@@ -7,6 +7,7 @@ import {
 import {Role} from '../aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '../types/utils';
 
+import {chatHistoryValidator} from './api/validators';
 import {
   AiCustomizations,
   AichatContext,
@@ -133,7 +134,9 @@ export async function getUserChatHistory(
     scriptId: scriptId?.toString() || '',
   };
   const response = await HttpClient.fetchJson<ServerChatEvent[]>(
-    paths.CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
+    paths.CHAT_HISTORY_URL + '?' + new URLSearchParams(params),
+    undefined,
+    chatHistoryValidator
   );
 
   return response.value;

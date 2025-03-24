@@ -60,33 +60,6 @@ class Pythonlab < Level
     true
   end
 
-  # Ensure that if this is a multiple choice predict level, there is at least one correct answer
-  # specified.
-  def has_correct_multiple_choice_answer?
-    if predict_settings && predict_settings["isPredictLevel"] && predict_settings["questionType"] == 'multipleChoice'
-      options = predict_settings["multipleChoiceOptions"]
-      answers = predict_settings["solution"]
-      unless options && answers && !options.empty? && answers.present?
-        errors.add(:predict_settings, 'multiple choice questions must have at least one correct answer')
-      end
-    end
-  end
-
-  def clean_up_predict_settings
-    return unless predict_settings
-    if !predict_settings["isPredictLevel"]
-      # If this is not a predict level, remove any predict settings that may have been set.
-      self.predict_settings = {isPredictLevel: false}
-    elsif predict_settings["questionType"] == 'multipleChoice'
-      # Remove any free response settings if this is a multiple choice question.
-      predict_settings.delete("placeholderText")
-      predict_settings.delete("freeResponseHeight")
-    else
-      # Remove any multiple choice settings if this is a free response question.
-      predict_settings.delete("multipleChoiceOptions")
-    end
-  end
-
   # Return the validation condition for this level. If the level has a validation file, the condition
   # is that all tests passed. If there is no validation file, there are no conditions.
   def get_validations

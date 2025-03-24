@@ -1,7 +1,9 @@
+@use '@code-dot-org/component-library-styles/typography.module' as typography;
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/variables' as variables;
 @import '@code-dot-org/component-library-styles/font.scss';
 @import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/colors.scss';
 
 .tabs {
   ul {
@@ -247,6 +249,80 @@
         color: var(--neutral-gray-80);
         background-color: var(--neutral-gray-95);
         border: 1px solid var(--neutral-gray-80);
+      }
+    }
+  }
+}
+
+// Styles for _tabGroup internal tab type. Since this type only have one size (M) right now we keep all the styles
+// under this scss selector for now.
+.tabs-_tabGroup {
+  ul {
+    display: flex;
+    width: 100%;
+    height: 2.6875rem;
+    align-items: stretch;
+    gap: 0.375rem;
+    border-bottom: 5px solid var(--borders-brand-teal-primary);
+  }
+
+  li {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+
+    // Fix issue when tooltip is added to the tab that has too long label and tab becomes wider then needed
+    > div {
+      width: 100%;
+    }
+  }
+
+  li button[role='tab'] {
+    display: flex;
+    width: 100%;
+    height: 2.6875rem;
+    padding: 0.75rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-top: 1px solid var(--borders-neutral-primary);
+    border-right: 1px solid var(--borders-neutral-primary);
+    border-left: 1px solid var(--borders-neutral-primary);
+    background: var(--background-neutral-primary);
+
+    span {
+      @include typography.heading-xs;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      background: var(--background-neutral-tertiary);
+    }
+
+    &:focus-visible {
+      @include focus-styles;
+    }
+
+    &:active:not(:disabled, .selectedTab) {
+      border-radius: 0.5rem 0.5rem 0 0;
+      border: 1px solid var(--borders-neutral-strong) !important;
+      border-bottom: 0 solid transparent !important;
+    }
+
+    &.selectedTab {
+      border-radius: 0.5rem 0.5rem 0 0;
+      background: var(--background-brand-teal-primary);
+      border-color: var(--borders-brand-teal-primary);
+      color: var(--text-neutral-white-fixed);
+
+      span {
+        color: var(--text-neutral-white-fixed);
       }
     }
   }

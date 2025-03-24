@@ -24,7 +24,10 @@ module AichatOpenaiHelper
   end
 
   def self.format_messages(aichat_model_customizations, stored_messages, new_message, level_id, encrypted_channel_id)
-    level_system_prompt = Level.find_by(id: level_id)&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
+    level = Level.find_by(id: level_id)
+    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
+    level_name = level&.name
+
     instructions = get_instructions(
       aichat_model_customizations['systemPrompt'],
       level_system_prompt,
@@ -33,15 +36,15 @@ module AichatOpenaiHelper
 
     [
       {role: "system", content: instructions},
-      *stored_messages.map {|message| format_message(message, encrypted_channel_id)},
-      format_message(new_message, encrypted_channel_id)
+      *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
+      format_message(new_message, encrypted_channel_id, level_name)
     ]
   end
 
-  def self.format_message(message, encrypted_channel_id)
+  def self.format_message(message, encrypted_channel_id, level_name)
     formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
-    message['assets']&.each do |filename|
-      asset_uris = AichatAssetHelper.get_asset_data_uris(encrypted_channel_id, filename)
+    message['assets']&.each do |asset|
+      asset_uris = AichatAssetHelper.get_asset_data_uris(asset, encrypted_channel_id, level_name)
       asset_uris.each do |asset_uri|
         formatted[:content] << {type: "image_url", image_url: {url: asset_uri}}
       end

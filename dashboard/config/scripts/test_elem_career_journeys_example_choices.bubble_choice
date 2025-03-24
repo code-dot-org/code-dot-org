@@ -1,0 +1,17 @@
+name 'test-elem-career-journeys-example-choices'
+display_name 'Future Me Examples'
+description 'Explore careers through these project examples.'
+
+sublevels
+level 'test-elem-career-journeys-explore-panels'
+level 'test-elem-career-journeys-explore-panels2'
+level 'test-elem-career-journeys-explore-panels3'
+level 'test-elem-career-journeys-video-choice1'
+level 'test-elem-career-journeys-video-choice2'
+level 'test-elem-career-journeys-video-choice3'
+level 'test-elem-career-journeys-example1'
+level 'test-elem-career-journeys-example2'
+level 'test-elem-career-journeys-example3'
+
+
+
