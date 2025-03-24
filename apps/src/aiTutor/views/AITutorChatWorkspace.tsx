@@ -29,32 +29,35 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
     [storedMessages]
   );
   const isLastMessageFromAssistant =
+    lastAssistantMessageIndex !== -1 &&
     lastAssistantMessageIndex === storedMessages.length - 1;
+
+  const scrollToBottom = useCallback(() => {
+    conversationContainerRef.current?.scrollTo({
+      top: conversationContainerRef.current.scrollHeight,
+      behavior: 'smooth',
+    });
+  }, []);
 
   const handleSuggestedPromptsRef = useCallback(
     (node: HTMLDivElement | null) => {
-      if (node !== null) {
+      const isNewMessage =
+        storedMessages.length !== prevMessagesCountRef.current;
+      if (node !== null && !isNewMessage) {
         setTimeout(() => {
           scrollToBottom();
         }, 100);
       }
     },
-    []
+    [scrollToBottom, storedMessages.length]
   );
 
-  const scrollToBottom = () => {
-    conversationContainerRef.current?.scrollTo({
-      top: conversationContainerRef.current.scrollHeight,
-      behavior: 'smooth',
-    });
-  };
-
-  const scrollToAssistantMessage = () => {
+  const scrollToAssistantMessage = useCallback(() => {
     lastAssistantMessageRef.current?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
-  };
+  }, []);
 
   useEffect(() => {
     if (!conversationContainerRef.current) {
@@ -66,11 +69,12 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
     const isFeedbackOpened =
       feedbackDetailsOpen && !prevFeedbackDetailsOpenRef.current;
 
-    if (isNewMessage) {
-      isLastMessageFromAssistant
-        ? scrollToAssistantMessage()
-        : scrollToBottom();
-    } else if (isFeedbackOpened) {
+    if (isNewMessage && isLastMessageFromAssistant) {
+      scrollToAssistantMessage();
+      return;
+    }
+
+    if (isNewMessage || isFeedbackOpened) {
       scrollToBottom();
     }
 
@@ -78,7 +82,13 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
     // assistant feedback details is open.
     prevMessagesCountRef.current = storedMessages.length;
     prevFeedbackDetailsOpenRef.current = feedbackDetailsOpen;
-  }, [storedMessages.length, feedbackDetailsOpen, isLastMessageFromAssistant]);
+  }, [
+    storedMessages.length,
+    feedbackDetailsOpen,
+    isLastMessageFromAssistant,
+    scrollToAssistantMessage,
+    scrollToBottom,
+  ]);
 
   return (
     <div id="ai-tutor-chat-workspace" className={style.aiTutorChatWorkspace}>
