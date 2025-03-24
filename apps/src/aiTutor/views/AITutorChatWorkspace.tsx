@@ -34,9 +34,9 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
   const handleSuggestedPromptsRef = useCallback(
     (node: HTMLDivElement | null) => {
       if (node !== null) {
-        requestAnimationFrame(() => {
+        setTimeout(() => {
           scrollToBottom();
-        });
+        }, 100);
       }
     },
     []
