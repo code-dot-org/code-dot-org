@@ -38,6 +38,11 @@
       }
     }
 
+    // Remove the native summary disclosure triangle on Safari browsers
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
     > p {
       display: flex;
       flex-direction: column;
