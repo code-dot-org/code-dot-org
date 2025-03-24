@@ -105,7 +105,6 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
               value={condition.value || dropdownOptions[0]}
               onChange={e => {
                 condition.value = e.target.value;
-                console.log({condition});
                 onConditionChange(condition, index);
               }}
             >
