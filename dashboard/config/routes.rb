@@ -573,10 +573,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/certificates/blank'
-    get '/certificates/batch'
-    post '/certificates/batch'
-    get '/certificates/:encoded_params', to: 'certificates#show'
+    resources :certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        get :blank
+        get :batch
+        post :batch
+      end
+    end
 
     get '/beta', to: redirect('/')
 
