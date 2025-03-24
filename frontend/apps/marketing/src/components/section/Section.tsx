@@ -5,9 +5,8 @@ import DSCOSection, {
 // Import the background image used in the pattern backgrounds on Contentful
 import bgPatternImage from '@public/images/bg-pattern-lines.png';
 
-const Section: React.FC<SectionProps> = ({background, id, ...props}) => (
+const Section: React.FC<SectionProps> = ({background, ...props}) => (
   <DSCOSection
-    id={id}
     background={background}
     backgroundImageUrl={
       background === 'patternDark' || background === 'patternPrimary'

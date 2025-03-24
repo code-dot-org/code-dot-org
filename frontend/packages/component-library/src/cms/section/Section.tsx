@@ -84,7 +84,6 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles[`section-padding-${padding}`],
         className,
       )}
-      {...HTMLAttributes}
       style={{
         ...(hasPatternBackground
           ? backgroundImageUrl
@@ -96,6 +95,7 @@ const Section: React.FC<SectionProps> = ({
             : {}
           : {}),
       }}
+      {...HTMLAttributes}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>
     </section>
