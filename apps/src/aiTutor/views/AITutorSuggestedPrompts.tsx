@@ -189,7 +189,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent<
   // `showSuggestedPrompts` ensures that if the user clicks on a suggested prompt,
   // we do not show a suggested prompt again until the user clicks on the 'Run' or
   // 'Validate'/'Test' buttons.
-  return showSuggestedPrompts ? (
+  return showSuggestedPrompts && suggestedPrompts.length > 0 ? (
     <div ref={innerRef}>
       <SuggestedPrompts suggestedPrompts={suggestedPrompts} />
     </div>

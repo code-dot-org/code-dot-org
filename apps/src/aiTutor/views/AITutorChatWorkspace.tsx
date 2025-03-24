@@ -41,15 +41,11 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 
   const handleSuggestedPromptsRef = useCallback(
     (node: HTMLDivElement | null) => {
-      const isNewMessage =
-        storedMessages.length !== prevMessagesCountRef.current;
-      if (node !== null && !isNewMessage) {
-        setTimeout(() => {
-          scrollToBottom();
-        }, 100);
+      if (node !== null) {
+        scrollToBottom();
       }
     },
-    [scrollToBottom, storedMessages.length]
+    [scrollToBottom]
   );
 
   const scrollToAssistantMessage = useCallback(() => {
