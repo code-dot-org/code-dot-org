@@ -306,18 +306,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       });
     });
     if (sortCdoSoundsByType) {
-      const SOUND_TYPE_ORDER: {[key in SoundType]: number} = {
-        preview: 0,
-        beat: 1,
-        bass: 2,
-        lead: 3,
-        fx: 4,
-        vocal: 5,
-      };
+      const soundTypes: SoundType[] = ['beat', 'bass', 'lead', 'fx', 'vocal'];
       possibleSoundEntries.sort((a, b) => {
         if (a.folder.artist === 'Code.org' && b.folder.artist === 'Code.org') {
-          const aOrder = SOUND_TYPE_ORDER[a.sound.type];
-          const bOrder = SOUND_TYPE_ORDER[b.sound.type];
+          const aOrder = soundTypes.indexOf(a.sound.type);
+          const bOrder = soundTypes.indexOf(b.sound.type);
           return aOrder - bOrder;
         }
         return 0;
