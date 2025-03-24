@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 20:33:46 UTC",
+    "serialized_at": "2025-03-23 03:14:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1833,7 +1833,7 @@
       "key": "cb48d2b2-5f4f-402d-a52c-327d12163591",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *build*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students should spend a few minutes exploring PCPartPicker by clicking the blue buttons to explore different components, using the filtering options available on the left-hand side of the screen, or even exploring builds that other users have shared. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *build*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Students should spend a few minutes exploring PCPartPicker by clicking the blue buttons to explore different components, using the filtering options available on the left-hand side of the screen, or even exploring builds that other users have shared. ",
         "progression_name": "PCPartPicker"
       },
       "seeding_key": {

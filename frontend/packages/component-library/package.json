@@ -92,6 +92,14 @@
       "import": "./dist/esm/closeButton/index.mjs",
       "require": "./dist/cjs/closeButton/index.js"
     },
+    "./cms/iconHighlight": {
+      "types": {
+        "import": "./dist/esm/cms/iconHighlight/index.d.ts",
+        "require": "./dist/cjs/cms/iconHighlight/index.d.ts"
+      },
+      "import": "./dist/esm/cms/iconHighlight/index.mjs",
+      "require": "./dist/cjs/cms/iconHighlight/index.js"
+    },
     "./cms/iframe": {
       "types": {
         "import": "./dist/esm/cms/iframe/index.d.ts",

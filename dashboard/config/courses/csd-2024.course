@@ -16,18 +16,6 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "announcements": [
-      {
-        "key": "6d50e172-882f-4a98-a166-d858bec27d60",
-        "notice": "Evaluating Potential Changes to the CSD Curriculum Sequence",
-        "details": "We're exploring ways to enhance student engagement in the CSD curriculum, including the possibility of bringing the AI/ML unit earlier in the sequence and shifting the Web Development unit later. Your feedback will help us understand how you teach the course and what changes, if any, would support you and your students.",
-        "link": "https://usabi.li/do/fs6ybetnvhaz/rjbsb6",
-        "type": "feedback",
-        "visibility": "Teacher-only",
-        "dismissible": true,
-        "buttonText": "Let us know your thoughts!"
-      }
-    ],
     "family_name": "csd",
     "has_verified_resources": true,
     "version_year": "2024"
