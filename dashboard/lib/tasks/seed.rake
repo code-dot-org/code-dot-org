@@ -635,6 +635,7 @@ namespace :seed do
   desc "seed all dashboard data"
   timed_task_with_logging all: FULL_SEED_TASKS
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
+  timed_task_with_logging ui_test_scripts: [:course_offerings_ui_tests, :scripts_ui_tests]
 
   desc "seed all dashboard data that has changed since last seed"
   timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :foorms, :import_pegasus_data]
