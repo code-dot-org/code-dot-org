@@ -70,7 +70,7 @@ export const Codebridge = React.memo(
       }
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
-    const innerLayout = useMemo(() => {
+    const InnerLayout = useMemo(() => {
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
@@ -106,7 +106,7 @@ export const Codebridge = React.memo(
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
-            {innerLayout}
+            <InnerLayout isProjectLevel={levelProperties.isProjectLevel} />
           </div>
         </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>

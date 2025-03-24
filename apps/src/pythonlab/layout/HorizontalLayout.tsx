@@ -1,4 +1,5 @@
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
+import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
@@ -15,7 +16,9 @@ const MIN_EDITOR_HEIGHT = 200;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_HEIGHT = 300;
 
-const HorizontalLayout: React.FunctionComponent = () => {
+const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
+  isProjectLevel,
+}) => {
   const {
     leftPanelWidth,
     rightPanelWidth,
@@ -28,8 +31,8 @@ const HorizontalLayout: React.FunctionComponent = () => {
     setRightBottomPanelSize,
   } = useHorizontalLayout({
     leftPanel: {
-      initialWidth: INITIAL_INFO_PANEL_WIDTH,
-      minWidth: MIN_LEFT_PANEL_WIDTH,
+      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
+      minWidth: isProjectLevel ? 0 : MIN_LEFT_PANEL_WIDTH,
       name: 'instructions',
     },
     rightTopPanel: {
@@ -46,15 +49,19 @@ const HorizontalLayout: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.layoutContainer}>
-      <InfoPanel
-        style={{width: leftPanelWidth}}
-        className={moduleStyles.flexShrink0}
-      />
-      <ResizeBar
-        isVertical={true}
-        separatorProps={leftPanelSeparatorProps}
-        isDragging={leftPanelDragging}
-      />
+      {!isProjectLevel && (
+        <>
+          <InfoPanel
+            style={{width: leftPanelWidth}}
+            className={moduleStyles.flexShrink0}
+          />
+          <ResizeBar
+            isVertical={true}
+            separatorProps={leftPanelSeparatorProps}
+            isDragging={leftPanelDragging}
+          />
+        </>
+      )}
       <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
         <Workspace style={{height: rightTopPanelHeight}} />
         <ResizeBar
