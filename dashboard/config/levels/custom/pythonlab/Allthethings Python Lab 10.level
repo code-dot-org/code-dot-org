@@ -1,7 +1,8 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
-  "created_at": "2025-01-24T09:35:12.000Z",
+  "created_at": "2025-01-22T22:43:57.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
@@ -13,7 +14,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\np = Painter(1,1,'south',3)\nprint(p.get_x())\np.turn_left()\np.paint('Blue')\np.move()\np.set_paint(10)\nprint(p.get_my_paint())",
+          "contents": "from neighborhood import Painter\n\np = Painter(1,1)\nprint(p.get_x())\np.paint('Blue') # No paint in bucket.\np.scrape_paint() # No paint to remove.\np.move()\np.set_paint(10)\nprint(p.get_my_paint())\np.paint('Blue')\np.move()",
           "folderId": "0",
           "active": false,
           "open": true,
@@ -39,10 +40,6 @@
     },
     "long_instructions": "## Neighborhood level\r\n",
     "hide_share_and_remix": "false",
-    "reference_links": [
-      "/courses/csa-2023/guides/instantiating-objects"
-    ],
-    "map_reference": "/docs/concepts/html/",
     "teacher_markdown": "Teachers should see this extra info.",
     "ai_tutor_available": "true",
     "submittable": "false",
@@ -267,9 +264,9 @@
           "assetId": 0
         },
         {
-          "tileType": 0,
+          "tileType": 1,
           "value": 0,
-          "assetId": 46
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -320,8 +317,8 @@
         },
         {
           "tileType": 1,
-          "value": 7,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -390,7 +387,6 @@
     "enable_micro_bit": "false",
     "mini_app": "neighborhood"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-22T10:07:14.637-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 9\\\"\"],\"cloned_from\":\"Allthethings Python Lab 9\"},{\"changed_at\":\"2025-01-22 10:08:38 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 10:32:29 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 11:41:13 -0800\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 14:36:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T10:07:14.637-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 9\\\"\"],\"cloned_from\":\"Allthethings Python Lab 9\"},{\"changed_at\":\"2025-01-22 10:08:38 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 10:32:29 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 11:41:13 -0800\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 00:01:14 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 16:14:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-24 21:01:06 +0000\",\"changed\":[\"reference_links\",\"map_reference\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-24 21:05:42 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-24 21:12:22 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
