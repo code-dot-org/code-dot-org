@@ -2,16 +2,14 @@
 module AichatAssetHelper
   ASSET_BUCKET = AssetBucket.new
 
-  def self.get_asset_url(channel_id, filename)
-    # TODO
-  end
-
   # Returns a list of data URIs in base64 format for the given asset.
-  def self.get_asset_data_uris(channel_id, filename)
-    result = ASSET_BUCKET.get(channel_id, filename)
+  def self.get_asset_data_uris(asset, channel_id, level_name)
+    filename = asset["filename"]
+    source = asset["source"]
+    result = fetch_asset(filename, source, channel_id, level_name)
 
     # TODO - error cases
-    return nil unless result[:status] == 'FOUND'
+    return [] unless result && result[:status] == 'FOUND'
 
     ext = File.extname(filename)
     return pdf_to_images(result) if ext == '.pdf'
@@ -40,5 +38,16 @@ module AichatAssetHelper
       data_uris << "data:image/jpeg;base64,#{data}"
     end
     data_uris
+  end
+
+  def self.fetch_asset(filename, source, channel_id, level_name)
+    return ASSET_BUCKET.get(channel_id, filename) if source == 'project'
+    if source == 'level'
+      level = Level.find_by(name: level_name)
+      uuid_name = (level&.starter_assets || level&.project_template_level&.starter_assets || {})&.dig(filename)
+      return nil if uuid_name.nil?
+      s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
+      return {status: 'FOUND', body: s3_object.get.body} if s3_object
+    end
   end
 end

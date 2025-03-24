@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 00:50:29 UTC",
+    "serialized_at": "2025-03-20 16:36:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6376,653 +6376,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U3L7-L1_pilot_oo2025"
-        ],
-        "progression": "Predict and Run: Enhanced For Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L1_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "c801f708-82a4-4913-87d5-570177e5e4cb"
-      },
-      "level_keys": [
-        "CSA U3L7-L1_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L7-L2_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Enhanced For Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L2_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "f5b5c36e-5b6d-408c-bd9e-ff9cd4c88417"
-      },
-      "level_keys": [
-        "CSA U3L7-L2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L7-L3_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Enhanced For Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L3_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "f5b5c36e-5b6d-408c-bd9e-ff9cd4c88417"
-      },
-      "level_keys": [
-        "CSA U3L7-L3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L7-L4_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Enhanced For Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L4_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "f5b5c36e-5b6d-408c-bd9e-ff9cd4c88417"
-      },
-      "level_keys": [
-        "CSA U3L7-L4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3L7-L5_pilot_oo2025"
-        ],
-        "progression": "Practice: Traversing 1D Arrays"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L5_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "5218b14d-1aa5-4837-b785-57a7e1933182"
-      },
-      "level_keys": [
-        "CSA U3L7-L5_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 51,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L7-L6_pilot_oo2025"
-        ],
-        "progression": "Practice: Traversing 1D Arrays"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L6_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "5218b14d-1aa5-4837-b785-57a7e1933182"
-      },
-      "level_keys": [
-        "CSA U3L7-L6_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 52,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L7-L7_pilot_oo2025"
-        ],
-        "progression": "Practice: Traversing 1D Arrays"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L7_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "5218b14d-1aa5-4837-b785-57a7e1933182"
-      },
-      "level_keys": [
-        "CSA U3L7-L7_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3L7-L8_pilot_oo2025"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L7-L8_pilot_oo2025"
-        ],
-        "lesson.key": "Enhanced For Loops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "0efecbc3-c1e2-4224-bb78-69e8b018699a"
-      },
-      "level_keys": [
-        "CSA U3L7-L8_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 54,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L8-L1_pilot_oo2025"
-        ],
-        "progression": "Predict and Run: Comparing String Objects"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L8-L1_pilot_oo2025"
-        ],
-        "lesson.key": "Array Algorithms",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "2a80db60-0405-4514-9317-c97d75b8ab7b"
-      },
-      "level_keys": [
-        "CSA U3L8-L1_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L8-L2_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Comparing and Returning"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L8-L2_pilot_oo2025"
-        ],
-        "lesson.key": "Array Algorithms",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "6bbd7147-4643-4971-b165-82d183d71c22"
-      },
-      "level_keys": [
-        "CSA U3L8-L2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L8-L3_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Comparing and Returning"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L8-L3_pilot_oo2025"
-        ],
-        "lesson.key": "Array Algorithms",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "6bbd7147-4643-4971-b165-82d183d71c22"
-      },
-      "level_keys": [
-        "CSA U3L8-L3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 57,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L8-L4_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Comparing and Returning"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L8-L4_pilot_oo2025"
-        ],
-        "lesson.key": "Array Algorithms",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "6bbd7147-4643-4971-b165-82d183d71c22"
-      },
-      "level_keys": [
-        "CSA U3L8-L4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 58,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3L8-L5_pilot_oo2025"
-        ],
-        "progression": "Practice: Array Algorithms"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L8-L5_pilot_oo2025"
-        ],
-        "lesson.key": "Array Algorithms",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "da0be401-4954-410a-9ea8-5fc9135e4694"
-      },
-      "level_keys": [
-        "CSA U3L8-L5_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 59,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L8-L6_pilot_oo2025"
-        ],
-        "progression": "Practice: Array Algorithms"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L8-L6_pilot_oo2025"
-        ],
-        "lesson.key": "Array Algorithms",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "da0be401-4954-410a-9ea8-5fc9135e4694"
-      },
-      "level_keys": [
-        "CSA U3L8-L6_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 60,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3L8-L7_pilot_oo2025"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L8-L7_pilot_oo2025"
-        ],
-        "lesson.key": "Array Algorithms",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "450b3e38-2cc3-46d7-b16f-17756fe50971"
-      },
-      "level_keys": [
-        "CSA U3L8-L7_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 61,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L1_pilot_oo2025"
-        ],
-        "progression": "Predict and Run: Nested Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L1_pilot_oo2025"
-        ],
-        "lesson.key": "Finding Duplicates",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "1bfcea54-2059-4a87-ab3e-82c98c62931a"
-      },
-      "level_keys": [
-        "CSA U3L9-L1_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 62,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L2_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Nested Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L2_pilot_oo2025"
-        ],
-        "lesson.key": "Finding Duplicates",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "1611252a-5089-4b54-9491-8317ab35c759"
-      },
-      "level_keys": [
-        "CSA U3L9-L2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 63,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L3_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Nested Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L3_pilot_oo2025"
-        ],
-        "lesson.key": "Finding Duplicates",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "1611252a-5089-4b54-9491-8317ab35c759"
-      },
-      "level_keys": [
-        "CSA U3L9-L3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 64,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L4_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Nested Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L4_pilot_oo2025"
-        ],
-        "lesson.key": "Finding Duplicates",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "1611252a-5089-4b54-9491-8317ab35c759"
-      },
-      "level_keys": [
-        "CSA U3L9-L4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 65,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L5_pilot_oo2025"
-        ],
-        "progression": "Practice: Finding Duplicate Values"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L5_pilot_oo2025"
-        ],
-        "lesson.key": "Finding Duplicates",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "b2d965f8-d7ac-4ffb-a63d-26be2c88749e"
-      },
-      "level_keys": [
-        "CSA U3L9-L5_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 66,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L6_pilot_oo2025"
-        ],
-        "progression": "Practice: Finding Duplicate Values"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L6_pilot_oo2025"
-        ],
-        "lesson.key": "Finding Duplicates",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "b2d965f8-d7ac-4ffb-a63d-26be2c88749e"
-      },
-      "level_keys": [
-        "CSA U3L9-L6_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 67,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L7_pilot_oo2025"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L7_pilot_oo2025"
-        ],
-        "lesson.key": "Finding Duplicates",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "5ae5a247-f4d7-4a59-8222-4a041e466c3b"
-      },
-      "level_keys": [
-        "CSA U3L9-L7_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 68,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3 Data for Social Good Project_pilot_oo2025"
-        ],
-        "progression": "Data for Social Good Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project_pilot_oo2025"
-        ],
-        "lesson.key": "Data for Social Good Project",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa3-2025",
-        "activity_section.key": "c380a666-4609-438b-bdae-b6869439dcb9"
-      },
-      "level_keys": [
-        "CSA U3 Data for Social Good Project_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 69,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025"
-        ],
-        "lesson.key": "Data for Social Good Project",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa3-2025",
-        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1"
-      },
-      "level_keys": [
-        "Student End of Unit Survey_csa3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 70,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA Unit 3 Assessment_pilot_oo2025"
-        ],
-        "progression": "Unit 3 Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA Unit 3 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 3 Assessment",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa3-2025",
-        "activity_section.key": "c7ff6c69-f22a-4a2a-ae5c-afa2723c014f"
-      },
-      "level_keys": [
-        "CSA Unit 3 Assessment_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 71,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
-        ],
-        "progression": "Data for Social Good Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-2025",
-        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
-      },
-      "level_keys": [
-        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 72,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CSA U3L6-L1_pilot_oo2025"
         ],
         "progression": "Predict and Run: Polymorphism"
@@ -7042,7 +6395,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7067,7 +6420,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7092,7 +6445,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7117,7 +6470,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7142,7 +6495,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7167,7 +6520,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7192,7 +6545,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 53,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7214,6 +6567,656 @@
       },
       "level_keys": [
         "CSA U3L6-L8_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L1_pilot_oo2025"
+        ],
+        "progression": "Predict and Run: Enhanced For Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L1_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "c801f708-82a4-4913-87d5-570177e5e4cb"
+      },
+      "level_keys": [
+        "CSA U3L7-L1_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L2_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Enhanced For Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L2_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "f5b5c36e-5b6d-408c-bd9e-ff9cd4c88417"
+      },
+      "level_keys": [
+        "CSA U3L7-L2_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L3_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Enhanced For Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L3_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "f5b5c36e-5b6d-408c-bd9e-ff9cd4c88417"
+      },
+      "level_keys": [
+        "CSA U3L7-L3_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L4_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Enhanced For Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L4_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "f5b5c36e-5b6d-408c-bd9e-ff9cd4c88417"
+      },
+      "level_keys": [
+        "CSA U3L7-L4_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L5_pilot_oo2025"
+        ],
+        "progression": "Practice: Traversing 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L5_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "5218b14d-1aa5-4837-b785-57a7e1933182"
+      },
+      "level_keys": [
+        "CSA U3L7-L5_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L6_pilot_oo2025"
+        ],
+        "progression": "Practice: Traversing 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L6_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "5218b14d-1aa5-4837-b785-57a7e1933182"
+      },
+      "level_keys": [
+        "CSA U3L7-L6_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L7_pilot_oo2025"
+        ],
+        "progression": "Practice: Traversing 1D Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L7_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "5218b14d-1aa5-4837-b785-57a7e1933182"
+      },
+      "level_keys": [
+        "CSA U3L7-L7_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L8_pilot_oo2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L8_pilot_oo2025"
+        ],
+        "lesson.key": "Enhanced For Loops",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "0efecbc3-c1e2-4224-bb78-69e8b018699a"
+      },
+      "level_keys": [
+        "CSA U3L7-L8_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L8-L1_pilot_oo2025"
+        ],
+        "progression": "Predict and Run: Comparing String Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L8-L1_pilot_oo2025"
+        ],
+        "lesson.key": "Array Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "2a80db60-0405-4514-9317-c97d75b8ab7b"
+      },
+      "level_keys": [
+        "CSA U3L8-L1_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L8-L2_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Comparing and Returning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L8-L2_pilot_oo2025"
+        ],
+        "lesson.key": "Array Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "6bbd7147-4643-4971-b165-82d183d71c22"
+      },
+      "level_keys": [
+        "CSA U3L8-L2_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L8-L3_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Comparing and Returning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L8-L3_pilot_oo2025"
+        ],
+        "lesson.key": "Array Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "6bbd7147-4643-4971-b165-82d183d71c22"
+      },
+      "level_keys": [
+        "CSA U3L8-L3_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L8-L4_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Comparing and Returning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L8-L4_pilot_oo2025"
+        ],
+        "lesson.key": "Array Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "6bbd7147-4643-4971-b165-82d183d71c22"
+      },
+      "level_keys": [
+        "CSA U3L8-L4_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3L8-L5_pilot_oo2025"
+        ],
+        "progression": "Practice: Array Algorithms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L8-L5_pilot_oo2025"
+        ],
+        "lesson.key": "Array Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "da0be401-4954-410a-9ea8-5fc9135e4694"
+      },
+      "level_keys": [
+        "CSA U3L8-L5_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L8-L6_pilot_oo2025"
+        ],
+        "progression": "Practice: Array Algorithms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L8-L6_pilot_oo2025"
+        ],
+        "lesson.key": "Array Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "da0be401-4954-410a-9ea8-5fc9135e4694"
+      },
+      "level_keys": [
+        "CSA U3L8-L6_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3L8-L7_pilot_oo2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L8-L7_pilot_oo2025"
+        ],
+        "lesson.key": "Array Algorithms",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "450b3e38-2cc3-46d7-b16f-17756fe50971"
+      },
+      "level_keys": [
+        "CSA U3L8-L7_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L9-L1_pilot_oo2025"
+        ],
+        "progression": "Predict and Run: Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L9-L1_pilot_oo2025"
+        ],
+        "lesson.key": "Finding Duplicates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "1bfcea54-2059-4a87-ab3e-82c98c62931a"
+      },
+      "level_keys": [
+        "CSA U3L9-L1_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L9-L2_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L9-L2_pilot_oo2025"
+        ],
+        "lesson.key": "Finding Duplicates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "1611252a-5089-4b54-9491-8317ab35c759"
+      },
+      "level_keys": [
+        "CSA U3L9-L2_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L9-L3_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L9-L3_pilot_oo2025"
+        ],
+        "lesson.key": "Finding Duplicates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "1611252a-5089-4b54-9491-8317ab35c759"
+      },
+      "level_keys": [
+        "CSA U3L9-L3_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L9-L4_pilot_oo2025"
+        ],
+        "progression": "Investigate and Modify: Nested Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L9-L4_pilot_oo2025"
+        ],
+        "lesson.key": "Finding Duplicates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "1611252a-5089-4b54-9491-8317ab35c759"
+      },
+      "level_keys": [
+        "CSA U3L9-L4_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3L9-L5_pilot_oo2025"
+        ],
+        "progression": "Practice: Finding Duplicate Values"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L9-L5_pilot_oo2025"
+        ],
+        "lesson.key": "Finding Duplicates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "b2d965f8-d7ac-4ffb-a63d-26be2c88749e"
+      },
+      "level_keys": [
+        "CSA U3L9-L5_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L9-L6_pilot_oo2025"
+        ],
+        "progression": "Practice: Finding Duplicate Values"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L9-L6_pilot_oo2025"
+        ],
+        "lesson.key": "Finding Duplicates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "b2d965f8-d7ac-4ffb-a63d-26be2c88749e"
+      },
+      "level_keys": [
+        "CSA U3L9-L6_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3L9-L7_pilot_oo2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L9-L7_pilot_oo2025"
+        ],
+        "lesson.key": "Finding Duplicates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "5ae5a247-f4d7-4a59-8222-4a041e466c3b"
+      },
+      "level_keys": [
+        "CSA U3L9-L7_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project_pilot_oo2025"
+        ],
+        "progression": "Data for Social Good Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project_pilot_oo2025"
+        ],
+        "lesson.key": "Data for Social Good Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "c380a666-4609-438b-bdae-b6869439dcb9"
+      },
+      "level_keys": [
+        "CSA U3 Data for Social Good Project_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa3_pilot_oo2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa3_pilot_oo2025"
+        ],
+        "lesson.key": "Data for Social Good Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa3_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 3 Assessment_pilot_oo2025"
+        ],
+        "progression": "Unit 3 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 3 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 3 Assessment",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "c7ff6c69-f22a-4a2a-ae5c-afa2723c014f"
+      },
+      "level_keys": [
+        "CSA Unit 3 Assessment_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Data for Social Good Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa3-2025",
+        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+      },
+      "level_keys": [
+        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
       ]
     },
     {
@@ -7858,6 +7861,102 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U3L6-L1_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L1_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "882dc9fa-1ecd-4709-94c1-f0273a973db0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L2_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L2_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "c89b2b16-d4ec-4fbd-b908-a6f6d7659258"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L3_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L3_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "c89b2b16-d4ec-4fbd-b908-a6f6d7659258"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L4_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L4_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "c89b2b16-d4ec-4fbd-b908-a6f6d7659258"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L5_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L5_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "a7b0c442-a6b8-45f0-9e70-ff46c3a9072b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L6_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L6_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "a7b0c442-a6b8-45f0-9e70-ff46c3a9072b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L7_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L7_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "a7b0c442-a6b8-45f0-9e70-ff46c3a9072b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L8_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3L6-L8_pilot_oo2025"
+        ],
+        "lesson.key": "(Optional) Polymorphism",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2025",
+        "activity_section.key": "fd54afc1-7af8-4346-a83f-cee5ea9936e7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U3L7-L1_pilot_oo2025",
         "script_level.level_keys": [
           "CSA U3L7-L1_pilot_oo2025"
@@ -8166,102 +8265,6 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa3-2025",
         "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L1_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L1_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "882dc9fa-1ecd-4709-94c1-f0273a973db0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L2_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "c89b2b16-d4ec-4fbd-b908-a6f6d7659258"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L3_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "c89b2b16-d4ec-4fbd-b908-a6f6d7659258"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L4_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "c89b2b16-d4ec-4fbd-b908-a6f6d7659258"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L5_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L5_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "a7b0c442-a6b8-45f0-9e70-ff46c3a9072b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L6_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L6_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "a7b0c442-a6b8-45f0-9e70-ff46c3a9072b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L7_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L7_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "a7b0c442-a6b8-45f0-9e70-ff46c3a9072b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L6-L8_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U3L6-L8_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Polymorphism",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-2025",
-        "activity_section.key": "fd54afc1-7af8-4346-a83f-cee5ea9936e7"
       }
     },
     {
@@ -8712,35 +8715,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csa3-2023/resources",
-      "key": "all_resources_2",
+      "url": "/s/csa3-2025/resources",
+      "key": "all_resources_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_2"
+        "resource.key": "all_resources_11"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csa3-2023/standards",
-      "key": "all_standards_2",
+      "url": "/s/csa3-2025/standards",
+      "key": "all_standards_10",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_2"
+        "resource.key": "all_standards_10"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csa3-2023/vocab",
-      "key": "all_vocabulary_2",
+      "url": "/s/csa3-2025/vocab",
+      "key": "all_vocabulary_10",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_2"
+        "resource.key": "all_vocabulary_10"
       }
     },
     {
@@ -10258,19 +10261,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_2",
+        "resource.key": "all_resources_11",
         "script.name": "csa3-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_2",
+        "resource.key": "all_standards_10",
         "script.name": "csa3-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_2",
+        "resource.key": "all_vocabulary_10",
         "script.name": "csa3-2025"
       }
     },
@@ -11070,6 +11073,13 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "(Optional) Polymorphism",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.3.A.1"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "(Optional) Polymorphism",

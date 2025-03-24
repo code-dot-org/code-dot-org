@@ -262,10 +262,23 @@ test.describe('All the things UI e2e test', () => {
             .filter({hasText: caption});
           await expect(video).toBeVisible();
 
-          // YouTube iframe should also exist
-          await expect(
-            video.locator('iframe[src*="youtube-nocookie.com"]'),
-          ).toBeVisible();
+          // Play Button should display
+          const playButton = video.getByLabel('Play Video', {exact: false});
+          await expect(playButton).toBeVisible();
+
+          // Clicking the play button should start the video
+          if (caption === 'Video without Fallback') {
+            await playButton.click();
+
+            // Video Facade and Play Button will go away and be replaced with a video
+            await expect(playButton).not.toBeVisible();
+
+            // Ensure YouTube loaded
+            const youtubeIFrameLocator = video.locator('iframe');
+
+            // Expect the iframe to be there
+            await expect(youtubeIFrameLocator).toBeVisible();
+          }
         });
       });
 

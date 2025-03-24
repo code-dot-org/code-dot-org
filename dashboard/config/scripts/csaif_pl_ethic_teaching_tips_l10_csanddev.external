@@ -1,0 +1,60 @@
+name 'csaif_pl_ethic-teaching-tips-L10-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Ethical Discussions
+
+#### Teaching students about ethical issues in computer systems goes beyond understanding how they function — it’s about **thinking critically** and **questioning how technology affects people and communities**.
+#### As students examine more complex and potentially controversial systems — such as surveillance networks, AI-powered recommendation engines, and biometric security — discussions may surface strong opinions and raise important questions about fairness, privacy, and accountability.
+
+#### These topics can spark strong opinions and have no easy answers.
+
+## When guiding students, consider:
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Encourage Multiple Perspectives
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Ask: “Who benefits from this computer system? Who might be harmed?”
+
+#### Frame debates around trade-offs rather than “right vs. wrong.”
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">❓ Use ‘What If’ Scenarios</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Example: “What if a self-driving car had to choose between protecting its passenger or a pedestrian?”
+
+#### Let students explore different viewpoints before giving definitive answer
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Acknowledge Uncertainty</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Ethical decisions in AI are complex. Reinforce that even experts debate these topics.
+#### Help students see that questioning and critical thinking are valuable skills.
+
+
+</p></div>
+</details>
+
+---
+
+#### By guiding these discussions with openness and curiosity, you will help students develop a thoughtful, ethical approach to technology—one that prepares them to navigate and shape the digital world they live in.
+
+MARKDOWN

@@ -897,6 +897,9 @@ en:
         musiclab_rosa_linn: Rosa Linn, Singer Songwriter
         musiclab_henny: Henny tha Bizness, Record Producer
         musiclab_aloe_blacc: Aloe Blacc, Singer Songwriter
+        career_pharmacist_hold: Career Journey - Pharmacist
+        career_data_security_hold: Career Journey - Data Security
+        career_data_tech_hold: Career Journey - Data Operations Technician
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

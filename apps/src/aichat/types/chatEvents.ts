@@ -2,6 +2,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {ChatAsset} from './assets';
 import {AiCustomizations} from './customizations';
 import {FeedbackValue} from './toxicity';
 
@@ -17,7 +18,7 @@ interface BaseChatEvent {
 interface BaseChatMessage extends BaseChatEvent {
   chatMessageText: string;
   /** Asset file names to optionally send with text content */
-  assets?: string[];
+  assets?: ChatAsset[];
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
 }

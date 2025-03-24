@@ -3,71 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The SNOT Troubleshooting Strategy
+<img src="https://images.code.org/41e0217e538fdf1f5f0e8ea33a42d240-image-1742484446527.png" alt="laptop with screwdiver symbolizing troubleshooting" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
 
+# Types of Data
 
-<img src="https://images.code.org/52df44bc304a4f077d318253d2b49bdd-image-1742233885762.png" alt="laptop with screwdiver symbolizing troubleshooting" style="border-radius:10px; float: right; ; height: 100px; margin: 20px 20px 0px 10px; ">
-
-## Troubleshooting
-
-#### Troubleshooting is a form of problem-solving that involves using a logical and systematic search for the source of a problem.
-
+#### Computers process a wide range of data types to power the applications and technologies we use every day. These data types come from different sources and serve various purposes, from improving user experiences to enabling advanced decision-making.
 
 <div style="clear:both;"></div>
 
----
+<br>
 
-## Steps for SNOT
+>- #### **Audio data** includes sounds, speech, and music, which can be analyzed for voice recognition or noise filtering. 
+>- #### **Visual data** consists of images and videos, used in everything from facial recognition to medical imaging. Text data includes written language, such as emails, social media posts, and documents, which computers can analyze for sentiment or keyword recognition.
+>- #### **Location** data captures geographic coordinates from GPS devices, helping with navigation, logistics, and local services. 
+>- #### **Environmental data** comes from sensors that measure temperature, humidity, air quality, and other conditions, supporting applications in weather forecasting and smart home automation.
+>- #### **Biometric data** includes fingerprints, facial features, and heart rate, commonly used for security authentication and health monitoring.
 
-#### The SNOT Strategy provides a structured approach for troubleshooting problems, helping students develop independence and critical thinking skills when faced with challenges.
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 1:Self</b></h3>
-  <p style = "font-size:14pt;">
-    Restate the problem and make your best guesses about possible solutions. 
-</p>
-</div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 2: Neighbor</b></h3>
-  <p style = "font-size:14pt;">
-    Talk through the problem with someone to share viewpoints and narrow down possibilities.
-</p>
-</div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 3: Online Resouces</b></h3>
-  <p style = "font-size:14pt;">
-    Search message boards, technical manuals, FAQs and other online resources to further narrow down possible solutions.
-</p>
-</div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 4: Technical Expert</b></h3>
-  <p style = "font-size:14pt;">
-    Ask a technical or subject-matter expert that can provide guidance.
-
-</p>
-</div>
-
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
-
-
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;"><br>
-<p style= "font-size: 14px; ">
-<b>Teacher Tip:</b>
-</p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> Having a clear troubleshooting strategy like SNOT encourages students to become problem-solvers instead of immediately seeking help. It builds resilience, promotes collaboration, and teaches them how to find and evaluate reliable resources—an essential skill for coding, data science, and beyond.    
-</p>
-</div>
+#### By processing and analyzing these diverse data types, computer systems can enhance functionality and improve user experiences in countless ways.
 
 
 
 
-## Let's try a troubleshooting activity
+<img src="https://images.code.org/945d2335353f1fa976bec7049e5469f6-image-1742485765009.png" alt="design process graph of the cycle" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
 MARKDOWN

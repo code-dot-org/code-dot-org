@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 ## Review Patient Profiles
 
 
-#### The following 6 people arrived at the emergency room at the same time and are seeking medical attention. **Choose the 2 patients to assist first:**
+The following 6 people arrived at the emergency room at the same time and are seeking medical attention. **Choose the 2 patients to assist first:**
 
 | Patient | Name   | Age | Type of Injury | Pain Level (out of 10) | Treatment Needed |
 |:-------:|:------:|:---:|:--------------:|:----------------------:|:----------------:|

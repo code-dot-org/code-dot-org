@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a Disneyworld planning chatbot. When given a prompt, answer with your recommendations.\n\nDo not answer any questions that are not related to Disneyworld.",
+      "levelSystemPrompt": "",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -45,6 +45,6 @@
     "display_name": "College Admissions Officer",
     "thumbnail_url": "https://images.code.org/c04758a4c88fce95b8fbbfe53ac7f45d-personal-statement.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T20:13:12.559+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson6-level3-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson6-level3-choice1\"},{\"changed_at\":\"2025-03-18 20:13:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 21:03:51 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 21:03:59 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 21:04:31 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 22:30:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T20:13:12.559+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson6-level3-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson6-level3-choice1\"},{\"changed_at\":\"2025-03-18 20:13:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 21:03:51 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 21:03:59 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 21:04:31 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 22:30:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 14:27:42 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

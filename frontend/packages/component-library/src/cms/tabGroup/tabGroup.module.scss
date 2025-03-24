@@ -1,0 +1,95 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/variables' as variables;
+
+$mobileBreakpoint: 1024px;
+
+.tabGroupContainer {
+  // For desktop, the tabs are rendered as a horizontal tabs row,
+  .tabsContainer,
+  .tabPanelsContainer {
+    display: block;
+  }
+
+  .tabsAccordion {
+    display: none;
+  }
+
+  // For mobile, the tabs are rendered as a vertical accordion.
+  @media screen and (max-width: $mobileBreakpoint) {
+    .tabsContainer,
+    .tabPanelsContainer {
+      display: none;
+    }
+
+    .tabsAccordion {
+      display: flex;
+    }
+  }
+
+  // For Accordion View - Highlight open tabs/items
+  details[open] summary {
+    border-bottom: 4px solid var(--borders-brand-teal-primary);
+  }
+}
+
+// Style Tag Group Tab Specific Styles
+.tabGroupModelTabContainer {
+  display: flex;
+  padding: 1.875rem;
+  align-items: center;
+  gap: 1.875rem;
+  align-self: stretch;
+  border-radius: 0 0 variables.$regular-border-radius
+    variables.$regular-border-radius;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+}
+
+.tabGroupModelTabImageContainer {
+  width: 28.6699rem;
+
+  border-radius: variables.$regular-border-radius;
+  background: var(--background-neutral-tertiary);
+}
+
+.tabGroupModelTabContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1 0 0;
+
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+.tabGroupAccordionItemContainer {
+  display: flex;
+  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+  background: var(--background-neutral-primary);
+}
+
+.tabGroupAccordionItemContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  align-self: stretch;
+
+  h4,
+  p {
+    margin: 0;
+  }
+}
+
+.tabGroupAccordionItemImage {
+  width: 100%;
+  border-radius: 0.25rem;
+  background: var(--background-neutral-tertiary);
+}

@@ -18,6 +18,7 @@
     align-items: center;
 
     .simpleListItemIcon {
+      flex-shrink: 0;
       text-align: center;
     }
 

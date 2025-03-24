@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-21 19:28:10 UTC",
+    "serialized_at": "2025-03-21 17:39:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -32,19 +32,827 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Networks",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson Exploration",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "2cd69a08-4024-44f6-b121-984ad35a56fe",
+      "position": 1,
+      "properties": {
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2cd69a08-4024-44f6-b121-984ad35a56fe",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks"
+      }
+    },
+    {
+      "key": "dd542aeb-27fb-4b70-bee8-a3d7f094d343",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd542aeb-27fb-4b70-bee8-a3d7f094d343",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "bee874b2-294a-4b51-9332-04c7099d7397",
+      "position": 1,
+      "properties": {
+        "progression_name": "Course Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397",
+        "lesson_activity.key": "2cd69a08-4024-44f6-b121-984ad35a56fe"
+      }
+    },
+    {
+      "key": "c8c401e0-895d-42b1-88de-d55d93ba6e02",
+      "position": 2,
+      "properties": {
+        "progression_name": "Networks and the Internet Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02",
+        "lesson_activity.key": "2cd69a08-4024-44f6-b121-984ad35a56fe"
+      }
+    },
+    {
+      "key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Internet"
+      },
+      "seeding_key": {
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea",
+        "lesson_activity.key": "dd542aeb-27fb-4b70-bee8-a3d7f094d343"
+      }
+    },
+    {
+      "key": "532e39c1-d3cd-4132-b1e5-5b5b43c8219c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Internet Access Advocacy Campaign Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "532e39c1-d3cd-4132-b1e5-5b5b43c8219c",
+        "lesson_activity.key": "dd542aeb-27fb-4b70-bee8-a3d7f094d343"
+      }
+    },
+    {
+      "key": "bf550378-14c0-4e0d-b8a2-9e4304812c3e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Network Security"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf550378-14c0-4e0d-b8a2-9e4304812c3e",
+        "lesson_activity.key": "dd542aeb-27fb-4b70-bee8-a3d7f094d343"
+      }
+    },
+    {
+      "key": "4d30b587-abfc-4135-9144-cd7d83167b36",
+      "position": 4,
+      "properties": {
+        "progression_name": "Network Security Risk Assessment Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d30b587-abfc-4135-9144-cd7d83167b36",
+        "lesson_activity.key": "dd542aeb-27fb-4b70-bee8-a3d7f094d343"
+      }
+    },
+    {
+      "key": "1883e945-ec11-4126-8085-3dcc962da0a6",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1883e945-ec11-4126-8085-3dcc962da0a6",
+        "lesson_activity.key": "dd542aeb-27fb-4b70-bee8-a3d7f094d343"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl__net_overview_objectives"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      },
+      "level_keys": [
+        "csaif_pl__net_overview_objectives"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_cert_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      },
+      "level_keys": [
+        "csaif_pl_cert_2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl__nets_module_overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      },
+      "level_keys": [
+        "csaif_pl__nets_module_overview"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      },
+      "level_keys": [
+        "csaif_pl_nets_course_overview"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_structure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      },
+      "level_keys": [
+        "csaif_pl_nets_course_structure"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_lesson_resources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      },
+      "level_keys": [
+        "csaif_pl_nets_lesson_resources"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Networks and the Internet Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      },
+      "level_keys": [
+        "csaif_pl_nets_overview"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Networks and the Internet Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_check_for_understanding"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      },
+      "level_keys": [
+        "csaif_pl_nets_check_for_understanding"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Networks and the Internet Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_check_answer"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      },
+      "level_keys": [
+        "csaif_pl_nets_check_answer"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Networks and the Internet Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_teacher"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      },
+      "level_keys": [
+        "csaif_pl_nets_teacher"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Networks and the Internet Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_navigating_module"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      },
+      "level_keys": [
+        "csaif_pl_nets_navigating_module"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_overview_objectives"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      },
+      "level_keys": [
+        "csaif_pl_nets_overview_objectives"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_3"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Internet Access Advocacy Campaign Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "532e39c1-d3cd-4132-b1e5-5b5b43c8219c"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Internet Access Advocacy Campaign Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_B"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "532e39c1-d3cd-4132-b1e5-5b5b43c8219c"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_1_B"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_B"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bf550378-14c0-4e0d-b8a2-9e4304812c3e"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_2_B"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security Risk Assessment Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "4d30b587-abfc-4135-9144-cd7d83167b36"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Network Security Risk Assessment Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_C"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "4d30b587-abfc-4135-9144-cd7d83167b36"
+      },
+      "level_keys": [
+        "csaif_pl_nets_project_2_C"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-nets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "1883e945-ec11-4126-8085-3dcc962da0a6"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-nets"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl__net_overview_objectives",
+        "script_level.level_keys": [
+          "csaif_pl__net_overview_objectives"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_cert_2",
+        "script_level.level_keys": [
+          "csaif_pl_cert_2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl__nets_module_overview",
+        "script_level.level_keys": [
+          "csaif_pl__nets_module_overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_course_overview",
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_course_structure",
+        "script_level.level_keys": [
+          "csaif_pl_nets_course_structure"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_lesson_resources",
+        "script_level.level_keys": [
+          "csaif_pl_nets_lesson_resources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bee874b2-294a-4b51-9332-04c7099d7397"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_overview",
+        "script_level.level_keys": [
+          "csaif_pl_nets_overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_check_for_understanding",
+        "script_level.level_keys": [
+          "csaif_pl_nets_check_for_understanding"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_check_answer",
+        "script_level.level_keys": [
+          "csaif_pl_nets_check_answer"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_teacher",
+        "script_level.level_keys": [
+          "csaif_pl_nets_teacher"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_navigating_module",
+        "script_level.level_keys": [
+          "csaif_pl_nets_navigating_module"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "c8c401e0-895d-42b1-88de-d55d93ba6e02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_overview_objectives",
+        "script_level.level_keys": [
+          "csaif_pl_nets_overview_objectives"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_1",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_3",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_1",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "532e39c1-d3cd-4132-b1e5-5b5b43c8219c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_1_B",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_1_B"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "532e39c1-d3cd-4132-b1e5-5b5b43c8219c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_2_B",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_B"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "bf550378-14c0-4e0d-b8a2-9e4304812c3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_2",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "4d30b587-abfc-4135-9144-cd7d83167b36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_project_2_C",
+        "script_level.level_keys": [
+          "csaif_pl_nets_project_2_C"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "4d30b587-abfc-4135-9144-cd7d83167b36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-nets",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-nets"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "1883e945-ec11-4126-8085-3dcc962da0a6"
+      }
+    }
   ],
   "resources": [
 
