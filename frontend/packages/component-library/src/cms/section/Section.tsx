@@ -35,7 +35,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
   padding?: Exclude<SpacingNoneToL, SpacingNoneToS>;
   /** Section theme */
   theme?: 'Light' | 'Dark';
-  /** Section id */
+  /** Section ID */
   id?: string;
   /** Section className */
   className?: string;

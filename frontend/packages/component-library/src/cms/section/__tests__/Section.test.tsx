@@ -44,7 +44,7 @@ describe('Section Component', () => {
     );
   });
 
-  it('applies a custom id to the section', () => {
+  it('applies a custom ID to the section', () => {
     renderComponent({id: 'section-id'});
 
     const section = screen
