@@ -24,7 +24,7 @@ Scenario: Teacher can view student versions
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible
   Then ".versionRow:nth-child(2) p" contains the saved text
-  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
+  And element ".versionRow:nth-child(2) .version-restore button" contains text "Restore"
 
   # Teacher cannot restore a version
   Then I sign in as "Teacher_Ron"
@@ -35,8 +35,8 @@ Scenario: Teacher can view student versions
   And I dismiss the teacher panel
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible
-  And element ".versionRow:nth-child(1) .img-upload" does not contain text "Restore"
-  And element ".versionRow:nth-child(2) .img-upload" does not contain text "Restore"
+  And element ".versionRow:nth-child(1) .version-restore button" does not contain text "Restore"
+  And element ".versionRow:nth-child(2) .version-restore button" does not contain text "Restore"
 
 Scenario: Teacher can view own versions
   Given I create an authorized teacher-associated student named "Ron"
@@ -56,5 +56,5 @@ Scenario: Teacher can view own versions
   And I press "show-code-header"
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible
-  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
+  And element ".versionRow:nth-child(2) .version-restore button" contains text "Restore"
   And I close the dialog

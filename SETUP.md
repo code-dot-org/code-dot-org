@@ -98,6 +98,7 @@ External contributors can supply alternate placeholder values for secrets normal
 ```
 slack_bot_token: localoverride
 pardot_private_key: localoverride
+openai_student_learning_api_key: localoverride
 properties_encryption_key: ''
 ```
 
