@@ -1,5 +1,6 @@
 import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
+import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
@@ -15,7 +16,9 @@ const MIN_PREVIEW_HEIGHT = 200;
 const INITIAL_PREVIEW_HEIGHT = 400;
 const MIN_RIGHT_PANEL_WIDTH = 300;
 
-const HorizontalLayout: React.FunctionComponent = () => {
+const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
+  isProjectLevel,
+}) => {
   const {
     leftPanelWidth,
     rightPanelWidth,
@@ -25,8 +28,8 @@ const HorizontalLayout: React.FunctionComponent = () => {
     rightBottomPanelDragging,
   } = useHorizontalLayout({
     leftPanel: {
-      minWidth: MIN_INFO_PANEL_WIDTH,
-      initialWidth: INITIAL_INFO_PANEL_WIDTH,
+      minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
+      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
       name: 'instructions',
     },
     rightTopPanel: {
@@ -43,10 +46,12 @@ const HorizontalLayout: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.layoutContainer}>
-      <InfoPanel
-        style={{width: leftPanelWidth}}
-        className={moduleStyles.flexShrink0}
-      />
+      {!isProjectLevel && (
+        <InfoPanel
+          style={{width: leftPanelWidth}}
+          className={moduleStyles.flexShrink0}
+        />
+      )}
       {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
          can only drag left, not right (something about the mouse events getting 
          captured by the preview?).
