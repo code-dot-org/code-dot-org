@@ -44,17 +44,9 @@ class UnitGroupUnit < ApplicationRecord
   # @return [UnitGroupUnit] the data corresponding to the given course ID and unit position, either
   #         retrieved directly or from the cache.
   def self.get_with_position_from_cache(course_id, unit_position)
-    if should_cache?
-      cache_key = "#{self.class.name}/course_id/#{course_id}/position/#{unit_position}"
-      Rails.cache.fetch(cache_key) do
-        get_with_position_without_cache(course_id, unit_position)
-      end
-    else
-      get_with_position_without_cache(course_id, unit_position)
+    course = UnitGroup.get_from_cache(course_id)
+    course.default_unit_group_units.find do |ugu|
+      ugu.position == unit_position
     end
-  end
-
-  def self.get_with_position_without_cache(course_id, unit_position)
-    UnitGroupUnit.find_by(course_id: course_id, position: unit_position)
   end
 end
