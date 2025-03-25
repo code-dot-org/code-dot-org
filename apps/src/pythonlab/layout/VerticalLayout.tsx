@@ -45,34 +45,38 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   });
 
   return (
-    <div className={moduleStyles.layoutContainer}>
-      {!isProjectLevel && (
-        <>
-          <InfoPanel
-            style={{width: leftPanelWidth}}
-            className={moduleStyles.flexShrink0}
-          />
-          <ResizeBar
-            isVertical={true}
-            separatorProps={leftPanelSeparatorProps}
-            isDragging={leftPanelDragging}
-          />
-        </>
-      )}
-      <Workspace
-        style={{width: middlePanelWidth}}
-        className={moduleStyles.shrinkAndGrow}
-      />
-      <ResizeBar
-        isVertical={true}
-        separatorProps={rightPanelSeparatorProps}
-        isDragging={rightPanelDragging}
-      />
-      <VerticalOutput
-        width={rightPanelWidth || INITIAL_OUTPUT_WIDTH}
-        className={moduleStyles.shrinkAndGrow}
-        setOutputWidth={setRightPanelSize}
-      />
+    <div className={moduleStyles.containerWithFooter}>
+      <div className={moduleStyles.layoutContainer}>
+        {!isProjectLevel && (
+          <>
+            <InfoPanel
+              style={{width: leftPanelWidth}}
+              className={moduleStyles.flexShrink0}
+            />
+            <ResizeBar
+              isVertical={true}
+              separatorProps={leftPanelSeparatorProps}
+              isDragging={leftPanelDragging}
+            />
+          </>
+        )}
+        <Workspace
+          style={{width: middlePanelWidth}}
+          className={moduleStyles.shrinkAndGrow}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={rightPanelSeparatorProps}
+          isDragging={rightPanelDragging}
+        />
+        <VerticalOutput
+          width={rightPanelWidth || INITIAL_OUTPUT_WIDTH}
+          className={moduleStyles.shrinkAndGrow}
+          setOutputWidth={setRightPanelSize}
+        />
+      </div>
+
+      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };

@@ -74,6 +74,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           width={rightPanelWidth}
           setOutputHeight={setRightBottomPanelSize}
         />
+        {isProjectLevel && <div className={moduleStyles.footerArea} />}
       </div>
     </div>
   );
