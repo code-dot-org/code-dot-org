@@ -95,7 +95,7 @@ mc
 aiml-2024
 pre-express-2021
 course3
-hourofcode
+Hour of Code
 music-jam-2024
 web-development-2024
 course2
