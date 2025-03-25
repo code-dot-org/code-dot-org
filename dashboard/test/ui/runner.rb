@@ -466,8 +466,12 @@ def status_page_url
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
 end
 
-def status_page_filename
-  "test_status_#{test_type}.html"
+# Returns an HTTPS URL to the status_page on S3
+def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_page_filename))
+  LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.css'), {content_type: 'text/css'})
+  LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.js'), {content_type: 'text/javascript'})
+
+  return LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
 end
 
 def scheme_for_environment
@@ -477,8 +481,9 @@ end
 def generate_status_page(suite_start_time)
   test_status_template = File.read(File.join(UI_TEST_DIR, 'test_status.haml'))
   haml_engine = Haml::Engine.new(test_status_template)
+  status_page_path = File.join(UI_TEST_DIR, status_page_filename)
   File.write(
-    File.join(UI_TEST_DIR, status_page_filename),
+    status_page_path,
     haml_engine.render(
       Object.new,
       {
@@ -494,6 +499,9 @@ def generate_status_page(suite_start_time)
     )
   )
   ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
+  status_page_s3_url = upload_status_page_to_s3(status_page_path)
+  ChatClient.log "Status page uploaded to S3: #{status_page_s3_url}"
+  return status_page_s3_url
 end
 
 def test_run_identifier(browser, feature)
