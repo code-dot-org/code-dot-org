@@ -7,20 +7,18 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
       "tts": true,
-      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "elem-game-design",
-    "serialized_at": "2025-01-09 16:37:27 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-25 00:55:27 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "elem-game-design-2024"
     }
