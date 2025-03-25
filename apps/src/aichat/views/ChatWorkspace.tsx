@@ -12,12 +12,16 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
 import {
-  fetchStudentChatHistory,
+  clearChatMessages,
+  fetchUserChatHistory,
   selectAllVisibleMessages,
+  selectMultimodalEnabled,
   setShowModalType,
 } from '../redux';
 import {getShortName} from '../utils';
 
+import StagedFilesPreview from './assets/StagedFilesPreview';
+import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -52,6 +56,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const visibleItems = useSelector(selectAllVisibleMessages);
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
     if (progress.viewAsUserId && progress.currentLevelId) {
@@ -64,10 +70,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    dispatch(clearChatMessages());
+
     if (selectedStudent) {
-      dispatch(fetchStudentChatHistory(selectedStudent.id));
+      dispatch(
+        fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
+      );
+    } else {
+      dispatch(
+        fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
+      );
     }
-  }, [selectedStudent, currentLevelId, dispatch]);
+  }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
 
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);
@@ -171,6 +185,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     dispatch(setShowModalType(undefined));
   }, [dispatch, isUserTeacher, showModalType]);
 
+  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {ChatModal && <ChatModal onClose={onCloseModal} />}
@@ -181,12 +197,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       )}
 
       <div className={moduleStyles.footer}>
+        {multimodalEnabled && <StagedFilesPreview />}
         {canChatWithModel && (
           <UserChatMessageEditor
             editorContainerClassName={moduleStyles.messageEditorContainer}
           />
         )}
         <div className={moduleStyles.buttonRow}>
+          {multimodalEnabled && <UploadButton />}
           <Button
             text={aichatI18n.clearChatButtonText()}
             disabled={!canChatWithModel}

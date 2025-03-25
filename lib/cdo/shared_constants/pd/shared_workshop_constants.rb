@@ -347,7 +347,7 @@ module Pd
         required: false
       },
       regional_partner_id: {
-        required: false
+        required: true
       },
       organizer_id: {
         required: false

@@ -1,6 +1,7 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  mount Marketing::Engine => '/marketing'
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
@@ -9,7 +10,7 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
-  # Redirect old sign up flow to new sign up flow
+  # Redirect old sign up flow to current sign up flow
   get "/users/sign_up", to: redirect("/users/sign_up/account_type")
 
   # Redirect uses of "new_sign_up" to "sign_up"
@@ -96,7 +97,8 @@ Dashboard::Application.routes.draw do
     resources :images, only: [:new]
 
     get "/ai_iteration/tools", to: "ai_iteration#tools"
-    get "/student_code_sample/:num_samples/:script_id/:level_id", to: "student_code_sample#fetch_student_code_samples"
+    post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
+    post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -144,6 +146,7 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+        get :retrieve_lessons_for_dropdown
       end
       collection do
         post 'section_instructors_verified'
@@ -388,7 +391,7 @@ Dashboard::Application.routes.draw do
       member do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
-        delete '/:filename', to: 'level_starter_assets#destroy'
+        delete '/:filename', to: 'level_starter_assets#destroy', format: true
       end
     end
 
@@ -1225,7 +1228,7 @@ Dashboard::Application.routes.draw do
 
     post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
-    get '/aichat_events/student_chat_history', to: 'aichat_events#student_chat_history'
+    get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'

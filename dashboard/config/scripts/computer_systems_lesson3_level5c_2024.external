@@ -1,6 +1,9 @@
 name 'computer-systems-lesson3-level5c-2024'
 title 'Robots in Space'
 description 'See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.'
+display_name 'Robots in Space'
+bubble_choice_description 'See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.'
+thumbnail_url 'https://images.code.org/3584d2ccc3b2523d3794a6548c3a1e90-robots.png'
 
 markdown <<MARKDOWN
 # Robots in Space

@@ -120,7 +120,7 @@ class AiDiffController < ApplicationController
     course_name = @unit_group.present? ? @unit_group.name : @unit&.name
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name)
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name, params[:isPreset])
 
     bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_name, session_id)
     #TODO: check for profanity/PII in model response

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:15:15 UTC",
+    "serialized_at": "2025-03-19 19:30:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -169,7 +169,7 @@
     },
     {
       "key": "Enhanced For Loops",
-      "name": "Enhanced For Loops",
+      "name": "Enhanced For Loops (2D Arrays)",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,

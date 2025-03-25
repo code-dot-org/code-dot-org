@@ -1,8 +1,9 @@
-import {default as DSCOLink} from '@code-dot-org/component-library/link';
+import classNames from 'classnames';
+import React, {ReactNode} from 'react';
+
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {ReactNode} from 'react';
-import classNames from 'classnames';
+import {default as DSCOLink} from '@code-dot-org/component-library/link';
 
 import {RemoveMarginBottomProps} from '@/components/common/types';
 

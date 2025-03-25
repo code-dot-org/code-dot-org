@@ -22,6 +22,12 @@ NeverSignedInStudent.args = {
   hasEverSignedIn: false,
 };
 
+export const DisabledButtons = Template.bind({});
+DisabledButtons.args = {
+  hasEverSignedIn: false,
+  disabled: true,
+};
+
 export const EverSignedInStudent = Template.bind({});
 EverSignedInStudent.args = {
   hasEverSignedIn: true,

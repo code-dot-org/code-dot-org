@@ -33,6 +33,7 @@ class BubbleChoice < DSLDefined
   serialized_attrs %w(
     display_name
     description
+    uses_lab2
   )
 
   ALPHABET = ('a'..'z').to_a
@@ -42,6 +43,7 @@ class BubbleChoice < DSLDefined
       name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
+      uses_lab2 false
 
       sublevels
       level 'level1'
@@ -71,6 +73,28 @@ class BubbleChoice < DSLDefined
   # @override
   def all_child_levels
     sublevels
+  end
+
+  def uses_lab2?
+    uses_lab2
+  end
+
+  def enable_scrolling?
+    # ensures we have the small footer
+    true
+  end
+
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+    level_properties = super
+    summary = summarize(script_level: @script_level, user: @view_as_user, should_localize: true)
+
+    # Remove status since this summary should not be user-specific.
+    summary[:sublevels].each do |sublevel|
+      sublevel.delete(:status)
+    end
+
+    level_properties[:levelData] = {sublevels: summary[:sublevels], displayName: summary[:display_name], description: summary[:description]}
+    level_properties
   end
 
   # Summarizes the level.

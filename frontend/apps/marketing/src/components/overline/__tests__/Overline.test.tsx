@@ -1,5 +1,6 @@
-import Overline from '@/components/overline';
 import {render, screen} from '@testing-library/react';
+
+import Overline from '@/components/overline';
 
 type OverlineColorClassMap = [
   'primary' | 'secondary',

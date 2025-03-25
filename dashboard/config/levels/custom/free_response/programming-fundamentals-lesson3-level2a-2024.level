@@ -14,9 +14,10 @@
     "optional": "false",
     "allow_multiple_attempts": "true",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-21T15:35:59.374+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson4-level2a1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson4-level2a1\"},{\"changed_at\":\"2025-02-21 15:36:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-02-21T15:35:59.374+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson4-level2a1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson4-level2a1\"},{\"changed_at\":\"2025-02-21 15:36:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-17 20:53:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,7 +1,9 @@
-import {MarketingPage} from './pom/marketing';
-import {test} from './fixtures/base';
 import {expect} from '@playwright/test';
+
 import {getStage} from '@/config/stage';
+
+import {test} from './fixtures/base';
+import {MarketingPage} from './pom/marketing';
 
 test.describe('robots.txt', () => {
   test('should disallow everything in preprod', async ({page, browserName}) => {

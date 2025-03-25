@@ -13,6 +13,7 @@
 #  ai_model_version    :string(255)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  code_version        :string(255)
 #
 # Indexes
 #

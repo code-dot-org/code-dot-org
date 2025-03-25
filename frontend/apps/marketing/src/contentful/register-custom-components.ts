@@ -3,6 +3,8 @@
  *
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
+import {defineComponents} from '@contentful/experiences-sdk-react';
+
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
@@ -16,6 +18,9 @@ import FAQAccordion, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import IconHighlight, {
+  IconHighlightContentfulComponentDefinition,
+} from '@/components/iconHighlight';
 import Iframe, {IframeContentfulComponentDefinition} from '@/components/iframe';
 import Image, {ImageContentfulComponentDefinition} from '@/components/image';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
@@ -28,9 +33,10 @@ import Paragraph, {
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
+import SimpleList, {
+  SimpleListContentfulComponentDefinition,
+} from '@/components/simpleList';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
-
-import {defineComponents} from '@contentful/experiences-sdk-react';
 
 defineComponents(
   [
@@ -53,6 +59,10 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: IconHighlight,
+      definition: IconHighlightContentfulComponentDefinition,
     },
     {
       component: Iframe,
@@ -80,6 +90,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: SimpleList,
+      definition: SimpleListContentfulComponentDefinition,
     },
     {
       component: Video,

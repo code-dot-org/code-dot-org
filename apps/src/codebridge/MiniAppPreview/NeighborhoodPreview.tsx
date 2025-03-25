@@ -14,7 +14,7 @@ import {MazeCell} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
 import {scaleMiniApp} from '../Workspace/outputHelpers';
@@ -29,8 +29,7 @@ interface NeighborhoodPreviewProps {
 const NeighborhoodPreview: React.FunctionComponent<
   NeighborhoodPreviewProps
 > = ({handleScaling}) => {
-  const levelProperties = useAppSelector(state => state.lab.levelProperties);
-  const {source, config} = useCodebridgeContext();
+  const {source, config, levelProperties} = useCodebridgeContext();
   const serializedMaze = findFile(
     source,
     MAZE_FILE_NAME,

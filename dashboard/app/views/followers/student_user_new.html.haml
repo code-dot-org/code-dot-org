@@ -6,137 +6,19 @@
 - content_for(:head) do
   %meta{name: "robots", content: "noindex"}/
 
-%script{src: webpack_asset_path('js/followers/student_user_new.js')}
-
-- if current_user || !@section
-  %h2= t('join_section.code.title')
-  %p= t('join_section.code.instructions')
-  - display_captcha = current_user && current_user.display_join_section_captcha?
-  = form_tag(student_user_new_path) do
-    = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
-    - if display_captcha
-      = recaptcha_tags callback: "onCaptchaCompletion"
-    %br/
-    = submit_tag t('join_section.code.submit'), class: 'btn btn-primary', disabled: display_captcha, id: 'join_new_section'
-    - if inline_alert
-      %span.inline-alert{ style: 'color: #b94a48; margin-left: 12px'}= inline_alert
-
-- else
-  %h2 Register to join section #{params[:section_code]}
-  %p
-    If you already have an account at Code.org, please
-    %a{href: "/users/sign_in?user_return_to=/join/#{params[:section_code]}"} sign into your account
-    before joining the section.
-  %p{style: 'margin-bottom: 30px;'} If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
-  - if current_user.errors.any?
-    #error_explanation.padded_container
-      %ul
-        - current_user.errors.full_messages.each do |msg|
-          %li= msg
-
-  -# Hack to look for a specific pattern in the class name to decide if it's a workshop.
-  - user_type = @section.name.to_s =~ /^Workshop on [\d\/]+ at .+$/ ? User::TYPE_TEACHER : User::TYPE_STUDENT
-
-  #signup
-    .row
-      .span10.signupblock
-        = form_for(current_user, url: { action: :student_register }) do |f|
-
-          = hidden_field_tag :section_code, params[:section_code]
-          = f.hidden_field :user_type, value: user_type
-          = f.hidden_field :locale, value: locale
-          = f.hidden_field :hashed_email
-
-          .itemblock
-            = f.label :name, t('activerecord.attributes.user.name')
-            = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true
-          %br/
-          .itemblock
-            = f.label :email, t('activerecord.attributes.user.email')
-            = f.email_field :email, class: 'input-xlarge fieldblock'
-          %br/
-          - if f.object.password_required?
-            .itemblock
-              = f.label :password, t('activerecord.attributes.user.password')
-              = f.password_field :password, class: 'input-xlarge fieldblock'
-              %span#password_message
-            %br/
-            .itemblock
-              = f.label :password_confirmation, t('activerecord.attributes.user.password_confirmation')
-              = f.password_field :password_confirmation, class: 'input-xlarge fieldblock'
-            %span#password_message_confirmation
-            %br/
-            - if user_type == User::TYPE_TEACHER
-              .itemblock
-                = f.label :school, t('signup_form.school_name')
-                = f.text_field :school, class: 'input-xlarge fieldblock'
-              %br/
-              .itemblock
-                = f.label :full_address, t('signup_form.school_address')
-                = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 255
-              %br/
-
-              = f.hidden_field :age, value: '21'
-            - if user_type == User::TYPE_STUDENT
-              .itemblock
-                = f.label :age, t('signup_form.age')
-                = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
-              %br/
-              - if us_ip
-                .itemblock
-                  = f.label :us_state, t('signup_form.us_state')
-                  = f.select :us_state, us_state_options, include_blank: true
-                  = f.hidden_field :country_code, value: country_code
-                %br/
-              - if experiment_value('gender', request)
-                .itemblock
-                  = f.label :gender_student_input, t('signup_form.gender')
-                  = f.text_field :gender_student_input, maxlength: 50
-                %br/
-            = submit_tag 'Register', class: 'btn btn-primary', id: 'create_and_register'
-
-        #student-terms
-          != t('signup_form.student_terms_markdown', markdown: true)
-          %br/
-          %br/
-          %br/
+%h2= t('join_section.code.title')
+%p= t('join_section.code.instructions')
+- display_captcha = current_user && current_user.display_join_section_captcha?
+= form_tag(student_user_new_path) do
+  = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
+  - if display_captcha
+    = recaptcha_tags callback: "onCaptchaCompletion"
+  %br/
+  = submit_tag t('join_section.code.submit'), class: 'btn btn-primary', disabled: display_captcha, id: 'join_new_section'
+  - if inline_alert
+    %span.inline-alert{ style: 'color: #b94a48; margin-left: 12px'}= inline_alert
 
 :javascript
-  $( "#section_code" ).placeholder();
-  $( "#user_name" ).placeholder();
-  $( "#user_age" ).placeholder();
-
-  $( "#user_password" ).on('input',function(e){
-    var password = $(this).val();
-    var password_message = $('#password_message');
-    var password_message_confirmation = $('#password_message_confirmation');
-    if (!password || password.length < 6) {
-      password_message.text("#{t('signup_form.invalid_password')}");
-    } else {
-      password_message.text("#{t('signup_form.valid_password')}");
-    }
-    password_message_confirmation.text("");
-  });
-
-  $( "#user_password_confirmation" ).on('input',function(e){
-    var conf_password = $(this).val();
-    var origin_password = $('#user_password').val();
-    var password_message = $('#password_message');
-    var password_message_confirmation = $('#password_message_confirmation');
-    if (conf_password !== origin_password) {
-      password_message_confirmation.text("#{t('signup_form.mismatch_password')}");
-    } else {
-      password_message_confirmation.text("");
-    }
-    password_message.text("");
-  });
-
-  $( "form#new_user" ).on("submit", function(e){
-    window.dashboard.hashEmail({ email_selector: '#user_email',
-      hashed_email_selector: '#user_hashed_email',
-      age_selector: '#user_age'});
-  });
-
   function onCaptchaCompletion() {
     $("#join_new_section").prop("disabled", false);
   };

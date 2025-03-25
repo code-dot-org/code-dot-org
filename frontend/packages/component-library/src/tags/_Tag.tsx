@@ -1,8 +1,8 @@
 import React, {HTMLAttributes, memo, useCallback} from 'react';
 
+import CloseButton from '@/closeButton/CloseButton';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {WithTooltip} from '@/tooltip';
-import CloseButton from '@/closeButton/CloseButton';
 
 import moduleStyles from './tags.module.scss';
 

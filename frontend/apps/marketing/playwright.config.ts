@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import {defineConfig, devices} from '@playwright/test';
 import {EyesFixture} from '@applitools/eyes-playwright/fixture';
+import {defineConfig, devices} from '@playwright/test';
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -25,11 +25,15 @@ export default defineConfig<EyesFixture>({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
     eyesConfig: {
-      appName: 'Code.org Marketing',
+      appName: 'Marketing',
       matchLevel: 'Strict',
       // Runner type: 'ufg' for Ultrafast Grid, 'classic' for Classic runner
       type: 'classic',
-      batch: {name: 'Marketing'},
+      batch: {
+        name: 'Frontend Eyes Tests',
+        id: process.env.APPLITOOLS_BATCH_ID,
+        notifyOnCompletion: false,
+      },
       sendDom: true,
       failTestsOnDiff: 'afterEach',
       branchName: 'staging',

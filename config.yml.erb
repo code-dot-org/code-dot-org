@@ -641,6 +641,7 @@ ai_proxy_origin: https://aiproxy-test.code.org
 # local_mode.
 statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'
+statsig_api_client_key_session_replay: 'client-fake-key'
 
 # MailGun/MailJet API keys
 mailjet_api_key:
@@ -664,3 +665,8 @@ active_job_backend_rolling_restart_in_n_batches: 2
 
 # aiproxy credentials
 aiproxy_api_key: !Secret
+
+# Contentful
+contentful_space_id: "90t6bu6vlf76"
+contentful_api_key: !Secret
+contentful_hostname: cdn.contentful.com

@@ -707,7 +707,11 @@ class Unit < ApplicationRecord
     return false unless Ability.new(user).can?(:read, self)
 
     # Users can view any course not in a family.
-    return true unless family_name
+    return true if family_name.nil? && !unit_group&.single_unit_course?
+
+    if unit_group&.single_unit_course?
+      return unit_group&.can_view_version?(user, locale)
+    end
 
     latest_stable_version = Unit.latest_stable_version(family_name)
     latest_stable_version_in_locale = Unit.latest_stable_version(family_name, locale: locale)
@@ -1209,9 +1213,9 @@ class Unit < ApplicationRecord
 
     source_course_version = get_course_version
     destination_unit_group = destination_unit_group_name ?
-      UnitGroup.find_by_name(destination_unit_group_name) :
+      UnitGroup.find_by_name!(destination_unit_group_name) :
       nil
-    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
+    raise 'Destination unit group must have a course version. please try saving the course edit page again.' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
 
     begin
       ActiveRecord::Base.transaction do
@@ -1234,7 +1238,7 @@ class Unit < ApplicationRecord
           copied_unit.professional_learning_course = destination_professional_learning_course
           copied_unit.peer_reviews_to_complete = peer_reviews_to_complete
         elsif destination_unit_group
-          raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
+          raise 'Destination unit group must be in a course version. please try saving the course edit page again.' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.reload
         else

@@ -1,6 +1,7 @@
 'use client';
-import type {InternationalFontLocale} from '@/constants';
 import {useEffect, useState} from 'react';
+
+import type {InternationalFontLocale} from '@/constants';
 import {getFontByLocale} from '@/resolver/getFontByLocale';
 
 interface FontLoaderProps {

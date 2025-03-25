@@ -7,49 +7,48 @@ markdown <<MARKDOWN
 
 #### The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">Computer Science and AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
 
-#### Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how programming skills apply across various fields. 
-
-<h2 style="text-align: center;">Emerging Technologies</h2>
-
- <div style="display: flex; gap: 10px; justify-content: center; max-width: 100%; margin: auto;">
-        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
-            <img src="https://images.code.org/c09054178b1d5e8005cbe3affc177408-image-1740673501859.png" alt="AI Icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
-            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">AI & Gen AI</div>
-        </div>
-        
-  <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
-            <img src="https://images.code.org/597a652393217e1d02ff8f5cf2ccde70-image-1740673587707.png" alt="Robot icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
-            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Robotics</div>
-        </div>
-        
-  <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
-            <img src="https://images.code.org/5431817363ad35c4b40f08124720304f-image-1740673640875.png" alt="Internet of Things icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
-            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Internet of Things</div>
-        </div>
-        
-        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
-            <img src="https://images.code.org/1ab50e0c0cac05336f90e173da024fe8-image-1740673745086.png" alt="Quantum computing icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
-            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Quantum Computing</div>
-        </div>
-        
-        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
-            <img src="https://images.code.org/cab7579927625e6e640f32414b928b53-image-1740674002939.png" alt="Icon of woman using agumented realtiy glasses" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
-            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">VR & AR</div>
-        </div>
-        
-        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
-            <img src="https://images.code.org/95cbb6971b46cde1d8effd34f7dc13c3-image-1740674091132.png" alt="Icon of robotic automation manufacturing" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
-            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Automation</div>
-        </div>
-    </div>
-
-</body>
-</html>
+#### Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how computer systems apply across various fields. 
 
 
 ---
 
-#### In **Computer Systems and Devices**, students begin the unit by exploring how their skills and interests align with computing careers and the evolving tech landscape. This early connection helps them see the real-world impact of coding and problem-solving.
+## Career Journeys
+
+<h4>
+In <b>Computer Systems and Devices, </b> several lessons are labeled with a <span style="background-color: lightgray; padding: 2px;"><b> 🧑‍🎓 Career Journeys </b></span>  tag indicating that the lesson connects to real-world careers.  
+</h4> 
+
+<div style="display: flex; justify-content: center; gap: 15px; padding: 20px;">
+    <img src="https://images.code.org/bb0c4bc6d2a7b7c7c38889fd03541372-image-1742223629607.png" 
+         alt="Image 1" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+    
+    <img src="https://images.code.org/fb2d69820db91b3dbd3297223c8fd4be-image-1742223656216.png" 
+         alt="Image 2" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+    
+    <img src="https://images.code.org/1a69b780dd83bcb5ab9c3103ec8dd37c-image-1742225695511.png" 
+         alt="Image 3" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+    
+    <img src="https://images.code.org/2044b4d0a0c7851dca85e0824da030cd-image-1742225727658.png" 
+         alt="Image 4" 
+         style="width: 150px; height: 150px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); object-fit: cover;">
+</div>
+
+## Career Journey Examples
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 2</a>, explore how different careers rely on specific computer components.
+</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4</a>, explore how different careers rely on specialized software.
+</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7</a>, analyze how different careers rely on different types of data. 
+</p>
 
 
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
@@ -61,6 +60,7 @@ markdown <<MARKDOWN
             <li><strong>Make Connections Ongoing</strong> – Reinforce career relevance throughout the unit, not just at the beginning, by tying discussions back to real-world applications.</li>
         </ul>
     </div>
+
 
 
 MARKDOWN

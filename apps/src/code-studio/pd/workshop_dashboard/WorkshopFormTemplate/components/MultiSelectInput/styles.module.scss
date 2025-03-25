@@ -1,0 +1,119 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+
+.label {
+  width: 100%;
+}
+
+.container {
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: $regular-border-radius;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: default;
+
+  &.focused {
+    @include focus-styles;
+  }
+
+  .clearAllButton {
+    margin-right: 0.75rem;
+  }
+
+  .tagsAndSearchContainer {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.313rem 0.75rem;
+    flex-grow: 1;
+    min-width: 6.25rem;
+    pointer-events: none;
+
+    & > * {
+      pointer-events: auto;
+    }
+
+    .tag {
+      display: inline-block;
+      cursor: default;
+
+      > div {
+        height: 1.375rem;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    input.searchInput {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 1.375rem;
+      display: inline-flex;
+      flex: 1 1 6.25rem; /* grow, shrink, basis */
+      min-width: 6.25rem;
+    }
+  }
+
+  .multiSelectMenu {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border: 1px solid var(--borders-neutral-primary);
+    border-radius: $regular-border-radius;
+    box-shadow: 0 4px 18px 0 rgba(0 0 0 / 0.24);
+    cursor: default;
+    max-height: 20rem;
+    overflow-y: auto;
+    background-color: var(--background-neutral-primary);
+    padding: 0.25rem 0;
+
+    .option {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      &:focus-visible {
+        @include focus-styles;
+        outline-offset: -2px;
+      }
+
+      .optionLabelText {
+        display: flex;
+        gap: 0.5rem;
+
+        p {
+          margin: 0;
+
+          &:nth-of-type(2) {
+            color: var(--text-neutral-secondary);
+          }
+        }
+      }
+
+      &:hover,
+      &.hover {
+        background-color: var(--background-neutral-tertiary);
+      }
+    }
+
+    .emptyState {
+      padding: 0.5rem 1rem;
+      margin: 0;
+    }
+  }
+}

@@ -276,6 +276,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal teacher.username, response["username"]
     assert_equal "teacher", response["user_type"]
     assert_equal teacher.short_name, response["short_name"]
+    assert_equal teacher.educator_role, response["educator_role"]
     assert_equal false, response["is_verified_instructor"]
   end
 

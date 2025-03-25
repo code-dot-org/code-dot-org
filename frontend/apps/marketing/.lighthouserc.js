@@ -2,13 +2,15 @@ const assertions = {
   'bf-cache': 'off',
   'color-contrast': 'off',
   'inspector-issues': 'off',
-  'offscreen-images': ['error', {minScore: 0.5, maxLength: 1}],
+  'offscreen-images': ['error', {minScore: 0.5, maxLength: 2}], // re-enable after CMS-482
   'total-byte-weight': ['error', {minScore: 0.5}],
   'unused-css-rules': ['error', {maxLength: 5}],
   'unused-javascript': ['error', {maxLength: 10}],
   'uses-text-compression': ['error', {maxLength: 5}],
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
+  'unsized-images': ['error', {minScore: 0.5}], // re-enable after CMS-482
+  'uses-responsive-images': ['error', {maxLength: 1}], // re-enable after CMS-482
 };
 
 if (process.env.STAGE !== 'production') {

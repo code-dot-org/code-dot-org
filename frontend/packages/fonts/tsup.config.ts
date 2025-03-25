@@ -1,8 +1,9 @@
-import {defineConfig} from 'tsup';
 import {sassPlugin} from 'esbuild-sass-plugin';
-import type {Options} from 'tsup';
 import {glob} from 'glob';
 import {resolve} from 'node:path';
+import type {Options} from 'tsup';
+import {defineConfig} from 'tsup';
+
 import {LOCALES_WITH_INTERNATIONAL_FONTS} from '@/constants';
 
 /**
