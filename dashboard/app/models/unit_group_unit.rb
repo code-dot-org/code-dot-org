@@ -25,16 +25,6 @@ class UnitGroupUnit < ApplicationRecord
     UnitGroup.find_by(id: course_id)&.write_serialization
   end
 
-  # Caching is disabled when editing in LevelBuilder mode or automated tests
-  # are running.
-  # Caching can also be disabled by configuring `cache_classes` to `false`
-  def self.should_cache?
-    return false if Rails.application.config.levelbuilder_mode
-    return false unless Rails.application.config.cache_classes
-    return false if ENV['UNIT_TEST'] || ENV['CI']
-    true
-  end
-
   # Finds a UnitGroupUnit for the given parameters and caches the result. Future
   # calls will use the cache if caching is enabled.
   # If caching is disabled, then the database is queried every time.
