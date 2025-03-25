@@ -1,14 +1,17 @@
 'use strict';
 
-const cmsDomain = 'marketing.code.org'; // Change to the CMS Cloudfront or ALB
+// const cmsDomain = 'd1zjy2ptvqjefb.cloudfront.net'; // Change to the CMS Cloudfront or ALB
+const cmsDomain = 'dev.marketing.dev-code.org';
 
 const cmsPaths = {
   '/about': true,
+  '/en-US/videos': true,
 }
 
-exports.handler = (event, context, callback) => {
+export const handler = (event, context, callback) => {
   const request = event.Records[0].cf.request;
   const uri = request.uri;
+  console.log('Request URI:', uri);
 
   // Set CMS origin if the requested path matches
   if (cmsPaths[uri]) {

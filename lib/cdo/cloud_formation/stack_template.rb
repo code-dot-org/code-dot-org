@@ -50,6 +50,18 @@ module Cdo::CloudFormation
       "AssumeRolePolicyDocument: #{document.to_json}"
     end
 
+    # Generate a trust policy for multiple AWS services.
+    private def multiple_service_role(services)
+      document = {
+        Statement: [
+          Effect: 'Allow',
+          Action: 'sts:AssumeRole',
+          Principal: {Service: services.map {|service| "#{service}.amazonaws.com"}},
+        ]
+      }
+      "AssumeRolePolicyDocument: #{document.to_json}"
+    end
+
     private def erb_file(filename, vars = {})
       file = File.expand_path filename
       erb_eval(File.read(file), file, vars)
