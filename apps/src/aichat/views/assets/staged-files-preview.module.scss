@@ -61,6 +61,7 @@
   @extend %preview;
   display: flex;
   gap: 8px;
+  text-align: left;
 
   .fileIcon {
     display: flex;
@@ -96,4 +97,8 @@
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
+
+  img {
+    opacity: 1;
+  }
 }

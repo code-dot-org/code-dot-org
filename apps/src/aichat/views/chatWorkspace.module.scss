@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import '../../mixins.scss';
 @import './aichat-common.module.scss';
 
 $default-spacing: 16px;
@@ -105,5 +106,10 @@ $tabs-default-spacing: 4px;
   max-height: 80px;
   width: auto;
   height: auto;
+}
+
+.assetButton {
+  @include remove-button-styles;
   align-self: end;
+  font-size: 13px;
 }
