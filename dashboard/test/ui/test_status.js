@@ -309,6 +309,56 @@ function updateProgressNow() {
 }
 var updateProgress = _.debounce(updateProgressNow, 300, { maxWait: 3000 });
 
+function s3HeaderToKey(header) {
+  console.log("raw key name: ", header)
+  key = header
+  key = key == 'x-amz-version-id' ? 'version_id' : key;
+  key = key.startsWith('x-amz-meta-') ? key.slice(11) : key;
+  key = key.replace(/-/g, '_');
+  return key;
+}
+
+// Fetch test results directly from S3, stored as object metadata on each *_output.html file
+async function fetchMetadataDirectlyFromS3For(browser, featureKey) {
+  const featureFilename = featureKey.replace(/^features_/, '').replace(/\.feature$/, '');
+  const s3Key = `${S3_PREFIX}/${browser}_${featureFilename}${S3_KEY_SUFFIX}`;
+  const url = `https://${S3_BUCKET}.s3.amazonaws.com/${s3Key}`;
+
+  const res = await fetch(url, { method: 'HEAD' });
+  if (!res.ok) {
+    console.error(`HTTP ${res.status}: trying to fetch ${url} for browser=${browser} featureKey=${featureKey}`);
+    return undefined;
+  }
+
+  const raw = Object.fromEntries(res.headers.entries());
+  const metadata = Object.fromEntries(
+    Object.entries(raw).map(([k, v]) =>
+      [s3HeaderToKey(k), v]
+    )
+  );
+  metadata.key = s3Key;
+
+  const symbol = metadata.success === 'true' ? '✓' : '✗';
+  console.log(`${symbol} ${browser} ${featureKey}`);
+  return metadata;
+}
+
+// Iterate through `tests`, and fetch metadata for each test directly from S3.
+// This function works without a backend, its a fallback in particular to serve
+// our HTML off a static bucket.
+async function fetchMetadataDirectlyFromS3() {
+  // Fetch all test results from S3 in parallel, start them going:
+  const entries = Object.entries(tests).flatMap(([browser, features]) =>
+    Object.keys(features).map(featureKey =>
+      fetchMetadataDirectlyFromS3For(browser, featureKey)
+    )
+  );
+
+  // Now wait for all the parallel fetch() calls to complete, this returns the
+  // same format as `test_logs_controller.rb`, and allows to operate "backendless".
+  return (await Promise.all(entries)).filter(Boolean);
+}
+
 function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
   // Passes last modification times to the test objects so they can decide
@@ -328,10 +378,17 @@ function refresh() {
     .then((response) => {
       if (response.ok) {
         return response.json();
+      } else {
+        // Maybe this file is hosted on a static S3 bucket? Or dashboard isn't running?
+        // Lets try accessing S3 directly. The bucket IS public after all.
+
+        // However, first we disable auto-refresh, because unlike S3 we can't do
+        // a one-op list that includes the last_modified metadata, so loading this
+        // every 10s would be doing hundreds of HTTP GET calls over and over.
+        disableAutoRefresh();
+
+        return fetchMetadataDirectlyFromS3()
       }
-      throw new Error(
-        `While fetching updates, "${response.url}" returned ${response.status}.`
-      );
     })
     .then((json) => {
       return Promise.all(json.map((object) => refreshIndividualTest(object)))
