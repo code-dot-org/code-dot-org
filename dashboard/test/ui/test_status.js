@@ -310,7 +310,6 @@ function updateProgressNow() {
 var updateProgress = _.debounce(updateProgressNow, 300, { maxWait: 3000 });
 
 function s3HeaderToKey(header) {
-  console.log("raw key name: ", header)
   key = header
   key = key == 'x-amz-version-id' ? 'version_id' : key;
   key = key.startsWith('x-amz-meta-') ? key.slice(11) : key;
@@ -359,7 +358,40 @@ async function fetchMetadataDirectlyFromS3() {
   return (await Promise.all(entries)).filter(Boolean);
 }
 
-function refresh() {
+async function fetchMetadataFromDashboardAPI(since) {
+  const res = await fetch(`${API_BASEPATH}/${S3_PREFIX}/since/${since}`, {
+    mode: "no-cors",
+  });
+  if (res.ok) {
+    return res.json();
+  } else {
+    throw new Error(`HTTP ${res.status}`);
+  }
+}
+
+async function fetchMetadata(since) {
+  let metadata
+  try {
+    metadata = await fetchMetadataFromDashboardAPI(since)
+  } catch (error) {
+    console.warn(`Failed to fetch metadata from dashboard API, falling back to trying direct S3 access (original error: ${error})`);
+
+    // Maybe this file is hosted on a static S3 bucket? Or dashboard isn't running?
+    // Lets try accessing S3 directly. The bucket IS public after all.
+
+    // However, first we disable auto-refresh, because unlike S3 we can't do
+    // a one-op list that includes the last_modified metadata, so loading this
+    // every 10s would be doing hundreds of HTTP GET calls over and over.
+    disableAutoRefresh();
+
+    metadata = await fetchMetadataDirectlyFromS3()
+    console.log("got this from fetchMetadataDirectlyFromS3", metadata);
+  }
+  console.log(`returning`, metadata)
+  return metadata
+}
+
+async function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
   // Passes last modification times to the test objects so they can decide
   // whether to update.
@@ -367,44 +399,26 @@ function refresh() {
     return;
   }
   refreshButton.disabled = true;
-  const ensure = () => {
-    refreshButton.disabled = false;
-  };
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime() / 1000);
   let newTime = new Date();
-  fetch(`${API_BASEPATH}/${S3_PREFIX}/since/${lastRefreshEpochSeconds}`, {
-    mode: "no-cors",
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        // Maybe this file is hosted on a static S3 bucket? Or dashboard isn't running?
-        // Lets try accessing S3 directly. The bucket IS public after all.
+  
+  try {
+    const json = await fetchMetadata(lastRefreshEpochSeconds);
 
-        // However, first we disable auto-refresh, because unlike S3 we can't do
-        // a one-op list that includes the last_modified metadata, so loading this
-        // every 10s would be doing hundreds of HTTP GET calls over and over.
-        disableAutoRefresh();
-
-        return fetchMetadataDirectlyFromS3()
+    try {
+      for (object of json) {
+        console.log("refreshing", object);
+        await refreshIndividualTest(object)
       }
-    })
-    .then((json) => {
-      return Promise.all(json.map((object) => refreshIndividualTest(object)))
-        .then(() => {
-          lastRefreshTime = newTime;
-          lastRefreshTimeLabel.textContent =
-            "Updated " + lastRefreshTime.toTimeString();
-        })
-        .catch((error) => {
-          lastRefreshTimeLabel.textContent =
-            "Partially updated at " + newTime.toTimeString();
-          console.warn(error);
-        });
-    })
-    .catch((error) => console.error(error))
-    .then(ensure, ensure);
+      lastRefreshTime = newTime;
+      lastRefreshTimeLabel.textContent = "Updated " + lastRefreshTime.toTimeString();
+    } catch (error) {
+      lastRefreshTimeLabel.textContent = "Partially updated at " + newTime.toTimeString();
+      console.warn(error);
+    }
+  } finally {
+    refreshButton.disabled = false;
+  }
 }
 
 /**
@@ -417,6 +431,7 @@ function refreshIndividualTest(object) {
     return test.setLastModified(object, new Date(object.last_modified));
   }
   // If we can't find the test, we don't care about it.
+  console.warn(`refreshIndividualTest(): skipping test for ${object.key} because none could be found, object=`, object);
   return Promise.resolve();
 }
 
