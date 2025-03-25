@@ -99,7 +99,7 @@ Dashboard::Application.routes.draw do
     get "/ai_iteration/tools", to: "ai_iteration#tools"
     post "/student_code_samples", to: "student_code_sample#fetch_student_code_samples"
 
-    resources :maker, only: [], path: '/maker' do
+    resources :maker, only: [] do
       collection do
         get :home
         get :setup
