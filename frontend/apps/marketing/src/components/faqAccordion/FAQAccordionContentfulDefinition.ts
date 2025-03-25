@@ -20,6 +20,10 @@ export const FAQAccordionContentfulComponentDefinition: ComponentDefinition = {
     faqs: {
       displayName: 'FAQs',
       type: 'Array',
+      validations: {
+        required: true,
+        bindingSourceType: ['entry'],
+      },
     },
   },
 };

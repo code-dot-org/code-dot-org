@@ -8,18 +8,14 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 export const useHandleFileUpload = (
   projectFiles: Record<string, ProjectFile>
 ) => {
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const {newFile, levelProperties} = useCodebridgeContext();
+  const {appName, validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
 
-  const {newFile} = useCodebridgeContext();
   const dialogControl = useDialogControl();
   return useCallback(
     (fileName: string, contents: string, folderIdArg: unknown) => {

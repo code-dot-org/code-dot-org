@@ -37,7 +37,7 @@ import VisibilityDropdown from './VisibilityDropdown';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
 
-function sanitizeSettings(settings: LevelAichatSettings) {
+function sanitizeSettings(settings: LevelAichatSettings): LevelAichatSettings {
   const sanitizedModelCardInfo = sanitizeField(
     settings.initialCustomizations.modelCardInfo,
     EMPTY_MODEL_CARD_INFO
@@ -56,6 +56,10 @@ function sanitizeSettings(settings: LevelAichatSettings) {
     modelDescriptions.some(model => model.id === id)
   );
 
+  const multimodalIncluded = (settings.availableModelIds || []).some(
+    id => modelDescriptions.find(model => model.id === id)?.multimodal
+  );
+
   return {
     ...settings,
     availableModelIds: filteredModelIds,
@@ -64,15 +68,17 @@ function sanitizeSettings(settings: LevelAichatSettings) {
       modelCardInfo: sanitizedModelCardInfo,
     },
     visibilities: sanitizedVisibilities,
+    // Disable multimodal if no multimodal models are available
+    multimodalEnabled: !multimodalIncluded ? false : settings.multimodalEnabled,
   };
 }
 
-function sanitizeField<F extends object>(field: F, defaults: F) {
+function sanitizeField<F extends object>(field: F, defaults: F): F {
   // Iterate over default keys, keeping the value from the field if present, and otherwise using the default.
   // This removes any extraneous keys and retains only expected keys.
   return getTypedKeys<keyof F>(defaults).reduce(
     (newField, key) => ({...newField, [key]: field[key] ?? defaults[key]}),
-    {}
+    {} as F
   );
 }
 
@@ -157,6 +163,16 @@ const EditAichatSettings: React.FunctionComponent<{
     [aichatSettings, setAichatSettings]
   );
 
+  const setMultimodalEnabled = useCallback(
+    (value: boolean) => {
+      setAichatSettings({
+        ...aichatSettings,
+        multimodalEnabled: value,
+      });
+    },
+    [aichatSettings, setAichatSettings]
+  );
+
   return (
     <UpdateContext.Provider
       value={{
@@ -165,6 +181,7 @@ const EditAichatSettings: React.FunctionComponent<{
         setPropertyValue,
         setModelCardPropertyValue,
         setModelSelectionValues,
+        setMultimodalEnabled,
       }}
     >
       <div>

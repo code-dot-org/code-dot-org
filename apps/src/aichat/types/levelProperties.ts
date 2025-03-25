@@ -28,4 +28,6 @@ export interface LevelAichatSettings {
   hidePresentationPanel: boolean;
   /** list of ModelDescription.ids to limit the models available to choose from in the level */
   availableModelIds: ValueOf<typeof AiChatModelIds>[];
+  /** If multimodal chat should be enabled for this level. Requires that all available model IDs support multimodal input. */
+  multimodalEnabled?: boolean;
 }

@@ -75,20 +75,21 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {onRun, onStop} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const dialogControl = useDialogControl();
 
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const {
+    id: levelId,
+    longInstructions: instructionsText,
+    predictSettings,
+    submittable: isSubmittable,
+    appName: appType,
+  } = levelProperties;
+
   const scriptId = useAppSelector(state => state.lab.scriptId);
-  const instructionsText = useAppSelector(
-    state => state.lab.levelProperties?.longInstructions
-  );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const {hasConditions, validationResults, satisfied} = useAppSelector(
     state => state.lab.validationState
-  );
-  const predictSettings = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
@@ -96,14 +97,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
-  const isSubmittable = useAppSelector(
-    state => state.lab.levelProperties?.submittable
-  );
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
 
-  const appType = useAppSelector(state => state.lab.levelProperties?.appName);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment

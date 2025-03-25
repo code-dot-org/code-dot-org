@@ -5,7 +5,7 @@
 set -x
 
 # Build a production version of Storybook
-yarn build-storybook --quiet
+yarn build --quiet
 
 # Wait for Storybook to be available and then execute the tests
 npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \

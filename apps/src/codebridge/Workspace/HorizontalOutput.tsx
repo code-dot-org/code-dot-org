@@ -6,7 +6,6 @@ import React, {useRef, useState, useCallback, useMemo, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BaseOutput from './BaseOutput';
 import {
@@ -32,7 +31,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
   setOutputHeight,
   className,
 }) => {
-  const {labConfig} = useCodebridgeContext();
+  const {labConfig, levelProperties} = useCodebridgeContext();
   const miniApp = labConfig?.miniApp?.name;
   const style = {
     height,
@@ -41,7 +40,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
   const [consoleWidth, setConsoleWidth] = useState<number | undefined>(
     undefined
   );
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const appName = levelProperties.appName;
   const [isMaximized, setIsMaximized] = useState<boolean>(false);
   const [miniAppMinimizeWidth, setMiniAppMinimizeWidth] = useState(
     DEFAULT_MINI_APP_SIZE
