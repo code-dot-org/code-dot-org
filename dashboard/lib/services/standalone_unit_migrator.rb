@@ -171,7 +171,6 @@ module Services
 
     private def update_levelbuilder_files
       if @file_system_changes
-        @unit.write_script_json
         @unit_group.write_serialization
       end
     end
