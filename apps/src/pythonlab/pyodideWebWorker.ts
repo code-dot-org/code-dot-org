@@ -44,7 +44,7 @@ async function loadPyodideAndPackages() {
     loadErrors = await loadPackages();
     if (loadErrors.length > 0) {
       postMessage({
-        type: 'internal_error',
+        type: 'load_failed',
         message: `Error(s) loading python packages: ${loadErrors.join('\n')}`,
         id: 'startup',
       });
