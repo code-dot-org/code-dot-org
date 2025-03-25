@@ -231,7 +231,7 @@ interface SoundsPanelProps {
   playingPreview: string;
   showSoundFilters: boolean;
   defaultMode: Mode;
-  sortCdoSoundsByType: boolean;
+  sortUnrestrictedPacksByType: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -242,7 +242,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   playingPreview,
   showSoundFilters,
   defaultMode,
-  sortCdoSoundsByType,
+  sortUnrestrictedPacksByType,
   onSelect,
   onPreview,
 }) => {
@@ -305,7 +305,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         possibleSoundEntries.push({folder, sound});
       });
     });
-    if (sortCdoSoundsByType) {
+    if (sortUnrestrictedPacksByType) {
       const soundTypes: SoundType[] = ['beat', 'bass', 'lead', 'fx', 'vocal'];
       possibleSoundEntries.sort((a, b) => {
         if (a.folder.artist === 'Code.org' && b.folder.artist === 'Code.org') {

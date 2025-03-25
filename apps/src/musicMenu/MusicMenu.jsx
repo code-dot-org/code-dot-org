@@ -164,7 +164,7 @@ const optionsList = [
     ],
   },
   {
-    name: 'sort-cdo-sounds-by-type',
+    name: 'sort-unrestricted-packs-by-type',
     type: 'radio',
     values: [
       {
@@ -174,7 +174,7 @@ const optionsList = [
       },
       {
         value: 'true',
-        description: 'Sort all Code.org sounds by type in the sounds panel.',
+        description: 'Sort all unrestricted packs by type in the sounds panel.',
       },
     ],
   },

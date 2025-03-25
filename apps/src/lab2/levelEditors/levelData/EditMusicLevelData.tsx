@@ -233,7 +233,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   ? {}
                   : {
                       showSoundsPanelInSoundsMode: false,
-                      sortCdoSoundsByType: false,
+                      sortUnrestrictedPacksByType: false,
                     }),
               });
             }}
@@ -256,15 +256,17 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             size="s"
           />
           <Checkbox
-            checked={!!levelData.sortCdoSoundsByType}
-            name="sortCdoSoundsByType"
-            label="Sort Code.org sounds by type in Sound Picker"
+            checked={!!levelData.sortUnrestrictedPacksByType}
+            name="sortUnrestrictedPacksByType"
+            label="Sort unrestricted (Code.org) packs by type in Sound Picker"
             onChange={event => {
-              const sortCdoSoundsByType = event.target.checked;
+              const sortUnrestrictedPacksByType = event.target.checked;
               setLevelData({
                 ...levelData,
-                sortCdoSoundsByType,
-                ...(sortCdoSoundsByType ? {showSoundFilters: true} : {}),
+                sortUnrestrictedPacksByType,
+                ...(sortUnrestrictedPacksByType
+                  ? {showSoundFilters: true}
+                  : {}),
               });
             }}
             size="s"
