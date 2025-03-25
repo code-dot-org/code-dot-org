@@ -8,10 +8,13 @@ import progress, {
   mergeResults,
   setCurrentLevelId,
 } from '@cdo/apps/code-studio/progressRedux';
-import {CodebridgeContextProvider} from '@cdo/apps/codebridge';
+import {
+  CodebridgeContextProvider,
+  CodebridgeLevelProperties,
+} from '@cdo/apps/codebridge';
 import ValidatedInstructions from '@cdo/apps/codebridge/InfoPanel/ValidatedInstructions';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import lab, {onLevelChange, setValidationState} from '@cdo/apps/lab2/lab2Redux';
+import lab, {setValidationState} from '@cdo/apps/lab2/lab2Redux';
 import lab2Project, {setHasEdited} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import predictLevel from '@cdo/apps/lab2/redux/predictLevelRedux';
 import lab2System, {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
@@ -55,10 +58,12 @@ describe('ValidatedInstructions', () => {
     restoreRedux();
   });
 
-  function renderDefault() {
+  function renderDefault(levelProperties: CodebridgeLevelProperties) {
     render(
       <Provider store={store}>
-        <CodebridgeContextProvider value={getDefaultCodebridgeContext()}>
+        <CodebridgeContextProvider
+          value={{...getDefaultCodebridgeContext(), levelProperties}}
+        >
           <ValidatedInstructions />
         </CodebridgeContextProvider>
       </Provider>
@@ -66,9 +71,8 @@ describe('ValidatedInstructions', () => {
   }
 
   it('Continue button is visible for an already-passed level', () => {
-    store.dispatch(onLevelChange({levelProperties: validatedLevelProperties}));
     // Default progress state is on a level that has already passed.
-    renderDefault();
+    renderDefault(validatedLevelProperties);
 
     // Continue button should be present.
     screen.getByRole('button', {name: commonI18n.continue()});
@@ -77,10 +81,7 @@ describe('ValidatedInstructions', () => {
   it('Buttons are correct for a non-validated level', () => {
     // Level 1 in the progression, which is "in progress"
     store.dispatch(setCurrentLevelId('1'));
-    store.dispatch(
-      onLevelChange({levelProperties: nonValidatedLevelProperties})
-    );
-    renderDefault();
+    renderDefault(nonValidatedLevelProperties);
 
     expect(
       screen.queryByRole('button', {name: commonI18n.continue()})
@@ -96,7 +97,6 @@ describe('ValidatedInstructions', () => {
   it('Buttons are correct for a validated level', () => {
     // Level 3 in the progression is validated and not yet passed
     store.dispatch(setCurrentLevelId('3'));
-    store.dispatch(onLevelChange({levelProperties: validatedLevelProperties}));
     store.dispatch(
       setValidationState({
         hasConditions: true,
@@ -105,7 +105,7 @@ describe('ValidatedInstructions', () => {
         index: 0,
       })
     );
-    renderDefault();
+    renderDefault(validatedLevelProperties);
 
     // To start theere should be no continue button but there should be a validate button.
     expect(
@@ -130,9 +130,8 @@ describe('ValidatedInstructions', () => {
   it('Buttons are correct on a predict level', () => {
     // Level 5 is a predict level that has not yet passed
     store.dispatch(setCurrentLevelId('5'));
-    store.dispatch(onLevelChange({levelProperties: predictLevelProperties}));
 
-    renderDefault();
+    renderDefault(predictLevelProperties);
 
     // No continue button to start
     expect(
@@ -149,11 +148,8 @@ describe('ValidatedInstructions', () => {
   it('Buttons are correct on a submittable level', () => {
     // Make Level 7 a submittable level without validation that has not yet passed.
     store.dispatch(setCurrentLevelId('7'));
-    store.dispatch(
-      onLevelChange({levelProperties: submittableLevelProperties})
-    );
 
-    renderDefault();
+    renderDefault(submittableLevelProperties);
 
     // No submit or unsubmit button to start
     expect(
@@ -184,11 +180,8 @@ describe('ValidatedInstructions', () => {
   it('shows finish button when on the last level', () => {
     // Make level 7 a level without validation.
     store.dispatch(setCurrentLevelId('7'));
-    store.dispatch(
-      onLevelChange({levelProperties: nonValidatedLevelProperties})
-    );
 
-    renderDefault();
+    renderDefault(nonValidatedLevelProperties);
 
     // No finish button to start
     expect(

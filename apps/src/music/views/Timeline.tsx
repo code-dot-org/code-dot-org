@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, {MouseEvent, useCallback, useRef} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';
@@ -169,11 +169,11 @@ const Timeline: React.FunctionComponent = () => {
   }, [playheadRef]);
 
   usePlaybackUpdate(scrollPlayheadForward, scrollToPlayhead, scrollToPlayhead);
-  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
-  const canPopulateTimeline = !isPredictLevel || predictAnswerLocked;
+  const canPopulateTimeline = !isPredictLevel || predictResponseSubmitted;
 
   return (
     <div

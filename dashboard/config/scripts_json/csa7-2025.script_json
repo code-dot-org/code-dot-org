@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 17:25:19 UTC",
+    "serialized_at": "2025-03-23 16:02:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -155,31 +155,12 @@
       }
     },
     {
-      "key": "Overriding Methods",
-      "name": "Overriding Methods",
+      "key": "Intellectual Property",
+      "name": "Intellectual Property",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
-      "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "overview": "**How can I override methods from other classes?**\n\nIn this lesson, students have an opportunity to continue planning their Creative Coding with The Theater project. Students should spend this time finalizing their UML diagrams and algorithms and updating their Project Planning Board with tasks they have completed and still need to complete. Students then revisit overriding methods and how they used the `super` keyword to call the superclass version of a class. They consider scenarios for overriding methods and practice writing and calling overridden methods of their own. Students then revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
-        "preparation": "* **(Optional)** Print copies of the Overriding Methods Guided Notes (one for each student)",
-        "student_overview": "**How can I override methods from other classes?**\n\nIn this lesson, you have an opportunity to continue planning your Creative Coding with The Theater project. You should spend this time finalizing your UML diagrams and algorithms and updating your Project Planning Board with tasks you have completed and still need to complete. You then revisit overriding methods and how you used the `super` keyword to call the superclass version of a class. You consider scenarios for overriding methods and practice writing and calling overridden methods of your own. You then revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
-      },
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "Intellectual Property",
-      "name": "Intellectual Property",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 6,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**Are developers responsible for the ethical use of the code they create and integrate?**\n\nIn this lesson, students will explore the ethical and legal issues surrounding the use of open-source code and proprietary software. They will learn about the significance of intellectual property rights and the impact of using open-source code on society, economics, and culture. Through an Open Source Carousel activity, students will engage in discussions on various scenarios related to the ethical use of code, intellectual property rights, and the responsibilities of developers. This lesson encourages critical thinking about how open-source and non-open-source code can be integrated into projects responsibly. ",
@@ -195,10 +176,10 @@
     {
       "key": "Recursion",
       "name": "Recursion",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is recursion?**\n\nIn this lesson, students are introduced to recursion through an unplugged activity and realize how these algorithms differ from how they have implemented algorithms throughout the year. Students learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. They then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion.",
@@ -214,10 +195,10 @@
     {
       "key": "Project Development",
       "name": "Project Development",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
         "overview": "Students have worked on their Creative Coding with The Theater Project throughout the unit to plan the classes and algorithms they will need to develop and get feedback from their peers on their plans. In this lesson, they review the project requirements and benchmarks and update their Project Planning Boards before beginning development on their projects. Students have an opportunity to get feedback on their initial program code through a code review to help ensure they are on the right track and to emphasize the iterative development process.",
         "preparation": "* **(Optional)** Print copies of the Project Development Guided Notes (one for each student)",
@@ -232,10 +213,10 @@
     {
       "key": "System Reliability",
       "name": "System Reliability",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "**What issues and impacts result from software bugs, and what are strategies to maximize system reliability?**\n\nIn this lesson, students explore examples of bugs in applications and programs that have affected system reliability. They review and analyze a real-life open source software bug and discover the impacts bugs can cause. Students consider ways to prevent similar issues in the future and maximize the reliability of open source software, such as contributing code or identifying and submitting bugs.",
         "preparation": "* **(Optional)** Print copies of the System Reliability Guided Notes (one for each student)\n* Preview *The Rise of Open Source Software* video\n* Print copies of the Open Source Bugs handouts (two copies of one version per pair of students)\n* Print copies of the Unit 7 Study Guide (one for each student)",
@@ -250,10 +231,10 @@
     {
       "key": "Creative Coding with The Theater Project",
       "name": "Creative Coding with The Theater Project",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then continue development of your program. They conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks. Students use this feedback to finalize development before sharing their projects with their peers to celebrate their successes.",
@@ -269,10 +250,10 @@
     {
       "key": "MusicQueue FRQ",
       "name": "MusicQueue FRQ",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper",
@@ -287,10 +268,10 @@
     {
       "key": "Unit 7 Assessment",
       "name": "Unit 7 Assessment",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -306,10 +287,10 @@
     {
       "key": "Creative Coding with The Theater Project [1-Day Version]",
       "name": "Creative Coding with The Theater Project [1-Day Version]",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
@@ -324,10 +305,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -339,10 +320,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -354,10 +335,10 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -545,48 +526,6 @@
       "seeding_key": {
         "lesson_activity.key": "7f0ac07b-3fe0-4dc8-9b7c-44fa7a6ebdd1",
         "lesson.key": "Private Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "7d82473b-b7cf-4cb0-9473-b1571d519211",
-      "position": 1,
-      "properties": {
-        "duration": 15,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7d82473b-b7cf-4cb0-9473-b1571d519211",
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "0dd641a0-8632-490c-8a54-7778d484203e",
-      "position": 2,
-      "properties": {
-        "duration": 25,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e",
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "57a4c71d-f70f-4ebc-92eb-c5c91f0f14eb",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "57a4c71d-f70f-4ebc-92eb-c5c91f0f14eb",
-        "lesson.key": "Overriding Methods",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa7-2025"
       }
@@ -2021,198 +1960,6 @@
       "seeding_key": {
         "activity_section.key": "8265b616-5944-4472-9eb2-80a872d8ba88",
         "lesson_activity.key": "7f0ac07b-3fe0-4dc8-9b7c-44fa7a6ebdd1"
-      }
-    },
-    {
-      "key": "6b9086cd-4e80-4698-b926-195b4d157d91",
-      "position": 1,
-      "properties": {
-        "description": "You now have time to continue your planning for your project. Remember, your planning might include outlines, rough drafts, flowcharts, UML diagrams, or pseudocode for key algorithms in your program. Take a look at your Project Planning Board to decide what task you need to tackle first.",
-        "name": "Planning Program Structure",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "6b9086cd-4e80-4698-b926-195b4d157d91",
-        "lesson_activity.key": "7d82473b-b7cf-4cb0-9473-b1571d519211"
-      }
-    },
-    {
-      "key": "91312017-0637-44d8-81fc-714dd05a7a22",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with The Theater Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
-      },
-      "seeding_key": {
-        "activity_section.key": "91312017-0637-44d8-81fc-714dd05a7a22",
-        "lesson_activity.key": "7d82473b-b7cf-4cb0-9473-b1571d519211"
-      }
-    },
-    {
-      "key": "61837e4e-223f-4ae8-8cb4-e5731ee55500",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
-        "duration": "10",
-        "name": "Overriding"
-      },
-      "seeding_key": {
-        "activity_section.key": "61837e4e-223f-4ae8-8cb4-e5731ee55500",
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e"
-      }
-    },
-    {
-      "key": "cc49c460-7953-4074-9132-945fe0115f04",
-      "position": 2,
-      "properties": {
-        "description": "We have overridden methods in the `Object` class, such as the `toString()` method and the `equals()` method. But we're not limited to overriding methods in the `Object` class! We can also override methods that we write ourselves.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "cc49c460-7953-4074-9132-945fe0115f04",
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e"
-      }
-    },
-    {
-      "key": "550b9950-5ab5-4b26-846f-ae4e8396353e",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
-        "progression_name": "Investigate and Modify: Overriding Methods"
-      },
-      "seeding_key": {
-        "activity_section.key": "550b9950-5ab5-4b26-846f-ae4e8396353e",
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e"
-      }
-    },
-    {
-      "key": "85df9a00-fc36-452c-919e-19cb244e76d5",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
-      },
-      "seeding_key": {
-        "activity_section.key": "85df9a00-fc36-452c-919e-19cb244e76d5",
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e"
-      }
-    },
-    {
-      "key": "ac0834d1-06a0-4952-893f-0f666acdc841",
-      "position": 5,
-      "properties": {
-        "description": "We wrote our own versions of the `toString()` method to return information about our classes and the `equals()` method to compare the values assigned to instance variables. When we did this, it made these methods more useful for our programs.",
-        "duration": "15",
-        "name": "Overriding Methods",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ac0834d1-06a0-4952-893f-0f666acdc841",
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e"
-      }
-    },
-    {
-      "key": "980be78d-8b84-46ca-9678-c62c3089abbf",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why would we want to override methods written in a class?*\n* *Where else have we seen the benefits of overriding methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass. Students also make connections to polymorphism and recall how traversing an array of a superclass type allows them to easily call each subclass version of a method.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "980be78d-8b84-46ca-9678-c62c3089abbf",
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e"
-      }
-    },
-    {
-      "key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review polymorphism.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate rules for overriding methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate calling a superclass method in a subclass using the `super` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding, then continue to complete choice levels on Levels 5 and 6 to practice overriding a method.",
-        "progression_name": "Practice: Overriding Methods",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of overriding methods.\n\nThe practice levels can be used as a formative assessment to gauge understanding of overriding methods."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca",
-        "lesson_activity.key": "0dd641a0-8632-490c-8a54-7778d484203e"
-      }
-    },
-    {
-      "key": "1f2cc4d5-ba7c-46cd-b24d-315743cb4c67",
-      "position": 1,
-      "properties": {
-        "description": "We just learned a lot of new information today, which may have even answered some of the Need to Know questions you wrote down about the Creative Coding Project. As we progress through the unit, it is helpful to stop and note what we have learned that is related to or useful for the project.",
-        "name": "Revisiting the Need to Knows",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "1f2cc4d5-ba7c-46cd-b24d-315743cb4c67",
-        "lesson_activity.key": "57a4c71d-f70f-4ebc-92eb-c5c91f0f14eb"
-      }
-    },
-    {
-      "key": "807dbe48-e233-4e20-94ab-fe4e3151c99f",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\nDo This: Have students share what they added to their chart with a partner.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, you can also have students share as a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "807dbe48-e233-4e20-94ab-fe4e3151c99f",
-        "lesson_activity.key": "57a4c71d-f70f-4ebc-92eb-c5c91f0f14eb"
-      }
-    },
-    {
-      "key": "dccad9dd-2a11-4edd-9f6f-2fe606d436f8",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 7 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "dccad9dd-2a11-4edd-9f6f-2fe606d436f8",
-        "lesson_activity.key": "57a4c71d-f70f-4ebc-92eb-c5c91f0f14eb"
-      }
-    },
-    {
-      "key": "4a2953ca-a406-4c9f-9b13-150cebba1642",
-      "position": 4,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a2953ca-a406-4c9f-9b13-150cebba1642",
-        "lesson_activity.key": "57a4c71d-f70f-4ebc-92eb-c5c91f0f14eb"
-      }
-    },
-    {
-      "key": "7b3e8138-9ced-4cf0-a217-b0c2d534b9cd",
-      "position": 5,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding",
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "7b3e8138-9ced-4cf0-a217-b0c2d534b9cd",
-        "lesson_activity.key": "57a4c71d-f70f-4ebc-92eb-c5c91f0f14eb"
       }
     },
     {
@@ -4446,181 +4193,6 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U7L5-L1_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Overriding Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5-L1_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "550b9950-5ab5-4b26-846f-ae4e8396353e"
-      },
-      "level_keys": [
-        "CSA U7L5-L1_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U7L5-L2_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Overriding Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5-L2_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "550b9950-5ab5-4b26-846f-ae4e8396353e"
-      },
-      "level_keys": [
-        "CSA U7L5-L2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U7L5-L3_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Overriding Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5-L3_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "550b9950-5ab5-4b26-846f-ae4e8396353e"
-      },
-      "level_keys": [
-        "CSA U7L5-L3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U7L5-L4_pilot_oo2025"
-        ],
-        "progression": "Practice: Overriding Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5-L4_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca"
-      },
-      "level_keys": [
-        "CSA U7L5-L4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U7L5-L5_pilot_oo2025"
-        ],
-        "progression": "Practice: Overriding Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5-L5_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca"
-      },
-      "level_keys": [
-        "CSA U7L5-L5_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U7L5-L6_pilot_oo2025"
-        ],
-        "progression": "Practice: Overriding Methods"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5-L6_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca"
-      },
-      "level_keys": [
-        "CSA U7L5-L6_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U7L5-L7_pilot_oo2025"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U7L5-L7_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "7b3e8138-9ced-4cf0-a217-b0c2d534b9cd"
-      },
-      "level_keys": [
-        "CSA U7L5-L7_pilot_oo2025"
-      ]
-    },
-    {
       "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
@@ -5247,90 +4819,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U7L5-L1_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7L5-L1_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "550b9950-5ab5-4b26-846f-ae4e8396353e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5-L2_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7L5-L2_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "550b9950-5ab5-4b26-846f-ae4e8396353e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5-L3_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7L5-L3_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "550b9950-5ab5-4b26-846f-ae4e8396353e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5-L4_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7L5-L4_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5-L5_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7L5-L5_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5-L6_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7L5-L6_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "629f36cd-0f67-4a3f-bcdb-16e720a7fcca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7L5-L7_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U7L5-L7_pilot_oo2025"
-        ],
-        "lesson.key": "Overriding Methods",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa7-2025",
-        "activity_section.key": "7b3e8138-9ced-4cf0-a217-b0c2d534b9cd"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U7L6-L1_pilot_oo2025",
         "script_level.level_keys": [
           "CSA U7L6-L1_pilot_oo2025"
@@ -5548,18 +5036,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] Overriding Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/1v-xefkOsM_M6rN15o0mLiobchKG9RKIdZI_Hr-GD4pE/edit?usp=drive_link",
-      "key": "_exemplar_overriding_methods_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_overriding_methods_guided_notes"
-      }
-    },
-    {
       "name": "[EXEMPLAR] Private Methods Guided Notes",
       "url": "https://docs.google.com/document/d/1e1Ppg1D_7XjsYtLonieYPvSM3Tv2POz8vTQCUiLOOyM/edit?usp=drive_link",
       "key": "_exemplar_private_methods_guided_notes",
@@ -5701,18 +5177,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_overloaded_methods_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Overriding Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/1ZWXCtPAdUsmulKe44m94iDGixznZa_iBJDyecBXWXR4/edit?usp=drive_link",
-      "key": "_key_overriding_methods_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_overriding_methods_extra_practice"
       }
     },
     {
@@ -6206,44 +5670,6 @@
       },
       "seeding_key": {
         "resource.key": "overloaded_methods_guided_notes"
-      }
-    },
-    {
-      "name": "Overriding Methods",
-      "url": "https://docs.google.com/presentation/d/1lHn73vz31NOMYDZuwX6pRTATx8gW2K3xeTXNZxkZKk8/edit?usp=drive_link",
-      "key": "overriding_methods_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "overriding_methods_1"
-      }
-    },
-    {
-      "name": "Overriding Methods Extra Practice",
-      "url": "https://docs.google.com/document/d/13YHdupRrDABmx1mymfRlGRxAeTHHHe6JaM-aU-k_jlo/edit?usp=drive_link",
-      "key": "overriding_methods_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "overriding_methods_extra_practice"
-      }
-    },
-    {
-      "name": "Overriding Methods Guided Notes",
-      "url": "https://docs.google.com/document/d/1NkFV_N11q79WpzHXEJEr5rPAXgoC6oTtUI-whQIsmiY/edit?usp=drive_link",
-      "key": "overriding_methods_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "overriding_methods_guided_notes"
       }
     },
     {
@@ -6818,42 +6244,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "_exemplar_overriding_methods_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "_key_overriding_methods_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "overriding_methods_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "overriding_methods_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "resource.key": "overriding_methods_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Private Methods",
         "resource.key": "_exemplar_private_methods_guided_notes"
       }
@@ -7405,16 +6795,6 @@
   ],
   "objectives": [
     {
-      "key": "009ded71-8228-4812-8b4c-289deb4b6d64",
-      "properties": {
-        "description": "Write and call overridden methods"
-      },
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "objective.key": "009ded71-8228-4812-8b4c-289deb4b6d64"
-      }
-    },
-    {
       "key": "13b42ac1-4611-4e43-9f81-628909fbce23",
       "properties": {
         "description": "Write and call `private` methods"
@@ -7522,16 +6902,6 @@
       "seeding_key": {
         "lesson.key": "System Reliability",
         "objective.key": "82408ac2-afb8-41c5-89e2-166531952779"
-      }
-    },
-    {
-      "key": "8a2e8491-e3d6-4d29-a155-fdf59c1d7e82",
-      "properties": {
-        "description": "Identify appropriate scenarios for overridden methods in a class"
-      },
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "objective.key": "8a2e8491-e3d6-4d29-a155-fdf59c1d7e82"
       }
     },
     {
@@ -7804,27 +7174,6 @@
     {
       "seeding_key": {
         "lesson.key": "Overloaded Methods",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "framework.shortcode": "csa2025",
-        "standard.shortcode": "1.15.A.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overriding Methods",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-22"
       }

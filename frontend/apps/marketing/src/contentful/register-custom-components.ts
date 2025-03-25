@@ -18,6 +18,9 @@ import FAQAccordion, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import IconHighlight, {
+  IconHighlightContentfulComponentDefinition,
+} from '@/components/iconHighlight';
 import Iframe, {IframeContentfulComponentDefinition} from '@/components/iframe';
 import Image, {ImageContentfulComponentDefinition} from '@/components/image';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
@@ -56,6 +59,10 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: IconHighlight,
+      definition: IconHighlightContentfulComponentDefinition,
     },
     {
       component: Iframe,

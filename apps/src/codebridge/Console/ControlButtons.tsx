@@ -33,9 +33,10 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const {onRun, onStop, labConfig} = useCodebridgeContext();
+  const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
+  const {id: levelId, appName, predictSettings} = levelProperties;
+  const isPredictLevel = predictSettings?.isPredictLevel;
 
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -43,15 +44,11 @@ const ControlButtons: React.FunctionComponent = () => {
   const hasPredictResponse = useAppSelector(
     state => !!state.predictLevel.response
   );
-  const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
-  );
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 

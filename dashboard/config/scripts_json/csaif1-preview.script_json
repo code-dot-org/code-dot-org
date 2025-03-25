@@ -2,14 +2,27 @@
   "script": {
     "name": "csaif1-preview",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "Foundations of CS and AI",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-21 02:04:47 UTC",
-    "published_state": null,
+    "serialized_at": "2025-03-22 02:43:48 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,

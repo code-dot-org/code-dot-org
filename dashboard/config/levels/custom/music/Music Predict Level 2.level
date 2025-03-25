@@ -70,7 +70,7 @@
       "isPredictLevel": true,
       "solution": "A drum beat and a bass line at the same time",
       "questionType": "multipleChoice",
-      "allowMultipleAttempts": false,
+      "allowMultipleAttempts": true,
       "multipleChoiceOptions": [
         "A drum beat",
         "A bass line",
@@ -79,9 +79,13 @@
       ],
       "codeEditableAfterSubmit": false
     },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-06T16:40:34.774-05:00\",\"changed\":[\"cloned from \\\"Music Predict Level 1\\\"\"],\"cloned_from\":\"Music Predict Level 1\"},{\"changed_at\":\"2025-03-06 17:12:18 -0500\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T16:40:34.774-05:00\",\"changed\":[\"cloned from \\\"Music Predict Level 1\\\"\"],\"cloned_from\":\"Music Predict Level 1\"},{\"changed_at\":\"2025-03-06 17:12:18 -0500\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-03-21 13:47:12 -0400\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

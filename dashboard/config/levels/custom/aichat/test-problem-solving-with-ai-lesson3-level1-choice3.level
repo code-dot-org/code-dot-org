@@ -1,6 +1,5 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
   "created_at": "2025-03-21T05:19:35.000Z",
   "level_num": "custom",
@@ -41,10 +40,11 @@
         "gpt-4o-mini"
       ]
     },
-    "display_name": "Video Game Developer",
+    "display_name": "Travel Agent",
     "bubble_choice_description": "Practice zero-shot prompting through the career of a travel agent by giving a simple, unstructured prompt to see how AI makes recommendations without any specific details or examples.",
     "thumbnail_url": "https://images.code.org/20ecb1a554684df32056f3488425ec5f-life-support.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21T05:19:35.069+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson3-level1-choice2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson3-level1-choice2\"},{\"changed_at\":\"2025-03-21 05:20:48 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-21T05:19:35.069+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson3-level1-choice2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson3-level1-choice2\"},{\"changed_at\":\"2025-03-21 05:20:48 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-03-22 14:40:39 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

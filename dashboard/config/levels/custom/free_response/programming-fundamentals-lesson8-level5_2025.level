@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-22T01:53:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Intro to Loops",
+    "long_instructions": "**What would be a more descriptive name for `mystery_function`? Explain your answer.**\r\n\r\nMake sure to include an explanation of what the `while` loop is doing.\r\n\r\n```\r\nfrom neighborhood import Painter\r\n\r\nsusana = Painter()\r\n\r\n# Define mystery_function\r\ndef mystery_function:\r\n  while susana.has_paint():\r\n    susana.paint(\"white\")\r\n    susana.move()\r\n\r\n# Run your code\r\nwhile susana.is_on_bucket():\r\n     susana.take_paint()\r\nmystery_function()\r\n``` ",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:53:32.346+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson8-level5-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson8-level5-2024\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

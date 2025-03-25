@@ -1,0 +1,20 @@
+name 'computer-systems-lesson9-level1d_2025'
+title 'AI Translation Tools'
+description ''
+
+markdown <<MARKDOWN
+## AI Translation Tools
+
+Watch the video and respond to the questions in your activity guide. 
+
+**Note**: This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/watch?v=6bca6M6uEz4" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/49bb9e24137d18fa99288a424bb02d08-AI-POWERED.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+MARKDOWN

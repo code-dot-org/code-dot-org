@@ -4,7 +4,8 @@
     "csa1-alt-2025",
     "csa2-alt-2025",
     "csa3-alt-2025",
-    "csa4-alt-2025"
+    "csa4-alt-2025",
+    "csa5-alt-2025"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
@@ -18,6 +19,39 @@
   },
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/courses/csa-alt-2025/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csa-alt-2025/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csa-alt-2025/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "Code Reviews for Teachers",
       "url": "https://docs.google.com/document/d/12NKMurFZbuo_QEhFBm-kjN-whkhGyMO8FVwmlMeDNUQ/edit?usp=sharing",
       "key": "code_reviews_for_teachers",
@@ -28,7 +62,27 @@
       }
     },
     {
-      "name": "Culturally Responsive Pedagogy and Equity",
+      "name": "College Board Programming Labs and Java Lab",
+      "url": "https://docs.google.com/document/d/1VGHDdpc1Whhq16FBFiT5QhLCDVWW63uRS5LktAmPC3A/edit?usp=sharing",
+      "key": "college_board_programming_labs_and_java_lab",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "college_board_programming_labs_and_java_lab"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csa/445",
+      "key": "csa_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csa_forum"
+      }
+    },
+    {
+      "name": "Student-Centered Pedagogy and Equity",
       "url": "https://docs.google.com/document/d/1n2bPN--Cd9dz8P0yOZBUJ3DGY_BQHEMALFXUITJZWN0/edit?usp=sharing",
       "key": "culturally_responsive_pedagogy_and_equity",
       "properties": {
@@ -38,7 +92,7 @@
       }
     },
     {
-      "name": "Curriculum Videos",
+      "name": "Guide to Curriculum Videos",
       "url": "https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing",
       "key": "curriculum_videos",
       "properties": {
@@ -68,13 +122,13 @@
       }
     },
     {
-      "name": "Level Validation in Java Lab",
-      "url": "https://docs.google.com/document/d/1vNeia7dKCpKLT7vC13Gnpzwf6u_WbA8URkEme8jP1Q0/edit?usp=sharing",
-      "key": "level_validation_in_java_lab_1",
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1rF-8Yi4aYaCPaWBJXvxyWFNcAnlLvvwq92zKzsiLL9E/edit?usp=sharing",
+      "key": "syllabus",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "level_validation_in_java_lab_1"
+        "resource.key": "syllabus"
       }
     }
   ],

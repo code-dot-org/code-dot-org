@@ -19,7 +19,49 @@
     "version_year": "2025"
   },
   "resources": [
-
+    {
+      "name": "All Resources",
+      "url": "/courses/computer-science-and-artificial-intelligence-foundations-2025/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/computer-science-and-artificial-intelligence-foundations-2025/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/computer-science-and-artificial-intelligence-foundations-2025/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1axNOABDheboTJtKPL63UPOK_i5lj80FDr4uz37pyD4s/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    }
   ],
   "student_resources": [
 

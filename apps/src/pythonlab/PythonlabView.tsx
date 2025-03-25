@@ -176,6 +176,7 @@ const PythonlabView: React.FunctionComponent<
           projectVersion={projectVersion}
           labConfig={labConfig}
           sendConsoleInput={sendInput}
+          levelProperties={levelProperties}
         />
       )}
     </div>
