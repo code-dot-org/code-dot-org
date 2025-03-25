@@ -3684,12 +3684,6 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: unversioned
-        hourofcode:
-          title: Classic Maze
-          description_short: Try the basics of computer science with many fun characters!
-          description_student: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_teacher: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          version_title: unversioned
         vpl-csd-2022:
           title: CS Discoveries Virtual Professional Learning 2022 - 23
           description_short: ''
@@ -4635,4 +4629,10 @@ en:
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description_student: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_teacher: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          version_title: unversioned
+        hour-of-code:
+          title: Hour of Code 2013
+          description_short: Try the basics of computer science with many fun characters!
+          description_student: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_teacher: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           version_title: unversioned

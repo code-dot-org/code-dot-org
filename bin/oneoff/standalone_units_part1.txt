@@ -338,7 +338,7 @@ courseb-draft
 csc-ecosystems-2022
 cspunit2
 csd4-draft
-HourofCode
+Hour of Code
 vpl-csd-2022
 k5-onlinepd-2022
 spritelab

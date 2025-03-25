@@ -1,14 +1,14 @@
 {
-  "name": "hourofcode",
+  "name": "hour-of-code",
   "script_names": [
-    "hourofcode"
+    "Hour of Code"
   ],
-  "published_state": "stable",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "hourofcode",
+    "family_name": "hour-of-code",
     "version_year": "unversioned"
   },
   "resources": [
