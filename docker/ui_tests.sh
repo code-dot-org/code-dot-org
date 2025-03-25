@@ -44,7 +44,7 @@ no_https_store: true
 override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
 pegasus_port: 3000
-properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+properties_encryption_key: invalid_properties_encryption_key
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
 saucelabs_tunnel_name: cdo-tunnel-$CI_BUILD_NUMBER
