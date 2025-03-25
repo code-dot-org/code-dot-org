@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2025-03-19 21:47:46 UTC",
+    "serialized_at": "2025-03-21 20:40:13 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4162,6 +4162,27 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example-choices"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-example-choices"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-elem-career-journeys-basic-skills-choices"
         ]
@@ -4181,9 +4202,9 @@
       ]
     },
     {
-      "chapter": 118,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 119,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4205,9 +4226,9 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 120,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4229,9 +4250,9 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 121,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5639,6 +5660,18 @@
         "level.key": "test-elem-career-journeys-panel-choices",
         "script_level.level_keys": [
           "test-elem-career-journeys-panel-choices"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-example-choices",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example-choices"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",

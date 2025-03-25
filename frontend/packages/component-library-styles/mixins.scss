@@ -1,5 +1,6 @@
 @use 'primitiveColors';
 @use 'colors';
+@use 'variables' as variables;
 @import 'font.scss';
 
 // Typography - Label styles
@@ -169,4 +170,15 @@
   font-size: $font-size;
   line-height: $line-height;
   width: calc(#{$font-size} * #{$line-height});
+}
+
+// Border styles
+@mixin border-styles(
+  $border-color: var(--borders-neutral-primary),
+  $border-width: 1px,
+  $border-style: solid,
+  $border-radius: variables.$regular-border-radius
+) {
+  border: $border-width $border-style $border-color;
+  border-radius: $border-radius;
 }

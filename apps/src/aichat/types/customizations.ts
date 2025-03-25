@@ -1,5 +1,6 @@
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
 /** Model customizations and model card information for aichat levels.
  *  selectedModelId is a foreign key to ModelDescription.id */
@@ -29,12 +30,9 @@ export interface ModelCardInfo {
 }
 
 /** Metadata about a given model, common across all aichat levels */
-export interface ModelDescription {
+export type ModelDescription = (typeof modelsJson)[number] & {
   id: ValueOf<typeof AiChatModelIds>;
-  name: string;
-  overview: string;
-  trainingData: string;
-}
+};
 
 // Visibility for AI customization fields set by levelbuilders.
 export enum Visibility {

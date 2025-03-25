@@ -21,6 +21,7 @@ import {
   ServerChatEvent,
   isCompletedChatMessage,
   PendingChatMessage,
+  ChatAsset,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -81,8 +82,7 @@ const aichatSlice = createSlice({
       }
 
       if (lastResetIndex >= 0) {
-        state.chatEventsPast = action.payload.slice(0, lastResetIndex + 1);
-        state.chatEventsCurrent = action.payload.slice(lastResetIndex + 1);
+        state.chatEventsCurrent = action.payload.slice(lastResetIndex);
       } else {
         state.chatEventsCurrent = action.payload;
       }
@@ -249,11 +249,11 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; filename: string}>
+      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
     ) {
       state.stagedFiles.push({
         ...action.payload,
-        status: 'uploading',
+        status: action.payload.loaded ? 'uploaded' : 'uploading',
       });
     },
     stagedFileUploadFinished(

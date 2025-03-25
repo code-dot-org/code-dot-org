@@ -19,7 +19,8 @@
         "text": "### She's an Artist, Creator, and Coder\n",
         "imageUrl": "https://images.code.org/31de70a2eb96f9e6de2fd7926fef44af-roxanne2.png",
         "key": "test-music-lab-loops-sythesize-project-panels-0b5eb9b2-25d6-472d-9f49-a3c50f1a0b1a",
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
       },
       {
         "text": "### Roxanne performs music using Code",
@@ -36,18 +37,20 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "## \"As I change the code, the music changes with it\"",
+        "text": "\"As I change the code, the music changes with it\"",
         "imageUrl": "https://images.code.org/10195782b8a92beb3b053b2b8947a4ef-roxanne5.png",
         "key": "test-music-lab-loops-sythesize-project-panels-0e55f57b-3524-4334-b2fc-6cc466c0e847",
-        "layout": "text-bottom-left",
-        "fadeInOverPrevious": true
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true,
+        "typing": true
       },
       {
-        "text": "## \"I'm just giving instructions on how and when to make sound\"",
+        "text": "\"I'm just giving instructions on how and when to make sound\"",
         "imageUrl": "https://images.code.org/732afda4c264bf088873fd6daaaa23ef-roxanne6.png",
         "key": "test-music-lab-loops-sythesize-project-panels-177676fb-e459-49fb-9aa9-4dbc047d67f3",
-        "layout": "text-bottom-left",
-        "fadeInOverPrevious": true
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true,
+        "typing": true
       },
       {
         "text": "### In this lesson, we're going to try Live Coding in Music Lab!",
@@ -73,6 +76,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18 18:28:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 16:34:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:12:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:46:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18 18:28:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 16:34:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:12:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:46:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 18:47:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 18:47:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

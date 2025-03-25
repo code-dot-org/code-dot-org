@@ -151,6 +151,11 @@ export default class MusicValidator extends Validator {
             name: MusicConditions.PLAYED_SOUND_ID.name,
             value: eventData.id,
           });
+
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUND_TYPE.name,
+            value: eventData.soundType,
+          });
         }
 
         playedNumberSounds++;

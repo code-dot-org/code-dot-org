@@ -1,0 +1,99 @@
+@import 'color.scss';
+
+.bubbleChoiceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 60px);
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  gap: 15px;
+  position: relative;
+
+  .headingLight, .textLight {
+    color: $neutral_dark;
+  }
+
+  .headingDark, .textDark {
+    color: $neutral_white;
+  }
+
+  .headingLight, .headingDark {
+    margin-top: 15px;
+  }
+
+  .textLight, .textDark {
+    font-size: 14px;
+  }
+
+  .sublevelsContainer {
+    display: grid;
+    justify-content: space-around;
+    gap: 15px;
+    max-height: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+    justify-items: center;
+    align-items: center;
+
+    .sublevelButton {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 0;
+      flex-grow: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: inherit;
+      color: inherit;
+      font-size: 16px;
+      padding: inherit;
+      margin: 0;
+      aspect-ratio: 1;
+      max-width: 100%;
+      max-height: 100%;
+
+      &Light {
+        border: solid 1px $neutral_dark60;
+      }
+
+      &Dark {
+        border: solid 1px $neutral_dark80;
+      }
+
+      &:hover {
+        .sublevelImage {
+          transform: scale(1.02, 1.02);
+          transition: 0.1s ease-in-out;
+        }
+      }
+
+      .sublevelText {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 15px 0;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .sublevelImageContainer {
+        overflow: hidden;
+
+        .sublevelImage {
+          width: 800px;
+          object-fit: contain;
+          aspect-ratio: 1;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .buttonRow {
+    .continueButton {
+      position: absolute;
+      inset-inline-end: 0;
+    }
+  }
+}
