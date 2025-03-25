@@ -26,6 +26,8 @@ require 'cdo/pycall'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+require_relative '../engines/marketing/lib/marketing/engine'
+
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.

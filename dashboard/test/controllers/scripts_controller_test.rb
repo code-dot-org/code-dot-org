@@ -22,6 +22,17 @@ class ScriptsControllerTest < ActionController::TestCase
     @migrated_pl_unit = create :script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @unmigrated_unit = create :script, is_migrated: false
 
+    @single_unit_course_offering = create :course_offering, key: 'single-unit-course', display_name: 'single-unit-course'
+    @single_unit_2023 = create :unit, name: 'single-unit-2023'
+    @single_unit_course_2023 = create :single_unit_course, name: 'single-unit-course-2023', family_name: "single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
+    create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2023, key: "2023", display_name: "2023"
+    @single_unit_2024 = create :unit, name: 'single-unit-2024'
+    @single_unit_course_2024 = create :single_unit_course, name: 'single-unit-course-2024', family_name: "single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+    create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2024, key: "2024", display_name: "2024"
+    @single_unit_2025 = create :unit, name: 'single-unit-2025'
+    @single_unit_course_2025 = create :single_unit_course, name: 'single-unit-course-2025', family_name: "single-unit-course", version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit: @single_unit_2025
+    create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2025, key: "2025", display_name: "2025"
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     File.stubs(:write)
   end
@@ -319,6 +330,55 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:facilitator)
     get :show, params: {id: @pl_coursez_2017.name}
     assert_response :ok
+  end
+
+  test "show: do not redirect when showing latest stable version of single-unit course for student" do
+    sign_in create(:student)
+    get :show, params: {id: @single_unit_2024.name}
+    assert_response :success
+  end
+
+  test "show: redirect from older version to latest stable version of single-unit course for student" do
+    sign_in create(:student)
+    get :show, params: {id: @single_unit_2023.name}
+    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from older version to latest stable version of single-unit course for logged out user" do
+    get :show, params: {id: @single_unit_2023.name}
+    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to latest stable version of single-unit course for student" do
+    sign_in create(:student)
+    get :show, params: {id: @single_unit_2025.name}
+    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version to latest stable version of single-unit course for logged out user" do
+    get :show, params: {id: @single_unit_2025.name}
+    assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
+  end
+
+  test "show: redirect from new unstable version of single-unit course to assigned version for student" do
+    student_single_unit_2023 = create :student
+    section_single_unit_2023 = create :section, unit_group: @single_unit_course_2023
+    section_single_unit_2023.add_student(student_single_unit_2023)
+
+    sign_in student_single_unit_2023
+    get :show, params: {id: @single_unit_2025.name}
+    assert_redirected_to "/s/#{@single_unit_2023.name}?redirect_warning=true"
+  end
+
+  test "show: do not redirect teacher to latest stable version of single-unit course" do
+    sign_in create(:teacher)
+    get :show, params: {id: @single_unit_2023.name}
+    assert_response :ok
+  end
+
+  test "show: redirect from family name to latest stable version of single-unit course" do
+    get :show, params: {id: @single_unit_course_offering.key}
+    assert_redirected_to "/s/#{@single_unit_2024.name}"
   end
 
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if unit is in a section" do
@@ -1903,8 +1963,7 @@ class ScriptsControllerTest < ActionController::TestCase
     let(:modularity_enabled) {false}
 
     before do
-      allow(Experiment).to receive(:enabled?).and_call_original
-      allow(Experiment).to receive(:enabled?).with(user: user, experiment_name: 'modularity').and_return(modularity_enabled)
+      allow(Policies::Courses).to receive(:modularity_enabled?).with(user).and_return(modularity_enabled)
     end
 
     context 'modularity is off' do

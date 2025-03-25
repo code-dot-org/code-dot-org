@@ -1,5 +1,20 @@
 import {ComponentDefinitionVariable} from '@contentful/experiences-core/types';
 
+export const componentSizeXSToLDefinition: ComponentDefinitionVariable = {
+  displayName: 'Size',
+  type: 'Text',
+  group: 'style',
+  defaultValue: 'm',
+  validations: {
+    in: [
+      {value: 'l', displayName: 'Large'},
+      {value: 'm', displayName: 'Medium'},
+      {value: 's', displayName: 'Small'},
+      {value: 'xs', displayName: 'Extra Small'},
+    ],
+  },
+};
+
 export const marginBottomNoneToMDefinition = {
   displayName: 'Margin bottom',
   type: 'Text',

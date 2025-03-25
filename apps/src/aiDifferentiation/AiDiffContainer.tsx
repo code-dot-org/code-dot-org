@@ -52,11 +52,31 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   );
 
   useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (window.innerWidth < positionX + 100) {
+        setPositionX(window.innerWidth - 100);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
     trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
   }, [positionX]);
 
   useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (positionY + window.innerHeight < 760) {
+        setPositionY(760 - window.innerHeight);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
     trySetSessionStorage(AI_DIFF_POSITION_Y, String(positionY));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
   }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
@@ -67,7 +87,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   return (
     <Draggable
       handle=".ai_diff_handle"
-      defaultPosition={{x: positionX, y: positionY}}
+      position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
     >
       <div

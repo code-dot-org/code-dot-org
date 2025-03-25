@@ -224,7 +224,6 @@ describe('LoginTypeSelection', () => {
       locale.confirm_password()
     );
     const beginSignUpParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,
@@ -300,7 +299,6 @@ describe('LoginTypeSelection', () => {
       locale.confirm_password()
     );
     const beginSignUpParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,
@@ -355,7 +353,6 @@ describe('LoginTypeSelection', () => {
       locale.confirm_password()
     );
     const beginSignUpParams = {
-      new_sign_up: true,
       user: {
         email: email,
         password: password,

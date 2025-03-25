@@ -11,7 +11,7 @@
     "long_instructions": "#### Add a new Play Together block\r\n\r\nTry this: \r\n- Keep adding to you code. Drag a new `play together` block to your code. \r\n- Add new sounds to that `play together` block. \r\n- Keep exploring and adding more sounds to your song!\r\n\r\n\r\n\r\n",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "sounds": {
@@ -28,7 +28,10 @@
           "drums_steady",
           "sweep",
           "strings_flourish",
-          "strings_slowdown"
+          "strings_slowdown",
+          "its_hard_to_look_right",
+          "and_all_the_other_boys",
+          "so_call_me_maybe"
         ]
       },
       "toolbox": {
@@ -104,12 +107,46 @@
             }
           ]
         }
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "carly_rae_jepsen_call_me_maybe/chorus_instruments"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true
     },
     "project_template_level_name": "test-music-lab-sequences-explore-play-template-parent",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T21:14:46.525+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-03-07 21:18:05 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T21:14:46.525+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-03-07 21:18:05 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:24:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:18:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:18:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:19:04 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

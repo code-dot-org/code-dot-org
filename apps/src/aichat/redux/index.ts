@@ -15,4 +15,9 @@ export {
   setStudentChatHistory,
   setUserHasAichatAccess,
   setViewMode,
+  addStagedFile,
+  stagedFileUploadFinished,
+  removeStagedFile,
+  stagedFilesLimitExceeded,
+  clearStagedFilesAlert,
 } from './slice';

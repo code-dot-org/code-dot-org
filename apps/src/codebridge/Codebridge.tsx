@@ -11,6 +11,7 @@ import {
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
+  CodebridgeLevelProperties,
 } from '@codebridge/types';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
@@ -18,7 +19,6 @@ import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
@@ -35,6 +35,7 @@ type CodebridgeProps = {
   projectVersion: number;
   labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
+  levelProperties: CodebridgeLevelProperties;
 };
 
 export const Codebridge = React.memo(
@@ -49,6 +50,7 @@ export const Codebridge = React.memo(
     projectVersion,
     labConfig,
     sendConsoleInput,
+    levelProperties,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -69,11 +71,7 @@ export const Codebridge = React.memo(
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
     const innerLayout = useMemo(() => {
-      if (
-        isShareView &&
-        config.layoutComponents.share &&
-        experiments.isEnabled(experiments.CODEBRIDGE_SHARE)
-      ) {
+      if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
       let currentLayout = config.activeLayout;
@@ -83,7 +81,7 @@ export const Codebridge = React.memo(
       return config.layoutComponents[currentLayout];
     }, [config.activeLayout, config.layoutComponents, isShareView]);
 
-    const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+    const appName = levelProperties.appName;
 
     const backpackApi = useMemo(
       () => new BackpackClientApi(appName, null),
@@ -103,6 +101,7 @@ export const Codebridge = React.memo(
           ...sourceUtilities,
           labConfig,
           sendConsoleInput,
+          levelProperties,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

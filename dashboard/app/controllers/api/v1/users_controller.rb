@@ -47,6 +47,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
+        educator_role: current_user.educator_role,
       }
     else
       render json: {

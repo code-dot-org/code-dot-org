@@ -133,6 +133,7 @@ class UnconnectedMusicView extends React.Component {
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
+    exemplarPlaybackEvents: PropTypes.array,
     validationState: PropTypes.object,
   };
 
@@ -153,6 +154,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
+      this.getExemplarPlaybackEvents,
       this.getValidationTimeout,
       this.player,
       this.getPlayingTriggers
@@ -316,24 +318,27 @@ class UnconnectedMusicView extends React.Component {
 
     let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
 
-    // Prevent "Select a track" dialog from showing in Toolbox Mode.
-    if (isToolboxMode) {
+    // Prevent "Select a track" dialog from special mode.
+    if (isToolboxMode || isStartMode || isEditingExemplar) {
       packId = packId || DEFAULT_PACK;
     }
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
+    this.setExemplarPlaybackEvents();
 
-    this.props.isPlayView
-      ? this.musicBlocklyWorkspace.initHeadless()
-      : this.musicBlocklyWorkspace.init(
-          document.getElementById(BLOCKLY_DIV_ID),
-          this.onBlockSpaceChange,
-          this.props.isReadOnlyWorkspace,
-          toolboxAllowList,
-          this.props.isRtl,
-          this.props.blockMode,
-          localizedToolboxDefinition
-        );
+    if (AppConfig.getValue('js-editor') !== 'true') {
+      this.props.isPlayView
+        ? this.musicBlocklyWorkspace.initHeadless()
+        : this.musicBlocklyWorkspace.init(
+            document.getElementById(BLOCKLY_DIV_ID),
+            this.onBlockSpaceChange,
+            this.props.isReadOnlyWorkspace,
+            toolboxAllowList,
+            this.props.isRtl,
+            this.props.blockMode,
+            localizedToolboxDefinition
+          );
+    }
 
     this.props.setShowInstructions(
       !!levelData?.text || !!this.props.longInstructions
@@ -393,6 +398,13 @@ class UnconnectedMusicView extends React.Component {
       AppConfig.getValue('show-sound-filters') !== 'false' &&
       (AppConfig.getValue('show-sound-filters') === 'true' ||
         levelData?.showSoundFilters);
+
+    MusicRegistry.showSoundsPanelInSoundsMode =
+      !!levelData?.showSoundsPanelInSoundsMode;
+
+    MusicRegistry.sortUnrestrictedPacksByType =
+      !!levelData?.sortUnrestrictedPacksByType ||
+      AppConfig.getValue('sort-unrestricted-packs-by-type') === 'true';
 
     MusicRegistry.hideAiTemperature =
       levelData?.hideAiTemperature ||
@@ -479,15 +491,23 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    const isEditingExemplar = getAppOptionsEditingExemplar();
+
+    let packId = this.props.levelProperties?.levelData?.packId;
+    // Prevent "Select a track" dialog from special mode.
+    if (isToolboxMode || isStartMode || isEditingExemplar) {
+      packId = packId || DEFAULT_PACK;
+    }
+
     // Clear the pack, unless it came from the level data itself.
-    if (!this.props.levelProperties?.levelData?.packId) {
+    if (!packId) {
       this.props.setPackId(null);
       this.library.setCurrentPackId(null);
     }
 
-    // Check if we are in start mode, and if so, load sources from the default JSON.
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    // In Start mode, load sources from the default JSON.
     if (isStartMode) {
       const startSourcesFilename = 'startSources' + this.props.blockMode;
       const defaultSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
@@ -525,6 +545,25 @@ class UnconnectedMusicView extends React.Component {
 
   getExemplarSources = () => {
     return this.props.levelProperties?.exemplarSources;
+  };
+
+  getExemplarPlaybackEvents = () => {
+    return this.exemplarPlaybackEvents || [];
+  };
+
+  setExemplarPlaybackEvents = () => {
+    const exemplarSources = this.getExemplarSources();
+    if (!exemplarSources) {
+      return [];
+    }
+    const workspace = new MusicBlocklyWorkspace();
+    const sequencer = new Simple2Sequencer();
+    workspace.initHeadless();
+    workspace.loadCode(exemplarSources);
+    workspace.compileSong({Sequencer: sequencer}, BlockMode.SIMPLE2);
+    workspace.executeCompiledSong();
+    this.exemplarPlaybackEvents = sequencer.getPlaybackEvents();
+    workspace.dispose();
   };
 
   onBlockSpaceChange = e => {
@@ -680,7 +719,15 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
+  // Execute a song that has already been compiled from Blockly sources.
   executeCompiledSong = () => {
+    if (!this.sequencer) {
+      return;
+    }
+    if (AppConfig.getValue('js-editor') === 'true') {
+      return;
+    }
+
     // Clear the events list because it will be populated next.
     this.props.clearPlaybackEvents();
     this.props.clearOrderedFunctions();
@@ -698,6 +745,37 @@ class UnconnectedMusicView extends React.Component {
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
 
+    return this.preloadSounds(allTriggerEvents);
+  };
+
+  // Execute some song code directly.  Called by the JavaScript editor.
+  executeSongCode = code => {
+    if (!this.sequencer) {
+      return;
+    }
+    if (AppConfig.getValue('js-editor') !== 'true') {
+      return;
+    }
+
+    // Clear the events list because it will be populated next.
+    this.props.clearPlaybackEvents();
+    this.props.clearOrderedFunctions();
+
+    this.sequencer.clear();
+
+    this.musicBlocklyWorkspace.executeCode(code, {
+      Sequencer: this.sequencer,
+    });
+
+    this.props.addPlaybackEvents(this.sequencer.getPlaybackEvents());
+    this.props.setLastMeasure(this.sequencer.getLastMeasure());
+
+    return this.preloadSounds();
+  };
+
+  // Preload sounds that the sequencer knows about.
+  // Called by executeCompiledSong and executeSongCode.
+  preloadSounds = (allTriggerEvents = []) => {
     return this.player.preloadSounds(
       [...this.sequencer.getPlaybackEvents(), ...allTriggerEvents],
       (loadTimeMs, soundsLoaded) => {
@@ -854,6 +932,13 @@ class UnconnectedMusicView extends React.Component {
           }
           analyticsReporter={this.analyticsReporter}
           blocklyWorkspace={this.musicBlocklyWorkspace}
+          exemplarPlaybackEvents={this.getExemplarPlaybackEvents()}
+          executeCode={
+            AppConfig.getValue('js-editor') === 'true' &&
+            (code => {
+              this.executeSongCode(code);
+            })
+          }
         />
         <Callouts />
       </AnalyticsContext.Provider>

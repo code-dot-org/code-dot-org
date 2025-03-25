@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "pilot-elem-music-lab",
-    "serialized_at": "2025-03-05 20:51:45 UTC",
+    "serialized_at": "2025-03-18 20:11:48 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -452,15 +452,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-career1-panel"
-        ],
         "progression": "Intro Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-coding-intro-career1-panel"
+          "music-coding-intro-songwriter-shakira-video"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
@@ -468,7 +465,7 @@
         "activity_section.key": "a40d11d8-b17b-491d-9141-3238fdf41168"
       },
       "level_keys": [
-        "music-coding-intro-career1-panel"
+        "music-coding-intro-songwriter-shakira-video"
       ]
     },
     {
@@ -1400,9 +1397,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-career1-panel",
+        "level.key": "music-coding-intro-songwriter-shakira-video",
         "script_level.level_keys": [
-          "music-coding-intro-career1-panel"
+          "music-coding-intro-songwriter-shakira-video"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",

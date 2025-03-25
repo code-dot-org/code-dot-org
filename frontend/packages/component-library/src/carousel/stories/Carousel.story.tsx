@@ -1,10 +1,10 @@
 import type {Meta, StoryFn} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import Carousel, {CarouselProps} from '../index';
-
 import {Heading2} from '@/typography';
+
 import Video from '../../video/Video';
+import Carousel, {CarouselProps} from '../index';
 
 export default {
   title: 'DesignSystem/Carousel',
@@ -416,7 +416,7 @@ VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
 
   // check that videos are visible in both carousels
   for (const videoTitle of videoTitles) {
-    const videos = await canvas.findAllByTitle(videoTitle);
+    const videos = await canvas.findAllByLabelText(`Play video ${videoTitle}`);
     videos.forEach(video => expect(video).toBeVisible());
   }
 };

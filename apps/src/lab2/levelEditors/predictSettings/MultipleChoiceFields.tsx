@@ -59,6 +59,7 @@ const MultipleChoiceFields: React.FunctionComponent<
     return null;
   }
 
+  const solutions = predictSettings.solution?.split(',') || [];
   return (
     <div>
       <label className={moduleStyles.fieldArea}>
@@ -73,7 +74,7 @@ const MultipleChoiceFields: React.FunctionComponent<
             />
             <Checkbox
               label="Correct answer"
-              checked={predictSettings.solution?.includes(option) || false}
+              checked={solutions.includes(option) || false}
               onChange={handleToggleMultipleChoiceAnswer}
               name={`mark_correct_answer_${index}`}
               value={option}

@@ -1,0 +1,20 @@
+{
+  "name": "problem-solving-with-ai-2024",
+  "script_names": [
+    "pswai-pilot-2024"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "problem-solving-with-ai",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

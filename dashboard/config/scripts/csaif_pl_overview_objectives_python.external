@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 </div>
 
 <!-- Welcome Section -->
-<div style="margin: 10px auto; width: 100%; font-family: Arial, sans-serif; line-height: 1.6; font-size: 14pt; color: #333;">
+<div style="margin: 10px auto; width: 100%; line-height: 1.6; font-size: 14pt; color: #333;">
     <h2>Welcome!</h2>
     <p style = "font-size: 14pt">
         This professional learning module is designed to help you prepare to teach Code.org’s 

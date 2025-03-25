@@ -34,7 +34,6 @@ experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
@@ -53,8 +52,6 @@ experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
 experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 // Allows the playspace to be dragged to take up a larger portion of the screen
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
-// Shows the new sign-up flow
-experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 // Shows 'check my code' button in App Lab for validation via AI
@@ -63,8 +60,6 @@ experiments.CSP_VALIDATION_VIA_AI = 'csp_validation_via_ai';
 experiments.FREE_RESPONSE_AI_ANALYSIS = 'free_response_ai_analysis';
 // Allows users to view the new version of the teacher homepage
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
-// Use the new version of codebridge share view
-experiments.CODEBRIDGE_SHARE = 'codebridge-share';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

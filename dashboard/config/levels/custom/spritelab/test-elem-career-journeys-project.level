@@ -41,7 +41,7 @@
     "parent_level_id": 28361,
     "short_instructions": "It's time to create whatever you want!",
     "mini_rubric": "false",
-    "long_instructions": "##Code your Future!\r\n**Create and share your career-inspired project**\r\n1. Add sprites & backgrounds – Use the Costumes tab to customize.\r\n\r\n2. Use events – Make sprites respond to clicks or other actions.\r\n3. Showcase your career – Use say blocks to explain the job.\r\n4. Enhance your project – Try animations, sound, or movement.\r\n5. Check your work – Use the Project Checklist to make sure it’s complete.",
+    "long_instructions": "##Code your Future!\r\n\r\n**1. Add sprites & backgrounds** – Use the Costumes tab to customize.\r\n\r\n**2. Use events** – Make sprites respond to clicks or other actions.\r\n\r\n**3. Showcase your career** – Use say blocks to explain the job.\r\n\r\n**4. Enhance your project** – Try animations, sound, or movement.\r\n\r\n**5. Check your work** – Use the Project Checklist to make sure it’s complete.\r\n\r\n**6. Share your career**-inspired project!",
     "encrypted": "false",
     "soft_buttons": [
       "leftButton",
@@ -62,12 +62,12 @@
     "video_key": "hello_world_congrats",
     "authored_hints": "[]",
     "skip_autosave": true,
-    "preload_asset_list": null,
     "standalone_app_name": "spritelab",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-04T20:08:42.549+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_freeplay\\\"\"],\"cloned_from\":\"helloworld_emoji_freeplay\"},{\"changed_at\":\"2025-03-04 20:53:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"soft_buttons\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:56:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-04T20:08:42.549+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_freeplay\\\"\"],\"cloned_from\":\"helloworld_emoji_freeplay\"},{\"changed_at\":\"2025-03-04 20:53:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"soft_buttons\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:56:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 22:44:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-19 22:45:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

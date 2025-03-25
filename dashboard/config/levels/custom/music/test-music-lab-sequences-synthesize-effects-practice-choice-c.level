@@ -1,0 +1,60 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-12T16:20:46.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Sound Design Challenge\r\nYou're now a sound designer, and your challenge is to create an immersive soundscape that tells a story using everything you've learned about filters, delays, volume, sequencing, layering, and offsetting sounds.\r\n\r\n🎧 The Scenario:\r\nImagine you’re designing the soundtrack for a scene in a movie. Choose one of these themes:\r\n- Mysterious Forest – A foggy landscape where distant echoes and shifting volumes create an eerie atmosphere.\r\n- Cyber City at Night – A pulsing beat, layered synths, and dynamic filters give this city its futuristic energy.\r\n- Ocean Adventure – Sailing boats, open water, and a mix of rising and falling volumes create the feeling of drifting at sea.\r\n\r\n🎼 Your challenge:\r\n-Sequence your sounds: Arrange different sounds in an order that makes sense for your theme.\r\n- Layer and Offset: Try using rests, delays, and overlapping sounds to make your mix feel more natural.\r\n- Use Effects: Apply filters, delays, and volume changes to add depth to your soundscape.\r\n- Match Sound Lengths: Make sure your layers work together by adjusting lengths so they blend smoothly.\r\n\r\n**Bonus Challenge:** Try making a transition effect—like a build-up before a drop or a gradual shift from calm to intense!",
+    "display_name": "Sound Design Challenge",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:20:46.377+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-b\"},{\"changed_at\":\"2025-03-12 16:20:48 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:14:10 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:21:03 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:21:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:22:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:40:13 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:40:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

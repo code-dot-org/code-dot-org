@@ -1,5 +1,6 @@
-import {_private} from '@/contentful/client';
 import {createClient} from 'contentful';
+
+import {_private} from '@/contentful/client';
 
 const DEFAULT_PROPS = {
   space: 'space',

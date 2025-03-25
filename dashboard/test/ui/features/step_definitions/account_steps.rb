@@ -257,13 +257,6 @@ end
 And(/^I fill in the sign up email field with a random email$/) do
   email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
   steps <<~GHERKIN
-    And I type "#{email}" into "#user_email"
-  GHERKIN
-end
-
-And(/^I fill in the new sign up email field with a random email$/) do
-  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
-  steps <<~GHERKIN
     And I press keys "#{email}" for element "#uitest-email"
   GHERKIN
 end

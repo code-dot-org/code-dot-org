@@ -4,17 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "self_paced_pl_k_5",
-      "curriculum_umbrella": "Self-paced PL - CSF",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "K-5 Special topics",
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "k5-unplugged",
-    "serialized_at": "2025-01-13 23:48:21 UTC",
+    "serialized_at": "2025-03-17 17:50:06 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

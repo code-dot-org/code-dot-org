@@ -1,8 +1,8 @@
 import React, {HTMLAttributes, memo, useCallback} from 'react';
 
+import CloseButton from '@/closeButton/CloseButton';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {WithTooltip} from '@/tooltip';
-import CloseButton from '@/closeButton/CloseButton';
 
 import moduleStyles from './tags.module.scss';
 
@@ -45,7 +45,11 @@ export interface ClosableTagProps extends BaseTagProps {
   type: 'closable';
   /** onClose callback gives the tag an accessible close button on the
    * right side of the label */
-  onClose: () => void;
+  onClose: (
+    e?:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.KeyboardEvent<HTMLButtonElement>,
+  ) => void;
 }
 
 export type TagProps = DefaultTagProps | ClosableTagProps;

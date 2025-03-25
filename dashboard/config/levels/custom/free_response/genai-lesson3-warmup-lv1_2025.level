@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-12T20:41:07.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "Imagine you are going to study abroad in a country where you don’t know the language, but you plan to learn it during your stay. You have 3 options for where to stay:\r\n\r\n- A hotel room with a bakery and restaurant on the ground floor\r\n- A barn on a fruit farm with a shop that repairs farm equipment\r\n- An apartment across from a florist with several young children\r\n\r\n### As you try to learn the language and listen to conversations around you:\r\n#### - What are some words you think you'll learn no matter where you stay?\r\n#### - What are some specialized words you'll learn because of where you're staying?",
+    "teacher_markdown": " Discussion Goal: Students should call out how they may learn the same conversational words and phrases in all three places - things like “Hello”, “goodbye”, “where is the bathroom?” - but they should call out how the secondary details in these scenarios may influence the types of words and phrases they learn. For example, in the hotel room, they are more likely to learn words associated with cooking and baking, whereas in the barn they are more likely to learn mechanical and technical terms. Emphasize how these differences are primarily due to circumstance and exposure rather than intent - whether you or not you wanted to learn certain phrases, the proximity to these situations makes it somewhat inevitable.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:41:07.862+00:00\",\"changed\":[\"cloned from \\\"genai-lesson3-warmup-lv1\\\"\"],\"cloned_from\":\"genai-lesson3-warmup-lv1\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

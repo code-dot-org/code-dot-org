@@ -166,7 +166,7 @@ class HttpCache
       'statsig_stable_id',
       session_key,
       storage_id,
-      'new_sign_up_user_type',
+      'sign_up_user_type',
     ].concat(default_cookies)
 
     {

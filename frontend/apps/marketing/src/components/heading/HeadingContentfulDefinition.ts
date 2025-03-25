@@ -1,11 +1,12 @@
 // Creates a definition for the Typography component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+
 import {removeMarginBottomDefinition} from '@/components/common/definitions';
 
 export const HeadingContentfulComponentDefinition: ComponentDefinition = {
   id: 'heading',
   name: 'Heading',
-  category: 'Typography',
+  category: '02: Typography',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/LHRmOBd4IWYZuWScbJG3i/0442e38966e91c0e2aca88fdb2b217ad/component_divider_thumbnail.png',
   tooltip: {

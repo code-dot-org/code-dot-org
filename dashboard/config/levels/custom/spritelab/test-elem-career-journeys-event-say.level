@@ -75,12 +75,15 @@
     "video_key": "hello_world_events",
     "skip_autosave": true,
     "encrypted_examples": "euHJQj7YqGu+N+OUKo15OCpg0KqUc7rk/mmOuESJ6sRj8wynVp7bqVM0CLk6\n77ADhiRQ/gElUamxZz0cF4zLEZH1yJO8XSh9s4e7rv2xfPuq8/bkmZ9ebHxE\n4JE0YujqaaSJHU9FK5Ke3e26ECgRPQ==\n",
-    "preload_asset_list": null,
     "standalone_app_name": "spritelab",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "preload_asset_list": null,
+    "display_name": "Events for say",
+    "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Skill:** Use the when clicked event to make a sprite say something.",
+    "thumbnail_url": "https://images.code.org/157cb53354c9f10acb54bac1a2b92f05-say.jpg"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-04T20:08:13.112+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_events\\\"\"],\"cloned_from\":\"helloworld_emoji_events\"},{\"changed_at\":\"2025-03-04 20:24:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:24:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:49:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:57:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-04T20:08:13.112+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_events\\\"\"],\"cloned_from\":\"helloworld_emoji_events\"},{\"changed_at\":\"2025-03-04 20:24:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:24:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:49:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-04 20:57:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:11:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:13:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -13,7 +13,7 @@
     "//#format": {},
     "//#format:fix": {},
     "release:dryrun": {
-      "dependsOn": ["lint", "test", "build"]
+      "dependsOn": ["build", "lint", "test"]
     },
     "lint": {
       "dependsOn": ["^lint", "prettier", "stylelint", "typecheck", "//#format"]
@@ -45,6 +45,7 @@
       "dependsOn": ["^test"]
     },
     "test:ui:ci": {
+      "cache": false,
       "dependsOn": ["^test:ui:ci"],
       "env": ["STAGE"]
     },

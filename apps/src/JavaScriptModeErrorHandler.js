@@ -29,6 +29,9 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputError(errorString, lineNumber, libraryName) {
+    if (errorString.msg) {
+      errorString = errorString.msg;
+    }
     this.output_(errorString, LogLevel.ERROR, lineNumber, libraryName);
   }
 
@@ -40,6 +43,9 @@ export default class JavaScriptModeErrorHandler {
    * @param {number} [lineNumber]
    */
   outputWarning(errorString, lineNumber) {
+    if (errorString.msg) {
+      errorString = errorString.msg;
+    }
     this.output_(errorString, LogLevel.WARNING, lineNumber);
   }
 
@@ -50,13 +56,7 @@ export default class JavaScriptModeErrorHandler {
    */
   getAsyncOutputWarning() {
     const lineNumber = this.getNearestUserCodeLine_();
-    return error => {
-      if (error.msg) {
-        this.output_(error.msg, LogLevel.WARNING, lineNumber);
-      } else {
-        this.output_(error, LogLevel.WARNING, lineNumber);
-      }
-    };
+    return error => this.outputWarning(error, lineNumber);
   }
 
   /**

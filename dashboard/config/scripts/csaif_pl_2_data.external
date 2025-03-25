@@ -5,35 +5,75 @@ description 'description here'
 markdown <<MARKDOWN
 # Personal Data
 
-#### In today's digital world, data plays a crucial role in everything from social media and online shopping to healthcare and government systems. Data can be anything from a simple username to sensitive information like bank details or medical records. Companies, governments, and hackers all seek access to data—sometimes for beneficial reasons, like improving services, but other times for malicious purposes, such as identity theft or fraud.
+#### In today's digital world, data plays a crucial role in everything from social media and online shopping to healthcare and government systems. Data can be anything from a simple username to sensitive information like bank details or medical records. 
 
-#### Cybersecurity is the practice of protecting data from unauthorized access, theft, or damage. Understanding what information is personal and how to protect it is essential to staying safe online.
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Personally Identifiable Information (PII)</strong> includes any data that identifies, links, or describes a person, such as a name, address, or phone number.</p>
+</div>
 
-#### Apps, websites, and other computing innovations they use every day require a lot of data to run, much of which you might consider to be either private or personal.
+#### Apps and websites rely on large amounts of data, much of which may be private or personal. Companies, governments, and hackers all seek access to data—sometimes for beneficial reasons, like improving services, but other times for malicious purposes, such as identity theft or fraud.
 
-#### Reflect on which of the following pieces of information would you consider to be "personal", as in you wouldn't want it shared with just anyone.
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Cybersecurity</strong> is the practice of protecting data from unauthorized access, theft, or damage.</p>
+</div>
 
-- #### Your full name
-- #### Your social security number
-- #### Your favorite musician / band
-- #### A picture of your face
-- #### Your fingerprint
-- #### Your birthdate
-- #### Your address
-- #### Where you go after school
-- #### Your phone number
-- #### Your medical information
-- #### Who your best friends are
-- #### Your racial / ethnic identity
-- #### A list of everything you've bought this month
-- #### A list of recordings of your voice
-- #### Your IP address
-- #### A video of you singing
-- #### Your academic history / report card
-- #### The town or city you live in
+#### Understanding what information is personal and how to protect it is essential to staying safe online. 
+
+## 📝 To Do
+#### Reflect on which of the following pieces of information you would consider to be "personal," as in you wouldn't want it shared with just anyone.
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 15px;">
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Full Name
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Social Security Number
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Birthdate
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Address
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Phone Number
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Medical Information
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Fingerprint
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your IP Address
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Academic History
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Online Purchase History
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        A Recording of Your Voice
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        The Town or City You Live In
+    </div>
+        <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Your Racial / Ethnic Identity
+    </div>
+        <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        Who Your Best Friends Are
+    </div>
+    <div style="background: #fff; padding: 15px; text-align: center; font-weight: bold; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0;">
+        A Picture of Your Face
+    </div>
+</div>
+
+<br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 
 

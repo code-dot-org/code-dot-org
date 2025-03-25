@@ -74,6 +74,12 @@ export const MusicConditions: ConditionNames = {
     description:
       'Checks if a specific sound is playing. Ex. Value: beats/drum_kit_disco',
   },
+  PLAYED_SOUND_TYPE: {
+    name: 'played_sound_type',
+    valueType: 'array',
+    description: 'Checks if a certain sound type is playing.',
+    valueOptions: ['beat', 'bass', 'lead', 'fx', 'vocal'],
+  },
   PLAYED_EMPTY_CHORDS: {
     name: 'played_empty_chords',
     valueType: 'number',
@@ -130,5 +136,15 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
     description:
       'Checks if a given trigger button (1, 2, 3, 4) is pressed. Ex. Value: 1',
+  },
+  USED_EFFECT: {
+    name: 'used_effect',
+    description:
+      'Checks if something was played with an effect (any value including Off/Full).',
+  },
+  USED_EFFECT_NON_DEFAULT: {
+    name: 'used_effect_non_default',
+    description:
+      'Checks if something was played with a non-default effect value (High/Low/Medium).',
   },
 };
