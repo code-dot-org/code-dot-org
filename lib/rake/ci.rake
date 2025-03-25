@@ -172,7 +172,7 @@ namespace :ci do
 
     Dir.chdir('dashboard') do
       RakeUtils.rake_stream_output 'seed:cached_ui_test'
-      RakeUtils.rake_stream_output 'seed:ui_test_scripts'
+      RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
 end
