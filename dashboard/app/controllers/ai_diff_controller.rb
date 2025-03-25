@@ -11,6 +11,9 @@ class AiDiffController < ApplicationController
   # isPreset:
   # POST /ai_diff/chat_completion
   def chat_completion
+    puts "puts in chat_completion"
+    ChatClient.log("ChatClient in chat_completion")
+    CDO.log.info("CDO.log.info in chat_completion")
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
@@ -66,10 +69,15 @@ class AiDiffController < ApplicationController
   end
 
   private def contains_pii?
+    puts "puts in contains_pii"
+    ChatClient.log("ChatClient in contains_pii")
+    CDO.log.info("CDO.log.info in contains_pii")
     response = Aws::Comprehend::Client.new.detect_pii_entities(
       {language_code: 'en', text: params[:inputText]}
     )
-
+    puts "puts after contains_pii client"
+    ChatClient.log("ChatClient after contains_pii client")
+    CDO.log.info("CDO.log.info after contains_pii client")
     # a string without pii concerns will contain no entities. example responses:
     # {
     #   "source": "the quick brown fox jumped over the lazy dog",
@@ -89,6 +97,9 @@ class AiDiffController < ApplicationController
   end
 
   private def get_response_body(session_id)
+    puts "puts in get_response_body"
+    ChatClient.log("ChatClient in get_response_body")
+    CDO.log.info("CDO.log.info in get_response_body")
     if contains_pii?
       return {
         role: "assistant",
