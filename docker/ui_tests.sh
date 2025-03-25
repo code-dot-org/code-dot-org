@@ -27,8 +27,8 @@ build_dashboard: true
 build_i18n: false
 build_pegasus: true
 bundler_use_sudo: false
-cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
-cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+cloudfront_key_pair_id: invalid_cloudfront_key_pair_id
+cloudfront_private_key: \"invalid_cloudfront_private_key\"
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_port: 3000
