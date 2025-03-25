@@ -10,6 +10,8 @@ import {
 } from '@cdo/apps/aiEvaluation/evaluationApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
+import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
+
 import style from '@cdo/apps/levelbuilder/ai-iteration-tools/ai-tutor/ai-tutor-tester.module.scss';
 
 interface LevelData {
@@ -86,6 +88,11 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   return (
     <div>
       <h2>AI Analysis (prototype)</h2>
+      <FreeResponseAiSummaryBox
+        aiEvaluationHandler={getAIEvaluations}
+        disabled={!responses.length || evaluationsPending}
+        isPending={evaluationsPending}
+      />
       <Button
         text="Evaluate student responses"
         onClick={getAIEvaluations}

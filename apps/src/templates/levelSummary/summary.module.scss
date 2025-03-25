@@ -259,3 +259,26 @@ svg text[fill] {
 .subLevelDropdownContainer {
   padding: 10px;
 }
+
+.aiSummaryContainer {
+  display: flex;
+  padding: 16px;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  gap: 40px;
+  width: 100%;
+  box-sizing: border-box;
+
+  .leftSide {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .rightSide {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+}
