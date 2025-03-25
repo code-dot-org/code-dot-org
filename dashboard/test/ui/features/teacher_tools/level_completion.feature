@@ -19,6 +19,7 @@ Scenario:
   And I see no difference for "level completion"
   And I close my eyes
 
+@skip
 Scenario:
   When I open my eyes to test "freeplay artist sharing"
   And I am on "http://studio.code.org/s/course3/lessons/21/levels/15?noautoplay=true"

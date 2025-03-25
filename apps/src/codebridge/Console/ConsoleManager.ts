@@ -66,7 +66,8 @@ export default class ConsoleManager {
 
   public writeErrorMessage(message: string) {
     // This colors the message red in the terminal
-    this.writeConsoleMessage(`\x1b[31m${message}\x1b[0m`);
+    // Reference for color codes: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+    this.writeConsoleMessage(`\x1b[38;5;203m${message}\x1b[0m`);
   }
 
   public writeSystemError(message: string, appName: string) {

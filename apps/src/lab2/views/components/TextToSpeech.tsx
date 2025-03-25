@@ -6,6 +6,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import DCDO from '@cdo/apps/dcdo';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import currentLocale from '@cdo/apps/util/currentLocale';
+import i18n from '@cdo/locale';
 
 import moduleStyles from './TextToSpeech.module.scss';
 
@@ -69,6 +70,14 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent onClick from firing twice
+      event.stopPropagation();
+      playText();
+    }
+  };
+
   if (!ttsButtonEnabled || !isTtsAvailable) {
     return null;
   }
@@ -80,6 +89,8 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
         isPlaying && moduleStyles.playButtonPlaying
       )}
       onClick={playText}
+      onKeyDown={handleKeyDown}
+      aria-label={i18n.playTextToSpeech()}
       type="button"
     >
       <FontAwesomeV6Icon

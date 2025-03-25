@@ -1,0 +1,22 @@
+name 'computer-systems-lesson3-level5e_2025'
+title 'Medical Robots'
+description 'Learn how specialists develop and maintain advanced robotic systems used in healthcare.'
+display_name 'Medical Robots'
+bubble_choice_description 'Learn how specialists develop and maintain advanced robotic systems used in healthcare.'
+thumbnail_url 'https://images.code.org/c6edf0a6008202b5ec9a87af8376f18b-Pasted%20Graphic%2079.png'
+
+markdown <<MARKDOWN
+# Medical Robots
+
+Learn how specialists develop and maintain advanced robotic systems used in healthcare.
+
+As you watch, be prepared to reflect on the following in the next activity:
+
+- What kind of hardware components are used by people in this career?  
+- What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?  
+
+**Note**: This video opens in a new tab ⧉.  
+
+[![YouTube Video Thumbnail](https://images.code.org/c6edf0a6008202b5ec9a87af8376f18b-Pasted%20Graphic%2079.png)](https://www.youtube.com/watch?v=8z0oJR9S1Ps)
+
+MARKDOWN

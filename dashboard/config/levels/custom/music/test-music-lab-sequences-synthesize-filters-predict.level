@@ -110,9 +110,22 @@
       "allowChangeStartingPlayheadPosition": true
     },
     "long_instructions": "### Make a Prediction \r\nNotice there is are new blocks in this code. What do you think the first cowbell will sound like? What about the second?",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "freeResponseHeight": 150,
+      "codeEditableAfterSubmit": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12T16:04:16.095+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict\"},{\"changed_at\":\"2025-03-12 16:05:19 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 17:21:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:37:03 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:04:16.095+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict\"},{\"changed_at\":\"2025-03-12 16:05:19 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 17:21:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:37:03 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:57:31 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

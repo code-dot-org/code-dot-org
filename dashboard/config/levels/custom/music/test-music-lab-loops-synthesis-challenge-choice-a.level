@@ -1,0 +1,67 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-18T17:50:16.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Call and Response Challenge: Improv & Timing\r\n\r\nIn live music, performers often respond to each other in the moment—just like a jazz musician improvising a solo or a DJ remixing a track on the fly. In this challenge, you'll practice improvisation and timing by interacting with your music in real-time.\r\n\r\n**Do This**:\r\n- Create a backtrack with a steady beat or melody.\r\n- Code a trigger that plays a small loop.\r\n- Perform live! Each time you use the trigger, modify the loop—change the sound, adjust the effect, or change up the timing.",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Call and Response Challenge",
+    "thumbnail_url": "https://images.code.org/cd536d446564546d3fa86bc98072bdd3-DALL·E 2025-03-18 11.20.35 - A vibrant background featuring a fun gradient transitioning from bright green to pink. In the foreground, two symbolic representations of a 'call and .webp",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-18T17:50:16.388+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-18 18:08:48 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:21:37 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 18:25:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -32,7 +32,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       MockS3ObjectSummary.new(key_2, 321, 2.days.ago),
       MockS3ObjectSummary.new(key_3, 111, 3.days.ago)
     ]
-    LevelStarterAssetsController.any_instance.
+    LevelStarterAssetsHelper.
       expects(:get_object).times(3).
       returns(file_objs[0], file_objs[1], file_objs[2])
     level_starter_assets = {
@@ -67,7 +67,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     file_objs = [
       MockS3ObjectSummary.new(key_1, 123, 1.day.ago)
     ]
-    LevelStarterAssetsController.any_instance.
+    LevelStarterAssetsHelper.
       expects(:get_object).once.
       returns(file_objs[0])
     level_starter_asset_1 = {
@@ -93,11 +93,11 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'file: returns requested file' do
-    LevelStarterAssetsController.any_instance.
+    LevelStarterAssetsHelper.
       expects(:get_object).
       with(@uuid_name).
       returns(@file_obj)
-    LevelStarterAssetsController.any_instance.
+    LevelStarterAssetsHelper.
       expects(:read_file).
       with(@file_obj).
       returns('hello, world!')
@@ -114,7 +114,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'file: returns 404 if level has no starter assets' do
-    LevelStarterAssetsController.any_instance.expects(:get_object).never
+    LevelStarterAssetsHelper.expects(:get_object).never
     level = create(:applab, starter_assets: nil)
 
     get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
@@ -145,7 +145,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns unprocessable_entity if file extension is invalid' do
-    LevelStarterAssetsController.any_instance.expects(:get_object).never
+    LevelStarterAssetsHelper.expects(:get_object).never
 
     # File must exist in order to use fixture_file_upload.
     invalid_filename = 'invalid.exe'
@@ -162,9 +162,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns unprocessable_entity if file fails to upload' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
     @file_obj.expects(:upload_file).returns(false)
 
     sign_in create(:levelbuilder)
@@ -174,9 +172,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: raises if file uploads but starter asset is not added' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
     @file_obj.expects(:upload_file).returns(true)
     Level.any_instance.expects(:valid?).twice.returns(true, false)
 
@@ -187,9 +183,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns summary if file uploads and starter asset is added' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
     @file_obj.expects(:upload_file).returns(true)
 
     sign_in create(:levelbuilder)
@@ -206,9 +200,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: can successfully upload files with single- and double- quotes in filenames' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).twice.
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).twice.returns(@file_obj)
     @file_obj.expects(:upload_file).twice.returns(true)
     sign_in create(:levelbuilder)
     level = create :applab

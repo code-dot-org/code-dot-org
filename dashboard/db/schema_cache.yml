@@ -13190,6 +13190,19 @@ indexes:
     type: 
     using: :btree
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: sections
+    name: index_sections_on_script_id
+    unique: false
+    columns:
+    - script_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   seed_info:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: seed_info
@@ -14106,7 +14119,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250314144822
+version: 20250319204416
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

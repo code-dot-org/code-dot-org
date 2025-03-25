@@ -42,6 +42,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
       name: 'output',
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
+    appName: 'pythonlab',
   });
 
   return (

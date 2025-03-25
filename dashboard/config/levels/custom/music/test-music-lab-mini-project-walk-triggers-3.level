@@ -1,0 +1,129 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-21T17:04:47.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Try It! \r\n**Do This:**\r\n- Add new sounds to play under `when run`. \r\n- Code at least two triggers with two different sets of sounds. \r\n\r\n**Don't Forget**: \r\n- Each trigger must have a different number assigned to it. \r\n- Click on the dropdown menu in the trigger block to specify whether the sound(s) should be triggered immediately, at the next beat, or at the next measure. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "whua_short",
+          "wormhole"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      },
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_sequential",
+            "play_sounds_together",
+            "triggered_at_simple2"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-21 17:49:37 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:50:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

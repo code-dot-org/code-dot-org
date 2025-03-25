@@ -23,13 +23,9 @@ import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources} = useCodebridgeContext();
+  const {startSources, levelProperties} = useCodebridgeContext();
+  const {appName, enableMicroBit, skipUrl} = levelProperties;
 
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const enableMicroBit = useAppSelector(
-    state => state.lab.levelProperties?.enableMicroBit || false
-  );
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -94,7 +90,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           className={darkModeStyles.tertiaryButton}
         />
       )}
-      <VersionHistoryButton startSources={startSources} />
+      <VersionHistoryButton startSources={startSources} appName={appName} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <Button

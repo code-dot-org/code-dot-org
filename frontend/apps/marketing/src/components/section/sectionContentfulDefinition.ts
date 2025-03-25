@@ -60,5 +60,11 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    id: {
+      displayName: 'Section ID',
+      type: 'Text',
+      group: 'content',
+      description: 'Adds a custom ID to a section; can be used for skip links.',
+    },
   },
 };
