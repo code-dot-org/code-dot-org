@@ -2059,9 +2059,9 @@ en:
           description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           version_title: '2024'
-        hour-of-code:
-          title: Hour of Code 2013
+        hourofcode:
+          title: Classic Maze
           description_short: Try the basics of computer science with many fun characters!
-          description_student: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-          description_teacher: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_student: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_teacher: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           version_title: unversioned
