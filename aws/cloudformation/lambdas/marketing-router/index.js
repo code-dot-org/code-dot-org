@@ -1,23 +1,20 @@
 'use strict';
 
-// const cmsDomain = 'd1zjy2ptvqjefb.cloudfront.net'; // Change to the CMS Cloudfront or ALB
-const cmsDomain = 'dev.marketing.dev-code.org';
+const { MARKETING_DOMAIN } = process.env;
 
-const cmsPaths = {
-  '/about': true,
+const marketingPaths = {
   '/en-US/videos': true,
 }
 
 export const handler = (event, context, callback) => {
   const request = event.Records[0].cf.request;
   const uri = request.uri;
-  console.log('Request URI:', uri);
 
   // Set CMS origin if the requested path matches
-  if (cmsPaths[uri]) {
+  if (marketingPaths[uri]) {
     request.origin = {
       custom: {
-        domainName: cmsDomain,
+        domainName: MARKETING_DOMAIN,
         port: 443,
         protocol: 'https',
         path: '',
@@ -29,7 +26,7 @@ export const handler = (event, context, callback) => {
     };
 
     // Update the Host header to match the new origin
-    request.headers['host'] = [{ key: 'Host', value: cmsDomain }];
+    request.headers['host'] = [{ key: 'Host', value: MARKETING_DOMAIN }];
   }
 
   callback(null, request);

@@ -401,6 +401,45 @@ Resources:
 
 <%   if cdn_enabled && app == 'Pegasus' -%>
 <%=    component 'www_redirect', app: app -%>
+  MarketingRouterLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
+      FunctionName: <%="#{rack_env.to_s}-MarketingRouter"%>%
+      Code: <%=zip_directory 'marketing-router'%>
+      Handler: index.handler
+      Runtime: nodejs22.x
+      Role: !GetAtt MarketingRouterLambdaRole.Arn
+      Environment:
+        Variables:
+          MARKETING_DOMAIN: dev.marketing.dev-code.org
+  MarketingRouterVersion:
+    Type: AWS::Lambda::Version
+    Properties:
+      FunctionName: !Ref MarketingRouterLambda
+  MarketingRouterLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=multiple_service_role ['lambda', 'edgelambda']%>
+      Path: /
+      Policies:
+        - PolicyName: <%="#{rack_env.to_s}-MarketingLambdaExecutionPolicy"%>%
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                Resource: 
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${MarketingRouterLambda.FunctionName}:*"
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${MarketingRouterLambda.FunctionName}:*"
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource:
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${MarketingRouterLambda.FunctionName}:log-stream:*"
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${MarketingRouterLambda.FunctionName}:log-stream:*"
 <%  end -%>
 
 <% end -%>
@@ -779,3 +818,6 @@ Outputs:
     Value: <%=cdn_enabled ? subdomain('origin') : stack_name%>
     Description: SSH server name
 <%end-%>
+  MarketingRouterVersion:
+    Value: !Ref MarketingRouterVersion
+    Export: {Name: MarketingRouterVersion}
