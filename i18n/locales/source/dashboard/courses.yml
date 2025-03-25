@@ -867,11 +867,8 @@ en:
         csa-alt-2025:
           title: Computer Science A ('25-'26)
           description_short: Learn Java programming and software engineering skills.
-          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
-          description_teacher: |-
-            **This version of the CSA curriculum follows the sequence outlined in the AP CSA CED.**
-
-            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_student: "## Overview\n\nComputer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems."
+          description_teacher: "## Overview\n\nComputer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.\n\n**Did You Know?**\n\n-   Professional development is available to help you get started teaching CSA. <a href=\"https://code.org/educate/professional-learning/middle-high\" target=\"blank\" rel=\"noopener noreferrer\">Click here</a> to learn more about professional learning opportunities in your region.\n\n-   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.\n\n* * *\n\n## Curriculum Structure\n\nThis version of the Code.org CSA curriculum organizes concepts using the same unit structure outlined in the AP Computer Science A Course and Exam Description (CED), including unit titles and themes. While the topics are mostly grouped into the same units as the CED, they may appear in a different order within each unit.\n\nAs noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers \"one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course.\"\n\nIf you prefer to use our objects-first version of the curriculum, you can find it [**here**][0]."
           version_title: "'25-'26"
         sandbox-csf-2025:
           title: sandbox-csf-2025
@@ -882,15 +879,8 @@ en:
         csa-2025:
           title: Computer Science A ('25-'26)
           description_short: Learn Java programming and software engineering skills.
-          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
-          description_teacher: |-
-            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
-
-            **Did You Know?**
-
-            -   Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
-
-            -   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          description_student: "## Overview\n\nComputer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems."
+          description_teacher: "## Overview\n\nComputer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.\n\n**Did You Know?**\n\n-   Professional development is available to help you get started teaching CSA. <a href=\"https://code.org/educate/professional-learning/middle-high\" target=\"blank\" rel=\"noopener noreferrer\">Click here</a> to learn more about professional learning opportunities in your region.\n\n-   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.\n\n* * *\n\n## Curriculum Structure\n\nThis version of the Code.org CSA curriculum follows an **object-first approach** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**][0].\n\nIf you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our [**CED-aligned version of the CSA curriculum**][1].\n\nAs noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers \"one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course.\""
           version_title: "'25-'26"
         csa-pilot-2025:
           title: Computer Science A ('24-'25 Pilot -- 2025 Framework)
@@ -1194,6 +1184,42 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
+          version_title: ''
+        exploring-gen-ai-2025:
+          title: exploring-gen-ai-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-2025:
+          title: csd-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        computer-science-and-artificial-intelligence-foundations-2025:
+          title: CS and AI Foundations (CSAIF)
+          description_short: ''
+          description_student: ''
+          description_teacher: "CS and AI Foundations (CSAIF) introduces students to essential computer science concepts and the transformative role of artificial intelligence (AI) in today's world. Designed for high school students with no prior computer science or programming experience, this curriculum equips them with foundational skills in programming, data science, networks, cybersecurity, and AI. Students will gain hands-on experience with AI tools for problem-solving, debugging, and data analysis, while also exploring the ethical implications of technology, such as bias, privacy, and fairness.\n\n## Prerequisites\n\nCSAIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.\n\nThis curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).\n\nNo specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects."
+          version_title: "'25-'26"
+        introduction-to-programming-in-music-lab-for-elementary-2025:
+          title: introduction-to-programming-in-music-lab-for-elementary-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        problem-solving-with-ai-2024:
+          title: "[PILOT] Problem Solving with AI"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csaif-preview:
+          title: "[PREVIEW] CS and AI Foundations (CSAIF)"
+          description_short: ''
+          description_student: CS and AI Foundations (CSAIF) introduces you to essential computer science concepts and the transformative role of artificial intelligence (AI) in today's world. Designed for high school students with no prior computer science or programming experience, this curriculum equips you with foundational skills in programming, data science, networks, cybersecurity, and AI. You will gain hands-on experience with AI tools for problem-solving, debugging, and data analysis, while also exploring the ethical implications of technology, such as bias, privacy, and fairness.
+          description_teacher: "CS and AI Foundations (CSAIF) introduces students to essential computer science concepts and the transformative role of artificial intelligence (AI) in today's world. Designed for high school students with no prior computer science or programming experience, this curriculum equips them with foundational skills in programming, data science, networks, cybersecurity, and AI. Students will gain hands-on experience with AI tools for problem-solving, debugging, and data analysis, while also exploring the ethical implications of technology, such as bias, privacy, and fairness.\n\n## Prerequisites\n\nCSAIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.\n\nThis curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).\n\nNo specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects."
           version_title: ''
     resources:
       curriculum/csd/2017:

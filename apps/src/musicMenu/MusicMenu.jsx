@@ -219,6 +219,14 @@ const optionsList = [
       {value: 'true', description: 'Original timeline.'},
     ],
   },
+  {
+    name: 'js-editor',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Blockly editor (default).'},
+      {value: 'true', description: 'JavaScript text editor.'},
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {

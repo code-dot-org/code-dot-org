@@ -1,7 +1,5 @@
-export interface UploadAssetResponse {
-  category: string;
+/** An asset file included with a chat message. */
+export interface ChatAsset {
   filename: string;
-  size: number;
-  timestamp: string;
-  versionId: string;
+  source: 'project' | 'level';
 }

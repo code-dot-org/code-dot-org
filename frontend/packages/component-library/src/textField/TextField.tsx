@@ -13,7 +13,7 @@ export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
   /** TextField id */
   id?: string;
   /** Specifies the type of input; see included options below. */
-  inputType?: 'text' | 'email' | 'password' | 'number';
+  inputType?: 'text' | 'email' | 'password' | 'number' | 'date';
   /** The name attribute specifies the name of an input element.
      The name attribute is used to reference elements in a JavaScript,
      or to reference form data after a form is submitted.
@@ -45,7 +45,7 @@ export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
   maxLength?: number;
   /** min length of TextField */
   minLength?: number;
-  /** min length of TextField */
+  /** handle input autoComplete attribute */
   autoComplete?: string;
 }
 

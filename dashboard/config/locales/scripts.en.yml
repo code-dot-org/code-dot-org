@@ -18984,68 +18984,392 @@ en:
               name: Programming Style and Feedback (new)
           lesson_groups:
             lessonGroup-2:
+              display_name: Projects
+            lessonGroup-3:
+              display_name: FRQ Practice
+            lessonGroup-4:
+              display_name: Alternate Lessons
+            lessonGroup-5:
+              display_name: Sandboxes
+            lessonGroup-6:
+              display_name: "[Topic 1.4] Assignment Statements and Input"
+            lessonGroup-7:
+              display_name: "[Topic 1.5] Casting and Range of Variables"
+            lessonGroup-8:
+              display_name: "[Topic 1.6] Compound Assignment Operators"
+            lessonGroup-9:
+              display_name: "[Topic 1.7] Application Program Interface (API) and Libraries"
+            lessonGroup-10:
+              display_name: "[Topic 1.8] Documentation with Comments"
+            lessonGroup-11:
+              display_name: "[Topic 1.9] Method Signatures"
+            lessonGroup-12:
+              display_name: "[Topic 1.10] Calling Class Methods"
+            lessonGroup-13:
+              display_name: "[Topic 1.11] Math Class"
+            lessonGroup-14:
+              display_name: "[Topic 1.12] Objects: Instances of Classes"
+            lessonGroup-15:
+              display_name: "[Topic 1.13] Object Creation and Storage (Instantiation)"
+            lessonGroup-16:
+              display_name: "[Topic 1.14] Calling Instance Methods"
+            lessonGroup-17:
+              display_name: "[Topic 1.15] String Manipulation"
+            lessonGroup-18:
               display_name: Content
           name: csa1-alt-2025
           title: Using Objects and Methods
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students learn foundational Java concepts, develop their identity as software engineers, and use object-oriented programming, debugging, and code reviews to build and improve programs in The Neighborhood.
+          description: |-
+            This unit introduces students to object-oriented programming through The Neighborhood. Students begin by exploring their identity as software engineers and building community through collaborative activities. As they progress, students learn fundamental programming concepts using Java in Java Lab, including classes, objects, methods, variables, and constructors.
+
+            Students gain hands-on experience by instantiating `Painter` objects and writing programs to navigate and paint within The Neighborhood. They gradually expand their understanding by creating subclasses with inheritance, writing methods with and without parameters, and applying debugging strategies. Emphasis is placed on writing readable code using proper programming style, documenting behavior with comments, and conducting peer code reviews. Through iterative development, students not only build programs but also reflect on how their skills align with those of real-world software engineers.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            - Develop and refine a software engineering identity
+
+            - Instantiate and use objects from a given class
+
+            - Call and write methods with and without parameters
+
+            - Use inheritance to create subclasses and extend functionality
+
+            - Implement algorithms using sequencing, selection, and iteration
+
+            - Debug programs using variables, outputs, and the problem-solving process
+
+            - Document code using comments, preconditions, and postconditions
+
+            - Collaborate with peers by giving and receiving feedback during code reviews
+
+            - Write readable, well-structured Java programs using classes, constructors, and methods
+
+            :::
+            &nbsp;
+          student_description: |-
+            In this unit, you take your first steps into the world of Java programming and discover what it means to be a software engineer. You write your first lines of code, learn how to give instructions to objects, and build programs that explore and paint in The Neighborhood.
+
+            As you learn new programming concepts - like classes, objects, methods, and variables - you also learn how real software engineers think and work. You design your own algorithms, write custom methods, and even extend the capabilities of a class by creating your own. You also learn how to find and fix bugs, write helpful comments in your code, and give feedback to your classmates just like profressional developers do.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+
+            - Create objects from existing classes and give them instructions
+
+            - Write your own methods to perform specific tasks
+
+            - Use selection (if/else) and repetition (loops) to control how your programs run
+
+            - Create subclasses to give objects new powers
+
+            - Read and understand Java code—and fix it when something goes wrong
+
+            - Use comments to explain what your code does and how it works
+
+            - Give and receive feedback through peer code reviews
+
+            - Write clear, organized code that others can read and understand
+
+            :::
+            &nbsp;
         csa2-alt-2025:
           lessons:
             lesson-12:
               name: Informal Run-Time Analysis
+            lesson-1:
+              name: 'Sandbox: The Neighborhood'
+            lesson-2:
+              name: 'Sandbox: Console'
+            lesson-3:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
+              display_name: Projects
+            lessonGroup-3:
               display_name: Content
+            lessonGroup-4:
+              display_name: Alternate Lessons
+            lessonGroup-5:
+              display_name: Sandboxes
+            lessonGroup-6:
+              display_name: "[Topic 2.4] Nested if Statements"
+            lessonGroup-7:
+              display_name: "[Topic 2.5] Compound Boolean Expressions"
+            lessonGroup-8:
+              display_name: "[Topic 2.6] Comparing Boolean Expressions"
+            lessonGroup-9:
+              display_name: "[Topic 2.7] while Loops"
+            lessonGroup-10:
+              display_name: "[Topic 2.8] for Loops"
+            lessonGroup-11:
+              display_name: "[Topic 2.9] Implementing Selction and Iteration Algorithms"
+            lessonGroup-12:
+              display_name: "[Topic 2.10] Implementing String Algorithms"
+            lessonGroup-13:
+              display_name: "[Topic 2.11] Nested Iteration"
+            lessonGroup-14:
+              display_name: "[Topic 2.12] Informal Run-Time Analysis"
           name: csa2-alt-2025
           title: Selection and Iteration
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students write algorithms using sequencing, selection, and iteration, and build more powerful programs by using conditionals, loops, logic, and runtime analysis to make decisions and repeat actions.
+          description: |-
+            This unit deepens students' understanding of algorithms and control structures as they explore how programs make decisions and repeat actions. Students implement increasingly complex algorithms using sequencing, selection, and iteration, with a focus on writing `if`, `if-else`, and `while` statements and using Boolean expressions to control program flow. They explore subclassing with inheritance to extend functionality, write their own methods to support modular program design, and apply logical and compound Boolean expressions to make decisions based on multiple conditions.
+
+            Students also develop strategies to test and trace code, compare different algorithmic solutions, and optimize their programs using informal runtime analysis. Throughout the unit, students continue to strengthen their problem-solving skills and software engineering identity by planning, writing, and reviewing code using professional practices like decomposition, pseudocode, and peer review.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            - Develop and implement algorithms using sequencing, selection, and iteration
+
+            - Write Boolean expressions and apply logical operators to control flow
+
+            - Use `if`, `if-else`, nested conditionals, and `while`/`for` loops to solve problems
+
+            - Trace and debug code that uses nested loops and complex conditionals
+
+            - Compare algorithm efficiency using informal runtime analysis
+
+            - Extend existing classes to create specialized subclasses
+
+            - Plan and write algorithms using pseudocode and decomposition
+
+            - Collaborate with peers to test and review code
+
+            :::
+            &nbsp;
+          student_description: |-
+            In this unit, you learn how to make your programs smarter by writing algorithms that make decisions and repeat actions. You use `if` statements and loops to help the `Painter` figure out what to do based on different situations in The Neighborhood. You also write Boolean expressions and use logic to control your programs, just like real software engineers do when solving complex problems.
+
+            As your programs grow, you practice breaking problems into smaller pieces, writing reusable methods, and even creating new classes by extending existing ones. You also learn how to test your code, find and fix bugs, and make your programs more efficient.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+
+            - Develop and implement algorithms using sequencing, selection, and iteration
+
+            - Write Boolean expressions and apply logical operators to control flow
+
+            - Use `if`, `if-else`, nested conditionals, and `while`/`for` loops to solve problems
+
+            - Trace and debug code that uses nested loops and complex conditionals
+
+            - Compare algorithm efficiency using informal runtime analysis
+
+            - Extend existing classes to create specialized subclasses
+
+            - Plan and write algorithms using pseudocode and decomposition
+
+            - Collaborate with peers to test and review code
+
+            :::
+            &nbsp;
         csa3-alt-2025:
           lessons:
             lesson-3:
-              name: Program Design
+              name: 'Sandbox: The Theater'
             lesson-5:
               name: AI-Generated Code
             lesson-9:
               name: No-Argument Constructors
             lesson-11:
               name: Parameterized Constructors
+            lesson-1:
+              name: 'Sandbox: The Neighborhood'
+            lesson-2:
+              name: 'Sandbox: Console'
           lesson_groups:
             lessonGroup-2:
-              display_name: Content
+              display_name: Projects
             lessonGroup-3:
-              display_name: AI-Generated Code
+              display_name: Content
+            lessonGroup-4:
+              display_name: FRQ Practice
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+            lessonGroup-7:
+              display_name: "[Topic 3.5] Methods: How to Write Them"
+            lessonGroup-8:
+              display_name: "[Topic 3.6] Methods: Passing and Returning References of an Object"
+            lessonGroup-9:
+              display_name: "[Topic 3.7] Class Variables and Methods"
+            lessonGroup-10:
+              display_name: "[Topic 3.8] Scope and Access"
+            lessonGroup-11:
+              display_name: "[Topic 3.9] this Keyword"
           name: csa3-alt-2025
           title: Class Creation
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students learn how to design and write Java classes from scratch by creating constructors, methods, and variables, while exploring ethical impacts of software.
+          description: |-
+            In this unit, students deepen their understanding of object-oriented program design by exploring the anatomy and structure of Java classes in greater detail. They begin by modeling class hierarchies and relationships using UML diagrams to visualize how attributes and behaviors are shared and extended through inheritance. Students learn to define classes from scratch by declaring instance variables, writing constructors, and creating accessor and mutator methods to manage object state.
+
+            Students explore key object-oriented programming concepts such as encapsulation, parameter passing, static methods and variables, scope, and the use of the `this` keyword to reduce redundancy and clarify program behavior. As they design and refine their classes, students consider system reliability, privacy, and ethical implications of software, especially in lessons on debugging, open-source collaboration, and the impacts of data collection and AI-generated content.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            - Design and document Java classes using UML diagrams
+
+            - Declare instance variables and apply encapsulation using access modifiers
+
+            - Write and call constructors (with and without parameters)
+
+            - Use the `this` keyword to refer to instance variables and reduce ambiguity
+
+            - Write accessor (getter) and mutator (setter) methods to manage object state
+
+            - Identify the scope of variables within a class or method
+
+            - Use and explain the purpose of static variables and static methods
+
+            - Differentiate between passing primitives and object references as parameters
+
+            - Recognize and address system bugs to improve software reliability
+
+            - Evaluate the ethical and societal impacts of programs, including privacy, security, and AI
+
+            :::
+            &nbsp;
+          student_description: |-
+            In this unit, you take a big step toward becoming a full-fledged software engineer by learning how to design your own Java classes from scratch. You plan out your ideas using UML diagrams and write code to define what objects *have* (attributes) and what they *do* (methods). You practice using constructors, creating variables that belong to specific objects, and writing methods to get or change an object's information.
+
+            As your programs grow, you explore more advanced tools that professional software engineers use - like the `this` keyword, static variables and methods, and writing helper methods to keep your code clean and organized. You also learn how to pass information between methods and classes, test your code, and fix bugs that might affect how your program runs.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+
+            - Design and document Java classes using UML diagrams
+
+            - Declare instance variables and apply encapsulation using access modifiers
+
+            - Write and call constructors (with and without parameters)
+
+            - Use the `this` keyword to refer to instance variables and reduce ambiguity
+
+            - Write accessor (getter) and mutator (setter) methods to manage object state
+
+            - Identify the scope of variables within a class or method
+
+            - Use and explain the purpose of static variables and static methods
+
+            - Differentiate between passing primitives and object references as parameters
+
+            - Recognize and address system bugs to improve software reliability
+
+            - Evaluate the ethical and societal impacts of programs, including privacy, security, and AI
+
+            :::
+            &nbsp;
         csa4-alt-2025:
           lessons:
             lesson-1:
-              name: Ethical and Social Issues Around Data Collection
+              name: 'Sandbox: The Neighborhood'
             lesson-2:
-              name: Data Sets
+              name: 'Sandbox: Console'
             lesson-9:
               name: Text Files
             lesson-19:
               name: Enhanced For Loops (2D)
             lesson-30:
               name: Array of Objects
+            lesson-3:
+              name: 'Sandbox: The Theater'
           lesson_groups:
             lessonGroup-2:
+              display_name: Projects
+            lessonGroup-3:
               display_name: Content
+            lessonGroup-4:
+              display_name: FRQ Practice
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+            lessonGroup-7:
+              display_name: "[Topic 4.5] Implementing Array Algorithms"
+            lessonGroup-8:
+              display_name: "[Topic 4.6] Using Text Files"
+            lessonGroup-9:
+              display_name: "[Topic 4.7] Wrapper Classes"
+            lessonGroup-10:
+              display_name: "[Topic 4.8] ArrayList Methods"
+            lessonGroup-11:
+              display_name: "[Topic 4.9] ArrayList Traversals"
+            lessonGroup-12:
+              display_name: "[Topic 4.10] Implementing ArrayList Algorithms"
+            lessonGroup-13:
+              display_name: "[Topic 4.11] 2D Array Creation and Access"
+            lessonGroup-14:
+              display_name: "[Topic 4.12] 2D Array Traversals"
+            lessonGroup-15:
+              display_name: "[Topic 4.13] Implementing 2D Array Algorithms"
+            lessonGroup-16:
+              display_name: "[Topic 4.14] Searching Algorithms"
+            lessonGroup-17:
+              display_name: "[Topic 4.15] Sorting Algorithms"
+            lessonGroup-18:
+              display_name: "[Topic 4.16] Recursion"
+            lessonGroup-19:
+              display_name: "[Topic 4.17] Recursive Searching and Sorting"
           name: csa4-alt-2025
           title: Data Collections
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students learn how to analyze and use data to solve real-world problems by writing algorithms with arrays and exploring algorithmic bias.
+          description: |-
+            In this unit, students explore how software engineers use data to solve problems, build knowledge, and create impactful programs. They begin by examining real-world issues related to algorithmic bias and data collection, developing a critical lens for evaluating the fairness and accuracy of datasets. Students analyze biased datasets and design strategies for collecting more representative data, building awareness of the ethical and social implications of programming decisions.
+
+            As they progress, students apply data-driven thinking to write programs that work with and manipulate data using one-dimensional (1D) and two-dimensional (2D) arrays. They implement standard algorithms for traversing arrays, identifying patterns, and performing calculations. Students expand their understanding of object-oriented programming by working with arrays of objects and using enhanced `for` loops.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            - Explain ethical concerns related to data bias and collection
+
+            - Analyze and process data sets to inform algorithm design
+
+            - Write algorithms to search, modify, and analyze values in 1D and 2D arrays
+
+            - Declare, initialize, and traverse arrays using `while`, `for`, and enhanced `for` loops
+
+            - Use and manipulate elements in arrays of primitive types and objects
+
+            - Read and process data from text files using the `Scanner` and `File` classes
+
+            - Use wrapper classes (`Integer`, `Double`) to convert and manipulate data
+
+            - Conduct code reviews to refine and improve solutions collaboratively
+
+            - Apply algorithmic thinking to a real-world problem in a culminating project
+
+            :::
+            &nbsp;
+          student_description: |-
+            In this unit, you learn how software engineers use data to solve real-world problems - and how the data we use can sometimes be biased or incomplete. You explore how algorithmic bias can lead to unfair outcomes, and how you can design better programs by collecting and analyzing more representative data.
+
+            You also level up your programming skills by learning how to work with lists and tables of data using arrays. You write algorithms that search, modify, and analyze values stored in one-dimensional (1D) and two-dimensional (2D) arrays. Along the way, you learn to use tools like loops and file input to make your programs more powerful and efficient.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+
+            - Explain ethical concerns related to data bias and collection
+
+            - Analyze and process data sets to inform algorithm design
+
+            - Write algorithms to search, modify, and analyze values in 1D and 2D arrays
+
+            - Declare, initialize, and traverse arrays using `while`, `for`, and enhanced `for` loops
+
+            - Use and manipulate elements in arrays of primitive types and objects
+
+            - Read and process data from text files using the `Scanner` and `File` classes
+
+            - Use wrapper classes (`Integer`, `Double`) to convert and manipulate data
+
+            - Conduct code reviews to refine and improve solutions collaboratively
+
+            - Apply algorithmic thinking to a real-world problem in a culminating project
+
+            :::
+            &nbsp;
         hello-world-food-one:
           title: 'Hello World: Food'
           description: ''
@@ -20719,7 +21043,11 @@ en:
           description: ''
           student_description: ''
         sandbox-csaif-pl-networks:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to Networks
+            lesson-2:
+              name: Lesson Exploration
           lesson_groups: {}
           name: sandbox-csaif-pl-networks
           title: Networks and the Internet PL
@@ -21158,49 +21486,179 @@ en:
           student_description: ''
         csaif2-2025:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+            lessonGroup-6:
+              display_name: Alternate Level Progressions (Console Only)
           name: csaif2-2025
           title: Programming Fundamentals
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+          student_description: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
         csaif3-2025:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: csaif3-2025
           title: Computer Systems and Devices
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+          student_description: |-
+            This unit introduces students to AI and computing systems, exploring how they process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, students design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. Using AI Chat, they unpack abstracted system layers, optimize software, and critique AI-generated outputs for accuracy and fairness. Activities like examining bias, and debating AI’s societal role foster creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit equips students to engage critically with AI, explore career pathways, and leverage technology for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
         csaif4-2025:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content, Part 1
+            lessonGroup-4:
+              display_name: Mid-Unit Project
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: End of Unit Project
+            lessonGroup-7:
+              display_name: End of Unit Assessment
           name: csaif4-2025
           title: Networks and the Internet
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+          student_description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
         csaif5-2025:
           lessons: {}
           lesson_groups: {}
           name: csaif5-2025
-          title: Cybersecurity
+          title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: In this unit, students learn how computing innovations have impacted the world in beneficial and harmful ways. Students explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, they participate in a "school of the future" conference in which they make a proposal for how best to improve school life with computing innovations.
+          student_description: In this unit, you will learn how computing innovations have impacted our world in beneficial and harmful ways. You'll explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, you will participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
         csaif6-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Post-Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: csaif6-2025
           title: Introduction to Data Science
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n  <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n   <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n  <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze data using CODAP and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n<p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze data using CODAP and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
         pswai-pilot-2024:
           lessons: {}
           lesson_groups: {}
@@ -21221,31 +21679,149 @@ en:
           student_description: ''
         csaif2-preview:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+            lessonGroup-6:
+              display_name: Alternate Level Progressions (Console Only)
           name: csaif2-preview
           title: "[PREVIEW] Programming Fundamentals"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+          student_description: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
         csaif3-preview:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: csaif3-preview
           title: "[PREVIEW] Computer Systems and Devices"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+          student_description: |-
+            This unit introduces students to AI and computing systems, exploring how they process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, students design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. Using AI Chat, they unpack abstracted system layers, optimize software, and critique AI-generated outputs for accuracy and fairness. Activities like examining bias, and debating AI’s societal role foster creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit equips students to engage critically with AI, explore career pathways, and leverage technology for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
         csaif4-preview:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content, Part 1
+            lessonGroup-4:
+              display_name: Mid-Unit Project
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: End of Unit Project
+            lessonGroup-7:
+              display_name: End of Unit Assessment
           name: csaif4-preview
           title: "[PREVIEW] Networks and the Internet"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+          student_description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
         csaif5-preview:
           lessons: {}
           lesson_groups: {}
@@ -21253,14 +21829,43 @@ en:
           title: "[PREVIEW] Cybersecurity"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: In this unit, students learn how computing innovations have impacted the world in beneficial and harmful ways. Students explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, they participate in a "school of the future" conference in which they make a proposal for how best to improve school life with computing innovations.
+          student_description: In this unit, you will learn how computing innovations have impacted our world in beneficial and harmful ways. You'll explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, you will participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
         csaif6-preview:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: Post-Assessment
           name: csaif6-preview
           title: "[PREVIEW] Introduction to Data Science"
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, students will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze data using CODAP and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::"
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, you will be able to . . .**] \n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze data using CODAP and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::"
+        csa5-alt-2025:
+          lessons:
+            lesson-1:
+              name: 'Sandbox: The Neighborhood'
+            lesson-2:
+              name: 'Sandbox: Console'
+            lesson-3:
+              name: 'Sandbox: The Theater'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Review and Practice
+            lessonGroup-3:
+              display_name: Mock Exams
+            lessonGroup-4:
+              display_name: Sandboxes
+          name: csa5-alt-2025
+          title: AP Exam Review and Practice
+          description_audience: ''
+          description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
+          description: This unit prepares students for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
+          student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.

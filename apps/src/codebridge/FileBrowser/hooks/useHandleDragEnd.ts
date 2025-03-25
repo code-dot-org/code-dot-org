@@ -10,7 +10,6 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DragType} from '../types';
 
@@ -20,12 +19,11 @@ import {DragType} from '../types';
  * @returns A function that handles the DragOverEvent from `@dnd-kit/core`.
  */
 export const useHandleDragEnd = () => {
-  const {source, moveFile, moveFolder} = useCodebridgeContext();
+  const {source, moveFile, moveFolder, levelProperties} =
+    useCodebridgeContext();
 
   const dialogControl = useDialogControl();
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
+  const validationFile = levelProperties.validationFile;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const validateFileName = usePartialApply(globalValidateFileName, {

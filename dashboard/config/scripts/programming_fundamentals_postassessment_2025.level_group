@@ -1,0 +1,27 @@
+name 'programming-fundamentals-postassessment_2025'
+title 'Programming Fundamentals End-of-Unit Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'programming-fundamentals-postassessment-intro_2025'
+level 'programming-fundamentals-postassessment-question1_2025'
+level 'programming-fundamentals-postassessment-question2_2025'
+level 'programming-fundamentals-postassessment-question3_2025'
+level 'programming-fundamentals-postassessment-question4_2025'
+level 'programming-fundamentals-postassessment-question5_2025'
+
+page
+level 'programming-fundamentals-postassessment-question6_2025'
+level 'programming-fundamentals-postassessment-question7_2025'
+level 'programming-fundamentals-postassessment-question8_2025'
+level 'programming-fundamentals-postassessment-question9_2025'
+level 'programming-fundamentals-postassessment-question10_2025'
+
+page
+level 'programming-fundamentals-postassessment-question11_2025'
+level 'programming-fundamentals-postassessment-question12_2025'
+level 'programming-fundamentals-postassessment-question13_2025'
+level 'programming-fundamentals-postassessment-question14_2025'
+level 'programming-fundamentals-postassessment-question15_2025'

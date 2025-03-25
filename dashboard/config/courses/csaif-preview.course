@@ -8,7 +8,7 @@
     "csaif5-preview",
     "csaif6-preview"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -18,7 +18,49 @@
     "version_year": "unversioned"
   },
   "resources": [
-
+    {
+      "name": "All Resources",
+      "url": "/courses/csaif-preview/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csaif-preview/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csaif-preview/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1axNOABDheboTJtKPL63UPOK_i5lj80FDr4uz37pyD4s/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    }
   ],
   "student_resources": [
 

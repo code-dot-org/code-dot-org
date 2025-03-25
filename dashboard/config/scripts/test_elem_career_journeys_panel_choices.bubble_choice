@@ -1,9 +1,11 @@
 name 'test-elem-career-journeys-panel-choices'
-display_name 'Practice Recreating these Timelines with Code'
-description 'Choose an option below to try to recreate with code.'
+display_name 'Learn more about careers in CS and AI'
+description 'These people all have jobs in computer science!'
 
 sublevels
-
+level 'test-elem-career-journeys-video-choice1'
+level 'test-elem-career-journeys-video-choice2'
+level 'test-elem-career-journeys-video-choice3'
 
 
 

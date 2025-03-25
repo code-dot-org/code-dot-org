@@ -157,6 +157,7 @@ const Weblab2View: React.FC<
             setConfig={setConfig}
             startSources={startSources}
             projectVersion={projectVersion}
+            levelProperties={levelProperties}
           />
         )}
       </div>

@@ -17,7 +17,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "scripts": {
-    "build-storybook": "storybook build -o dist/component-library-storybook",
+    "build": "storybook build -o dist/component-library-storybook",
     "clean": "rimraf dist",
     "dev": "yarn run storybook",
     "eyes-storybook": "tsx ./scripts/eyes-storybook.ts",

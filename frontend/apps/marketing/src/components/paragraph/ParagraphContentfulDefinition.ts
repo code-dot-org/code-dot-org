@@ -20,7 +20,7 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
     visualAppearance: {
       displayName: 'Visual Appearance',
       type: 'Text',
-      defaultValue: 'body-one',
+      defaultValue: 'body-two',
       group: 'style',
       validations: {
         in: [
