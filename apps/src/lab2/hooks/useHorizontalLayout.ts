@@ -18,6 +18,7 @@ interface UseHorizontalLayoutProps {
   rightTopPanel: RowPanelConfig;
   rightBottomPanel: RowPanelConfig;
   minRightPanelWidth: number;
+  heightOffset?: number;
 }
 /**
  * Hook that manages the layout of a lab with 3 resizable panels.
@@ -33,6 +34,7 @@ export const useHorizontalLayout = ({
   rightTopPanel,
   rightBottomPanel,
   minRightPanelWidth,
+  heightOffset = 0,
 }: UseHorizontalLayoutProps) => {
   const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
     undefined
@@ -106,6 +108,7 @@ export const useHorizontalLayout = ({
       window.innerHeight -
         rawRightBottomPanelHeight -
         RESIZE_BAR_SIZE_PX -
+        heightOffset -
         PANEL_TOP_COORDINATE,
       rightTopPanel.minHeight
     );
@@ -116,12 +119,14 @@ export const useHorizontalLayout = ({
         window.innerHeight -
           newRightTopPanelHeight -
           RESIZE_BAR_SIZE_PX -
+          heightOffset -
           PANEL_TOP_COORDINATE
       ),
       rightBottomPanel.minHeight
     );
     setrightBottomPanelHeight(newRightBottomPanelHeight);
   }, [
+    heightOffset,
     rawRightBottomPanelHeight,
     rightBottomPanel.minHeight,
     rightTopPanel.minHeight,

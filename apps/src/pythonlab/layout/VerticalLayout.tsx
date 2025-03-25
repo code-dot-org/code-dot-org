@@ -45,7 +45,13 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   });
 
   return (
-    <div className={moduleStyles.containerWithFooter}>
+    <div
+      className={
+        isProjectLevel
+          ? moduleStyles.containerWithFooter
+          : moduleStyles.defaultContainer
+      }
+    >
       <div className={moduleStyles.layoutContainer}>
         {!isProjectLevel && (
           <>

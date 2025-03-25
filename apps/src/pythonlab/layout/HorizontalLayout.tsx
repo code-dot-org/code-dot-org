@@ -45,37 +45,49 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
       name: 'output',
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
+    heightOffset: isProjectLevel ? 60 : 0,
   });
 
   return (
-    <div className={moduleStyles.layoutContainer}>
-      {!isProjectLevel && (
-        <>
-          <InfoPanel
-            style={{width: leftPanelWidth}}
-            className={moduleStyles.flexShrink0}
-          />
+    <div
+      className={
+        isProjectLevel
+          ? moduleStyles.containerWithFooter
+          : moduleStyles.defaultContainer
+      }
+    >
+      <div className={moduleStyles.layoutContainer}>
+        {!isProjectLevel && (
+          <>
+            <InfoPanel
+              style={{width: leftPanelWidth}}
+              className={moduleStyles.flexShrink0}
+            />
+            <ResizeBar
+              isVertical={true}
+              separatorProps={leftPanelSeparatorProps}
+              isDragging={leftPanelDragging}
+            />
+          </>
+        )}
+        <div
+          className={moduleStyles.flexColumn}
+          style={{width: rightPanelWidth}}
+        >
+          <Workspace style={{height: rightTopPanelHeight}} />
           <ResizeBar
-            isVertical={true}
-            separatorProps={leftPanelSeparatorProps}
-            isDragging={leftPanelDragging}
+            isVertical={false}
+            separatorProps={rightBottomPanelSeparatorProps}
+            isDragging={rightBottomPanelDragging}
           />
-        </>
-      )}
-      <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
-        <Workspace style={{height: rightTopPanelHeight}} />
-        <ResizeBar
-          isVertical={false}
-          separatorProps={rightBottomPanelSeparatorProps}
-          isDragging={rightBottomPanelDragging}
-        />
-        <HorizontalOutput
-          height={rightBottomPanelHeight || INITIAL_OUTPUT_HEIGHT}
-          width={rightPanelWidth}
-          setOutputHeight={setRightBottomPanelSize}
-        />
-        {isProjectLevel && <div className={moduleStyles.footerArea} />}
+          <HorizontalOutput
+            height={rightBottomPanelHeight || INITIAL_OUTPUT_HEIGHT}
+            width={rightPanelWidth}
+            setOutputHeight={setRightBottomPanelSize}
+          />
+        </div>
       </div>
+      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };
