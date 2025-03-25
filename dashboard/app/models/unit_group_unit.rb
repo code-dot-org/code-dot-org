@@ -57,25 +57,4 @@ class UnitGroupUnit < ApplicationRecord
   def self.get_with_position_without_cache(course_id, unit_position)
     UnitGroupUnit.find_by(course_id: course_id, position: unit_position)
   end
-
-  # Finds a UnitGroupUnit for the given parameters and caches the result. Future
-  # calls will use the cache if caching is enabled.
-  # If caching is disabled, then the database is queried every time.
-  #
-  # @param [Integer, String] unit_id the Unit the UnitGroupUnits are associated with.
-  # @return [Array<UnitGroupUnit>] the UnitGroupUnits the given Unit is in.
-  def self.get_with_unit_from_cache(unit_id)
-    if should_cache?
-      cache_key = "#{self.class.name}/unit_id/#{unit_id}"
-      Rails.cache.fetch(cache_key) do
-        get_with_unit_without_cache(unit_id)
-      end
-    else
-      get_with_unit_without_cache(unit_id)
-    end
-  end
-
-  def self.get_with_unit_without_cache(unit_id)
-    UnitGroupUnit.where(script_id: unit_id)
-  end
 end
