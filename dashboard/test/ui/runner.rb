@@ -466,6 +466,10 @@ def status_page_url
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
 end
 
+def status_page_filename
+  "test_status_#{test_type}.html"
+end
+
 # Returns an HTTPS URL to the status_page on S3
 def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_page_filename))
   LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.css'), {content_type: 'text/css'})
