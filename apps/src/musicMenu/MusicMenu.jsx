@@ -164,6 +164,21 @@ const optionsList = [
     ],
   },
   {
+    name: 'sort-unrestricted-packs-by-type',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Use the default sort for sounds in the sounds panel (default).',
+      },
+      {
+        value: 'true',
+        description: 'Sort all unrestricted packs by type in the sounds panel.',
+      },
+    ],
+  },
+  {
     name: 'allow-change-starting-playhead-position',
     type: 'radio',
     values: [

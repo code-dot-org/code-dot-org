@@ -75,7 +75,10 @@ describe('VersionHistoryButton', () => {
   function renderDefault() {
     return render(
       <Provider store={store}>
-        <VersionHistoryButton startSources={{source: ''}} />
+        <VersionHistoryButton
+          startSources={{source: ''}}
+          appName={'pythonlab'}
+        />
       </Provider>
     );
   }

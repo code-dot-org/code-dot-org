@@ -831,6 +831,13 @@ FactoryBot.define do
       end
     end
 
+    trait :with_starter_code do
+      after(:create) do |level|
+        level.properties['start_blocks'] = 'const isCode = true;'
+        level.save!
+      end
+    end
+
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
