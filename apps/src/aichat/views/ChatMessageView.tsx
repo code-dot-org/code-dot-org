@@ -1,4 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {memo, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -16,6 +15,7 @@ import {
 } from '../types';
 import {getAssetUrl} from '../utils';
 
+import PdfFilePreview from './assets/PdfFilePreview';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
@@ -88,19 +88,17 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       ) : null;
   }
 
+  let header;
   if (!isAssistant && !isChatHistoryView && assets && currentChannelId) {
-    footer = (
-      <div className={styles.assetRow}>
+    header = (
+      <div className={styles.assetCol}>
         {assets.map(asset => {
           const filename = asset.filename;
           return filename.endsWith('.pdf') ? (
-            <div key={filename} className={styles.pdfPreview}>
-              <FontAwesomeV6Icon
-                iconName="file-pdf"
-                className={styles.pdfIcon}
-              />
-              <span>{filename}</span>
-            </div>
+            <PdfFilePreview
+              filename={filename}
+              url={getAssetUrl(asset, currentChannelId, levelName)}
+            />
           ) : (
             <img
               key={filename}
@@ -119,6 +117,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
+      header={header}
       footer={footer}
     />
   );

@@ -95,38 +95,15 @@ $tabs-default-spacing: 4px;
   white-space: nowrap;
 }
 
-// Styles for asset previews. TODO: Move/update when implementing final UI
-
-.assetRow {
+.assetCol {
   display: flex;
-  gap: 8px;
-  justify-content: flex-end;
-  padding: 8px 0;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .imagePreview {
-  height: 80px;
-}
-
-.pdfPreview {
-  display: flex;
-  max-width: 150px;
-  align-items: center;
-  gap: 8px;
-  border: 1px dashed black;
-  border-radius: 8px;
-  padding: 4px;
-  text-align: center;
-  margin-top: auto;
-
-  i {
-    font-size: 30px;
-  }
-
-  span {
-    width: inherit;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  align-self: end;
 }
