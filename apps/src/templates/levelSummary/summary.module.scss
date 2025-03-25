@@ -75,6 +75,11 @@ label.sectionSelector {
   float: right;
 }
 
+.toggleGroup {
+  display: flex;
+  gap: 20px;
+}
+
 [dir='rtl'] .toggleContainer {
   float: left;
 }
@@ -129,7 +134,6 @@ label.sectionSelector {
     column-gap: 48px;
     padding-top: 40px;
     padding-bottom: 12px;
-
   }
 
   .pinResponsesSection {
@@ -173,7 +177,7 @@ label.sectionSelector {
   }
 
   .unpinnedResponse {
-    background-color: #F6EDFD;
+    background-color: #f6edfd;
   }
 
   .studentAnswer {

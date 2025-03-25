@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class StudentCodeSampleControllerTest < ActionController::TestCase
+class StudentWorkSampleControllerTest < ActionController::TestCase
   setup do
-    @controller = StudentCodeSampleController.new
+    @controller = StudentWorkSampleController.new
   end
 
   # Anonymous, signed-out user cannot fetch student code samples,

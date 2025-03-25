@@ -39,6 +39,7 @@ const VerticalLayout: React.FunctionComponent = () => {
       minWidth: MIN_OUTPUT_WIDTH,
       name: 'output',
     },
+    appName: 'pythonlab',
   });
 
   return (

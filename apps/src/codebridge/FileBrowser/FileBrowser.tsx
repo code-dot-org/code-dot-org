@@ -31,9 +31,9 @@ import {DragDataType, DropDataType} from './types';
 import moduleStyles from './styles/filebrowser.module.scss';
 
 export const FileBrowser = React.memo(() => {
-  const {source, setFileType} = useCodebridgeContext();
+  const {source, setFileType, levelProperties} = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const appName = levelProperties.appName;
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);

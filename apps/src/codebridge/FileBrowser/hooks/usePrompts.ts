@@ -19,7 +19,7 @@ import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {setOverrideValidations} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Provides functions to open new file or folder prompts within the application.
@@ -35,14 +35,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
  *   - **openSaveToBackpackPrompt:** Opens a prompt for saving a file to the user's backpack.
  */
 export const usePrompts = () => {
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const dialogControl = useDialogControl();
-  const dispatch = useAppDispatch();
-
   const {
     source,
     deleteFile,
@@ -54,7 +46,12 @@ export const usePrompts = () => {
     renameFile,
     renameFolder,
     saveFile,
+    levelProperties,
   } = useCodebridgeContext();
+  const {appName, validationFile} = levelProperties;
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const dialogControl = useDialogControl();
+  const dispatch = useAppDispatch();
 
   const sendCodebridgeAnalyticsEvent = useCallback(
     (event: string) => globalSendCodebridgeAnalyticsEvent(event, appName),
