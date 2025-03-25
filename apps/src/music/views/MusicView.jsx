@@ -402,6 +402,10 @@ class UnconnectedMusicView extends React.Component {
     MusicRegistry.showSoundsPanelInSoundsMode =
       !!levelData?.showSoundsPanelInSoundsMode;
 
+    MusicRegistry.sortUnrestrictedPacksByType =
+      !!levelData?.sortUnrestrictedPacksByType ||
+      AppConfig.getValue('sort-unrestricted-packs-by-type') === 'true';
+
     MusicRegistry.hideAiTemperature =
       levelData?.hideAiTemperature ||
       AppConfig.getValue('hide-ai-temperature') === 'true';
