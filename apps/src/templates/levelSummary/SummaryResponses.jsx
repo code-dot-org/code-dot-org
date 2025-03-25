@@ -11,9 +11,9 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
+import FreeResponseAIEvaluation from './FreeResponseAIEvaluation';
 import FreeResponseResponses from './FreeResponseResponses';
 import MultiResponses from './MultiResponses';
-import FreeResponseAIEvaluation from './FreeResponseAIEvaluation';
 
 import styles from './summary.module.scss';
 
