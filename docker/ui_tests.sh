@@ -58,6 +58,9 @@ echo "Wrote secrets from env vars into locals.yml."
 
 set -x
 
+# Trash the UI test cache on this branch, we don't want to use it until we gain understanding
+rm dashboard/db/ui_test_data.hash
+
 bundle install --quiet
 bundle exec rake install
 bundle exec rake build
