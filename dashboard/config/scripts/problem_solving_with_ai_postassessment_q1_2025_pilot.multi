@@ -1,0 +1,8 @@
+name 'problem-solving-with-ai-postassessment-q1_2025-pilot'
+
+question 'Question'
+
+wrong 'wrong answer'
+right 'right answer'
+
+allow_multiple_attempts false

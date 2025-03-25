@@ -1,14 +1,15 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
-  "created_at": "2024-05-10T00:45:52.000Z",
+  "created_at": "2024-05-16T09:29:48.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code."
+    "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code.",
+    "thumbnail_url": "https://images.code.org/b473c5be84af0072b3eff6aa893843be-bubblechoice-2.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-09T10:45:52.804-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 2\\\"\"],\"cloned_from\":\"Allthethings Python Lab 2\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-09T10:45:52.804-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 2\\\"\"],\"cloned_from\":\"Allthethings Python Lab 2\"},{\"changed_at\":\"2025-03-24 18:08:09 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
