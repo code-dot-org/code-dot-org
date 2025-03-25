@@ -21,10 +21,10 @@ export const chatCompletionHighBrowserFailureRateConfiguration: PutMetricAlarmIn
         AlarmActions: [SNS_TOPIC],
         InsufficientDataActions: [],
         EvaluationPeriods: 5,
-        DatapointsToAlarm: 5,
+        DatapointsToAlarm: 3,
         Threshold: 10,
         ComparisonOperator: ComparisonOperator.GreaterThanThreshold,
-        TreatMissingData: 'missing',
+        TreatMissingData: 'ignore',
         Metrics: [
             ...['ChatCompletionRequestInitiated', 'ChatCompletionErrorUnhandled']
                 .map((metric, i) =>
