@@ -23,9 +23,9 @@ class Queries::Courses
   #     - `:unit_group_unit` - The associated UnitGroupUnit information
   #     - `:unit` - The Unit for the given `unit_name`
   def self.get_course_context(unit_name)
-    unit = Unit.get_from_cache(unit_name)
+    unit = Unit.get_from_cache(unit_name, raise_exceptions: false)
     return nil unless unit
-    unit_group_unit = UnitGroupUnit.get_with_unit_from_cache(unit.id).first
+    unit_group_unit = unit.unit_group_units&.first
     return nil unless unit_group_unit
     course = UnitGroup.get_from_cache(unit_group_unit.course_id)
     {course: course, unit_group_unit: unit_group_unit, unit: unit}
