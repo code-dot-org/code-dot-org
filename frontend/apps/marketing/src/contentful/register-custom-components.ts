@@ -5,6 +5,9 @@
  */
 import {defineComponents} from '@contentful/experiences-sdk-react';
 
+import ActionBlock, {
+  ActionBlockContentfulComponentDefinition,
+} from '@/components/actionBlocks/defaultActionBlock';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
@@ -40,6 +43,10 @@ import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
   [
+    {
+      component: ActionBlock,
+      definition: ActionBlockContentfulComponentDefinition,
+    },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
       component: VideoCarousel,
