@@ -116,16 +116,29 @@ const PythonlabView: React.FunctionComponent<
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const dialogControl = useDialogControl();
+  const [showingProjectTypeDialog, setShowingProjectTypeDialog] =
+    useState(false);
 
   useEffect(() => {
-    if (levelProperties.isProjectLevel && !initialSources) {
+    if (
+      levelProperties.isProjectLevel &&
+      !initialSources &&
+      !showingProjectTypeDialog
+    ) {
+      setShowingProjectTypeDialog(true);
       dialogControl?.showDialog({
         type: DialogType.GenericDialog,
         title: 'Choose your project type',
         bodyComponent: <ProjectTypePicker />,
+        buttons: null,
       });
     }
-  }, [levelProperties.isProjectLevel, initialSources, dialogControl]);
+  }, [
+    levelProperties.isProjectLevel,
+    initialSources,
+    dialogControl,
+    showingProjectTypeDialog,
+  ]);
 
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {

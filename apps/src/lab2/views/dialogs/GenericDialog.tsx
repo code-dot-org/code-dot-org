@@ -43,14 +43,16 @@ export type GenericDialogBodyProps =
 
 export type GenericDialogProps = GenericDialogTitleProps &
   GenericDialogBodyProps & {
-    buttons?: {
-      [key in ButtonType]?: {
-        text?: string;
-        callback?: dialogCallback;
-        disabled?: boolean;
-        destructive?: boolean;
-      };
-    };
+    buttons?:
+      | {
+          [key in ButtonType]?: {
+            text?: string;
+            callback?: dialogCallback;
+            disabled?: boolean;
+            destructive?: boolean;
+          };
+        }
+      | null;
     getButtonCallback?: typeof defaultGetButtonCallback;
   };
 
@@ -178,23 +180,25 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                   text={buttons.neutral.text}
                 />
               )}
-              <Button
-                onClick={confirmCallback}
-                className={classNames({
-                  [darkModeStyles.primaryButton]: theme === Theme.DARK,
-                })}
-                disabled={buttons?.confirm?.disabled}
-                type="primary"
-                color={
-                  buttons?.confirm?.destructive
-                    ? buttonColors.destructive
-                    : theme === Theme.DARK
-                    ? buttonColors.white
-                    : buttonColors.purple
-                }
-                text={buttons?.confirm?.text || commonI18n.dialogOK()}
-                id="uitest-generic-dialog-ok"
-              />
+              {buttons !== null && (
+                <Button
+                  onClick={confirmCallback}
+                  className={classNames({
+                    [darkModeStyles.primaryButton]: theme === Theme.DARK,
+                  })}
+                  disabled={buttons?.confirm?.disabled}
+                  type="primary"
+                  color={
+                    buttons?.confirm?.destructive
+                      ? buttonColors.destructive
+                      : theme === Theme.DARK
+                      ? buttonColors.white
+                      : buttonColors.purple
+                  }
+                  text={buttons?.confirm?.text || commonI18n.dialogOK()}
+                  id="uitest-generic-dialog-ok"
+                />
+              )}
             </div>
           </div>
         </div>
