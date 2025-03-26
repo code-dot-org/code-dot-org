@@ -8,6 +8,7 @@ import {useDispatch} from 'react-redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
@@ -33,13 +34,31 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const [editorView, setEditorView] = useState<EditorView | null>(null);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const editorFontSize = useAppSelector(
+    state => state.codebridgeWorkspace.editorFontSize
+  );
+  const sessionStorageKey = 'codeEditorFontSizeKey';
+  const DEFAULT_FONT_SIZE = 14;
+  const fontSize =
+    editorFontSize ||
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) ||
+    DEFAULT_FONT_SIZE;
 
   // These two compartments control read-only settings.
   // Controls if you can type in the editor or not.
   const editorReadOnlyCompartment = useMemo(() => new Compartment(), []);
   // Controls if the dom is focusable or not (and therefore if a cursor is visible in the editor or not).
   const editorEditableCompartment = useMemo(() => new Compartment(), []);
+  const fontSizeCompartment = useMemo(() => new Compartment(), []);
 
+  const getFontSizeTheme = (fontSize: number) => {
+    console.log('getFontSizeTheme fontSize', fontSize);
+    return EditorView.theme({
+      '&': {
+        fontSize: `${fontSize}px`,
+      },
+    });
+  };
   useEffect(() => {
     if (editorRef.current === null || didInit) {
       return;
@@ -61,7 +80,8 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
     editorExtensions.push(
       editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
-      editorEditableCompartment.of(EditorView.editable.of(!isReadOnly))
+      editorEditableCompartment.of(EditorView.editable.of(!isReadOnly)),
+      fontSizeCompartment.of(getFontSizeTheme(fontSize))
     );
     if (darkMode) {
       editorExtensions.push(darkModeTheme);
@@ -92,7 +112,18 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorReadOnlyCompartment,
     isReadOnly,
     editorEditableCompartment,
+    fontSizeCompartment,
+    fontSize,
   ]);
+
+  // When we have a new editorFontSize, reset font size.
+  useEffect(() => {
+    console.log('useEffect - fontSize', fontSize);
+    if (editorView) {
+      console.log('editorView');
+      fontSizeCompartment.reconfigure(getFontSizeTheme(fontSize));
+    }
+  }, [fontSize, editorView, fontSizeCompartment]);
 
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.

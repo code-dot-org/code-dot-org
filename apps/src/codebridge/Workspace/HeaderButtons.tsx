@@ -8,13 +8,19 @@ import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {setEditorFontSize} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
-import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {
+  useDialogControl,
+  DialogType,
+  extractUserInput,
+} from '@cdo/apps/lab2/views/dialogs';
+import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -31,11 +37,20 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
+  const dispatch = useAppDispatch();
 
   const feedbackTooltipProps: TooltipProps = {
     text: commonI18n.feedback(),
     direction: 'onLeft',
     tooltipId: 'feedback-tooltip',
+    size: 'xs',
+    className: darkModeStyles.tooltipLeft,
+  };
+
+  const settingsTooltipProps: TooltipProps = {
+    text: commonI18n.settings(),
+    direction: 'onLeft',
+    tooltipId: 'settings-tooltip',
     size: 'xs',
     className: darkModeStyles.tooltipLeft,
   };
@@ -77,8 +92,40 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     sendPythonCodeToMicroBit(pythonCode);
   };
 
+  const onClickSettings = async () => {
+    const fontSizeOptions: GenericDropdownProps['items'] = [
+      {value: 'tiny', text: 'tiny'},
+      {value: 'small', text: 'small'},
+      {value: 'medium', text: 'medium'},
+      {value: 'large', text: 'large'},
+      {value: 'huge', text: 'huge'},
+    ];
+    const results = await dialogControl?.showDialog({
+      type: DialogType.GenericDropdown,
+      title: 'Settings',
+      message: 'Customize your text editor font size',
+      selectedValue: fontSizeOptions[0].value,
+      items: fontSizeOptions,
+      dropdownLabel: '',
+    });
+    const selectedFontSize = extractUserInput(results);
+    console.log('selectedFontSize', selectedFontSize);
+    dispatch(setEditorFontSize(25));
+  };
+
   return (
     <div className={moduleStyles.rightHeaderButtons}>
+      <WithTooltip tooltipProps={settingsTooltipProps}>
+        <Button
+          isIconOnly
+          icon={{iconStyle: 'solid', iconName: 'gear'}}
+          onClick={onClickSettings}
+          size={'xs'}
+          type={'tertiary'}
+          color={buttonColors.white}
+          className={darkModeStyles.tertiaryButton}
+        />
+      </WithTooltip>
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
