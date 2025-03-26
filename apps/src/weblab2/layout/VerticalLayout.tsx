@@ -7,6 +7,7 @@ import React from 'react';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
+import weblab2Styles from './weblab2Layout.module.scss';
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
@@ -46,7 +47,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     <div
       className={
         isProjectLevel
-          ? moduleStyles.containerWithFooter
+          ? weblab2Styles.containerWithFooter
           : moduleStyles.defaultContainer
       }
     >
