@@ -259,3 +259,91 @@ svg text[fill] {
 .subLevelDropdownContainer {
   padding: 10px;
 }
+
+.aiSummaryContainer {
+  display: flex;
+  padding: 16px;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  gap: 40px;
+  width: 100%;
+  box-sizing: border-box;
+
+  .leftSide {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .rightSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .botImage {
+    width: 35px;
+  }
+}
+
+.aiDataContainer {
+  display: flex;
+  gap: 20px;
+  background-color: var(--background-neutral-primary);
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  padding: 4px 12px;
+  align-items: flex-start;
+
+  .group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .labelText {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.needsReviewTag div {
+  background-color: var(--background-brand-purple-primary) !important;
+}
+
+.needsReviewTag div i {
+  color: white !important;
+}
+
+.needsReviewTag div span {
+  color: white !important;
+}
+
+.proficientTag div {
+  background-color: var(--text-success-primary) !important;
+}
+
+.proficientTag div i {
+  color: white !important;
+}
+
+.proficientTag div span {
+  color: white !important;
+}
+
+.proficientIcon {
+  color: var(--text-success-primary);
+}
+
+.needsReviewIcon {
+  color: var(--text-brand-purple-primary);
+}
+
+.flaggedIcon {
+  color: var(--text-error-primary);
+}
+
+.noAttemptIcon {
+  color: var(--text-neutral-tertiary);
+}

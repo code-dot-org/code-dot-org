@@ -125,7 +125,7 @@ class Pd::Enrollment < ApplicationRecord
 
   # Any enrollment with attendance, for an ended workshop, has a survey.
   # Except for FiT workshops - no exit surveys for them!
-  # This scope is used in ProfessionalLearningLandingController to direct the teacher
+  # This scope is used in ProfessionalLearningController to direct the teacher
   #   to their latest pending survey.
   scope :with_surveys, (lambda do
     for_ended_workshops.

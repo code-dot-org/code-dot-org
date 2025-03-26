@@ -365,6 +365,7 @@ export default class MusicPlayer {
         id: event.id,
         sampleUrl: library.generateSoundUrl(folder, soundData),
         playbackPosition: event.when,
+        pickupLength: soundData.pickupLength,
         triggered: event.triggered,
         effects: event.effects,
         originalBpm: soundData.bpm || DEFAULT_BPM,
