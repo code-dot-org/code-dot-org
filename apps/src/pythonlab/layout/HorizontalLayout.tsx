@@ -15,6 +15,7 @@ const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_HEIGHT = 300;
+const PROJECT_FOOTER_HEIGHT = 56;
 
 const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
@@ -46,7 +47,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
     appName: 'pythonlab',
-    heightOffset: isProjectLevel ? 60 : 0,
+    heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
   });
 
   return (

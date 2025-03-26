@@ -34,7 +34,7 @@
 
 .containerWithFooter {
   display: grid;
-  grid-template-rows: 1fr 60px;
+  grid-template-rows: 1fr 56px;
   grid-template-columns: 1fr;
   grid-template-areas: "content"
                        "footer";
