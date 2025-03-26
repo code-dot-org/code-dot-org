@@ -89,7 +89,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (!isAssistant && !isChatHistoryView && assets && currentChannelId) {
+  if (!isAssistant && assets && currentChannelId) {
     header = (
       <div className={styles.assetCol}>
         {assets.map(asset => {

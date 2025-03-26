@@ -13,6 +13,7 @@ import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
 import {
   clearChatMessages,
+  clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
   selectMultimodalEnabled,
@@ -71,6 +72,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   useEffect(() => {
     dispatch(clearChatMessages());
+    dispatch(clearStagedFiles());
 
     if (selectedStudent) {
       dispatch(
@@ -204,7 +206,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           />
         )}
         <div className={moduleStyles.buttonRow}>
-          {multimodalEnabled && <UploadButton />}
+          {multimodalEnabled && <UploadButton isDisabled={!canChatWithModel} />}
           <Button
             text={aichatI18n.clearChatButtonText()}
             disabled={!canChatWithModel}
