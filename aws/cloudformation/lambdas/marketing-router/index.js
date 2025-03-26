@@ -3,7 +3,8 @@
 const { MARKETING_DOMAIN } = process.env;
 
 const marketingPaths = {
-  '/en-US/videos': true,
+  // Add key-value pairs for each path that should be served by the CMS
+  // e.g. '/videos': true,
 }
 
 export const handler = (event, context, callback) => {
