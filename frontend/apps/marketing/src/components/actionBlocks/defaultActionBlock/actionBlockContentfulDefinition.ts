@@ -54,76 +54,22 @@ export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['entry', 'asset'],
       },
     },
-    detailLabel: {
-      displayName: 'Detail label',
-      type: 'Text',
-      group: 'content',
-      description: 'The detail label, like "Duration".',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    detailDescription: {
-      displayName: 'Detail description',
-      type: 'Text',
-      group: 'content',
-      description: 'The detail description, like "1 hour".',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    primaryButtonText: {
-      displayName: 'Primary button text',
-      type: 'Text',
+    primaryButton: {
+      displayName: 'Primary button',
+      type: 'Link',
       group: 'content',
       description: 'The primary button of the action block.',
       validations: {
-        bindingSourceType: ['entry', 'manual'],
+        bindingSourceType: ['entry'],
       },
     },
-    primaryButtonHref: {
-      displayName: 'Primary button url',
-      type: 'Text',
-      group: 'content',
-      description: 'The primary button url.',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    primaryButtonAriaLabel: {
-      displayName: 'Primary button aria label',
-      type: 'Text',
-      group: 'content',
-      description: 'The primary button aria label.',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    secondaryButtonText: {
-      displayName: 'Secondary button text',
-      type: 'Text',
+    secondaryButton: {
+      displayName: 'Secondary button',
+      type: 'Link',
       group: 'content',
       description: 'The secondary button of the action block.',
       validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    secondaryButtonHref: {
-      displayName: 'Secondary button url',
-      type: 'Text',
-      group: 'content',
-      description: 'The secondary button url.',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
-      },
-    },
-    secondaryButtonAriaLabel: {
-      displayName: 'Secondary button aria label',
-      type: 'Text',
-      group: 'content',
-      description: 'The secondary button aria label.',
-      validations: {
-        bindingSourceType: ['entry', 'manual'],
+        bindingSourceType: ['entry'],
       },
     },
     background: {

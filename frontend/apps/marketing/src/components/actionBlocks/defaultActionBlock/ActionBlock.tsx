@@ -1,55 +1,61 @@
-// import {EntryFields} from 'contentful';
+import {EntryFields} from 'contentful';
 
 import DSCOActionBlock from '@code-dot-org/component-library/actionBlock';
 
 export type ActionBlockContentfulProps = {
-  detailLabel?: string;
-  detailDescription?: string;
-  primaryButtonText?: string;
-  primaryButtonHref?: string;
-  primaryButtonAriaLabel?: string;
-  secondaryButtonText?: string;
-  secondaryButtonHref?: string;
-  secondaryButtonAriaLabel?: string;
+  primaryButton: {
+    fields: {
+      label: EntryFields.Text;
+      primaryTarget: EntryFields.Text;
+      ariaLabel: EntryFields.Text;
+    };
+  };
+  secondaryButton: {
+    fields: {
+      label: EntryFields.Text;
+      primaryTarget: EntryFields.Text;
+      ariaLabel: EntryFields.Text;
+    };
+  };
 };
 
 const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
-  detailLabel,
-  detailDescription,
-  primaryButtonText,
-  primaryButtonHref,
-  primaryButtonAriaLabel,
-  secondaryButtonText,
-  secondaryButtonHref,
-  secondaryButtonAriaLabel,
+  primaryButton,
+  secondaryButton,
   ...props
 }) => {
+  const actionBlockProps = {
+    primaryButton: {
+      label: primaryButton?.fields?.label,
+      primaryTarget: primaryButton?.fields?.primaryTarget,
+      ariaLabel: primaryButton?.fields?.ariaLabel,
+    },
+    secondaryButton: {
+      label: secondaryButton?.fields?.label,
+      primaryTarget: secondaryButton?.fields?.primaryTarget,
+      ariaLabel: secondaryButton?.fields?.ariaLabel,
+    },
+  };
+
   return (
     <DSCOActionBlock
       {...props}
-      details={
-        detailDescription
-          ? {
-              label: detailLabel || '',
-              description: detailDescription || '',
-            }
-          : undefined
-      }
       primaryButton={
-        primaryButtonText
+        actionBlockProps.primaryButton.label
           ? {
-              text: primaryButtonText || 'Primary button',
-              href: primaryButtonHref || '#',
-              ariaLabel: primaryButtonAriaLabel || '',
+              text: actionBlockProps.primaryButton.label || 'Primary button',
+              href: actionBlockProps.primaryButton.primaryTarget || '#',
+              ariaLabel: actionBlockProps.primaryButton.ariaLabel || '',
             }
           : undefined
       }
       secondaryButton={
-        secondaryButtonText
+        actionBlockProps.secondaryButton.label
           ? {
-              text: secondaryButtonText || 'Secondary button',
-              href: secondaryButtonHref || '#',
-              ariaLabel: secondaryButtonAriaLabel || '',
+              text:
+                actionBlockProps.secondaryButton.label || 'Secondary button',
+              href: actionBlockProps.secondaryButton.primaryTarget || '#',
+              ariaLabel: actionBlockProps.secondaryButton.ariaLabel || '',
             }
           : undefined
       }
