@@ -1,9 +1,9 @@
 // Creates a definition for the Tab Group component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-export const TabGroupContentfulComponentDefinition: ComponentDefinition = {
-  id: 'tabGroup',
-  name: 'Tab Group',
+export const TabGroupItemContentfulComponentDefinition: ComponentDefinition = {
+  id: 'tabGroupItem',
+  name: 'Tab Group Item',
   category: '04: Advanced',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/1HJ7nWwydFt54zhjpJVn3D/67f46ccf2fab57678fd0b7e4de11386c/3eac18fce1deaddc61c5fbe1c795fbd5.png',
@@ -16,5 +16,26 @@ export const TabGroupContentfulComponentDefinition: ComponentDefinition = {
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
   children: true,
-  variables: {},
+  variables: {
+    ctaLink: {
+      displayName: 'Link',
+      type: 'Link',
+    },
+    description: {
+      displayName: 'Description',
+      type: 'Text',
+    },
+    image: {
+      displayName: 'Image',
+      type: 'Media',
+    },
+    tabLabel: {
+      displayName: 'Tab Label',
+      type: 'Text',
+    },
+    title: {
+      displayName: 'Title',
+      type: 'Text',
+    },
+  },
 };

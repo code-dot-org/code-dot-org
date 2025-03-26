@@ -40,6 +40,8 @@ import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
+import TabGroupItem from '@/components/tabGroupItem';
+import {TabGroupItemContentfulComponentDefinition} from '@/components/tabGroupItem/TabGroupContentfulDefinition';
 
 defineComponents(
   [
@@ -99,6 +101,10 @@ defineComponents(
       definition: SimpleListContentfulComponentDefinition,
     },
     {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
+    {
+      component: TabGroupItem,
+      definition: TabGroupItemContentfulComponentDefinition,
+    },
     {
       component: Video,
       definition: VideoContentfulComponentDefinition,
