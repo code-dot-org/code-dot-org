@@ -52,5 +52,13 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Link',
       group: 'content',
     },
+    linkProps: {
+      displayName: 'Link Props',
+      type: 'Object',
+      group: 'content',
+      validations: {
+        bindingSourceType: ['entry'],
+      },
+    },
   },
 };

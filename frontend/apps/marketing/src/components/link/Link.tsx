@@ -18,6 +18,7 @@ export type LinkProps = RemoveMarginBottomProps & {
   size: ComponentSizeXSToL;
   /** Whether Link is for internal code.org pages, or external web page. (external links are opened in new tab) */
   isLinkExternal: boolean;
+  linkProps?: Record<string, unknown>;
 };
 
 const Link: React.FunctionComponent<LinkProps> = ({
@@ -26,22 +27,27 @@ const Link: React.FunctionComponent<LinkProps> = ({
   size,
   isLinkExternal,
   removeMarginBottom,
-}) => (
-  <DSCOLink
-    href={href}
-    openInNewTab={isLinkExternal}
-    size={size}
-    className={classNames(
-      moduleStyles.link,
-      moduleStyles[`link-size-${size}`],
-      removeMarginBottom && moduleStyles['link-removeMarginBottom'],
-    )}
-  >
-    {children}
-    {isLinkExternal && (
-      <FontAwesomeV6Icon iconName="up-right-from-square" iconStyle="solid" />
-    )}
-  </DSCOLink>
-);
+  linkProps,
+}) => {
+  console.log(linkProps);
+  console.log('-------------------');
+  return (
+    <DSCOLink
+      href={href}
+      openInNewTab={isLinkExternal}
+      size={size}
+      className={classNames(
+        moduleStyles.link,
+        moduleStyles[`link-size-${size}`],
+        removeMarginBottom && moduleStyles['link-removeMarginBottom'],
+      )}
+    >
+      {children}
+      {isLinkExternal && (
+        <FontAwesomeV6Icon iconName="up-right-from-square" iconStyle="solid" />
+      )}
+    </DSCOLink>
+  );
+};
 
 export default Link;
