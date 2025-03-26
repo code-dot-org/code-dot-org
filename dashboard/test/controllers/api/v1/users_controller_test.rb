@@ -280,17 +280,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, response["is_verified_instructor"]
   end
 
-  test 'a get request to get current has CORS enabled for code.org' do
-    sign_in(@user)
-
-    get :current
-
-    assert_equal 'http://test.code.org', response.headers['Access-Control-Allow-Origin']
-    assert_equal 'GET', response.headers['Access-Control-Allow-Methods']
-    assert_equal '*', response.headers['Access-Control-Allow-Headers']
-    assert_equal 'true', response.headers['Access-Control-Allow-Credentials']
-  end
-
   test "a get request to get school_name returns school object" do
     sign_in(@user)
     get :get_school_name, params: {user_id: @user.id}
@@ -388,5 +377,40 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
     post :set_seen_ta_scores, params: {lesson_id: 'not_a_number'}
     assert_response :bad_request
+  end
+
+  describe 'GET signed_in' do
+    let(:current_user) {@user}
+
+    before do
+      sign_in(current_user) if current_user
+    end
+
+    it 'renders correct current user signed-in indicator' do
+      get :signed_in
+
+      assert_response :success
+      _(json_response).must_equal({'is_signed_in' => true})
+    end
+
+    it 'allows CDO CORS' do
+      get :signed_in
+
+      _(response.headers['Access-Control-Allow-Origin']).must_equal 'http://test.code.org'
+      _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
+      _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
+      _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+    end
+
+    context 'when no signed-in user' do
+      let(:current_user) {nil}
+
+      it 'renders correct current user signed-in indicator' do
+        get :signed_in
+
+        assert_response :success
+        _(json_response).must_equal({'is_signed_in' => false})
+      end
+    end
   end
 end
