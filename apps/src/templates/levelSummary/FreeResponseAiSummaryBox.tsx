@@ -83,6 +83,22 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
 
   const showEvaluationSummary = studentWorkEvaluations && evaluationComplete;
 
+  const aiSummaryContent = () => {
+    return (
+      <>
+        {aiSummaryTag(proficientStudentCount)}
+        {aiSummaryMessage(proficientStudentCount)}
+        <FreeResponseSummaryDataBox
+          totalStudentCount={10}
+          proficientStudentCount={proficientStudentCount}
+          needsRevisionStudentCount={needsRevisionStudentCount}
+          flaggedStudentCount={flaggedStudentCount}
+          noResponseStudentCount={noResponseStudentCount}
+        />
+      </>
+    );
+  };
+
   // TO DO: Get total student count loaded in
   return (
     <div className={styles.aiSummaryContainer}>
@@ -99,17 +115,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         />
       </div>
       <div className={styles.rightSide}>
-        {showEvaluationSummary && aiSummaryTag(proficientStudentCount)}
-        {showEvaluationSummary && aiSummaryMessage(proficientStudentCount)}
-        {showEvaluationSummary && (
-          <FreeResponseSummaryDataBox
-            totalStudentCount={10}
-            proficientStudentCount={proficientStudentCount}
-            needsRevisionStudentCount={needsRevisionStudentCount}
-            flaggedStudentCount={flaggedStudentCount}
-            noResponseStudentCount={noResponseStudentCount}
-          />
-        )}
+        {showEvaluationSummary && aiSummaryContent()}
       </div>
     </div>
   );
