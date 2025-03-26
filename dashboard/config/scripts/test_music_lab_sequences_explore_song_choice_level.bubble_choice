@@ -1,9 +1,11 @@
 name 'test-music-lab-sequences-explore-song-choice-level'
 display_name 'Recreate songs on the radio!'
 description 'Dozens of famous musicians have shared their song samples for you to mix, match, and rearrange! Try recreating songs by will.i.am and Benson Boone or choose your own.'
+uses_lab2
 
 sublevels
 level 'test-music-lab-sequences-explore-song-choice-level-a'
 level 'test-music-lab-sequences-explore-song-choice-level-b'
 level 'test-music-lab-sequences-explore-song-choice-level-c'
+level 'test-music-lab-sequences-explore-choice-level-c'
 

@@ -8,8 +8,8 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Welcome to Music Lab!\r\n\r\nThis is a lab that lets you combine **coding** and **music**! This level is all about exploration! Try clicking things! Try dragging things! Explore this space! \r\n\r\nSee how many of these you can do:\r\n\r\n- Drag out a block\r\n- Connect two blocks\r\n- Play a track\r\n- Change the track\r\n- Play 3 tracks in a row: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5;\"></i> &nbsp; Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9;\"></i> &nbsp; Bass </span>, then <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px;  white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A;\"></i> &nbsp; Lead </span> tracks\r\n- Change the order of your tracks\r\n- Change where the song starts playing\r\n- Delete a block\r\n- Clear the workspace and start over\r\n- Play 3 tracks simultaneously\r\n\r\n",
-    "offer_browser_tts": "false",
+    "long_instructions": "#### Welcome to Music Lab!\r\n\r\nThis is a lab that lets you combine **coding** and **music**! This level is all about exploration! Try clicking things! Try dragging things! Explore this space! \r\n\r\nSee how many of these you can do:\r\n\r\n- Drag out a block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sound_at_current_location_simple2)\r\n- Connect two blocks [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:when-run-block)\r\n- Play a track [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=run-button)\r\n- Change the track\r\n- Play 3 tracks in a row: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5;\"></i> &nbsp; Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9;\"></i> &nbsp; Bass </span>, then <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px;  white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A;\"></i> &nbsp; Lead </span>\r\n- Change the order of your tracks\r\n- Change where the song starts playing in the timeline\r\n- Delete a block\r\n- Clear the workspace and start over\r\n- Play 3 tracks simultaneously\r\n\r\n",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -53,9 +53,55 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-investigate_cb7ae20a-4dfa-4647-81fb-a28cc935c6e0",
+        "message": "You played 3 tracks! Nice job!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-investigate_501ec8c8-4c83-4770-ac55-4cf022f1f529",
+        "message": "You played 2 tracks! Try to play 3 in total!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ],
+        "callout": "flyout-id:play_sound_at_current_location_simple2---id:when-run-block"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-investigate_b40600c0-2378-4876-b62c-b4929dc5601a",
+        "message": "You played a sound! Try to play 3 in total!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ],
+        "callout": "flyout-id:play_sound_at_current_location_simple2---id:when-run-block"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-investigate_5b77ac2f-f924-47b1-a8e2-b96c505d8008",
+        "message": "Nothing is playing yet! Try connecting a block!",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-id:play_sound_at_current_location_simple2---id:when-run-block"
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T19:44:43.387+00:00\",\"changed\":[\"cloned from \\\"test-musicLab-sequences-explore-investigate\\\"\"],\"cloned_from\":\"test-musicLab-sequences-explore-investigate\"},{\"changed_at\":\"2025-03-07 19:44:46 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:06:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:08:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:11:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:21:57 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:10:27 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:10:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:12:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-24 23:16:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:02:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:07:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:19:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:21:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:25:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:27:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T19:44:43.387+00:00\",\"changed\":[\"cloned from \\\"test-musicLab-sequences-explore-investigate\\\"\"],\"cloned_from\":\"test-musicLab-sequences-explore-investigate\"},{\"changed_at\":\"2025-03-07 19:44:46 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:06:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:08:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:11:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:21:57 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:10:27 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:10:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:12:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-24 23:16:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:02:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:07:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:19:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:21:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:25:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 00:27:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:02:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 06:14:35 +0000\",\"changed\":[\"long_instructions\",\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
