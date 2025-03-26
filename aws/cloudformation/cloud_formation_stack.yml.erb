@@ -405,7 +405,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
-      FunctionName: <%="#{rack_env.to_s}-MarketingRouter"%>%
+      FunctionName: !Sub "${AWS::StackName}-marketing-router"
       Code: <%=zip_directory 'marketing-router'%>
       Handler: index.handler
       Runtime: nodejs22.x
@@ -423,7 +423,7 @@ Resources:
       <%=multiple_service_role ['lambda', 'edgelambda']%>
       Path: /
       Policies:
-        - PolicyName: <%="#{rack_env.to_s}-MarketingLambdaExecutionPolicy"%>%
+        - PolicyName: !Sub "${AWS::StackName}-marketing-lambda-execution-policy"
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
