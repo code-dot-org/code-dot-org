@@ -256,7 +256,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
   'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
-  'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+  'pd/professional_learning/index': './src/sites/studio/pages/pd/professional_learning/index.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
   'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',

@@ -1,11 +1,14 @@
 import {Heading1} from '@code-dot-org/component-library/typography';
+import moment from 'moment-timezone';
 import React, {FC, useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {workshopLabel} from '../utils/workshopLabel';
+import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
+import {generateNewSession} from './components/SessionsEditor';
 import {AdditionalInfo} from './sections/AdditionalInfo';
 import {Basics} from './sections/Basics';
 import {EmailsReminders} from './sections/EmailsReminders';
@@ -45,24 +48,29 @@ export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   suppressEmail: data.suppress_email ?? false,
   courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
   participantGroupType: data.participant_group_type ?? '',
-  timeZone: data.time_zone ?? '',
+  timeZone: data.time_zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone,
 });
 
-export const sessionDataToState = (data: Session[]): SessionFormState[] =>
+export const sessionDataToState = (
+  data: Session[],
+  timeZone: string
+): SessionFormState[] =>
   data.map(session => ({
     id: session.id,
-    start: session.start ?? '',
-    end: session.end ?? '',
-    code: session.code ?? '',
+    date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
+    start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
+    end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
     locationAddress: session.location_address ?? '',
     locationName: session.location_name ?? '',
     meetingLink: session.meeting_link ?? '',
-    sessionFormat: session.session_format ?? 'in_person',
+    format: session.session_format ?? 'in_person',
+    sameAsPrevious: false,
   }));
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
 }) => {
+  const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const {workshopId} = useParams();
 
   const workshopUrl = workshopId ? `/api/v1/pd/workshops/${workshopId}` : '';
@@ -107,20 +115,25 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       suppressEmail: false,
       courseOfferings: [],
       participantGroupType: '',
-      timeZone: '',
+      timeZone: userTimeZone,
     }
   );
 
-  const [sessionFormState, setSessionFormState] = useState<SessionFormState[]>(
-    []
-  );
+  const [sessionFormState, setSessionFormState] = useState<SessionFormState[]>([
+    generateNewSession(),
+  ]);
 
   useEffect(() => {
     if (workshop) {
       setWorkshopFormState(workshopDataToState(workshop));
-      setSessionFormState(sessionDataToState(workshop.sessions));
+      setSessionFormState(
+        sessionDataToState(
+          workshop.sessions,
+          workshop.time_zone ?? userTimeZone
+        )
+      );
     }
-  }, [workshop]);
+  }, [workshop, userTimeZone]);
 
   const handleChange = <K extends keyof WorkshopFormState>(
     update: Record<K, WorkshopFormState[K]>
@@ -142,7 +155,13 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         handleChange={handleChange}
         config={config}
       />
-      <Schedule state={sessionFormState} />
+      <Schedule
+        state={workshopFormState}
+        handleChange={handleChange}
+        sessions={sessionFormState}
+        handleSessions={setSessionFormState}
+        config={config}
+      />
       <PartnerFacilitator
         state={workshopFormState}
         regionalPartners={regionalPartners}

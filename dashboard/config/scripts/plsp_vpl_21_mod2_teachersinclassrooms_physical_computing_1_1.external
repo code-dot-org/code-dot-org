@@ -1,0 +1,15 @@
+name 'PLSP-VPL-21-mod2-TeachersInClassrooms_physical-computing_1_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Accessing Unit Level Resources
+![](https://images.code.org/d66347b3b5bd21066f83200ac3244803-image-1742933817353.16.51 PM.png)
+#### 1. From the Unit Overview page, navigate to your unit of choice. 
+#### 2. Click on "Go to Unit" 
+
+![](https://images.code.org/ebeb3ec12d2ffe66ad776bd91ed056fd-image-1742933858347.17.34 PM.png)
+
+#### 3. Click on "Teacher Resources"
+#### 4. Select your resource 
+MARKDOWN
