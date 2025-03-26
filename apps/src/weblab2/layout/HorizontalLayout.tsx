@@ -45,28 +45,40 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   });
 
   return (
-    <div className={moduleStyles.layoutContainer}>
-      {!isProjectLevel && (
-        <InfoPanel
-          style={{width: leftPanelWidth}}
-          className={moduleStyles.flexShrink0}
-        />
-      )}
-      {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
+    <div
+      className={
+        isProjectLevel
+          ? moduleStyles.containerWithFooter
+          : moduleStyles.defaultContainer
+      }
+    >
+      <div className={moduleStyles.layoutContainer}>
+        {!isProjectLevel && (
+          <InfoPanel
+            style={{width: leftPanelWidth}}
+            className={moduleStyles.flexShrink0}
+          />
+        )}
+        {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
          can only drag left, not right (something about the mouse events getting 
          captured by the preview?).
          Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
-      <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
-        <Workspace style={{height: rightTopPanelHeight}} />
-        <ResizeBar
-          isVertical={false}
-          separatorProps={rightBottomPanelSeparatorProps}
-          isDragging={rightBottomPanelDragging}
-        />
-        <div style={{height: rightBottomPanelHeight}}>
-          <FilePreview />
+        <div
+          className={moduleStyles.flexColumn}
+          style={{width: rightPanelWidth}}
+        >
+          <Workspace style={{height: rightTopPanelHeight}} />
+          <ResizeBar
+            isVertical={false}
+            separatorProps={rightBottomPanelSeparatorProps}
+            isDragging={rightBottomPanelDragging}
+          />
+          <div style={{height: rightBottomPanelHeight}}>
+            <FilePreview />
+          </div>
         </div>
       </div>
+      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };

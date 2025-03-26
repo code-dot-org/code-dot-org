@@ -42,34 +42,43 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   });
 
   return (
-    <div className={moduleStyles.layoutContainer}>
-      {!isProjectLevel && (
-        <>
-          <InfoPanel
-            style={{width: leftPanelWidth}}
-            className={moduleStyles.flexShrink0}
-          />
-          <ResizeBar
-            isVertical={true}
-            separatorProps={leftPanelSeparatorProps}
-            isDragging={leftPanelDragging}
-          />
-        </>
-      )}
-      <Workspace
-        style={{width: middlePanelWidth}}
-        className={moduleStyles.shrinkAndGrow}
-      />
-      {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you
+    <div
+      className={
+        isProjectLevel
+          ? moduleStyles.containerWithFooter
+          : moduleStyles.defaultContainer
+      }
+    >
+      <div className={moduleStyles.layoutContainer}>
+        {!isProjectLevel && (
+          <>
+            <InfoPanel
+              style={{width: leftPanelWidth}}
+              className={moduleStyles.flexShrink0}
+            />
+            <ResizeBar
+              isVertical={true}
+              separatorProps={leftPanelSeparatorProps}
+              isDragging={leftPanelDragging}
+            />
+          </>
+        )}
+        <Workspace
+          style={{width: middlePanelWidth}}
+          className={moduleStyles.shrinkAndGrow}
+        />
+        {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you
          can only drag left, not right (something about the mouse events getting 
          captured by the preview?) 
          Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
-      <div
-        style={{width: rightPanelWidth}}
-        className={moduleStyles.shrinkAndGrow}
-      >
-        <FilePreview />
+        <div
+          style={{width: rightPanelWidth}}
+          className={moduleStyles.shrinkAndGrow}
+        >
+          <FilePreview />
+        </div>
       </div>
+      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };
