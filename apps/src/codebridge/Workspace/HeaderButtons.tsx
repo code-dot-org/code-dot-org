@@ -22,6 +22,7 @@ import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -118,6 +119,8 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     });
     const selectedKey = extractUserInput(results) as keyof typeof FontSize;
     if (selectedKey && FontSize[selectedKey]) {
+      const sessionStorageKey = `${levelProperties.appName}CodeEditorFontSizeKey`;
+      trySetSessionStorage(sessionStorageKey, selectedKey);
       dispatch(setEditorFontSize(selectedKey));
     }
   };
