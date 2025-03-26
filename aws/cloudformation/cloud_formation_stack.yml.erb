@@ -427,7 +427,7 @@ Resources:
       <%=service_role ['lambda', 'edgelambda']%>
       Path: /
       Policies:
-        - PolicyName: !Sub "${AWS::StackName}-marketing-lambda-execution-policy"
+        - PolicyName: Logging
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
