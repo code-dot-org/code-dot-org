@@ -95,26 +95,22 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
         {assets.map(asset => {
           const filename = asset.filename;
           const url = getAssetUrl(asset, currentChannelId, levelName);
-          return filename.endsWith('.pdf') ? (
+          return (
             <button
               type="button"
               className={styles.assetButton}
               onClick={() => window.open(url, '_blank')}
             >
-              <FilePreview type="pdf" filename={filename} url={url} />
-            </button>
-          ) : (
-            <button
-              type="button"
-              className={styles.assetButton}
-              onClick={() => window.open(url, '_blank')}
-            >
-              <img
-                key={filename}
-                alt=""
-                className={styles.imagePreview}
-                src={url}
-              />
+              {filename.endsWith('.pdf') ? (
+                <FilePreview type="pdf" filename={filename} url={url} />
+              ) : (
+                <img
+                  key={filename}
+                  alt=""
+                  className={styles.imagePreview}
+                  src={url}
+                />
+              )}
             </button>
           );
         })}

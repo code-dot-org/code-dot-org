@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {StrongText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import aichatI18n from '@cdo/apps/aichat/locale';
 
@@ -15,16 +15,34 @@ const FilePreview: React.FC<{
   isLoading?: boolean;
   onRemove?: () => void;
 }> = ({type, filename, url, isLoading, onRemove}) => {
+  const imageRef = useRef<HTMLImageElement>(null);
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    const imageElement = imageRef.current;
+    if (!imageElement) {
+      return;
+    }
+
+    const handleLoad = () => {
+      setImageLoaded(true);
+    };
+
+    if (imageElement.complete) {
+      handleLoad();
+    } else {
+      imageElement.addEventListener('load', handleLoad);
+    }
+
+    return () => {
+      imageElement.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
-    <div
-      className={styles[`preview-${type}`]}
-      title={filename}
-      style={
-        !isLoading && type === 'image' ? {backgroundImage: `url('${url}')`} : {}
-      }
-    >
+    <div className={styles[`preview-${type}`]} title={filename}>
       {onRemove ? (
-        isLoading ? (
+        isLoading || (type === 'image' && !imageLoaded) ? (
           <FontAwesomeV6Icon
             className={styles.topRightIcon}
             iconName={'circle-notch'}
@@ -54,7 +72,17 @@ const FilePreview: React.FC<{
           </WithTooltip>
         )
       ) : null}
-      {type === 'pdf' && (
+      {type === 'image' ? (
+        <div style={!imageLoaded || isLoading ? {width: 52, height: 52} : {}}>
+          <img
+            alt=""
+            className={styles.imagePreview}
+            src={url}
+            ref={imageRef}
+            style={imageLoaded ? {} : {display: 'none'}}
+          />
+        </div>
+      ) : (
         <>
           <div className={styles.fileIcon}>
             <FontAwesomeV6Icon iconName="file" />
