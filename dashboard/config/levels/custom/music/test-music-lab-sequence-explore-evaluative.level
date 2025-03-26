@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -138,10 +138,81 @@
       }
     },
     "encrypted_exemplar_sources": "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\n",
-    "long_instructions": "Create a song using the provided prechorus and chorus tracks from Katy Perry's Fireworks. \r\n\r\nYou will need to add appropriate bass and lead tracks to the chorus - you can decide what to add! \r\n\r\nChoose whatever you think makes the song sound great!",
+    "long_instructions": "#### Assessment\r\n\r\nCreate a song using the prechorus and chorus tracks from Katy Perry's Fireworks.\r\n\r\nEach part of your song should include a <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span> track. You can decide which ones to use from the song itself!\r\n\r\nThis is an **Assessment** level, which means it covers the key parts of this lesson. This means your song should:\r\n- Use multiple `play together` blocks\r\n- Layer different tracks to sound like the original song",
+    "validations": [
+      {
+        "key": "test-music-lab-sequence-explore-evaluative_eb8c1fa6-7b62-47fe-8151-50972f015231",
+        "message": "You used the `play together` block 3 times with different sounds! You passed the level",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 3
+          },
+          {
+            "name": "played_sounds",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequence-explore-evaluative_9133f4e9-4079-4207-896f-64b8df80faf4",
+        "message": "You used another `play together` block with 3 sounds! You need to do this 3 times to pass the level!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
+          },
+          {
+            "name": "played_sounds",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequence-explore-evaluative_c63660cd-9904-46b7-867d-ab16ffca7b52",
+        "message": "You used a `play together` block with 3 sounds! You need to do this 3 times to pass the level!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequence-explore-evaluative_1f754f44-ab3c-4f76-886a-38d4d0c6de9b",
+        "message": "Something's not quite right!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T22:41:46.010+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequence-explore-evaluative\\\"\"],\"cloned_from\":\"music-lab-sequence-explore-evaluative\"},{\"changed_at\":\"2025-03-07 22:42:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T22:41:46.010+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequence-explore-evaluative\\\"\"],\"cloned_from\":\"music-lab-sequence-explore-evaluative\"},{\"changed_at\":\"2025-03-07 22:42:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-25 22:22:17 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 22:22:54 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,0 +1,28 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-03-25T13:19:02.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#What is a Multimodal Model?\n\nA multimodal model is an AI system that can process information from multiple types of input.\n",
+        "imageUrl": "https://images.code.org/86642ade3620a934f9ddfcc16f191ae5-multimodal.gif",
+        "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#Where is Multimodal AI Used?\n\n\n- **Accessibility:** screen readers interpreting images and text\n- **Healthcare:** AI analyzing X-ray images and text\n- **Translation:** real-time text and audio speech translation\n- **Security:** facial and object recognition",
+        "imageUrl": "https://images.code.org/86642ade3620a934f9ddfcc16f191ae5-multimodal.gif",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
+        "layout": "text-bottom-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:19:02.472+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level1\"},{\"changed_at\":\"2025-03-25 13:29:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

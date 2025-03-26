@@ -225,9 +225,48 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             name="showSoundFilters"
             label="Show Sound Filters in Sound Picker"
             onChange={event => {
+              const showSoundFilters = event.target.checked;
               setLevelData({
                 ...levelData,
-                showSoundFilters: event.target.checked,
+                showSoundFilters,
+                ...(showSoundFilters
+                  ? {}
+                  : {
+                      showSoundsPanelInSoundsMode: false,
+                      sortUnrestrictedPacksByType: false,
+                    }),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.showSoundsPanelInSoundsMode}
+            name="showSoundsPanelInSoundsMode"
+            label="Default to 'Sounds' mode in Sound Picker"
+            onChange={event => {
+              const showSoundsPanelInSoundsMode = event.target.checked;
+              setLevelData({
+                ...levelData,
+                showSoundsPanelInSoundsMode,
+                ...(showSoundsPanelInSoundsMode
+                  ? {showSoundFilters: true}
+                  : {}),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.sortUnrestrictedPacksByType}
+            name="sortUnrestrictedPacksByType"
+            label="Sort unrestricted (Code.org) packs by type in Sound Picker"
+            onChange={event => {
+              const sortUnrestrictedPacksByType = event.target.checked;
+              setLevelData({
+                ...levelData,
+                sortUnrestrictedPacksByType,
+                ...(sortUnrestrictedPacksByType
+                  ? {showSoundFilters: true}
+                  : {}),
               });
             }}
             size="s"

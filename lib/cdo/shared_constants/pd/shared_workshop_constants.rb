@@ -8,6 +8,7 @@ module Pd
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
       COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
+      COURSE_CSAIF = 'CS and AI Fundamentals'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
@@ -305,6 +306,12 @@ module Pd
       {value: 'virtual', label: 'Virtual', enum_value: 1}
     ].freeze
 
+    WORKSHOP_FORMATS = {
+      in_person: 'In-Person',
+      hybrid: 'Hybrid',
+      virtual: 'Virtual'
+    }.freeze
+
     SESSION_FIELDS = {
       start: {
         required: true
@@ -347,7 +354,7 @@ module Pd
         required: false
       },
       regional_partner_id: {
-        required: false
+        required: true
       },
       organizer_id: {
         required: false

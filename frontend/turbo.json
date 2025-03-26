@@ -45,6 +45,7 @@
       "dependsOn": ["^test"]
     },
     "test:ui:ci": {
+      "cache": false,
       "dependsOn": ["^test:ui:ci"],
       "env": ["STAGE"]
     },

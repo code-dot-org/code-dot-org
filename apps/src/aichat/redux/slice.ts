@@ -2,7 +2,10 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
 
-import {ModalTypes} from '../constants';
+import {
+  ModalTypes,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
 import {
   AiCustomizations,
   ChatEvent,
@@ -13,10 +16,12 @@ import {
   Visibility,
   isModelUpdate,
   isNotification,
+  isUserActionEvent,
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
   PendingChatMessage,
+  ChatAsset,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -56,6 +61,31 @@ const aichatSlice = createSlice({
       action: PayloadAction<ServerChatEvent[]>
     ) => {
       state.studentChatHistory = action.payload;
+    },
+    setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
+      // Find the last index of an event that marks the start a new conversation with the model.
+      const events = action.payload;
+      let lastResetIndex = -1;
+      for (let i = events.length - 1; i >= 0; i--) {
+        const event = events[i];
+
+        if (
+          (isModelUpdate(event) &&
+            RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
+              event.updatedField
+            )) ||
+          (isUserActionEvent(event) && event.descriptionKey === 'CLEAR_CHAT')
+        ) {
+          lastResetIndex = i;
+          break;
+        }
+      }
+
+      if (lastResetIndex >= 0) {
+        state.chatEventsCurrent = action.payload.slice(lastResetIndex);
+      } else {
+        state.chatEventsCurrent = action.payload;
+      }
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
@@ -219,11 +249,11 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; filename: string}>
+      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
     ) {
       state.stagedFiles.push({
         ...action.payload,
-        status: 'uploading',
+        status: action.payload.loaded ? 'uploaded' : 'uploading',
       });
     },
     stagedFileUploadFinished(
@@ -307,6 +337,7 @@ export const {
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
+  setOwnChatHistory,
   setUserHasAichatAccess,
   setViewMode,
   addStagedFile,

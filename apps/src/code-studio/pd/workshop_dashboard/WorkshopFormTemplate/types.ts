@@ -68,12 +68,14 @@ export interface Session {
 
 export interface SessionFormState {
   id?: number;
+  date: string;
   start: string;
   end: string;
   locationAddress: string;
   locationName: string;
   meetingLink: string;
-  sessionFormat: SessionFormat;
+  format: SessionFormat;
+  sameAsPrevious: boolean;
 }
 
 export interface Workshop {
@@ -101,6 +103,17 @@ export interface Workshop {
 export interface CourseOffering {
   id: number;
   display_name: string;
+}
+
+export interface RegionalPartner {
+  id: number;
+  name: string;
+}
+
+export interface Facilitator {
+  id: number;
+  name: string;
+  email: string;
 }
 
 export interface WorkshopFormState {
@@ -133,10 +146,13 @@ export interface SectionProps {
   ) => void;
   config: WorkshopCourseConfig;
   courseOfferings?: CourseOffering[] | null;
+  regionalPartners?: RegionalPartner[] | null;
+  facilitators?: Facilitator[] | null;
 }
 
-export interface ScheduleProps {
-  state: SessionFormState[];
+export interface ScheduleProps extends SectionProps {
+  sessions: SessionFormState[];
+  handleSessions: (sessions: SessionFormState[]) => void;
 }
 
 export interface PublishCancelButtonsProps {

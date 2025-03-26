@@ -62,6 +62,7 @@ openai_evaluate_rubric_api_key: 'stub-api-key'
 <% if running_web_application? && test_system? -%>
 statsig_server_secret_key: !Secret
 statsig_api_client_key: !Secret
+statsig_api_client_key_session_replay: !Secret
 <% else %>
 statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'

@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-03-25T13:36:15.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Video Game Developer - Providing Multiple Examples\r\n\r\nPractice prompting through the career of a video game developer by guiding the AI with clear structure and multiple expectations for the dialogue.\r\n\r\n### Do This:\r\n\r\n1. Try a prompt like the one below, or write a similar one that breaks the task into parts and gives specific goals for the conversation.\r\n\r\n>Create a dialogue where a hero confronts a villain in an abandoned city. First, describe the villain’s motivation, then build tension with a heated argument, and end with the hero preparing to stop the villain’s plan.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how the added structure affects the story flow, character depth, and tension.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Video Game Developer",
+    "bubble_choice_description": "Practice prompting through the career of a video game developer by guiding the AI with clear structure and multiple expectations for the dialogue.",
+    "thumbnail_url": "https://images.code.org/8c4485c1eac15a6acacbe43a90f97480-game-developer.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:36:15.609+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson3-level3-choice2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson3-level3-choice2\"},{\"changed_at\":\"2025-03-25 13:44:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-25 13:45:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

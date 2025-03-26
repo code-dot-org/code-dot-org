@@ -11,8 +11,6 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
 import '@xterm/xterm/css/xterm.css';
 
 import ConsoleManager from './ConsoleManager';
@@ -25,8 +23,8 @@ import moduleStyles from './console.module.scss';
 const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const {labConfig, sendConsoleInput} = useCodebridgeContext();
+  const {labConfig, sendConsoleInput, levelProperties} = useCodebridgeContext();
+  const appName = levelProperties.appName;
   const hasMiniApp = !!labConfig?.miniApp?.name;
 
   const clearOutput = useCallback(

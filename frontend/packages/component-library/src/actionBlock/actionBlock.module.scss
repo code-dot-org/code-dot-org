@@ -1,0 +1,80 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+$mobileBreakpoint: 900px;
+
+// ActionBlock common styles
+.actionBlock {
+  @include mixins.border-styles;
+  max-width: 100%;
+  text-align: initial;
+  padding: 1.25rem;
+
+  figure {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin: 0 0 1rem 0;
+
+    & > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .overline {
+    color: var(--text-brand-teal-primary);
+    margin-block: -0.25rem 0.5rem;
+  }
+
+  p {
+    margin-block: 0 1rem;
+  }
+
+  .buttonWrapper {
+    margin-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+// Action block background styles
+.actionBlock-background {
+  &-primary {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &-secondary {
+    background-color: var(--background-neutral-primary);
+  }
+}
+
+// Basic action block styles
+.oneColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// Full width action block styles
+.fullWidth {
+  @media (min-width: $mobileBreakpoint) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    figure {
+      margin-bottom: 0;
+    }
+
+    .buttonWrapper > a {
+      width: fit-content;
+    }
+  }
+}

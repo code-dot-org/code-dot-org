@@ -416,7 +416,7 @@ VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
 
   // check that videos are visible in both carousels
   for (const videoTitle of videoTitles) {
-    const videos = await canvas.findAllByTitle(videoTitle);
+    const videos = await canvas.findAllByLabelText(`Play video ${videoTitle}`);
     videos.forEach(video => expect(video).toBeVisible());
   }
 };

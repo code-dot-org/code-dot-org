@@ -1,6 +1,7 @@
 import {ModalTypes} from '../constants';
 import {
   AiCustomizations,
+  ChatAsset,
   ChatEvent,
   FieldVisibilities,
   PendingChatMessage,
@@ -34,7 +35,7 @@ export interface AichatState {
   // List of files that have been staged for upload to the model.
   stagedFiles: {
     key: string;
-    filename: string;
+    asset: ChatAsset;
     status: 'uploading' | 'uploaded';
   }[];
   // Alert to display for staged files if something went wrong.

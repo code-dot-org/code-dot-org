@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-17 17:34:08 UTC",
+    "serialized_at": "2025-03-21 20:33:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -69,9 +69,11 @@
       "name": "Data in Computer Systems",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -84,7 +86,7 @@
       "name": "Ethical Use and the Final Project",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -117,6 +119,30 @@
       "seeding_key": {
         "lesson_activity.key": "4967c50b-914e-41ec-9a22-51f4b98fa43a",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems"
+      }
+    },
+    {
+      "key": "df8a58fa-a4d2-4b22-8410-a374b23e0061",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df8a58fa-a4d2-4b22-8410-a374b23e0061",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems"
+      }
+    },
+    {
+      "key": "1231f7c7-4744-4661-a294-e87d7a609984",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1231f7c7-4744-4661-a294-e87d7a609984",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-computer-systems"
       }
@@ -165,6 +191,83 @@
       "seeding_key": {
         "activity_section.key": "a7bfb210-5fab-4162-a39c-26cc85dde0ef",
         "lesson_activity.key": "4967c50b-914e-41ec-9a22-51f4b98fa43a"
+      }
+    },
+    {
+      "key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Software and Operating Systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e",
+        "lesson_activity.key": "4967c50b-914e-41ec-9a22-51f4b98fa43a"
+      }
+    },
+    {
+      "key": "ea88f6bc-50f7-4fec-9942-0b39e08af600",
+      "position": 4,
+      "properties": {
+        "progression_name": "Troubleshooting Software "
+      },
+      "seeding_key": {
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600",
+        "lesson_activity.key": "4967c50b-914e-41ec-9a22-51f4b98fa43a"
+      }
+    },
+    {
+      "key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba",
+      "position": 5,
+      "properties": {
+        "progression_name": "Optimizing Software"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba",
+        "lesson_activity.key": "4967c50b-914e-41ec-9a22-51f4b98fa43a"
+      }
+    },
+    {
+      "key": "b4756279-f874-47e7-8f8f-dc0e0ed38700",
+      "position": 1,
+      "properties": {
+        "progression_name": "Data in Computer Systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700",
+        "lesson_activity.key": "df8a58fa-a4d2-4b22-8410-a374b23e0061"
+      }
+    },
+    {
+      "key": "ea695e39-d3a7-4d02-976a-873f43ad58c1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Ethics and Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea695e39-d3a7-4d02-976a-873f43ad58c1",
+        "lesson_activity.key": "df8a58fa-a4d2-4b22-8410-a374b23e0061"
+      }
+    },
+    {
+      "key": "22ace35b-faa2-460a-b092-616e1946b033",
+      "position": 1,
+      "properties": {
+        "progression_name": "Preparing for the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033",
+        "lesson_activity.key": "1231f7c7-4744-4661-a294-e87d7a609984"
+      }
+    },
+    {
+      "key": "895afc9e-f04c-43c3-9095-d57e9cbd9daf",
+      "position": 2,
+      "properties": {
+        "progression_name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "895afc9e-f04c-43c3-9095-d57e9cbd9daf",
+        "lesson_activity.key": "1231f7c7-4744-4661-a294-e87d7a609984"
       }
     }
   ],
@@ -400,6 +503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_hardware-L1-CSandDev"
+        ],
         "progression": "Computer systems"
       },
       "bonus": false,
@@ -422,12 +528,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev"
+        ],
         "progression": "Computer systems"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_compsys-L2-CSandDev"
+          "csaif-pl-computersystems-video-L2-CSandDev"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -435,7 +544,7 @@
         "activity_section.key": "2aa0b459-1bce-4353-a392-8bc03e592dbe"
       },
       "level_keys": [
-        "csaif_pl_compsys-L2-CSandDev"
+        "csaif-pl-computersystems-video-L2-CSandDev"
       ]
     },
     {
@@ -444,6 +553,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ispo-L3-CSandDev"
+        ],
         "progression": "Computer systems"
       },
       "bonus": false,
@@ -466,6 +578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -488,6 +603,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -510,6 +628,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -532,6 +653,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -554,6 +678,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -576,6 +703,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -598,6 +728,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev"
+        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -612,6 +745,632 @@
       },
       "level_keys": [
         "csaif-pl-hardware-assess-L8-CSandDev"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_software-L11-CSandDev"
+        ],
+        "progression": "Software and Operating Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e"
+      },
+      "level_keys": [
+        "csaif_pl_software-L11-CSandDev"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev"
+        ],
+        "progression": "Software and Operating Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e"
+      },
+      "level_keys": [
+        "csaif-pl-matchingsoftware-L12-CSandDev"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev"
+        ],
+        "progression": "Software and Operating Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e"
+      },
+      "level_keys": [
+        "csaif_pl-reflectsoftware-L13-CSandDev"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev"
+        ],
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      },
+      "level_keys": [
+        "csaif_pl_troubleshoot-about-L14-CSandDev"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev"
+        ],
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      },
+      "level_keys": [
+        "csaif-pl-software-troubleshooting-L15-CSandDev"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev"
+        ],
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      },
+      "level_keys": [
+        "csaif-pl-troubleshooting-synthesis-L16-CSandDev"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-student-response-L17-CSandDev"
+        ],
+        "progression": "Troubleshooting Software "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-student-response-L17-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      },
+      "level_keys": [
+        "csaif-pl-student-response-L17-CSandDev"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev"
+        ],
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      },
+      "level_keys": [
+        "csaif_pl_optimizing-lesson-L18-CSandDev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev"
+        ],
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      },
+      "level_keys": [
+        "csaif-pl-optimize-bot-L19-CSandDev"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 20,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev"
+        ],
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      },
+      "level_keys": [
+        "csaif-pl-optimization-reflect-L20-CSandDev"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 21,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-_hardware-software_forum_L21_CSandDev"
+        ],
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_hardware-software_forum_L21_CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      },
+      "level_keys": [
+        "csaif-pl-_hardware-software_forum_L21_CSandDev"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_data-L1-CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_data-L1-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_data-L1-CSandDev"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-_datareflect_L3_CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_datareflect_L3_CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif-pl-_datareflect_L3_CSandDev"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif_pl-everyday-data-L2-CSandDev"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif_pl-analyzedatea-L4-CSandDev"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif-pl-data-library-panels-L5-CSandDev"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-librarydata-L6-CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-librarydata-L6-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif-pl-librarydata-L6-CSandDev"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      },
+      "level_keys": [
+        "csaif_pl-AI-realworld-L7-CSandDev"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethics and Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea695e39-d3a7-4d02-976a-873f43ad58c1"
+      },
+      "level_keys": [
+        "csaif-pl-aiethics-video-L11-CSandDev"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethics and Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L10-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea695e39-d3a7-4d02-976a-873f43ad58c1"
+      },
+      "level_keys": [
+        "csaif_pl_ethic-teaching-tips-L10-CSandDev"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethics and Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea695e39-d3a7-4d02-976a-873f43ad58c1"
+      },
+      "level_keys": [
+        "csaif-pl-_data_forum_L10_CSandDev"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      },
+      "level_keys": [
+        "csaif_pl_lesson_overview_endofUnit_L1_CSandDev"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      },
+      "level_keys": [
+        "csaif_pl_project-description-L2-CSandDev"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      },
+      "level_keys": [
+        "csaif_pl_3-day-project-L3-CSandDev"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      },
+      "level_keys": [
+        "csaif-pl-_projectmanage_forum_L5_CSandDev"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-csandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "895afc9e-f04c-43c3-9095-d57e9cbd9daf"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-L6-csandDev"
       ]
     }
   ],
@@ -738,9 +1497,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_compsys-L2-CSandDev",
+        "level.key": "csaif-pl-computersystems-video-L2-CSandDev",
         "script_level.level_keys": [
-          "csaif_pl_compsys-L2-CSandDev"
+          "csaif-pl-computersystems-video-L2-CSandDev"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -842,6 +1601,318 @@
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-computer-systems",
         "activity_section.key": "a7bfb210-5fab-4162-a39c-26cc85dde0ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_software-L11-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-matchingsoftware-L12-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-reflectsoftware-L13-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "bd9748c9-df1b-4ff3-8fa5-a2215016db4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_troubleshoot-about-L14-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-software-troubleshooting-L15-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-troubleshooting-synthesis-L16-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-student-response-L17-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-student-response-L17-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea88f6bc-50f7-4fec-9942-0b39e08af600"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_optimizing-lesson-L18-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimize-bot-L19-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimization-reflect-L20-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_hardware-software_forum_L21_CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-_hardware-software_forum_L21_CSandDev"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "c1da06a2-fc94-40f5-9b5e-9b0420d770ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_data-L1-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_data-L1-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_datareflect_L3_CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-_datareflect_L3_CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-everyday-data-L2-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-analyzedatea-L4-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-data-library-panels-L5-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-librarydata-L6-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-librarydata-L6-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-AI-realworld-L7-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "b4756279-f874-47e7-8f8f-dc0e0ed38700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-aiethics-video-L11-CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea695e39-d3a7-4d02-976a-873f43ad58c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ethic-teaching-tips-L10-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_ethic-teaching-tips-L10-CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea695e39-d3a7-4d02-976a-873f43ad58c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_data_forum_L10_CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "ea695e39-d3a7-4d02-976a-873f43ad58c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_lesson_overview_endofUnit_L1_CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_project-description-L2-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_3-day-project-L3-CSandDev",
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_projectmanage_forum_L5_CSandDev",
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "22ace35b-faa2-460a-b092-616e1946b033"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-L6-csandDev",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-csandDev"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-computer-systems",
+        "activity_section.key": "895afc9e-f04c-43c3-9095-d57e9cbd9daf"
       }
     }
   ],

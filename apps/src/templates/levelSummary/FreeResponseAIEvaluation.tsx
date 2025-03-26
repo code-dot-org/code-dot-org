@@ -1,4 +1,3 @@
-import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
 import {
@@ -10,10 +9,11 @@ import {
 } from '@cdo/apps/aiEvaluation/evaluationApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
+import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
+
 import style from '@cdo/apps/levelbuilder/ai-iteration-tools/ai-tutor/ai-tutor-tester.module.scss';
 
 interface LevelData {
-  levelInstructions: string;
   levelId: number;
   unitId: number;
 }
@@ -33,9 +33,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   const evaluationComplete =
     evaluationCount > 0 && responses.length === evaluationCount;
 
-  const basePrompt =
-    'You are a teaching assistant for a high school AP Computer Science class where the students are learning JavaScript.';
-
   const getAIEvaluations = async () => {
     setEvaluationsPending(true);
     const responsePromises = responses.map(async studentResponse => {
@@ -48,20 +45,16 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
-    const systemPrompt = `${basePrompt} Please review the student's work. Respond in correctly formatted JSON.
-    evaluationCriteria should just be a copy of ${levelData.levelInstructions}.
-    aiEvaluation should be your assessment of the student's work. Respond with "great", "ok", or "needs revision".
-    aiReasoning should be one sentence with your reasoning.`;
     const aiResponse = await evaluateStudentWork(
       studentAnswer,
       levelData.levelId,
-      levelData.unitId,
-      systemPrompt
+      levelData.unitId
     );
     const evaluation = {
       ...studentAnswer,
       aiEvaluation: aiResponse.aiEvaluation,
       aiReasoning: aiResponse.aiReasoning,
+      evaluationCriteria: aiResponse.evaluationCriteria,
     };
     setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
     setEvaluationCount(prevCount => prevCount + 1);
@@ -70,15 +63,10 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   const summarizeStudentEvaluations = async (
     evaluations: StudentWorkEvaluation[]
   ) => {
-    const sectionPrompt = `${basePrompt} Please review the evaluations of the student responses. Respond in correctly formatted JSON.
-    evaluationCriteria should just be a copy of "Summarize".
-    aiEvaluation should be your assessment of the class's overall work. Respond with "review the concept" or "move on to the next lesson".
-    aiReasoning should be one sentence with your reasoning including the names of any students who need more help.`;
     const aiSummary = await summarizeEvaluations(
       evaluations,
       levelData.levelId,
-      levelData.unitId,
-      sectionPrompt
+      levelData.unitId
     );
     const summary = aiSummary;
     if (summary) {
@@ -87,6 +75,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       setAiSummary({
         aiEvaluation: 'Uh oh!',
         aiReasoning: 'Something went wrong',
+        evaluationCriteria: 'unknown',
       });
     }
   };
@@ -99,18 +88,15 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
 
   return (
     <div>
-      <h2>AI Analysis (prototype)</h2>
-      <Button
-        text="Evaluate student responses"
-        onClick={getAIEvaluations}
+      <FreeResponseAiSummaryBox
+        aiEvaluationHandler={getAIEvaluations}
         disabled={!responses.length || evaluationsPending}
         isPending={evaluationsPending}
+        studentWorkEvaluations={evaluations}
+        evaluationComplete={evaluationComplete}
       />
       {evaluationComplete && aiSummary && (
         <div>
-          <br />
-          <h3>Reccommendation: {aiSummary.aiEvaluation}</h3>
-          <h4>Reasoning: {aiSummary.aiReasoning}</h4>
           <CollapsibleSection
             headerContent={
               <h3>AI Evaluations of Individual Student Responses</h3>

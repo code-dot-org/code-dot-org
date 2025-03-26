@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2024-11-19 01:16:30 UTC",
+    "serialized_at": "2025-03-25 20:04:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -343,6 +343,22 @@
       },
       "seeding_key": {
         "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Sequences - Explore",
+      "name": "Sequences - Explore",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+        "background": "dark"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequences - Explore",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1009,6 +1025,18 @@
       "seeding_key": {
         "lesson_activity.key": "8cb88de1-0881-4d25-8fa9-620d9842ee8e",
         "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "9995d5cb-11e1-41dd-979a-9c2865786202",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202",
+        "lesson.key": "Sequences - Explore",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -2849,6 +2877,83 @@
       "seeding_key": {
         "activity_section.key": "19c2600d-bcd9-488a-a078-8774ed7a5343",
         "lesson_activity.key": "8cb88de1-0881-4d25-8fa9-620d9842ee8e"
+      }
+    },
+    {
+      "key": "ee4c5662-48e7-40d2-8dc4-95891c23556e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee4c5662-48e7-40d2-8dc4-95891c23556e",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "73b86b85-5835-4a2a-b33d-51186afd946b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "73b86b85-5835-4a2a-b33d-51186afd946b",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "3260509f-9c18-4595-b0e9-f765826dd763",
+      "position": 3,
+      "properties": {
+        "progression_name": "Investigate"
+      },
+      "seeding_key": {
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "bceeb240-2ac1-4813-86c4-c72031dbae14",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "bceeb240-2ac1-4813-86c4-c72031dbae14",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "97343e94-13a8-4835-ad66-7cba4540a786",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
       }
     }
   ],
@@ -5051,6 +5156,204 @@
       "level_keys": [
         "gen-ai-customizing-project-L0_2024_TEST"
       ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-investigate_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ee4c5662-48e7-40d2-8dc4-95891c23556e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-investigate_testing"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-predict_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "73b86b85-5835-4a2a-b33d-51186afd946b"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-predict_testing"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-1_testing"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-2_testing"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-3_testing"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-formative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-explore-formative_testing"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bceeb240-2ac1-4813-86c4-c72031dbae14"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-choice-level_testing"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-evaluative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-explore-evaluative_testing"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-song-choice-level_testing"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6108,6 +6411,114 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "34c52b0d-fd00-42da-98b3-83465bb2bbf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-investigate_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-investigate_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ee4c5662-48e7-40d2-8dc4-95891c23556e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-predict_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-predict_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "73b86b85-5835-4a2a-b33d-51186afd946b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-1_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-2_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-3_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-explore-formative_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-formative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-choice-level_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bceeb240-2ac1-4813-86c4-c72031dbae14"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-explore-evaluative_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-evaluative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-song-choice-level_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786"
       }
     }
   ],

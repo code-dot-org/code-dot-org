@@ -508,8 +508,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email does not have to be unique when existing user has LTI authentication" do
-    user = create :teacher, :with_lti_auth
-    dupe_user = create(:teacher, email: user.email)
+    email = "duplicated_email@foo.com"
+    create :teacher, :with_lti_auth, email: email
+    dupe_user = create(:teacher, email: email)
     assert dupe_user.valid?
   end
 
@@ -990,12 +991,9 @@ class UserTest < ActiveSupport::TestCase
     email = 'test@foo.bar'
     migrated_student = create(:student, email: email)
 
-    legacy_student = build(:student, email: email)
-    # ignore "Email has already been taken" error
-    assert_raises(ActiveRecord::RecordInvalid) do
-      legacy_student.save(validate: false)
-    end
-    legacy_student.demigrate_from_multi_auth
+    legacy_student = build(:user, :demigrated, email: email)
+    # skip validation since we're creating a second user with the same email
+    legacy_student.save(validate: false)
     assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))

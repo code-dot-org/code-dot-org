@@ -18,6 +18,9 @@ import FAQAccordion, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import IconHighlight, {
+  IconHighlightContentfulComponentDefinition,
+} from '@/components/iconHighlight';
 import Iframe, {IframeContentfulComponentDefinition} from '@/components/iframe';
 import Image, {ImageContentfulComponentDefinition} from '@/components/image';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
@@ -30,6 +33,12 @@ import Paragraph, {
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
+import SimpleList, {
+  SimpleListContentfulComponentDefinition,
+} from '@/components/simpleList';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
@@ -53,6 +62,10 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: IconHighlight,
+      definition: IconHighlightContentfulComponentDefinition,
     },
     {
       component: Iframe,
@@ -81,6 +94,11 @@ defineComponents(
         wrapContainerWidth: '100%',
       },
     },
+    {
+      component: SimpleList,
+      definition: SimpleListContentfulComponentDefinition,
+    },
+    {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
     {
       component: Video,
       definition: VideoContentfulComponentDefinition,

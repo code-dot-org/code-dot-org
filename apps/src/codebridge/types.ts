@@ -2,6 +2,7 @@ import {LanguageSupport} from '@codemirror/language';
 import {AnyAction, Dispatch} from 'redux';
 
 import {
+  LevelProperties,
   MultiFileSource,
   ProjectFile,
   ProjectSources,
@@ -71,3 +72,18 @@ export type ReducerAction = {
 };
 
 export type EditorTheme = 'light' | 'dark';
+
+export interface CodebridgeLevelProperties extends LevelProperties {
+  validationFile?: ProjectFile;
+  enableMicroBit?: boolean;
+  miniApp?: string;
+  serializedMaze?: MazeCell[][];
+  startDirection?: number;
+}
+
+// Python Lab specific property
+export interface MazeCell {
+  tileType: number;
+  value: number;
+  assetId: number;
+}

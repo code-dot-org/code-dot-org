@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # About Code.org
 
-> <img src="https://images.code.org/d7b27d5c36fea4bfa38e9415bd712d0e-image-1667244505864.png" alt="code.org logo" style="float: left; height: 50px; clear: both; margin: 0 20px 20px 0;"> Code.org is a nonprofit dedicated to **expanding access to computer science** in schools and increasing participation by young women and students from other underrepresented groups. 
+> <img src="https://images.code.org/d7b27d5c36fea4bfa38e9415bd712d0e-image-1667244505864.png" alt="code.org logo" style="float: left; height: 100px; clear: both; margin: 0 20px 20px 0;"> Learning about **computer science and AI** is fundamental to active and informed participation in an increasingly digital society and provides all students with a critical lens for interpreting the world around them. Computer science offers life-changing and economic opportunities, whether students pursue careers in technology or not. 
 
 #### Code.org's vision for CS education is that **every student in every school** has the opportunity to learn computer science. In order to make this vision a reality, Code.org:
 
@@ -24,5 +24,5 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
-#### <a href="https://advocacy.code.org/stateofcs" target="blank" rel="noopener noreferrer">Click here</a> and select your state handout to learn more about computer science access in your region. 
+#### <a href="https://advocacy.code.org/stateofcs" target="blank" rel="noopener noreferrer">Select your state handout </a> to learn more about computer science access in your region. 
 MARKDOWN
