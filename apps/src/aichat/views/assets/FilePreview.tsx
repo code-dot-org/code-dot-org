@@ -74,11 +74,7 @@ const FilePreview: React.FC<{
       ) : null}
       {type === 'image' ? (
         <div
-          className={
-            !imageLoaded || isUploading
-              ? styles['preview-image-loading']
-              : undefined
-          }
+          className={!imageLoaded ? styles['preview-image-loading'] : undefined}
         >
           <img
             alt=""

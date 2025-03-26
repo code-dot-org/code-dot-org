@@ -206,7 +206,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           />
         )}
         <div className={moduleStyles.buttonRow}>
-          {multimodalEnabled && <UploadButton isDisabled={!canChatWithModel} />}
+          {multimodalEnabled && (
+            <UploadButton isDisabled={!canChatWithModel || !!selectedStudent} />
+          )}
           <Button
             text={aichatI18n.clearChatButtonText()}
             disabled={!canChatWithModel}

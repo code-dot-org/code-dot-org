@@ -36,7 +36,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       )}
     >
       <div className={moduleStyles.messageWithChildren}>
-        <div>{header}</div>
+        {header && <div>{header}</div>}
         <div className={moduleStyles[`container-${role}`]}>
           {role === Role.ASSISTANT && (
             <div
