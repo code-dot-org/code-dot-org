@@ -135,3 +135,4 @@ grade2-maker-2024
 grade3-maker-2024
 pilot-elem-music-lab
 programming-with-music-lab-2024
+introduction-to-programming-in-music-lab-for-elementary
