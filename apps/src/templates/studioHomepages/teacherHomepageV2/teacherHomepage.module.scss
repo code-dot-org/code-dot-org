@@ -231,15 +231,23 @@
 }
 
 .promotion {
+  position: relative;
   width: 280px;
   max-width: 280px;
   min-height: 150px;
   max-height: 800px;
-  padding: 12px 20px 20px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  
-  background-color: $neutral_light;
+  background-color: var(--background-neutral-secondary);
+}
+
+.promotionType {
+  margin-bottom: 6px;
+}
+
+.promotionTitle {
+  margin-bottom: 16px;
 }
 
 .promotionImage {
@@ -249,25 +257,11 @@
 }
 
 .promotionButton {
-  width: fit-content;
+  width: 100%;
 }
 
 .closeButton {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-
-  button {
-    font-size: 14px;
-    background-color: inherit;
-    border: none;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 3px;
-
-    i {
-      height: 20px;
-      width: 20px;
-    }
-  }
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
 }

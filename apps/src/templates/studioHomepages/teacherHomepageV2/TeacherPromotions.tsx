@@ -43,6 +43,7 @@ export const TeacherPromotions: React.FC = () => {
       .then(data => {
         setPromotions(data.map(serverPromotionConverter));
         setIsLoading(false);
+        console.log('lfm', {promos: data.map(serverPromotionConverter)});
       })
       .catch(error => {
         console.error('Error retrieving marketing promotions', {error});

@@ -1,10 +1,14 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyThreeText,
-  Heading3,
+  Heading5,
+  OverlineTwoText,
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
+
+import i18n from '@cdo/locale';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -23,9 +27,26 @@ interface TeacherPromoAdditionalProps {
   onClose: () => void;
 }
 
+const announcementTypes = [
+  {text: 'New Curriculum', icon: 'book-open-cover'},
+  {text: 'Announcement', icon: 'bullhorn'},
+  {text: 'New Feature', icon: 'circle-plus'},
+  {text: 'Hour of Code', icon: 'clock'},
+  {text: 'Teacher Resources', icon: 'folder-open'},
+  {text: 'Professional Learning', icon: 'head-side-gear'},
+];
+
+const getIconType = (announcementText: string): string => {
+  const entry = Object.values(announcementTypes).find(
+    type => type.text === announcementText
+  );
+  return entry ? entry.icon : 'bullhorn';
+};
+
 type TeacherPromoProps = TeacherPromoInfo & TeacherPromoAdditionalProps;
 
 export const TeacherPromo: React.FC<TeacherPromoProps> = ({
+  announcementType,
   title,
   description,
   buttonLabel,
@@ -37,19 +58,24 @@ export const TeacherPromo: React.FC<TeacherPromoProps> = ({
   return (
     <div className={styles.promotion}>
       {isCloseable && (
-        <div className={styles.closeButton}>
-          <button type="button" onClick={onClose}>
-            <FontAwesomeV6Icon iconName="close" />
-          </button>
-        </div>
+        <CloseButton
+          className={styles.closeButton}
+          aria-label={i18n.closeDialog}
+          onClick={onClose}
+        />
       )}
+      <OverlineTwoText className={styles.promotionType}>
+        <FontAwesomeV6Icon iconName={getIconType(announcementType)} />{' '}
+        {announcementType}
+      </OverlineTwoText>
+      <Heading5 className={styles.promotionTitle}>{title}</Heading5>
       <img src={image} alt={title} className={styles.promotionImage} />
-      <Heading3>{title}</Heading3>
       <BodyThreeText>{description}</BodyThreeText>
       <LinkButton
         href={buttonTarget}
         color="black"
         text={buttonLabel}
+        iconRight={{iconName: 'up-right-from-square'}}
         type="secondary"
         size="s"
         className={styles.promotionButton}
