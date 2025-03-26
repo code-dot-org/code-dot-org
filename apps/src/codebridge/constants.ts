@@ -15,3 +15,5 @@ export enum FontSize {
   Large = 22,
   Huge = 26,
 }
+
+export const DEFAULT_FONT_SIZE_KEY = FontSize.Medium;

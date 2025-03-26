@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
+import {FontSize, DEFAULT_FONT_SIZE_KEY} from '@cdo/apps/codebridge/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -34,15 +35,16 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const [editorView, setEditorView] = useState<EditorView | null>(null);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const editorFontSize = useAppSelector(
-    state => state.codebridgeWorkspace.editorFontSize
+  const editorFontSizeKey = useAppSelector(
+    state => state.codebridgeWorkspace.editorFontSizeKey
   );
   const sessionStorageKey = 'codeEditorFontSizeKey';
-  const DEFAULT_FONT_SIZE = 14;
-  const fontSize =
-    editorFontSize ||
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) ||
-    DEFAULT_FONT_SIZE;
+  const sessionStorage = tryGetSessionStorage(sessionStorageKey, false);
+  console.log('sessionStorage', sessionStorage);
+  const fontSizeKey =
+    sessionStorage || editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
+  const fontSize = FontSize[fontSizeKey as keyof typeof FontSize];
+  console.log('fontSize', fontSize);
 
   // These two compartments control read-only settings.
   // Controls if you can type in the editor or not.

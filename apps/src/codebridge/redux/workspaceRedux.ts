@@ -1,13 +1,13 @@
+import {FontSize} from '@codebridge/constants';
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-
 export interface CodebridgeWorkspaceState {
   showLockedFilesBanner: boolean;
-  editorFontSize: number | undefined;
+  editorFontSizeKey: keyof typeof FontSize | undefined;
 }
 
 export const initialState: CodebridgeWorkspaceState = {
   showLockedFilesBanner: false,
-  editorFontSize: undefined,
+  editorFontSizeKey: undefined,
 };
 
 // SLICE
@@ -18,8 +18,11 @@ const workspaceSlice = createSlice({
     setShowLockedFilesBanner(state, action: PayloadAction<boolean>) {
       state.showLockedFilesBanner = action.payload;
     },
-    setEditorFontSize(state, action: PayloadAction<number>) {
-      state.editorFontSize = action.payload;
+    setEditorFontSize(
+      state,
+      action: PayloadAction<keyof typeof FontSize | undefined>
+    ) {
+      state.editorFontSizeKey = action.payload;
     },
   },
 });

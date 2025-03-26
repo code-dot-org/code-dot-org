@@ -22,6 +22,7 @@ import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -33,14 +34,12 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties} = useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
   const editorFontSize = useAppSelector(
-    state => state.codebridgeWorkspace.editorFontSize
+    state => state.codebridgeWorkspace.editorFontSizeKey
   );
   const selectedFontSizeKey =
     Object.entries(FontSize).find(
       ([key, value]) => value === editorFontSize
     )?.[0] || 'Medium';
-
-  console.log('editorFontSize', editorFontSize);
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -120,9 +119,9 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       dropdownLabel: '',
     });
     const selectedKey = extractUserInput(results) as keyof typeof FontSize;
-    const selectedFontSizeValue = FontSize[selectedKey];
-    console.log('selectedFontSize', selectedFontSizeValue);
-    dispatch(setEditorFontSize(selectedFontSizeValue));
+    dispatch(setEditorFontSize(selectedKey));
+    const sessionStorageKey = 'codeEditorFontSizeKey';
+    trySetSessionStorage(sessionStorageKey, selectedKey);
   };
 
   return (
