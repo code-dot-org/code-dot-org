@@ -158,10 +158,10 @@ describe('CourseContentDropdown', () => {
     screen.getByText('Go to Course page');
   });
 
-  it('renders Go to a lesson dropdown when a unit is assigned', async () => {
+  it('renders Jump to lesson dropdown when a unit is assigned', async () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
     expect(fetchSpy).toHaveBeenCalled();
-    screen.getByLabelText('Go to a lesson');
+    screen.getByRole('combobox', {name: 'Jump to'});
   });
 });

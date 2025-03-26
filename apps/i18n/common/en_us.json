@@ -1580,6 +1580,7 @@
   "joinUs": "Join us",
   "jsonInCdoBlockly": "Due to a system upgrade, your code could not be loaded. Please use Version History to recover a working version of this project, or to start over.",
   "jump": "jump",
+  "jumpTo": "Jump to",
   "jumpToLesson": "Jump to lesson",
   "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",
   "justDidHourOfCodeDonor": "I just did the #HourOfCode - check it out! (Thanks {donor_twitter} for supporting @codeorg)",
