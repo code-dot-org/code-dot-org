@@ -35,6 +35,10 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
   padding?: Exclude<SpacingNoneToL, SpacingNoneToS>;
   /** Section theme */
   theme?: 'Light' | 'Dark';
+  /** Section ID */
+  id?: string;
+  /** Section className */
+  className?: string;
   /** Section content */
   children?: ReactNode;
 }
@@ -58,8 +62,9 @@ const Section: React.FC<SectionProps> = ({
   backgroundImageUrl,
   padding = 'l',
   theme = 'Light',
-  children,
+  id,
   className,
+  children,
   ...HTMLAttributes
 }: SectionProps) => {
   const hasPatternBackground =
@@ -71,6 +76,7 @@ const Section: React.FC<SectionProps> = ({
 
   return (
     <section
+      id={id}
       data-theme={hasPatternBackground || useDarkTheme ? 'Dark' : theme}
       className={classNames(
         moduleStyles.section,
@@ -78,7 +84,6 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles[`section-padding-${padding}`],
         className,
       )}
-      {...HTMLAttributes}
       style={{
         ...(hasPatternBackground
           ? backgroundImageUrl
@@ -90,6 +95,7 @@ const Section: React.FC<SectionProps> = ({
             : {}
           : {}),
       }}
+      {...HTMLAttributes}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>
     </section>

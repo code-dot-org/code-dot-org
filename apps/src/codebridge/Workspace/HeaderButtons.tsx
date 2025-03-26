@@ -90,7 +90,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           className={darkModeStyles.tertiaryButton}
         />
       )}
-      <VersionHistoryButton startSources={startSources} />
+      <VersionHistoryButton startSources={startSources} appName={appName} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <Button

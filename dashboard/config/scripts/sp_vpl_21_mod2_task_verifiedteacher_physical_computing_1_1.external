@@ -3,44 +3,57 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Task: Become a Verified Teacher
+# Task:Join the Community of Verified Teachers
+## Become a <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >verified teacher</a> to unlock exclusive tools and resources. 
 
-#### Code.org’s curricula offers additional materials for **verified teachers.** 
+#### Verified teachers have the ability to:
 
-#### These materials include:
-<!-- Unified container for all four cards -->
-<div style="display: flex; justify-content: space-between; width: 100%; gap: 10px; margin: 20px 0px 20px 0px">
-    <!-- Card 1 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
-        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Student assessments and surveys</p>
-   
-    </div>
-    <!-- Card 2 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
-        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Example solutions and answer keys</p>
- 
-    </div>
-    <!-- Card 3 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
-        <p style="font-size: 14pt; font-weight: bold; margin: 0;">The ability to leave feedback for students on levels</p>
- 
-    </div>
-    <!-- Card 4 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
-        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Teaching tips and more!</p>
- 
-    </div>
-</div>
+<img src="https://images.code.org/d6f7b9db8c609831ceda707a25a8ddba-image-1734022345967.png" alt="books and graded papers" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
+
+## Assess student growth 
+#### Use surveys and assessments to monitor progress
 
 
-<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 10px 10px; margin: 20px 0px 20px 0px">
 
-# <i class="fa-solid fa-person-chalkboard"></i>
-<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 5px 5px 0px 5px;">
+<div style="clear:both;"></div>
+<br>
 
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>If you are not already a verified teacher,</b></p>
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px"> <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >Click here</a> to complete the form to become a verified teacher. 
-</p>
+
+
+<img src="https://images.code.org/61e76c291c3e6143851d4e85defe3edf-image-1734022440768.png" alt="computer emphasising retail shopping" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
+
+## Access Solutions:
+#### View example answers for every coding challenge
+
+
+
+<div style="clear:both;"></div>
+<br>
+
+<img src="https://images.code.org/c8d0ed429aa6a3816496f18659941bd5-image-1734022520463.png" alt="computer emphasizing photo editing software" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
+
+## Gain Instructional Insights
+#### Tips, strategies, and extras to support instruction
+
+
+
+<div style="clear:both;"></div>
+<br>
+
+<img src="https://images.code.org/3ecbfc19dcf2cebfe82044fe2d5e7908-image-1734022641846.png" alt="cellphone with social media apps" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
+
+## Give personalized student feedback
+#### Leave comments directly on coding levels.
+
+
+<div style="clear:both;"></div>
+<br>
+
+
+
+
+
+
 
 ___
 

@@ -6,11 +6,11 @@ import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMar
 
 const ForTeachersOnly: React.FunctionComponent = () => {
   const {levelProperties} = useCodebridgeContext();
-  const teacherMarkdown = levelProperties.teacherMarkdown;
+  const {teacherMarkdown, predictSettings} = levelProperties;
 
   return (
     <div>
-      <PredictSolution />
+      <PredictSolution predictSettings={predictSettings} />
       <TeacherOnlyMarkdown content={teacherMarkdown} hideContainer={true} />
     </div>
   );

@@ -39,6 +39,9 @@ import Section, {
 import SimpleList, {
   SimpleListContentfulComponentDefinition,
 } from '@/components/simpleList';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
@@ -102,6 +105,7 @@ defineComponents(
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
     },
+    {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
     {
       component: Video,
       definition: VideoContentfulComponentDefinition,

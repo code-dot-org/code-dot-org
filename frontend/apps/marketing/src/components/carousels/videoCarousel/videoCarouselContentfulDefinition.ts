@@ -19,6 +19,10 @@ export const VideoCarouselContentfulComponentDefinition: ComponentDefinition = {
     slides: {
       displayName: 'Video slides',
       type: 'Array',
+      validations: {
+        required: true,
+        bindingSourceType: ['entry'],
+      },
     },
   },
 };
