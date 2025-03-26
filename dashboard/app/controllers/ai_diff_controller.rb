@@ -66,7 +66,12 @@ class AiDiffController < ApplicationController
   end
 
   private def contains_pii?
-    response = Aws::Comprehend::Client.new.detect_pii_entities(
+    client =  if (Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services) || [:development, :test].include?(rack_env)
+                Aws::Comprehend::Client.new(stub_responses: true)
+              else
+                Aws::Comprehend::Client.new
+              end
+    response = client.detect_pii_entities(
       {language_code: 'en', text: params[:inputText]}
     )
 

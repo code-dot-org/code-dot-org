@@ -8,7 +8,46 @@ module AiDiffBedrockHelper
   RETRIEVAL_LIMIT = 10
 
   def self.create_bedrock_client
-    Aws::BedrockAgentRuntime::Client.new
+    if (Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services) || [:development, :test].include?(rack_env)
+      client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
+      client.stub_responses(
+        :retrieve_and_generate, {
+          citations: [
+            {
+              generated_response_part: {
+                text_response_part: {
+                  span: {
+                    end: 55,
+                    start: 0
+                  },
+                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                }
+              },
+              retrieved_references: [
+                {
+                  content: {
+                    text: "Hwaet! We gar-dena in geardagum, theod-cyninga thrym gefrunon"
+                  },
+                  location: {
+                    s3_location: {
+                      uri: "s3://dummy_file"
+                    },
+                    type: "S3"
+                  }
+                }
+              ]
+            }
+          ],
+          output: {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          session_id: "fake_session_id"
+        }
+      )
+      return client
+    else
+      Aws::BedrockAgentRuntime::Client.new
+    end
   end
 
   def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)

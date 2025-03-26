@@ -14,15 +14,21 @@
     gap: 1rem;
 
     > * {
+      min-width: unset;
+      display: flex;
       flex: 1;
+      > input {
+        height: 2rem;
+      }
     }
+  }
 
-    .card {
-      border-radius: $regular-border-radius;
-      padding: 1rem;
-      background-color: var(--background-neutral-secondary);
-      border: 1px solid var(--borders-neutral-primary);
-    }
+  .card {
+    border-radius: $regular-border-radius;
+    padding: 1rem;
+    background-color: var(--background-neutral-secondary);
+    border: 1px solid var(--borders-neutral-primary);
+    gap: 1rem;
   }
 
   .item {
@@ -30,9 +36,13 @@
     flex-direction: column;
     width: 100%;
 
+    > div,
     input,
-    textarea {
+    textarea,
+    select,
+    button {
       width: 100%;
+      border-color: var(--borders-neutral-strong);
     }
 
     &.required {
@@ -45,8 +55,7 @@
     textarea {
       height: 6rem;
       margin-bottom: 0;
-      border-radius: 0.25rem;
-      border: 1px solid;
+      border-radius: $regular-border-radius;
       box-sizing: border-box;
       resize: vertical;
 
