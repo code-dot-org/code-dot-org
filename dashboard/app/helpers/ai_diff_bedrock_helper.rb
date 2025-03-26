@@ -8,7 +8,58 @@ module AiDiffBedrockHelper
   RETRIEVAL_LIMIT = 10
 
   def self.create_bedrock_client
-    Aws::BedrockAgentRuntime::Client.new
+    puts "puts Rails.application.config.respond_to?(:stub_aichat_external_services) - #{Rails.application.config.respond_to?(:stub_aichat_external_services)}"
+    puts "puts Rails.application.config.stub_aichat_external_services) - #{Rails.application.config.stub_aichat_external_services}"
+    puts "puts [:development, :test].include?(rack_env) - #{[:development, :test].include?(rack_env)}"
+    ChatClient.log("ChatClient Rails.application.config.respond_to?(:stub_aichat_external_services) - #{Rails.application.config.respond_to?(:stub_aichat_external_services)}")
+    ChatClient.log("ChatClient Rails.application.config.stub_aichat_external_services) - #{Rails.application.config.stub_aichat_external_services}")
+    ChatClient.log("ChatClient [:development, :test].include?(rack_env) - #{[:development, :test].include?(rack_env)}")
+    CDO.log.info("CDO.log.info Rails.application.config.respond_to?(:stub_aichat_external_services) - #{Rails.application.config.respond_to?(:stub_aichat_external_services)}")
+    CDO.log.info("CDO.log.info Rails.application.config.stub_aichat_external_services) - #{Rails.application.config.stub_aichat_external_services}")
+    CDO.log.info("CDO.log.info [:development, :test].include?(rack_env) - #{[:development, :test].include?(rack_env)}")
+    if (Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services) || [:development, :test].include?(rack_env)
+      puts "puts Stubbing AWS Client"
+      ChatClient.log("ChatClient Stubbing AWS client")
+      CDO.log.info("CDO.log.info Stubbing AWS client")
+      client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
+      client.stub_responses(
+        :retrieve_and_generate, {
+          citations: [
+            {
+              generated_response_part: {
+                text_response_part: {
+                  span: {
+                    end: 55,
+                    start: 0
+                  },
+                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                }
+              },
+              retrieved_references: [
+                {
+                  content: {
+                    text: "Hwaet! We gar-dena in geardagum, theod-cyninga thrym gefrunon"
+                  },
+                  location: {
+                    s3_location: {
+                      uri: "s3://dummy_file"
+                    },
+                    type: "S3"
+                  }
+                }
+              ]
+            }
+          ],
+          output: {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          session_id: "fake_session_id"
+        }
+      )
+      return client
+    else
+      Aws::BedrockAgentRuntime::Client.new
+    end
   end
 
   def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
@@ -119,6 +170,9 @@ module AiDiffBedrockHelper
   end
 
   def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id)
+    puts "puts in request_bedrock_rag_chat"
+    ChatClient.log("ChatClient in request_bedrock_rag_chat")
+    CDO.log.info("CDO.log.info in request_bedrock_rag_chat")
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
     config = filter_for_context(config, lesson_number, unit_num, course_name)
