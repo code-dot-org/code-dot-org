@@ -15,7 +15,7 @@ import {
 } from '../types';
 import {getAssetUrl} from '../utils';
 
-import PdfFilePreview from './assets/PdfFilePreview';
+import FilePreview from './assets/FilePreview';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
@@ -101,7 +101,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
               className={styles.assetButton}
               onClick={() => window.open(url, '_blank')}
             >
-              <PdfFilePreview filename={filename} url={url} />
+              <FilePreview type="pdf" filename={filename} url={url} />
             </button>
           ) : (
             <button
