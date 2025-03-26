@@ -7,7 +7,7 @@ import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterH
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import {FontSize} from '@cdo/apps/codebridge/constants';
+import {DEFAULT_FONT_SIZE_KEY, FontSize} from '@cdo/apps/codebridge/constants';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {setEditorFontSize} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
@@ -22,7 +22,6 @@ import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {trySetSessionStorage} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -33,13 +32,11 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties} = useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
-  const editorFontSize = useAppSelector(
+  const editorFontSizeKey = useAppSelector(
     state => state.codebridgeWorkspace.editorFontSizeKey
   );
-  const selectedFontSizeKey =
-    Object.entries(FontSize).find(
-      ([key, value]) => value === editorFontSize
-    )?.[0] || 'Medium';
+  console.log('editorFontSizeKey', editorFontSizeKey);
+  const selectedFontSizeKey = editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -101,13 +98,13 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     sendPythonCodeToMicroBit(pythonCode);
   };
 
-  const fontSizeOptions: GenericDropdownProps['items'] = [
-    {value: 'Tiny', text: 'tiny'},
-    {value: 'Small', text: 'small'},
-    {value: 'Medium', text: 'medium'},
-    {value: 'Large', text: 'large'},
-    {value: 'Huge', text: 'huge'},
-  ];
+  // fontSizeOptions contains a list of value/text, e.g., [{value: 'Tiny', text: 'Tiny'}, {value: 'Small', text: 'Small'}, ...]
+  const fontSizeOptions: GenericDropdownProps['items'] = Object.keys(FontSize)
+    .filter(key => isNaN(Number(key))) // Filters out the reverse enum keys.
+    .map(key => ({
+      value: key,
+      text: key,
+    }));
 
   const onClickSettings = async () => {
     const results = await dialogControl?.showDialog({
@@ -119,9 +116,9 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       dropdownLabel: '',
     });
     const selectedKey = extractUserInput(results) as keyof typeof FontSize;
-    dispatch(setEditorFontSize(selectedKey));
-    const sessionStorageKey = 'codeEditorFontSizeKey';
-    trySetSessionStorage(sessionStorageKey, selectedKey);
+    if (selectedKey && FontSize[selectedKey]) {
+      dispatch(setEditorFontSize(selectedKey));
+    }
   };
 
   return (

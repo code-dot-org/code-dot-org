@@ -9,7 +9,6 @@ import {FontSize, DEFAULT_FONT_SIZE_KEY} from '@cdo/apps/codebridge/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
@@ -38,12 +37,8 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const editorFontSizeKey = useAppSelector(
     state => state.codebridgeWorkspace.editorFontSizeKey
   );
-  const sessionStorageKey = 'codeEditorFontSizeKey';
-  const sessionStorage = tryGetSessionStorage(sessionStorageKey, false);
-  console.log('sessionStorage', sessionStorage);
-  const fontSizeKey =
-    sessionStorage || editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
-  const fontSize = FontSize[fontSizeKey as keyof typeof FontSize];
+  const fontSizeKey = editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
+  const fontSize = FontSize[fontSizeKey];
   console.log('fontSize', fontSize);
 
   // These two compartments control read-only settings.
