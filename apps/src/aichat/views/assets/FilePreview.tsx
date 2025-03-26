@@ -12,9 +12,9 @@ const FilePreview: React.FC<{
   type: 'pdf' | 'image';
   filename: string;
   url: string;
-  isLoading?: boolean;
+  isUploading?: boolean;
   onRemove?: () => void;
-}> = ({type, filename, url, isLoading, onRemove}) => {
+}> = ({type, filename, url, isUploading, onRemove}) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
@@ -42,7 +42,7 @@ const FilePreview: React.FC<{
   return (
     <div className={styles[`preview-${type}`]} title={filename}>
       {onRemove ? (
-        isLoading || (type === 'image' && !imageLoaded) ? (
+        isUploading || (type === 'image' && !imageLoaded) ? (
           <FontAwesomeV6Icon
             className={styles.topRightIcon}
             iconName={'circle-notch'}
@@ -73,13 +73,21 @@ const FilePreview: React.FC<{
         )
       ) : null}
       {type === 'image' ? (
-        <div style={!imageLoaded || isLoading ? {width: 52, height: 52} : {}}>
+        <div
+          className={
+            !imageLoaded || isUploading
+              ? styles['preview-image-loading']
+              : undefined
+          }
+        >
           <img
             alt=""
-            className={styles.imagePreview}
             src={url}
             ref={imageRef}
-            style={imageLoaded ? {} : {display: 'none'}}
+            className={classNames(
+              styles.imagePreview,
+              !imageLoaded && styles.hide
+            )}
           />
         </div>
       ) : (

@@ -53,7 +53,7 @@ const StagedFilesPreview: React.FC = () => {
               type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
               url={getAssetUrl(asset, currentChannelId, levelName)}
               filename={filename}
-              isLoading={status === 'uploading'}
+              isUploading={status === 'uploading'}
               onRemove={() => dispatch(removeStagedFile(key))}
             />
           );
