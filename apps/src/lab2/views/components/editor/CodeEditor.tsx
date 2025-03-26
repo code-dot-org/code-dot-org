@@ -118,10 +118,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   // When we have a new editorFontSize, reset font size.
   useEffect(() => {
-    console.log('useEffect - fontSize', fontSize);
     if (editorView) {
-      console.log('editorView');
-      fontSizeCompartment.reconfigure(getFontSizeTheme(fontSize));
+      editorView.dispatch({
+        effects: [fontSizeCompartment.reconfigure(getFontSizeTheme(fontSize))],
+      });
     }
   }, [fontSize, editorView, fontSizeCompartment]);
 

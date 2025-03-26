@@ -7,6 +7,7 @@ import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterH
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
+import {FontSize} from '@cdo/apps/codebridge/constants';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {setEditorFontSize} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
@@ -31,6 +32,15 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties} = useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
+  const editorFontSize = useAppSelector(
+    state => state.codebridgeWorkspace.editorFontSize
+  );
+  const selectedFontSizeKey =
+    Object.entries(FontSize).find(
+      ([key, value]) => value === editorFontSize
+    )?.[0] || 'Medium';
+
+  console.log('editorFontSize', editorFontSize);
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -92,25 +102,27 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     sendPythonCodeToMicroBit(pythonCode);
   };
 
+  const fontSizeOptions: GenericDropdownProps['items'] = [
+    {value: 'Tiny', text: 'tiny'},
+    {value: 'Small', text: 'small'},
+    {value: 'Medium', text: 'medium'},
+    {value: 'Large', text: 'large'},
+    {value: 'Huge', text: 'huge'},
+  ];
+
   const onClickSettings = async () => {
-    const fontSizeOptions: GenericDropdownProps['items'] = [
-      {value: 'tiny', text: 'tiny'},
-      {value: 'small', text: 'small'},
-      {value: 'medium', text: 'medium'},
-      {value: 'large', text: 'large'},
-      {value: 'huge', text: 'huge'},
-    ];
     const results = await dialogControl?.showDialog({
       type: DialogType.GenericDropdown,
       title: 'Settings',
       message: 'Customize your text editor font size',
-      selectedValue: fontSizeOptions[0].value,
+      selectedValue: selectedFontSizeKey,
       items: fontSizeOptions,
       dropdownLabel: '',
     });
-    const selectedFontSize = extractUserInput(results);
-    console.log('selectedFontSize', selectedFontSize);
-    dispatch(setEditorFontSize(25));
+    const selectedKey = extractUserInput(results) as keyof typeof FontSize;
+    const selectedFontSizeValue = FontSize[selectedKey];
+    console.log('selectedFontSize', selectedFontSizeValue);
+    dispatch(setEditorFontSize(selectedFontSizeValue));
   };
 
   return (
