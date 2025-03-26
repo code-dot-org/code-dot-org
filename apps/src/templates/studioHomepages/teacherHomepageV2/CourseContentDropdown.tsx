@@ -3,6 +3,8 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState, useMemo} from 'react';
 import {useNavigate} from 'react-router-dom';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
@@ -62,6 +64,13 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   }, [lessonList]);
 
   const onDropdownChange = (args: React.ChangeEvent<HTMLSelectElement>) => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED,
+      {
+        lesson: args.target.value,
+      },
+      PLATFORMS.BOTH
+    );
     if (args.target.value !== 'Go to') {
       if (!section.unitId) {
         const unit = args.target.value.replace('/s/', '');

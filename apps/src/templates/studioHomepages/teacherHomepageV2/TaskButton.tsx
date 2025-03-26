@@ -3,6 +3,8 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {TEACHER_NAVIGATION_SECTIONS_URL} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 import styles from './teacherHomepage.module.scss';
@@ -30,13 +32,22 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
 }) => {
   const navigate = useNavigate();
 
+  const onButtonClick = () => {
+    const navEvent =
+      path === 'progress'
+        ? EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED
+        : path === 'materials'
+        ? EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED
+        : EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED;
+    analyticsReporter.sendEvent(navEvent, {}, PLATFORMS.BOTH);
+    navigate(`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`);
+  };
+
   return (
     <button
       type={'button'}
       className={styles.taskButtons}
-      onClick={() =>
-        navigate(`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`)
-      }
+      onClick={onButtonClick}
     >
       <div className={styles.taskButtonLeft}>
         <FontAwesomeV6Icon
