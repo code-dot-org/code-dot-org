@@ -420,7 +420,7 @@ Resources:
   MarketingRouterLambdaRole:
     Type: AWS::IAM::Role
     Properties:
-      <%=multiple_service_role ['lambda', 'edgelambda']%>
+      <%=service_role ['lambda', 'edgelambda']%>
       Path: /
       Policies:
         - PolicyName: !Sub "${AWS::StackName}-marketing-lambda-execution-policy"
