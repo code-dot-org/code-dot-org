@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 72,
-  "created_at": "2024-07-01T09:35:38.000Z",
+  "created_at": "2024-08-14T03:26:18.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
@@ -30,10 +30,6 @@
     },
     "long_instructions": "##Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Which of the following matches what the program will print?",
     "hide_share_and_remix": "true",
-    "reference_links": [
-      "/courses/csa-2023/guides/instantiating-objects"
-    ],
-    "map_reference": "/docs/concepts/html/",
     "predict_settings": {
       "isPredictLevel": true,
       "solution": "It will print numbers 1 through 4",
@@ -49,8 +45,9 @@
       "isMultiSelect": false
     },
     "ai_tutor_available": "true",
-    "submittable": "false"
+    "submittable": "false",
+    "enable_micro_bit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-26T10:53:23.711-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 5\\\"\"],\"cloned_from\":\"Allthethings Python Lab 5\"},{\"changed_at\":\"2024-06-26 11:03:46 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 11:05:13 -0700\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:36:53 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:38:54 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:15:56 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:31:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:35:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-01 16:22:53 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-01 16:23:09 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 10:43:46 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 11:06:14 -0700\",\"changed\":[\"teacher_markdown\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 11:20:50 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-06 00:33:04 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-26T10:53:23.711-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 5\\\"\"],\"cloned_from\":\"Allthethings Python Lab 5\"},{\"changed_at\":\"2024-06-26 11:03:46 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 11:05:13 -0700\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:36:53 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:38:54 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:15:56 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:31:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:35:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-01 16:22:53 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-01 16:23:09 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 10:43:46 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 11:06:14 -0700\",\"changed\":[\"teacher_markdown\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 11:20:50 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-06 00:33:04 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"},{\"changed_at\":\"2025-03-24 21:02:37 +0000\",\"changed\":[\"reference_links\",\"map_reference\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

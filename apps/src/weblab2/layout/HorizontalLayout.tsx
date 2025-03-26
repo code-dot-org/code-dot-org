@@ -42,6 +42,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
       name: 'preview',
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
+    appName: 'weblab2',
   });
 
   return (

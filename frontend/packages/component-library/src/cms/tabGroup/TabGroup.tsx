@@ -24,17 +24,26 @@ export interface TabGroupTabModel extends Omit<TabModel, 'tabContent'> {
   };
 }
 export interface TabGroupProps
-  extends Omit<TabsProps, 'tabs' | 'mode' | 'size' | 'type' | 'onTabClose'> {
+  extends Omit<
+    TabsProps,
+    | 'tabs'
+    | 'mode'
+    | 'size'
+    | 'type'
+    | 'onTabClose'
+    | 'onChange'
+    | 'defaultSelectedTabValue'
+  > {
   /** Array of props for Tabs to render */
   tabs: (TabModel | TabGroupTabModel)[];
   /** The function that is called when a Tab is clicked/selected tab is changed */
-  onChange: (value: string) => void;
+  onChange?: (value: string) => void;
   /** The name attribute specifies the name of a Tabs group.
      The name attribute is used to reference elements in a JavaScript.
      */
   name: string;
   /** The value of the default selected Tab. Also can be used to change Selected tab from Consumer(Parent Component) */
-  defaultSelectedTabValue: string;
+  defaultSelectedTabValue?: string;
 }
 
 const isTabGroupTabModel = (
@@ -110,8 +119,8 @@ const parseTabsGroupTabToAccordionItem = (
  */
 const TabGroup: React.FunctionComponent<TabGroupProps> = ({
   tabs,
-  onChange,
-  defaultSelectedTabValue,
+  onChange = () => {},
+  defaultSelectedTabValue = '',
   name,
   ...rest
 }) => {

@@ -8,7 +8,6 @@ import {
   ColumnPanelConfig,
   RowPanelConfig,
 } from '@cdo/apps/lab2/views/components/layout/types';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The top Y coordinate of the panel. This is the height of the main page header.
 const PANEL_TOP_COORDINATE = 50;
@@ -18,6 +17,7 @@ interface UseHorizontalLayoutProps {
   rightTopPanel: RowPanelConfig;
   rightBottomPanel: RowPanelConfig;
   minRightPanelWidth: number;
+  appName: string;
   heightOffset?: number;
 }
 /**
@@ -34,6 +34,7 @@ export const useHorizontalLayout = ({
   rightTopPanel,
   rightBottomPanel,
   minRightPanelWidth,
+  appName,
   heightOffset = 0,
 }: UseHorizontalLayoutProps) => {
   const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
@@ -48,7 +49,6 @@ export const useHorizontalLayout = ({
   const [rightBottomPanelHeight, setrightBottomPanelHeight] = useState<
     number | undefined
   >(rightBottomPanel.initialHeight);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const {
     position: rawLeftPanelWidth,

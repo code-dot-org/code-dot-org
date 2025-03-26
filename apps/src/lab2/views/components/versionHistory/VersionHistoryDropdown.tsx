@@ -50,6 +50,7 @@ interface VersionHistoryDropdownProps {
   listLoadError: boolean;
   selectedVersion: string;
   setSelectedVersion: (version: string) => void;
+  appName: string;
 }
 
 const INITIAL_VERSION_ID = 'initial-version';
@@ -73,6 +74,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   listLoadError,
   selectedVersion,
   setSelectedVersion,
+  appName,
 }) => {
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
@@ -87,7 +89,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
 
   // If this is a teacher viewing a student's project, we hide the restore button,

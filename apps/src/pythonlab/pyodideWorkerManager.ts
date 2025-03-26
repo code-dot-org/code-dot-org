@@ -101,6 +101,12 @@ const setUpPyodideWorker = () => {
           .getMetricsReporter()
           .logError('Python Lab Internal Error', undefined, {message});
         break;
+      case 'load_failed':
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Failed to load packages', undefined, {message});
+        consoleManager?.writeErrorMessage(pythonlabI18n.loadFailed());
+        break;
       case 'loading_pyodide':
         getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
