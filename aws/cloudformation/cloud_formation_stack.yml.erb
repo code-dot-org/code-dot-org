@@ -435,15 +435,15 @@ Resources:
                 Action:
                   - logs:CreateLogGroup
                 Resource: 
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${MarketingRouterLambda.FunctionName}:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${MarketingRouterLambda.FunctionName}:*"
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:*"
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:*"
               - Effect: Allow
                 Action:
                   - logs:CreateLogStream
                   - logs:PutLogEvents
                 Resource:
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${MarketingRouterLambda.FunctionName}:log-stream:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${MarketingRouterLambda.FunctionName}:log-stream:*"
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:log-stream:*"
+                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:log-stream:*"
 <%  end -%>
 
 <% end -%>
