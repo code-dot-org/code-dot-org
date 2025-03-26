@@ -1,5 +1,5 @@
 class MigrateStandaloneUnitsPart1 < ActiveRecord::Migration[6.1]
-  def change
+  def up
     return if Rails.env.production?
 
     file_name = 'standalone_units_part1.txt'
@@ -28,5 +28,8 @@ class MigrateStandaloneUnitsPart1 < ActiveRecord::Migration[6.1]
     puts "There are still unmigrated units! Unmigrated Units: #{Unit.all.count(&:is_course?)}" if Unit.all.count(&:is_course?) > 0
 
     ENV.delete('MIGRATE_STANDALONE_UNITS')
+  end
+
+  def down
   end
 end
