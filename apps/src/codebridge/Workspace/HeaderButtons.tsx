@@ -29,6 +29,15 @@ import {useCodebridgeContext} from '../codebridgeContext';
 import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
+// fontSizeOptions contains a list of value/text from the FontSize enum,
+// e.g., [{value: 'Tiny', text: 'Tiny'}, {value: 'Small', text: 'Small'}, ...]
+const fontSizeOptions: GenericDropdownProps['items'] = Object.keys(FontSize)
+  .filter(key => isNaN(Number(key))) // Filters out the reverse enum keys.
+  .map(key => ({
+    value: key,
+    text: key,
+  }));
+
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties} = useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
@@ -97,14 +106,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     console.log('Flash file onto micro:bit');
     sendPythonCodeToMicroBit(pythonCode);
   };
-
-  // fontSizeOptions contains a list of value/text, e.g., [{value: 'Tiny', text: 'Tiny'}, {value: 'Small', text: 'Small'}, ...]
-  const fontSizeOptions: GenericDropdownProps['items'] = Object.keys(FontSize)
-    .filter(key => isNaN(Number(key))) // Filters out the reverse enum keys.
-    .map(key => ({
-      value: key,
-      text: key,
-    }));
 
   const onClickSettings = async () => {
     const results = await dialogControl?.showDialog({
