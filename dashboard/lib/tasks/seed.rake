@@ -305,8 +305,6 @@ namespace :seed do
        allthemigratedthings
        alltheselfpacedplthings
        allthettsthings
-       pre-express-2017
-       express-2017
        interactive-games-animations-2023
        customizing-llms-2024
        events
