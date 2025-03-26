@@ -12,11 +12,14 @@ class UnitGroupTest < ActiveSupport::TestCase
       File.stubs(:write)
     end
 
-    def populate_cache_and_disconnect_db
+    def populate_cache
       UnitGroup.stubs(:should_cache?).returns true
       @@course_cache ||= UnitGroup.course_cache_to_cache
       UnitGroup.course_cache
+    end
 
+    def populate_cache_and_disconnect_db
+      populate_cache
       # NOTE: ActiveRecord collection association still references an active DB connection,
       # even when the data is already eager loaded.
       # Best we can do is ensure that no queries are executed on the active connection.
@@ -41,6 +44,37 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       assert_equal uncached_unit_group, UnitGroup.get_from_cache('acourse')
       assert_equal uncached_unit_group, UnitGroup.get_from_cache(unit_group.id)
+    end
+
+    test "course cache should include associated models" do
+      unit_group = create(:unit_group, name: 'course-x')
+      unit = create :script, name: 'course-x-unit-1'
+      create(:unit_group_unit, unit_group: unit_group, position: 1, script: unit)
+      unit = create :script, name: 'course-x-unit-2'
+      create(:unit_group_unit, unit_group: unit_group, position: 2, script: unit)
+
+      UnitGroup.get_from_cache(unit_group.name)
+
+      populate_cache
+
+      unit_group = create(:unit_group, name: 'course-y')
+      unit = create :script, name: 'course-y-unit-1'
+      create(:unit_group_unit, unit_group: unit_group, position: 1, script: unit)
+      unit = create :script, name: 'course-y-unit-2'
+      create(:unit_group_unit, unit_group: unit_group, position: 2, script: unit)
+
+      # prepopulated unit group should have cached associations on first access
+      assert_queries(0, ignore_filters: []) do
+        unit_group = UnitGroup.get_from_cache('course-x')
+        assert_equal 2, unit_group.default_unit_group_units.length
+      end
+
+      # unit groups populated on cache miss should have cached associations
+      # on second access.
+      assert_cached_queries(0, ignore_filters: []) do
+        unit_group = UnitGroup.get_from_cache('course-y')
+        assert_equal 2, unit_group.default_unit_group_units.length
+      end
     end
   end
 
