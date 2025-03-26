@@ -365,6 +365,18 @@ svg text[fill] {
   color: white !important;
 }
 
+.noAttemptTag div {
+  background-color: var(--background-neutral-tertiary) !important;
+}
+
+.noAttemptTag div i {
+  color: var(--text-neutral-tertiary) !important;
+}
+
+.noAttemptTag div span {
+  color: var(--text-neutral-primary) !important;
+}
+
 .proficientIcon {
   color: var(--text-success-primary);
 }

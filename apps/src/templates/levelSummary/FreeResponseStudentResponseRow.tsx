@@ -7,6 +7,8 @@ import {
   StudentWorkEvaluation,
 } from '@cdo/apps/aiEvaluation/evaluationApi';
 
+import {FEEDBACK_TYPE} from './AiFeedbackType';
+
 import styles from './summary.module.scss';
 
 type FreeResponseStudentResponseRowProps = {
@@ -27,9 +29,9 @@ const FreeResponseStudentResponseRow: React.FC<
         <Tags
           tagsList={[
             {
-              label: 'Proficient',
+              label: FEEDBACK_TYPE.PROFICIENT.label,
               icon: {
-                iconName: 'circle-check',
+                iconName: FEEDBACK_TYPE.PROFICIENT.icon,
                 iconStyle: 'solid',
                 title: 'check',
                 placement: 'left',
@@ -37,7 +39,7 @@ const FreeResponseStudentResponseRow: React.FC<
             },
           ]}
           size="m"
-          //   className={styles.proficientTag}
+          className={styles.proficientTag}
         />
       );
     } else if (studentWorkEvaluation.aiEvaluation === 'needs revision') {
@@ -45,9 +47,9 @@ const FreeResponseStudentResponseRow: React.FC<
         <Tags
           tagsList={[
             {
-              label: 'Needs Revision',
+              label: FEEDBACK_TYPE.NEEDS_REVIEW.label,
               icon: {
-                iconName: 'circle-check',
+                iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
                 iconStyle: 'solid',
                 title: 'check',
                 placement: 'left',
@@ -55,7 +57,25 @@ const FreeResponseStudentResponseRow: React.FC<
             },
           ]}
           size="m"
-          //   className={styles.proficientTag}
+          className={styles.needsReviewTag}
+        />
+      );
+    } else if (studentWorkEvaluation.aiEvaluation === 'No attempt') {
+      return (
+        <Tags
+          tagsList={[
+            {
+              label: FEEDBACK_TYPE.NO_ATTEMPT.label,
+              icon: {
+                iconName: FEEDBACK_TYPE.NO_ATTEMPT.icon,
+                iconStyle: 'solid',
+                title: 'check',
+                placement: 'left',
+              },
+            },
+          ]}
+          size="m"
+          className={styles.noAttemptTag}
         />
       );
     }
