@@ -101,24 +101,24 @@ namespace :infra do
     :all,
     'test:ci'
   ]
-end
 
-desc 'Update the server as part of continuous integration.'
-timed_task_with_logging :ci do
-  # In the test environment, we want to build everything with tests. In most
-  # other environments, we want to do a full build including server
-  # redeployment, but in some environments (like the i18n server) we just want
-  # to run the build with no other actions.
-  desired_task =
-    if ENV['CI_ONLY_BUILD']
-      'infra:build'
-    elsif rack_env?(:test)
-      'infra:test'
-    else
-      'infra:all'
-    end
+  desc 'Update the server as part of continuous integration.'
+  timed_task_with_logging :ci do
+    # In the test environment, we want to build everything with tests. In most
+    # other environments, we want to do a full build including server
+    # redeployment, but in some environments (like the i18n server) we just
+    # want to run the build with no other actions.
+    desired_task =
+      if ENV['CI_ONLY_BUILD']
+        'infra:build'
+      elsif rack_env?(:test)
+        'infra:test'
+      else
+        'infra:all'
+      end
 
-  ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
+    ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
+  end
 end
 
 # Returns true if upgrade succeeded, false if failed.

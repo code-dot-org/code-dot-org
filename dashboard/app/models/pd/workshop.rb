@@ -217,12 +217,12 @@ class Pd::Workshop < ApplicationRecord
 
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_before(date)
-    joins(:sessions).group_by_id.having('(DATE(MIN(start)) <= ?)', date)
+    joins(:sessions).group_by_id.having('(DATE(MIN(pd_sessions.start)) <= ?)', date)
   end
 
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_after(date)
-    joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
+    joins(:sessions).group_by_id.having('(DATE(MIN(pd_sessions.start)) >= ?)', date)
   end
 
   scope(
@@ -238,7 +238,7 @@ class Pd::Workshop < ApplicationRecord
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)
-    joins(:sessions).
+    joins("INNER JOIN pd_sessions ON pd_sessions.pd_workshop_id = pd_workshops.id").
       group_by_id.
       # This SQL string is not at risk for injection vulnerabilites because
       # it's not injesting arbitrary strings, but programmatically constructing

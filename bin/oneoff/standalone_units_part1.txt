@@ -399,4 +399,3 @@ web-development-2023
 hello-world-space-2022
 hello-world-emoji-2021
 csp3-virtual
-sandbox-pl-cv
