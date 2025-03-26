@@ -20,6 +20,9 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {DialogType, useDialogControl} from '../lab2/views/dialogs';
+
+import ProjectTypePicker from './components/ProjectTypePicker';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -112,6 +115,17 @@ const PythonlabView: React.FunctionComponent<
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const dialogControl = useDialogControl();
+
+  useEffect(() => {
+    if (levelProperties.isProjectLevel && !initialSources) {
+      dialogControl?.showDialog({
+        type: DialogType.GenericDialog,
+        title: 'Choose your project type',
+        bodyComponent: <ProjectTypePicker />,
+      });
+    }
+  }, [levelProperties.isProjectLevel, initialSources, dialogControl]);
 
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {
