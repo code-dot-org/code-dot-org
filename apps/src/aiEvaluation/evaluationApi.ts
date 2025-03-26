@@ -1,4 +1,3 @@
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -84,7 +83,7 @@ async function evaluationFromOpenAI(
   evaluationType?: EvaluationType
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
-    studentWork: [{role: Role.USER, content: studentWork}],
+    studentWork: studentWork,
     levelId: levelId,
     unitId: unitId,
     evaluationType: evaluationType,

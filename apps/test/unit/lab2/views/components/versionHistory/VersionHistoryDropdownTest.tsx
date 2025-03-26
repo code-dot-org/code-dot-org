@@ -68,6 +68,7 @@ describe('VersionHistoryButton', () => {
           listLoadError={false}
           selectedVersion={'abc'}
           setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
         />
       </Provider>
     );
@@ -104,6 +105,7 @@ describe('VersionHistoryButton', () => {
           listLoadError={false}
           selectedVersion={'2'}
           setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
         />
       </Provider>
     );
@@ -143,6 +145,7 @@ describe('VersionHistoryButton', () => {
           listLoadError={false}
           selectedVersion={'initial-version'}
           setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
         />
       </Provider>
     );
@@ -166,6 +169,7 @@ describe('VersionHistoryButton', () => {
           listLoadError={false}
           selectedVersion={'3'} // 3 is latest version
           setSelectedVersion={setSelectedVersion}
+          appName={'pythonlab'}
         />
       </Provider>
     );

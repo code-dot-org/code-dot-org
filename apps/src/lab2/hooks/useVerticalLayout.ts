@@ -4,7 +4,6 @@ import {useResizable} from 'react-resizable-layout';
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {ColumnPanelConfig} from '@cdo/apps/lab2/views/components/layout/types';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 
@@ -12,6 +11,7 @@ interface UseVerticalLayoutProps {
   leftPanel: ColumnPanelConfig;
   middlePanel: ColumnPanelConfig;
   rightPanel: ColumnPanelConfig;
+  appName: string;
 }
 
 /**
@@ -25,6 +25,7 @@ export const useVerticalLayout = ({
   leftPanel,
   middlePanel,
   rightPanel,
+  appName,
 }: UseVerticalLayoutProps) => {
   const [leftPanelWidth, setLeftPanelWidth] = useState<number | undefined>(
     leftPanel.initialWidth
@@ -35,7 +36,6 @@ export const useVerticalLayout = ({
   const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
     rightPanel.initialWidth
   );
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const {
     position: rawLeftPanelWidth,

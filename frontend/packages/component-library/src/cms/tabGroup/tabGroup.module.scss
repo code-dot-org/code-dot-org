@@ -42,6 +42,7 @@ $mobileBreakpoint: 1024px;
   border-radius: 0 0 variables.$regular-border-radius
     variables.$regular-border-radius;
   border: 1px solid var(--borders-neutral-primary);
+  border-top: 0;
   background: var(--background-neutral-primary);
 }
 

@@ -18,6 +18,7 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 interface VersionHistoryProps {
   startSources: ProjectSources;
   updatedSourceCallback?: (source: ProjectSources) => void;
+  appName: string;
 }
 
 /**
@@ -26,6 +27,7 @@ interface VersionHistoryProps {
 const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   startSources,
   updatedSourceCallback,
+  appName,
 }) => {
   const [isVersionListLoaded, setIsVersionListLoaded] = useState(false);
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
@@ -117,6 +119,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           listLoading={loading}
           selectedVersion={selectedVersion}
           setSelectedVersion={setSelectedVersion}
+          appName={appName}
         />
       )}
     </div>

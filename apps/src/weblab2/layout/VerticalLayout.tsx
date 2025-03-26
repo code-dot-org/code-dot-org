@@ -36,6 +36,7 @@ const VerticalLayout: React.FunctionComponent = () => {
       initialWidth: INITIAL_PREVIEW_WIDTH,
       name: 'preview',
     },
+    appName: 'weblab2',
   });
 
   return (
