@@ -7,7 +7,7 @@ import teacherSections, {
   setCourseOfferings,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import '@cdo/apps/code-studio/pd/professional_learning_landing/tableStyles.scss';
+import '@cdo/apps/code-studio/pd/professional_learning/tableStyles.scss';
 
 import OwnedPlSectionsTable from './OwnedPlSectionsTable';
 

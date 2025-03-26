@@ -90,8 +90,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               course_url: @workshop.course_url,
               fee: @workshop.fee,
               properties: nil,
-              location_name: @workshop.friendly_location,
+              location_name: @workshop.location_name,
               virtual: @workshop.virtual?,
+              format: @workshop.format,
               course_offerings: @workshop.course_offerings
             }
           ),

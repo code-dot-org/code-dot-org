@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-25 03:16:33 UTC",
+    "serialized_at": "2025-03-26 02:21:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -247,6 +247,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**How can AI enhance creativity?**\n\nIn this lesson, students take on creative roles to design and launch a product or app that helps students succeed in school. Working in teams, they collaborate with AI across four stages—research, brainstorming, content generation, and editing—to co-create campaign materials like slogans, scripts, and visuals. The activity emphasizes decomposition, prompting strategy, and human-AI collaboration, helping students develop both technical and creative problem-solving skills.",
+        "preparation": "- Print copies of the Collaborate on a Product Launch activity guide (one for each student)",
+        "student_overview": "**How can AI enhance creativity?**\n\nIn this lesson, you’ll work with a team to help launch a brand-new product or app for students. You’ll use AI to research, brainstorm, and build your part of the campaign—like coming up with a name, writing a script, or designing a logo. You’ll learn how to guide the AI, improve its responses, and use your own creativity to make something original."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -262,6 +265,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**How do human strengths and AI capabilities interact?**\n\nThis lesson explores how AI can support human creativity through a hands-on remixing challenge. Students interact with AI to refine both their own creative content and AI-generated work, comparing the role of human input in both processes. The lesson emphasizes that while AI can enhance creative work, human judgment is essential for originality, nuance, and meaning.",
+        "preparation": "- Prepare copies of the AI Remix Challenge activity guide (one for each student)",
+        "student_overview": "**How do human strengths and AI capabilities interact?**\n\nIn this lesson, you explore how AI can support creativity by remixing and refining content. You compare your ideas with AI’s suggestions and decide what makes something truly creative."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -681,6 +687,90 @@
       }
     },
     {
+      "key": "04e86ab8-7255-44ab-bf7f-a2079c139458",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04e86ab8-7255-44ab-bf7f-a2079c139458",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "da13d0a0-0d7d-4c08-abf1-9d44eb0cadca",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da13d0a0-0d7d-4c08-abf1-9d44eb0cadca",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "08c46820-30c3-4e0e-ae50-59c272a760bd",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
       "key": "b64ed28b-4987-45c3-945d-a625672a4c71",
       "position": 1,
       "properties": {
@@ -750,7 +840,8 @@
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *artificial intelligence*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Predict the word that you think will probably come next in the following sentence: The dog barked at the...*\n- Ask students to predict the word that they think will probably come next (i.e. the most common word) and provide a reason for why they chose that word. Have all students raise their hand when they think of an answer. Start calling on students and have other students put down their hand if someone is called on who has the same answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will see that there are several common possibilities that are chosen. Common words might include squirrel, mailman, stranger, etc. However, there will also be outliers that might not be as common (e.g. my aunt Lucy). Having students recognize that there are more and less common responses is a first step towards understanding how probability works while making this sort of prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the AI Chat in Lesson 1, Level 1 for students.",
         "duration": "10",
-        "name": "AI Predictions"
+        "name": "AI Predictions",
+        "progression_name": "AI Predictions"
       },
       "seeding_key": {
         "activity_section.key": "9f960284-44c1-415d-bad3-c48d0b39843d",
@@ -847,7 +938,8 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students input \"Give me 3 gift ideas\" into AI Chat.\n- **Level 3:** Students input a more specific prompt that defines the person who is getting the gift.\n- **Level 4:** Students upload an image to accompany the specific prompt that they reuse from Level 3.",
         "duration": "20",
-        "name": "Prompting AI"
+        "name": "Prompting AI",
+        "progression_name": "Prompting AI"
       },
       "seeding_key": {
         "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac",
@@ -886,6 +978,7 @@
       "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5. Students choose one of the AI Chat levels that is configured for a specific task. They start by giving the AI Chat a generic prompt first (such as \"Help me plan a trip to Disney World\"), then make it more specific, then make it more specific and add an image. Students should update their prompt or interact with the AI Chat in at least three back and forth interactions.",
+        "progression_name": "Prompting Practice",
         "tips": [
           {
             "type": "teachingTip",
@@ -913,6 +1006,7 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 1, Level 6 to complete the formative assessment. Display students' anonymous responses.",
+        "progression_name": "Check Your Understanding",
         "tips": [
           {
             "type": "teachingTip",
@@ -1079,10 +1173,22 @@
       }
     },
     {
-      "key": "e8fde249-e978-4be0-bbbe-b4a75cb32d27",
+      "key": "0c05cfc1-7846-4109-b08f-7ef68332e958",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 and 2.\n- **Level #1:** Students review multimodal concepts\n- **Level #2:** Students upload an image and ask AI Chat to describe it. Students should complete the \"What's in an image?\" and \"Privacy and Ethical Concerns\" sections in their Unit Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students noticing unexpected AI-detected details (e.g., time of day, inferred location). If students struggle, ask students, \"Did AI describe something you missed?\" or \"Did AI infer anything beyond what’s in the image?\"",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 and 2.\n- **Level #1:** Students review multimodal concepts\n- **Level #2:** Students upload an image and ask AI Chat to describe it. Students should complete the \"What's in an image?\" and \"Privacy and Ethical Concerns\" sections in their Unit Guide.",
+        "progression_name": "AI's Image Observation Skills"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c05cfc1-7846-4109-b08f-7ef68332e958",
+        "lesson_activity.key": "745cb615-ab86-444a-8c1c-4f06dcd908a6"
+      }
+    },
+    {
+      "key": "e8fde249-e978-4be0-bbbe-b4a75cb32d27",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students noticing unexpected AI-detected details (e.g., time of day, inferred location). If students struggle, ask students, \"Did AI describe something you missed?\" or \"Did AI infer anything beyond what’s in the image?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1097,7 +1203,7 @@
     },
     {
       "key": "9acdc2c7-e2d9-4742-b808-04deb029c299",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -1107,7 +1213,7 @@
     },
     {
       "key": "1871fd33-a3df-4065-91f4-10048e8fb626",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n- *What should we consider before sharing images online with AI tools?*\n- *What are the benefits and risks of AI interpreting images without human context?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that AI can infer more than just visible objects in an image, including time, location, and personal details. They should critically evaluate privacy risks and ethical concerns when sharing images with AI.\n",
         "tips": [
@@ -1124,11 +1230,12 @@
     },
     {
       "key": "caa09099-8ad9-475d-a520-030c2aacab13",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Level 3. Students prompt the chatbot to suggest improvements, first based off of a text-only description and then based on an image.",
         "duration": "20",
-        "name": "Scenario-Based Multimodal Prompting"
+        "name": "Scenario-Based Multimodal Prompting",
+        "progression_name": "Scenario-Based Prompting"
       },
       "seeding_key": {
         "activity_section.key": "caa09099-8ad9-475d-a520-030c2aacab13",
@@ -1137,7 +1244,7 @@
     },
     {
       "key": "b6509910-92ec-4434-961e-72bea07b5782",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students who struggle to explain why AI's response changed when using text vs. images. If needed, ask: \"What new details did AI include when you used an image? Was the response more specific or more general?\""
       },
@@ -1147,10 +1254,22 @@
       }
     },
     {
-      "key": "1e609ee4-87cf-4f2e-b2fd-b4e60c57afc3",
-      "position": 8,
+      "key": "6ec685fc-93d2-40d9-93e4-29ca808d5b2d",
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 2, Level 4 to complete the formative assessment.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students' anonymous responses, and choose one of the three approaches below based on how students did:\n\n- **Option 1: Whole-Class Poll & Debrief (Quick Check-In)**\n\n   - Display the poll results for the multiple choice question.\n\n   - Call on 2-3 students from each answer group (Text Only vs Text +Image) to explain their reasoning\n\n   - Wrap up by asking students: “How does this confirm or challenge what we learned about effective prompting?”\n\n- **Option 2: Small Group Discussion & Class Share-Out (Collaborative)**\n\n   - Assign students to groups of 3-4.\n\n   - Each group discusses: How did AI’s response change when you included an image? and What do you think influenced AI’s different responses?\n\n   - Groups write down 1-2 insights on a shared board (physical or digital).\n\n   - Teacher facilitates a brief whole-class discussion based on key themes.\n\n- **Option 3: Silent Gallery Walk (Reflective)**\n\n   - Post anonymized student responses using the “View Student Responses” Pin Response feature.\n\n   - Students independently respond to pinned responses using:\n\n   - Agree/Disagree: Do they agree with the reasoning? Why?\n\n   - Question: What would they ask this student to clarify?\n\n   - Connection: How does this relate to prior learning?\n\n   - End with whole-class synthesis: What patterns or surprises did students notice?\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 2, Level 4 to complete the formative assessment.",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ec685fc-93d2-40d9-93e4-29ca808d5b2d",
+        "lesson_activity.key": "745cb615-ab86-444a-8c1c-4f06dcd908a6"
+      }
+    },
+    {
+      "key": "1e609ee4-87cf-4f2e-b2fd-b4e60c57afc3",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students' anonymous responses, and choose one of the three approaches below based on how students did:\n\n- **Option 1: Whole-Class Poll & Debrief (Quick Check-In)**\n\n   - Display the poll results for the multiple choice question.\n\n   - Call on 2-3 students from each answer group (Text Only vs Text +Image) to explain their reasoning\n\n   - Wrap up by asking students: “How does this confirm or challenge what we learned about effective prompting?”\n\n- **Option 2: Small Group Discussion & Class Share-Out (Collaborative)**\n\n   - Assign students to groups of 3-4.\n\n   - Each group discusses: How did AI’s response change when you included an image? and What do you think influenced AI’s different responses?\n\n   - Groups write down 1-2 insights on a shared board (physical or digital).\n\n   - Teacher facilitates a brief whole-class discussion based on key themes.\n\n- **Option 3: Silent Gallery Walk (Reflective)**\n\n   - Post anonymized student responses using the “View Student Responses” Pin Response feature.\n\n   - Students independently respond to pinned responses using:\n\n   - Agree/Disagree: Do they agree with the reasoning? Why?\n\n   - Question: What would they ask this student to clarify?\n\n   - Connection: How does this relate to prior learning?\n\n   - End with whole-class synthesis: What patterns or surprises did students notice?\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1165,7 +1284,7 @@
     },
     {
       "key": "e56352cf-1319-4af5-897e-ac23af992aa5",
-      "position": 9,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -1175,7 +1294,7 @@
     },
     {
       "key": "209ad81f-5295-4c32-8b9e-d8a6ad3cbb34",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "Now that we've discussed your findings, let's practice using multimodal AI in a scenario!",
         "remarks": true
@@ -1187,9 +1306,10 @@
     },
     {
       "key": "65b58ef8-3ffe-4d3a-894e-8d5d6cdfe715",
-      "position": 11,
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Levels 5 to pick one of the scenarios to practice prompting the AI for suggestions using images and text."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Levels 5 to pick one of the scenarios to practice prompting the AI for suggestions using images and text.",
+        "progression_name": "Practice with a Multimodal Model"
       },
       "seeding_key": {
         "activity_section.key": "65b58ef8-3ffe-4d3a-894e-8d5d6cdfe715",
@@ -1198,7 +1318,7 @@
     },
     {
       "key": "b1d63422-2af4-40ab-9447-31921ee8b1ce",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students recognize how AI's response shifts when using text vs. images. If students only describe objects AI listed, ask: \"Did AI provide any deeper insights beyond what you expected?\"",
         "tips": [
@@ -1390,7 +1510,8 @@
       "key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 on Code Studio to complete Levels 1 through 3 of the Prompting Challenges activity. For each level, students will choose one of three options based on a real-world career path:\n- **Level 1:** Students provide a basic, unstructured prompt for their chosen career path.\n- **Level 2:** Students add one example to guide the AI's response.\n- **Level 3:** Students refine the prompt with multiple details and structure to improve accuracy."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 on Code Studio to complete Levels 1 through 3 of the Prompting Challenges activity. For each level, students will choose one of three options based on a real-world career path:\n- **Level 1:** Students provide a basic, unstructured prompt for their chosen career path.\n- **Level 2:** Students add one example to guide the AI's response.\n- **Level 3:** Students refine the prompt with multiple details and structure to improve accuracy.",
+        "progression_name": "Prompting Challenges"
       },
       "seeding_key": {
         "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410",
@@ -1675,7 +1796,8 @@
       "key": "f22be262-af56-494e-9f98-576f83cff9a1",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs for the purpose of having a thought partner to share experiences and ranking with for the next activity.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 3 to test AI's performance on different tasks. Students should complete the \"Human vs AI Response Comparison\" section of their Unit Guide as they interact with each task.\n- **Level #1:** Students test AI's ability to solve a math problem. They rate how well a human would do and how the AI did.\n- **Level #2:** Students test AI's ability to answer a creative or tricky question. They rate how well a human would do and how the AI did.\n- **Level #3:** Students test AI's ability to provide historical or technical information. They rate how well a human would do and how the AI did.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs for the purpose of having a thought partner to share experiences and ranking with for the next activity.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 3 to test AI's performance on different tasks. Students should complete the \"Human vs AI Response Comparison\" section of their Unit Guide as they interact with each task.\n- **Level #1:** Students test AI's ability to solve a math problem. They rate how well a human would do and how the AI did.\n- **Level #2:** Students test AI's ability to answer a creative or tricky question. They rate how well a human would do and how the AI did.\n- **Level #3:** Students test AI's ability to provide historical or technical information. They rate how well a human would do and how the AI did.\n",
+        "progression_name": "AI vs Human Tasks"
       },
       "seeding_key": {
         "activity_section.key": "f22be262-af56-494e-9f98-576f83cff9a1",
@@ -1806,7 +1928,8 @@
       "key": "ce12e241-ac6a-40bc-b7d8-32903c57be68",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 4, Level 4 to complete the formative assessment."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 4, Level 4 to complete the formative assessment.",
+        "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ce12e241-ac6a-40bc-b7d8-32903c57be68",
@@ -1904,8 +2027,9 @@
       "key": "b0b8ef13-9b12-4af8-8522-6c68009247eb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask the class for a topic (e.g., space, animals, history, music, etc.).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use Lesson 5, Level 1 to demo entering the following prompt: \"Tell me 2 truths and a lie about [insert topic]. Don't tell me which ones are truths or lies.\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students partner up and try to guess which AI-generated statements are true and which is the lie.\n",
-        "name": "Two Truths and a Lie"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask the class for a topic (e.g., space, animals, history, music, etc.).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use Lesson 5, Level 1 to demo entering the following prompt: \"Tell me 2 truths and a lie about [insert topic]. Don't tell me which ones are truths or lies.\"\n",
+        "name": "Two Truths and a Lie",
+        "progression_name": "Two Truths and a Lie"
       },
       "seeding_key": {
         "activity_section.key": "b0b8ef13-9b12-4af8-8522-6c68009247eb",
@@ -1913,8 +2037,19 @@
       }
     },
     {
-      "key": "330f3a5a-1a4a-478c-b285-d5051a3c7e06",
+      "key": "51374cc0-c40f-452a-8b59-4c643d915f48",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students partner up and try to guess which AI-generated statements are true and which is the lie."
+      },
+      "seeding_key": {
+        "activity_section.key": "51374cc0-c40f-452a-8b59-4c643d915f48",
+        "lesson_activity.key": "d0142471-9b3e-4d4c-a652-079bac60bb62"
+      }
+    },
+    {
+      "key": "330f3a5a-1a4a-478c-b285-d5051a3c7e06",
+      "position": 3,
       "properties": {
         "description": "AI might not always produce the results that is expected. The result might even be contradictory. Therefore, fact-checking AI's results is an important step of the process.",
         "remarks": true
@@ -1926,9 +2061,9 @@
     },
     {
       "key": "516a79d4-eca9-4bcb-aed7-0ef73134038b",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate fact-checking by researching online using Google and/or credible websites to verify which statements are true and which is a lie.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why might AI generate a lie or inaccurate information?*\n- *How do we ensure accuracy when using AI?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that AI generates responses based on patterns in data rather than verified facts. They should discuss how AI lacks direct knowledge, can misinterpret ambiguous prompts, and sometimes \"hallucinates\" information because it is designed to predict plausible-sounding text rather than confirm truth. Students highlight the importance of human judgement in verifying AI-generated content. Students should identify fact-checking strategies, such as cross-referencing multiple reliable sources (using official or expert-verified information) and critically analyze responses for logical consistency.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate fact-checking by researching online using Google and credible websites to verify which statements are true and which is a lie.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why might AI generate a lie or inaccurate information?*\n- *How do we ensure accuracy when using AI?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that AI generates responses based on patterns in data rather than verified facts. They should discuss how AI lacks direct knowledge, can misinterpret ambiguous prompts, and sometimes \"hallucinates\" information because it is designed to predict plausible-sounding text rather than confirm truth. Students highlight the importance of human judgement in verifying AI-generated content. Students should identify fact-checking strategies, such as cross-referencing multiple reliable sources (using official or expert-verified information) and critically analyze responses for logical consistency.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "516a79d4-eca9-4bcb-aed7-0ef73134038b",
@@ -1939,9 +2074,10 @@
       "key": "c86228d5-30ff-4ec0-998a-66e2fbdafc7f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *contradiction*.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the*Contradictions in Real World Contexts*activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Using their activity guide, students will review two contradictory AI responses from a telehealth chatbot.\n- **Step 1:** Students review both AI-generated responses.\n- **Step 2:** Students highlight contradictions, vague statements, or misleading claims, such as the conflicting advice on whether or not immediate medical attention is necessary.\n- **Step 3:** Students fact-check the AI's claims using reliable sources (e.g., trusted medical websites or professional guidelines).\n- **Step 4:** Students refine the provided prompt to get a more consistent and clearer response from the AI.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does the AI's lack of specialization in the medical field contribute to contradictions?*\n- *How can fact-checking and prompt refinement help improve AI-generated responses in real-world contexts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognized that AI models do not have deep expertise like medical professionals. They should discuss how AI relies on broad datasets that may contain conflicting or outdated information, which leads to contradictions. Students should understand that fact-checking ensures accuracy by verifying AI-generated information against trusted sources. They should also recognize that refining prompts (e.g. specifying a reliable source, adding context, etc.) helps AI produce clearer and more relevant responses.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *contradiction*.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Examining AI Contradictions activity guide.\n\n",
         "duration": "15",
-        "name": "Contradictions in Real-World Contexts"
+        "name": "Contradictions in Real-World Contexts",
+        "progression_name": "Examining AI Contradictions Activity Guide"
       },
       "seeding_key": {
         "activity_section.key": "c86228d5-30ff-4ec0-998a-66e2fbdafc7f",
@@ -1949,8 +2085,19 @@
       }
     },
     {
-      "key": "9f1da3e0-f0b4-4342-aa8c-62930b494a5c",
+      "key": "f6264f43-f64d-40fa-bc33-311e835c59a8",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Using their activity guide, students will review two contradictory AI responses from a telehealth chatbot.\n- **Step 1:** Students review both AI-generated responses.\n- **Step 2:** Students highlight contradictions, vague statements, or misleading claims, such as the conflicting advice on whether or not immediate medical attention is necessary.\n- **Step 3:** Students fact-check the AI's claims using reliable sources (e.g., trusted medical websites or professional guidelines).\n- **Step 4:** Students refine the provided prompt to get a more consistent and clearer response from the AI.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does the AI's lack of specialization in the medical field contribute to contradictions?*\n- *How can fact-checking and prompt refinement help improve AI-generated responses in real-world contexts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognized that AI models do not have deep expertise like medical professionals. They should discuss how AI relies on broad datasets that may contain conflicting or outdated information, which leads to contradictions. Students should understand that fact-checking ensures accuracy by verifying AI-generated information against trusted sources. They should also recognize that refining prompts (e.g. specifying a reliable source, adding context, etc.) helps AI produce clearer and more relevant responses.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6264f43-f64d-40fa-bc33-311e835c59a8",
+        "lesson_activity.key": "009fc6b4-9387-40c9-be4f-d5cbf3219fdd"
+      }
+    },
+    {
+      "key": "9f1da3e0-f0b4-4342-aa8c-62930b494a5c",
+      "position": 3,
       "properties": {
         "description": "AI models do not have deep expertise like medical professionals. AI relies on broad datasets that may contain conflicting or outdated information, which leads to contradictions. Fact-checking ensures accuracy by verifying AI-generated information against trusted sources. Refining prompts by doing things like specifying a reliable source or adding context helps AI produce clearer and more relevant responses.",
         "remarks": true
@@ -1962,7 +2109,7 @@
     },
     {
       "key": "7bec07c4-bdc4-46e4-a3f1-7c240fa46d20",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the differences between where an AI and a medical professional acquire information."
       },
@@ -1973,11 +2120,12 @@
     },
     {
       "key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 3 to complete Levels 3 through 6. Students choose a different topic in this choice level (e.g., government, nutrition, science, law, social media). In pairs, students practice with the various forms of questioning provided and discuss the results.",
         "duration": "10",
-        "name": "AI Contradictions in Practice"
+        "name": "AI Contradictions in Practice",
+        "progression_name": "AI Contradictions in Practice"
       },
       "seeding_key": {
         "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d",
@@ -1986,7 +2134,7 @@
     },
     {
       "key": "7b9a6d70-a33f-4442-bc55-4c4b1db1e401",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the three different ways in which students were asked to refine the prompt in the previous activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *context*.\n"
       },
@@ -1997,9 +2145,10 @@
     },
     {
       "key": "398d1d06-9b00-4726-9f0a-c14752d7ad65",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 7. In pairs, students practice prompting the AI Chat with different framings of their own questions to see if they can produce AI contradictions and can experience themselves how their framing can alter the response an AI outputs."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 7. In pairs, students practice prompting the AI Chat with different framings of their own questions to see if they can produce AI contradictions and can experience themselves how their framing can alter the response an AI outputs.",
+        "progression_name": "Try Your Own"
       },
       "seeding_key": {
         "activity_section.key": "398d1d06-9b00-4726-9f0a-c14752d7ad65",
@@ -2008,9 +2157,10 @@
     },
     {
       "key": "8a52ef56-3107-46fb-a91e-8718f59a9259",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 5, Level 8 to complete the formative assessment on Levels 8 and 9.",
+        "progression_name": "Check Your Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2138,7 +2288,8 @@
       "key": "17c65615-318a-4287-9113-18fe72e83aab",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to explore AI-generated descriptions of different professions – a nurse and doctor. Students should complete the AI Bias Analysis section of their activity guide as they interact with each task."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to explore AI-generated descriptions of different professions – a nurse and doctor. Students should complete the AI Bias Analysis section of their activity guide as they interact with each task.",
+        "progression_name": "Describe a ____"
       },
       "seeding_key": {
         "activity_section.key": "17c65615-318a-4287-9113-18fe72e83aab",
@@ -2188,7 +2339,7 @@
       "key": "3168e3fc-021c-4b8d-bbc1-b7cc7e74b0e8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 6, Level 1. Refine the original prompts to improve neutrality. Students document their refined prompts and compare AI's new responses in the AI Bias Analysis Chart section of their activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Return students to Lesson 6, Level 1. Refine the original prompts to improve neutrality. Students document their refined prompts and compare AI's new responses in the AI Bias Analysis Chart section of their activity guide."
       },
       "seeding_key": {
         "activity_section.key": "3168e3fc-021c-4b8d-bbc1-b7cc7e74b0e8",
@@ -2223,6 +2374,7 @@
       "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 6, Level 2 to complete the formative assessment.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \n- Students answer the multiple-select question: \"How could AI developers make adjustments to reduce bias?\"\n- Use the \"View Student Responses\" feature to analyze the class results.\n- Ask students: \"What do you notice?\" and \"What do you wonder?\" Have them discuss with a partner before selecting a few volunteers to share.\n",
+        "progression_name": "Check Your Understanding",
         "tips": [
           {
             "type": "teachingTip",
@@ -2268,7 +2420,8 @@
       "key": "d7255ef4-c82e-4d0c-8a8d-e5508b961c13",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 6, Level 3. Students choose one decision-making role:\n- **Hiring Manager:** Selects top candidates for job interviews.\n- **College Admissions Officer:** Picks students for acceptance.\n- **Hospital Triage Nurse:** Prioritizes patients for urgent care.\n\nThen students review the candidate pool and select two candidates based on their qualifications. They record and justify selections in the activity guide.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 6, Level 3. Students choose one decision-making role:\n- **Hiring Manager:** Selects top candidates for job interviews.\n- **College Admissions Officer:** Picks students for acceptance.\n- **Hospital Triage Nurse:** Prioritizes patients for urgent care.\n\nThen students review the candidate pool and select two candidates based on their qualifications. They record and justify selections in the activity guide.\n",
+        "progression_name": "Decision-Making Roles"
       },
       "seeding_key": {
         "activity_section.key": "d7255ef4-c82e-4d0c-8a8d-e5508b961c13",
@@ -2302,7 +2455,8 @@
       "key": "ff9095e1-3065-451e-a087-a9f150839c7b",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 4, where they will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own. After reviewing AI's choices, students will refine their prompt to better align with their group's priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.\n\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 4, where they will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own. After reviewing AI's choices, students will refine their prompt to better align with their group's priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.\n\n",
+        "progression_name": "AI Audit Challenge"
       },
       "seeding_key": {
         "activity_section.key": "ff9095e1-3065-451e-a087-a9f150839c7b",
@@ -2527,7 +2681,8 @@
       "key": "7209e092-7571-488a-a754-bca52da5cb33",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 2.\n- **Level #1:** Students review how to reduce AI hallucinations.\n- **Level #2:** Students complete a formative assessment.\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 2.\n- **Level #1:** Students review how to reduce AI hallucinations.\n- **Level #2:** Students complete a formative assessment.\n",
+        "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
         "activity_section.key": "7209e092-7571-488a-a754-bca52da5cb33",
@@ -2661,7 +2816,8 @@
       "key": "ffe21f54-8b26-4ad5-bad8-6bd8f87471b6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Direct students to take out their Problem Solving with AI Unit Guide.****\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 8, Level 1 to practice providing the core task or objective the AI needs to address. Students should complete the corresponding section of their Unit Guide.\n"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Direct students to take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 8, Level 1 to practice providing the core task or objective the AI needs to address. Students should complete the corresponding section of their Unit Guide.\n",
+        "progression_name": "Adding a Task"
       },
       "seeding_key": {
         "activity_section.key": "ffe21f54-8b26-4ad5-bad8-6bd8f87471b6",
@@ -2672,7 +2828,8 @@
       "key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room and engage students in thoughtful reflection by asking, \"How did AI's response change after you added context?\" or \"Did AI follow your requested format? Why or why not?\" or \"What's still missing from AI's response?\". Offer guidance if a prompt remains too vague (e.g., \"Make sure you tell the AI exactly what you want it to do!\").\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What task did you add to the original prompt?*\n- *How did refining the prompt improve AI's output?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The aim is for students to recognize that making the Task explicit often leads to more focused and relevant AI replies. They should see how even small changes in wording can clarify the objective for the AI. This discussion should serve as an opportunity for guided practice before students work independently through the next four refining output activities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 5. Students should complete the corresponding sections of their Unit Guide.\n- **Level #2:** Students practice providing necessary background information to give context for the task.\n- **Level #3:** Students practice providing references, examples, or models to guide the AI.\n- **Level #4:** Students practice specifying the format in which the response should be delivered.\n- **Level #5:** Students practice setting the tone for the AI response.\n"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room and engage students in thoughtful reflection by asking, \"How did AI's response change after you added context?\" or \"Did AI follow your requested format? Why or why not?\" or \"What's still missing from AI's response?\". Offer guidance if a prompt remains too vague (e.g., \"Make sure you tell the AI exactly what you want it to do!\").\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What task did you add to the original prompt?*\n- *How did refining the prompt improve AI's output?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The aim is for students to recognize that making the Task explicit often leads to more focused and relevant AI replies. They should see how even small changes in wording can clarify the objective for the AI. This discussion should serve as an opportunity for guided practice before students work independently through the next four refining output activities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 5. Students should complete the corresponding sections of their Unit Guide.\n- **Level #2:** Students practice providing necessary background information to give context for the task.\n- **Level #3:** Students practice providing references, examples, or models to guide the AI.\n- **Level #4:** Students practice specifying the format in which the response should be delivered.\n- **Level #5:** Students practice setting the tone for the AI response.\n",
+        "progression_name": "AI Prompting Framework"
       },
       "seeding_key": {
         "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af",
@@ -2708,6 +2865,7 @@
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students refine a generic prompt using the Prompting Framework to improve accuracy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 6 to complete Levels 6 through 8.\n- **Level #6:** This panel level serves as a review of the key elements of prompt refinement.\n- **Level #7:** Students choose a generic prompt to improve. They use at least three elements (Task, Context, Reference, Format, Tone) and iterate on their prompt until they have one that consistently generates helpful AI output.\n- **Level #8:** Students copy their revised prompt from Level 7 into the free response level. Then they explain why their revised prompt led to a better result than the initial generic prompt.\n",
         "duration": "10",
         "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2764,6 +2922,592 @@
       }
     },
     {
+      "key": "775ad681-eabb-42d2-b4ef-928a05b77aea",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students understand the importance of keeping a human in the loop and where AI might lack creativity or insight.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the \"AI Essay Critique\" section in their Unit Guide to read the paragraph. Explain that the paragraph was generated by an AI using the basic prompt: \"Write a personal essay\". Direct students to identify what the AI did well and where a human might add more value to the writing.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What does this introduction do well?*\n- *What is it lacking?*\n- *How could a human collaborating with AI improve this draft?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that AI produces technically correct and well-structured writing. Students also note that AI writing can lack originality, emotion, and personal voice. They suggest ideas about collaborating with AI to \"fine-tune\" the response, or to improving their prompts to provide more context for the original response. This activity lays the groundwork for today’s project. Students will later collaborate with AI themselves to generate and refine creative content, so this is a chance to start thinking critically about how AI performs.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *If AI struggles with originality in personal essays, how might that apply to creative fields like marketing, advertising, and branding?*\n- Stand and Share: students stand and form small groups of 3-4 students from different tables or rows. After discussing the prompt, each group picks one representative to share their ideas with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students make connections between AI’s limitations in personal essays to similar creative challenges in other fields. They understand that creative ideas in marketing and branding will require emotional connections, cultural relevance, and distinct voices that AI will need human input on to be truly effective.",
+        "name": "AI Essay Critique",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle, prompt them with: \"Would you trust AI to write a Super Bowl ad? Why or why not?\" or \"What makes a good slogan or ad? Could AI come up with it on its own?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "775ad681-eabb-42d2-b4ef-928a05b77aea",
+        "lesson_activity.key": "04e86ab8-7255-44ab-bf7f-a2079c139458"
+      }
+    },
+    {
+      "key": "4c720b47-6ee5-4826-a563-81ff37f98c38",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4c720b47-6ee5-4826-a563-81ff37f98c38",
+        "lesson_activity.key": "04e86ab8-7255-44ab-bf7f-a2079c139458"
+      }
+    },
+    {
+      "key": "f0410e70-f9c2-4127-aa82-56ea5a3c8bd6",
+      "position": 3,
+      "properties": {
+        "description": "Now that we've seen how AI can help generate ideas, but also where it might fall short, let’s dive into how we can collaborate with AI to create something truly innovative—where humans and AI can work together to refine and enhance creative projects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f0410e70-f9c2-4127-aa82-56ea5a3c8bd6",
+        "lesson_activity.key": "04e86ab8-7255-44ab-bf7f-a2079c139458"
+      }
+    },
+    {
+      "key": "fff8dbc5-b45b-4073-a003-798c4efc6e89",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "fff8dbc5-b45b-4073-a003-798c4efc6e89",
+        "lesson_activity.key": "04e86ab8-7255-44ab-bf7f-a2079c139458"
+      }
+    },
+    {
+      "key": "ebae1d76-a495-4de4-a37a-253af5670b55",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** In this activity, students will work in small groups to design and launch a new product or app intended to help students with school-related tasks. They will collaborate with AI at each stage of the development process, refining ideas and generating content.",
+        "duration": "10",
+        "name": "Introduction to AI Collaboration"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebae1d76-a495-4de4-a37a-253af5670b55",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "e0976387-b36c-41a4-ab0d-9d7c89e6999a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *More and more music and movie producers, graphic designers, writers and other creatives are taking advantage of collaborative opportunities with AI. How might AI help you in one of these careers?*\n- *Where might AI fall short?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify tasks like generating ideas or structuring content as areas in which AI can help. They mention limitations of AI like lack of personal voice and lack of emotion. They begin to consider ways in which AI can be a collaborator in creative endeavors.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Collaborate on a Product Launch activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *co-creating*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Product Launch activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to choose a product or app concept designed to help students in school.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct each group member to choose a role and record their choice in their activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "e0976387-b36c-41a4-ab0d-9d7c89e6999a",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "12f6fc87-fd05-42a6-ab6e-fa7af906ff85",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Give students hands-on experience using AI to co-create part of a product launch. Students will work through a sequence of AI-powered levels in order to build and refine their content.",
+        "duration": "20",
+        "name": "Collaborate on a Product Launch"
+      },
+      "seeding_key": {
+        "activity_section.key": "12f6fc87-fd05-42a6-ab6e-fa7af906ff85",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "8df49010-b5d8-4423-9ec1-b5c9b7b11478",
+      "position": 4,
+      "properties": {
+        "description": "You've seen how creators break tasks into smaller steps. Now you'll use AI to help complete your part of the product launch, just like a real creative team might. Move through the four stages—research, brainstorming, content creation, and refinement.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8df49010-b5d8-4423-9ec1-b5c9b7b11478",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "a0927938-98d0-4d3e-bf0c-5b36fdbe944f",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 4, Level 1. Students should complete each choice level based on the product they are launching.",
+        "progression_name": "Collaborate on a Product Launch"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0927938-98d0-4d3e-bf0c-5b36fdbe944f",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "b3292587-d0ed-4915-87de-ac6521a12247",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are progressing through each stage. Listen for how they talk about AI responses and how they’re improving or combining ideas. Encourage specificity in their reflection and remind them that they are the creative lead and that the AI is here to support, not replace, their ideas."
+      },
+      "seeding_key": {
+        "activity_section.key": "b3292587-d0ed-4915-87de-ac6521a12247",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "e047a7c2-57b9-4077-914b-cc1df3636364",
+      "position": 7,
+      "properties": {
+        "description": "Now that you've completed your part of the campaign with AI, let's reflect on the collaboration. Think about what you gained from using AI and what could have been lost if you relied only on it. These questions help us understand AI's strengths and limitations in creative work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e047a7c2-57b9-4077-914b-cc1df3636364",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "1405aa8b-55ed-48e2-898b-1c66280e27d6",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 9, Level 2 to complete the formative assessment.",
+        "progression_name": "Check Your Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students only focus on the benefits of AI (e.g., saving time, generating ideas), prompt them with: \"What would have been lost if AI had handled everything on its own? What creative elements did you contribute that AI couldn't replicate?\" This encourages them to think about AI as a complement, not a replacement, for human creativity."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This assessment will help you gauge how well students understand the role of AI as a collaborator. Pay attention to the following:\n\n- Balanced responses: If students acknowledge both the benefits of AI and the essential human contributions, they understand how AI can enhance creativity without replacing it.\n\n- Specific examples: Are students providing detailed answers based on their roles in the campaign (e.g., how AI helped generate slogans or ideas, and what human creativity brought to the project)?\n\n- Critical thinking: Are students able to identify specific aspects of their work that AI couldn't handle, such as adding emotional depth, personal perspective, or fine-tuning content?\n\n**Actions to take:**\n\n- If students focus too much on AI’s benefits (e.g., efficiency, idea generation), remind them of the unique human elements that make creative work impactful, like originality, emotion, and context. Revisit the \"AI Essay Critique\" activity from earlier in the lesson to highlight these aspects.\n\n- If students struggle to justify their reasoning or give vague answers, prompt them with: \"Can you explain how AI's suggestions were useful and where human input was essential?\" This will guide students to connect their reflections to the different stages in the \"Collaborate on a Product Launch\" activity (e.g., brainstorming, refining).\n\n- If students demonstrate strong understanding, celebrate their insights by encouraging them to share with the class. They should be able to explain how AI and human contributions work together to produce a final, polished creative piece.\n\n**Next Step:**\n\n- If most students are able to reflect critically and balance the strengths and weaknesses of AI, continue with the wrap-up discussion to consolidate their learning.\n\n- If some students need more support, consider having a follow-up conversation or provide extra examples to reinforce AI’s complementary role in creative work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1405aa8b-55ed-48e2-898b-1c66280e27d6",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
+      "key": "dc0f5285-1cfe-43d6-9c59-445ae82e9dbf",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To encourage students to reflect on how AI enhanced the creativity of their group's product launch project and express their thoughts through discussion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to \"Stand and Swap.\" First, students stand and discuss the Question of the Day within their original project group. Then, each group \"swaps\" by joining with another group nearby to share insights. Groups compare experiences and reflect on how AI helped shape or improve their creative process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 3 to complete the End of Lesson Survey."
+      },
+      "seeding_key": {
+        "activity_section.key": "dc0f5285-1cfe-43d6-9c59-445ae82e9dbf",
+        "lesson_activity.key": "da13d0a0-0d7d-4c08-abf1-9d44eb0cadca"
+      }
+    },
+    {
+      "key": "a29c2821-f9a1-4891-99c6-6d37b3e68f29",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i>**Goal of this activity:** Have students reflect on AI's ability to be creative by exploring AI-generated beats to reflect different moods.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to experiment with AI-generated drum beats in AI Music Lab. Encourage students to try generating beats for different moods (e.g., elevator music, intense combat scene in a movie, upbeat pop song, etc.) to hear how AI structures patterns.\n",
+        "progression_name": "AI in Music Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "a29c2821-f9a1-4891-99c6-6d37b3e68f29",
+        "lesson_activity.key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8"
+      }
+    },
+    {
+      "key": "1ffa0631-8b54-4f2a-9cd1-8d3c6f5d6d97",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Does this music sound creative? Why or why not?*\n- *How does AI decide what beat patterns to generate?*\n- *Is AI creating music, or is it following patterns from existing data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI generated music based on patterns and probabilities, not creativity. AI predicts what notes and beats are most likely to follow, but it doesn't compose music with artistic intent like humans do.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle, have them compare AI-generated beats to a song they know. Ask: \"What decisions did the human composer make that AI didn't?\" or \"How does AI's approach differ from an artist's creative process?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ffa0631-8b54-4f2a-9cd1-8d3c6f5d6d97",
+        "lesson_activity.key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8"
+      }
+    },
+    {
+      "key": "1f83998c-6801-4c49-a689-5027ffccce08",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1f83998c-6801-4c49-a689-5027ffccce08",
+        "lesson_activity.key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8"
+      }
+    },
+    {
+      "key": "b218b2d3-0bfc-4d2a-83b3-51934d2e2595",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain that AI-generated music is based on recognizing common beat patterns from existing songs. AI predicts what notes and rhythms are likely to follow based on its training data. Unlike humans, AI doesn't compose with emotion or meaning—it just finds the most probable next sound. "
+      },
+      "seeding_key": {
+        "activity_section.key": "b218b2d3-0bfc-4d2a-83b3-51934d2e2595",
+        "lesson_activity.key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8"
+      }
+    },
+    {
+      "key": "7ea83bc8-21c6-4571-95ae-b2d17f35eb1e",
+      "position": 5,
+      "properties": {
+        "description": "Now that we've seen how AI generates music by recognizing patterns, let’s explore how AI assists in other creative fields like design, storytelling, and game development.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7ea83bc8-21c6-4571-95ae-b2d17f35eb1e",
+        "lesson_activity.key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8"
+      }
+    },
+    {
+      "key": "b797273c-8ee6-4057-a9ca-6ed5bf8b2d84",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b797273c-8ee6-4057-a9ca-6ed5bf8b2d84",
+        "lesson_activity.key": "6dbc7fd6-06c6-499b-a199-7ee886f383f8"
+      }
+    },
+    {
+      "key": "4a037db5-9f09-4d80-8ca2-a85681f6eb3b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i>**Goal of this activity:** Help students understand how AI is used in different creative professions.",
+        "duration": "5",
+        "name": "Career Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a037db5-9f09-4d80-8ca2-a85681f6eb3b",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "3a37c10a-2aed-4917-8fb0-624d51bf79ac",
+      "position": 2,
+      "properties": {
+        "description": "Let's watch a short video to see how professionals use AI in their creative work. As you watch, pay attention to what the human does and what the AI does.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3a37c10a-2aed-4917-8fb0-624d51bf79ac",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "9483bd43-2787-4ed5-be00-8f7be4715148",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Create an Entire Game Ad using AI!\" video.\n\n**Questions to consider with the video:**\n- What tasks does the human do?\n- What tasks does AI assist with?\n- Did AI replace human creativity or did it enhance it?\n\n**Discussion Goal:** Students should identify the different roles that humans and AI play in creative work by analyzing specific tasks performed in the video. The goal is for students to recognize that AI assists with creative processes by generating ideas, refining details, or automating repetitive tasks, but human creativity is still essential for originality, decision-making, and artistic intent.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to differentiate AI and human tasks, prompt them to think about what decisions required human judgment. Ask: *“What creative choices required human judgment? Could AI have done that task alone?”*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9483bd43-2787-4ed5-be00-8f7be4715148",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "2cbf4428-5ee3-44b7-8f18-6afcf78a7ea5",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2cbf4428-5ee3-44b7-8f18-6afcf78a7ea5",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "6f189f69-c1e8-42ff-9f8e-530d91549a90",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i>**Goal of this activity:** Apply AI to refine creative content through iteration, evaluation, and human input.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI Remix Challenge activity guide.\n",
+        "duration": "15",
+        "name": "AI Remix Challenge",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to work in pairs so they can discuss AI’s suggestions, evaluate improvements, and challenge each other’s ideas. Thought partners help reinforce critical thinking and collaboration."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6f189f69-c1e8-42ff-9f8e-530d91549a90",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "4cbf018a-c7e0-47ad-9ab0-a29cd69d8c92",
+      "position": 6,
+      "properties": {
+        "description": "In this challenge, you will start as the creator, writing a short original piece. Then, you'll use AI to refine and improve it. Later, you’ll switch roles and guide AI in refining its own content.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4cbf018a-c7e0-47ad-9ab0-a29cd69d8c92",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "949cb524-6652-48d7-b70f-34356950335c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one of the creative writing options in Part 1 of their activity guide and give students a few minutes to record their original written pieces, however if students are having trouble coming up with something creative or if time is limited, have them use one of the provided examples in their activity guide. Remind students that the goal is improvement, not perfection. Their writing will evolve as they experiment with AI.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to keep their original content short so they have more time to explore AI's suggestions and refine their work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "949cb524-6652-48d7-b70f-34356950335c",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "8ced4962-5cef-4715-bd2a-fa36c3183de0",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 10, Level 2 to work with AI to get suggestions on how to revise their creation. Make sure students record their revised content and answer the questions in Part 1 of their activity guide.",
+        "progression_name": "Humans as the Creator"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ced4962-5cef-4715-bd2a-fa36c3183de0",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "6b2491da-e8f2-4370-a8e4-57f6737cfeb7",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are recording a final, revised version of their creation and completing the Self-Evaluation in their activity after getting suggestions from the AI. If you notice students relying too much on AI's suggestions without critically evaluating them, ask them, \"Did you agree with all of AI's suggestions? Why or why not?\" or \"What changes did YOU decide to make, rather than AI making them for you?\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that AI does not replace their creativity—it's a tool to refine their ideas. If time allows, encourage experimenting with multiple AI suggestions to compare which refinements feel the most valuable."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b2491da-e8f2-4370-a8e4-57f6737cfeb7",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "74e22d22-41b6-4092-b896-8d2f12fca462",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Did AI’s suggestions improve your content? Why or why not?*\n- *Which AI suggestion did you find most useful, and which one did you ignore? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students recognize that AI can enhance creative work, but human decision-making is needed to refine originality and intent. Students should consider which AI suggestions actually improved their work and which ones didn’t align with their creative instincts. The goal is to get students thinking critically about AI's role as an assistant rather than a creator.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "74e22d22-41b6-4092-b896-8d2f12fca462",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "c22e0411-e4f9-402d-923c-2c2d065884b8",
+      "position": 11,
+      "properties": {
+        "description": "Now that you've experimented with AI giving suggestions on how to refine your work, let's flip roles—this time, YOU will guide AI through refining its own content.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c22e0411-e4f9-402d-923c-2c2d065884b8",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "c3778b3f-75bc-48ef-999c-c16207bc11f9",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 10, Level 3. Students work with the AI to refine the AI’s creation.",
+        "progression_name": "AI as the Creator"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3778b3f-75bc-48ef-999c-c16207bc11f9",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "91b2407a-715e-4e0a-bce2-62f3bc3e8fda",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are recording a final, revised version of the AI's creation and completing the Self-Evaluation in their activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may find it harder to revise AI-generated content than their own. Encourage them to think about clarity, creativity, tone, or audience as ways they can improve AI's draft. If a student is stuck, ask: \"What part of this response feels robotic or repetitive?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "91b2407a-715e-4e0a-bce2-62f3bc3e8fda",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "98450f05-e6f2-4b06-bac8-30f238e6714c",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i>**Goal of this activity:** Now that students have experienced both roles—getting AI's feedback on their work and guiding AI to refine its content, students compare these two experiences.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which type of AI collaboration did you prefer and why? (i.e., getting AI's suggestions on how to refine your original idea vs. guiding AI to refine its content)*\n- *Where would you find each type of collaboration useful in any of the tasks you do both in and outside of school?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the difference between AI assisting in content refinement and AI generating original work. The goal is for students to evaluate whether AI's suggestions improved the content or made it feel more artificial, and to reflect on the importance of human input in creative tasks.\n",
+        "duration": "5",
+        "name": "Synthesis Discussion",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The **activity guide provides evidence** of whether students are critically engaging with AI's suggestions rather than accepting them passively.\n\nThe **Synthesis Discussion reveals students' ability** to apply these insights to real-world creative collaboration.\n\nTeachers can determine the next instructional steps based on student understanding:\n- **If students mostly relied on AI's suggestions without critically evaluating or modifying them:**\n   - Reinforce human decision-making in creative refinement.\n   - Revisit AI's role as an assistant by reviewing a sample AI-generated response and asking: \"What would make this feel more original?\"\n   - Have students reattempt refining AI's response, focusing on their own judgment to improve clarity, engagement, and originality.\n- **If students struggled to articulate differences between AI-generated creativity and human creativity:**\n   - Clarify AI's strengths and weaknesses by asking students: \"What was AI able to do instantly? What did you have to refine or adjust yourself?\"\n   - Facilitate small group discussions comparing AI's role in different tasks (e.g., storytelling, design, music).\n   - Use an example of an AI-generated response and discuss what would make it feel more human.\n- **If students clearly differentiate AI's role from human creativity and refinement:**\n   - Move on to the assessment without reteaching. Students demonstrate an understanding of how AI and human creativity interact and can articulate AI's role as a tool rather than a creator.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "98450f05-e6f2-4b06-bac8-30f238e6714c",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "7270ccd1-bcac-4628-b99a-a7f3ed71b719",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7270ccd1-bcac-4628-b99a-a7f3ed71b719",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "449b92d4-33f9-43d3-bf6f-f4b92f98f80a",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly review each takeaway with students, pausing to reinforce the idea that AI is a tool, not a replacement for human creativity."
+      },
+      "seeding_key": {
+        "activity_section.key": "449b92d4-33f9-43d3-bf6f-f4b92f98f80a",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "e817eaf4-ceae-4fa8-b910-2b9c420ac8cf",
+      "position": 17,
+      "properties": {
+        "description": "As we've seen today, AI is great at generating ideas and patterns, but the heart of creativity—meaning, emotion, and originality—comes from you. The most powerful work happens when AI helps you get started and you take it further.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e817eaf4-ceae-4fa8-b910-2b9c420ac8cf",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "92c2dbf4-d092-48b8-ac9a-42104230d5e6",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete an assessment reflecting on their process during the choice level activity. Let students know this assessment is their opportunity to reflect on how AI and human creativity interact.",
+        "duration": "5",
+        "name": "Assessment",
+        "progression_name": "Check Your Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Teachers can review **student responses** to assess how well students understood the **role of AI in creative tasks vs. human refinement**.\n- If most students describe AI as fully creative (e.g., \"AI was the creator\" or \"AI was the one making the content\"):\n   - Clarify AI's role as an assistant by reviewing the slides again. Remind students that AI relies on learned patterns to generate responses and does not create with originality or intent like a human.\n   - Pose the class a reworded discussion prompt: \"How do human strengths and AI capabilities interact?\" and have students explain to a partner before moving forward.\n- If some students struggle to explain their role vs. AI's role in refinement:\n   - Have students pair up and compare answers to discuss what AI contributed vs. what they controlled.\n   - Follow up with a Think-Pair-Share on \"What creative decisions did YOU make in this process?\" before moving to the wrap-up.\n- If students clearly differentiate AI's role from human creativity:\n   - Move on to the wrap up without reteaching. Students are demonstrating understanding of AI's role in creative tasks.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92c2dbf4-d092-48b8-ac9a-42104230d5e6",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
+      "key": "5cbe905f-ab0d-43f0-a272-365ef9778b9b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a brief response in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the next few slides contain statements about AI and creativity. For each one, students should show a thumbs up if they agree, thumbs down if they disagree, or thumbs sideways if they’re unsure. After each vote, call on one or two students from different positions (e.g., one thumbs up, one thumbs down, one thumbs sideways) to explain their thinking.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display statement #1: AI is just as creative as humans. Ask students to respond with a thumbs up, down, or sideways. Then call on one student who agreed and one who disagreed to explain their thinking. Invite a third student if someone gave a sideways response to explain what made them unsure.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, have students explain their choice to a partner first before opening the discussion to the whole class. This helps more students clarify their thinking and increases participation in the full-class share-out."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5cbe905f-ab0d-43f0-a272-365ef9778b9b",
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248"
+      }
+    },
+    {
+      "key": "8a627132-f84a-45c6-a2f1-a018078a4599",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a627132-f84a-45c6-a2f1-a018078a4599",
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248"
+      }
+    },
+    {
+      "key": "1c6e157b-1354-4514-8980-61f43cfa6c05",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display statement #2: I would use AI again for a creative project. Ask students to respond with a thumbs up, down, or sideways. Then invite one student from each category to briefly explain their reasoning. Encourage students to reflect on what worked well (or didn't) when using AI in this context.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, have students explain their choice to a partner first. This gives everyone a chance to process and prepare their reasoning before the whole-class share-out."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1c6e157b-1354-4514-8980-61f43cfa6c05",
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248"
+      }
+    },
+    {
+      "key": "1de52044-dead-4756-98d6-43ff170114b6",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1de52044-dead-4756-98d6-43ff170114b6",
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248"
+      }
+    },
+    {
+      "key": "92d97d57-3f77-470e-938f-ff648670f334",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display statement #3: AI and humans working together create better results than AI or humans working alone. Ask students to vote using thumbs up, down, or sideways. Then invite one student from each group to share their reasoning. Emphasize the importance of backing up their opinion with an example from the remix activity or a real-life scenario (e.g., AI in art, music, writing, etc).",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, have students explain their choice to a partner first. This gives everyone a chance to think through their answer before sharing aloud. Encourage students to reference their remix experience or the final reflection to support their reasoning."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92d97d57-3f77-470e-938f-ff648670f334",
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248"
+      }
+    },
+    {
+      "key": "fe4124b0-4e06-458a-8ed9-fc5cfe26aee8",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fe4124b0-4e06-458a-8ed9-fc5cfe26aee8",
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248"
+      }
+    },
+    {
+      "key": "f238865a-4984-4316-aad7-0dc718e6974d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5 to complete the End of Lesson Survey.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f238865a-4984-4316-aad7-0dc718e6974d",
+        "lesson_activity.key": "5fa6e9ac-7030-4b8b-bcd1-bab05e667248"
+      }
+    },
+    {
       "key": "3eda1cbe-367e-488a-ba91-7f350a79c039",
       "position": 1,
       "properties": {
@@ -2782,6 +3526,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-preassessment_2025-pilot"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -2802,8 +3549,1045 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Predictions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level1_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "9f960284-44c1-415d-bad3-c48d0b39843d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson1-level1_2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level2_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson1-level2_2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level3_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson1-level3_2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level4_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson1-level4_2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level5_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8bebe965-525b-46ec-b79e-4c092ba5ff1f"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson1-level5_2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level6_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e49694aa-2d0a-4504-9691-faabfd7aeea9"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson1-level6_2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Image Observation Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level1_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "0c05cfc1-7846-4109-b08f-7ef68332e958"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson2-level1_2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Image Observation Skills"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level2_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "0c05cfc1-7846-4109-b08f-7ef68332e958"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson2-level2_2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario-Based Prompting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level3_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "caa09099-8ad9-475d-a520-030c2aacab13"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson2-level3_2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level4_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "6ec685fc-93d2-40d9-93e4-29ca808d5b2d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson2-level4_2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice with a Multimodal Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level5_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "65b58ef8-3ffe-4d3a-894e-8d5d6cdfe715"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson2-level5_2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level1_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson3-level1_2024"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level2_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson3-level2_2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level3_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson3-level3_2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI vs Human Tasks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level1_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f22be262-af56-494e-9f98-576f83cff9a1"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson4-level1_2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI vs Human Tasks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level2_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f22be262-af56-494e-9f98-576f83cff9a1"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson4-level2_2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI vs Human Tasks"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level3_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f22be262-af56-494e-9f98-576f83cff9a1"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson4-level3_2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "ce12e241-ac6a-40bc-b7d8-32903c57be68"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson4-level4_2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Two Truths and a Lie"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level1_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b0b8ef13-9b12-4af8-8522-6c68009247eb"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level1_2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Examining AI Contradictions Activity Guide"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level2_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "c86228d5-30ff-4ec0-998a-66e2fbdafc7f"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level2_2024"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Contradictions in Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level3_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level3_2024"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Contradictions in Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level4_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level4_2024"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Contradictions in Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level5_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level5_2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Contradictions in Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level6_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level6_2024"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Try Your Own"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level7_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "398d1d06-9b00-4726-9f0a-c14752d7ad65"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level7_2024"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8a52ef56-3107-46fb-a91e-8718f59a9259"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level8_2024"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level9_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8a52ef56-3107-46fb-a91e-8718f59a9259"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level9_2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Describe a ____"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level1_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "17c65615-318a-4287-9113-18fe72e83aab"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-level1_2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level2_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "6afeacba-2aca-433f-89de-aa7884ab28f9"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-level2_2024"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Decision-Making Roles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level3_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "d7255ef4-c82e-4d0c-8a8d-e5508b961c13"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-level3_2024"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Audit Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level4_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "ff9095e1-3065-451e-a087-a9f150839c7b"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-level4_2024"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson7-level1_2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7209e092-7571-488a-a754-bca52da5cb33"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson7-level1_2024"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson7-level2_2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7209e092-7571-488a-a754-bca52da5cb33"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson7-level2_2024"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding a Task"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level1_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "ffe21f54-8b26-4ad5-bad8-6bd8f87471b6"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level1_2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompting Framework"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level2_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level2_2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompting Framework"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level3_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level3_2024"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompting Framework"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level4_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level4_2024"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompting Framework"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level5_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level5_2024"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level6_2024"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level7_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level7_2024"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level8_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level8_2024"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1_2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "a0927938-98d0-4d3e-bf0c-5b36fdbe944f"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-level1_2024"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1405aa8b-55ed-48e2-898b-1c66280e27d6"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-level2_2024"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI in Music Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level1_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "a29c2821-f9a1-4891-99c6-6d37b3e68f29"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson10-level1_2024"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Humans as the Creator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level2_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8ced4962-5cef-4715-bd2a-fa36c3183de0"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson10-level2_2024"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI as the Creator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level3_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "c3778b3f-75bc-48ef-999c-c16207bc11f9"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson10-level3_2024"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "92c2dbf4-d092-48b8-ac9a-42104230d5e6"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson10-level4_2024"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-postassessment-pilot"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -2832,6 +4616,570 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pswai-pilot-2024",
         "activity_section.key": "5ef65223-0bfe-4486-82a2-3469fa2d560c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson1-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level1_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "9f960284-44c1-415d-bad3-c48d0b39843d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson1-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level2_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson1-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level3_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson1-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level4_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson1-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level5_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8bebe965-525b-46ec-b79e-4c092ba5ff1f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson1-level6_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level6_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e49694aa-2d0a-4504-9691-faabfd7aeea9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson2-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level1_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "0c05cfc1-7846-4109-b08f-7ef68332e958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson2-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level2_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "0c05cfc1-7846-4109-b08f-7ef68332e958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson2-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level3_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "caa09099-8ad9-475d-a520-030c2aacab13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson2-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level4_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "6ec685fc-93d2-40d9-93e4-29ca808d5b2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson2-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level5_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "65b58ef8-3ffe-4d3a-894e-8d5d6cdfe715"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson3-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level1_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson3-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level2_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson3-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level3_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson4-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level1_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f22be262-af56-494e-9f98-576f83cff9a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson4-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level2_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f22be262-af56-494e-9f98-576f83cff9a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson4-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level3_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f22be262-af56-494e-9f98-576f83cff9a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson4-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "ce12e241-ac6a-40bc-b7d8-32903c57be68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level1_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b0b8ef13-9b12-4af8-8522-6c68009247eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level2_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "c86228d5-30ff-4ec0-998a-66e2fbdafc7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level3_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level4_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level5_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level6_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level6_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "f858a9fa-c7cf-437b-bb5f-7cd3bf16355d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level7_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level7_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "398d1d06-9b00-4726-9f0a-c14752d7ad65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level8_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8a52ef56-3107-46fb-a91e-8718f59a9259"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level9_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level9_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8a52ef56-3107-46fb-a91e-8718f59a9259"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level1_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "17c65615-318a-4287-9113-18fe72e83aab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level2_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "6afeacba-2aca-433f-89de-aa7884ab28f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level3_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "d7255ef4-c82e-4d0c-8a8d-e5508b961c13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level4_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "ff9095e1-3065-451e-a087-a9f150839c7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson7-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson7-level1_2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7209e092-7571-488a-a754-bca52da5cb33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson7-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson7-level2_2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7209e092-7571-488a-a754-bca52da5cb33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level1_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "ffe21f54-8b26-4ad5-bad8-6bd8f87471b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level2_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level3_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level4_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level5_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1c66974c-f6cc-4cc8-abc6-3a19356b40af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level6_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level7_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level7_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level8_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level8_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1_2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "a0927938-98d0-4d3e-bf0c-5b36fdbe944f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "1405aa8b-55ed-48e2-898b-1c66280e27d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson10-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level1_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "a29c2821-f9a1-4891-99c6-6d37b3e68f29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson10-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level2_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "8ced4962-5cef-4715-bd2a-fa36c3183de0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson10-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level3_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "c3778b3f-75bc-48ef-999c-c16207bc11f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson10-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "92c2dbf4-d092-48b8-ac9a-42104230d5e6"
       }
     },
     {
@@ -2873,6 +5221,30 @@
       }
     },
     {
+      "name": "[KEY] AI Remix Challenge",
+      "url": "https://docs.google.com/document/d/1dsIyJe3Oxbjylsz5tkFAh2Hmlb8xufW7rQNP0S6OgqU/edit?usp=sharing",
+      "key": "_key_ai_remix_challenge",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_remix_challenge"
+      }
+    },
+    {
+      "name": "[KEY] Collaborate on a Product Launch",
+      "url": "https://docs.google.com/document/d/11a78DDVNKno8LzbzGgA1KkOw1-MMtnEhN82we3R-tnw/edit?usp=sharing",
+      "key": "_key_collaborate_on_a_product_launch",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_collaborate_on_a_product_launch"
+      }
+    },
+    {
       "name": "[KEY] Examining AI Contradictions",
       "url": "https://docs.google.com/document/d/1v_lzxtPnahh0Vd-ksqf0M8C2vDsRN-5xmQrFcKYKwJ4/edit?usp=sharing",
       "key": "_key_examining_ai_contradictions",
@@ -2897,6 +5269,18 @@
       }
     },
     {
+      "name": "AI as a Co-Creator",
+      "url": "https://docs.google.com/presentation/d/1hE6Ea3bYFOKIT2LhX50nADUwlPEUJaQJ_w_6RZ8uTps/view",
+      "key": "ai_as_a_co-creator",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_as_a_co-creator"
+      }
+    },
+    {
       "name": "AI Audit",
       "url": "https://docs.google.com/document/d/1SLbdeRX5HgurDFB2PGw9J-Q5Zslmcm5yBPQq7xBc4D4/edit?usp=sharing",
       "key": "ai_audit",
@@ -2907,6 +5291,19 @@
       },
       "seeding_key": {
         "resource.key": "ai_audit"
+      }
+    },
+    {
+      "name": "AI Remix Challenge",
+      "url": "https://docs.google.com/document/d/1Q8CsLHYIopOOnQCCwHEJSB7LD4h2x81MLy90ydL4Tp8/edit?usp=sharing",
+      "key": "ai_remix_challenge",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_remix_challenge"
       }
     },
     {
@@ -2943,6 +5340,31 @@
       },
       "seeding_key": {
         "resource.key": "beyond_words"
+      }
+    },
+    {
+      "name": "Collaborate on a Product Launch",
+      "url": "https://docs.google.com/document/d/11L-Ml3X06zW04w-Xc4V4LyCI4RN3u_WGLe2vYSHXzYA/edit?usp=sharing",
+      "key": "collaborate_on_a_product_launch",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "collaborate_on_a_product_launch"
+      }
+    },
+    {
+      "name": "Create a Game Using AI",
+      "url": "https://www.youtube.com/shorts/WVWayzc07Ug?si=5o6-VsfhK2XMcEN5",
+      "key": "create_a_game_using_ai",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_game_using_ai"
       }
     },
     {
@@ -3018,6 +5440,18 @@
       },
       "seeding_key": {
         "resource.key": "plan_a_perfect_trip_with_chatgpt"
+      }
+    },
+    {
+      "name": "Remixing, Creativity, and Originality",
+      "url": "https://docs.google.com/presentation/d/1M15Gq8VaZXJaf_R4otrXZkVgzDMlHFzhEwQFMwHAdFo/view",
+      "key": "remixing_creativity_and_originality",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "remixing_creativity_and_originality"
       }
     },
     {
@@ -3153,6 +5587,72 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_exemplar_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_collaborate_on_a_product_launch"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "ai_as_a_co-creator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "collaborate_on_a_product_launch"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_exemplar_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_key_ai_remix_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "ai_remix_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "create_a_game_using_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "remixing_creativity_and_originality"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
         "resource.key": "unit_guide"
       }
     },
@@ -3320,7 +5820,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_guide",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_guide",
+        "script.name": "pswai-pilot-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -3364,6 +5875,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "key": "co_creating",
+      "word": "co-creating",
+      "definition": "humans and AI working together, with humans providing creativity and direction, while AI assists by processing data, generating suggestions, or automating tasks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "co_creating"
       }
     },
     {
@@ -3500,6 +6021,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "co_creating"
       }
     },
     {
@@ -3714,6 +6241,16 @@
       }
     },
     {
+      "key": "75ca8b92-81ba-4854-9b5d-c30c6564f34b",
+      "properties": {
+        "description": "Analyze the strengths and weaknesses of AI-generated creative work compared to human-created content."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "75ca8b92-81ba-4854-9b5d-c30c6564f34b"
+      }
+    },
+    {
       "key": "7cc4b757-79b7-4f5b-87a4-3707505a56fa",
       "properties": {
         "description": "Justify when AI should or shouldn’t be used in real-world cases."
@@ -3761,6 +6298,16 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "objective.key": "9f387c27-187e-4473-996e-d549c3008d0f"
+      }
+    },
+    {
+      "key": "a4c6bdb5-385a-494c-9166-52dc2f916220",
+      "properties": {
+        "description": "Evaluate the strengths and limitations of generative AI."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "a4c6bdb5-385a-494c-9166-52dc2f916220"
       }
     },
     {
@@ -3831,6 +6378,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "e2e92e9c-3e84-4db1-a470-70e731f2c045"
+      }
+    },
+    {
+      "key": "f568af68-7e03-4ae5-893e-775902375dcf",
+      "properties": {
+        "description": "Analyze the role of human creativity in AI-assisted content generation."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "f568af68-7e03-4ae5-893e-775902375dcf"
       }
     },
     {

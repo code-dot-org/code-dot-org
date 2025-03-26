@@ -9,7 +9,6 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -17,16 +16,15 @@
         "ai"
       ],
       "tts": true,
-      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "coding-with-ai",
-    "serialized_at": "2024-11-19 01:13:57 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-24 23:14:05 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coding-with-ai"
     }
