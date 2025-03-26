@@ -103,9 +103,10 @@ $tabs-default-spacing: 4px;
 }
 
 .imagePreview {
-  max-height: 80px;
+  max-height: 200px;
   width: auto;
   height: auto;
+  opacity: 1;
 }
 
 .assetButton {
