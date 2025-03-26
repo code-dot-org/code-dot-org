@@ -81,6 +81,9 @@ export default class MusicValidator extends Validator {
     // A map of ids for blocks in nested loops and the count of playback events associated with them.
     const blockIdNestedLoopRepetitions: {[key: string]: number} = {};
 
+    // A map of sound types and the count of playback events associated with them.
+    const soundTypeRepetitions: {[key: string]: number} = {};
+
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
     let playedNumberEmptyPatterns = 0;
@@ -98,6 +101,8 @@ export default class MusicValidator extends Validator {
 
     const uniqueSounds: string[] = [];
     const uniqueCurrentSounds: string[] = [];
+    const uniqueFunctionContexts: string[] = [];
+    const uniqueSoundLengths: number[] = [];
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach(eventData => {
@@ -159,7 +164,23 @@ export default class MusicValidator extends Validator {
         }
 
         playedNumberSounds++;
-
+        if (!uniqueSoundLengths.includes(eventData.length)) {
+          uniqueSoundLengths.push(eventData.length);
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_DIFFERENT_LENGTH_SOUNDS.name,
+            value: uniqueSoundLengths.length,
+          });
+        }
+        if (
+          eventData.functionContext &&
+          !uniqueFunctionContexts.includes(eventData.functionContext.name)
+        ) {
+          uniqueFunctionContexts.push(eventData.functionContext.name);
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUNDS_IN_DIFFERENT_FUNCTIONS.name,
+            value: uniqueFunctionContexts.length,
+          });
+        }
         // In order to check that the user has pressed the beat map buttons multiple times,
         // we look at the unique invocation id. (Simple2 only)
         if (eventData.triggered) {
@@ -174,6 +195,17 @@ export default class MusicValidator extends Validator {
 
         if (!uniqueSounds.includes(eventData.id)) {
           playedNumberDifferentSounds++;
+          if (soundTypeRepetitions[eventData.soundType]) {
+            soundTypeRepetitions[eventData.soundType]++;
+          } else {
+            soundTypeRepetitions[eventData.soundType] = 1;
+          }
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUND_TYPE_MULTIPLE_TIMES.name,
+            value: `${eventData.soundType}:${
+              soundTypeRepetitions[eventData.soundType]
+            }`,
+          });
           uniqueSounds.push(eventData.id);
         }
       } else if (
@@ -427,6 +459,7 @@ export default class MusicValidator extends Validator {
   }
 
   conditionsMet(conditions: Condition[]): boolean {
+    this.addSatisfiedBlockCountConditions(conditions);
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 
@@ -470,5 +503,34 @@ export default class MusicValidator extends Validator {
         event.type === currentEvent.type &&
         event.when === currentEvent.when
     );
+  }
+
+  private addSatisfiedBlockCountConditions(conditions: Condition[]) {
+    const blockCountConditions = conditions.filter(
+      ({name}) => name === MusicConditions.block_count_by_type.name
+    );
+    if (blockCountConditions.length === 0) {
+      return;
+    }
+
+    const blocks = Blockly.getMainWorkspace()
+      .getAllBlocks()
+      .filter(block => block.isEnabled());
+
+    blockCountConditions.forEach(({value}) => {
+      const [blockType, countStr] = (value as string).split(':');
+      const expectedCount = parseInt(countStr);
+
+      const blockCountByType = blocks.filter(
+        block => block.type === blockType
+      ).length;
+
+      if (blockCountByType >= expectedCount) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.block_count_by_type.name,
+          value: `${blockType}:${expectedCount}`,
+        });
+      }
+    });
   }
 }

@@ -336,9 +336,11 @@ export interface Condition {
   value?: string | number;
 }
 
+type ValueType = 'string' | 'number';
+type ConditionValueType = `${ValueType}:${ValueType}` | ValueType;
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number' | 'array';
+  valueType?: ConditionValueType;
   description: string;
   valueOptions?: string[];
 }
