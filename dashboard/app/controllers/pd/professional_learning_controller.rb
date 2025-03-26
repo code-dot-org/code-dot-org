@@ -1,4 +1,4 @@
-class Pd::ProfessionalLearningLandingController < ApplicationController
+class Pd::ProfessionalLearningController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
   before_action :authenticate_user!, only: [:index]

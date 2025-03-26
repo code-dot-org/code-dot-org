@@ -4,8 +4,8 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
-import {RegionalLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
+import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning/constants.js';
+import {RegionalLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning/LandingPage';
 import {
   buildGoogleCalendarLink,
   buildOutlookCalendarLink,

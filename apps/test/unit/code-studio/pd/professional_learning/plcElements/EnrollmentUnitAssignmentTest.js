@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import EnrollmentUnitAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/EnrollmentUnitAssignment';
+import EnrollmentUnitAssignment from '@cdo/apps/code-studio/pd/professional_learning/plcElements/EnrollmentUnitAssignment';
 
 const DEFAULT_PROPS = {
   courseUnitData: {

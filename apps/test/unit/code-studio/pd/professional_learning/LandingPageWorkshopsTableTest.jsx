@@ -4,7 +4,7 @@ import moment from 'moment';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import LandingPageWorkshopsTable from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPageWorkshopsTable';
+import LandingPageWorkshopsTable from '@cdo/apps/code-studio/pd/professional_learning/LandingPageWorkshopsTable';
 import * as utils from '@cdo/apps/utils';
 
 import {serializedWorkshopFactory} from '../../../../factories/professionalLearning';
