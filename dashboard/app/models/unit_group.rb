@@ -508,12 +508,13 @@ class UnitGroup < ApplicationRecord
       course_cache_from_cache || course_cache_from_db
   end
 
-  def self.get_without_cache(id_or_name)
+  def self.get_without_cache(id_or_name, with_associated_models: false)
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
-    UnitGroup.find_by(find_by => id_or_name)
+    model = with_associated_models ? UnitGroup.with_associated_models : UnitGroup
+    model.find_by(find_by => id_or_name)
   end
 
   def self.get_from_cache(id_or_name)
@@ -521,7 +522,7 @@ class UnitGroup < ApplicationRecord
 
     course_cache.fetch(id_or_name.to_s) do
       # Populate cache on miss.
-      course_cache[id_or_name.to_s] = get_without_cache(id_or_name)
+      course_cache[id_or_name.to_s] = get_without_cache(id_or_name, with_associated_models: true)
     end
   end
 
