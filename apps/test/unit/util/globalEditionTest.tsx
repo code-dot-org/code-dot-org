@@ -4,7 +4,6 @@ import React from 'react';
 //import {* as jsCookie} from 'js-cookie';
 
 import {
-  getGlobalEditionRegionFromLocation,
   getGlobalEditionRegion,
   currentGlobalConfiguration,
 } from '@cdo/apps/util/globalEdition';
@@ -41,32 +40,6 @@ const Document: React.FunctionComponent<DocumentProps> = ({region}) => (
 );
 
 describe('globalEdition', () => {
-  describe('getGlobalEditionRegionFromLocation', () => {
-    afterEach(() => {
-      restoreLocation();
-    });
-
-    it('should return the region given in the location path', () => {
-      mockLocation('https://studio.code.org/global/fa/teacher_dashboard');
-
-      expect(getGlobalEditionRegionFromLocation()).toBe('fa');
-    });
-
-    it('should return root if the location path has no region', () => {
-      mockLocation('https://studio.code.org/teacher_dashboard');
-
-      expect(getGlobalEditionRegionFromLocation()).toBe('root');
-    });
-
-    it('should return root if the location path has no known region', () => {
-      mockLocation(
-        'https://studio.code.org/global/bogusweasel/teacher_dashboard'
-      );
-
-      expect(getGlobalEditionRegionFromLocation()).toBe('root');
-    });
-  });
-
   describe('getGlobalEditionRegion', () => {
     afterEach(() => {
       restoreLocation();
@@ -78,48 +51,6 @@ describe('globalEdition', () => {
       render(<Document region={'narnia'} />);
 
       expect(getGlobalEditionRegion()).toBe('narnia');
-    });
-
-    it('should return the region given in the embedded script data in spite of the current cookie', () => {
-      mockLocation('https://studio.code.org/global/fa/teacher_dashboard');
-
-      render(<Document region={'narnia'} />);
-
-      cookies.set('ge_region', 'middle-earth');
-
-      expect(getGlobalEditionRegion()).toBe('narnia');
-
-      cookies.remove('ge_region');
-    });
-
-    it('should return the region given in the cookie if there is no script in spite of the location path', () => {
-      mockLocation('https://studio.code.org/global/fa/teacher_dashboard');
-
-      cookies.set('ge_region', 'middle-earth');
-
-      expect(getGlobalEditionRegion()).toBe('middle-earth');
-
-      cookies.remove('ge_region');
-    });
-
-    it('should return the region given in the location path when no script data exists', () => {
-      mockLocation('https://studio.code.org/global/fa/teacher_dashboard');
-
-      expect(getGlobalEditionRegion()).toBe('fa');
-    });
-
-    it('should return root if the location path has no region when no script data exists', () => {
-      mockLocation('https://studio.code.org/teacher_dashboard');
-
-      expect(getGlobalEditionRegion()).toBe('root');
-    });
-
-    it('should return root if the location path has no known region when no script data exists', () => {
-      mockLocation(
-        'https://studio.code.org/global/bogusweasel/teacher_dashboard'
-      );
-
-      expect(getGlobalEditionRegion()).toBe('root');
     });
   });
 
