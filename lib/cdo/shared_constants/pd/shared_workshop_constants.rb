@@ -306,6 +306,12 @@ module Pd
       {value: 'virtual', label: 'Virtual', enum_value: 1}
     ].freeze
 
+    WORKSHOP_FORMATS = {
+      in_person: 'In-Person',
+      hybrid: 'Hybrid',
+      virtual: 'Virtual'
+    }.freeze
+
     SESSION_FIELDS = {
       start: {
         required: true

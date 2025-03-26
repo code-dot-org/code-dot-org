@@ -25,11 +25,11 @@ export const chatCompletionJobExecutionHighFailureRateSagemakerConfiguration: Pu
         OKActions: [],
         AlarmActions: [SNS_TOPIC],
         InsufficientDataActions: [],
-        EvaluationPeriods: 5,
-        DatapointsToAlarm: 5,
+        EvaluationPeriods: 3,
+        DatapointsToAlarm: 3,
         Threshold: 10,
         ComparisonOperator: ComparisonOperator.GreaterThanThreshold,
-        TreatMissingData: 'missing',
+        TreatMissingData: 'ignore',
         Metrics: [
             {
                 Id: 'failure_rate',

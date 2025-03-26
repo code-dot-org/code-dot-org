@@ -89,15 +89,8 @@ module Pd::WorkshopFilters
         workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
 
         if params[:virtual]
-          # Note this is an inefficient workaround required
-          # because we store a workshop's virtual status as
-          # a serialized attribute, which cannot be queried easily
-          # via the typical ActiveRecord where method.
-          virtual_status = params[:virtual] == 'yes'
-          workshops_array = workshops.select {|workshop| workshop.virtual? == virtual_status}
-          workshops = workshops_array.empty? ?
-            workshops.none :
-            workshops.where(id: workshops_array.map(&:id))
+          session_format = params[:virtual] == 'yes' ? 'virtual' : 'in_person'
+          workshops = workshops.joins(:sessions).where(sessions: {session_format: session_format})
         end
       end
 
@@ -137,7 +130,11 @@ module Pd::WorkshopFilters
         when 'subject'
           workshops = workshops.order("subject #{direction}".strip)
         when 'virtual'
-          workshops = workshops.order("virtual #{direction}".strip)
+          workshops = workshops.
+          joins("INNER JOIN pd_sessions ON pd_sessions.pd_workshop_id = pd_workshops.id and pd_sessions.deleted_at is null").
+          group("pd_workshops.id").
+          select("pd_workshops.*, MAX(CASE WHEN pd_sessions.session_format = #{Pd::Session.session_formats[:virtual]} THEN 1 ELSE 0 END) as has_virtual").
+          order(Arel.sql("has_virtual #{direction}"))
         when 'date'
           workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
         when 'enrollments'
