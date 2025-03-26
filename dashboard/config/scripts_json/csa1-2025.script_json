@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-23 21:58:43 UTC",
+    "serialized_at": "2025-03-26 03:20:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3190,10 +3190,20 @@
       }
     },
     {
-      "key": "006169fb-83d0-4455-a641-33f1c9185b67",
+      "key": "d26b4f04-0de4-4faf-a43b-3fcc8eab834d",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students investigate the program, make changes to the program as prompted, and observe the results.",
+      },
+      "seeding_key": {
+        "activity_section.key": "d26b4f04-0de4-4faf-a43b-3fcc8eab834d",
+        "lesson_activity.key": "3cba26af-bb9c-40ff-a767-4be5f524c365"
+      }
+    },
+    {
+      "key": "006169fb-83d0-4455-a641-33f1c9185b67",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the example flowchart of washing dishes.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Loops and Boolean Methods"
       },
       "seeding_key": {
@@ -3203,7 +3213,7 @@
     },
     {
       "key": "e308224a-706e-4d6b-a4c0-25e36cd31909",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
@@ -3220,9 +3230,9 @@
     },
     {
       "key": "7f688486-c5f1-477e-b07e-e1007280ac8d",
-      "position": 10,
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that we can use while loops to repeat an action when we don't know how many times the action will repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that iteration is required when we need to repeat an action until a condition is met, but we don't know in advance how many times it must run.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that we can use while loops to repeat an action when we don't know how many times the action will repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
       },
       "seeding_key": {
         "activity_section.key": "7f688486-c5f1-477e-b07e-e1007280ac8d",
@@ -3231,7 +3241,7 @@
     },
     {
       "key": "1835c7b2-3e09-4f00-bcda-815257a96b92",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "We now know how to implement two components of algorithms in Java – sequencing and iteration. Software engineers often plan their algorithms in natural language first before writing code. This is an important step that helps us better understand a problem and plan the steps we need to take to develop a solution.",
         "duration": "15",
@@ -3245,7 +3255,7 @@
     },
     {
       "key": "f08bdab5-3dd1-4d6d-8597-af6696694bcb",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.",
         "tips": [
@@ -3262,7 +3272,7 @@
     },
     {
       "key": "83cb93dc-bbe3-45b0-ae2f-150442b1a4cf",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding on Level 6, then continue to complete Level 7 to implement their solution for their chosen problem.",
         "progression_name": "Practice: Using Loops and Boolean Methods",

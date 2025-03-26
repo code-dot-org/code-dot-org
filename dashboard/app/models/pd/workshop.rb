@@ -134,6 +134,15 @@ class Pd::Workshop < ApplicationRecord
     sessions.any? {|session| session.session_format == "virtual"}
   end
 
+  def format
+    has_in_person_session = sessions.any? {|session| session.session_format == "in_person"}
+    if virtual?
+      has_in_person_session ? Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:hybrid] : Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:virtual]
+    else
+      Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:in_person]
+    end
+  end
+
   def sanitize_time_zone
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
   end

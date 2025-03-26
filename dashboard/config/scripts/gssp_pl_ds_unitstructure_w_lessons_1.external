@@ -4,42 +4,26 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Congratulations! You completed the module! 
+<div style="text-align: center;">
+<img src="https://images.code.org/f1fc61bbfd548b7c641d6b7e89fb653b-image-1742943937020.05.34 PM.png" width="300" height="200" alt="two students with arms up in celebration looking at a laptop screen">
+</div>
+
+
+## You are ready to start teaching if you:
+#### ✅ Became a <a href="https://www.example.com" target="_blank">verified teacher </a>
+#### ✅ Posted on the <a href="https://www.example.com" target="_blank">Teacher Forum </a>
+#### ✅ Set up a <a href="https://www.example.com" target="_blank">classroom section</a>
+#### ✅ Added a <a href="https://www.example.com" target="_blank">course</a>
+#### ✅ Located course <a href="https://www.example.com" target="_blank">lesson plans</a> and <a href="https://www.example.com" target="_blank">teacher resources</a>
+#### ✅ Learned how to <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula</a>
 
 
 
-<body>
-    <div style="text-align: center; padding: 20px;">
-        <h1 style="color: #0093A4;">You are ready to start teaching if you:  </h1>
- <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
-              ✅ Became a  <a href="https://www.example.com" target="_blank">verified teacher</a>
-            </div>
-            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
-                   ✅ Posted on the <a href="https://www.example.com" target="_blank"> Teacher Forum</a>
-            </div>
-            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
-                ✅ Set up a  <a href="https://www.example.com" target="_blank">classroom section</a>
-            </div>
-            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
-               ✅ Added a <a href="https://www.example.com" target="_blank">course</a>
-            </div>
-            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
-                   ✅ Located and used course  <a href="https://www.example.com" target="_blank">lesson plans</a> and <a href="https://www.example.com" target="_blank">teacher resources.</a>
-            </div>
-            <div style="background: #FFFFFF; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 18px; width: 60%;">
-                         ✅ Learned how to  <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula.
-            </div>
-        </div>
-    </div>
-
-
-
-##What Next?
+##What's Next?
 
 
 ### <b>Never Coded before? </b>
 ####<a href="https://studio.code.org/courses/self-paced-pl-k5-2024" target="_blank">CS Basics</a> is Code.org's free self-paced online learning for educators to get familiar with Computer Science Basics! After completing this professional learning experience, you'll be comfortable with basic coding concepts.
-
 
 
 ### <b>Ready to Teach?</b> 
@@ -47,7 +31,6 @@ markdown <<MARKDOWN
 
 ### <b>Need Course Specific Support?</b>  
 #### Start a <a href="https://code.org/professional-learning/self-paced" target="_blank">self-paced professional learning module</a>
-
 
 
 MARKDOWN
