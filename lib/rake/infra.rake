@@ -101,25 +101,31 @@ namespace :infra do
     :all,
     'test:ci'
   ]
+
+  desc 'Update the server as part of continuous integration.'
+  timed_task_with_logging :ci do
+    # In the test environment, we want to build everything with tests. In most
+    # other environments, we want to do a full build including server
+    # redeployment, but in some environments (like the i18n server) we just
+    # want to run the build with no other actions.
+    desired_task =
+      if ENV['CI_ONLY_BUILD']
+        'infra:build'
+      elsif rack_env?(:test)
+        'infra:test'
+      else
+        'infra:all'
+      end
+
+    ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
+  end
 end
 
-desc 'Update the server as part of continuous integration.'
-timed_task_with_logging :ci do
-  # In the test environment, we want to build everything with tests. In most
-  # other environments, we want to do a full build including server
-  # redeployment, but in some environments (like the i18n server) we just want
-  # to run the build with no other actions.
-  desired_task =
-    if ENV['CI_ONLY_BUILD']
-      'infra:build'
-    elsif rack_env?(:test)
-      'infra:test'
-    else
-      'infra:all'
-    end
-
-  ChatClient.wrap('CI build', backtrace: true) {Rake::Task[desired_task].invoke}
-end
+# Temporarily support invoking this task with either `rake ci` or `rake
+# infra:ci` until the latter method has been deployed everywhere, so our
+# persistent managed servers don't break during the transition.
+# TODO infra: remove this once the `infra:ci` implementation has been deployed
+timed_task_with_logging ci: ['infra:ci']
 
 # Returns true if upgrade succeeded, false if failed.
 def upgrade_frontend(name, hostname)

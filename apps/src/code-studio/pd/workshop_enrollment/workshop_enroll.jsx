@@ -46,7 +46,16 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
+    const workshopTitle = props.workshop.name
+      ? props.workshop.name
+      : `a ${props.workshop.course}`;
+    let workshopEnrollTitle = `Register for ${workshopTitle}`;
+    if (!workshopTitle.toLowerCase().endsWith('workshop')) {
+      workshopEnrollTitle += ' workshop';
+    }
+
     this.state = {
+      workshopEnrollTitle: workshopEnrollTitle,
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
@@ -174,7 +183,7 @@ export default class WorkshopEnroll extends React.Component {
       default:
         return (
           <div>
-            <h1>{`Register for a ${this.props.workshop.course} workshop`}</h1>
+            <h1>{this.state.workshopEnrollTitle}</h1>
             <p>
               Taught by Code.org facilitators who are experienced computer
               science educators, our workshops will prepare you to teach the

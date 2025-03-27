@@ -1,0 +1,20 @@
+{
+  "name": "poetry-hoc",
+  "script_names": [
+    "poetry-hoc"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "poembot-hoc",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

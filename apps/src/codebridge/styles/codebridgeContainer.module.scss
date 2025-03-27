@@ -19,11 +19,3 @@
     background: $light_black;
   }
 }
-
-.codebridgeGridContainer {
-  display: grid;
-
-  // Background color and gap make a border around the grid items.
-  background-color: $light_gray_800;
-  gap: 1px;
-}

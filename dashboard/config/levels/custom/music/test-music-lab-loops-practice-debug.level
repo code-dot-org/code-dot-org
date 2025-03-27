@@ -1,0 +1,172 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-13T21:52:55.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Woops!\r\nYour coding partner needs help again. They accidentally moved around all their code. Help them debug their code so it matches the timeline image below. \r\n\r\n![](https://images.code.org/28912effd0e74278486b8e5c8ccbe903-image-1741989566548.17.08 PM.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_main_beat",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2"
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 430,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_espresso/drums_main_beat"
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_sounds_together",
+              "x": 230,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sounds_sequential",
+              "id": "play_sounds_sequential",
+              "x": 230,
+              "y": 350,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "VPCR;^R,gE%H~V_a$lb|",
+              "x": 430,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_espresso/vocals_verse_1"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "u_7+BSNvG0]::wN`B@57",
+              "x": 430,
+              "y": 230,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_espresso/vocals_verse_2"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Z{?)TDFl4ebQTw1+j925",
+              "x": 430,
+              "y": 310,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 230,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "(8B@%|A3;lS(ey^}tMd$",
+              "x": 430,
+              "y": 390,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor/cwejr3U15rWOIkH8dDTLeaAYtCh7rvJ4qD5+CIxST/M\nKcKET2BXjPSzgsj4vEPimRw60pGInB6rV5fMMX6hhwMIDB/wWGDi0Uim+eQY\ndohrM9z9HTHVugFaWEp0771ePHyEt95yP7+EOTOPZV1diVnMbs9/2135knGd\n9s1YpuQy+JDvA7sOm2e6Ng5a03m3JAFiT5kPdCj3taRrXsO8oDjBXQaIIuMY\nHeAjvyycyxA/0SbqQ3BuvAnC8v9ERLyPf+kDSsQ6TaGVVbsw9Bku3ltE8AeI\nK2g7t+jmHjY3D9kgbfwJ1YjRNXXXaaGJaoRvnpNzg7Jhojj85uxnnNOzT/XD\n1yTH1M7u+mMW4jrzVnA8hR/FNb1QKubq/Y6HHcTCgOfXjJgojBRQoRj/DCVx\nzpm8iOsRuRtpkxjcDgqDZ29vSJwf8fy3vhSbtgoyokz7/NauHO4xykmFvh1u\n7XdGxu+SQAAYsRRjIpaoizZOWJOrl3MdtHpqtKF4w2Q+uAhWYkjwJMnEvRKT\n248Y3s6RQDWp2g09rfz9ZCpKvXrYdbrXlde0aVuQkkD5hBdbQ7ahCZS0y+rR\nqahixds5RFYazPR2g0iXjghOSVibHtTDk4x8sgClAdpbqDbwX4QnfEPzlLVy\njft5lyaV3ItTNg7ALHSGk3lAgSZoc0ah11IwIYXOHRaFXbPVQD6993KQj0qI\nAzkzlqzWRR/1oTwCPw/aeX2kDXFBA+QdCvzLESjGAM9xKv4UuDCfq0YUKzuw\numpM9HXTxoOKyrordQ5Jm4khyO1F9JR/c7nmNkXyVeDb3yKLOyUb3t1FLemV\n/96OLcuwJFqppje/WSlcH8D3BUIR2vBtv8UPNX4ouPzmyuaSXLHIovRY0DfZ\nndS2PiFNIFRkCsJBiwSPdox51NVjZQPSPJi2fDlrnjiXd0/2DUm5GHGgOP3C\nDdfy6aLtWo1dyfHpY3aSXZPzIuTmKccXVpGdE/UwS+IP/1+DLxdS//2M/bDv\nAwK3EvzZrvl54iF0cT503LdqNxbUVwdNJW5zjyCx6xcmQpvD1HmZshUalE5J\n/fkTkW3p9Vm/zox60S0Ken8QlaA4mFEmZwQQtXIaCkQcwtWdOPs/c8cVSWba\n6rH+xFiK48z3f9KVCiZFUNbiq1gNk5dFE8qpd6wDeR7+On47IWwxpzTNFI34\nsxNVShvl0vPlDTWSgsrtw14oxqFAmvnKVlG9nCYUTfkhwg/StPgHl8uQnTUH\nKJssnqU5NTmSbs8OKaKk/+gsYm0ii8vr0u5PyezmsNHZ4gBye0pkNoKjtz1d\nRhFIEH96vFwgKDvX8Jvp9xHIPROYm/mgh09sJlPV/lwlwfcw0Tt7PkOg9P79\n2Lxd5Siu9e4fo6ZkKmKT50X5+CrZBPZYhBI78OGEIQ1edhyUz1/SGsbzb2Gi\n9T6n9w==\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-14 21:56:42 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 21:59:46 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 21:06:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 21:07:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

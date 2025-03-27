@@ -9,6 +9,7 @@ import React, {useCallback, useEffect} from 'react';
 
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {LabProps} from '@cdo/apps/lab2/types';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -36,8 +37,8 @@ import {
   setUserHasAichatAccess,
   setViewMode,
   updateAiCustomization,
-} from '../redux/aichatRedux';
-import {getNewMessageId} from '../redux/utils';
+} from '../redux';
+import {getNewRemoveId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
@@ -48,14 +49,14 @@ import PresentationView from './presentation/PresentationView';
 import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
-  id: getNewMessageId(),
+  removeId: getNewRemoveId(),
   text: aichatI18n.modelResetNotification(),
   notificationType: 'success',
   timestamp: Date.now(),
   includeInChatHistory: true,
 });
 
-const AichatView: React.FunctionComponent = () => {
+const AichatView: React.FunctionComponent<LabProps> = () => {
   const dispatch = useAppDispatch();
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
@@ -70,8 +71,6 @@ const AichatView: React.FunctionComponent = () => {
   const initialSources = useAppSelector(
     state => (state.lab.initialSources?.source as string) || '{}'
   );
-
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
@@ -116,7 +115,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'LOAD_LEVEL',
-        hideForParticipants: true,
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
@@ -136,12 +134,6 @@ const AichatView: React.FunctionComponent = () => {
         });
     }
   }, [dispatch, signInState]);
-
-  // When the level changes or if we are viewing aichat level as a different user
-  // (e.g., teacher viewing student work), clear the chat message history and start a new session.
-  useEffect(() => {
-    dispatch(clearChatMessages());
-  }, [currentLevelId, viewAsUserId, dispatch]);
 
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
@@ -218,7 +210,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'CLEAR_CHAT',
-        hideForParticipants: true,
       })
     );
     dispatch(
@@ -264,16 +255,17 @@ const AichatView: React.FunctionComponent = () => {
                   headerContent={aichatI18n.modelCustomizationHeader()}
                   className={moduleStyles.panelContainer}
                   headerClassName={moduleStyles.panelHeader}
-                  rightHeaderContent={renderModelCustomizationHeaderRight(
-                    () => {
+                  rightHeaderContent={
+                    !viewAsUserId &&
+                    renderModelCustomizationHeaderRight(() => {
                       onClickStartOver();
                       dispatch(
                         sendAnalytics(EVENTS.AICHAT_START_OVER, {
                           levelPath: window.location.pathname,
                         })
                       );
-                    }
-                  )}
+                    })
+                  }
                 >
                   <ModelCustomizationWorkspace />
                 </PanelContainer>

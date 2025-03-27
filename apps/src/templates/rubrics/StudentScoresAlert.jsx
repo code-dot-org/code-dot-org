@@ -1,9 +1,9 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';

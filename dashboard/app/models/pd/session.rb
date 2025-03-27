@@ -2,16 +2,19 @@
 #
 # Table name: pd_sessions
 #
-#  id             :integer          not null, primary key
-#  pd_workshop_id :integer
-#  start          :datetime         not null
-#  end            :datetime         not null
-#  created_at     :datetime
-#  updated_at     :datetime
-#  deleted_at     :datetime
-#  code           :string(255)
-#  session_format :integer
-#  time_zone      :string(255)
+#  id               :integer          not null, primary key
+#  pd_workshop_id   :integer
+#  start            :datetime         not null
+#  end              :datetime         not null
+#  created_at       :datetime
+#  updated_at       :datetime
+#  deleted_at       :datetime
+#  code             :string(255)
+#  session_format   :integer
+#  time_zone        :string(255)
+#  meeting_link     :text(65535)
+#  location_name    :string(255)
+#  location_address :string(255)
 #
 # Indexes
 #
@@ -30,13 +33,10 @@ class Pd::Session < ApplicationRecord
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: 'pd_session_id', dependent: :destroy
 
-  before_validation :set_default_time_zone
-
-  before_update :prevent_time_zone_change
-
   validates_presence_of :start, :end
   validate :starts_and_ends_on_the_same_day
   validate :starts_before_ends
+  validate :valid_meeting_link_format, if: :meeting_link?
 
   def starts_and_ends_on_the_same_day
     return unless start && self.end
@@ -52,22 +52,18 @@ class Pd::Session < ApplicationRecord
     end
   end
 
-  def set_default_time_zone
-    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : 'UTC'
-  end
-
-  def prevent_time_zone_change
-    if time_zone_changed?
-      self.time_zone = time_zone_was # Revert to the original time_zone
+  def valid_meeting_link_format
+    unless valid_url?(meeting_link)
+      errors.add(:meeting_link, "is not a valid URL")
     end
   end
 
   def start_time
-    start.in_time_zone(time_zone || 'UTC')
+    start.in_time_zone(workshop.time_zone || 'UTC')
   end
 
   def end_time
-    self.end.in_time_zone(time_zone || 'UTC')
+    self.end.in_time_zone(workshop.time_zone || 'UTC')
   end
 
   def formatted_date
@@ -75,8 +71,12 @@ class Pd::Session < ApplicationRecord
   end
 
   def tz_abbreviation
-    return '' if time_zone.blank?
-    ActiveSupport::TimeZone[time_zone].tzinfo.current_period.abbreviation.to_s
+    return '' if workshop.time_zone.blank? || start.blank?
+
+    time_zone_obj = ActiveSupport::TimeZone[workshop.time_zone]
+    return '' unless time_zone_obj
+
+    time_zone_obj.tzinfo.period_for_utc(start).abbreviation.to_s
   end
 
   def formatted_date_with_start_and_end_times
@@ -89,8 +89,9 @@ class Pd::Session < ApplicationRecord
   def session_info_for_calendar
     {
       id: id,
-      start: start,
-      end: self.end
+      start: start_time.utc.iso8601,
+      end: end_time.utc.iso8601,
+      is_local: workshop.time_zone.blank?
     }
   end
 
@@ -144,6 +145,13 @@ class Pd::Session < ApplicationRecord
 
   def too_soon_for_link?
     workshop.started_at.nil? || start - 48.hours > Time.zone.now
+  end
+
+  def valid_url?(url)
+    uri = URI.parse(url)
+    uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+  rescue URI::InvalidURIError
+    false
   end
 
   private def unused_random_code

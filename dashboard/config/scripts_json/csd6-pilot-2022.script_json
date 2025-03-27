@@ -9,20 +9,18 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "csd-u6-pilot-2022",
       "show_calendar": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csd6-pilot",
-    "serialized_at": "2024-11-19 01:16:19 UTC",
+    "family_name": null,
+    "serialized_at": "2025-03-24 23:13:21 UTC",
     "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd6-pilot-2022"
     }

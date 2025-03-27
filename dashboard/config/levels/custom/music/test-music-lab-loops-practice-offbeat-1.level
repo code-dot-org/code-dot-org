@@ -1,0 +1,50 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-13T21:59:18.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Create an Offbeat Song\r\n\r\nUse what you know about loops and rests to recreate this timeline using the sounds you are given. \r\n\r\n![](https://images.code.org/4fac8b35f1c361c60de058f0c9a59696-image-1741993866842.11.00 PM.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "pop": [
+          "drum_kit_pop",
+          "clap"
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        }
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Offbeat Song #1"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RB47f5qX3xiiiVCFasL7QIKnC\nuDH/BvFJSGCVshdONoNWyCGpl/ubO+Cm+/r1jnNfD1t03vnJP7pHpoF1OQHf\nYe7o+Vu8/hb3zD6Wme+V+JVc6ir8OeAadQU1EZlHmOOnRMrgZFEf2a976EcC\n0WgJkkFJ0lG3cMoa0YTPpbfE+Snpv2SEdphKD4XBa/htLDkWo3rD7JO6bT8T\naKThzeM5z6KYAwr3txk97b8eaWeDIpkrvy40nLo1ADt8j9meHdhLCy9COFz1\npvdWJ5sXyYTM+z4lArPck/fGphKm7fmg92Aun6pkLESaQplMskxY657GkfZm\nM377MtSc8X6OZA1xmgFPKE6QFuhxiCBHJq1ZTTsCumV/1U34ADrmAC4uCIDB\nkgwaUB0s9AfzcbhGadBfVLg6Xtm6OFtooCKHkGUAfYCQSI09pRkT7YFw34XQ\n3B378joRKbOlezOG+UQwPuMPHauKNHEJkRNITW/C7B7tlpxaaOc5ayVXkdnX\nr+tmiSMvPUFW4UmYc7rFVpM+Z0UFjVoRufmgyjsaEIhz0D1lJnRuGeVlnhOw\nSfgKCDkNlKMSZlX8PUreXgju09Jr6BcFvK5i2wOgahWxLtBpInfaeVNNno5c\nL2D2zVKTeDJeoDCCLIGjC2enm9t8O+yD1cJzW6egFFWkK73QCO6CY3K2rcWm\nUI/bjuJ4Zj2GZOCj1f17bULiCQOk/A/OEePCKJkxZJj6AQ7fMheCeb13/+oJ\nAkA//rKr95SGBzEQQS7qx8fGRPlpiS3j7nPZMfYSpKS3HVqAqpwyBDf1XhKS\nvXivvXA2o9dl0NOR6dYRMCKv8ZwVhDjOxgfXf4zOUBGBUrn9bgiR4ye9CrRa\nkMiTz3umMWLkKRbYJF+DjG+GBNgOL5AneXRlI0NbPbPklRbDMrFLhQFhzG+C\nDBaTyQ3jS7oPWLQDr/iKt+O37YtQ+luI1ZBZpw==\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-14 23:07:44 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:11:01 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:11:23 +0000\",\"changed\":[\"long_instructions\",\"exemplar_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

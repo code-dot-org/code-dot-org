@@ -1,0 +1,14 @@
+{
+  "name": "ui-test-single-unit-course-2025",
+  "script_names": [
+    "ui-test-single-unit-2025"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-single-unit-course",
+    "version_year": "2025"
+  }
+}

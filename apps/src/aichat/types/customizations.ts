@@ -1,5 +1,6 @@
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
 /** Model customizations and model card information for aichat levels.
  *  selectedModelId is a foreign key to ModelDescription.id */
@@ -29,12 +30,9 @@ export interface ModelCardInfo {
 }
 
 /** Metadata about a given model, common across all aichat levels */
-export interface ModelDescription {
+export type ModelDescription = (typeof modelsJson)[number] & {
   id: ValueOf<typeof AiChatModelIds>;
-  name: string;
-  overview: string;
-  trainingData: string;
-}
+};
 
 // Visibility for AI customization fields set by levelbuilders.
 export enum Visibility {
@@ -42,3 +40,17 @@ export enum Visibility {
   READONLY = 'readonly',
   EDITABLE = 'editable',
 }
+
+export type AichatContext = {
+  currentLevelId: number | null;
+  scriptId: number | null;
+  channelId: string | undefined;
+};
+
+export enum ViewMode {
+  EDIT = 'edit-mode',
+  PRESENTATION = 'presentation-mode',
+}
+
+// The type of save action being performed (customization update, publish, model card save, etc).
+export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';

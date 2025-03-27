@@ -13,7 +13,7 @@ import {
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {VideoLevelData} from '@cdo/apps/lab2/types';
+import {LabProps, VideoLevelData} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import standaloneVideoLocale from './locale';
@@ -21,7 +21,7 @@ import Video from './Video';
 
 import styles from './video.module.scss';
 
-const StandaloneVideo: React.FunctionComponent = () => {
+const StandaloneVideo: React.FunctionComponent<LabProps> = () => {
   const dispatch = useAppDispatch();
   const levelData = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.levelData

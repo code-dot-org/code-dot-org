@@ -10,5 +10,5 @@ allow_multiple_attempts true
 markdown <<MARKDOWN
 Planning a 7-course dinner requires breaking the task down into smaller steps, a process called ____________.
 
-Driving a car without understanding the underlying mechanics means only knowing relevant key details. This is also called ____________.
+Driving a car without understanding the underlying mechanics means only knowing relevant key details. This is called ____________.
 MARKDOWN

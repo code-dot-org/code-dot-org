@@ -6,7 +6,7 @@ import {
   addChatEvent,
   selectAllVisibleMessages,
   sendAnalytics,
-} from '@cdo/apps/aichat/redux/aichatRedux';
+} from '@cdo/apps/aichat/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -48,7 +48,6 @@ const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'COPY_CHAT',
-        hideForParticipants: true,
       })
     );
   };
@@ -57,7 +56,7 @@ const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
     <Button
       onClick={handleCopy}
       text={aichatI18n.copyChatButtonText()}
-      iconLeft={{iconName: 'clipboard'}}
+      iconLeft={{iconName: 'copy'}}
       size="s"
       color="gray"
       type="secondary"

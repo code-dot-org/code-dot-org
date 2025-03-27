@@ -231,8 +231,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    response[:activity_id] = options[:activity] && options[:activity].id
-
     response
   end
 
@@ -326,10 +324,9 @@ class ApplicationController < ActionController::Base
   end
 
   protected def clear_sign_up_session_vars
-    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+    if session[:sign_up_uid] || session[:sign_up_type]
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
-      session.delete(:sign_up_tracking_expiration)
     end
   end
 

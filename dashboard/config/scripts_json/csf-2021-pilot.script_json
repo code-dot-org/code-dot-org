@@ -17,18 +17,16 @@
       "content_area": "other",
       "curriculum_umbrella": "Other",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csf-2021-pilot",
-      "version_year": "unversioned"
+      "pilot_experiment": "csf-2021-pilot"
     },
     "new_name": null,
-    "family_name": "csf-2021-pilot-1",
-    "serialized_at": "2024-11-19 01:16:34 UTC",
+    "family_name": null,
+    "serialized_at": "2025-03-24 23:13:38 UTC",
     "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }

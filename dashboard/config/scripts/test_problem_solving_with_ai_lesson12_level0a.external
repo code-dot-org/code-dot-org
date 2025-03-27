@@ -1,0 +1,10 @@
+name 'test-problem-solving-with-ai-lesson12-level0a'
+title 'AI in Grocery Stores'
+description 'description here'
+
+markdown <<MARKDOWN
+##AI In Grocery Stores
+Examine the following news articles, crafted by Code.org, but modeled after real world events.
+
+[Link to Articles](https://drive.google.com/drive/folders/1JaZwxEeDHVHHkPhkNqObp8ItbDTUC-g5)
+MARKDOWN

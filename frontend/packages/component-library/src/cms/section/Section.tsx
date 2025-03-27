@@ -1,31 +1,44 @@
 import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {ComponentSizeXSToL} from '@/common/types';
+import {SpacingNoneToS, SpacingNoneToL} from '@/common/types';
+
 import moduleStyles from './section.module.scss';
 
-export type SectionBackgroundColor =
+export type SectionBackground =
   | 'primary'
   | 'secondary'
   | 'dark'
   | 'brandLightPrimary'
-  | 'brandLightSecondary';
+  | 'brandLightSecondary'
+  | 'patternDark'
+  | 'patternPrimary';
 
-export const sectionBackgroundColors: {
-  [key in SectionBackgroundColor]: SectionBackgroundColor;
+export const sectionBackground: {
+  [key in SectionBackground]: SectionBackground;
 } = {
   primary: 'primary',
   secondary: 'secondary',
   dark: 'dark',
   brandLightPrimary: 'brandLightPrimary',
   brandLightSecondary: 'brandLightSecondary',
+  patternDark: 'patternDark',
+  patternPrimary: 'patternPrimary',
 };
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
-  backgroundColor?: SectionBackgroundColor;
+  background?: SectionBackground;
+  /** Background image */
+  backgroundImageUrl?: string;
   /** Vertical padding */
-  padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
+  padding?: Exclude<SpacingNoneToL, SpacingNoneToS>;
+  /** Section theme */
+  theme?: 'Light' | 'Dark';
+  /** Section ID */
+  id?: string;
+  /** Section className */
+  className?: string;
   /** Section content */
   children?: ReactNode;
 }
@@ -42,22 +55,46 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  *
  * Design System: Section Component.
  * Acts as a container for section content in the Contentful CMS.
+ * Supports Light and Dark themes automatically based on background color.
  */
 const Section: React.FC<SectionProps> = ({
-  backgroundColor = 'primary',
+  background = 'primary',
+  backgroundImageUrl,
   padding = 'l',
-  children,
+  theme = 'Light',
+  id,
   className,
+  children,
   ...HTMLAttributes
 }: SectionProps) => {
+  const hasPatternBackground =
+    background === sectionBackground.patternDark ||
+    background === sectionBackground.patternPrimary;
+
+  const useDarkTheme =
+    hasPatternBackground || background === sectionBackground.dark;
+
   return (
     <section
+      id={id}
+      data-theme={hasPatternBackground || useDarkTheme ? 'Dark' : theme}
       className={classNames(
         moduleStyles.section,
-        moduleStyles[`section-${backgroundColor}`],
-        moduleStyles[`section-${padding}`],
+        moduleStyles[`section-background-${background}`],
+        moduleStyles[`section-padding-${padding}`],
         className,
       )}
+      style={{
+        ...(hasPatternBackground
+          ? backgroundImageUrl
+            ? {
+                backgroundImage: `url(${backgroundImageUrl})`,
+                backgroundRepeat: 'repeat',
+                backgroundSize: '18rem',
+              }
+            : {}
+          : {}),
+      }}
       {...HTMLAttributes}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>

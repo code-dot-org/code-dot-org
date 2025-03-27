@@ -49,6 +49,8 @@ export interface MusicState {
   hideHeaders: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
+  /** The playback events associated with the exemplar player */
+  exemplarPlaybackEvents: PlaybackEvent[];
   /** The current ordered functions */
   orderedFunctions: FunctionEvents[];
   /** The current last measure of the song */
@@ -90,6 +92,7 @@ const initialState: MusicState = {
   instructionsPosition: InstructionsPosition.LEFT,
   hideHeaders: false,
   playbackEvents: [],
+  exemplarPlaybackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
   // Default to 1 (fully loaded). When loading a new sound, the progress will be set back to 0 before the load starts.

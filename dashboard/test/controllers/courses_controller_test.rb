@@ -106,6 +106,42 @@ class CoursesControllerTest < ActionController::TestCase
     assert_template 'courses/show'
   end
 
+  test "show includes correct SEO data" do
+    offering = create :course_offering, key: 'csp'
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    get :show, params: {course_name: ug2019}
+
+    assert_response :ok
+    assert_includes(@response.body, "<title>Computer Science Principles (&#39;19-&#39;20) - Code.org [test]</title>")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"Learn foundational computer science concepts.\" />")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/csp-2019\" />")
+  end
+
+  test "canonical url points to the latest stable version" do
+    offering = create :course_offering, key: 'csp'
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+    get :show, params: {course_name: ug2019}
+
+    assert_response :ok
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/csp-2020\" />")
+  end
+
+  test "canonical url points to itself when it is the latest stable version" do
+    offering = create :course_offering, key: 'csp'
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+    get :show, params: {course_name: ug2020}
+
+    assert_response :ok
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/csp-2020\" />")
+  end
+
   test "show: non existant course throws" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {course_name: 'nosuchcourse'}
@@ -382,18 +418,6 @@ class CoursesControllerTest < ActionController::TestCase
 
     get :show, params: {course_name: 'experiment-course'}
     assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}"
-  end
-
-  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard unit overview if single-unit course is in a section" do
-    experiment_single_unit_course = create :single_unit_course
-    experiment_teacher = create :teacher
-    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_single_unit_course
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
-
-    sign_in experiment_teacher
-
-    get :show, params: {course_name: experiment_single_unit_course.name}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_single_unit_course.default_units.first.name}"
   end
 
   no_access_msg = "You don&#39;t have access to this course."

@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {MouseEvent, useCallback, useRef} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
+import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';
@@ -168,16 +169,23 @@ const Timeline: React.FunctionComponent = () => {
   }, [playheadRef]);
 
   usePlaybackUpdate(scrollPlayheadForward, scrollToPlayhead, scrollToPlayhead);
+  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+  const canPopulateTimeline = !isPredictLevel || predictResponseSubmitted;
 
   return (
     <div
       id="timeline"
+      aria-label="Timeline"
       className={classNames(
         moduleStyles.timeline,
         isPlaying && moduleStyles.timelinePlaying
       )}
       onClick={onTimelineClick}
       ref={timelineRef}
+      tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
     >
       <div
         id="timeline-measures-background"
@@ -225,11 +233,12 @@ const Timeline: React.FunctionComponent = () => {
       </div>
 
       <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
-        {blockMode === BlockMode.SIMPLE2 ? (
-          <TimelineSimple2Events {...timelineElementProps} />
-        ) : (
-          <TimelineSampleEvents {...timelineElementProps} />
-        )}
+        {canPopulateTimeline &&
+          (blockMode === BlockMode.SIMPLE2 ? (
+            <TimelineSimple2Events {...timelineElementProps} />
+          ) : (
+            <TimelineSampleEvents {...timelineElementProps} />
+          ))}
       </div>
 
       <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>

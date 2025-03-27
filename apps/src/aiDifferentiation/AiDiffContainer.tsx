@@ -1,8 +1,10 @@
+import Button from '@code-dot-org/component-library/button';
+import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
-import Button from '@cdo/apps/componentLibrary/button';
+import i18n from '@cdo/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {useAppSelector} from '../util/reduxHooks';
@@ -21,21 +23,20 @@ const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
   closeTutor?: () => void;
+  context: string;
   open: boolean;
-  lessonId: number;
-  lessonName: string;
-  unitDisplayName: string;
-  disableWelcome?: boolean;
+  scriptId?: number;
+  scriptName?: string;
+  unitDisplayName?: string;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
+  context,
   open,
-  lessonId,
-  lessonName,
+  scriptId,
+  scriptName,
   unitDisplayName,
-  // TODO(lfm): remove this when welcome is ready to be shown.
-  disableWelcome = true,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
@@ -51,11 +52,31 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   );
 
   useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (window.innerWidth < positionX + 100) {
+        setPositionX(window.innerWidth - 100);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
     trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
   }, [positionX]);
 
   useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (positionY + window.innerHeight < 760) {
+        setPositionY(760 - window.innerHeight);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
     trySetSessionStorage(AI_DIFF_POSITION_Y, String(positionY));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
   }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
@@ -66,7 +87,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   return (
     <Draggable
       handle=".ai_diff_handle"
-      defaultPosition={{x: positionX, y: positionY}}
+      position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
     >
       <div
@@ -91,6 +112,13 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             <span className={style.aiDiffHeaderText}>
               {AI_DIFF_HEADER_TEXT}
             </span>
+            <span>
+              <Tags
+                tagsList={[{label: i18n.experiment()}]}
+                size="s"
+                className={style.headerTag}
+              />
+            </span>
           </div>
           <div className={style.aiDiffHeaderRightSide}>
             <Button
@@ -105,19 +133,19 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          {!disableWelcome &&
-          !hasCompletedAiDifferentiationWelcome &&
-          showWelcomeExperience ? (
+          {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience ? (
             <AiDiffWelcome
               setShowWelcomeExperience={setShowWelcomeExperience}
-              lessonId={lessonId}
-              lessonName={lessonName}
+              context={context}
+              scriptId={scriptId}
+              scriptName={scriptName}
               unitDisplayName={unitDisplayName}
             />
           ) : (
             <AiDiffChat
-              lessonId={lessonId}
-              lessonName={lessonName}
+              context={context}
+              scriptId={scriptId}
+              scriptName={scriptName}
               unitDisplayName={unitDisplayName}
             />
           )}

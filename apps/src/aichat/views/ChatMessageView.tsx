@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {memo, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -5,12 +6,20 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {ChatMessage as ChatMessageType} from '../types';
+import {
+  type ChatMessage as ChatMessageType,
+  isCompletedChatMessage,
+  isServerChatEvent,
+} from '../types';
+import {getAssetUrl} from '../utils';
 
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
+
+import styles from './chatWorkspace.module.scss';
 
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
@@ -22,7 +31,9 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   isChatHistoryView,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText} = chatMessage;
+  const {status, role, chatMessageText, assets} = chatMessage;
+  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
+  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -41,40 +52,74 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     chatMessage.role === Role.USER &&
     chatMessage.status === Status.PROFANITY_VIOLATION;
 
-  // Note: ID should always be defined when viewing chat history,
-  // but is currently marked optional because the ChatEvent type
-  // is used for both chat history and live chat.
-  // TODO: Clean up types to separate server and client IDs.
-  const commonProps = {
-    id: chatMessage.id!,
-    chatMessageText: chatMessage.chatMessageText,
-    teacherFeedback: chatMessage?.teacherFeedback,
-  };
-
   const isAssistant = chatMessage.role === Role.ASSISTANT;
 
-  const chatHistoryFooter = messageVisible ? (
-    <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
-  ) : userMessageProfanity ? (
-    <ProfanityFeedbackFooter
-      {...commonProps}
-      toggleProfaneMessageVisibility={() =>
-        setShowProfaneUserMessage(!showProfaneUserMessage)
-      }
-      profaneMessageVisible={showProfaneUserMessage}
-    />
-  ) : null;
-  const defaultFooter =
-    messageVisible && isAssistant ? (
-      <CopyButton copyText={chatMessage.chatMessageText} />
+  let footer;
+  if (isChatHistoryView) {
+    // In chat history view, all events should have been retrieved from the server (i.e. should have an ID).
+    if (!isServerChatEvent(chatMessage)) {
+      console.warn('Invalid event in chat history', chatMessage);
+      return null;
+    }
+
+    const commonProps = {
+      id: chatMessage.id,
+      chatMessageText: chatMessage.chatMessageText,
+      teacherFeedback: isCompletedChatMessage(chatMessage)
+        ? chatMessage.teacherFeedback
+        : undefined,
+    };
+
+    footer = messageVisible ? (
+      <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
+    ) : userMessageProfanity ? (
+      <ProfanityFeedbackFooter
+        {...commonProps}
+        toggleProfaneMessageVisibility={() =>
+          setShowProfaneUserMessage(!showProfaneUserMessage)
+        }
+        profaneMessageVisible={showProfaneUserMessage}
+      />
     ) : null;
+  } else {
+    footer =
+      messageVisible && isAssistant ? (
+        <CopyButton copyText={chatMessage.chatMessageText} />
+      ) : null;
+  }
+
+  if (!isAssistant && !isChatHistoryView && assets && currentChannelId) {
+    footer = (
+      <div className={styles.assetRow}>
+        {assets.map(asset => {
+          const filename = asset.filename;
+          return filename.endsWith('.pdf') ? (
+            <div key={filename} className={styles.pdfPreview}>
+              <FontAwesomeV6Icon
+                iconName="file-pdf"
+                className={styles.pdfIcon}
+              />
+              <span>{filename}</span>
+            </div>
+          ) : (
+            <img
+              key={filename}
+              alt=""
+              className={styles.imagePreview}
+              src={getAssetUrl(asset, currentChannelId, levelName)}
+            />
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <ChatMessage
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
-      footer={isChatHistoryView ? chatHistoryFooter : defaultFooter}
+      footer={footer}
     />
   );
 };

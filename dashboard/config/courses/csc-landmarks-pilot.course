@@ -1,0 +1,20 @@
+{
+  "name": "csc-landmarks-pilot",
+  "script_names": [
+    "csc-landmarks-pilot"
+  ],
+  "published_state": "sunsetting",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csc-landmarks-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

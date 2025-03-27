@@ -1,0 +1,47 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-17T21:11:44.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-loops-sythesize-skill-template",
+    "long_instructions": "### Change a sound in real-time\r\n\r\nLive coding doesn't have to be complicated. Try manipulating just one element at a time. See if you can change a sound on the beat. \r\n\r\n**Do this:** \r\n- Plan your next sound shift. Find a sound in the dropdown menu that you'll switch to at Measure 4. \r\n- Practice live coding your music by pressing \"Run\" and clicking on your new sound once the playhead gets to the beginning of Measure 4. ",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-17T21:11:44.322+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-1\"},{\"changed_at\":\"2025-03-17 21:20:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 15:50:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

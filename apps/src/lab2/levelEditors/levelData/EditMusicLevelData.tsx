@@ -1,10 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {
@@ -225,9 +225,48 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             name="showSoundFilters"
             label="Show Sound Filters in Sound Picker"
             onChange={event => {
+              const showSoundFilters = event.target.checked;
               setLevelData({
                 ...levelData,
-                showSoundFilters: event.target.checked,
+                showSoundFilters,
+                ...(showSoundFilters
+                  ? {}
+                  : {
+                      showSoundsPanelInSoundsMode: false,
+                      sortUnrestrictedPacksByType: false,
+                    }),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.showSoundsPanelInSoundsMode}
+            name="showSoundsPanelInSoundsMode"
+            label="Default to 'Sounds' mode in Sound Picker"
+            onChange={event => {
+              const showSoundsPanelInSoundsMode = event.target.checked;
+              setLevelData({
+                ...levelData,
+                showSoundsPanelInSoundsMode,
+                ...(showSoundsPanelInSoundsMode
+                  ? {showSoundFilters: true}
+                  : {}),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.sortUnrestrictedPacksByType}
+            name="sortUnrestrictedPacksByType"
+            label="Sort unrestricted (Code.org) packs by type in Sound Picker"
+            onChange={event => {
+              const sortUnrestrictedPacksByType = event.target.checked;
+              setLevelData({
+                ...levelData,
+                sortUnrestrictedPacksByType,
+                ...(sortUnrestrictedPacksByType
+                  ? {showSoundFilters: true}
+                  : {}),
               });
             }}
             size="s"

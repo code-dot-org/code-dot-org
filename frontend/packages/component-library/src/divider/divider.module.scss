@@ -4,12 +4,12 @@
 .divider {
   border: 0;
   border-top: 1px solid;
-  margin: 0;
   width: 100%;
+  margin-inline: auto;
 }
 
-// Divider Colors
-.divider {
+// Divider colors
+.divider-color {
   &-primary {
     border-top-color: var(--background-neutral-quaternary);
   }
@@ -19,21 +19,25 @@
   }
 }
 
-// Divider Spacing
-.divider {
+// Divider margin
+.divider-margin {
+  &-none {
+    margin-block: 0;
+  }
+
   &-xs {
-    margin: 0.5rem 0;
+    margin-block: 0.5rem;
   }
 
   &-s {
-    margin: 1rem 0;
+    margin-block: 1rem;
   }
 
   &-m {
-    margin: 2rem 0;
+    margin-block: 2rem;
   }
 
   &-l {
-    margin: 4rem 0;
+    margin-block: 4rem;
   }
 }

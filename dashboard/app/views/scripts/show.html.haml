@@ -1,5 +1,3 @@
-- @page_title = @script.localized_title
-
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 
 -# This variable will get any data we need to pass along to scripts/show.js
@@ -67,3 +65,7 @@
         ="There are #{lesson_plans.count} unlaunched code studio lesson plans in this unit:"
         - lesson_plans.each do |lesson_plan|
           %li= link_to lesson_plan[:name], lesson_plan[:url]
+
+/ Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
+- if Policies::Ai.ai_differentiation_enabled?(current_user) && Policies::Ai.ai_differentiation_enabled_for_unit?(@script)
+  %div#ai-differentiation-fab-mount-point

@@ -1,0 +1,20 @@
+{
+  "name": "hello-world-batman",
+  "script_names": [
+    "hello-world-batman"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hello-world-batman",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

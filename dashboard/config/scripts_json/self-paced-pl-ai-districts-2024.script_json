@@ -6,22 +6,20 @@
     "properties": {
       "content_area": "skills_focused_self_paced_pl",
       "curriculum_umbrella": "Self-paced PL - AI for teachers",
-      "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
       "topic_tags": [
         "ai"
       ],
-      "tts": true,
-      "version_year": "2024"
+      "tts": true
     },
     "new_name": null,
-    "family_name": "self-paced-pl-ai-districts",
-    "serialized_at": "2025-01-13 23:52:21 UTC",
-    "published_state": "stable",
-    "instruction_type": "self_paced",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "family_name": null,
+    "serialized_at": "2025-03-24 23:13:41 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-ai-districts-2024"
     }

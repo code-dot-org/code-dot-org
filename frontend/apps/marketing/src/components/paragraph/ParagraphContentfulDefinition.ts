@@ -1,10 +1,12 @@
 // Creates a definition for the Paragraph component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
+import {removeMarginBottomDefinition} from '@/components/common/definitions';
+
 export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
   id: 'paragraph',
   name: 'Paragraph',
-  category: 'Typography',
+  category: '02: Typography',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/5hP7jqXdP90BtLxMi6FSWm/09a555420c3313133d16e87a84e22826/component_paragraph_thumbnail.png',
   tooltip: {
@@ -18,7 +20,7 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
     visualAppearance: {
       displayName: 'Visual Appearance',
       type: 'Text',
-      defaultValue: 'body-one',
+      defaultValue: 'body-two',
       group: 'style',
       validations: {
         in: [
@@ -29,6 +31,19 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    color: {
+      displayName: 'Color',
+      type: 'Text',
+      defaultValue: 'primary',
+      group: 'style',
+      validations: {
+        in: [
+          {value: 'primary', displayName: 'Primary'},
+          {value: 'secondary', displayName: 'Secondary'},
+        ],
+      },
+    },
+    removeMarginBottom: {...removeMarginBottomDefinition},
     children: {
       displayName: 'Content',
       type: 'Text',

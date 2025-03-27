@@ -443,6 +443,14 @@ class UnitTest < ActiveSupport::TestCase
 
       @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+
+      @single_unit_course_offering = create :course_offering, key: 'single-unit-course', display_name: 'single-unit-course'
+      @single_unit_2023 = create :unit, name: 'single-unit-2023'
+      @single_unit_course_2023 = create :single_unit_course, name: 'single-unit-course-2023', family_name: "single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
+      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2023, key: "2023", display_name: "2023"
+      @single_unit_2024 = create :unit, name: 'single-unit-2024'
+      @single_unit_course_2024 = create :single_unit_course, name: 'single-unit-course-2024', family_name: "single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2024, key: "2024", display_name: "2024"
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
@@ -496,6 +504,22 @@ class UnitTest < ActiveSupport::TestCase
       unit2.reload
 
       assert unit2.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is false if unit in single-unit course has no progress and is not assigned' do
+      @single_unit_2023.reload
+      refute @single_unit_2023.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if unit in single-unit course is the latest stable version' do
+      @single_unit_2024.reload
+      assert @single_unit_2024.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if student is assigned to unit in single-unit course' do
+      @student.scripts << @single_unit_2023
+      @single_unit_2023.reload
+      assert @single_unit_2023.can_view_version?(@student)
     end
   end
 
@@ -1136,6 +1160,25 @@ class UnitTest < ActiveSupport::TestCase
       assert_equal([true], summary.values.pluck(:is_stable))
       assert_equal([true], summary.values.pluck(:is_recommended))
     end
+  end
+
+  test 'summarize_course_versions for versioned single-unit course' do
+    versioned_course_offering = create(:course_offering, key: 'versioned-single-unit-course', display_name: 'versioned-single-unit-course')
+
+    # Create courses
+    versioned_single_unit_course25 = create(:single_unit_course, name: 'versioned-single-unit-course-2025', family_name: 'versioned-single-unit-course', version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    versioned_single_unit_course26 = create(:single_unit_course, name: 'versioned-single-unit-course-2026', family_name: 'versioned-single-unit-course', version_year: '2026', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+
+    # Create course versions
+    create(:course_version, :with_unit_group, key: '2025', display_name: '2025', course_offering: versioned_course_offering, content_root: versioned_single_unit_course25)
+    create(:course_version, :with_unit_group, key: '2026', display_name: '2026', course_offering: versioned_course_offering, content_root: versioned_single_unit_course26)
+
+    single_unit = versioned_single_unit_course25.default_units.first
+
+    UnitGroup.any_instance.expects(:summarize_course_versions).once.returns(versioned_single_unit_course25.course_version&.course_offering&.course_versions)
+    course_versions = single_unit.summarize_course_versions(create(:teacher))
+    puts course_versions.inspect
+    assert_equal 2, course_versions.count
   end
 
   test 'summarize excludes unlaunched versions' do
@@ -1998,15 +2041,20 @@ class UnitTest < ActiveSupport::TestCase
     refute @csd_unit.hoc?
   end
 
-  test "middle_high?" do
-    assert @csd_unit.middle_high?
-    assert @csp_unit.middle_high?
-    assert @csa_unit.middle_high?
-    assert @foundations_of_cs_unit.middle_high?
-    assert @foundations_of_programming_unit.middle_high?
+  test "show_unit_overview_between_lessons" do
+    aiml_6_8 = create :unit, name: 'aiml-6-8', properties: {content_area: "6-8 Curriculum"}
+    aiml_9_12 = create :unit, name: 'aiml-9-12', properties: {content_area: "9-12 Curriculum"}
 
-    refute @csf_unit.middle_high?
-    refute @hoc_unit.middle_high?
+    assert @csd_unit.show_unit_overview_between_lessons?
+    assert @csp_unit.show_unit_overview_between_lessons?
+    assert @csa_unit.show_unit_overview_between_lessons?
+    assert @foundations_of_cs_unit.show_unit_overview_between_lessons?
+    assert @foundations_of_programming_unit.show_unit_overview_between_lessons?
+    assert aiml_6_8.show_unit_overview_between_lessons?
+    assert aiml_9_12.show_unit_overview_between_lessons?
+
+    refute @csf_unit.show_unit_overview_between_lessons?
+    refute @hoc_unit.show_unit_overview_between_lessons?
   end
 
   test "has_standards_associations?" do

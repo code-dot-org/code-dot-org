@@ -1,0 +1,20 @@
+{
+  "name": "dani-june-2020-test",
+  "script_names": [
+    "dani-june-2020-test"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "dani-june-2020-test",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

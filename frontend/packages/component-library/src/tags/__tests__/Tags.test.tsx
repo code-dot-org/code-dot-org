@@ -1,5 +1,5 @@
-import {render, screen} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import {render, screen, waitFor} from '@testing-library/react';
+import userEvent, {UserEvent} from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
 import Tags, {TagProps} from './../index';
@@ -34,7 +34,7 @@ describe('Design System - Tags Component', () => {
     expect(plusOneTag).toBeInTheDocument();
   });
 
-  it('displays tooltip content on hover', async () => {
+  it('displays tooltip content with tab navigation', async () => {
     const user = userEvent.setup();
     render(<Tags tagsList={tagsList} />);
 
@@ -46,24 +46,26 @@ describe('Design System - Tags Component', () => {
       screen.queryByText('This is the content of tag2 tooltip'),
     ).not.toBeInTheDocument();
 
-    const plusOneTag = screen.getByText('+1');
-
-    // Hover over the "+1" tag and verify the tooltip appears
-    await user.hover(plusOneTag);
-    expect(
-      screen.getByText('This is the content of tag2 tooltip'),
-    ).toBeInTheDocument();
-
-    // Move hover to "tag1" and verify its tooltip appears, and the other tooltip disappears
-    const tag1 = screen.getByText('tag1');
-    await user.hover(tag1);
-
+    // Tab to tag1 and check tooltip appears
+    await user.tab();
     expect(
       screen.getByText('This is the content of tag1 tooltip'),
     ).toBeInTheDocument();
+
+    // Tab to tooltip then second tag and ensure it appears and first disappears
+    await user.tab();
+    await user.tab();
+
     expect(
-      screen.queryByText('This is the content of tag2 tooltip'),
-    ).not.toBeInTheDocument();
+      screen.getByText('This is the content of tag2 tooltip'),
+    ).toBeInTheDocument();
+    await waitFor(
+      () =>
+        expect(
+          screen.queryByText('This is the content of tag1 tooltip'),
+        ).not.toBeInTheDocument(),
+      {timeout: 1000}, // 1-second wait to account for fadeout
+    );
   });
 
   it('removes tooltip content on mouse leave', async () => {
@@ -79,23 +81,35 @@ describe('Design System - Tags Component', () => {
       screen.getByText('This is the content of tag1 tooltip'),
     ).toBeInTheDocument();
 
-    // Move mouse out of tag1 and check tooltip disappears
-    await user.unhover(tag1);
+    // Verify that it doesn't disappear when you hover on the tooltip itself
+    const tooltip1 = screen.getByText('This is the content of tag1 tooltip');
+    await user.hover(tooltip1);
     expect(
-      screen.queryByText('This is the content of tag1 tooltip'),
-    ).not.toBeInTheDocument();
+      screen.getByText('This is the content of tag1 tooltip'),
+    ).toBeInTheDocument();
 
-    // Hover over the "+1" tag
+    // Move mouse to second tag and check first tooltip disappears
     await user.hover(plusOneTag);
+    await waitFor(
+      () =>
+        expect(
+          screen.queryByText('This is the content of tag1 tooltip'),
+        ).not.toBeInTheDocument(),
+      {timeout: 1000}, // 1-second wait to account for fadeout
+    );
     expect(
       screen.getByText('This is the content of tag2 tooltip'),
     ).toBeInTheDocument();
 
     // Unhover "+1" tag and verify tooltip disappears
-    await user.unhover(plusOneTag);
-    expect(
-      screen.queryByText('This is the content of tag2 tooltip'),
-    ).not.toBeInTheDocument();
+    await user.unhover(document.body);
+    await waitFor(
+      () =>
+        expect(
+          screen.queryByText('This is the content of tag2 tooltip'),
+        ).not.toBeInTheDocument(),
+      {timeout: 1000}, // 1-second wait to account for fadeout
+    );
   });
 
   it('renders correctly with an empty tags list', () => {
@@ -128,5 +142,87 @@ describe('Design System - Tags Component', () => {
 
     expect(tagLabel).toBeInTheDocument();
     expect(icon).toBeInTheDocument();
+  });
+
+  describe('onClose', () => {
+    let user: UserEvent;
+    let onClick1: jest.Mock;
+    let onClick2: jest.Mock;
+    let tagsList: TagProps[];
+    let button1: HTMLElement;
+    let button2: HTMLElement;
+
+    beforeEach(() => {
+      user = userEvent.setup();
+      onClick1 = jest.fn();
+      onClick2 = jest.fn();
+      tagsList = [
+        {
+          type: 'closable',
+          tooltipId: 'tag-icon-1',
+          label: 'tag with icon',
+          tooltipContent: 'Tooltip with icon',
+          onClose: onClick1,
+          icon: {
+            iconName: 'close',
+            iconStyle: 'solid',
+            title: 'Close 1',
+            placement: 'right',
+          },
+        },
+        {
+          type: 'closable',
+          tooltipId: 'tag-icon-2',
+          label: 'tag with icon',
+          tooltipContent: 'Tooltip with icon',
+          onClose: onClick2,
+          icon: {
+            iconName: 'close',
+            iconStyle: 'solid',
+            title: 'Close 2',
+            placement: 'right',
+          },
+        },
+      ];
+
+      render(<Tags tagsList={tagsList} />);
+
+      [button1, button2] = screen.getAllByRole('button', {
+        name: /close/i,
+      });
+    });
+
+    it('has keyboard navigable close button if onClose is present', async () => {
+      await user.tab();
+
+      expect(button1).toHaveFocus();
+
+      await user.tab();
+
+      expect(button2).toHaveFocus();
+    });
+
+    it('calls onClose when the close button is clicked', async () => {
+      await user.click(button1);
+
+      expect(onClick1).toHaveBeenCalledTimes(1);
+      expect(onClick2).not.toHaveBeenCalled();
+    });
+
+    it('calls onClose when Enter or Space is pressed while close button has focus', async () => {
+      await user.tab();
+      expect(button1).toHaveFocus();
+      await user.keyboard('{Enter}');
+
+      expect(onClick1).toHaveBeenCalledTimes(1);
+      expect(onClick2).not.toHaveBeenCalled();
+
+      await user.tab();
+      expect(button2).toHaveFocus();
+      await user.keyboard(' ');
+
+      expect(onClick1).toHaveBeenCalledTimes(1);
+      expect(onClick2).toHaveBeenCalledTimes(1);
+    });
   });
 });

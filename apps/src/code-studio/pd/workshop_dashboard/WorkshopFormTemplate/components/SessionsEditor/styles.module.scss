@@ -1,0 +1,37 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+
+.sessionRow {
+  align-items: flex-end;
+  button.deleteButton {
+    flex: 0;
+    height: 2rem;
+    min-width: 2rem;
+  }
+
+  .timeDropdown {
+    > div::after {
+      display: none;
+    }
+
+    > div > i {
+      inset-inline-end: 0.5rem;
+      inset-inline-start: unset;
+    }
+
+    > div > select {
+      padding-inline-start: 1rem;
+    }
+  }
+}
+
+.addDateButton {
+  border: 1px dashed var(--borders-neutral-primary);
+}
+
+.copyPreviousCheckbox {
+  display: inline-block;
+  margin-top: 0.75rem;
+  i::before {
+    background-color: var(--background-neutral-primary);
+  }
+}

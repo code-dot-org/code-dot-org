@@ -1,0 +1,9 @@
+name 'computer-systems-lesson-10-ai-models'
+display_name 'Interview Your Computing Roles'
+description 'Explore the key technical roles who contribute to developing your chosen innovation. Select a role to conduct an AI interview and learn how their work helps bring this technology to life, the challenges they face, and how computing drives innovation.'
+
+sublevels
+level 'computer-systems-hardware-aichat'
+level 'computer-systems-software-aichat'
+level 'computer-systems-designer-aichat'
+

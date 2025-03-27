@@ -31,12 +31,14 @@
       background-color: $neutral_dark;
       flex: 1;
       overflow-y: scroll;
+      scroll-padding: 1px 0;
     }
 
     .rightColumn {
       background-color: $neutral_dark;
       flex: 1;
       overflow-y: scroll;
+      scroll-padding: 1px 0;
     }
   }
 

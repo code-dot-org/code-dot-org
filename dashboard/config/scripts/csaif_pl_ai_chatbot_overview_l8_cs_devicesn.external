@@ -1,0 +1,52 @@
+name 'csaif_pl_AI_chatbot_overview_L8-cs-devicesn'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Chat Lab Overview
+
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="code.org AI robot character" style="border-radius:10px; float: right; ; height: 200px; margin: 20px 20px 0px 10px; ">
+
+## Working with AI
+
+#### Throughout the <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">Computer Science and AI Foundations Curriculum</a>, students will have the opportunity to interact with an AI Chatbot
+
+#### Code.org has created a an **AI Chat Lab** that is safe for student use and embedded into the curriculum seamlessly so students can engage with generative AI in an authentic and secure way without leaving the platform.
+
+## Why use Generative AI?
+
+#### By working with AI in a structured and responsible setting, students will learn how to engage ethically with these technologies, use AI as a tool for problem-solving, and develop essential skills for the future of work. 
+
+#### Understanding how to interact with AI effectively will prepare them to navigate an increasingly AI-driven world with confidence and critical thinking.
+<br>
+
+---
+#### To ensure safety and appropriate use, a pop-up message displays before each use of the Chat Lab. 
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h2>Chat Responsibly</h2>
+  	<ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">         
+        <li >All messages you send will be visible to your teacher, including blocked messages.	 </li>
+		<li>Inappropriate messages will be flagged by our content moderation policy.</li>
+		<li>All unsaved changes will be lost.</li>
+		<li>In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted.</li>
+    </ul>
+</div>
+
+## Exploring AI in Action
+
+#### This brief example highlights Lesson 1, where students use the Chat Lab to explore computing careers that align with their interests.
+
+#### Lessons incorporating the Chat Lab are intentionally designed to provide structured guidance, ensuring students engage with AI purposefully. These interactions foster authentic learning experiences, helping students see how AI can be a valuable tool for exploration and problem-solving.
+
+<div style="text-align: center;">
+    <img src="https://images.code.org/349932762cd9e2a1cfd03a4a175672db-image-1740757370529.png" 
+         alt="A sample of a chat conversation with an AI bot." 
+         width="650px" 
+         style="border-radius: 5px; border: 2px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+</div>
+
+
+
+MARKDOWN

@@ -4,6 +4,7 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -22,13 +23,9 @@ import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources} = useCodebridgeContext();
+  const {startSources, levelProperties} = useCodebridgeContext();
+  const {appName, enableMicroBit, skipUrl} = levelProperties;
 
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const enableMicroBit = useAppSelector(
-    state => state.lab.levelProperties?.enableMicroBit || false
-  );
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -93,7 +90,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           className={darkModeStyles.tertiaryButton}
         />
       )}
-      <VersionHistoryButton startSources={startSources} />
+      <VersionHistoryButton startSources={startSources} appName={appName} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <Button
@@ -116,9 +113,12 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           type={'tertiary'}
           color={buttonColors.white}
           text={commonI18n.skipToProject()}
-          className={darkModeStyles.tertiaryButton}
+          className={classNames(
+            darkModeStyles.tertiaryButton,
+            moduleStyles.buttonSkip
+          )}
         >
-          {commonI18n.skipToProject()}
+          <span>{commonI18n.skipToProject()}</span>
         </Button>
       )}
     </div>

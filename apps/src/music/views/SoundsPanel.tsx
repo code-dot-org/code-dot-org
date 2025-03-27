@@ -179,7 +179,11 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
-      aria-label={sound.name + musicI18n.measureLength() + sound.length}
+      aria-label={
+        sound.name +
+        musicI18n.measureLength() +
+        String(getLengthRepresentation(sound.length))
+      }
       tabIndex={0}
       role="tabpanel"
     >
@@ -226,6 +230,8 @@ interface SoundsPanelProps {
   currentValue: string;
   playingPreview: string;
   showSoundFilters: boolean;
+  defaultMode: Mode;
+  sortUnrestrictedPacksByType: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -235,6 +241,8 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   currentValue,
   playingPreview,
   showSoundFilters,
+  defaultMode,
+  sortUnrestrictedPacksByType,
   onSelect,
   onPreview,
 }) => {
@@ -244,12 +252,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
     library.getAllowedFolderForSoundId(currentValue) || folders[0]
   );
-  const [mode, setMode] = useState<Mode>('packs');
+  const [mode, setMode] = useState<Mode>(defaultMode);
   const [filter, setFilter] = useState<Filter>('all');
+  const [isFocusSet, setIsFocusSet] = useState(false);
 
   const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
-    useRef(null);
-  const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
 
   const onModeChange = useCallback((value: Mode) => {
@@ -265,7 +272,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     // when wrapping the content with FocusLock.
     setTimeout(() => {
       currentFolderRef.current?.scrollIntoView();
-      currentSoundRef.current?.scrollIntoView();
     }, 0);
   }, []);
 
@@ -274,7 +280,12 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   };
 
   const currentSoundRefCallback = (ref: HTMLDivElement) => {
-    currentSoundRef.current = ref;
+    if (!isFocusSet && ref) {
+      setTimeout(() => {
+        ref.focus();
+        setIsFocusSet(true);
+      }, 0);
+    }
   };
 
   let possibleSoundEntries: SoundEntry[] = [];
@@ -294,6 +305,17 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         possibleSoundEntries.push({folder, sound});
       });
     });
+    if (sortUnrestrictedPacksByType) {
+      const soundTypes: SoundType[] = ['beat', 'bass', 'lead', 'fx', 'vocal'];
+      possibleSoundEntries.sort((a, b) => {
+        if (a.folder.artist === 'Code.org' && b.folder.artist === 'Code.org') {
+          const aOrder = soundTypes.indexOf(a.sound.type);
+          const bOrder = soundTypes.indexOf(b.sound.type);
+          return aOrder - bOrder;
+        }
+        return 0;
+      });
+    }
   }
 
   if (filter === 'all') {
@@ -333,7 +355,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         aria-modal
         role="dialog"
       >
-        <div id="hidden-item" tabIndex={0} role="button" />
         {showSoundFilters && (
           <div
             id="sounds-panel-top"

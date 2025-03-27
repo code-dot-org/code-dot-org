@@ -25,6 +25,9 @@ import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 
+import {START_BLOCKS} from '../constants';
+import {START_SOURCES} from '../lab2/constants';
+
 import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
@@ -118,6 +121,7 @@ import {
   handleCodeGenerationFailure,
   strip,
   interpolateMsg,
+  isDarkTheme,
 } from './utils';
 
 const options = {
@@ -846,13 +850,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       !!optOptionsExtended.disableVariableEditing;
     blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
     blocklyWrapper.isStartMode =
-      optOptionsExtended.editBlocks === 'start_sources';
+      !!optOptionsExtended.editBlocks &&
+      // Lab2 levels such as Music Lab use 'start_sources', while older labs use 'start_blocks'.
+      [START_BLOCKS, START_SOURCES].includes(optOptionsExtended.editBlocks);
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
+    blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -904,6 +911,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.addChangeListener(updateBlockLimits);
     }
 
+    // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    if (blocklyWrapper.isToolboxMode) {
+      workspace.addChangeListener(event => {
+        if (event.type === GoogleBlockly.Events.MOVE) {
+          workspace.cleanUp();
+        }
+      });
+    }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate
     // location.
@@ -933,7 +948,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     );
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
-    scrollOptionsPlugin.init();
+    scrollOptionsPlugin.init({
+      // Rather than using the block edge, we always use the mouse cursor (plus a margin)
+      // to activate block-based scrolling.
+      edgeScrollOptions: {oversizeBlockThreshold: 0},
+    });
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();

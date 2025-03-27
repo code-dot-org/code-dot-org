@@ -6,7 +6,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../constants';
 import aichatI18n from '../locale';
-import {removeUpdateMessage} from '../redux/aichatRedux';
+import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
   ChatEvent,
@@ -22,7 +22,13 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
-const ChatEventDescriptions = {
+const chatEventDescriptionsOwner = {
+  COPY_CHAT: aichatI18n.chatEventDescriptions_copyChatOwner(),
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChatOwner(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
+} as const satisfies {[key in ChatEventDescriptionKey]: string};
+
+const chatEventDescriptionsStudent = {
   COPY_CHAT: aichatI18n.chatEventDescriptions_copyChat(),
   CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
   LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
@@ -70,6 +76,10 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
 }) => {
   const dispatch = useAppDispatch();
 
+  const chatEventDescriptions = isTeacherView
+    ? chatEventDescriptionsStudent
+    : chatEventDescriptionsOwner;
+
   if (isChatMessage(event)) {
     return (
       <ChatMessageView
@@ -80,7 +90,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   }
 
   if (isNotification(event)) {
-    const {id, text, notificationType, timestamp} = event;
+    const {removeId, text, notificationType, timestamp} = event;
     return (
       <Alert
         text={`${text} ${timestampToLocalTime(timestamp)}`}
@@ -90,7 +100,9 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
             : 'success'
         }
         onClose={
-          isTeacherView ? undefined : () => dispatch(removeUpdateMessage(id))
+          isTeacherView
+            ? undefined
+            : () => dispatch(removeUpdateMessage(removeId))
         }
         link={
           notificationType === 'permissionsError'
@@ -116,23 +128,20 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
         onClose={
           isTeacherView
             ? undefined
-            : () => dispatch(removeUpdateMessage(event.id))
+            : () => dispatch(removeUpdateMessage(event.removeId))
         }
       />
     );
   }
 
-  if (event.descriptionKey) {
-    return (
-      <Alert
-        text={ChatEventDescriptions[event.descriptionKey] as string}
-        type="info"
-        size="s"
-      />
-    );
-  }
-
-  return null;
+  // Automatically narrowed to UserActionEvent
+  return (
+    <Alert
+      text={chatEventDescriptions[event.descriptionKey]}
+      type="info"
+      size="s"
+    />
+  );
 };
 
 export default memo(ChatEventView);

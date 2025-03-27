@@ -22,15 +22,10 @@
         "imageUrl": "",
         "key": "music-coding-intro-career1-panel_1-aeafa538-b521-4dfb-83dc-5aaece5e03ef",
         "fadeInOverPrevious": true
-      },
-      {
-        "text": "#Placeholder for a hype video about songwriters using technology to help them express their creativity.",
-        "imageUrl": "https://images.code.org/47d8743206663e4c56b7377f2e671285-shakira creativity.jpg",
-        "key": "music-coding-intro-career1-panel-6cc616ef-9579-45db-9546-552ccf158a67"
       }
     ],
     "name_suffix": "_1"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.189+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-career1-panel\\\"\"],\"cloned_from\":\"music-coding-intro-career1-panel\"},{\"changed_at\":\"2025-01-14 18:55:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-14 21:34:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:35:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:40:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:42:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:42:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.189+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-career1-panel\\\"\"],\"cloned_from\":\"music-coding-intro-career1-panel\"},{\"changed_at\":\"2025-01-14 18:55:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-14 21:34:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:35:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:40:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:42:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:42:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-07 22:12:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Panels>

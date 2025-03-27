@@ -4,10 +4,7 @@ import React, {useCallback} from 'react';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../../locale';
-import {
-  selectHavePropertiesChanged,
-  updateAiCustomization,
-} from '../../redux/aichatRedux';
+import {selectHavePropertiesChanged, updateAiCustomization} from '../../redux';
 
 import styles from '../model-customization-workspace.module.scss';
 

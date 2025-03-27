@@ -1,18 +1,17 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-01-31T05:50:21.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
     "display_name": "Policy Advisor",
-    "long_instructions": "## Aisha Khan, Agricultural Policy Advisor 📢\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> New Delhi, India </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🏛️ Workplace:</strong> Ministry of Agriculture, India </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Farming regulations, sustainability policies, AI in agriculture </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"FarmVibes.AI helps policymakers analyze national agricultural trends, allowing us to design better support programs for farmers. AI data is crucial in shaping policies that promote food security and sustainable farming.\" </p>\r\n\r\n\r\n---\r\n\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
+    "long_instructions": "## Aisha Khan, Agricultural Policy Advisor\r\n\r\n**Location:** New Delhi, India\r\n\r\n**Workplace:** Ministry of Agriculture, India\r\n\r\n**Expertise:** Farming regulations, sustainability policies, AI in agriculture\r\n\r\n**How I Use AI:** \"FarmVibes.AI helps policymakers analyze national agricultural trends, allowing us to design better support programs for farmers. AI data is crucial in shaping policies that promote food security and sustainable farming.\"\r\n\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -44,6 +43,7 @@
     },
     "thumbnail_url": "https://images.code.org/285f6447837eabe0da495e2c1b4d2f21-Pasted Graphic 25.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:50:21.561+00:00\",\"changed\":[\"cloned from \\\"computer-systems-farmer-supplychain-aichat\\\"\"],\"cloned_from\":\"computer-systems-farmer-supplychain-aichat\"},{\"changed_at\":\"2025-01-31 05:51:17 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:07:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:50:21.561+00:00\",\"changed\":[\"cloned from \\\"computer-systems-farmer-supplychain-aichat\\\"\"],\"cloned_from\":\"computer-systems-farmer-supplychain-aichat\"},{\"changed_at\":\"2025-01-31 05:51:17 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:07:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-16 19:44:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

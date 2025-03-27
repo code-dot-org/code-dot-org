@@ -1,0 +1,10 @@
+name 'test-problem-solving-with-ai-lesson12-level0d'
+title 'AI in Schools'
+description 'description here'
+
+markdown <<MARKDOWN
+##AI In Schools
+Examine the following news articles, crafted by Code.org, but modeled after real world events.
+
+[Link to Articles](https://drive.google.com/drive/folders/1wMP0SkMrordE67u_BN86jrei0hIXFk46)
+MARKDOWN

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-12T20:41:19.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "###What animal do you see in the picture below?\r\n\r\n![](https://images.code.org/a9a8561cc49677310f0b5aea3f378414-image-1727381911744.png)",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:41:19.810+00:00\",\"changed\":[\"cloned from \\\"genai-lesson8-warmup-v2\\\"\"],\"cloned_from\":\"genai-lesson8-warmup-v2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

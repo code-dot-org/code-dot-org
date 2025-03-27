@@ -707,7 +707,11 @@ class Unit < ApplicationRecord
     return false unless Ability.new(user).can?(:read, self)
 
     # Users can view any course not in a family.
-    return true unless family_name
+    return true if family_name.nil? && !unit_group&.single_unit_course?
+
+    if unit_group&.single_unit_course?
+      return unit_group&.can_view_version?(user, locale)
+    end
 
     latest_stable_version = Unit.latest_stable_version(family_name)
     latest_stable_version_in_locale = Unit.latest_stable_version(family_name, locale: locale)
@@ -877,7 +881,7 @@ class Unit < ApplicationRecord
   end
 
   def has_standards_associations?
-    curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
+    curriculum_umbrella == 'CSF' && ((version_year && version_year >= '2019') || (unit_group&.version_year && unit_group.version_year >= '2019'))
   end
 
   def standards
@@ -949,12 +953,6 @@ class Unit < ApplicationRecord
 
   def foundations_of_programming?
     under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_programming)
-  end
-
-  # TODO: (Dani) Update to use new course types framework.
-  # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
-  def middle_high?
-    csd? || csp? || csa? || foundations_of_cs? || foundations_of_programming?
   end
 
   def requires_verified_instructor?
@@ -1215,9 +1213,9 @@ class Unit < ApplicationRecord
 
     source_course_version = get_course_version
     destination_unit_group = destination_unit_group_name ?
-      UnitGroup.find_by_name(destination_unit_group_name) :
+      UnitGroup.find_by_name!(destination_unit_group_name) :
       nil
-    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
+    raise 'Destination unit group must have a course version. please try saving the course edit page again.' unless destination_unit_group.nil? || destination_professional_learning_course.nil? || destination_unit_group.course_version
 
     begin
       ActiveRecord::Base.transaction do
@@ -1240,7 +1238,7 @@ class Unit < ApplicationRecord
           copied_unit.professional_learning_course = destination_professional_learning_course
           copied_unit.peer_reviews_to_complete = peer_reviews_to_complete
         elsif destination_unit_group
-          raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
+          raise 'Destination unit group must be in a course version. please try saving the course edit page again.' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.reload
         else
@@ -1760,7 +1758,11 @@ class Unit < ApplicationRecord
   # launched and can_view_version?. For instructors if course_assignable? is false then
   # launched will also be false.
   def summarize_course_versions(user = nil, locale_code = 'en-us')
-    return {} if unit_group
+    return {} if unit_group && !unit_group.single_unit_course?
+
+    if unit_group&.single_unit_course?
+      return unit_group.summarize_course_versions(user, locale_code)
+    end
 
     all_course_versions = course_version&.course_offering&.course_versions
     course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
@@ -2141,7 +2143,14 @@ class Unit < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
-    middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+    csd? ||
+      csp? ||
+      csa? ||
+      foundations_of_cs? ||
+      foundations_of_programming? ||
+      ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key) ||
+      properties['content_area'] == Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA.curriculum_6_8 ||
+      properties['content_area'] == Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA.curriculum_9_12
   end
 
   def ai_assessment_enabled?

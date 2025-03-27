@@ -1,0 +1,20 @@
+{
+  "name": "hoc-dp-oct-beta-b",
+  "script_names": [
+    "hoc-dp-oct-beta-b"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoc-dp-oct-beta-b",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -26,14 +26,13 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
-  ActiveCourseWorkshops,
   Subjects,
   SubjectNames,
   HideFeeInformationSubjects,
   HideOnWorkshopMapSubjects,
   HideFundedSubjects,
-  VirtualOnlySubjects,
   NotFundedSubjects,
   MustSuppressEmailSubjects,
   ParticipantGroupTypes,
@@ -83,13 +82,9 @@ const INPUT_HEIGHT = 34;
 //  a) whether the workshop is occurring virtually, and
 //  b) if there's a third party responsible for the content/structure of the workshop.
 // These two things are stored as separate attributes in the workshop model.
-const virtualWorkshopTypes = ['regional', 'friday_institute'];
-const thirdPartyProviders = ['friday_institute'];
 
 export class WorkshopForm extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,
@@ -112,8 +107,6 @@ export class WorkshopForm extends React.Component {
       enrolled_teacher_count: PropTypes.number.isRequired,
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
-      virtual: PropTypes.bool,
-      third_party_provider: PropTypes.string,
       suppress_email: PropTypes.bool,
       organizer: PropTypes.shape({
         id: PropTypes.number,
@@ -122,6 +115,7 @@ export class WorkshopForm extends React.Component {
       module: PropTypes.string,
       course_offerings: PropTypes.array,
       participant_group_type: PropTypes.string,
+      time_zone: PropTypes.string,
     }),
     onSaved: PropTypes.func,
     today: PropTypes.instanceOf(Date),
@@ -157,9 +151,7 @@ export class WorkshopForm extends React.Component {
       showSaveConfirmation: false,
       showTypeOptionsHelpDisplay: false,
       regional_partner_id: '',
-      virtual: false,
       suppress_email: false,
-      third_party_provider: null,
       course_offerings: [],
       participant_group_type: '',
     };
@@ -183,9 +175,7 @@ export class WorkshopForm extends React.Component {
           'notes',
           'regional_partner_id',
           'organizer',
-          'virtual',
           'suppress_email',
-          'third_party_provider',
           'course_offerings',
           'participant_group_type',
         ])
@@ -262,17 +252,16 @@ export class WorkshopForm extends React.Component {
         format: session.session_format,
         date: moment
           .utc(session.start)
-          .tz(session.time_zone || 'UTC')
+          .tz(this.workshopTimezone || 'UTC')
           .format(DATE_FORMAT),
         startTime: moment
           .utc(session.start)
-          .tz(session.time_zone || 'UTC')
+          .tz(this.workshopTimezone || 'UTC')
           .format(TIME_FORMAT),
         endTime: moment
           .utc(session.end)
-          .tz(session.time_zone || 'UTC')
+          .tz(this.workshopTimezone || 'UTC')
           .format(TIME_FORMAT),
-        timeZone: session.time_zone,
       };
     });
   }
@@ -281,8 +270,6 @@ export class WorkshopForm extends React.Component {
   prepareSessionsForApi(sessions, destroyedSessions) {
     return sessions
       .map(session => {
-        const timeZone =
-          session.timeZone ?? Intl.DateTimeFormat().resolvedOptions().timeZone;
         return {
           id: session.id,
           session_format: session.format,
@@ -290,15 +277,18 @@ export class WorkshopForm extends React.Component {
             .tz(
               `${session.date} ${session.startTime}`,
               DATETIME_FORMAT,
-              timeZone
+              this.workshopTimezone
             )
             .utc()
             .toISOString(),
           end: moment
-            .tz(`${session.date} ${session.endTime}`, DATETIME_FORMAT, timeZone)
+            .tz(
+              `${session.date} ${session.endTime}`,
+              DATETIME_FORMAT,
+              this.workshopTimezone
+            )
             .utc()
             .toISOString(),
-          time_zone: timeZone,
         };
       })
       .concat(
@@ -312,14 +302,12 @@ export class WorkshopForm extends React.Component {
   }
 
   get workshopTimezone() {
-    // a new session is created using the user's local timezone
-    let sessionTz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
-    const editing = Boolean(this.props.workshop);
-    if (editing) {
-      // handle legacy sessions stored without timezone offset
-      sessionTz = this.props.workshop.sessions?.[0]?.time_zone || 'UTC';
-    }
-    return moment.tz(sessionTz).format('z');
+    const {workshop} = this.props;
+    // if editing an existing workshop, use the existing time zone
+    // if creating a new workshop, use the user's current time zone
+    return workshop
+      ? workshop.time_zone
+      : Intl.DateTimeFormat().resolvedOptions().timeZone;
   }
 
   // Convert from [id, name, email] to an array of ids.
@@ -440,34 +428,6 @@ export class WorkshopForm extends React.Component {
     return this.state.course && Subjects[this.state.course];
   }
 
-  // For summer workshops for CSP and CSA, only workshop admins can change
-  // the “Is this a virtual workshop” field within one month of the workshop
-  // in order to prevent people from changing this last minute without
-  // talking to us or the Friday institute.
-  checkCannotChangeIfWorkshopVirtual() {
-    return (
-      (this.state.course === ActiveCourseWorkshops.CSP ||
-        this.state.course === ActiveCourseWorkshops.CSA) &&
-      this.state.subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP &&
-      !this.props.permission.has(WorkshopAdmin) &&
-      this.state.sessions.some(this.sessionStartsWithinMonth)
-    );
-  }
-
-  // Returns whether today is within a month before the given session (a month
-  // is represented as 30 days here for consistency and to align with behavior
-  // in workshop_controller.rb).
-  sessionStartsWithinMonth = session => {
-    const today = this.props.today;
-    const workshopDate = new Date(session.date);
-    const monthBeforeWorkshopDate = new Date(
-      workshopDate.getFullYear(),
-      workshopDate.getMonth(),
-      workshopDate.getDate() - 30
-    );
-    return monthBeforeWorkshopDate <= today && today <= workshopDate;
-  };
-
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
@@ -488,14 +448,6 @@ export class WorkshopForm extends React.Component {
       isAdminCounselor ||
       isCsfSubjectWithHiddenFundedField ||
       isBuildYourOwnWorkshop
-    );
-    const virtualWorkshopHelpTip = this.checkCannotChangeIfWorkshopVirtual() ? (
-      <p>
-        There is less than a month until your workshop. Please contact
-        partner@code.org to update this setting.
-      </p>
-    ) : (
-      <p>Please update your selection if/when your plans change.</p>
     );
 
     return (
@@ -537,28 +489,6 @@ export class WorkshopForm extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col sm={5}>
-            <FormGroup validationState={validation.style.virtual}>
-              <ControlLabel>
-                Is this a virtual workshop?
-                <HelpTip>{virtualWorkshopHelpTip}</HelpTip>
-              </ControlLabel>
-              <SelectIsVirtual
-                value={this.currentVirtualStatus()}
-                onChange={this.handleVirtualChange}
-                readOnly={
-                  this.props.readOnly ||
-                  VirtualOnlySubjects.includes(this.state.subject) ||
-                  this.checkCannotChangeIfWorkshopVirtual()
-                }
-                showVirtualOptions={
-                  !!this.props.workshop ||
-                  !this.checkCannotChangeIfWorkshopVirtual()
-                }
-              />
-              <HelpBlock>{validation.help.virtual}</HelpBlock>
-            </FormGroup>
-          </Col>
           {!isBuildYourOwnWorkshop && (
             <Col sm={5}>
               <FormGroup validationState={validation.style.suppress_email}>
@@ -737,9 +667,6 @@ export class WorkshopForm extends React.Component {
 
     // Don't ask if admins want to send updates with workshop changes for virtual workshops.
     // Update emails are suppressed for virtual workshops.
-    if (this.state.virtual) {
-      return false;
-    }
 
     // If location address is modified, then returned to blank,
     // this.state.location_address is a blank string instead of null.
@@ -810,31 +737,6 @@ export class WorkshopForm extends React.Component {
     return location;
   };
 
-  currentVirtualStatus = () => {
-    const {virtual, third_party_provider} = this.state;
-
-    // First, check if the third party provider is a valid
-    // virtual workshop type.
-    if (virtualWorkshopTypes.includes(third_party_provider)) {
-      return third_party_provider;
-    } else if (virtual) {
-      return 'regional';
-    } else {
-      return 'in_person';
-    }
-  };
-
-  handleVirtualChange = event => {
-    // This field gets its own handler so we can coerce its value to boolean
-    const value = event.target.value;
-    const virtual = virtualWorkshopTypes.includes(value);
-
-    this.setState({
-      virtual,
-      third_party_provider: thirdPartyProviders.includes(value) ? value : null,
-    });
-  };
-
   handleSuppressEmailChange = event => {
     // This field gets its own handler so we can coerce its value to boolean
     // before we save it to React state.
@@ -881,7 +783,7 @@ export class WorkshopForm extends React.Component {
     });
     this.loadAvailableFacilitators(course);
     if (course === COURSE_BUILD_YOUR_OWN) {
-      this.setState({funded: false, suppress_email: true});
+      this.setState({funded: false});
     }
   };
 
@@ -894,12 +796,6 @@ export class WorkshopForm extends React.Component {
     ) {
       this.setState({
         funded: false,
-      });
-    }
-
-    if (VirtualOnlySubjects.includes(subject)) {
-      this.setState({
-        virtual: true,
       });
     }
 
@@ -942,9 +838,7 @@ export class WorkshopForm extends React.Component {
       module: this.state.module,
       fee: this.state.fee ? this.state.fee : null,
       notes: this.state.notes,
-      virtual: this.state.virtual,
       suppress_email: this.state.suppress_email,
-      third_party_provider: this.state.third_party_provider,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
         this.state.destroyedSessions
@@ -952,6 +846,7 @@ export class WorkshopForm extends React.Component {
       regional_partner_id: this.state.regional_partner_id,
       course_offerings: this.state.course_offerings,
       participant_group_type: this.state.participant_group_type,
+      time_zone: this.workshopTimezone,
     };
 
     if (this.state.organizer) {
@@ -1150,7 +1045,9 @@ export class WorkshopForm extends React.Component {
       <Grid>
         <form>
           <Row>
-            <Col sm={4}>All workshop times are {this.workshopTimezone}:</Col>
+            <Col sm={4}>
+              All workshop times are {this.workshopTimezone ?? 'local'}:
+            </Col>
           </Row>
           <SessionListFormPart
             sessions={this.state.sessions}
@@ -1489,38 +1386,6 @@ export default connect(state => ({
   permission: state.workshopDashboard.permission,
   facilitatorCourses: state.workshopDashboard.facilitatorCourses,
 }))(WorkshopForm);
-
-const SelectIsVirtual = ({value, readOnly, onChange, showVirtualOptions}) => (
-  <FormControl
-    componentClass="select"
-    value={value}
-    id="virtual"
-    name="virtual"
-    onChange={onChange}
-    style={readOnly ? styles.readOnlyInput : undefined}
-    disabled={readOnly}
-  >
-    <option key={'in_person'} value={'in_person'}>
-      No, this is an in-person workshop.
-    </option>
-    {showVirtualOptions && (
-      <>
-        <option key={'friday_institute'} value={'friday_institute'}>
-          Yes, this is a Code.org-Friday Institute virtual workshop.
-        </option>
-        <option key={'regional'} value={'regional'}>
-          Yes, this is a regional virtual workshop.
-        </option>
-      </>
-    )}
-  </FormControl>
-);
-SelectIsVirtual.propTypes = {
-  value: PropTypes.string.isRequired,
-  readOnly: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
-  showVirtualOptions: PropTypes.bool.isRequired,
-};
 
 const SelectSuppressEmail = ({value, readOnly, onChange}) => (
   <FormControl

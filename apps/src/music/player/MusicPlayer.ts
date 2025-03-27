@@ -99,6 +99,10 @@ export default class MusicPlayer {
     return this.bpm;
   }
 
+  getKey(): Key {
+    return this.key;
+  }
+
   setBpm(bpm: number) {
     this.audioPlayer.setBpm(bpm);
   }
@@ -361,6 +365,7 @@ export default class MusicPlayer {
         id: event.id,
         sampleUrl: library.generateSoundUrl(folder, soundData),
         playbackPosition: event.when,
+        pickupLength: soundData.pickupLength,
         triggered: event.triggered,
         effects: event.effects,
         originalBpm: soundData.bpm || DEFAULT_BPM,

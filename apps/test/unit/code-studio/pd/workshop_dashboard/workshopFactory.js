@@ -36,7 +36,8 @@ Factory.define('workshop')
   .attr('funded', true)
   .attr('enrolled_teacher_count', 1)
   .attr('organizer', {name: 'Oscar Organzier', email: 'oscar@code.org'})
-  .attr('virtual', false);
+  .attr('virtual', false)
+  .attr('time_zone', 'America/Denver');
 
 Factory.define('workshop multiple sessions')
   .extend('workshop')
@@ -115,7 +116,6 @@ Factory.define('session')
   .attr('code', 'TEST')
   .attr('start', middleOfYearFakeToday.toISOString())
   .attr('end', middleOfYearFakeTodayEnd.toISOString())
-  .attr('time_zone', 'America/Denver')
   .attr('attendance_count', 0)
   .attr('session_format', PdSessionFormats[0].value)
   .attr('show_link?', false);

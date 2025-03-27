@@ -168,6 +168,7 @@ export interface ProjectFolder {
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
   id: number;
+  name: string;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;
@@ -194,7 +195,8 @@ export interface LevelProperties {
   helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
-  exemplarSources?: MultiFileSource;
+  exemplarSources?: Source;
+  exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
@@ -209,6 +211,11 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  // Properties added for parity with non-lab2 AI Tutor levels
+  aiTutorAvailable?: boolean;
+  isAssessment?: boolean;
+  progressionType?: string;
+  type?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -225,6 +232,21 @@ export interface VideoLevelData {
   thumbnail: string;
 }
 
+// The level data for a bubble_choice level that doesn't require
+// reloads between levels.
+export interface BubbleChoiceLevelData {
+  displayName: string;
+  description: string;
+  sublevels: BubbleChoiceSublevel[];
+}
+
+// Bubble Choice specific property
+export interface BubbleChoiceSublevel {
+  display_name: string;
+  level_id: string;
+  thumbnail_url: string;
+}
+
 // Addtional fields for videos that are linked as references in the
 // Help & Tips tab of Instructions.
 interface VideoData extends VideoLevelData {
@@ -232,6 +254,17 @@ interface VideoData extends VideoLevelData {
   key?: string;
   enable_fallback?: boolean;
   autoplay?: boolean;
+}
+
+// Exemplar settings for a level.
+export interface ExemplarSettings {
+  // Validation settings (always expected)
+  validationEnabled: boolean;
+  validationSuccessMessage: string;
+  validationFailureMessage: string;
+  // Player settings (optional, only used for Music)
+  playerEnabled?: boolean;
+  playerTitle?: string;
 }
 
 // Python Lab specific property
@@ -248,7 +281,7 @@ export interface Lab2EntryPoint {
    * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
    * example.
    */
-  view: LazyExoticComponent<ComponentType>;
+  view: LazyExoticComponent<ComponentType<LabProps>>;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults
@@ -257,7 +290,10 @@ export interface Lab2EntryPoint {
   theme?: Theme;
 }
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+export type LevelData =
+  | ProjectLevelData
+  | VideoLevelData
+  | BubbleChoiceLevelData;
 
 export type ProjectType =
   | AppName
@@ -302,8 +338,9 @@ export interface Condition {
 
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number';
+  valueType?: 'string' | 'number' | 'array';
   description: string;
+  valueOptions?: string[];
 }
 
 // Validation in the level.
@@ -361,4 +398,12 @@ export interface ParentLevelPathLink {
   path: string;
   kind: string;
   position: string;
+}
+
+export interface LabProps<
+  T extends LevelProperties = LevelProperties,
+  U extends ProjectSources = ProjectSources
+> {
+  levelProperties: T;
+  initialSources?: U;
 }

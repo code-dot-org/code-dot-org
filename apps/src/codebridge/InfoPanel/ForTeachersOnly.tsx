@@ -1,17 +1,16 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import React from 'react';
 
 import PredictSolution from '@cdo/apps/lab2/views/components/PredictSolution';
 import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const ForTeachersOnly: React.FunctionComponent = () => {
-  const teacherMarkdown = useAppSelector(
-    state => state.lab.levelProperties?.teacherMarkdown
-  );
+  const {levelProperties} = useCodebridgeContext();
+  const {teacherMarkdown, predictSettings} = levelProperties;
 
   return (
     <div>
-      <PredictSolution />
+      <PredictSolution predictSettings={predictSettings} />
       <TeacherOnlyMarkdown content={teacherMarkdown} hideContainer={true} />
     </div>
   );

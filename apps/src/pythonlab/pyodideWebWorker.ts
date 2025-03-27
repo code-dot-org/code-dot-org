@@ -35,31 +35,20 @@ async function loadPyodideAndPackages() {
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
   // matplotlib, which pythonlab_setup depends on, and numpy,
-  // which will frequently be used. We have seen issues with loading these via
-  // loadPyodide, so we load them here to ensure they are available.
-  const loadErrors: string[] = [];
-  await pyodide.loadPackage(
-    [
-      'numpy',
-      'matplotlib',
-      // These are custom packages that we have built. They are defined in the
-      // python/pythonlab/ folder in the codebase.
-      `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/neighborhood-0.2.0-py3-none-any.whl`,
-    ],
-    {
-      errorCallback: (message: string) => {
-        loadErrors.push(message);
-      },
-    }
-  );
+  // which will frequently be used. We have seen occasional issues with loading
+  // packages, so we retry loading if we see any errors.
+  let loadErrors = await loadPackages();
   if (loadErrors.length > 0) {
-    postMessage({
-      type: 'internal_error',
-      message: `Error(s) loading python packages: ${loadErrors.join('\n')}`,
-      id: 'startup',
-    });
+    // Retry loading packages once. Any packages that were successfully loaded
+    // will be skipped in the retry.
+    loadErrors = await loadPackages();
+    if (loadErrors.length > 0) {
+      postMessage({
+        type: 'load_failed',
+        message: `Error(s) loading python packages: ${loadErrors.join('\n')}`,
+        id: 'startup',
+      });
+    }
   }
   // Warm up the pyodide environment by running setup code.
   await runInternalCode(SETUP_CODE, -1);
@@ -94,25 +83,24 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source, validationFile, canSupportInput} = event.data;
+  const {id, python, source, validationFile} = event.data;
   let results = undefined;
   let sourceToWrite = source;
-  // Add the validation file to the source if it exists.
+  // Add the validation file to the source if it exists. Use the id "validation"
+  // so the validation file does not overwrite a user file (user files have stringified numeric ids).
   if (validationFile) {
     sourceToWrite = {
       ...source,
       files: {
         ...source.files,
-        [validationFile.id]: validationFile,
+        validation: {...validationFile, id: 'validation'},
       },
     };
   }
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
     await importPackagesFromFiles(sourceToWrite, pyodide);
-    if (canSupportInput) {
-      await patchInput(id);
-    }
+    await patchInput(id);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -172,4 +160,25 @@ function getStreamHandlerOptions(type: MessageType) {
 
 async function patchInput(id: number) {
   await runInternalCode(patchInputCode(id), id);
+}
+
+async function loadPackages() {
+  const loadErrors: string[] = [];
+  await pyodide.loadPackage(
+    [
+      'numpy',
+      'matplotlib',
+      // These are custom packages that we have built. They are defined in the
+      // python/pythonlab/ folder in the codebase.
+      `/blockly/js/pyodide/${version}/unittest_runner-0.2.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/neighborhood-0.4.0-py3-none-any.whl`,
+    ],
+    {
+      errorCallback: (message: string) => {
+        loadErrors.push(message);
+      },
+    }
+  );
+  return loadErrors;
 }

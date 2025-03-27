@@ -2,8 +2,12 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
+import {
+  setHasError,
+  setLoadedCodeEnvironment,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -22,8 +26,15 @@ let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 
 const setUpPyodideWorker = () => {
-  // @ts-expect-error because TypeScript does not like this syntax.
-  const worker = new Worker(new URL('./pyodideWebWorker.ts', import.meta.url));
+  // The web worker is versioned to ensure the correct version is loaded.
+  // Update the version if you update the web worker.
+  const worker = new Worker(
+    /* webpackChunkName: "pyodide-web-worker-1.0.0" */ new URL(
+      './pyodideWebWorker.ts',
+      // @ts-expect-error because TypeScript does not like this syntax.
+      import.meta.url
+    )
+  );
 
   callbacks = {};
 
@@ -60,7 +71,10 @@ const setUpPyodideWorker = () => {
         consoleManager?.writeConsoleMessage(message);
         break;
       case 'run_complete':
-        consoleManager?.writeSystemMessage('Program completed.', appName);
+        consoleManager?.writeSystemMessage(
+          pythonlabI18n.programCompleted(),
+          appName
+        );
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -68,9 +82,15 @@ const setUpPyodideWorker = () => {
         getStore().dispatch(setAndSaveSource(message));
         break;
       case 'error':
+        getStore().dispatch(setHasError(true));
+        if (message.includes(MessageTag.INPUT_FAILED)) {
+          consoleManager?.writeErrorMessage(pythonlabI18n.inputFailed());
+          break;
+        }
         consoleManager?.writeErrorMessage(parseErrorMessage(message));
         break;
       case 'system_error':
+        getStore().dispatch(setHasError(true));
         consoleManager?.writeSystemError(message, appName);
         Lab2Registry.getInstance()
           .getMetricsReporter()
@@ -80,6 +100,12 @@ const setUpPyodideWorker = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Python Lab Internal Error', undefined, {message});
+        break;
+      case 'load_failed':
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Failed to load packages', undefined, {message});
+        consoleManager?.writeErrorMessage(pythonlabI18n.loadFailed());
         break;
       case 'loading_pyodide':
         getStore().dispatch(setLoadedCodeEnvironment(false));
@@ -114,8 +140,11 @@ const registerServiceWorker = async () => {
     try {
       // Do not move the url into a variable, because webpack needs it to be passed as
       // a parmaeter to register() directly in order to set up inputServiceWorker as a service worker.
+      // The service worker is versioned to ensure the correct version is loaded.
+      // Update the version if you update the service worker.
       const registration = await navigator.serviceWorker.register(
         new URL(
+          /* webpackChunkName: "input-service-worker-1.0.0" */
           './inputServiceWorker.js',
           // @ts-expect-error because TypeScript does not like this syntax.
           import.meta.url
@@ -180,6 +209,9 @@ const asyncRun = (() => {
 
     // Make sure async setup is done
     await initializeServiceWorker();
+    // Reset error state
+    getStore().dispatch(setHasError(false));
+
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
       const messageData = {
@@ -187,7 +219,6 @@ const asyncRun = (() => {
         id,
         source,
         validationFile,
-        canSupportInput: canSupportInput(),
       };
       pyodideWorker.postMessage(messageData);
     });
@@ -201,7 +232,7 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    consoleManager?.writeSystemMessage('Program stopped.', appName);
+    consoleManager?.writeSystemMessage(pythonlabI18n.programStopped(), appName);
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');
