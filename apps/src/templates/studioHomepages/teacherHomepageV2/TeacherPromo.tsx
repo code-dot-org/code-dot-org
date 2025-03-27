@@ -37,9 +37,7 @@ const announcementTypes = [
 ];
 
 const getIconType = (announcementText: string): string => {
-  const entry = Object.values(announcementTypes).find(
-    type => type.text === announcementText
-  );
+  const entry = announcementTypes.find(type => type.text === announcementText);
   return entry ? entry.icon : 'bullhorn';
 };
 
