@@ -28,6 +28,7 @@ Scenario: Teacher can open and close Icon Key and details
   And I click selector "#ui-close-dialog"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
 
+@encrypted_level
 Scenario: Viewing student metadata
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
@@ -72,6 +73,7 @@ Scenario: Viewing student metadata
   And element "div:contains(Time Spent)" does not exist
   And element "div:contains(Last Updated)" does not exist
 
+@encrypted_level
 Scenario: Teacher can open and close lessons and see level data cells
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
@@ -89,6 +91,7 @@ Scenario: Teacher can open and close lessons and see level data cells
   And I click selector "#ui-test-expanded-progress-column-header-2"
   And element "#ui-test-s-allthethings-lessons-2-levels-1-cell-data" is not visible
 
+@encrypted_level
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"

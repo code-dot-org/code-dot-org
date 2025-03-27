@@ -16,6 +16,7 @@ Scenario: Stage Locking Dialog
   And I see no difference for "course overview for authorized teacher"
   And I close my eyes
 
+@encrypted_level
 Scenario: Readonly view does not show teacher only boxes
   Given I create an authorized teacher-associated student named "bobby"
 
@@ -44,6 +45,7 @@ Scenario: Readonly view does not show teacher only boxes
   Then element "h3:contains(For Teacher Only)" is not visible
   Then element ".previousPageButton" is visible
 
+@encrypted_level
 Scenario: Lock settings for students in survey
   Given I create an authorized teacher-associated student named "bobby"
 
@@ -114,6 +116,7 @@ Scenario: Lock settings for students in survey
   Then element "h3:contains(Answer)" is visible
   Then element ".previousPageButton" is visible
 
+@encrypted_level
 Scenario: Lock settings for students who never submit
   Given I create an authorized teacher-associated student named "billy"
 

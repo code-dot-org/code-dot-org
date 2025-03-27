@@ -1,6 +1,7 @@
 Feature: BubbleChoice
   @no_safari
   @no_mobile
+  @encrypted_level
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 
@@ -43,6 +44,7 @@ Feature: BubbleChoice
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
 
   @no_firefox
+  @encrypted_level
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 
