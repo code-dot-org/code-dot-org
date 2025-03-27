@@ -15,6 +15,7 @@ require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
+require 'cdo/ci_utils'
 
 require 'haml'
 require 'json'
@@ -62,7 +63,7 @@ def main(options)
   open_log_files
   configure_for_eyes if eyes?
   report_tests_starting
-  generate_status_page(start_time) if options.with_status_page
+  run_status_page_url = generate_status_page(start_time) if options.with_status_page
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
@@ -86,7 +87,7 @@ def main(options)
     return 1001
   end
 
-  report_tests_finished start_time, run_results
+  report_tests_finished start_time, run_results, run_status_page_url
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
   close_log_files
@@ -413,7 +414,7 @@ def report_tests_starting
   end
 end
 
-def report_tests_finished(start_time, run_results)
+def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   suite_duration = Time.now - start_time
 
   # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
@@ -440,13 +441,29 @@ def report_tests_finished(start_time, run_results)
   Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
   Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
   Infrastructure::Logger.flush
+
+  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? "*❌ FAILED*" : "*✅ PASSED*"}\n"
+  test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
+  test_report += "\n"
+  test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
+  test_report += "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
+  test_report += "#{test_type} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
+  test_report += "\n"
+  test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
+  test_report += "\n"
+  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? "FAILED" : "PASSED"}\n\n"
+
+  ChatClient.log test_report, color: 'purple'
+end
+
+def old
   ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
-  "Test count: #{run_results.count}. " \
-  "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
-  "Total reruns of flaky tests: #{total_flaky_reruns}. " \
-  "Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
-  + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
-  + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
+"Test count: #{run_results.count}. " \
+"Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
+"Total reruns of flaky tests: #{total_flaky_reruns}. " \
+"Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
++ (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
++ (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
   a_status_page = status_page_url ? "<a href=\"#{status_page_url}\">" : ''
   end_a = status_page_url ? "</a>" : ''
@@ -461,7 +478,7 @@ def report_tests_finished(start_time, run_results)
   end
 end
 
-def status_page_url
+def server_status_page_url
   return nil unless $options.with_status_page
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
 end
@@ -502,10 +519,10 @@ def generate_status_page(suite_start_time)
       }
     )
   )
-  ChatClient.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
-  status_page_s3_url = upload_status_page_to_s3(status_page_path)
-  ChatClient.log "Status page uploaded to S3: #{status_page_s3_url}"
-  return status_page_s3_url
+  run_status_page_url = upload_status_page_to_s3(status_page_path)
+  ChatClient.log "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
+  ChatClient.log "#{test_type} Test Status Page (for this server):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
+  return run_status_page_url
 end
 
 def test_run_identifier(browser, feature)
