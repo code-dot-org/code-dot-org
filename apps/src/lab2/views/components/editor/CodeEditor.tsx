@@ -71,7 +71,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const fontSizeCompartment = useMemo(() => new Compartment(), []);
 
   const getFontSizeTheme = (fontSize: number) => {
-    console.log('getFontSizeTheme fontSize', fontSize);
     return EditorView.theme({
       '&': {
         fontSize: `${fontSize}px`,
