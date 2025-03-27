@@ -8,7 +8,7 @@ Feature: Dance Party
     When I am on "http://studio.code.org/s/dance/lessons/1/levels/1"
     And I wait for the lab page to fully load
     And I am on "http://studio.code.org/restricted/placeholder.txt"
-    Then page text does contain "SETH BROKE THIS TEST INTENTIONALLY DO NOT COMMIT DO NOT COMMIT"
+    Then page text does contain "placeholder for testing"
 
   @no_mobile
   Scenario: Can toggle run/reset in Dance Party
