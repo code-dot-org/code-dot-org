@@ -203,16 +203,18 @@ class UnitGroup < ApplicationRecord
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
-    unaddable_unit_names = new_units_objects.select do |s|
-      s.unit_group != self && s.prevent_course_version_change?
-    end.map(&:name)
-    raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
+    unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
+      unaddable_unit_names = new_units_objects.select do |s|
+        s.unit_group != self && s.prevent_course_version_change?
+      end.map(&:name)
+      raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
+    end
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
-        unit.course_version&.destroy
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
+        unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
 
         unit.reload
         unit.write_script_json

@@ -5,13 +5,28 @@ description 'description here'
 markdown <<MARKDOWN
 # Assessment Levels
 
-## Finding Assessment Levels
-#### On the Course View page, assessment levels are denoted with a purple circle with a white checkmark.These levels are helpful for formative assessment. 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Finding Assessment Levels</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> On the Course View page, assessment levels are denoted with a purple circle with a white checkmark.These levels are helpful for formative assessment.
+
 ![](https://images.code.org/cf747bb670038bc08149881ef4048ab1-image-1734026218172.56.53 AM.png)
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">End of Unit Assessments</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Many courses provide end of unit assessments to evaluate student progress and learning. 
+
+![](https://images.code.org/2cb6e5df508177f185fa56ef179b7c4f-image-1743004625944.57.02 AM.png)
+
+</p></div>
+</details>
 
 
 ##Using Assessments 
-Insert testimonials here
+
 
 
 <div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
