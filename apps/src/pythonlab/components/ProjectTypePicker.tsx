@@ -1,4 +1,5 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -15,28 +16,30 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
   selectProjectType,
 }) => {
   return (
-    <div data-theme="Dark" className={moduleStyles.pickerContainer}>
-      <ActionBlock
-        description={pythonlabI18n.consoleOnlyDescription()}
-        image={consoleImage}
-        primaryButton={{
-          text: pythonlabI18n.consoleOnly(),
-          color: 'black',
-          useAsLink: false,
-          onClick: () => selectProjectType('console'),
-        }}
-      />
-      <ActionBlock
-        description={pythonlabI18n.neighborhoodDescription()}
-        image={neighborhoodImage}
-        primaryButton={{
-          text: pythonlabI18n.neighborhood(),
-          color: 'black',
-          useAsLink: false,
-          onClick: () => selectProjectType('neighborhood'),
-        }}
-      />
-    </div>
+    <CustomDialog mode="dark" className={moduleStyles.pickerDialog}>
+      <div data-theme="Dark" className={moduleStyles.pickerContainer}>
+        <ActionBlock
+          description={pythonlabI18n.consoleOnlyDescription()}
+          image={consoleImage}
+          primaryButton={{
+            text: pythonlabI18n.consoleOnly(),
+            color: 'black',
+            useAsLink: false,
+            onClick: () => selectProjectType('console'),
+          }}
+        />
+        <ActionBlock
+          description={pythonlabI18n.neighborhoodDescription()}
+          image={neighborhoodImage}
+          primaryButton={{
+            text: pythonlabI18n.neighborhood(),
+            color: 'black',
+            useAsLink: false,
+            onClick: () => selectProjectType('neighborhood'),
+          }}
+        />
+      </div>
+    </CustomDialog>
   );
 };
 

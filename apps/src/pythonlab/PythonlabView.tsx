@@ -1,4 +1,5 @@
 // Pythonlab view
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
@@ -20,8 +21,6 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
-
-import {DialogType, useDialogControl} from '../lab2/views/dialogs';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {defaultNeighborhoodProject, defaultProject} from './constants';
@@ -100,43 +99,20 @@ const PythonlabView: React.FunctionComponent<
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
-  const dialogControl = useDialogControl();
-  const [showingProjectTypeDialog, setShowingProjectTypeDialog] =
-    useState(false);
+  const [choseProjectType, setChoseProjectType] = useState(false);
 
-  useEffect(() => {
-    if (
-      levelProperties.isProjectLevel &&
-      !initialSources &&
-      !showingProjectTypeDialog
-    ) {
-      const onSelectedProject = (type: 'console' | 'neighborhood') => {
-        console.log(type);
-        if (type === 'neighborhood') {
-          setProject(defaultNeighborhoodProject);
-        } else {
-          setProject(defaultProject);
-        }
-        setShowingProjectTypeDialog(false);
-        dialogControl?.closeDialog('confirm');
-      };
-      setShowingProjectTypeDialog(true);
-      dialogControl?.showDialog({
-        type: DialogType.GenericDialog,
-        title: pythonlabI18n.projectPickerTitle(),
-        bodyComponent: (
-          <ProjectTypePicker selectProjectType={onSelectedProject} />
-        ),
-        buttons: null,
-      });
+  const showProjectPickerModal =
+    (levelProperties.isProjectLevel && !initialSources && !choseProjectType) ||
+    false;
+
+  const selectProjectType = (type: 'console' | 'neighborhood') => {
+    let project = defaultProject;
+    if (type === 'neighborhood') {
+      project = defaultNeighborhoodProject;
     }
-  }, [
-    levelProperties.isProjectLevel,
-    initialSources,
-    dialogControl,
-    showingProjectTypeDialog,
-    setProject,
-  ]);
+    setProject(project);
+    setChoseProjectType(true);
+  };
 
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {
@@ -189,7 +165,10 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {source && (
+      {showProjectPickerModal && (
+        <ProjectTypePicker selectProjectType={selectProjectType} />
+      )}
+      {!showProjectPickerModal && source && (
         <Codebridge
           source={source}
           config={config}
