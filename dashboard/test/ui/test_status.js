@@ -317,7 +317,10 @@ function s3HeaderToKey(header) {
   return key;
 }
 
-// Fetch test results directly from S3, stored as object metadata on each *_output.html file
+// Fetch test results directly from S3, already stored as object metadata on each *_output.html file
+// This function is used when running as static HTML. In this condition, the test_status_UI.html (etc)
+// pages we're running in will be served from the same S3 bucket, and therefore domain, as the *_output.html
+// files. Therefore, there is no CORS issue doing HEAD requests against them.
 async function fetchMetadataDirectlyFromS3For(browser, featureKey) {
   const featureFilename = featureKey.replace(/^features_/, '').replace(/\.feature$/, '');
   const s3Key = `${S3_PREFIX}/${browser}_${featureFilename}${S3_KEY_SUFFIX}`;
@@ -358,6 +361,10 @@ async function fetchMetadataDirectlyFromS3() {
   return (await Promise.all(entries)).filter(Boolean);
 }
 
+// Fetches test status (pass, fail, etc) from S3 metadata by proxying our call through
+// test_logs_controller.rb. We now support `fetchMetadataDirectlyFromS3`, but this is slower
+// because the browser more heavily restricts the number or parallel requests to
+// the same domain. As a result, we prefer this method.
 async function fetchMetadataFromDashboardAPI(since) {
   const res = await fetch(`${API_BASEPATH}/${S3_PREFIX}/since/${since}`, {
     mode: "no-cors",
@@ -369,11 +376,21 @@ async function fetchMetadataFromDashboardAPI(since) {
   }
 }
 
+// Try to fetch S3 metadata for _output.html files (which contains test status like pass/fail)
+//
+// First we try to fetch it via `test_logs_controller.rb`, this will work when dashboard is running
+// in situations like the test server, or your local dev box.
+//
+// If this fails, we fallback to fetching the S3 metadata directly. This is a little slower,
+// but allows us to support a static-html-only mode, that allows uploading this file to S3, giving
+// us a permalink we can pass back in drone.
 async function fetchMetadata(since) {
   let metadata
   try {
+    // Try to fetch from test_logs_controller.rb first:
     metadata = await fetchMetadataFromDashboardAPI(since)
   } catch (error) {
+    // Looks like test_logs_controller.rb wasn't there, we're probably running as static HMTML uploaded to S3
     console.warn(`Failed to fetch metadata from dashboard API, falling back to trying direct S3 access (original error: ${error})`);
 
     // Maybe this file is hosted on a static S3 bucket? Or dashboard isn't running?
