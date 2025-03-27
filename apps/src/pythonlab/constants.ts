@@ -27,7 +27,7 @@ export const defaultNeighborhoodProject: ProjectSources = {
         id: '0',
         name: MAIN_PYTHON_FILE,
         language: 'py',
-        contents: 'import neighborhood',
+        contents: 'from neighborhood import Painter',
         folderId: '0',
         active: true,
         open: true,

@@ -3,12 +3,14 @@ import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {
   defaultNeighborhoodProject,
   defaultProject,
 } from '@cdo/apps/pythonlab/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import consoleImage from '@cdo/static/pythonlab/console-only.svg';
 import neighborhoodImage from '@cdo/static/pythonlab/neighborhood-console.svg';
 
@@ -23,12 +25,14 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
   setProject,
   setProjectCallback,
 }) => {
+  const dispatch = useAppDispatch();
+
   const selectProjectType = (type: 'console' | 'neighborhood') => {
     let project = defaultProject;
     if (type === 'neighborhood') {
       project = defaultNeighborhoodProject;
     }
-    setProject(project);
+    dispatch(setAndSaveProjectSources(project));
     setProjectCallback();
   };
 
