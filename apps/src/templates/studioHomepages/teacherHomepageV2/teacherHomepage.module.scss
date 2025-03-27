@@ -239,7 +239,34 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-neutral-secondary);
+
+  &.promotion-gray {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &.promotion-purple {
+    background-color: var(--background-brand-purple-extra-light);
+  }
+
+  &.promotion-blue {
+    background-color: var(--backgound-info-extra-light);
+  }
+
+  &.promotion-aqua {
+    background-color: var(--background-brand-aqua-light);
+  }
+
+  &.promotion-green {
+    background-color: var(--background-success-light);
+  }
+
+  &.promotion-strawberry {
+    background-color: var(--background-accent-strawberry-light);
+  }
+
+  &.promotion-orange {
+    background-color: var(--background-accent-orange-light);
+  }
 }
 
 .promotionType {

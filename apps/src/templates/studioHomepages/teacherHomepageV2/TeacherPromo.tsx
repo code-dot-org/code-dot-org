@@ -6,6 +6,8 @@ import {
   Heading5,
   OverlineTwoText,
 } from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import _ from 'lodash';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -47,6 +49,7 @@ type TeacherPromoProps = TeacherPromoInfo & TeacherPromoAdditionalProps;
 export const TeacherPromo: React.FC<TeacherPromoProps> = ({
   id,
   announcementType,
+  backgroundColor,
   title,
   description,
   buttonLabel,
@@ -56,7 +59,13 @@ export const TeacherPromo: React.FC<TeacherPromoProps> = ({
   onClose,
 }) => {
   return (
-    <div className={styles.promotion} key={id}>
+    <div
+      className={classNames(
+        styles.promotion,
+        styles[`promotion-${_.lowerCase(backgroundColor)}`]
+      )}
+      key={id}
+    >
       {isClosable && (
         <CloseButton
           className={styles.closeButton}
