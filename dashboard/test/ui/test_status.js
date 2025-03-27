@@ -312,14 +312,11 @@ function updateProgressNow() {
 }
 var updateProgress = _.debounce(updateProgressNow, 300, { maxWait: 3000 });
 
-// maps HTTP headers returned from S3 to the same names as test_logs_controller.rb returns
-function s3HeaderToMetadataKey(header) {
-  key = header
-  key = key == 'x-amz-version-id' ? 'version_id' : key;
-  key = key.startsWith('x-amz-meta-') ? key.slice(11) : key;
-  key = key.replace(/-/g, '_');
-  return key;
-}
+// maps HTTP headers returned from S3 by a HEAD request to the same names as test_logs_controller.rb returns
+const s3HeaderToMetadataKey = httpHeaderName =>
+  httpHeaderName === 'x-amz-version-id'
+    ? 'version_id'
+    : httpHeaderName.replace(/^x-amz-meta-/, '').replaceAll('-', '_');
 
 // Fetch test results directly from S3, already stored as object metadata on each *_output.html file
 // This function is used when running as static HTML. In this condition, the test_status_UI.html (etc)
