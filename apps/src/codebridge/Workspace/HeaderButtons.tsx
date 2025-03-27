@@ -21,6 +21,7 @@ import {
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
@@ -45,8 +46,8 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const editorFontSizeKey = useAppSelector(
     state => state.codebridgeWorkspace.editorFontSizeKey
   );
-  console.log('editorFontSizeKey', editorFontSizeKey);
   const selectedFontSizeKey = editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
+  const {signInState} = useAppSelector(state => state.currentUser);
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -119,8 +120,12 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     });
     const selectedKey = extractUserInput(results) as keyof typeof FontSize;
     if (selectedKey && FontSize[selectedKey]) {
-      const sessionStorageKey = `${levelProperties.appName}CodeEditorFontSizeKey`;
-      trySetSessionStorage(sessionStorageKey, selectedKey);
+      // We want the user preference for selected font size to persist across a session
+      // for signed-in users per app type.
+      if (signInState === SignInState.SignedIn) {
+        const sessionStorageKey = `${levelProperties.appName}CodeEditorFontSizeKey`;
+        trySetSessionStorage(sessionStorageKey, selectedKey);
+      }
       dispatch(setEditorFontSize(selectedKey));
     }
   };

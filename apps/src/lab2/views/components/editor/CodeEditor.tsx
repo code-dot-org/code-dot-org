@@ -46,7 +46,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const fontSizeKey = editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
 
   // We want the user preference for selected font size to persist across a session
-  // per signed-in user per apptype (currently either pythonlab or weblab).
+  // per signed-in user per app type (currently either pythonlab or weblab).
   // Note that When the user selects a different font size from settings, fontSizeKey
   // is updated alongside sessionStorage for sessionStorageKey.
   useEffect(() => {
