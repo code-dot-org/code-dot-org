@@ -1,0 +1,20 @@
+{
+  "name": "csc-function-machines-pilot",
+  "script_names": [
+    "csc-function-machines-pilot"
+  ],
+  "published_state": "sunsetting",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csc-function-machines-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

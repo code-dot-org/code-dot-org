@@ -5,7 +5,6 @@ import {
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {SectionCardBody} from './SectionCardBody';
@@ -32,7 +31,11 @@ export const SectionCard: React.FC<SectionCardProps> = ({
           <div className={styles.sectionCardCode}>
             <OverlineOneText>
               {i18n.classCode()}
-              <a href={teacherDashboardUrl(section.id, '/login_info')}>
+              <a
+                href={`/join/${section.code}`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {section.code}
               </a>
             </OverlineOneText>

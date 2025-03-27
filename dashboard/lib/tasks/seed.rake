@@ -299,7 +299,17 @@ namespace :seed do
 
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
+    %w(allthethingscourse
+       csp-2017
+       csp-2019
+       allthemigratedthings
+       alltheselfpacedplthings
+       allthettsthings
+       interactive-games-animations-2023
+       customizing-llms-2024
+       events
+       playlab
+       step).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017

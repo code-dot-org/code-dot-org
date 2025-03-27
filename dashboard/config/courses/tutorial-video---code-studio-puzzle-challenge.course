@@ -1,0 +1,20 @@
+{
+  "name": "tutorial-video---code-studio-puzzle-challenge",
+  "script_names": [
+    "Tutorial Video - Code Studio Puzzle Challenge"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "tutorial-video---code-studio-puzzle-challenge",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

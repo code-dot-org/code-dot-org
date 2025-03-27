@@ -1,0 +1,20 @@
+{
+  "name": "2018hoc-ab",
+  "script_names": [
+    "2018hoc-ab"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "2018hoc-ab",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
