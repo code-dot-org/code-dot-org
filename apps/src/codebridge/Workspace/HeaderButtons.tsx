@@ -141,7 +141,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           type={'tertiary'}
           color={buttonColors.white}
           className={darkModeStyles.tertiaryButton}
-          ariaLabel={commonI18n.settings()}
         />
       </WithTooltip>
       {enableMicroBit && (
