@@ -64,14 +64,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     className: darkModeStyles.tooltipLeft,
   };
 
-  const settingsTooltipProps: TooltipProps = {
-    text: commonI18n.settings(),
-    direction: 'onLeft',
-    tooltipId: 'settings-tooltip',
-    size: 'xs',
-    className: darkModeStyles.tooltipLeft,
-  };
-
   const openFeedbackForm = () => {
     window.open('https://forms.gle/Z4FsGMFzE4NrFp369', '_blank');
   };
@@ -132,17 +124,15 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
-      <WithTooltip tooltipProps={settingsTooltipProps}>
-        <Button
-          isIconOnly
-          icon={{iconStyle: 'solid', iconName: 'gear'}}
-          onClick={onClickSettings}
-          size={'xs'}
-          type={'tertiary'}
-          color={buttonColors.white}
-          className={darkModeStyles.tertiaryButton}
-        />
-      </WithTooltip>
+      <Button
+        icon={{iconStyle: 'solid', iconName: 'gear'}}
+        onClick={onClickSettings}
+        size={'xs'}
+        type={'tertiary'}
+        color={buttonColors.white}
+        className={darkModeStyles.tertiaryButton}
+        ariaLabel={commonI18n.settings()}
+      />
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
