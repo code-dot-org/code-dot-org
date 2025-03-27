@@ -3,7 +3,7 @@
 - if @header['set_dir']
   - dir = language_dir_class
 
-%html{dir: dir}
+%html{dir: dir, lang: request.locale}
   %head
     = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml, locals: {domain: 'code.org'}
 
