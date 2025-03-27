@@ -9,6 +9,8 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -64,12 +66,15 @@ describe('TeacherHomepage', () => {
   let store: Store;
 
   const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+  let sendEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     store = getStore();
     registerReducers({teacherSections, currentUser});
     store.dispatch(setSections(serverSections));
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
 
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/dashboardapi/sections/available_participant_types') {
@@ -104,6 +109,15 @@ describe('TeacherHomepage', () => {
     );
   }
 
+  it('sends analytics event when visiting the page', () => {
+    renderComponent();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
+      {},
+      PLATFORMS.BOTH
+    );
+  });
+
   it('renders SectionList component', () => {
     renderComponent();
     screen.getByText('Welcome, Rubber Ducky');
@@ -120,11 +134,11 @@ describe('TeacherHomepage', () => {
     screen.getByRole('button', {name: 'Cancel'});
   }, 15000);
 
-  //TODO (TEACH-1659): Why did we need to increase timeouts on this test?
   it('teaching/archived toggle', async () => {
     renderComponent();
     screen.getByRole('button', {name: 'Teaching'});
     const archivedButton = screen.getByRole('button', {name: 'Archived'});
+    const teachingButton = screen.getByRole('button', {name: 'Teaching'});
 
     screen.getByText('Period 1');
     expect(screen.queryByText('hidden')).toBeNull();
@@ -133,6 +147,20 @@ describe('TeacherHomepage', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
+
+    fireEvent.click(teachingButton);
+    await screen.findByText('Period 1');
+    expect(screen.queryByText('hidden')).toBeNull();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('archive all opens modal', async () => {
