@@ -64,9 +64,9 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   }, [lessonList]);
 
   const onDropdownChange = (args: React.ChangeEvent<HTMLSelectElement>) => {
-    const jumpToEvent = args.target.value.includes('/s/')
-      ? EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED
-      : EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED;
+    const jumpToEvent = args.target.value.includes('/lessons/')
+      ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
+      : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED;
     analyticsReporter.sendEvent(
       jumpToEvent,
       {
