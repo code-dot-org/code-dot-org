@@ -487,12 +487,18 @@ def status_page_filename
   "test_status_#{test_type}.html"
 end
 
-# Returns an HTTPS URL to the status_page on S3
+# Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
 def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_page_filename))
   LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.css'), {content_type: 'text/css'})
   LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.js'), {content_type: 'text/javascript'})
 
   return LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
+rescue Aws::Sigv4::Errors::MissingCredentialsError
+  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type} Test Status Page' to S3"
+  nil
+rescue Exception => exception
+  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
+  nil
 end
 
 def scheme_for_environment
