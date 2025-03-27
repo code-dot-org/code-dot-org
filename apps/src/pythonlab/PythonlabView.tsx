@@ -21,7 +21,7 @@ import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
-import {defaultNeighborhoodProject, defaultProject} from './constants';
+import {defaultProject} from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -103,15 +103,6 @@ const PythonlabView: React.FunctionComponent<
     (levelProperties.isProjectLevel && !initialSources && !choseProjectType) ||
     false;
 
-  const selectProjectType = (type: 'console' | 'neighborhood') => {
-    let project = defaultProject;
-    if (type === 'neighborhood') {
-      project = defaultNeighborhoodProject;
-    }
-    setProject(project);
-    setChoseProjectType(true);
-  };
-
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {
       progressManager.setValidator(
@@ -179,7 +170,10 @@ const PythonlabView: React.FunctionComponent<
         />
       )}
       {showProjectPickerModal && (
-        <ProjectTypePicker selectProjectType={selectProjectType} />
+        <ProjectTypePicker
+          setProject={setProject}
+          setProjectCallback={() => setChoseProjectType(true)}
+        />
       )}
     </div>
   );

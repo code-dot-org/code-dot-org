@@ -3,6 +3,11 @@ import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  defaultNeighborhoodProject,
+  defaultProject,
+} from '@cdo/apps/pythonlab/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import consoleImage from '@cdo/static/pythonlab/console-only.svg';
 import neighborhoodImage from '@cdo/static/pythonlab/neighborhood-console.svg';
@@ -10,12 +15,23 @@ import neighborhoodImage from '@cdo/static/pythonlab/neighborhood-console.svg';
 import moduleStyles from './projectTypePicker.module.scss';
 
 interface ProjectTypePickerProps {
-  selectProjectType: (projectType: 'console' | 'neighborhood') => void;
+  setProject: (project: ProjectSources) => void;
+  setProjectCallback: () => void;
 }
 
 const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
-  selectProjectType,
+  setProject,
+  setProjectCallback,
 }) => {
+  const selectProjectType = (type: 'console' | 'neighborhood') => {
+    let project = defaultProject;
+    if (type === 'neighborhood') {
+      project = defaultNeighborhoodProject;
+    }
+    setProject(project);
+    setProjectCallback();
+  };
+
   return (
     <div className={moduleStyles.dialogContainer} data-theme="Dark">
       <CustomDialog mode="dark" className={moduleStyles.pickerDialog}>
