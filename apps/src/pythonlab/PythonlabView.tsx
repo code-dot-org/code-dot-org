@@ -9,7 +9,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
-import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
@@ -17,12 +17,14 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {DialogType, useDialogControl} from '../lab2/views/dialogs';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
+import {defaultNeighborhoodProject, defaultProject} from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -38,23 +40,6 @@ import moduleStyles from './pythonlab-view.module.scss';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
-};
-
-const defaultProject: ProjectSources = {
-  source: {
-    files: {
-      '0': {
-        id: '0',
-        name: MAIN_PYTHON_FILE,
-        language: 'py',
-        contents: 'print("Hello world!")',
-        folderId: '0',
-        active: true,
-        open: true,
-      },
-    },
-    folders: {},
-  },
 };
 
 const defaultConfig: ConfigType = {
@@ -125,11 +110,23 @@ const PythonlabView: React.FunctionComponent<
       !initialSources &&
       !showingProjectTypeDialog
     ) {
+      const onSelectedProject = (type: 'console' | 'neighborhood') => {
+        console.log(type);
+        if (type === 'neighborhood') {
+          setProject(defaultNeighborhoodProject);
+        } else {
+          setProject(defaultProject);
+        }
+        setShowingProjectTypeDialog(false);
+        dialogControl?.closeDialog('confirm');
+      };
       setShowingProjectTypeDialog(true);
       dialogControl?.showDialog({
         type: DialogType.GenericDialog,
-        title: 'Choose your project type',
-        bodyComponent: <ProjectTypePicker />,
+        title: pythonlabI18n.projectPickerTitle(),
+        bodyComponent: (
+          <ProjectTypePicker selectProjectType={onSelectedProject} />
+        ),
         buttons: null,
       });
     }
@@ -138,6 +135,7 @@ const PythonlabView: React.FunctionComponent<
     initialSources,
     dialogControl,
     showingProjectTypeDialog,
+    setProject,
   ]);
 
   useEffect(() => {
