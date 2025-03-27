@@ -4,7 +4,7 @@ import {BlockMode} from '../constants';
 import {ConditionNames} from './MusicValidator';
 
 export const MusicConditions: ConditionNames = {
-  block_count_by_type: {
+  BLOCK_COUNT_BY_TYPE: {
     name: 'block_count_by_type',
     valueType: 'string:number',
     description:

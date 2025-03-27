@@ -507,7 +507,7 @@ export default class MusicValidator extends Validator {
 
   private addSatisfiedBlockCountConditions(conditions: Condition[]) {
     const blockCountConditions = conditions.filter(
-      ({name}) => name === MusicConditions.block_count_by_type.name
+      ({name}) => name === MusicConditions.BLOCK_COUNT_BY_TYPE.name
     );
     if (blockCountConditions.length === 0) {
       return;
@@ -527,7 +527,7 @@ export default class MusicValidator extends Validator {
 
       if (blockCountByType >= expectedCount) {
         this.conditionsChecker.addSatisfiedCondition({
-          name: MusicConditions.block_count_by_type.name,
+          name: MusicConditions.BLOCK_COUNT_BY_TYPE.name,
           value: `${blockType}:${expectedCount}`,
         });
       }
