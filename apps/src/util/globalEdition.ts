@@ -33,6 +33,4 @@ export const getGlobalEditionRegion = () => {
  * This returns the current region's configuration data.
  */
 export const currentGlobalConfiguration: () => RegionConfiguration = () =>
-  (Regions as {[key: string]: RegionConfiguration})[
-    getGlobalEditionRegion() || 'root'
-  ] || {};
+  Regions[getGlobalEditionRegion() as keyof typeof Regions] || Regions.root;
