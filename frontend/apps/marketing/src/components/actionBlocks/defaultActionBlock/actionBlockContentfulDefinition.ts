@@ -2,7 +2,7 @@
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
-  id: 'actionBlock',
+  id: 'verticalActionBlock',
   name: 'Vertical Action Block',
   category: '03: Basic',
   thumbnailUrl:
