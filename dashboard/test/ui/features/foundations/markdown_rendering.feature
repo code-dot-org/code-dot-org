@@ -1,5 +1,6 @@
 Feature: Markdown rendering across the website
 
+  @encrypted_level
   Scenario: Visiting an external markdown level with details tag
     Given I am on "http://studio.code.org/s/allthethings/lessons/21/levels/1?noautoplay=true"
     And I wait to see "#extra-details-tag"
@@ -8,7 +9,6 @@ Feature: Markdown rendering across the website
     Then element "#cool-list" is open
 
   @eyes
-  @encrypted_level
   Scenario: Viewing a level with blockly embedded in instructions
     When I open my eyes to test "Blockly in instructions"
     And I am on "http://studio.code.org/s/allthethings/lessons/21/levels/2?noautoplay=true"
