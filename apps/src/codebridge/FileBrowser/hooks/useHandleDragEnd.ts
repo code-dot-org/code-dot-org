@@ -10,7 +10,6 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DragType} from '../types';
 
@@ -20,18 +19,17 @@ import {DragType} from '../types';
  * @returns A function that handles the DragOverEvent from `@dnd-kit/core`.
  */
 export const useHandleDragEnd = () => {
-  const {project, moveFile, moveFolder} = useCodebridgeContext();
+  const {source, moveFile, moveFolder, levelProperties} =
+    useCodebridgeContext();
 
   const dialogControl = useDialogControl();
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
+  const validationFile = levelProperties.validationFile;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const validateFileName = usePartialApply(globalValidateFileName, {
     isStartMode,
     validationFile,
-    projectFiles: project.files,
+    projectFiles: source.files,
   } satisfies PAFunctionArgs<typeof globalValidateFileName>);
 
   return useMemo(
@@ -43,9 +41,9 @@ export const useHandleDragEnd = () => {
         }
         if (e.active.data.current?.type === DragType.FOLDER) {
           const validationError = validateFolderName({
-            folderName: project.folders[e.active.data.current.id].name,
+            folderName: source.folders[e.active.data.current.id].name,
             parentId: e.over.id as string,
-            projectFolders: project.folders,
+            projectFolders: source.folders,
           });
           if (validationError) {
             dialogControl?.showDialog({
@@ -57,7 +55,7 @@ export const useHandleDragEnd = () => {
           }
         } else if (e.active.data.current?.type === DragType.FILE) {
           const validationError = validateFileName({
-            fileName: project.files[e.active.data.current.id].name,
+            fileName: source.files[e.active.data.current.id].name,
             folderId: e.over.id as string,
           });
           if (validationError) {
@@ -75,8 +73,8 @@ export const useHandleDragEnd = () => {
       dialogControl,
       moveFile,
       moveFolder,
-      project.files,
-      project.folders,
+      source.files,
+      source.folders,
       validateFileName,
     ]
   );

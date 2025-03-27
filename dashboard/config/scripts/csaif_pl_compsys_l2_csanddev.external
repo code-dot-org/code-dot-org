@@ -1,0 +1,27 @@
+name 'csaif_pl_compsys-L2-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Computer System? 
+
+(Replace with video level)
+
+#### A computer system is a set of parts that work together to process information and complete tasks. It includes hardware (the physical parts), software (the programs that run on it), and an operating system (which manages the hardware and software).
+
+#### This video gives a brief overview of computer systems. While you watch this video, consider how the different parts of a computer system—hardware, software, and the operating system—work together.
+
+ 
+
+
+
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+      
+        <p style="font-size: 14pt;">
+        Computational thinking builds the problem-solving skills students need for programming by helping them organize their ideas, identify useful patterns, and develop clear, logical steps—preparing them to become effective Python programmers.
+        </p>
+    </div>
+
+
+MARKDOWN

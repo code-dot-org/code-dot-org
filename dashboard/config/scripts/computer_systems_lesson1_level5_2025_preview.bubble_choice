@@ -1,0 +1,9 @@
+name 'computer-systems-lesson1-level5_2025-preview'
+display_name 'Industry Professional for Jacquard Smart Jacket'
+description 'Learn how the Jacquard Smart Jacket combines fashion and technology to help users stay connected on the go. Choose a role and conduct an interview to see how wearable tech is changing the way we interact with our devices.'
+
+sublevels
+level 'computer-systems-lesson1-level5a_2025-preview'
+level 'computer-systems-lesson1-level5b_2025-preview'
+level 'computer-systems-lesson1-level5c_2025-preview'
+level 'computer-systems-lesson1-level5d_2025-preview'

@@ -1,0 +1,259 @@
+@import 'color';
+
+.getStartedPage {
+  background: linear-gradient(180deg, $light_gray_950 0%, $light_black 100%);
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.getStartedContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  height: calc(100% - 40px);
+}
+
+.getStartedTop {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+
+  & h1 {
+    color: $light_white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: var(--brand-aqua-50, #3CFFF7)
+  }
+}
+
+
+.botScanning {
+  width: 140px;
+  height: 370px;
+  object-fit: cover;
+  object-position: top left;
+  align-self: center;
+}
+
+.selectOption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.selectOptionPage {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  height: 100%;
+}
+
+.selectOptionContent {
+  margin: 0 56px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progressBarHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  align-items: center;
+}
+
+.headerBackButton {
+  min-width: 32px;
+  font-size: 14px;
+  margin-inline-start: 16px;
+  border: 0;
+  margin: 0;
+  line-height: 0px;
+  padding: 8px;
+  background-color: $light_white;
+
+  &:active {
+    border: 0 !important;
+  }
+}
+
+.progressBar {
+  height: 12px;
+  width: 100%;
+  background-color: #eaebeb;
+  border-radius: 100px;
+  margin-inline-end: 56px;
+  margin-inline-start: 24px;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 100px;
+  background-color: $light_affirmative_500;
+}
+
+.selectOptionSubtitle {
+  color: $light_gray_800
+}
+
+.skipLink {
+  align-self: end;
+  margin-top: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.bottomButtons {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  text-align: end;
+  align-self: center;
+  margin-top: auto;
+}
+
+.optionRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+  border-radius: 4px;
+  border: 2px solid $light_gray_200;
+  margin: 16px 0 0 0;
+  background-color: inherit;
+
+  &:active {
+    border: 2px solid $light_gray_200 !important;
+  }
+
+  &:hover {
+    background-color: #E4E6E9 !important;
+  }
+}
+
+.optionRowWithPic {
+  flex-direction: column;
+}
+
+.ai101Thumbnail {
+  margin: 0 12px 12px 12px;
+  border-radius: 4px;
+}
+
+.optionIcon {
+  font-size: 24px;
+  margin-top: 10px;
+  width: 54px;
+  min-width: 54px;
+  display: flex;
+  justify-content: center;
+
+  --fa-primary-color: var(--light-aqua-70, #19BBB5);
+  --fa-secondary-color: var(--light-aqua-700, #30CCC6);
+}
+
+.optionText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  gap: 8px;
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.optionWithPicTop {
+  width: 100%;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  display: flex;
+
+  & p {
+    margin-bottom: 0;
+    text-align: start;
+  }
+}
+
+.optionDescription {
+  margin-bottom: 0;
+}
+
+.selectedOption {
+  border: 4px solid #3CFFF7;
+  width: calc(100% + 6px);
+
+  &:active {
+    border: 4px solid #3CFFF7 !important;
+  }
+}
+
+.practicePage {
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.practiceContent {
+  height: calc(100% - 123px);
+  max-height: calc(100% - 123px);
+  border-top: 2px solid $neutral_gray10;
+}
+
+.endPage {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 32px 20px 20px 20px;
+}
+
+.endPageTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 36px 16px 36px;
+  text-align: center;
+
+  & h3 {
+    margin-bottom: 4px;
+  }
+
+  & h6 {
+    color: $neutral_dark80;
+    margin-bottom: 0;
+  }
+}
+
+
+.botHappy {
+  width: 94px;
+}
+
+.confetti {
+  position: relative;
+  left: 0;
+  top: 500px;
+}
+
+.endPage a {
+  text-decoration: none !important;
+}

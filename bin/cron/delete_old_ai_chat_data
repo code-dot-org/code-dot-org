@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
-require 'cdo/chat_client'
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
 
 # We want to avoid storing student chat messages any longer than
 # is necessary for analysis to prevent storing excess student PII. This deletes
@@ -16,11 +16,11 @@ def main
   # Pilot data collected before September 30th, 2024 is being retained for analysis.
   pilot_end_date = DateTime.new(2024, 10, 1, 0, 0, 0)
 
-  destroyed_events = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).destroy_all
-  ChatClient.message('cron-daily', "Deleted #{destroyed_events.length} AichatEvent records")
+  destroyed_event_count = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
+  ChatClient.message('cron-daily', "Deleted #{destroyed_event_count} AichatEvent records")
 
-  destroyed_requests = AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).destroy_all
-  ChatClient.message('cron-daily', "Deleted #{destroyed_requests.length} AichatRequest records")
+  destroyed_request_count = AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
+  ChatClient.message('cron-daily', "Deleted #{destroyed_request_count} AichatRequest records")
 end
 
 main

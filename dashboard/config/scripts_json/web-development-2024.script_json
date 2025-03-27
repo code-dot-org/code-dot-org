@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "web-development",
-    "serialized_at": "2024-11-19 01:19:58 UTC",
+    "serialized_at": "2025-03-05 21:04:00 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -10800,46 +10800,46 @@
     },
     {
       "name": "All Code",
-      "url": "/s/csd2-2023/code",
-      "key": "all_code",
+      "url": "/s/web-development-2024/code",
+      "key": "all_code_1",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_code"
+        "resource.key": "all_code_1"
       }
     },
     {
       "name": "All Resources",
-      "url": "/s/csd2-2023/resources",
-      "key": "all_resources",
+      "url": "/s/web-development-2024/resources",
+      "key": "all_resources_1",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_1"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csd2-2023/standards",
-      "key": "all_standards",
+      "url": "/s/web-development-2024/standards",
+      "key": "all_standards_1",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_1"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd2-2023/vocab",
-      "key": "all_vocabulary",
+      "url": "/s/web-development-2024/vocab",
+      "key": "all_vocabulary_1",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_1"
       }
     },
     {
@@ -13045,25 +13045,25 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_code",
+        "resource.key": "all_code_1",
         "script.name": "web-development-2024"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_1",
         "script.name": "web-development-2024"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_1",
         "script.name": "web-development-2024"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_1",
         "script.name": "web-development-2024"
       }
     },

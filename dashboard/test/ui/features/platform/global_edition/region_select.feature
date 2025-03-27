@@ -46,7 +46,7 @@ Feature: Global Edition - Region Select
     And check that I am on "http://studio.code.org/global/fa/users/sign_in?lang=fa-IR"
     And element "#locale option:contains(فارسی)" is checked
     And element "#locale" has escaped text "English\nفارسی"
-    And element ".footer #global-edition-region-reset:contains(Return to Full Site)" is visible
+    And element ".footer #global-edition-region-reset:contains(بازگشت به نسخه کامل سایت)" is visible
 
     When I am on "http://studio.code.org"
     Then I get redirected away from "http://studio.code.org"
@@ -90,9 +90,9 @@ Feature: Global Edition - Region Select
     Given I am on "http://code.org/global/fa"
     And element ".language-dropdown:visible option:contains(فارسی)" is checked
     And element "#ge-region-languages" is visible
-    And element "#ge-region-languages" has escaped text "\n\n\n\nView in English\n\n\n\n"
+    And element "#ge-region-languages" has escaped text "\n\n\n\nمشاهده در English\n\n\n\n"
 
-    When I click selector "#ge-region-languages a:contains(View in English)" to load a new page
+    When I click selector "#ge-region-languages a:contains(مشاهده در English)" to load a new page
     Then I get redirected away from "http://code.org/global/fa"
     And check that I am on "http://code.org/global/fa"
     And element ".language-dropdown:visible option:contains(English)" is checked
@@ -104,4 +104,4 @@ Feature: Global Edition - Region Select
     And check that I am on "http://code.org/global/fa"
     And element ".language-dropdown:visible option:contains(فارسی)" is checked
     And element "#ge-region-languages" is visible
-    And element "#ge-region-languages" has escaped text "\n\n\n\nView in English\n\n\n\n"
+    And element "#ge-region-languages" has escaped text "\n\n\n\nمشاهده در English\n\n\n\n"

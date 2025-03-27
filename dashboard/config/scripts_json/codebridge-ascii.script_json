@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "codebridge-ascii",
-    "serialized_at": "2024-11-26 02:59:37 UTC",
+    "serialized_at": "2025-01-22 02:25:28 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
@@ -43,6 +43,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",

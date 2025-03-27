@@ -1,0 +1,1608 @@
+{
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/1": {
+    "dsls": {
+      "title": "Customizing Language Models Pre-Survey"
+    },
+    "sublevels": {
+      "gen-ai-customizing-studentsurvey-premodule-preamble": {
+        "dsls": {
+          "markdown": "###Please take a moment to respond to this short survey.\n\nCode.org takes your privacy seriously. Your responses here will be kept **anonymous**. Your teacher can see responses for the whole class but without names attached.\n",
+          "teacher_markdown": "**Teacher Start-Of-Unit Survey:** While your students complete the survey, we would appreciate you completing a short teacher survey.\n\n##[Click Here for Teacher Survey](https://studio.code.org/form/exploring_with_generative_ai_pre_survey)\n"
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "This is the first I am learning about Generative AI",
+              "correct": true
+            },
+            {
+              "text": "I have done smaller Generative AI activities (for example: an hour of code), but this is my first longer class",
+              "correct": true
+            },
+            {
+              "text": "I have already taken a class or done longer online tutorials on Generative AI (for example: the Foundations of Generative AI unit in Code.org)",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What prior experiences have you had learning about Generative AI?"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Very interested",
+              "correct": true
+            },
+            {
+              "text": "Somewhat interested",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Not very interested",
+              "correct": true
+            },
+            {
+              "text": "Not interested at all",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "How would you rate your current interest in generative AI?"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Understand how large language models (LLMs) work and generate text.",
+              "correct": true
+            },
+            {
+              "text": "Complete a project.",
+              "correct": true
+            },
+            {
+              "text": "Learn about the ethical implications of AI",
+              "correct": true
+            },
+            {
+              "text": "Explore potential careers in computer vision and AI",
+              "correct": true
+            },
+            {
+              "text": "Nothing",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What are you most hoping to learn or achieve in Exploring Generative AI? (Choose Top 2)"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Watching videos",
+              "correct": true
+            },
+            {
+              "text": "Reading text (books, articles, websites)",
+              "correct": true
+            },
+            {
+              "text": "Hands-on projects and experiments",
+              "correct": true
+            },
+            {
+              "text": "Group discussions and collaborations",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "How do you prefer to learn new topics? (Choose top 2)"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Understanding complex concepts",
+              "correct": true
+            },
+            {
+              "text": "Keeping up with assignments",
+              "correct": true
+            },
+            {
+              "text": "Working on group projects",
+              "correct": true
+            },
+            {
+              "text": "Lack of interest in the topic",
+              "correct": true
+            },
+            {
+              "text": "No challenges",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following do you expect will make learning difficult in Exploring Generative AI? (Choose top 2)"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/2": {
+    "long_instructions": "## Explore a Chatbot\n\nThese levels let you experiment with chatbots. They use a language model behind the scenes to answer questions. Let's experiment and see what questions we can get answered.\n\n**Fair Warning:** This chatbot is for educational purposes, so we've built in appropriate restrictions and accountability to make sure it doesn't get abused. Inappropriate messages from you _or_ the chatbot will be flagged and not displayed. The chatbot also keeps track of **all messages you send to it**, and your teacher can view these messages (even the ones that were flagged as inappropriate). So be sure to just use the chatbot as directed!\n\n### Do This\n\n1.  Ask the chatbot 3-4 questions. Try to determine its purpose.\n2.  Find the button that lets you clear the chat. This also resets the conversation\n3.  Find the button that lets you copy the chat. This will be useful to know about later!\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What is space like?\n-   Where is Tucson located?\n-   Where can I get a good chile relleno?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/3": {
+    "long_instructions": "## Explore a Chatbot Round 2\n\nThis chatbot now has additional information you can view, called the **Model Card**. This displays additional information for you, the user, about how the chatbot works.\n\n### Do This\n\n1.  Read the model card to learn more about how the chatbot works\n2.  With this new information: try to have a successful conversation with the chatbot\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/4": {
+    "long_instructions": "## Exploring Temperature\n\n**Temperature** is one of the values you can control once a language model has been trained. Let's experiment with it and see if we can tell what it does.\n\n<!--\n**Temperature** controls the randomness of how a model responds.\n- ⬇️ lower temperatures create less random, less creative responses\n- ⬆️ higher temperatures create more random, more creative responses\n-->\n\n### Do This\n\n1.  Have a 3-4 message conversation with the chatbot about a book or movie or band you like.\n2.  Change the temperature to a high value like 0.8 **Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button!**\n3.  Have another 3-4 message conversation about the same topic. Do you notice a difference in the type of responses?\n4.  Change the temperature to a low value like 0.2 **Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button!**\n5.  Have another 3-4 message conversation about the same topic. Do you notice a difference in the type of responses?\n\n**Discuss:** How were the responses different for higher temperatures? Lower temperatures?"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/5": {
+    "long_instructions": "## Poetry Chatbot\n\nThis chatbot has been designed to help generate poetry on a given topic. You can ask it to generate a poem on a certain topic, and it will respond with a poem. Let's try to adjust the temperature and see how it affects the chatbot.\n\n### Do This\n\n1.  Update the temperature of the chatbot so it can generate creative poetry on a given topic.\n    -   The results should be _creative_ and _expressive_\n    -   **Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button each time you change the temperature!**\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Write me a poem about love and jealousy\n-   Write me a poem about a walrus and a carpenter\n-   Write me an ode to the sun\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/6": {
+    "long_instructions": "## Biography Chatbot\n\nThis chatbot has been designed to summarize information about historical figures. You can ask it about a historical figure, and it will respond with information about their lives. Let's try to adjust the temperature so the chatbot works as expected.\n\n### Do This\n\n1.  Update the temperature of the chatbot so it can summarize facts and information about historical figures.\n    -   **Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button each time you change the temperature!**\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Who was Ada Lovelace?\n-   Who was Jerry Lawson?\n-   Who was Grace Hopper?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/7": {
+    "long_instructions": "## Argument Chatbot\n\nThis chatbot is designed to make an argument for a given topic. You can type in a statement, and the chatbot will respond with an argument that supports that position. Let's try to adjust the temperature so the chatbot works as expected.\n\n### Do This\n\n1.  Update the temperature so it can generate a persuasive argument on the given topic.\n    -   Arguments are best when they contain both rational logical and persuasive emotional appeals, so consider this when balancing the temperature.\n    -   **Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button each time you change the temperature!**\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Dogs are better than cats\n-   recycling is good for the planet\n-   A hot dog is a sandwich\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/8": {
+    "long_instructions": "Based on the last few levels:\n\n1.  What types of tasks do you think a **⬆️ high** temperature is better suited for?\n2.  What types of tasks do you think a **⬇️ low** temperature is better suited for?",
+    "teacher_markdown": "Students should notice that higher temperature is better for more creative and open-ended tasks (like the poetry level), while lower temperature can be better for more fact and information based tasks (like the historical biography level). Mid temperatures are better for a combination of the two (like making an argument, that requires both logical and emotional appeals).\n\nStudents may also call out places where bias and hallucinations are important. Lower temperatures can be better for places where we want to try and eliminate hallucinations, although we will learn some better tricks for this later in the unit.",
+    "placeholder": "Write your answer here!",
+    "title": "Mid-Lesson Check-In"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/9": {
+    "long_instructions": "## Investigating Hallucinations\n\nA **hallucination** is an inaccuracy in a chatbot's response. It's important to be aware of hallucinations when using chatbots, and temperature is something that can sometimes affect how often a chatbot hallucinates.\n\n-   Sometimes chatbots just aren't great at certain tasks and will hallucinate certain responses no matter what.\n-   Sometimes chatbots will hallucinate more with higher temperatures, since it makes the responses more random.\n\nThis chatbot is designed to provide plot summaries of novels or movies. Let's experiment it and see if we can observe some hallucinations.\n\n### Do This\n\n1.  Ask the chatbot to provide a plot summary of a few movies or novels you are familiar with.\n2.  Read the response carefully and notice if any responses seem incorrect\n    -   Hallucinations usually _sound_ correct in the context of the response, so it's important to read closely!\n3.  Update the temperature and ask the same questions. Do the answers change? Does the accuracy change?\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Can you summarize the plot to the first Twilight book?\n-   Can you summarize the plot to Of Mice and Men?\n-   Can you summarize the plot for the Hunger Games?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/2/levels/10": {
+    "dsls": {
+      "description": "Choose at least 2 levels to try",
+      "display_name": "You Try!"
+    },
+    "sublevels": {
+      "gen-ai-customizing-intro-L8A_2024": {
+        "display_name": "Investigating Translation",
+        "bubble_choice_description": "This chatbot is designed to help translate sentences to different language. Let's investigate how accurate it can be.",
+        "long_instructions": "## Investigating Translations\r\n\r\nThis chatbot is designed to help translate sentences to different language. Let's investigate how accurate it can be.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot to translate 4-5 sentences into a different language that you are familiar with.\r\n2) Read the response carefully and notice if any responses seem incorrect\r\n    - Hallucinations usually _sound_ correct in the context of the response, so it's important to read closely!\r\n3) Update the temperature and ask the same questions. Do the answers change? Does the accuracy change?\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Can you translate \"Hello how are you?\" into Spanish?\r\n* Can you translate \"It is a beautiful day in the neighborhood\" into Korean?\r\n* Can you translate \"I remember it all too well\" into Arabic?\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-intro-L8B_2024": {
+        "display_name": "Investigating Mathematics",
+        "bubble_choice_description": "This chatbot is designed to help solve mathematics problems and perform calculations. Let's investigate how accurate it can be.",
+        "long_instructions": "## Investigating Mathematics\r\n\r\nThis chatbot is designed to help solve mathematics problems and perform calculations. Let's investigate how accurate it can be.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot to solve 4-5 different math problems\r\n    - These can be simple calculations, like \"What is 9 times 5 plus 4\"\r\n2) Read the response carefully and notice if any responses seem incorrect\r\n    - Hallucinations usually _sound_ correct in the context of the response, so it's important to read closely!\r\n3) Update the temperature and ask the same questions. Do the answers change? Does the accuracy change?\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What is 9 times 5 plus 4?\r\n* If I have 55 dollars and I need to split it amongst 3 people, how much money does each person get?\r\n* If my meal costs $32.05 and there's a 1.02% tax and I want to tip 20%, what is my total bill?\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-intro-L8C_2024": {
+        "display_name": "Investigating History",
+        "bubble_choice_description": "This chatbot is designed to describe the historical chain-of-events that led to big events in world history. Let's investigate how accurate it can be.",
+        "long_instructions": "## Investigating History\r\n\r\nThis chatbot is designed to describe the historical chain-of-events that led to big events in world history. Let's investigate how accurate it can be.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot about the chain-of-events that led to 3 or 4 significant US / world event that you are familiar with.\r\n2) Read the response carefully and notice if any responses seem incorrect\r\n    - Hallucinations usually _sound_ correct in the context of the response, so it's important to read closely!\r\n    - You may need to do a little internet searching to check dates or event names\r\n3) Update the temperature and ask the same questions. Do the answers change? Does the accuracy change?\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the chain of events that led to the revolutionary war?\r\n* What are the chain of events that led to the industrial revolution?\r\n* What are the chain of events that led to the civil rights movement?\r\n* What are the chain of events that led to the space race?\r\n:::\r\n\r\n&nbsp;"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width:40%; float: right; margin: 10px; border: solid 2px black\" src=\"https://images.code.org/5f30ad2b376c2f53f1c4b46e0b173a50-image-1714967571111.png\" />\n\n# Predict (Part 1)\n\n#### This chatbot has an additional setting called a system prompt. We'll explore what this does throughout this lesson, but for now we're going to try and make some predictions about what this might do to our chatbot.\n\n> Looking at the screenshot above, **What do you notice? What do you wonder?** Write 1 sentence for each of these. _There is no wrong answer - it's just your observation_.\n>\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3/levels/2": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width:40%; float: right; margin: 10px; border: solid 2px black\" src=\"https://images.code.org/5f30ad2b376c2f53f1c4b46e0b173a50-image-1714967571111.png\" />\n\n# Predict (Part 2)\n\n#### What would you expect to happen when you interact with this chatbot?\n\n#### What's a question you might ask, and what answer would you expect?\n\n> **Try to predict how this chatbot will behave when you ask it questions. What is a question you could ask it, and how would you expect it to answer?** Write a 1-2 sentence response. _There is no wrong answer - it's just your prediction_.\n>\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3/levels/3": {
+    "long_instructions": "## Driving Chatbot\n\nHere is the chatbot from the previous questions. Test your predictions!\n\n### Do This\n\n1.  **Investigate:** Test the chatbot with at least 4 different messages\n2.  **Discuss:** What worked like you expected? What surprised you?\n\nOnce you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What are the requirements to get a driving permit?\n-   What happens if you run a red light?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3/levels/4": {
+    "long_instructions": "## Driving Chatbot Version 2\n\nHere is an updated version of the chatbot. Test out some of the same questions from before and notice how the responses are different.\n\n### Do This\n\n1.  **Investigate:** Test the chatbot with at least 4 different messages. You can use the same ones as before.\n2.  **Discuss:** How are the responses different? How do you think the new system prompt is updating the responses?\n\nOnce you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What are the requirements to get a driving permit?\n-   What happens if you run a red light?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3/levels/5": {
+    "dsls": {
+      "description": "Choose at least 2 levels to attempt before continuing",
+      "display_name": "You Try: Modify These Chatbots!"
+    },
+    "sublevels": {
+      "gen-ai-customizing-prompt-explore-L5A_2024": {
+        "display_name": "Changing the Goal",
+        "bubble_choice_description": "System prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit goal or focus**.",
+        "long_instructions": "## Changing the Goal\r\n\r\nSystem prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit goal or focus**.\r\n\r\n### Do This\r\n\r\n1) Update the chatbot so it helps people understand a different topic.\r\n    - Don't erase the entire prompt; just modify the relevant parts of the prompt and see how it changes.\r\n\r\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-explore-L5B_2024": {
+        "display_name": "Changing the Tone",
+        "bubble_choice_description": "System prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit tone or way of speaking**.",
+        "long_instructions": "## Changing the Tone\r\n\r\nSystem prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit tone or way of speaking**.\r\n\r\n### Do This\r\n\r\n1) Update the chatbot so the explanation is formal and academic from a legal perspective, as if talking to someone studying these rules from a law and compliance perspective.\r\n    - Don't erase the entire prompt; just modify the relevant parts of the prompt and see how it changes.\r\n\r\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-explore-L5C_2024": {
+        "display_name": "Changing the Role",
+        "bubble_choice_description": "System prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit role or expertise**.",
+        "long_instructions": "## Changing the Role\r\n\r\nSystem prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit role or expertise**.\r\n\r\n### Do This\r\n\r\n1) Update the chatbot so it simulates interacting with a driving instructor, as though preparing to take a driving test.\r\n    - Don't erase the entire prompt; just modify the relevant parts of the prompt and see how it changes.\r\n\r\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-explore-L5D_2024": {
+        "display_name": "Changing the Restriction",
+        "bubble_choice_description": "System prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit restriction or limitation** to focus what it responds to.",
+        "long_instructions": "## Changing the Restriction\r\n\r\nSystem prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit restriction or limitation** to focus what it responds to.\r\n\r\n### Do This\r\n\r\n1) Update the chatbot so it can also answer questions about driving laws in other states, but still redirects back to the laws and regulations in Arizona.\r\n    - Don't erase the entire prompt; just modify the relevant parts of the prompt and see how it changes.\r\n\r\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3/levels/6": {
+    "long_instructions": "What is something you could imagine using a chatbot for? Describe what you'd want your chatbot to do, then describe the prompt you would consider giving it.",
+    "placeholder": "What is something you could imagine a chatbot doing?",
+    "title": "Check-In"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/3/levels/7": {
+    "dsls": {
+      "description": "Choose at least 1 level to complete fully, then try the others!",
+      "display_name": "You Try: Make"
+    },
+    "sublevels": {
+      "gen-ai-customizing-prompt-explore-L7A_2024": {
+        "display_name": "Historical Experiences",
+        "bubble_choice_description": "Have you ever wanted to talk to someone from the past and learn what it was like? Or a famous historical figure?",
+        "long_instructions": "## Historical Experiences\r\n\r\nHave you ever wanted to talk to someone from the past and learn what it was like? Or a famous historical figure?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone from the past about a specific topic.\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- A specific role or tone to use when responding\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n- Tell me what life was like when you were alive?\r\n- What is your proudest moment?\r\n- Did you always know you would be famous?\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-explore-L7B_2024": {
+        "display_name": "Personal Tutor",
+        "bubble_choice_description": "Have you ever wanted a personal tutor to help you better understand one of your classes?",
+        "long_instructions": "## Personal Tutor\r\n\r\nHave you ever wanted a personal tutor to help you better understand one of your classes?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to a tutor on a specific subject you're learning about in school.\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- A specific role or tone to use when responding\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Can you explain this concept to me? [concept]\r\n* What are some of the big ideas in [subject]?\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-explore-L7C_2024": {
+        "display_name": "Career Advice",
+        "bubble_choice_description": "Have you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?",
+        "long_instructions": "## Career Advice\r\n\r\nHave you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone who works at a specific place or has a certain career.\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- **A specific role or tone to use when responding**\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n- What is it like to do your job?\r\n- What should I study in school in order to do your job?\r\n- Who are other famous people who do your job?\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-explore-L7D_2024": {
+        "display_name": "Shared Passion",
+        "bubble_choice_description": "Is there a certain movie or book or band that you _love_ but you have no one to talk to about it? Wouldn't it be great to talk about it with someone who also likes the same thing?",
+        "long_instructions": "## Shared Passion\r\n\r\nIs there a certain movie or book or band that you _love_ but you have no one to talk to about it? Wouldn't it be great to talk about it with someone who also likes the same thing?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone with a specific passion or interest that you also have.\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- A specific role or tone to use when responding\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      },
+      "gen-ai-customizing-prompt-explore-L7E_2024": {
+        "display_name": "Make Your Own",
+        "bubble_choice_description": "Make the chatbot you described in the last level!",
+        "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the last level!\r\n\r\n### Do This\r\n\r\nAdd a system prompt that matches the chatbot you described. You may not be able to get it 100% perfect yet, but this can be a good start!\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- A specific role or tone to use when responding\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/1": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# System Prompt\n\nYou can give additional guidance to a chatbot by typing in a System Prompt",
+      "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013": "# System Prompt\n\nWhen using a system prompt, it can be helpful to include:\n\n-   a specific **goal** that the chatbot is designed to accomplish\n-   any **constraints** on how the chatbot should respond",
+      "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b": "# System Prompt\n\nAfter setting the system prompt, make sure to press the Update button",
+      "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7": "# System Prompt\n\nYou'll see an update in the chatbot window letting you know it was a success.\n\nThen you can start chatting with your new chatbot!"
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/2": {
+    "long_instructions": "## Recipe Bot\n\nThis chatbot has been designed to help someone learn how to cook recipes from Sonora, Mexico. Try to make it work for a different place (like where you're from)!\n\n### Do This\n\n1.  Update the chatbot to work for recipes from a different place\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What is an easy recipe for me to try?\n-   What is a good recipe to cook for a dinner party of at least 10 people?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/3": {
+    "long_instructions": "## Part 2\n\nWe also want to limit the topics this chatbot talks about. Add a few more sentences to the prompt instructing the chatbot to only talk about this topic, and to ignore any off-topic inputs.\n\n### Do This\n\n1.  Edit the system prompt so the chatbot ignores off-topic inputs.\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What is the capital of France?\n-   Who invented the term \"software engineer\"?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/4": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Role\n\nYou can also direct a chatbot to take on a certain role to influence it's responses. For example:\n\n-   \"Act as a [X]...\"\n-   \"You are an expert in [X]...\"",
+      "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013": "# Tone\n\nYou can also direct a chatbot on the tone or voice to use when responding. For example:\n\n-   \"Your responses should be [X]\"\n-   \"Use [X] language to respond\"\n-   \"Respond with a [X] tone\""
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/5": {
+    "long_instructions": "## Expert Opinions\n\nThis chatbot is setup to be an expert in grammar and sentence structure, and it will analyze any sentences you type into it. Let's experiment with how the responses change when we change its expertise.\n\n### Do This\n\n1.  Type in a slogan from a brand or TV commercial or billboard and see how it responds\n2.  Change the system prompt so it is now an expert on tone and sentiment analysis. \n    -   Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button!\n3.  Type in the same slogan and see how it responds\n4.  Choose a third expert to try with the same slogan\n    -   For example: an expert in psychology, or an expert in social media posts\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Whoever wins: we lose.\n-   The happiest place on earth\n-   It gives you wings\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/6": {
+    "long_instructions": "## Learning the Rules\n\nThis chatbot is designed to explain the rules of basketball, but some people have complained about how it responds. Let's add an extra sentence to help guide the chatbot with how it should respond and see which values are the most appealing.\n\n### Do This\n\n1.  Add a sentence to the end of the system prompt telling the chatbot to use specific tones. Choose 3 different tones to try.\n    -   For example: Academic and Thoughtful, or Friendly and Jovial, or Sarcastic and Grumpy.\n2.  For each of these tone: ask the chatbot questions about basketball and notice how the response changes.\n    -   Which one would you recommend for a new basketball player?\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What are fouls?\n-   What is a double dribble?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/7": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Audience\n\nIt can also help to direct a chatbot to address a certain audience with its response. For example:\n\n-   \"Respond as thought speaking to [X]...\"\n-   \"Your response should be appropriate for [X]...\"",
+      "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013": "# Modality\n\nYou can also shape the format of the response that a chatbot gives. For example:\n\n-   \"Give your response as a [X]...\"\n-   \"Limit your response to [X]...\""
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/8": {
+    "long_instructions": "## Complex Emotions\n\nThis chatbot is designed to explain complex, abstract emotions like \"love\" or \"jealousy\" or \"envy\" or \"euphoria\". Since these are such complex topics, the chatbot needs some guidance based on who it is speaking to. Let's add a sentence to the end of the system prompt to help tailor it's responses.\n\n### Do This\n\n1.  Add a sentence to the end of the system prompt instructing the chatbot to tailor it's responses to...\n    -   A group of kindergarteners\n    -   A one-on-one conversation with a close friend\n    -   An acadedmic\n    -   Another audience of your choice\n2.  Choose an emotion to test with each of these audiences and see how the response changes.\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Explain anger to me\n-   Explain confusion to me\n-   Explain bewilderment to me\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/9": {
+    "long_instructions": "## Creative Classifications\n\nThis chatbot is designed to create a creative summary from the description of a person. The user provides a description, and the chatbot provides a creative interpretation. We need to decide what that creative interpretation should be.\n\n### Do This\n\n1.  Add a sentence to the end of the system prompt so the chatbot responds with:\n    -   A short story with this person as the protagonist\n    -   A country western song\n    -   a Haiku\n\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Bob was a grumpy curmudgeon who only stayed indoors and loathed the fresh air and sunlight\n-   Jill was bright and full of light, always smiling and humming a tune in the spring air.\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/10": {
+    "long_instructions": "Hawa is making a chatbot, but all she has for the system prompt is \"Your goal is to help people fix their computer with internet issues\". What are 2 suggestions you would give Hawa to make the chatbot clearer and easier to use? Include specific suggestions!",
+    "teacher_markdown": "Look for responses that emphasize the strategies from this lesson, and include specifics.",
+    "placeholder": "Type your answer here!",
+    "title": "Check-In"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/11": {
+    "dsls": {
+      "description": "Try These Levels!",
+      "display_name": "Bubble Choice: All the Choices"
+    },
+    "sublevels": {
+      "gen-ai-customizing-prompt-practice-L11A_2024": {
+        "display_name": "Style Upgrader",
+        "bubble_choice_description": "Create a chatbot to convert sentences into social media posts that are meant to go viral with younger social media users.",
+        "long_instructions": "## Style Upgrader\r\n\r\nCreate a chatbot to convert sentences into social media posts that are meant to go viral with younger social media users.\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* School is almost out for the summer\r\n* I got some great new jeans today\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-practice-L11B_2024": {
+        "display_name": "Conflict Resolution",
+        "bubble_choice_description": "Create a chatbot to help with conflict resolution for elementary school students. The user describes an interpersonal problem, and the chatbot provides suggestions for how to address the conflict.",
+        "long_instructions": "## Conflict Resolution\r\n\r\nCreate a chatbot to help with conflict resolution for elementary school students. The user describes an interpersonal problem they've observed with two students, and the chatbot provides suggestions for how to address the conflict.\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n**Optional Extension:** Add some protections to the system prompt that helps it avoid responding if there is \"personally identifiable information\", which is a common guardrail in many chatbots\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* One student has started to bully and make fun of another student\r\n* One student is being overly controlling and not letting other students choose games or activities.\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-practice-L11C_2024": {
+        "display_name": "Hype Machine",
+        "bubble_choice_description": "Create a chatbot that acts as a personal motivator / hype-person. The user describes something they did that day, and the chatbot hypes them up and provides positive reinforcement.",
+        "long_instructions": "## Hype Machine\r\n\r\nCreate a chatbot that acts as a personal motivator / hype-person. The user describes something they did that day, and the chatbot hypes them up and provides positive reinforcement.\r\n- When designing this prompt, encourage the chatbot to _really_ overexaggerate or emphasize certain things.\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* I passed my test today.\r\n* I scored the game winning goal.\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-practice-L11D_2024": {
+        "display_name": "Resume Helper",
+        "bubble_choice_description": "Create a chatbot that helps the user describe their academic, volunteer, and work experience for a resume.",
+        "long_instructions": "## Resume Helper\r\n\r\nCreate a chatbot that helps the user describe their academic, volunteer, and work experience for a resume. The user makes a statement about their academic, volunteer, or work experience, and the chatbot should respond with a resume bullet point for that experience.\r\n\r\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* I babysit my sister on the weekends.\r\n* I have volunteered at the local food bank.\r\n:::\r\n\r\n&nbsp;"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/12": {
+    "long_instructions": "## Assessment Level\n\nYou are designing a chatbot to help a nephew with their homework. The chatbot should focus on answering questions about 6th grade science, and not get distracted with other topics. Design a chatbot to meet these needs\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   I need help studying the solar system.\n-   Can you explain ecosystems?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/4/levels/13": {
+    "dsls": {
+      "description": "Try These Levels!",
+      "display_name": "Bubble Choice: All the Choices"
+    },
+    "sublevels": {
+      "gen-ai-customizing-prompt-practice-L13A_2024": {
+        "display_name": "Hannah's Chatbot",
+        "bubble_choice_description": "Hannah wants to make a chatbot that helps people learn about the environment.",
+        "long_instructions": "## Hannah's Chatbot\r\n\r\n**Define:** Hannah wants to make a chatbot that helps people learn about the environment. People can describe things they do in their day, and the chatbot should provide tips or suggestions for how to be mindful of the environment in these activities. It's important to not make people feel bad about their habits, otherwise they may stop listening to the advice of the chatbot.\r\n\r\n**Prepare:** What is your strategy for addressing this user? What aspects of a prompt will be most important?\r\n\r\n**Try:** Design a chatbot that meets the needs of this person\r\n\r\n**Reflect:** Test the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* On my way to school each day, I stop by the drive-through coffee shop for my morning mocha\r\n* I know it's bad to waste food so I always finish my lunch\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-practice-L13B_2024": {
+        "display_name": "Ali's Chatbot",
+        "bubble_choice_description": "Ali is really excited about music and how different musicians influence each other.",
+        "long_instructions": "## Ali's Chatbot\r\n\r\n**Define:** Ali is really excited about music and how different musicians influence each other. He wants to design a chatbot where the user types in a band or musical artist, and the chatbot lists the various musical influences on this artist's work. The list shouldn't be too long, but it should reference specific music.\r\n\r\n**Prepare:** What is your strategy for addressing this user? What aspects of a prompt will be most important?\r\n\r\n**Try:** Design a chatbot that meets the needs of this person\r\n\r\n**Reflect:** Test the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Beyonce\r\n* Taylor Swift\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-practice-L13C_2024": {
+        "display_name": "Andrew's Chatbot",
+        "bubble_choice_description": "Andrew is a folk music songwriter, but he can never finish his songs. He wants a chatbot app that lets him type in one of his song lyrics then will generate a chorus.",
+        "long_instructions": "## Andrew's Chatbot\r\n\r\n**Define:** Andrew is a folk music songwriter, but he can never finish his songs. He can usually come up with one or two catchy lines for the song, but then will struggle to generate the rest of it. He wants a chatbot app that lets him type in one of his song lyrics, and then will generate a chorus based on the lyric and appropriate for his folk-loving listeners.\r\n\r\n**Prepare:** What is your strategy for addressing this user? What aspects of a prompt will be most important?\r\n\r\n**Try:** Design a chatbot that meets the needs of this person\r\n\r\n**Reflect:** Test the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* I dreamed a dream of cloudy clouds\r\n* I left my heart in a heart-shaped box\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-prompt-practice-L13D_2024": {
+        "display_name": "Dani's Chatbot",
+        "bubble_choice_description": "Dani has a colleague who sends really long and rambly emails. She would like a chatbot where she can paste in one of these emails and it will generate a summary with simplified language.",
+        "long_instructions": "## Dani's Chatbot\r\n\r\n**Define:** Dani works as a microbiologist and has a colleague who sends really long and rambly emails with lots of technical details that are hard to parse and understand. She would like a chatbot where she can paste in one of these emails and it will generate a concise 3-bullet summary of the email with simplified language.\r\n\r\n**Prepare:** What is your strategy for addressing this user? What aspects of a prompt will be most important?\r\n\r\n**Try:** Design a chatbot that meets the needs of this person\r\n\r\n**Reflect:** Test the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* _I hope this email finds you well. I am a microbiologist specializing in pathogenic microbial mechanisms, particularly focusing on virulence factors and host-pathogen interactions. I am keen on exploring potential collaborative opportunities to further our understanding of microbial pathogenesis. Could we schedule a meeting to discuss potential research synergies and avenues for collaboration?_\r\n* _I trust this correspondence finds you in good health and academic prosperity. As a fervent scholar entrenched in the domain of microbiology, specifically delving into the intricate realms of pathogenic microbial processes, with a pronounced emphasis on elucidating virulence factors and elucidating the complexities of host-pathogen interplay, I am impassioned by the prospect of forging synergistic alliances to augment our collective comprehension of microbial pathogenesis. Might I humbly beseech thee to consider the possibility of convening for a scholarly discourse? It is my ardent aspiration to engage in erudite discussions to explore potential avenues of mutual research endeavor and collaborative inquiry._\r\n:::\r\n\r\n&nbsp;\r\n"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/1": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Chain of Reasoning\n\nYou can ask the chatbot to follow specific steps when generating it's responses.",
+      "gen-ai-customizing-prompt-synthesis-L1-d8c2782a-9aae-4e43-a315-a0c4c0a3ce75": "# Chain of Reasoning\n\nChain of Reasoning can improve chatbot responses to be more strategic or methodical",
+      "gen-ai-customizing-prompt-synthesis-L1-6926d39c-6edd-449b-bcb3-51992e618d5e": "# Chain of Reasoning\n\nYou can also use these steps to have the chatbot ask the user questions as part of its goal",
+      "gen-ai-customizing-prompt-synthesis-L1-febf6bf9-3ddb-4509-8dd4-697a2293be2e": "# Chain of Reasoning\n\nThe chatbot will use this user input when generating its responses"
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/2": {
+    "long_instructions": "## Art Project Brainstorm\n\nAlice has noticed that often young children want to make art projects but adults don't have traditional art supplies. However, they tend to have assorted materials around the house like cardboard or tissue boxes or ribbon that could be used for art projects. Alice wants to create a chatbot that helps people brainstorm potential projects for young children that use these materials.\n\nThe chatbot has already been started, but the results are pretty generic. Let’s add some additional steps to help it brainstorm.\n\n## Do This\n\n1.  Add at least 2 more questions to the steps of the chatbot. For example:\n    -   Ask if the students have any interests\n    -   Ask how old the children are\n    -   Ask what the children’s favorite colors are\n\nTest the chatbot! Start by saying \"Hello I'm ready to get started\", then continue the conversation. When you're finished, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/3": {
+    "long_instructions": "## Improving Results\n\nChain of thought prompting can also improve results for certain tasks by helping to focus how the chatbot approaches a problem. For example, this chatbot is designed to tell children's stories, but sometimes the stories are too complex or rambling and are hard to follow. We can help focus the chatbot  by providing the specific steps of a <a href=\"https://www.storyboardthat.com/articles/e/plot-diagram\" target=\"_blank\">story arc</a> for the chatbot to follow.\n\n## Do This\n\n1.  In the chatbot window, type in a brief description of a children's story.Skim the results from the chatbot to compare to later\n2.  Add the following steps to the prompt:\n    -   Step 1) Write the setting and background information\n    -   Step 2) Write the inciting incident\n    -   Step 3) Write the climax\n    -   Step 4) Write the resolution\n    -   Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button so the changes save!\n3.  Type in the same topic. What changed about the response you received?\n\n::: details [**Click here to see example messages to try in this level**]\n\n-   a little girl travels through the woods to meet her grandmother\n-   a robot explores a deserted planet looking for signs of life\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/4": {
+    "long_instructions": "<img style=\"width: 40%; float: right; margin: 5px;\" src=\"https://images.code.org/0c729a5644d395eee4a3ea140877e9bc-image-1715134452835.png\" >\n\n## Adapting from a Diagram\n\nKenny is trying to make a chatbot to help people solve problems, but it isn't working as great as he'd like. He recently discovered the Problem Solving Process and would like to incorporate it into his chatbot:\n\n[][0]\n\nKenny has also been <a href=\"https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view\" target=\"_blank\">reading this document</a> with more information about this process.\n\n### Do This\n\n1.  Type in a problem that you might want help solving and see how the chatbot responds\n2.  Add steps to the prompt that represent the Problem Solving Process. You should have at least 4!\n    -   You can use the linked document as a reference for what some of the steps could be\n    -   Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your changes!\n3.  Type in the same problem and see how the answer changes.\n    -   The chatbot should list out the steps of the problem-solving process as it attempts to reason through solving the problem.\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   My dog isn't potty trained and will still pee on the floor\n-   I live on the fifth floor of an apartment building and I need to move my bed and mattress to a new apartment on the third floor.\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/5": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Providing Examples\n\nAnother advanced strategy for prompting is providing examples. This can be useful when we want the chatbot to respond in a specific format.\n\nIn this example, the chatbot isn't doing exactly what we want.",
+      "gen-ai-customizing-prompt-synthesis-L5-22940fc4-83e4-41c0-a0cb-63946b8a7c38": "# Providing Examples\n\nWe can improve our results by adding an example. Now the format is a little better.\n\nThis is called _One-Shot Prompting_.",
+      "gen-ai-customizing-prompt-synthesis-L5-3e87b89b-7436-4bc7-940e-4977905da175": "# Providing Examples\n\nThe more examples we add, the better the results.\n\nAdding multiple examples is called _Few-Shot Prompting_."
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/6": {
+    "long_instructions": "## Card Game Generator\n\nVictor wants to create his own trading card game focused on monsters from literature and folklore. Each card will have an illustration and several traits. He wants to create a chatbot that helps him generate these traits, but they need to be formatted in a very specific way.\n\n### Do This\n\nAdd two more examples to the prompt. They should follow the same format, but the traits can vary to add variety to the traits that are generated\n\nTest the chatbot! Try to generate some new cards!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Frankenstein - a hulking monstrosity that is afraid of fire\n-   Chupacabra - a bloodsucking beast with large fangs and lizard skin\n-   Kitsune - a nine-tailed fox who is wise and cunning\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/7": {
+    "long_instructions": "## Reversing a Sentence\n\nThis task is actually extremely difficult for a language model because of how its designed to generate sentences. However, with some examples, its performance can be improved.\n\n### Do This\n\n1.  Try 3 short sentences (no more than 8 words) and see the results\n2.  Add at least 2 examples to the prompt showing how the model should behave. For example:\n    -   Input: \"this is a sentence\"\n    -   Response: \"sentence is a this\"\n    -   Use \"Input:\" / \"Response:\" to structure your examples\n3.  Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your changes!\n4.  Type in the same 3 sentences and see how it changes the difference\n    -   If you don't notice a huge difference, try adding more examples!\n\n**Note:** This will never be _perfect_ because of how language models work. But you should notice an improvement when you add more examples to the prompt!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   This is a sentence\n-   Hello World\n-   Welcome Home\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/8": {
+    "dsls": {
+      "description": "Choose two levels to complete - one using chain of reasoning, and one using examples.",
+      "display_name": "Practice"
+    },
+    "sublevels": {
+      "gen-ai-customizing-prompt-synthesis-L9A_2024": {
+        "display_name": "Dialogue Generator",
+        "bubble_choice_description": "Write a prompt that generates dialogue between two characters using chain of reasoning.",
+        "long_instructions": "## Dialogue Generator\r\n\r\nJorge is a writer who loves thinking up plot points, or describing the setting, or developing interesting characters... but he doesn't really like writing dialogue. He'd like to create a chatbot that helps him write the dialogue between his characters. He'd like the dialogue to match his story, so the chatbot should take into account as many story details as it can.\r\n\r\n### Do this\r\n\r\nWrite a prompt that generates dialogue between two characters. Include at least two steps that ask the user for more details about the story, incorporating details like character traits, potential plot points, or the setting of the story.\r\n\r\nTest the chatbot! Have a few different conversations, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      },
+      "gen-ai-customizing-prompt-synthesis-L9B_2024": {
+        "display_name": "Should I send the email?",
+        "bubble_choice_description": "Create a prompt that uses chain of reasoning to recommend whether or not someone should send an email.",
+        "long_instructions": "## Should I send the email?\r\n\r\nSarah wants to create a chatbot that lets her know whether or not she should send an email. It should analyze the email for several factors (like tone, clarity, etc) before providing an overall recommendation\r\n\r\n### Do This\r\nCreate a prompt that uses chain of reasoning to recommend whether or not someone should send an email. The steps should include different criteria to evaluate the email for, and then combining those results into a single recommendation.\r\n\r\nTest the chatbot! Type in 3-4 messages and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      },
+      "gen-ai-customizing-prompt-synthesis-L9C_2024": {
+        "display_name": "Social Media Sound-Alike",
+        "bubble_choice_description": "Create a chatbot that generates social media posts in the same style and voice as someone recognizable on social media using examples.",
+        "long_instructions": "## Social Media Sound-Alike\r\n\r\nCreate a chatbot that generates social media posts in the same style and voice as someone recognizable on social media. The user can provide a topic and the chatbot responds with a post on that topic.\r\n\r\nYou should either make up examples in their voice and style, or provide real examples from their social media posts.\r\n"
+      },
+      "gen-ai-customizing-prompt-synthesis-L9D_2024": {
+        "display_name": "Agreeable friend",
+        "bubble_choice_description": "Create a chatbot that acts as a \"Yes-man\" who just mindlessly agrees with everything you say. Use examples to set a specific pattern for how the chatbot should respond.",
+        "long_instructions": "## Agreeable friend\r\n\r\nCreate a chatbot that acts as a \"Yes-man\" who just mindlessly agrees with everything you say. For example, if you say \"the world is ending\", the chatbot will say \"I agree - the world is ending\".\r\n\r\nUse examples to make sure your chatbot is responding in a clear agreeable pattern.\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* The world is ending\r\n* Cats are better than dogs\r\n* A hot dog is a sandwich\r\n:::\r\n\r\n&nbsp;"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/9": {
+    "long_instructions": "What is a situation where you think Chain of Reasoning could be useful?\n\nWhat is a situation where you think Providing Examples could be useful?",
+    "placeholder": "Type your answer here!",
+    "title": "Check-In"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/5/levels/10": {
+    "dsls": {
+      "description": "These are the same levels from an earlier lesson. Using what you've learned, revise one of these levels or start a new one. You can even make your own chatbot using the skills you've learned",
+      "display_name": "Bubble Choice: All the Choices"
+    },
+    "sublevels": {
+      "gen-ai-customizing-prompt-synthesis-L10A_2024": {
+        "display_name": "Historical Experiences",
+        "bubble_choice_description": "Have you ever wanted to talk to someone from the past and learn what it was like? Or a famous historical figure?",
+        "long_instructions": "## Historical Experiences\r\n\r\nHave you ever wanted to talk to someone from the past and learn what it was like? Or a famous historical figure?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone from the past about a specific topic. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-prompt-synthesis-L10B_2024": {
+        "display_name": "Personal Tutor",
+        "bubble_choice_description": "Have you ever wanted a personal tutor to help you better understand one of your classes?",
+        "long_instructions": "## Personal Tutor\r\n\r\nHave you ever wanted a personal tutor to help you better understand one of your classes?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to a tutor on a specific subject you're learning about in school. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-prompt-synthesis-L10C_2024": {
+        "display_name": "Career Advice",
+        "bubble_choice_description": "Have you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?",
+        "long_instructions": "## Career Advice\r\n\r\nHave you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone who works at a specific place or has a certain career. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-prompt-synthesis-L10D_2024": {
+        "display_name": "Shared Passion",
+        "bubble_choice_description": "Is there a certain movie or book or band that you _love_ but you have no one to talk to about it? Wouldn't it be great to talk about it with someone who also likes the same thing?",
+        "long_instructions": "## Shared Passion\r\n\r\nIs there a certain movie or book or band that you _love_ but you have no one to talk to about it? Wouldn't it be great to talk about it with someone who also likes the same thing?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone with a specific passion or interest that you also have. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-prompt-synthesis-L10E_2024": {
+        "display_name": "Make Your Own",
+        "bubble_choice_description": "Make the chatbot you described in the last level!",
+        "long_instructions": "## Make Your Own\r\n\r\nMake your own chatbot! Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/1": {
+    "long_instructions": "## Tucson Bot V1\n\nDan is originally from Tucson and really loves it. He made this chatbot so people could learn more about Tucson and he's asked us to be test users to see how it works.\n\n### Do This\n\nAsk the chatbot questions about Tucson. Specifically, try to find answers to:\n\n-   A good restaurant to visit in Tucson\n-   A place to go hiking in Tucson\n-   Something for young kids to do in Tucson\n\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What is a good place to eat in Tucson?\n-   Where are good places to hike in Tucson?\n-   What can young kids do in Tucson?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/2": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"https://images.code.org/193057c22cae98e713bdd478891f91c0-image-1715203719083.png\" />\n\n# Predict (Part 1)\n\n#### Based on feedback, Dan is about to introduce Version 2 of his chatbot. This version has an additional setting called Retrieval, which we'll learn more about in this lesson.\n\n> Looking at the screenshot above, **What do you notice? What do you wonder?** Write 1 sentence for each of these. _There is no wrong answer - it's just your observation_.\n>\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/3": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"https://images.code.org/193057c22cae98e713bdd478891f91c0-image-1715203719083.png\" />\n\n# Predict (Part 2)\n\n#### What would you expect to happen when you interact with this chatbot?\n\n#### What's a question you might ask, and what answer would you expect?\n\n> **Try to predict how this chatbot will behave when you ask it questions. What is a question you could ask it, and how would you expect it to answer?** Write a 1-2 sentence response. _There is no wrong answer - it's just your prediction_.\n>\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/4": {
+    "long_instructions": "## Tucson Bot V2\n\nHere is the chatbot from the previous level with the new Retrieval features. You can click the new \"Retrieval\" tab to view the additional information that's been added to the chatbot. \n\nUse this chatbot and test your predictions from the last few levels!\n\n### Do This\n\n1.  **Investigate:** Test the chatbot with the same messages as before\n2.  **Discuss:** What changed from before? What worked like you expected? What surprised you?\n\nTest the chatbot! Have a 3-4 message conversation, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What is a good place to eat in Tucson?\n-   Where are good places to hike in Tucson?\n-   What can young kids do in Tucson?\n-   What can you tell me about the OSIRIS-REx mission?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/5": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Retrieval\n\nYou can use the retrieval tab to add information to the chatbot that is outside of its training data.",
+      "gen-ai-customizing-retrieval-explore-L5-eb123342-6d4c-4001-90b5-0a42512701bb": "# Retrieval\n\nPress the \"Add\" button when you're ready to add your retrieval information.",
+      "gen-ai-customizing-retrieval-explore-L5-9f0eb8c0-3401-4c95-be80-86d28aba6526": "# Retrieval\n\nYou can remove retrieval information by pressing the X next to the prompt you want to remove.",
+      "gen-ai-customizing-retrieval-explore-L5-90ef177f-49e5-4136-8115-1b61df0cb147": "# Retrieval\n\nPress the \"Update\" button when you're ready to add the retrieval information to the chatbot."
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/6": {
+    "long_instructions": "## Editing Retrieval\n\nDan wants you to help him update his retrieval statements based on the following user feedback:\n\n-   Some people don't like how the app seems to favor the University of Arizona over Arizona State University\n-   Several folks asked to see more up-to-date scientific content, like the [2023 OSIRIS-REx mission][0]\n\nLet's update the retrieval in response to this user feedback.\n\n### Do This\n\n1.  Switch to the Retrieval panel\n2.  Remove the line about the University of Arizona and Arizona State University\n3.  Add a line stating that the 2023 OSIRIS-REx mission successfully collected a sample from a meteor and brought it back to Tucson\n4.  Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your changes!\n\nTest the chatbot! Have a 3-4 message conversation and see how it’s answers are updated\n\n**Discuss:** Before adding a statement about the OSIRIS-REx mission, the chatbot didn't know very much about that mission. Why do you think the chatbot didn't know that the OSIRIS-REx mission had completed and successfully returned to Tucson?\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   Where are good places to visit in Tucson?\n-   What can you tell me about the OSIRIS-REx mission?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/7": {
+    "long_instructions": "## Make it your own\n\nWe're going to remix Dan's chatbot to make our own chatbot about where you live! It should include details that might not be easily accessible just by searching for information about your city - something you, as a local, know about that might not be obvious.\n\n### Do This\n\n1.  Update the system prompt so it's about where you live (or a place you've lived before)\n2.  Update the the retrieval statements so it's now a chatbot about where you live (or a place you’ve lived before). \n    -   Be sure to include at least 5 retrieval statements.\n    -   Retrieval statements should be 1-2 sentences at most\n\nTest the chatbot! Have a few different conversations and see how will it references your retrieval statements. When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/8": {
+    "long_instructions": "What is something new that retrieval lets you do and a prompt couldn't do by itself?\n\nWhat's a new type of chatbot you could imagine creating now that you can use retrieval?",
+    "placeholder": "Type your answer here!",
+    "title": "Check-In"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/6/levels/9": {
+    "dsls": {
+      "description": "Choose 1-2 levels to try and make something of your own!",
+      "display_name": "Make Levels"
+    },
+    "sublevels": {
+      "gen-ai-customizing-retrieval-explore-L9A_2024": {
+        "display_name": "Personal Passions",
+        "bubble_choice_description": "Has anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?",
+        "long_instructions": "## Personal Passions & Hot Takes\r\n\r\nHas anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?\r\n\r\n### Do This\r\n\r\n1) Decide on a book or show or other content that you have strong opinions for.\r\n2) Set a system prompt to answer questions about this topic. \r\n3) Add at least 5 retrieval statements that exemplify your \"hot takes\" or strong opinions on the content. \r\n    - For example, which team member is clearly the best and why?\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      },
+      "gen-ai-customizing-retrieval-explore-L9B_2024": {
+        "display_name": "Food Recommendations",
+        "bubble_choice_description": "Has anyone ever asked your advice on what to cook for a meal or a restaurant to visit? Let's create a chatbot that offers meal or restaurant recommendations around a cuisine you enjoy (for example: Thai, Indian, Italian, etc).",
+        "long_instructions": "## Food Recommendations\r\n\r\nHas anyone ever asked your advice on what to cook for a meal or a restaurant to visit? Let's create a chatbot that offers meal or restaurant recommendations around a cuisine you enjoy (for example: Thai, Indian, Italian, etc).\r\n\r\n### Do This\r\n\r\n1) Decide on a style of food you want to recommend (for example: Thai, Indian, Italian, etc).\r\n2) Write a system prompt to help recommend food or restaurants around this type of food\r\n3) Add at least 5 retrieval statements that highlight your personal preferences. \r\n    - For example: whether or not a certain ingredient is overrated.\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      },
+      "gen-ai-customizing-retrieval-explore-L9C_2024": {
+        "display_name": "Self-Help and Wellness",
+        "bubble_choice_description": "Have you ever helped someone get over the hiccups, or cheer up when they’re feeling down, or relieve a body ache? Let's create a chatbot that gives people friendly advice on how to get over common ailments (like hiccups or body aches or toothaches).",
+        "long_instructions": "## Self-Help and Wellness\r\n\r\nHave you ever helped someone get over the hiccups, or cheer up when they’re feeling down, or relieve a body ache? Let's create a chatbot that gives people friendly advice on how to get over common ailments (like hiccups or body aches or toothaches).\r\n\r\n### Do This\r\n1) Write a system prompt to help give advice or recommendations for common ailments or maintaining your mental health\r\n2) Add at least 5 retrieval statements based on personal and communal experiences, like a certain remedy used in your family for generations or a special way to get over a cold.\r\n3) Add at least 5 retrieval statements about personal strategies for getting out of a slump \r\n    - (For example: going for a walk or getting fresh air)\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      },
+      "gen-ai-customizing-retrieval-explore-L9D_2024": {
+        "display_name": "Personal Style Advice",
+        "bubble_choice_description": "Has anyone ever asked you for fashion or style advice? Do you have a personal list of \"dos and don'ts\" and special tricks for your sense of fashion? Let's create a chatbot that gives people advice for how to dress or how to style themselves.",
+        "long_instructions": "## Personal Style Advice\r\n\r\nHas anyone ever asked you for fashion or style advice? Do you have a personal list of \"dos and don'ts\" and special tricks for your sense of fashion? Let's create a chatbot that gives people advice for how to dress or how to style themselves.\r\n\r\n### Do This\r\n- Add a system prompt that will give recommendations for how people can style themselves.\r\n- Add at least 5 retrieval statements based on your personal experiences or community norms, like certain color or garment choices that pair well together or tips for how to handle certain types of hair or makeup.\r\n- Add at least 5 retrieval statements related to accessories, makeup, or hair styles\r\n    - For example: certain accessories don't pair well together, or to always match colors between certain items\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      },
+      "gen-ai-customizing-retrieval-explore-L9E_2024": {
+        "display_name": "Make Your Own",
+        "bubble_choice_description": "Make the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements.",
+        "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements.\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/1": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Retrieval for Current Information\n\nChatbots only have information up to a certain date.",
+      "gen-ai-customizing-retrieval-practice-L1-9d4077fd-5b23-4b17-97db-134a15801448": "# Retrieval for Current Information\n\nFor more recent information, we can add it with retrieval",
+      "gen-ai-customizing-retrieval-practice-L1-8e3e668e-0067-4a5b-9284-ec0791734486": "# Retrieval for Current Information\n\nThis lets the chatbot answer questions on more recent events"
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/2": {
+    "long_instructions": "## Movie Recommendations\n\nJim wants to create a chatbot that helps recommend movies to people. But, the chatbot doesn't have some of the most recent movies that have come out even though those are some of the best ones to recommend. We need to use Retrieval to update the chatbot with information about these latest movies.\n\n### Do This\n\n1.  Search for 5 movies that have come out in the last year\n2.  You can find recent movies at <a href=\"https://www.boxofficemojo.com/year/world/2024/\" target=\"_blank\">https\\://www.boxofficemojo.com/year/world/2024/</a>\n3.  Go to a website that provides movie summaries\n4.  For example, searching for movies on <a href=\"https://wikipedia.org\">https\\://wikipedia.org</a>\n5.  Copy-and-paste the plot summary of those movies into the Retrieval section of the chatbot\n6.  Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your work!\n\nTest the chatbot! Ask it about some of the movies you added that were released recently. Also ask it about other new releases that you _didn't_ include to verify that the chatbot isn't aware of recent movie releases. When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   What is the plot of the latest Inside Out movie?\n    -   (without retrieval, the chatbot won’t know about Inside Out 2 released in 2024)\n-   What is the plot of the latest Mission Impossible movie?\n    -   (without retrieval, thet chatbot won’t know about Mission Impossible: Dead Reckoning released in 2023)\n        :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/3": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Retrieval for Specialized Information\n\nChatbots tend to have general information about topics",
+      "gen-ai-customizing-retrieval-practice-L3-f357cb13-fa89-490c-b493-06ce771480a8": "# Retrieval for Specialized Information\n\nFor more specialized information, we can add it with Retrieval",
+      "gen-ai-customizing-retrieval-practice-L3-8ab707af-e4fb-4a63-93e3-02e9164562d7": "# Retrieval for Specialized Information\n\nThis lets the chatbot give more specific answers."
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/4": {
+    "long_instructions": "## Study Guide\n\nMario wants to create a chatbot that will help him study for a class that he is taking. However, he needs the chatbot to help him with the specific terms used in the class which have precise definitions. This requires adding them as Retrieval so the chatbot knows which definitions to reference specifically.\n\n### Do This\n\n1.  Go to this website to view the vocabulary words that Mario needs to study: <a href=\"https://studio.code.org/s/csp2-2023/vocab\" target=\"_blank\">https\\://studio.code.org/s/csp2-2023/vocab </a>\n    -   **Optional Variation**: Instead of using these vocabulary words, try choosing words from one of your current classes or another area you're studying.\n2.  Choose at least 5 words and copy-and-paste the word and their definition into Retrieval\n    -   You don’t need to make any edits - just copy-and-paste the line directly from the website\n3.  Update the chatbot and then test it out. Start by saying \"Let’s get started!\""
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/5": {
+    "panels": {
+      "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c": "# Retrieval for Accurate Information\n\nChatbots don't have all the answers and sometimes hallucinate",
+      "gen-ai-customizing-retrieval-practice-L5-007134e2-0169-4294-b8d0-b6de250851c6": "# Retrieval for Accurate Information\n\nFor situations that require very high accuracy, we can add information with retrieval",
+      "gen-ai-customizing-retrieval-practice-L5-e1d170f7-39bc-48d3-9e7e-5168b460494e": "# Retrieval for Accurate Information\n\nThis lets the chatbot answer with highly accurate information",
+      "gen-ai-customizing-retrieval-practice-L5-35adae9d-8147-4ee2-befe-6ff93f337466": "# Retrieval for Accurate Information\n\nThe situation in this example might seem weird, **but it really happened!**\n\n[Read more about it here][0]"
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/6": {
+    "long_instructions": "## Noticing some Bias?\n\nJessie was testing a chatbot and noticed that some of the responses seemed bias. For example, when asking about famous scientists, the chatbot seemed to only respond with white men even though there's a diversity of renowned scientists. This is a situation that Retrieval can help with by adding information about diverse figured to the chatbot.\n\n### Do This\n\n1.  Ask the chatbot for 3-5 examples of people famous in certain areas, and notice if a response includes a limited set of examples\n    -   For example: \"Who are 5 famous scientists\" or \"Who are 3 astronauts who have gone to space\"\n2.  Search for other famous people in these areas from more diverse backgrounds\n3.  Find a description of these people and their accomplishments, then add them to Retrieval\n    -   For example: looking for descriptions on Wikipedia\n4.  Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your work!\n5.  Ask the chatbot the same questions and verify that the answers are updated to include the examples you've provided."
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/7": {
+    "long_instructions": "## Voting Chatbot\n\nSam wants to create a chatbot that makes it easier for people to vote in an upcoming election in her state. For this kind of chatbot, having accurate information is incredibly important, so Sam wants to use Retrieval to make sure the right facts are provided to the chatbot. Our job is to help Sam add this information to the chatbot.\n\n### Do This\n\n1.  Find an online resource that provides information about voting in an upcoming local election. For example: see if your <a href=\"https://www.recorder.pima.gov/BallotFAQs\" target=\"_blank\"> county recorder website </a> or <a href=\"https://azsos.gov/elections/voters/voting-elections\" target=\"_blank\"> secretary of state websites </a> have election FAQs.\n2.  Identify at least 5 pieces of information from these websites that should be included in the chatbot. Some examples might include:\n    -   The date of the next election\n    -   What identification is needed\n    -   Rules for early voting or mail-in voting\n3.  Add that information to the retrieval section of the chatbot. You can copy-and-paste directly from the website.\n4.  Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your changes!\n5.  Ask the chatbot questions and verify it gives accurate information based on what you've provided!\n\n \n\n::: details [**Click here to see example messages to try in this level**]\n\n-   When is the date of the next election?\n-   What forms of ID do I need when voting?\n-   How can I participate in mail-in voting?\n    :::\n\n "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/8": {
+    "long_instructions": "Ethan wants to make a chatbot that helps people learn about <a href=\"https://csdt.org/culture/beadloom/origins.html\" target=\"_blank\"> bead loom art </a>, which is a tradition in his family that many of his aunties and elders practice. However, getting a chatbot to talk about this artwork is difficult - there isn't a lot of information about the artform, and most of it doesn't match his experiences. But, Ethan has an opportunity to interview a master loom artist in his community to learn more about the practice to help with his chatbot.\n\nWhat are two pieces of advice you would you give Ethan for how he could use this interview and Retrieval to improve his chatbot? Give specific examples of the kind of information that would be helpful and why.",
+    "placeholder": "Type your answer here!",
+    "title": "Check-In"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/9": {
+    "dsls": {
+      "description": "Try These Levels!",
+      "display_name": "Bubble Choice: All the Choices"
+    },
+    "sublevels": {
+      "gen-ai-customizing-retrieval-practice-L9A_2024": {
+        "display_name": "Fan Club Chatbot",
+        "bubble_choice_description": "Create a chatbot that acts as a superfan for someone you follow on social media or who's artistic work you enjoy.",
+        "long_instructions": "## Fan Club Chatbot\r\n\r\nCreate a chatbot that acts as a superfan for someone you follow on social media or who's artistic work you enjoy. The chatbot should be excited and enthusiastic and only want to talk about this particular person. It should also be able to answer questions about things this person has done recently, not just far in the past.\r\n\r\nYour chatbot should include at least 5 pieces of retrieval information.\r\n\r\n&nbsp;\r\n\r\n::: details [**Some Tips to Consider on this Level**]\r\n* Consider giving the chatbot specific steps to follow when generating a response\r\n* Consider finding recent information about your idol and using that as retrieval\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-retrieval-practice-L9B_2024": {
+        "display_name": "Promotion Chatbot",
+        "bubble_choice_description": "Make a chatbot that promotes a club or organization you're a part of (like school pride, or a club you're trying to recruit members for)",
+        "long_instructions": "## Promotion Chatbot\r\n\r\nThe principal of your school wants to make a chatbot that helps people learn more about the school and help convince people to come to the school. The chatbot needs help knowing about recent successes or achievements to talk about, and it could use some local expertise from someone who attends the school (ie: you!) about the things that make it interesting.\r\n\r\nYour chatbot should include at least 5 pieces of retrieval information.\r\n\r\n**Alternative Task:** Instead of making this chatbot about school, you could alternatively make it about a club you're in or a class you really like or even a group you're a part of outside of school. The goals are still the same: it should help promote, and you'll need to provide some additional information via retrieval.\r\n\r\n&nbsp;\r\n\r\n::: details [**Some Tips to Consider on this Level**]\r\n* Consider giving the chatbot a specific role and tone\r\n* Consider finding recent accomplishments and using that as retrieval\r\n* Consider including your own personal experiences as retrieval\r\n:::\r\n\r\n&nbsp;"
+      },
+      "gen-ai-customizing-retrieval-practice-L9C_2024": {
+        "display_name": "Know Your Rights",
+        "bubble_choice_description": "Veronica wants to make a chatbot to help people understand their rights in certain situations.",
+        "long_instructions": "## Know Your Rights\r\n\r\nVeronica wants to make a chatbot to help people understand their rights in certain situations. The user should be able to ask \"what are my rights when [X] happens?\" or \"what are my rights when I'm in [X]\" and the chatbot will respond. This requires very specific and accurate information, so Veronica has decided to use Retrieval to help her create the chatbot.\r\n\r\n### Do This\r\n1) Visit a website that helps people understand their rights in different situations\r\n    - For example: the [ACLU Know your Rights page](https://www.aclu.org/know-your-rights) or the [CAIR Know your Rights Guides](https://www.cair.com/know_your_rights/download-know-your-rights-guides/)\r\n2) Decide on a situation or context that is meaningful for you\r\n    - For example: patient rights in the medical system, or your rights to free speech\r\n3) Create a system prompt that helps people understand these rights\r\n4) Add at least 5 pieces of retrieval based on your source.\r\n5) **Test the chatbot carefully!** This is a situation where incorrect information could be harmful to someone trying to use this chatbot."
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/10": {
+    "long_instructions": "## Restaurant Chatbot\n\nLin is making a chatbot for her family's restaurant, <a href=\"https://skydragonchinese.wixsite.com/tucson/dinner-menu\" target=\"_blank\">Sky Dragon </a>. She thinks the chatbot will be a good option for people who may not want to fully browse the website - it could pop up in the corner and say \"Can I help you find something great to eat?\". Talking to the chatbot should feel like talking to someone who visits the restaurant all the time and is super excited by the menu.\n\nTo make this work, Lin needs to add specific information from her restaurant website to the chatbot. This should include:\n\n-   The name, description, and price of at least 3 dishes\n-   The address and phone number of the restaurant\n-   A general description of the type of food served at the restaurant\n\nHelp Lin create this chatbot by adding a system prompt and retrieval! You should have at least 8 pieces of retrieval in the chatbot!\n\n**Optional Adjustment:** Instead of making a chatbot for this restaurant, you could make one for a different local restaurant in your city. The restaurant still needs a website to pull information from, and will still need the items listed above. Once you've confirmed this information is on the restaurant website, ask your teacher and make sure it's okay to change the assignment on this level!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/7/levels/11": {
+    "dsls": {
+      "description": "Try These Levels!",
+      "display_name": "Bubble Choice: All the Choices"
+    },
+    "sublevels": {
+      "gen-ai-customizing-retrieval-practice-L11A_2024": {
+        "display_name": "Laptop Support Chatbot",
+        "bubble_choice_description": "Greg isn't very great with technology - he keeps calling you for help fixing his brand new Sony laptop. You've decided to create a chatbot for him to talk to instead.",
+        "long_instructions": "## Laptop Support Chatbot\r\n\r\nGreg isn't very great with technology - he keeps calling you for help fixing his brand new Sony laptop. You've decided to create a chatbot for him to talk to instead. The chatbot needs to provide precise, up-to-date troubleshooting steps that reflect the latest technical guidelines.\r\n\r\n### Do This\r\n\r\nSearch for a recently released laptop and find sources to use for specific troubleshooting steps. For example: you may find details on the company support website, or on tech support forums run by other computer repair companies.\r\n\r\nDesign a chatbot that offers tech support on this specific laptop."
+      },
+      "gen-ai-customizing-retrieval-practice-L11B_2024": {
+        "display_name": "Virtual Museum Guide",
+        "bubble_choice_description": "Jen is the curator of a museum and they have a brand new exhibit on Egyptian artifacts and culture, which is also available online. Jen wants to create a chatbot to act as a \"virtual museum docent\" that can guide visitors through this new exhibit.",
+        "long_instructions": "## Virtual Museum Guide\r\n\r\nJen is the curator of a museum and they have a brand new exhibit on Egyptian artifacts and culture, which is also available online. Jen wants to create a chatbot to act as a \"virtual museum docent\" that can guide visitors through this new exhibit. Visitors should feel like they're interacting with someone who works at the museum and can provide detailed and accurate historical information about the artifacts.\r\n\r\n### Do This\r\n\r\nSearch for a museum that is hosting an exhibit on Egyptian artifacts and culture, which can be used as information for your chatbot. For example: you may find a natural history museum has recently curated an Egyptian show.\r\n\r\nDesign a chatbot that offers information about the exhibit.\r\n\r\n**Alternative Assignment:** Instead of Egyptian artifacts and culture, you can substitute this for a different type of cultural exhibit. For example, if a local museum has an exhibit on Navajo artifacts and culture or Haitian artifacts and culture, feel free to design your chatbot around this exhibit instead."
+      },
+      "gen-ai-customizing-retrieval-practice-L11C_2024": {
+        "display_name": "Fantasy Football Chatbot",
+        "bubble_choice_description": "Ken is a huge fan sports and loves to play fantasy football. A big moment in fantasy football is the \"draft\", where each person decides the players they want on their team. Ken wants to create a chatbot to help him decide who to draft.",
+        "long_instructions": "## Fantasy Football Chatbot\r\n\r\nKen is a huge fan sports and loves to play fantasy football. This is a game where you create imaginary teams from real players in a league, then each week your imaginary team scores points according to the actual performance of their players in real life.\r\n\r\nA big moment in fantasy football is the \"draft\", where each person decides the players they want on their team. Ken wants to create a chatbot to help him decide who to draft. This requires knowing up-to-date stats on current football players so Ken can discuss strategy with the chatbot and weigh the pros and cons of certain players.\r\n\r\n### Do This\r\n\r\nSearch for recent statistics on football players to use for specific data in the chatbot. For example: you may find details on other fantasy football websites or official statistics from the national league.\r\n\r\nDesign a chatbot that offers advice and strategy on how to select a fantasy football team."
+      },
+      "gen-ai-customizing-retrieval-practice-L11D_2024": {
+        "display_name": "Cultural Norms Chatbot",
+        "bubble_choice_description": "Mariah wants to use a chatbot to help make sure she has the right cultural norms and etiquette when visiting another country.",
+        "long_instructions": "## Cultural Norms Chatbot\r\n\r\nMariah is preparing to go on a trip to China as part of a cultural exchange program - she will spend 3 months learning about educational practices in China while some Chinese students attend schools in the US to learn our customs.\r\n\r\nAs part of Mariah's preparation for the trip, she needs to learn the cultural communication norms to avoid any misunderstandings or miscommunications and make sure she represents herself professionally. For example, the 👋 and 👍 emojis can mean different things in different cultures - and sometimes they mean something offensive! <a href=\"https://pumble.com/blog/culture-emoji/\" target=\"_blank\">Learn more here</a>.\r\n\r\nMariah wants to use a chatbot to help make sure she has the right cultural norms and etiquette when visiting another country.\r\n\r\n### Do This\r\n\r\nSearch for information about the cultural do's and don'ts when visiting China to use as sources for the chatbot. For example: you may find details on international consulate websites or travel blogs. Then design a chatbot that offers advice on interacting with people while in China to not offend anyone or embarrass yourself.\r\n\r\n**A Note About Testing:** When testing the chatbot, don't ask questions like \"How do Chinese people do [X]\" - this is likely to generate biased stereotypes based on how language models are trained. Instead, ask questions like \"When in China, what is the proper way to [X]\" or \"What are things for tourists to avoid when doing [X] in China\".\r\n\r\n**Alternative Task:** Instead of making this chatbot specific to visiting China, you can substitute another country like Egypt, Ghana, India, or the US."
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/bc95d99932581c8db079cef3e8cb6221-image-1715382614383.png\" />\n\n## User Story 1: Sarah Thompson\n\n### Introduction\n\nMy name is Sarah Thompson, I am 34 years old, and I serve as the Public Relations Manager for the city environmental office. My job involves spreading awareness about environmental issues and coordinating community involvement in our local initiatives. It's all about communication—crafting messages that resonate with people and organizing events that bring our community together for a good cause.\n\n### Why I'm Here\n\nI'm leading a project to get more people involved in our local cleanup efforts. Litter is a big issue in our city, ruining the look of our public spaces and harming our environment. I think using technology could really help make our cleanup events more fun and easy to join, especially if people can use it to find upcoming events. A chatbot could be a real game-changer, giving us a direct way to teach people about the bad effects of litter and empowering them to do something about it. By using this chatbot in our campaigns, I want to change the way our community gets involved with our environmental programs, making it simpler and more interesting for everyone to help make our city healthier and more sustainable.\n\n**Defining the Problem:** There is low community engagement in environmental initiatives, and people are not well-informed about the negative impacts of littering.\n\n> We've been asked to help develop a chatbot for this person. Before diving in, let's take a moment to **Prepare** and plan how we can develop this chatbot\n>\n> 1.  How could we use a **System Prompt** when making the chatbot? What parts of this problem is a System Prompt most helpful for?\n> 2.  How could we use **Retrieval** when making the chatbot? What parts of this problem is Retrieval most helpful for?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/2": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/bc95d99932581c8db079cef3e8cb6221-image-1715382614383.png\" />\n\n## User Story 1: Sarah Thompson\n\n### Worries and Fears\n\nI fear the chatbot might become just another notification tool, failing to genuinely engage or motivate the community to participate in environmental activities.\n\n> **Prepare** also means planning to make sure the chatbot works as intended, and trying to proactively detect any unintended or harmful consequences.\n>\n> 1.  Describe how you can **Test** the chatbot to make sure it doesn't fall into this pattern.\n>     -   For example: what questions would you ask it, and what types of answers would you expect?\n> 2.  If you discover it does, describe at least one **Mitigation** you can try to improve it.\n>     -   For example: would you change the system prompt more? Or change the retrieval?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/3": {
+    "long_instructions": "## Make the Chatbot!\n\nMake the chatbot you've been preparing over the last few levels! Use system prompting and retrieval to design a chatbot that meets the needs of Sarah Thompson.\n\nFor this activity, pretend that Sarah works for an organization in your community. This means, when looking up retrieval information, look for sources from within your community especially for local events."
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/4": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/c98f85a5f4db51f1a5cf8a3592768b51-image-1715405977507.png\" />\n\n## User Story 2: Janet Lee\n\n### Introduction\n\nHello, I’m Janet Lee, 28 years old, and I'm the Program Director at our local community center, which mainly serves our elderly population. My role involves organizing activities and managing services that cater to the needs of elderly members of our community. I work to create a welcoming and supportive environment that helps reduce feelings of loneliness and isolation among our seniors.\n\n### Why I'm Here\n\nMany of our elderly members are not just physically isolated but also digitally disconnected, which can intensify feelings of exclusion. I see a great opportunity to use a chatbot to bridge this gap. By developing a chatbot that can start friendly chats, remind them of upcoming events, and offer easy-to-understand tech support, we can make our members feel more connected and integrated into the community. This chatbot could act like a virtual companion, helping them navigate both the social and technological aspects of their lives more confidently. This aligns perfectly with my goal to improve our elderly members' engagement and well-being.\n\n**Defining the Problem:** Elderly community members feel isolated and struggle with using modern technology, affecting their social engagement and access to community resources.\n\n> We've been asked to help develop a chatbot for this person. Before diving in, let's take a moment to **Prepare** and plan how we can develop this chatbot\n>\n> 1.  How could we use a **System Prompt** when making the chatbot? What parts of this problem is a System Prompt most helpful for?\n> 2.  How could we use **Retrieval** when making the chatbot? What parts of this problem is Retrieval most helpful for?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/5": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/c98f85a5f4db51f1a5cf8a3592768b51-image-1715405977507.png\" />\n\n## User Story 2: Janet Lee\n\n### Worries and Fears\n\nI think chatbots can feel impersonal or fake. I'm concerned the chatbot might use complicated language that confuses our elderly members, making them feel more isolated.\n\n> **Prepare** also means planning to make sure the chatbot works as intended, and trying to proactively detect any unintended or harmful consequences.\n>\n> 1.  Describe how you can **Test** the chatbot to make sure it doesn't fall into this pattern.\n>     -   For example: what questions would you ask it, and what types of answers would you expect?\n> 2.  If you discover it does, describe at least one **Mitigation** you can try to improve it.\n>     -   For example: would you change the system prompt more? Or change the retrieval?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/6": {
+    "long_instructions": "## Make the Chatbot!\n\nMake the chatbot you've been preparing over the last few levels! Use system prompting and retrieval to design a chatbot that meets the needs of Janet Lee.\n\nFor this activity, pretend that Janet works for an organization in your community. This means, when looking up retrieval information, look for sources from within your community especially for local events."
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/7": {
+    "long_instructions": "When you're designing a chatbot to solve a problem or accomplish a task:\n\n1.  When is it better to use a **system prompt**? What types of problems make you think \"I'll try to use a system prompt to address this\"?\n2.  When is it better to use **retrieval**? What types of problems make you think \"I'll try to use retrieval statements to address this\"?",
+    "placeholder": "Type your answer here!",
+    "title": "Check-In"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/8": {
+    "dsls": {
+      "description": "Choose 1-2 levels to try and make something of your own!",
+      "display_name": "Make Levels"
+    },
+    "sublevels": {
+      "gen-ai-customizing-retrieval-synthesis-L11A_2024": {
+        "display_name": "Personal Passions",
+        "bubble_choice_description": "Has anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?",
+        "long_instructions": "## Personal Passions & Hot Takes\r\n\r\nHas anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Let's create a chatbot that acts as a mutual fan to talk about your favorite contenet with. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-retrieval-synthesis-L11B_2024": {
+        "display_name": "Food Recommendations",
+        "bubble_choice_description": "Has anyone ever asked your advice on what to cook for a meal or a restaurant to visit? Let's create a chatbot that offers meal or restaurant recommendations around a cuisine you enjoy (for example: Thai, Indian, Italian, etc).",
+        "long_instructions": "## Food Recommendations\r\n\r\nHas anyone ever asked your advice on what to cook for a meal or a restaurant to visit? Let's create a chatbot that offers meal or restaurant recommendations around a cuisine you enjoy (for example: Thai, Indian, Italian, etc). Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-retrieval-synthesis-L11C_2024": {
+        "display_name": "Self-Help and Wellness",
+        "bubble_choice_description": "Have you ever helped someone get over the hiccups, or cheer up when they’re feeling down, or relieve a body ache? Let's create a chatbot that gives people friendly advice on how to get over common ailments (like hiccups or body aches or toothaches).",
+        "long_instructions": "## Self-Help and Wellness\r\n\r\nHave you ever helped someone get over the hiccups, or cheer up when they’re feeling down, or relieve a body ache? Let's create a chatbot that gives people friendly advice on how to get over common ailments (like hiccups or body aches or toothaches). Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-retrieval-synthesis-L11D_2024": {
+        "display_name": "Personal Style Advice",
+        "bubble_choice_description": "Has anyone ever asked you for fashion or style advice? Do you have a personal list of \"dos and don'ts\" and special tricks for your sense of fashion? Let's create a chatbot that gives people advice for how to dress or how to style themselves.",
+        "long_instructions": "## Personal Style Advice\r\n\r\nHas anyone ever asked you for fashion or style advice? Do you have a personal list of \"dos and don'ts\" and special tricks for your sense of fashion? Let's create a chatbot that gives people advice for how to dress or how to style themselves. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible."
+      },
+      "gen-ai-customizing-retrieval-synthesis-L11E_2024": {
+        "display_name": "Make Your Own",
+        "bubble_choice_description": "Make the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements.",
+        "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible.\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/9": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/c7b77a541754a5b4abffe4d9aa185e71-image-1715406760596.png\" />\n\n## User Story 3: Alex Martinez\n\n### Introduction\n\nHi, I’m Alex Martinez, 28 years old, and I work for the local tourism board as a Marketing Specialist. My job is to make our city a must-visit destination for tourists from all over the world. My main task is to come up with effective ways to promote our city's attractions, culture, and events. I create marketing materials, manage social media content, and help organize events that can draw visitors.\n\n### Why I'm Here\n\nThinking about boosting tourism post-pandemic, I believe a chatbot could really help personalize the way we interact with potential tourists. By providing tailored travel suggestions, fun historical facts, and updates on current events, a chatbot can make planning their visit easier and more exciting. This tool could be a key part of our strategy to enhance tourists' experiences, making them feel uniquely cared for and informed. This way, they're more likely to enjoy longer stays and participate in more activities, which is exactly what we need to boost our local tourism industry.\n\n**Defining the Problem:** The local tourism industry needs revitalization post-pandemic, with a need to attract tourists through personalized and engaging information.\n\n> We've been asked to help develop a chatbot for this person. Before diving in, let's take a moment to **Prepare** and plan how we can develop this chatbot\n>\n> 1.  How could we use a **System Prompt** when making the chatbot? What parts of this problem is a System Prompt most helpful for?\n> 2.  How could we use **Retrieval** when making the chatbot? What parts of this problem is Retrieval most helpful for?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/10": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 20%; float: right; margin: 10px\" src=\"https://images.code.org/c7b77a541754a5b4abffe4d9aa185e71-image-1715406760596.png\" />\n\n## User Story 3: Alex Martinez\n\n### Worries and Fears\n\nChatbots can give very formulaic or narrow answers, which wouldn't fit with our community. I am concerned that the chatbot might not handle the diverse and dynamic nature of tourist inquiries, giving generic responses that don't help in personalizing their experience.\n\n> **Prepare** also means planning to make sure the chatbot works as intended, and trying to proactively detect any unintended or harmful consequences.\n>\n> 1.  Describe how you can **Test** the chatbot to make sure it doesn't fall into this pattern.\n>     -   For example: what questions would you ask it, and what types of answers would you expect?\n> 2.  If you discover it does, describe at least one **Mitigation** you can try to improve it.\n>     -   For example: would you change the system prompt more? Or change the retrieval?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/8/levels/11": {
+    "long_instructions": "## Make the Chatbot!\n\nMake the chatbot you've been preparing over the last few levels! Use system prompting and retrieval to design a chatbot that meets the needs of Alex Martinez.\n\nFor this activity, pretend that Alex works for an organization in your community. This means, when looking up retrieval information, look for sources from within your community especially for local events or local artists."
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/10/levels/1": {
+    "long_instructions": "## Isaac's Cooking Chatbot\n\nMake the chatbot your class decided on!\n\n(If you lost your activity guide, <a href=\"https://docs.google.com/document/d/1-lIWtV556QCZ2hUlaHajtTugty9-TWy84YGk8UvXZH4/edit\" target=\"_blank\">click here to see Isaac's scenario</a>)\n\n### Do This\n\n1.  Make Isaac's chatbot! Choose a system prompt that represents the decisions made as a class\n2.  Test the chatbot to make sure it works as expected! You'll need to write down how you tested the chatbot on your model card!\n3.  Create a Model Card based on these decisions\n4.  \"Publish\" the chatbot and see how it would look to a user!\n    -   Press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button and you'll be taken to the User View. "
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/10/levels/2": {
+    "dsls": {
+      "description": "Try These Levels!",
+      "display_name": "Bubble Choice: All the Choices"
+    },
+    "sublevels": {
+      "gen-ai-customizing-modelcards-practice-L2A_2024": {
+        "display_name": "Alex's Mental Health Chat",
+        "bubble_choice_description": "Alex aims to develop a chatbot to help people manage their mental health. While initial users found it helpful, many did not return. Alex needs to specialize the chatbot to better meet their needs.",
+        "long_instructions": "## Alex's Mental Health Chatbot\r\n\r\nMake a chatbot for Alex <a href=\"https://docs.google.com/document/d/1fmw324RzOuxAS1NhETm8AApDk56ZmtW-0JluAq-ZPF0/edit\" target=\"_blank\">using this activity guide!</a>\r\n\r\n### Do This\r\n\r\n1) Make Alex's chatbot! Choose a system prompt that represents the decisions you made on the activity guide!\r\n2) Test the chatbot to make sure it works as expected! You'll need to write down how you tested the chatbot on your model card!\r\n3) Create a Model Card based on these decisions\r\n4) \"Publish\" the chatbot and see how it would look to a user!\r\n    - Press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button and you'll be taken to the User View."
+      },
+      "gen-ai-customizing-modelcards-practice-L2B_2024": {
+        "display_name": "Liam's Travel Chatbot",
+        "bubble_choice_description": "Liam wants to create a chatbot that assists people in planning their travels. Despite the chatbot's capabilities, users find it overwhelming. He needs to make strategic decisions to improve its usability and appeal.",
+        "long_instructions": "## Liam's Travel Chatbot\r\n\r\nMake a chatbot for Liam <a href=\"https://docs.google.com/document/d/1K317h6vQpqi9AH2QeJzT2E-6K2aEXNA-8k4C3g6LhGM/edit\" target=\"_blank\">using this activity guide!</a>\r\n\r\n### Do This\r\n\r\n1) Make Liam's chatbot! Choose a system prompt that represents the decisions you made on the activity guide!\r\n2) Test the chatbot to make sure it works as expected! You'll need to write down how you tested the chatbot on your model card!\r\n3) Create a Model Card based on these decisions\r\n4) \"Publish\" the chatbot and see how it would look to a user!\r\n    - Press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button and you'll be taken to the User View. "
+      },
+      "gen-ai-customizing-modelcards-practice-L2C_2024": {
+        "display_name": "Sophie's Exercise Chatbot",
+        "bubble_choice_description": "Sophie wants to develop a chatbot that helps people with fitness and exercise. Despite having a range of workouts, users are not sticking to their routines. Sophie needs to refine the chatbot's approach to keep users engaged and motivated.",
+        "long_instructions": "## Sophie's Exercise Chatbot\r\n\r\nMake a chatbot for Sophie <a href=\"https://docs.google.com/document/d/1VW3RoG-VWhDx7EhylYJmFj2ZY19QEYBOTOQ9RpB682w/edit\" target=\"_blank\">using this activity guide!</a>\r\n\r\n### Do This\r\n\r\n1) Make Sophie's chatbot! Choose a system prompt that represents the decisions you made on the activity guide!\r\n2) Test the chatbot to make sure it works as expected! You'll need to write down how you tested the chatbot on your model card!\r\n3) Create a Model Card based on these decisions\r\n4) \"Publish\" the chatbot and see how it would look to a user!\r\n    - Press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button and you'll be taken to the User View. "
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/11/levels/1": {
+    "dsls": {
+      "description": "Choose at least 1 example to investigate",
+      "display_name": "Example Projects!"
+    },
+    "sublevels": {
+      "gen-ai-customizing-project-L0C_2024": {
+        "display_name": "School Info Bot",
+        "bubble_choice_description": "This chatbot shares details on school events, extracurricular activities, academic programs, enrollment procedures, and more. The bot aims to assist students, parents, and the community with quick and accurate responses to Derby High School.",
+        "long_instructions": "## Derby High School Communication Bot\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot."
+      },
+      "gen-ai-customizing-project-L0A_2024": {
+        "display_name": "Cats - Your Feline Friend",
+        "bubble_choice_description": "This chatbot teaches people about how wonderful cats are as pets and gives advice and information on how to take care of a cat.",
+        "long_instructions": "## Cats - Your Feline Friends\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot."
+      },
+      "gen-ai-customizing-project-L0B_2024": {
+        "display_name": "Car Bot",
+        "bubble_choice_description": "Car bot is an AI used to learn more about cars. Ask the bot any question you want specifically about cars and it will give you a straightforward answer.",
+        "long_instructions": "## Car Bot\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot."
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/11/levels/2": {
+    "long_instructions": "## System Prompt and Temperature\n\nAdd the System Prompt and Temperature to your chatbot!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/11/levels/3": {
+    "long_instructions": "## Retrieval\n\nAdd your Retrieval knowledge to your chatbot!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/11/levels/4": {
+    "long_instructions": "## Model Card & Publish\n\nAdd your model card and publish your chatbot! Be sure to press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button to view your chatbot!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/13/levels/1": {
+    "long_instructions": "## User Testing\n\nComplete the steps in your [User Testing Activity Guide][0] using the chatbot on this level.\n\nYou can switch into User View to interact with the published version of the chatbot while user testing."
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/13/levels/2": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "🟢Launch it anyway - no action needed!",
+              "correct": false
+            },
+            {
+              "text": "🟡Launch the chatbot, but follow-up with a quick fix to address the issue",
+              "correct": false
+            },
+            {
+              "text": "🟠Delay the launch until we fix the issue",
+              "correct": false
+            },
+            {
+              "text": "🔴Cancel the project altogether - this issue is too serious",
+              "correct": false
+            }
+          ],
+          "markdown": "## Alice's Recycle Chatbot\n\n#### Alice got a lot of useful data from testing her chatbot with users!\n\n#### One thing people reported is that some of the advice from the chatbot is incorrect - it doesn't always get it right when something can or can't be recycled.\n\n#### Now Alice needs to make a decision about what to do with this new information\n\n<hr />\n\n",
+          "questions": [
+            {
+              "text": "Given this new information, what do you think we should do?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/13/levels/3": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "🟢Launch it anyway - no action needed!",
+              "correct": false
+            },
+            {
+              "text": "🟡Launch the chatbot, but follow-up with a quick fix to address the issue",
+              "correct": false
+            },
+            {
+              "text": "🟠Delay the launch until we fix the issue",
+              "correct": false
+            },
+            {
+              "text": "🔴Cancel the project altogether - this issue is too serious",
+              "correct": false
+            }
+          ],
+          "markdown": "## Tutoring Chatbot\n\n#### An online tutoring website has launched a chatbot to help elementary school students with math and science problems.\n\n#### However, user testing shows that the chatbot tends to give answers that are too complex or in-depth for students to understand, like they're talking to an adult instead of a younger student. Sometimes the chatbot just solves the problem for them without actually tutoring.\n\n#### What should the company do based on this feedback?\n\n<hr />\n\n",
+          "questions": [
+            {
+              "text": "Given this new information, what do you think we should do?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/13/levels/4": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "🟢Launch it anyway - no action needed!",
+              "correct": false
+            },
+            {
+              "text": "🟡Launch the chatbot, but follow-up with a quick fix to address the issue",
+              "correct": false
+            },
+            {
+              "text": "🟠Delay the launch until we fix the issue",
+              "correct": false
+            },
+            {
+              "text": "🔴Cancel the project altogether - this issue is too serious",
+              "correct": false
+            }
+          ],
+          "markdown": "## Eating Disorder Helpline\n\n#### A health and wellness company runs an eating disorder helpline, where you can call in and get counseling to help with issues related to eating disorders. The company has decided to replace the call-in line with an online chatbot instead.\n\n#### Some users are reporting that the chatbot offers the wrong advice and can be cued into suggesting counter-productive strategies that can harm the health and well-being of the user if followed.\n\n#### Given this new information, how should the company respond?\n\n<hr />\n\n",
+          "questions": [
+            {
+              "text": "Given this new information, what do you think we should do?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/13/levels/5": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "🟢Launch it anyway - no action needed!",
+              "correct": false
+            },
+            {
+              "text": "🟡Launch the chatbot, but follow-up with a quick fix to address the issue",
+              "correct": false
+            },
+            {
+              "text": "🟠Delay the launch until we fix the issue",
+              "correct": false
+            },
+            {
+              "text": "🔴Cancel the project altogether - this issue is too serious",
+              "correct": false
+            }
+          ],
+          "markdown": "## Short Story Chatbot\n\n#### Alexis is making a chatbot that lets people describe themselves and their friends, and then will write a fun fantasy story that puts them in the plot for them to go on an adventure.\n\n#### After user testing, Alexis discovered that the chatbot might have some gender bias - male characters are always knights or wizards or the brave heroes of the story, and female characters tend to be supportive side characters without much to do or are always in need of rescuing.\n\n#### What should Alexis do with this new information?\n\n<hr />\n\n",
+          "questions": [
+            {
+              "text": "Given this new information, what do you think we should do?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/1": {
+    "long_instructions": "## Medical Explanation Chatbot\n\nThis chatbot is designed to explain medical and anatomy terms. It could be used by someone studying for an exam or wanting to learn more about how their biology works.\n\nWe've been asked to evaluate how approachable the chatbot is - will it work for a student in a middle school biology and health class? Or is it better for advanced medical students becoming doctors?\n\n### Do This\n\n1.  Test at least 4 prompts asking the chatbot to describe how one of your organs or muscles work in your body. For example:\n    -   \"Describe the gall bladder and what it does in your body\"\n    -   \"Describe the Circle of Willis and what it does in your body\"\n    -   \"Describe the  liver and what it does in your body\"\n    -   \"Describe the Choroid Plexus and what it does in your body\"\n2.  Read over the responses and rate how understandable they are:\n    -   (1) A small child could understand these responses\n    -   (2) A high school student could understand these responses\n    -   (3) A college student could understand these responses\n    -   (4) Someone training to become a doctor could understand these responses\n    -   (5) Only experts, like doctors, can understand these responses"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/2": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"https://images.code.org/bb09c78334acde0f7637e7e5d1177ba7-image-1715990442289.png\" />\n\n# Predict (Part 1)\n\n#### In the next few levels, we'll be able to set a different base language model to chat with. This one is called _BioMistral_ and more information is provided here.\n\n#### We'll explore more about what some of these terms mean, but for now: what do you notice about this description? What do you wonder?\n\n> Looking at the screenshot above, **What do you notice? What do you wonder?** Write 1 sentence for each of these. _There is no wrong answer - it's just your observation_.\n>\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/3": {
+    "contained levels": [
+      {
+        "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"https://images.code.org/bb09c78334acde0f7637e7e5d1177ba7-image-1715990442289.png\" />\n\n# Predict (Part 2)\n\n#### What would you expect to happen when you interact with this chatbot?\n\n#### What's a question you might ask, and what answer would you expect?\n\n> **Try to predict how this chatbot will behave when you ask it questions** in 1-2 sentences. _There is no wrong answer - it's just your prediction_.\n>\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!"
+      }
+    ]
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/4": {
+    "long_instructions": "## Medical Explanation Chatbot V2\n\nThis chatbot uses the new model we saw in the previous levels, _BioMistral_. It has the same system prompt as the original chatbot.\n\nLet's evaluate this chatbot now - will it work for a student in a middle school biology and health class? Or is it better for advanced medical students becoming doctors?\n\n### Do This\n\n1.  Test **the same prompts from before** in this chatbot. For example:\n    -   \"Describe the gall bladder and what it does in your body\"\n    -   \"Describe the Circle of Willis and what it does in your body\"\n    -   \"Describe the  liver and what it does in your body\"\n    -   \"Describe the Choroid Plexus and what it does in your body\"\n2.  Read over the responses and rate how understandable they are:\n    -   (1) A small child could understand these responses\n    -   (2) A high school student could understand these responses\n    -   (3) A college student could understand these responses\n    -   (4) Someone training to become a doctor could understand these responses\n    -   (5) Only experts, like doctors, can understand these responses\n3.  How did the responses change with this new model? What's similar to before, and what's different?"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/5": {
+    "panels": {
+      "gen-ai-panels-chatbot-overview-d3f0947e-62e1-42b4-a1af-7c29c6c57ed8": "# Changing Base Models\n\nYou can choose different base models to use with your chatbot.\n\nClick the Compare Models button to view more information",
+      "gen-ai-panels-finetune-overview-1040630f-bae3-4ae1-af7c-f61818318c04": "# Changing Base Models:\n\nUse the dropdown to view different base models and compare them. Compare the overview and training data of both models",
+      "gen-ai-panels-finetune-overview-ecaaeb77-0787-4f88-b9cf-a15700a6e1dd": "# Changing Base Models:\n\nUse the dropdown to select your model, then click the Update button",
+      "gen-ai-panels-finetune-overview_2024-1ba37311-a3ab-4cdc-b23a-b45bb3dd5bb1": "# Changing Base Models:\n\nDifferent models can respond differently to the same prompt. Experiment with each model to see what their strengths and weaknesses are!"
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/6": {
+    "dsls": {
+      "description": "Choose 1-2 levels to investigate!",
+      "display_name": "Investigate"
+    },
+    "sublevels": {
+      "gen-ai-customizing-finetuning-explore-arithmo_2024": {
+        "display_name": "Arithmo",
+        "bubble_choice_description": "Experiment with Arithmo, a base model fine-tuned for mathematical calculations and explanations.",
+        "long_instructions": "## Switching Between Models\r\n\r\nThis tool has two base models: _Arithmo_ and _Mistral Instruct_. We can use the Compare Models button to view the differences between them.\r\n\r\nTo change a base model, use the dropdown to update the model and then press the Update button to save the configuration.\r\n\r\n### Do This\r\n\r\n1) Ask _Arithmo_ **how to solve a math word problem** (for example: if 3 people split a pizza with 12 slices, how many pieces does each person get?). Then change to the _Mistral Instruct_ model and have the same conversation\r\n    - Was one model more helpful than the other?\r\n2) Ask a **question about a book or movie** to the _Mistral Instruct_ model, then change to the _Arithmo_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?"
+      },
+      "gen-ai-customizing-finetuning-explore-karen_2024": {
+        "display_name": "Karen the Editor",
+        "bubble_choice_description": "Exiperiment with Karen the Editor, a base model fine-tuned for providing feedback on sentence structure and grammar, and helping to write more creatively.",
+        "long_instructions": "## Switching Between Models\r\n\r\nThis tool has two base models: _Karen the Editor_ and _Mistral Instruct_. We can use the Compare Models button to view the differences between them.\r\n\r\nTo change a base model, use the dropdown to update the model and then press the Update button to save the configuration.\r\n\r\n### Do This\r\n\r\n1) Ask _Karen the Editor_ for advice on how to make a sentence more creative, then change to the _Mistral Instruct_ model and have the same conversation\r\n    - Was one model more helpful than the other?\r\n2) Ask a **question about a book or movie** to the _Mistral Instruct_ model, then change to the _Karen the Editor_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?"
+      },
+      "gen-ai-customizing-finetuning-explore-pirate_2024": {
+        "display_name": "Mistral Pirate",
+        "bubble_choice_description": "Experiment with Mistral Pirate, a base model that was fine-tuned to talk like a pirate and is an expert on pirate-themed conversations.",
+        "long_instructions": "## Switching Between Models\r\n\r\nThis tool has two base models: _Mistral Pirate_ and _Mistral Instruct_. We can use the Compare Models button to view the differences between them.\r\n\r\nTo change a base model, use the dropdown to update the model and then press the Update button to save the configuration.\r\n\r\n### Do This\r\n\r\n1) Start a casual conversation with the _Pirate Mistral_ model, then change to the _Mistral Instruct_ model and have the same conversation\r\n    - How was the tone different between the two models?\r\n2) Ask a **question about a book or movie** to the _Mistral Instruct_ model, then change to the _Pirate Mistral_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?"
+      },
+      "gen-ai-customizing-finetuning-explore-biomistral_2024": {
+        "display_name": "BioMistral",
+        "bubble_choice_description": "Experiment with BioMistral, a base model that was fine-tuned on anatomy and biology medical textbooks",
+        "long_instructions": "## Switching Between Models\r\n\r\nThis tool has two base models: _BioMistral_ and _Mistral Instruct_. We can use the Compare Models button to view the differences between them.\r\n\r\nTo change a base model, use the dropdown to update the model and then press the Update button to save the configuration.\r\n\r\n### Do This\r\n\r\n1) Ask a **medical question** to the _BioMistral_ model, then change to the _Mistral Instruct_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?\r\n2) Ask a **question about a book or movie** to the _Mistral Instruct_ model, then change to the _BioMistral_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?"
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/7": {
+    "long_instructions": "If you could fine-tune your own model, what would you have it do? Or who would you have it behave like?\n\nWhat data would you need in order to successfully fine-tune the model (for example: specific websites? interviews? types of literature?)",
+    "placeholder": "Type your answer here!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/14/levels/8": {
+    "long_instructions": "## Explore Multiple Models\n\nThis level has _every_ base model available to experiment with and compare.\n\n### Do This\n\n1.  Choose a model _other than the default one_ and try to create a chatbot with it.\n    -   Come up with your own system prompt or retrieval and see if you can make a simple chatbot with it."
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/16/levels/1": {
+    "dsls": {
+      "description": "Choose at least 1 example to investigate",
+      "display_name": "Example Projects!"
+    },
+    "sublevels": {
+      "gen-ai-customizing-project2-L0A_2024": {
+        "display_name": "Activity Helper 5000",
+        "bubble_choice_description": "This chatbot is meant to help adults who don't know how to get their day started by asking them certain questions about what they like and want to accomplish today.",
+        "long_instructions": "## Activity Helper 5000\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot."
+      },
+      "gen-ai-customizing-project2-L0B_2024": {
+        "display_name": "Biology Study Chatbot",
+        "bubble_choice_description": "This bot will help you learn more about how living things work and can be used to take quick notes while having fun with a chatbot.",
+        "long_instructions": "## Biology Study Chatbot\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot."
+      },
+      "gen-ai-customizing-project2-L0C_2024": {
+        "display_name": "Career Finder v.1",
+        "bubble_choice_description": "This chatbot that suggests careers to undecided college students, based on their preferences.",
+        "long_instructions": "## Career Finder v.1\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot."
+      }
+    }
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/16/levels/2": {
+    "long_instructions": "## Step 4: Create your Chatbot\n\nFollow the instructions on your activity guide to create your chatbot! Be sure to test it as you make it.\n\nOnce you're done, continue to the next level to create your model card."
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/16/levels/3": {
+    "long_instructions": "## Step 5: Make your Model Card\n\nFollow the instructions on your activity guide to make your model card, then \"publish\" the chatbot.\n\nUse this level for Step 6: User Testing as well!"
+  },
+  "https://studio.code.org/s/exploring-gen-ai2-2024/lessons/16/levels/4": {
+    "dsls": {
+      "title": "Customizing Language Models: Post-Survey"
+    },
+    "sublevels": {
+      "gen-ai-customizing-studentsurvey-postmodule-preamble": {
+        "dsls": {
+          "markdown": "###Please take a moment to respond to this short survey.\n\nCode.org takes your privacy seriously. Your responses here will be kept **anonymous**. Your teacher can see responses for the whole class but without names attached.\n",
+          "teacher_markdown": "**Teacher End-Of-Unit Survey:** While your students complete the survey, we would appreciate you completing a short teacher survey.\n\n##[Click Here for Teacher Survey](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data[unit_number]=unit_2)\n"
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I understand the concepts covered in this unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I found the topics in this unit interesting and engaging."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "The lessons and activities were clear and easy to follow."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel confident in applying what I learned in this unit to real-world problems or projects."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I got to be creative in this unit"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I got to make choices that aligned with my interests or personal preferences"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q7a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I learned about and discussed the impact of AI in society"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q8a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Understanding the concepts",
+              "correct": true
+            },
+            {
+              "text": "Keeping up with assignments",
+              "correct": true
+            },
+            {
+              "text": "Working on group projects",
+              "correct": true
+            },
+            {
+              "text": "Lack of interest in the topic",
+              "correct": true
+            },
+            {
+              "text": "No challenges",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What challenges did you face during this unit? (Choose top 2)"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q9a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I felt supported by the teacher and resources provided throughout this unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q10a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "After this unit, I am interested in learning more about AI and related topics than I was before."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q11a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Overall, I am satisfied with my learning experience in this unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q12": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I liked learning about computer science and AI through this unit"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I could be myself in this class during this generative AI unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q15": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "This unit made me more interested in pursuing a career in computer science and/or AI."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Definitely yes",
+              "correct": true
+            },
+            {
+              "text": "Probably yes",
+              "correct": true
+            },
+            {
+              "text": "Might or might not",
+              "correct": true
+            },
+            {
+              "text": "Probably no",
+              "correct": true
+            },
+            {
+              "text": "Definitely no",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Would you recommend this unit to other students?"
+            }
+          ]
+        }
+      },
+      "gen-ai-customizing-studentsurvey-postmodule-q17": {
+        "long_instructions": "What improvements would you suggest for the **unit as a whole**?"
+      },
+      "gen-ai-customizing-studentsurvey-postmodule-chatbot1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I enjoyed using the chatbot"
+            }
+          ]
+        }
+      },
+      "gen-ai-customizing-studentsurvey-postmodule-chatbot2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Using the chatbot helped me learn more about AI"
+            }
+          ]
+        }
+      },
+      "gen-ai-customizing-studentsurvey-postmodule-chatbot3": {
+        "long_instructions": "What improvements would you suggest for the **chatbot**?"
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q18": {
+        "long_instructions": "Any other comments or feedback you'd like to share about your experience?"
+      }
+    }
+  }
+}

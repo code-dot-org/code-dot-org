@@ -1,9 +1,12 @@
-import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
-import {getExperience} from '@/contentful/get-experience';
-import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
-
 // Register custom components server-side
 import '@/contentful/register-custom-components';
+
+import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
+
+import FontLoader from '@code-dot-org/fonts/FontLoader';
+
+import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
+import {getExperience} from '@/contentful/get-experience';
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; preview?: string}>;
@@ -30,6 +33,7 @@ export default async function ExperiencePage({
   const experienceJSON = experience ? JSON.stringify(experience) : null;
   return (
     <main style={{width: '100%'}}>
+      <FontLoader locale={locale} />
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader experienceJSON={experienceJSON} locale={locale} />
     </main>

@@ -1,10 +1,11 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {Button} from '@cdo/apps/componentLibrary/button';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
@@ -81,6 +82,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     return null;
   }
 
+  const canShowNextButton =
+    manageNavigation &&
+    (!hasConditions || satisfied) &&
+    (!predictSettings?.isPredictLevel || predictAnswerLocked);
+
   return (
     <InstructionsPanel
       text={instructionsText}
@@ -95,7 +101,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       handleInstructionsTextClick={handleInstructionsTextClick}
       offerBrowserTts={offerBrowserTts}
       className={className}
-      canShowNextButton={manageNavigation && (!hasConditions || satisfied)}
+      canShowNextButton={canShowNextButton}
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
@@ -172,6 +178,36 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   // the unique index.
   const useMessageIndex = useSecondaryFinishButton ? undefined : messageIndex;
 
+  const feedbackRef = useRef<HTMLDivElement>(null);
+  const runButton = document.querySelector('#run-button');
+
+  useEffect(() => {
+    const checkRunButton = () => {
+      if (feedbackRef.current && runButton?.textContent === 'Run') {
+        feedbackRef.current.focus();
+        return true;
+      }
+      return false;
+    };
+
+    const observer = new MutationObserver(mutations => {
+      if (checkRunButton()) {
+        // Stop observing once the run button is found and has the text 'Run'
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      observer.disconnect();
+    };
+  }, [useMessage, canShowNextButton, runButton?.textContent]);
+
   return (
     <div
       id="instructions"
@@ -200,7 +236,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              {predictSettings?.isPredictLevel && <PredictSummary />}
               <EnhancedSafeMarkdown
                 markdown={text}
                 className={moduleStyles.markdownText}
@@ -212,6 +247,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 setPredictResponse={setPredictResponse}
                 predictAnswerLocked={predictAnswerLocked}
               />
+              {predictSettings?.isPredictLevel && (
+                <InstructorsOnly>
+                  <div className={moduleStyles['message-' + theme]}>
+                    <PredictSummary />
+                  </div>
+                </InstructorsOnly>
+              )}
             </div>
           </div>
         )}
@@ -232,11 +274,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 <TextToSpeech text={useMessage} />
               )}
               {useMessage && (
-                <EnhancedSafeMarkdown
-                  markdown={useMessage}
-                  className={moduleStyles.markdownText}
-                  handleInstructionsTextClick={handleInstructionsTextClick}
-                />
+                <div ref={feedbackRef} tabIndex={-1}>
+                  <EnhancedSafeMarkdown
+                    markdown={useMessage}
+                    className={moduleStyles.markdownText}
+                    handleInstructionsTextClick={handleInstructionsTextClick}
+                  />
+                </div>
               )}
               {canShowNextButton && (
                 <Button

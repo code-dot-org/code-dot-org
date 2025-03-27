@@ -1,7 +1,7 @@
+import Typography from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';

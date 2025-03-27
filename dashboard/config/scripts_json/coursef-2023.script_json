@@ -27,12 +27,14 @@
         "playlab_k1",
         "artist"
       ],
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2023"
+      "version_year": "2023",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-11-19 01:14:38 UTC",
+    "serialized_at": "2025-01-09 16:03:07 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

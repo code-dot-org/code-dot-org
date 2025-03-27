@@ -88,6 +88,22 @@ class CourseOverview extends Component {
         },
         PLATFORMS.BOTH
       );
+    } else if (props.userType === 'student') {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
+        {
+          'unit group name': props.name,
+        },
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
+        {
+          'unit group name': props.name,
+        },
+        PLATFORMS.BOTH
+      );
     }
   }
 
@@ -202,7 +218,7 @@ class CourseOverview extends Component {
           versions={versions}
           teacherResources={teacherResources}
           studentResources={studentResources}
-          isInstructor={true}
+          isInstructor={viewAs === ViewType.Instructor}
           viewAs={viewAs}
           showAssignButton={showAssignButton}
           title={title}

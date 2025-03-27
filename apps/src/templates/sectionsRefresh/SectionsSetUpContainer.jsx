@@ -1,3 +1,7 @@
+import {
+  BodyTwoText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
@@ -5,11 +9,6 @@ import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import {
-  BodyTwoText,
-  Heading1,
-  Heading3,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -43,17 +42,7 @@ const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(
     section
-      ? [
-          {
-            ...Object.keys(section).reduce((acc, cur) => {
-              if (cur !== 'stageExtras') {
-                acc[cur] = section[cur];
-              }
-              return acc;
-            }, {}),
-            lessonExtras: section.stageExtras,
-          },
-        ]
+      ? [section]
       : [
           {
             pairingAllowed: true,
@@ -61,7 +50,7 @@ const useSections = section => {
             ttsAutoplayEnabled: false,
             lessonExtras: true,
             aiTutorEnabled: false,
-            course: {hasTextToSpeech: false, hasLessonExtras: false},
+            course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
           },
         ]
   );
@@ -89,8 +78,13 @@ export default function SectionsSetUpContainer({
   canEnableAITutor,
   userCountry,
   defaultRedirectUrl,
+  setIsEditInProgress = value => {},
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
+  const updateSectionAndSetEditInProgress = (sectionIdx, keyToUpdate, val) => {
+    updateSection(sectionIdx, keyToUpdate, val);
+    setIsEditInProgress(true);
+  };
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
@@ -181,6 +175,8 @@ export default function SectionsSetUpContainer({
   };
 
   const saveSection = (section, createAnotherSection, coteachersToAdd) => {
+    setIsEditInProgress(false);
+
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -264,6 +260,7 @@ export default function SectionsSetUpContainer({
       })
       .catch(err => {
         setIsSaveInProgress(false);
+        setIsEditInProgress(true);
         console.error(err);
       });
   };
@@ -274,8 +271,8 @@ export default function SectionsSetUpContainer({
         courseOfferingId: sections[0].courseOfferingId,
         versionId: sections[0].courseVersionId,
         unitId: sections[0].unitId,
-        hasLessonExtras: sections[0].lessonExtras,
-        hasTextToSpeech: sections[0].ttsAutoplayEnabled,
+        lessonExtrasAvailable: sections[0].lessonExtras,
+        textToSpeechEnabled: sections[0].ttsAutoplayEnabled,
         displayName: sections[0].courseDisplayName,
       };
     } else {
@@ -346,22 +343,27 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
+  // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
+  const aiTutorAllowedForCourse = section =>
+    [
+      '[PILOT] Programming Fundamentals (AI Tutor)',
+      'Computer Science A',
+    ].includes(section?.course?.displayName);
+
   const renderAdvancedSettings = () => {
-    // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
-    // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
-      canEnableAITutor &&
-      sections[0].course.displayName === 'Computer Science A';
+      canEnableAITutor && aiTutorAllowedForCourse(sections[0]);
 
     return renderExpandableSection(
       'uitest-expandable-settings',
       () => i18n.advancedSettings(),
       () => (
         <AdvancedSettingToggles
-          updateSection={(key, val) => updateSection(0, key, val)}
+          updateSection={(key, val) =>
+            updateSectionAndSetEditInProgress(0, key, val)
+          }
           section={sections[0]}
-          hasLessonExtras={sections[0].course.hasLessonExtras}
-          hasTextToSpeech={sections[0].course.hasTextToSpeech}
           aiTutorAvailable={aiTutorAvailable}
           label={i18n.pairProgramming()}
         />
@@ -392,7 +394,10 @@ export default function SectionsSetUpContainer({
           sectionId={sections[0].id}
           sectionInstructors={sections[0].sectionInstructors}
           primaryTeacher={sections[0].primaryInstructor}
-          setCoteachersToAdd={setCoteachersToAdd}
+          setCoteachersToAdd={value => {
+            setCoteachersToAdd(value);
+            setIsEditInProgress(true);
+          }}
           coteachersToAdd={coteachersToAdd}
           sectionMetricInformation={getCoteacherMetricInfoFromSection(
             sections[0]
@@ -407,32 +412,27 @@ export default function SectionsSetUpContainer({
 
   return (
     <form id={FORM_ID}>
-      <div className={moduleStyles.containerWithMarginTop}>
-        <Heading1>
-          {isNewSection
-            ? i18n.setUpClassSectionsHeader()
-            : i18n.editSectionDetails()}
-        </Heading1>
-        {isNewSection && (
-          <>
-            <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
-              {i18n.setUpClassSectionsSubheader()}
-            </BodyTwoText>
-            <BodyTwoText>
-              <a onClick={onURLClick} className={moduleStyles.textPopUp}>
-                {i18n.setUpClassSectionsSubheaderLink()}
-              </a>
-            </BodyTwoText>
-          </>
-        )}
-      </div>
+      {isNewSection && (
+        <>
+          <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
+            {i18n.setUpClassSectionsSubheader()}
+          </BodyTwoText>
+          <BodyTwoText>
+            <a onClick={onURLClick} className={moduleStyles.textPopUp}>
+              {i18n.setUpClassSectionsSubheaderLink()}
+            </a>
+          </BodyTwoText>
+        </>
+      )}
 
       {renderChildAccountPolicyNotification()}
 
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
-        updateSection={(key, val) => updateSection(0, key, val)}
+        updateSection={(key, val) =>
+          updateSectionAndSetEditInProgress(0, key, val)
+        }
         isNewSection={isNewSection}
       />
 
@@ -444,6 +444,7 @@ export default function SectionsSetUpContainer({
           id: 'uitest-curriculum-quick-assign',
           isNewSection: isNewSection,
           updateSection: (key, val) => updateSection(0, key, val),
+          setIsEditInProgress: setIsEditInProgress,
           sectionCourse: sections[0].course || consolidatedCourseData(),
           initialParticipantType: sections[0].participantType,
         }}
@@ -505,4 +506,5 @@ SectionsSetUpContainer.propTypes = {
   canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
   defaultRedirectUrl: PropTypes.string.isRequired,
+  setIsEditInProgress: PropTypes.func,
 };

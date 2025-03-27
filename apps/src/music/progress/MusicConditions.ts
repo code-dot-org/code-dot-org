@@ -48,7 +48,13 @@ export const MusicConditions: ConditionNames = {
     name: 'played_anything_in_same_loop',
     valueType: 'number',
     description:
-      'Checks if something is playing from within a repeat block, at least this many times. Ex. Value: 3',
+      'Checks if something is playing from within a loop, at least this many times. Ex. Value: 3',
+  },
+  PLAYED_ANYTHING_IN_SAME_NESTED_LOOP: {
+    name: 'played_anything_in_same_nested_loop',
+    valueType: 'number',
+    description:
+      'Checks if something is playing from within a nested loop, at least this many times. Ex. Value: 3',
   },
   PLAYED_SOUNDS: {
     name: 'played_sounds',
@@ -67,6 +73,12 @@ export const MusicConditions: ConditionNames = {
     valueType: 'string',
     description:
       'Checks if a specific sound is playing. Ex. Value: beats/drum_kit_disco',
+  },
+  PLAYED_SOUND_TYPE: {
+    name: 'played_sound_type',
+    valueType: 'array',
+    description: 'Checks if a certain sound type is playing.',
+    valueOptions: ['beat', 'bass', 'lead', 'fx', 'vocal'],
   },
   PLAYED_EMPTY_CHORDS: {
     name: 'played_empty_chords',
@@ -124,5 +136,15 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
     description:
       'Checks if a given trigger button (1, 2, 3, 4) is pressed. Ex. Value: 1',
+  },
+  USED_EFFECT: {
+    name: 'used_effect',
+    description:
+      'Checks if something was played with an effect (any value including Off/Full).',
+  },
+  USED_EFFECT_NON_DEFAULT: {
+    name: 'used_effect_non_default',
+    description:
+      'Checks if something was played with a non-default effect value (High/Low/Medium).',
   },
 };

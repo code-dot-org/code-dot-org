@@ -10,6 +10,8 @@ const jestAliases = {
   ...LOCALE_ALIASES,
   // Force module uuid to resolve with the CJS entry point, because Jest does not support package.json.exports. See https://github.com/uuidjs/uuid/issues/451
   uuid: require.resolve('uuid'),
+  // Pin react to use the apps version of react when used in conjunction with linked npm packages
+  '^react$': require.resolve('react'),
   '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
@@ -94,7 +96,7 @@ const config = {
   // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
-  // maxWorkers: "50%",
+  // maxWorkers: '100%',
 
   // An array of directory names to be searched recursively up from the requiring module's location
   // moduleDirectories: [

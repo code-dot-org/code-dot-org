@@ -1,0 +1,22 @@
+{
+  "name": "music-pilot-gj-2025",
+  "script_names": [
+    "music-early-pilot-gj"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "music-pilot-gj",
+    "has_numbered_units": true,
+    "pilot_experiment": "music-lab-gj",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -33,8 +33,8 @@ Feature: Curriculum Catalog Page
     And I see no difference for "Curriculum Catalog: All Offerings in Spanish"
 
     Then I click selector "#topic-dropdown-button"
-    And I wait until element "span:contains(Alfabetización digital)" is visible
-    Then I click selector "span:contains(Alfabetización digital)"
+    And I wait until element "span:contains(Alfabetización Digital)" is visible
+    Then I click selector "span:contains(Alfabetización Digital)"
     And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is not visible
     And I see no difference for "Curriculum Catalog: One Offering in Spanish"
 
@@ -88,20 +88,21 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is selected
     And the "Section 2" checkbox is not selected
     And I click selector "button:contains(Confirm section assignments)"
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Assign a course
     Then I wait until element "h4:contains(Computer Science Principles)" is visible
     And I click selector "[aria-label='Assign Computer Science Principles to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth(2)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click the "Section 2" checkbox in the dialog
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
-    And element "p:contains(You have successfully assigned)" is visible
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
@@ -126,7 +127,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='Assign Computer Science Principles to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth(2)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click the "Section 2" checkbox in the dialog
@@ -225,7 +226,7 @@ Feature: Curriculum Catalog Page
     And I wait until current URL contains "/home"
     And I wait for jquery to load
     And I wait until element "h3:contains(Create a new section)" is visible
-  
+
   @no_mobile
   Scenario: On expanded card, Signed-in teacher with sections assigns and unassigns offerings to sections
     Given I am a teacher with student sections named Section 1 and Section 2
@@ -252,14 +253,14 @@ Feature: Curriculum Catalog Page
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth(2)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click the "Section 2" checkbox in the dialog
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
-    And element "p:contains(You have successfully assigned)" is visible
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
@@ -288,7 +289,7 @@ Feature: Curriculum Catalog Page
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth(2)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click the "Section 2" checkbox in the dialog
@@ -301,7 +302,7 @@ Feature: Curriculum Catalog Page
     Then I am on "http://studio.code.org"
     And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
-  
+
   @only_mobile
   Scenario: On mobile, Signed-out User sees the Learn More button on Catalog Cards
     Given I am on "http://studio.code.org/catalog"
@@ -309,7 +310,7 @@ Feature: Curriculum Catalog Page
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Learn more about AI for Oceans']"
     And I wait until current URL contains "/oceans"
-  
+
   @only_mobile
   Scenario: On mobile, Signed-in teacher sees the Learn More button on Catalog Cards
     Given I create a teacher named "Teacher Tom"
@@ -318,7 +319,7 @@ Feature: Curriculum Catalog Page
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Learn more about AI for Oceans']"
     And I wait until current URL contains "/oceans"
-  
+
   @only_mobile
   Scenario: On mobile, Signed-in student sees the Try Now button on Catalog Cards
     Given I create a student named "Student Sam"
@@ -327,9 +328,9 @@ Feature: Curriculum Catalog Page
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Try AI for Oceans now']"
     And I wait until current URL contains "/oceans"
-  
+
   # Curriculum Catalog Filter tests
-  
+
   Scenario: User can Select all and Clear all in Curriculum Catalog filters
     Given I am on "http://studio.code.org/catalog"
     Then I wait until element "#grade-dropdown-button" is visible
@@ -364,8 +365,8 @@ Feature: Curriculum Catalog Page
     And the "Grade 10" checkbox is not selected
     And the "Grade 11" checkbox is not selected
     And the "Grade 12" checkbox is not selected
-  
-  
+
+
   Scenario: User can use Clear filters button to clear all selected filters
     Given I am on "http://studio.code.org/catalog"
     Then I wait until element "#grade-dropdown-button" is visible

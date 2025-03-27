@@ -1,0 +1,167 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:11:03.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "oG~wmPtW6bbNmv[*-6?e",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "ArKMz1@GoqVsk+~x=p1/",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "chainsmokers_coldplay_something_just_like_this/drums_tom_build"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "q#fzceb}@j}*_q.qmGG]",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/piano_build"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "4va!0Q`U_3)$Q1iF![+=",
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": ";*UwE:0E?G9hIuLBvM;X",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_3"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": ":X(~,hry{?#:R3%S/55Y",
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_4"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together",
+                      "extraState": {
+                        "disableNextConnection": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2",
+            "play_sounds_sequential"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ]
+        }
+      },
+      "sounds": {
+        "chainsmokers_coldplay_something_just_like_this": [
+          "vocals_prechorus_4",
+          "vocals_prechorus_3",
+          "drums_tom_build",
+          "piano_build",
+          "drums_drop_beat",
+          "synth_drop_1",
+          "synth_drop_2",
+          "drums_crash",
+          "piano_full_1",
+          "vocals_hook_high",
+          "vocals_hook_low"
+        ]
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "long_instructions": "####Make the beat drop!\r\n\r\n1. Add sounds to play together following the build up. \r\n2. Press Run to listen to your beat drop.\r\n3. Press Finish when you are done experimenting. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "display_name": "Something Just Like This",
+    "bubble_choice_description": "By The Chainsmokers & Coldplay",
+    "validations": [
+      {
+        "key": "music-coding-intro-drop3_cbf812aa-8ab3-445b-be68-04ea24aba753",
+        "message": "Change a few sounds and tinker with the code. When you're done, click Continue.",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_january",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:11:03.509+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3\\\"\"],\"cloned_from\":\"music-coding-intro-drop3\"}]"
+}]]></config>
+  <blocks/>
+</Music>

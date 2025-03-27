@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-23T23:11:02.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "####Writing music is all about creating the perfect sequence and timing for each layer of sound.",
+        "imageUrl": "https://images.code.org/98c62dfa8fbaab00032f1dd88797b63d-digital-mixer-in-a-recording-studio-with-a-comput-2023-11-27-05-03-44-utc.jpg",
+        "key": "music-intro-coding-seq-panel-bc024962-11c0-46a8-a581-1b95ac378e08",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "In music, we use **measures** to keep track of time. \n\nSongwriters use these measures to carefully time each sound in their song.",
+        "imageUrl": "https://images.code.org/db7684ad84de1056c8f5ff11f3c03c61-measures.jpg",
+        "key": "music-coding-intro-seq-panel-d41fd16c-480c-4da2-a69c-6eee3f56814f",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "Some sounds play together to build harmony.\n\nWhile others follow a sequence to guide the song's flow and tell its story.",
+        "imageUrl": "https://images.code.org/e691084d8cc9f96ccca7962b6408794a-Untitled 4.jpg",
+        "key": "music-coding-intro-seq-panel-rests-658f4077-7762-4a9b-be1e-f7f0a49e4cab",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "To create space or rhythm, songwriters might add pauses called rests. A rest is a moment of silence that keeps the music balanced.",
+        "imageUrl": "https://images.code.org/0212e0c832ca9bc2e841aba2aefd29be-Untitled 5.jpg",
+        "key": "music-coding-intro-seq-panel-62188d64-289a-4399-a6bb-3ec3ac3ef864",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true,
+        "typing": true
+      }
+    ],
+    "offer_browser_tts": "true",
+    "name_suffix": "_january"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:11:02.421+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel-rests\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel-rests\"}]"
+}]]></config>
+</Panels>

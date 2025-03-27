@@ -11,7 +11,12 @@ class FollowersController < ApplicationController
 
   # GET /join/:section_code (section_code is optional)
   def student_user_new
-    @user = current_user || User.new
+    if current_user
+      render 'student_user_new', formats: [:html]
+    else
+      @section_code = params[:section_code]
+      render 'join_logged_out', formats: [:html]
+    end
   end
 
   # POST /join/:section_code
@@ -24,8 +29,9 @@ class FollowersController < ApplicationController
       @user = User.new(followers_params(user_type))
       @user.user_type = user_type
     else
-      @user = User.new(user_type: User::TYPE_STUDENT)
-      return render 'student_user_new', formats: [:html]
+      @section_code = params[:section_code]
+      render 'join_logged_out', formats: [:html]
+      return
     end
 
     # Create boolean to confirm if a user already actively exists on a section roster
@@ -47,8 +53,13 @@ class FollowersController < ApplicationController
           if is_existing_follower
             redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
           elsif !@section.can_join_section_as_participant?(@user)
-            redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
-          # Check if section is restricted, and redirect with restricted error if true
+            # check if student is joining a teacher section
+            if @section.student_joining_teacher_course?(@user)
+              render :students_cannot_join, locals: {section_code: params[:section_code]}
+            else
+              redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
+            end
+            # Check if section is restricted, and redirect with restricted error if true
           elsif @section.restricted?
             redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
           # Check if the section is already at capacity

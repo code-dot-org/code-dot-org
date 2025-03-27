@@ -65,8 +65,6 @@ updates:
       codemirror:
         patterns:
         - "@codemirror/*"
-        - "codemirror"
-        - "codemirror-*"
       dnd-kit:
         patterns:
         - "@dnd-kit/*"
@@ -200,6 +198,7 @@ updates:
     directories:
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
+    - "/docker/developers"
     schedule:
       interval: "weekly"
       day: "sunday"

@@ -32,6 +32,7 @@ class ProgressViewHeader extends Component {
       ? getUnitUrl(
           sectionId,
           scriptData.name,
+          null,
           `${scriptData.path}?section_id=${sectionId}`
         )
       : null;

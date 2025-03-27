@@ -4,6 +4,7 @@ require 'dynamic_config/dcdo'
 module Cdo
   module Throttle
     CACHE_PREFIX = "cdo_throttle/".freeze
+    MINIMUM_EXPIRATION = 1.day
 
     # @param [String] id - Unique identifier to throttle on.
     # @param [Integer] limit - Number of requests allowed over period.
@@ -12,7 +13,7 @@ module Cdo
     # Defaults to Cdo::Throttle.throttle_time.
     # @returns [Boolean] Whether or not the request should be throttled.
     def self.throttle(id, limit, period, throttle_for = throttle_time)
-      full_key = CACHE_PREFIX + id.to_s
+      full_key = cache_key(id)
       value = CDO.shared_cache.read(full_key) || empty_value
       now = Time.now.utc
       value[:request_timestamps] << now
@@ -27,7 +28,8 @@ module Cdo
         value[:throttled_until] = now + throttle_for if should_throttle
       end
 
-      CDO.shared_cache.write(full_key, value)
+      expires_in = expiration_time(period, throttle_for)
+      CDO.shared_cache.write(full_key, value, expires_in: expires_in)
       should_throttle
     end
 
@@ -40,6 +42,22 @@ module Cdo
 
     def self.throttle_time
       DCDO.get('throttle_time_default', 60)
+    end
+
+    def self.cache_key(id)
+      return CACHE_PREFIX + id.to_s
+    end
+
+    def self.expiration_time(period, throttle_for)
+      # The maximum time (in seconds) for which any information contained in
+      # this entry could possibly be relevant.
+      max_data_relevancy = period + throttle_for
+
+      # Expiring entries too quickly can result in increased CPU usage on the
+      # cluster if we end up repeatedly expiring and recreating them. To avoid
+      # that, set a generous minimum expiration which should avoid thrashing
+      # while also preventing unbounded growth.
+      return [max_data_relevancy, MINIMUM_EXPIRATION].max
     end
   end
 end

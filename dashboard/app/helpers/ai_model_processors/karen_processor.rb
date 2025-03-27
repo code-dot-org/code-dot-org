@@ -10,7 +10,7 @@ class AiModelProcessors::KarenProcessor < AiModelProcessors::MistralProcessor
     # Note that prior user and assistant messages are NOT included and the customized
     # pretext is always used so that the given user message is edited and not responded to.
     inputs = CHAT_ML[:BEGIN_TOKEN] + ROLE[:SYSTEM] + NEWLINE + instructions + CHAT_ML[:END_TOKEN] + NEWLINE
-    inputs << (CHAT_ML[:BEGIN_TOKEN] + ROLE[:USER] + NEWLINE + KAREN_PRETEXT + new_message[:chatMessageText] + CHAT_ML[:END_TOKEN] + NEWLINE)
+    inputs << (CHAT_ML[:BEGIN_TOKEN] + ROLE[:USER] + NEWLINE + KAREN_PRETEXT + new_message['chatMessageText'] + CHAT_ML[:END_TOKEN] + NEWLINE)
     inputs << (CHAT_ML[:BEGIN_TOKEN] + ROLE[:ASSISTANT])
     inputs
   end

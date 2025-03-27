@@ -22,12 +22,14 @@
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "counting-csc",
-    "serialized_at": "2024-11-19 01:13:59 UTC",
+    "serialized_at": "2025-01-09 16:48:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

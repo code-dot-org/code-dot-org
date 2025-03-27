@@ -21,12 +21,14 @@
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2024-11-19 01:19:38 UTC",
+    "serialized_at": "2025-01-09 16:47:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

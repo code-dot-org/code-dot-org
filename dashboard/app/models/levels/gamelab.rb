@@ -98,10 +98,6 @@ class Gamelab < Blockly
     true
   end
 
-  def uses_google_blockly?
-    true
-  end
-
   def age_13_required?
     true
   end

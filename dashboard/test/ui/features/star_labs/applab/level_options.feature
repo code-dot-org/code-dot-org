@@ -28,6 +28,6 @@ Scenario: Level defaults to design mode, students see design mode and teachers s
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
   And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
   And I wait to see Applab code mode

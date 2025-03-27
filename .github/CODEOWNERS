@@ -6,6 +6,7 @@
 # i18n #
 ########
 
+# Must Approve changes to
 # Scripts controlling the internationalization sync
 /bin/i18n/                  @code-dot-org/i18n
 
@@ -14,27 +15,25 @@
 # red-team #
 ############
 
-# Database schema and migrations
-/dashboard/db/              @code-dot-org/red-team
-/pegasus/migrations/        @code-dot-org/red-team
-
-# Redshift database SQL
-/aws/redshift/              @code-dot-org/red-team
-
+# Should Approve changes to
 # Database Migration Service (Redshift replication) configuration
 /aws/dms/                   @code-dot-org/red-team
+
+# Should be Informed of changes to
+# Redshift database SQL
+/aws/redshift/              @code-dot-org/red-team
 
 
 ##################
 # infrastructure #
 ##################
 
-# Must approve changes to:
+# Should Approve changes to:
 /.github/                       @code-dot-org/infrastructure
 /aws/                           @code-dot-org/infrastructure
 /cookbooks/                     @code-dot-org/infrastructure
 /docker/ci/                     @code-dot-org/infrastructure
 .ruby-version                   @code-dot-org/infrastructure
 
-# May have feedback on:
+# Should be Consulted on changes to
 .drone.yml                      @code-dot-org/infrastructure

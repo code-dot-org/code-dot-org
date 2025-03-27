@@ -1,0 +1,19 @@
+name 'csaif-pl-hardware-assess-L8-CSandDev'
+title 'Check for Understanding: Hardware'
+description ''
+question 'Consider the IPSO model and determine which hardware component is responsible for processing.'
+height'125'
+
+wrong '![](https://images.code.org/19842e1a696a7f802d0c1cc91a5a6839-image-1742311341210.png)' 
+wrong '![](https://images.code.org/8471c610a1b081ca2dd6733ae8545b07-image-1742311523041.png)'
+wrong '![](https://images.code.org/b5b6a5d1bb8d0885eef2e906e0d70934-image-1742311652306.png)'
+right 'https://images.code.org/9210e41fdfd3cb9d5cad12bfbc5c781d-image-1742311976512.png'
+allow_multiple_attempts true
+
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+

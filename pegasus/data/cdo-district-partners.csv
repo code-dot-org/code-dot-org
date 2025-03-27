@@ -31,6 +31,7 @@ Alameda Unified School District,California
 Alliance Jack H. Skirball Middle School,California
 Alta Loma School District,California
 Berkeley Unified School District,California
+Butte Valley Unified School District,California
 Clovis Unified School District,California
 Columbia Union School District,California
 Corona-Norco Unified School District,California
@@ -108,6 +109,8 @@ Elementary School District 159,Illinois
 Evanston Skokie CCSD 65,Illinois
 Grayslake CCSD 46,Illinois
 Herscher Community Unit School District #2,Illinois
+Ottawa Elementary School District 141,Illinois
+Pembroke Community Consolidated School District 259,Illinois
 Riverton Community Unit School District 14,Illinois
 Rockridge Community Unit School District 300,Illinois
 St. Joseph School,Illinois
@@ -122,15 +125,20 @@ Hanover Community School Corporation,Indiana
 Independence Academy of Indiana,Indiana
 Indiana Math & Science Academy North,Indiana
 Jennings County Schools,Indiana
+Lake Station Community Schools,Indiana
 Lawrenceburg Community School Corporation,Indiana
 Liberty-Perry Community School District,Indiana
 Linton-Stockton School Corporation,Indiana
+Madison Consolidated Schools,Indiana
+Marion Community Schools,Indiana
 Monroe County Community School,Indiana
 MSD of Mount Vernon,Indiana
 Plainfield Community School Corporation,Indiana
 South Vermillion Community School Corporation,Indiana
 Southwest Parke Community Schools,Indiana
 St. John the Baptist,Indiana
+Tabernacle Christian School,Indiana
+Tippecanoe Valley School Corporation,Indiana
 Trinity Christian School,Indiana
 Cedar Rapids Community School District,Iowa
 Denison Community Schools,Iowa
@@ -155,14 +163,19 @@ Robertson County Schools,Kentucky
 Acadiana Renaissance Charter,Louisiana
 Acadiana Renaissance Charter,Louisiana
 Ascension Parish School Board,Louisiana
+Beauregard,Louisiana
 Bossier Parish Schools,Louisiana
 Delta Charter Group,Louisiana
 Discovery Health Sciences Foundation,Louisiana
 East Baton Rouge,Louisiana
 East Baton Rouge Parish School System,Louisiana
 Integrated Impact Academy,Louisiana
+Morehouse Parish School District,Louisiana
 Natchitoches Parish,Louisiana
 Pelican Educational Foundation,Louisiana
+Rapides Parish Schools,Louisiana
+Washington Parish School System,Louisiana
+Winn Parish,Louisiana
 Great Salt Bay School,Maine
 Baltimore City Public Schools,Maryland
 Charles County Public Schools,Maryland
@@ -213,7 +226,9 @@ Adrian Public Schools District 511,Minnesota
 Belle Plaine Public Schools,Minnesota
 Bloomington Public Schools,Minnesota
 Brooklyn Center Community Schools,Minnesota
+"Fosston Public Schools, ISD 601",Minnesota
 Kasson-Mantorville Schools,Minnesota
+Kingsland Public Schools,Minnesota
 Mankato Area Public Schools,Minnesota
 Martin County West Schools,Minnesota
 Mountain Iron-Buhl,Minnesota
@@ -222,7 +237,10 @@ Princeton Public Schools,Minnesota
 South Washington County Schools,Minnesota
 St. Louis County Schools ISD 2142,Minnesota
 "Thief River Falls Public Schools, District 564",Minnesota
+Wabasha-Kellogg Public School District,Minnesota
+Zumbrota Mazeppa Public Schools,Minnesota
 Ambition Preparatory Charter,Mississippi
+Calhoun County School District,Mississippi
 Coffeeville Schools,Mississippi
 Holmes County Consolidated School District,Mississippi
 Instant Impact Global Prep,Mississippi
@@ -243,6 +261,9 @@ Marshall Public Schools,Missouri
 Miller R-II Schools,Missouri
 Plato R-V School District,Missouri
 Putnam County R-I School District,Missouri
+Riverview Gardens School District,Missouri
+Rockwood School District,Missouri
+Smithton R-VI School District,Missouri
 St. Charles R-VI,Missouri
 University City,Missouri
 Wentzville School District,Missouri
@@ -278,6 +299,7 @@ Ambassador Christian Academy,New Jersey
 Barnegat Township School District,New Jersey
 Bayonne Board of Education,New Jersey
 Beach Haven School,New Jersey
+Benjamin Banneker Preparatory Charter School,New Jersey
 Bloomfield Public Schools,New Jersey
 Brick Education Network,New Jersey
 Cape May County Vocational School District,New Jersey
@@ -336,6 +358,7 @@ Greece Central schools,New York
 Highland Falls Fort Montgomery CSD,New York
 Hyde Leadership Charter School,New York
 Lake Shore Central School District,New York
+Lindenhurst UFSD,New York
 Manhattan Charter School,New York
 Mercaz Academy,New York
 Millbrook Central School District,New York
@@ -345,6 +368,7 @@ Norwood-Norfolk Central School District,New York
 Orchard Park Central School District,New York
 P.S. 354Q,New York
 Pathways in Technology Early College High School,New York
+Plainview-Old Bethpage CSD,New York
 PS 165 Robert E Simon,New York
 Public Schools of the Tarrytowns,New York
 Ravena Coeymans Selkirk CSD,New York
@@ -419,7 +443,9 @@ Columbus City Schools,Ohio
 Educational Solutions Company,Ohio
 Educational Solutions Company,Ohio
 Euclid City Schools,Ohio
+Forest Hills School District,Ohio
 Horizon Science Academy Cleveland High School,Ohio
+Huber Heights City Schools,Ohio
 Hudson City School District,Ohio
 Indian Hill Exempted Village School District,Ohio
 New Miami Local,Ohio
@@ -427,19 +453,25 @@ Olentangy Local Schools,Ohio
 Par Excellence STEM Academy,Ohio
 Perrysburg Exempted Village School District,Ohio
 Pickerington Local School District,Ohio
+Pike-Delta-York Local Schools,Ohio
 Springfield Local Schools,Ohio
 Allen Public Schools,Oklahoma
+Broken Arrow Public School,Oklahoma
 Chouteau Early Childhood Center,Oklahoma
 Coleman Public Schools,Oklahoma
 Coweta School District I-17,Oklahoma
 Epic Charter Schools,Oklahoma
 Kildare Public School,Oklahoma
+McAlester Public Schools,Oklahoma
+Oklahoma City Public Schools,Oklahoma
+Piedmont Independent School District 22,Oklahoma
 Tulsa Public Schools,Oklahoma
 Wayne Public Schools,Oklahoma
 Berwick Area School District,Pennsylvania
 Carbon Learning Achievement School,Pennsylvania
 Community Academy of Philadelphia Charter School,Pennsylvania
 East Stroudsburg University,Pennsylvania
+Eastern York School District,Pennsylvania
 Interboro School District,Pennsylvania
 Montrose Area School District,Pennsylvania
 Norwin School District,Pennsylvania
@@ -457,6 +489,7 @@ Clarendon County School District,South Carolina
 Darlington County School District,South Carolina
 Lexington County School District One,South Carolina
 Lexington School District 2,South Carolina
+Wessington Springs,South Dakota
 Anderson County School District,Tennessee
 Bradley County Schools,Tennessee
 Bristol Tennessee City School District,Tennessee
@@ -466,8 +499,10 @@ Germantown Municipal School District,Tennessee
 Green Dot Public School,Tennessee
 Hickman County Schools,Tennessee
 Humphreys County Board of Education,Tennessee
+Jackson-Madison County School System,Tennessee
 Johnson City Schools,Tennessee
 Lincoln County Schools,Tennessee
+Manchester City School,Tennessee
 McKenzie Special School District,Tennessee
 Memphis Shelby County Schools,Tennessee
 Metro Nashville Public Schools,Tennessee
@@ -479,6 +514,7 @@ All Saints' Episcopal School of Fort Worth,Texas
 Austin Achieve Pflugerville,Texas
 Benavides Independent School District,Texas
 Canutillo Independent School District,Texas
+Clear Creek ISD,Texas
 Clifton Independent School District,Texas
 Copperas Cove Independent School District,Texas
 Crowley Independent School District,Texas
@@ -506,6 +542,8 @@ St. Joseph's School,Texas
 Stafford MSD,Texas
 Texline Independent School District,Texas
 Westlake Academy,Texas
+Ysleta Independent School District,Texas
+Ignite Entrepreneurship Academy,Utah
 Alleghany Highlands Public Schools,Virginia
 "Frederick County Public Schools, (VA)",Virginia
 Loudoun County Public Schools,Virginia
@@ -519,6 +557,7 @@ Lake Washington School District,Washington
 Marysville School District,Washington
 Omak School District,Washington
 Renton School District,Washington
+Seattle Public Schools,Washington
 Trillium Academy,Washington
 Calhoun County Schools,West Virginia
 Fayette County Schools,West Virginia
@@ -532,10 +571,12 @@ Gibraltar Area School District,Wisconsin
 Oneida Nation School System,Wisconsin
 Pewaukee School District,Wisconsin
 Pulaski Community School District,Wisconsin
+School District of Bonduel,Wisconsin
 School District of Brown Deer,Wisconsin
 School District of Cudahy,Wisconsin
 Seymour Community Schools,Wisconsin
 Sheboygan Area School District,Wisconsin
+Venture Academy,Wisconsin
 Converse County School District #2,Wyoming
 Sheridan County School District #2,Wyoming
 Sweetwater County School District #1,Wyoming

@@ -44,21 +44,22 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
   end
 
-  test "student_user_new when not signed in" do
+  test "student_user_new when signed out with section code shows link account view" do
     get :student_user_new, params: {section_code: @chris_section.code}
 
     assert_response :success
-    assert assigns(:user)
+    assert_template :join_logged_out
 
-    refute assigns(:user).persisted?
+    refute assigns(:user)
   end
 
-  test "student_user_new without section code" do
+  test "student_user_new when signed out without section code shows link account view" do
     get :student_user_new
 
     assert_response :success
-    # form to type in section code
-    assert_select 'input#section_code'
+    assert_template :join_logged_out
+
+    refute assigns(:user)
   end
 
   test "student_user_new when signed in" do
@@ -271,13 +272,13 @@ class FollowersControllerTest < ActionController::TestCase
     assert_includes(@chris_section.students, @student)
   end
 
-  test "student_register prompts user to create an account if not signed in" do
+  test "student_register shows link account view when signed out" do
     assert_does_not_create(User, Follower) do
       post :student_register, params: {section_code: @chris_section.code}
     end
 
-    assert_template 'followers/student_user_new'
-    assert_select '#signup'
+    assert_response :success
+    assert_template :join_logged_out
   end
 
   test "student_register with no section when signed in" do
@@ -290,13 +291,13 @@ class FollowersControllerTest < ActionController::TestCase
     assert_select 'input#section_code'
   end
 
-  test "student_register with no section when not signed in" do
+  test "student_register with no section shows link account view when not signed in" do
     assert_does_not_create(User, Follower) do
       post :student_register, params: {section_code: ''}
     end
 
-    assert_template 'followers/student_user_new'
-    assert_select 'input#section_code'
+    assert_response :success
+    assert_template :join_logged_out
   end
 
   test "student_register in section with script" do
@@ -351,6 +352,15 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to '/'
     expected = I18n.t('follower.error.not_participant_type', section_code: section.code)
     assert_equal(expected, flash[:alert])
+  end
+
+  test 'student_register renders students_cannot_join page when a student tries to join a teacher section' do
+    sign_in @student
+    section = create(:section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, grades: ["pl"])
+
+    get :student_register, params: {section_code: section.code}
+
+    assert_template 'followers/students_cannot_join'
   end
 
   test 'student_register redirects admins to admin_directory' do

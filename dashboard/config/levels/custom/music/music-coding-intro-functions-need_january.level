@@ -1,0 +1,204 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:10.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "validationTimeout": 2,
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "dove_cameron_boyfriend/main_beat"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "9kTSW_VXaBT/A[T+vzw$",
+                            "fields": {
+                              "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "WKFEdaq)zzApgs9,+17C",
+                                "fields": {
+                                  "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "@tf5unHUq]=oHQJ7fNW;",
+                      "fields": {
+                        "sound": "dove_cameron_boyfriend/plucks"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "sXVk^hx@R-Xt?LmL3Ey[",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "U0k%~xxIxb8ck?R7Sh{k",
+                                "fields": {
+                                  "sound": "dove_cameron_boyfriend/main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "%9J;,qJ;Z~F5?G$gH,UP",
+                                    "fields": {
+                                      "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "_SU2ZGOf5/N-k)QvrTC+",
+                                        "fields": {
+                                          "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "j~?aOr_ttL-[iBXsGQ/M",
+                              "fields": {
+                                "sound": "dove_cameron_boyfriend/brass"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "@,9(VL$LHCDW9B$?*~,a",
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "#JG1P/CIwLIlY=mDFayN",
+                                        "fields": {
+                                          "sound": "dove_cameron_boyfriend/main_beat"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "p@(]/umL:cu-^gDyJG2{",
+                                            "fields": {
+                                              "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "Y)RU4YX0RY.#JAiZ9Q5{",
+                                                "fields": {
+                                                  "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "dove_cameron_boyfriend"
+    },
+    "long_instructions": "###<i class=\"fa-regular fa-face-thinking\"></i> What do you notice? \r\n\r\n1. Look for patterns in the code.\r\n2. Press [Run](#clickable=run-button) to listen to the song.",
+    "validations": [
+      {
+        "key": "music-coding-intro-functions-need_0494dc13-1782-465b-91a8-0ed486477a1b",
+        "message": "**We can make this code more efficient!**\n\nPress Continue to learn how. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-functions-need_4e41262d-17d3-46b7-9d4d-2404f9fc902e",
+        "message": "These sounds are playing together again!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-functions-need_fe21bd7b-5297-4459-bdba-2db666f824b8",
+        "message": "Watch for patterns in the code.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_january",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:10.057+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need\"}]"
+}]]></config>
+  <blocks/>
+</Music>

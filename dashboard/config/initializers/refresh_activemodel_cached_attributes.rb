@@ -54,7 +54,7 @@ module Cdo
     # we could consider instead checking a hash of the contents of the set
     # rather than the length, at a small performance cost.
     private def new_database_migration_since_initialization?
-      return nil unless defined?(@@latest_count_of_database_migrations)
+      return false unless defined?(@@latest_count_of_database_migrations)
       current_migrations_count = ActiveRecord::SchemaMigration.all.count
       return current_migrations_count != @@latest_count_of_database_migrations
     end

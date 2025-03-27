@@ -1,8 +1,9 @@
 import {findFiles, findSubFolders} from '@codebridge/codebridgeContext';
 import {DeleteFolderFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectFolder, ProjectType} from '@codebridge/types';
+import {ProjectFolder} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
@@ -11,8 +12,8 @@ type OpenConfirmDeleteFileArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   deleteFolder: DeleteFolderFunction;
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
-  projectFiles: ProjectType['files'];
-  projectFolders: ProjectType['folders'];
+  projectFiles: MultiFileSource['files'];
+  projectFolders: MultiFileSource['folders'];
 };
 
 // this is ~technically~ not a prompt in that it's merely a confirmation dialog,

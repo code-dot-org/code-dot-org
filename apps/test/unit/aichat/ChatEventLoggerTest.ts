@@ -1,17 +1,18 @@
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
-import {AichatContext, ChatMessage} from '@cdo/apps/aichat/types';
+import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 describe('ChatEventLogger', () => {
-  let userChatMessage: ChatMessage;
+  let userChatMessage: CompletedChatMessage;
   let aichatContext: AichatContext;
   let chatEventLogger: ChatEventLogger;
   let postLogChatEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     userChatMessage = {
+      requestId: 1,
       role: Role.USER,
       chatMessageText: 'hello',
       status: AiInteractionStatus.OK,
@@ -32,7 +33,7 @@ describe('ChatEventLogger', () => {
   it('logChatEvent calls on postLogChatEvent', async () => {
     postLogChatEventSpy = jest
       .spyOn(aichatApi, 'postLogChatEvent')
-      .mockResolvedValue({chat_event_id: 1, chat_event: userChatMessage});
+      .mockResolvedValue(userChatMessage);
 
     chatEventLogger.logChatEvent(userChatMessage, aichatContext);
     expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);
@@ -44,7 +45,7 @@ describe('ChatEventLogger', () => {
       .mockImplementation(() => {
         return new Promise(resolve => {
           setTimeout(() => {
-            resolve({chat_event_id: 1, chat_event: userChatMessage});
+            resolve(userChatMessage);
           }, 1000);
         });
       });

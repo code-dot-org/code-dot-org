@@ -10,8 +10,43 @@ import color from '../../util/color';
 
 import NewProjectButtons from './NewProjectButtons';
 
+const DEFAULT_PROJECT_TYPES_ADVANCED = [
+  'spritelab',
+  'artist',
+  'applab',
+  'gamelab',
+];
+
+const DEFAULT_PROJECT_TYPES_BASIC = ['spritelab', 'artist', 'dance', 'playlab'];
+
+const OPEN_ENDED_PROJECT_TYPES = ['spritelab', 'dance', 'poetry', 'music'];
+
+const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
+
+const MINECRAFT_PROJECT_TYPES = [
+  'minecraft_adventurer',
+  'minecraft_designer',
+  'minecraft_hero',
+  'minecraft_aquatic',
+];
+
+const GAMES_AND_EVENTS_PROJECT_TYPES = [
+  'flappy',
+  'starwarsblocks',
+  'bounce',
+  'sports',
+  'basketball',
+];
+
+const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
+
+const ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'starwars'];
+
+const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
+
 export class StartNewProject extends React.Component {
   static propTypes = {
+    availableProjectTypes: PropTypes.arrayOf(PropTypes.string),
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     canViewFullList: PropTypes.bool,
     canViewAdvancedTools: PropTypes.bool,
@@ -29,107 +64,143 @@ export class StartNewProject extends React.Component {
     this.setState({showFullList: !this.state.showFullList});
   };
 
+  cleanProjectTypes = projectTypes => {
+    const {availableProjectTypes} = this.props;
+
+    if (availableProjectTypes) {
+      projectTypes = projectTypes.filter(projectType =>
+        availableProjectTypes.includes(projectType)
+      );
+    }
+
+    return projectTypes;
+  };
+
+  getFullListProjectButtonsData = () => {
+    const projectButtonsData = [];
+
+    const openEndedProjectTypes = this.cleanProjectTypes(
+      OPEN_ENDED_PROJECT_TYPES
+    );
+    if (openEndedProjectTypes.length) {
+      projectButtonsData.push({
+        description: i18n.projectGroupOpenEnded(),
+        projectTypes: openEndedProjectTypes,
+      });
+    }
+
+    const drawingProjectTypes = this.cleanProjectTypes(DRAWING_PROJECT_TYPES);
+    if (drawingProjectTypes.length) {
+      projectButtonsData.push({
+        description: i18n.projectGroupArtist(),
+        projectTypes: drawingProjectTypes,
+      });
+    }
+
+    const minecraftProjectTypes = this.cleanProjectTypes(
+      MINECRAFT_PROJECT_TYPES
+    );
+    if (minecraftProjectTypes.length) {
+      projectButtonsData.push({
+        description: i18n.projectGroupMinecraft(),
+        projectTypes: minecraftProjectTypes,
+      });
+    }
+
+    const gamesAndEventsProjectTypes = this.cleanProjectTypes(
+      GAMES_AND_EVENTS_PROJECT_TYPES
+    );
+    if (gamesAndEventsProjectTypes.length) {
+      projectButtonsData.push({
+        description: i18n.projectGroupEvents(),
+        projectTypes: gamesAndEventsProjectTypes,
+      });
+    }
+
+    if (this.props.canViewAdvancedTools) {
+      const advancedProjectTypes = this.cleanProjectTypes(
+        ADVANCED_PROJECT_TYPES
+      );
+      if (advancedProjectTypes.length) {
+        projectButtonsData.push({
+          description: i18n.projectGroupAdvancedTools(),
+          projectTypes: advancedProjectTypes,
+        });
+      }
+    }
+
+    const playLabProjectTypes = this.cleanProjectTypes(PLAYLAB_PROJECT_TYPES);
+    if (playLabProjectTypes.length) {
+      projectButtonsData.push({
+        description: i18n.projectGroupPlaylab(),
+        projectTypes: playLabProjectTypes,
+      });
+    }
+
+    const preReaderProjectTypes = this.cleanProjectTypes(
+      PREREADER_PROJECT_TYPES
+    );
+    if (preReaderProjectTypes.length) {
+      projectButtonsData.push({
+        description: i18n.projectGroupPreReader(),
+        projectTypes: preReaderProjectTypes,
+      });
+    }
+
+    return projectButtonsData;
+  };
+
   render() {
     const {canViewAdvancedTools, canViewFullList} = this.props;
     const {showFullList} = this.state;
 
-    const DEFAULT_PROJECT_TYPES_ADVANCED = [
-      'spritelab',
-      'artist',
-      'applab',
-      'gamelab',
-    ];
-
-    const DEFAULT_PROJECT_TYPES_BASIC = [
-      'spritelab',
-      'artist',
-      'dance',
-      'playlab',
-    ];
-
-    const defaultProjectTypes = canViewAdvancedTools
-      ? DEFAULT_PROJECT_TYPES_ADVANCED
-      : DEFAULT_PROJECT_TYPES_BASIC;
-
-    const OPEN_ENDED_PROJECT_TYPES = ['spritelab', 'dance', 'poetry', 'music'];
-
-    const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
-
-    const MINECRAFT_PROJECT_TYPES = [
-      'minecraft_adventurer',
-      'minecraft_designer',
-      'minecraft_hero',
-      'minecraft_aquatic',
-    ];
-
-    const GAMES_AND_EVENTS_PROJECT_TYPES = [
-      'flappy',
-      'starwarsblocks',
-      'bounce',
-      'sports',
-      'basketball',
-    ];
-
-    const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
-
-    const ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'starwars'];
-
-    const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
+    const defaultProjectTypes = this.cleanProjectTypes(
+      canViewAdvancedTools
+        ? DEFAULT_PROJECT_TYPES_ADVANCED
+        : DEFAULT_PROJECT_TYPES_BASIC
+    );
+    const fullListProjectButtonsData = canViewFullList
+      ? this.getFullListProjectButtonsData()
+      : [];
 
     return (
       <div>
-        <h4 className="new-project-heading" style={styles.headingStartNew}>
-          {i18n.projectStartNew()}
-        </h4>
-        <NewProjectButtons projectTypes={defaultProjectTypes} />
-
-        {canViewFullList && (
-          <Button
-            id="uitest-view-full-list"
-            onClick={this.toggleShowFullList}
-            color={Button.ButtonColor.neutralDark}
-            icon={showFullList ? 'caret-up' : 'caret-down'}
-            text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
-            style={styles.button}
-          />
+        {defaultProjectTypes.length && (
+          <>
+            <h4 className="new-project-heading" style={styles.headingStartNew}>
+              {i18n.projectStartNew()}
+            </h4>
+            <NewProjectButtons projectTypes={defaultProjectTypes} />
+          </>
         )}
 
-        <div style={{clear: 'both'}} />
+        {fullListProjectButtonsData.length && (
+          <>
+            <Button
+              id="uitest-view-full-list"
+              onClick={this.toggleShowFullList}
+              color={Button.ButtonColor.neutralDark}
+              icon={showFullList ? 'caret-up' : 'caret-down'}
+              text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
+              style={styles.button}
+            />
 
-        {showFullList && (
-          <div>
-            <NewProjectButtons
-              description={i18n.projectGroupOpenEnded()}
-              projectTypes={OPEN_ENDED_PROJECT_TYPES}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupArtist()}
-              projectTypes={DRAWING_PROJECT_TYPES}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupMinecraft()}
-              projectTypes={MINECRAFT_PROJECT_TYPES}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupEvents()}
-              projectTypes={GAMES_AND_EVENTS_PROJECT_TYPES}
-            />
-            {canViewAdvancedTools && (
-              <NewProjectButtons
-                description={i18n.projectGroupAdvancedTools()}
-                projectTypes={ADVANCED_PROJECT_TYPES}
-              />
+            <div style={{clear: 'both'}} />
+
+            {showFullList && (
+              <div id="full-list-projects">
+                {fullListProjectButtonsData.map(projectData => (
+                  <NewProjectButtons
+                    key={projectData.description}
+                    description={projectData.description}
+                    projectTypes={projectData.projectTypes}
+                  />
+                ))}
+              </div>
             )}
-            <NewProjectButtons
-              description={i18n.projectGroupPlaylab()}
-              projectTypes={PLAYLAB_PROJECT_TYPES}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupPreReader()}
-              projectTypes={PREREADER_PROJECT_TYPES}
-            />
-          </div>
+          </>
         )}
+
         <div style={styles.spacer} />
       </div>
     );
@@ -169,9 +240,8 @@ const styles = {
  *   # All pages
  *   - path: /
  *     components:
- *       LtiFeedbackBanner: false
  *       StartNewProject:
- *         canViewFullList: false
+ *         availableProjectTypes: ['artist', 'playlab']
  * ```
  */
 const RegionalStartNewProject = props => (

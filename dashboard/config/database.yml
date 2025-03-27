@@ -16,6 +16,7 @@ mysql_defaults: &mysql_defaults
   encoding: utf8mb4
   collation: utf8mb4_unicode_ci
   default_group: 'cdo'
+  database_timezone: :utc
 
   # ActiveRecord connection-pool settings:
   # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html

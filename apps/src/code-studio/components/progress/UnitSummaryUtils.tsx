@@ -213,6 +213,7 @@ export const setUnitSummaryReduxData = (
 
   dispatch(
     setCalendarData({
+      unitName: unitData.name,
       showCalendar: !!unitData.showCalendar,
       calendarLessons: unitData.calendarLessons,
       versionYear: unitData.version_year

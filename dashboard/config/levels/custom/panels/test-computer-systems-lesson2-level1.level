@@ -1,0 +1,74 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-07T17:42:22.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Central Processing Unit (CPU)\nThe CPU is like the brain of the computer—it does all the thinking and calculations to make everything work. Just like your brain processes information, the CPU processes instructions from software.",
+        "imageUrl": "https://images.code.org/9f9f3b9ad15ebdbaa92c3a973942193c-central-processing-unit-or-computer-chip-3-2023-11-27-05-16-03-utc-min.JPG",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-left",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Motherboard\nThe motherboard is like the nervous system, connecting all the parts of the computer and allowing them to communicate with each other.",
+        "imageUrl": "https://images.code.org/b56de783f0f89415f8950be382fd3577-computerchip-technology-and-electronics-industry-2023-11-27-05-08-36-utc-min.jpg",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Power Supply Unit\nThe power supply is like the heart, sending energy (electricity) to all the components to keep them running.",
+        "imageUrl": "https://images.code.org/b6c5e9c0cc0ed7042138f5ea58542719-power-supply-isolated-2023-11-27-05-12-35-utc-min.jpg",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Graphics Processing Unit (GPU)\nThe GPU processes graphics and images, handling tasks like rendering videos, animations, and games so they can be displayed on the screen.",
+        "imageUrl": "https://images.code.org/ddc5145d3a3e9c415ef6c58a0f6f5202-graphics-card-modern-gaming-gpu-graphics-process-2023-11-27-05-28-10-utc-min.jpg",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Random Access Memory (RAM) \nRAM is like short-term memory, holding information temporarily so the computer can quickly access and use it while working.",
+        "imageUrl": "https://images.code.org/aa2f624ce284c612cdf40e1e48849354-computer-random-access-memory-ram-sticks-close-u-2023-11-27-04-56-04-utc-min.jpg",
+        "key": "hardware-components-266c1383-bf2b-4307-bd04-1f35b2808edd",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Hard Drive\nThe hard drive is like long-term memory, storing everything the computer needs to remember, even when it’s turned off.",
+        "imageUrl": "https://images.code.org/f928d4dc5705437983886a4a9bd64e5d-hard-disk-isolated-on-white-background-with-clipp-2023-11-27-04-57-22-utc-min.jpg",
+        "key": "hardware-components-8296a10a-18ea-4c91-933f-b2b6dec55bd2",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Peripherals \n**(Monitor, Keyboard, Mouse, etc.)** \n\nPeripherals are external devices that let you interact with the computer. The monitor displays information, the keyboard lets you type, and the mouse lets you point and click.",
+        "imageUrl": "https://images.code.org/2c4a27b587980eb5c021ad9e3bcea726-periphs2.png",
+        "key": "hardware-components-3fb7f8f9-2e27-4b0a-aa81-96a7528b3571",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Enclosure (Case)\nThe case houses all the internal components, keeping them organized, protected, and helping manage airflow to prevent overheating.",
+        "imageUrl": "https://images.code.org/951cffe353b65b61249042ce4e406819-disassembled-computer-processor-on-desk-2024-02-27-00-32-53-utc-min.jpg",
+        "key": "hardware-components-fde7ae9f-ebcc-47e4-a6d0-24cf8caeb2e8",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-07 17:52:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 17:58:20 +0000\",\"changed\":[\"name\",\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 17:59:56 +0000\",\"changed\":[\"name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 19:11:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 20:47:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 20:54:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 20:58:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-07 21:26:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

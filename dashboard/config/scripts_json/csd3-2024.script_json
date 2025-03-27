@@ -26,12 +26,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:15:59 UTC",
+    "serialized_at": "2025-03-25 04:34:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -21994,7 +21993,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,

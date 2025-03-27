@@ -1,6 +1,8 @@
-import React, {useContext} from 'react';
+import Link from '@code-dot-org/component-library/link';
+import React, {useContext, useEffect} from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LtiProviderContext} from '@cdo/apps/simpleSignUp/lti/link/LtiLinkAccountPage/context';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -19,6 +21,14 @@ const LtiLinkAccountPage = () => {
       ? navigateToHref(`/users/cancel`)
       : navigateToHref(`/users/sign_out`);
   };
+
+  useEffect(() => {
+    analyticsReporter.sendEvent(
+      EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
+      {source: 'lti'},
+      PLATFORMS.BOTH
+    );
+  }, []);
 
   return (
     <main>

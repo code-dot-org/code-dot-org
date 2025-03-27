@@ -1,6 +1,9 @@
+import {
+  BodyTwoText,
+  Heading6,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {BodyTwoText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {Resource} from './LessonMaterialTypes';

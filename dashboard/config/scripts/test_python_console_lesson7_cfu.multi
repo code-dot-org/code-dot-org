@@ -1,0 +1,20 @@
+name 'test-python-console-lesson7-cfu'
+title 'Functions and Parameters'
+
+wrong '`plant_garden`'
+right '`item`'
+wrong '"garlic bulb"'
+wrong '`print`'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the parameter in this function definition?
+
+```
+def plant_garden(item):
+	print(f"Character plants {item}")
+	print("Character moves to the next spot.")
+
+paint_square("garlic bulb")
+```
+MARKDOWN

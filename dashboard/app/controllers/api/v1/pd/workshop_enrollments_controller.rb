@@ -61,14 +61,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
         if @workshop.course == COURSE_BUILD_YOUR_OWN
           enrollment.update!(enrollment_params)
-
-          # Mark attendance for all sessions in Build Your Own workshops (we are not tracking attendance in
-          # this way for Build Your Own workshops, but we want to ensure that functionality for emails,
-          # certificates, etc. remains the same).
-          @workshop.sessions.each do |session|
-            attendance = Pd::Attendance.find_restore_or_create_by! session: session, teacher: user, enrollment: enrollment
-            attendance.update! marked_by_user: user
-          end
         else
           enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
           user&.update_school_info(enrollment.school_info)
@@ -77,10 +69,19 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
+        # Also send to the teacher's alternate summer email if they entered it in their application and
+        # it's for a summer workshop.
+        if @workshop.subject == SUBJECT_SUMMER_WORKSHOP
+          alt_summer_email = user&.alternate_email
+          if alt_summer_email.present?
+            Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment, alt_summer_email).deliver_now
+          end
+        end
+
         render json: {
           workshop_enrollment_status: RESPONSE_MESSAGES[:SUCCESS],
           account_exists: user.present?,
-          sign_up_url: url_for('/users/sign_up'),
+          sign_up_url: url_for('/users/sign_up/account_type'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
       rescue ActiveRecord::ValueTooLong
@@ -112,6 +113,15 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     enrollment.destroy!
     Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
     Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+
+    # Also send to the user's alternate summer email if they entered it in their application
+    # and it's for a summer workshop.
+    if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
+      alt_summer_email = enrollment.user&.alternate_email
+      if alt_summer_email.present?
+        Pd::WorkshopMailer.teacher_cancel_receipt(enrollment, alt_summer_email).deliver_now
+      end
+    end
   end
 
   # POST /api/v1/pd/enrollments/move
@@ -157,12 +167,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     {
       school_type: params[:school_info][:school_type],
       school_state: params[:school_info][:school_state],
-      school_zip: params[:school_info][:school_zip],
+      school_zip: params[:school_info][:zip],
       school_district_name: params[:school_info][:school_district_name]&.strip_utf8mb4,
       school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
       school_id: params[:school_info][:school_id],
       school_name: params[:school_info][:school_name]&.strip_utf8mb4,
-      country: "US" # we currently only support enrollment in pd for US schools
+      country: params[:school_info][:country]
     }
   end
 

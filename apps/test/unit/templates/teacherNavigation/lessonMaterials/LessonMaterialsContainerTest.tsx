@@ -10,7 +10,7 @@ import {
   registerReducers,
   restoreRedux,
 } from '@cdo/apps/redux';
-import unitSelection, {setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import teacherSections, {
   selectSection,
   setSections,
@@ -89,6 +89,35 @@ const SECTIONS = [
   },
 ];
 
+const COURSES_WITH_PROGRESS = [
+  {
+    id: 123,
+    display_name: 'CSD',
+    units: [
+      {
+        id: 1,
+        version_year: 2023,
+        key: 'csd1-2024',
+        name: 'CSD unit 1',
+        position: null,
+      },
+    ],
+  },
+  {
+    id: 1234,
+    display_name: 'CSD1-2020',
+    units: [
+      {
+        id: 2,
+        version_year: 2020,
+        key: 'csd1-2020',
+        name: 'CSD1-2020 unit 1',
+        position: null,
+      },
+    ],
+  },
+];
+
 describe('LessonMaterialsContainer', () => {
   let store: Store;
   let fetchSpy: jest.SpyInstance;
@@ -98,6 +127,7 @@ describe('LessonMaterialsContainer', () => {
     unitNumber: 3,
     hasNumberedUnits: true,
     versionYear: 2023,
+    unitId: 1,
     lessons: [
       {
         name: 'First lesson',
@@ -209,7 +239,11 @@ describe('LessonMaterialsContainer', () => {
     ],
   };
 
-  const renderDefault = async (showNoCurriculumAssigned = false) => {
+  const renderDefault = async (
+    showNoCurriculumAssigned = false,
+    lessonData: object = mockLessonData
+  ) => {
+    mockSpy(lessonData);
     await act(async () =>
       render(
         <Provider store={store}>
@@ -231,23 +265,38 @@ describe('LessonMaterialsContainer', () => {
 
     store = getStore();
 
-    store.dispatch(setUnitName('csd1-2024'));
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    mockSpy(mockLessonData);
   });
 
-  afterEach(() => {
+  afterEach(async () => {
     jest.resetAllMocks();
     restoreRedux();
+    fetchSpy.mockReset();
   });
 
-  it('renders the component and dropdown with lessons', async () => {
-    fetchSpy.mockResolvedValue({
-      value: mockLessonData,
-      response: new Response(),
+  const mockSpy = (lessonData: object) => {
+    fetchSpy.mockReset();
+    fetchSpy.mockImplementation((path: string) => {
+      if (path.includes('lesson_materials')) {
+        return Promise.resolve({
+          value: lessonData,
+          response: new Response(),
+        });
+      }
+      if (path.includes('section_courses')) {
+        return Promise.resolve({
+          value: COURSES_WITH_PROGRESS,
+          response: new Response(),
+        });
+      }
     });
+  };
+
+  it('renders the component and dropdown with lessons', async () => {
     await renderDefault();
 
     // check for unit resources dropdown
@@ -259,18 +308,16 @@ describe('LessonMaterialsContainer', () => {
       i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
     );
 
+    // Check for unit selector
+    screen.getByRole('combobox', {name: 'Select a unit'});
+
     // Check for lesson dropdowns
-    screen.getByRole('combobox');
+    screen.getByRole('combobox', {name: 'Choose a lesson'});
     screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
   });
 
   it('renders the student and teacher resources for the first lesson on render', async () => {
-    fetchSpy.mockResolvedValue({
-      value: mockLessonData,
-      response: new Response(),
-    });
-
     await renderDefault();
 
     // Teacher resources, including lesson plan, unit vocab and unit standards
@@ -300,24 +347,15 @@ describe('LessonMaterialsContainer', () => {
 
     store.dispatch(selectSection(2));
 
-    fetchSpy.mockResolvedValue({
-      value: lessonDataWithoutNumberedUnits,
-      response: new Response(),
-    });
+    await renderDefault(false, lessonDataWithoutNumberedUnits);
 
-    await renderDefault();
-
-    screen.getByText('Unit Standards');
+    await screen.findByText('Unit Standards');
     screen.getByText('Unit Vocabulary');
     screen.getByText(i18n.downloadUnitLessonPlans());
     screen.getByText(i18n.downloadUnitHandouts());
   });
 
   it('shows no student resources if no student resources are provided', async () => {
-    fetchSpy.mockResolvedValue({
-      value: mockLessonData,
-      response: new Response(),
-    });
     await renderDefault();
 
     // check for unit resources dropdown
@@ -330,7 +368,9 @@ describe('LessonMaterialsContainer', () => {
     );
 
     // Check for lesson dropdowns
-    const lessonDropdown = screen.getByRole('combobox');
+    const lessonDropdown = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
     screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
 
@@ -343,14 +383,8 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('notifies users if no curriculum is assigned.', async () => {
-    fetchSpy.mockResolvedValue({
-      value: mockLessonData,
-      response: new Response(),
-    });
     store.dispatch(selectSection(12));
-    await act(async () => {
-      renderDefault(true);
-    });
+    await renderDefault(true);
 
     screen.getByAltText('blank screen');
     screen.getByText(i18n.emptySectionHeadline());
@@ -360,7 +394,6 @@ describe('LessonMaterialsContainer', () => {
 
   it('tells users to select a unit when no unit assigned', async () => {
     store.dispatch(selectSection(10));
-    store.dispatch(setUnitName(null));
 
     await renderDefault();
 
@@ -373,7 +406,6 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
-    store.dispatch(setUnitName('csd1-2020'));
     store.dispatch(selectSection(11));
 
     await renderDefault();
@@ -386,13 +418,11 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders the resources for the new lesson when lesson is changed', async () => {
-    fetchSpy.mockResolvedValue({
-      value: mockLessonData,
-      response: new Response(),
-    });
     await renderDefault();
 
-    const selectedLessonInput = screen.getAllByRole('combobox')[0];
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
 
     fireEvent.change(selectedLessonInput, {target: {value: '2'}});
 
@@ -411,13 +441,11 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders will render message when there is no lesson plan', async () => {
-    fetchSpy.mockResolvedValue({
-      value: mockLessonData,
-      response: new Response(),
-    });
     await renderDefault();
 
-    const selectedLessonInput = screen.getAllByRole('combobox')[0];
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
 
     fireEvent.change(selectedLessonInput, {target: {value: '3'}});
 
@@ -425,12 +453,8 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders empty state when there are no lesson plans in the whole unit', async () => {
-    fetchSpy.mockResolvedValue({
-      value: mockLessonDataNoLessonPlans,
-      response: new Response(),
-    });
     store.dispatch(selectSection(3));
-    await renderDefault();
+    await renderDefault(false, mockLessonDataNoLessonPlans);
 
     screen.getByText('There are no lesson materials for this unit.');
   });

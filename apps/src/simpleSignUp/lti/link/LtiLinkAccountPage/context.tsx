@@ -5,12 +5,13 @@ import {LtiProvider} from './types';
 export interface LtiProviderContextProps {
   ltiProvider: LtiProvider;
   ltiProviderName: string;
-  newAccountUrl: string;
+  newAccountUrl: URL;
   continueAccountUrl: string;
   existingAccountUrl: URL;
   emailAddress: string;
   newCtaType: 'continue' | 'new';
-  userType?: string;
+  userType: string;
+  finishSignUpUrl: string;
 }
 
 export const LtiProviderContext = createContext<

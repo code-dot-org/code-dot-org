@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-01-24T21:48:40.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Step 1: Dataset Selection",
+    "long_instructions": "####Which dataset did you select for your project, and what about it interested you? Describe how you developed your data question based on the dataset’s attributes and potential insights you were hoping to gain.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_beta"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-24T21:48:40.805+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4a\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4a\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

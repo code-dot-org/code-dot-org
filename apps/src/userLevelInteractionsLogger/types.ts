@@ -1,8 +1,8 @@
 export interface UserLevelInteraction {
-  levelId: number;
-  scriptId: number;
-  schoolYear: string;
+  levelId: number | undefined;
+  scriptId: number | undefined;
+  schoolYear?: string;
   interaction: string;
-  codeVersion: string;
-  metadata: JSON;
+  codeVersion?: string;
+  metadata?: JSON;
 }

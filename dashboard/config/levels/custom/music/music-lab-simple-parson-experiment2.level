@@ -1,0 +1,162 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-02-12T02:50:46.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category",
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 130,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 2
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "oPJ4oLw@t=7sbT^1Q+CN",
+              "x": 510,
+              "y": 230,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 3
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "MmEg1J;%nO2`!%6(:SCY",
+              "x": 590,
+              "y": 90,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "mc_hammer_u_cant_touch_this/main_loop"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "nR]tk,X}ew;K_IxlLE-N",
+              "x": 230,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "mc_hammer_u_cant_touch_this/break_it_down"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 330,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "mc_hammer_u_cant_touch_this/stop_hammer_time"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "cant_touch_this",
+          "mymymy",
+          "verse_1",
+          "verse_2",
+          "yo_let_me_bust",
+          "i_told_ya",
+          "break_it_down",
+          "bass",
+          "bass_breakdown",
+          "beat",
+          "beat_breakdown",
+          "main_loop",
+          "main_loop_short",
+          "oohs",
+          "chopped_oohs",
+          "breakdown_oohs",
+          "synth"
+        ]
+      },
+      "packId": "mc_hammer_u_cant_touch_this"
+    },
+    "long_instructions": "Code the song so that:\r\n- \"Stop - Hammer Time\" plays exactly once\r\n- the \"Main Loop\" plays 6 times\r\n- \"Break it down\" plays 2 times\r\n\r\nListen to the example below to hear how it sounds",
+    "validations": [
+      {
+        "key": "music-lab-simple-parson-experiment_2423241e-6580-4bb6-a085-d989c497c305",
+        "message": "",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-12T02:50:46.416+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-parson-experiment\\\"\"],\"cloned_from\":\"music-lab-simple-parson-experiment\"},{\"changed_at\":\"2025-02-12 02:51:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:53:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:55:01 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 02:59:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-03 18:06:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-03 18:07:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

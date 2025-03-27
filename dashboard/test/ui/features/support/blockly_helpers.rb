@@ -88,11 +88,11 @@ module BlocklyHelpers
   end
 
   def get_block_workspace_left(block_id)
-    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById(#{block_id}).getRelativeToSurfaceXY().x;")
+    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById('#{block_id}').getRelativeToSurfaceXY().x;")
   end
 
   def get_block_workspace_top(block_id)
-    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById(#{block_id}).getRelativeToSurfaceXY().y;")
+    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById('#{block_id}').getRelativeToSurfaceXY().y;")
   end
 
   def modal_dialog_visible
@@ -127,6 +127,12 @@ def delete_block(id)
   "var workspace = Blockly.getMainWorkspace();" \
   "var blockToDelete = workspace.getBlockById('#{id}');" \
   "blockToDelete.dispose();"
+end
+
+def move_block_to_jigsaw_ghost(id)
+  "var workspace = Blockly.getMainWorkspace();" \
+  "var blockToMove = workspace.getBlockById('#{id}');" \
+  "blockToMove.moveTo(appOptions.level.ghost);"
 end
 
 World(BlocklyHelpers)

@@ -1,0 +1,13 @@
+collectorCollectedNothing
+collectorCollectedTooMany
+didNotCollectEverything
+didNotPlantEverywhere
+flowerEmptyError
+honeycombFullError
+insufficientHoney
+insufficientNectar
+notAtFlowerError
+notAtHoneycombError
+plantInNonSoilError
+uncheckedCloudError
+uncheckedPurpleError

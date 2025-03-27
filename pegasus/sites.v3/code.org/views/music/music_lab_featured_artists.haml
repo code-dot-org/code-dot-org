@@ -1,19 +1,10 @@
 :ruby
-  existing_artists = [
-    {image: '/images/music-lab/tinashe.png', alt_text: 'Tinashe'},
-    {image: '/images/music-lab/aloe-blacc.png', alt_text: 'Aloe Blacc'},
-    {image: '/images/music-lab/rosa-linn.png', alt_text: 'Rosa Linn'},
-    {image: '/images/music-lab/chainsmokers.png', alt_text: 'The Chainsmokers'},
-  ]
-  hoc_nov_artists = [
+  artists = [
     {image: '/images/music-lab/sabrina-carpenter.png', alt_text: 'Sabrina Carpenter'},
     {image: '/images/music-lab/shakira.png', alt_text: 'Shakira'},
     {image: '/images/music-lab/benson-boone.png', alt_text: 'Benson Boone'},
     {image: '/images/music-lab/henry-moodie.png', alt_text: 'Henry Moodie'},
   ]
-
-  # TODO ACQ-2556 - Clean this up after the 2024 HOC launch
-  artists = DCDO.get('hoc-2024-nov-launch', false) ? hoc_nov_artists : existing_artists
 
 %ul.featured-artists.clear-styles.flex-container.justify-space-between.wrap
   - artists.each do |artist|

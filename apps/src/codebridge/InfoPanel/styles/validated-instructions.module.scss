@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   background-size: 100% 200%;
-  padding: 0 10px 10px 10px;
+  padding: 10px;
   box-sizing: border-box;
   position: relative;
   font-size: 14px;
@@ -62,7 +62,7 @@
 }
 
 .mainInstructions {
-  white-space: pre-wrap;
+  white-space: normal;
 
   display: flex;
   align-items: flex-start;
@@ -72,8 +72,11 @@
 %bubble {
   padding: 8px;
   border-radius: 4px;
-  margin-top: 10px;
   animation: slidein 0.5s;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
 }
 
 .bubble-dark {
@@ -92,17 +95,24 @@
   color: $neutral_dark;
 }
 
+.bubbleNoSlide {
+  animation: none;
+}
+
 .buttonInstruction {
   width: 100%;
   height: 32px;
 }
 
-.validationButton {
+// Using button to increase specificity of this class
+// (this allows it to take precedence over the component library button styles)
+button.validationButton {
   margin-top: 8px;
 }
 
 .markdownText {
   line-height: 0;
+  user-select: text;
 
   h1,
   h2,
@@ -160,5 +170,8 @@
 }
 
 .scrollingContent {
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
+  margin-bottom: 10px;
 }

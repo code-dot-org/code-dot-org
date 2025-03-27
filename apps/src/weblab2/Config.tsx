@@ -1,13 +1,14 @@
-import {ProjectType, ConfigType} from '@codebridge/types';
+import {ConfigType} from '@codebridge/types';
 import React, {useState} from 'react';
 
 import './styles/config.css';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 type BaseConfigProps = {configName: string; cancelConfig: () => void};
 
 type ConfigProps = BaseConfigProps & {
-  config: ProjectType | ConfigType;
-  setConfig: (name: string, config: ProjectType | ConfigType) => void;
+  config: MultiFileSource | ConfigType;
+  setConfig: (name: string, config: MultiFileSource | ConfigType) => void;
 };
 
 type LayoutConfigProps = BaseConfigProps & {
@@ -16,7 +17,7 @@ type LayoutConfigProps = BaseConfigProps & {
 };
 
 const parseJSON = (v: string) => JSON.parse(v);
-const stringifyJSON = (s: string | ProjectType | ConfigType) =>
+const stringifyJSON = (s: string | MultiFileSource | ConfigType) =>
   JSON.stringify(s, undefined, 2);
 
 const LayoutInstructions = () => (

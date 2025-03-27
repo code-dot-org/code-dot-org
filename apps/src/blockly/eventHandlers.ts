@@ -120,12 +120,11 @@ export function storeWorkspaceWidth(e: GoogleBlockly.Events.Abstract) {
 // Jigsaw only. Sets a fill pattern defines a path in order to show pictures
 // over the blocks.
 export function setPathFill(e: GoogleBlockly.Events.Abstract) {
-  if (
-    [Blockly.Events.FINISHED_LOADING, Blockly.Events.BLOCK_MOVE].includes(
-      e.type
-    ) &&
-    e.workspaceId
-  ) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.FINISHED_LOADING,
+    Blockly.Events.BLOCK_MOVE,
+  ];
+  if (expectedEventTypes.includes(e.type) && e.workspaceId) {
     if (!Blockly.isJigsaw) {
       return;
     }
@@ -182,15 +181,14 @@ export function bumpRTLBlocks() {
 
 // When blocks on the main workspace are changed, update the block limits indicators.
 export function updateBlockLimits(event: GoogleBlockly.Events.Abstract) {
-  if (
-    ![
-      Blockly.Events.BLOCK_CHANGE,
-      Blockly.Events.BLOCK_MOVE,
-      Blockly.Events.BLOCK_CREATE,
-      // High Contrast theme has a different font size, so we update the indicators.
-      Blockly.Events.THEME_CHANGE,
-    ].includes(event.type)
-  ) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.BLOCK_CHANGE,
+    Blockly.Events.BLOCK_MOVE,
+    Blockly.Events.BLOCK_CREATE,
+    // High Contrast theme has a different font size, so we update the indicators.
+    Blockly.Events.THEME_CHANGE,
+  ];
+  if (!expectedEventTypes.includes(event.type)) {
     return;
   }
 

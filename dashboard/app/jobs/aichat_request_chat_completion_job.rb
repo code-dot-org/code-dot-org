@@ -46,25 +46,39 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   def perform(request:, locale:)
-    model_customizations = JSON.parse(request.model_customizations, {symbolize_names: true})
-    stored_messages = JSON.parse(request.stored_messages, {symbolize_names: true})
-    new_message = JSON.parse(request.new_message, {symbolize_names: true})
+    model_customizations = request.model_customizations
+    stored_messages = request.stored_messages
+    new_message = request.new_message
     level_id = request.level_id
-    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
+    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(request.user_id), request.project_id)
+    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale, encrypted_channel_id)
     request.update!(response: response, execution_status: status)
   end
 
-  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
+  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale, encrypted_channel_id)
     # Moderate user input for toxicity.
-    user_toxicity = AichatSafetyHelper.find_toxicity('user', new_message[:chatMessageText], locale)
+    user_toxicity = AichatSafetyHelper.find_toxicity('user', new_message['chatMessageText'], locale, level_id)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
-    user_pii = find_pii(new_message[:chatMessageText], locale)
+    user_pii = find_pii(new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
     begin
-      response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
+      response = model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] ?
+        AichatOpenaiHelper.get_openai_assistant_response(
+          model_customizations,
+          stored_messages,
+          new_message,
+          level_id,
+          encrypted_channel_id
+        ) :
+        AichatSagemakerHelper.get_sagemaker_assistant_response(
+          model_customizations,
+          stored_messages,
+          new_message,
+          level_id
+        )
     rescue Aws::SageMakerRuntime::Errors::ModelError => exception
       # If the user input was too large, return a USER_INPUT_TOO_LARGE status code. Otherwise, re-raise the exception.
       if exception.message.include?("must have less than 3000 tokens") || exception.message.include?("must be <= 4096")
@@ -75,7 +89,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     # Moderate model output for toxicity.
-    model_toxicity = AichatSafetyHelper.find_toxicity('assistant', response, locale)
+    model_toxicity = AichatSafetyHelper.find_toxicity('assistant', response, locale, level_id)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
 
     model_pii = find_pii(response, locale)
@@ -90,7 +104,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def get_model_id(request)
-    JSON.parse(request.model_customizations, {symbolize_names: true})[:selectedModelId]
+    request.model_customizations['selectedModelId']
   end
 
   private def report_job_start(request)

@@ -14,9 +14,18 @@ export const teacherDashboardUrl = (sectionId, path = '') => {
   return dashboardPrefix + sectionId + path;
 };
 
-export const getUnitUrl = (sectionId, unitName, unassignedUnitUrl) => {
+export const getUnitUrl = (
+  sectionId,
+  unitName,
+  studentId = null,
+  unassignedUnitUrl
+) => {
   if (showV2TeacherDashboard() && sectionId && unitName) {
-    return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}`;
+    if (studentId) {
+      return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}?user_id=${studentId}`;
+    } else {
+      return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}`;
+    }
   }
 
   return unassignedUnitUrl;
@@ -30,6 +39,7 @@ export const unitUrlForStudent = (sectionId, unitName, studentId) => {
   return getUnitUrl(
     sectionId,
     unitName,
+    studentId,
     `/s/${unitName}?section_id=${sectionId}&user_id=${studentId}&viewAs=Instructor`
   );
 };

@@ -49,6 +49,8 @@ export interface MusicState {
   hideHeaders: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
+  /** The playback events associated with the exemplar player */
+  exemplarPlaybackEvents: PlaybackEvent[];
   /** The current ordered functions */
   orderedFunctions: FunctionEvents[];
   /** The current last measure of the song */
@@ -90,6 +92,7 @@ const initialState: MusicState = {
   instructionsPosition: InstructionsPosition.LEFT,
   hideHeaders: false,
   playbackEvents: [],
+  exemplarPlaybackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
   // Default to 1 (fully loaded). When loading a new sound, the progress will be set back to 0 before the load starts.
@@ -186,20 +189,18 @@ const musicSlice = createSlice({
     },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
-      state.lastMeasure = 0;
     },
     clearOrderedFunctions: state => {
       state.orderedFunctions = [];
     },
-    addPlaybackEvents: (
-      state,
-      action: PayloadAction<{events: PlaybackEvent[]; lastMeasure: number}>
-    ) => {
-      state.playbackEvents.push(...action.payload.events);
-      state.lastMeasure = Math.max(
-        state.lastMeasure,
-        action.payload.lastMeasure
-      );
+    addPlaybackEvents: (state, action: PayloadAction<PlaybackEvent[]>) => {
+      state.playbackEvents.push(...action.payload);
+    },
+    setLastMeasure: (state, action: PayloadAction<number>) => {
+      state.lastMeasure = action.payload;
+    },
+    updateLastMeasure: (state, action: PayloadAction<number>) => {
+      state.lastMeasure = Math.max(state.lastMeasure, action.payload);
     },
     addOrderedFunctions: (
       state,
@@ -330,6 +331,8 @@ export const {
   clearPlaybackEvents,
   clearOrderedFunctions,
   addPlaybackEvents,
+  setLastMeasure,
+  updateLastMeasure,
   addOrderedFunctions,
   setSoundLoadingProgress,
   setStartingPlayheadPosition,

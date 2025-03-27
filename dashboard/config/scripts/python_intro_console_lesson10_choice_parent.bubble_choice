@@ -1,0 +1,11 @@
+name 'python-intro-console-lesson10-choice-parent'
+display_name 'Variables Choice Level'
+description 'Pick one of the levels below to keep practicing conditionals.'
+
+sublevels
+level 'python-intro-console-lesson10-choiceA'
+level 'python-intro-console-lesson10-choiceB'
+level 'python-intro-console-lesson10-choiceC'
+
+
+

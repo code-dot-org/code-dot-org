@@ -40,6 +40,7 @@ class UnitOverview extends React.Component {
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
+    isSingleUnitCourse: PropTypes.bool,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
@@ -84,6 +85,22 @@ class UnitOverview extends React.Component {
     if (props.userType === 'teacher') {
       analyticsReporter.sendEvent(
         EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit name': props.scriptName,
+        },
+        PLATFORMS.BOTH
+      );
+    } else if (props.userType === 'student') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
+        {
+          'unit name': props.scriptName,
+        },
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
         {
           'unit name': props.scriptName,
         },
@@ -151,7 +168,7 @@ class UnitOverview extends React.Component {
           <EndOfLessonDialog lessonNumber={completedLessonNumber} />
         )}
         <div>
-          {this.props.courseLink && (
+          {!this.props.isSingleUnitCourse && this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
               <a
                 href={this.props.courseLink}

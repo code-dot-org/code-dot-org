@@ -2,6 +2,10 @@ require 'cdo/global_edition'
 
 module Cdo
   class Footer
+    def self.relative_url?(url)
+      url.start_with?('/')
+    end
+
     def self.get_footer_contents(options)
       # Get the 'footer' section from the requested region
       ge_region = options[:ge_region] || :root
@@ -24,9 +28,9 @@ module Cdo
         end
 
         if link[:domain] == 'studio.code.org'
-          link[:url] = CDO.studio_url(link[:url])
+          link[:url] = CDO.studio_url(link[:url]) if relative_url?(link[:url])
         elsif link[:domain] == 'code.org'
-          link[:url] = CDO.code_org_url(link[:url])
+          link[:url] = CDO.code_org_url(link[:url]) if relative_url?(link[:url])
         else
           # It is an external link, so appropriately mark its follow rules
           link[:rel] = "noopener noreferrer nofollow"

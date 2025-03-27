@@ -13,7 +13,7 @@ export const VISUALIZATION_DIV_ID = 'visualization';
  *          elements in the current view.
  */
 export function isResponsiveFromState(state) {
-  return state.pageConstants.isResponsive;
+  return state.pageConstants?.isResponsive || false;
 }
 
 /**

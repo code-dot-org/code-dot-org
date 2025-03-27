@@ -13,11 +13,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csd3-virtual",
-    "serialized_at": "2024-11-19 01:16:01 UTC",
+    "serialized_at": "2025-02-12 17:44:20 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

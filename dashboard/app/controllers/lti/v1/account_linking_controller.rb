@@ -7,6 +7,14 @@ module Lti
 
       # GET /lti/v1/account_linking/landing
       def landing
+        lti_provider = session.dig(:lms_landing, :lti_provider_name) || params[:lti_provider]
+        new_cta_type = session.dig(:lms_landing, :new_cta_type) || params[:new_cta_type]
+        user_type = session.dig(:lms_landing, :user_type) || current_user&.user_type
+
+        if lti_provider.blank? || new_cta_type.blank? || user_type.blank?
+          flash[:alert] = I18n.t('lti.account_linking.launch_from_lms')
+          redirect_to root_path and return
+        end
       end
 
       # GET /lti/v1/account_linking/finish_link

@@ -1,15 +1,36 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
 import i18n from '@cdo/locale';
 
 window.fetch = jest.fn().mockResolvedValue({json: jest.fn()});
 
 describe('CurriculumQuickAssign', () => {
+  it('shows spinner when isLoading is true', () => {
+    const wrapper = mount(
+      <CurriculumQuickAssign
+        updateSection={() => {}}
+        sectionCourse={{}}
+        initialParticipantType="student"
+        courseFilters={{}}
+        isNewSection={false}
+      />
+    );
+
+    expect(wrapper.find(Spinner)).toHaveLength(1);
+    expect(wrapper.find('h3').length).toBe(1);
+    expect(wrapper.find('Button')).toHaveLength(0);
+  });
+
   it('renders headers and the top row of buttons', () => {
     const wrapper = mount(
-      <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
+      <CurriculumQuickAssign
+        updateSection={() => {}}
+        sectionCourse={{}}
+        isNewSection={true}
+      />
     );
 
     expect(wrapper.find('h3').length).toBe(1);
@@ -27,7 +48,11 @@ describe('CurriculumQuickAssign', () => {
 
   it('updates caret direction when clicked', () => {
     const wrapper = mount(
-      <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
+      <CurriculumQuickAssign
+        updateSection={() => {}}
+        sectionCourse={{}}
+        isNewSection={true}
+      />
     );
 
     expect(wrapper.find('Button').at(0).props().icon).toBe('caret-right');
@@ -40,8 +65,13 @@ describe('CurriculumQuickAssign', () => {
 
   it('opens and closes version dropdowns with table open and collapse', () => {
     const wrapper = mount(
-      <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
+      <CurriculumQuickAssign
+        updateSection={() => {}}
+        sectionCourse={{}}
+        isNewSection={true}
+      />
     );
+
     expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
     wrapper
       .find('Button')
@@ -57,7 +87,11 @@ describe('CurriculumQuickAssign', () => {
 
   it('leaves dropdowns alone when decide later clicked', () => {
     const wrapper = mount(
-      <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
+      <CurriculumQuickAssign
+        updateSection={() => {}}
+        sectionCourse={{}}
+        isNewSection={true}
+      />
     );
 
     // No dropdowns active at beginning

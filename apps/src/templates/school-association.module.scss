@@ -16,6 +16,10 @@
   label {
     width: 100%;
     margin-bottom: 0;
+
+    span::after {
+      content: '*';
+    }
   }
 
   input,
@@ -50,12 +54,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
-}
-
-.schoolAssociationWrapper.requiredLabel label {
-  span::after {
-    content: '*';
-  }
 }
 
 .disabledLabel {

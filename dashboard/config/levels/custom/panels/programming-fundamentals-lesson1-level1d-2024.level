@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-02-21T15:27:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Taylor\n**Age:** 17\n\n**Hobbies:** Tinkering and fixing things (even if they're not broken)\n\n**Favorite Subject:** Math\n\n**Favorite Movie:** The Social Network (loves stories about innovation).",
+        "imageUrl": "https://images.code.org/cff3a88b0cd37438674151097b083101-Screenshot 2025-01-14 120339.png",
+        "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**Big ideas start with a little mess.** 🌟 #BehindTheScenes #CreativeProcess",
+        "imageUrl": "https://images.code.org/5ea5b537f0190b7fb0962d50c0b01b63-Screenshot 2025-01-14 120730.png",
+        "key": "undefined-ccb0bb2c-6711-4a94-9328-d9d683897239",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**The team that builds together, creates together. 💡 Excited for our next big idea!** #EngineeringDreamTeam #InnovatorsAtWork",
+        "imageUrl": "https://images.code.org/21a53e4f0852cfc3877e597a82810f6c-DALL·E 2025-01-17 10.08.44 - An animated selfie-style image of a diverse group of high school students in an engineering classroom. Taylor, a 16-year-old Black student wearing a h.webp",
+        "key": "undefined-a682ce3e-40a5-47ab-95f0-10b7b145ee49",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**Data tells a story—sometimes you just need to ask the right questions.** 📊 #DataDriven #StoryInTheNumbers",
+        "imageUrl": "https://images.code.org/8a7353eb327fe233a9df1dbe76bd7e41-Screenshot 2025-01-14 121901.png",
+        "key": "undefined-1737e582-c669-4266-b428-837a44bdade4",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "display_name": "Taylor",
+    "thumbnail_url": "https://images.code.org/cff3a88b0cd37438674151097b083101-Screenshot 2025-01-14 120339.png",
+    "bubble_choice_description": "**Age:** 17\n\n**Hobbies:** Tinkering and fixing things (even if they're not broken)\n\n**Favorite Subject:** Math\n\n**Favorite Movie:** The Social Network (loves stories about innovation)."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-21T15:27:48.226+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson1d-level4-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson1d-level4-2024\"},{\"changed_at\":\"2025-02-21 15:27:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

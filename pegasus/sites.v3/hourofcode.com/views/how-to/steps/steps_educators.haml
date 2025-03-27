@@ -1,5 +1,3 @@
--# TODO ACQ-2556 - Remove DCDO logic after launch
-- nov_launch = !!DCDO.get('hoc-2024-nov-launch', false)
 - music_url = "https://code.org/music"
 - mc_url = "https://aka.ms/hourofcode"
 
@@ -19,7 +17,7 @@
 
   steps_educators_desc = [
     hoc_s("hoc_how_to.teachers.steps_v2.register"),
-    nov_launch ? hoc_s("hoc_how_to.teachers.steps_v2.choose_activity", markdown: :inline, locals: {music_url: music_url, mc_url: mc_url, transformers_url: "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1"}) : hoc_s("hoc_how_to.teachers.steps.choose_activity"),
+    hoc_s("hoc_how_to.teachers.steps_v2.choose_activity", markdown: :inline, locals: {music_url: music_url, mc_url: mc_url, transformers_url: "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1"}),
     hoc_s("hoc_how_to.teachers.steps_v2.plan_event.body_01", markdown: :inline),
     hoc_s("hoc_how_to.teachers.steps_v2.schedule.body_01", markdown: :inline, locals: {music_url: music_url, mc_url: mc_url}),
     hoc_s("hoc_how_to.teachers.steps.spread_word.body_01", markdown: :inline, locals:{emails_url: resolve_url("/resources#sample-emails")}),

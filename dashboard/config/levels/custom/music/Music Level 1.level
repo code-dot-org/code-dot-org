@@ -51,7 +51,7 @@
     },
     "instructions_important": "false",
     "long_instructions": "First, please play one sound.",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "validations": [
       {
         "conditions": [

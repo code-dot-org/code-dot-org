@@ -1,6 +1,7 @@
-import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
+import {FolderId, ProjectFile} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {isDuplicateFileName, DuplicateFileError} from './isDuplicateFileName';
 import {isValidFileName} from './isValidFileName';
@@ -8,7 +9,7 @@ import {isValidFileName} from './isValidFileName';
 type ValidateFileNameArgs = {
   fileName: string;
   folderId: FolderId;
-  projectFiles: ProjectType['files'];
+  projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
 };

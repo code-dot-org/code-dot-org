@@ -1,0 +1,56 @@
+@import 'color.scss';
+.mazeContainer {
+  display: grid;
+  height: 400px;
+  width: 400px;
+  background-color: #42444b;
+}
+
+.categoryTiles {
+  display: grid;
+  column-gap: 4px;
+  row-gap: 4px;
+}
+
+
+.selectedCell {
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+.mazeGenerator {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.saveButtonContainer {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.mazeGeneratorContainer {
+  margin-top: 20px;
+}
+.selectedTile {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.categoryDropdown {
+  margin-bottom: 10px;
+}
+
+.unselectButton {
+  margin-top: 10px;
+}
+
+.saveConfirmation {
+  margin: auto 5px;
+}
+
+.greenCheck {
+  color: $light_affirmative_500;
+}

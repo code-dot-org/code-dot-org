@@ -107,9 +107,9 @@ export const procedureDefMutator = {
     const state = Object.create(null);
     state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
-    state['initialDeleteConfig'] = this.isDeletable();
-    state['initialEditConfig'] = this.isEditable();
-    state['initialMoveConfig'] = this.isMovable();
+    state['initialDeleteConfig'] = this.isOwnDeletable();
+    state['initialEditConfig'] = this.isOwnEditable();
+    state['initialMoveConfig'] = this.isOwnMovable();
     state['userCreated'] = this.userCreated;
     state['invisible'] = this.invisible;
 
@@ -136,44 +136,55 @@ export const procedureDefMutator = {
 
   /**
    * Accepts a JSON serializable state value and applies it to the block.
+   * Overridden to support initial block states for the modal function editor,
+   * and legacy state for user-created functions and invisible blocks.
    * @param state The state to apply to this block (see saveExtraState above).
    */
-  // TODO: define a better type for state.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
-    const procedureFromMap = map.get(procedureId);
-    if (
-      procedureId &&
-      procedureId !== this.model_.getId() &&
-      procedureFromMap &&
-      (this.isInsertionMarker() || this.noBlockHasClaimedModel_(procedureId))
-    ) {
+    if (map.has(procedureId) && !state['fullSerialization']) {
       if (map.has(this.model_.getId())) {
         map.delete(this.model_.getId());
       }
-      this.model_ = procedureFromMap;
+      this.model_ = map.get(procedureId)!;
     }
 
-    if (state['params'] && !this.getProcedureModel().getParameters().length) {
-      for (let i = 0; i < state['params'].length; i++) {
-        const {name, id, paramId} = state['params'][i];
-        this.getProcedureModel().insertParameter(
-          new ObservableParameterModel(this.workspace, name, paramId, id),
-          i
-        );
+    const model = this.getProcedureModel();
+    const newParams: {name: string; id: string}[] = state['params'] ?? [];
+    const newIds = new Set(newParams.map(p => p.id));
+    const currParams = model.getParameters();
+    if (state['fullSerialization']) {
+      for (let i = currParams.length - 1; i >= 0; i--) {
+        if (!newIds.has(currParams[i].getId())) {
+          model.deleteParameter(i);
+        }
       }
     }
+    for (let i = 0; i < newParams.length; i++) {
+      const {name, id, paramId} = state['params'][i];
+      this.getProcedureModel().insertParameter(
+        new ObservableParameterModel(this.workspace, name, paramId, id),
+        i
+      );
+    }
 
+    // Customization: Sets the description field of the block.
     setBlockDescription(this, state['description']);
+
     this.doProcedureUpdate();
+
+    // Customization: Sets the initial delete/edit/move configuration of the block.
     if (!Blockly.useModalFunctionEditor) {
       this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
       this.setEditable(state['initialEditConfig'] === false ? false : true);
       this.setMovable(state['initialMoveConfig'] === false ? false : true);
     }
+
     this.setStatements_(state['hasStatements'] === false ? false : true);
+
+    // Customization: Handles the legacy state for user-created functions and invisible blocks.
     this.userCreated = state['userCreated'];
     this.invisible = state['invisible'];
   },

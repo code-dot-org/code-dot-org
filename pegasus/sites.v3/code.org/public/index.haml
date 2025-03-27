@@ -11,7 +11,7 @@ jquery: defer
 style_min: true
 ---
 :ruby
-  @header["title"] = hoc_s(:hoc2020_header)
+  @header["title"] = hoc_s(:hoc2019_header)
 
   hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
 
@@ -35,9 +35,8 @@ style_min: true
 = view :header
 
 #homepage.supreme-container
-  -# TODO ACQ-2556 - Remove this hero banner after 2024 HOC
-  - if !!DCDO.get('hoc-2024-nov-launch', false) && hoc_mode != false
-    = view :hoc_2024_music_lab_jam_hero
+  - if !!DCDO.get('exploring-gen-ai-launch', false)
+    = view :exploring_gen_ai_hero_banner
   - else
     = view :homepage_hero
 
@@ -47,9 +46,6 @@ style_min: true
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement
-
-  -# Show Generative AI Launch banner if 'gen-ai-launch' dcdo is true
-  = view :gen_ai_launch_skinny_banner
 
   = view :homepage_sections
   = view :homepage_gallery

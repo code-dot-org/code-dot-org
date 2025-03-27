@@ -20,6 +20,7 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "bg-BG",
@@ -62,11 +63,12 @@
         "zh-CN",
         "zh-TW"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2024-11-19 01:19:05 UTC",
+    "serialized_at": "2025-01-09 18:07:33 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -129,7 +131,8 @@
       "key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff",
@@ -156,7 +159,8 @@
       "key": "2ccc0a90-872b-424b-ae39-d7f92ceb8c06",
       "position": 4,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 2,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "2ccc0a90-872b-424b-ae39-d7f92ceb8c06",

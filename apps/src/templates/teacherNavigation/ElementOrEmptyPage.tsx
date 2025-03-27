@@ -1,9 +1,11 @@
+import Button, {LinkButton} from '@code-dot-org/component-library/button';
+import {
+  Heading3,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import {useNavigate, NavLink} from 'react-router-dom';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import TeacherDashboardEmptyState from '@cdo/apps/templates/teacherNavigation/images/TeacherDashboardEmptyState.svg';
@@ -96,12 +98,12 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
   } else {
     return (
       <div className={dashboardStyles.emptyClassroomDiv}>
-        <div className={dashboardStyles.emptyClassroomDiv}>
+        <div className={dashboardStyles.emptyClassroomImage}>
           {displayedImage()}
-          <Heading3 className={styles.topPadding}>{heading}</Heading3>
-          <BodyTwoText>{textDescription()}</BodyTwoText>
-          {link()}
         </div>
+        <Heading3 className={styles.topPadding}>{heading}</Heading3>
+        <BodyTwoText>{textDescription()}</BodyTwoText>
+        {link()}
       </div>
     );
   }

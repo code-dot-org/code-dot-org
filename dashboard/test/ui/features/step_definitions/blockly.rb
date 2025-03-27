@@ -66,6 +66,11 @@ When /^I connect block "([^"]*)" inside block "([^"]*)"$/ do |from, to|
   @browser.execute_script code
 end
 
+When /^I move block "([^"]*)" to jigsaw ghost$/ do |id|
+  code = move_block_to_jigsaw_ghost(id)
+  @browser.execute_script code
+end
+
 When /^I delete block "([^"]*)"$/ do |id|
   code = delete_block(id)
   @browser.execute_script code
@@ -131,33 +136,38 @@ Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
-  id_selector = get_id_selector
   block_id = get_block_id(block)
 
   # Check block existence, blockly-way
   steps "Then block \"#{block}\" has not been deleted"
 
-  # Check block position is within visible blockspace
-  # Get block dimensions
-  block_left = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().left")
-  block_right = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().right")
-  block_top = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().top")
-  block_bottom = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().bottom")
+  script = <<-JS
+    const workspace = Blockly.getMainWorkspace();
+    const block = workspace.getBlockById('#{block_id}');
+    const boundingRect = block.getBoundingRectangle();
+    const viewMetrics = workspace.getMetricsManager().getViewMetrics();
+    const toolboxWidth = workspace.getToolbox() ? workspace.getToolbox().getWidth() : 0;
 
-  # Get blockspace dimensions
-  # blockspaceRect includes the toolbox on the left, but not the headers on the top.
-  block_space_left = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().left')
-  block_space_right = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().right')
-  block_space_top = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().top')
-  block_space_bottom = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().bottom')
-  toolbox_width = @browser.execute_script('return Blockly.mainBlockSpaceEditor.getToolboxWidth()')
+    return {
+      blockLeft: boundingRect.left,
+      blockRight: boundingRect.right,
+      blockTop: boundingRect.top,
+      blockBottom: boundingRect.bottom,
+      viewLeft: viewMetrics.left + toolboxWidth,
+      viewRight: viewMetrics.left + viewMetrics.width,
+      viewTop: viewMetrics.top,
+      viewBottom: viewMetrics.top + viewMetrics.height
+    };
+  JS
 
-  # Minimum part of block (in pixels) that must be within workspace to be 'visible'
+  dimensions = @browser.execute_script(script)
+
   block_margin = 10
-  expect(block_bottom).to be > block_space_top + block_margin
-  expect(block_top).to be < block_space_bottom - block_margin
-  expect(block_left).to be < block_space_right - block_margin
-  expect(block_right).to be > block_space_left + block_margin + toolbox_width
+
+  expect(dimensions["blockBottom"]).to be > dimensions["viewTop"] + block_margin
+  expect(dimensions["blockTop"]).to be < dimensions["viewBottom"] - block_margin
+  expect(dimensions["blockLeft"]).to be < dimensions["viewRight"] - block_margin
+  expect(dimensions["blockRight"]).to be > dimensions["viewLeft"] + block_margin
 end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
@@ -201,7 +211,7 @@ end
 
 And /^I've initialized the workspace with a manually\-positioned playlab puzzle$/ do
   clear_main_block_space
-  blocks_xml = '<xml><block type="studio_whenArrow" x="20"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
+  blocks_xml = '<xml><block type="studio_whenArrow" x="20" id="whenUp"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20" id="whenDown"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20" id="whenLeft"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow" id="whenRight"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
@@ -357,6 +367,70 @@ def current_block_xml
   @browser.execute_script <<-JS
     return __TestInterface.getBlockXML();
   JS
+end
+
+When /^I move block "([^"]*)" to (top|left|bottom|right) edge of workspace$/ do |block, edge|
+  block_id = get_block_id(block)
+  script = <<-JS
+    const workspace = Blockly.getMainWorkspace();
+    const viewMetrics = workspace.getMetricsManager().getViewMetrics();
+    const block = workspace.getBlockById('#{block_id}');
+    const boundingRect = block.getBoundingRectangle();
+
+    const blockWidth = boundingRect.right - boundingRect.left;
+    const blockHeight = boundingRect.bottom - boundingRect.top;
+
+    let x, y;
+
+    switch ('#{edge}') {
+      case 'left':
+        x = viewMetrics.left - blockWidth / 2;
+        y = boundingRect.top; // Maintain current top position
+        break;
+      case 'right':
+        x = viewMetrics.left + viewMetrics.width - blockWidth / 2;
+        y = boundingRect.top; // Maintain current top position
+        break;
+      case 'top':
+        x = boundingRect.left; // Maintain current left position
+        y = viewMetrics.top - blockHeight / 2;
+        break;
+      case 'bottom':
+        x = boundingRect.left; // Maintain current left position
+        y = viewMetrics.top + viewMetrics.height - blockHeight / 2;
+        break;
+    }
+
+    block.moveTo(new Blockly.utils.Coordinate(x, y));
+  JS
+  @browser.execute_script(script)
+end
+
+When(/^I show the editor of field "([^"]*)" of block "([^"]*)"$/) do |field, block|
+  block_id = get_block_id(block)
+  script = <<-JS
+    var workspace = Blockly.getMainWorkspace();
+    workspace.hideChaff();
+    var selectedBlock = workspace.getBlockById('#{block_id}');
+    Blockly.common.setSelected(selectedBlock);
+    selectedBlock.getField('#{field}').showEditor();
+  JS
+  @browser.execute_script(script)
+end
+When(/^I change the field "([^"]*)" editor value to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setEditorValue_(#{val})")
+end
+
+When(/^I change the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
+  # Refresh the dropdown
+  @browser.execute_script("Blockly.selected.getField('#{field}').showEditor()")
+end
+
+When(/^I update the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
+  # Refresh the dropdown
+  @browser.execute_script("Blockly.selected.workspace.hideChaff()")
 end
 
 def clear_main_block_space

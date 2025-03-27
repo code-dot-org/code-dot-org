@@ -11,18 +11,6 @@
     "csppostap-2017",
     "csp-post-survey"
   ],
-  "alternate_units": [
-    {
-      "experiment_name": "subgoals-group-a",
-      "alternate_script": "csp3-a",
-      "default_script": "csp3-2017"
-    },
-    {
-      "experiment_name": "subgoals",
-      "alternate_script": "csp3-research-mxghyt",
-      "default_script": "csp3-2017"
-    }
-  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

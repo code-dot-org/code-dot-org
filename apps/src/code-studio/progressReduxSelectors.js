@@ -19,6 +19,9 @@ export const hasLockableLessons = state =>
 
 export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
+export const getCurrentLesson = state =>
+  state.progress.lessons?.find(l => l.id === state.progress.currentLessonId);
+
 /**
  * Extract the relevant portions of a particular lesson from the store.
  * Note, that this does not include levels

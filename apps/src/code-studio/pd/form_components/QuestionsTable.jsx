@@ -1,8 +1,7 @@
+import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {ControlLabel, FormGroup, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-
-import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
 
 const questionPropType = PropTypes.shape({
   label: PropTypes.string.isRequired,

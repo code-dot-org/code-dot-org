@@ -1,0 +1,71 @@
+@use '@code-dot-org/component-library-styles/colors';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+
+// Link common styles
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    border-radius: 0.25rem;
+    outline-offset: 0;
+  }
+
+  &:active:not([aria-disabled='true']) {
+    text-decoration: none;
+  }
+
+  &-primary {
+    color: var(--text-brand-purple-primary);
+
+    &:hover,
+    :active,
+    :visited {
+      color: var(--text-brand-purple-secondary);
+    }
+
+    &:focus-visible {
+      color: var(--text-brand-purple-primary);
+    }
+  }
+
+  &-secondary {
+    color: var(--text-neutral-primary);
+
+    &:hover,
+    :active,
+    :visited {
+      color: var(--text-neutral-tertiary);
+    }
+
+    &:focus-visible {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    color: var(--text-neutral-disabled);
+  }
+}
+
+// Sizes
+.link-l {
+  @include link-body-one;
+}
+
+.link-m {
+  @include link-body-two;
+}
+
+.link-s {
+  @include link-body-three;
+}
+
+.link-xs {
+  @include link-body-four;
+}

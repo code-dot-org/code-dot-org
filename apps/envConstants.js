@@ -40,4 +40,6 @@ module.exports = {
   HOT: process.env.HOT === '1',
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
+  // set Statsig local_mode to false to send events to statsig during local development
+  STATSIG_LOCAL_MODE_OFF: process.env.STATSIG_LOCAL_MODE_OFF,
 };

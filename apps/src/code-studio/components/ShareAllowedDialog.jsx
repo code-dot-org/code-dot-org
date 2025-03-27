@@ -1,9 +1,9 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';

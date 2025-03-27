@@ -56,7 +56,7 @@
     },
     "instructions_important": "false",
     "name_suffix": "_pdx",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "musiclab_intro_change_sound_elementary_251e3d31-19b7-499e-a47d-362f33f4f2c0",

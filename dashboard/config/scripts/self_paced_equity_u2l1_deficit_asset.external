@@ -5,23 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Inclusive Pedagogy
 
+<img src="https://images.code.org/22029b6ec5fa9dfce7ff1ce0b95ac8d4-image-1736203131526.38.49 PM.png" alt="A student writes on a piece of paper with a smile on their face." style="border-radius:20px; float: right; height: 200px; clear: both; margin: 0px 10px 10px 10px;">
+
 #### One of the ways to make students feel included in the computer science is by employing asset-based pedagogy. Read the definitions below, and while you do so, brainstorm an example of asset- and deficit-based pedagogy to connect to your existing knowledge. 
 
 ## Key Terms
 
-<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
-
-* #### **Deficit-based pedagogy**: the notion that students (particularly those of low income, racial/ethnic minority background) fail in school because such students and their families have internal defects (deficits) that thwart the learning process.
-
-* #### **Asset-based pedagogy**: the belief that students possess unique life experiences and abilities which can be leveraged to foster effective and meaningful learning experiences.
-</p></div>
-
+* #### **Asset-based pedagogy**: the belief that students possess unique life experiences and abilities which can be leveraged to foster effective and meaningful learning experiences.<sup>8</sup>
+* #### **Deficit-based pedagogy**: the notion that students (particularly those of low income, racial/ethnic minority background) fail in school because such students and their families have internal defects (deficits) that thwart the learning process.<sup>9</sup>
 
 #### **Asset-based instruction** allows teachers to celebrate students' existing knowledge (from their home lives, culture, traditions) while adding to their formal learning through instruction. In the next level, we'll provide you with some computer-science specific examples of each of these terms.
 
 ___
 
-##### **Sources:**
-* ##### <a href="https://www.researchgate.net/publication/382598758_ASSET-BASED_COMPUTATIONAL_THINKING_PEDAGOGY_Early_Childhood_Teachers%27_Use_of_Asset-based_Computational_Thinking_Pedagogy_Centering_Students%27_Expertise_and_Life_Experiences" target="blank" rel="noopener noreferrer">ASSET-BASED COMPUTATIONAL THINKING PEDAGOGY Early Childhood Teachers' Use of Asset-based Computational Thinking Pedagogy: Centering Students' Expertise and Life Experiences</a>
-* ##### <a href="https://www.icsequity.org/asset-based-language-over-deficit-based-language/" target="blank" rel="noopener noreferrer">Why Schools Should Embrace Asset-Based Language Over Deficit-Based Language</a>
+##### <sup>8</sup>Assaf, Lori Czop, and Sean Justice. “Asset-based computational thinking in early childhood classrooms: Centering students’ expertise in a community of learners.” Early Childhood Education Journal, 21 Dec. 2024, https://doi.org/10.1007/s10643-024-01825-3. 
+##### <sup>9</sup>ICS Equity. “Embrace Asset-Based Language over Deficit-Based Language.” ICS Equity, ICS Equity, 24 Oct. 2024, <a href="www.icsequity.org/asset-based-language-over-deficit-based-language/" target="blank" rel="noopener noreferrer">www.icsequity.org/asset-based-language-over-deficit-based-language/</a>. 
 MARKDOWN

@@ -34,6 +34,7 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
   FILTERED = "[FILTERED]"
 
   test "does NOT log encrypted data" do
+    skip 'races the reconfiguration and errors if it contacts real honeybadger server'
     student = create :student
     sign_in student
 

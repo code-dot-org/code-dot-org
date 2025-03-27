@@ -8,6 +8,8 @@
  */
 export const PUZZLE_PAGE_NONE = -1;
 
+export type LessonBackground = 'light' | 'dark' | null;
+
 export interface Lesson {
   assessment: boolean;
   description_student: string;
@@ -31,6 +33,7 @@ export interface Lesson {
   script_name: string;
   title: string;
   unplugged: boolean | null;
+  background: LessonBackground;
 }
 
 export interface LessonGroup {

@@ -1,0 +1,21 @@
+{
+  "name": "tess-modularity-2025",
+  "script_names": [
+    "tess-modularity-test-unit-1"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "tess-modularity",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

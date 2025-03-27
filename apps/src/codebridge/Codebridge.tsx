@@ -1,142 +1,114 @@
 import {
   CodebridgeContextProvider,
-  projectReducer,
-  PROJECT_REDUCER_ACTIONS,
-  useProjectUtilities,
+  sourceReducer,
+  SOURCE_REDUCER_ACTIONS,
+  useSourceUtilities,
 } from '@codebridge/codebridgeContext';
-import {FileBrowser} from '@codebridge/FileBrowser';
 import {useReducerWithCallback} from '@codebridge/hooks';
-import {InfoPanel} from '@codebridge/InfoPanel';
-import {SideBar} from '@codebridge/SideBar';
 import {
-  ProjectType,
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
+  SendConsoleInputFunction,
+  CodebridgeLevelProperties,
 } from '@codebridge/types';
-import React, {useEffect, useReducer, useRef} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
-import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
-import './styles/small-footer-dark-overrides.scss';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import Workspace from './Workspace';
-import Output from './Workspace/Output';
-import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
-
-import moduleStyles from './styles/cdoIDE.module.scss';
+import moduleStyles from './styles/codebridgeContainer.module.scss';
+import './styles/codebridge.scss';
 
 type CodebridgeProps = {
-  project: ProjectType;
+  source: MultiFileSource;
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
-  startSource: ProjectSources;
+  startSources: ProjectSources;
   onRun?: OnRunFunction;
   onStop?: () => void;
   projectVersion: number;
+  labConfig?: LabConfig;
+  sendConsoleInput?: SendConsoleInputFunction;
+  levelProperties: CodebridgeLevelProperties;
 };
 
 export const Codebridge = React.memo(
   ({
-    project,
+    source,
     config,
     setProject,
     setConfig,
-    startSource,
+    startSources,
     onRun,
     onStop,
     projectVersion,
+    labConfig,
+    sendConsoleInput,
+    levelProperties,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
-      projectReducer,
-      setProject,
-      new Set(PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT)
+      sourceReducer,
+      (source: MultiFileSource) => setProject({source, labConfig}),
+      new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
     );
-    const [internalProject, dispatch] = useReducer(
-      reducerWithCallback,
-      project
-    );
+    const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
+    const isShareView = useAppSelector(state => state.lab.isShareView);
 
-    const projectUtilities = useProjectUtilities(dispatch);
+    const sourceUtilities = useSourceUtilities(dispatch);
 
     const currentProjectVersion = useRef(projectVersion);
     useEffect(() => {
       if (projectVersion !== currentProjectVersion.current) {
-        projectUtilities.replaceProject(project);
+        sourceUtilities.replaceSource(source);
         currentProjectVersion.current = projectVersion;
       }
-    }, [currentProjectVersion, project, projectUtilities, projectVersion]);
+    }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
-    const ComponentMap = {
-      'file-browser': FileBrowser,
-      'side-bar': SideBar,
-      'file-preview': FilePreview,
-      'info-panel': config.Instructions || InfoPanel,
-      workspace: Workspace,
-      output: Output,
-      'workspace-and-output': WorkspaceAndOutput,
-    };
+    const innerLayout = useMemo(() => {
+      if (isShareView && config.layoutComponents.share) {
+        return config.layoutComponents.share;
+      }
+      let currentLayout = config.activeLayout;
+      if (!currentLayout) {
+        currentLayout = 'horizontal';
+      }
+      return config.layoutComponents[currentLayout];
+    }, [config.activeLayout, config.layoutComponents, isShareView]);
 
-    let gridLayout: string;
-    let gridLayoutRows: string;
-    let gridLayoutColumns: string;
-    if (
-      config.gridLayout &&
-      config.gridLayoutRows &&
-      config.gridLayoutColumns
-    ) {
-      gridLayout = config.gridLayout;
-      gridLayoutRows = config.gridLayoutRows;
-      gridLayoutColumns = config.gridLayoutColumns;
-    } else if (config.labeledGridLayouts && config.activeGridLayout) {
-      const labeledLayout = config.labeledGridLayouts[config.activeGridLayout];
-      gridLayout = labeledLayout.gridLayout;
-      gridLayoutRows = labeledLayout.gridLayoutRows;
-      gridLayoutColumns = labeledLayout.gridLayoutColumns;
-    } else {
-      throw new Error('Cannot render codebridge - no layout provided');
-    }
-    // gridLayout is a css string that defines the components in the grid layout.
-    // In order to find which components are in the grid layout, we remove all quotes
-    // from the string and tokenize it.
-    const gridLayoutKeys = gridLayout
-      .trim()
-      .replaceAll(`"`, '')
-      .split(' ')
-      .map(key => key.trim());
+    const appName = levelProperties.appName;
+
+    const backpackApi = useMemo(
+      () => new BackpackClientApi(appName, null),
+      [appName]
+    );
 
     return (
       <CodebridgeContextProvider
         value={{
-          project: internalProject,
+          source: internalSource,
           config,
           setProject,
           setConfig,
-          startSource,
+          startSources,
           onRun,
           onStop,
-          ...projectUtilities,
+          ...sourceUtilities,
+          labConfig,
+          sendConsoleInput,
+          levelProperties,
         }}
       >
-        <div
-          className={moduleStyles['cdoide-container']}
-          style={{
-            gridTemplateAreas: gridLayout,
-            gridTemplateRows: gridLayoutRows,
-            gridTemplateColumns: gridLayoutColumns,
-          }}
-        >
-          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => gridLayoutKeys.includes(key))
-            .map(key => {
-              const Component = ComponentMap[key];
-              return <Component key={key} />;
-            })}
-
-          {/*<Search />*/}
-        </div>
+        <BackpackAPIContext.Provider value={backpackApi}>
+          <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {innerLayout}
+          </div>
+        </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>
     );
   }

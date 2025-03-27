@@ -1,0 +1,9 @@
+name 'test-intro-to-programming-lesson7-level7'
+display_name 'Practice with Functions and Parameters'
+description 'Choose one of the options below!'
+
+sublevels
+level 'test-intro-to-programming-lesson7-level7a'
+level 'test-intro-to-programming-lesson7-level7b'
+level 'test-intro-to-programming-lesson7-level7c'
+

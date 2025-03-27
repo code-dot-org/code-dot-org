@@ -2,29 +2,33 @@
 #
 # Table name: pd_workshops
 #
-#  id                  :integer          not null, primary key
-#  organizer_id        :integer          not null
-#  location_name       :string(255)
-#  location_address    :string(255)
-#  processed_location  :text(65535)
-#  course              :string(255)      not null
-#  subject             :string(255)
-#  capacity            :integer          not null
-#  notes               :text(65535)
-#  section_id          :integer
-#  started_at          :datetime
-#  ended_at            :datetime
-#  created_at          :datetime
-#  updated_at          :datetime
-#  processed_at        :datetime
-#  deleted_at          :datetime
-#  regional_partner_id :integer
-#  on_map              :boolean
-#  funded              :boolean
-#  funding_type        :string(255)
-#  properties          :text(65535)
-#  module              :string(255)
-#  name                :string(255)
+#  id                     :integer          not null, primary key
+#  organizer_id           :integer          not null
+#  location_name          :string(255)
+#  location_address       :string(255)
+#  processed_location     :text(65535)
+#  course                 :string(255)      not null
+#  subject                :string(255)
+#  capacity               :integer          not null
+#  notes                  :text(65535)
+#  section_id             :integer
+#  started_at             :datetime
+#  ended_at               :datetime
+#  created_at             :datetime
+#  updated_at             :datetime
+#  processed_at           :datetime
+#  deleted_at             :datetime
+#  regional_partner_id    :integer
+#  on_map                 :boolean
+#  funded                 :boolean
+#  funding_type           :string(255)
+#  properties             :text(65535)
+#  module                 :string(255)
+#  name                   :string(255)
+#  participant_group_type :string(255)
+#  description            :text(65535)
+#  registration_link      :text(65535)
+#  hidden                 :boolean
 #
 # Indexes
 #
@@ -42,7 +46,7 @@ class Pd::Workshop < ApplicationRecord
   belongs_to :organizer, class_name: 'User', optional: true
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
 
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id', inverse_of: :workshop
   accepts_nested_attributes_for :sessions, allow_destroy: true
 
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
@@ -54,10 +58,9 @@ class Pd::Workshop < ApplicationRecord
 
   serialized_attrs [
     'fee',
-
-    # Indicates that this workshop will be conducted virtually, which triggers
-    # a different, virtual-specific post-workshop survey.
-    'virtual',
+    'grades',
+    'prereq',
+    'time_zone',
 
     # Allows a workshop to be associated with a third party
     # organization.
@@ -73,6 +76,8 @@ class Pd::Workshop < ApplicationRecord
     'suppress_email'
   ]
 
+  before_validation :sanitize_time_zone
+
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -82,7 +87,6 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
 
@@ -100,7 +104,7 @@ class Pd::Workshop < ApplicationRecord
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
-      unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
+      unless sessions.map {|session| session.start_time.to_date}.uniq.length == sessions.length
         errors.add(:sessions, 'must start on separate days.')
       end
     else
@@ -120,16 +124,18 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def friday_institute_workshops_must_be_virtual
-    if friday_institute? && !virtual?
-      errors.add :properties, 'Friday Institute workshops must be virtual'
-    end
-  end
-
   def virtual_only_subjects_must_be_virtual
     if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
       errors.add :properties, "Workshops with the subject #{subject} must be virtual"
     end
+  end
+
+  def virtual?
+    sessions.any? {|session| session.session_format == "virtual"}
+  end
+
+  def sanitize_time_zone
+    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
   end
 
   # Whether enrollment in this workshop requires an application
@@ -151,9 +157,15 @@ class Pd::Workshop < ApplicationRecord
   def self.enrolled_in_by(teacher)
     base_query = joins(:enrollments)
     user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
-    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email_for_enrollments})
+    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
 
-    user_id_where_clause.or(email_where_clause).distinct
+    alternate_email = teacher.alternate_email
+    if alternate_email.present?
+      alternate_email_where_clause = base_query.where(pd_enrollments: {email: alternate_email})
+      user_id_where_clause.or(email_where_clause).or(alternate_email_where_clause).distinct
+    else
+      user_id_where_clause.or(email_where_clause).distinct
+    end
   end
 
   def self.exclude_summer
@@ -336,10 +348,11 @@ class Pd::Workshop < ApplicationRecord
 
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
-    course_subject = subject ? "#{course} #{subject}" : course
+    course_title = name.presence || (subject ? "#{course} #{subject}" : course)
+    course_title += ' workshop' unless course_title.downcase.end_with?('workshop')
 
     # Limit the friendly name to 255 chars
-    name = "#{course_subject} workshop on #{start_time} at #{location_name}"
+    name = "#{course_title} on #{start_time} at #{location_name}"
     name += " in #{friendly_location}" if friendly_location.present?
     name[0...255]
   end
@@ -460,6 +473,14 @@ class Pd::Workshop < ApplicationRecord
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
         email.deliver_now
+
+        # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
+        if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
+          alt_summer_email = enrollment.user&.alternate_email
+          if alt_summer_email.present?
+            Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
+          end
+        end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
@@ -537,6 +558,12 @@ class Pd::Workshop < ApplicationRecord
     scheduled_start_in_days(20).select {|ws| ws.course == COURSE_CSA && ws.subject == Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP}.each do |workshop|
       workshop.enrollments.each do |enrollment|
         Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment).deliver_now
+
+        # Also send to the user's alternate summer email if they entered it in their application.
+        alt_summer_email = enrollment.user&.alternate_email
+        if alt_summer_email.present?
+          Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment, to_email: alt_summer_email).deliver_now
+        end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
@@ -925,6 +952,7 @@ class Pd::Workshop < ApplicationRecord
       id: id,
       course: course_name,
       subject: subject,
+      name: name,
       dates: workshop_date_range_string,
       location: location_address,
       sessions: sessions,

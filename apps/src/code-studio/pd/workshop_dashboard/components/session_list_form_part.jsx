@@ -37,6 +37,7 @@ export default class SessionListFormPart extends React.Component {
         .format(DATE_FORMAT),
       startTime: lastSession.startTime,
       endTime: lastSession.endTime,
+      format: lastSession.format,
     };
 
     sessions.push(newSession);
@@ -73,14 +74,17 @@ export default class SessionListFormPart extends React.Component {
     return (
       <div>
         <Row>
-          <Col sm={4}>
+          <Col sm={3}>
             <label className="control-label">Date</label>
           </Col>
-          <Col sm={3}>
+          <Col sm={2}>
             <label className="control-label">Start Time</label>
           </Col>
-          <Col sm={3}>
+          <Col sm={2}>
             <label className="control-label">End Time</label>
+          </Col>
+          <Col sm={3}>
+            <label className="control-label">Format</label>
           </Col>
         </Row>
         {sessionForms}

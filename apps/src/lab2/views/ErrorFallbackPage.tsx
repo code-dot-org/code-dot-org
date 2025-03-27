@@ -1,4 +1,7 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
+
+import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
@@ -20,6 +23,13 @@ export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
       {message && (
         <div className={moduleStyles.pageErrorMessage}>({message})</div>
       )}
+      <Button
+        text={commonI18n.reloadPage()}
+        onClick={() => {
+          location.reload();
+        }}
+        size="s"
+      />
     </div>
   </div>
 );

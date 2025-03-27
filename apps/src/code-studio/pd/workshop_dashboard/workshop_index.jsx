@@ -3,10 +3,15 @@
  * Route: /workshops
  */
 import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
+
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+import {
+  DATE_ORDER_ASC,
+  DATE_ORDER_DESC,
+} from '@cdo/apps/code-studio/pd/constants';
 
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
@@ -21,7 +26,6 @@ import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
-  date_order: 'desc',
   limit: 5,
 };
 const filterParams = {
@@ -45,19 +49,20 @@ export class WorkshopIndex extends React.Component {
     permission: PermissionPropType.isRequired,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
-  handleNewWorkshopClick = () => {
+  handleNewWorkshopClick = e => {
+    e.preventDefault();
     this.context.router.push('/workshops/new');
   };
 
-  handleAttendanceReportsClick = () => {
+  handleAttendanceReportsClick = e => {
+    e.preventDefault();
     this.context.router.push('/reports');
   };
 
-  handleLegacySurveySummariesClick = () => {
+  handleLegacySurveySummariesClick = e => {
+    e.preventDefault();
     this.context.router.push('/legacy_survey_summaries');
   };
 
@@ -102,18 +107,25 @@ export class WorkshopIndex extends React.Component {
           {canCreate && (
             <Button
               className="btn-primary"
+              href={this.context.router.createHref('/workshops/new')}
               onClick={this.handleNewWorkshopClick}
             >
               New Workshop
             </Button>
           )}
           {canSeeAttendanceReports && (
-            <Button onClick={this.handleAttendanceReportsClick}>
+            <Button
+              href={this.context.router.createHref('/reports')}
+              onClick={this.handleAttendanceReportsClick}
+            >
               Attendance Reports
             </Button>
           )}
           {canSeeLegacySurveySummaries && (
-            <Button onClick={this.handleLegacySurveySummariesClick}>
+            <Button
+              href={this.context.router.createHref('/legacy_survey_summaries')}
+              onClick={this.handleLegacySurveySummariesClick}
+            >
               Legacy Facilitator Survey Summaries
             </Button>
           )}
@@ -139,6 +151,7 @@ export class WorkshopIndex extends React.Component {
           tableId="inProgressWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('In Progress')}
+          initialOrderBy={DATE_ORDER_DESC}
         />
         <h2>Not Started</h2>
         <ServerSortWorkshopTable
@@ -149,6 +162,7 @@ export class WorkshopIndex extends React.Component {
           showSignupUrl
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Not Started')}
+          initialOrderBy={DATE_ORDER_ASC}
         />
         <h2>Past</h2>
         <ServerSortWorkshopTable
@@ -157,6 +171,7 @@ export class WorkshopIndex extends React.Component {
           tableId="endedWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Ended')}
+          initialOrderBy={DATE_ORDER_DESC}
         />
       </div>
     );

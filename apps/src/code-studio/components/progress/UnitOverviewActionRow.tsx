@@ -1,7 +1,7 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -147,6 +147,11 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   const viewAs = useSelector(
     (state: {viewAs: keyof typeof ViewType}) => state.viewAs
   ) as string;
+
+  const isTeacher = useSelector(
+    (state: {currentUser: {isTeacher: boolean}}) => state.currentUser.isTeacher
+  );
+
   const selectedSectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
   );
@@ -273,7 +278,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
           )}
         </div>
 
-        {showV2TeacherDashboard() && (
+        {showV2TeacherDashboard() && isTeacher && (
           <div className={styles.viewAs}>
             {<label className={styles.viewAsLabel}>{i18n.viewPageAs()}</label>}
             <SegmentedButtons

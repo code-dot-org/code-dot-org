@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-06-28T19:54:46.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Dialogue Generator\r\n\r\nJorge is a writer who loves thinking up plot points, or describing the setting, or developing interesting characters... but he doesn't really like writing dialogue. He's like to create a chatbot that helps him write the dialogue between his characters. He'd like the dialogue to match his story, so the chatbot should take into account as many story details as it can.\r\n\r\n### Do this\r\n\r\nWrite a prompt that generates dialogue between two characters. Include at least two steps that ask the user for more details about the story, incorporating details like character traits, potential plot points, or the setting of the story.\r\n\r\nTest the chatbot! Have a few different conversations, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
+    "long_instructions": "## Dialogue Generator\r\n\r\nJorge is a writer who loves thinking up plot points, or describing the setting, or developing interesting characters... but he doesn't really like writing dialogue. He'd like to create a chatbot that helps him write the dialogue between his characters. He'd like the dialogue to match his story, so the chatbot should take into account as many story details as it can.\r\n\r\n### Do this\r\n\r\nWrite a prompt that generates dialogue between two characters. Include at least two steps that ask the user for more details about the story, incorporating details like character traits, potential plot points, or the setting of the story.\r\n\r\nTest the chatbot! Have a few different conversations, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -48,7 +49,6 @@
     "thumbnail_url": "https://images.code.org/f20e7fafa53e584f6f2d570d67b46f30-Lesson 5 - Level 8A - Dialogue Generator.png",
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:46.701+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L9A\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L9A\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:46.701+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L9A\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L9A\"},{\"changed_at\":\"2025-01-08 23:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

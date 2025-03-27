@@ -26,8 +26,8 @@ Given(/^I enter a temp unit name$/) do
   @temp_script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
   puts "temp unit name: #{@temp_script_name}"
   steps %{
-    And element ".familyNameInput" is visible
-    And I press keys "#{@temp_script_name}" for element ".familyNameInput"
+    And element "input[name='script[name]']" is visible
+    And I press keys "#{@temp_script_name}" for element "input[name='script[name]']"
   }
 end
 

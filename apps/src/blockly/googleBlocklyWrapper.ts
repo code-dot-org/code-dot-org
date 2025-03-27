@@ -19,12 +19,14 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
-import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
+
+import {START_BLOCKS} from '../constants';
+import {START_SOURCES} from '../lab2/constants';
 
 import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
@@ -48,7 +50,7 @@ import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
-import {overrideHandleTouchMove} from './addons/cdoGesture';
+import {gestureOverrides} from './addons/cdoGesture';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -119,6 +121,7 @@ import {
   handleCodeGenerationFailure,
   strip,
   interpolateMsg,
+  isDarkTheme,
 } from './utils';
 
 const options = {
@@ -276,7 +279,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // These are exclusively provided via the FieldColour plugin as of Blockly v11.
   installFieldColourBlocks({javascript: javascriptGenerator});
 
-  type registrableFieldType = Pick<typeof GoogleBlockly.Field, 'prototype'>;
+  type registrableFieldType = GoogleBlockly.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
   const fieldOverrides: [string, string, registrableFieldType][] = [
@@ -503,6 +506,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
   };
 
+  const originalSetInputsInline =
+    blocklyWrapper.Block.prototype.setInputsInline;
+  // Replace the original setInputsInline with a version that forces a
+  // two-row Play Lab block to always use inline inputs..
+  extendedBlockSvg.setInputsInline = function (inline) {
+    originalSetInputsInline.call(this, inline);
+    if (
+      this.type === 'studio_whenSpriteAndGroupCollide' &&
+      !this.getInputsInline()
+    ) {
+      this.setInputsInline(true);
+    }
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
@@ -532,6 +549,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       fieldHelper,
       options
     );
+    return this;
+  };
+
+  // This is intentionally a no-op. Called by PlayLab.
+  // Google Blockly's implementation uses end row inputs instead.
+  extendedInput.setInline = function (inline) {
     return this;
   };
 
@@ -636,9 +659,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
-  if (DCDO.get('blockly-move', true)) {
-    overrideHandleTouchMove(blocklyWrapper);
-  }
+  gestureOverrides(blocklyWrapper);
 
   // Used for spritelab behavior blocks.
   // We can remove this once we are ready to no longer support sprite lab on CDO Blockly.
@@ -825,13 +846,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         container as HTMLElement
       ).style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
-    blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
+    blocklyWrapper.disableVariableEditing =
+      !!optOptionsExtended.disableVariableEditing;
+    blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
+    blocklyWrapper.isStartMode =
+      !!optOptionsExtended.editBlocks &&
+      // Lab2 levels such as Music Lab use 'start_sources', while older labs use 'start_blocks'.
+      [START_BLOCKS, START_SOURCES].includes(optOptionsExtended.editBlocks);
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
+    blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options
@@ -883,6 +911,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.addChangeListener(updateBlockLimits);
     }
 
+    // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    if (blocklyWrapper.isToolboxMode) {
+      workspace.addChangeListener(event => {
+        if (event.type === GoogleBlockly.Events.MOVE) {
+          workspace.cleanUp();
+        }
+      });
+    }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate
     // location.
@@ -912,7 +948,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     );
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
-    scrollOptionsPlugin.init();
+    scrollOptionsPlugin.init({
+      // Rather than using the block edge, we always use the mouse cursor (plus a margin)
+      // to activate block-based scrolling.
+      edgeScrollOptions: {oversizeBlockThreshold: 0},
+    });
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
@@ -965,6 +1005,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       // initialize the modal function editor.
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
+    }
+
+    const blocklySvgElement = document.querySelector('.blocklySvg');
+    if (blocklySvgElement) {
+      blocklySvgElement.setAttribute('tabindex', '-1');
     }
 
     return workspace;

@@ -20,6 +20,7 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
@@ -54,11 +55,12 @@
         "ur-PK",
         "vi-VN"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "playlab",
-    "serialized_at": "2024-11-19 01:19:19 UTC",
+    "serialized_at": "2025-01-09 16:49:38 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -121,7 +123,8 @@
       "key": "974b1dfa-682c-4556-89d8-af3f0d0a9d69",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "974b1dfa-682c-4556-89d8-af3f0d0a9d69",

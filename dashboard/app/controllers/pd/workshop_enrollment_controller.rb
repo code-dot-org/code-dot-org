@@ -33,8 +33,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     elsif !current_user
       @script_data = {
         props: {
-          new_account_url: "#{new_user_registration_url}?user_return_to=#{request.fullpath}",
-          existing_account_url: "/users/sign_in?user_return_to=#{request.fullpath}"
+          new_account_url: "/users/sign_up/login_type?user_type=teacher&user_return_to=/pd/workshops/#{@workshop.id}/enroll",
+          existing_account_url: "/users/sign_in?user_return_to=/pd/workshops/#{@workshop.id}/enroll"
         }.to_json
       }
       render :logged_out
@@ -44,13 +44,16 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
       render '/pd/application/teacher_application/no_teacher_email'
+    elsif @workshop.enrollments.any? {|enrollment| enrollment.user_id == current_user.id}
+      @user_email = current_user.email
+      render :already_enrolled
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       @enrollment.full_name = current_user.name
-      @enrollment.email = current_user.email_for_enrollments
-      @enrollment.email_confirmation = current_user.email_for_enrollments
+      @enrollment.email = current_user.email
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
+      session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
       facilitators = @workshop.facilitators.map do |facilitator|
         # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
@@ -87,11 +90,14 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               course_url: @workshop.course_url,
               fee: @workshop.fee,
               properties: nil,
-              virtual: @workshop.virtual,
+              location_name: @workshop.friendly_location,
+              virtual: @workshop.virtual?,
               course_offerings: @workshop.course_offerings
             }
           ),
+          workshop_location_for_calendar: @workshop.location_address.presence || @workshop.location_name,
           session_dates: session_dates,
+          session_info_for_calendar: session_info_for_calendar,
           enrollment: @enrollment,
           facilitators: facilitators,
           workshop_enrollment_status: "unsubmitted",
@@ -187,11 +193,20 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # Gets the workshop enrollment associated with the current user id or email used for
   # enrollments if one exists. Otherwise returns a new enrollment for that user.
   private def get_workshop_user_enrollment
-    @workshop.enrollments.where(user_id: current_user.id).or(@workshop.enrollments.where(email: current_user.email_for_enrollments)).first || Pd::Enrollment.new(
+    enrollment_by_user_id = @workshop.enrollments.where(user_id: current_user.id).first
+    return enrollment_by_user_id if enrollment_by_user_id.present?
+
+    enrollment_by_email = @workshop.enrollments.where(email: current_user.email).first
+    return enrollment_by_email if enrollment_by_email.present?
+
+    enrollment_by_alternate_email = @workshop.enrollments.where(email: current_user.alternate_email).first
+    return enrollment_by_alternate_email if enrollment_by_alternate_email.present?
+
+    Pd::Enrollment.new(
       pd_workshop_id: @workshop.id,
       user_id: current_user.id,
       full_name: current_user.name,
-      email: current_user.email_for_enrollments
+      email: current_user.email
     )
   end
 

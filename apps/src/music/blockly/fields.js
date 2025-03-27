@@ -63,6 +63,7 @@ export const fieldRestDurationDefinition = {
     [musicI18n.blockly_fieldRestBeats({num: 2}), '0.5'],
     [musicI18n.blockly_fieldRestOneMeasure(), '1'],
     [musicI18n.blockly_fieldRestMeasures({num: 2}), '2'],
+    [musicI18n.blockly_fieldRestMeasures({num: 3}), '3'],
   ],
 };
 

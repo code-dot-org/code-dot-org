@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2025-03-22T01:22:27.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Computing Innovation Map\r\n\r\n![](https://images.code.org/6f32ab87e5311ad41bebfe978ed14a71-image-1738282808454.png)\r\n\r\n### Do This:\r\n\r\n* Click the link to open the interactive Computing Innovation Map.\r\n* Click on the markers to explore different computing innovations in medicine, agriculture, education, and fashion.\r\n* Watch videos and read descriptions to learn how each innovation works.\r\n* Choose one innovation to investigate.\r\n\r\n**Note:** If you are unable to access the site linked below, you can use this resource as an alternative [Computing Innovation Map](https://docs.google.com/presentation/d/11_vTxAX7WZTmFqn2jQRvDkErAhHlQriLj2KfWEJM2Zg/edit?usp=sharing)",
+    "link_title": "Computing Innovation Map",
+    "url": "https://www.google.com/maps/d/u/1/viewer?hl=en&mid=1wpU-4sxapqN7ksztqtEdVEcKtbhCcA0",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:22:27.437+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level1-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level1-2024\"}]"
+}]]></config>
+</ExternalLink>

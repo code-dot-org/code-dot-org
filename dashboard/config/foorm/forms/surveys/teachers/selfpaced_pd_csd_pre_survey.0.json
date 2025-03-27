@@ -123,8 +123,8 @@
           "name": "how_nessessary_to_learn",
           "title": "How necessary is it for students to learn computer science?",
           "rateMax": 7,
-          "minRateDescription": "Very unnecessary",
-          "maxRateDescription": "Not necessary at all"
+          "minRateDescription": "Not necessary at all",
+          "maxRateDescription": "Very necessary"
         }
       ]
     },

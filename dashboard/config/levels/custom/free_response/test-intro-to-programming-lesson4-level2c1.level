@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-01-24T20:27:39.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Step 1: Understanding the Problem\r\n\r\nAnswer the questions below:\r\n1. What is the main goal of this algorithm?\r\n2. What constraints must your algorithm account for?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-24T20:27:39.733+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson4-level2b1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson4-level2b1\"},{\"changed_at\":\"2025-01-24 20:27:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

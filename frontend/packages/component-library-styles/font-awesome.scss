@@ -1,0 +1,15 @@
+/*
+   This file is a copy of `shared/css` and is meant for temporary usage to add Font Awesome Pro support.
+   This file will be replaced by the long term font solution: https://codedotorg.atlassian.net/browse/ACQ-2799
+ */
+@import 'font.scss';
+
+/* stylelint-disable import-notation */
+@import url($font-awesome-core-url);
+@import url($font-awesome-brands-url);
+@import url($font-awesome-solid-url);
+@import url($font-awesome-regular-url);
+@import url($font-awesome-v4-fonts-url);
+@import url($font-awesome-v4-shims-url);
+@import url($font-awesome-duotone-url);
+@import url($font-awesome-custom-icons-url);

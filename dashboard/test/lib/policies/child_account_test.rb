@@ -359,26 +359,34 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when the user does not have a state' do
-      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil)}
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: 'US')}
 
       it 'returns false' do
         _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when the user is outside the US' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: 'CA')}
+
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
       end
     end
 
     context 'when the user does not have a country' do
       let(:user) {build_stubbed(:student, birthday: user_birthday, country_code: nil)}
 
-      it 'returns false' do
-        _(can_link_new_personal_account?).must_equal false
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
       end
     end
 
     context 'when the user does not have a state nor country' do
       let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: nil)}
 
-      it 'returns false' do
-        _(can_link_new_personal_account?).must_equal false
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
       end
     end
 

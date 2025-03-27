@@ -1,4 +1,4 @@
-import {ProjectType} from '@codebridge/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 /**
  * Sorts an array of files by their names.
@@ -9,7 +9,7 @@ import {ProjectType} from '@codebridge/types';
  * @returns A new array containing the sorted files.
  */
 export const sortFilesByName = (
-  files: ProjectType['files'],
+  files: MultiFileSource['files'],
   options = {mustBeOpen: true}
 ) => {
   return Object.values(files)

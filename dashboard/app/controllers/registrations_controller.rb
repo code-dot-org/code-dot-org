@@ -21,29 +21,11 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/sign_up
   #
   def new
-    session[:user_return_to] ||= params[:user_return_to]
-    if PartialRegistration.in_progress?(session)
-      user_params = params[:user] || ActionController::Parameters.new
-      user_params[:user_type] ||= session[:default_sign_up_user_type]
-      user_params[:email] ||= params[:email]
-      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
-    else
-      save_default_sign_up_user_type
-      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
-      super
+    sign_up_path = users_sign_up_account_type_url
+    if params[:user_return_to]
+      sign_up_path += "?user_return_to=#{params[:user_return_to]}"
     end
-  end
-
-  # If the user[user_type] queryparam is provided and valid, save its value
-  # into the session so we can use it as a default on the finish_sign_up page.
-  # If not, clear it from the session so we don't use a misleading default.
-  def save_default_sign_up_user_type
-    requested_user_type = params.dig(:user, :user_type)
-    if User::USER_TYPE_OPTIONS.include? requested_user_type
-      session[:default_sign_up_user_type] = requested_user_type
-    else
-      session.delete(:default_sign_up_user_type)
-    end
+    redirect_to sign_up_path
   end
 
   #
@@ -55,38 +37,28 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
 
-    if params[:new_sign_up].present?
-      SignUpTracking.begin_sign_up_tracking session
-      SignUpTracking.log_load_sign_up request
-    end
-    SignUpTracking.log_begin_sign_up(@user, request)
-
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
     else
-      if params[:new_sign_up].present?
-        render json: {
-          error: @user.errors.as_json(full_messages: true)
-        }, status: :bad_request
-      end
-    end
-
-    if params[:new_sign_up].blank?
-      render 'new'
+      render json: {
+        error: @user.errors.as_json(full_messages: true)
+      }, status: :bad_request
     end
   end
 
   #
-  # Get /users/new_sign_up/account_type
+  # Get /users/sign_up/account_type
   #
   def account_type
+    @is_signed_out = current_user.nil?
     view_options(full_width: true, responsive_content: true)
   end
 
   #
-  # Get /users/new_sign_up/login_type
+  # Get /users/sign_up/login_type
   #
   def login_type
+    @is_signed_out = current_user.nil?
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
   end
@@ -99,7 +71,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/new_sign_up/finish_student_account
+  # Get /users/sign_up/finish_student_account
   #
   def finish_student_account
     @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
@@ -116,12 +88,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/new_sign_up/finish_teacher_account
+  # Get /users/sign_up/finish_teacher_account
   #
   def finish_teacher_account
     location = Geocoder.search(request.ip).try(:first)
     @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
+
     render 'finish_teacher_account'
   end
 
@@ -131,10 +104,6 @@ class RegistrationsController < Devise::RegistrationsController
   # Cancels the in-progress partial user registration and redirects to sign-up page.
   #
   def cancel
-    provider = PartialRegistration.get_provider(session) || 'email'
-    SignUpTracking.log_cancel_finish_sign_up(request, provider)
-    SignUpTracking.end_sign_up_tracking(session)
-
     PartialRegistration.delete(session)
     redirect_to new_user_registration_path
   end
@@ -177,14 +146,14 @@ class RegistrationsController < Devise::RegistrationsController
         )
       end
 
-      if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up])
-        session[:user_return_to] ||= params[:user_return_to]
+      begin
         @user = Services::PartialRegistration::UserBuilder.call(request: request)
-        SignUpTracking.log_load_finish_sign_up request, (@user.providers&.first || 'email')
-        sign_in @user
-      else
-        super
+      rescue ActiveRecord::RecordInvalid => exception
+        return render json: {
+          error: exception
+        }, status: :bad_request
       end
+      sign_in @user
     end
 
     if current_user && current_user.errors.blank?
@@ -233,8 +202,6 @@ class RegistrationsController < Devise::RegistrationsController
         get_enabled_experiments: true,
       )
     end
-
-    SignUpTracking.log_sign_up_result resource, request
   end
 
   #
@@ -467,7 +434,7 @@ class RegistrationsController < Devise::RegistrationsController
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
     @country_code = location&.country_code.to_s.upcase
-    @is_usa = ['US', 'RD'].include?(@country_code)
+    @is_usa = Policies::User.in_usa?(@country_code)
 
     # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
     underage = Policies::ChildAccount.underage?(current_user)
@@ -476,6 +443,7 @@ class RegistrationsController < Devise::RegistrationsController
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
     @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user)
+    @personal_account_linking_enabled = false if current_user.student? && (@is_usa && current_user.country_code.nil?)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if underage || !Policies::ChildAccount.has_required_information?(current_user)

@@ -11,10 +11,11 @@ export function shouldShowFile(file?: ProjectFile) {
   }
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
-  // If we are in start mode, show all files. If we are not in start mode,
-  // show starter files, locked starter files, and files without a type.
+  // If we are in start mode, show all files except system support files.
+  // If we are not in start mode, show starter files, locked starter files,
+  // and files without a type.
   return isStartMode
-    ? true
+    ? file.type !== ProjectFileType.SYSTEM_SUPPORT
     : file.type === ProjectFileType.STARTER ||
         file.type === ProjectFileType.LOCKED_STARTER ||
         !file.type;
@@ -47,7 +48,9 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 /**
  * Prepare the source for saving in levelbuilder. This moves the validation file
  * into a separate field and removes it from the files and list of open files, if
- * it was open.
+ * it was open. It also removes system support files, which are included in the sources
+ * from the other level properties and therefore don't also need to be in the start sources
+ * (for example, the maze grid).
  *
  * We split out the validation file because it is handled differently from start sources
  * in user code. The validation file is not saved to the user's project, and we always use
@@ -60,9 +63,15 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
   if (!source) {
     return {parsedSource: null, validationFile: null};
   }
+
+  // We skip validation and system support files when saving to levelbuilder.
+  // The validation file is split out into a separate field, and system support
+  // files are not part of level start sources.
   const newFiles = Object.fromEntries(
     Object.entries(source.files).filter(
-      ([_, file]) => file.type !== ProjectFileType.VALIDATION
+      ([_, file]) =>
+        file.type !== ProjectFileType.VALIDATION &&
+        file.type !== ProjectFileType.SYSTEM_SUPPORT
     )
   );
   let validationFile = getValidationFromSource(source) || null;
@@ -86,7 +95,7 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
  * @returns: MultiFileSource with the validation file added to the files, if it exists.
  */
 export function combineStartSourcesAndValidation(
-  source?: MultiFileSource,
+  source: MultiFileSource,
   validationFile?: ProjectFile
 ) {
   let returnValue = source;

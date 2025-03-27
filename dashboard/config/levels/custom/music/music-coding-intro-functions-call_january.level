@@ -1,0 +1,330 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:10.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-bullhorn\"></i> Call a Function\r\nA chorus function has already been defined!\r\n1. To call the [chorus](#clickable=flyout-first-block) function add it under [when run](#clickable=when-run-block). \r\n- Press [Run](#clickable=run-button) to see how it works. ",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_riptide",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 34,
+              "y": 34,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "intro-call",
+              "x": 190,
+              "y": 30,
+              "deletable": false,
+              "extraState": {
+                "procedureId": "intro-procedure",
+                "initialDeleteConfig": false,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "OJW^%gSWxo:Q]%_9Uv1V",
+                          "deletable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "chainsmokers_riptide/drums_scratch_tone"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "WmRmQe1YKcEyWeR!-R.!",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_riptide/vocals_chorus_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "~4#B+CLI?7q0bFzd|Z8[",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_riptide/bass_1"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together_no_next",
+                        "id": "^fbpb)DaPk:Udqo(~A!.",
+                        "deletable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "N/KYOy.IXc7m*u(+;Buh",
+                              "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "chainsmokers_riptide/drums_scratch_tone"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "L9RvL62mB^I{kF~H:qWk",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "chainsmokers_riptide/vocals_chorus_2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "chainsmokers_riptide/bass_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "jN6v:04PQW@K=KC*]Ik]",
+                                          "deletable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "chainsmokers_riptide/synth_slide"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "intro-procedure",
+            "name": "chorus",
+            "returnTypes": null
+          }
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout",
+        "addFunctionCalls": true
+      },
+      "sounds": {
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle",
+          "brass",
+          "dark_sweep_crash",
+          "dive",
+          "kick_impact",
+          "bubble",
+          "vibraslap"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme",
+          "crash_build",
+          "crunch",
+          "hey",
+          "rustle",
+          "scratch",
+          "swipe"
+        ],
+        "chainsmokers_riptide": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_chorus_tag",
+          "vocals_its_only_you",
+          "drums_kick_snare_big",
+          "drums_kick_snare_small",
+          "drums_claps",
+          "drums_full",
+          "drums_hat",
+          "drums_mouth_drums",
+          "drums_scratch_tone",
+          "drums_snare_tone",
+          "cymbal_long",
+          "cymbal_short",
+          "open_can",
+          "reverse_chord",
+          "riser",
+          "bass_1",
+          "bass_2",
+          "bass_drop",
+          "bass_growl",
+          "bass_sub_1",
+          "bass_sub_2",
+          "synth_drop",
+          "synth_slide"
+        ]
+      }
+    },
+    "validations": [
+      {
+        "key": "music-ai-functions-chorus_40e32b8b-3591-4266-82c8-cc24049aa1a0",
+        "message": "Nice work.  You successfully used the function to play a sound.",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "chorus"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
+        "message": "Connect the [chorus](#clickable=flyout-first-block) block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-first-block---when-run-block"
+      }
+    ],
+    "name_suffix": "_january",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:10.443+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-call\\\"\"],\"cloned_from\":\"music-coding-intro-functions-call\"}]"
+}]]></config>
+  <blocks/>
+</Music>

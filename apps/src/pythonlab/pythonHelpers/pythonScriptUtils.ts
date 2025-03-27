@@ -72,7 +72,7 @@ export function writeSource(
 // these are files such as validation that do not need to be saved to the user's project.
 export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
-  id: number,
+  id: string,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void,
   skippedFilenames: string[] = []
@@ -101,7 +101,7 @@ function updateAndDeleteSourceWithContents(
   source: MultiFileSource,
   currentPath: string,
   folderId: string,
-  id: number,
+  id: string,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void,
   skippedFilenames: string[] = []

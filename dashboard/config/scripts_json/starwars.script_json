@@ -8,6 +8,7 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "ca-ES",
@@ -50,11 +51,12 @@
         "zh-CN",
         "zh-TW"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "starwars",
-    "serialized_at": "2024-11-19 01:19:39 UTC",
+    "serialized_at": "2025-01-09 18:08:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -103,7 +105,8 @@
       "key": "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4",
       "position": 1,
       "properties": {
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4",
@@ -116,7 +119,8 @@
       "key": "156ffaf5-a045-4956-9c89-15fcc64fa3af",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "156ffaf5-a045-4956-9c89-15fcc64fa3af",
@@ -156,7 +160,8 @@
       "key": "ab54fc81-dcbd-4647-a4c7-5308b0b6299b",
       "position": 5,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 2,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "ab54fc81-dcbd-4647-a4c7-5308b0b6299b",

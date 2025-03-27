@@ -1,0 +1,49 @@
+name 'csaif_pl_security'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Security Risks
+
+#### Understanding security risks is crucial to protecting personal and sensitive information. Cyber-threats like keylogging, phishing, and malware can compromise your data and privacy.
+
+## 📝 To Do
+#### Make a copy (either digital or physical) of the <a href='https://docs.google.com/presentation/d/1lGhQk816jVmjz98MuLuAhm6z3l2uZ2yttsibnNDYjfA/edit#slide=id.p' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Vocabulary Canvas</a>. Design the Vocabulary Canvas with definitions, images, and representations that are unique and meaningful to you.
+
+#### These vocabulary words may be new to you. Learn more about each one.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📖 Keylogging</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### **Definition:** the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information.
+
+#### Explore more on this <a href="https://studio.code.org/s/csp8-2024/lessons/5/levels/1" target="blank" rel="noopener noreferrer">Curriculum Level</a>.
+</p></div>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📖 Phishing </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### **Definition:** a technique that attempts to trick a user into providing personal information. That personal information can then be used to access sensitive online resources, such as bank accounts and emails.
+
+#### Explore more on this <a href="https://studio.code.org/s/csp8-2024/lessons/5/levels/2" target="blank" rel="noopener noreferrer">Curriculum Level</a>.
+</p></div>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📖 Malware</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### **Definition:** software intended to damage a computing system or to take partial control over its operation.
+
+#### Explore more on this <a href="https://studio.code.org/s/csp8-2024/lessons/5/levels/1" target="blank" rel="noopener noreferrer">Curriculum Level</a>.
+</p></div>
+</details>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ These vocabulary words are from Lesson 5. You can learn more in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+MARKDOWN

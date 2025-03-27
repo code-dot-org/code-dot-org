@@ -1,0 +1,26 @@
+name 'self-paced-equity-U2L3-closing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+<img src="https://images.code.org/485d45dd7ddf21283bcdd7500630db1d-image-1736377242133.00.40 PM.png" alt="Two students sit at a desk in front of laptops. One points at the other's screen." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### So far, you have:
+
+* #### Become an advocate for equity and inclusion within your school and community.
+* #### Expanded participation in computer science classes.
+
+## Up Next
+
+#### In the next section of this professional learning module, you will:
+
+* #### Use a common definition of inclusion and accessibility.
+* #### Recognize that all students can and should learn CS.
+* #### Describe the influence you have over culture and student success in a CS classroom
+
+<br>
+
+#### Click continue to keep going!
+MARKDOWN

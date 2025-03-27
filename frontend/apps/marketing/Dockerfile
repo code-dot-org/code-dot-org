@@ -38,7 +38,7 @@ COPY . .
  
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
 # See: https://turbo.build/repo/docs/reference/prune
-RUN yarn turbo prune @code-dot-org/marketing --docker
+RUN yarn dlx turbo prune @code-dot-org/marketing --docker
 
 ##############################################################################
 # Builder Layer                                                              #
@@ -59,8 +59,9 @@ WORKDIR /app
 # First install the dependencies (as they change less often)
 COPY --link --from=source-code /app/out/json/ .
 RUN yarn install
- 
+
 # Build the project
+COPY --link --from=source-code /app/.turbo .turbo
 COPY --link --from=source-code /app/out/full/ .
 RUN yarn turbo run build
 
@@ -76,15 +77,15 @@ RUN yarn turbo run build
 
 FROM base AS runner
 WORKDIR /app
- 
+
 # Don't run production as root
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 USER nextjs
- 
+
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --link --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/standalone ./
 COPY --link --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/static ./apps/marketing/.next/static
- 
+
 CMD ["node", "apps/marketing/server.js"]

@@ -8,5 +8,6 @@ export interface NeighborhoodSignal {
     direction?: string;
     x?: string;
     y?: string;
+    paint?: number;
   };
 }

@@ -330,28 +330,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
-  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+  test 'alternate_email returns nil if user has no latest accepted application' do
     user = create :teacher
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+  test 'alternate_email returns nil if users latest accepted application has no alternate email' do
     user = create :teacher
-    application = create :pd_teacher_application, user: user
+    application = create :pd_teacher_application, user: user, status: 'accepted'
     application_form_data = application.form_data_hash
-    application_form_data['alternateEmail'] = nil
+    application_form_data['alternateEmail'] = ''
     application.update!(form_data_hash: application_form_data)
 
     assert application.form_data_hash['alternateEmail'].blank?
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+  test 'alternate_email returns app alternate email if users latest accepted application has alternate email' do
     user = create :teacher
     application = create :pd_teacher_application, user: user, status: 'accepted'
     app_alternate_email = application.form_data_hash['alternateEmail']
 
-    assert_equal user.email_for_enrollments, app_alternate_email
+    assert_equal user.alternate_email, app_alternate_email
   end
 
   test "log in with password with pepper" do
@@ -508,8 +508,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email does not have to be unique when existing user has LTI authentication" do
-    user = create :teacher, :with_lti_auth
-    dupe_user = create(:teacher, email: user.email)
+    email = "duplicated_email@foo.com"
+    create :teacher, :with_lti_auth, email: email
+    dupe_user = create(:teacher, email: email)
     assert dupe_user.valid?
   end
 
@@ -816,6 +817,31 @@ class UserTest < ActiveSupport::TestCase
     refute_nil user.errors[:email]
   end
 
+  test "can create teacher user with a valid educator_role" do
+    user = create :teacher, :with_educator_role
+    assert user.valid?
+    assert_empty user.errors[:educator_role]
+  end
+
+  test "cannot create teacher user with an invalid educator_role" do
+    user = build(:teacher, educator_role: "fake_role")
+    refute user.save
+    assert_includes user.errors[:educator_role], "is not included in the list"
+  end
+
+  test "cannot create student user with an educator_role" do
+    user = assert_does_not_create(User) do
+      User.create(@good_data.merge({educator_role: SharedConstants::EDUCATOR_ROLES.first[:value]}))
+    end
+    refute_nil user.errors[:educator_role]
+  end
+
+  test "teachers with a valid educator_role can change user_type to student" do
+    user = create :teacher, :with_educator_role
+    user.set_user_type(User::TYPE_STUDENT)
+    assert user.valid?
+  end
+
   test "LTI users with school_info_id should have a user_school_info entry" do
     lti_integration = create :lti_integration
     auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
@@ -965,12 +991,9 @@ class UserTest < ActiveSupport::TestCase
     email = 'test@foo.bar'
     migrated_student = create(:student, email: email)
 
-    legacy_student = build(:student, email: email)
-    # ignore "Email has already been taken" error
-    assert_raises(ActiveRecord::RecordInvalid) do
-      legacy_student.save(validate: false)
-    end
-    legacy_student.demigrate_from_multi_auth
+    legacy_student = build(:user, :demigrated, email: email)
+    # skip validation since we're creating a second user with the same email
+    legacy_student.save(validate: false)
     assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
@@ -1619,7 +1642,7 @@ class UserTest < ActiveSupport::TestCase
     @student.update!(races: 'white,closed_dialog')
     @student.reload
     assert_equal 'closed_dialog', @student.races
-    assert_nil @student.urm
+    refute @student.urm
   end
 
   test 'sanitize_race_data sanitizes too many races' do
@@ -1628,7 +1651,7 @@ class UserTest < ActiveSupport::TestCase
     student.update!(races: 'american_indian,asian,black,hawaiian,hispanic,white')
     student.reload
     assert_equal 'nonsense', student.races
-    assert_nil student.urm
+    refute student.urm
   end
 
   test 'sanitize_race_data sanitizes non-races' do

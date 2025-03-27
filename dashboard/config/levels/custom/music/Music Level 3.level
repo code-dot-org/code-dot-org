@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "intro2024",
       "text": "Try everything!",

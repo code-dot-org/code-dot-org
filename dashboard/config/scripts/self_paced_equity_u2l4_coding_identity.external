@@ -1,0 +1,71 @@
+name 'self-paced-equity-U2L4-coding-identity'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Thread 2: Personally Relevant Practice
+
+## What is it?
+
+<img src="https://images.code.org/5397778581461e1b8dd3d8acfc1e2b12-image-1736531222006.46.58 AM.png" alt="A teacher kneels by an elementary school students with headphones working at a laptop." style="border-radius:20px; float: left; height: 200px; clear: both; margin: 0px 10px 10px 10px;">
+
+#### Students need to know why the concepts they are learning matter and how they will be used in the real world. Practice problems should allow students to apply new knowledge in a way that supports their growth while also providing relevance for the work they are doing. As noted in the Microsoft Guide to Inclusive Computer Science Education, activities should **"build on the cultural assets, prior knowledge and interests of students to feature CS in contexts that are interesting for students"**<sup>2</sup>. Practice problems that are meaningful and relevant to students in this way build confidence and interest in learning computer science.
+<br>
+
+## What does it look like?
+
+<img src="https://images.code.org/24338f1a80a0357aa6b5e977c2a1b3a1-image-1736531182881.46.19 AM.png" alt="Two high school students sit at a desk, while a third student and a teacher look over their shoulder at a notebook." style="border-radius:20px; float: right; height: 200px; clear: both; margin: 0px 10px 10px 10px;">
+
+* #### Providing multiple means of engagement to meet the needs of various learning preferences and personal interests in the CS classroom.
+* #### Offering choices in achieving lesson and unit objectives to help students feel more self-confident and connected to their learning.<sup>3</sup>
+* #### Differentiating practice by skills or topics to build students' confidence through success with problems at their personal skill levels.
+* #### Increasing students' personal connection to content by allowing them to use programming to explore their interests.
+* #### Helping students make connections between classroom work and the technology they use every day to see the authenticity and relevance of the concepts they are learning.
+
+## Examples in Code.org Curricula
+
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### The CS Connections Module <a href="https://studio.code.org/s/csc-bookcovers-2023" target="blank" rel="noopener noreferrer">Coding Book Covers</a> guides students through coding an interactive book cover for their favorite book to recommend to others, including characters, a setting, and a summary. <a href="https://studio.code.org/s/csc-bookcovers-2023/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2</a> of the module opens a discussion where students name their favorite book they've read this year to connect to joyful experiences students have with reading.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### CS Discoveries provides ample opportunities for students to direct their own learning by including choice practice levels. Students are able to choose which levels they would like to participate in to practice the skills they learned during the direct instruction portion of a lesson. See page 3 of the <a href="https://docs.google.com/document/d/1fwXnkosoiHTJJuc2CGF9zEwl0NsUa20Z7THRk8cuZwg/edit?usp=sharing" target="blank" rel="noopener noreferrer">CS Discoveries Guide to Programming Levels</a> for more about our approach to these levels.
+
+#### Here are some examples of choice levels:
+
+* #### In a <a href="https://studio.code.org/s/csd2-2024/lessons/12/levels/6" target="blank" rel="noopener noreferrer">Unit 2 - Web Development lesson</a>, students can choose how they practice structure a web page or debug code.
+* #### In a <a href="https://studio.code.org/s/csd3-2024/lessons/8/levels/9" target="blank" rel="noopener noreferrer">Unit 3 - Interactive Animations and Games lesson</a>, students can decide how they would like to practice adding sprites to a scene.
+* #### In a <a href="https://studio.code.org/s/csd6a-2024/lessons/5/levels/6" target="blank" rel="noopener noreferrer">Unit 6 - Creating Apps with Devices lesson</a>, students can practice coding different elements of a physical device.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### In <a href="https://studio.code.org/s/csa-postap-se-and-computer-vision-2024" target="blank" rel="noopener noreferrer">a post-AP test module of CSA</a>, high schoolers learn about professional software development tools, including GitHub and GitHub Copilot, which helps them build real-world industry-standard skills. Each lesson centers around a relevant question that students might ask about being a programmer like, "How might tools like ChatGPT or GitHub Copilot impact my role as a software engineer?" in <a href="https://studio.code.org/s/csa-postap-se-and-computer-vision-2024/lessons/3" target="blank" rel="noopener noreferrer">lesson 2</a>.
+</p></div>
+</details>
+
+___
+
+##### <sup>2</sup>Microsoft. Guide to Inclusive Computer Science Education, 2023, https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a. 
+##### <sup>3</sup>CAST, The UDL Guidelines, <a href="https://udlguidelines.cast.org/engagement/recruiting-interest/choice-autonomy" target="blank" rel="noopener noreferrer">Optimize individual choice and autonomy</a>
+MARKDOWN

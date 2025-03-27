@@ -4,7 +4,7 @@ import {
 } from './AuthenticityTokenStore';
 
 export type ResponseValidator<ResponseType> = (
-  bodyJson: Record<string, unknown>
+  bodyJson: Record<string, unknown> | unknown[]
 ) => ResponseType;
 
 export type GetResponse<ResponseType> = {
@@ -85,7 +85,7 @@ async function fetchJson<ResponseType>(
 async function sendRequest(
   method: string,
   endpoint: string,
-  body?: string,
+  body?: BodyInit,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {
@@ -122,7 +122,7 @@ async function get(
 
 async function put(
   endpoint: string,
-  body?: string,
+  body?: BodyInit,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {
@@ -131,7 +131,7 @@ async function put(
 
 async function post(
   endpoint: string,
-  body?: string,
+  body?: BodyInit,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {

@@ -365,28 +365,14 @@ module Pd::Application
       assert_includes application.formatted_applicant_email, application.applicant_full_name
     end
 
-    test 'formatted_applicant_email uses alternate email if no user account email' do
+    test 'formatted_applicant_email raises error if no user email' do
       teacher_without_email = create :teacher, :with_school_info, :demigrated
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
-
-      application = create :pd_teacher_application, user: teacher_without_email
-
-      assert teacher_without_email.email.blank?
-
-      assert_includes application.formatted_applicant_email, application.applicant_full_name
-      assert_includes application.formatted_applicant_email, application.sanitized_form_data_hash[:alternate_email]
-    end
-
-    test 'formatted_applicant_email raises error if no user email or alternate email' do
-      teacher_without_email = create :teacher, :with_school_info, :demigrated
-      teacher_without_email.update_attribute(:email, '')
-      teacher_without_email.update_attribute(:hashed_email, '')
-      application_hash_without_email = build :pd_teacher_application_hash, alternate_email: ''
+      application_hash_without_email = build :pd_teacher_application_hash
       application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
 
       assert teacher_without_email.email.blank?
-      assert application_without_email.sanitized_form_data_hash[:alternate_email].blank?
       assert_raises_matching("invalid email address for application #{application_without_email.id}") do
         application_without_email.formatted_applicant_email
       end

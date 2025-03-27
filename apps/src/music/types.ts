@@ -1,10 +1,11 @@
+import * as GoogleBlockly from 'blockly/core';
+
 import {ProjectLevelData} from '../lab2/types';
 import {ValueOf} from '../types/utils';
 
 import {ToolboxData} from './blockly/toolbox/types';
 import {BlockMode} from './constants';
 import {Sounds} from './player/MusicLibrary';
-
 // TODO: Use this interface when converting MusicView to TypeScript
 export interface MusicLevelData extends ProjectLevelData {
   toolbox?: ToolboxData;
@@ -12,11 +13,14 @@ export interface MusicLevelData extends ProjectLevelData {
   library?: string;
   packId?: string;
   showSoundFilters?: boolean;
+  showSoundsPanelInSoundsMode?: boolean;
+  sortUnrestrictedPacksByType?: boolean;
   blockMode?: ValueOf<typeof BlockMode>;
   hideAiTemperature?: boolean;
   showAiTemperatureExplanation?: boolean;
   showAiGenerateAgainHelp?: boolean;
   allowChangeStartingPlayheadPosition?: boolean;
+  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
 }
 
 export type LoadFinishedCallback = (

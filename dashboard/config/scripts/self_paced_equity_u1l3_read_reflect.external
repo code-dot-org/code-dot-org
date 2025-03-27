@@ -1,0 +1,57 @@
+name 'self-paced-equity-U1L3-read-reflect'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Read & Reflect
+
+#### So far, you've reflected on your own identity. Let's shift our perspective to how we can make <i>all students</i> feel like they belong and can express all of their identities in the computer science classroom. Students who are apprehensive about whether or not they belong in computer science will need your support in making them feel included. 
+
+#### One way to achieve this is by becoming a more **culturally responsive** teacher.
+
+## What is Culturally Responsive Teaching?
+
+#### According to Zaretta Hammond, culturally responsive teaching is:
+
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.2; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"><i>An educator’s ability to recognize students’ cultural displays of learning and meaning making and respond positively and constructively with teaching moves that use cultural knowledge as a scaffold to connect what the students know to new concepts and content in order to promote effective information processing. All the while, the educator understands the importance of being in relationship and having a social-emotional connection to the student in order to create a safe space for learning.<sup>1</sup></i></p></div>
+<br>
+
+#### We don't have time to cover the details of culturally responsive teaching here, but we recommend you check out Zaretta Hammond's work for more.
+<br>
+
+<div style="display: flex; align-items: left;">
+
+<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" style="width: auto; height: 100px;"  alt="An open hand with an open book floating above it.">
+
+<div style="background-color: #009EB0; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Resource Suggestion</b></p>
+
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Zaretta Hammond's book, <a href="https://resources.corwin.com/hammondaudio" target="blank" rel="noopener noreferrer"><span style="background-color: LightCyan;">Culturally Responsive Teaching and the Brain"</span></a>, explores how educators can use culturally responsive teaching strategies to support the academic success of diverse students. The book bridges neuroscience and education, providing practical tools to help teachers build students' cognitive capacity by leveraging their cultural strengths, fostering engagement, and creating an inclusive learning environment.
+
+</p>
+
+</div>
+</div>
+<br>
+
+
+## Learning to Be Culturally Responsive
+
+#### The reading below is comes from a blog post on Zaretta Hammond's website titled, "5 Common Myths about Culturally Responsive Pedagogy". 
+
+####  While you read, think about how this blurb applies to you and your teaching practice.
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 20px 10px 10px 20px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; font-size: 18px;"><b>Myth 5: Only teachers of color have the skills to be truly culturally responsive.</b></p>
+
+
+<p style="line-height: 1.2; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">I call this the “cop out” myth. Like Myth No. 2, many white teachers use this as an excuse not to develop the knowledge and skill to be culturally responsive in the classroom. They often say they don’t feel they can be legitimate or taken seriously as a culturally competent educator because they are white. This myth also happens among teachers of color whose race and ethnicity are different from their students. Like an African American teacher working with Latino students and families.</p>
+
+<p style="line-height: 1.2; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">In reality, being a culturally competent educator is less about your racial background and more about developing what we call “ a cultural eye,” a way to look at the cultural differences in the classroom and respond to them positively and constructively. It means being self-reflective about your own cultural identity so that you recognize when you are interpreting a child’s actions and reactions through a narrow cultural lens that does not account for different ways of doing, knowing and being based on one’s racial or cultural identity.<sup>2</sup></p>
+</div>
+
+___
+
+##### <sup>1</sup>Hammond, Zaretta, and Yvette Jackson. Culturally Responsive Teaching and the Brain: Promoting Authentic Engagement and Rigor Among Culturally and Linguistically Diverse Students. Corwin, a SAGE Company, 2015. 
+##### <sup>2</sup>Hammond, Zaretta. “‘5 Common Myths about Culturally Responsive Pedagogy.’” Culturally Responsive Teaching & the Brain, https://crtandthebrain.com/5-common-myths-about-culturally-responsive-pedagogy/. Accessed 18 July 2012. 
+MARKDOWN

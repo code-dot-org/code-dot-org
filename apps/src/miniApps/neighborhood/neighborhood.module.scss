@@ -1,5 +1,15 @@
+@import 'color';
+
 .neighborhoodPreviewBackground {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background: $neutral_dark;
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.slider {
+  width: 200px;
 }

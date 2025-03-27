@@ -143,9 +143,15 @@
     text-align: left;
     white-space: nowrap;
     padding: 0;
-    right: 0px;
+    right: 0;
     &[dir = 'rtl']  a {
       text-align: right;
+      left: 0;
+      right: unset;
+    }
+    html[dir = 'rtl'] & {
+      left: 0;
+      right: unset;
     }
     a {
       display: block;

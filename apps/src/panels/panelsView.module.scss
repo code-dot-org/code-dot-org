@@ -194,12 +194,21 @@ $text-horizontal-padding: 2.6cqw;
     .bubble {
       margin: 0 7px;
 
-      &Current {
+      &CurrentDark {
         color: $neutral_light;
       }
 
-      &NotCurrent {
+      &CurrentLight {
         color: $neutral_dark70;
+      }
+
+      &NotCurrentDark {
+        color: $neutral_dark70;
+        cursor: pointer;
+      }
+
+      &NotCurrentLight {
+        color: $neutral_dark30;
         cursor: pointer;
       }
     }

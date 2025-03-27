@@ -1,11 +1,12 @@
 import {MoveFileFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectFile, ProjectType, FileId} from '@codebridge/types';
+import {ProjectFile, FileId} from '@codebridge/types';
 import {
   getFolderPath,
   getPossibleDestinationFoldersForFile,
 } from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogType,
   DialogControlInterface,
@@ -16,8 +17,8 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenMoveFilePromptArgsType = {
   fileId: FileId;
-  projectFiles: ProjectType['files'];
-  projectFolders: ProjectType['folders'];
+  projectFiles: MultiFileSource['files'];
+  projectFolders: MultiFileSource['folders'];
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   moveFile: MoveFileFunction;
   isStartMode: boolean;

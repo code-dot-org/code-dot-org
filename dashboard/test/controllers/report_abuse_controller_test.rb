@@ -34,6 +34,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   test "signed in user can update abuse score when reporting not restricted to verified teachers" do
     @controller.stubs(:restrict_reporting_to_verified_teachers).returns(false)
     DCDO.stubs(:get).with('restrict_reporting_to_verified_teachers', false).returns(false)
+    DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
 
     user = create(:student)
     sign_in user

@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-06-28T19:57:13.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Study Guide\r\n\r\nMario wants to create a chatbot that will help him study for a class that he is taking. However, he needs the chatbot to help him with the specific terms used in the class which have precise definitions. This requires adding them as Retrieval so the chatbot knows which definitions to reference specifically.\r\n\r\n### Do This\r\n\r\n1) Go to this website to view the vocabulary words that Mario needs to study: https://studio.code.org/s/csp2-2023/vocab \r\n2) Choose at least 5 words and copy-and-paste the word and their definition into Retrieval\r\n    - You don’t need to make any edits - just copy-and-paste the line directly from the website\r\n3) Update the chatbot and then test it out. Start by saying \"Let’s get started!\"",
+    "long_instructions": "## Study Guide\r\n\r\nMario wants to create a chatbot that will help him study for a class that he is taking. However, he needs the chatbot to help him with the specific terms used in the class which have precise definitions. This requires adding them as Retrieval so the chatbot knows which definitions to reference specifically.\r\n\r\n### Do This\r\n\r\n1) Go to this website to view the vocabulary words that Mario needs to study: <a href=\"https://studio.code.org/s/csp2-2023/vocab\" target=\"_blank\">https://studio.code.org/s/csp2-2023/vocab </a>\r\n    - **Optional Variation**: Instead of using these vocabulary words, try choosing words from one of your current classes or another area you're studying.\r\n2) Choose at least 5 words and copy-and-paste the word and their definition into Retrieval\r\n    - You don’t need to make any edits - just copy-and-paste the line directly from the website\r\n3) Update the chatbot and then test it out. Start by saying \"Let’s get started!\"",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -45,7 +46,6 @@
     },
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:57:13.151+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:57:13.151+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4\"},{\"changed_at\":\"2025-01-08 22:17:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

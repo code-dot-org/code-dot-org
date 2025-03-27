@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_k_5",
-      "curriculum_umbrella": "CSF Self Paced PL",
+      "curriculum_umbrella": "Self-paced PL - CSF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gettingstarted-k5",
-    "serialized_at": "2024-11-19 01:18:43 UTC",
+    "serialized_at": "2025-01-13 23:50:07 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",

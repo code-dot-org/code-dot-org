@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 #### This professional learning module is made up of **four lessons:**
 
 ### 🏘️ **Lesson 1- Introduction to Teaching Data Science** - ⭐️ You're here!
-#### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course. *15 minutes*
+#### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course. *10 minutes*
 
 ### 🖥️ **Lesson 2- Overview of Unit 1: Introduction to Data Science**
 #### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. *30 minutes*
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 #### Learn how to guide students through Python basics, data manipulation using Pandas, and creating visualizations with Matplotlib. This part builds foundational skills in programming and data analysis. *45 minutes*
 
 #### **Lesson 4- Part 2: Advanced Data Science Concepts**
-#### Delve into advanced topics such as cleaning data, analyzing datasets, and creating custom visualizations. Students will develop the skills to communicate insights effectively through a real-world, data-driven project. *30 minutes*
+#### Delve into advanced topics such as cleaning data, analyzing datasets, and creating custom visualizations. Students will develop the skills to communicate insights effectively through a real-world, data-driven project. *35 minutes*
 
 
 

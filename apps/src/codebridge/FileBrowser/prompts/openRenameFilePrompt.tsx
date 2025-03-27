@@ -1,8 +1,9 @@
 import {RenameFileFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectFile, ProjectType, FileId} from '@codebridge/types';
+import {ProjectFile, FileId} from '@codebridge/types';
 import {validateFileName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogType,
   DialogControlInterface,
@@ -14,7 +15,7 @@ type RenameNewFilePromptArgsType = {
   fileId: FileId;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   renameFile: RenameFileFunction;
-  projectFiles: ProjectType['files'];
+  projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;

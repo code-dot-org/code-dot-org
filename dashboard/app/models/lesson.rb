@@ -66,6 +66,7 @@ class Lesson < ApplicationRecord
     student_overview
     unplugged
     creative_commons_license
+    background
     assessment
     purpose
     preparation
@@ -302,6 +303,7 @@ class Lesson < ApplicationRecord
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url,
         duration: total_lesson_duration,
+        background: background,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -423,6 +425,7 @@ class Lesson < ApplicationRecord
       lockable: lockable,
       hasLessonPlan: has_lesson_plan,
       creativeCommonsLicense: creative_commons_license,
+      background: background,
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,

@@ -172,6 +172,7 @@ namespace :ci do
 
     Dir.chdir('dashboard') do
       RakeUtils.rake_stream_output 'seed:cached_ui_test'
+      RakeUtils.rake_stream_output 'seed:single_script SCRIPT_NAME="allthemigratedthings"'
     end
   end
 end

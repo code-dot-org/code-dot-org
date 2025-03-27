@@ -1,0 +1,36 @@
+name 'self-paced-equity-U2L4-opening'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 2, Lesson 4: Equity in Code.org's Curriculum
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <div style="width: 70%;">
+        <p style="line-height: 1.5; font-size: 18px;">
+            In this lesson, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+            <li style="line-height: 1.5;font-size: 16px;">
+                Implement inclusive teaching practices that support the learning of all students.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Use culturally responsive pedagogy to engage and motivate students from different backgrounds.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Adapt CS curriculum and activities to be more inclusive and accessible.
+            </li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+        <br>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> 45 minutes
+        </p>
+    </div>
+    
+    <!-- Image on the right -->
+    <img src="https://images.code.org/d1c9b511fb8d2a683278ad49e3826121-image-1736446681439.17.57 AM.png" alt="A student works on a laptop while a teacher stands to the left of them." style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+<br>
+MARKDOWN
