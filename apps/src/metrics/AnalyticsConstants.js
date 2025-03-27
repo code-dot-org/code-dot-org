@@ -448,6 +448,8 @@ const EVENTS = {
   SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED:
     'Section Card Go To Course Button Clicked',
   SECTION_CARD_JUMP_TO_LESSON_CLICKED: 'Section Card Jump To Lesson Clicked',
+  SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED:
+    'Section Card Jump To Unit Overview Clicked',
   SECTION_CARD_VIEW_PROGRESS_CLICKED: 'Section Card View Progress Clicked',
   SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED:
     'Section Card View Lesson Materials Clicked',
