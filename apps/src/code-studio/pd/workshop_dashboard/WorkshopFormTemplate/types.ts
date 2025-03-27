@@ -68,12 +68,14 @@ export interface Session {
 
 export interface SessionFormState {
   id?: number;
+  date: string;
   start: string;
   end: string;
   locationAddress: string;
   locationName: string;
   meetingLink: string;
-  sessionFormat: SessionFormat;
+  format: SessionFormat;
+  sameAsPrevious: boolean;
 }
 
 export interface Workshop {
@@ -148,8 +150,9 @@ export interface SectionProps {
   facilitators?: Facilitator[] | null;
 }
 
-export interface ScheduleProps {
-  state: SessionFormState[];
+export interface ScheduleProps extends SectionProps {
+  sessions: SessionFormState[];
+  handleSessions: (sessions: SessionFormState[]) => void;
 }
 
 export interface PublishCancelButtonsProps {

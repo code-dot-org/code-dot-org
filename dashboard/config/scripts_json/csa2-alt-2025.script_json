@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 02:29:23 UTC",
+    "serialized_at": "2025-03-26 03:19:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1283,7 +1283,7 @@
       "key": "4a603e15-f550-4103-85c8-8e8cab9cc16a",
       "position": 7,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the example flowchart of washing dishes.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Loops and Boolean Methods"
       },
       "seeding_key": {
@@ -1312,7 +1312,7 @@
       "key": "d3fcb9d4-91bb-4f06-a2ae-35122d094124",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that iteration is required when we need to repeat an action until a condition is met, but we don't know in advance how many times it must run.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
       },
       "seeding_key": {
         "activity_section.key": "d3fcb9d4-91bb-4f06-a2ae-35122d094124",
@@ -7098,6 +7098,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project_pilot_oo20_2025-cb-alt"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -7120,6 +7123,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -7142,6 +7148,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa7_2025-cb-alt"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7164,6 +7173,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -7186,6 +7198,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilo_2025-cb-alt"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -7208,6 +7223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025-cb-alt"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -7230,6 +7248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -7252,6 +7273,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7273,6 +7297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {

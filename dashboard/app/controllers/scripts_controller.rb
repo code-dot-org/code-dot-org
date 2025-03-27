@@ -336,7 +336,7 @@ class ScriptsController < ApplicationController
       @course = UnitGroup.get_from_cache(course_name)
       raise ActiveRecord::RecordNotFound unless @course
       @unit_position = params[:position]
-      unit_group_unit = UnitGroupUnit.find_by(course_id: @course.id, position: @unit_position)
+      unit_group_unit = UnitGroupUnit.get_with_position_from_cache(@course.id, @unit_position)
       @script = Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
     else
       @script = get_unit_by_name

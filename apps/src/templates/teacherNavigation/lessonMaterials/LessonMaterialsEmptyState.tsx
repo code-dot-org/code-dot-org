@@ -70,7 +70,7 @@ export const getNoLessonMaterialsForLegacyCourses = (
             }
           )
         }
-        text={i18n.goToCourse()}
+        text={i18n.goToCoursePage()}
       />
     ),
   };

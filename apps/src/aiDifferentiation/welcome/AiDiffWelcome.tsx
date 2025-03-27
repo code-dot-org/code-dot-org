@@ -196,6 +196,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       return (
         <div className={style.bottomButtons}>
           <Button
+            id="uitest_aiDiffWelcomeContinue"
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
             disabled={continueDisabled}

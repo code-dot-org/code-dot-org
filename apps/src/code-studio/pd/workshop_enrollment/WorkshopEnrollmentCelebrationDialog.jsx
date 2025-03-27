@@ -16,7 +16,7 @@ import i18n from '@cdo/locale';
 
 import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
 
-import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage.module.scss';
+import style from '@cdo/apps/code-studio/pd/professional_learning/landingPage.module.scss';
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 

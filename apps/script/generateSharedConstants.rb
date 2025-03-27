@@ -182,6 +182,7 @@ def main
         CSD_CUSTOM_WORKSHOP_MODULES
         PARTICIPANT_GROUP_TYPES
         PD_SESSION_FORMATS
+        WORKSHOP_FORMATS
         WORKSHOP_COURSE_CONFIGS
       ),
       source_module: Pd::SharedWorkshopConstants,

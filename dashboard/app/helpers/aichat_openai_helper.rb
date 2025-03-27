@@ -44,17 +44,24 @@ module AichatOpenaiHelper
   def self.format_message(message, encrypted_channel_id, level_name)
     formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
     message['assets']&.each do |asset|
-      asset_uris = AichatAssetHelper.get_asset_data_uris(asset, encrypted_channel_id, level_name)
-      asset_uris.each do |asset_uri|
-        formatted[:content] << {type: "image_url", image_url: {url: asset_uri}}
-      end
+      data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
+      is_pdf = File.extname(asset["filename"]) == '.pdf'
+      formatted[:content] << if is_pdf
+                               {type: 'file', file: {filename: asset["filename"], file_data: data}}
+                             else
+                               {type: "image_url", image_url: {url: data}}
+                             end
     end
     formatted
   end
 
   def self.request_chat_completion(messages, temperature)
     http_response = client.request_chat_completion(messages, temperature)
-    JSON.parse(http_response.body)['choices'][0]['message']['content']
+    body = JSON.parse(http_response.body)
+    raise StandardError.new(body['error']) if body['error']
+    response = body&.dig("choices")&.first&.dig('message', 'content')
+    raise StandardError.new("Unexpected response from OpenAI: #{body}") unless response
+    response
   end
 
   def self.get_instructions(system_prompt, level_system_prompt, retrieval_contexts)
