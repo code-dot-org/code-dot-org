@@ -3,3 +3,8 @@
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
+
+// Ensures the dialog and overlay are on top of other level editor content
+div.dialogContainer > div[role='presentation'] {
+  z-index: 5;
+}

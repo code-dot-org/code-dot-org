@@ -1,5 +1,4 @@
 // Pythonlab view
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
@@ -18,7 +17,6 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -165,10 +163,7 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {showProjectPickerModal && (
-        <ProjectTypePicker selectProjectType={selectProjectType} />
-      )}
-      {!showProjectPickerModal && source && (
+      {source && (
         <Codebridge
           source={source}
           config={config}
@@ -182,6 +177,9 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
         />
+      )}
+      {showProjectPickerModal && (
+        <ProjectTypePicker selectProjectType={selectProjectType} />
       )}
     </div>
   );

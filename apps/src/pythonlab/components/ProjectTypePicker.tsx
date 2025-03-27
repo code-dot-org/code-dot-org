@@ -16,30 +16,32 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
   selectProjectType,
 }) => {
   return (
-    <CustomDialog mode="dark" className={moduleStyles.pickerDialog}>
-      <div data-theme="Dark" className={moduleStyles.pickerContainer}>
-        <ActionBlock
-          description={pythonlabI18n.consoleOnlyDescription()}
-          image={consoleImage}
-          primaryButton={{
-            text: pythonlabI18n.consoleOnly(),
-            color: 'black',
-            useAsLink: false,
-            onClick: () => selectProjectType('console'),
-          }}
-        />
-        <ActionBlock
-          description={pythonlabI18n.neighborhoodDescription()}
-          image={neighborhoodImage}
-          primaryButton={{
-            text: pythonlabI18n.neighborhood(),
-            color: 'black',
-            useAsLink: false,
-            onClick: () => selectProjectType('neighborhood'),
-          }}
-        />
-      </div>
-    </CustomDialog>
+    <div className={moduleStyles.dialogContainer}>
+      <CustomDialog mode="dark" className={moduleStyles.pickerDialog}>
+        <div data-theme="Dark" className={moduleStyles.pickerContainer}>
+          <ActionBlock
+            description={pythonlabI18n.consoleOnlyDescription()}
+            image={consoleImage}
+            primaryButton={{
+              text: pythonlabI18n.consoleOnly(),
+              color: 'black',
+              useAsLink: false,
+              onClick: () => selectProjectType('console'),
+            }}
+          />
+          <ActionBlock
+            description={pythonlabI18n.neighborhoodDescription()}
+            image={neighborhoodImage}
+            primaryButton={{
+              text: pythonlabI18n.neighborhood(),
+              color: 'black',
+              useAsLink: false,
+              onClick: () => selectProjectType('neighborhood'),
+            }}
+          />
+        </div>
+      </CustomDialog>
+    </div>
   );
 };
 
