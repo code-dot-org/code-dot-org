@@ -8,6 +8,9 @@ import {defineComponents} from '@contentful/experiences-sdk-react';
 import ActionBlock, {
   ActionBlockContentfulComponentDefinition,
 } from '@/components/actionBlocks/defaultActionBlock';
+import FullWidthActionBlock, {
+  FullWidthActionBlockContentfulComponentDefinition,
+} from '@/components/actionBlocks/fullWidthActionBlock';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
@@ -68,6 +71,13 @@ defineComponents(
     {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
+    },
+    {
+      component: FullWidthActionBlock,
+      definition: FullWidthActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Heading,

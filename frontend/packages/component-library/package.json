@@ -42,6 +42,14 @@
       "import": "./dist/esm/actionBlock/index.mjs",
       "require": "./dist/cjs/actionBlock/index.js"
     },
+    "./actionBlock/fullWidthActionBlock": {
+      "types": {
+        "import": "./dist/esm/actionBlock/fullWidthActionBlock/index.d.ts",
+        "require": "./dist/cjs/actionBlock/fullWidthActionBlock/index.d.ts"
+      },
+      "import": "./dist/esm/actionBlock/fullWidthActionBlock/index.mjs",
+      "require": "./dist/cjs/actionBlock/fullWidthActionBlock/index.js"
+    },
     "./alert": {
       "types": {
         "import": "./dist/esm/alert/index.d.ts",

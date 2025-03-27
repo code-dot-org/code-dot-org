@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import {HTMLAttributes} from 'react';
 
 import {LinkButton, LinkButtonProps} from '@/button';
 import {
@@ -9,33 +8,9 @@ import {
   StrongText,
 } from '@/typography';
 
-import moduleStyles from './actionBlock.module.scss';
+import {ActionBlockProps} from './types';
 
-export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
-  /** Action Block title */
-  title?: string;
-  /** Action Block description */
-  description?: string;
-  /** Action Block image */
-  image?: string;
-  /** Action Block overline */
-  overline?: string;
-  /** Action Block Details */
-  details?: {
-    /** Detail label */
-    label: string;
-    /** Detail text */
-    description: string;
-  };
-  /** Primary button props */
-  primaryButton?: LinkButtonProps;
-  /** Secondary button props */
-  secondaryButton?: LinkButtonProps;
-  /** Action Block background */
-  background?: 'primary' | 'secondary';
-  /** Action Block custom className */
-  className?: string;
-}
+import moduleStyles from './actionBlock.module.scss';
 
 export const getImage = (image?: string) => {
   if (!image) return null;
