@@ -1,0 +1,20 @@
+{
+  "name": "music-extras-2024",
+  "script_names": [
+    "music-extras-2024"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "music-extras",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

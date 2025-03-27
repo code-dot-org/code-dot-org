@@ -1,0 +1,20 @@
+{
+  "name": "self-paced-pl-ai-districts-2024",
+  "script_names": [
+    "self-paced-pl-ai-districts-2024"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "self-paced-pl-ai-districts",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
