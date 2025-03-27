@@ -2,14 +2,14 @@
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
-  id: 'actionBlock',
-  name: 'Action Block',
+  id: 'verticalActionBlock',
+  name: 'Vertical Action Block',
   category: '03: Basic',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/AHRiLWYa6NruVlsM61hbn/8dc5d6ba056e81df347445738fb8cd5c/component_actionblock_thumbnail.png',
   tooltip: {
     description:
-      'A flexible card for highlighting curriculum, resources, or other key content. Supports text, media, CTAs, and multiple layouts.',
+      'A flexible card for highlighting curriculum, resources, or other key content. Supports text, media, and a CTA. Use this version in groups of 2, 3 or as part of a carousel.',
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/5cjcKrwgMCHaJxEK48xN2B/75599dc0fab6fb3a0cae8c2fb963827b/component_actionblock_tooltip.png',
   },
