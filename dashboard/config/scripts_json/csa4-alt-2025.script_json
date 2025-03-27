@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 02:32:39 UTC",
+    "serialized_at": "2025-03-26 20:44:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5305,7 +5305,7 @@
       "key": "fe799719-fe01-4412-a7eb-aac794c731e0",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `java.io.IOException` library must be imported in the tester class and the class where the file reader method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show students the various `Scanner` methods that they may need to process a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `java.io.IOException` library must be imported in the tester class and the class where the file reader method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `split()` method and explain how it can be used to split text into an array of `String` objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show students the various `Scanner` methods that they may need to process a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate and Modify: Processing File Data"
       },
       "seeding_key": {
@@ -18264,6 +18264,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -18286,6 +18289,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa3_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18308,6 +18314,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -18330,6 +18339,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa4_2025-cb-alt"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18352,6 +18364,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -18374,6 +18389,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa5_2025-cb-alt"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18396,6 +18414,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -18418,6 +18439,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6_2025-cb-alt"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18440,6 +18464,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -18462,6 +18489,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -18484,6 +18514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -18506,6 +18539,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2_2025-cb-alt"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -18528,6 +18564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025-cb-alt"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -18550,6 +18589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -18572,6 +18614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -18593,6 +18638,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {

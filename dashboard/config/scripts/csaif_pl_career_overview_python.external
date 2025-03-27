@@ -49,7 +49,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### In **Programming Fundamentals**, students begin the unit by exploring how their skills and interests align with computing careers and the evolving tech landscape. This early connection helps them see the real-world impact of coding and problem-solving.
+#### In the **Programming Fundamentals** unit, students begin by exploring how their skills and interests align with computing careers and the evolving tech landscape. This early connection helps them see the real-world impact of coding and problem-solving.
 
 
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
@@ -61,6 +61,20 @@ markdown <<MARKDOWN
             <li><strong>Make Connections Ongoing</strong> – Reinforce career relevance throughout the unit, not just at the beginning, by tying discussions back to real-world applications.</li>
         </ul>
     </div>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Share in the forum!
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+####Participating in the <a href="https://forum.code.org/t/about-the-cs-ai-foundations-category/40251?u=plteam" target="_blank">Coumputer Science and AI PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Computer Science learner community. <br><br>Please share your response to this reflection <i>'How can you make career connections meaningful in your class'</i> in the forum and take the time to read and respond to other educators' posts.
+
+### <a href="https://forum.code.org/t/reflecting-on-your-experience-with-codap/40257?u=plteam" target="_blank">Direct Link to this Forum Topic</a>
+
+
+</p></div>
+</details>
 
 
 MARKDOWN
