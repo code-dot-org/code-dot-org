@@ -312,7 +312,8 @@ function updateProgressNow() {
 }
 var updateProgress = _.debounce(updateProgressNow, 300, { maxWait: 3000 });
 
-function s3HeaderToKey(header) {
+// maps HTTP headers returned from S3 to the same names as test_logs_controller.rb returns
+function s3HeaderToMetadataKey(header) {
   key = header
   key = key == 'x-amz-version-id' ? 'version_id' : key;
   key = key.startsWith('x-amz-meta-') ? key.slice(11) : key;
@@ -335,16 +336,12 @@ async function fetchMetadataDirectlyFromS3For(browser, featureKey) {
     return undefined;
   }
 
-  const raw = Object.fromEntries(res.headers.entries());
+  // Transform S3 HTTP header names into the same metadata keys as test_logs_controller.rb returns
   const metadata = Object.fromEntries(
-    Object.entries(raw).map(([k, v]) =>
-      [s3HeaderToKey(k), v]
-    )
+    Array.from(res.headers.entries(), ([httpHeader, v]) => [s3HeaderToMetadataKey(httpHeader), v])
   );
   metadata.key = s3Key;
 
-  const symbol = metadata.success === 'true' ? '✓' : '✗';
-  console.log(`${symbol} ${browser} ${featureKey}`);
   return metadata;
 }
 
