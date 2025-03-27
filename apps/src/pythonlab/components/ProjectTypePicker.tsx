@@ -1,5 +1,6 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -16,9 +17,10 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
   selectProjectType,
 }) => {
   return (
-    <div className={moduleStyles.dialogContainer}>
+    <div className={moduleStyles.dialogContainer} data-theme="Dark">
       <CustomDialog mode="dark" className={moduleStyles.pickerDialog}>
-        <div data-theme="Dark" className={moduleStyles.pickerContainer}>
+        <Heading2>{pythonlabI18n.projectPickerTitle()}</Heading2>
+        <div className={moduleStyles.pickerContainer}>
           <ActionBlock
             description={pythonlabI18n.consoleOnlyDescription()}
             image={consoleImage}
@@ -27,6 +29,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               color: 'black',
               useAsLink: false,
               onClick: () => selectProjectType('console'),
+              iconRight: {iconName: 'chevron-right'},
             }}
           />
           <ActionBlock
@@ -37,6 +40,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               color: 'black',
               useAsLink: false,
               onClick: () => selectProjectType('neighborhood'),
+              iconRight: {iconName: 'chevron-right'},
             }}
           />
         </div>
