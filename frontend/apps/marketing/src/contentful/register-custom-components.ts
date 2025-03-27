@@ -49,6 +49,9 @@ defineComponents(
     {
       component: ActionBlock,
       definition: ActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
