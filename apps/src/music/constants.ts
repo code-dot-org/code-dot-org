@@ -113,3 +113,14 @@ export const BUS_EFFECT_COMBINATIONS: Effects[] = [
 export const TICKS_PER_MEASURE = 16;
 export const PATTERN_AI_NUM_EVENTS = TICKS_PER_MEASURE * 2;
 export const PATTERN_AI_NUM_SEED_EVENTS = 8;
+
+export const VALIDATION_MODE_OPTIONS = [
+  {
+    label: 'Compare all sounds by id (Default)',
+    value: 'default',
+  },
+  {
+    label: 'Compare all sounds by type only',
+    value: 'type',
+  },
+];

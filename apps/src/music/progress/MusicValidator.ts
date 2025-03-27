@@ -5,7 +5,12 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
-import {Condition, ConditionType, ExemplarSettings} from '@cdo/apps/lab2/types';
+import {
+  Condition,
+  ConditionType,
+  ExemplarSettings,
+  ValidationMode,
+} from '@cdo/apps/lab2/types';
 
 import {
   BlockTypes,
@@ -17,7 +22,7 @@ import {isChordEvent} from '../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {PlayingTrigger} from '../player/interfaces/PlayingTrigger';
-import {isSoundEvent} from '../player/interfaces/SoundEvent';
+import {isSoundEvent, SoundEvent} from '../player/interfaces/SoundEvent';
 import MusicPlayer from '../player/MusicPlayer';
 
 import {MusicConditions} from './MusicConditions';
@@ -42,8 +47,8 @@ export default class MusicValidator extends Validator {
     super();
   }
 
-  didPassExemplarValidation(): boolean {
-    return this.validatePlaybackEventsEquivalent();
+  didPassExemplarValidation(mode: ValidationMode): boolean {
+    return this.validatePlaybackEventsEquivalent(mode);
   }
 
   shouldCheckConditions() {
@@ -446,15 +451,15 @@ export default class MusicValidator extends Validator {
   }
 
   // Validates that both playback event arrays are equivalent based on id, type, and starting measure.
-  validatePlaybackEventsEquivalent(): boolean {
+  validatePlaybackEventsEquivalent(mode: ValidationMode): boolean {
     const studentEvents = [...this.getPlaybackEvents()];
     const exemplarEvents = this.getExemplarPlaybackEvents();
 
     const studentMatchesExemplar = studentEvents.every(studentEvent =>
-      this.eventMatchFound(studentEvent, exemplarEvents)
+      this.eventMatchFound(studentEvent, exemplarEvents, mode)
     );
     const exemplarMatchesStudent = exemplarEvents.every(exemplarEvent =>
-      this.eventMatchFound(exemplarEvent, studentEvents)
+      this.eventMatchFound(exemplarEvent, studentEvents, mode)
     );
 
     return studentMatchesExemplar && exemplarMatchesStudent;
@@ -462,13 +467,37 @@ export default class MusicValidator extends Validator {
 
   private eventMatchFound(
     currentEvent: PlaybackEvent,
-    comparisonEvents: PlaybackEvent[]
+    comparisonEvents: PlaybackEvent[],
+    mode: ValidationMode = 'default'
   ): boolean {
-    return comparisonEvents.some(
-      event =>
-        event.id === currentEvent.id &&
-        event.type === currentEvent.type &&
-        event.when === currentEvent.when
-    );
+    switch (mode) {
+      case 'type':
+        return comparisonEvents.some(event => {
+          if (
+            event.type !== currentEvent.type ||
+            event.when !== currentEvent.when
+          ) {
+            return false;
+          }
+
+          // If both events are sound events, compare soundType too
+          if (event.type === 'sound' && currentEvent.type === 'sound') {
+            return (
+              (event as SoundEvent).soundType ===
+              (currentEvent as SoundEvent).soundType
+            );
+          }
+
+          // For other event types, matching type + when is sufficient
+          return true;
+        });
+      default:
+        return comparisonEvents.some(
+          event =>
+            event.id === currentEvent.id &&
+            event.type === currentEvent.type &&
+            event.when === currentEvent.when
+        );
+    }
   }
 }

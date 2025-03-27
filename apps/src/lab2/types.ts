@@ -262,10 +262,13 @@ export interface ExemplarSettings {
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;
+  validationMode?: string;
   // Player settings (optional, only used for Music)
   playerEnabled?: boolean;
   playerTitle?: string;
 }
+
+export type ValidationMode = 'default' | 'type';
 
 // Python Lab specific property
 export interface MazeCell {

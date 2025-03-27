@@ -7,11 +7,13 @@ import {AppName, ExemplarSettings} from '../../types';
 
 import moduleStyles from './exemplar-settings.module.scss';
 
-interface ExemplarSettingsProps {
+interface ExemplarValidationProps {
   exemplarDefined: boolean;
   exemplarSettings: ExemplarSettings;
   onChange: (updatedFields: ExemplarSettings) => void;
   appName: AppName;
+  modeOptions?: {label: string; value: string}[];
+  description?: React.ReactNode;
 }
 
 const defaultExemplarValidationSettings: ExemplarSettings = {
@@ -20,11 +22,21 @@ const defaultExemplarValidationSettings: ExemplarSettings = {
   validationEnabled: false,
 };
 
-const ExemplarValidation: React.FunctionComponent<ExemplarSettingsProps> = ({
+const defaultDescription = (
+  <>
+    If enabled, the student's work will be compared against the exemplar's
+    expected output. The validation method may vary by app, and all validations
+    must pass for the level to be marked complete.
+  </>
+);
+
+const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
   exemplarDefined,
   exemplarSettings,
   onChange,
   appName,
+  modeOptions,
+  description,
 }) => {
   return (
     <div className={moduleStyles.section}>
@@ -36,15 +48,6 @@ const ExemplarValidation: React.FunctionComponent<ExemplarSettingsProps> = ({
           <BodyThreeText>
             An additional layer of validation is available for levels with
             exemplar sources.
-            <br />
-            If checked, the playback events on the student’s timeline must match
-            those on the exemplar’s timeline. If condition-based validations are
-            defined (in the section above), they will be checked first. Exemplar
-            validation cannot check code organization (such as loops or
-            functions) - use condition-based validation in combination with
-            exemplar validation to achieve this. The student cannot pass the
-            level unless all timeline events match exactly, even if they have
-            satisfied all other condition-based validations.
           </BodyThreeText>
         </div>
         {!exemplarDefined && (
@@ -75,6 +78,34 @@ const ExemplarValidation: React.FunctionComponent<ExemplarSettingsProps> = ({
             }}
           />
         </div>
+        <BodyThreeText>{/*description ??*/ defaultDescription}</BodyThreeText>
+        {modeOptions && (
+          <div className={moduleStyles.row}>
+            <label htmlFor="mode" className={moduleStyles.label}>
+              Validation Mode:
+            </label>
+            <select
+              id="mode"
+              name="mode"
+              className={moduleStyles.callout}
+              disabled={!exemplarDefined || !exemplarSettings.validationEnabled}
+              value={exemplarSettings.validationMode ?? ''}
+              onChange={e =>
+                onChange({
+                  ...defaultExemplarValidationSettings,
+                  ...exemplarSettings,
+                  validationMode: e.target.value,
+                })
+              }
+            >
+              {modeOptions.map(({label, value}) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
         <div className={moduleStyles.row}>
           <label htmlFor="successMessage" className={moduleStyles.label}>
             Success message:

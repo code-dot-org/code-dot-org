@@ -14,7 +14,7 @@ export abstract class Validator {
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
-  didPassExemplarValidation(): boolean {
+  didPassExemplarValidation(mode?: string): boolean {
     return false;
   }
 }
@@ -97,7 +97,8 @@ export default class ProgressManager {
     let passedExemplar = false;
     let exemplarMessage = '';
     if (shouldValidateExemplar) {
-      passedExemplar = this.validator.didPassExemplarValidation();
+      const mode = exemplarSettings!.validationMode;
+      passedExemplar = this.validator.didPassExemplarValidation(mode);
       exemplarMessage = passedExemplar
         ? exemplarSettings!.validationSuccessMessage!
         : exemplarSettings!.validationFailureMessage!;
