@@ -76,7 +76,7 @@ export const TeacherPromo: React.FC<TeacherPromoProps> = ({
       <BodyThreeText>{description}</BodyThreeText>
       {partnerLogo && (
         <BodyThreeText className={styles.promotionPartnerLogo}>
-          <StrongText>In partnership with</StrongText>
+          <StrongText>{i18n.partnershipWith()}</StrongText>
           <img
             src={partnerLogo}
             alt="Partner Logo"
