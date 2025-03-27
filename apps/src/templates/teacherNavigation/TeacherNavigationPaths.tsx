@@ -28,12 +28,16 @@ const getAbsolutePath = (name: string) =>
   `${TEACHER_NAVIGATION_SECTIONS_URL}/${SPECIFIC_SECTION_BASE_URL}/${name}`;
 
 /**
- * Get the AbsolutePath include the BASE_URL for TeacherNavigation
- *
+ * Get the path starting from the TeacherNavigation Base URL for the given
+ * Path name.
+ * For example:
+ *   Given: 'courses/:courseVersionName?'
+ *   Returns: '/teacher_dashboard/sections/:section_id/courses/:courseVersionName?'
+ * These paths use the React Router path syntax.
  * @param {string} name - The TEACHER_NAVIGATION_PATHS path
- * @returns {string} The full base path URL for the given name.
+ * @returns {string} The full base path in React Router syntax for the given name.
  */
-export const getBasePath = (name: string) =>
+export const getBasePath = (name: string): string =>
   `${TEACHER_NAVIGATION_BASE_URL}/${getAbsolutePath(name)}`;
 
 export const TEACHER_NAVIGATION_PATH_NAMES = Object.fromEntries(
