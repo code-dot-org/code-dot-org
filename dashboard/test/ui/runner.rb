@@ -456,28 +456,6 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   ChatClient.log test_report, color: 'purple'
 end
 
-def old
-  ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
-"Test count: #{run_results.count}. " \
-"Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
-"Total reruns of flaky tests: #{total_flaky_reruns}. " \
-"Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." \
-+ (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
-+ (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
-
-  a_status_page = status_page_url ? "<a href=\"#{status_page_url}\">" : ''
-  end_a = status_page_url ? "</a>" : ''
-
-  if failures.empty?
-    ChatClient.log "*#{a_status_page}SUMMARY, #{suite_success_count} DASHBOARD #{test_type.upcase} TESTS PASSED#{end_a}*", color: 'purple'
-  else
-    ChatClient.log "*#{a_status_page}SUMMARY, #{failures.count} DASHBOARD #{test_type.upcase} TESTS FAILED#{end_a}:*", color: 'purple'
-    failures.each do |failure|
-      ChatClient.log "\t• #{failure}", color: 'purple'
-    end
-  end
-end
-
 def server_status_page_url
   return nil unless $options.with_status_page
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment)
