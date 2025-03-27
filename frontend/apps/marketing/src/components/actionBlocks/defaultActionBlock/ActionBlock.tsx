@@ -10,9 +10,9 @@ export type ActionBlockContentfulProps = ActionBlockProps & {
   description: EntryFields.Text;
   image: BaseEntry & {
     fields: {
-      description?: string;
-      title?: string;
-      file: {url: string};
+      description?: EntryFields.Text;
+      title?: EntryFields.Text;
+      file: {url: EntryFields.Text};
     };
   };
   primaryButton: BaseEntry & {
