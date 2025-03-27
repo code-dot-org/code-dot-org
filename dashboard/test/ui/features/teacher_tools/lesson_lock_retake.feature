@@ -1,6 +1,7 @@
 Feature: Lesson Locking Retake
 
 @eyes
+@encrypted_level
 Scenario: Lock settings for retake not submit scenario
   Given I create an authorized teacher-associated student named "babby"
 
