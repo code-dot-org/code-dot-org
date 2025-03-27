@@ -8,7 +8,7 @@ import {asyncLoadTeacherHomepageSectionData} from '../../teacherDashboard/teache
 
 import {Header} from './Header';
 import {SectionList} from './SectionList';
-import {TeacherPromotions} from './TeacherPromotions';
+import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
 
