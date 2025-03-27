@@ -125,6 +125,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.rightHeaderButtons}>
       <Button
+        isIconOnly
         icon={{iconStyle: 'solid', iconName: 'gear'}}
         onClick={onClickSettings}
         size={'xs'}
