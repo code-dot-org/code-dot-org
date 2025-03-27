@@ -10,6 +10,7 @@ jest.mock('@cdo/apps/util/HttpClient');
 describe('TeacherPromotions', () => {
   const mockPromotions = [
     {
+      id: 1,
       announcement_type: 'New Curriculum',
       background_color: 'Blue',
       title: 'Promotion 1',
@@ -20,6 +21,7 @@ describe('TeacherPromotions', () => {
       is_closable: true,
     },
     {
+      id: 2,
       announcement_type: 'Announcement',
       background_color: 'Gray',
       title: 'Promotion 2',
@@ -75,6 +77,7 @@ describe('TeacherPromotions', () => {
 
     await waitFor(() => {
       expect(screen.queryByText('Promotion 1')).toBeNull();
+      screen.getByText('Promotion 2');
     });
   });
 
