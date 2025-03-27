@@ -239,6 +239,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
 
   &.promotion-gray {
     background-color: var(--background-neutral-secondary);
