@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-12T23:55:22.000Z",
   "level_num": "custom",
@@ -21,9 +22,11 @@
     "project_template_level_name": "CSA U2L8-Operators PBT_pilot_oo2025",
     "teacher_markdown": "1. The first code segment attempts to divide an `int` value by `0` and will result in the following error:\r\n\r\n```\r\nException message: java.lang.ArithmeticException: / by zero\r\n\t at ExpressionsRunner.main(ExpressionsRunner.java:21)\r\n```\r\n\r\n2. The second code segment attempts to divide a `double` value by `0` and will print `Infinity` to the console. This is because of the standard Java uses to handle `double` values.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T23:55:22.239+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L8-L4_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T23:55:22.239+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L8-L4_pilot-2025\"},{\"changed_at\":\"2025-03-26 21:02:34 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Task: Post an Introduction on the Teacher Forum
-## The Code.org Forum is a great place to learn more about our curricula and platform. Join our forum by introducing yourself.
+## The Code.org Forum is a great place to learn more about our curricula and platform.  Start by introducing yourself to the community!
 
 
 <div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 
 #### **Note: Join the Teacher Forum Anytime!** You can access the Teacher Forum from anywhere on Code.org. Just follow these steps:
 
-#### **Step 1:** Click on the Help Menu in the upper right hand corner of your screen.
+#### **Step 1:** Click on the Help Menu in the upper right-hand corner of your screen.
 #### **Step 2:** Select "Teacher forum" from the dropdown menu. 
 #### **Step 3:** Click the magnifying glass at the top-right corner.
 #### **Step 4:** Search for the thread, "Welcome to Code.org! We are thrilled you have joined our community" and click on it.
