@@ -5,6 +5,7 @@ import {
   BodyThreeText,
   Heading5,
   OverlineTwoText,
+  StrongText,
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
@@ -15,13 +16,14 @@ import styles from './teacherHomepage.module.scss';
 export interface TeacherPromoInfo {
   id: string;
   announcementType: string;
-  backgroundColor: string; //TODO(lfm) add background color
+  backgroundColor: string;
   buttonLabel: string;
   buttonTarget: string;
   title: string;
   description: string;
   image: string;
   isClosable: boolean;
+  partnerLogo: string | null;
 }
 
 interface TeacherPromoAdditionalProps {
@@ -53,6 +55,7 @@ export const TeacherPromo: React.FC<TeacherPromoProps> = ({
   buttonTarget,
   image,
   isClosable,
+  partnerLogo,
   onClose,
 }) => {
   return (
@@ -71,6 +74,16 @@ export const TeacherPromo: React.FC<TeacherPromoProps> = ({
       <Heading5 className={styles.promotionTitle}>{title}</Heading5>
       <img src={image} alt={title} className={styles.promotionImage} />
       <BodyThreeText>{description}</BodyThreeText>
+      {partnerLogo && (
+        <BodyThreeText className={styles.promotionPartnerLogo}>
+          <StrongText>In partnership with</StrongText>
+          <img
+            src={partnerLogo}
+            alt="Partner Logo"
+            className={styles.partnerLogo}
+          />
+        </BodyThreeText>
+      )}
       <LinkButton
         href={buttonTarget}
         color="black"

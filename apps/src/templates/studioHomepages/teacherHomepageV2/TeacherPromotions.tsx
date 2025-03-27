@@ -22,6 +22,7 @@ interface ServerPromotion {
   button_target: string;
   image: string;
   is_closable: boolean;
+  partner_logo?: string;
 }
 
 const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
@@ -34,6 +35,7 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
   buttonTarget: serverPromotion.button_target,
   image: serverPromotion.image,
   isClosable: serverPromotion.is_closable,
+  partnerLogo: serverPromotion.partner_logo || null,
 });
 
 export const TeacherPromotions: React.FC = () => {
@@ -67,7 +69,7 @@ export const TeacherPromotions: React.FC = () => {
     <div className={styles.promotions}>
       {isLoading && <div>Loading...</div>}
       {/* TODO(lfm): Add a skeleton here */}
-      {promotions.map((promotion, ind) => (
+      {promotions.map(promotion => (
         <TeacherPromo {...promotion} onClose={closePromotionCallback} />
       ))}
     </div>
