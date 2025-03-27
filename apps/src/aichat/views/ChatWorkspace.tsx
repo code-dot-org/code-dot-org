@@ -70,6 +70,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const dispatch = useAppDispatch();
 
+  // This effect resets chat history and any staged uploads when:
+  // a) a user switches levels, or
+  // b) a teacher switches between viewing students (or their own project) on a given level.
   useEffect(() => {
     dispatch(clearChatMessages());
     dispatch(clearStagedFiles());

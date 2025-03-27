@@ -80,10 +80,7 @@ const FilePreview: React.FC<{
             alt=""
             src={url}
             ref={imageRef}
-            className={classNames(
-              styles.imagePreview,
-              !imageLoaded && styles.hide
-            )}
+            className={(!imageLoaded && styles.hide) || undefined}
           />
         </div>
       ) : (
