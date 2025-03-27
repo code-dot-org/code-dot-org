@@ -27,9 +27,9 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
-  MarketingSubdomainName:
+  MarketingDomainName:
     Type: String
-    Default: <%=rack_env?(:production) ? 'marketing' : "#{stack_name}-marketing" %>
+    Default: 'dev.marketing.dev-code.org'
     Description: Subdomain name for marketing site.
   HourOfCodeBaseDomainName:
     Type: String
@@ -416,7 +416,7 @@ Resources:
       Role: !GetAtt MarketingRouterLambdaRole.Arn
       Environment:
         Variables:
-          MARKETING_DOMAIN: !Sub "${MarketingSubdomainName}.${BaseDomainName}"
+          MARKETING_DOMAIN: !Sub "${MarketingDomainName}"
   MarketingRouterVersion:
     Type: AWS::Lambda::Version
     Properties:
