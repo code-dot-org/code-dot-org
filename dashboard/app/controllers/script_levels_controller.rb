@@ -386,8 +386,7 @@ class ScriptLevelsController < ApplicationController
       course = UnitGroup.get_from_cache(course_name)
       unit_position = params[:unit_position]
       raise ActiveRecord::RecordNotFound unless course && unit_position
-      # TODO TEACH-1633 call UnitGroupUnit.get_from_cache.
-      unit_group_unit = UnitGroupUnit.find_by(course_id: course.id, position: unit_position)
+      unit_group_unit = UnitGroupUnit.get_with_position_from_cache(course.id, unit_position)
       return Unit.get_from_cache(unit_group_unit.script_id, raise_exceptions: false) if unit_group_unit
     end
     raise ActiveRecord::RecordNotFound

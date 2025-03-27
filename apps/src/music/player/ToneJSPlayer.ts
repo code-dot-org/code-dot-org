@@ -223,7 +223,7 @@ class ToneJSPlayer {
     await this.startContextIfNeeded();
     events.forEach(({notes, playbackPosition}) => {
       const offsetSeconds = Transport.toSeconds(
-        this.playbackTimeToTransportTime(playbackPosition)
+        this.playbackTimeToTransportTime(playbackPosition - 1)
       );
       lastSampleStart = Math.max(lastSampleStart, offsetSeconds);
       this.previewSamplers[instrument]
