@@ -1,9 +1,12 @@
 // Scripts that operate the test status page.  We expect the page to be
 // prepopulated with tables listing all of the tests we are going to run
 // (see runner.rb and test_status.haml for how this happens) but the actual
-// status of those tests we retrieve asynchronously from a server API
-// (see test_logs_controller.rb) which in turn gets its information from the
-// uploaded S3 logs and their metadata.
+// status of those tests we retrieve asynchronously in one of two ways:
+// 1. from a server API (see test_logs_controller.rb) which in turn gets its
+//    information from the uploaded S3 logs and their metadata. This mode
+//    is faster.
+// 2. directly fetching the metadata from S3 via HEAD requests, this mode
+//    is slower, but allows us to be hosted as static HTML on S3 w/o a backend.
 
 // Globals are provided on test_status.html
 /* global _, Clipboard, setTabStatusIcon */
@@ -385,10 +388,9 @@ async function fetchMetadataFromDashboardAPI(since) {
 // but allows us to support a static-html-only mode, that allows uploading this file to S3, giving
 // us a permalink we can pass back in drone.
 async function fetchMetadata(since) {
-  let metadata
   try {
     // Try to fetch from test_logs_controller.rb first:
-    metadata = await fetchMetadataFromDashboardAPI(since)
+    return await fetchMetadataFromDashboardAPI(since)
   } catch (error) {
     // Looks like test_logs_controller.rb wasn't there, we're probably running as static HMTML uploaded to S3
     console.warn(`Failed to fetch metadata from dashboard API, falling back to trying direct S3 access (original error: ${error})`);
@@ -401,11 +403,8 @@ async function fetchMetadata(since) {
     // every 10s would be doing hundreds of HTTP GET calls over and over.
     disableAutoRefresh();
 
-    metadata = await fetchMetadataDirectlyFromS3()
-    console.log("got this from fetchMetadataDirectlyFromS3", metadata);
+    return await fetchMetadataDirectlyFromS3()
   }
-  console.log(`returning`, metadata)
-  return metadata
 }
 
 async function refresh() {
@@ -424,7 +423,6 @@ async function refresh() {
 
     try {
       for (object of json) {
-        console.log("refreshing", object);
         await refreshIndividualTest(object)
       }
       lastRefreshTime = newTime;
