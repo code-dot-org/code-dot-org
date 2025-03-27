@@ -69,8 +69,10 @@ export const TeacherPromo: React.FC<TeacherPromoProps> = ({
         {announcementType}
       </OverlineTwoText>
       <Heading5 className={styles.promotionTitle}>{title}</Heading5>
+
       <img src={image} alt={title} className={styles.promotionImage} />
       <BodyThreeText>{description}</BodyThreeText>
+
       <LinkButton
         href={buttonTarget}
         color="black"
