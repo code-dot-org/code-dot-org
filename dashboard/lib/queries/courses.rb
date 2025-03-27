@@ -13,9 +13,9 @@ class Queries::Courses
   #     - `:course` - The retrieved Unit/Course
   #     - `:unit_group_unit` - The associated UnitGroupUnit information
   def self.get_course_context(unit_name)
-    unit = Unit.get_from_cache(unit_name)
+    unit = Unit.get_from_cache(unit_name, raise_exceptions: false)
     return nil unless unit
-    unit_group_unit = UnitGroupUnit.where(script_id: unit.id).first
+    unit_group_unit = unit.unit_group_units&.first
     return nil unless unit_group_unit
     course = UnitGroup.get_from_cache(unit_group_unit.course_id)
     {course: course, unit_group_unit: unit_group_unit}

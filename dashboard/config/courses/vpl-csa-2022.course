@@ -1,0 +1,20 @@
+{
+  "name": "vpl-csa-2022",
+  "script_names": [
+    "vpl-csa-2022"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "vpl-csa",
+    "version_year": "2022"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

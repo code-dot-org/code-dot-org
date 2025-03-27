@@ -138,7 +138,10 @@ class UnitOverviewTopRow extends React.Component {
           )}
 
           <div style={styles.resourcesRow}>
-            {!showV2TeacherDashboard() &&
+            {!(
+              showV2TeacherDashboard() &&
+              location.pathname.includes('teacher_dashboard')
+            ) &&
               showCalendar &&
               viewAs === ViewType.Instructor && (
                 <UnitCalendarButton

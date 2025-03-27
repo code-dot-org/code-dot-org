@@ -1,0 +1,20 @@
+{
+  "name": "sandbox-coding-with-ai",
+  "script_names": [
+    "sandbox-coding-with-ai"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "sandbox-coding-with-ai",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

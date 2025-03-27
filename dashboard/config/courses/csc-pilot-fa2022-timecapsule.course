@@ -1,0 +1,20 @@
+{
+  "name": "csc-pilot-fa2022-timecapsule",
+  "script_names": [
+    "csc-pilot-fa2022-timecapsule"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csc-pilot-fa2022-timecapsule",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

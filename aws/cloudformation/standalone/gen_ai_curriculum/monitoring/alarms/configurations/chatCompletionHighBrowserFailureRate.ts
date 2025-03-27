@@ -20,11 +20,11 @@ export const chatCompletionHighBrowserFailureRateConfiguration: PutMetricAlarmIn
         OKActions: [],
         AlarmActions: [SNS_TOPIC],
         InsufficientDataActions: [],
-        EvaluationPeriods: 5,
-        DatapointsToAlarm: 5,
+        EvaluationPeriods: 3,
+        DatapointsToAlarm: 3,
         Threshold: 10,
         ComparisonOperator: ComparisonOperator.GreaterThanThreshold,
-        TreatMissingData: 'missing',
+        TreatMissingData: 'ignore',
         Metrics: [
             ...['ChatCompletionRequestInitiated', 'ChatCompletionErrorUnhandled']
                 .map((metric, i) =>
