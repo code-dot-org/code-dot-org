@@ -416,7 +416,7 @@ Resources:
       Role: !GetAtt MarketingRouterLambdaRole.Arn
       Environment:
         Variables:
-          MARKETING_DOMAIN: !Sub "${MarketingDomainName}"
+          MARKETING_DOMAIN: !Ref MarketingDomainName
   MarketingRouterVersion:
     Type: AWS::Lambda::Version
     Properties:
