@@ -6,7 +6,14 @@ import {TeacherPromo, TeacherPromoInfo} from './TeacherPromo';
 
 import styles from './teacherHomepage.module.scss';
 
-interface ServerPromotionType {
+// This is a hard-coded ID for the Teacher Homepage Ad in contentful.
+// This retrieves all the ads from contentful.
+// If we want to have different ads for each teacher, we will need to stop hardcoding this ID.
+const TEACHER_HOMEPAGE_CONTENTFUL_ID = '55R4y1NlZ0qJG9O0qgyq0Q';
+const TEACHER_PROMOTION_URL = `/marketing/teacher/promotions/${TEACHER_HOMEPAGE_CONTENTFUL_ID}`;
+
+interface ServerPromotion {
+  id: string;
   announcement_type: string;
   background_color: string;
   title: string;
@@ -14,10 +21,11 @@ interface ServerPromotionType {
   button_label: string;
   button_target: string;
   image: string;
-  is_closeable: boolean;
+  is_closable: boolean;
 }
 
-const serverPromotionConverter = (serverPromotion: ServerPromotionType) => ({
+const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
+  id: serverPromotion.id,
   announcementType: serverPromotion.announcement_type,
   backgroundColor: serverPromotion.background_color,
   title: serverPromotion.title,
@@ -25,11 +33,7 @@ const serverPromotionConverter = (serverPromotion: ServerPromotionType) => ({
   buttonLabel: serverPromotion.button_label,
   buttonTarget: serverPromotion.button_target,
   image: serverPromotion.image,
-  // TODO(lfm): make sure this is working with contentful.
-  isCloseable:
-    serverPromotion.is_closeable === undefined
-      ? true
-      : serverPromotion.is_closeable,
+  isClosable: serverPromotion.is_closable,
 });
 
 export const TeacherPromotions: React.FC = () => {
@@ -38,21 +42,21 @@ export const TeacherPromotions: React.FC = () => {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    HttpClient.get('/marketing/teacher/promotions/55R4y1NlZ0qJG9O0qgyq0Q')
-      .then(response => response.json())
+    HttpClient.fetchJson<ServerPromotion[]>(TEACHER_PROMOTION_URL)
+      .then(response => response?.value)
       .then(data => {
         setPromotions(data.map(serverPromotionConverter));
         setIsLoading(false);
-        console.log('lfm', {promos: data.map(serverPromotionConverter)});
       })
       .catch(error => {
         console.error('Error retrieving marketing promotions', {error});
+        setIsLoading(false);
       });
   }, []);
 
   const closePromotionCallback = React.useCallback(
-    (index: number) => {
-      setPromotions([...promotions].splice(index, 1));
+    (id: string) => {
+      setPromotions(promotions.filter(promotion => promotion.id !== id));
 
       // TODO(lfm): Send a POST request to the server to mark the promotion as closed
     },
@@ -64,10 +68,7 @@ export const TeacherPromotions: React.FC = () => {
       {isLoading && <div>Loading...</div>}
       {/* TODO(lfm): Add a skeleton here */}
       {promotions.map((promotion, ind) => (
-        <TeacherPromo
-          {...promotion}
-          onClose={() => closePromotionCallback(ind)}
-        />
+        <TeacherPromo {...promotion} onClose={closePromotionCallback} />
       ))}
     </div>
   );

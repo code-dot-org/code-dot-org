@@ -13,6 +13,7 @@ import i18n from '@cdo/locale';
 import styles from './teacherHomepage.module.scss';
 
 export interface TeacherPromoInfo {
+  id: string;
   announcementType: string;
   backgroundColor: string; //TODO(lfm) add background color
   buttonLabel: string;
@@ -20,11 +21,11 @@ export interface TeacherPromoInfo {
   title: string;
   description: string;
   image: string;
-  isCloseable: boolean;
+  isClosable: boolean;
 }
 
 interface TeacherPromoAdditionalProps {
-  onClose: () => void;
+  onClose: (id: string) => void;
 }
 
 const announcementTypes = [
@@ -44,22 +45,23 @@ const getIconType = (announcementText: string): string => {
 type TeacherPromoProps = TeacherPromoInfo & TeacherPromoAdditionalProps;
 
 export const TeacherPromo: React.FC<TeacherPromoProps> = ({
+  id,
   announcementType,
   title,
   description,
   buttonLabel,
   buttonTarget,
   image,
-  isCloseable,
+  isClosable,
   onClose,
 }) => {
   return (
-    <div className={styles.promotion}>
-      {isCloseable && (
+    <div className={styles.promotion} key={id}>
+      {isClosable && (
         <CloseButton
           className={styles.closeButton}
-          aria-label={i18n.closeDialog}
-          onClick={onClose}
+          aria-label={i18n.closeDialog()}
+          onClick={() => onClose(id)}
         />
       )}
       <OverlineTwoText className={styles.promotionType}>
