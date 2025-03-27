@@ -14,6 +14,7 @@ const chatHistoryValidator: ResponseValidator<ServerChatEvent[]> = bodyJson => {
   }
 
   const events = bodyJson as ServerChatEvent[];
+  const filteredEvents = [];
   for (const event of events) {
     if (event.id === undefined) {
       throw fieldError('id');
@@ -33,8 +34,14 @@ const chatHistoryValidator: ResponseValidator<ServerChatEvent[]> = bodyJson => {
         );
       }
     }
+
+    // Filter out any copy chat events, which were logged historically.
+    if ((event as {descriptionKey?: string}).descriptionKey !== 'COPY_CHAT') {
+      filteredEvents.push(event);
+    }
   }
-  return events;
+
+  return filteredEvents;
 };
 
 function fieldError(fieldName: string) {
