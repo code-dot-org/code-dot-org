@@ -66,9 +66,16 @@ markdown <<MARKDOWN
 
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 85%;">
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-            While the neighborhood-themed activity provides a visual and engaging way to explore data types, we recognize that it may not be fully compatible with screen readers.<br><br> To ensure all students can participate meaningfully, an alternative lesson using Python Lab is available for those with accessibility needs.
+            While the neighborhood-themed activity provides a visual and engaging way to explore data types, we recognize that it may not be fully compatible with screen readers.<br><br> To ensure all students can participate meaningfully, an alternative lesson using Python Lab is available for those with accessibility needs. You can find these lesson by scrolling to the bottom of the unit to the <b>Alternative Level Progressions (console)</b>. Simply assign the designated students the alternative version. 
         </p>
     </div>
 </div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Check out the level progressions and alternative progressions in the <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>unit plan</a>.
+</p>
+
+
+
 
 MARKDOWN

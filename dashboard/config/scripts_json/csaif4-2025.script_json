@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-22 02:16:14 UTC",
+    "serialized_at": "2025-03-26 13:18:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2664,7 +2664,7 @@
       "key": "6648e333-cf0c-4b5d-aa52-836a13dd74d7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video “The Internet: Packets, Routing, and Reliability”",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"How Cyber Attacks Happen in Real Life\".",
         "tips": [
           {
             "type": "teachingTip",
@@ -3203,6 +3203,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3225,6 +3228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level1_2025"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -3247,6 +3253,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level2_2025"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -3269,6 +3278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level3_2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -3291,6 +3303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson1-level4_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3313,6 +3328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson2-level1_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3335,6 +3353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level1_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3357,6 +3378,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level2_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3379,6 +3403,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level3_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3401,6 +3428,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level4_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3423,6 +3453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson3-level5_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3445,6 +3478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level1_2025"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -3467,6 +3503,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level2_2025"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -3489,6 +3528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson4-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3511,6 +3553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level1_2025"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -3533,6 +3578,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3555,6 +3603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson5-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3577,6 +3628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level1_2025"
+        ],
         "progression": "Internet Simulator: DNS Queries"
       },
       "bonus": false,
@@ -3599,6 +3653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level2_2025"
+        ],
         "progression": "DNS Hierarchy Chatbot"
       },
       "bonus": false,
@@ -3621,6 +3678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level3_2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3643,6 +3703,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level4_2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3665,6 +3728,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level5_2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3687,6 +3753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson6-level6_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3709,6 +3778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level1_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3731,6 +3803,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level2_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3753,6 +3828,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level3_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3775,6 +3853,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level4_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3797,6 +3878,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level5_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3819,6 +3903,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level6_2025"
+        ],
         "progression": "Choose a Persona"
       },
       "bonus": false,
@@ -3841,6 +3928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson7-level7_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3863,6 +3953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson8-level1_2025"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -3885,6 +3978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level1_2025"
+        ],
         "progression": "Identify, Defend, Reflect!"
       },
       "bonus": false,
@@ -3907,6 +4003,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3929,6 +4028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson9-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3951,6 +4053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level1_2025"
+        ],
         "progression": "Threat Detection Chatbot"
       },
       "bonus": false,
@@ -3973,6 +4078,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3995,6 +4103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-lesson10-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4017,6 +4128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level1_2025"
+        ],
         "progression": "Company Case Study Choices"
       },
       "bonus": false,
@@ -4039,6 +4153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level2_2025"
+        ],
         "progression": "AI-Driven Solution Chatbots"
       },
       "bonus": false,
@@ -4061,6 +4178,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level3_2025"
+        ],
         "progression": "Final Risk Assessment"
       },
       "bonus": false,
@@ -4083,6 +4203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level4_2025"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
@@ -4105,6 +4228,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,

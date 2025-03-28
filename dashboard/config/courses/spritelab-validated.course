@@ -1,0 +1,20 @@
+{
+  "name": "spritelab-validated",
+  "script_names": [
+    "spritelab-validated"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "spritelab-validated",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

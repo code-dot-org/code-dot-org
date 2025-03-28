@@ -299,10 +299,28 @@ namespace :seed do
 
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
+    %w(allthethingscourse
+       csp-2017
+       csp-2019
+       allthemigratedthings
+       alltheselfpacedplthings
+       allthettsthings
+       interactive-games-animations-2023
+       customizing-llms-2024
+       events
+       playlab
+       step).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017 ui-test-course-2019 ui-test-single-unit-course-2025 ui-test-single-unit-course-2026).each do |course_name|
+    %w(ui-test-course-2017
+       ui-test-course-2019
+       ui-test-single-unit-course-2025
+       ui-test-single-unit-course-2026
+       ui-test-csa-family-script
+       ui-test-facilitator-pl-course
+       ui-test-teacher-pl-course
+       ui-test-versioned-script-2017
+       ui-test-versioned-script-2019).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
@@ -412,7 +430,7 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course ui-test-single-unit-course).each do |course_offering_name|
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course ui-test-single-unit-course ui-test-versioned-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end

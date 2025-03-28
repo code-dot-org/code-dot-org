@@ -100,8 +100,12 @@ Dashboard::Application.routes.draw do
     post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
     post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
-    get 'maker/home', to: 'maker#home'
-    get 'maker/setup', to: 'maker#setup'
+    resources :maker, only: [] do
+      collection do
+        get :home
+        get :setup
+      end
+    end
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false

@@ -14,6 +14,7 @@ import {CourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacher
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
 
 describe('CourseContentDropdown', () => {
   const nonUnitSection: Section = {
@@ -155,13 +156,13 @@ describe('CourseContentDropdown', () => {
 
   it('renders section Go to Course page button when no unit is assigned', () => {
     renderComponent();
-    screen.getByText('Go to Course page');
+    screen.getByText(i18n.goToCourse());
   });
 
-  it('renders Go to a lesson dropdown when a unit is assigned', async () => {
+  it('renders Jump to lesson dropdown when a unit is assigned', async () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
     expect(fetchSpy).toHaveBeenCalled();
-    screen.getByLabelText('Go to a lesson');
+    screen.getByRole('combobox', {name: 'Jump to'});
   });
 });
