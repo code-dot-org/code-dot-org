@@ -360,6 +360,100 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert_equal [earlier_workshop.course, later_workshop.course], program_manager_workshop_courses
   end
 
+  test 'signed out user trying to view facilitator landing pages is sent to sign in page' do
+    get :csa
+    assert_redirected_to '/users/sign_in'
+
+    get :csd
+    assert_redirected_to '/users/sign_in'
+
+    get :csf
+    assert_redirected_to '/users/sign_in'
+
+    get :csp
+    assert_redirected_to '/users/sign_in'
+  end
+
+  test 'csa facilitator landing page only loads for users with one of the necessary permissions' do
+    setup_facilitator_landing_users
+    can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csa_facilitator]
+    cannot_view = [@teacher, @csd_facilitator, @csf_facilitator, @csp_facilitator]
+
+    can_view.each do |can_view_user|
+      sign_in can_view_user
+      get :csa
+      assert_template 'pd/professional_learning/facilitator/csa'
+      sign_out can_view_user
+    end
+
+    cannot_view.each do |cannot_view_user|
+      sign_in cannot_view_user
+      get :csa
+      assert_template 'pd/professional_learning/facilitator/not_permitted_to_view'
+      sign_out cannot_view_user
+    end
+  end
+
+  test 'csd facilitator landing page only loads for users with one of the necessary permissions' do
+    setup_facilitator_landing_users
+    can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csd_facilitator]
+    cannot_view = [@teacher, @csa_facilitator, @csf_facilitator, @csp_facilitator]
+
+    can_view.each do |can_view_user|
+      sign_in can_view_user
+      get :csd
+      assert_template 'pd/professional_learning/facilitator/csd'
+      sign_out can_view_user
+    end
+
+    cannot_view.each do |cannot_view_user|
+      sign_in cannot_view_user
+      get :csd
+      assert_template 'pd/professional_learning/facilitator/not_permitted_to_view'
+      sign_out cannot_view_user
+    end
+  end
+
+  test 'csf facilitator landing page only loads for users with one of the necessary permissions' do
+    setup_facilitator_landing_users
+    can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csf_facilitator]
+    cannot_view = [@teacher, @csa_facilitator, @csd_facilitator, @csp_facilitator]
+
+    can_view.each do |can_view_user|
+      sign_in can_view_user
+      get :csf
+      assert_template 'pd/professional_learning/facilitator/csf'
+      sign_out can_view_user
+    end
+
+    cannot_view.each do |cannot_view_user|
+      sign_in cannot_view_user
+      get :csf
+      assert_template 'pd/professional_learning/facilitator/not_permitted_to_view'
+      sign_out cannot_view_user
+    end
+  end
+
+  test 'csp facilitator landing page only loads for users with one of the necessary permissions' do
+    setup_facilitator_landing_users
+    can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csp_facilitator]
+    cannot_view = [@teacher, @csa_facilitator, @csd_facilitator, @csf_facilitator]
+
+    can_view.each do |can_view_user|
+      sign_in can_view_user
+      get :csp
+      assert_template 'pd/professional_learning/facilitator/csp'
+      sign_out can_view_user
+    end
+
+    cannot_view.each do |cannot_view_user|
+      sign_in cannot_view_user
+      get :csp
+      assert_template 'pd/professional_learning/facilitator/not_permitted_to_view'
+      sign_out cannot_view_user
+    end
+  end
+
   private def go_to_workshop(workshop, teacher)
     enrollment = create :pd_enrollment, email: teacher.email, workshop: workshop
     create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
@@ -375,5 +469,20 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
   private def session_on_day(day_offset)
     day = Time.zone.today + day_offset.days
     create :pd_session, start: day + 9.hours, end: day + 17.hours
+  end
+
+  private def setup_facilitator_landing_users
+    @teacher = create :teacher
+    @workshop_admin = create :workshop_admin
+    @workshop_organizer = create :workshop_organizer
+    @program_manager = create :program_manager
+    @csa_facilitator = create :facilitator
+    @csa_facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSA
+    @csd_facilitator = create :facilitator
+    @csd_facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
+    @csf_facilitator = create :facilitator
+    @csf_facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSF
+    @csp_facilitator = create :facilitator
+    @csp_facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSP
   end
 end

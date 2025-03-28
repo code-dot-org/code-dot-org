@@ -3,7 +3,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import moment from 'moment-timezone';
-import React, {FC, useState} from 'react';
+import React, {FC, memo, useState} from 'react';
 
 import styles from './styles.module.scss';
 
@@ -59,3 +59,5 @@ export const TimeZoneEditor: FC<{
     </div>
   );
 };
+
+export default memo(TimeZoneEditor);

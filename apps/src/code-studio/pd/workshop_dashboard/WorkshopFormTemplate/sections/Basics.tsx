@@ -7,7 +7,7 @@ import Tags from '@code-dot-org/component-library/tags';
 import TextField from '@code-dot-org/component-library/textField';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {ChangeEvent, FC, useCallback, useMemo} from 'react';
+import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
@@ -279,3 +279,5 @@ export const Basics: FC<BasicsProps> = ({
     </>
   );
 };
+
+export default memo(Basics);

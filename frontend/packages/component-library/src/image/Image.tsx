@@ -3,14 +3,17 @@ import {ImgHTMLAttributes} from 'react';
 
 import moduleStyles from './image.module.scss';
 
-export interface ImageProps extends ImgHTMLAttributes<HTMLElement> {
+export interface ImageProps
+  extends Omit<ImgHTMLAttributes<HTMLElement>, 'width' | 'height'> {
   /** Image source */
   src: string;
   /** Image alt text */
   altText?: string;
+  /** Image loading attribute */
+  loading?: 'eager' | 'lazy';
   /** Image decoration */
   decoration?: 'none' | 'border' | 'shadow';
-  /** Image custom className */
+  /** Custom className */
   className?: string;
   /** Image onLoad callback */
   onLoad?: () => void;
@@ -23,38 +26,47 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLElement> {
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/Image.test.tsx)
  *  * (✔) passes accessibility checks;
  *
  * ### Status: ```Ready for dev```
  *
  * Design System: Image Component.
- * Adds an image to the page with decorative options for border and box shadow.
+ * Renders an image inside a fixed-size container while maintaining aspect ratio.
+ * Supports DSCO common decorative options for border and box shadow.
  */
 const Image: React.FC<ImageProps> = ({
   src,
   altText = '',
+  loading = 'lazy',
   decoration = 'none',
+  style,
   className,
   onLoad,
   onError,
-  ...HTMLAttributes
-}: ImageProps) => {
-  return (
+  ...ImageHTMLAttributes
+}) => (
+  <figure
+    className={classNames(
+      moduleStyles.figureContainer,
+      {
+        [moduleStyles['figure-hasBorder']]: decoration === 'border',
+        [moduleStyles['figure-hasBoxShadow']]: decoration === 'shadow',
+      },
+      className,
+    )}
+    // Only use inline styles if there's no way to add custom className with needed styles.
+    style={style}
+  >
     <img
-      className={classNames(
-        moduleStyles.image,
-        moduleStyles[decoration === 'border' ? 'image-hasBorder' : ''],
-        moduleStyles[decoration === 'shadow' ? 'image-hasBoxShadow' : ''],
-        className,
-      )}
+      className={classNames(moduleStyles.image)}
       alt={altText}
+      loading={loading}
       src={src}
-      {...HTMLAttributes}
       onLoad={onLoad}
       onError={onError}
+      {...ImageHTMLAttributes}
     />
-  );
-};
+  </figure>
+);
 
 export default Image;
