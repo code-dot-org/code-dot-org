@@ -7,7 +7,6 @@ import {
   evaluateStudentWork,
   summarizeEvaluations,
 } from '@cdo/apps/aiEvaluation/evaluationApi';
-import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
 import FreeResponseStudentResponseRow from './FreeResponseStudentResponseRow';
@@ -29,6 +28,8 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   const [evaluations, setEvaluations] = useState<StudentWorkEvaluation[]>([]);
   const [evaluationCount, setEvaluationCount] = useState<number>(0);
   const [aiSummary, setAiSummary] = useState<AIResponse>();
+  const [showDetailedAnalysis, setShowDetailedAnalysis] =
+    useState<boolean>(false);
   const evaluationComplete =
     evaluationCount > 0 && responses.length === evaluationCount;
 
@@ -93,24 +94,18 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         isPending={evaluationsPending}
         studentWorkEvaluations={evaluations}
         evaluationComplete={evaluationComplete}
+        totalStudentCount={responses.length}
+        openDetailedAnalysis={() => setShowDetailedAnalysis(true)}
       />
-      {evaluationComplete && aiSummary && (
+      {evaluationComplete && aiSummary && showDetailedAnalysis && (
         <div>
-          <CollapsibleSection
-            headerContent={
-              <h3>AI Evaluations of Individual Student Responses</h3>
-            }
-          >
-            <div>
-              {evaluations.map(evaluation => (
-                <FreeResponseStudentResponseRow
-                  key={evaluation.studentId}
-                  studentResponse={evaluation}
-                  studentWorkEvaluation={evaluation}
-                />
-              ))}
-            </div>
-          </CollapsibleSection>
+          {evaluations.map(evaluation => (
+            <FreeResponseStudentResponseRow
+              key={evaluation.studentId}
+              studentResponse={evaluation}
+              studentWorkEvaluation={evaluation}
+            />
+          ))}
         </div>
       )}
     </div>

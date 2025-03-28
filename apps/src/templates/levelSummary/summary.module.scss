@@ -392,3 +392,12 @@ svg text[fill] {
 .noAttemptIcon {
   color: var(--text-neutral-tertiary);
 }
+
+.evaluateButton {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.viewAnalysisLink {
+  color: var(--text-neutral-primary) !important;
+}
