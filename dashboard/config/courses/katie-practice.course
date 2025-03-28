@@ -1,0 +1,20 @@
+{
+  "name": "katie-practice",
+  "script_names": [
+    "katie-practice"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "katie-practice",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

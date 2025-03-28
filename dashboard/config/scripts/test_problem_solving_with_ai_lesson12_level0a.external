@@ -1,6 +1,7 @@
 name 'test-problem-solving-with-ai-lesson12-level0a'
 title 'AI in Grocery Stores'
-description 'description here'
+display_name 'AI In Grocery Stores'
+thumbnail_url 'https://images.code.org/e7f9a23e083228a1f419d20d1ec32e37-supermaket.png'
 
 markdown <<MARKDOWN
 ##AI In Grocery Stores

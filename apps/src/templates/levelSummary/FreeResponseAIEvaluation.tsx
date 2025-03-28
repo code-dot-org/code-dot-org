@@ -10,8 +10,7 @@ import {
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
-
-import style from '@cdo/apps/levelbuilder/ai-iteration-tools/ai-tutor/ai-tutor-tester.module.scss';
+import FreeResponseStudentResponseRow from './FreeResponseStudentResponseRow';
 
 interface LevelData {
   levelId: number;
@@ -102,24 +101,15 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
               <h3>AI Evaluations of Individual Student Responses</h3>
             }
           >
-            <table>
-              <thead>
-                {evaluations.map(evaluation => (
-                  <tr key={evaluation.studentId} className={style.row}>
-                    <td className={style.cell}>
-                      <div>{evaluation.studentDisplayName}</div>
-                    </td>
-                    <td className={style.cell}>
-                      <div>{evaluation.studentWork}</div>
-                    </td>
-                    <td className={style.cell}>
-                      <div>{evaluation.aiEvaluation}</div>
-                      <div>{evaluation.aiReasoning}</div>
-                    </td>
-                  </tr>
-                ))}
-              </thead>
-            </table>
+            <div>
+              {evaluations.map(evaluation => (
+                <FreeResponseStudentResponseRow
+                  key={evaluation.studentId}
+                  studentResponse={evaluation}
+                  studentWorkEvaluation={evaluation}
+                />
+              ))}
+            </div>
           </CollapsibleSection>
         </div>
       )}

@@ -1,0 +1,20 @@
+{
+  "name": "outbreak-csc",
+  "script_names": [
+    "outbreak-csc"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "outbreak-csc",
+    "version_year": "2021"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
