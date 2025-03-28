@@ -16,6 +16,7 @@
       Localize.initialize({
         key: 'I0P5RaUEW8s5h',
         rememberLanguage: true,
+        retranslateOnNewPhrases: true,
       });
 
       // Add a custom function to Localize:
@@ -66,7 +67,19 @@
           console.log(cdoLanguage);
           console.log("looking for select");
           ensureSelector(cdoLanguage);
+
+          console.log("page loaded... looking for blockly");
+          for (const [key, value] of Object.entries(Blockly?.Msg || {})) {
+            //console.log(Localize.phrase(value));
+            const dummy = document.createElement("span");
+            dummy.setAttribute("data-localize", "blockly-block");
+            dummy.textContent = value;
+            Blockly.Msg[key] = Localize.translate(dummy);
+            console.log(Blockly.Msg[key]);
+          }
         });
+
+        // Translate everything in the Blockly message pool
         ensureSelector(cdoLanguage);
       };
 
