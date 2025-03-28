@@ -1,4 +1,4 @@
-import image1 from '@public/images/action-block-01.png';
+import image from '@public/images/action-block-01.png';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
@@ -29,7 +29,7 @@ const DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
 
 const defaultArgs: ActionBlockProps = {
-  image: image1,
+  image: image,
   title: 'Action block title',
   description: DESCRIPTION,
   overline: 'Overline Text',

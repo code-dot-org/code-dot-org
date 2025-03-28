@@ -241,9 +241,11 @@ export const WithSecondaryBackground: Story = {
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const overline = await canvas.findByText('Overline One');
-    const textWrapper = overline.closest('div');
-    const actionBlock = textWrapper?.closest('div');
+    const titles = await canvas.findAllByText('Action block title');
+    const title = titles[0];
+    const textWrapper = title.parentElement;
+    const actionBlock = textWrapper?.parentElement;
+
     const expectedBackgroundColor = window
       .getComputedStyle(document.body)
       .getPropertyValue('--background-neutral-primary');
