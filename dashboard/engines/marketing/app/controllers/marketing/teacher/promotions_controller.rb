@@ -17,8 +17,8 @@ module Marketing
 
         result = entry.fields.clone
         ads = result[:sidebar_ads].
-        reject {|ad| hidden_promotions.include?(ad.id)}.
-                map do |ad|
+            reject {|ad| hidden_promotions.include?(ad.id)}.
+            map do |ad|
           ad.fields.transform_values {|v| v.is_a?(Contentful::Asset) ? v.image_url : v}.merge(id: ad.id)
         end
 
