@@ -115,7 +115,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const onClickSettings = async () => {
     const results = await dialogControl?.showDialog({
       type: DialogType.GenericDropdown,
-      title: 'Settings',
+      title: commonI18n.settings(),
       message: 'Customize your text editor font size',
       selectedValue: selectedFontSizeKey,
       items: fontSizeOptions,
