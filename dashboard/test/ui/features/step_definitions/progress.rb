@@ -9,6 +9,33 @@ def color_string(key)
   }[key.to_sym]
 end
 
+def wait_for_progress(selector, test_result)
+  case test_result
+  when 'perfect'
+    background_color = color_string('perfect')
+    border_color = color_string('perfect')
+  when 'attempted'
+    background_color = color_string('not_tried')
+    border_color = color_string('perfect')
+  when 'not_tried'
+    background_color = color_string('not_tried')
+    border_color = color_string('lighter_gray')
+  when 'perfect_assessment'
+    background_color = color_string('assessment')
+    border_color = color_string('assessment')
+  when 'attempted_assessment'
+    background_color = color_string('not_tried')
+    border_color = color_string('assessment')
+  end
+
+  steps "And I wait until element \"#{selector}\" is visible"
+
+  wait_short_until do
+    element_css_value(selector, 'background-color') == background_color &&
+      element_css_value(selector, 'border-color') == border_color
+  end
+end
+
 # Verifies that the given selector (which should be a progress bubble) is visible
 # and displays the expected test_result. This function accounts for the asynchronous
 # nature of progress bubbles and can be slow, especially when verifying that a bubble
@@ -85,6 +112,11 @@ Then /^I open the progress drop down of the current page$/ do
     Then I click selector ".header_popup_link"
     And I wait to see ".uitest-summary-progress-table"
   }
+end
+
+Then /^I wait for progress in the header of the current page to be "([^"]*)" for level (\d+)/ do |test_result, level|
+  selector = header_bubble_selector(level.to_i)
+  wait_for_progress(selector, test_result)
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
