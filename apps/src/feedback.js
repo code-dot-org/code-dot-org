@@ -1,6 +1,7 @@
 // Globals used in this file:
 //   Blockly
 
+import FocusTrap from 'focus-trap-react';
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
@@ -1244,13 +1245,15 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   });
 
   ReactDOM.render(
-    <div>
-      <GeneratedCode
-        message={generatedCodeProperties.message}
-        code={generatedCodeProperties.code}
-      />
-      <DialogButtons ok={true} />
-    </div>,
+    <FocusTrap>
+      <div>
+        <GeneratedCode
+          message={generatedCodeProperties.message}
+          code={generatedCodeProperties.code}
+        />
+        <DialogButtons ok={true} />
+      </div>
+    </FocusTrap>,
     codeDiv
   );
 
