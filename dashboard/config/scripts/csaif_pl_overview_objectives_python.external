@@ -30,7 +30,7 @@ markdown <<MARKDOWN
     <h2 style="margin-top: 0;">In this module, you will:</h2>
     <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
         <li>Understand the key components of computational thinking - pattern recognition, abstraction, decomposition, and algorithms</li><br>
-        <li>Learn Python programming basics using Code.org’s engaging Neighborhood IDE
+        <li>Learn Python programming basics using Code.org’s engaging Neighborhood Platform
 </li><br>
         <li>Examine the ethical implications of technology
 </li>
@@ -43,13 +43,13 @@ markdown <<MARKDOWN
 
 ---
 
-<h2 style="text-align: center">Take the Pre-Survey</h2>
+<h2 style="text-align: left">Take the Pre-Survey</h2>
 
-<p style="text-align: center; font-size: 14pt">
+<p style="text-align: left; font-size: 14pt">
 Code.org values and is responsive to feedback. Please fill out the pre-survey to  tell us about who you are and how we can best support you.
 </p>
 
-<p style="text-align: center;">
+<p style="text-align: left;">
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/exploring_generative_ai_selfpaced_pl_pre_survey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 </p>
 

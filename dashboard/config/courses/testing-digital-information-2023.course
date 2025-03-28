@@ -1,0 +1,20 @@
+{
+  "name": "testing-digital-information-2023",
+  "script_names": [
+    "testing-digital-information-2023"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "testing-digital-information",
+    "version_year": "2023"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -60,9 +60,17 @@ class AichatOpenaiHelperTest < ActionView::TestCase
   end
 
   test 'includes asset URLs if present' do
-    image_uris = ['image1', 'image2']
-    AichatAssetHelper.stubs(:get_asset_data_uris).returns(image_uris)
-    message_with_assets = {role: 'user', chatMessageText: 'message with assets', assets: ['asset1']}.stringify_keys
+    image_uri = "data:image/png;base64,12345"
+    pdf_uri = "data:application/pdf;base64,12345"
+    AichatAssetHelper.stubs(:get_asset_data_uri).returns(image_uri, pdf_uri)
+    message_with_assets = {
+      role: 'user',
+       chatMessageText: 'message with assets',
+       assets: [
+         {filename: 'image.png', source: 'project'},
+         {filename: 'file.pdf', source: 'level'}
+       ]
+    }.deep_stringify_keys
 
     expected_messages = [
       {role: 'system', content: "test prompt test retrieval"},
@@ -70,8 +78,8 @@ class AichatOpenaiHelperTest < ActionView::TestCase
       {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
       {role: 'user', content: [
         {type: 'text', text: 'message with assets'},
-        {type: 'image_url', image_url: {url: 'image1'}},
-        {type: 'image_url', image_url: {url: 'image2'}}
+        {type: 'image_url', image_url: {url: image_uri}},
+        {type: 'file', file: {filename: 'file.pdf', file_data: pdf_uri}}
       ]}
     ]
 
