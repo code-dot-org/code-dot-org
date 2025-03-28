@@ -37,8 +37,9 @@ def verify_progress(selector, test_result, no_wait: false)
 
   # The data for progress bubbles can be loaded synchronously or
   # asynchronously, therefore unless we know the colors are set (such as when
-  # we're checking multiple not_tried bubbles in a row) we wait a bit before
-  # checking to ensure progress is loaded and the bubble is the correct color.
+  # we're checking multiple not_tried bubbles in a row) we keep checking until
+  # progress is loaded and the bubble is the correct color.
+  # TODO: check whether no_wait actually saves us time
   if no_wait
     steps %{
       And element "#{selector}" has css property "background-color" equal to "#{background_color}"
@@ -48,7 +49,7 @@ def verify_progress(selector, test_result, no_wait: false)
     steps "And I wait until jQuery Ajax requests are finished"
     wait_short_until do
       element_css_value(selector, 'background-color') == background_color &&
-        element_css_value(selector, 'border-color') == border_color
+        element_css_value(selector, 'border-top-color') == border_color
     end
   end
 end
