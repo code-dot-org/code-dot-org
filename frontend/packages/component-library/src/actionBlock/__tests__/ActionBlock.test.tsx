@@ -16,6 +16,7 @@ describe('ActionBlock', () => {
       ariaLabel: 'Primary Button aria label',
     },
   };
+
   const secondaryButtonProps = {
     secondaryButton: {
       text: 'Secondary Button',
@@ -77,5 +78,19 @@ describe('ActionBlock', () => {
     );
     expect(secondaryButton).toBeInTheDocument();
     expect(secondaryButton).toHaveAttribute('href', 'https://hourofcode.com');
+  });
+
+  it('does not render buttons when the primary button is not provided', () => {
+    render(<ActionBlock {...defaultProps} primaryButton={undefined} />);
+
+    // check for primary button
+    const primaryButton = screen.queryByLabelText('Primary Button aria label');
+    expect(primaryButton).not.toBeInTheDocument();
+
+    // check for secondary button
+    const secondaryButton = screen.queryByLabelText(
+      'Secondary Button aria label',
+    );
+    expect(secondaryButton).not.toBeInTheDocument();
   });
 });
