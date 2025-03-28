@@ -8,8 +8,8 @@ const marketingPaths = {
 }
 
 export const handler = (event, context, callback) => {
-  const request = event.Records[0].cf.request;
-  const uri = request.uri;
+  const request = event?.Records?.[0]?.cf?.request;
+  const uri = request?.uri;
 
   // Set CMS origin if the requested path matches
   if (marketingPaths[uri]) {
