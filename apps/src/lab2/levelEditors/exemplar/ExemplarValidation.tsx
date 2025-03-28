@@ -78,7 +78,7 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
             }}
           />
         </div>
-        <BodyThreeText>{/*description ??*/ defaultDescription}</BodyThreeText>
+        <BodyThreeText>{description ?? defaultDescription}</BodyThreeText>
         {modeOptions && (
           <div className={moduleStyles.row}>
             <label htmlFor="mode" className={moduleStyles.label}>
