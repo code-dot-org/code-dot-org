@@ -33,26 +33,24 @@ def verify_progress(selector, test_result, no_wait: false)
     border_color = color_string('assessment')
   end
 
+  steps "And I wait until element \"#{selector}\" is visible"
+
   # The data for progress bubbles can be loaded synchronously or
   # asynchronously, therefore unless we know the colors are set (such as when
   # we're checking multiple not_tried bubbles in a row) we wait a bit before
   # checking to ensure progress is loaded and the bubble is the correct color.
-  unless no_wait
+  if no_wait
     steps %{
-      And I wait for 2 seconds
-      And I wait until jQuery Ajax requests are finished
+      And element "#{selector}" has css property "background-color" equal to "#{background_color}"
+      And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
     }
+  else
+    steps "And I wait until jQuery Ajax requests are finished"
+    wait_short_until do
+      element_css_value(selector, 'background-color') == background_color &&
+        element_css_value(selector, 'border-color') == border_color
+    end
   end
-
-  verify_bubble_color(selector, background_color, border_color)
-end
-
-def verify_bubble_color(selector, background_color, border_color)
-  steps %{
-    And I wait until element "#{selector}" is visible
-    And element "#{selector}" has css property "background-color" equal to "#{background_color}"
-    And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
-  }
 end
 
 def verify_bubble_type(selector, type)
