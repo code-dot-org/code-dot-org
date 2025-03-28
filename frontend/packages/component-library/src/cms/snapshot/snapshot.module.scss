@@ -2,10 +2,11 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
 
 // SnapshotSection common styles
 .snapshot {
-  border-radius: 0.25rem;
+  border-radius: variables.$regular-border-radius;
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-primary);
 
