@@ -120,7 +120,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.index ["aidiff_message_id"], name: "index_aidiff_message_feedbacks_on_aidiff_message_id", unique: true
   end
 
-  create_table "aidiff_messages", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "aidiff_messages", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "aidiff_thread_id", null: false
     t.text "external_id", null: false
     t.integer "role", null: false
@@ -131,7 +131,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.index ["aidiff_thread_id"], name: "index_aidiff_messages_on_aidiff_thread_id"
   end
 
-  create_table "aidiff_threads", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "aidiff_threads", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.text "external_id", null: false
     t.text "llm_version", null: false
@@ -231,7 +231,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.string "callout_text"
   end
 
-  create_table "cap_user_events", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "cap_user_events", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name", limit: 64, null: false
     t.integer "user_id", null: false
     t.string "policy", limit: 16, null: false
@@ -490,7 +490,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
-  create_table "course_offerings_pd_workshops", id: false, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "pd_workshop_id", null: false
     t.bigint "course_offering_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -738,7 +738,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.index ["intro_video_id"], name: "index_games_on_intro_video_id"
   end
 
-  create_table "hidden_promotions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "hidden_promotions", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.string "promotion_id", null: false
     t.integer "teacher_id", null: false
     t.datetime "deleted_at"
@@ -983,7 +983,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
-  create_table "lti_deployments_user_identities", id: false, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "lti_deployment_id", null: false
     t.bigint "lti_user_identity_id", null: false
     t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
@@ -1055,7 +1055,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.float "value", null: false
   end
 
-  create_table "new_feature_feedbacks", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "new_feature_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "form_key", null: false
     t.boolean "satisfied", null: false
@@ -2312,7 +2312,7 @@ ActiveRecord::Schema.define(version: 2025_03_28_153956) do
     t.index ["user_id"], name: "index_user_level_evaluations_on_user_id"
   end
 
-  create_table "user_level_interactions", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "user_level_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
     t.integer "script_id", null: false
