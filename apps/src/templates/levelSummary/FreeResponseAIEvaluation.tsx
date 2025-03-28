@@ -1,4 +1,3 @@
-import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
 import {
@@ -9,6 +8,8 @@ import {
   summarizeEvaluations,
 } from '@cdo/apps/aiEvaluation/evaluationApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+
+import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
 
 import style from '@cdo/apps/levelbuilder/ai-iteration-tools/ai-tutor/ai-tutor-tester.module.scss';
 
@@ -87,18 +88,15 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
 
   return (
     <div>
-      <h2>AI Analysis (prototype)</h2>
-      <Button
-        text="Evaluate student responses"
-        onClick={getAIEvaluations}
+      <FreeResponseAiSummaryBox
+        aiEvaluationHandler={getAIEvaluations}
         disabled={!responses.length || evaluationsPending}
         isPending={evaluationsPending}
+        studentWorkEvaluations={evaluations}
+        evaluationComplete={evaluationComplete}
       />
       {evaluationComplete && aiSummary && (
         <div>
-          <br />
-          <h3>Reccommendation: {aiSummary.aiEvaluation}</h3>
-          <h4>Reasoning: {aiSummary.aiReasoning}</h4>
           <CollapsibleSection
             headerContent={
               <h3>AI Evaluations of Individual Student Responses</h3>

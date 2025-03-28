@@ -1,0 +1,20 @@
+{
+  "name": "code-break-younger-staging",
+  "script_names": [
+    "code-break-younger-staging"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "code-break-younger-staging",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -42,7 +42,7 @@ markdown <<MARKDOWN
 
 #### These sections help identify the specific skills and knowledge students will learn in the unit.
 
-#### Each lesson is aligned to the **CSTA Standards**. Clicking on a standard will expand the text to show the specific standard being addressed in a lesson. 
+#### Each lesson is aligned to the **CSTA Standards**. Clicking on a standard will expand the text to show the specific standard being addressed in a lesson. Depending on the curriculum, other standards, like College Board Frameworks or Common Core State Standards, maybe aligned as well. 
 
 #### Based on the standards, individual **objectives** are written for each lesson.
 </p></div>
@@ -61,7 +61,7 @@ markdown <<MARKDOWN
 
 #### The **Links** section provides resources for teachers and students. Some resources (like answer keys) can only be viewed by verified teachers. Student resources are usually used throughout the lesson, and will need to be printed or distributed digitally.
 
-#### The **Vocabulary** section provides definitions for any new academic vocabulary introduced in the lesson. This section only appears if a new vocabulary term is introduced in the lesson. Similarly, if new coding commands are introduced in a lesson, an "Introduced Code" section will appear that includes any new coding commands.
+#### The **Vocabulary** section provides definitions for any new academic vocabulary introduced in the lesson. This section only appears if a new vocabulary term is introduced in the lesson. In some courses, if new coding commands are introduced in a lesson, an "Introduced Code" section will appear that includes any new coding commands.
 </p></div>
 </details>
 

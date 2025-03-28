@@ -1,0 +1,20 @@
+{
+  "name": "sb-pt-exp",
+  "script_names": [
+    "sb-pt-exp"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "sb-pt-exp",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

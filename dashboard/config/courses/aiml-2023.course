@@ -1,0 +1,20 @@
+{
+  "name": "aiml-2023",
+  "script_names": [
+    "aiml-2023"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "aiml",
+    "version_year": "2023"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 02:30:58 UTC",
+    "serialized_at": "2025-03-26 20:56:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4496,7 +4496,7 @@
       "key": "11a5d825-ab89-4efb-9bdf-aa53413fe885",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This** Explain that static methods cannot access or change the values of instance variables unless an instance of the class is passed as a parameter.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
         "progression_name": "Practice: Static Variables and Methods",
         "tips": [
           {
@@ -7236,6 +7236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_alt_2025-cb-alt"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -7258,6 +7261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_alt_2025-cb-alt"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -7280,6 +7286,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_alt_2025-cb-alt"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -7302,6 +7311,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_alt_2025-cb-alt"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -7324,6 +7336,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_alt_2025-cb-alt"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -7346,6 +7361,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_alt_2025-cb-alt"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -7368,6 +7386,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_alt_2025-cb-alt"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -7390,6 +7411,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_alt_2025-cb-alt"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -7412,6 +7436,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_alt_2025-cb-alt"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7634,6 +7661,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -7656,6 +7686,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa2_2025-cb-alt"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7678,6 +7711,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -7700,6 +7736,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025-cb-alt"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -7722,6 +7761,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -7744,6 +7786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7765,6 +7810,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -11019,6 +11067,16 @@
   ],
   "vocabularies": [
     {
+      "key": "abstraction",
+      "word": "abstraction",
+      "definition": "showing only essential details while hiding implementation details",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
       "key": "access_modifier",
       "word": "access modifier",
       "definition": "a keyword used to set the visibility of classes, variables, constructors, and methods",
@@ -11414,6 +11472,12 @@
       "seeding_key": {
         "lesson.key": "Object References as Parameters",
         "vocabulary.key": "user_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "vocabulary.key": "abstraction"
       }
     },
     {

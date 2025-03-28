@@ -1,3 +1,4 @@
+@no_phone
 Feature: Level Progress
 
   Scenario: Progress is saved for signed-in student

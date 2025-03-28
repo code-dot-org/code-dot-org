@@ -6,18 +6,16 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "contagion-pilot",
-      "version_year": "unversioned"
+      "pilot_experiment": "contagion-pilot"
     },
     "new_name": null,
-    "family_name": "contagion-pilot-1",
-    "serialized_at": "2024-11-19 01:13:59 UTC",
+    "family_name": null,
+    "serialized_at": "2025-03-24 23:13:17 UTC",
     "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "contagion-pilot"
     }
