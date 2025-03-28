@@ -1,0 +1,20 @@
+{
+  "name": "csp3-recovery",
+  "script_names": [
+    "csp3-recovery"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csp3-recovery",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

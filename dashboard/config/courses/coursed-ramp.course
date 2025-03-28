@@ -1,0 +1,20 @@
+{
+  "name": "coursed-ramp",
+  "script_names": [
+    "coursed-ramp"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "coursed-ramp",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

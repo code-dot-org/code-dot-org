@@ -3,34 +3,58 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Congratulations! You completed the module! 
+# Congratulations! You completed the Getting Started with Code.org module! 
 <div style="text-align: center;">
 <img src="https://images.code.org/f1fc61bbfd548b7c641d6b7e89fb653b-image-1742943937020.05.34 PM.png" width="300" height="200" alt="two students with arms up in celebration looking at a laptop screen">
 </div>
 
 
 ## You are ready to start teaching if you:
-#### ✅ Became a <a href="https://www.example.com" target="_blank">verified teacher </a>
-#### ✅ Posted on the <a href="https://www.example.com" target="_blank">Teacher Forum </a>
-#### ✅ Set up a <a href="https://www.example.com" target="_blank">classroom section</a>
-#### ✅ Added a <a href="https://www.example.com" target="_blank">course</a>
-#### ✅ Located course <a href="https://www.example.com" target="_blank">lesson plans</a> and <a href="https://www.example.com" target="_blank">teacher resources</a>
-#### ✅ Learned how to <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula</a>
+#### ✅ Became a <a href="https://form.jotform.com/240863841362155" target="_blank">verified teacher. </a>
+#### ✅ Posted on the <a href="https://forum.code.org/t/welcome-to-code-org-we-are-thrilled-you-have-joined-our-community/40528" target="_blank">Teacher Forum. </a>
+#### ✅ Set up a <a href="https://www.example.com" target="_blank">classroom section.</a>
+#### ✅ Added a <a href="https://www.example.com" target="_blank">course.</a>
+#### ✅ Located course <a href="https://www.example.com" target="_blank">lesson plans.</a> and <a href="https://www.example.com" target="_blank">teacher resources.</a>
+#### ✅ Learned how to <a href="https://www.example.com" target="_blank">access support</a> while teaching Code.org curricula.</a>
+## Help Us Make This Course Better!
+
+#### Code.org values and is responsive to feedback. Please fill out this short survey to provide your feedback on this module.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_equity_cs_post_survey" target="blank" rel="noopener noreferrer">Take the Survey</a>
 
 
+## Next Steps
 
-##What's Next?
+### <b>Become a Verified Teacher</b>
+
+#### If you have not done so yet, become a <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >verified teacher</a> to unlock exclusive tools and resources. 
+
+### <b>Start Teaching</b> 
+#### Browse the <a href="https://studio.code.org/catalog" target="_blank">course catalog.</a>
 
 
-### <b>Never Coded before? </b>
+## **Continue Learning**
+
+#### Join us for a facilitator-led professional learning workshop. <a href="https://code.org/educate/professional-learning/" target="blank" rel="noopener noreferrer" >Click here</a>  to learn about opportunities in your area. 
+
+### <b>New to Coding?</b>
 ####<a href="https://studio.code.org/courses/self-paced-pl-k5-2024" target="_blank">CS Basics</a> is Code.org's free self-paced online learning for educators to get familiar with Computer Science Basics! After completing this professional learning experience, you'll be comfortable with basic coding concepts.
 
+### **Revisit This Content**
 
-### <b>Ready to Teach?</b> 
-#### Browse the <a href="https://studio.code.org/catalog" target="_blank">course catalog</a>
+#### You can return to <a href="UPDATE" target="blank" rel="noopener noreferrer" >this professional learning</a> at anytime to review your learning, access links or resources, or just refresh your memory!
 
-### <b>Need Course Specific Support?</b>  
-#### Start a <a href="https://code.org/professional-learning/self-paced" target="_blank">self-paced professional learning module</a>
+## **Stay Connected**
+
+* #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>. 
+
+* #### Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
+
+* #### Explore opportunities with the <a href="https://code.org/afe" target="blank" rel="noopener noreferrer">Amazon Future Engineer program</a>. 
+
+* #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
+
+### Thank you for learning with us!
 
 
 MARKDOWN

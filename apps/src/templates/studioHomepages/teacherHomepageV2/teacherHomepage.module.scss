@@ -221,6 +221,10 @@
   color: var(--brand-purple-50);
 }
 
+.emptyImage {
+  width: 220px;
+}
+
 // Teacher promotions
 
 .promotions {
@@ -255,6 +259,7 @@
   min-height: 160px;
   margin-bottom: 20px;
 }
+
 .promotionPartnerLogo {
   height: 22px;
   max-width: 100%;

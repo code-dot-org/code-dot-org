@@ -1,0 +1,20 @@
+{
+  "name": "self-paced-pl-csd5-2021",
+  "script_names": [
+    "self-paced-pl-csd5-2021"
+  ],
+  "published_state": "beta",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "universal_instructor",
+  "properties": {
+    "family_name": "self-paced-pl-csd5",
+    "version_year": "2021"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

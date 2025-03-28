@@ -142,7 +142,7 @@
     "validations": [
       {
         "key": "test-music-lab-sequence-explore-evaluative_eb8c1fa6-7b62-47fe-8151-50972f015231",
-        "message": "You used the `play together` block 3 times with different sounds! You passed the level",
+        "message": "<i class=\"fa-solid fa-square-check\"></i> You Did It!",
         "next": true,
         "conditions": [
           {
@@ -158,48 +158,6 @@
             "value": 9
           }
         ]
-      },
-      {
-        "key": "test-music-lab-sequence-explore-evaluative_9133f4e9-4079-4207-896f-64b8df80faf4",
-        "message": "You used another `play together` block with 3 sounds! You need to do this 3 times to pass the level!",
-        "next": false,
-        "conditions": [
-          {
-            "name": "played_sounds_together",
-            "value": 3
-          },
-          {
-            "name": "played_different_sounds_together_multiple_times",
-            "value": 2
-          },
-          {
-            "name": "played_sounds",
-            "value": 6
-          }
-        ]
-      },
-      {
-        "key": "test-music-lab-sequence-explore-evaluative_c63660cd-9904-46b7-867d-ab16ffca7b52",
-        "message": "You used a `play together` block with 3 sounds! You need to do this 3 times to pass the level!",
-        "next": false,
-        "conditions": [
-          {
-            "name": "played_sounds_together",
-            "value": 3
-          },
-          {
-            "name": "played_different_sounds_together_multiple_times",
-            "value": 1
-          }
-        ]
-      },
-      {
-        "key": "test-music-lab-sequence-explore-evaluative_1f754f44-ab3c-4f76-886a-38d4d0c6de9b",
-        "message": "Something's not quite right!",
-        "next": false,
-        "conditions": [
-
-        ]
       }
     ],
     "predict_settings": {
@@ -212,7 +170,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T22:41:46.010+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequence-explore-evaluative\\\"\"],\"cloned_from\":\"music-lab-sequence-explore-evaluative\"},{\"changed_at\":\"2025-03-07 22:42:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-25 22:22:17 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 22:22:54 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T22:41:46.010+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequence-explore-evaluative\\\"\"],\"cloned_from\":\"music-lab-sequence-explore-evaluative\"},{\"changed_at\":\"2025-03-07 22:42:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-25 22:22:17 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 22:22:54 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 22:16:02 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 22:16:44 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 22:55:37 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

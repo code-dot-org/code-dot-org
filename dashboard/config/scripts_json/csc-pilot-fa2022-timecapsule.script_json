@@ -19,18 +19,16 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csc-pilot-fa2022-timecapsule",
-      "version_year": "unversioned"
+      "pilot_experiment": "csc-pilot-fa2022-timecapsule"
     },
     "new_name": null,
-    "family_name": "csc-pilot-fa2022-timecapsule",
-    "serialized_at": "2024-11-19 01:15:40 UTC",
+    "family_name": null,
+    "serialized_at": "2025-03-24 23:13:38 UTC",
     "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csc-pilot-fa2022-timecapsule"
     }
