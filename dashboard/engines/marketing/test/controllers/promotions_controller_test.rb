@@ -44,6 +44,7 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
         }
       ].to_json
     end
+    let(:current_user) {create(:teacher)}
 
     before do
       Marketing::ContentfulClient.any_instance.expects(:entry).with(locale, entry_id).returns(entry)
@@ -71,6 +72,40 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
         get "/marketing/teacher/promotions/#{entry_id}"
         assert_response :not_found
       end
+    end
+
+    context 'when a promotion is hidden' do
+      let(:hidden_promotion_id) {"abc123"}
+      before do
+        HiddenPromotion.create!(teacher: current_user, promotion_id: hidden_promotion_id)
+      end
+
+      it 'does not return hidden promotions' do
+        sign_in current_user
+        get "/marketing/teacher/promotions/#{entry_id}"
+        assert_response :ok
+        result = JSON.parse(@response.body)
+        _(result).wont_include({'title' => 'Ad 1', 'id' => hidden_promotion_id})
+      end
+    end
+  end
+
+  describe '#hide' do
+    let(:promotion_id) {'abc123'}
+    let(:current_user) {create(:teacher)}
+
+    before do
+      sign_in current_user
+    end
+
+    it 'adds a HiddenPromotion' do
+      assert_difference 'HiddenPromotion.count', 1 do
+        post "/marketing/teacher/promotions/hide/#{promotion_id}"
+      end
+      assert_response :ok
+      hidden_promotion = HiddenPromotion.last
+      _(hidden_promotion.teacher).must_equal current_user
+      _(hidden_promotion.promotion_id).must_equal promotion_id
     end
   end
 end
