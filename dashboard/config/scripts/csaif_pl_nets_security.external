@@ -3,33 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Network Secuirty
+# Network Security
 
-#### Many of the ideas we use to keep secrets in the digital age are far older than the Internet.
+#### Phishing, weak passwords, default credentials, and social engineering are all vulnerabilities in real-world networks. 
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Encryption</strong> is a process of encoding messages to keep them secret, so only "authorized" parties can read it.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Phishing</strong> An attack where a user is tricked into revealing private information, often via a deceptive email.</p>
 </div>
-
-
-#### For example in Roman times Julius Caesar is reported to have encrypted messages to his soldiers and generals by using a simple alphabetic shift - every character was encrypted by substituting it with a character that was some fixed number of letters away in the alphabet.
-
-#### As a result an alphabetic shift is often referred to as the Caesar Cipher.
-
-<p align="center">
-<img src="https://images.code.org/24a2ed5e5656b809731ce608b56b7a82-Screenshot 2025-03-12 at 2.22.59 PM.png" alt="lesson plan diagram" width="90%" style="border-radius:10px; border: 5px solid black;">
-</p>
 
 ## 📝 To Do
 
-#### Explore the decryption widget in the next level. While you're exploring think about: *How does the widget work? What steps would you take to crack the code?*.
+#### CyberShield Inc. is under attack!
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Decryption</strong> is a process that reverses encryption, taking a secret message and reproducing the original <strong>plain text</strong>.</p>
-</div>
+#### As a cybersecurity analyst, it’s your job to investigate security threats and identify the best defenses to protect the company’s network.
+
+#### In this interactive simulation, you’ll analyze real-world vulnerabilities—like phishing scams, weak passwords, default credentials, and social engineering tricks—and decide how to stop them before they cause damage.
+
+#### **Open** the <a href='https://docs.google.com/presentation/d/1EVhT6Les4IsI59u1FssuiWn6gtuLIvOerjbMVISxQ5Q/preview?rm=minimal&slide=id.g2b778c96f3d_2_209' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Identify, Defend, Reflect! Activity Slide Deck</a>.
+
+#### **Explore** the Slide Deck and learn more about network vulnerabilities.
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 9. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 
 <br>
@@ -40,8 +35,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### If you get stuck trying to decrypt the message try moving around the letters to make possible matches. The frequency meter may help you get started - especially in matching letters in short words.
+#### The <a href='https://docs.google.com/document/d/1zTfZ1CxCdX1Kk-n195UEn2Fu_SVZ9RJO0sPJ5nGDCTE/edit?tab=t.0#heading=h.2dese35ij8j8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Networks and The Internet Unit Guide</a> includes a worksheet for students to fill out while working through the slide deck. Open your copy and turn to Lesson 9 for additional guidance.
 </p></div>
 </details>
-
 MARKDOWN

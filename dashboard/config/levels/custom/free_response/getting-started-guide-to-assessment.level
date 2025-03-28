@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-26T15:49:41.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Assessment and Grading with Code.org",
+    "long_instructions": "\r\n\r\n#### Code.org curriculum provides opportunities for formative and summative assessments. \r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n<summary style=\"font-size: 16px; font-weight: bold;\">Course Specific Guide to Assessment</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n<p style=\"font-size: 16px;\"> Many courses provides a Guide to Assessment. Guides can be found under the \"Teacher Resources\" drop-down. \r\n<img src=\"https://images.code.org/975dc256e30b3e5ab77d02fd41346287-image-1732222540780.png\" alt=\"Guide to Assessment\">\r\n\r\n\r\n</p></div>\r\n</details>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n<summary style=\"font-size: 16px; font-weight: bold;\">Example Guide to Assessment </summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n<p style=\"font-size: 16px;\"> \r\n\r\n<img src=\"https://images.code.org/e7741e79bbfbc19707d7ccfa15c5bec1-image-1740594189010.23.06 AM.png\" alt=\"example guide\">\r\n\r\n\r\n</p></div>\r\n</details>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/assessment-reflection/40543\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>How Do Teachers Assess in Their Classrooms?</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Post your ideas and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div>\r\n</div>\r\n\r\n\r\n\r\n\r\n___ \r\n\r\n##### **Note:** Click and drag the bottom-right corner of the text box below to resize it.\r\n\r\n\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "200",
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-26T15:49:41.436+00:00\",\"changed\":[\"cloned from \\\"getting-started-teacher-prep\\\"\"],\"cloned_from\":\"getting-started-teacher-prep\"},{\"changed_at\":\"2025-03-26 15:50:20 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-03-26 15:51:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-03-26 20:35:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

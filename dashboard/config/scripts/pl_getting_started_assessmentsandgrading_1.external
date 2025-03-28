@@ -7,13 +7,26 @@ markdown <<MARKDOWN
 
 #### Code.org curriculum provides opportunities for formative and summative assessments. 
 
-
-#### Many courses provides a Guide to Assessment. Guides can be found under the "Teacher Resources" drop-down. 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Course Specific Guide to Assessment</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Many courses provides a Guide to Assessment. Guides can be found under the "Teacher Resources" drop-down. 
 
 ![](https://images.code.org/975dc256e30b3e5ab77d02fd41346287-image-1732222540780.png)
+</p></div>
+</details>
 
-## Example Guide to Assessment 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Example Guide to Assessment </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> 
+
 ![](https://images.code.org/e7741e79bbfbc19707d7ccfa15c5bec1-image-1740594189010.23.06 AM.png)
+</p></div>
+</details>
+
+
+
 
 
 

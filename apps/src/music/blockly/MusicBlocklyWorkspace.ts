@@ -543,6 +543,7 @@ export default class MusicBlocklyWorkspace {
         flyoutItems.push({
           kind: 'block',
           ...Blockly.serialization.blocks.save(block, {saveIds: false}),
+          id: Blockly.blockIdOverrides?.[block.id] || block.id,
           enabled: true,
         });
         currentCategory.contents = flyoutItems;

@@ -1,0 +1,20 @@
+{
+  "name": "curriculum-sandbox-levels",
+  "script_names": [
+    "curriculum-sandbox-levels"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "curriculum-sandbox-levels",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

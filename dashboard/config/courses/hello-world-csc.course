@@ -1,0 +1,20 @@
+{
+  "name": "hello-world-csc",
+  "script_names": [
+    "hello-world-csc"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hello-world-csc",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

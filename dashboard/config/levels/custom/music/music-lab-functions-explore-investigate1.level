@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -36,7 +36,7 @@
               "next": {
                 "block": {
                   "type": "procedures_callnoreturn",
-                  "id": "?bE07,9dOJ{b,F$ch?A1",
+                  "id": "verse_workspace",
                   "deletable": false,
                   "movable": false,
                   "editable": false,
@@ -46,7 +46,7 @@
                   "next": {
                     "block": {
                       "type": "play_sounds_together",
-                      "id": "[ZAN:H81#J,qImysH}he",
+                      "id": "play_together_workspace",
                       "deletable": false,
                       "editable": false,
                       "extraState": {
@@ -382,7 +382,7 @@
             },
             {
               "type": "procedures_defnoreturn",
-              "id": "o%b]-){oKoO}C@Mc%F{}",
+              "id": "prechorus_def_workspace",
               "x": 370,
               "y": 30,
               "deletable": false,
@@ -399,7 +399,7 @@
             },
             {
               "type": "procedures_callnoreturn",
-              "id": "8xZX|fnYFz06-e|)h3o2",
+              "id": "prechorus_workspace",
               "x": 250,
               "y": 30,
               "disabledReasons": [
@@ -447,11 +447,21 @@
         ]
       }
     },
-    "long_instructions": "Drag the pre-chorus section into its own function, then call it",
+    "long_instructions": "#### Investigate\r\n\r\nThe last level used a **function** to simplify the `verse` of the song.\r\n\r\nBecky noticed that there were two `verse` blocks - one big area that **defined** the function with all of the blocks that made up the verse, and another that **called** the function using just the name `verse`. She wondered if we can do the same thing with the Prechorus by moving all of the blocks into it's own function and calling it.\r\n\r\n![](https://images.code.org/f690d81c9de641a9f24e45990b5e5d10-image-1743134344805.png)\r\n\r\nTry to recreate the code above on your own, or follow the step-by-step instructions below:\r\n\r\n1) Drag the <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> block into the function **definition** <code style=\"background-color: rgb(80, 153, 24); color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">prechorus</code> [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:play_together_workspace---id:prechorus_def_workspace)\r\n2) Drag the individual <code style=\"background-color: rgb(80, 153, 24); color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">prechorus</code> block underneath the <code style=\"background-color: rgb(80, 153, 24); color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">verse</code> block. This is **calling** your function. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:prechorus_workspace---id:verse_workspace).\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!",
     "encrypted_exemplar_sources": "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\nn/ElU0s620e/sNdCzPahxgvY4FA=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12T23:33:34.975+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-predict\\\"\"],\"cloned_from\":\"music-lab-functions-explore-predict\"},{\"changed_at\":\"2025-03-12 23:34:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:36:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:37:01 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:37:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:38:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T23:33:34.975+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-predict\\\"\"],\"cloned_from\":\"music-lab-functions-explore-predict\"},{\"changed_at\":\"2025-03-12 23:34:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:36:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:37:01 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:37:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-12 23:38:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 04:05:37 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 04:08:07 +0000\",\"changed\":[\"level_data\",\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 04:10:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

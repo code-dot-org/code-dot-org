@@ -2983,6 +2983,12 @@
   "https://studio.code.org/s/allthethings/lessons/46/levels/7": {
     "long_instructions": "This level shares a project with the previous level in the progression."
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/8": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/9": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Which of the following do you expect to hear?"
+  },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button. What can you learn about Ada Lovelace?"
   },
