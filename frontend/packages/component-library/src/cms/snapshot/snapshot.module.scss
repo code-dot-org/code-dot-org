@@ -6,10 +6,8 @@
 
 // SnapshotSection common styles
 .snapshot {
-  border-radius: variables.$regular-border-radius;
-  border: 1px solid var(--borders-neutral-primary);
+  @include mixins.border-styles;
   background: var(--background-neutral-primary);
-
   column-count: 2;
   column-width: 180px;
   column-gap: 1.5rem;
