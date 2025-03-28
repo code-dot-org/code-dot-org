@@ -19,8 +19,8 @@ type FreeResponseAiSummaryBoxProps = {
   isPending: boolean;
   studentWorkEvaluations?: StudentWorkEvaluation[];
   evaluationComplete?: boolean;
-  totalStudentCount: number; // Total number of students for the assignment
-  openDetailedAnalysis?: () => void; // Optional function to open detailed analysis
+  totalStudentCount: number;
+  openDetailedAnalysis?: () => void;
 };
 
 const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
@@ -33,7 +33,6 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   openDetailedAnalysis,
 }) => {
   const proficienceyThreshold = totalStudentCount * 0.8;
-  // TO DO: Update logic for the proficiency label.  Should be > 20% of students have a proficient answer
   const aiSummaryTag = (proficiencyCount: number) => {
     return (
       <Tags
@@ -100,7 +99,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
     : 0;
 
-  // TO DO: Update this with perhaps different logic...
+  // TO DO: Update this with perhaps different logic for "flagged students"
   const flaggedStudentCount = studentWorkEvaluations
     ? countEvaluationsByType(studentWorkEvaluations, ['Cant Evaluate'])
     : 0;
@@ -126,7 +125,6 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     );
   };
 
-  // TO DO: Get total student count loaded in
   return (
     <div className={styles.aiSummaryContainer}>
       <div className={styles.leftSide}>
