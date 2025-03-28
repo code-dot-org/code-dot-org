@@ -97,7 +97,6 @@ Scenario: Teacher can reset progress on free response contained level
   And I verify progress in the header of the current page is "perfect" for level 3
   Then I click selector "button:contains('Delete Answer')"
   And I wait until ".response" does not contain text "Here is my response!"
-  And I wait for 5 seconds
   And I verify progress in the header of the current page is "not_tried" for level 3
   And I press keys "Here is my response!" for element ".response"
   And element ".response" has value "Here is my response!"
