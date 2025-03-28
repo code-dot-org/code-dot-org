@@ -133,6 +133,14 @@
       "require": "./dist/cjs/cms/section/index.js"
     },
     "./cms/section/index.css": "./dist/esm/cms/section/index.css",
+    "./cms/snapshot": {
+      "types": {
+        "import": "./dist/esm/cms/snapshot/index.d.ts",
+        "require": "./dist/cjs/cms/snapshot/index.d.ts"
+      },
+      "import": "./dist/esm/cms/snapshot/index.mjs",
+      "require": "./dist/cjs/cms/snapshot/index.js"
+    },
     "./cms/tabGroup": {
       "types": {
         "import": "./dist/esm/cms/tabGroup/index.d.ts",
