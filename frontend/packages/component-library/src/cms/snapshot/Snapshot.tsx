@@ -41,7 +41,7 @@ const Snapshot: React.FC<SnapshotProps> = ({
     className={classNames(moduleStyles.snapshot, className)}
     {...HTMLAttributes}
   >
-    {items.map(({key, icon, label, content}) => (
+    {items?.map(({key, icon, label, content}) => (
       <div key={key} className={moduleStyles.snapshotItem}>
         <FontAwesomeV6Icon
           {...icon}

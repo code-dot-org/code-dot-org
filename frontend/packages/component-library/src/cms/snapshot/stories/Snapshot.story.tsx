@@ -10,6 +10,7 @@ export default {
 } as Meta<SnapshotProps>;
 
 const defaultArgs: SnapshotProps = {
+  title: 'Curriculum Snapshot',
   items: [
     {
       key: 'grades',
