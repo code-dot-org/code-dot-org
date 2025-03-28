@@ -79,7 +79,6 @@ export const submitChatContents = createAsyncThunk(
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
           levelPath: window.location.pathname,
-          userMessage: newUserMessageInput.text,
         })
       );
     } catch (error) {

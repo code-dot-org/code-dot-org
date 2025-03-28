@@ -1274,7 +1274,7 @@ en:
           description_teacher: ''
           version_title: ''
         pilot-pl-teaching-k5-music-lab:
-          title: pilot-pl-teaching-k5-music-lab
+          title: Teaching Intro to Programming with Music Lab
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -4298,6 +4298,10 @@ en:
         getting-started-2025:
           title: Getting Started with Code.org
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            ##Welcome
+            This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
+          description_teacher: |-
+            ##Welcome
+            This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
           version_title: ''
