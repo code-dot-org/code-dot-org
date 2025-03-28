@@ -7,6 +7,10 @@ class Policies::CoursesTest < ActiveSupport::TestCase
     let(:modularity_enabled) {Policies::Courses.modularity_enabled?(user)}
 
     context 'nothing configured' do
+      before do
+        allow(user).to receive(:id).and_return(7)
+      end
+
       it 'defaults to false' do
         _(modularity_enabled).must_equal false
       end
@@ -17,6 +21,7 @@ class Policies::CoursesTest < ActiveSupport::TestCase
 
       before do
         allow(DCDO).to receive(:get).with('modularity', false).and_return(dcdo_value)
+        allow(user).to receive(:id).and_return(7)
       end
 
       context 'DCDO is true' do
