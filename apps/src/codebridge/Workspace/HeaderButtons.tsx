@@ -7,10 +7,13 @@ import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterH
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import {DEFAULT_FONT_SIZE_KEY, FontSize} from '@cdo/apps/codebridge/constants';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {setEditorFontSize} from '@cdo/apps/codebridge/redux/workspaceRedux';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {
+  DEFAULT_FONT_SIZE_KEY,
+  FontSize,
+  MAIN_PYTHON_FILE,
+} from '@cdo/apps/lab2/constants';
+import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
 import {
@@ -44,7 +47,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties} = useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
   const editorFontSizeKey = useAppSelector(
-    state => state.codebridgeWorkspace.editorFontSizeKey
+    state => state.lab2View.editorFontSizeKey
   );
   const selectedFontSizeKey = editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
   const {signInState} = useAppSelector(state => state.currentUser);
