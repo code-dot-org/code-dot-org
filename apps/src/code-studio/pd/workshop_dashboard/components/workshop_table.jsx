@@ -117,6 +117,30 @@ export default class WorkshopTable extends React.Component {
         },
       },
       {
+        property: 'course',
+        header: {
+          label: 'Type',
+          transforms: [sortable],
+        },
+      },
+      {
+        property: 'subject',
+        header: {
+          label: 'Subjects/Topics',
+          transforms: [sortable],
+        },
+      },
+      {
+        property: 'virtual',
+        header: {
+          label: 'Format',
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [this.formatVirtualFormat],
+        },
+      },
+      {
         property: 'location_name',
         header: {
           label: 'Location',
@@ -124,54 +148,26 @@ export default class WorkshopTable extends React.Component {
         },
       },
       {
-        property: 'on_map',
-        header: {
-          label: 'On Map',
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.formatBoolean],
-        },
-      },
-      {
-        property: 'funded',
-        header: {
-          label: 'Funded',
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.formatBoolean],
-        },
-      },
-      {
-        property: 'course',
-        header: {
-          label: 'Course',
-          transforms: [sortable],
-        },
-      },
-      {
-        property: 'subject',
-        header: {
-          label: 'Subject',
-          transforms: [sortable],
-        },
-      },
-      {
-        property: 'virtual',
-        header: {
-          label: 'Virtual',
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.formatBoolean],
-        },
-      },
-      {
         property: 'enrollments',
         header: {
           label: 'Signups',
           transforms: [sortable],
+        },
+      },
+      {
+        property: 'regional_partner_name',
+        header: {
+          label: 'Regional Partner',
+          transforms: [sortable],
+        },
+      },
+      {
+        property: 'facilitators',
+        header: {
+          label: 'Facilitators',
+        },
+        cell: {
+          formatters: [this.formatFacilitators],
         },
       }
     );
@@ -187,25 +183,6 @@ export default class WorkshopTable extends React.Component {
         },
       });
     }
-
-    columns.push(
-      {
-        property: 'facilitators',
-        header: {
-          label: 'Facilitators',
-        },
-        cell: {
-          formatters: [this.formatFacilitators],
-        },
-      },
-      {
-        property: 'regional_partner_name',
-        header: {
-          label: 'Regional Partner',
-          transforms: [sortable],
-        },
-      }
-    );
 
     columns.push();
 
@@ -265,8 +242,8 @@ export default class WorkshopTable extends React.Component {
     return <SessionTimesList sessions={rowData.sessions} />;
   };
 
-  formatBoolean = bool => {
-    return bool ? 'Yes' : 'No';
+  formatVirtualFormat = isVirtual => {
+    return isVirtual ? 'Virtual' : 'In-Person';
   };
 
   formatOrganizer = organizer => {

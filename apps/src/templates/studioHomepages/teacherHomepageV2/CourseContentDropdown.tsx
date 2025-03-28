@@ -55,11 +55,10 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
     }
   }, [section.id, section.unitId]);
 
-  const dropdownOptions = useMemo(() => {
-    const options = [{value: i18n.goToLesson(), text: i18n.goToLesson()}];
-    options.push(...lessonList);
-    return options;
-  }, [lessonList]);
+  const dropdownOptions = useMemo(
+    () => [{value: i18n.jumpTo(), text: i18n.jumpTo()}, ...lessonList],
+    [lessonList]
+  );
 
   const onDropdownChange = (args: React.ChangeEvent<HTMLSelectElement>) => {
     if (args.target.value !== 'Go to') {
@@ -83,10 +82,10 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         <SimpleDropdown
           className={styles.courseContentDropdown}
           name="go-to-lesson-dropdown"
-          labelText={i18n.goToLesson()}
+          labelText={i18n.jumpTo()}
           isLabelVisible={false}
           items={dropdownOptions}
-          selectedValue={i18n.goToLesson()}
+          selectedValue={i18n.jumpTo()}
           size="m"
           dropdownTextThickness="thin"
           onChange={args => onDropdownChange(args)}

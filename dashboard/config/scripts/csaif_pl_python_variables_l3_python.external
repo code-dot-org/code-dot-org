@@ -21,8 +21,9 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/83801bad4dc34715b6cfd9ada97d5313-image-1727203773189.png" alt="variable types: int, float, string, boolean" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
 
 
-![]()
-#### *Notice how data types are not named when defining variables in Python. Instead, Python automatically assigns the data type based on the value you input.*
+#### In Python, you don’t have to say what kind of data you're using when you create a variable — Python figures it out for you based on what you type.
+
+#### For example, if you write `age = 12`, Python knows that age is a number, and if you write `name = "Alex"`, it knows that name is text because of the quotation marks.
 
 ## Creating a Variable 
 
@@ -48,10 +49,28 @@ markdown <<MARKDOWN
                 <img src="https://images.code.org/00824a86b12347424b5e6f2cbba0d745-image-1727210984964.png" alt="Image 3" width="100%">
             </td>
             <td width="67%" style="font-size:14pt;">
-                Then we can specifiy the <b>starting value</b> to what we want the variable to store.
+                Then we can specify the <b>starting value</b> to what we want the variable to store.
             </td>
         </tr>
     </table>
+    
+<br>  
+
+## Declaring Different Variable Types 
+
+#### Variable types are not named when creating variables, however, how you input the value determines the variable type.
+
+<img src="https://images.code.org/3f2339ba75b14b98c82b78281c4fda38-image-1741196296906.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### **Notice:**
+
+- #### **String**, or text, variables are defined using quotation marks.
+- #### **Booleans** are defined using the words True or False.
+
 
 ##Let's try creating variables in Python Lab! 
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ The upcoming coding levels are from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 MARKDOWN

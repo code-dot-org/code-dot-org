@@ -67,20 +67,8 @@
     }
   }
 
-  .tag_button_container {
-    position: relative;
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-
-    button {
-      all: unset;
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 20px;
-      cursor: pointer;
-    }
+  .wrapContainer {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
   }
 }

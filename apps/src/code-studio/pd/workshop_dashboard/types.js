@@ -9,6 +9,7 @@ const workshopShape = PropTypes.shape({
   funded: PropTypes.bool.isRequired,
   course: PropTypes.string.isRequired,
   subject: PropTypes.string,
+  course_offering_names: PropTypes.string,
   title: PropTypes.string,
   enrolled_teacher_count: PropTypes.number.isRequired,
   capacity: PropTypes.number.isRequired,

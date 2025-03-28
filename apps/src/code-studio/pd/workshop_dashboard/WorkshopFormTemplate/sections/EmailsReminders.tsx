@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 
 import {SectionProps} from '../types';
 
-export const EmailsReminders: FC<SectionProps> = ({state, handleChange}) => {
+export const EmailsReminders: FC<SectionProps> = ({dispatchWorkshop}) => {
   return (
     <div>
       <Heading2 visualAppearance="heading-sm">Emails & Reminders</Heading2>
