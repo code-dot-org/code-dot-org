@@ -21716,6 +21716,7 @@ en:
             - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
             - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
             :::
+            &nbsp;
           student_description: |-
             AI is becoming a bigger part of everyday life—from helping write emails to suggesting music and planning trips. But using AI isn't just about typing in a prompt and accepting the answer. In this unit, you learn how to work with AI as a creative and problem-solving partner. You explore what AI does well, where it struggles, and how your thinking and choices can improve its results.
 
@@ -21728,6 +21729,7 @@ en:
             - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
             - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
             :::
+            &nbsp;
         csaif1-preview:
           lessons: {}
           lesson_groups: {}
@@ -21929,3 +21931,31 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description: This unit prepares students for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
           student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
+        csd-programming-with-music-lab-2025-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-programming-with-music-lab-2025-pilot
+          title: "[PILOT] CSD Programming with Music Lab"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-getting-started-2024:
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+            lesson-2:
+              name: Navigating the Code.org Learning Platform
+            lesson-3:
+              name: The Student Experience
+            lesson-4:
+              name: Navigating Lesson Plans, Assessments, and Resources
+            lesson-5:
+              name: Navigating Support
+          lesson_groups: {}
+          name: self-paced-pl-getting-started-2024
+          title: Getting Started with Code.org
+          description_audience: ''
+          description_short: ''
+          description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching any of the Code.org curriculum** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\nPick your content: The Getting Started Content is organized in five lessons: \n* Lesson 1: Welcome to Code.org\n* Lesson 2: Navigating the Code.org Learning Platform\n* Lesson 3: The Student Experience\n* Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n* Lesson 5: Navigating Support"
+          student_description: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching any of the Code.org curriculum** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\nPick your content: The Getting Started Content is organized in five lessons: \n* Lesson 1: Welcome to Code.org\n* Lesson 2: Navigating the Code.org Learning Platform\n* Lesson 3: The Student Experience\n* Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n* Lesson 5: Navigating Support"
