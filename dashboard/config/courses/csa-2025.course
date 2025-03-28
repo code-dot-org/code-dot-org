@@ -23,7 +23,129 @@
     "version_year": "2025"
   },
   "resources": [
-
+    {
+      "name": "All Resources",
+      "url": "/courses/csa-2025/resources",
+      "key": "all_resources_17",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_17"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csa-2025/standards",
+      "key": "all_standards_16",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_16"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csa-2025/vocab",
+      "key": "all_vocabulary_16",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_16"
+      }
+    },
+    {
+      "name": "Code Reviews for Teachers",
+      "url": "\thttps://docs.google.com/document/d/12NKMurFZbuo_QEhFBm-kjN-whkhGyMO8FVwmlMeDNUQ/edit?usp=sharing",
+      "key": "code_reviews_for_teachers_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "code_reviews_for_teachers_1"
+      }
+    },
+    {
+      "name": "College Board Programming Labs and Java Lab",
+      "url": "https://docs.google.com/document/d/1VGHDdpc1Whhq16FBFiT5QhLCDVWW63uRS5LktAmPC3A/edit?usp=sharing",
+      "key": "college_board_programming_labs_and_java_lab",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "college_board_programming_labs_and_java_lab"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csa/445",
+      "key": "csa_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csa_forum"
+      }
+    },
+    {
+      "name": "Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing",
+      "key": "guide_to_curriculum_videos",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_curriculum_videos"
+      }
+    },
+    {
+      "name": "Java Lab Documentation",
+      "url": "https://studio.code.org/docs/ide/javalab/",
+      "key": "java_lab_documentation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "java_lab_documentation"
+      }
+    },
+    {
+      "name": "Level Validation in Java Lab",
+      "url": "https://docs.google.com/document/d/1vNeia7dKCpKLT7vC13Gnpzwf6u_WbA8URkEme8jP1Q0/edit?usp=sharing",
+      "key": "level_validation_in_java_lab",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "level_validation_in_java_lab"
+      }
+    },
+    {
+      "name": "Objects-First Approach to CSA",
+      "url": "https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing",
+      "key": "objects-first_approach_to_csa",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "objects-first_approach_to_csa"
+      }
+    },
+    {
+      "name": "Student-Centered Pedagogy and Equity",
+      "url": "https://docs.google.com/document/d/1n2bPN--Cd9dz8P0yOZBUJ3DGY_BQHEMALFXUITJZWN0/edit?usp=sharing",
+      "key": "student-centered_pedagogy_and_equity",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "student-centered_pedagogy_and_equity"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1rF-8Yi4aYaCPaWBJXvxyWFNcAnlLvvwq92zKzsiLL9E/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    }
   ],
   "student_resources": [
 

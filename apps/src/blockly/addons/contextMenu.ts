@@ -25,6 +25,43 @@ import {getBaseName, isDarkTheme} from '../utils';
 // Some options are only available to levelbuilders via start mode.
 // Literal strings are used for display text instead of translatable strings
 // as Levelbuilder can only be used in English.
+const registerOverrideBlockId = function (weight: number) {
+  const overrideIdOption = {
+    displayText: () => 'Override block id',
+    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (Blockly.isStartMode || Blockly.isToolboxMode) {
+        return MenuOptionStates.ENABLED;
+      }
+      return MenuOptionStates.HIDDEN;
+    },
+    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      const block = scope.block;
+      if (!block) return;
+
+      const currentId = block.id;
+      const currentOverride =
+        Blockly.blockIdOverrides?.[currentId] ?? currentId;
+
+      Blockly.dialog.prompt(
+        'Enter a new block id (requires saving):',
+        currentOverride,
+        newId => {
+          if (!Blockly.blockIdOverrides) {
+            Blockly.blockIdOverrides = {};
+          }
+          if (newId) {
+            Blockly.blockIdOverrides[currentId] = newId;
+          }
+        }
+      );
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
+    id: 'overrideBlockId',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(overrideIdOption);
+};
+
 const registerDeletable = function (weight: number) {
   const deletableOption = {
     displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
@@ -705,6 +742,7 @@ function registerCustomBlockOptions() {
 
   // Custom block options. We increment the weight for each so they are automatically
   // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
+  registerOverrideBlockId(nextWeight++);
   registerHelp(nextWeight++);
   registerDeletable(nextWeight++);
   registerMovable(nextWeight++);

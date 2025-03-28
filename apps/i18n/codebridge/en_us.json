@@ -38,7 +38,6 @@
   "forTeachersOnlyHeader": "For Teachers Only",
   "getBackpackFileListError": "There was an error in getting the Backpack file list.",
   "getBackpackFileError": "There was an error in getting {selectedFileName}.",
-  "helpAndTipsHeader": "Help and Tips",
   "importAsNewName": "Import as {newFileName}",
   "importFromBackpackTitle": "Import from Backpack",
   "importFromBackpackDuplicateMessage": "Would you like to replace the current file with this file or import this file as {newFileName}?",

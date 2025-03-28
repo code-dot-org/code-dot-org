@@ -20,11 +20,6 @@
             "play_sound_at_current_location_simple2",
             "play_rest_at_current_location_simple2"
           ],
-          "Effects": [
-            "set_volume_effect_at_current_location_simple2",
-            "set_filter_effect_at_current_location_simple2",
-            "set_delay_effect_at_current_location_simple2"
-          ],
           "Functions": [
 
           ],
@@ -46,7 +41,7 @@
     "long_instructions": "### Change a sound in real-time\r\n\r\nLive coding doesn't have to be complicated. Try manipulating just one element at a time. See if you can change a sound on the beat. \r\n\r\n**Do this:** \r\n- Plan your next sound shift. Find a sound in the dropdown menu that you'll switch to at Measure 4. \r\n- Practice live coding your music by pressing \"Run\" and clicking on your new sound once the playhead gets to the beginning of Measure 4. ",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T21:11:44.322+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-1\"},{\"changed_at\":\"2025-03-17 21:20:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17T21:11:44.322+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-1\"},{\"changed_at\":\"2025-03-17 21:20:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-18 15:50:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

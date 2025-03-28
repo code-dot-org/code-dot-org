@@ -1,0 +1,22 @@
+name 'SP-VPL-21-mod2-GS_ReportAProblem_5_3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Report a Problem
+
+
+
+<img src="https://images.code.org/a858e7fc8aa0e391359c7059bbcad2f1-image-1714074767673.46.57 PM.png" alt="The Code.org 'Contact Us' submission form." style="float: right; width: 400px; clear: both; margin: 0 20px 20px 20px;">
+
+#### 1.  While logged in click the   ?   menu
+#### 2. Select "Report a problem".
+#### 3. Describe the issue in detail, including screenshots and links when possible
+#### 4. Submit your message, and our team will follow up via email to assist you.
+
+
+### **What Happens Next?**
+
+#### After you submit your message, a member of our team will follow up with you via email. 
+
+MARKDOWN

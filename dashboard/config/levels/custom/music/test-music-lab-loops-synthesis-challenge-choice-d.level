@@ -1,0 +1,92 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-19T15:56:39.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2",
+            "play_sounds_random",
+            "triggered_at_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 5
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_random",
+                        "id": "play_sounds_random",
+                        "extraState": {
+                          "disableNextConnection": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Alternating Patterns with Nested Loops\r\n\r\nUse nested loops to switch between different parts of your code, allowing you to tweak one loop while the other plays.\r\n\r\n**Do This**:\r\n- Create a loop that repeats 3 times, layering a drum, bass, and lead part using play together.\r\n- Create a second loop that also repeats 3 times with a different set of drum, bass, and lead layers.\r\n- Nest both loops inside another loop that plays 3 times (see image below for reference).\r\n- Press \"Run\" – while one loop plays, the other is silent. Use that time to edit and experiment!\r\n\r\n![](https://images.code.org/71c0ad8e20a2a083deeab43651f60787-image-1742403105866.51.43 AM.png)",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "The Nested Loops Strategy",
+    "thumbnail_url": "https://images.code.org/639db2157c19ef7b8f71eaa534ce453a-DALL·E 2025-03-19 09.53.20 - A vibrant background featuring a gradient transitioning from deep purple to bright yellow. In the foreground, a dynamic and playful illustration of mu.webp",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-19T15:56:39.674+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-b\"},{\"changed_at\":\"2025-03-19 16:01:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-19 16:51:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-19 16:54:12 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

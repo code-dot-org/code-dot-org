@@ -1,0 +1,41 @@
+name 'csaif_pl_nets_security'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Network Security
+
+#### Phishing, weak passwords, default credentials, and social engineering are all vulnerabilities in real-world networks. 
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Phishing</strong> An attack where a user is tricked into revealing private information, often via a deceptive email.</p>
+</div>
+
+## 📝 To Do
+
+#### CyberShield Inc. is under attack!
+
+#### As a cybersecurity analyst, it’s your job to investigate security threats and identify the best defenses to protect the company’s network.
+
+#### In this interactive simulation, you’ll analyze real-world vulnerabilities—like phishing scams, weak passwords, default credentials, and social engineering tricks—and decide how to stop them before they cause damage.
+
+#### **Open** the <a href='https://docs.google.com/presentation/d/1EVhT6Les4IsI59u1FssuiWn6gtuLIvOerjbMVISxQ5Q/preview?rm=minimal&slide=id.g2b778c96f3d_2_209' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Identify, Defend, Reflect! Activity Slide Deck</a>.
+
+#### **Explore** the Slide Deck and learn more about network vulnerabilities.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 9. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Hint
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### The <a href='https://docs.google.com/document/d/1zTfZ1CxCdX1Kk-n195UEn2Fu_SVZ9RJO0sPJ5nGDCTE/edit?tab=t.0#heading=h.2dese35ij8j8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Networks and The Internet Unit Guide</a> includes a worksheet for students to fill out while working through the slide deck. Open your copy and turn to Lesson 9 for additional guidance.
+</p></div>
+</details>
+MARKDOWN

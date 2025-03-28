@@ -12,6 +12,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Spinner from '../../../../sharedComponents/Spinner';
+import {COURSE_BUILD_YOUR_OWN} from '../workshopConstants';
+
+// To allow the workshop table to display/sort by Subjects/Topics, the subjects and topics have to all be
+// under the same field name. So, only for the purposes of displaying the info to the user, the Build Your
+// Own workshop course offerings will be set as the workshop's subject.
+function processWorkshopData(workshopData) {
+  return {
+    ...workshopData,
+    workshops: workshopData.workshops?.map(ws => {
+      if (ws.course === COURSE_BUILD_YOUR_OWN) {
+        ws.subject = ws.course_offering_names;
+      }
+      return ws;
+    }),
+  };
+}
 
 export default class WorkshopTableLoader extends React.Component {
   static propTypes = {
@@ -70,7 +86,7 @@ export default class WorkshopTableLoader extends React.Component {
     }).done(data => {
       this.setState({
         loading: false,
-        workshops: data,
+        workshops: processWorkshopData(data),
       });
     });
   };

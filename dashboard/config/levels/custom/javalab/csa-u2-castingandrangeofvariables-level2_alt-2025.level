@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2025-03-19T20:52:44.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Add the following code:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nSystem.out.println(\"bigNumber as double: \" + (double)bigNumber);\r\nSystem.out.println(bigNumber + \" (as double) plus 1: \" + ((double)bigNumber + 1));\r\n</pre>\r\n\r\nRun the program and observe the results. Why do you think this happened?\r\n\r\nCan you change + 1 in the line above in order to cause an overflow again?",
+    "mini_rubric": "false",
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyClass.java": {
+        "text": "public class MyClass {\n    public static void main(String args[]) {\n        int bigNumber = 2147483647;\n        System.out.println(\"Integer.MAX_VALUE: \" + Integer.MAX_VALUE);\n        System.out.println(\"bigNumber: \" + bigNumber);\n        System.out.println(bigNumber + \" plus 1: \" + (bigNumber + 1));\n        System.out.println(\"-------------\");\n        \n        /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n      \n    }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-19T20:52:44.783+00:00\",\"changed\":[\"cloned from \\\"CSA U2_Casting-and-range-of-variables-L2\\\"\"],\"cloned_from\":\"CSA U2_Casting-and-range-of-variables-L2\"},{\"changed_at\":\"2025-03-19 20:53:05 +0000\",\"changed\":[\"ai_tutor_available\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

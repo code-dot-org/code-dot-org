@@ -6,6 +6,7 @@ type Section =
   | 'Button'
   | 'Divider'
   | 'Heading'
+  | 'Image'
   | 'Localization'
   | 'Overline'
   | 'Paragraph'

@@ -740,6 +740,11 @@ module SharedConstants
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
+  AI_EVALUATION_TYPES = {
+    SINGLE_STUDENT: 'single_student',
+    SECTION_SUMMARY: 'section_summary',
+  }.freeze
+
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.
   AI_INTERACTION_STATUS = {

@@ -1,0 +1,20 @@
+{
+  "name": "csd-test-saving-state",
+  "script_names": [
+    "csd-test-saving-state"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd-test-saving-state",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

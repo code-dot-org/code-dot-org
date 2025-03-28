@@ -11,6 +11,7 @@ import {
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
+  CodebridgeLevelProperties,
 } from '@codebridge/types';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
@@ -34,6 +35,7 @@ type CodebridgeProps = {
   projectVersion: number;
   labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
+  levelProperties: CodebridgeLevelProperties;
 };
 
 export const Codebridge = React.memo(
@@ -48,6 +50,7 @@ export const Codebridge = React.memo(
     projectVersion,
     labConfig,
     sendConsoleInput,
+    levelProperties,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -78,7 +81,7 @@ export const Codebridge = React.memo(
       return config.layoutComponents[currentLayout];
     }, [config.activeLayout, config.layoutComponents, isShareView]);
 
-    const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+    const appName = levelProperties.appName;
 
     const backpackApi = useMemo(
       () => new BackpackClientApi(appName, null),
@@ -98,6 +101,7 @@ export const Codebridge = React.memo(
           ...sourceUtilities,
           labConfig,
           sendConsoleInput,
+          levelProperties,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

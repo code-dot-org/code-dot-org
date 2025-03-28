@@ -1,0 +1,3906 @@
+{
+  "script": {
+    "name": "csa5-alt-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-24 02:50:30 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csa5-alt-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Review and Practice"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Mock Exams"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "The AP CSA Exam",
+      "name": "The AP CSA Exam",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Students learn about the structure and expectations of the AP CSA Exam. In the process, students identify and answer questions about the exam. Students explore test-taking strategies and study resources that they can use to prepare for the exam.",
+        "preparation": "* Print copies of the Course Exam Description (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the Exploring Exam Expectations handout (one for each student)\n* Gather three sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-1-the-ap-csa-exam/36306/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You did it! You have completed the content for the course, and now it is time to prepare for the AP CSA Exam. In the process, you identify and answer questions you may have about the exam. You explore test-testing strategies and study resources that you can use to prepare for the exam."
+      },
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "MCQ Pre-Assessment",
+      "name": "MCQ Pre-Assessment",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "Students complete a Multiple-Choice Pre-Assessment on AP Classroom.",
+        "preparation": "* Create a multiple-choice pre-assessment on AP Classroom as indicated on the Creating a Multiple-Choice Pre-Assessment resource\n* Print copies of the Java Quick Reference (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-2-mcq-pre-assessment/36305/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "To identify your current strengths and weaknesses on the multiple-choice portion of the AP CSA Exam, you take a Multiple-Choice Pre-Assessment on AP Classroom. Best of luck!"
+      },
+      "seeding_key": {
+        "lesson.key": "MCQ Pre-Assessment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "MCQ Study Plan",
+      "name": "MCQ Study Plan",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "Students review their results from the multiple-choice pre-assessment to create a study plan.",
+        "preparation": "* Print copies of the MCQ Pre-Assessment Scoring Reflection handout (one for each student)\n* Print copies of the AP CSA Exam Study Plan (one for each student)\n* Gather 5-10 sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-3-mcq-study-plan/36304/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You review your results from the multiple-choice pre-assessment to create a study plan."
+      },
+      "seeding_key": {
+        "lesson.key": "MCQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "MCQ Practice – Day 1",
+      "name": "MCQ Practice – Day 1",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "Students identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.",
+        "preparation": "* Print out the station materials in the MCQ Practice Stations resource\n* Print copies of the MCQ Practice handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-4-5-mcq-practice/36303/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Now it's time to practice! You identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type."
+      },
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "MCQ Practice – Day 2",
+      "name": "MCQ Practice – Day 2",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.",
+        "preparation": "* Create a digital copy of the MCQ Choice Board and make it accessible to students\n* Gather several index cards\n* Assign MCQ Progress Checks on AP Classroom (If you have already used these, create your own quizzes with the Question Bank.)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-4-5-mcq-practice/36303/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam."
+      },
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "FRQ Pre-Assessment",
+      "name": "FRQ Pre-Assessment",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "Students complete an FRQ Pre-Assessment. ",
+        "preparation": "* Create an FRQ pre-assessment on AP Classroom\n* Print copies of the FRQ Answer Sheet (two for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-6-frq-pre-assessment/36302/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "To identify your current strengths and weaknesses on the FRQ portion of the AP CSA Exam, you take an FRQ Pre-Assessment. Best of luck!"
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "FRQ Study Plan",
+      "name": "FRQ Study Plan",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "Students review their results from the FRQ pre-assessment to create a study plan.",
+        "preparation": "* Gather the FRQ Pre-Assessment and Scoring Guidelines for the FRQ Pre-Assessment (one for each student)\n* Print copies of the FRQ Study Plan (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-7-frq-study-plan/36301/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You review your results from the FRQ pre-assessment to create a study plan."
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "FRQ Practice – Day 1",
+      "name": "FRQ Practice – Day 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.",
+        "preparation": "* Create a digital copy of the FRQ Choice Board and make it accessible to students\n* Assign the FRQ Progress Checks on AP Classroom (If you have already used these, create your own quizzes with the Question Bank.). Make sure that all Progress Checks have Self Score enabled\n* (Optional) Instead of using AP Classroom, print copies of FRQs, scoring guidelines, and solutions\n* Gather 1-3 sticky notes for each student\n* Gather blank paper and markers, or colored pencils\n* Print the Fishbowl Skill Practice Slips resource\n* (Optional) Gather backlog folders used in Units 6-8\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-8-9-frq-practice/36300/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam."
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "FRQ Practice – Day 2",
+      "name": "FRQ Practice – Day 2",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "Students identify strategies for approaching FRQs on the AP CSA Exam.",
+        "preparation": "* Print out the station materials in the FRQ Practice Stations resource\n* Print copies of the FRQ Practice handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-8-9-frq-practice/36300/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You identify strategies for approaching FRQs on the AP CSA Exam."
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "Mock MCQ Exam – Day 1",
+      "name": "Mock MCQ Exam – Day 1",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "Students complete the first half of a mock AP CSA multiple-choice exam.",
+        "preparation": "* Print copies of the generated MCQ (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* (Optional) print copies of the answer sheet (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-10-12-mock-mcq-exam/36299/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You complete the first half of a mock AP CSA multiple-choice exam. Best of luck!"
+      },
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "Mock MCQ Exam – Day 2",
+      "name": "Mock MCQ Exam – Day 2",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "Students complete the second half of a mock AP CSA multiple-choice exam.",
+        "preparation": "* Gather several sharpened pencils and scratch paper\n* (Optional) Redistribute exam materials before students arrive\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-10-12-mock-mcq-exam/36299/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You complete the second half of a mock AP CSA multiple-choice exam. Best of luck!"
+      },
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "Mock MCQ Exam – Day 3",
+      "name": "Mock MCQ Exam – Day 3",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "Students review their results on the MCQ Mock Exam and update their study plans.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-10-12-mock-mcq-exam/36299/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You review your results on the MCQ Mock Exam and update your study plans."
+      },
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "Mock FRQ Exam – Day 1",
+      "name": "Mock FRQ Exam – Day 1",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "Students complete the first half of a mock AP CSA free response exam.",
+        "preparation": "* Print copies of the FRQ (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Print four copies of the FRQ answer sheet for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-13-15-mock-frq-exam/36298/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You complete the first half of a mock AP CSA free response exam. Best of luck!"
+      },
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "Mock FRQ Exam – Day 2",
+      "name": "Mock FRQ Exam – Day 2",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "overview": "Students complete the second half of a mock AP CSA free response exam.",
+        "preparation": "* Gather several sharpened pencils and scratch paper\n* (Optional) Redistribute exam materials before students arrive\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-13-15-mock-frq-exam/36298/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You complete the second half of a mock AP CSA free response exam. Best of luck!"
+      },
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "Mock FRQ Exam – Day 3",
+      "name": "Mock FRQ Exam – Day 3",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "overview": "Students review their results on the FRQ Mock Exam and update their study plans.",
+        "preparation": "* Redistribute student answer sheets\n* Print multiple copies of the FRQs for each station\n* Print multiple copies of the scoring guidelines for each station\n* Gather one sticky note for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-13-15-mock-frq-exam/36298/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "You review your results on the FRQ Mock Exam and update your study plans."
+      },
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Sandbox: Console",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "5d89d0e3-9504-4480-b561-4879a388bc3f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5d89d0e3-9504-4480-b561-4879a388bc3f",
+        "lesson.key": "The AP CSA Exam",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "090ea58f-5328-430a-8a68-a47bf543be10",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10",
+        "lesson.key": "The AP CSA Exam",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "edddcb32-5fb5-43ab-986d-bc6efdcc418c",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "edddcb32-5fb5-43ab-986d-bc6efdcc418c",
+        "lesson.key": "The AP CSA Exam",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "0c4126c4-ef41-4ee9-9913-f2eae07da289",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c4126c4-ef41-4ee9-9913-f2eae07da289",
+        "lesson.key": "MCQ Pre-Assessment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "cde700c3-c096-45db-914b-734076f40c25",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cde700c3-c096-45db-914b-734076f40c25",
+        "lesson.key": "MCQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "897a457c-9dac-48e2-8acc-ac334e56e7d7",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7",
+        "lesson.key": "MCQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "01bc50da-6ba2-4e35-8ecc-bc1cd3c2c8d8",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01bc50da-6ba2-4e35-8ecc-bc1cd3c2c8d8",
+        "lesson.key": "MCQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "57290c82-ff4f-476f-9619-c0a5adebc1a6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57290c82-ff4f-476f-9619-c0a5adebc1a6",
+        "lesson.key": "MCQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "f03d94ef-8fca-4f99-b2a1-d6217fd00dcb",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f03d94ef-8fca-4f99-b2a1-d6217fd00dcb",
+        "lesson.key": "MCQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "d452dc9d-0080-4047-bdb5-789ad0d8d954",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d452dc9d-0080-4047-bdb5-789ad0d8d954",
+        "lesson.key": "MCQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "8c079612-6ef2-4310-8dbd-986b5125f89f",
+      "position": 1,
+      "properties": {
+        "name": "Choice Board: Mini-Lessons Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c079612-6ef2-4310-8dbd-986b5125f89f",
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "defb18db-fa0d-4806-b6a3-23e91f7b8838",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "defb18db-fa0d-4806-b6a3-23e91f7b8838",
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "2630655b-7a30-4b9f-b4c0-822f06640f01",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2630655b-7a30-4b9f-b4c0-822f06640f01",
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "5c62a952-dbb5-4f52-9a16-77b55124c233",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c62a952-dbb5-4f52-9a16-77b55124c233",
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "dba3cb12-530a-4ef3-95f6-8e061abd9045",
+      "position": 1,
+      "properties": {
+        "name": "FRQ Pre-Assessment Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dba3cb12-530a-4ef3-95f6-8e061abd9045",
+        "lesson.key": "FRQ Pre-Assessment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "cd625265-57cb-456e-9bd4-bcb2d36985f4",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd625265-57cb-456e-9bd4-bcb2d36985f4",
+        "lesson.key": "FRQ Pre-Assessment",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "bb60621d-ecbb-4a72-87ca-8703fb1516cc",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb60621d-ecbb-4a72-87ca-8703fb1516cc",
+        "lesson.key": "FRQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "b5ca643f-602b-46b1-b419-216d5c0d63f2",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5ca643f-602b-46b1-b419-216d5c0d63f2",
+        "lesson.key": "FRQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "132ac683-e838-4f8a-a019-01118db7901c",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "132ac683-e838-4f8a-a019-01118db7901c",
+        "lesson.key": "FRQ Study Plan",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "52da6379-9eb1-40c0-a3b6-535a94e95ea5",
+      "position": 1,
+      "properties": {
+        "name": "Classroom Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52da6379-9eb1-40c0-a3b6-535a94e95ea5",
+        "lesson.key": "FRQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "8df23a8c-944f-496e-9744-0894d3ab7918",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8df23a8c-944f-496e-9744-0894d3ab7918",
+        "lesson.key": "FRQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "581bf85f-a8a8-442c-a137-8c0734507a40",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "581bf85f-a8a8-442c-a137-8c0734507a40",
+        "lesson.key": "FRQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "e06b6b51-8681-4686-b5e6-72b91fa92c90",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e06b6b51-8681-4686-b5e6-72b91fa92c90",
+        "lesson.key": "FRQ Practice – Day 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "31dca719-daf9-497e-83ca-0a590fe7b1fc",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31dca719-daf9-497e-83ca-0a590fe7b1fc",
+        "lesson.key": "FRQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "0061af60-6f19-476a-94ae-ea59667bf8f2",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0061af60-6f19-476a-94ae-ea59667bf8f2",
+        "lesson.key": "FRQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "fa82de0e-ceb6-4b7f-bf15-f0c65283f3f7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa82de0e-ceb6-4b7f-bf15-f0c65283f3f7",
+        "lesson.key": "FRQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "6373d051-8acd-4312-ba3f-d123579c92df",
+      "position": 1,
+      "properties": {
+        "name": "MCQ Exam Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6373d051-8acd-4312-ba3f-d123579c92df",
+        "lesson.key": "Mock MCQ Exam – Day 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "dedd7f79-d8a4-48a1-8183-652fec04c85b",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b",
+        "lesson.key": "Mock MCQ Exam – Day 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "a05e0283-68cd-419e-8745-6abe48bfbfa6",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6",
+        "lesson.key": "Mock MCQ Exam – Day 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "d468ac25-e66b-48ea-8157-2d47fa9ee8c1",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d468ac25-e66b-48ea-8157-2d47fa9ee8c1",
+        "lesson.key": "Mock MCQ Exam – Day 3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "86162242-f48a-48b6-89cd-27a5e4ee74ce",
+      "position": 1,
+      "properties": {
+        "name": "FRQ Exam Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86162242-f48a-48b6-89cd-27a5e4ee74ce",
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "080ae6d8-1739-40ae-8e7f-3fec1541daec",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec",
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7",
+        "lesson.key": "Mock FRQ Exam – Day 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "46f67ff6-8ff4-45a2-892c-9f36e7daabc9",
+      "position": 1,
+      "properties": {
+        "name": "FRQ Scoring Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46f67ff6-8ff4-45a2-892c-9f36e7daabc9",
+        "lesson.key": "Mock FRQ Exam – Day 3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "8eecc444-7142-434c-a91f-b5f2872cdb4b",
+      "position": 2,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8eecc444-7142-434c-a91f-b5f2872cdb4b",
+        "lesson.key": "Mock FRQ Exam – Day 3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "af437427-f57d-4950-bc13-4002f14625fc",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af437427-f57d-4950-bc13-4002f14625fc",
+        "lesson.key": "Mock FRQ Exam – Day 3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "af0abdc2-9c9a-46a9-9311-489253eb2509",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af0abdc2-9c9a-46a9-9311-489253eb2509",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "53c61a55-02d8-4923-833e-a310cca9564d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53c61a55-02d8-4923-833e-a310cca9564d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025"
+      }
+    },
+    {
+      "key": "7f02a6f7-0b02-47d6-8251-2e2a7f39ca37",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f02a6f7-0b02-47d6-8251-2e2a7f39ca37",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a97a99f4-e9fb-4fdf-b471-46935bbbb3d4",
+      "position": 1,
+      "properties": {
+        "description": "We have learned a lot this year about computer science and writing programs using Java.",
+        "name": "Self-Confidence Check",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a97a99f4-e9fb-4fdf-b471-46935bbbb3d4",
+        "lesson_activity.key": "5d89d0e3-9504-4480-b561-4879a388bc3f"
+      }
+    },
+    {
+      "key": "f05aa2b1-f216-4e0e-9379-371191e72e6c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How can you use computer science to solve problems?*\n* *What topics do you feel the most confident about as you prepare for the AP Exam?*\n\n**Discussion Goal:** Students share that computer science allows them to write programs to solve problems across different industries for various needs. Students identify which topics they feel most confident."
+      },
+      "seeding_key": {
+        "activity_section.key": "f05aa2b1-f216-4e0e-9379-371191e72e6c",
+        "lesson_activity.key": "5d89d0e3-9504-4480-b561-4879a388bc3f"
+      }
+    },
+    {
+      "key": "9acd97d9-0ec9-462f-a084-f1cfc18b79c5",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In this unit, we will prepare for the AP CSA Exam. The exam is 3 hours and has two sections. The first part of the exam consists of 40 multiple-choice questions, and the second part consists of 4 free response questions. Each section is worth 50% of your final grade, and you will have 90 minutes per section.",
+        "duration": "10",
+        "name": "Structure of the AP CSA Exam",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9acd97d9-0ec9-462f-a084-f1cfc18b79c5",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "0f6d205e-6f5f-42c7-aa0c-c6f00a71be13",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Java Quick Reference resource."
+      },
+      "seeding_key": {
+        "activity_section.key": "0f6d205e-6f5f-42c7-aa0c-c6f00a71be13",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "d3530629-cd57-47a2-b649-b5641d6ff010",
+      "position": 3,
+      "properties": {
+        "description": "While taking the exam, you have a copy of the AP CSA Java Quick Reference. This resource outlines the methods from the Java API covered on the exam.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d3530629-cd57-47a2-b649-b5641d6ff010",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "b84ec4ca-cb83-46c1-b033-92f8087068e6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Course Exam Description resource."
+      },
+      "seeding_key": {
+        "activity_section.key": "b84ec4ca-cb83-46c1-b033-92f8087068e6",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "feaa3927-927f-4683-91d0-d05ac4f88d10",
+      "position": 5,
+      "properties": {
+        "description": "Let's take a look at the Course Exam Description. This resource outlines the topics and exam weight for the AP CSA Exam.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that the order of the units is not important and to focus on the topics."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "feaa3927-927f-4683-91d0-d05ac4f88d10",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "7f79eb0a-f17b-4b2f-a7c7-98403863d167",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What topics do you feel the most comfortable?*\n* *What topics do you think you need to review?*\n\n**Discussion Goal:** Students identify the topics they feel most comfortable with and those they think they need to review."
+      },
+      "seeding_key": {
+        "activity_section.key": "7f79eb0a-f17b-4b2f-a7c7-98403863d167",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "696ce704-596b-4278-8221-189cc53f46f8",
+      "position": 7,
+      "properties": {
+        "description": "Knowing where you are is important in preparing for success on the AP CSA Exam.",
+        "duration": "15",
+        "name": "Exploring Exam Expectations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "696ce704-596b-4278-8221-189cc53f46f8",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "6876172c-bbe6-4e42-af34-5a8935dc510d",
+      "position": 8,
+      "properties": {
+        "description": "**Group:** Place students with a partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Exploring Exam Expectations handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Exploring Exam Expectations handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can group students based on learning style, knowledge of topic, or skill."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6876172c-bbe6-4e42-af34-5a8935dc510d",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "199864d9-6b5e-4da5-a3a7-6cef4db9756a",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What exam expectations surprised you the most?*\n* *Do you feel adequately prepared to pass the AP CSA Exam? Why or why not?*\n\n**Discussion Goal:** Students share their findings from the Exploring Exam Expectations handout. Students share how prepared they feel for the AP CSA Exam."
+      },
+      "seeding_key": {
+        "activity_section.key": "199864d9-6b5e-4da5-a3a7-6cef4db9756a",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "9c634e47-3f48-47b2-8a6a-08131e05bf77",
+      "position": 10,
+      "properties": {
+        "description": "Earning a score of 3 or more proves that you have mastered the course content and can potentially earn you collect credit. Studying and practicing will help you be successful on the AP CSA Exam.",
+        "duration": "10",
+        "name": "Test-Taking and Study Strategies",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c634e47-3f48-47b2-8a6a-08131e05bf77",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "9b45a1d9-2e84-43f0-927f-ebaf65912eed",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What test-taking and study strategies were the most effective for the end-of-unit multiple-choice assessments we took in this course?*\n\n**Discussion Goal:** Students share strategies they used to prepare for the end-of-unit multiple-choice assessments and how they approached the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss study strategies.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss test-taking strategies.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Additional test-taking and study strategies you can share with students:\n* Don’t dwell on logic or syntax accuracy for each question.\n* Address every part of the question.\n* Use the Java Quick Reference Guide.\n* Attempt every aspect of the question.\n* Write legibly, clearly, and with good programming style.\n* Write notes and annotate the question in your test booklet."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9b45a1d9-2e84-43f0-927f-ebaf65912eed",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "033c081b-1c67-4ac6-b42d-68c0c51a30f8",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the AP Daily videos. Encourage students to use their independent study time to watch the videos."
+      },
+      "seeding_key": {
+        "activity_section.key": "033c081b-1c67-4ac6-b42d-68c0c51a30f8",
+        "lesson_activity.key": "090ea58f-5328-430a-8a68-a47bf543be10"
+      }
+    },
+    {
+      "key": "b5598771-e87a-4a56-afd2-c1acda4a3b33",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that students will access AP Classroom to take a practice MCQ assessment in the next lesson. \n\n**Distribute:** Give each student 2 or 3 sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write a positive message and exam tip to provide support and encouragement to their classmates as they prepare for the exam. Have students add their sticky notes to the Exam Affirmation Wall. If time permits, students should read the sticky notes placed by other students.",
+        "name": "Exam Affirmations",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To provide support for students throughout this unit, designate a space in the classroom for the Exam Affirmation Wall.\n\nExam Affirmation Wall examples:\n* Classroom board\n* Chart paper\n* Classroom door\n* Bulletin board\n\nContinue to keep the wall up for the entire unit. Encourage students to take a sticky note if they need it for additional support in a later lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b5598771-e87a-4a56-afd2-c1acda4a3b33",
+        "lesson_activity.key": "edddcb32-5fb5-43ab-986d-bc6efdcc418c"
+      }
+    },
+    {
+      "key": "7c4247fd-3922-4098-afca-aeec93880bc7",
+      "position": 2,
+      "properties": {
+        "description": "Each lesson in this unit will help you prepare for the AP CSA Exam. You will review concepts, practice multiple-choice and free response questions, and strengthen your test-taking strategies. As you prepare, use your software engineering values to guide you to make the best decision.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7c4247fd-3922-4098-afca-aeec93880bc7",
+        "lesson_activity.key": "edddcb32-5fb5-43ab-986d-bc6efdcc418c"
+      }
+    },
+    {
+      "key": "63d597d0-9c44-4381-9591-5abf12df1358",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, we looked the structure of the AP CSA Exam. Today we will get an idea of where we are on the multiple-choice portion of the exam by taking a pre-assessment.",
+        "duration": "5",
+        "name": "AP Classroom Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "63d597d0-9c44-4381-9591-5abf12df1358",
+        "lesson_activity.key": "0c4126c4-ef41-4ee9-9913-f2eae07da289"
+      }
+    },
+    {
+      "key": "74b5d308-8f8f-428d-93c1-f4e347985c78",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the AP Classroom User Guide for Students resource.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students have used AP Classroom before, skip reviewing the AP Classroom User Guide for Students and give students more time on the pre-assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "74b5d308-8f8f-428d-93c1-f4e347985c78",
+        "lesson_activity.key": "0c4126c4-ef41-4ee9-9913-f2eae07da289"
+      }
+    },
+    {
+      "key": "d703ede0-77e3-449d-915d-6a74baa23b18",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Java Quick Reference.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Assignments section on AP Classroom to locate the Multiple-Choice Pre-Assessment you created.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Multiple-Choice Pre-Assessment on AP Classroom.",
+        "duration": "40",
+        "name": "Multiple-Choice Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "d703ede0-77e3-449d-915d-6a74baa23b18",
+        "lesson_activity.key": "0c4126c4-ef41-4ee9-9913-f2eae07da289"
+      }
+    },
+    {
+      "key": "d6014994-c66e-47a6-8d90-89d7c1fbe163",
+      "position": 1,
+      "properties": {
+        "description": "You’ve likely taken many big exams before, such as another AP exam or an end-of-quarter or end-of-year exam. We’re going to identify all the strategies, tools, and resources we can use to be successful on the AP CSA exam and even other exams like it.",
+        "name": "What's in a Study Plan?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d6014994-c66e-47a6-8d90-89d7c1fbe163",
+        "lesson_activity.key": "cde700c3-c096-45db-914b-734076f40c25"
+      }
+    },
+    {
+      "key": "30727f91-e60e-4be0-99c4-7a383f409954",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give each student 5-10 sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to prompt students to write ideas for a strong study plan. Students should write down one idea per sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students sort their sticky notes into three different categories around the room:\n* Qualities of an effective study plan\n* Differences between effective and ineffective study plans\n* Tools, resources, activities, or actions to help them study",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This brainstorm becomes a resource later in the lesson when students are creating their study plans. Students do not need to review ideas from other students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "30727f91-e60e-4be0-99c4-7a383f409954",
+        "lesson_activity.key": "cde700c3-c096-45db-914b-734076f40c25"
+      }
+    },
+    {
+      "key": "ef3a7b3b-8668-45a3-8df4-3ab141661556",
+      "position": 1,
+      "properties": {
+        "description": "You completed a multiple-choice pre-assessment in the previous lesson. We will take a few minutes to review your results. By reviewing which topics you performed well on and which are areas for improvement, you can effectively study for the CSA exam.",
+        "duration": "15",
+        "name": "Reviewing the MCQ Pre-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ef3a7b3b-8668-45a3-8df4-3ab141661556",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "3df1b843-c3ef-4154-a164-ce106a47a04c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the AP CSA scoring structure and curve.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MCQ Pre-Assessment Scoring Reflection handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review their results on the Multiple-Choice Pre-Assessment and complete the MCQ Pre-Assessment Scoring Reflection handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may be disheartened by their results. Emphasize that the pre-assessment helps them identify their strengths and areas for improvement to determine how to prepare for the AP CSA Exam. It’s okay if they didn’t score as well as they hoped - they have time to improve."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3df1b843-c3ef-4154-a164-ce106a47a04c",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "013c1f08-21e9-4fd1-96b7-1ef77734593d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which topics or subtopics do you feel most confident?*\n* *Which topics or subtopics did you miss most often?*\n* *Were your results surprising to you?*\n\n**Discussion Goal:** Students should identify common topics and subtopics that they missed. Students identify that they have both strengths and areas for improvement and share any aspects of their results they found surprising."
+      },
+      "seeding_key": {
+        "activity_section.key": "013c1f08-21e9-4fd1-96b7-1ef77734593d",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "d7a214d4-033c-4ab7-acfa-0b92d6415b8e",
+      "position": 4,
+      "properties": {
+        "description": "No matter what your score, the goal of the pre-assessment was to help you identify some topics or subtopics that you would like to spend more time practicing before the exam.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d7a214d4-033c-4ab7-acfa-0b92d6415b8e",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "bf3fdc8b-7dbd-4f92-8d80-d4eda4ccd1a1",
+      "position": 5,
+      "properties": {
+        "description": "Now that we’ve spent some time identifying our strengths and areas for improvement, it’s time to create your own study plan for the AP CSA exam!",
+        "duration": "15",
+        "name": "Creating a Study Plan",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bf3fdc8b-7dbd-4f92-8d80-d4eda4ccd1a1",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "629051c0-f7a3-4f60-b14e-a294bb6ecc0e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give each student a copy of the MCQ Study Plan handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their mastery of the content to self-identify their areas of highest need. This process has three parts:\n* Recording their assessment data from the practice exam\n* Identifying any subtopics they would like to spend additional time with\n* Self-rating their current level of mastery for each of the ten College Board units\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to record assessment data from the multiple-choice pre-assessment in the appropriate box for each topic. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students have completed Progress Checks or other quizzes on AP Classroom, encourage them to record that data as well."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "629051c0-f7a3-4f60-b14e-a294bb6ecc0e",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "53e3af1e-11bd-46df-bbf9-c7d91183418a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to identify subtopics to focus on:\n* Students read through subtopics listed for each topic.\n* Students check any topic they would like to review further."
+      },
+      "seeding_key": {
+        "activity_section.key": "53e3af1e-11bd-46df-bbf9-c7d91183418a",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "e957fe57-66b6-4cab-a19e-2fda3a01dbbd",
+      "position": 8,
+      "properties": {
+        "description": "This study plan also includes a mastery tracker for each unit covered on the AP CSA Exam. This tracker is a tool you can use to track your mastery of the content covered under each topic. Mastery tracking will help you increase confidence, boost motivation, and mentally prepare for the exam.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e957fe57-66b6-4cab-a19e-2fda3a01dbbd",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "ae5ab32c-ff4e-4189-92cc-e9e82db3c97a",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the mastery tracker.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can build in regular check-in times for students to self-assess mastery. You can also use a shared class mastery tracker for specific topics."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ae5ab32c-ff4e-4189-92cc-e9e82db3c97a",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "214edf41-4acb-4a40-b8b3-a8bce081c821",
+      "position": 10,
+      "properties": {
+        "description": "Finally, it’s time for us to make an actionable plan to build mastery in topics we might not feel as confident about right now.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "214edf41-4acb-4a40-b8b3-a8bce081c821",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "3ce65625-bb51-42e1-8b3e-37a10bd3931f",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the study plan table on pages 7-8 of the MCQ Study Plan handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add topics and subtopics to their MCQ Study Plan handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may find it beneficial to work in pairs or small groups to think through how they’d like to study and complete their planner. Consider offering students the option to choose between working individually, in pairs, or in groups of 3-4 with the expectation that all students will have their own individual plan.\n\nEncourage students to think of how they plan on spending time outside of class to study for the AP CSA Exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ce65625-bb51-42e1-8b3e-37a10bd3931f",
+        "lesson_activity.key": "897a457c-9dac-48e2-8acc-ac334e56e7d7"
+      }
+    },
+    {
+      "key": "7999c747-2eac-47c0-8e12-e017cc2a2b8b",
+      "position": 1,
+      "properties": {
+        "description": "While we will continue to review and practice as a class, your study plan should guide how you prepare for the AP CSA Exam outside of class as well.",
+        "name": "Identifying Needs",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7999c747-2eac-47c0-8e12-e017cc2a2b8b",
+        "lesson_activity.key": "01bc50da-6ba2-4e35-8ecc-bc1cd3c2c8d8"
+      }
+    },
+    {
+      "key": "a366ede1-49d4-431a-9c9a-6dcd3c933c89",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write down their needs on their sticky note.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect and review these to identify resources or supports students may need as they prepare for the AP CSA exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a366ede1-49d4-431a-9c9a-6dcd3c933c89",
+        "lesson_activity.key": "01bc50da-6ba2-4e35-8ecc-bc1cd3c2c8d8"
+      }
+    },
+    {
+      "key": "0e38d349-8349-4a38-947c-5c3eae055c33",
+      "position": 1,
+      "properties": {
+        "description": "The AP CSA Exam has different types of multiple-choice questions.",
+        "name": "Types of Multiple-Choice Questions",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0e38d349-8349-4a38-947c-5c3eae055c33",
+        "lesson_activity.key": "57290c82-ff4f-476f-9619-c0a5adebc1a6"
+      }
+    },
+    {
+      "key": "8977afce-20d5-4d94-acab-ef29df108346",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the different types of multiple-choice questions that appear on the AP CSA Exam.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide.\n* *Which type of multiple-choice questions am I most comfortable with? Which takes the least amount of time?*\n* *What strategies do I have for the different types of questions?*\n\n**Discussion Goal:** Students identify the types of questions they are most comfortable with. Students share strategies they can use on the exam, such as skipping the questions that they are least comfortable with and that take the most time."
+      },
+      "seeding_key": {
+        "activity_section.key": "8977afce-20d5-4d94-acab-ef29df108346",
+        "lesson_activity.key": "57290c82-ff4f-476f-9619-c0a5adebc1a6"
+      }
+    },
+    {
+      "key": "feda6686-bcc3-49b0-9b3d-9fbea21632f2",
+      "position": 1,
+      "properties": {
+        "description": "We're now going to explore the different types of multiple-choice questions that may appear on the exam.",
+        "duration": "20",
+        "name": "Around the World",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "feda6686-bcc3-49b0-9b3d-9fbea21632f2",
+        "lesson_activity.key": "f03d94ef-8fca-4f99-b2a1-d6217fd00dcb"
+      }
+    },
+    {
+      "key": "980d56ed-b79b-4930-beeb-60be7e53d7da",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MCQ Practice handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station and complete the MCQ Practice handout.\n* Students find a station. (Students do not need to go in order.)\n* Students answer all the MCQ questions at their station before moving on to the next station.\n* Encourage students to move on from a station after eight minutes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you think you may need students to work independently for you to work individually with students or for targeted review with a small group, you can modify this activity so it doesn't require movement to stations. Print out enough copies of the station printouts for each student, and have students work on the questions on their own."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "980d56ed-b79b-4930-beeb-60be7e53d7da",
+        "lesson_activity.key": "f03d94ef-8fca-4f99-b2a1-d6217fd00dcb"
+      }
+    },
+    {
+      "key": "3174d25e-d4c5-46b2-960e-19caeab7377a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Discuss the MCQ Practice solution.\n\n**Discuss:** Click through the animated slides for each station.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *How would you describe this style of question?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What was challenging about the style of question in this station?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What strategies do you have for this style?*\n\n**Discussion Goal:** Students share that Station A asks the output or value returned by code segment. Station B asks students to analyze the behavior of the code segment. Station C asks students to complete the code segment. Students share their challenges and strategies.",
+        "duration": "10",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Sample strategies for each station include:\n* **Station A:** Use a trace table.\n* **Station B:** Select multiple inputs to test the behavior of the code segment.\n* **Station C:** Compare the options to each other to identify differences."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3174d25e-d4c5-46b2-960e-19caeab7377a",
+        "lesson_activity.key": "f03d94ef-8fca-4f99-b2a1-d6217fd00dcb"
+      }
+    },
+    {
+      "key": "33f606fd-1ca0-4daf-8cb0-007bf14dc7bb",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to apply their strategies to the remaining questions on the MCQ Practice handout.",
+        "duration": "5",
+        "name": "Applying Strategies",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternatively, students can complete the remaining questions on the MCQ Practice handout as extra practice."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "33f606fd-1ca0-4daf-8cb0-007bf14dc7bb",
+        "lesson_activity.key": "f03d94ef-8fca-4f99-b2a1-d6217fd00dcb"
+      }
+    },
+    {
+      "key": "bbfe81f4-21c9-42dc-972f-f3e707b63cce",
+      "position": 1,
+      "properties": {
+        "description": "Great job everyone! Tomorrow you will have time to review specific content.",
+        "name": "Study Strategies",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bbfe81f4-21c9-42dc-972f-f3e707b63cce",
+        "lesson_activity.key": "d452dc9d-0080-4047-bdb5-789ad0d8d954"
+      }
+    },
+    {
+      "key": "b5c7ce8f-37d6-4238-86e5-60a578f7bf09",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What study strategies did you include in your study plan?*\n\n**Discussion Goal:** Students share the strategies they included in their study plan."
+      },
+      "seeding_key": {
+        "activity_section.key": "b5c7ce8f-37d6-4238-86e5-60a578f7bf09",
+        "lesson_activity.key": "d452dc9d-0080-4047-bdb5-789ad0d8d954"
+      }
+    },
+    {
+      "key": "01cb3599-e8c7-4e7d-a17c-36f88021844f",
+      "position": 1,
+      "properties": {
+        "description": "* If you notice concepts that need reteaching (for example, many students missed similar questions), offer mini-lessons as an additional choice on the MCQ Choice Board.\n* Use student data to select one or two topics on which you could lead short mini-lessons.\n* Mini-lessons can be facilitated as a small group discussion about missed questions or a complete reteach with additional questions for students to try.\n* You can facilitate one 10 minute mini-lesson at the beginning of the activity, then facilitate a second mini-lesson before bringing the class back together for the wrap up."
+      },
+      "seeding_key": {
+        "activity_section.key": "01cb3599-e8c7-4e7d-a17c-36f88021844f",
+        "lesson_activity.key": "8c079612-6ef2-4310-8dbd-986b5125f89f"
+      }
+    },
+    {
+      "key": "c4940d78-5f09-4929-ba4f-b2372148ab2c",
+      "position": 1,
+      "properties": {
+        "description": "We have covered a LOT of vocabulary this year. While there are no vocabulary multiple-choice questions, if you do not understand the vocabulary used in a question, it is much less likely that you will answer it correctly.",
+        "name": "Vocabulary Self-Test",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c4940d78-5f09-4929-ba4f-b2372148ab2c",
+        "lesson_activity.key": "defb18db-fa0d-4806-b6a3-23e91f7b8838"
+      }
+    },
+    {
+      "key": "b09bd7c9-621c-4216-95fb-2fab991db271",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student several index cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to set up their self-test vocabulary flashcards."
+      },
+      "seeding_key": {
+        "activity_section.key": "b09bd7c9-621c-4216-95fb-2fab991db271",
+        "lesson_activity.key": "defb18db-fa0d-4806-b6a3-23e91f7b8838"
+      }
+    },
+    {
+      "key": "c04d80a8-58e4-4f01-9218-a2436b13adc0",
+      "position": 3,
+      "properties": {
+        "description": "There is a right and a wrong way to use flashcards! Successful learning comes from the work that your brain does while trying to recall something - not from reading the answer on the back of the card. Don't turn the card over if you don't know the definition as soon as you see a word. Challenge yourself to try to recall at least a portion of the definition, make connections to other ideas that are similar, or even jot down ideas that relate before turning it over.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c04d80a8-58e4-4f01-9218-a2436b13adc0",
+        "lesson_activity.key": "defb18db-fa0d-4806-b6a3-23e91f7b8838"
+      }
+    },
+    {
+      "key": "52813a0d-831a-4ab0-be46-edb560912d51",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-test using their vocabulary flashcards."
+      },
+      "seeding_key": {
+        "activity_section.key": "52813a0d-831a-4ab0-be46-edb560912d51",
+        "lesson_activity.key": "defb18db-fa0d-4806-b6a3-23e91f7b8838"
+      }
+    },
+    {
+      "key": "07768f32-cfff-45e3-a19b-b211403eb961",
+      "position": 5,
+      "properties": {
+        "description": "Self-testing is also most effective when done intermittently to let your brain think about something else and then return to an idea, strengthening the neural pathways to that concept. We will be using these flashcards multiple times throughout the class period.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Avoid asking students to write the words they feel they know least or are most unsure about. Doing so increases the stakes of finding words and may extend the length of the activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "07768f32-cfff-45e3-a19b-b211403eb961",
+        "lesson_activity.key": "defb18db-fa0d-4806-b6a3-23e91f7b8838"
+      }
+    },
+    {
+      "key": "397ed90a-712d-4f15-9d04-6bec7f45cb5d",
+      "position": 1,
+      "properties": {
+        "description": "Today, our goal is to study and review topics on the multiple-choice section of the exam. We will begin by identifying what those topics are.",
+        "name": "Study Skills Choice Board",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "397ed90a-712d-4f15-9d04-6bec7f45cb5d",
+        "lesson_activity.key": "2630655b-7a30-4b9f-b4c0-822f06640f01"
+      }
+    },
+    {
+      "key": "8434fa37-4a03-4172-9e54-ba369c3b2a47",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to look at their study plan to identify topics they want to review. Students should identify their 1-3 highest priority topics and list them on a sticky note to help plan their tasks for the day."
+      },
+      "seeding_key": {
+        "activity_section.key": "8434fa37-4a03-4172-9e54-ba369c3b2a47",
+        "lesson_activity.key": "2630655b-7a30-4b9f-b4c0-822f06640f01"
+      }
+    },
+    {
+      "key": "24b833e3-4f9c-4d5b-817f-5bccb8e8106a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the activity and six study strategies options. Answer any general questions about the task. Students should attempt to complete two activities, using the study strategy to reinforce their learning about one of the topics from the study plan that they'd like to revisit. Some students may use one strategy to review multiple topics or take the entire period to complete one choice.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Flashcards\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video Script\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Topic Cheat Sheet\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Design Your Own Multiple-Choice Questions\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom Multiple- Choice Practice\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Code.org Videos + Notecatcher\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom Videos + Notecatcher\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Participate in a Mini-Lesson\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Concept Diagram",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the lesson suggests that all students complete at least two activities, this may not be the best fit for all students. To differentiate this lesson, consider giving your students or a group of students different tasks:\n* Complete one of the items in the choice board\n* Work on an item for a set time, then encourage students to transition to another option. If students find their current style to be a successful way of learning, encourage students to use it when studying for the exam at home.\n\nSome of these study strategies may take longer than others. The lesson suggests students engage with two strategies, but an active engagement with content is more important than the number of items they engage with. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "24b833e3-4f9c-4d5b-817f-5bccb8e8106a",
+        "lesson_activity.key": "2630655b-7a30-4b9f-b4c0-822f06640f01"
+      }
+    },
+    {
+      "key": "158a9443-f4cc-49f0-a0f5-4b991d4ed5ce",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the MCQ Choice Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board.",
+        "progression_name": "CSA Curriculum Videos",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to self-test using their vocabulary cards when they reach a good pausing point.\n\nThis lesson requires students to be self-directed and to use their time wisely. Consider asking students to vocalize how they intend to use their time or write it down on a sticky note."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "158a9443-f4cc-49f0-a0f5-4b991d4ed5ce",
+        "lesson_activity.key": "2630655b-7a30-4b9f-b4c0-822f06640f01"
+      }
+    },
+    {
+      "key": "363e020c-274e-4705-8932-a5bc85e1b1a0",
+      "position": 1,
+      "properties": {
+        "description": "Let's revisit our study guide and identify the most important content for you to review.",
+        "name": "Study Plan Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "363e020c-274e-4705-8932-a5bc85e1b1a0",
+        "lesson_activity.key": "5c62a952-dbb5-4f52-9a16-77b55124c233"
+      }
+    },
+    {
+      "key": "e9ec0566-0f69-4b2a-9f37-e16e05a6dcd9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e9ec0566-0f69-4b2a-9f37-e16e05a6dcd9",
+        "lesson_activity.key": "5c62a952-dbb5-4f52-9a16-77b55124c233"
+      }
+    },
+    {
+      "key": "605e366b-ddfa-4446-86cf-9e75b79f67cd",
+      "position": 3,
+      "properties": {
+        "description": "You should continue using these resources on your own as you prepare for the AP CSA exam. Today’s choice board provides several strategies you may not have gotten a chance to use in class but are useful in your continued exam preparations.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "605e366b-ddfa-4446-86cf-9e75b79f67cd",
+        "lesson_activity.key": "5c62a952-dbb5-4f52-9a16-77b55124c233"
+      }
+    },
+    {
+      "key": "e61b585d-caaf-4788-8006-3e478af34e39",
+      "position": 1,
+      "properties": {
+        "description": "You should include one question on **Classes** and one question on **Arrays/ArrayLists**. To create the FRQ Pre-Assessment using AP Classroom:\n1. On AP Classroom, navigate to the **Question Bank** and filter the results using the following criteria:\n   * For **Exam Alignment**, select High.\n   * For **Question Type**, select FRQ: 2 Class or FRQ: 3 Array/ ArrayList.\n   * For **Security**, select Publicly Available.\n\n2. Print the assessment and the corresponding scoring guidelines:\n   * Navigate to the assessment.\n   * Click the **Action** button.\n   * To print the exam, click **Print Preview** and then **Print**. Print one copy for each student.\n   * To print the scoring guidelines, click **Scoring Guidelines**. Print one copy for each student.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider using the following questions if you are unsure which questions to use on the exam:\n* **Classes FRQ:** Step Tracker (Question 2 from the 2019 AP Computer Science Exam)\n* **Array/ArrayList FRQ:** LogMessage (Question 2 from the 2016 AP Computer Science Exam)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e61b585d-caaf-4788-8006-3e478af34e39",
+        "lesson_activity.key": "dba3cb12-530a-4ef3-95f6-8e061abd9045"
+      }
+    },
+    {
+      "key": "d1951650-ce02-4446-b995-5aaa1a113fcb",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lessons, we practiced multiple-choice questions to prepare for the AP CSA Exam. Today we will get an idea of where we are on the FRQ portion of the exam by taking a pre-assessment.",
+        "duration": "5",
+        "name": "Pre-Assessment Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d1951650-ce02-4446-b995-5aaa1a113fcb",
+        "lesson_activity.key": "cd625265-57cb-456e-9bd4-bcb2d36985f4"
+      }
+    },
+    {
+      "key": "8f01b106-3b11-4005-b23b-0fc1ddd3941b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Pre-Assessment, Java Quick Reference, two FRQ answer sheets, and a sheet of scratch paper faced down on each student’s desk."
+      },
+      "seeding_key": {
+        "activity_section.key": "8f01b106-3b11-4005-b23b-0fc1ddd3941b",
+        "lesson_activity.key": "cd625265-57cb-456e-9bd4-bcb2d36985f4"
+      }
+    },
+    {
+      "key": "6165d365-3026-4df4-9ef9-2ec48a3b7757",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the FRQ Pre-Assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Pre-Assessment, Java Quick Reference, FRQ answer sheets, and scrap paper from each student.",
+        "duration": "40",
+        "name": "FRQ Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "6165d365-3026-4df4-9ef9-2ec48a3b7757",
+        "lesson_activity.key": "cd625265-57cb-456e-9bd4-bcb2d36985f4"
+      }
+    },
+    {
+      "key": "f48b3891-a5b5-4960-9c20-845be41a27c5",
+      "position": 1,
+      "properties": {
+        "description": "Before we continue preparing, let’s take some time to update your progress on your study plan.",
+        "name": "Study Plan Check-In",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f48b3891-a5b5-4960-9c20-845be41a27c5",
+        "lesson_activity.key": "bb60621d-ecbb-4a72-87ca-8703fb1516cc"
+      }
+    },
+    {
+      "key": "261fe858-c244-455b-8a80-496bcc50df9d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students update their MCQ Study Plan."
+      },
+      "seeding_key": {
+        "activity_section.key": "261fe858-c244-455b-8a80-496bcc50df9d",
+        "lesson_activity.key": "bb60621d-ecbb-4a72-87ca-8703fb1516cc"
+      }
+    },
+    {
+      "key": "1014d9eb-8f43-4a93-b3aa-ad08a44b0a09",
+      "position": 1,
+      "properties": {
+        "description": "You completed a FRQ pre-assessment in the previous lesson. We will take a few minutes to review your results. By reviewing which topics you performed well on and which are areas for improvement, you can effectively study for the CSA exam.\n\nWhile there are many approaches to solving these two problems, let’s see how well your solution met the criteria and requirements of the problem. ",
+        "duration": "20",
+        "name": "Reviewing the FRQ Pre-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1014d9eb-8f43-4a93-b3aa-ad08a44b0a09",
+        "lesson_activity.key": "b5ca643f-602b-46b1-b419-216d5c0d63f2"
+      }
+    },
+    {
+      "key": "09aec4d0-ea61-4952-b6e0-e54e7e475cf5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Pre-Assessment, the Scoring Guidelines, and their answer sheets.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students score their FRQ using the Scoring Guidelines.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the exam did you earn points?*\n* *Which parts of the exam did you deduct penalties?*\n* *Were there any places on the exam where you made an error, but did not lose points?*\n\n**Discussion Goal:** Students discuss which elements of their solution added and deducted points from their overall score. "
+      },
+      "seeding_key": {
+        "activity_section.key": "09aec4d0-ea61-4952-b6e0-e54e7e475cf5",
+        "lesson_activity.key": "b5ca643f-602b-46b1-b419-216d5c0d63f2"
+      }
+    },
+    {
+      "key": "b852b12e-4183-4155-8e4c-e05c7e0ed01e",
+      "position": 3,
+      "properties": {
+        "description": "No matter what your score, the goal of the pre-assessment was to help you identify some topics or subtopics that you would like to spend more time practicing before the exam.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b852b12e-4183-4155-8e4c-e05c7e0ed01e",
+        "lesson_activity.key": "b5ca643f-602b-46b1-b419-216d5c0d63f2"
+      }
+    },
+    {
+      "key": "e575ce77-cd7d-496f-a8a8-1b059ece1d04",
+      "position": 4,
+      "properties": {
+        "description": "Now that we’ve spent some time identifying our strengths and areas for improvement, it’s time to create your own study plan for the AP CSA exam!",
+        "duration": "15",
+        "name": "Creating a Study Plan",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e575ce77-cd7d-496f-a8a8-1b059ece1d04",
+        "lesson_activity.key": "b5ca643f-602b-46b1-b419-216d5c0d63f2"
+      }
+    },
+    {
+      "key": "b3702065-69bc-4bc7-a120-9baa6c8f4bb1",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Study Plan handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their mastery of the content to self-identify their areas of highest need. This process has three parts:\n* Recording their assessment data from the practice exam\n* Identifying any subtopics they would like to spend additional time with\n* Self-rating their current level of mastery for each of the four FRQ topics\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to record assessment data from the FRQ pre-assessment in the appropriate box for each topic. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to identify subtopics to focus on:\n* Students read through subtopics listed for each topic.\n* Students check any topic they would like to review further.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the mastery tracker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the study plan table on the FRQ Study Plan handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "b3702065-69bc-4bc7-a120-9baa6c8f4bb1",
+        "lesson_activity.key": "b5ca643f-602b-46b1-b419-216d5c0d63f2"
+      }
+    },
+    {
+      "key": "88528e55-cb5a-483f-9554-eb68f7303920",
+      "position": 1,
+      "properties": {
+        "description": "While we will continue to review and practice as a class, your study plan should guide how you prepare for the AP CSA Exam outside of class as well.",
+        "name": "Identifying Needs",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "88528e55-cb5a-483f-9554-eb68f7303920",
+        "lesson_activity.key": "132ac683-e838-4f8a-a019-01118db7901c"
+      }
+    },
+    {
+      "key": "652d2617-c895-4470-b11f-620c927854c7",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write down their needs on their sticky note.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect and review these to identify resources or supports students may need as they prepare for the AP CSA exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "652d2617-c895-4470-b11f-620c927854c7",
+        "lesson_activity.key": "132ac683-e838-4f8a-a019-01118db7901c"
+      }
+    },
+    {
+      "key": "15046d01-8f4c-4b20-96a0-2d14a5bbb2d0",
+      "position": 1,
+      "properties": {
+        "description": "Prepare the Fishbowl Skills Practice area:\n\n1. Gather four containers (cups, bowls, etc), and label each with a sticky note:\n   * Methods/Control Structures\n   * Classes\n   * Array/ArrayList\n   * 2D Array\n\n2. Cut out the slips from the Fishbowl Skills Practice Slips resource and sort them into their corresponding container."
+      },
+      "seeding_key": {
+        "activity_section.key": "15046d01-8f4c-4b20-96a0-2d14a5bbb2d0",
+        "lesson_activity.key": "52da6379-9eb1-40c0-a3b6-535a94e95ea5"
+      }
+    },
+    {
+      "key": "dbb2caf3-9870-4435-976f-fc9eaa8b4c30",
+      "position": 1,
+      "properties": {
+        "description": "Today our goal is to study and review topics and/or skills that you may be less confident in applying on the free response portion of the exam. ",
+        "name": "Identifying Topics",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dbb2caf3-9870-4435-976f-fc9eaa8b4c30",
+        "lesson_activity.key": "8df23a8c-944f-496e-9744-0894d3ab7918"
+      }
+    },
+    {
+      "key": "033d48e6-0517-4878-abc0-c2fc869f6b10",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to look at their Free Response Question Study Plan to identify topics they want to review.  Students should identify their 1-3 highest priority topics, and list them on a sticky note to help plan their tasks for the day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may benefit from using their backlog folders from Units 6-8 to plan and execute their study session. To do this, students would add their highest priority topic sticky notes to the Product Backlog section of the folder, prioritize those sticky notes, and then move sticky notes as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "033d48e6-0517-4878-abc0-c2fc869f6b10",
+        "lesson_activity.key": "8df23a8c-944f-496e-9744-0894d3ab7918"
+      }
+    },
+    {
+      "key": "dccbcda2-071e-47c6-9b1c-ef5b49642ea0",
+      "position": 1,
+      "properties": {
+        "description": "We used a choice board previously to navigate studying for the multiple-choice section of the exam. Today, we will be using a similar choice board to prepare for the FRQ section.",
+        "name": "Study Skills Choice Board",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dccbcda2-071e-47c6-9b1c-ef5b49642ea0",
+        "lesson_activity.key": "581bf85f-a8a8-442c-a137-8c0734507a40"
+      }
+    },
+    {
+      "key": "6f4dc832-460e-471d-8f59-e2acfc5ce4a3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the activity and six study strategies options. Answer any general questions about the task. Students should attempt to complete two activities, using the study strategy as a way of reinforcing their learning about one of the topics from the study plan that they'd like to revisit. Some students may choose to use one strategy to review multiple topics/skills, or take the entire period to complete one choice.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Create a tutorial video\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Create a topic \"Cheat Sheet\"\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom FRQ practice\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Small group guided study session\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Fishbowl skills practice\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Sketch notes",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the lesson suggests that all students complete at least two activities, this may not be the best fit for all students. To differentiate this lesson, consider giving your students or a group of students different tasks:\n* Complete one of the items in the choice board\n* Work on an item for a set time, then encourage students to transition to another option. If students find their current style to be a successful way of learning, encourage students to use it when studying for the exam at home.\n\nSome of these study strategies may take longer than others. The lesson suggests students engage with two strategies, but active engagement with content is more important than the number of items they engage with. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6f4dc832-460e-471d-8f59-e2acfc5ce4a3",
+        "lesson_activity.key": "581bf85f-a8a8-442c-a137-8c0734507a40"
+      }
+    },
+    {
+      "key": "8c496386-6b80-4930-b010-e3e31c7bbb4f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the FRQ Choice Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c496386-6b80-4930-b010-e3e31c7bbb4f",
+        "lesson_activity.key": "581bf85f-a8a8-442c-a137-8c0734507a40"
+      }
+    },
+    {
+      "key": "6e0da821-411b-4acc-bb79-333376a0e728",
+      "position": 1,
+      "properties": {
+        "description": "Let's revisit our study guide and identify which content is most important for you to review.",
+        "name": "Study Plan Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6e0da821-411b-4acc-bb79-333376a0e728",
+        "lesson_activity.key": "e06b6b51-8681-4686-b5e6-72b91fa92c90"
+      }
+    },
+    {
+      "key": "a048c174-336e-4b0b-b21b-8c2170d7c6f6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
+      },
+      "seeding_key": {
+        "activity_section.key": "a048c174-336e-4b0b-b21b-8c2170d7c6f6",
+        "lesson_activity.key": "e06b6b51-8681-4686-b5e6-72b91fa92c90"
+      }
+    },
+    {
+      "key": "4aca9e29-7b3e-48b3-95ed-77c5a7471258",
+      "position": 3,
+      "properties": {
+        "description": "You should continue using these resources on your own as you prepare for the AP CSA exam. Today’s choice board provides several strategies you may not have gotten a chance to use in class but are useful in your continued exam preparations.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4aca9e29-7b3e-48b3-95ed-77c5a7471258",
+        "lesson_activity.key": "e06b6b51-8681-4686-b5e6-72b91fa92c90"
+      }
+    },
+    {
+      "key": "aea8b463-112a-48eb-893d-157fb6151097",
+      "position": 1,
+      "properties": {
+        "description": "You have had a lot of practice completing FRQs this year and likely have a lot of strategies to help you succeed.",
+        "name": "FRQ Strategies",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aea8b463-112a-48eb-893d-157fb6151097",
+        "lesson_activity.key": "31dca719-daf9-497e-83ca-0a590fe7b1fc"
+      }
+    },
+    {
+      "key": "b86c2c0f-05f8-426c-ba43-427909d10a66",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Have students participate in an FRQ Advice Snowball:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to explain the instructions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Conduct the FRQ Advice Snowball after each student has a piece of advice by throwing their snowball. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> After the time is up, students read the snowball that is closest to them.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If one student has multiple snowballs, have them share with others.\n\nIf this activity does not fit well with your classroom culture, consider using the Give One, Get One strategy for sharing advice instead."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b86c2c0f-05f8-426c-ba43-427909d10a66",
+        "lesson_activity.key": "31dca719-daf9-497e-83ca-0a590fe7b1fc"
+      }
+    },
+    {
+      "key": "ca635156-54e8-46a9-b3cf-230b873708cb",
+      "position": 1,
+      "properties": {
+        "description": "Today we will be focusing on strategies for success when completing FRQ questions. ",
+        "name": "Around the World",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ca635156-54e8-46a9-b3cf-230b873708cb",
+        "lesson_activity.key": "0061af60-6f19-476a-94ae-ea59667bf8f2"
+      }
+    },
+    {
+      "key": "5bf4aa0f-6f82-41f2-b36c-f25e5201d919",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to review the FRQ section of the AP CSA Exam:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are four FRQ questions to be completed in 90 minutes. The FRQs are 50% of the score, and each question is worth 9 points. Each question has a specific topic.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each FRQ uses specific task verbs.\n\n**Do This:** Click through the animated slides to introduce the stations:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Common Errors\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Objectives\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Predict the Scoring Guide\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Spot the Error\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the FRQ Practice handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station and complete the FRQ Practice handout.\n* Students find a station. (Students do not need to go in order.)\n* Students answer the prompts on their activity guides. \n* Students should move between stations after 8 minutes or completing the question, whichever comes first."
+      },
+      "seeding_key": {
+        "activity_section.key": "5bf4aa0f-6f82-41f2-b36c-f25e5201d919",
+        "lesson_activity.key": "0061af60-6f19-476a-94ae-ea59667bf8f2"
+      }
+    },
+    {
+      "key": "926b6c71-7250-489d-b51a-b7c0e68ea6f3",
+      "position": 3,
+      "properties": {
+        "description": "There are a few more strategies that are always good to remember when completing the FRQs",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "926b6c71-7250-489d-b51a-b7c0e68ea6f3",
+        "lesson_activity.key": "0061af60-6f19-476a-94ae-ea59667bf8f2"
+      }
+    },
+    {
+      "key": "9739c888-b0cd-47ac-8420-1e58937950f2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain strategies for the FRQs."
+      },
+      "seeding_key": {
+        "activity_section.key": "9739c888-b0cd-47ac-8420-1e58937950f2",
+        "lesson_activity.key": "0061af60-6f19-476a-94ae-ea59667bf8f2"
+      }
+    },
+    {
+      "key": "812d50dd-57ec-4a26-8c0a-a842eafa2b30",
+      "position": 1,
+      "properties": {
+        "description": "Let's revisit our study guide and identify which content is most important for you to review.",
+        "name": "Study Plan Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "812d50dd-57ec-4a26-8c0a-a842eafa2b30",
+        "lesson_activity.key": "fa82de0e-ceb6-4b7f-bf15-f0c65283f3f7"
+      }
+    },
+    {
+      "key": "24b8efdc-7d87-4f87-a349-7f019136ddc0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
+      },
+      "seeding_key": {
+        "activity_section.key": "24b8efdc-7d87-4f87-a349-7f019136ddc0",
+        "lesson_activity.key": "fa82de0e-ceb6-4b7f-bf15-f0c65283f3f7"
+      }
+    },
+    {
+      "key": "3d0499a3-f805-4740-bf57-dc47e5e4aea3",
+      "position": 1,
+      "properties": {
+        "description": "Students practice a complete multiple-choice exam (40 questions) in AP Classroom. To create a multiple-choice exam in AP Classroom, follow these steps:\n\n**Do This:** Follow the directions in the AP Classroom: Practice Exams resource to create a test booklet for the 2020 Practice Exam 1 MCQ.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We recommend using the 2020 Practice Exam 1. Practice exams from previous years include topics that the current framework no longer covers.\n\nIf you choose to use the 2015 Released Exam, skip questions 10 and 33. If you use the 2014 Practice Exam, skip questions 14 and 25."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3d0499a3-f805-4740-bf57-dc47e5e4aea3",
+        "lesson_activity.key": "6373d051-8acd-4312-ba3f-d123579c92df"
+      }
+    },
+    {
+      "key": "aa76dca0-8953-4cc8-b7de-88246c9ca366",
+      "position": 2,
+      "properties": {
+        "description": "AP Classroom provides answer sheets, but you may use any type of bubble answers sheet for grading.\n\n**Do This:** Follow the directions in the ​​AP Classroom: Using Answer Sheets for Print Assessments resource to generate answer sheets (one for each student), or gather your own answer sheets."
+      },
+      "seeding_key": {
+        "activity_section.key": "aa76dca0-8953-4cc8-b7de-88246c9ca366",
+        "lesson_activity.key": "6373d051-8acd-4312-ba3f-d123579c92df"
+      }
+    },
+    {
+      "key": "8f3ccd19-3db1-4588-b043-75942060de7a",
+      "position": 1,
+      "properties": {
+        "description": "You will start the multiple-choice portion of our mock exam today. \n\nYou must use a No. 2 pencil to write your responses. Please raise your hand if you need a No. 2 pencil.",
+        "name": "Exam Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8f3ccd19-3db1-4588-b043-75942060de7a",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "9d60c7d2-4a51-4c4d-a911-edc0dfbf3a53",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "9d60c7d2-4a51-4c4d-a911-edc0dfbf3a53",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "15107369-b93a-43f5-a360-7c5f24911169",
+      "position": 3,
+      "properties": {
+        "description": "I will now distribute the exam materials. Please do not turn over any materials until told to do so.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "15107369-b93a-43f5-a360-7c5f24911169",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "3dcc1e51-4010-4f94-a4bc-23dc2c5e16fd",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the Test Booklet, Java Quick Reference, answer sheet, and a sheet of scratch paper faced down on each student’s desk. "
+      },
+      "seeding_key": {
+        "activity_section.key": "3dcc1e51-4010-4f94-a4bc-23dc2c5e16fd",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "b921a25a-569f-4cd1-9c84-e0ceaf95b609",
+      "position": 5,
+      "properties": {
+        "description": "In front of you, you should have a copy of the MCQ Mock Exam, Java Quick Reference handout, an answer sheet, and a sheet of scratch paper. Please raise your hand if you are missing any exam materials.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b921a25a-569f-4cd1-9c84-e0ceaf95b609",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "f3823883-0bd3-409d-be57-361b416c238d",
+      "position": 6,
+      "properties": {
+        "description": "**Distribute:** Give any missing exam materials to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "f3823883-0bd3-409d-be57-361b416c238d",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "3278d0d8-248c-4e64-b498-2ec263ee73be",
+      "position": 7,
+      "properties": {
+        "description": "On the multiple-choice section of the exam, you are given 90 minutes to complete 40 multiple-choice questions. Today, you will have 40 minutes to start the multiple-choice section of the mock exam. You will have the next lesson to finish the multiple-choice questions. Although the timing is slightly shorter than the actual exam, you will be able to practice the complete multiple-choice section of the AP CSA Exam.\n\nYou may write on your scrap paper and answer sheet; however, only responses on the answer sheet will be scored.  Do not write on your Java Quick Reference or the mock exam. These will be reused, and you might not receive the same document next class that you have today.\n\nYou are responsible for pacing yourself over the two lessons and may proceed freely between all 40 questions.\n\nGood luck! You may now begin the exam.",
+        "duration": "40",
+        "name": "Multiple-Choice Mock Exam",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3278d0d8-248c-4e64-b498-2ec263ee73be",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "f19f5a8c-de50-45e0-b7a6-8d3fa6cc792d",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students start the multiple-choice mock exam. On the board, write the start and end times."
+      },
+      "seeding_key": {
+        "activity_section.key": "f19f5a8c-de50-45e0-b7a6-8d3fa6cc792d",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "b7fcbc5a-cb96-4e3d-af62-9ab2c85d0132",
+      "position": 9,
+      "properties": {
+        "description": "Great work! Time is up. Please stop working and close your exam. Remain in your seat, without talking, while the exam materials are collected.\n\nTomorrow you will finish the multiple-choice section of the mock exam! Since this mock exam is a chance for you to assess your progress to improve and review, you will get more out of it if you do not look up or discuss the exam with anyone outside of class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b7fcbc5a-cb96-4e3d-af62-9ab2c85d0132",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "bfd97de9-2347-44b7-8bc9-eda85c8733e2",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the MCQ Mock Exam, Java Quick Reference, answer sheet, and scrap paper from each student."
+      },
+      "seeding_key": {
+        "activity_section.key": "bfd97de9-2347-44b7-8bc9-eda85c8733e2",
+        "lesson_activity.key": "dedd7f79-d8a4-48a1-8183-652fec04c85b"
+      }
+    },
+    {
+      "key": "4016d3d7-ac6a-4f5b-a7bb-bf24840d68b0",
+      "position": 1,
+      "properties": {
+        "description": "You will complete the multiple-choice portion of our mock exam today. \n\nYou will use a No. 2 pencil to write your responses. Please raise your hand if you need a No. 2 pencil.",
+        "duration": "5",
+        "name": "Exam Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4016d3d7-ac6a-4f5b-a7bb-bf24840d68b0",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "0a315210-3505-4223-91d9-7217acb013ab",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "0a315210-3505-4223-91d9-7217acb013ab",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "2e4ceb90-0c11-4f5b-ae86-005e75ef485b",
+      "position": 3,
+      "properties": {
+        "description": "I will now redistribute the exam materials. Please do not turn over any materials until told to do so.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e4ceb90-0c11-4f5b-ae86-005e75ef485b",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "f5791a8f-230a-4706-b671-bd2a13ab33f5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the Test Booklet, Java Quick Reference, each student's answer sheet, and a sheet of scratch paper faced down on each student’s desk. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f5791a8f-230a-4706-b671-bd2a13ab33f5",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "ab2136ca-8155-4f73-abb1-067f06465b91",
+      "position": 5,
+      "properties": {
+        "description": "In front of you, you should have a copy of the MCQ Mock Exam, Java Quick Reference handout, your answer sheet, and a sheet of scratch paper. Please raise your hand if you are missing any exam materials.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab2136ca-8155-4f73-abb1-067f06465b91",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "4e717b9f-f736-44f6-81d0-0cdfdacf8e68",
+      "position": 6,
+      "properties": {
+        "description": "**Distribute:** Give any missing exam materials to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "4e717b9f-f736-44f6-81d0-0cdfdacf8e68",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "26080a5d-db7a-40ec-844a-b86557a94a83",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the MCQ portion of the mock exam. On the board, write the start and end times.",
+        "duration": "40",
+        "name": "Multiple-Choice Mock Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "26080a5d-db7a-40ec-844a-b86557a94a83",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "1be6ba14-3fcc-4f31-8db9-6e5d4194f68d",
+      "position": 8,
+      "properties": {
+        "description": "Great work! Time is up. Please stop working and close your exam. Remain in your seat, without talking, while the exam materials are collected.\n\nYou will review your results on the multiple-choice mock exam in the next lesson.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1be6ba14-3fcc-4f31-8db9-6e5d4194f68d",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "0298a550-b327-4916-b692-a5e4d4b17d91",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the MCQ Mock Exam, Java Quick Reference, answer sheet, and scrap paper from each student.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To give students more time in the next lesson, consider scoring the MCQ Mock Exam before the next lesson.\n\nIf you used the AP Classroom answer sheets, follow the directions in the ​​AP Classroom: Using Answer Sheets for Print Assessments resource to upload the answer sheets. AP Classroom scores uploaded answer sheets. If you used your own bubble answer sheets, follow the directions in the AP Classroom: Practice Exams resource to obtain the scoring guide for the practice exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0298a550-b327-4916-b692-a5e4d4b17d91",
+        "lesson_activity.key": "a05e0283-68cd-419e-8745-6abe48bfbfa6"
+      }
+    },
+    {
+      "key": "eb92ab19-117c-4479-bad4-463a9b12c50f",
+      "position": 1,
+      "properties": {
+        "description": "You have now completed a full 40 question multiple-choice mock exam. Let's review your results and update your study plans.",
+        "duration": "30",
+        "name": "Mock MCQ Exam Results",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eb92ab19-117c-4479-bad4-463a9b12c50f",
+        "lesson_activity.key": "d468ac25-e66b-48ea-8157-2d47fa9ee8c1"
+      }
+    },
+    {
+      "key": "6667dfde-ab98-440b-b5f0-d43479524c97",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student the Test Booklet and answer sheet for the MCQ Mock Exam.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answer to each multiple-choice question and its AP Classroom topic. Students should record the topic next to each question to update their study plans. "
+      },
+      "seeding_key": {
+        "activity_section.key": "6667dfde-ab98-440b-b5f0-d43479524c97",
+        "lesson_activity.key": "d468ac25-e66b-48ea-8157-2d47fa9ee8c1"
+      }
+    },
+    {
+      "key": "367a11ce-a146-49af-8dcd-b592a7b956a7",
+      "position": 3,
+      "properties": {
+        "description": "It is important to take time to reflect and update your plan for the days between now and the exam. ",
+        "duration": "15",
+        "name": "Updated Study Plan",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "367a11ce-a146-49af-8dcd-b592a7b956a7",
+        "lesson_activity.key": "d468ac25-e66b-48ea-8157-2d47fa9ee8c1"
+      }
+    },
+    {
+      "key": "cb6d87d7-5e1a-4ca5-b3e4-9b49f1f3b523",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students review the multiple-choice questions they missed.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students summarize their results by topic and update their study plan."
+      },
+      "seeding_key": {
+        "activity_section.key": "cb6d87d7-5e1a-4ca5-b3e4-9b49f1f3b523",
+        "lesson_activity.key": "d468ac25-e66b-48ea-8157-2d47fa9ee8c1"
+      }
+    },
+    {
+      "key": "ef0eaeea-4a49-4907-865b-59e21bae5b3c",
+      "position": 1,
+      "properties": {
+        "description": "Students practice a complete free response exam (4 questions). Access the AP Computer Science A: The Exam resource to find the most recent free response questions available. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We recommend using the the most recent exam available on the AP Computer Science A Past Exam Questions resource or the 2020 Practice Exam found in AP Classroom. Practice exams from previous years include topics that the current framework no longer covers.\n\nExams in the AP Computer Science A: The Exam and AP Computer Science A Past Exam Questions resources are publicly available and include additional resources from the College Board including:\n* Chief Reader Report\n* Scoring Statistics\n* Student Samples and Commentary\n\nThe 2020 Practice Exam on AP Classroom is only available to teachers and does not include these additional resources."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ef0eaeea-4a49-4907-865b-59e21bae5b3c",
+        "lesson_activity.key": "86162242-f48a-48b6-89cd-27a5e4ee74ce"
+      }
+    },
+    {
+      "key": "c9747550-0154-4db9-84ee-0b30ef7a82e6",
+      "position": 1,
+      "properties": {
+        "description": "You will start the FRQ portion of our mock exam today. \n\nYou will use a No. 2 pencil to write your responses. Please raise your hand if you need a No. 2 pencil.",
+        "duration": "5",
+        "name": "Exam Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c9747550-0154-4db9-84ee-0b30ef7a82e6",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "5b238e89-9519-4edc-b387-3e418a992817",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "5b238e89-9519-4edc-b387-3e418a992817",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "213ee329-52cc-4ae0-8997-a7e5df3fae49",
+      "position": 3,
+      "properties": {
+        "description": "I will now distribute the exam materials. Please do not turn over any materials until told to do so.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "213ee329-52cc-4ae0-8997-a7e5df3fae49",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "880f2713-1b70-4e45-8ae6-b587420a5e19",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Mock Exam, Java Quick Reference, four FRQ answer sheets, and a sheet of scratch paper faced down on each student’s desk. "
+      },
+      "seeding_key": {
+        "activity_section.key": "880f2713-1b70-4e45-8ae6-b587420a5e19",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "b96cb561-cdb9-428c-baf0-d4c9a5e56aa4",
+      "position": 5,
+      "properties": {
+        "description": "In front of you, you should have a copy of the FRQ Mock Exam, Java Quick Reference handout, four FRQ answer sheets, and a sheet of scratch paper. Please raise your hand if you are missing any exam materials.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b96cb561-cdb9-428c-baf0-d4c9a5e56aa4",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "43b78c51-b25a-4bc9-a8e5-89bd84dcfeb6",
+      "position": 6,
+      "properties": {
+        "description": "**Distribute:** Give any missing exam materials to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "43b78c51-b25a-4bc9-a8e5-89bd84dcfeb6",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "b23821ea-ed36-414a-88dc-e83f13a98573",
+      "position": 7,
+      "properties": {
+        "description": "On each answer sheet, print your name, period, and today’s date where indicated.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b23821ea-ed36-414a-88dc-e83f13a98573",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "c38bdd01-d9cb-48ef-82e3-d0ec239cba31",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Direct students to fill in their names, period, and the current date on the answer sheets."
+      },
+      "seeding_key": {
+        "activity_section.key": "c38bdd01-d9cb-48ef-82e3-d0ec239cba31",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "3e9f6583-1420-4e1b-a329-48cad7b581f5",
+      "position": 9,
+      "properties": {
+        "description": "On the FRQ section of the exam, you are given 90 minutes to complete 4 free response questions. Today, you will have 40 minutes to start the FRQ section of the mock exam. You will have the next lesson to finish the free response questions. Although the timing is slightly shorter than the actual exam, you will be able to practice the complete FRQ section of the AP CSA Exam.\n\nYou may write on your scrap paper and answer sheet; however, only responses on the answer sheet will be scored.  Do not write on your Java Quick Reference or the mock exam. These will be reused, and you might not receive the same document next class that you have today.\n\nYou are responsible for pacing yourself over the two lessons and may proceed freely between all four questions. On each FRQ answer sheet, be sure to fill in the circle that corresponds to the question that you are answering.\n\nGood luck! You may now begin the exam.",
+        "duration": "40",
+        "name": "FRQ Mock Exam",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3e9f6583-1420-4e1b-a329-48cad7b581f5",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "16af02f3-eeb2-4586-9420-9d4a08836c54",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students start the FRQ mock exam. On the board, write the start and end times."
+      },
+      "seeding_key": {
+        "activity_section.key": "16af02f3-eeb2-4586-9420-9d4a08836c54",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "11d45061-e941-44e3-9a0e-ca4a2eeaba13",
+      "position": 11,
+      "properties": {
+        "description": "Great work! Time is up. Please stop working and close your exam. Remain in your seat, without talking, while the exam materials are collected.\n\nTomorrow you will finish the FRQ section of the mock exam! Since this mock exam is a chance for you to assess your progress to improve and review, you will get more out of it if you do not look up or discuss the exam with anyone outside of class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "11d45061-e941-44e3-9a0e-ca4a2eeaba13",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "32d69a19-2715-492c-8931-caaf6348d8c5",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Mock Exam, Java Quick Reference, answer sheets, and scrap paper from each student."
+      },
+      "seeding_key": {
+        "activity_section.key": "32d69a19-2715-492c-8931-caaf6348d8c5",
+        "lesson_activity.key": "080ae6d8-1739-40ae-8e7f-3fec1541daec"
+      }
+    },
+    {
+      "key": "5a530103-b713-4802-ad37-4e8ffd8b50a7",
+      "position": 1,
+      "properties": {
+        "description": "You will complete the FRQ section of our mock exam today. \n\nYou will use a No. 2 pencil to write your responses. Please raise your hand if you need a No. 2 pencil.",
+        "duration": "5",
+        "name": "Exam Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5a530103-b713-4802-ad37-4e8ffd8b50a7",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "f2abb5bc-f4ab-4a0d-b0af-6d4f1125a1b4",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2abb5bc-f4ab-4a0d-b0af-6d4f1125a1b4",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "80711a73-ecca-4c2c-b111-093152e049c6",
+      "position": 3,
+      "properties": {
+        "description": "I will now redistribute the exam materials. Please do not turn over any materials until told to do so.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "80711a73-ecca-4c2c-b111-093152e049c6",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "b73b3520-5b11-48e0-8b3c-8762e0b2f124",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Mock Exam, Java Quick Reference, each student's answer sheets, and a sheet of scratch paper faced down on each student’s desk. "
+      },
+      "seeding_key": {
+        "activity_section.key": "b73b3520-5b11-48e0-8b3c-8762e0b2f124",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "745edc6c-0edf-44c5-b7c0-861a1343e47a",
+      "position": 5,
+      "properties": {
+        "description": "In front of you, you should have a copy of the FRQ Mock Exam, Java Quick Reference handout, your answer sheets, and a sheet of scratch paper. Please raise your hand if you are missing any exam materials.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "745edc6c-0edf-44c5-b7c0-861a1343e47a",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "94e01864-74a3-46a1-b422-926b216d89d4",
+      "position": 6,
+      "properties": {
+        "description": "**Distribute:** Give any missing exam materials to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "94e01864-74a3-46a1-b422-926b216d89d4",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "e4d43a23-e7e0-45da-80f8-d2e857acc69f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the FRQ portion of the mock exam. On the board, write the start and end times.",
+        "duration": "40",
+        "name": "FRQ Mock Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4d43a23-e7e0-45da-80f8-d2e857acc69f",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "c8736ddc-cb30-49a3-970b-abadd7c03e54",
+      "position": 8,
+      "properties": {
+        "description": "Great work! Time is up. Please stop working and close your exam. Remain in your seat, without talking, while the exam materials are collected.\n\nYou will review your results on the FRQ mock exam in the next lesson.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c8736ddc-cb30-49a3-970b-abadd7c03e54",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "9075bb86-aa07-48e0-a1ce-42029d741594",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Mock Exam, Java Quick Reference, answer sheets, and scrap paper from each student."
+      },
+      "seeding_key": {
+        "activity_section.key": "9075bb86-aa07-48e0-a1ce-42029d741594",
+        "lesson_activity.key": "e8ab0c27-ab5e-4f31-8053-1e3059ddd4e7"
+      }
+    },
+    {
+      "key": "c1471720-8b72-400f-ad51-34e7fcfba9a5",
+      "position": 1,
+      "properties": {
+        "description": "Post each FRQ at a different station around the room. Determine the number of copies based on the following: \n* Students stand or sit comfortably in groups of 3-4 to look at the same problem. \n* If possible, enlarge the text or print on larger paper so all students can clearly read the FRQ. \n* Provide copies of the FRQ Scoring Guidelines at each station.\n* Set a timer for students to rotate every 6-7 minutes.\n* Based on your room configuration, you may want to try one of the following options:\n   * Place each FRQ around the exterior of the room, taping the question to walls, doors, cabinets, whiteboards, etc.\n   * Create pods of desks/tables in your classroom and post the FRQ at each pod.\n   * Spread out by posting the FRQ in the hallway outside of your classroom."
+      },
+      "seeding_key": {
+        "activity_section.key": "c1471720-8b72-400f-ad51-34e7fcfba9a5",
+        "lesson_activity.key": "46f67ff6-8ff4-45a2-892c-9f36e7daabc9"
+      }
+    },
+    {
+      "key": "9995540e-cc91-4707-ace8-61c04623d6cc",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations on completing the FRQ Mock Exam! As with any problem we solve in Java, there are multiple approaches to solving an FRQ. Working in groups, travel around the room to review and score your responses.",
+        "duration": "30",
+        "name": "FRQ Scoring",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9995540e-cc91-4707-ace8-61c04623d6cc",
+        "lesson_activity.key": "8eecc444-7142-434c-a91f-b5f2872cdb4b"
+      }
+    },
+    {
+      "key": "518a2fc5-4177-4f2b-b395-988fafb627cf",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their answer sheets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the FRQ stations instructions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use a timer to ensure students assess all four FRQs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "518a2fc5-4177-4f2b-b395-988fafb627cf",
+        "lesson_activity.key": "8eecc444-7142-434c-a91f-b5f2872cdb4b"
+      }
+    },
+    {
+      "key": "81cda597-6889-4ba1-bdc1-6ebdeb560eb1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were you confident about?*\n* *Are there some things you left out that could have brought up your score?*\n* *How could you improve your time management?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution, areas of improvement, and time management strategies.",
+        "duration": "10",
+        "name": "Study Plan",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Additional FRQ strategies you can share with students:\n* Read the questions carefully.\n* Keep an eye on your time.\n* Try to solve all parts of the a question.\n* Only use classes given to you for the exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81cda597-6889-4ba1-bdc1-6ebdeb560eb1",
+        "lesson_activity.key": "8eecc444-7142-434c-a91f-b5f2872cdb4b"
+      }
+    },
+    {
+      "key": "f34c1526-6504-460c-875e-3e2605e0db09",
+      "position": 4,
+      "properties": {
+        "description": "It is important to take time to reflect and update your plan for the days between now and the exam. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f34c1526-6504-460c-875e-3e2605e0db09",
+        "lesson_activity.key": "8eecc444-7142-434c-a91f-b5f2872cdb4b"
+      }
+    },
+    {
+      "key": "4dd8b077-0fc2-472e-acc9-b5f36c70411a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add topics and subtopics to their study plan. Students should categorize each topic as high, medium, or low priority, identify tangible goals, and specific action items to help them achieve their desired level of mastery. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, direct students to work on their Study Strategies Choice Board."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4dd8b077-0fc2-472e-acc9-b5f36c70411a",
+        "lesson_activity.key": "8eecc444-7142-434c-a91f-b5f2872cdb4b"
+      }
+    },
+    {
+      "key": "3e93016a-2d1e-4b2e-97c7-0f800d1e7feb",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student one sticky note.",
+        "name": "Give One, Get One"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e93016a-2d1e-4b2e-97c7-0f800d1e7feb",
+        "lesson_activity.key": "af437427-f57d-4950-bc13-4002f14625fc"
+      }
+    },
+    {
+      "key": "36ffdd6f-a456-4a6f-83f1-8c7561743c6e",
+      "position": 2,
+      "properties": {
+        "description": "This is our last day of review for the AP exam, but you should continue using these resources on your own. Remember to practice, reflect on your techniques, and practice some more. You are ready, and I believe in you. Good luck on the exam!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "36ffdd6f-a456-4a6f-83f1-8c7561743c6e",
+        "lesson_activity.key": "af437427-f57d-4950-bc13-4002f14625fc"
+      }
+    },
+    {
+      "key": "e39e885d-691f-439f-bc5e-c8f55b447388",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in the Give One, Get One activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "e39e885d-691f-439f-bc5e-c8f55b447388",
+        "lesson_activity.key": "af437427-f57d-4950-bc13-4002f14625fc"
+      }
+    },
+    {
+      "key": "e5af96b6-7cca-4437-8e10-8cb931e8cb2c",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5af96b6-7cca-4437-8e10-8cb931e8cb2c",
+        "lesson_activity.key": "af0abdc2-9c9a-46a9-9311-489253eb2509"
+      }
+    },
+    {
+      "key": "e6e2ccf7-88b0-4008-b519-72e929cae0cd",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6e2ccf7-88b0-4008-b519-72e929cae0cd",
+        "lesson_activity.key": "af0abdc2-9c9a-46a9-9311-489253eb2509"
+      }
+    },
+    {
+      "key": "d3ca54f4-b4e7-42f3-805b-9afce74fb811",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d3ca54f4-b4e7-42f3-805b-9afce74fb811",
+        "lesson_activity.key": "53c61a55-02d8-4923-833e-a310cca9564d"
+      }
+    },
+    {
+      "key": "b8010de6-3b92-404b-a31b-3e9f323ec37f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b8010de6-3b92-404b-a31b-3e9f323ec37f",
+        "lesson_activity.key": "7f02a6f7-0b02-47d6-8251-2e2a7f39ca37"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSA Curriculum Videos"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Curriculum Videos_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "158a9443-f4cc-49f0-a0f5-4b991d4ed5ce"
+      },
+      "level_keys": [
+        "CSA Curriculum Videos_pilot_oo2025_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "e5af96b6-7cca-4437-8e10-8cb931e8cb2c"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "e6e2ccf7-88b0-4008-b519-72e929cae0cd"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "d3ca54f4-b4e7-42f3-805b-9afce74fb811"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "b8010de6-3b92-404b-a31b-3e9f323ec37f"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox_2025-cb-alt"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA Curriculum Videos_pilot_oo2025_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA Curriculum Videos_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "MCQ Practice – Day 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "158a9443-f4cc-49f0-a0f5-4b991d4ed5ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "e5af96b6-7cca-4437-8e10-8cb931e8cb2c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "e6e2ccf7-88b0-4008-b519-72e929cae0cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "d3ca54f4-b4e7-42f3-805b-9afce74fb811"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox_2025-cb-alt"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "b8010de6-3b92-404b-a31b-3e9f323ec37f"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Exploring Exam Expectations",
+      "url": "https://docs.google.com/document/d/1MgKBDsT7_jDtor2T2_WYf89j0VH7RGzJVZYvXv9E3o0/edit?tab=t.0",
+      "key": "_key_exploring_exam_expectations",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_exploring_exam_expectations"
+      }
+    },
+    {
+      "name": "[KEY] FRQ Practice",
+      "url": "https://docs.google.com/document/d/1pls1vb4AGfmOYTqvbveg0TVjOk5N94NTzKwFUhJh35k/edit",
+      "key": "_key_frq_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_frq_practice"
+      }
+    },
+    {
+      "name": "[KEY] MCQ Practice",
+      "url": "https://docs.google.com/document/d/1zvYb4t2GeoNe6lnjSYK5ZjFm1yoVmNqz3u72biEmi8Q/edit",
+      "key": "_key_mcq_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_mcq_practice"
+      }
+    },
+    {
+      "name": "AP Classroom: Authoring New FRQs",
+      "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tcb-qb-creating-new-frqs",
+      "key": "ap_classroom_authoring_new_frqs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_classroom_authoring_new_frqs"
+      }
+    },
+    {
+      "name": "AP Classroom: Practice Exams",
+      "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tch-reports-practice-exams",
+      "key": "ap_classroom_practice_exams",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_classroom_practice_exams"
+      }
+    },
+    {
+      "name": "AP Classroom: Questions Tab",
+      "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tch-reports-qb-questions-tab",
+      "key": "ap_classroom_questions_tab",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_classroom_questions_tab"
+      }
+    },
+    {
+      "name": "AP Classroom User Guide for Students",
+      "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-students/introduction",
+      "key": "ap_classroom_user_guide_for_students",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_classroom_user_guide_for_students"
+      }
+    },
+    {
+      "name": "AP Classroom: Using Answer Sheets for Print Assessments",
+      "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tch-using-answer-sheets",
+      "key": "ap_classroom_using_answer_sheets_for_print_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_classroom_using_answer_sheets_for_print_assessments"
+      }
+    },
+    {
+      "name": "AP Computer Science A Past Exam Questions",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions?course=ap-computer-science-a",
+      "key": "ap_computer_science_a_past_exam_questions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_computer_science_a_past_exam_questions"
+      }
+    },
+    {
+      "name": "AP Computer Science A: The Exam",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam",
+      "key": "ap_computer_science_a_the_exam",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ap_computer_science_a_the_exam"
+      }
+    },
+    {
+      "name": "Course and Exam Description",
+      "url": "https://docs.google.com/document/d/1UXJYtTDf1ezh9xtcfsJOj6qsxnn0cqNJq-pyIQdQCRE/edit?tab=t.0#heading=h.dmg4wiv1dp5",
+      "key": "course_and_exam_description",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "course_and_exam_description"
+      }
+    },
+    {
+      "name": "Creating a Multiple-Choice Pre-Assessment",
+      "url": "https://docs.google.com/document/d/1BdAeC4anEshpwyBXlYdftggAAD76SGBtNA2aVSVM9U8/edit?usp=sharing",
+      "key": "creating_a_multiple-choice_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_multiple-choice_pre-assessment"
+      }
+    },
+    {
+      "name": "Exploring Exam Expectations",
+      "url": "https://docs.google.com/document/d/140rF2QC2Z_zNx7g53oyxmrVOJMtae8yAx_LT9-Edywo/edit?tab=t.0",
+      "key": "exploring_exam_expectations",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_exam_expectations"
+      }
+    },
+    {
+      "name": "FRQ Answer Sheet",
+      "url": "https://docs.google.com/document/d/1W679dFvJeXrHBNV4Nc_kevUaIigJ6aaq9VQ6whD-Wk4/edit",
+      "key": "frq_answer_sheet",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_answer_sheet"
+      }
+    },
+    {
+      "name": "FRQ Choice Board",
+      "url": "https://docs.google.com/presentation/d/18ym-9n3cNeTK-lQfSqA3OMoIq_kmYjYjOVN5pA-RH-Q/edit?usp=sharing",
+      "key": "frq_choice_board",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_choice_board"
+      }
+    },
+    {
+      "name": "FRQ Fishbowl Skills Practice Slips",
+      "url": "https://docs.google.com/document/d/1Bzr_exD7_ISUzS_cP9n9cawJkQVB73bCWFekdRtD9vM/edit#",
+      "key": "frq_fishbowl_skills_practice_slips",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "frq_fishbowl_skills_practice_slips"
+      }
+    },
+    {
+      "name": "FRQ Practice",
+      "url": "https://docs.google.com/document/d/1ImB8WBa225uI1pkckzTnmHrxvmlfqvXljXq1hH75l18/edit#",
+      "key": "frq_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_practice"
+      }
+    },
+    {
+      "name": "FRQ Practice - Day 1",
+      "url": "https://docs.google.com/presentation/d/1O1hJ_ZFU21UR4y8aC6UjzYc90THdxgZcGO3XBBPBuas/edit?usp=drive_link",
+      "key": "frq_practice_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_practice_-_day_1"
+      }
+    },
+    {
+      "name": "FRQ Practice - Day 2",
+      "url": "https://docs.google.com/presentation/d/1y8ackOtnZiNzzn1UeGjlrYDH7Gmc5NRgqlwkC9Yge5Y/edit?usp=drive_link",
+      "key": "frq_practice_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_practice_-_day_2"
+      }
+    },
+    {
+      "name": "FRQ Practice Stations",
+      "url": "https://docs.google.com/document/d/1T7phvHGu-p1GQwOzivu7rekKCnDPJAC01zMqe1omp0w/edit?usp=sharing",
+      "key": "frq_practice_stations",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "frq_practice_stations"
+      }
+    },
+    {
+      "name": "FRQ Pre-Assessment",
+      "url": "https://docs.google.com/presentation/d/1rj0l7iAl_MtJh5B2Y4QLEZaWbOP32V2hT5mv-2vmwhk/edit?usp=drive_link",
+      "key": "frq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_pre-assessment"
+      }
+    },
+    {
+      "name": "FRQ Study Plan",
+      "url": "https://docs.google.com/document/u/1/d/1qPWxEK5Vy7DRLl2MVmphshM6JXR42bz0hfm9LH07Mco/edit",
+      "key": "frq_study_plan",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_study_plan"
+      }
+    },
+    {
+      "name": "FRQ Study Plan",
+      "url": "https://docs.google.com/presentation/d/1QpOzcfipzyFrfTbFyqt6WvIjMxOj-x-p3kX-n7GNL34/edit?usp=drive_link",
+      "key": "frq_study_plan_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_study_plan_1"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
+      "key": "java_quick_reference_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
+      "name": "MCQ Choice Board",
+      "url": "https://docs.google.com/presentation/d/1fsgQ-jJpSqAXK6L4dESzVsSEN7dQsIMYzALXlCHMKiY/edit#slide=id.p",
+      "key": "mcq_choice_board",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_choice_board"
+      }
+    },
+    {
+      "name": "MCQ Mock Exam Scoring",
+      "url": "https://docs.google.com/document/d/1mr1i2-Ks2oOeMm2d4loFgynoXyYuidsm2SERP_9rqeA/edit?usp=sharing",
+      "key": "mcq_mock_exam_scoring",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_mock_exam_scoring"
+      }
+    },
+    {
+      "name": "MCQ Practice",
+      "url": "https://docs.google.com/document/d/1oEMFA9h3w8qG7QtNKkCIYDwawk775IOVxXuuwaTm4sw/edit",
+      "key": "mcq_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_practice"
+      }
+    },
+    {
+      "name": "MCQ Practice - Day 1",
+      "url": "https://docs.google.com/presentation/d/13PCv5ZA4SoXgHbfWJlcLvDDlrbZNfEOOoWY02n4Qqt8/edit?usp=drive_link",
+      "key": "mcq_practice_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_practice_-_day_1"
+      }
+    },
+    {
+      "name": "MCQ Practice - Day 2",
+      "url": "https://docs.google.com/presentation/d/1PVjC7kWBML19BeUnfrDU1-h-j_vOs20gf4ZpVstTTZA/edit?usp=drive_link",
+      "key": "mcq_practice_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_practice_-_day_2"
+      }
+    },
+    {
+      "name": "MCQ Practice Stations",
+      "url": "https://docs.google.com/document/d/13xlh2Ci0CUfds90Inf8fU5Zf3l7kJLoD0u0byoVcJQI/edit",
+      "key": "mcq_practice_stations",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_practice_stations"
+      }
+    },
+    {
+      "name": "MCQ Pre-Assessment",
+      "url": "https://docs.google.com/presentation/d/1cD-QzcPAzUPkL3uuO7DwP_wKXP9aiwN3ka3EgSCbxXQ/edit?usp=drive_link",
+      "key": "mcq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_pre-assessment"
+      }
+    },
+    {
+      "name": "MCQ Pre-Assessment Scoring Reflection",
+      "url": "https://docs.google.com/document/u/4/d/1oWHKnfgarIsN8yBrSvzeWOVT0Lj3MWF9XTKk_f-S8z4/edit",
+      "key": "mcq_pre-assessment_scoring_reflection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_pre-assessment_scoring_reflection"
+      }
+    },
+    {
+      "name": "MCQ Study Plan",
+      "url": "https://docs.google.com/document/d/1dD6sb2dRvnCY4Q1l8aaOwaRP62N2RaZHfcpMJmLFLGk/edit?tab=t.0",
+      "key": "mcq_study_plan",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_study_plan"
+      }
+    },
+    {
+      "name": "MCQ Study Plan",
+      "url": "https://docs.google.com/presentation/d/1sd42NZADilSeNtES13_WLDvYQNHhjpKV3HRTMHdSe0I/edit?usp=drive_link",
+      "key": "mcq_study_plan_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_study_plan_1"
+      }
+    },
+    {
+      "name": "Mock FRQ Exam - Day 1",
+      "url": "https://docs.google.com/presentation/d/1In8_AHTKGODs80NA4yegwdI9ppHlH2zsJtRLObKJe8k/edit?usp=drive_link",
+      "key": "mock_frq_exam_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_frq_exam_-_day_1"
+      }
+    },
+    {
+      "name": "Mock FRQ Exam - Day 2",
+      "url": "https://docs.google.com/presentation/d/1r845IT97pa0ZiLvSGPfMtImvYoNAUTt7MaPB4p9HJRk/edit?usp=drive_link",
+      "key": "mock_frq_exam_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_frq_exam_-_day_2"
+      }
+    },
+    {
+      "name": "Mock FRQ Exam - Day 3",
+      "url": "https://docs.google.com/presentation/d/174dI-WrrQZNo90eX8stIaeZI2Ijt1PjfKKaoSFC_Wro/edit?usp=drive_link",
+      "key": "mock_frq_exam_-_day_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_frq_exam_-_day_3"
+      }
+    },
+    {
+      "name": "Mock MCQ Exam - Day 1",
+      "url": "https://docs.google.com/presentation/d/1EBigtaW4vU4rvu48qKAChZ5CJr_UAC3GiNCboJMG7n0/edit?usp=drive_link",
+      "key": "mock_mcq_exam_-_day_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_mcq_exam_-_day_1"
+      }
+    },
+    {
+      "name": "Mock MCQ Exam - Day 2",
+      "url": "https://docs.google.com/presentation/d/1QsKjnSzB210PTIoqucR3T9AqMbjkTvjcF7ktOgwY0CQ/edit?usp=drive_link",
+      "key": "mock_mcq_exam_-_day_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_mcq_exam_-_day_2"
+      }
+    },
+    {
+      "name": "Mock MCQ Exam - Day 3",
+      "url": "https://docs.google.com/presentation/d/1ybJATHDhe0WREFFACE9krNObEQNvstlrfmg0jFqXEVY/edit?usp=drive_link",
+      "key": "mock_mcq_exam_-_day_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mock_mcq_exam_-_day_3"
+      }
+    },
+    {
+      "name": "The AP CSA Exam",
+      "url": "https://docs.google.com/presentation/d/1Ht3-pmVpdHQ5GzqDWq3cZQ7pRG64jGbnZajd5W2S5LA/edit?usp=drive_link",
+      "key": "the_ap_csa_exam",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_ap_csa_exam"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 1",
+        "resource.key": "frq_choice_board"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 1",
+        "resource.key": "frq_fishbowl_skills_practice_slips"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 1",
+        "resource.key": "frq_practice_-_day_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 2",
+        "resource.key": "_key_frq_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 2",
+        "resource.key": "frq_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 2",
+        "resource.key": "frq_practice_-_day_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 2",
+        "resource.key": "frq_practice_stations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
+        "resource.key": "ap_classroom_authoring_new_frqs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
+        "resource.key": "ap_classroom_practice_exams"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
+        "resource.key": "frq_answer_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
+        "resource.key": "frq_pre-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Study Plan",
+        "resource.key": "frq_study_plan"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Study Plan",
+        "resource.key": "frq_study_plan_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 1",
+        "resource.key": "_key_mcq_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 1",
+        "resource.key": "mcq_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 1",
+        "resource.key": "mcq_practice_-_day_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 1",
+        "resource.key": "mcq_practice_stations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 2",
+        "resource.key": "mcq_choice_board"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Practice – Day 2",
+        "resource.key": "mcq_practice_-_day_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Pre-Assessment",
+        "resource.key": "ap_classroom_user_guide_for_students"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Pre-Assessment",
+        "resource.key": "creating_a_multiple-choice_pre-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Pre-Assessment",
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Pre-Assessment",
+        "resource.key": "mcq_pre-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Study Plan",
+        "resource.key": "mcq_pre-assessment_scoring_reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Study Plan",
+        "resource.key": "mcq_study_plan"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Study Plan",
+        "resource.key": "mcq_study_plan_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "resource.key": "ap_computer_science_a_past_exam_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "resource.key": "ap_computer_science_a_the_exam"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "resource.key": "frq_answer_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 1",
+        "resource.key": "mock_frq_exam_-_day_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 2",
+        "resource.key": "frq_answer_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 2",
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 2",
+        "resource.key": "mock_frq_exam_-_day_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 3",
+        "resource.key": "ap_computer_science_a_past_exam_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 3",
+        "resource.key": "ap_computer_science_a_the_exam"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock FRQ Exam – Day 3",
+        "resource.key": "mock_frq_exam_-_day_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 1",
+        "resource.key": "ap_classroom_practice_exams"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 1",
+        "resource.key": "ap_classroom_using_answer_sheets_for_print_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 1",
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 1",
+        "resource.key": "mock_mcq_exam_-_day_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 2",
+        "resource.key": "ap_classroom_practice_exams"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 2",
+        "resource.key": "ap_classroom_using_answer_sheets_for_print_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 2",
+        "resource.key": "mock_mcq_exam_-_day_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 3",
+        "resource.key": "ap_classroom_questions_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 3",
+        "resource.key": "mcq_mock_exam_scoring"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mock MCQ Exam – Day 3",
+        "resource.key": "mock_mcq_exam_-_day_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "resource.key": "_key_exploring_exam_expectations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "resource.key": "course_and_exam_description"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "resource.key": "exploring_exam_expectations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "resource.key": "java_quick_reference_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "resource.key": "the_ap_csa_exam"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "289ee792-8e0b-4878-a4b0-553de284a315",
+      "properties": {
+        "description": "Identify strengths and areas for improvement"
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Study Plan",
+        "objective.key": "289ee792-8e0b-4878-a4b0-553de284a315"
+      }
+    },
+    {
+      "key": "4e8a06ab-8da7-4bd9-b965-673ffa769425",
+      "properties": {
+        "description": "Explain the structure of the AP CSA Exam"
+      },
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "objective.key": "4e8a06ab-8da7-4bd9-b965-673ffa769425"
+      }
+    },
+    {
+      "key": "77411e12-3dd3-4fc7-aff9-eb92c130dc6a",
+      "properties": {
+        "description": "Identify strengths and areas for improvement"
+      },
+      "seeding_key": {
+        "lesson.key": "MCQ Study Plan",
+        "objective.key": "77411e12-3dd3-4fc7-aff9-eb92c130dc6a"
+      }
+    },
+    {
+      "key": "af1c4685-6727-44b6-a966-fff7f41dea03",
+      "properties": {
+        "description": "Create a study plan"
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Study Plan",
+        "objective.key": "af1c4685-6727-44b6-a966-fff7f41dea03"
+      }
+    },
+    {
+      "key": "d792e3ae-98c6-47d8-b455-a9fa98650184",
+      "properties": {
+        "description": "Create a study plan"
+      },
+      "seeding_key": {
+        "lesson.key": "MCQ Study Plan",
+        "objective.key": "d792e3ae-98c6-47d8-b455-a9fa98650184"
+      }
+    },
+    {
+      "key": "dc08caec-ae69-4b93-b42a-ef3a133bceae",
+      "properties": {
+        "description": "Identify test-taking and study strategies and resources"
+      },
+      "seeding_key": {
+        "lesson.key": "The AP CSA Exam",
+        "objective.key": "dc08caec-ae69-4b93-b42a-ef3a133bceae"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

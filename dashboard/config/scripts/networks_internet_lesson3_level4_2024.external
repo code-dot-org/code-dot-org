@@ -7,6 +7,7 @@ markdown <<MARKDOWN
 
 ### Scenario 1: Handling Conflicting IP Addresses
 ![Ryan and Sofia's devices have the same IP address](https://images.code.org/6781bb757701559fbf6d842f0a0daceb-image-1740207669051.jpg)
+
 **Scenario:**  
 Two employees at a tech company, **Ryan and Sofia**, both connect their personal laptops to the company’s Wi-Fi. However, both devices are accidentally assigned the **same IP address** (192.168.2.1), causing a network conflict.  
 
@@ -29,7 +30,7 @@ AI monitors **real-time traffic patterns** and **predicts congestion** before it
 **Discussion:**  
 - How does **AI compare to traditional manual traffic rerouting**?  
 
-## Scenario 3: AI Detecting and Fixing Packet Loss  
+### Scenario 3: AI Detecting and Fixing Packet Loss  
 
 ![Jake streaming a live soccer match](https://images.code.org/b4fa67a7c55f8f52cc698e3d0e2a9b1b-image-1740207669049.jpg)
 

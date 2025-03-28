@@ -1,0 +1,27 @@
+name 'csaif_pl_nets_interent'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Network Components
+
+#### Physical components like routers, switches and servers work with physical and wireless connections in order to transmit data globally throughout the Interent.
+
+## 📝 To Do
+
+#### Open up the <a href='https://docs.google.com/document/d/1aZKiP8iWpEHYO8y19GfwrbGsV7xQkm4P5khDwrhrrjo/edit?tab=t.0#heading=h.10sosi3gwomj' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Networks Chat Activity Guide</a>. As you interact with the AI Chatbot on the next level, fill in the network diagram by: 
+- #### Writing the function of each component in the network.
+- #### Using arrows to illustrate the flow of data
+- #### Use dotted arrows for wireless communication
+- #### Use solid arrows for wired communication
+
+#### There are some suggested chat prompts in the activity guide.
+
+## [Digital Version of Guide]
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 1. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

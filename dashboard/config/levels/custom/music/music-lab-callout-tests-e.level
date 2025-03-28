@@ -1,0 +1,299 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-25T18:46:24.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false,
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 230,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/drum_beat_cabana"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "}F:QVY~#[9q*dKhRuPHr",
+              "x": 470,
+              "y": 110,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/drum_beat_conga"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "9_Le^sN^Bg2L?hNP#Ov?",
+              "x": 110,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/drum_beat_conga"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "s2*VwN=o6Sz{NU66]qKT",
+              "x": 290,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/drum_beat_sweep"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "5HT7X5@#:l9S}^^-qIww",
+              "x": 570,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/bass_float"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "bassBounce",
+              "x": 690,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/bass_bounce"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "AI+[4(?TDIpmr5iL[1Uf",
+              "x": 170,
+              "y": 310,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/ukulele_shine"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "0Fi2EQTlTS4`^rJj=`f.",
+              "x": 670,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/lead_violins"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "5k}l((JP[%]6@(^2rUhP",
+              "x": 790,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/guitar_flower"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "L^eDV|qaLF:Wlcn2D7E|",
+              "x": 490,
+              "y": 290,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": true
+              },
+              "fields": {
+                "sound": "acoustic_arcade/synth_rubber"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "showSoundFilters": true,
+      "sounds": {
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      }
+    },
+    "long_instructions": "1) Play the secret track! You'll know you've played it when you get a success validation message! [<i class=\"fa-solid fa-lightbulb\"></i><i class=\"fa-solid fa-eyes fa-flip-horizontal\"></i></i>](#clickable=id:bassBounce)\r\n\r\n\r\n<i class=\"fa-solid fa-square-right\">",
+    "encrypted_exemplar_sources": "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\n6dFGwX8R/iLYIBBQRQ==\n",
+    "validations": [
+      {
+        "key": "music-lab-callout-tests-a_6ce14057-b500-4a86-b7ca-3be2aa3dd97f",
+        "message": "You did it!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "acoustic_arcade/bass_bounce"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-validation-tests-loops_adbc520a-474d-4bd5-8abd-d2a98eb39a7b",
+        "message": "You didn't play the right track!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-lab-validation-tests-loops_13628bfb-32af-4a5a-bad8-d8cb2a97af2a",
+        "message": "Play Something First!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T18:46:24.470+00:00\",\"changed\":[\"cloned from \\\"music-lab-callout-tests-d\\\"\"],\"cloned_from\":\"music-lab-callout-tests-d\"},{\"changed_at\":\"2025-03-25 18:46:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:48:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

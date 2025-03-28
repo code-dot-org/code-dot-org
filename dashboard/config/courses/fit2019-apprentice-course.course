@@ -1,0 +1,20 @@
+{
+  "name": "fit2019-apprentice-course",
+  "script_names": [
+    "fit2019-apprentice"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "fit2019-apprentice",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

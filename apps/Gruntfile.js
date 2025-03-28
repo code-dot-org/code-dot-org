@@ -13,7 +13,7 @@ const {createWebpackConfig} = require('./webpack.config');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
 // Review every couple of years to see if an increase improves test performance
-const MEM_PER_KARMA_PROCESS_MB = 4300;
+const MEM_PER_TEST_PROCESS_MB = 4300;
 
 module.exports = function (grunt) {
   var config = {};
@@ -380,7 +380,7 @@ module.exports = function (grunt) {
       stdio: 'inherit',
       env: {
         ...process.env,
-        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}`,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}`,
       },
     });
   });
@@ -623,4 +623,4 @@ module.exports = function (grunt) {
 };
 
 // Exported for matching use in `run-tests-in-parallel.sh`
-module.exports.MEM_PER_KARMA_PROCESS_MB = MEM_PER_KARMA_PROCESS_MB;
+module.exports.MEM_PER_TEST_PROCESS_MB = MEM_PER_TEST_PROCESS_MB;

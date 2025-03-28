@@ -134,9 +134,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   test 'filter_workshops with virtual status' do
     params virtual: 'yes'
 
-    # No virtual workshops found, uses none to return empty set of records.
-    @workshop_query.expects(:select).returns([])
-    expects(:none)
+    @workshop_query.expects(:joins).with(:sessions).returns(@workshop_query)
+    @workshop_query.expects(:where).with(sessions: {session_format: 'virtual'}).returns([])
 
     @controller.filter_workshops @workshop_query
 
@@ -144,11 +143,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       virtual: true,
       suppress_email: true
 
-    # Need to override expects method used elsewhere in this test file
-    # to set the return value to an array, instead of the mock @workshop_query
-    # object.
-    @workshop_query.expects(:select).returns([virtual_workshop])
-    expects(:where).with(id: [virtual_workshop.id])
+    @workshop_query.expects(:joins).with(:sessions).returns(@workshop_query)
+    @workshop_query.expects(:where).with(sessions: {session_format: 'virtual'}).returns([virtual_workshop])
 
     @controller.filter_workshops @workshop_query
   end

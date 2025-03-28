@@ -1,3 +1,4 @@
+import {Triggers} from '../constants';
 import musicI18n from '../locale';
 
 import {backupFunctionDefinitons} from './blockUtils';
@@ -63,7 +64,9 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript.forBlock[blockType] = blockConfig.generator;
   }
 
-  Blockly.JavaScript.addReservedWords('Sequencer');
+  Blockly.JavaScript.addReservedWords(
+    ['Sequencer', 'when_run', ...Triggers.map(trigger => trigger.id)].join(',')
+  );
 
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);

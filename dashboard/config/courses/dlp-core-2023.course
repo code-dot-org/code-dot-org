@@ -1,0 +1,20 @@
+{
+  "name": "dlp-core-2023",
+  "script_names": [
+    "dlp-core-2023"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "facilitator",
+  "instructor_audience": "plc_reviewer",
+  "properties": {
+    "family_name": "dlp-core",
+    "version_year": "2023"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

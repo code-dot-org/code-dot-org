@@ -6,4 +6,5 @@ export interface UserLevelEvaluation {
   evaluationCriteria: string;
   aiEvaluation: string;
   aiReasoning: string;
+  codeVersion?: string;
 }

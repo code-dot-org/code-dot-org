@@ -1,0 +1,20 @@
+{
+  "name": "jess-test-script",
+  "script_names": [
+    "jess-test-script"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "jess-test-script-1",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
