@@ -154,6 +154,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
   And I close my eyes
 
 @eyes
+@encrypted_level
 Scenario: Teacher can view student work, ask student to keep working, on rubric level
   And I open my eyes to test "V2 Progress Dashboard Assessments"
   Given I create an authorized teacher-associated student named "Sally"
@@ -210,6 +211,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I close my eyes
 
 @eyes
+@encrypted_level
 Scenario: Teacher can view choice levels
   And I open my eyes to test "V2 Progress - Choice Levels"
 

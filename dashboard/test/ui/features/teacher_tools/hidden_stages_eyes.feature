@@ -1,6 +1,7 @@
 @eyes
 Feature: Hidden Stages
 
+@encrypted_level
 Scenario: Hidden Stages
   When I open my eyes to test "hidden stages"
   Given I create an authorized teacher-associated student named "bobby"

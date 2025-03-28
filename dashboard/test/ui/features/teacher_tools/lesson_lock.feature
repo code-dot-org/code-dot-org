@@ -2,6 +2,7 @@
 Feature: Lesson Locking
 
 @eyes
+@encrypted_level
 Scenario: Stage Locking Dialog
   Given I create an authorized teacher-associated student named "bobby"
   When I open my eyes to test "stage locking"
