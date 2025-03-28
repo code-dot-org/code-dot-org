@@ -260,6 +260,39 @@ svg text[fill] {
   padding: 10px;
 }
 
+.rowContainer {
+  display: flex;
+  padding: 4px 16px;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px solid var(--borders-neutral-primary);
+  min-height: 52px;
+  align-self: stretch;
+}
+
+.aiAnalysisNameColumn {
+  width: 150px;
+  align-items: center;
+  flex: 0 0 150px;
+}
+
+.aiAnalysisResponseColumn {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  flex: 1 0 0;
+  overflow: hidden;
+}
+
+.aiAnalysisTagColumn {
+  width: 145px;
+  flex: 0 0 145px;
+}
+
+.aiAnalysisReasoningColumn {
+  flex: 1 1 0;
+}
+
 .aiSummaryContainer {
   display: flex;
   padding: 16px;
@@ -330,6 +363,18 @@ svg text[fill] {
 
 .proficientTag div span {
   color: white !important;
+}
+
+.noAttemptTag div {
+  background-color: var(--background-neutral-tertiary) !important;
+}
+
+.noAttemptTag div i {
+  color: var(--text-neutral-tertiary) !important;
+}
+
+.noAttemptTag div span {
+  color: var(--text-neutral-primary) !important;
 }
 
 .proficientIcon {

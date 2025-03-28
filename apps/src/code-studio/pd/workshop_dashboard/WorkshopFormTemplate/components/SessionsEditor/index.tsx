@@ -2,14 +2,15 @@ import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import moment from 'moment-timezone';
-import React, {FC, useMemo} from 'react';
+import React, {ChangeEvent, Dispatch, FC, useCallback, useMemo} from 'react';
 
 import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import {DATE_FORMAT, TIME_FORMAT} from '../../../workshopConstants';
-import {SessionFormat, SessionFormState} from '../../types';
+import {SessionAction, SessionFormState} from '../../types';
 
 import styles from './styles.module.scss';
 import commonStyles from '../../styles.module.scss';
@@ -17,6 +18,7 @@ import commonStyles from '../../styles.module.scss';
 export const generateNewSession = (
   prevSession?: SessionFormState
 ): SessionFormState => ({
+  id: `new-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`,
   date: prevSession
     ? moment(prevSession.date, DATE_FORMAT).add(1, 'day').format(DATE_FORMAT)
     : moment().format(DATE_FORMAT),
@@ -37,51 +39,20 @@ export const generateNewSession = (
 
 export const SessionsEditor: FC<{
   sessions: SessionFormState[];
-  handleSessions: (sessions: SessionFormState[]) => void;
-}> = ({sessions, handleSessions}) => {
-  const getHandleSession = (index: number) => (session: SessionFormState) => {
-    const newSessions = [...sessions];
-    newSessions[index] = session;
-    handleSessions(newSessions);
-  };
-
-  const getDeleteSession = (index: number) => () => {
-    const newSessions = [...sessions];
-    newSessions.splice(index, 1);
-    handleSessions(newSessions);
-  };
-
-  const getHandleSameAsPrevious =
-    (index: number) => (sameAsPrevious: boolean) => {
-      const currentSession = {...sessions[index]};
-      currentSession.sameAsPrevious = sameAsPrevious;
-      const prevSession = sessions[index - 1];
-      if (sameAsPrevious && prevSession) {
-        currentSession.locationAddress = prevSession.locationAddress;
-        currentSession.locationName = prevSession.locationName;
-        currentSession.meetingLink = prevSession.meetingLink;
-      }
-      const newSessions = [...sessions];
-      newSessions.splice(index, 1, currentSession);
-      handleSessions(newSessions);
-    };
-
-  const addSession = () => {
-    const newSessions = [...sessions];
-    newSessions.push(generateNewSession(sessions[sessions.length - 1]));
-    handleSessions(newSessions);
-  };
+  dispatchSessions: Dispatch<SessionAction>;
+}> = ({sessions, dispatchSessions}) => {
+  const addSession = useCallback(() => {
+    dispatchSessions({type: 'ADD_SESSION'});
+  }, [dispatchSessions]);
 
   return (
     <>
       {sessions.map((session, i) => (
         <SessionPart
-          key={i}
-          session={session}
-          handleSession={getHandleSession(i)}
-          deleteSession={getDeleteSession(i)}
+          key={session.id}
           showSameAsPrevious={i > 0}
-          handleSameAsPrevious={getHandleSameAsPrevious(i)}
+          dispatchSessions={dispatchSessions}
+          {...session}
         />
       ))}
       <div className={commonStyles.row}>
@@ -98,17 +69,29 @@ export const SessionsEditor: FC<{
 };
 
 export const SessionPart: FC<{
-  session: SessionFormState;
-  handleSession: (session: SessionFormState) => void;
-  deleteSession: () => void;
-  handleSameAsPrevious: (checked: boolean) => void;
+  id: SessionFormState['id'];
+  date: SessionFormState['date'];
+  start: SessionFormState['start'];
+  end: SessionFormState['end'];
+  format: SessionFormState['format'];
+  locationName: SessionFormState['locationName'];
+  locationAddress: SessionFormState['locationAddress'];
+  meetingLink: SessionFormState['meetingLink'];
+  sameAsPrevious: SessionFormState['sameAsPrevious'];
   showSameAsPrevious: boolean;
+  dispatchSessions: Dispatch<SessionAction>;
 }> = ({
-  session,
-  handleSession,
-  deleteSession,
+  id,
+  date,
+  start,
+  end,
+  format,
+  locationName,
+  locationAddress,
+  meetingLink,
+  sameAsPrevious,
   showSameAsPrevious,
-  handleSameAsPrevious,
+  dispatchSessions,
 }) => {
   const timeOptions = useMemo(() => {
     const startTime = moment().startOf('day').add(7, 'hours');
@@ -126,14 +109,50 @@ export const SessionPart: FC<{
   }, []);
 
   const sameAsPreviousLabel = useMemo(() => {
-    if (session.format === 'in_person') {
-      return 'Location';
+    switch (format) {
+      case 'in_person':
+        return 'Location';
+      case 'virtual':
+        return 'Meeting link';
+      default:
+        return '';
     }
-    if (session.format === 'virtual') {
-      return 'Meeting link';
-    }
-    return '';
-  }, [session.format]);
+  }, [format]);
+
+  const handleSession = useCallback(
+    (update: Partial<SessionFormState>) => {
+      dispatchSessions({type: 'UPDATE_SESSION', id, payload: update});
+    },
+    [dispatchSessions, id]
+  );
+
+  const deleteSession = useCallback(() => {
+    dispatchSessions({type: 'DELETE_SESSION', id});
+  }, [dispatchSessions, id]);
+
+  const handleSameAsPrevious = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      if (event.target.checked) {
+        dispatchSessions({
+          type: 'UPDATE_SESSION_SAME_AS_PREVIOUS',
+          id,
+        });
+      } else {
+        handleSession({sameAsPrevious: false});
+      }
+    },
+    [dispatchSessions, handleSession, id]
+  );
+
+  const updateSession = useCallback(
+    (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+      const update = {
+        [event.target.name]: event.target.value,
+      };
+      handleSession(update);
+    },
+    [handleSession]
+  );
 
   return (
     <>
@@ -144,19 +163,15 @@ export const SessionPart: FC<{
           inputType="date"
           size="s"
           className={classNames(commonStyles.item, commonStyles.required)}
-          value={session.date}
-          onChange={e => {
-            handleSession({...session, date: e.target.value});
-          }}
+          value={date}
+          onChange={updateSession}
         />
         <SimpleDropdown
-          name="start time"
+          name="start"
           labelText="Start Time"
-          onChange={e => {
-            handleSession({...session, start: e.target.value});
-          }}
+          onChange={updateSession}
           iconLeft={{iconName: 'clock'}}
-          selectedValue={session.start}
+          selectedValue={start}
           items={timeOptions}
           dropdownTextThickness="thin"
           size="s"
@@ -167,13 +182,11 @@ export const SessionPart: FC<{
           )}
         />
         <SimpleDropdown
-          name="end time"
+          name="end"
           labelText="End Time"
-          onChange={e => {
-            handleSession({...session, end: e.target.value});
-          }}
+          onChange={updateSession}
           iconLeft={{iconName: 'clock'}}
-          selectedValue={session.end}
+          selectedValue={end}
           items={timeOptions}
           dropdownTextThickness="thin"
           size="s"
@@ -186,11 +199,8 @@ export const SessionPart: FC<{
         <SimpleDropdown
           name="format"
           labelText="Format"
-          onChange={e => {
-            const format = e.target.value as SessionFormat;
-            handleSession({...session, format});
-          }}
-          selectedValue={session.format}
+          onChange={updateSession}
+          selectedValue={format}
           items={PdSessionFormats.map(({value, label}) => ({
             value,
             text: label,
@@ -199,54 +209,58 @@ export const SessionPart: FC<{
           size="s"
           className={classNames(commonStyles.item, commonStyles.required)}
         />
-        <Button
-          icon={{iconName: 'minus'}}
-          onClick={deleteSession}
-          isIconOnly={true}
-          className={styles.deleteButton}
-          type="secondary"
-          color="destructive"
-          title="delete workshop session"
-          aria-label="delete workshop session"
-        />
+        <WithTooltip
+          tooltipOverlayClassName={styles.deleteButtonContainer}
+          tooltipProps={{
+            tooltipId: `delete-session-tooltip-${id}`,
+            size: 'xs',
+            text: 'delete workshop session',
+          }}
+        >
+          <Button
+            icon={{iconName: 'minus'}}
+            onClick={deleteSession}
+            isIconOnly={true}
+            className={styles.deleteButton}
+            type="secondary"
+            color="destructive"
+            title="delete workshop session"
+            aria-label="delete workshop session"
+            aria-describedby={`delete-session-tooltip-${id}`}
+          />
+        </WithTooltip>
       </div>
       <div className={commonStyles.card}>
         <div className={commonStyles.row}>
-          {session.format === 'in_person' && (
+          {format === 'in_person' && (
             <>
               <TextField
                 label="Location name"
-                name="location name"
+                name="locationName"
                 size="s"
                 className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={e => {
-                  handleSession({...session, locationName: e.target.value});
-                }}
-                value={session.locationName}
+                onChange={updateSession}
+                value={locationName}
               />
               <TextField
                 label="Location address"
-                name="location address"
+                name="locationAddress"
                 size="s"
                 className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={e => {
-                  handleSession({...session, locationAddress: e.target.value});
-                }}
-                value={session.locationAddress}
+                onChange={updateSession}
+                value={locationAddress}
               />
             </>
           )}
-          {session.format === 'virtual' && (
+          {format === 'virtual' && (
             <>
               <TextField
                 label="Meeting link"
-                name="meeting link"
+                name="meetingLink"
                 size="s"
                 className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={e => {
-                  handleSession({...session, meetingLink: e.target.value});
-                }}
-                value={session.meetingLink}
+                onChange={updateSession}
+                value={meetingLink}
               />
               {/* blank space */}
               <div className={commonStyles.item} />
@@ -258,9 +272,9 @@ export const SessionPart: FC<{
             <Checkbox
               label={`${sameAsPreviousLabel} same as previous`}
               name={`${sameAsPreviousLabel} same as previous`}
-              checked={session.sameAsPrevious}
+              checked={sameAsPrevious}
               size="s"
-              onChange={e => handleSameAsPrevious(e.target.checked)}
+              onChange={handleSameAsPrevious}
             />
           </div>
         )}

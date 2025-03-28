@@ -67,7 +67,7 @@
             },
             {
               "type": "repeat_simple2",
-              "id": "repeat_simple2",
+              "id": "repeat_workspace",
               "x": 290,
               "y": 70,
               "disabledReasons": [
@@ -84,7 +84,7 @@
             },
             {
               "type": "play_sound_at_current_location_simple2",
-              "id": "UB4i~zJYt@P}a(EMnjyy",
+              "id": "play_workspace",
               "x": 290,
               "y": 170,
               "disabledReasons": [
@@ -112,17 +112,20 @@
     },
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Repeat Three Times\r\nPress play and observe the pattern in the timeline. Now, use the repeat 3 times block and the play drum beat cowbell block to recreate that pattern.\r\n\r\n",
-    "offer_browser_tts": "false",
+    "long_instructions": "### Introducing Repeat\r\nThis level has a new block - <code style=\"background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">repeat</code>! You can use it to repeat code a certain number of times.\r\n\r\nLet's try to simplify our existing code with this new block instead!\r\n\r\n1) Drag the <code style=\"background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">repeat</code> block over to the when run block. When you connect  it, the existing blocks will disappear! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:repeat_workspace---id:when-run-block)\r\n2) Drag the <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> block so it repeats 3 times [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace---id-up-inside:repeat_workspace)\r\n\r\nWhen you're done, your song should sound exactly the same as the starter code - just with less blocks!\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!\r\n",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "test-music-lab-loops-explore-start_2fd65070-672b-41b9-b5d2-4f93d6889ac9",
-        "message": "Dan, can we get validation that checks if students used a loop? I'm not sure if we're able to read what's in the workspace in the way we validate things. ",
-        "next": false,
+        "message": "<i class=\"fa-solid fa-square-check\"></i> You Did It!",
+        "next": true,
         "conditions": [
-
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 3
+          }
         ]
       }
     ],
@@ -135,7 +138,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12 20:41:21 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:42:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:46:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:41:52 +0000\",\"changed\":[\"level_data\",\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 00:55:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 00:55:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-21 18:00:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12 20:41:21 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:42:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:46:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:41:52 +0000\",\"changed\":[\"level_data\",\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 00:55:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 00:55:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-21 18:00:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-27 13:35:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 14:40:58 +0000\",\"changed\":[\"level_data\",\"long_instructions\",\"offer_browser_tts\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 14:43:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 14:46:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 14:48:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

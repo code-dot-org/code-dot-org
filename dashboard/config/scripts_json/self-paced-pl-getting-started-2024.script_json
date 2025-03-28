@@ -2,14 +2,19 @@
   "script": {
     "name": "self-paced-pl-getting-started-2024",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 21:58:34 UTC",
+    "serialized_at": "2025-03-27 15:17:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -113,6 +118,7 @@
       "key": "1b8ce259-924b-45f8-a743-6084ba5b6e6c",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "1b8ce259-924b-45f8-a743-6084ba5b6e6c",
@@ -125,6 +131,7 @@
       "key": "aa1d7751-e001-40e7-85bf-a0c54e124072",
       "position": 1,
       "properties": {
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "aa1d7751-e001-40e7-85bf-a0c54e124072",
@@ -137,6 +144,7 @@
       "key": "86b3a7e4-73bb-4245-8b56-dd5525f6668a",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "86b3a7e4-73bb-4245-8b56-dd5525f6668a",
@@ -149,6 +157,7 @@
       "key": "c7568a4a-4822-47ac-b3f4-50b127a7ab08",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "c7568a4a-4822-47ac-b3f4-50b127a7ab08",
@@ -161,6 +170,7 @@
       "key": "8dd1904c-4bb7-40f7-bdd8-7451e876450e",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "8dd1904c-4bb7-40f7-bdd8-7451e876450e",
@@ -229,6 +239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_Getting_Started_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -250,6 +263,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-GS-welcome-vid_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -271,6 +287,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-GS-Overview-Welcome_ModuleOverview_1_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -292,6 +311,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS-Task-VerifiedTeacher_1_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,6 +335,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-24-GS-mod1-Certificate_1_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -334,6 +359,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-GS-CSisFoundational_1_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -355,6 +383,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-GS-Advice-TipVid_1_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -376,6 +407,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS-JoinTheTeacherCommunity_1_8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,6 +431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS-Overview-WebsiteNavigation_2_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -418,6 +455,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS-tour-vid_2_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -439,6 +479,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GSself-paced-GS-U2L3-basic_features_ref"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,6 +503,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_ClassSection-vid_2_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -481,6 +527,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1GSself-paced-GS_U2L5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -502,6 +551,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_tour-vid_2_6_LMS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -523,6 +575,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_Task-ClassSection_physical-computing_2_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -544,6 +599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-GS_mod2-TeachersInClassrooms_3_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -565,6 +623,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_StudentExperience-vid_3_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -586,6 +647,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_Task-StudentView_3_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -607,6 +671,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-21-mod2-GS_Task-StudentView_3_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -628,6 +695,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_ProgessAndFeedback-vid_3_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -649,6 +719,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_progress-c4u_3_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -670,6 +743,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-GS_mod2-feedback-c4u_3_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -691,6 +767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS-TeachersInClassrooms_4_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -712,6 +791,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1SP-VPL-21-mod2-GS_NavigatingLessonPlans_4_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -733,6 +815,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_ExploreLessonPlan_4_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -754,6 +839,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "getting-started-teacher-lesson_planning_4_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -775,6 +863,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "getting-started-guide-to-assessment_4_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -796,6 +887,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "getting-started-types-of-assessments_4_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -817,6 +911,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-mod2-GS_TeachersInClassrooms_4_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -838,6 +935,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_UnitCalendar_4_8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -859,6 +959,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting-Started_MultipleChoice_4_9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -880,6 +983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_TaskResources_5_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -901,6 +1007,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_navigating support_5_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -922,6 +1031,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_ReportAProblem_5_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -943,6 +1055,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-GS_Support-c4u_5_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -964,6 +1079,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GSSP-PL-GS_UnitStructure-w-lessons_5_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {

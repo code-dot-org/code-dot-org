@@ -1,6 +1,7 @@
 name 'test-problem-solving-with-ai-lesson12-level0d'
 title 'AI in Schools'
-description 'description here'
+display_name 'AI in Schools'
+thumbnail_url 'https://images.code.org/f1ad19993cb7089a1998cb3a246e31e0-education.png'
 
 markdown <<MARKDOWN
 ##AI In Schools
