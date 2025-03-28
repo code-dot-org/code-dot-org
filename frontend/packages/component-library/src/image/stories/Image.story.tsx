@@ -6,7 +6,7 @@ import {useState} from 'react';
 import Image, {ImageProps} from '../index';
 
 export default {
-  title: 'CMS/Image',
+  title: 'DesignSystem/Image',
   component: Image,
 } as Meta;
 type Story = StoryObj<typeof Image>;
@@ -72,6 +72,7 @@ export const ImageWithBorder: Story = {
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
+    const figure = canvas.getByRole('figure');
     const image = await canvas.findByAltText('Teacher helping student');
     const getComputedStyleValue = (property: string) =>
       window.getComputedStyle(document.body).getPropertyValue(property);
@@ -89,9 +90,9 @@ export const ImageWithBorder: Story = {
     await expect(canvas.queryByText('Image has error')).not.toBeInTheDocument();
 
     // check if image has border
-    await expect(image).toHaveStyle(`border-width: ${expectedBorderSize};`);
-    await expect(image).toHaveStyle(`border-style: ${expectedBorderStyle};`);
-    await expect(image).toHaveStyle(`border-color: ${expectedBorderColor};`);
+    await expect(figure).toHaveStyle(`border-width: ${expectedBorderSize};`);
+    await expect(figure).toHaveStyle(`border-style: ${expectedBorderStyle};`);
+    await expect(figure).toHaveStyle(`border-color: ${expectedBorderColor};`);
   },
 };
 
@@ -111,6 +112,7 @@ export const ImageWithShadow: Story = {
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
+    const figure = canvas.getByRole('figure');
     const image = await canvas.findByAltText('Teacher helping student');
     const expectedBoxShadow = 'rgb(191, 228, 232) 8px 8px 0px 0px';
 
@@ -122,7 +124,7 @@ export const ImageWithShadow: Story = {
     await expect(canvas.queryByText('Image has error')).not.toBeInTheDocument();
 
     // check if image has box shadow
-    await expect(image).toHaveStyle(`box-shadow: ${expectedBoxShadow};`);
+    await expect(figure).toHaveStyle(`box-shadow: ${expectedBoxShadow};`);
   },
 };
 
@@ -150,5 +152,32 @@ export const ImageWithError: Story = {
     // check if image is loaded
     await expect(canvas.queryByText('Image loaded')).not.toBeInTheDocument();
     await canvas.findByText('Image has error');
+  },
+};
+
+export const WithCustomStyles: Story = {
+  ...SingleTemplate,
+  args: {
+    src: imageFile,
+    altText: 'Teacher helping student',
+    className: 'customClass',
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      figure.customClass {
+        width: 123px;
+        height: 123px;
+        outline: 2px dashed green;
+      }
+    `;
+    canvasElement.appendChild(style);
+
+    const figure = await canvas.findByRole('figure');
+    await expect(figure).toHaveClass('customClass');
+    await expect(figure).toHaveStyle('width: 123px');
+    await expect(figure).toHaveStyle('height: 123px');
   },
 };

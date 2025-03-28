@@ -116,14 +116,6 @@
       "import": "./dist/esm/cms/iframe/index.mjs",
       "require": "./dist/cjs/cms/iframe/index.js"
     },
-    "./cms/image": {
-      "types": {
-        "import": "./dist/esm/cms/image/index.d.ts",
-        "require": "./dist/cjs/cms/image/index.d.ts"
-      },
-      "import": "./dist/esm/cms/image/index.mjs",
-      "require": "./dist/cjs/cms/image/index.js"
-    },
     "./cms/section": {
       "types": {
         "import": "./dist/esm/cms/section/index.d.ts",
@@ -253,6 +245,14 @@
       },
       "import": "./dist/esm/formFieldWrapper/index.mjs",
       "require": "./dist/cjs/formFieldWrapper/index.js"
+    },
+    "./image": {
+      "types": {
+        "import": "./dist/esm/image/index.d.ts",
+        "require": "./dist/cjs/image/index.d.ts"
+      },
+      "import": "./dist/esm/image/index.mjs",
+      "require": "./dist/cjs/image/index.js"
     },
     "./link": {
       "types": {

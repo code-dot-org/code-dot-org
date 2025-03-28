@@ -5,7 +5,7 @@ import {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
 import {LinkButtonProps} from '@/button';
-import {ImageProps} from '@/cms/image';
+import {ImageProps} from '@/image';
 
 import TabGroup, {TabGroupTabModel} from './../TabGroup';
 

@@ -65,7 +65,6 @@ export const getButtons = (
     <div className={moduleStyles.buttonWrapper}>
       {primaryButton && (
         <LinkButton
-          {...primaryButton}
           type="primary"
           size="m"
           color="purple"

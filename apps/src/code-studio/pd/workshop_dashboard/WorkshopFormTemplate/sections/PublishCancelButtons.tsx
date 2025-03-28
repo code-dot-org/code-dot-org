@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 
 import {PublishCancelButtonsProps} from '../types';
 
@@ -19,3 +19,5 @@ export const PublishCancelButtons: FC<PublishCancelButtonsProps> = ({
     </div>
   );
 };
+
+export default memo(PublishCancelButtons);

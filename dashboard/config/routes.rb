@@ -100,8 +100,12 @@ Dashboard::Application.routes.draw do
     post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
     post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
-    get 'maker/home', to: 'maker#home'
-    get 'maker/setup', to: 'maker#setup'
+    resources :maker, only: [] do
+      collection do
+        get :home
+        get :setup
+      end
+    end
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -839,6 +843,10 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
+    get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
+    get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
+    get 'professional-learning/facilitator/computer-science-fundamentals', to: 'pd/professional_learning#csf'
+    get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
 
     namespace :pd do
       # React-router will handle sub-routes on the client.
