@@ -112,6 +112,8 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     return null;
   }
 
+  // need to figure out how to have onclick for analytics event,
+  // as well as default onclick that opens/closes dropdown
   return (
     <>
       {levelName && showAssetManager && (
@@ -135,6 +137,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
           color: 'gray',
           iconLeft: {iconName: 'upload'},
           text: aichatI18n.upload(),
+          onClick: () => console.log('hello'),
         }}
         options={[
           {
