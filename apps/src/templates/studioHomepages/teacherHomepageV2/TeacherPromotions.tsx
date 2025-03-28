@@ -11,6 +11,7 @@ import styles from './teacherHomepage.module.scss';
 // If we want to have different ads for each teacher, we will need to stop hardcoding this ID.
 const TEACHER_HOMEPAGE_CONTENTFUL_ID = '55R4y1NlZ0qJG9O0qgyq0Q';
 const TEACHER_PROMOTION_URL = `/marketing/teacher/promotions/${TEACHER_HOMEPAGE_CONTENTFUL_ID}`;
+const TEACHER_PROMOTION_HIDE_URL = '/marketing/teacher/promotions/hide';
 
 interface ServerPromotion {
   id: string;
@@ -58,7 +59,7 @@ export const TeacherPromotions: React.FC = () => {
     (id: string) => {
       setPromotions(promotions.filter(promotion => promotion.id !== id));
 
-      // TODO(lfm): Send a POST request to the server to mark the promotion as closed
+      HttpClient.post(`${TEACHER_PROMOTION_HIDE_URL}/${id}`, undefined, true);
     },
     [promotions]
   );
