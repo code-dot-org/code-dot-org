@@ -11,11 +11,10 @@ end
 
 # Verifies that the given selector (which should be a progress bubble) is visible
 # and displays the expected test_result. This function accounts for the asynchronous
-# nature of progress bubbles and can be slow, especially when verifying that a bubble
-# displays 'not_tried'. Passing no_wait=true skips all waits and immediately verifies
-# the bubble.
-# TODO: remove no_wait
-def verify_progress(selector, test_result, no_wait: false)
+# nature of progress bubbles by repeatedly checking for the specified value for
+# up to 30 seconds; this means that successful checks should be reliable and
+# prompt, but failures will be slow.
+def verify_progress(selector, test_result)
   case test_result
   when 'perfect'
     background_color = color_string('perfect')
@@ -89,11 +88,11 @@ Then /^I verify progress in the drop down of the current page is "([^"]*)" for l
   verify_progress(selector, test_result)
 end
 
-Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"]*)"( without waiting)?/ do |lesson, level, detail_view, test_result, without_waiting|
+Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"]*)"/ do |lesson, level, detail_view, test_result|
   selector = detail_view.nil? ?
     ".uitest-summary-progress-table .uitest-summary-progress-row:eq(#{lesson.to_i - 1}) .progress-bubble:eq(#{level.to_i - 1})" :
     ".uitest-detail-progress-table .uitest-progress-lesson:eq(#{lesson.to_i - 1}) .progress-bubble:eq(#{level.to_i - 1})"
-  verify_progress(selector, test_result, no_wait: !!without_waiting)
+  verify_progress(selector, test_result)
 end
 
 Then /^I verify progress for the sublevel with selector "([^"]*)" is "([^"]*)"/ do |selector, test_result|
