@@ -36,7 +36,7 @@ class UserLevelInteractionsController < ApplicationController
       :school_year,
       :interaction,
       :code_version,
-      validation_results: [],
+      :validation_results,
     )
     user_level_interaction_params[:user_id] = current_user.id
     user_level_interaction_params[:school_year] = school_year
