@@ -169,6 +169,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         levelId: levelId,
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_validate,
+        validationResults: validationResults,
       });
       onRun(true, dispatch, source).finally(() =>
         dispatch(setIsValidating(false))

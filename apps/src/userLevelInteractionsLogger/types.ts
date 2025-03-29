@@ -5,4 +5,8 @@ export interface UserLevelInteraction {
   interaction: string;
   codeVersion?: string;
   metadata?: JSON;
+  validationResults?: {
+    message: string;
+    result: string;
+  }[];
 }
