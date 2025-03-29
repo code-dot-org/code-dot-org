@@ -53,6 +53,7 @@ class UserLevelInteractionsController < ApplicationController
       user_type: current_user.user_type,
       project_id: project_data[:project_id],
       channel: channel,
+      validation_state: level.validated?,
     }.to_json
     user_level_interaction_params[:metadata] = metadata
     user_level_interaction_params
