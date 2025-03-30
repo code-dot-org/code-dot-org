@@ -8,6 +8,7 @@ class UserLevelInteractionsController < ApplicationController
 
   # POST /user_level_interactions
   def create
+    puts "Raw params: #{params.inspect}"
     version_year = JSON.parse(user_level_interaction_params[:metadata])["version_year"]
     if should_create_uli?(version_year)
       @user_level_interaction = UserLevelInteraction.new(user_level_interaction_params)
@@ -30,13 +31,13 @@ class UserLevelInteractionsController < ApplicationController
   end
 
   def user_level_interaction_params
+    transformed_params = params.transform_keys(&:underscore)
     user_level_interaction_params = params.transform_keys(&:underscore).permit(
       :level_id,
       :script_id,
       :school_year,
       :interaction,
       :code_version,
-      :validation_results,
     )
     user_level_interaction_params[:user_id] = current_user.id
     user_level_interaction_params[:school_year] = school_year
@@ -46,6 +47,8 @@ class UserLevelInteractionsController < ApplicationController
     project_data = get_project_and_version_id(user_level_interaction_params[:level_id], user_level_interaction_params[:script_id])
     channel = get_channel_for(level, script_id, current_user)
     user_level_interaction_params[:code_version] = project_data[:version_id]
+    validation_results = transformed_params[:validation_results]
+    puts "Extracted validation_results: #{validation_results.inspect}"
     metadata = {
       course_offering: unit.properties["curriculum_umbrella"],
       version_year: unit.get_course_version.key,
@@ -55,9 +58,12 @@ class UserLevelInteractionsController < ApplicationController
       project_id: project_data[:project_id],
       channel: channel,
       validation_state: level.validated?,
-      validation_results: user_level_interaction_params[:validation_results],
-    }.to_json
-    user_level_interaction_params[:metadata] = metadata
+      validation_results: validation_results,
+    }
+    puts "Constructed metadata: #{metadata.inspect}"
+
+    user_level_interaction_params[:metadata] = metadata.to_json
+    puts "Final user_level_interaction_params: #{user_level_interaction_params.inspect}"
     user_level_interaction_params
   end
 end

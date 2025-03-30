@@ -1,3 +1,4 @@
+import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 export interface UserLevelInteraction {
   levelId: number | undefined;
   scriptId: number | undefined;
@@ -5,8 +6,5 @@ export interface UserLevelInteraction {
   interaction: string;
   codeVersion?: string;
   metadata?: JSON;
-  validationResults?: {
-    message: string;
-    result: string;
-  }[];
+  validationResults?: ValidationResult[];
 }

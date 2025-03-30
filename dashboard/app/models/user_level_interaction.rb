@@ -10,7 +10,6 @@
 #  interaction  :string(255)      not null
 #  code_version :string(255)
 #  metadata     :json
-#  validation_results :json
 #  deleted_at   :datetime
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
