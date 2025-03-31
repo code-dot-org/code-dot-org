@@ -42,7 +42,9 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
 const TEACHER_PROMOTION_LOCAL_STORAGE_KEY = 'teacherPromotionClosed';
 
 const TeacherPromotions: React.FC = () => {
-  const [promotions, setPromotions] = React.useState<TeacherPromoInfo[]>([]);
+  const [unfilteredPromotions, setUnfilteredPromotions] = React.useState<
+    TeacherPromoInfo[]
+  >([]);
 
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -60,15 +62,7 @@ const TeacherPromotions: React.FC = () => {
     HttpClient.fetchJson<ServerPromotion[]>(TEACHER_PROMOTION_URL)
       .then(response => response?.value)
       .then(data => {
-        setPromotions(
-          data
-            .map(serverPromotionConverter)
-            .filter(
-              promotion =>
-                !promotion.isClosable ||
-                !closedPromotions.includes(promotion.id)
-            )
-        );
+        setUnfilteredPromotions(data.map(serverPromotionConverter));
         setIsLoading(false);
       })
       .catch(error => {
@@ -77,10 +71,16 @@ const TeacherPromotions: React.FC = () => {
       });
   }, [closedPromotions]);
 
+  const promotions = React.useMemo<TeacherPromoInfo[]>(
+    () =>
+      unfilteredPromotions.filter(
+        promotion => !closedPromotions.includes(promotion.id)
+      ),
+    [unfilteredPromotions, closedPromotions]
+  );
+
   const closePromotionCallback = React.useCallback(
     (id: string) => {
-      setPromotions(promotions.filter(promotion => promotion.id !== id));
-
       setClosedPromotions([...closedPromotions, id]);
 
       // We don't want the promotions cookie to store old promotions.
