@@ -5,9 +5,10 @@ $mobileBreakpoint: 900px;
 // ActionBlock common styles
 .actionBlock {
   @include mixins.border-styles;
-  max-width: 100%;
   text-align: initial;
   padding: 1.25rem;
+  box-sizing: border-box;
+  width: 100%;
 
   figure {
     position: relative;

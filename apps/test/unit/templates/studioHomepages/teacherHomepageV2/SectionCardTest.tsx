@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -12,7 +13,6 @@ import {Store} from 'redux';
 import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import * as urlHelpers from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 describe('SectionCard', () => {
@@ -89,15 +89,10 @@ describe('SectionCard', () => {
     screen.getByText('Period 1');
   });
   it('renders section class code with login info link', () => {
-    const teacherDashboardUrlSpy = jest.spyOn(
-      urlHelpers,
-      'teacherDashboardUrl'
-    );
-
     renderComponent();
-    const link = screen.getByText('ABCDEF');
-    fireEvent.click(link);
-    expect(teacherDashboardUrlSpy).toHaveBeenCalled();
+    const link = screen.getByRole('link', {name: 'ABCDEF'});
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('href', '/join/ABCDEF');
   });
 
   it('renders section options dropdown', () => {

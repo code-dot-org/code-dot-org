@@ -127,9 +127,30 @@
       "freeResponseHeight": 150,
       "codeEditableAfterSubmit": false
     },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-predict_c9c657d3-7cdf-4462-b2f1-862a3a0bd75f",
+        "message": "Continue to the next level to keep experimenting with this song!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-predict_d7ca51ab-1fc5-4974-bd5a-7f84c07b99d6",
+        "message": "Look at the timeline! Did it match your prediction?",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T19:45:39.476+00:00\",\"changed\":[\"cloned from \\\"test-musicLab-sequences-explore-predict\\\"\"],\"cloned_from\":\"test-musicLab-sequences-explore-predict\"},{\"changed_at\":\"2025-03-07 19:45:41 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:23:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:22:33 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 16:03:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 16:04:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:53:31 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:15:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-24 17:47:25 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:27:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:29:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-07T19:45:39.476+00:00\",\"changed\":[\"cloned from \\\"test-musicLab-sequences-explore-predict\\\"\"],\"cloned_from\":\"test-musicLab-sequences-explore-predict\"},{\"changed_at\":\"2025-03-07 19:45:41 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-07 20:23:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:22:33 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 16:03:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 16:04:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:53:31 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:15:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-24 17:47:25 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:27:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:29:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 17:51:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

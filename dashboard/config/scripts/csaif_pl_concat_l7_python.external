@@ -6,16 +6,19 @@ markdown <<MARKDOWN
 # String Concatenation   
 
 
-#### In the previous levels, you worked with **print statements** and **string Concatenation**.
+#### In the previous levels, you worked with **print statements** and **string concatenation**.
 
 
 <img src="https://images.code.org/0d5ccbdeb31cf38001ebb37338ac81cc-image-1741191408570.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### **Concatenation** simply means joining things together, like two pieces of text or data and uses `+` symbol. In the picture above, the symbol connects the variable value to the string message in the print statement.
+#### **Concatenation** simply means joining things together, like two pieces of text or data and uses `+` symbol. 
+#### In the picture above, the symbol `+` connects the variable `name` to the string message **"loves pizza"** in the print statement.
 
 ## Non-string variables
 
-#### Since `print` statements in Python output text, any non-string variable (such as an `int`, `float`, or `boolean`) must be converted to a string before being printed.
+#### Since `print` statements in Python output **text**, any non-string, or non-text, variable (such as an `int`, `float`, or `boolean`) must be **converted to a string** before being printed, this is called **casting a variable.**
+
+#### Notice in the picture below `str()` is added to the Boolean variable `loves_pizza` in the print statement.
 
 <img src="https://images.code.org/ce76a8a8e439f4b531fcc6d3df6c7e48-image-1741191203136.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 

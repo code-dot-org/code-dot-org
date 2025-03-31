@@ -1,0 +1,20 @@
+{
+  "name": "coding-with-ai",
+  "script_names": [
+    "coding-with-ai"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "coding-with-ai",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

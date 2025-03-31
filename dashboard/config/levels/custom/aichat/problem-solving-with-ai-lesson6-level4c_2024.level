@@ -39,12 +39,16 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "bubble_choice_description": "Use AI Chat to help you choose which two candidates to interview for the Software Engineering position.",
     "display_name": "Software Engineering Hiring Manager",
-    "thumbnail_url": "https://images.code.org/a7b59d67e228c6d17baab72cb8a118aa-resume.png"
+    "thumbnail_url": "https://images.code.org/a7b59d67e228c6d17baab72cb8a118aa-resume.png",
+    "starter_assets": {
+      "Resumes.pdf": "8bb4e260-ac5a-425d-a9b0-5f01bd666f47.pdf"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-25T14:05:46.017+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson6-level3-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson6-level3-choice3\"},{\"changed_at\":\"2025-03-25 14:05:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T14:05:46.017+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson6-level3-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson6-level3-choice3\"},{\"changed_at\":\"2025-03-25 14:05:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 22:08:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

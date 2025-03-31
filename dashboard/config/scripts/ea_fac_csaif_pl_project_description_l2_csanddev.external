@@ -1,0 +1,108 @@
+name 'ea-fac-csaif_pl_project-description-L2-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sustainable Systems Project Overview
+
+
+#### In this project, students propose and design an **AI-infused computer system** and demonstrate how it would contribute to achieving one of the **United Nations Sustainable Development Goals**.
+
+>#### They will: 
+>- #### Demonstrate how hardware, software, and communication combine to create a computer system
+>- #### Design a prototype of a device that solves a real-world issue
+>- #### Evaluate the ethical implications of design decisions
+
+<div style="clear:both;"></div>
+
+## Project Requirements:
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 System Diagram
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### The diagram clearly shows how the system works, including user interactions, data flow, and processing.
+- #### Includes a problem statement to explain what the system is solving.
+- #### All parts of our diagram are clear and well-labeled.
+.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Computational Systems: Hardware Layer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Lists all the hardware used in my system (e.g., sensors, processors).
+- #### Explains how each hardware component interacts with other parts of the system.
+- #### Explanation includes how the hardware helps the system function.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Computational Systems: Software Layer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Describes the software used in my system and how it processes data.
+- #### Explains how the software interacts with the hardware.
+- #### Includes features such as automation, AI, or interactive elements if applicable.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💭 Computational Systems: Communications Layer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Explains how data moves through my system.
+- #### Describes how different components connect and exchange information (e.g., Wi-Fi, Bluetooth, cloud).
+- #### Explanation makes it clear how my system transmits and retrieves data.
+
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🤖 AI Integration</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Use AI tools for brainstorming, debugging, or refining their code.
+- #### Reflect on AI’s role in their project and discuss its ethical implications.
+
+
+</p></div>
+</details>
+
+---
+
+#### Check out the <a href="https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing" target="blank" rel="noopener noreferrer">Expemlar</a> lesson plan to see how these concepts come to life in the classroom.
+
+<br>
+ 
+ <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 13. You can find more details in the full <a href='https://example.com/lesson13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+
+MARKDOWN
