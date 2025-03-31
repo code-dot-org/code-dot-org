@@ -79,13 +79,11 @@ module AichatOpenaiHelper
   # Reports and logs usage metrics to Cloudwatch
   def self.report_usage_metrics(usage, messages, level_id, encrypted_channel_id, user_id)
     return unless usage
-    messages_with_assets_count = 0
-    assets_count = 0
-    messages.each do |message|
-      next if message[:content].is_a?(String)
-      assets_count += message[:content].count {|content| content[:type] != 'text'}
-      messages_with_assets_count += 1 if assets_count > 0
-    end
+
+    filtered = messages.reject {|message| message[:content].is_a?(String)}
+    messages_with_assets_count = filtered.count {|message| message[:content].any? {|c| c[:type] != 'text'}}
+    pdfs_count = filtered.sum {|message| message[:content].count {|c| c[:type] == 'file'}}
+    images_count = filtered.sum {|message| message[:content].count {|c| c[:type] == 'image_url'}}
 
     is_multimodal = messages_with_assets_count > 0
 
@@ -102,7 +100,8 @@ module AichatOpenaiHelper
       messages: {
         total: messages.count,
         withAssets: messages_with_assets_count,
-        assets: assets_count
+        pdfs: pdfs_count,
+        images: images_count,
       },
       cost: {
         input: "$#{format("%.6f", input_cost)}",
