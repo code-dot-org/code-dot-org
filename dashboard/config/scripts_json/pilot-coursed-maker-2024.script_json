@@ -8,15 +8,14 @@
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_migrated": true,
-      "pilot_experiment": "csf-maker-pilot",
       "topic_tags": [
         "maker"
       ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:33 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2025-03-31 23:48:02 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,

@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "pilot-elem-music-lab",
+    "pilot_experiment": "pilot-intro-programming-music-lab",
     "version_year": "unversioned"
   },
   "resources": [

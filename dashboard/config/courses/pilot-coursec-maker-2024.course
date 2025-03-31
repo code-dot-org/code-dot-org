@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "pilot-coursec-maker-2024",
+    "pilot_experiment": "csf-maker-pilot",
     "version_year": "unversioned"
   },
   "resources": [

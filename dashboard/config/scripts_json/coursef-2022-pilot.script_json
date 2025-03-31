@@ -20,7 +20,6 @@
       "hideable_lessons": true,
       "is_migrated": true,
       "lesson_extras_available": true,
-      "pilot_experiment": "csf-2022-pilot",
       "project_widget_types": [
         "playlab",
         "artist"
@@ -29,8 +28,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:22 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2025-03-31 23:48:01 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,

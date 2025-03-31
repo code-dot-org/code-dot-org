@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "music-intro-elementary",
+    "pilot_experiment": "spring-2024-k5-pilot",
     "version_year": "2024"
   },
   "resources": [
