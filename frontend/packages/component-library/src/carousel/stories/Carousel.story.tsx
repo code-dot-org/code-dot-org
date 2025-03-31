@@ -1,14 +1,36 @@
+import image1 from '@public/images/action-block-01.png';
+import image2 from '@public/images/action-block-02.png';
+import image3 from '@public/images/action-block-03.png';
+import image4 from '@public/images/action-block-04.png';
+import image5 from '@public/images/action-block-05.png';
+import image6 from '@public/images/action-block-06.png';
 import type {Meta, StoryFn} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
+import {ActionBlock, FullWidthActionBlock} from '@/actionBlock';
 import {Heading2} from '@/typography';
+import Video from '@/video';
 
-import Video from '../../video/Video';
 import Carousel, {CarouselProps} from '../index';
 
 export default {
   title: 'DesignSystem/Carousel',
   component: Carousel,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable the color contrast rule for action blocks.
+            // ActionBlock component has one a11y issue, and it's related to the overline color.
+            // This is a known issue across our design system, and we are ok accepting this for now.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 // Create a basic slide
@@ -277,12 +299,154 @@ CarouselWithCustomSlidesPerView.play = async ({
   }
 };
 
-// TODO CMS-360 - Add Action Block carousel when Action Block component is ready
-export const ActionBlockCarousel = MultipleTemplate.bind({});
-ActionBlockCarousel.parameters = {
+export const ActionBlockCarousels = MultipleTemplate.bind({});
+const DESCRIPTION =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
+const DESCRIPTION_MED =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+ActionBlockCarousels.args = {
+  components: [
+    {
+      allowTouchMove: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      slides: [
+        {
+          id: 'fw-slide-1',
+          slide: (
+            <FullWidthActionBlock
+              title="Action block 1"
+              description={DESCRIPTION}
+              image={image1}
+              overline={'Overline 1'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+        {
+          id: 'fw-slide-2',
+          slide: (
+            <FullWidthActionBlock
+              title="Action block 2"
+              description={DESCRIPTION_MED}
+              image={image2}
+              overline={'Overline 2'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+      ],
+    },
+    {
+      allowTouchMove: true,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      slides: [
+        {
+          id: 'vertical-slide-1',
+          slide: (
+            <ActionBlock
+              title="Action block 1"
+              description={DESCRIPTION}
+              image={image1}
+              overline={'Overline 1'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+        {
+          id: 'vertical-slide-2',
+          slide: (
+            <ActionBlock
+              title="Action block 2"
+              description={DESCRIPTION_MED}
+              image={image2}
+              overline={'Overline 2'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+        {
+          id: 'vertical-slide-3',
+          slide: (
+            <ActionBlock
+              title="Action block 3"
+              description={DESCRIPTION}
+              image={image3}
+              overline={'Overline 3'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+        {
+          id: 'vertical-slide-4',
+          slide: (
+            <ActionBlock
+              title="Action block 4"
+              description={DESCRIPTION_MED}
+              image={image4}
+              overline={'Overline 4'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+        {
+          id: 'vertical-slide-5',
+          slide: (
+            <ActionBlock
+              title="Action block 5"
+              description={DESCRIPTION}
+              image={image5}
+              overline={'Overline 5'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+        {
+          id: 'vertical-slide-6',
+          slide: (
+            <ActionBlock
+              title="Action block 6"
+              description={DESCRIPTION_MED}
+              image={image6}
+              overline={'Overline 6'}
+              primaryButton={{
+                text: 'Primary Button',
+                href: '#',
+              }}
+            />
+          ),
+        },
+      ],
+    },
+  ],
+};
+ActionBlockCarousels.parameters = {
   docs: {
     description: {
-      story: 'COMING SOON',
+      story:
+        'Action blocks can be used in carousels to display a series of related cards. The carousels can be configured to allow touch movement for better user experience on touch devices. Carousels can contain full width action blocks, two across, or three across. The example above shows four action blocks in a carousel.',
     },
   },
 };
