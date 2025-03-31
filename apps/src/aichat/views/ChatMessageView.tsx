@@ -100,9 +100,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
               key={filename}
               type="button"
               className={styles.assetButton}
-              onClick={() => {
-                window.open(url, '_blank');
-              }}
+              onClick={() => window.open(url, '_blank')}
             >
               {filename.endsWith('.pdf') ? (
                 <FilePreview type="pdf" filename={filename} url={url} />
