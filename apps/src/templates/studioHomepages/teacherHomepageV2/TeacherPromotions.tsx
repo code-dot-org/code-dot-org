@@ -52,7 +52,7 @@ const TeacherPromotions: React.FC = () => {
         TEACHER_PROMOTION_LOCAL_STORAGE_KEY,
         '[]'
       );
-      return JSON.parse(stringPromotions) as string[];
+      return (JSON.parse(stringPromotions) as string[]) || [];
     }
   );
 
