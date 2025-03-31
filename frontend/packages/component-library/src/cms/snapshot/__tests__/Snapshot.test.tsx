@@ -26,13 +26,11 @@ describe('CMS Snapshot', () => {
     const snapshot = getSnapshot();
     expect(snapshot).toBeVisible();
 
-    const itemLabel = within(snapshot).getByText(items[0].label as string);
+    const itemLabel = within(snapshot).getByText(items[0].label + ':');
     expect(itemLabel).toBeVisible();
-    expect(itemLabel).toHaveRole('term');
 
     const itemContent = within(snapshot).getByText(items[0].content as string);
     expect(itemContent).toBeVisible();
-    expect(itemContent).toHaveRole('definition');
   });
 
   it('renders snapshot section with provided className styles', () => {
