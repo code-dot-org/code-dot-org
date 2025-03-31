@@ -7,7 +7,7 @@ import image6 from '@public/images/action-block-06.png';
 import type {Meta, StoryFn} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import {ActionBlock} from '@/actionBlock';
+import ActionBlock from '@/actionBlock';
 import {Heading2} from '@/typography';
 import Video from '@/video';
 
