@@ -1,66 +1,73 @@
 import {render, screen} from '@testing-library/react';
 
 import '@testing-library/jest-dom';
-import ActionBlock, {ActionBlockProps} from '../index';
+import FullWidthActionBlock, {ActionBlockProps} from '../index';
 
-describe('ActionBlock', () => {
+describe('FullWidthActionBlock', () => {
   const defaultProps: ActionBlockProps = {
-    title: 'Action block title',
-    description: 'This is the action block description.',
+    title: 'Full width action block title',
+    description: 'This is the full width action block description.',
   };
 
   const primaryButtonProps = {
     primaryButton: {
-      text: 'Primary Button',
+      text: 'Full Width Primary Button',
       href: 'https://code.org',
-      ariaLabel: 'Primary Button aria label',
+      ariaLabel: 'Full Width Primary Button aria label',
     },
   };
 
   const secondaryButtonProps = {
     secondaryButton: {
-      text: 'Secondary Button',
+      text: 'Full Width Secondary Button',
       href: 'https://hourofcode.com',
-      ariaLabel: 'Secondary Button aria label',
+      ariaLabel: 'Full Width Secondary Button aria label',
     },
   };
 
   it('renders the title and description', () => {
-    render(<ActionBlock {...defaultProps} />);
+    render(<FullWidthActionBlock {...defaultProps} />);
 
-    expect(screen.getByText('Action block title')).toBeInTheDocument();
     expect(
-      screen.getByText('This is the action block description.'),
+      screen.getByText('Full width action block title'),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('This is the full width action block description.'),
     ).toBeInTheDocument();
   });
 
   it('renders an image', () => {
-    render(<ActionBlock {...defaultProps} image="image.png" />);
+    render(<FullWidthActionBlock {...defaultProps} image="image.png" />);
 
     expect(screen.getByAltText('')).toHaveAttribute('src', 'image.png');
   });
 
   it('renders an overline', () => {
-    render(<ActionBlock {...defaultProps} overline="Overline Text" />);
+    render(
+      <FullWidthActionBlock
+        {...defaultProps}
+        overline="Full Width Overline Text"
+      />,
+    );
 
-    expect(screen.getByText('Overline Text')).toBeInTheDocument();
+    expect(screen.getByText('Full Width Overline Text')).toBeInTheDocument();
   });
 
   it('renders detail', () => {
     render(
-      <ActionBlock
+      <FullWidthActionBlock
         {...defaultProps}
-        details={{label: 'Duration', description: '1 hour'}}
+        details={{label: 'Duration', description: '1 week'}}
       />,
     );
 
     expect(screen.getByText('Duration:')).toBeInTheDocument();
-    expect(screen.getByText('1 hour')).toBeInTheDocument();
+    expect(screen.getByText('1 week')).toBeInTheDocument();
   });
 
   it('renders buttons', () => {
     render(
-      <ActionBlock
+      <FullWidthActionBlock
         {...defaultProps}
         {...primaryButtonProps}
         {...secondaryButtonProps}
@@ -68,28 +75,34 @@ describe('ActionBlock', () => {
     );
 
     // check for primary button
-    const primaryButton = screen.getByLabelText('Primary Button aria label');
+    const primaryButton = screen.getByLabelText(
+      'Full Width Primary Button aria label',
+    );
     expect(primaryButton).toBeInTheDocument();
     expect(primaryButton).toHaveAttribute('href', 'https://code.org');
 
     // check for secondary button
     const secondaryButton = screen.getByLabelText(
-      'Secondary Button aria label',
+      'Full Width Secondary Button aria label',
     );
     expect(secondaryButton).toBeInTheDocument();
     expect(secondaryButton).toHaveAttribute('href', 'https://hourofcode.com');
   });
 
   it('does not render buttons when the primary button is not provided', () => {
-    render(<ActionBlock {...defaultProps} primaryButton={undefined} />);
+    render(
+      <FullWidthActionBlock {...defaultProps} primaryButton={undefined} />,
+    );
 
     // check for primary button
-    const primaryButton = screen.queryByLabelText('Primary Button aria label');
+    const primaryButton = screen.queryByLabelText(
+      'Full Width Primary Button aria label',
+    );
     expect(primaryButton).not.toBeInTheDocument();
 
     // check for secondary button
     const secondaryButton = screen.queryByLabelText(
-      'Secondary Button aria label',
+      'Full Width Secondary Button aria label',
     );
     expect(secondaryButton).not.toBeInTheDocument();
   });

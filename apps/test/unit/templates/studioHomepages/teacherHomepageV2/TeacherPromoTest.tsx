@@ -17,6 +17,7 @@ describe('TeacherPromo', () => {
     description: 'Description for Promotion 1',
     image: '/image1.png',
     isClosable: true,
+    partnerLogo: '/partner_logo.png',
   };
 
   const onCloseMock = jest.fn();
