@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DSCOImage, {ImageProps} from '@code-dot-org/component-library/cms/image';
+import DSCOImage, {ImageProps} from '@code-dot-org/component-library/image';
 
 const Image: React.FC<ImageProps> = ({src, ...props}) => {
   // Show placeholder text until a content entry is added

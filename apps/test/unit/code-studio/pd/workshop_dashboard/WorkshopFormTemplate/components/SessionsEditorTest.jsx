@@ -11,9 +11,9 @@ import {
 import {sessionsReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate';
 import {
   SessionsEditor,
-  SessionPart,
   generateNewSession,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor';
+import {SessionPart} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor/components/SessionPart';
 
 describe('generateNewSession', () => {
   const newIdRegex = /^new-\d+-\w+$/;

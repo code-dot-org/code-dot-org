@@ -1,8 +1,8 @@
 import {Heading2} from '@code-dot-org/component-library/typography';
-import React, {FC, useCallback} from 'react';
+import React, {FC, memo, useCallback} from 'react';
 
-import {SessionsEditor} from '../components/SessionsEditor';
-import {TimeZoneEditor} from '../components/TimeZoneEditor';
+import SessionsEditor from '../components/SessionsEditor';
+import TimeZoneEditor from '../components/TimeZoneEditor';
 import {ScheduleProps} from '../types';
 
 export const Schedule: FC<ScheduleProps> = ({
@@ -28,3 +28,5 @@ export const Schedule: FC<ScheduleProps> = ({
     </>
   );
 };
+
+export default memo(Schedule);

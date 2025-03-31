@@ -1,7 +1,7 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {ChangeEvent, FC, useCallback, useMemo} from 'react';
+import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
@@ -107,3 +107,5 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
     </>
   );
 };
+
+export default memo(PartnerFacilitator);

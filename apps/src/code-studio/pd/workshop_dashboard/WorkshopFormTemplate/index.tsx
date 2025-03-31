@@ -9,13 +9,13 @@ import {workshopLabel} from '../utils/workshopLabel';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
 import {generateNewSession} from './components/SessionsEditor';
-import {AdditionalInfo} from './sections/AdditionalInfo';
-import {Basics} from './sections/Basics';
-import {EmailsReminders} from './sections/EmailsReminders';
-import {PartnerFacilitator} from './sections/PartnerFacilitator';
-import {PublishCancelButtons} from './sections/PublishCancelButtons';
-import {PublishSettings} from './sections/PublishSettings';
-import {Schedule} from './sections/Schedule';
+import AdditionalInfo from './sections/AdditionalInfo';
+import Basics from './sections/Basics';
+import EmailsReminders from './sections/EmailsReminders';
+import PartnerFacilitator from './sections/PartnerFacilitator';
+import PublishCancelButtons from './sections/PublishCancelButtons';
+import PublishSettings from './sections/PublishSettings';
+import Schedule from './sections/Schedule';
 import {
   Session,
   SessionAction,
