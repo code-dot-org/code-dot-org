@@ -51,7 +51,7 @@ const Snapshot: React.FC<SnapshotProps> = ({
         />
 
         <BodyTwoText className={moduleStyles.snapshotItemContent}>
-          <StrongText>{label}:</StrongText> <span>{content}</span>
+          <StrongText>{label}:</StrongText> {content}
         </BodyTwoText>
       </li>
     ))}
