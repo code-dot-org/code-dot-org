@@ -311,7 +311,12 @@ class ApiController < ApplicationController
     page = [params[:page].to_i, 1].max
     per = params[:per].to_i || 50
 
-    paged_students = section.students.page(page).per(per)
+    # Occassionaly, students will be double-added to a section. When this happens, errors can
+    # occur when we get the progress for the student twice.  We saw two issues that were caused by
+    # having duplicate students in a section AND the number of students being a multiple of the page amount
+    # Deduplicating students ensures all data for all students is pulled.
+    deduplicated_students = section.students.distinct
+    paged_students = deduplicated_students.page(page).per(per)
     # As designed, if there are 50 students, the client will ask for both
     # page 1 and page 2, even though page 2 is out of range. However, it should
     # never ask for page 3
