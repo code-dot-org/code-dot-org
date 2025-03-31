@@ -114,7 +114,7 @@ export const TICKS_PER_MEASURE = 16;
 export const PATTERN_AI_NUM_EVENTS = TICKS_PER_MEASURE * 2;
 export const PATTERN_AI_NUM_SEED_EVENTS = 8;
 
-export const VALIDATION_MODE_OPTIONS = [
+export const EXEMPLAR_VALIDATION_MODE_OPTIONS = [
   {
     label: 'Compare all sounds by id (Default)',
     value: 'default',
@@ -124,3 +124,12 @@ export const VALIDATION_MODE_OPTIONS = [
     value: 'type',
   },
 ];
+
+export const EXEMPLAR_VALIDATION_DESCRIPTION = `
+If checked, the playback events on the student's timeline must match those on the exemplar's timeline.
+
+You can choose between two modes:
+
+- **Compare all events by type and id (Default):** Everything on the timeline must match exactly as defined in the blocks.
+- **Compare all events by type only:** Only the event type (sound, chord, instrument) and sound type (beat, bass, lead, fx, vocal) must match.
+`;

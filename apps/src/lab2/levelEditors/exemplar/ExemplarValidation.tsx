@@ -2,6 +2,7 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 
 import {AppName, ExemplarSettings, ExemplarValidationMode} from '../../types';
 
@@ -13,7 +14,7 @@ interface ExemplarValidationProps {
   onChange: (updatedFields: ExemplarSettings) => void;
   appName: AppName;
   modeOptions?: {label: string; value: string}[];
-  description?: React.ReactNode;
+  description?: string;
 }
 
 const defaultExemplarValidationSettings: ExemplarSettings = {
@@ -36,7 +37,7 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
   onChange,
   appName,
   modeOptions,
-  description,
+  description = defaultDescription,
 }) => {
   return (
     <div className={moduleStyles.section}>
@@ -78,7 +79,7 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
             }}
           />
         </div>
-        <BodyThreeText>{description ?? defaultDescription}</BodyThreeText>
+        <EnhancedSafeMarkdown markdown={description} />
         {modeOptions && (
           <div className={moduleStyles.row}>
             <label htmlFor="mode" className={moduleStyles.label}>

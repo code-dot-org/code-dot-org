@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 
-import {VALIDATION_MODE_OPTIONS as MUSIC_VALIDATION_MODE_OPTIONS} from '@cdo/apps/music/constants';
+import {
+  EXEMPLAR_VALIDATION_MODE_OPTIONS as MUSIC_VALIDATION_MODE_OPTIONS,
+  EXEMPLAR_VALIDATION_DESCRIPTION as MUSIC_EXEMPLAR_VALIDATION_DESCRIPTION,
+} from '@cdo/apps/music/constants';
 
 import {AppName, ExemplarSettings} from '../../types';
 
@@ -22,34 +25,8 @@ const validationModeOptions: Partial<{
 }> = {
   music: MUSIC_VALIDATION_MODE_OPTIONS,
 };
-
-const exemplarValidationDescriptions: Partial<
-  Record<AppName, React.ReactNode>
-> = {
-  music: (
-    <>
-      <p>
-        If checked, the playback events on the student's timeline must match
-        those on the exemplar's timeline. If condition-based validations are
-        defined (in the section above), they will be checked first. Exemplar
-        validation cannot check code organization (such as loops or functions) -
-        use condition-based validation in combination with exemplar validation
-        to achieve this. You can choose between two modes:
-      </p>
-      <ul>
-        <li>
-          <strong>Compare all events by type and id (Default):</strong>{' '}
-          Everything on the timeline must match exactly as defined in the
-          blocks.
-        </li>
-        <li>
-          <strong>Compare all events by type only:</strong> Only the event type
-          (sound, chord, instrument) and sound type (beat, bass, lead, fx,
-          vocal) must match, not the specific sound.
-        </li>
-      </ul>
-    </>
-  ),
+const validationModeDescriptions: Partial<Record<AppName, string>> = {
+  music: MUSIC_EXEMPLAR_VALIDATION_DESCRIPTION,
 };
 
 const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
@@ -90,7 +67,7 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
         exemplarSettings={exemplarSettings}
         onChange={updateSettings}
         modeOptions={validationModeOptions[appName]}
-        description={exemplarValidationDescriptions[appName]}
+        description={validationModeDescriptions[appName]}
       />
       {appName === 'music' && (
         <ExemplarPlayer
