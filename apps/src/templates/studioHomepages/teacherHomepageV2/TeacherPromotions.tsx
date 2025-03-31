@@ -82,9 +82,19 @@ const TeacherPromotions: React.FC = () => {
       setPromotions(promotions.filter(promotion => promotion.id !== id));
 
       setClosedPromotions([...closedPromotions, id]);
+
+      // We don't want the promotions cookie to store old promotions.
+      // So only save the promotions that are currently active and have been closed.
+      const newClosedPromotions =
+        promotions.length > 0
+          ? closedPromotions.filter(promotion =>
+              promotions.map(p => p.id).includes(promotion)
+            )
+          : closedPromotions;
+      newClosedPromotions.push(id);
       trySetLocalStorage(
         TEACHER_PROMOTION_LOCAL_STORAGE_KEY,
-        JSON.stringify([...closedPromotions, id])
+        JSON.stringify(newClosedPromotions)
       );
     },
     [promotions, closedPromotions]
