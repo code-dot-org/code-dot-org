@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:23 UTC",
+    "serialized_at": "2025-03-28 09:29:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5161,6 +5161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-investigate_testing"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -5183,6 +5186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-predict_testing"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5205,6 +5211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_testing"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5227,6 +5236,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_testing"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5249,6 +5261,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_testing"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5271,6 +5286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-formative_testing"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5293,6 +5311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-choice-level_testing"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5315,6 +5336,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-evaluative_testing"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5337,6 +5361,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_testing"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,

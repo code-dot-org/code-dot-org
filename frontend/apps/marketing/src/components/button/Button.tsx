@@ -1,3 +1,4 @@
+import {EntryFields} from 'contentful';
 import React, {useMemo} from 'react';
 
 import {
@@ -6,7 +7,10 @@ import {
   LinkButton,
 } from '@code-dot-org/component-library/button';
 
-import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
+import {
+  externalLinkIconProps,
+  fontAwesomeV6BrandIconsMap,
+} from '@/components/common/constants';
 
 type ButtonProps = {
   /** Button text */
@@ -21,6 +25,8 @@ type ButtonProps = {
   isLinkExternal?: boolean;
   /** Button left icon name */
   iconLeftName?: string;
+  /** Aria label for the button */
+  ariaLabel?: EntryFields.Text;
 };
 
 const Button: React.FunctionComponent<ButtonProps> = ({
@@ -29,6 +35,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   type,
   href,
   isLinkExternal = false,
+  ariaLabel,
   iconLeftName,
 }) => {
   const isLeftIconBrand = useMemo(
@@ -43,6 +50,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       target={isLinkExternal ? '_blank' : '_self'}
       type={type}
       color={color}
+      aria-label={ariaLabel}
       iconLeft={
         iconLeftName
           ? {
@@ -52,14 +60,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
             }
           : undefined
       }
-      iconRight={
-        isLinkExternal
-          ? {
-              iconName: 'up-right-from-square',
-              iconStyle: 'solid',
-            }
-          : undefined
-      }
+      iconRight={isLinkExternal ? externalLinkIconProps : undefined}
     />
   );
 };

@@ -39,12 +39,22 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "bubble_choice_description": "Use AI Chat to help you plan your lunches. Come up with a prompt and select an image that matches.",
     "display_name": "Plan Your Lunches",
-    "thumbnail_url": "https://images.code.org/391de17354b4038fd83564bae37ea562-meal-planning.png"
+    "thumbnail_url": "https://images.code.org/391de17354b4038fd83564bae37ea562-meal-planning.png",
+    "starter_assets": {
+      "pexels-photo-115740.jpg": "2f6015d9-32b7-45e6-8ba3-274aef4c46e8.jpg",
+      "pexels-photo-1128678.jpg": "2a968e9d-6b88-4e72-be7a-bd939153bb34.jpg",
+      "pexels-photo-2802527.jpg": "b42c8aff-c44e-478b-8035-b603100ab95d.jpg",
+      "pexels-photo-1414651.jpg": "299887e3-43be-4594-967b-eb7899f12220.jpg",
+      "pexels-photo-539451.jpg": "1b9006e4-9512-4717-80a3-2ca4c3b85ad6.jpg",
+      "pexels-photo-1437267.jpg": "9d2930c1-ebe7-4662-8dee-4eba0a6e3488.jpg",
+      "pexels-photo-2233729.jpg": "9034c64b-b5fe-4220-a3bb-57033f6c4e18.jpg"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-14T18:36:15.520+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1\"},{\"changed_at\":\"2025-03-14 18:36:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:16:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:16:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:17:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:22:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:33:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:47:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:57:11 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 20:33:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-03-20 16:24:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-14T18:36:15.520+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1\"},{\"changed_at\":\"2025-03-14 18:36:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:16:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:16:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:17:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:22:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 15:33:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:47:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 17:57:11 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-17 20:33:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-03-20 16:24:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 16:43:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

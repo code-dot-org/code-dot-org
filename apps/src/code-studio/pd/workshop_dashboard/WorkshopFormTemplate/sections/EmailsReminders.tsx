@@ -1,5 +1,5 @@
 import {Heading2} from '@code-dot-org/component-library/typography';
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 
 import {SectionProps} from '../types';
 
@@ -10,3 +10,5 @@ export const EmailsReminders: FC<SectionProps> = ({dispatchWorkshop}) => {
     </div>
   );
 };
+
+export default memo(EmailsReminders);

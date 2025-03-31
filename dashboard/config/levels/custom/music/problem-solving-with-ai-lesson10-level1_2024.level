@@ -9,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### Generate a Beat with A.I. \r\nUse this level to have A.I. help you create a new beats.\r\n\r\n- Click the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate your own beat.  \r\n\r\n<img src=\"https://images.code.org/f107e484c397d0c57a4d5fa3b4c2697c-image-1742674189869.png\" style=\"width: 150px\">\r\n\r\n- Work the AI to see if you can generate beats to match different musical moods like elevator music, intense combat scene in a move, upbeat pop song, etc.\r\n- Press [Run](#clickable=run-button). \r\n\r\n",
+    "long_instructions": "#### Generate a Beat with A.I. \r\nUse A.I. to help you create a new drum beat.\r\n\r\n- Click the black box on the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate your own beat.  \r\n\r\n<img src=\"https://images.code.org/f107e484c397d0c57a4d5fa3b4c2697c-image-1742674189869.png\" style=\"width: 150px\">\r\n\r\n- Make sure to select at least 4 beats so that the **Generate** button pops up.\r\n- You can customize the AI generated beat or even **Generate** a new beat.\r\n- When you have a beat you like, click off the pop up to save your beat.\r\n- Work with AI to see if you can generate beats to match different musical moods like elevator music, intense combat scene in a move, upbeat pop song, etc.\r\n- Press [Run](#clickable=run-button). \r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -97,9 +97,6 @@
       "toolbox": {
         "includeAi": true,
         "blocks": {
-          "Play": [
-            "play_pattern_ai_at_current_location_simple2"
-          ]
         },
         "type": "flyout",
         "addFunctionCalls": true
@@ -107,7 +104,8 @@
       "library": "launch2024",
       "sounds": {
       },
-      "blockMode": "Simple2"
+      "blockMode": "Simple2",
+      "packId": "default"
     },
     "name_suffix": "_final",
     "offer_browser_tts": "true",
@@ -121,7 +119,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-25T22:32:03.156+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson10-level1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson10-level1\"},{\"changed_at\":\"2025-03-25 22:32:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T22:32:03.156+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson10-level1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson10-level1\"},{\"changed_at\":\"2025-03-25 22:32:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 19:56:07 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 19:57:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 19:58:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 19:58:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 19:59:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 20:00:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 20:07:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
