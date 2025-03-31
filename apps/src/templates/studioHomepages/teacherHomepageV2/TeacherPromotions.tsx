@@ -2,6 +2,7 @@ import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import PermanentPromotions from './PermanentPromotions';
 import TeacherPromo, {TeacherPromoInfo} from './TeacherPromo';
 
 import styles from './teacherHomepage.module.scss';
@@ -72,6 +73,7 @@ const TeacherPromotions: React.FC = () => {
       {promotions.map(promotion => (
         <TeacherPromo {...promotion} onClose={closePromotionCallback} />
       ))}
+      <PermanentPromotions />
     </div>
   );
 };
