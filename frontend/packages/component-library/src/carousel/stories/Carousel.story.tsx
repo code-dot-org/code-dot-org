@@ -7,7 +7,7 @@ import image6 from '@public/images/action-block-06.png';
 import type {Meta, StoryFn} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import {ActionBlock, FullWidthActionBlock} from '@/actionBlock';
+import {ActionBlock} from '@/actionBlock';
 import {Heading2} from '@/typography';
 import Video from '@/video';
 
@@ -299,158 +299,117 @@ CarouselWithCustomSlidesPerView.play = async ({
   }
 };
 
-export const ActionBlockCarousels = MultipleTemplate.bind({});
+export const ActionBlockCarousel = SingleTemplate.bind({});
 const DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
 const DESCRIPTION_MED =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-ActionBlockCarousels.args = {
-  components: [
+ActionBlockCarousel.args = {
+  allowTouchMove: true,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  slides: [
     {
-      allowTouchMove: true,
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      slides: [
-        {
-          id: 'fw-slide-1',
-          slide: (
-            <FullWidthActionBlock
-              title="Full Width Action Block 1"
-              description={DESCRIPTION}
-              image={image1}
-              overline={'Overline 1'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-        {
-          id: 'fw-slide-2',
-          slide: (
-            <FullWidthActionBlock
-              title="Full Width Action Block 2"
-              description={DESCRIPTION_MED}
-              image={image2}
-              overline={'Overline 2'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-      ],
+      id: 'action-block-slide-1',
+      slide: (
+        <ActionBlock
+          title="Action Block 1"
+          description={DESCRIPTION}
+          image={image1}
+          overline={'Overline 1'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
     },
     {
-      allowTouchMove: true,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      slides: [
-        {
-          id: 'vertical-slide-1',
-          slide: (
-            <ActionBlock
-              title="Action Block 1"
-              description={DESCRIPTION}
-              image={image1}
-              overline={'Overline 1'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-        {
-          id: 'vertical-slide-2',
-          slide: (
-            <ActionBlock
-              title="Action Block 2"
-              description={DESCRIPTION_MED}
-              image={image2}
-              overline={'Overline 2'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-        {
-          id: 'vertical-slide-3',
-          slide: (
-            <ActionBlock
-              title="Action Block 3"
-              description={DESCRIPTION}
-              image={image3}
-              overline={'Overline 3'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-        {
-          id: 'vertical-slide-4',
-          slide: (
-            <ActionBlock
-              title="Action Block 4"
-              description={DESCRIPTION_MED}
-              image={image4}
-              overline={'Overline 4'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-        {
-          id: 'vertical-slide-5',
-          slide: (
-            <ActionBlock
-              title="Action Block 5"
-              description={DESCRIPTION}
-              image={image5}
-              overline={'Overline 5'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-        {
-          id: 'vertical-slide-6',
-          slide: (
-            <ActionBlock
-              title="Action Block 6"
-              description={DESCRIPTION_MED}
-              image={image6}
-              overline={'Overline 6'}
-              primaryButton={{
-                text: 'Primary Button',
-                href: '#',
-              }}
-            />
-          ),
-        },
-      ],
+      id: 'action-block-slide-2',
+      slide: (
+        <ActionBlock
+          title="Action Block 2"
+          description={DESCRIPTION_MED}
+          image={image2}
+          overline={'Overline 2'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-3',
+      slide: (
+        <ActionBlock
+          title="Action Block 3"
+          description={DESCRIPTION}
+          image={image3}
+          overline={'Overline 3'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-4',
+      slide: (
+        <ActionBlock
+          title="Action Block 4"
+          description={DESCRIPTION_MED}
+          image={image4}
+          overline={'Overline 4'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-5',
+      slide: (
+        <ActionBlock
+          title="Action Block 5"
+          description={DESCRIPTION}
+          image={image5}
+          overline={'Overline 5'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-6',
+      slide: (
+        <ActionBlock
+          title="Action Block 6"
+          description={DESCRIPTION_MED}
+          image={image6}
+          overline={'Overline 6'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
     },
   ],
 };
-ActionBlockCarousels.parameters = {
+ActionBlockCarousel.parameters = {
   docs: {
     description: {
       story:
-        'Action blocks can be used in carousels to display a series of related cards. Carousels can contain full width action blocks or vertical action blocks, and can be configured to allow touch movement for better user experience on touch devices.',
+        'Action blocks can be used in carousels to display a series of related cards. A carousel should be used when there are more than six action blocks in a section.',
     },
   },
 };
-ActionBlockCarousels.play = async ({
+ActionBlockCarousel.play = async ({
   canvasElement,
 }: {
   canvasElement: HTMLElement;
@@ -460,8 +419,6 @@ ActionBlockCarousels.play = async ({
   const navArrowNext = await canvas.findAllByLabelText('Next slide');
   const paginationDots = ['Go to slide 1', 'Go to slide 2'];
   const actionBlockTitles = [
-    'Full Width Action Block 1',
-    'Full Width Action Block 2',
     'Action Block 1',
     'Action Block 2',
     'Action Block 3',
