@@ -93,24 +93,19 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
     setValidations(newValidations);
   };
 
+  const createNewValidation = (): Validation => ({
+    key: levelName + '_' + createUuid(),
+    message: '',
+    next: false,
+    conditions: [],
+  });
+
   const prependValidation = () => {
-    const newValidation: Validation = {
-      key: levelName + '_' + createUuid(),
-      message: '',
-      next: false,
-      conditions: [],
-    };
-    setValidations([newValidation, ...validations]);
+    setValidations([createNewValidation(), ...validations]);
   };
 
   const appendValidation = () => {
-    const newValidation: Validation = {
-      key: levelName + '_' + createUuid(),
-      message: '',
-      next: false,
-      conditions: [],
-    };
-    setValidations([...validations, newValidation]);
+    setValidations([...validations, createNewValidation()]);
   };
 
   return (
