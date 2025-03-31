@@ -8,8 +8,10 @@ import i18n from '@cdo/locale';
 
 import {asyncLoadTeacherHomepageSectionData} from '../../teacherDashboard/teacherSectionsRedux';
 
+import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
+import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -35,6 +37,19 @@ export const TeacherHomepage: React.FC = () => {
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
 
+  const sections = useAppSelector(state => state.teacherSections.sections);
+
+  // The server uses hidden to mean the same thing as archived.
+  const showHiddenOnly = selectedArchiveToggle === 'archived';
+
+  const numSections = React.useMemo(
+    () =>
+      Object.values(sections).filter(
+        section => showHiddenOnly === section.hidden
+      ).length,
+    [sections, showHiddenOnly]
+  );
+
   const onArchiveToggleChange = (value: ArchivedToggleOption) => {
     const toggleEvent =
       value === 'teaching'
@@ -55,11 +70,15 @@ export const TeacherHomepage: React.FC = () => {
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
-            <SectionList
-              showHiddenOnly={selectedArchiveToggle === 'archived'}
-            />
+            {numSections === 0 ? (
+              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+            ) : (
+              <SectionList
+                showHiddenOnly={selectedArchiveToggle === 'archived'}
+              />
+            )}
           </div>
-          <div className={styles.blankAnnouncement} />
+          <TeacherPromotions />
         </div>
       </div>
     </div>

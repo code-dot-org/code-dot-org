@@ -807,7 +807,7 @@ class Lesson < ApplicationRecord
     end
 
     copied_lesson = dup
-    # scripts.en.yml cannot handle the '.' character in key names
+    # scripts/en.yml cannot handle the '.' character in key names
     copied_lesson.key = copied_lesson.name.delete('.')
     copied_lesson.script_id = destination_unit.id
 

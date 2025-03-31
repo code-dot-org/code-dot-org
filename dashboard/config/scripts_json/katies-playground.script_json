@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:27 UTC",
+    "serialized_at": "2025-03-28 09:29:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4160,6 +4160,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-example-choices"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4182,30 +4185,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-elem-career-journeys-example-choices"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-elem-career-journeys-example-choices"
-        ],
-        "lesson.key": "lesson-16",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "21c6011c-be26-4e4c-a3e4-bf17276f6732"
-      },
-      "level_keys": [
-        "test-elem-career-journeys-example-choices"
-      ]
-    },
-    {
-      "chapter": 119,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "test-elem-career-journeys-basic-skills-choices"
         ]
       },
@@ -4224,9 +4203,9 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 119,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4248,9 +4227,9 @@
       ]
     },
     {
-      "chapter": 121,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 120,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [

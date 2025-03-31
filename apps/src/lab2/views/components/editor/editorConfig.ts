@@ -14,7 +14,6 @@ import {
 } from '@codemirror/commands';
 import {
   indentOnInput,
-  foldGutter,
   foldKeymap,
   defaultHighlightStyle,
   bracketMatching,
@@ -51,7 +50,6 @@ const editorConfig = [
   lineNumbers(),
   highlightSpecialChars(),
   history(),
-  foldGutter(),
   drawSelection(),
   EditorState.allowMultipleSelections.of(true),
   indentOnInput(),

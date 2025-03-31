@@ -65,6 +65,11 @@ class AiDiffController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  # Certain types of PII detected by Amazon Comprehend are actually allowed
+  # for use in chat messages. We allow teachers to ask about lessons themed
+  # on a favorite named celebrity, or how to help students at certain ages. etc.
+  ALLOWED_TYPES = %w[NAME AGE DATE_TIME USERNAME PIN].freeze
+
   private def contains_pii?
     client =  if (Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services) || [:development, :test].include?(rack_env)
                 Aws::Comprehend::Client.new(stub_responses: true)
@@ -88,7 +93,7 @@ class AiDiffController < ApplicationController
     #   ]
     # }
 
-    max_score = response.entities.map(&:score).max || 0
+    max_score = response.entities.reject {|entity| ALLOWED_TYPES.include?(entity.type)}.map(&:score).max || 0
 
     max_score > 0.9
   end

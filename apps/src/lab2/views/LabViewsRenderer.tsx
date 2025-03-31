@@ -64,6 +64,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     return null;
   }
 
+  const extraLinksButtonRightOfFooter =
+    levelProperties?.isProjectLevel &&
+    (currentAppName === 'pythonlab' || currentAppName === 'weblab2');
+
   const LabView = properties.view;
   return (
     <ProgressContainer key={currentAppName} appType={currentAppName}>
@@ -74,7 +78,12 @@ const LabViewsRenderer: React.FunctionComponent = () => {
             initialSources={initialSources}
           />
         </Suspense>
-        {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
+        {!hideExtraLinks && levelId && (
+          <ExtraLinks
+            levelId={levelId}
+            positionRightOfFooter={extraLinksButtonRightOfFooter}
+          />
+        )}
       </div>
     </ProgressContainer>
   );

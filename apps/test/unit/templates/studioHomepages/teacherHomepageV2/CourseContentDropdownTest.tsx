@@ -169,7 +169,7 @@ describe('CourseContentDropdown', () => {
     );
   });
 
-  it('renders Go to a lesson dropdown when a unit is assigned', async () => {
+  it('renders Jump to lesson dropdown when a unit is assigned', async () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
     expect(fetchSpy).toHaveBeenCalled();
