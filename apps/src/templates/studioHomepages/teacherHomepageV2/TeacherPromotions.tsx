@@ -2,7 +2,7 @@ import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {TeacherPromo, TeacherPromoInfo} from './TeacherPromo';
+import TeacherPromo, {TeacherPromoInfo} from './TeacherPromo';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -20,8 +20,9 @@ interface ServerPromotion {
   description: string;
   button_label: string;
   button_target: string;
-  image: string;
+  image?: string;
   is_closable: boolean;
+  partner_logo?: string;
 }
 
 const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
@@ -32,11 +33,12 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
   description: serverPromotion.description,
   buttonLabel: serverPromotion.button_label,
   buttonTarget: serverPromotion.button_target,
-  image: serverPromotion.image,
+  image: serverPromotion.image || null,
   isClosable: serverPromotion.is_closable,
+  partnerLogo: serverPromotion.partner_logo || null,
 });
 
-export const TeacherPromotions: React.FC = () => {
+const TeacherPromotions: React.FC = () => {
   const [promotions, setPromotions] = React.useState<TeacherPromoInfo[]>([]);
 
   const [isLoading, setIsLoading] = React.useState(true);
@@ -67,9 +69,11 @@ export const TeacherPromotions: React.FC = () => {
     <div className={styles.promotions}>
       {isLoading && <div>Loading...</div>}
       {/* TODO(lfm): Add a skeleton here */}
-      {promotions.map((promotion, ind) => (
+      {promotions.map(promotion => (
         <TeacherPromo {...promotion} onClose={closePromotionCallback} />
       ))}
     </div>
   );
 };
+
+export default TeacherPromotions;

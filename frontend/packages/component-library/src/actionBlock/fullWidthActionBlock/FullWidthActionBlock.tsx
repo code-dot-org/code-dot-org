@@ -4,13 +4,13 @@ import {Heading3, BodyThreeText, OverlineTwoText} from '@/typography';
 
 import {
   ActionBlockWrapper,
-  ActionBlockProps,
   getImage,
   getButtons,
   getDetail,
-} from './ActionBlock';
+} from '../ActionBlock';
+import {ActionBlockProps} from '../types';
 
-import moduleStyles from './actionBlock.module.scss';
+import moduleStyles from '../actionBlock.module.scss';
 
 // This component is used to render a full-width action block that's designed to be
 // used in a layout where the action block takes up the full width of its container.

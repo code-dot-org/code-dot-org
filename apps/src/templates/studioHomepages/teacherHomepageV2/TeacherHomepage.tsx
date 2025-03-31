@@ -9,7 +9,7 @@ import {asyncLoadTeacherHomepageSectionData} from '../../teacherDashboard/teache
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
-import {TeacherPromotions} from './TeacherPromotions';
+import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
 
