@@ -298,12 +298,16 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               type="number"
               id="validationTimeout"
               name="validationTimeout"
-              value={levelData.validationTimeout ?? DEFAULT_VALIDATION_TIMEOUT}
+              value={levelData.validationTimeout}
+              placeholder={DEFAULT_VALIDATION_TIMEOUT.toString()}
               min={1}
               onChange={event => {
+                const parsedValue = parseInt(event.target.value);
                 setLevelData({
                   ...levelData,
-                  validationTimeout: parseInt(event.target.value),
+                  validationTimeout: !isNaN(parsedValue)
+                    ? parsedValue
+                    : undefined,
                 });
               }}
               className={moduleStyles.input}
