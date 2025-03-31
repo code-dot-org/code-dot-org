@@ -988,54 +988,43 @@ class User < ApplicationRecord
   def downgrade_to_student
     return true if student? # No-op if user is already a student
 
-    # Force the DB update for user_type only, no validations
-    # TODO: I think maybe this should be wrapped in a transaction block
-    update_column(:user_type, TYPE_STUDENT)
-
-    student = becomes(Student)
-    # Set email to nil (passing Student validations)
-    student.update!(email: nil)
-    student.save!
-
-    student
+    transaction do
+      student = becomes!(Student)
+      student.email = nil
+      student.save!
+      student
+    end
+  rescue
+    false # Relevant errors are set on the user model, so we rescue and return false here.
   end
 
   def upgrade_to_teacher(email, email_preference = nil)
-    return true if teacher? # No-op if user is already a teacher
+    return true if teacher?
     return false if email.blank?
 
     hashed_email = User.hash_email(email)
 
     new_attributes = email_preference.nil? ? {} : email_preference
-    # new_attributes[:user_type] = TYPE_TEACHER
-    # Remove family name, in case it was set on the student account.
-    # Must do this before updating user_type, to prevent validation failure.
-    new_attributes[:family_name] = nil
-    # teachers do not need another adult to have access to their account.
     new_attributes[:parent_email] = nil
-
-    if Policies::Lti.lti? self
-      new_attributes[:lti_roster_sync_enabled] = true
-    end
-
-    new_attributes[:email] = email
+    new_attributes[:lti_roster_sync_enabled] = true if Policies::Lti.lti?(self)
 
     transaction do
-      teacher = becomes(Teacher)
-      # Force the DB update for user_type only, no validations
-      teacher.update_column(:user_type, TYPE_TEACHER)
+      teacher = becomes!(Teacher)
+      # These attributes are set here to prevent errors in the following
+      # logic such as updating the primary contact info.
+      teacher.email = email
+      teacher.family_name = nil
+      teacher.save!(validate: false)
 
       if migrated?
         teacher.update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
       end
 
       teacher.update!(new_attributes)
-      teacher.save!
 
       teacher
     end
   rescue
-    # becomes(Student)
     false # Relevant errors are set on the user model, so we rescue and return false here.
   end
 

@@ -663,9 +663,8 @@ class UserTest < ActiveSupport::TestCase
 
     # Change user to student to make sure any previous cleartext emails are empty
     # (including deleted ones and those created when user was a teacher)
-    user.update!(user_type: User::TYPE_STUDENT)
+    user = user.downgrade_to_student
     user.authentication_options << create(:authentication_option, email: 'third@email.com')
-    user.reload
     all_auth_options = user.authentication_options.with_deleted
     assert_equal 3, all_auth_options.count
     all_auth_options.each do |ao|
@@ -838,7 +837,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "teachers with a valid educator_role can change user_type to student" do
     user = create :teacher, :with_educator_role
-    user.set_user_type(User::TYPE_STUDENT)
+    user = user.set_user_type(User::TYPE_STUDENT)
     assert user.valid?
   end
 
@@ -1548,7 +1547,8 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.blank?
     assert user.hashed_email
 
-    assert user.set_user_type(User::TYPE_TEACHER, 'email@old.xx')
+    user = user.set_user_type(User::TYPE_TEACHER, 'email@old.xx')
+    assert user
 
     assert_equal 'email@old.xx', user.email
     assert_equal '21+', user.age
@@ -1557,8 +1557,8 @@ class UserTest < ActiveSupport::TestCase
   test 'changing oauth user from student to teacher with same email is allowed' do
     user = create :student, :google_sso_provider, email: 'email@new.xx'
     assert user.primary_contact_info.credential_type == 'google_oauth2'
-
-    assert user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
+    user = user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
+    assert user
 
     assert_equal 'email@new.xx', user.email
     assert_equal User::TYPE_TEACHER, user.user_type
@@ -1568,7 +1568,8 @@ class UserTest < ActiveSupport::TestCase
     user = create :student, :google_sso_provider
     assert user.primary_contact_info.credential_type == 'google_oauth2'
 
-    assert user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
+    user = user.set_user_type(User::TYPE_TEACHER, 'email@new.xx')
+    assert user
 
     assert_equal 'email@new.xx', user.email
     assert_equal User::TYPE_TEACHER, user.user_type
@@ -1584,17 +1585,20 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'changing from student to teacher creates StudioPerson' do
+    email = 'fakeemail@example.com'
     user = assert_does_not_create(StudioPerson) do
       create :student
     end
 
     assert_creates(StudioPerson) do
-      user.set_user_type(User::TYPE_TEACHER, 'fakeemail@example.com')
+      # user.set_user_type(User::TYPE_TEACHER, 'fakeemail@example.com')
+      # user.save!
+      user = user.upgrade_to_teacher(email)
       user.save!
     end
-    user.reload
+    # user.reload
     assert user.studio_person
-    assert_equal 'fakeemail@example.com', user.studio_person.emails
+    assert_equal email, user.studio_person.emails
   end
 
   test 'changing from teacher to student destroys StudioPerson' do
@@ -2566,7 +2570,7 @@ class UserTest < ActiveSupport::TestCase
   test 'upgrade_to_teacher is false if updating primary contact info fails' do
     user = create :student
     original_primary_contact_info = user.primary_contact_info
-    user.stubs(:update_primary_contact_info!).raises(RuntimeError)
+    User.any_instance.stubs(:update_primary_contact_info!).raises(RuntimeError)
 
     assert_equal 1, user.authentication_options.count
     refute_nil original_primary_contact_info
@@ -2581,7 +2585,7 @@ class UserTest < ActiveSupport::TestCase
   test 'upgrade_to_teacher is false if user update fails' do
     user = create :student
     original_primary_contact_info = user.primary_contact_info
-    user.stubs(:update!).raises(ActiveRecord::RecordInvalid)
+    user.stubs(:becomes!).raises(ActiveRecord::RecordInvalid)
     user.stubs(:update_columns).raises(ActiveRecord::RecordInvalid)
 
     assert_equal 1, user.authentication_options.count
@@ -2652,7 +2656,8 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal family_name, user.family_name
 
-    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user = user.upgrade_to_teacher('example@email.com', email_preference_params)
+    assert user
 
     user.reload
     assert_nil user.family_name
