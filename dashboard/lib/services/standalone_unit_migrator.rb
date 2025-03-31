@@ -125,6 +125,7 @@ module Services
         instruction_type: @unit.instruction_type,
         instructor_audience: @unit.instructor_audience,
         participant_audience: @unit.participant_audience,
+        pilot_experiment: @unit.pilot_experiment,
         has_numbered_units: false
       )
       unless @unit_group.save
