@@ -8,7 +8,6 @@ import {
 import {
   Condition,
   ConditionType,
-  ExemplarSettings,
   ExemplarValidationMode,
 } from '@cdo/apps/lab2/types';
 
@@ -32,7 +31,6 @@ export interface ConditionNames {
 }
 
 export default class MusicValidator extends Validator {
-  exemplarSettings: ExemplarSettings | undefined;
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
