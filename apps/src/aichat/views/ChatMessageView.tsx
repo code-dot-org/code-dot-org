@@ -5,10 +5,9 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {sendAnalytics} from '../redux';
 import {
   type ChatMessage as ChatMessageType,
   isCompletedChatMessage,
@@ -35,8 +34,6 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   const {status, role, chatMessageText, assets} = chatMessage;
   const currentChannelId = useAppSelector(state => state.lab.channel?.id);
   const levelName = useAppSelector(state => state.lab.levelProperties?.name);
-
-  const dispatch = useAppDispatch();
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -104,7 +101,6 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
               type="button"
               className={styles.assetButton}
               onClick={() => {
-                dispatch(sendAnalytics());
                 window.open(url, '_blank');
               }}
             >
