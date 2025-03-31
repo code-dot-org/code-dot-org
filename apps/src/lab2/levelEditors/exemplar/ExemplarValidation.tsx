@@ -3,7 +3,7 @@ import React from 'react';
 
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-import {AppName, ExemplarSettings} from '../../types';
+import {AppName, ExemplarSettings, ExemplarValidationMode} from '../../types';
 
 import moduleStyles from './exemplar-settings.module.scss';
 
@@ -90,13 +90,17 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
               className={moduleStyles.callout}
               disabled={!exemplarDefined || !exemplarSettings.validationEnabled}
               value={exemplarSettings.validationMode ?? ''}
-              onChange={e =>
+              onChange={e => {
+                let newMode;
+                if (['default', 'type'].includes(e.target.value)) {
+                  newMode = e.target.value as ExemplarValidationMode;
+                }
                 onChange({
                   ...defaultExemplarValidationSettings,
                   ...exemplarSettings,
-                  validationMode: e.target.value,
-                })
-              }
+                  validationMode: newMode ? newMode : undefined,
+                });
+              }}
             >
               {modeOptions.map(({label, value}) => (
                 <option key={value} value={value}>

@@ -9,7 +9,7 @@ import {
   Condition,
   ConditionType,
   ExemplarSettings,
-  ValidationMode,
+  ExemplarValidationMode,
 } from '@cdo/apps/lab2/types';
 
 import {
@@ -47,7 +47,7 @@ export default class MusicValidator extends Validator {
     super();
   }
 
-  didPassExemplarValidation(mode: ValidationMode): boolean {
+  didPassExemplarValidation(mode: ExemplarValidationMode): boolean {
     return this.validatePlaybackEventsEquivalent(mode);
   }
 
@@ -451,7 +451,7 @@ export default class MusicValidator extends Validator {
   }
 
   // Validates that both playback event arrays are equivalent based on id, type, and starting measure.
-  validatePlaybackEventsEquivalent(mode: ValidationMode): boolean {
+  validatePlaybackEventsEquivalent(mode: ExemplarValidationMode): boolean {
     const studentEvents = [...this.getPlaybackEvents()];
     const exemplarEvents = this.getExemplarPlaybackEvents();
 
@@ -468,7 +468,7 @@ export default class MusicValidator extends Validator {
   private eventMatchFound(
     currentEvent: PlaybackEvent,
     comparisonEvents: PlaybackEvent[],
-    mode: ValidationMode = 'default'
+    mode: ExemplarValidationMode = 'default'
   ): boolean {
     switch (mode) {
       case 'type':

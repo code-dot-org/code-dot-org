@@ -256,19 +256,19 @@ interface VideoData extends VideoLevelData {
   autoplay?: boolean;
 }
 
+export type ExemplarValidationMode = 'default' | 'type';
+
 // Exemplar settings for a level.
 export interface ExemplarSettings {
   // Validation settings (always expected)
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;
-  validationMode?: string;
+  validationMode?: ExemplarValidationMode;
   // Player settings (optional, only used for Music)
   playerEnabled?: boolean;
   playerTitle?: string;
 }
-
-export type ValidationMode = 'default' | 'type';
 
 // Python Lab specific property
 export interface MazeCell {
