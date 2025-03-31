@@ -42,6 +42,9 @@ import Section, {
 import SimpleList, {
   SimpleListContentfulComponentDefinition,
 } from '@/components/simpleList';
+import CurriculumSnapshot, {
+  CurriculumSnapshotContentfulComponentDefinition,
+} from '@/components/snapshots/curriculumSnapshot';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
@@ -117,6 +120,10 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: CurriculumSnapshot,
+      definition: CurriculumSnapshotContentfulComponentDefinition,
     },
     {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
     {
