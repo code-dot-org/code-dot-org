@@ -1,0 +1,57 @@
+name: "Deploy Marketing App"
+description: "Deploys the marketing app to a specified environment"
+inputs:
+  environment:
+    description: "The target environment for deployment, marketing-test or production"
+    required: true
+  aws-access-key-id:
+    description: "AWS Access Key ID for deployer user"
+    required: true
+    default: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  aws-secret-access-key:
+    description: "AWS Secret Access Key for deployer user"
+    required: true
+    default: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  aws-region:
+    description: "AWS region to deploy into"
+    required: true
+    default: ${{ vars.AWS_REGION }}
+  cloudformation-stack-name:
+    description: "The name of the Cloudformation stack"
+    required: true
+    default: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
+  container-image-digest:
+    description: "Hash for for the docker image to deploy"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v4
+      with:
+        sparse-checkout: |
+          aws
+
+    - uses: ruby/setup-ruby@v1
+
+    # Warning: Use minimal permissions for the deployer
+    # See: https://github.com/aws-actions/amazon-ecs-deploy-task-definition?tab=readme-ov-file#permissions
+    - name: Configure ECS/Github Deployer AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4.0.2
+      with:
+        aws-access-key-id: ${{ inputs.aws-access-key-id }}
+        aws-secret-access-key: ${{ inputs.aws-secret-access-key }}
+        aws-region: ${{ inputs.aws-region }}
+
+    - name: Synthesize Cloudformation Template
+      working-directory: ./aws/cloudformation/standalone/marketing/deployment
+      run: |
+        ruby ./deploy.rb
+
+    - name: Deploy Marketing App Cloudformation
+      uses: aws-actions/aws-cloudformation-github-deploy@v1
+      with:
+        name: ${{ inputs.cloudformation-stack-name }}
+        template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
+        parameter-overrides: "ContainerImageHashDigest=${{ inputs.container-image-digest }}"
+        capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM

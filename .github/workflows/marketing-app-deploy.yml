@@ -109,35 +109,15 @@ jobs:
     needs: build-and-push-image
 
     steps:
-    - uses: actions/checkout@v4
-      with:
-        sparse-checkout: |
-          aws
-
-    - uses: ruby/setup-ruby@v1
-
-    # Warning: Use minimal permissions for the deployer
-    # See: https://github.com/aws-actions/amazon-ecs-deploy-task-definition?tab=readme-ov-file#permissions
-    - name: Configure ECS/Github Deployer AWS credentials
-      uses: aws-actions/configure-aws-credentials@v4.0.2
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ vars.AWS_REGION }}
-
-    # This must be converted to a rake task before deploy to non-dev environments
-    - name: Synthesize Cloudformation Template
-      working-directory: ./aws/cloudformation/standalone/marketing/deployment
-      run: |
-        ruby ./deploy.rb
-
-    - name: "[Staging] Deploy Marketing App to AWS"
-      uses: aws-actions/aws-cloudformation-github-deploy@v1
-      with:
-        name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
-        template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
-        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }}"
-        capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM
+      - name: Deploy to AWS
+        uses: ./.github/actions/frontend/marketing/deploy
+        with:
+          environment: marketing-test
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.AWS_REGION }}
+          cloudformation-stack-name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
+          container-image-digest: ${{ needs.build-and-push-image.outputs.digest }}
 
   ui-tests:
     runs-on: ubuntu-24.04
@@ -168,3 +148,24 @@ jobs:
           CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
           MARKETING_BASE_URL: ${{ vars.MARKETING_BASE_URL }}
+
+  # Job: deploy-to-marketing-prod
+  # This job deploys the current image to production after the UI tests pass in the test environment
+  deploy-to-marketing-prod:
+    runs-on: ubuntu-24.04
+    environment: production
+    needs:
+      - build-and-push-image
+      - deploy-to-marketing-test
+      - ui-tests
+
+    steps:
+      - name: Deploy to AWS
+        uses: ./.github/actions/frontend/marketing/deploy
+        with:
+          environment: production
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.AWS_REGION }}
+          cloudformation-stack-name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
+          container-image-digest: ${{ needs.build-and-push-image.outputs.digest }}
