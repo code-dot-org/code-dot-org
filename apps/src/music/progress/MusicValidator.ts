@@ -99,9 +99,16 @@ export default class MusicValidator extends Validator {
     let playedNumberEmptyChords = 0;
     let playedNumberChords = 0;
 
+    // This is a list of unique sound IDs that have been played.
     const uniqueSounds: string[] = [];
+
+    // This is a list of unique sound IDs that are currently playing.
     const uniqueCurrentSounds: string[] = [];
+
+    // This is a list of unique function contexts that have been used to play sounds.
     const uniqueFunctionContexts: string[] = [];
+
+    // This is a list of unique sound lengths that have been played.
     const uniqueSoundLengths: number[] = [];
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();

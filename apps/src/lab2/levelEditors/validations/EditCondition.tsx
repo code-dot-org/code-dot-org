@@ -105,51 +105,55 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
       {hasValueType && (
         <>
           <label className={moduleStyles.label}>Value:</label>
-          {valueTypes.map((type, i) => {
-            const currentConditionValue = condition.value!;
-            const currentParts =
-              typeof currentConditionValue === 'string'
-                ? currentConditionValue.split(':')
-                : [currentConditionValue];
-            const currentValue = currentParts[i];
+          <div className={moduleStyles.valueInputsWrapper}>
+            {valueTypes.map((type, i) => {
+              const currentConditionValue = condition.value!;
+              const currentParts =
+                typeof currentConditionValue === 'string'
+                  ? currentConditionValue.split(':')
+                  : [currentConditionValue];
+              const currentValue = currentParts[i];
 
-            const isNumber = type === 'number';
-            const isString = type === 'string';
+              const isNumber = type === 'number';
+              const isString = type === 'string';
 
-            if (isNumber || (isString && !useDropdown)) {
-              return (
-                <input
-                  key={i}
-                  type={isNumber ? 'number' : 'text'}
-                  className={
-                    isNumber
-                      ? moduleStyles.conditionValueInputNumber
-                      : undefined
-                  }
-                  value={currentValue}
-                  onChange={e => handleValueChange(e.target.value, i, isNumber)}
-                />
-              );
-            }
+              if (isNumber || (isString && !useDropdown)) {
+                return (
+                  <input
+                    key={i}
+                    type={isNumber ? 'number' : 'text'}
+                    className={
+                      isNumber
+                        ? moduleStyles.conditionValueInputNumber
+                        : undefined
+                    }
+                    value={currentValue}
+                    onChange={e =>
+                      handleValueChange(e.target.value, i, isNumber)
+                    }
+                  />
+                );
+              }
 
-            if (useDropdown) {
-              return (
-                <select
-                  key={i}
-                  value={currentValue || dropdownOptions[0]}
-                  onChange={e => handleValueChange(e.target.value, i)}
-                >
-                  {dropdownOptions.map((option, index) => (
-                    <option key={index} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              );
-            }
+              if (useDropdown) {
+                return (
+                  <select
+                    key={i}
+                    value={currentValue || dropdownOptions[0]}
+                    onChange={e => handleValueChange(e.target.value, i)}
+                  >
+                    {dropdownOptions.map((option, index) => (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                );
+              }
 
-            return null;
-          })}
+              return null;
+            })}
+          </div>
         </>
       )}
       <button
