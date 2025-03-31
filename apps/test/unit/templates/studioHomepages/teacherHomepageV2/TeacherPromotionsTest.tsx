@@ -2,7 +2,7 @@ import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import {TeacherPromotions} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherPromotions';
+import TeacherPromotions from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherPromotions';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient');
