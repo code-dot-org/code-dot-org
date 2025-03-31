@@ -315,7 +315,7 @@ ActionBlockCarousels.args = {
           id: 'fw-slide-1',
           slide: (
             <FullWidthActionBlock
-              title="Action block 1"
+              title="Full Width Action Block 1"
               description={DESCRIPTION}
               image={image1}
               overline={'Overline 1'}
@@ -330,7 +330,7 @@ ActionBlockCarousels.args = {
           id: 'fw-slide-2',
           slide: (
             <FullWidthActionBlock
-              title="Action block 2"
+              title="Full Width Action Block 2"
               description={DESCRIPTION_MED}
               image={image2}
               overline={'Overline 2'}
@@ -352,7 +352,7 @@ ActionBlockCarousels.args = {
           id: 'vertical-slide-1',
           slide: (
             <ActionBlock
-              title="Action block 1"
+              title="Action Block 1"
               description={DESCRIPTION}
               image={image1}
               overline={'Overline 1'}
@@ -367,7 +367,7 @@ ActionBlockCarousels.args = {
           id: 'vertical-slide-2',
           slide: (
             <ActionBlock
-              title="Action block 2"
+              title="Action Block 2"
               description={DESCRIPTION_MED}
               image={image2}
               overline={'Overline 2'}
@@ -382,7 +382,7 @@ ActionBlockCarousels.args = {
           id: 'vertical-slide-3',
           slide: (
             <ActionBlock
-              title="Action block 3"
+              title="Action Block 3"
               description={DESCRIPTION}
               image={image3}
               overline={'Overline 3'}
@@ -397,7 +397,7 @@ ActionBlockCarousels.args = {
           id: 'vertical-slide-4',
           slide: (
             <ActionBlock
-              title="Action block 4"
+              title="Action Block 4"
               description={DESCRIPTION_MED}
               image={image4}
               overline={'Overline 4'}
@@ -412,7 +412,7 @@ ActionBlockCarousels.args = {
           id: 'vertical-slide-5',
           slide: (
             <ActionBlock
-              title="Action block 5"
+              title="Action Block 5"
               description={DESCRIPTION}
               image={image5}
               overline={'Overline 5'}
@@ -427,7 +427,7 @@ ActionBlockCarousels.args = {
           id: 'vertical-slide-6',
           slide: (
             <ActionBlock
-              title="Action block 6"
+              title="Action Block 6"
               description={DESCRIPTION_MED}
               image={image6}
               overline={'Overline 6'}
@@ -446,9 +446,45 @@ ActionBlockCarousels.parameters = {
   docs: {
     description: {
       story:
-        'Action blocks can be used in carousels to display a series of related cards. The carousels can be configured to allow touch movement for better user experience on touch devices. Carousels can contain full width action blocks, two across, or three across. The example above shows four action blocks in a carousel.',
+        'Action blocks can be used in carousels to display a series of related cards. Carousels can contain full width action blocks or vertical action blocks, and can be configured to allow touch movement for better user experience on touch devices.',
     },
   },
+};
+ActionBlockCarousels.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = await canvas.findAllByLabelText('Previous slide');
+  const navArrowNext = await canvas.findAllByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const actionBlockTitles = [
+    'Full Width Action Block 1',
+    'Full Width Action Block 2',
+    'Action Block 1',
+    'Action Block 2',
+    'Action Block 3',
+    'Action Block 4',
+    'Action Block 5',
+    'Action Block 6',
+  ];
+
+  // check that the navigation arrows are showing on both carousels
+  navArrowPrev.forEach(prevArrow => expect(prevArrow).toBeInTheDocument());
+  navArrowNext.forEach(nextArrow => expect(nextArrow).toBeInTheDocument());
+
+  // check that the pagination dots are showing on both carousels
+  for (const dotLabel of paginationDots) {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  }
+
+  // check that action blocks are visible in both carousels
+  for (const title of actionBlockTitles) {
+    const actionBlock = await canvas.findByText(title);
+    expect(actionBlock).toBeVisible();
+  }
 };
 
 export const VideoCarousels = MultipleTemplate.bind({});
