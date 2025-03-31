@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_03_21_141312) do
-
+ActiveRecord::Schema.define(version: 20_250_328_153_956) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -736,6 +735,16 @@ ActiveRecord::Schema.define(version: 2025_03_21_141312) do
     t.string "app"
     t.integer "intro_video_id"
     t.index ["intro_video_id"], name: "index_games_on_intro_video_id"
+  end
+
+  create_table "hidden_promotions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.string "promotion_id", null: false
+    t.integer "teacher_id", null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["deleted_at"], name: "index_hidden_promotions_on_deleted_at"
+    t.index ["teacher_id"], name: "index_hidden_promotions_on_teacher_id"
   end
 
   create_table "hint_view_requests", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2553,6 +2562,7 @@ ActiveRecord::Schema.define(version: 2025_03_21_141312) do
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
+  add_foreign_key "hidden_promotions", "users", column: "teacher_id"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
