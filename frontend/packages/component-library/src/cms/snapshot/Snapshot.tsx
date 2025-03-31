@@ -2,13 +2,14 @@ import classNames from 'classnames';
 import {Key, HTMLAttributes, ReactNode} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import {BodyTwoText, StrongText} from '@/typography';
 
 import moduleStyles from './snapshot.module.scss';
 
 export type SnapshotItem = {
   key: Key;
   icon: FontAwesomeV6IconProps;
-  label: string | ReactNode;
+  label: string;
   content: string | ReactNode;
 };
 
@@ -37,27 +38,24 @@ const Snapshot: React.FC<SnapshotProps> = ({
   className,
   ...HTMLAttributes
 }: SnapshotProps) => (
-  <dl
+  <ul
     className={classNames(moduleStyles.snapshot, className)}
     {...HTMLAttributes}
   >
     {items?.map(({key, icon, label, content}) => (
-      <div key={key} className={moduleStyles.snapshotItem}>
+      <li key={key} className={moduleStyles.snapshotItem}>
         <FontAwesomeV6Icon
           {...icon}
           aria-hidden="true"
           className={classNames(moduleStyles.snapshotItemIcon, icon.className)}
         />
 
-        <dt className={moduleStyles.snapshotItemLabel}>
-          {label}
-          <span aria-hidden="true">:&nbsp;</span>
-        </dt>
-
-        <dd className={moduleStyles.snapshotItemContent}>{content}</dd>
-      </div>
+        <BodyTwoText className={moduleStyles.snapshotItemContent}>
+          <StrongText>{label}:</StrongText> <span>{content}</span>
+        </BodyTwoText>
+      </li>
     ))}
-  </dl>
+  </ul>
 );
 
 export default Snapshot;

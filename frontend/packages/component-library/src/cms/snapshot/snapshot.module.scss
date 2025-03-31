@@ -15,9 +15,9 @@
   margin: 0;
 
   .snapshotItem {
-    display: table;
+    display: flex;
     break-inside: avoid-column;
-    width: 100%;
+    column-gap: 0.5rem;
 
     &:not(:last-child) {
       margin-bottom: 1.25rem;
@@ -26,21 +26,12 @@
     .snapshotItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-md));
       color: var(--text-neutral-primary);
-      display: table-cell;
       text-align: center;
       line-height: 1.48;
-      padding-inline-end: 0.5rem;
-    }
-
-    .snapshotItemLabel {
-      @include typography.heading-xs;
-      display: inline;
-      margin: 0;
+      flex-shrink: 0;
     }
 
     .snapshotItemContent {
-      @include typography.body-two;
-      display: inline;
       margin: 0;
     }
   }
