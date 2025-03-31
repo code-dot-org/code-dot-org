@@ -26,7 +26,7 @@ describe I18n::Resources::Dashboard::CourseOfferings::SyncOut do
     let(:expect_localization_distribution) do
       I18nScriptUtils.expects(:sanitize_data_and_write).with(
         {i18n_locale => {'data' => {'course_offerings' => crowdin_file_data}}},
-        CDO.dir("dashboard/config/locales/course_offerings.#{i18n_locale}.json")
+        CDO.dir("dashboard/config/locales/course_offerings/#{i18n_locale}.json")
       )
     end
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do

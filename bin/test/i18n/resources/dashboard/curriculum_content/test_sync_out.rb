@@ -71,7 +71,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     let(:type_i18n_data) {{'uuid' => 'new_i18n_data'}}
     let(:types_i18n_data) {{type => type_i18n_data}}
 
-    let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "#{type}.#{i18n_locale}.json")}
+    let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{type}", "#{i18n_locale}.json")}
 
     before do
       described_instance.stubs(:types_i18n_data_of).with(language).returns(types_i18n_data)

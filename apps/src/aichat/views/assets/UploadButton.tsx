@@ -20,7 +20,7 @@ import {
 
 import styles from './upload-button.module.scss';
 
-const UploadButton: React.FC = () => {
+const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
   const dispatch = useAppDispatch();
   const currentChannelId = useAppSelector(state => state.lab.channel?.id);
   const numStagedFiles = useAppSelector(
@@ -127,7 +127,7 @@ const UploadButton: React.FC = () => {
       <ActionDropdown
         name="uploadDropdown"
         labelText={aichatI18n.upload()}
-        disabled={numStagedFiles >= MAX_NUM_FILES}
+        disabled={numStagedFiles >= MAX_NUM_FILES || isDisabled}
         size="s"
         className={classNames(styles.upload, styles.dropdown)}
         triggerButtonProps={{

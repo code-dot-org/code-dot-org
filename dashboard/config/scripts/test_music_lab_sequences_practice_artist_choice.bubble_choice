@@ -1,6 +1,7 @@
 name 'test-music-lab-sequences-practice-artist-choice'
-display_name 'Recreate Parts of Songs'
-description 'Choose one of the option below to recreate parts of familiar songs.'
+display_name 'Practice'
+description 'Choose at least 2 options below to practice!'
+uses_lab2
 
 sublevels
 level 'test-music-lab-sequences-practice-artist-choice-a'

@@ -1,0 +1,538 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-28T20:02:45.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Tightrope with Loops\r\nEmma is revisiting a remix she made of Tinashe's Tightrope, which originally required a lot of blocks to make everything line up:\r\n\r\n> The Synth lead is 8 measures long, so I had to repeat tracks a bunch of times to get it to all sync up. Loops is going to make this so much easier!\r\n\r\nUse **abstraction** to identify the parts of her code that can be converted into loops.\r\n\r\nAll of the blocks you need are already in the workspace. You can replace her old code with your new code as soon as you drag-and-drop on top of it!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
+      },
+      "packId": "tinashe_tightrope",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "shadow": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "shadow": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "PV6g|7a}0UOSbQUx]]NS",
+                        "deletable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "tinashe_tightrope/synth_melody"
+                        },
+                        "next": {
+                          "shadow": {
+                            "type": "play_sounds_sequential",
+                            "id": "play_sounds_sequential",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "Ie_5]!1%Yp6[Y.Z(H;8q",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "tinashe_tightrope/drums_tambo_fast"
+                                  },
+                                  "next": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "klB7pM7)]22J^^2ybvb{",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "tinashe_tightrope/drums_tambo_fast"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "B_h(ig`%fGV9Qn4QMr-j",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "tinashe_tightrope/drums_tambo_fast"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "$+_M`H;bLaP]5Z?[si1R",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "tinashe_tightrope/drums_tambo_fast"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "shadow": {
+                                "type": "play_sounds_sequential",
+                                "id": "5f1b;)z@vfCN6g]b7M[0",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "CWLi[IGim:?/D3Qp9?4V",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "acoustic_arcade/bass_giant"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "QjyTz3KE$s*6!kKyoWaW",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "acoustic_arcade/bass_giant"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "rsSBsF{)!Yyvna@`SvD1",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "acoustic_arcade/bass_giant"
+                                              },
+                                              "next": {
+                                                "shadow": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "G%7T-S%lUP=jfsu3(]0d",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "acoustic_arcade/bass_giant"
+                                                  },
+                                                  "next": {
+                                                    "shadow": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "u+q2X2:__8^E^/-f^1U;",
+                                                      "deletable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "acoustic_arcade/bass_giant"
+                                                      },
+                                                      "next": {
+                                                        "shadow": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "8FMr{h`:@C*BG)62aEov",
+                                                          "deletable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "acoustic_arcade/bass_giant"
+                                                          },
+                                                          "next": {
+                                                            "shadow": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "KJ0OWND{7X{m8?{*$gJ*",
+                                                              "deletable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "acoustic_arcade/bass_giant"
+                                                              },
+                                                              "next": {
+                                                                "shadow": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": ")O{bx}.-Jr*xg+rbS3Wu",
+                                                                  "deletable": false,
+                                                                  "editable": false,
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "acoustic_arcade/bass_giant"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "shadow": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "P_ILv!,{fPg;Q0s99H%4",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "~_$8$tQ||y+C*8nVvnuY",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "tinashe_tightrope/drums_perc_loop"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "6SFM;T^s?+!:Iy92@CSE",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "tinashe_tightrope/drums_perc_loop"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "shadow": {
+                                        "type": "play_sounds_sequential",
+                                        "id": "6#ts/Qs7d:o-Lx:uUbw4",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "s$5[huX3,}gHh,d=OyOx",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "tinashe_tightrope/vocals_chorus_backups"
+                                              },
+                                              "next": {
+                                                "shadow": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "zNCsSCF{huoR#CN%H7F6",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "tinashe_tightrope/vocals_chorus_backups"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": ".J{pd?FOFscCA9})$QrS",
+              "x": 530,
+              "y": 90,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "tinashe_tightrope/synth_melody"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "j=-wRj#jb!S;%U~C`j)k",
+              "x": 530,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "acoustic_arcade/bass_giant"
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "7xtb(Km3V6G.~nT(EM$H",
+              "x": 770,
+              "y": 90,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 770,
+              "y": 190,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "`(@xjRw({30he?Ib@hYV",
+              "x": 770,
+              "y": 290,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "4xqu,t:zc/x.7o8DtIFw",
+              "x": 370,
+              "y": 190,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": ")f%~Y+,]NZ=~5nl#QW|-",
+              "x": 530,
+              "y": 410,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "tinashe_tightrope/vocals_chorus_backups"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "P;4g(_5/G}lxmu.thy/)",
+              "x": 530,
+              "y": 330,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "tinashe_tightrope/drums_perc_loop"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "cida|aatr7S+LI/T.!a!",
+              "x": 530,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "tinashe_tightrope/drums_tambo_fast"
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "FFZn-d5ClC{RJgR^4(v3",
+              "x": 370,
+              "y": 290,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true
+    },
+    "display_name": "Tightrope Remix",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Tightrope Remix"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41yZYvWe3Ubip/cJLgjkQQsuHvYbx+Muo7DIC6RcP1rYWi\nY/kWnllT0O4qXmFkWhkLeMKwnmAeBKzJzibiQyPIBdqVSPSRa+cY8+xHveCm\nez0DO0xZ/sRn0jKWlDrNjPYN62TYEPvCJUSrEmYJYPcnS36lwRbxCpEfVARl\n/bUYI1qhiZDv/8PpuhCSThqFaAM+y/QxK4eC0pGJY0VUnGuyWXekk4/tNA3V\n4dtabxz8cq9B/8m/lcDLMRCBvvjhiR3+YBOvIaNM3PttsEdfmcxlYcv8aVOc\nSq3u6n2MyRVPdnD7ZdHUJWqcyXLOshSwDKqdy/sO2AOOR5EhTMcr+ZwyK831\nx0oDhaaI9VsSHv4Hr8u4FtCPkHMqGoOUDp7ZFF0BYypI9rFIuENo9TvXyDNH\nvHzqJfYOlO5+aBWoRMvxFBwxfwFgf2ghdg7nze+LFPJ+wfQ2YQAgjEC1+vEN\nstWKgZHDXK5+IcC0ztzN76Cz7n/dq6P1w+JkEVKvNG9kpbg3y3ymIDNIcigm\nDd6iXp5swa63qowAw//8XSr2t1dA3wK6zA5rPQmjwH5qEr+jP2Y8+eh0JmnH\nQE+x1LdUM1n1dMRJtzj3mFVCB5wrCT9/VSzlohp38bhkk2In0OvocoE37Gwe\nzc94dlloi7l9wXyRch1ESlE/+18LlQpYuganJFDgo8+kDDkEGgOS0+HjhgTV\njHxej1CcbVR/A6avL51bJfUfQOBSxzIOu3qWh2N6Hd5D83zrSG4wv3J29R9Q\ndH+FqmeXlPPxaLKuTBkSzEBfV/MplWDs+Q1RRDNhfTVp03uZB7k4zZP8nUHG\nDMgD0FmdnDFbdw/5yIUCQv0LVc31GD/77MqY3NkJ/Z40f4/8+o0pSeXstCPn\nazqyVMfJ59sm0ngTUzzw+p3nekXq5bz7WB2Co0I3IV9S1LDjh3IsJYjVeaXQ\n4TTAKXrfGFJGIJT8tNZ1GNaIqPdtrlb6HcioxJ/E/+FYyKeEYA9MzypEb8LW\nG1LfMdsmYeCOxM6qCNagTd+5lQnDISqmuJlIXOdvCwH6+gj1bSdtYvJOwRAT\neQ/D7+nVRz70PeTNW9msBxTvjSH81sBKTzwYKLFj8XVBBqZqz9V0/Y7sWvJh\nVC1C4+8qLTGRpnpbq8Yo8YNkUD4TflyA+xWlgWFw92XX3TGM6fFoWQFsNDjd\nKZ+WAkwe9aSvIXbRwdtgalzLAuHvQnPTnFRRrMZeqw/qz8bXdXG381sZCdn+\naAbDqEsI92m4qlZ7IqFXFiPvlV5rSvaZ2p3i3IROb7+HPEhyw9MwHiOdKvKF\nXwWtms19bs+EN0KSb2bnncjv211r85Ts+PWbcmfTTB9KuTzCX9I5Uh/Cu8f9\nAfHMMN1PnoVNsAT7jkwPQpUEXVTA3ogUJHe+dYqE4qudnfBGg3syHwKMpE7a\nyW7mOkuJGwsUgUFlAlLI7NNdBsIQJotOm7t3PWudn5EQGLVmj29TJcjQrkc9\nWl27uh0nFCepdpjykMULXmzTswV2dEIiJN4Or/Lp4O/fWlZdgJYpugEvmugG\nS6HHhk3+qkSKMVZyA7YBlmBy/y6XOexyqHZiCUBoX2/i8+Dw8YlL5h6SMe1q\nGTSbcXwn4t2GPIPUCd3wTP9j8k0n7CfDwbUqxTOkr7U32qv7yVvVZ+xmCSYn\nIULDXIDGQ2dM4sJR5dpnfRSabI5v6yLf+BCMJrtpN73WIvC9VwX9B/Ax/NoM\nR30/qQ/tB3k5q6yT5LbvZfJL9NYS2lRUMwreI1Ccey7QqAaXjNe/5lRPcmAx\n7hsB4nv4lS0crPCRLOs31okwHTkY4BVAc49zAQKzCMDvhKwwMYjPkycBfmHE\no0Izju2m8h0Ue1APs81Pj6LLR4i6pVsH9XkcFtiUbCmCzmLjOTu9wUnPux8d\nPxIBRfWU2CCllzMrTANk5+2YaukXmOAX502YH6uf5bSN0/dfxMiMFWR1jtv5\nQkACO1IqDKuIZ3XYAVJBg0i6X4tXNUCo9GWb9dkESUsDsvfdm9mi7ViftEQd\n3A+oqL9mno+dZL3gld3ub7Byg/fCtTUeRC/RYO4aot2QorBfjMOfd5XMcJI3\nXC8DTpQSfLWUiI53HtpY7lcj/V3I3R0x5G255j8MJJL39DZqFQ3FKycdvzkP\n9p00hnuQ0nQWMSjiBBXozNo8pbCEn3iR5AJcrIGGo6XD2jzi4cZ8ujoD58Gi\nh3Z1u0Mw2TxC5CDdQvS3fgJZs/YJUsD5duUo/Zl05yY4y1Eat0+FeAer08KW\nNow37Lb4EJaK/laHIR5nk8RJCdMIc078mJOM/Z0+zfKIKEteP6+17KHXegrB\ncGpM7sCizITQqUideVTHZs/Sw+VyeOAIX6cRnmrnNk7Vr8dFMXV4t5MXksbn\nUTUA7rxx1Ru6M2PxBU+FBN3F/G4q8V3Qw+EW1Pu1B5F3y5yQSuDzYi0GiEly\nKgLeZ2Cej+zqwQVwn7a1BZjuKETyUHxu0INgE9Yqde80Ez81/8YgcQgDRIlW\njllZa1ydouZjKhm1kJc76cmUXjQf0u7ftQPg9UX+ZfApdkRIcJgnKFAKuW+9\nOXg1SE8gP3K6lilLvI1SldNOJZq03Pt/s7970O/iLq41j5C5txCvgcGWwYdN\nUZbZkP562oCdEDDhcazUA56s+KRRoBoZrWr/LMalxclc8JCiMQZJH7ZiQUYw\nRgIYVyl4DJzIaTtrWhugwdwN1ERwMpZAfWSNqDMazFitJjnZBeYRJOIQSiAr\nnON0zuhJfpvUD5AUvKwGLA9kaseYjUV2jq3Edj0UmAyu4sRcCS6etnJoCZiX\nbx/BmnvuVCtNpTChiXcG62lTwciIKFHdkUIHWI23NzpDz5RK+Xr+nPH30had\ndDf/PHPmqvwBtVaQJeR6woWKPgnVCyZbrfcngF/6k6khQi0aYftaTrwgVdBb\ntO6U56NpaKqr6814g8Q/KwN2gRhng5Z0cHSHzGOXZGhVi+FdySCbStK/s5zr\nMuhVO4oxATp/jLTLGSTxKvvqhpm4Dxq6r6jBVBMOrSsm37DTIbdiDu17z2HR\nTGuNmruvZacSHaqyHiOH9R3UUwA6XKcy3LCsDWXzlTaQGCs+xkJA7w0s1Kiy\nSQ11p3JXQipqWxcBh2Lr2wwHMgtdc2o9Ig14SreuzED7nbVGrvZl/7G+dS0p\n46PqyzxUkw3cqjWLEvondEhLGP4zjGNWzr7zztX773hXPV64PUWHfTpjotaX\nlVF4UXynHxd+xV5KQSQZKDpWVejcCeF7uHGqEuDOZ+NTQqS2q2iPSLEey5hO\ngoterb3RHd2adK1fBugjJ1KPT6baMsGHfKP2vhJX2+wngDo+q5DcxeGUt2qr\nY/2v3ubDTX4SASSlQdaT7i/IgXYUbvobl0tz/iCjiaxv8xWeTNkz/vqpR/Ly\n/Xxo4nm6Sm11juHbt6FFvFyV41oeey5bNr6nVUGYR6MQyBD91boM+LOoENpQ\n8J3Ft+n1j+Bn7tDsUKllKRbqavXhEm9bCNiXXtpyNAgoFLuphGTY1yDEgmG0\ntjROIus8VwDNccfu92Mjhw/kjNpyL6VlkSTZ2x7TukPI9CsbU6ZyDSddwlJK\no/3JTmw8St9yYZFCMLI1G1LsVuBDW3Ynvmdjm512oFdUvKS+EMub8NtuVyJX\n7ZU/NC9GhMPYJ9Jty3blBU7+ao+DG9uFIEID+hXb/nb2jELit82VkqesmFy5\nl8Bq7E8MsAj4Jr+HXT+BoePz7hJrGEMCBVisd7cphX1qSirNP+2kPLdPLdHH\nflscfhot2a2ld3bCqhUGpEJ0r9qkLtTEJ/ADgwceRCzJE1dd+sJLsxwf1+8d\nwBnjwnTKcXp/wHQ5TeJa/QmJekhzUnkTkVDD838Vn1+S0GPvEB3WYkWlFL7Z\nNAmjFBCTSK6ayuGqq5pPnrMUEHqh5p/1dTjHHprPCUFwg2U6jF23X/vZJXU8\nCyQ1x5GS+8TtGG//wK3D9C6FaJIKJWyK8cOPTcJxnsZfT4DHU7msCyW9hA0t\nPrSBTcz35UmeGxWSfa1CHDlR3GJ+ElDX/JyDnbtJIOD9mBcWcg3b12WV3pVI\nz6q1JHRj60HluiviB4Gylr40sXk3KSeO5OS41hSMAsTIIS6qYU86DkeMYzZN\n9iCyw7FTDYmZkMcwIrvXzR9FPeR9bbUjI51SHEd31Kk5VKVwEOVH7IVuMQ6+\nz1+85kteUwhrUm6Vd5b2WG6vcChqjIvAu837xGhfH1t4vvS6rPmh1B+wK/1J\nq0TFzNLC1vGOoEd46Pa86TT1CU+hWfOi5eZQa13pLRnYomdPB2W7V7GnrfME\ncvad3u/iDYKBi/s7itpKfZc/W0hzWIgDhqOAgJmBUrUwuyXDok0RFPvR+uko\nxqFgSDvFZcdONYW93WpRKYfFkGkXb6Hs6415lNCNE0VKafECpFtnEmVzlgfU\nVkFDNl+75fTMiIrtR/W102+itSrkBa4p8uCWVlZkSOSQyRTkR43F8UUOkAwr\n39aMnI1B4EcXA2b9pqnyJtkenE6CqLUAMhWozhbMj4ehsyXDEqp/molQCVSy\nc1SqRu2AcSWvRAc+fmfFs60Zh1qpo9G+G88SJs9clk2iWnygCD9tbACDKOj0\nOzVCyeB6CkNR2UOra102Gx0V+oAcUMWJPkox8uHFk9YuxjSBWyd3CzoHRAEy\nCsoESqZMANEZg/PP9hUsOXv10htDxcIYmaDcD3G9BCyDAdEVGtjmGeg481NQ\nNIPf5HQNDwGVvFt2G/3Z7G8gcKJWftFPGl1/7sLQqCSjhKAZOQbEPIWnlGXv\nD3l0JU/b7foD+fSq3lg5SIHYl6hThqPdi19AFDMAa4cP8KK3bI2FF6ZME1P2\nktrJzdERKs46dhT5CC+H4ldePiv3U6xebu4MhehuV8G0QSo+fG2AJmz78CGc\nt4+nf/bMlFUhXxWEnFFlKbehO5d3gV3VAlFzlCsbhEdOGcr3A/WWpwCOIVUJ\nzMXRvhsZsCar8huP5iS9nCaA6Wcxq2cgmO0vfHqrQ8Ai62MtvpVYKdhB6gLA\nPrG8F+39sVfc0/isQr2nNgPREK916sqqq235EAUJiGL1R2QCP/TxhOIbWFRG\nw06OG1XCj4m8Q9KYWu6YOSy4rXpZYeMGrVVQuk+Kov34s+jFLjtCtHC3eFFa\ngFZF1uo6Ag+ZwgycbhIhIJV/cTXE111ddJ8Ius18HMuXYS/9aHVTpdPsKm+U\nrKVEqbGawbkjZsmJjUsbpAa1wzUo527+VTsjGhuK8WErR/gQZsNQU+IoGhQv\n6za1mr/zsTw3cUpdCJHWfE9JIFqr1A0lkdk8vJCaG1dEk7U+jRlmOpB963u8\nqKG/h5ECguF1s2oRB3C1iigzvUF2XkJBfFvz8LO1/7yKNnKee5HhGjxRBjoY\n8KdNuFG4NHA+aKNhRaKglxq/KdEf4MFBAzQ=\n",
+    "bubble_choice_description": "Help Emma use loops to improve her remix of Tightrope",
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-practice-e_b5fe9770-6083-4deb-ac57-b8b91472a6fa",
+        "message": "[Check for 4 loops]",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-28T20:02:45.225+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e\"},{\"changed_at\":\"2025-03-28 20:09:01 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"exemplar_settings\",\"bubble_choice_description\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:10:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:11:21 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

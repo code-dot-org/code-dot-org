@@ -43,8 +43,14 @@
     },
     "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
     "display_name": "Hospital Triage Nurse",
-    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png"
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
+    "starter_assets": {
+      "blueprint_1.png": "80e31cd5-17c5-41a3-9558-5463f264f6fd.png",
+      "blueprint_2.png": "50fd1423-c5dd-48e0-b68f-f1db484a21d2.png",
+      "blueprint_3.png": "79e51c90-060f-42be-866b-469407d7a04f.png",
+      "blueprint_4.png": "60770973-3cc3-45f9-9784-51b493207428.png"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-25T13:56:59.057+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level4\"},{\"changed_at\":\"2025-03-25 13:59:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:56:59.057+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level4\"},{\"changed_at\":\"2025-03-25 13:59:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 21:00:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

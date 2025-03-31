@@ -793,7 +793,7 @@ type ParticipantTypesResponse = {
 };
 
 export const asyncLoadTeacherHomepageSectionData =
-  (): SectionThunkAction => dispatch => {
+  (): SectionThunkAction => (dispatch, getState) => {
     dispatch(beginAsyncLoad());
 
     const promises: Promise<object>[] = [
@@ -802,11 +802,22 @@ export const asyncLoadTeacherHomepageSectionData =
       ).then(response => dispatch(setCourseOfferings(response.value))),
       HttpClient.fetchJson<ParticipantTypesResponse>(
         '/dashboardapi/sections/available_participant_types'
-      ).then(response =>
-        dispatch(
+      ).then(response => {
+        if (
+          response.value.availableParticipantTypes.length === 1 &&
+          getState().teacherSections.sectionBeingEdited &&
+          !getState().teacherSections.sectionBeingEdited?.participantType
+        ) {
+          dispatch(
+            editSectionProperties({
+              participantType: response.value.availableParticipantTypes[0],
+            })
+          );
+        }
+        return dispatch(
           setAvailableParticipantTypes(response.value.availableParticipantTypes)
-        )
-      ),
+        );
+      }),
     ];
 
     return Promise.all(promises)

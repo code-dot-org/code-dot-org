@@ -63,8 +63,15 @@ const aichatSlice = createSlice({
       state.studentChatHistory = action.payload;
     },
     setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
+      // It's confusing / not helpful for users to see their own history of when they loaded the level.
+      // These events are exclusively for teachers to view their student's activity, so we exclude them
+      // when someone is looking at their own history.
+      const events = action.payload.filter(
+        event =>
+          !(isUserActionEvent(event) && event.descriptionKey === 'LOAD_LEVEL')
+      );
+
       // Find the last index of an event that marks the start a new conversation with the model.
-      const events = action.payload;
       let lastResetIndex = -1;
       for (let i = events.length - 1; i >= 0; i--) {
         const event = events[i];
@@ -82,9 +89,9 @@ const aichatSlice = createSlice({
       }
 
       if (lastResetIndex >= 0) {
-        state.chatEventsCurrent = action.payload.slice(lastResetIndex);
+        state.chatEventsCurrent = events.slice(lastResetIndex);
       } else {
-        state.chatEventsCurrent = action.payload;
+        state.chatEventsCurrent = events;
       }
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {

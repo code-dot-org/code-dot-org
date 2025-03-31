@@ -475,29 +475,41 @@ function LandingPage({
 
     let landingPageCourses = [];
     if (coursesAsFacilitator.includes(COURSE_CSF)) {
-      landingPageCourses.push('CSF');
+      landingPageCourses.push({
+        name: 'CSF',
+        urlSlug: 'computer-science-fundamentals',
+      });
     }
     if (coursesAsFacilitator.includes(COURSE_CSD)) {
-      landingPageCourses.push('CSD');
+      landingPageCourses.push({
+        name: 'CSD',
+        urlSlug: 'computer-science-discoveries',
+      });
     }
     if (coursesAsFacilitator.includes(COURSE_CSP)) {
-      landingPageCourses.push('CSP');
+      landingPageCourses.push({
+        name: 'CSP',
+        urlSlug: 'computer-science-principles',
+      });
     }
     if (coursesAsFacilitator.includes(COURSE_CSA)) {
-      landingPageCourses.push('CSA');
+      landingPageCourses.push({
+        name: 'CSA',
+        urlSlug: 'computer-science-a',
+      });
     }
-    landingPageCourses.forEach(coursePage => {
+    landingPageCourses.forEach(course => {
       allResources.push({
         headingText: i18n.plSectionsFacilitatorResourcesTitle({
-          course_name: coursePage,
+          course_name: course.name,
         }),
         descriptionText: i18n.plSectionsFacilitatorResourcesDesc({
-          course_name: coursePage,
+          course_name: course.name,
         }),
         buttonText: i18n.plSectionsFacilitatorResourcesButton({
-          course_name: coursePage,
+          course_name: course.name,
         }),
-        buttonUrl: pegasus(`/educate/facilitator-landing/${coursePage}`),
+        buttonUrl: `/professional-learning/facilitator/${course.urlSlug}`,
       });
     });
 
