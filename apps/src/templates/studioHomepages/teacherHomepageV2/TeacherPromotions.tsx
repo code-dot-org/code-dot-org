@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 import TeacherPromo, {TeacherPromoInfo} from './TeacherPromo';
 
@@ -38,31 +39,55 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
   partnerLogo: serverPromotion.partner_logo || null,
 });
 
+const TEACHER_PROMOTION_LOCAL_STORAGE_KEY = 'teacherPromotionClosed';
+
 const TeacherPromotions: React.FC = () => {
   const [promotions, setPromotions] = React.useState<TeacherPromoInfo[]>([]);
 
   const [isLoading, setIsLoading] = React.useState(true);
 
+  const [closedPromotions, setClosedPromotions] = React.useState<string[]>(
+    () => {
+      const stringPromotions = tryGetLocalStorage(
+        TEACHER_PROMOTION_LOCAL_STORAGE_KEY,
+        '[]'
+      );
+      return JSON.parse(stringPromotions) as string[];
+    }
+  );
+
   React.useEffect(() => {
     HttpClient.fetchJson<ServerPromotion[]>(TEACHER_PROMOTION_URL)
       .then(response => response?.value)
       .then(data => {
-        setPromotions(data.map(serverPromotionConverter));
+        setPromotions(
+          data
+            .map(serverPromotionConverter)
+            .filter(
+              promotion =>
+                !promotion.isClosable ||
+                !closedPromotions.includes(promotion.id)
+            )
+        );
         setIsLoading(false);
       })
       .catch(error => {
         console.error('Error retrieving marketing promotions', {error});
         setIsLoading(false);
       });
-  }, []);
+  }, [closedPromotions]);
 
   const closePromotionCallback = React.useCallback(
     (id: string) => {
       setPromotions(promotions.filter(promotion => promotion.id !== id));
 
-      // TODO(lfm): Send a POST request to the server to mark the promotion as closed
+      setClosedPromotions([...closedPromotions, id]);
+      trySetLocalStorage(
+        TEACHER_PROMOTION_LOCAL_STORAGE_KEY,
+        JSON.stringify([...closedPromotions, id])
+      );
     },
-    [promotions]
+    [promotions, closedPromotions]
   );
 
   return (
