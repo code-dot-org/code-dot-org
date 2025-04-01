@@ -57,7 +57,7 @@ markdown <<MARKDOWN
         
         <div style="background-color: #F7F8FA; padding: 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); border-radius: 8px;">
              <ul>
-                <li style = "font-size: 14pt"> Store user input in a variable
+                <li style = "font-size: 14pt"> Stores user input in a variable- this is used when users answer a prompt.
 </li><br>
                 <li style = "font-size: 14pt">Make sure to convert the variable to an integer when needed</li>
              </ul>

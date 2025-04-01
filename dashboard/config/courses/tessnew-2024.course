@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "tessnew",
+    "pilot_experiment": "tesstesting",
     "version_year": "2024"
   },
   "resources": [

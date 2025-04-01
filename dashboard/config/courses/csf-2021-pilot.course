@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csf-2021-pilot-1",
+    "pilot_experiment": "csf-2021-pilot",
     "version_year": "unversioned"
   },
   "resources": [

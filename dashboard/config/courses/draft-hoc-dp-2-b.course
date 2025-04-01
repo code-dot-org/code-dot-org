@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "draft-hoc-dp-2-b",
+    "pilot_experiment": "draft-hoc-dp-2-b",
     "version_year": "unversioned"
   },
   "resources": [

@@ -1,8 +1,17 @@
+@import 'color.scss';
 .layoutContainer {
+  grid-area: content;
   display: flex;
   flex-direction: row;
-  height: 100%;
+}
+
+.containerWithFooter .layoutContainer {
+  overflow: hidden;
+}
+
+.defaultContainer .layoutContainer {
   width: 100%;
+  height: 100%;
 }
 
 .flexColumn {
@@ -16,4 +25,23 @@
 
 .flexShrink0 {
   flex-shrink: 0;
+}
+
+.footerArea {
+  grid-area: footer;
+  background-color: $light_gray_900;
+}
+
+.containerWithFooter {
+  display: grid;
+  grid-template-rows: 1fr 56px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "content"
+                       "footer";
+  height: 100%;
+}
+
+.defaultContainer {
+  height: 100%;
+  width: 100%;
 }

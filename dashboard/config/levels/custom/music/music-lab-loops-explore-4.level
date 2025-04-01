@@ -21,7 +21,6 @@
             "play_sound_at_current_location_simple2"
           ],
           "Control": [
-            "play_sounds_together",
             "repeat_simple2"
           ]
         },
@@ -38,7 +37,192 @@
               "x": 30,
               "y": 30,
               "deletable": false,
-              "movable": false
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 3
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "fields": {
+                          "sound": "lady_gaga_born_this_way/drums_glitch_fill"
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "repeat_simple2",
+                      "id": "Y6O3V$g1nI(g79e(u1q)",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "times": 2
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": "play_sounds_together",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "sk9p^Txdq/wGgv-.9tUB",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "lady_gaga_born_this_way/drums_intro"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "G5lh4k9;L|:`Lge*ieV1",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "lady_gaga_born_this_way/synth_distorted"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "+jH.e@(?KKnAZSHog$(Y",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "electro/bass_synth_duct_tape"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "Zx`}?:w-OEFLp]I./Oj*",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "Xh9b5h6Rgoo#P[v^/2;M",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "lady_gaga_born_this_way/vocals_chorus_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "?W]xmhg@LoDUVoUbY1R}",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "lady_gaga_born_this_way/synth_big_chorus"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "repeat_simple2",
+                                        "id": "repeat_workspace",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "times": 2
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "Z(mz.]kVbRQxhi,|~`I3",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "sound": "lady_gaga_born_this_way/drums_clap_breakdown"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           ]
         }
@@ -46,7 +230,64 @@
       "allowChangeStartingPlayheadPosition": true,
       "showSoundFilters": true,
       "showSoundsPanelInSoundsMode": true,
-      "sortUnrestrictedPacksByType": true
+      "sortUnrestrictedPacksByType": true,
+      "packId": "lady_gaga_born_this_way",
+      "sounds": {
+        "lady_gaga_born_this_way": [
+          "drums_glitch_fill",
+          "drums_intro",
+          "synth_distorted",
+          "vocals_chorus_1",
+          "synth_big_chorus",
+          "drums_clap_breakdown",
+          "crash",
+          "bell",
+          "sweep",
+          "digital_toms"
+        ],
+        "electro": [
+          "crackle",
+          "spring_lift",
+          "whua",
+          "wormhole",
+          "bass_synth_duct_tape"
+        ],
+        "pop": [
+          "clap",
+          "clunk",
+          "phase_elevator",
+          "rainstick"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "lady_gaga_born_this_way/sweep"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
     },
     "exemplar_settings": {
       "playerEnabled": true,
@@ -55,15 +296,15 @@
       "validationSuccessMessage": "You did it! The song matches the example!",
       "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
     },
-    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6dATAqvqCNBaL7gcusy6Gy2fnwYBnaYjrEyWA22GQe18mHEDAVVuD+erp\n6+LrpK8JgB2eI/Ulu4eZqf6lTA7dPl8pyRY44SThBAixCQO2uPGvaLHvevoP\n2haLZw8WVSPfmTdT1IEQdUAYuaZdIu3NQIBRui+78JkvN9iuKfCrdA4=\n",
+    "encrypted_exemplar_sources": "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\npv7+mc7pC5h5yPExGFTk3HQ7rg8=\n",
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "#### Loops\r\n\r\n\r\n\r\n<span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>\r\n\r\n<span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>\r\n\r\n<span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span>\r\n\r\n<span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-waveform\" style=\"color: #F3DF55; margin-right: 2px\"></i> Effect </span>\r\n\r\n<span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span>\r\n\r\n<code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code>\r\n\r\n<code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code>\r\n\r\n<code style=\"background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">repeat</code>\r\n\r\n- [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sound_at_current_location_simple2)\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!",
+    "long_instructions": "#### Investigate\r\n\r\nFor the main chorus, is using a <code style=\"background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">repeat</code> block for the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Clap Breakdown </span> so the measures will line up with the rest of the chorus.\r\n\r\nCan you add an effect to the chorus using a similar strategy? Choose any effect you want, but make sure all of the measures line up! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:repeat_toolbox---id:repeat_workspace)\r\n\r\nWhen you're finished, your song should have an Effect playing during the final part of the song\r\n\r\n![](https://images.code.org/c1d9f1118758e2a52ef879a7da64182b-image-1743443595096.png)\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!",
     "validations": [
       {
         "key": "music-lab-loops-explore-1_7d55d405-a98f-4a33-b566-64da51d97e4b",
-        "message": "auto-pass for exemplar",
+        "message": "[change exemplar settings to validate by type] [Also check if playing an effect]",
         "next": true,
         "conditions": [
 
@@ -72,7 +313,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-29T02:31:21.396+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-3\\\"\"],\"cloned_from\":\"music-lab-loops-explore-3\"},{\"changed_at\":\"2025-03-29 02:31:23 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-29T02:31:21.396+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-3\\\"\"],\"cloned_from\":\"music-lab-loops-explore-3\"},{\"changed_at\":\"2025-03-29 02:31:23 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 17:47:49 +0000\",\"changed\":[\"level_data\",\"predict_settings\",\"long_instructions\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 17:49:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 17:49:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 17:50:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 17:50:37 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 17:53:18 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 17:54:06 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

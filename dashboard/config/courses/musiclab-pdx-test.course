@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "musiclab-pdx-test",
+    "pilot_experiment": "spring-2024-k5-pilot",
     "version_year": "unversioned"
   },
   "resources": [
