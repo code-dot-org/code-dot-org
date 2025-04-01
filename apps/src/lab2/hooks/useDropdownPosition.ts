@@ -3,7 +3,9 @@ import {useLayoutEffect, useState} from 'react';
 
 const TOP_PADDING = 5;
 
-// A hook to find the styles for the dropdown container.
+// A hook that calculates and updates the dropdown's position relative to the
+// trigger button - returns the inline styles to position the dropdown below and
+// to the right of the button.
 export default function useDropdownPosition(
   buttonRef: React.RefObject<HTMLElement>,
   menuRef: React.RefObject<HTMLElement>
