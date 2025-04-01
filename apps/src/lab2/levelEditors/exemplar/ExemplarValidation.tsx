@@ -12,8 +12,6 @@ interface ExemplarValidationProps {
   exemplarSettings: ExemplarSettings;
   onChange: (updatedFields: ExemplarSettings) => void;
   appName: AppName;
-  modeOptions?: {label: string; value: string}[];
-  description?: string;
 }
 
 const defaultExemplarValidationSettings: ExemplarSettings = {
