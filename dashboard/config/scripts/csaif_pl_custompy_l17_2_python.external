@@ -15,9 +15,9 @@ markdown <<MARKDOWN
 
 ## Functions with Parameters 
 
-#### In this example, a function is created to paint two consecutive squares (or a line) a certain color in the neighborhood. 
+#### In this example, a function, `paint_line()`, is created to paint two consecutive squares (or a line) a certain color in the neighborhood. 
 
-#### The function is also called to paint the line blue. 
+#### The function is also called, or used, to paint the line blue. 
 
 #### Defining a function like this means you can run the function multiple times and just change the color each time by putting in a different value.
 
@@ -74,6 +74,9 @@ markdown <<MARKDOWN
   <h4>This tells the function which painter to use when it runs.</h4>
 </div>
 
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This concept is covered in Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 
 ## Next up!
 #### Explore the backpack feature to see how to transfer your custom code to different levels. 

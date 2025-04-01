@@ -1,0 +1,21 @@
+{
+  "name": "pilot-elem-music-lab",
+  "script_names": [
+    "pilot-elem-music-lab"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "pilot-elem-music-lab",
+    "pilot_experiment": "pilot-intro-programming-music-lab",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

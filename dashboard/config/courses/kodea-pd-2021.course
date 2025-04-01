@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "kodea-pd-2021",
+    "pilot_experiment": "csf-online-pd-kodea",
     "version_year": "2021"
   },
   "resources": [

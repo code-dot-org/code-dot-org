@@ -39,7 +39,8 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
     "display_name": "Hospital Triage Nurse",
@@ -51,6 +52,6 @@
       "blueprint_4.png": "60770973-3cc3-45f9-9784-51b493207428.png"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-25T13:56:59.057+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level4\"},{\"changed_at\":\"2025-03-25 13:59:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 21:00:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:56:59.057+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level4\"},{\"changed_at\":\"2025-03-25 13:59:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 21:00:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-31 20:32:52 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

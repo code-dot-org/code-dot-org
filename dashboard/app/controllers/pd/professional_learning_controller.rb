@@ -1,7 +1,7 @@
 class Pd::ProfessionalLearningController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
-  before_action :authenticate_user!, only: [:index, :csa, :csd, :csf, :csp]
+  before_action :authenticate_user!, only: [:index, :csa, :csd, :csf, :csp, :csaif]
 
   # GET my-professional-learning
   def index
@@ -65,6 +65,16 @@ class Pd::ProfessionalLearningController < ApplicationController
     @course_name = Pd::Workshop::COURSE_CSP
     if can_view_facilitator_page(@course_name)
       render 'pd/professional_learning/facilitator/csp'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-ai-fundamentals
+  def csaif
+    @course_name = Pd::Workshop::COURSE_CSAIF
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csaif'
     else
       render 'pd/professional_learning/facilitator/not_permitted_to_view'
     end
