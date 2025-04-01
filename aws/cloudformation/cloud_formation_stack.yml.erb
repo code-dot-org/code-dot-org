@@ -414,6 +414,9 @@ Resources:
       Handler: index.handler
       Runtime: nodejs22.x
       Role: !GetAtt MarketingRouterLambdaRole.Arn
+      LoggingConfig:
+        ApplicationLogLevel: "ERROR"
+        LogFormat: "JSON"
       Environment:
         Variables:
           MARKETING_DOMAIN: !Ref MarketingDomainName
