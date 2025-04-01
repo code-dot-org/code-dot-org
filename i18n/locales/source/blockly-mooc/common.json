@@ -2142,6 +2142,7 @@
   "participantTypeFacilitatorTitle": "Facilitators",
   "participants": "Participants",
   "partner": "Partner: {partner}",
+  "partnershipWith": "In partnership with",
   "password": "Password",
   "passwordConfirmation": "Password confirmation",
   "passwordTooShort": "Password too short (minimum is 6 characters)",
