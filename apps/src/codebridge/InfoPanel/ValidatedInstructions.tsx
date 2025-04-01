@@ -392,11 +392,13 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               moduleStyles['bubble-' + theme],
               moduleStyles.button
             )}
+            data-theme="Dark"
           >
             <Button
               text={navigationText}
               onClick={handleNavigation}
-              color={'white'}
+              color={'purple'}
+              type={'primary'}
               className={moduleStyles.buttonInstruction}
               iconLeft={navigationIcon}
               size={'s'}
