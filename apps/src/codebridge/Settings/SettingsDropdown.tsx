@@ -8,12 +8,14 @@ import FocusTrap from 'focus-trap-react';
 import React, {useLayoutEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {DEFAULT_FONT_SIZE_KEY, FontSize} from '@cdo/apps/lab2/constants';
 import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetSessionStorage} from '@cdo/apps/utils';
+import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 
@@ -49,6 +51,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const dispatch = useAppDispatch();
   const [selectedValue, setSelectedValue] = useState(selectedFontSizeKey);
 
+  const getSelectedKey = (value: string) => value as keyof typeof FontSize;
+
   useLayoutEffect(() => {
     const updateDropdownPosition = () => {
       if (buttonRef.current && menuRef.current) {
@@ -69,12 +73,11 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   }, [buttonRef, menuRef]);
 
   const onTextEditorDropdownChange = async (value: string) => {
-    const selectedKey = value as keyof typeof FontSize;
-    setSelectedValue(selectedKey);
+    setSelectedValue(getSelectedKey(value));
   };
 
   const onSave = () => {
-    const selectedKey = selectedValue as keyof typeof FontSize;
+    const selectedKey = getSelectedKey(selectedValue);
     if (FontSize[selectedKey]) {
       // We want the user preference for selected font size to persist across a session
       // for signed-in users per app type.
@@ -100,10 +103,12 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         role="dialog"
         style={dropdownStyles}
         aria-modal="true"
-        aria-label="Settings"
+        aria-label={commonI18n.settings()}
       >
         <div className={moduleStyles.header}>
-          <Heading6 className={moduleStyles.settingsTitle}>Settings</Heading6>
+          <Heading6 className={moduleStyles.settingsTitle}>
+            {commonI18n.settings()}
+          </Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label="Close settings"
@@ -111,14 +116,15 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
           />
         </div>
         <div className={moduleStyles.dropdownRow}>
+          {/* Customized label for dropdown */}
           <label
-            htmlFor="editor-font-size"
+            htmlFor={codebridgeI18n.textEditorFontSize()}
             className={moduleStyles.dropdownLabel}
           >
-            Text editor font size
+            {codebridgeI18n.textEditorFontSize()}
           </label>
           <SimpleDropdown
-            labelText="Text editor font size"
+            labelText={codebridgeI18n.textEditorFontSize()}
             isLabelVisible={false}
             onChange={event => onTextEditorDropdownChange(event.target.value)}
             items={fontSizeOptions}
