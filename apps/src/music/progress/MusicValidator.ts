@@ -5,11 +5,7 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
-import {
-  Condition,
-  ConditionType,
-  ExemplarValidationMode,
-} from '@cdo/apps/lab2/types';
+import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
 import {
   BlockTypes,
@@ -23,6 +19,7 @@ import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {PlayingTrigger} from '../player/interfaces/PlayingTrigger';
 import {isSoundEvent, SoundEvent} from '../player/interfaces/SoundEvent';
 import MusicPlayer from '../player/MusicPlayer';
+import {ExemplarValidationMode} from '../types';
 
 import {MusicConditions} from './MusicConditions';
 
@@ -38,6 +35,7 @@ export default class MusicValidator extends Validator {
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly getPlayingTriggers: () => PlayingTrigger[],
+    private readonly getExemplarValidationMode: () => ExemplarValidationMode,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
@@ -45,8 +43,8 @@ export default class MusicValidator extends Validator {
     super();
   }
 
-  didPassExemplarValidation(mode: ExemplarValidationMode): boolean {
-    return this.validatePlaybackEventsEquivalent(mode);
+  didPassExemplarValidation(): boolean {
+    return this.validatePlaybackEventsEquivalent();
   }
 
   shouldCheckConditions() {
@@ -449,7 +447,8 @@ export default class MusicValidator extends Validator {
   }
 
   // Validates that both playback event arrays are equivalent based on id, type, and starting measure.
-  validatePlaybackEventsEquivalent(mode: ExemplarValidationMode): boolean {
+  validatePlaybackEventsEquivalent(): boolean {
+    const mode = this.getExemplarValidationMode();
     const studentEvents = [...this.getPlaybackEvents()];
     const exemplarEvents = this.getExemplarPlaybackEvents();
 

@@ -2,9 +2,8 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 
-import {AppName, ExemplarSettings, ExemplarValidationMode} from '../../types';
+import {AppName, ExemplarSettings} from '../../types';
 
 import moduleStyles from './exemplar-settings.module.scss';
 
@@ -23,21 +22,11 @@ const defaultExemplarValidationSettings: ExemplarSettings = {
   validationEnabled: false,
 };
 
-const defaultDescription = (
-  <>
-    If enabled, the student's work will be compared against the exemplar's
-    expected output. The validation method may vary by app, and all validations
-    must pass for the level to be marked complete.
-  </>
-);
-
 const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
   exemplarDefined,
   exemplarSettings,
   onChange,
   appName,
-  modeOptions,
-  description = defaultDescription,
 }) => {
   return (
     <div className={moduleStyles.section}>
@@ -48,7 +37,10 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
         <div className={moduleStyles.row}>
           <BodyThreeText>
             An additional layer of validation is available for levels with
-            exemplar sources.
+            exemplar sources. If enabled, the student's work will be compared
+            against the exemplar's expected output. The validation method may
+            vary by app, and all validations must pass for the level to be
+            marked complete.
           </BodyThreeText>
         </div>
         {!exemplarDefined && (
@@ -79,38 +71,6 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
             }}
           />
         </div>
-        <EnhancedSafeMarkdown markdown={description} />
-        {modeOptions && (
-          <div className={moduleStyles.row}>
-            <label htmlFor="mode" className={moduleStyles.label}>
-              Validation Mode:
-            </label>
-            <select
-              id="mode"
-              name="mode"
-              className={moduleStyles.callout}
-              disabled={!exemplarDefined || !exemplarSettings.validationEnabled}
-              value={exemplarSettings.validationMode ?? ''}
-              onChange={e => {
-                let newMode;
-                if (['default', 'type'].includes(e.target.value)) {
-                  newMode = e.target.value as ExemplarValidationMode;
-                }
-                onChange({
-                  ...defaultExemplarValidationSettings,
-                  ...exemplarSettings,
-                  validationMode: newMode ? newMode : undefined,
-                });
-              }}
-            >
-              {modeOptions.map(({label, value}) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
         <div className={moduleStyles.row}>
           <label htmlFor="successMessage" className={moduleStyles.label}>
             Success message:

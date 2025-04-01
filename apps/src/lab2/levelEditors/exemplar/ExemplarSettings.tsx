@@ -1,14 +1,9 @@
 import React, {useState} from 'react';
 
-import {
-  EXEMPLAR_VALIDATION_MODE_OPTIONS as MUSIC_VALIDATION_MODE_OPTIONS,
-  EXEMPLAR_VALIDATION_DESCRIPTION as MUSIC_EXEMPLAR_VALIDATION_DESCRIPTION,
-} from '@cdo/apps/music/constants';
-
 import {AppName, ExemplarSettings} from '../../types';
 
-import ExemplarPlayer from './ExemplarPlayer';
 import ExemplarValidation from './ExemplarValidation';
+import MusicExemplarSettings from './MusicExemplarSettings';
 
 const AppExemplarSupport: {[key in AppName]?: boolean} = {
   music: true,
@@ -19,15 +14,6 @@ interface ExemplarSettingsProps {
   exemplarDefined: boolean;
   appName: AppName;
 }
-
-const validationModeOptions: Partial<{
-  [key in AppName]: {label: string; value: string}[];
-}> = {
-  music: MUSIC_VALIDATION_MODE_OPTIONS,
-};
-const validationModeDescriptions: Partial<Record<AppName, string>> = {
-  music: MUSIC_EXEMPLAR_VALIDATION_DESCRIPTION,
-};
 
 const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
   initialExemplarSettings,
@@ -66,12 +52,9 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
         exemplarDefined={exemplarDefined}
         exemplarSettings={exemplarSettings}
         onChange={updateSettings}
-        modeOptions={validationModeOptions[appName]}
-        description={validationModeDescriptions[appName]}
       />
       {appName === 'music' && (
-        <ExemplarPlayer
-          appName={appName}
+        <MusicExemplarSettings
           exemplarDefined={exemplarDefined}
           exemplarSettings={exemplarSettings}
           onChange={updateSettings}
