@@ -348,6 +348,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         style={dropdownStyles}
         aria-modal="true"
         aria-label={lab2I18n.versionHistoryList()}
+        data-theme="Dark"
       >
         <div className={moduleStyles.versionHistoryHeader}>
           <Heading6 className={moduleStyles.versionHistoryTitle}>
@@ -426,7 +427,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
               {!viewAsUserId && (
                 <Button
                   text={commonI18n.restore()}
-                  color={'white'}
                   size={'s'}
                   onClick={restoreSelectedVersion}
                   disabled={versionLoading || latestVersion === selectedVersion}
@@ -436,7 +436,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
               )}
               <Button
                 text={commonI18n.cancel()}
-                color={'white'}
                 size={'s'}
                 onClick={handleCancel}
                 disabled={versionLoading}
