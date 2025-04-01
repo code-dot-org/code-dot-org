@@ -168,6 +168,10 @@ export interface AdditionalInfoProps
   extends SectionProps,
     Pick<WorkshopFormState, 'fee' | 'participantGroupType' | 'notes'> {}
 
+export interface EmailsRemindersProps
+  extends SectionProps,
+    Pick<WorkshopFormState, 'suppressEmail'> {}
+
 export interface ScheduleProps
   extends SectionProps,
     Pick<WorkshopFormState, 'timeZone'> {

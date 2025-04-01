@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimalnie obsługiwane przeglądarki i platformy
 
-Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przeglądarek i systemów operacyjnych. Chociaż stare wersje mogą nadal działać, nie będziemy w stanie obsługiwać żądań poprawek błędów w starszych wersjach.
+Każdego roku będziemy aktualizować minimalne wersje wymagane dla przeglądarek i systemów operacyjnych. Chociaż stare wersje mogą nadal działać, nie będziemy w stanie obsługiwać żądań poprawek błędów w starszych wersjach.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przegl�
       <table>
         <th>
           Przeglądarka
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobilne Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Przeglądarka lipiec '24
         </th>
         <tr>
           <td>Chrome 103.x</td>
@@ -71,26 +49,49 @@ Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przegl�
           Platforma
         </th>
         <tr>
-          <td>macOS 10.13</td>
+          <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 11.x</td>
+          <td>iOS 15.x</td>
         </tr>
         <tr>
-          <td>Windows 7</td>
+          <td>Windows 8</td>
         </tr>
         <tr>
-          <td>Android 6</td>
+          <td>Android 8.x</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '25
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platforma lipiec '24
+          Platform July '25
         </th>
         <tr>
           <td>macOS 10.15</td>
@@ -109,6 +110,7 @@ Od lipca 2024 roku będziemy aktualizować minimalne wersje wymagane dla przegl�
         </tr>
       </table>
     </td>
+    -->
   </tr>
 </table>
 

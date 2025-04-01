@@ -12,14 +12,16 @@
 %ul
   %li
     Review the workshop agenda and resources posted on the
-    - if @workshop.course == 'CS Principles'
+    - if @workshop.course == Pd::Workshop::COURSE_CSP
       =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-principles') + '.'
-    - elsif @workshop.course == 'CS Discoveries'
+    - elsif @workshop.course == Pd::Workshop::COURSE_CSD
       =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-discoveries') + '.'
-    - elsif @workshop.course == 'Computer Science A'
+    - elsif @workshop.course == Pd::Workshop::COURSE_CSA
       =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-a') + '.'
-    - elsif @workshop.course == 'CS Fundamentals'
+    - elsif @workshop.course == Pd::Workshop::COURSE_CSF
       =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-fundamentals') + '.'
+    - elsif @workshop.course == Pd::Workshop::COURSE_CSAIF
+      =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-ai-fundamentals') + '.'
   %li
     Have quick questions about resources, agendas, or participant requests? Post them in the facilitator
     - if @workshop.course == 'CS Fundamentals'
