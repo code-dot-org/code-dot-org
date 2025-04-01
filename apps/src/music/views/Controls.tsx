@@ -3,8 +3,10 @@ import classNames from 'classnames';
 import React, {useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
+import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {Triggers} from '@cdo/apps/music/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   moveStartPlayheadPositionBackward,
@@ -116,11 +118,14 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
   hasTrigger,
   enableSkipControls = false,
 }) => {
+  const dispatch = useAppDispatch();
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
-  const isLoading = useMusicSelector(
-    state => state.music.soundLoadingProgress < 1
-  );
-
+  const disableRun = useAppSelector(({lab, predictLevel, music}) => {
+    const isPredictLevel = lab.levelProperties?.predictSettings?.isPredictLevel;
+    const hasPredictResponse = !!predictLevel.response;
+    const isLoading = music.soundLoadingProgress < 1;
+    return isLoading || (isPredictLevel && !hasPredictResponse);
+  });
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       <div id="controls-section" className={moduleStyles.section}>
@@ -128,11 +133,14 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
           id="run-button"
           className={classNames(
             moduleStyles.runButton,
-            isLoading && moduleStyles.disabled
+            disableRun && moduleStyles.disabled
           )}
-          onClick={() => setPlaying(!isPlaying)}
+          onClick={() => {
+            dispatch(submitPredictResponse({appType: 'music'}));
+            setPlaying(!isPlaying);
+          }}
           type="button"
-          disabled={isLoading}
+          disabled={disableRun}
         >
           <FontAwesomeV6Icon
             iconName={isPlaying ? 'stop' : 'play'}

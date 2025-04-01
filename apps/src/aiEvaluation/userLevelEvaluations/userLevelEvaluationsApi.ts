@@ -23,7 +23,7 @@ export async function logUserLevelEvaluation(
     return data;
   } catch (error) {
     MetricsReporter.logError({
-      event: MetricEvent.USER_LEVEL_INTERACTION_SAVE_FAIL,
+      event: MetricEvent.USER_LEVEL_EVALUATION_SAVE_FAIL,
       errorMessage:
         (error as Error).message || 'Failed to save UserLevel evaluation',
     });

@@ -17,7 +17,7 @@
 # An ordered set of levels associated with a single app, e.g. Farmer2
 # also associates an intro video
 
-# Game.name also maps to localized strings, e.g. [data.en.yml]: game: name: 'Unplug1': 'Introduction to Computer Science'
+# Game.name also maps to localized strings, e.g. [data/en.yml]: game: name: 'Unplug1': 'Introduction to Computer Science'
 class Game < ApplicationRecord
   include Seeded
   has_many :levels

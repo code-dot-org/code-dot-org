@@ -1,0 +1,21 @@
+{
+  "name": "tessnew-2024",
+  "script_names": [
+    "tessnew-2024"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "tessnew",
+    "pilot_experiment": "tesstesting",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

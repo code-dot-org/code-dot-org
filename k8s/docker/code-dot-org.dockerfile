@@ -22,6 +22,12 @@ COPY --chown=${UID} \
   Gemfile.lock \
   ./
 
+# /Gemfile includes '**/engines/*/*.gemspec', these will need to be added to this dockerfile
+# one by one as they are defined, or the build will be broken.
+COPY --chown=${UID} \
+  ./dashboard/engines/marketing/marketing.gemspec \
+  ./dashboard/engines/marketing/
+
 RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
   bundle install --jobs 8 --quiet
 EOF
@@ -70,9 +76,15 @@ COPY --chown=${UID} \
   ./apps/eslint \
   ./apps/eslint/
 
+# Required to handle the `portal:../frontend/packages/component-library` link in apps/package.json
 COPY --chown=${UID} \
   ./frontend/packages/component-library/package.json \
   ./frontend/packages/component-library/
+
+# Required to handle the `portal:../frontend/packages/component-library-styles` link in apps/package.json
+COPY --chown=${UID} \
+  ./frontend/packages/component-library-styles/package.json \
+  ./frontend/packages/component-library-styles/
 
 RUN \
   #

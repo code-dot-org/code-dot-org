@@ -1,6 +1,9 @@
 name 'computer-systems-lesson3-level5d-2024'
 title 'Farming Technology'
 description 'Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.'
+display_name 'Farming Technology'
+bubble_choice_description 'Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.'
+thumbnail_url 'https://images.code.org/819b6dfb2838c2c40e811fca3a123821-farm-tech.png'
 
 markdown <<MARKDOWN
 # Farming Technology

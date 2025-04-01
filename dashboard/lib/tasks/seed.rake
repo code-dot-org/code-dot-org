@@ -299,10 +299,59 @@ namespace :seed do
 
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
+    %w(allthethingscourse
+       csp-2017
+       csp-2019
+       20-hour
+       allthemigratedthings
+       alltheselfpacedplthings
+       allthettsthings
+       artist
+       course1
+       course2
+       course3
+       course4
+       coursea-2017
+       courseb-2017
+       coursec-2017
+       coursed-2017
+       coursee-2017
+       coursef-2017
+       pre-express-2017
+       express-2017
+       coursea-2019
+       coursec-2019
+       coursee-2019
+       coursea-2020
+       interactive-games-animations-2023
+       interactive-games-animations-2024
+       customizing-llms-2024
+       dance
+       events
+       flappy
+       frozen
+       hero
+       hourofcode
+       infinity
+       mc
+       minecraft
+       playlab
+       starwars
+       starwarsblocks
+       step
+       oceans
+       sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017 ui-test-course-2019 ui-test-single-unit-course-2025 ui-test-single-unit-course-2026).each do |course_name|
+    %w(ui-test-course-2017
+       ui-test-course-2019
+       ui-test-single-unit-course-2025
+       ui-test-single-unit-course-2026
+       ui-test-csa-family-script
+       ui-test-facilitator-pl-course
+       ui-test-teacher-pl-course
+       ui-test-versioned-script-2017
+       ui-test-versioned-script-2019).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
@@ -412,7 +461,7 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course ui-test-single-unit-course).each do |course_offering_name|
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course ui-test-single-unit-course ui-test-versioned-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end

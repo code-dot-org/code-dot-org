@@ -72,8 +72,6 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
     state => (state.lab.initialSources?.source as string) || '{}'
   );
 
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
   const {currentAiCustomizations, viewMode} = useAppSelector(
@@ -136,12 +134,6 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
         });
     }
   }, [dispatch, signInState]);
-
-  // When the level changes or if we are viewing aichat level as a different user
-  // (e.g., teacher viewing student work), clear the chat message history and start a new session.
-  useEffect(() => {
-    dispatch(clearChatMessages());
-  }, [currentLevelId, viewAsUserId, dispatch]);
 
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and

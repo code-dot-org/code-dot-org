@@ -1,0 +1,20 @@
+{
+  "name": "creativity-with-ai-playground",
+  "script_names": [
+    "creativity-with-ai-playground"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "creativity-with-ai-playground",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

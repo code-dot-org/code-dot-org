@@ -1,0 +1,21 @@
+{
+  "name": "gen-ai-standalone",
+  "script_names": [
+    "gen-ai-standalone"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "gen-ai-standalone",
+    "pilot_experiment": "gen-ai-lab-v1",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

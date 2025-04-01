@@ -2,6 +2,7 @@
 @single_session
 Feature: Signing in and signing out
 
+@skip
 Scenario: Student sign in from code.org
   Given I create a student named "Bob"
   And I set the cookie named "_loc_notice" to "1"

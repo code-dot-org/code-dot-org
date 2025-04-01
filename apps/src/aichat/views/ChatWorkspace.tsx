@@ -12,7 +12,9 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
 import {
-  fetchStudentChatHistory,
+  clearChatMessages,
+  clearStagedFiles,
+  fetchUserChatHistory,
   selectAllVisibleMessages,
   selectMultimodalEnabled,
   setShowModalType,
@@ -55,6 +57,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const visibleItems = useSelector(selectAllVisibleMessages);
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
     if (progress.viewAsUserId && progress.currentLevelId) {
@@ -66,11 +70,23 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const dispatch = useAppDispatch();
 
+  // This effect resets chat history and any staged uploads when:
+  // a) a user switches levels, or
+  // b) a teacher switches between viewing students (or their own project) on a given level.
   useEffect(() => {
+    dispatch(clearChatMessages());
+    dispatch(clearStagedFiles());
+
     if (selectedStudent) {
-      dispatch(fetchStudentChatHistory(selectedStudent.id));
+      dispatch(
+        fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
+      );
+    } else {
+      dispatch(
+        fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
+      );
     }
-  }, [selectedStudent, currentLevelId, dispatch]);
+  }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
 
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);
@@ -193,7 +209,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           />
         )}
         <div className={moduleStyles.buttonRow}>
-          {multimodalEnabled && <UploadButton />}
+          {multimodalEnabled && (
+            <UploadButton isDisabled={!canChatWithModel || !!selectedStudent} />
+          )}
           <Button
             text={aichatI18n.clearChatButtonText()}
             disabled={!canChatWithModel}

@@ -13,12 +13,15 @@ export interface MusicLevelData extends ProjectLevelData {
   library?: string;
   packId?: string;
   showSoundFilters?: boolean;
+  showSoundsPanelInSoundsMode?: boolean;
+  sortUnrestrictedPacksByType?: boolean;
   blockMode?: ValueOf<typeof BlockMode>;
   hideAiTemperature?: boolean;
   showAiTemperatureExplanation?: boolean;
   showAiGenerateAgainHelp?: boolean;
   allowChangeStartingPlayheadPosition?: boolean;
   toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  validationTimeout?: number;
 }
 
 export type LoadFinishedCallback = (

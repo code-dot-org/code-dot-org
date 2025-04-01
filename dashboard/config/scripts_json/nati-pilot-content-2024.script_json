@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 20:09:19 UTC",
+    "serialized_at": "2025-03-26 13:17:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2536,7 +2536,7 @@
       "key": "75fc097e-7279-448f-971f-fc0a8dc6ea7d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video “The Internet: Packets, Routing, and Reliability”",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"How Cyber Attacks Happen in Real Life\".",
         "tips": [
           {
             "type": "teachingTip",

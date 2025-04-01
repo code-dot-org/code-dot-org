@@ -22,8 +22,12 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
-const ChatEventDescriptions = {
-  COPY_CHAT: aichatI18n.chatEventDescriptions_copyChat(),
+const chatEventDescriptionsOwner = {
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChatOwner(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
+} as const satisfies {[key in ChatEventDescriptionKey]: string};
+
+const chatEventDescriptionsStudent = {
   CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
   LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
@@ -69,6 +73,10 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   isTeacherView,
 }) => {
   const dispatch = useAppDispatch();
+
+  const chatEventDescriptions = isTeacherView
+    ? chatEventDescriptionsStudent
+    : chatEventDescriptionsOwner;
 
   if (isChatMessage(event)) {
     return (
@@ -127,7 +135,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   // Automatically narrowed to UserActionEvent
   return (
     <Alert
-      text={ChatEventDescriptions[event.descriptionKey]}
+      text={chatEventDescriptions[event.descriptionKey]}
       type="info"
       size="s"
     />

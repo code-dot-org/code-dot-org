@@ -22,22 +22,36 @@ describe('Section Component', () => {
     const {rerender} = renderComponent({
       background: sectionBackground.secondary,
     });
+    const section = screen
+      .getByText('This is content.')
+      .closest('.container')?.parentElement;
 
     // check if background color is light gray
-    expect(screen.getByText('This is content.').parentElement).toHaveStyle(
+    expect(section).toHaveStyle(
       'background-color: var(--background-neutral-secondary)',
     );
 
     // change background color to light teal
     rerender(
-      <Section background="brandLightPrimary">
+      <Section background={sectionBackground.brandLightPrimary}>
         <div>This is content.</div>
       </Section>,
     );
 
     // check if background color is light teal
-    expect(screen.getByText('This is content.').parentElement).toHaveStyle(
+    expect(section).toHaveStyle(
       'background-color: var(--background-brand-light-primary)',
     );
+  });
+
+  it('applies a custom ID to the section', () => {
+    renderComponent({id: 'section-id'});
+
+    const section = screen
+      .getByText('This is content.')
+      .closest('.container')?.parentElement;
+
+    // check if the section element has the correct id
+    expect(section).toHaveAttribute('id', 'section-id');
   });
 });

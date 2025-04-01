@@ -1,0 +1,20 @@
+name 'PLSP-VPL-21-GS_mod2-TeachersInClassrooms_3_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Student Experience
+
+<img src="https://images.code.org/f871aed8987a4e53d2c34a0f7dc6f2d7-image-1713997323056.21.59 PM.png" alt="Two students sitting at individual laptops smile at their screens" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+
+#### In this lesson, we are going to dig deeper into the differences between what teachers see and what students see. 
+
+### **You will learn how to:**
+
+* #### Experience Code.org's platform from the student perspective.
+* #### Identify differences between student and teacher view.
+<br>
+
+#### **Suggested time:** 20 minutes
+<br><br><br>
+MARKDOWN

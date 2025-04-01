@@ -1,0 +1,21 @@
+{
+  "name": "musiclab-pilot",
+  "script_names": [
+    "musiclab-pilot"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "musiclab-pilot",
+    "pilot_experiment": "musiclab-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -9,57 +9,27 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "## What is a Function?\n#### Look at the code to the right. \n- #### What do you notice?\n- #### What do you wonder? \n",
+        "text": "## What is a Function?\n In the previous level, you saw a **function** similar to the code here.\n\n \n-  What do you notice?\n- What do you wonder? \n",
         "imageUrl": "https://images.code.org/989a61be73abbee97d35979a65c81a23-panel images (4).jpg",
         "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
         "layout": "text-top-left"
       },
       {
-        "text": "## User-Defined Functions\n\n#### A *function* is a set of instructions that defines a block of code that can be reused to perform a specific task. \n\n<br>\n\n#### These are written by the programmer and not associated with a class. ",
+        "text": "## User-Defined Functions\n\n A **function** is a set of instructions that defines a block of code and can be reused to perform a specific task. \n\n<br>\n\nThese are written by the programmer to simplify their code.\n\n<br>\n\nHere, a function called `move_fast` was defined for the painter to move three times. This simplifies the code because now, the programmer can use 'move_fast' to move three times instead of having to type three extra lines of code.",
         "imageUrl": "https://images.code.org/632f6bb59d83985de975165a7b9891d8-functions.jpg",
         "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
         "layout": "text-top-left"
       },
       {
-        "text": "<h2>User-Defined Functions</h2>\n\n#### We *define*, or create, a function with:\n>#### **def function_name()**\n\n<br>\n\n#### We *call*, or use a function with:\n>#### **function_name()**",
+        "text": "<h2>User-Defined Functions</h2>\n\nThere are two parts to using functions.\n\n1. **Define the function**-this means creating it by giving it a name and writing the steps you want it to do:\n>**def function_name()** <br>\n>&nbsp;&nbsp;&nbsp;&nbsp;**steps of code to run**\n\n*Note: the code inside the function is indented will not run until it is called*\n<br>\n\n2.  **Call the function** — this means using it in your main code, so it actually runs:\n> **function_name()**\n\n## Let's try!",
         "imageUrl": "https://images.code.org/0aeac77a5c372a4260a95f049e3cfbaa-functions (1).jpg",
         "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
-        "layout": "text-top-left"
-      },
-      {
-        "text": "## Parameter\n\n#### A *parameter* is a placeholder in the function definition that specifies what kind of input the function will take.",
-        "imageUrl": "https://images.code.org/3ddd8201405019823ec72c4f99a46e2f-functions (2).jpg",
-        "key": "csaif-PL-functions-L16_Python-14419561-5813-4214-91b6-5e1b8ddb2b49",
-        "layout": "text-top-left"
-      },
-      {
-        "text": "## Arguments\n\n####  An *argument* is the actual values passed into a function when you call it.",
-        "imageUrl": "https://images.code.org/587ba2739412f60a6853502542621520-functions (3).jpg",
-        "key": "csaif-PL-functions-L16_Python-a2a768fd-7268-411c-bae3-730e82be2da9",
-        "layout": "text-top-left"
-      },
-      {
-        "text": "## Reusing User-Defined Functions\n\n#### If we need to *reuse functions* we can define them in a library, like ***custom.py***\n\n#### We call our functions in ***main.py***\n\n<br>\n\n#### *Toggle between main.py and custom.py files on the top of your workspace.*\n",
-        "imageUrl": "https://images.code.org/8994272de78cc15253e1013982d567df-panel slides.jpg",
-        "key": "csaif-PL-functions-L16_Python-b5157f5c-caaa-428b-aa05-b86245f4af83",
-        "layout": "text-top-left"
-      },
-      {
-        "text": "## Reusing User-Defined Functions\n\n#### Notice that we use a painter object as our **parameter** and the name of our actual object as the **argument.**",
-        "imageUrl": "https://images.code.org/b2caec8f46a2540186dcf5a5a487baeb-panel slides (1).jpg",
-        "key": "csaif-PL-functions-L16_Python-c86fe46f-0eab-4ca7-893a-ca393febd7b9",
-        "layout": "text-top-left"
-      },
-      {
-        "text": "## Reusing User-Defined Functions\n\n#### When using functions from *custom.py*, we need to use dot notation so that Python knows the function is located in *custom.py*.\n\n<br>\n<br>\n\n## Let's practice!",
-        "imageUrl": "https://images.code.org/fc7bf211088b75ecf25cc2fbdf851463-panel slides (2).jpg",
-        "key": "csaif-PL-functions-L16_Python-4bd9a353-53aa-445e-9a47-e7d5d022d64f",
         "layout": "text-top-left"
       }
     ],
     "name_suffix": "_2024",
     "offer_browser_tts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-06T16:47:19.478+00:00\",\"changed\":[\"cloned from \\\"csaif-PL-pythonLab_tour-L1-5_python\\\"\"],\"cloned_from\":\"csaif-PL-pythonLab_tour-L1-5_python\"},{\"changed_at\":\"2025-03-06 16:58:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 15:40:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 15:56:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:09:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:11:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:12:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:33:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:36:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:37:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-06T16:47:19.478+00:00\",\"changed\":[\"cloned from \\\"csaif-PL-pythonLab_tour-L1-5_python\\\"\"],\"cloned_from\":\"csaif-PL-pythonLab_tour-L1-5_python\"},{\"changed_at\":\"2025-03-06 16:58:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 15:40:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 15:56:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:09:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:11:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:12:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:33:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:36:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-07 16:37:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-28 16:21:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-28 16:57:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

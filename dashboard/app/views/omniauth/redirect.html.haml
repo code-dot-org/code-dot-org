@@ -11,7 +11,7 @@
           var oauthType = "#{@form_data[:provider]}";
           sessionStorage.setItem('email', email);
           sessionStorage.setItem('oauthType', oauthType);
-          window.location.href = "#{new_sign_up_url}";
+          window.location.href = "#{sign_up_url}";
         })();
 
   %body

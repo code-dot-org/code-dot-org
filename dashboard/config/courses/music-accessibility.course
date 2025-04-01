@@ -1,0 +1,20 @@
+{
+  "name": "music-accessibility",
+  "script_names": [
+    "music-accessibility"
+  ],
+  "published_state": "beta",
+  "instruction_type": "self_paced",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "music-accessibility",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,6 +1,6 @@
 name 'test-elem-career-journeys-extra-skills-choices'
-display_name 'Practice Recreating these Timelines with Code'
-description 'Choose an option below to try to recreate with code.'
+display_name 'More Skills!'
+description 'Level up your Sprite Lab skills. Choose one to practice.'
 
 sublevels
 

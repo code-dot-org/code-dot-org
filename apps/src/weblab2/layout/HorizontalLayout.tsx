@@ -1,11 +1,13 @@
 import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
+import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
+import weblab2Styles from './weblab2Layout.module.scss';
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
@@ -14,8 +16,11 @@ const MIN_EDITOR_HEIGHT = 200;
 const MIN_PREVIEW_HEIGHT = 200;
 const INITIAL_PREVIEW_HEIGHT = 400;
 const MIN_RIGHT_PANEL_WIDTH = 300;
+const PROJECT_FOOTER_HEIGHT = 64;
 
-const HorizontalLayout: React.FunctionComponent = () => {
+const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
+  isProjectLevel,
+}) => {
   const {
     leftPanelWidth,
     rightPanelWidth,
@@ -25,8 +30,8 @@ const HorizontalLayout: React.FunctionComponent = () => {
     rightBottomPanelDragging,
   } = useHorizontalLayout({
     leftPanel: {
-      minWidth: MIN_INFO_PANEL_WIDTH,
-      initialWidth: INITIAL_INFO_PANEL_WIDTH,
+      minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
+      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
       name: 'instructions',
     },
     rightTopPanel: {
@@ -39,29 +44,45 @@ const HorizontalLayout: React.FunctionComponent = () => {
       name: 'preview',
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
+    appName: 'weblab2',
+    heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
   });
 
   return (
-    <div className={moduleStyles.layoutContainer}>
-      <InfoPanel
-        style={{width: leftPanelWidth}}
-        className={moduleStyles.flexShrink0}
-      />
-      {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
+    <div
+      className={
+        isProjectLevel
+          ? weblab2Styles.containerWithFooter
+          : moduleStyles.defaultContainer
+      }
+    >
+      <div className={moduleStyles.layoutContainer}>
+        {!isProjectLevel && (
+          <InfoPanel
+            style={{width: leftPanelWidth}}
+            className={moduleStyles.flexShrink0}
+          />
+        )}
+        {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
          can only drag left, not right (something about the mouse events getting 
          captured by the preview?).
          Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
-      <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
-        <Workspace style={{height: rightTopPanelHeight}} />
-        <ResizeBar
-          isVertical={false}
-          separatorProps={rightBottomPanelSeparatorProps}
-          isDragging={rightBottomPanelDragging}
-        />
-        <div style={{height: rightBottomPanelHeight}}>
-          <FilePreview />
+        <div
+          className={moduleStyles.flexColumn}
+          style={{width: rightPanelWidth}}
+        >
+          <Workspace style={{height: rightTopPanelHeight}} />
+          <ResizeBar
+            isVertical={false}
+            separatorProps={rightBottomPanelSeparatorProps}
+            isDragging={rightBottomPanelDragging}
+          />
+          <div style={{height: rightBottomPanelHeight}}>
+            <FilePreview />
+          </div>
         </div>
       </div>
+      {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
   );
 };

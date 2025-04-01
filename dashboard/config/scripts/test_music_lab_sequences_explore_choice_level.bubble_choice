@@ -1,9 +1,16 @@
 name 'test-music-lab-sequences-explore-choice-level'
-display_name 'Recreate what you hear!'
-description 'Your friends found out you can compose music on your computer with code. Now they are asking for your help to recreate snippets of songs for them. Complete each of the levels below to practice your music producer skills.'
+display_name 'Practice'
+description 'Try at least 2 practice levels!'
 
 sublevels
 level 'test-music-lab-sequences-explore-choice-level-a'
 level 'test-music-lab-sequences-explore-choice-level-b'
-level 'test-music-lab-sequences-explore-choice-level-c'
+# level 'test-music-lab-sequences-explore-choice-level-c'
+level 'test-music-lab-sequences-explore-choice-level-d'
+level 'test-music-lab-sequences-explore-choice-level-e'
+level 'test-music-lab-sequences-explore-choice-level-f'
 
+
+markdown <<MARKDOWN
+
+MARKDOWN

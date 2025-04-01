@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 ####  Computational thinking—breaking problems into steps, recognizing patterns, and designing clear instructions—lays the foundation for strong coding skills.
 
-#### In this activity, you'll see how students apply these skills to guide the Painter through a maze.
+#### In this activity, you'll see how students apply these skills to guide the Painter through a maze preparing them to code in the **Neighborhood IDE.**
 
 #### By prioritizing problem-solving, students develop a solid understanding before diving into code.
 
@@ -24,8 +24,8 @@ markdown <<MARKDOWN
         Jot down the steps to navigate the painter from position A to position C on the map below using only the following commands: 
     </p>
     <ul>
-    <li style="font-size: 14pt;">move_forward</li>
-    <li style="font-size: 14pt;">turn_left</li>
+    <li style="font-size: 14pt;">Move forward</li>
+    <li style="font-size: 14pt;">Turn left</li>
     </ul>
     <p style="font-size: 14pt;">Now, try going from C to E. </p>
     <br>
@@ -55,7 +55,7 @@ markdown <<MARKDOWN
 
 <br>
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 
 

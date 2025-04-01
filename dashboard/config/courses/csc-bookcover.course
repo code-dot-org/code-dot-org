@@ -1,0 +1,21 @@
+{
+  "name": "csc-bookcover",
+  "script_names": [
+    "csc-bookcover"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csc-bookcover",
+    "pilot_experiment": "csc-pilot-fa2022-bookcovers",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

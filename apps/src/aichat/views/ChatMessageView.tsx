@@ -1,4 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {memo, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -14,7 +13,9 @@ import {
   isCompletedChatMessage,
   isServerChatEvent,
 } from '../types';
+import {getAssetUrl} from '../utils';
 
+import FilePreview from './assets/FilePreview';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
@@ -32,6 +33,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {status, role, chatMessageText, assets} = chatMessage;
   const currentChannelId = useAppSelector(state => state.lab.channel?.id);
+  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -86,25 +88,30 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       ) : null;
   }
 
-  if (!isAssistant && !isChatHistoryView && assets && currentChannelId) {
-    footer = (
-      <div className={styles.assetRow}>
+  let header;
+  if (!isAssistant && assets && currentChannelId) {
+    header = (
+      <div className={styles.assetCol}>
         {assets.map(asset => {
-          return asset.endsWith('.pdf') ? (
-            <div key={asset} className={styles.pdfPreview}>
-              <FontAwesomeV6Icon
-                iconName="file-pdf"
-                className={styles.pdfIcon}
-              />
-              <span>{asset}</span>
-            </div>
-          ) : (
-            <img
-              key={asset}
-              alt=""
-              className={styles.imagePreview}
-              src={`/v3/assets/${currentChannelId}/${asset}`}
-            />
+          const filename = asset.filename;
+          const url = getAssetUrl(asset, currentChannelId, levelName);
+          return (
+            <button
+              type="button"
+              className={styles.assetButton}
+              onClick={() => window.open(url, '_blank')}
+            >
+              {filename.endsWith('.pdf') ? (
+                <FilePreview type="pdf" filename={filename} url={url} />
+              ) : (
+                <img
+                  key={filename}
+                  alt=""
+                  className={styles.imagePreview}
+                  src={url}
+                />
+              )}
+            </button>
           );
         })}
       </div>
@@ -116,6 +123,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
+      header={header}
       footer={footer}
     />
   );

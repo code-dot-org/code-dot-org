@@ -1,0 +1,8 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#starter-assets-container"}}
+  Manage Starter Assets
+
+#starter-assets-container.in.collapse
+  #starter-assets-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_starter_assets.js'), data: {levelname: @level.name}}

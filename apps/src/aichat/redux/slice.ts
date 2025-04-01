@@ -2,7 +2,10 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
 
-import {ModalTypes} from '../constants';
+import {
+  ModalTypes,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
 import {
   AiCustomizations,
   ChatEvent,
@@ -13,10 +16,12 @@ import {
   Visibility,
   isModelUpdate,
   isNotification,
+  isUserActionEvent,
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
   PendingChatMessage,
+  ChatAsset,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -56,6 +61,38 @@ const aichatSlice = createSlice({
       action: PayloadAction<ServerChatEvent[]>
     ) => {
       state.studentChatHistory = action.payload;
+    },
+    setOwnChatHistory: (state, action: PayloadAction<ServerChatEvent[]>) => {
+      // It's confusing / not helpful for users to see their own history of when they loaded the level.
+      // These events are exclusively for teachers to view their student's activity, so we exclude them
+      // when someone is looking at their own history.
+      const events = action.payload.filter(
+        event =>
+          !(isUserActionEvent(event) && event.descriptionKey === 'LOAD_LEVEL')
+      );
+
+      // Find the last index of an event that marks the start a new conversation with the model.
+      let lastResetIndex = -1;
+      for (let i = events.length - 1; i >= 0; i--) {
+        const event = events[i];
+
+        if (
+          (isModelUpdate(event) &&
+            RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
+              event.updatedField
+            )) ||
+          (isUserActionEvent(event) && event.descriptionKey === 'CLEAR_CHAT')
+        ) {
+          lastResetIndex = i;
+          break;
+        }
+      }
+
+      if (lastResetIndex >= 0) {
+        state.chatEventsCurrent = events.slice(lastResetIndex);
+      } else {
+        state.chatEventsCurrent = events;
+      }
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
@@ -219,11 +256,11 @@ const aichatSlice = createSlice({
     },
     addStagedFile(
       state,
-      action: PayloadAction<{key: string; filename: string}>
+      action: PayloadAction<{key: string; asset: ChatAsset; loaded?: boolean}>
     ) {
       state.stagedFiles.push({
         ...action.payload,
-        status: 'uploading',
+        status: action.payload.loaded ? 'uploaded' : 'uploading',
       });
     },
     stagedFileUploadFinished(
@@ -307,6 +344,7 @@ export const {
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
+  setOwnChatHistory,
   setUserHasAichatAccess,
   setViewMode,
   addStagedFile,

@@ -199,17 +199,6 @@ export default function SchoolDataInputs({
           </div>
         )}
       </div>
-      {/* hidden fields are needed when form is submitted in _finish_sign_up.js 
-      in order to pass the default schoolType when the user does 
-      not teach in a school setting */}
-      {schoolId === NonSchoolOptions.NO_SCHOOL_SETTING && (
-        <input
-          hidden
-          readOnly
-          name={fieldNames.schoolType}
-          value={NonSchoolOptions.NO_SCHOOL_SETTING}
-        />
-      )}
     </div>
   );
 }

@@ -1,0 +1,20 @@
+{
+  "name": "kaitie-test-script",
+  "script_names": [
+    "kaitie-test-script"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "kaitie-test-script",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
