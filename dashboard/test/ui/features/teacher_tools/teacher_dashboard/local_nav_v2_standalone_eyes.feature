@@ -9,7 +9,7 @@ Feature: V2 teacher dashboard local navigation - standalone unit - Eyes
   Scenario: Local navigation on standalone Unit
     When I open my eyes to test "teacher local nav v2 - standalone unit overview"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "interactive-games-animations-2024" with teacher "Teacher_Sally"
+    Given I am assigned to course "interactive-games-animations-2024" and unit "interactive-games-animations-2024" with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
