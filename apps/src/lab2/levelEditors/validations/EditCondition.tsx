@@ -6,6 +6,14 @@ import {Condition, ConditionType} from '../../types';
 
 import moduleStyles from './edit-validations.module.scss';
 
+function getConditionPart(
+  value: string | number,
+  index: number
+): string | number {
+  const parts = typeof value === 'string' ? value.split(':') : [value];
+  return parts[index];
+}
+
 interface EditConditionProps {
   condition: Condition;
   conditionTypes: ConditionType[];
@@ -30,8 +38,8 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
   const valueType = currentConditionType?.valueType;
   const hasValueType = valueType !== undefined;
   const valueTypes = React.useMemo(
-    () => currentConditionType?.valueType?.split(':') || [],
-    [currentConditionType?.valueType]
+    () => valueType?.split(':') || [],
+    [valueType]
   );
   const useDropdown = !!currentConditionType?.valueOptions;
   const dropdownOptions = currentConditionType?.valueOptions || [''];
@@ -108,11 +116,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           <div className={moduleStyles.valueInputsWrapper}>
             {valueTypes.map((type, i) => {
               const currentConditionValue = condition.value!;
-              const currentParts =
-                typeof currentConditionValue === 'string'
-                  ? currentConditionValue.split(':')
-                  : [currentConditionValue];
-              const currentValue = currentParts[i];
+              const currentValue = getConditionPart(currentConditionValue, i);
 
               const isNumber = type === 'number';
               const isString = type === 'string';
