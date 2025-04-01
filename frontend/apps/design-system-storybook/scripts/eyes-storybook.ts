@@ -24,8 +24,8 @@ exec('yarn dotenv-run -- eyes-storybook', (error, stdout) => {
             
         ${
           testsSuccessful
-            ? `✅ No storybook eyes differences detected!`
-            : `⚠️⚠️⚠️ Detected storybook eyes differences, see [report](${eyesFailureLink})!`
+            ? `✅ No Storybook eyes differences detected!`
+            : `⚠️⚠️⚠️ Detected Storybook eyes differences, see [report](${eyesFailureLink})!`
         }
         
         ${
