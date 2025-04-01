@@ -2366,7 +2366,7 @@ ActiveRecord::Schema.define(version: 2025_03_31_202624) do
 
   create_table "user_preference", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "section_order"
+    t.json "section_order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_user_preference_on_user_id"
