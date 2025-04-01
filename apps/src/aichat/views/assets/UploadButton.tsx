@@ -19,13 +19,9 @@ import {
   stagedFilesLimitExceeded,
   stagedFileUploadFinished,
 } from '../../redux';
+import {AssetSource} from '../../types';
 
 import styles from './upload-button.module.scss';
-
-const UPLOAD_TYPES = {
-  Device: 'device',
-  Library: 'library',
-};
 
 const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
   const dispatch = useAppDispatch();
@@ -102,7 +98,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
 
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
-        source: UPLOAD_TYPES.Device,
+        source: AssetSource.PROJECT,
         fileCountSuccess: uploadSuccessCount,
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
@@ -117,7 +113,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
           key: `${asset.filename}-${Date.now()}`,
           asset: {
             filename: asset.filename,
-            source: 'level',
+            source: AssetSource.LEVEL,
           },
           loaded: true,
         })
@@ -126,7 +122,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
 
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
-        source: UPLOAD_TYPES.Library,
+        source: AssetSource.LEVEL,
         fileCountSuccess: assets.length,
       })
     );
@@ -142,7 +138,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     openFileInput();
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
-        source: UPLOAD_TYPES.Device,
+        source: AssetSource.PROJECT,
       })
     );
   };
@@ -186,7 +182,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
               setShowAssetManager(true);
               dispatch(
                 sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
-                  source: UPLOAD_TYPES.Library,
+                  source: AssetSource.LEVEL,
                 })
               );
             },
