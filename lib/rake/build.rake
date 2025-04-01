@@ -63,8 +63,9 @@ namespace :build do
         ChatClient.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:setup_or_migrate'
 
-        # Update the schema cache file, except for production which always uses the cache.
-        unless rack_env?(:production)
+        # Update the schema cache file, except for production which always uses the cache,
+        # and on adhoc where updating schema cache can cause merge conflicts.
+        unless [:production, :adhoc].include?(rack_env)
           schema_cache_file = dashboard_dir('db/schema_cache.yml')
           RakeUtils.rake 'db:schema:cache:dump'
           # NOTE: Temporarily commenting the `else` check below (and ignoring
