@@ -173,7 +173,7 @@ describe('CourseContentDropdown', () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
     expect(fetchSpy).toHaveBeenCalled();
-    const lessonDropdown = screen.getByLabelText(i18n.goToLesson());
+    const lessonDropdown = screen.getByLabelText(i18n.jumpTo());
     fireEvent.change(lessonDropdown, {
       target: {value: '/s/csd3-2024/lessons/4/levels/1'},
     });
