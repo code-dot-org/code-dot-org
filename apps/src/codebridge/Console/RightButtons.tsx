@@ -41,7 +41,6 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
             size={'xs'}
             type={'tertiary'}
             className={darkModeStyles.tertiaryButton}
-            data-theme="Dark"
           />
         </WithTooltip>
         {!isShareView && <SwapLayoutDropdown />}

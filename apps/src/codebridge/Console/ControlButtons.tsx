@@ -163,7 +163,6 @@ const ControlButtons: React.FunctionComponent = () => {
               moduleStyles.controlButton,
               darkModeStyles.primaryButton
             )}
-            data-theme="Dark"
           />
         </WithConditionalTooltip>
       )}
