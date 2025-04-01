@@ -459,7 +459,7 @@ class ApiController < ApplicationController
       end
     else
       course_name = params[:course_name]
-      unit_position = params[:unit_position]
+      unit_position = params[:unit_position]&.to_i
       context = Queries::Courses.get_unit_context(course_name, unit_position)
       unit = context[:unit]
     end
