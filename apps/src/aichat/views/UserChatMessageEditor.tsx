@@ -45,18 +45,6 @@ const UserChatMessageEditor: React.FunctionComponent<{
     [isWaitingForChatResponse, multimodalEnabled, chatAssets, dispatch]
   );
 
-  // seems to stay big after sending a large message
-  const onChange = () => {
-    const ref = inputRef.current;
-
-    if (!ref) {
-      return;
-    }
-
-    ref.style.height = 'auto'; // Reset height
-    ref.style.height = ref.scrollHeight + 'px'; // Set to scroll height
-  };
-
   const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   useEffect(() => {
@@ -70,7 +58,6 @@ const UserChatMessageEditor: React.FunctionComponent<{
   return (
     <UserMessageEditor
       onSubmit={handleSubmit}
-      onChange={onChange}
       disabled={disabled}
       editorContainerClassName={editorContainerClassName}
       ref={inputRef}

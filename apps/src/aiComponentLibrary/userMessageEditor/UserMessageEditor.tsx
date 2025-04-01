@@ -19,7 +19,6 @@ export interface UserMessageEditorProps {
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
-  onChange?: () => void;
 }
 
 const UserMessageEditor = React.forwardRef<
@@ -33,7 +32,6 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
-      onChange,
     },
     ref
   ) => {
@@ -58,7 +56,18 @@ const UserMessageEditor = React.forwardRef<
       [onSubmit]
     );
 
-    useEffect(() => onChange?.(), [onChange, userMessage]);
+    useEffect(() => {
+      if (typeof ref !== 'object' || ref === null) {
+        return;
+      }
+
+      if (!ref.current) {
+        return;
+      }
+
+      ref.current.style.height = 'auto'; // Reset height
+      ref.current.style.height = ref.current.scrollHeight + 'px'; // Set to scroll height
+    }, [ref, userMessage]);
 
     const icon = {iconName: 'paper-plane'};
 
