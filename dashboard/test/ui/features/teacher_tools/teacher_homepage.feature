@@ -185,7 +185,10 @@ Feature: Using the teacher homepage sections feature
     # save the older section id, from the last row of the table
     And I save the section id from row 0 of the section table
 
+    And I wait to see ".uitest-owned-sections a:contains('Computer Science Principles')"
     And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
+
+    And I wait to see ".uitest-owned-sections a:contains('Unit 1')"
     And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
 
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
