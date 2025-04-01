@@ -9,39 +9,12 @@ def color_string(key)
   }[key.to_sym]
 end
 
-def wait_for_progress(selector, test_result)
-  case test_result
-  when 'perfect'
-    background_color = color_string('perfect')
-    border_color = color_string('perfect')
-  when 'attempted'
-    background_color = color_string('not_tried')
-    border_color = color_string('perfect')
-  when 'not_tried'
-    background_color = color_string('not_tried')
-    border_color = color_string('lighter_gray')
-  when 'perfect_assessment'
-    background_color = color_string('assessment')
-    border_color = color_string('assessment')
-  when 'attempted_assessment'
-    background_color = color_string('not_tried')
-    border_color = color_string('assessment')
-  end
-
-  steps "And I wait until element \"#{selector}\" is visible"
-
-  wait_short_until do
-    element_css_value(selector, 'background-color') == background_color &&
-      element_css_value(selector, 'border-color') == border_color
-  end
-end
-
 # Verifies that the given selector (which should be a progress bubble) is visible
 # and displays the expected test_result. This function accounts for the asynchronous
-# nature of progress bubbles and can be slow, especially when verifying that a bubble
-# displays 'not_tried'. Passing no_wait=true skips all waits and immediately verifies
-# the bubble.
-def verify_progress(selector, test_result, no_wait: false)
+# nature of progress bubbles by repeatedly checking for the specified value for
+# up to 30 seconds; this means that successful checks should be reliable and
+# prompt, but failures will be slow.
+def verify_progress(selector, test_result)
   case test_result
   when 'perfect'
     background_color = color_string('perfect')
@@ -60,26 +33,17 @@ def verify_progress(selector, test_result, no_wait: false)
     border_color = color_string('assessment')
   end
 
-  # The data for progress bubbles can be loaded synchronously or
-  # asynchronously, therefore unless we know the colors are set (such as when
-  # we're checking multiple not_tried bubbles in a row) we wait a bit before
-  # checking to ensure progress is loaded and the bubble is the correct color.
-  unless no_wait
-    steps %{
-      And I wait for 2 seconds
-      And I wait until jQuery Ajax requests are finished
-    }
-  end
-
-  verify_bubble_color(selector, background_color, border_color)
-end
-
-def verify_bubble_color(selector, background_color, border_color)
   steps %{
     And I wait until element "#{selector}" is visible
-    And element "#{selector}" has css property "background-color" equal to "#{background_color}"
-    And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
+    And I wait until jQuery Ajax requests are finished
   }
+
+  # The data for progress bubbles can be loaded  asynchronously, so keep
+  # checking until progress is loaded and the bubble is the correct color.
+  wait_short_until do
+    element_css_value(selector, 'background-color') == background_color &&
+      element_css_value(selector, 'border-top-color') == border_color
+  end
 end
 
 def verify_bubble_type(selector, type)
@@ -114,11 +78,6 @@ Then /^I open the progress drop down of the current page$/ do
   }
 end
 
-Then /^I wait for progress in the header of the current page to be "([^"]*)" for level (\d+)/ do |test_result, level|
-  selector = header_bubble_selector(level.to_i)
-  wait_for_progress(selector, test_result)
-end
-
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
   selector = header_bubble_selector(level.to_i)
   verify_progress(selector, test_result)
@@ -129,11 +88,11 @@ Then /^I verify progress in the drop down of the current page is "([^"]*)" for l
   verify_progress(selector, test_result)
 end
 
-Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"]*)"( without waiting)?/ do |lesson, level, detail_view, test_result, without_waiting|
+Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"]*)"/ do |lesson, level, detail_view, test_result|
   selector = detail_view.nil? ?
     ".uitest-summary-progress-table .uitest-summary-progress-row:eq(#{lesson.to_i - 1}) .progress-bubble:eq(#{level.to_i - 1})" :
     ".uitest-detail-progress-table .uitest-progress-lesson:eq(#{lesson.to_i - 1}) .progress-bubble:eq(#{level.to_i - 1})"
-  verify_progress(selector, test_result, no_wait: !!without_waiting)
+  verify_progress(selector, test_result)
 end
 
 Then /^I verify progress for the sublevel with selector "([^"]*)" is "([^"]*)"/ do |selector, test_result|
