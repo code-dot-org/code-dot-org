@@ -16,7 +16,7 @@ export type ActionBlockCarouselProps = ActionBlockProps & {
     slide: ReactNode;
     sys: {
       contentType: BaseEntry & {
-        id: EntryFields.Text;
+        sys: {id: EntryFields.Text};
       };
     };
     fields: {
@@ -24,9 +24,7 @@ export type ActionBlockCarouselProps = ActionBlockProps & {
       title: EntryFields.Text;
       shortDescription: EntryFields.Text;
       image: BaseEntry & {
-        fields: {
-          file: {url: EntryFields.Text};
-        };
+        fields: {file: {url: EntryFields.Text}};
       };
       primaryLinkRef: BaseEntry & {
         fields: {
@@ -52,7 +50,6 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
   slides,
   background,
 }) => {
-  // Show placeholder text until a content entry is added
   if (!slides) {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
@@ -65,62 +62,69 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
     );
   }
 
-  console.log(slides);
-
   const slidesData = useMemo(
     () =>
-      slides
-        .filter(Boolean)
-        .map(
-          ({
-            fields: {
-              actionBlockOverline,
-              title,
-              shortDescription,
-              image,
-              primaryLinkRef,
-              secondaryLinkRef,
-            },
-          }) => ({
-            id: title,
-            slide: (
-              <ActionBlock
-                overline={actionBlockOverline}
-                title={title}
-                description={shortDescription}
-                image={image?.fields?.file?.url}
-                primaryButton={
-                  primaryLinkRef?.fields?.label
-                    ? {
-                        text: primaryLinkRef.fields.label,
-                        href: primaryLinkRef.fields.primaryTarget || '#',
-                        ariaLabel: primaryLinkRef.fields.ariaLabel || '',
-                      }
-                    : undefined
-                }
-                secondaryButton={
-                  secondaryLinkRef?.fields?.label
-                    ? {
-                        text: secondaryLinkRef.fields.label,
-                        href: secondaryLinkRef.fields.primaryTarget || '#',
-                        ariaLabel: secondaryLinkRef.fields.ariaLabel || '',
-                      }
-                    : undefined
-                }
-                background={background}
-              />
-            ),
-          }),
-        ),
+      slides.filter(Boolean).map(({sys, fields}) => {
+        const contentType = sys?.contentType?.sys?.id;
+        const {
+          actionBlockOverline,
+          title,
+          shortDescription,
+          image,
+          primaryLinkRef,
+          secondaryLinkRef,
+        } = fields;
+
+        return {
+          id: title,
+          slide: (
+            <ActionBlock
+              overline={
+                [
+                  'curriculum',
+                  'selfPacedPl',
+                  'lab',
+                  'resourcesAndTools',
+                ].includes(contentType)
+                  ? actionBlockOverline
+                  : undefined
+              }
+              title={title}
+              description={shortDescription}
+              image={image?.fields?.file?.url}
+              primaryButton={
+                primaryLinkRef?.fields?.label
+                  ? {
+                      text: primaryLinkRef.fields.label,
+                      href: primaryLinkRef.fields.primaryTarget || '#',
+                      ariaLabel: primaryLinkRef.fields.ariaLabel || '',
+                    }
+                  : undefined
+              }
+              secondaryButton={
+                secondaryLinkRef?.fields?.label &&
+                ['selfPacedPl', 'lab'].includes(contentType)
+                  ? {
+                      text: secondaryLinkRef.fields.label,
+                      href: secondaryLinkRef.fields.primaryTarget || '#',
+                      ariaLabel: secondaryLinkRef.fields.ariaLabel || '',
+                    }
+                  : undefined
+              }
+              background={background}
+            />
+          ),
+        };
+      }),
     [slides, background],
   );
 
   return (
     <DSCOCarousel
-      showNavArrows={true}
+      showNavArrows
       slidesPerView={3}
       slidesPerGroup={3}
-      allowTouchMove={true}
+      allowTouchMove
       slides={slidesData}
     />
   );
