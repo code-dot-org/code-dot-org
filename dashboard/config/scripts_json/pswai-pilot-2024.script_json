@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 02:21:28 UTC",
+    "serialized_at": "2025-03-31 14:33:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -283,6 +283,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**What are the ethical considerations of AI collaboration?**\n\nStudents explore ethical and legal questions around ownership, fairness, and transparency when collaborating with AI in creative contexts. Through an interactive spectrum warm-up, real-world case study discussions, and a group policy-writing challenge, students examine how AI-generated content affects artists, musicians, and other creators. They reflect on questions of consent, attribution, and compensation, then draft policies that balance the benefits of AI with the rights of original creators. This lesson builds students’ ability to evaluate AI as a collaborator and justify when AI should or shouldn’t be used, especially in ethically complex situations.",
+        "preparation": "- Print copies of the Create a Copyright Policy activity guide (one for each student)",
+        "student_overview": "**What are the ethical considerations of AI collaboration?**\n\nWhen AI creates things like art, music, or writing, who should get credit? In this lesson, you explore real cases where AI-generated content raised tough questions. You work with your group to write a policy for how AI companies should treat creative work, and reflect on how to balance innovation with fairness to human creators."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -298,6 +301,8 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "**How should AI be used in solving real-world problems?**\n\nStudents choose a real-world example of AI in use within the community, investigating who might benefit and who might be harmed from its implementation. They use their research to draft a call to action in which they propose solutions to the perceived issues that they uncover.",
+        "student_overview": "**How should AI be used in solving real-world problems?**\n\nYou explore a variety of different ways that AI is being and will be used within your community. Using a chatbot to summarize a variety of different articles, you create your own draft of a short-form video script that addresses issues that you have uncovered."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -313,6 +318,9 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "In this project, students work with AI to develop a future prediction and create a presentation that explains their process. They collaborate with AI to generate and refine ideas, evaluate outputs for accuracy and bias, and reflect on how they shaped the final prediction. The project centers on ethical reasoning, student voice, and thoughtful use of multimodal inputs to support transparency and agency in AI collaboration.",
+        "preparation": "- Print copies of the AI Time Capsule Project Planning Guide (one per student)",
+        "student_overview": "In this project, you work with AI to make and refine a prediction about the future. Then, you create a presentation that explains how you used AI, what decisions you made, and how you improved the prediction to make it more realistic, fair, and your own."
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -771,6 +779,132 @@
       }
     },
     {
+      "key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "d5190adb-000d-4336-9d64-f0f35312b6ec",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5190adb-000d-4336-9d64-f0f35312b6ec",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "51deb925-3433-4e74-8ff5-098d59b9682a",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51deb925-3433-4e74-8ff5-098d59b9682a",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "7fe284ee-6665-4e81-821a-2bbe49748495",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "19e210b9-c5a0-4dc2-abe3-99a3e740fd87",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19e210b9-c5a0-4dc2-abe3-99a3e740fd87",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "76ba9778-3604-44c3-ac1d-efd7a681d69c",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "697e31b8-57ed-43b8-b4c6-594e73d318e3",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
+      "key": "b504a7ee-540c-417b-8590-b60d4569638e",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b504a7ee-540c-417b-8590-b60d4569638e",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024"
+      }
+    },
+    {
       "key": "b64ed28b-4987-45c3-945d-a625672a4c71",
       "position": 1,
       "properties": {
@@ -1059,6 +1193,17 @@
       }
     },
     {
+      "key": "cfa82d7b-54cd-4549-92aa-8a44a88d9f2e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfa82d7b-54cd-4549-92aa-8a44a88d9f2e",
+        "lesson_activity.key": "fd5332f7-c228-4a75-80c7-90b43704e991"
+      }
+    },
+    {
       "key": "8a072b58-cd99-4e7e-838e-12a6a823595c",
       "position": 1,
       "properties": {
@@ -1334,6 +1479,17 @@
       }
     },
     {
+      "key": "871b89d4-d62e-4764-ba28-c0ed794a214b",
+      "position": 15,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "871b89d4-d62e-4764-ba28-c0ed794a214b",
+        "lesson_activity.key": "745cb615-ab86-444a-8c1c-4f06dcd908a6"
+      }
+    },
+    {
       "key": "edf9d5d2-6bc8-4ef5-bdc5-6fb5270967e3",
       "position": 1,
       "properties": {
@@ -1536,6 +1692,17 @@
       },
       "seeding_key": {
         "activity_section.key": "2d56180f-bc0f-4591-9c64-b9f675795a29",
+        "lesson_activity.key": "4fef1e1b-9b0e-437e-a41b-47114234555b"
+      }
+    },
+    {
+      "key": "a91b8d86-4b50-4978-923b-2a7628eb5ff2",
+      "position": 9,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a91b8d86-4b50-4978-923b-2a7628eb5ff2",
         "lesson_activity.key": "4fef1e1b-9b0e-437e-a41b-47114234555b"
       }
     },
@@ -1958,6 +2125,17 @@
       }
     },
     {
+      "key": "7d1b87f2-4b42-4116-a932-f667e4c2adae",
+      "position": 22,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d1b87f2-4b42-4116-a932-f667e4c2adae",
+        "lesson_activity.key": "3fd1c824-c2e7-441f-9824-9e4771bb87cf"
+      }
+    },
+    {
       "key": "4dfebd59-348e-4688-bfbb-a88b3959adda",
       "position": 1,
       "properties": {
@@ -2170,6 +2348,17 @@
       },
       "seeding_key": {
         "activity_section.key": "8a52ef56-3107-46fb-a91e-8718f59a9259",
+        "lesson_activity.key": "009fc6b4-9387-40c9-be4f-d5cbf3219fdd"
+      }
+    },
+    {
+      "key": "16dcc087-acbf-4010-a84b-ae4a4921c6be",
+      "position": 9,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "16dcc087-acbf-4010-a84b-ae4a4921c6be",
         "lesson_activity.key": "009fc6b4-9387-40c9-be4f-d5cbf3219fdd"
       }
     },
@@ -2475,6 +2664,17 @@
       }
     },
     {
+      "key": "e45b4cc1-16c7-4409-b8de-eecf330589f2",
+      "position": 20,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e45b4cc1-16c7-4409-b8de-eecf330589f2",
+        "lesson_activity.key": "e3bb530f-cc33-48de-8e93-9c2cc528a69f"
+      }
+    },
+    {
       "key": "b5371885-7306-444b-bc02-c87b4737aee0",
       "position": 1,
       "properties": {
@@ -2707,6 +2907,17 @@
       }
     },
     {
+      "key": "982240fa-02d5-463f-bbb0-8e9a0c619f36",
+      "position": 10,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "982240fa-02d5-463f-bbb0-8e9a0c619f36",
+        "lesson_activity.key": "5e40a8f5-29bf-4a8d-bb12-2f541ab8a364"
+      }
+    },
+    {
       "key": "6e72c307-f3dc-4f44-a68b-68ad5f0b2a10",
       "position": 1,
       "properties": {
@@ -2875,6 +3086,17 @@
       },
       "seeding_key": {
         "activity_section.key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d",
+        "lesson_activity.key": "baf2eba5-43a3-47d5-bc94-6e7cb5645cb2"
+      }
+    },
+    {
+      "key": "cbac57af-cc7b-493e-814e-f4077ed9aec4",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "cbac57af-cc7b-493e-814e-f4077ed9aec4",
         "lesson_activity.key": "baf2eba5-43a3-47d5-bc94-6e7cb5645cb2"
       }
     },
@@ -3079,6 +3301,17 @@
       }
     },
     {
+      "key": "2caff1fb-985e-43ae-b06f-ccbf5f5e1888",
+      "position": 9,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2caff1fb-985e-43ae-b06f-ccbf5f5e1888",
+        "lesson_activity.key": "d5362db4-5f1d-4a5f-94d9-6f521cd85205"
+      }
+    },
+    {
       "key": "dc0f5285-1cfe-43d6-9c59-445ae82e9dbf",
       "position": 1,
       "properties": {
@@ -3093,7 +3326,7 @@
       "key": "a29c2821-f9a1-4891-99c6-6d37b3e68f29",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i>**Goal of this activity:** Have students reflect on AI's ability to be creative by exploring AI-generated beats to reflect different moods.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to experiment with AI-generated drum beats in AI Music Lab. Encourage students to try generating beats for different moods (e.g., elevator music, intense combat scene in a movie, upbeat pop song, etc.) to hear how AI structures patterns.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students reflect on AI's ability to be creative by exploring AI-generated beats to reflect different moods.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to experiment with AI-generated drum beats in AI Music Lab. Encourage students to try generating beats for different moods (e.g., elevator music, intense combat scene in a movie, upbeat pop song, etc.) to hear how AI structures patterns.\n",
         "progression_name": "AI in Music Lab"
       },
       "seeding_key": {
@@ -3416,6 +3649,17 @@
       }
     },
     {
+      "key": "2da22712-674c-41be-9418-1dce44bf736b",
+      "position": 19,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2da22712-674c-41be-9418-1dce44bf736b",
+        "lesson_activity.key": "08c46820-30c3-4e0e-ae50-59c272a760bd"
+      }
+    },
+    {
       "key": "5cbe905f-ab0d-43f0-a272-365ef9778b9b",
       "position": 1,
       "properties": {
@@ -3508,6 +3752,838 @@
       }
     },
     {
+      "key": "fdd50021-7288-40f9-adcf-5b6cb0c10ab2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To encourage students to critically assess the extent to which AI-generated content is truthful or misleading.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions and expectations with students. \n- Prepare the classroom space for movement.\n\n- Designate one side of the room as \"Real or Truthful\" and the opposite side as \"Designed to Mislead.\"\n\n- Have students begin standing in the center of the room.\n\n- Explain which side of the room represents each end of the spectrum and review expectations for respectful participation.\n\n- Explain that students should return to the center after each example so they approach each one with fresh thinking.",
+        "name": "The Reality Spectrum: How Real is AI-Generated Content?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Print or post visible signs for each end of the spectrum to make positioning clear. For each new prompt, have students return to the middle before making their decision—this encourages fresh thinking and movement. If time allows, let students briefly discuss their positions with nearby peers before moving into the full-class discussion after the final prompt."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fdd50021-7288-40f9-adcf-5b6cb0c10ab2",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "6c627042-2288-4f88-bfdb-d88d5aebc39d",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6c627042-2288-4f88-bfdb-d88d5aebc39d",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "bf28c22e-bb4e-4a7d-a23f-a036bf3287ac",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the example aloud, then direct students to move to the spot on the spectrum that matches their opinion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider highlighting the example of the 2022 ‘Théâtre D’opéra Spatial’ art piece that was created by MidJourney and won first place in the Colorado State fair art competition."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bf28c22e-bb4e-4a7d-a23f-a036bf3287ac",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "0c2df11c-1d0e-4fa9-b524-7d1752823c11",
+      "position": 4,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c2df11c-1d0e-4fa9-b524-7d1752823c11",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "ebb096bc-4107-4a70-910d-9e2efd871726",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the example aloud, then direct students to move to the spot on the spectrum that matches their opinion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider highlighting the example of the 2023, AI-generated song with the voices of Drake and The Weeknd going viral even though neither artist was involved."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ebb096bc-4107-4a70-910d-9e2efd871726",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "e259b79e-1afa-4a0c-9760-6149423e1b01",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e259b79e-1afa-4a0c-9760-6149423e1b01",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "d84b7cab-5d68-45df-a8d9-2f44d3db5277",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the example aloud, then direct students to move to the spot on the spectrum that matches their opinion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the example aloud, then direct students to move to the spot on the spectrum that matches their opinion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the example aloud, then direct students to move to the spot on the spectrum that matches their opinion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider highlighting the example of CNET, in 2023, publishing dozens of AI-written articles in 2023, many with factual errors or plagiarism, leading to public backlash."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d84b7cab-5d68-45df-a8d9-2f44d3db5277",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "66b3f19c-5eb3-45f2-a124-bbccc1e727cb",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "66b3f19c-5eb3-45f2-a124-bbccc1e727cb",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "efdb610d-d814-41b0-b07f-0029b1eba69e",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What makes something feel ‘real’ to you?*\n- *What factors make something misleading?*\n- *If AI-generated content is indistinguishable from human work, who should get credit?*\n- *How does this impact artists, musicians, and content creators?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should begin processing the ways in which \"realness\" can be subjective when discussing AI. They should mention that \"realness\" can be complicated by things like filters, AI, and replication. They should also note that things designed to be misleading are often examples of impersonation, or lack (or  have false) attribution. They may raise questions about ethical issues like credit, consent, and payment, especially in the ways that those issues impact creative fields like art and music.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "efdb610d-d814-41b0-b07f-0029b1eba69e",
+        "lesson_activity.key": "3251a330-ea88-448e-b2fd-fb96a9a6ed5a"
+      }
+    },
+    {
+      "key": "b270f658-8aab-4499-a4e5-6d0e40efd172",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce foundational concepts to help students evaluate AI-generated content legally and ethically and analyze AI copyright challenges through real-world disputes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *copyright*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *attribution*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *transparency*.",
+        "duration": "10",
+        "name": "Case Study Discussions"
+      },
+      "seeding_key": {
+        "activity_section.key": "b270f658-8aab-4499-a4e5-6d0e40efd172",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "dcd87569-d52c-43bf-84a0-0dbea58fe144",
+      "position": 2,
+      "properties": {
+        "description": "Now that we've discussed how AI-generated content can blur the line between real and misleading, let's explore the ethical and legal challenges it raises.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dcd87569-d52c-43bf-84a0-0dbea58fe144",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "cb4f1231-d1da-4158-bc0c-64ed95c14197",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Who should own AI-generated content—the AI creator, the user, or the company?*\n- *What happens if AI uses copyrighted material in training?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that AI-generated content raises complicated questions about ownership and credit. They mention the ways in which copyrighted materials may be involved in training and how the ethics of this may not be fully addressed with current laws.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Should AI-generated art be considered \"real art\"?*\n- *Who should get credit—the AI, the programmer, or the person providing the prompt?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students mention how AI-generated art complicates definitions of creativity and authorship. They recognize that even though a human provides the prompt, the final output is produced by a machine, but the machine is trained on countless other real artworks. Students raise questions about whether or not competitions should allow, or separate, or even ban, AI-assisted work.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Should musicians have control over AI trained on their music?*\n- *Who should be compensated when AI-generated music is sold?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize AI-generated music can lead to complex issues around ownership and compensation. They discuss the ways in which AI's training may use musicians' work without their knowledge and suggest requirements around permission or payment. They recognize concerns over how AI impacts the value of human-created music."
+      },
+      "seeding_key": {
+        "activity_section.key": "cb4f1231-d1da-4158-bc0c-64ed95c14197",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "7f2f4f2b-0257-4c4c-9051-283a447ac641",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students collaborate to draft a policy addressing how LLM developers should handle copyrighted material when training AI models.",
+        "duration": "15",
+        "name": "Create a Copyright Policy"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f2f4f2b-0257-4c4c-9051-283a447ac641",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "c937424c-8a94-4934-a551-de76c9599f92",
+      "position": 5,
+      "properties": {
+        "description": "Now that we have looked at some real-world controversies, let's turn our attention to the ways in which AI companies are responding. You'll review some real policies that are in place and then work with your group to create a policy for how AI companies should handle copyrighted content when training their models.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c937424c-8a94-4934-a551-de76c9599f92",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "1afe29cf-3dc7-4cfa-b008-2c3df93d9030",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs or small groups.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair or group a copy of the Create a Copyright Policy activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the idea of transparency policies by explaining OpenAI shares general information about how it trains its models but does not always list exactly what data was used. Encourage students to think about how this may make some creators raise questions about a lack of transparency making it impossible to tell if their work was included without permission and attribution.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good opportunity to reinforce the vocabulary words \"transparency\" and \"attribution.\" Consider asking students how they would feel if their own artwork or writing were used to train an AI without them knowing. However, don't spend too much time on these next three slides as the bulk of this activity should be devoted to student work time."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1afe29cf-3dc7-4cfa-b008-2c3df93d9030",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "c99252ed-ded3-4331-b6c3-3f1374352572",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c99252ed-ded3-4331-b6c3-3f1374352572",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "a25c7587-98e5-47f7-8e5f-07d642db62cf",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the EU AI Act as an example of how governments are starting to regulate AI. Point out that it requires companies to say if they used copyrighted content and gives creators the option to opt out. Use the pyramid graphic to explain how the Act assigns different rules based on an AI system's risk level, with higher-risk systems requiring stronger ethical protections.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Emphasize that this example was one of the strongest reactions to AI training practices and provide the context that in 2023 artists and authors sued AI companies for using their copyrighted works without their permission. Encourage students to consider that this is not just a legal issue but an ethical one as well as it affects the livelihoods of these creators.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work through their activity guide with their partner to design a copyright policy for training LLMs. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for how they're reasoning through tradeoffs—especially between innovation and fairness. Look for groups discussing creator rights, transparency, or payment models, and ask probing questions like, \"How would your policy affect small artists?\" or \"Who benefits most from your approach?\" Support groups that are stuck by pointing them back to the showcase examples or vocabulary terms."
+      },
+      "seeding_key": {
+        "activity_section.key": "a25c7587-98e5-47f7-8e5f-07d642db62cf",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "67df01b8-ac4f-4b36-87f0-9fed9033a277",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To have students reflect on how their proposed AI copyright policy balances the potential benefits of AI with fairness to original creators and ensure they are considering both innovation and ethical concerns.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Navigate to Lesson 11, Level 1 on Code Studio in order to answer the free response reflection question.",
+        "duration": "5",
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this self-assessment to gauge how well students understand the ethical tradeoffs involved in AI development. As students respond, look for whether they:\n- Acknowledge both benefits and risks of using copyrighted work in AI training\n- Reference key terms like attribution, transparency, or compensation\n- Demonstrate awareness of who benefits or may be left out\n\nIf many responses are vague or one-sided (e.g., \"AI should always be allowed to use whatever data it wants\"), consider doing one or more of the following:\n- Revisit one of the case studies from earlier in the lesson and discuss: “What might this creator say about your policy?”\n- Have students revisit the vocabulary terms and identify which ones apply to their response\n- Use a class discussion to explore a spectrum of student responses and ask students to challenge or defend one another’s reasoning"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "67df01b8-ac4f-4b36-87f0-9fed9033a277",
+        "lesson_activity.key": "64b6d4ee-1cdb-4bfa-aef6-16fe090e0d76"
+      }
+    },
+    {
+      "key": "7bb21374-f73e-478a-94e9-9bb3754efa4c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students synthesize their learning and reflect on the ethical considerations of AI collaboration.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students answer the Question of the Day in their Unit Guide and then share with their peers using a Think-Write-Share protocol:\n- Students list ethical considerations in their activity guides\n- Students share at one ethical consideration with a partner or small group.\n- A few students share insights with the class.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 2 to complete the End of Lesson Survey.\n",
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bb21374-f73e-478a-94e9-9bb3754efa4c",
+        "lesson_activity.key": "d5190adb-000d-4336-9d64-f0f35312b6ec"
+      }
+    },
+    {
+      "key": "c41bb698-5497-4637-94a1-ff7f3ee5202c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students practice weighing pros and cons of an AI-powered system.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario about*Newsclues.com*, a fictional website that is deciding to replace the people who pick the articles to feature on the site with an AI-powered news filtering system.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Have students write a one-minute response to the discussion prompts about the scenario from the previous slide. Then, have them pair up and take turns summarizing their writing in one minute.\n- *What are the risks of using an AI-system to decide which news articles to feature?*\n- *Who is impacted most by AI errors, such as linking to unverified or inaccurate sources?*\n- *Who is impacted most by AI bias, such as linking to articles that present only one perspective on an issue?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students critically evaluate the benefits and risks of AI decision-making in media curation. This discussion will set the stage for deeper exploration of AI's role in their own communities. Here are things to listen for:\n- AI is not neutral; it reflects biases in training data.\n- AI may favor certain perspectives while excluding others.\n- Risk of misinformation (e.g., promoting unreliable sources).\n- AI may prioritize engagement over accuracy.\n- Benefits: Companies (cost savings), increased efficiency.\n- Harms: Journalists (job loss), misinformation in communities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c41bb698-5497-4637-94a1-ff7f3ee5202c",
+        "lesson_activity.key": "51deb925-3433-4e74-8ff5-098d59b9682a"
+      }
+    },
+    {
+      "key": "9334cf43-5727-470a-9063-2ac03d371d63",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Help students assess how AI is impacting their own local communities. AI's impact varies by location, economy, and social factors—students should advocate for fair and accessible AI. This part of the activity also focuses on having students use AI to help summarize and draw key points out of source material.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI in My Community activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 1. Students choose one implementation of AI to focus on. For all of the choices, students will be sent to a folder with four articles – one feature article about the use of AI they picked, one editorial on the use of AI they picked, one tabloid-style article about the area they picked, and one feature article focused on environmental issues.\n",
+        "duration": "15",
+        "name": "AI in My Community: Helpful or Harmful?",
+        "progression_name": "Articles",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note:** These articles were written by Code.org staff members. The articles were crafted along with ChatGPT, which was used to synthesizing around 20 different news articles on the respective subjects. The facts presented in the articles all come from one or more of these news sources.\n\nYou may choose to tailor this list to issues you know are relevant in your students community if you have sources they can use to learn about these issues.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9334cf43-5727-470a-9063-2ac03d371d63",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "4811d02b-b67c-49f1-b585-eecde1da180e",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4811d02b-b67c-49f1-b585-eecde1da180e",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "af5c01c4-a722-486d-9095-a9effaee99d6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 12, Level 2. Students choose the same implementation they picked in the previous level and then use AI Chat to summarize the articles and pull out key information. They should record their findings in their activity guide.\n",
+        "progression_name": "AI in the Community"
+      },
+      "seeding_key": {
+        "activity_section.key": "af5c01c4-a722-486d-9095-a9effaee99d6",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "cf87f89c-106c-443d-bc18-86bd58f39394",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Listen for students making local connections to their own school or city and asking follow-up questions to the AI when summaries are incomplete. If students finish too fast or seem stuck:\n- \"How would someone in your neighborhood feel about this?\"\n- \"How could this tech be made more fair or eco-friendly?\"\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf87f89c-106c-443d-bc18-86bd58f39394",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "ffe28978-c141-4f75-8176-dee6a43d3d3b",
+      "position": 5,
+      "properties": {
+        "description": "You've explored how AI is affecting different parts of your community—now let's shift into reflecting and connecting ideas. Think about the biggest impacts you noticed, any concerns that stood out to you, and what questions you still have about AI's role in society.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ffe28978-c141-4f75-8176-dee6a43d3d3b",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "b99c278e-2c45-4c65-a7ae-fe9f45c986e7",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 3 to complete the formative assessment.",
+        "progression_name": "Check Your Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This reflection will help you gauge how well students understand AI’s impact on communities and the environment, and whether they're thinking critically about equity. Pay attention to the following:\n- Community awareness: Are students identifying both positive and negative impacts of AI on different groups in their community (e.g., age, income, ability, race, location)?\n- Environmental understanding: Do students recognize specific environmental concerns like AI's energy use, reliance on data centers, or carbon emissions?\n- Curiosity and gaps: Are student questions thoughtful and relevant, revealing areas where they want to dig deeper—or misunderstandings that need clarification?\n\n**Actions to take:**\n- If students focus too narrowly (e.g., one group or only benefits), prompt them with: \"How might this affect someone with different needs or background?\" or pair students to challenge each other's perspectives.\n- If students skip environmental concerns, briefly review how AI depends on large-scale computing and power use. Encourage connections to articles or earlier class discussions.\n- If student questions reveal confusion or patterns of misunderstanding, group similar ones and address them in a brief discussion or mini-lesson to clarify before moving on.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b99c278e-2c45-4c65-a7ae-fe9f45c986e7",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "cdb503b3-8383-4fd1-b825-a70555d7fead",
+      "position": 7,
+      "properties": {
+        "description": "You've identified some powerful takeaways and questions about AI. Next, we'll watch a short video where an activist shares how they use their voice to advocate for change. As you watch, consider what makes their message effective—and how you might apply that to your own message about AI.",
+        "duration": "15",
+        "name": "Share Your Voice",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cdb503b3-8383-4fd1-b825-a70555d7fead",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "e00d6a0b-79be-4c90-8db7-7010f650f91a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"UNICEF Youth Advocate Ayshka on Mental Health\" video.\n\n**Questions to consider with the video:**\n- How does the speaker use emotion, personal experience, and a clear message to connect with the audience?\n\n**Discussion Goal:** Students understand that getting straight to the point and outlining clear, easy-to-follow, steps can be effective steps for straightforward communication in a short video.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 4. Students will use the AI Chat to draft a script for a short video proposing how AI could be made more beneficial for all members of their community.\n",
+        "progression_name": "Write a Video Script"
+      },
+      "seeding_key": {
+        "activity_section.key": "e00d6a0b-79be-4c90-8db7-7010f650f91a",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "fdfbd0f4-6a36-486c-b1d5-64f3c2a2239b",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to begin drafting their video scripts using what they've learned about AI's impact, fairness, and sustainability.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students making connections to their earlier research on AI's impact—especially examples that include both benefits and harms for different groups.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students partner with someone new and exchange scripts. They should give feedback based on fairness and use of specific examples.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students identifying areas where a script lacks detail or overlooks certain community groups. Encourage partners to ask clarifying questions if something is unclear. Here are some possible questions to help get students talking if you notice they've finished early:\n- What kinds of changes did your partner suggest?\n- How might you revise your script to make it stronger?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "fdfbd0f4-6a36-486c-b1d5-64f3c2a2239b",
+        "lesson_activity.key": "7fe284ee-6665-4e81-821a-2bbe49748495"
+      }
+    },
+    {
+      "key": "5fa9d5c1-551a-4036-aec2-ccbc12a4b988",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students form small groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain that now that they have reflected in their Unit Guide, they will share key takeaways with their group. Explain that the \"Pass the Mic\" discussion is designed so that everyone gets a chance to share. Each person will share their answer to the Question of the Day in one or two sentences and then \"pass the mic\" so that everyone has a turn.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share in their groups:\n- Listen for common themes and misconceptions such as:\n   - Are students clearly identifying AI's strengths and weaknesses?\n   - Are students misunderstanding AI's capabilities (e.g., assuming AI \"thinks\" like a human)?\n- Prompt deeper thinking with guiding questions such as:\n   - Did AI ever surprise you with what it could or couldn't do?\n   - Would you trust AI more or less after today's lesson?\n   - Did anyone in your group have a different perspective that made you think differently?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, facilitate a full-class discussion of the QotD. Consider asking students to raise their hands if they heard a new perspective in their group that made them think differently.\n- If students only state a general opinion (e.g., \"AI is good at math\"), follow up with: \"What makes AI good at that task? Is it better than a human?\" or \"Can you give an example of when AI would fail at that same task?\"\n- If some students are not engaging in discussion, ask them directly: \"What did you write down in your Unit Guide? Can you share one thing that stood out to you?\" or \"Did you hear something from your group that you agree or disagree with?\"\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5fa9d5c1-551a-4036-aec2-ccbc12a4b988",
+        "lesson_activity.key": "19e210b9-c5a0-4dc2-abe3-99a3e740fd87"
+      }
+    },
+    {
+      "key": "962e7f26-9042-4a58-9ce1-43cd27a30f5f",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "962e7f26-9042-4a58-9ce1-43cd27a30f5f",
+        "lesson_activity.key": "19e210b9-c5a0-4dc2-abe3-99a3e740fd87"
+      }
+    },
+    {
+      "key": "249bdfca-ef0e-49d1-80b6-0d6c646327ae",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 5 to complete the End of Lesson Survey.",
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "249bdfca-ef0e-49d1-80b6-0d6c646327ae",
+        "lesson_activity.key": "19e210b9-c5a0-4dc2-abe3-99a3e740fd87"
+      }
+    },
+    {
+      "key": "04f6af7a-b24c-4895-a520-3e99dd048887",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of two or three. Display the mix of real (“AI Will Soon Take Your Order at Taco Bell and Pizza Hut”) and AI-generated future news headlines and have students analyze the headlines. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which headlines feel possible? Which feel exaggerated?*\n- *How do current trends shape what we believe about the future?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI-generated predictions can be plausible but also exaggerated or biased based on the data AI has been trained on. The goal is for students to start questioning AI-generated content and assessing its realism.\n",
+        "duration": "5",
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle, prompt them to consider what evidence would be needed to make a prediction believable."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04f6af7a-b24c-4895-a520-3e99dd048887",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "3c3f75ac-b24b-4bf3-9a0b-77cb5bdcaac8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c3f75ac-b24b-4bf3-9a0b-77cb5bdcaac8",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "7635d8eb-c38d-4b09-9e03-009f002782ec",
+      "position": 3,
+      "properties": {
+        "description": "Now that we've examined some AI-generated headlines, let's shift our focus to see how we're going to create our own predictions with AI's help.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7635d8eb-c38d-4b09-9e03-009f002782ec",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "ff30025e-88f6-4508-96d6-8aeb33a30ed5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to the AI Time Capsule project, its goals, and expected deliverables. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the AI Time Capsule Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this project, students will be working with AI to explore possible futures.  Introduce the project and explain the project structure:\n- Students will create a future prediction using AI.\n- They will refine it through AI and peer feedback.\n- They will present their final work in a creative format.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to review the assessment criteria rubric and final deliverables on the last pages of the Project Planning Guide. Explain the design challenge framing of \"How can we use AI as a creative partner to generate meaningful future predictions?\"\n",
+        "duration": "10",
+        "name": "Project Overview",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to think about how AI can be a useful tool for prediction, but not an absolute truth-teller."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ff30025e-88f6-4508-96d6-8aeb33a30ed5",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "1d65a848-a043-45ab-ab80-975ae322ace8",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1d65a848-a043-45ab-ab80-975ae322ace8",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "3e82115e-0d7d-4033-891a-29e2ef974a3a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3."
+      },
+      "seeding_key": {
+        "activity_section.key": "3e82115e-0d7d-4033-891a-29e2ef974a3a",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "12001d5c-7226-412b-ad49-e8a6f886888b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Guide students through AI-assisted future predictions, evaluating and refining outputs.",
+        "duration": "20",
+        "name": "Exploring Future Possibilities with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "12001d5c-7226-412b-ad49-e8a6f886888b",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "ec512bc2-5bbe-4d22-a5e2-7475fbad73c9",
+      "position": 8,
+      "properties": {
+        "description": "Now that you understand the project's structure, let's begin shaping your predictions. We're going to start by gathering information, making an initial prediction, and then seeing how AI builds on it. Your job is to refine AI's ideas into something you truly believe could happen.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ec512bc2-5bbe-4d22-a5e2-7475fbad73c9",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "87c872a2-1930-4941-94df-214fc317657f",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to select a focus area for their project and record it in Step 1 of their Project Planning Guide.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Gather enough artifacts to give AI enough context to make a prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Emphasize to students that they should find several resources but that they don't need to look for the \"perfect\" artifact. Instead, their focus should be on only spending a few minutes gathering resources so they can move on to the next steps.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Support students who might be spending a long time searching by asking \"What kind of information do you think AI will need?\" or \"Do you already have a Few artifacts that feel useful?\"\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make a plan beforehand for how you want students to store artifacts. In order to upload them to AI Chat, students need to save the files to their computers. You might consider leading a mini-lesson for students on how to create a folder on their computer's desktop where they can store images and PDFs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "87c872a2-1930-4941-94df-214fc317657f",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "71a5aea8-8dc7-45fe-bbf4-c7e4afeac7af",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the My Initial Prediction section of their planning guide. They should make a prediction using the artifacts they gathered for context.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 13, Level 1 to work with AI Chat to generate on a future prediction for their chosen area. ",
+        "progression_name": "AI Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "71a5aea8-8dc7-45fe-bbf4-c7e4afeac7af",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "c271404d-d466-4afc-943b-1cbe3cef209f",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are working through the steps in the level to refine their output. Have students working at the same pace answer the discussion questions in Step 2 together.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Check if students are evaluating AI's predictions critically or just accepting them. If students accept AI's outputs without questioning, ask:\n- *\"What trends or real-world examples support this prediction?\"*\n- *\"Who might benefit or be excluded from this future?\"*\n\nEncourage students to refine AI’s predictions by comparing the predictions to their own knowledge and research.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c271404d-d466-4afc-943b-1cbe3cef209f",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "76967e15-aa93-4ad2-a306-0eeba3eee7d8",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the self reflection questions in Day 1 Reflection in their Project Planning Guide. Then have students make a final prediction statement using the sentence starter \"I believe . . . \".",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Optionally, you can have students record their answers to these questions on a 3x5 card to be handed in as an Exit Ticket as they leave the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76967e15-aa93-4ad2-a306-0eeba3eee7d8",
+        "lesson_activity.key": "76ba9778-3604-44c3-ac1d-efd7a681d69c"
+      }
+    },
+    {
+      "key": "572eb429-8436-4d9f-b8ce-75611224a35c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students recognize how human reasoning improves AI-generated content. They will apply these skills as create a presentation that documents their own process of working with AI.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What exactly did the human change or add?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students identify the specific changes the human made to the AI's prediction, such as clarifying limits of automation and including a more realistic role for humans. This will help them later in the lesson explain their own changes to the AI outputs they received.\n",
+        "duration": "10",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "572eb429-8436-4d9f-b8ce-75611224a35c",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "40b6d66e-aba3-4612-b8fe-acd3a68e9846",
+      "position": 2,
+      "properties": {
+        "description": "Just like in this example, your job today is to explain the refinements you made while working with AI.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "40b6d66e-aba3-4612-b8fe-acd3a68e9846",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "a627073d-2384-4c26-8ed3-d8fe88cacbe9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 2 of the project and explain that today, students' goal is to begin developing their final product.",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Decide in advance what platforms students will have available for their final product and where they will save their work. If you plan to have students create a slides presentation, infographic, news article, etc. you may want to create a shared class folder where all students can save their products."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a627073d-2384-4c26-8ed3-d8fe88cacbe9",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "ddad957d-39c2-43c9-9daf-976fea3c6c73",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ddad957d-39c2-43c9-9daf-976fea3c6c73",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "6869f4d6-e966-48e3-b8be-258380ecb816",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Guide students in selecting their final presentation format."
+      },
+      "seeding_key": {
+        "activity_section.key": "6869f4d6-e966-48e3-b8be-258380ecb816",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "a1c0099e-93b2-402f-9095-910a6cf8aaa6",
+      "position": 6,
+      "properties": {
+        "description": "Before we start developing our final product, let's decide how you want to present your prediction. Think about what format will best communicate your ideas.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a1c0099e-93b2-402f-9095-910a6cf8aaa6",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "b616513d-4959-4b50-85a6-887776f0dcfa",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to pick a product format for their project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Develop Your Presentation section in their Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the checklist with students to ensure they understand what they need to include in their project. Do this before they move on to Lesson 13, Level 2 and begin collaborating with AI. Students can also find this list in the Collaborating with AI section of their Project Planning Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 13, Level 2 to use AI as a collaborator to help them refine and improve the content or design of their presentation.",
+        "progression_name": "Final Product"
+      },
+      "seeding_key": {
+        "activity_section.key": "b616513d-4959-4b50-85a6-887776f0dcfa",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "9a37342c-0891-43af-8d7e-90a7f9cd1a53",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are updating their presentations with the collaboration of AI Chat.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students are creating their project’s product, look for if students are integrating AI-generated insights while maintaining their own voice. If students over-rely on AI's wording, ask:\n- *\"How can you make this sound more like your perspective?\"*\n- *\"What details could you add to make this clearer for your audience?\"*\n\nGuide students to refine AI's content rather than copying it directly.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a37342c-0891-43af-8d7e-90a7f9cd1a53",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "507cbd5f-005b-4670-8bf8-de16b35035e2",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "507cbd5f-005b-4670-8bf8-de16b35035e2",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "47938d40-50d4-4f37-8c4d-c98808105cbc",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to exchange projects with a peer and complete Peer Review. Students will use the peer feedback to make revisions to their final product.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, you can have students go through one more round of iteration on their project's product after getting peer feedback."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "47938d40-50d4-4f37-8c4d-c98808105cbc",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "02ad1c93-947c-4143-ab45-2f34915c71e3",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students that before they move on to finalizing their projects next class, to take a moment to reflect on today's refinements. Direct students to answer Day 2 Reflection questions in their Project Planning Guides.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, have students share their reflections with a partner or in small groups."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "02ad1c93-947c-4143-ab45-2f34915c71e3",
+        "lesson_activity.key": "697e31b8-57ed-43b8-b4c6-594e73d318e3"
+      }
+    },
+    {
+      "key": "745999d9-2999-4c1c-81b5-9feb72aa5661",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Encourage students to reflect on the importance of making their own voice, decisions, and reasoning clear in their presentation, rather than simply repeating AI-generated content.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can you tell if something was written by a person or by AI? Why does that matter in your project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the value of personal input in AI-generated content and identify what makes a presentation feel original, human, and thoughtful. They should begin thinking about how to show ownership over their choices and reasoning.\n",
+        "duration": "10",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "745999d9-2999-4c1c-81b5-9feb72aa5661",
+        "lesson_activity.key": "b504a7ee-540c-417b-8590-b60d4569638e"
+      }
+    },
+    {
+      "key": "a4552c59-adde-4fea-b10f-9e78fc988a2f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students about 15 minutes to make any final revisions for their project.",
+        "duration": "15",
+        "name": "Finalizing the AI Time Capsule"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4552c59-adde-4fea-b10f-9e78fc988a2f",
+        "lesson_activity.key": "b504a7ee-540c-417b-8590-b60d4569638e"
+      }
+    },
+    {
+      "key": "c17cfcdb-b921-455a-a83e-013499251200",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students form groups of three or four students. Direct students to present their projects and engage in peer discussion. Make sure each presenter is answering the following questions as well as any questions their peers have for them:\n- *What perspectives are represented in this prediction?*\n- *What biases might have shaped this future scenario?*\n- *How does this prediction encourage responsible AI use?*\n",
+        "duration": "15",
+        "name": "Presenting Your Prediction and Peer Feedback",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on class size, consider using stations, sticky notes for written feedback, or rotating peer groups to keep discussions efficient. \n\nLook for if students are engaging critically with each other’s predictions. If discussions lack depth, ask:\n- \"What makes this prediction compelling or questionable?\"\n- \"What evidence supports or challenges this scenario?\"\n\nPush students to ask thoughtful questions and challenge assumptions.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c17cfcdb-b921-455a-a83e-013499251200",
+        "lesson_activity.key": "b504a7ee-540c-417b-8590-b60d4569638e"
+      }
+    },
+    {
+      "key": "ac41b58f-cb9d-4da6-91e3-e9129e7b9b41",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students think about AI's role in shaping the future and how we ensure AI is used responsibly. Have students complete the End of Project Reflection in their Project Planning Guide.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, have students share their reflections with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ac41b58f-cb9d-4da6-91e3-e9129e7b9b41",
+        "lesson_activity.key": "b504a7ee-540c-417b-8590-b60d4569638e"
+      }
+    },
+    {
+      "key": "c27ed22a-863f-4f2d-9518-4a1f69ab0afb",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c27ed22a-863f-4f2d-9518-4a1f69ab0afb",
+        "lesson_activity.key": "b504a7ee-540c-417b-8590-b60d4569638e"
+      }
+    },
+    {
+      "key": "5fab1d53-8fce-4cc9-8268-02a84e183c32",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to complete the End of Lesson Survey.",
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fab1d53-8fce-4cc9-8268-02a84e183c32",
+        "lesson_activity.key": "b504a7ee-540c-417b-8590-b60d4569638e"
+      }
+    },
+    {
       "key": "3eda1cbe-367e-488a-ba91-7f350a79c039",
       "position": 1,
       "properties": {
@@ -3551,6 +4627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level1_2024"
+        ],
         "progression": "AI Predictions"
       },
       "bonus": false,
@@ -3573,6 +4652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level2_2024"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -3595,6 +4677,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level3_2024"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -3617,12 +4702,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level4"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson1-level4_2024"
+          "test-problem-solving-with-ai-lesson1-level4"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
@@ -3630,7 +4718,7 @@
         "activity_section.key": "fa75c521-ea40-446a-9af0-a65aad81eeac"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson1-level4_2024"
+        "test-problem-solving-with-ai-lesson1-level4"
       ]
     },
     {
@@ -3639,12 +4727,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level6"
+        ],
         "progression": "Prompting Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson1-level5_2024"
+          "test-problem-solving-with-ai-lesson1-level6"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
@@ -3652,7 +4743,7 @@
         "activity_section.key": "8bebe965-525b-46ec-b79e-4c092ba5ff1f"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson1-level5_2024"
+        "test-problem-solving-with-ai-lesson1-level6"
       ]
     },
     {
@@ -3661,6 +4752,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level6_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -3679,10 +4773,38 @@
     },
     {
       "chapter": 8,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level7_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level7_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "cfa82d7b-54cd-4549-92aa-8a44a88d9f2e"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson1-level7_2024"
+      ]
+    },
+    {
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level1_2024"
+        ],
         "progression": "AI's Image Observation Skills"
       },
       "bonus": false,
@@ -3700,11 +4822,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level2_2024"
+        ],
         "progression": "AI's Image Observation Skills"
       },
       "bonus": false,
@@ -3722,11 +4847,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level3_2024"
+        ],
         "progression": "Scenario-Based Prompting"
       },
       "bonus": false,
@@ -3744,11 +4872,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level4_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -3766,11 +4897,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level5_2024"
+        ],
         "progression": "Practice with a Multimodal Model"
       },
       "bonus": false,
@@ -3788,11 +4922,39 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level6_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level6_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "871b89d4-d62e-4764-ba28-c0ed794a214b"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson2-level6_2024"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level1_2024"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -3810,11 +4972,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level2_2024"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -3832,11 +4997,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level3_2024"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -3854,11 +5022,39 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "a91b8d86-4b50-4978-923b-2a7628eb5ff2"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson3-level4_2024"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level1_2024"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -3876,11 +5072,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level2_2024"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -3898,11 +5097,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level3_2024"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -3920,11 +5122,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -3942,11 +5147,39 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level5_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level5_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7d1b87f2-4b42-4116-a932-f667e4c2adae"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson4-level5_2024"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level1_2024"
+        ],
         "progression": "Two Truths and a Lie"
       },
       "bonus": false,
@@ -3964,11 +5197,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level2_2024"
+        ],
         "progression": "Examining AI Contradictions Activity Guide"
       },
       "bonus": false,
@@ -3986,11 +5222,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level3_2024"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -4008,11 +5247,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level4_2024"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -4030,11 +5272,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level5_2024"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -4052,11 +5297,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level6_2024"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -4074,11 +5322,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level7_2024"
+        ],
         "progression": "Try Your Own"
       },
       "bonus": false,
@@ -4096,11 +5347,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4118,11 +5372,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level9_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4140,11 +5397,39 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level10_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level10_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "16dcc087-acbf-4010-a84b-ae4a4921c6be"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson5-level10_2024"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level1_2024"
+        ],
         "progression": "Describe a ____"
       },
       "bonus": false,
@@ -4162,11 +5447,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level2_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4184,11 +5472,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level3_2024"
+        ],
         "progression": "Decision-Making Roles"
       },
       "bonus": false,
@@ -4206,11 +5497,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level4_2024"
+        ],
         "progression": "AI Audit Challenge"
       },
       "bonus": false,
@@ -4228,11 +5522,39 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e45b4cc1-16c7-4409-b8de-eecf330589f2"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-level5_2024"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level1_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4250,11 +5572,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level2_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4272,11 +5597,39 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level3_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson7-level3_2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "982240fa-02d5-463f-bbb0-8e9a0c619f36"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson7-level3_2024"
+      ]
+    },
+    {
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level1_2024"
+        ],
         "progression": "Adding a Task"
       },
       "bonus": false,
@@ -4294,11 +5647,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level2_2024"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -4316,11 +5672,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level3_2024"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -4338,11 +5697,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level4_2024"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -4360,11 +5722,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level5_2024"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -4382,11 +5747,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4404,11 +5772,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level7_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4426,11 +5797,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level8_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4448,11 +5822,39 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 50,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level9_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level9_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "cbac57af-cc7b-493e-814e-f4077ed9aec4"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson8-level9_2024"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1_2024"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -4470,11 +5872,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4492,11 +5897,39 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 53,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level3_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level3_2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "2caff1fb-985e-43ae-b06f-ccbf5f5e1888"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-level3_2024"
+      ]
+    },
+    {
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level1_2024"
+        ],
         "progression": "AI in Music Lab"
       },
       "bonus": false,
@@ -4514,11 +5947,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level2_2024"
+        ],
         "progression": "Humans as the Creator"
       },
       "bonus": false,
@@ -4536,11 +5972,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level3_2024"
+        ],
         "progression": "AI as the Creator"
       },
       "bonus": false,
@@ -4558,11 +5997,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4580,7 +6022,270 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 58,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level5_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level5_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "2da22712-674c-41be-9418-1dce44bf736b"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson10-level5_2024"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level1_2024"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson11-level1_2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "67df01b8-ac4f-4b36-87f0-9fed9033a277"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson11-level1_2024"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level2_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson11-level2_2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7bb21374-f73e-478a-94e9-9bb3754efa4c"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson11-level2_2024"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Articles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level1_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "9334cf43-5727-470a-9063-2ac03d371d63"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level1_2024"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI in the Community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level2_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "af5c01c4-a722-486d-9095-a9effaee99d6"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level2_2024"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level3_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b99c278e-2c45-4c65-a7ae-fe9f45c986e7"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level3_2024"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Write a Video Script"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level4_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e00d6a0b-79be-4c90-8db7-7010f650f91a"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level4_2024"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level5_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level5_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "249bdfca-ef0e-49d1-80b6-0d6c646327ae"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level5_2024"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level1_2024"
+        ],
+        "progression": "AI Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson13-level1_2024"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "71a5aea8-8dc7-45fe-bbf4-c7e4afeac7af"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson13-level1_2024"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level2_2024"
+        ],
+        "progression": "Final Product"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson13-level2_2024"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b616513d-4959-4b50-85a6-887776f0dcfa"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson13-level2_2024"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level3_2024"
+        ],
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson13-level3_2024"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "5fab1d53-8fce-4cc9-8268-02a84e183c32"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson13-level3_2024"
+      ]
+    },
+    {
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4656,9 +6361,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson1-level4_2024",
+        "level.key": "test-problem-solving-with-ai-lesson1-level4",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson1-level4_2024"
+          "test-problem-solving-with-ai-lesson1-level4"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
@@ -4668,9 +6373,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson1-level5_2024",
+        "level.key": "test-problem-solving-with-ai-lesson1-level6",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson1-level5_2024"
+          "test-problem-solving-with-ai-lesson1-level6"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
@@ -4688,6 +6393,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pswai-pilot-2024",
         "activity_section.key": "e49694aa-2d0a-4504-9691-faabfd7aeea9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson1-level7_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson1-level7_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "cfa82d7b-54cd-4549-92aa-8a44a88d9f2e"
       }
     },
     {
@@ -4752,6 +6469,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson2-level6_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson2-level6_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "871b89d4-d62e-4764-ba28-c0ed794a214b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson3-level1_2024",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson3-level1_2024"
@@ -4784,6 +6513,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pswai-pilot-2024",
         "activity_section.key": "3a08103b-a0cf-4b22-8f4f-3a34c08ab410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson3-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "a91b8d86-4b50-4978-923b-2a7628eb5ff2"
       }
     },
     {
@@ -4832,6 +6573,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pswai-pilot-2024",
         "activity_section.key": "ce12e241-ac6a-40bc-b7d8-32903c57be68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson4-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson4-level5_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7d1b87f2-4b42-4116-a932-f667e4c2adae"
       }
     },
     {
@@ -4944,6 +6697,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson5-level10_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson5-level10_2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "16dcc087-acbf-4010-a84b-ae4a4921c6be"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson6-level1_2024",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson6-level1_2024"
@@ -4992,6 +6757,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e45b4cc1-16c7-4409-b8de-eecf330589f2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson7-level1_2024",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson7-level1_2024"
@@ -5012,6 +6789,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pswai-pilot-2024",
         "activity_section.key": "7209e092-7571-488a-a754-bca52da5cb33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson7-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson7-level3_2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "982240fa-02d5-463f-bbb0-8e9a0c619f36"
       }
     },
     {
@@ -5112,6 +6901,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson8-level9_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson8-level9_2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "cbac57af-cc7b-493e-814e-f4077ed9aec4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson9-level1_2024",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson9-level1_2024"
@@ -5132,6 +6933,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pswai-pilot-2024",
         "activity_section.key": "1405aa8b-55ed-48e2-898b-1c66280e27d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level3_2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "2caff1fb-985e-43ae-b06f-ccbf5f5e1888"
       }
     },
     {
@@ -5184,6 +6997,138 @@
     },
     {
       "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson10-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson10-level5_2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "2da22712-674c-41be-9418-1dce44bf736b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson11-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson11-level1_2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "67df01b8-ac4f-4b36-87f0-9fed9033a277"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson11-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson11-level2_2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "7bb21374-f73e-478a-94e9-9bb3754efa4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level1_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "9334cf43-5727-470a-9063-2ac03d371d63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level2_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "af5c01c4-a722-486d-9095-a9effaee99d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level3_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b99c278e-2c45-4c65-a7ae-fe9f45c986e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level4_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e00d6a0b-79be-4c90-8db7-7010f650f91a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level5_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level5_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "249bdfca-ef0e-49d1-80b6-0d6c646327ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson13-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson13-level1_2024"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "71a5aea8-8dc7-45fe-bbf4-c7e4afeac7af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson13-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson13-level2_2024"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b616513d-4959-4b50-85a6-887776f0dcfa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson13-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson13-level3_2024"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "5fab1d53-8fce-4cc9-8268-02a84e183c32"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-postassessment-pilot",
         "script_level.level_keys": [
           "problem-solving-with-ai-postassessment-pilot"
@@ -5221,6 +7166,18 @@
       }
     },
     {
+      "name": "[KEY] AI in the Community",
+      "url": "https://docs.google.com/document/d/1GedXYa9BH8wEEzaui9d6b6chpLDV1bOQ8vhLFbZ8Slg/edit?usp=sharing",
+      "key": "_key_ai_in_the_community",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_in_the_community"
+      }
+    },
+    {
       "name": "[KEY] AI Remix Challenge",
       "url": "https://docs.google.com/document/d/1dsIyJe3Oxbjylsz5tkFAh2Hmlb8xufW7rQNP0S6OgqU/edit?usp=sharing",
       "key": "_key_ai_remix_challenge",
@@ -5242,6 +7199,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_collaborate_on_a_product_launch"
+      }
+    },
+    {
+      "name": "[KEY] Create a Copyright Policy",
+      "url": "https://docs.google.com/document/d/1_XCw7KcQ7EH3iRov2W8gbVRmr2Qdvhnq9-tsiqAWLwk/edit?usp=sharing",
+      "key": "_key_create_a_copyright_policy",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_create_a_copyright_policy"
       }
     },
     {
@@ -5294,6 +7263,19 @@
       }
     },
     {
+      "name": "AI in the Community",
+      "url": "https://docs.google.com/document/d/1I8pOsKbbWCJDIQi2E7WdChm5g3hSh-CYgzg6ZBc6lVQ/edit?usp=sharing",
+      "key": "ai_in_the_community",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_in_the_community"
+      }
+    },
+    {
       "name": "AI Remix Challenge",
       "url": "https://docs.google.com/document/d/1Q8CsLHYIopOOnQCCwHEJSB7LD4h2x81MLy90ydL4Tp8/edit?usp=sharing",
       "key": "ai_remix_challenge",
@@ -5319,6 +7301,18 @@
       }
     },
     {
+      "name": "AI's Role in Society",
+      "url": "https://docs.google.com/presentation/d/1lzeUbf88j4pC5rhySaSFaU1Rl4D0pUafCpNonkgsIts/view",
+      "key": "ai_s_role_in_society",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_s_role_in_society"
+      }
+    },
+    {
       "name": "AI's Wild Imagination",
       "url": "https://docs.google.com/presentation/d/1w0ZqZnJrWaCZrbxruLlRTYydxHDqxRLkbDwzIFzDRHU/edit?usp=sharing",
       "key": "ai_s_wild_imagination",
@@ -5328,6 +7322,31 @@
       },
       "seeding_key": {
         "resource.key": "ai_s_wild_imagination"
+      }
+    },
+    {
+      "name": "AI Time Capsule Project",
+      "url": "https://docs.google.com/presentation/d/1PWGEBPaJiD8aMCy0TwQQccdaFnCJHr4l_KaMQ_LTDDA/view",
+      "key": "ai_time_capsule_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_time_capsule_project"
+      }
+    },
+    {
+      "name": "AI Time Capsule Project Planning Guide",
+      "url": "https://docs.google.com/document/d/12VXXPQ0xTHpdgdLEj09K2nOwTRoiprEszM5QESP2SXk/edit?tab=t.0#heading=h.o5k6kdpc3hjp",
+      "key": "ai_time_capsule_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_time_capsule_project_planning_guide"
       }
     },
     {
@@ -5353,6 +7372,19 @@
       },
       "seeding_key": {
         "resource.key": "collaborate_on_a_product_launch"
+      }
+    },
+    {
+      "name": "Create a Copyright Policy",
+      "url": "https://docs.google.com/document/d/1zyxKvVs5Yx6-pOL475pediazFCQ4oMqWgavQLE-7Dq4/edit?usp=sharing",
+      "key": "create_a_copyright_policy",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_copyright_policy"
       }
     },
     {
@@ -5393,6 +7425,30 @@
       }
     },
     {
+      "name": "Exemplar Description",
+      "url": "https://docs.google.com/document/d/1C0sQDyrgocK_I1BhlVw1cVCHZhEkri4ukFKPRvgAdSc/edit?usp=sharing",
+      "key": "exemplar_description",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_description"
+      }
+    },
+    {
+      "name": "Exemplar Project",
+      "url": "https://drive.google.com/file/d/180dIgV9g3UfwKRbvF08D4Yw-iiKQIuE8/view?usp=sharing",
+      "key": "exemplar_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_project"
+      }
+    },
+    {
       "name": "Hallucination Case Studies",
       "url": "https://docs.google.com/document/d/1l252sY3OMQ5kK435xBmb79VM3xDQv1ZJyrDAHh1F1LI/edit?usp=sharing",
       "key": "hallucination_case_studies",
@@ -5428,6 +7484,18 @@
       },
       "seeding_key": {
         "resource.key": "jigsaw_articles"
+      }
+    },
+    {
+      "name": "Ownership, Ethics, and Creativity",
+      "url": "https://docs.google.com/presentation/d/1GW9SfHuMo_wqsOXNRcJFksxFcWZ6U-3aIlSvlE6pIQU/view",
+      "key": "ownership_ethics_and_creativity",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ownership_ethics_and_creativity"
       }
     },
     {
@@ -5512,6 +7580,18 @@
       },
       "seeding_key": {
         "resource.key": "understanding_bias"
+      }
+    },
+    {
+      "name": "UNICEF Youth Advocate Ayshka on Mental Health",
+      "url": "https://youtu.be/zsiMg1zRdWU?si=hcMihJqh28_QfkwD",
+      "key": "unicef_youth_advocate_ayshka_on_mental_health",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "unicef_youth_advocate_ayshka_on_mental_health"
       }
     },
     {
@@ -5654,6 +7734,96 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_exemplar_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_create_a_copyright_policy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "create_a_copyright_policy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "ownership_ethics_and_creativity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_exemplar_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_ai_in_the_community"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "ai_in_the_community"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "ai_s_role_in_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unicef_youth_advocate_ayshka_on_mental_health"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "ai_time_capsule_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "ai_time_capsule_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "exemplar_description"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "exemplar_project"
       }
     },
     {
@@ -5878,6 +8048,16 @@
       }
     },
     {
+      "key": "attribution",
+      "word": "attribution",
+      "definition": "the act of giving credit to the original creator of a work, especially in the context of using or referencing their material",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribution"
+      }
+    },
+    {
       "key": "co_creating",
       "word": "co-creating",
       "definition": "humans and AI working together, with humans providing creativity and direction, while AI assists by processing data, generating suggestions, or automating tasks",
@@ -5905,6 +8085,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "contradiction"
+      }
+    },
+    {
+      "key": "copyright",
+      "word": "copyright",
+      "definition": "the legal right granted to the creator of an original work to use, distribute, and modify it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "copyright"
+      }
+    },
+    {
+      "key": "ethics",
+      "word": "ethics",
+      "definition": "the branch of philosophy that deals with what is morally right and wrong, and how decisions affect people and society",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethics"
       }
     },
     {
@@ -5996,6 +8196,16 @@
       "seeding_key": {
         "vocabulary.key": "training_data"
       }
+    },
+    {
+      "key": "transparency",
+      "word": "transparency",
+      "definition": "the practice of openly disclosing how something works, especially in terms of decision-making, data use, or AI processes",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "transparency"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -6027,6 +8237,30 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "vocabulary.key": "co_creating"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "attribution"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "copyright"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "transparency"
       }
     },
     {
@@ -6121,6 +8355,16 @@
       }
     },
     {
+      "key": "0de39c24-9a8e-4dd6-9a85-521a79031127",
+      "properties": {
+        "description": "Evaluate AI outputs for accuracy, inclusivity, and real-world relevance."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "0de39c24-9a8e-4dd6-9a85-521a79031127"
+      }
+    },
+    {
       "key": "119f1623-b777-4689-9519-501f7443a072",
       "properties": {
         "description": "Experiment with AI to uncover contradictions and explain why they occur."
@@ -6128,6 +8372,26 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "119f1623-b777-4689-9519-501f7443a072"
+      }
+    },
+    {
+      "key": "15f331e0-370c-4aae-9ab6-a9c58c2d974d",
+      "properties": {
+        "description": "Develop a future prediction by combining research with AI-generated insights."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "15f331e0-370c-4aae-9ab6-a9c58c2d974d"
+      }
+    },
+    {
+      "key": "1d1688e8-a06d-4319-bd6c-c77f3feb6099",
+      "properties": {
+        "description": "Evaluate AI’s societal impact by investigating its effects on different community groups."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "1d1688e8-a06d-4319-bd6c-c77f3feb6099"
       }
     },
     {
@@ -6171,6 +8435,16 @@
       }
     },
     {
+      "key": "3bc65d77-11a4-4071-b490-154c6dd2bef3",
+      "properties": {
+        "description": "Create a presentation that explains how you collaborated with AI to shape and improve your final prediction."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "3bc65d77-11a4-4071-b490-154c6dd2bef3"
+      }
+    },
+    {
       "key": "3e49812f-4ec9-4c41-827a-0ea1c1d552c9",
       "properties": {
         "description": "Identify strategies for mitigating bias in AI systems and evaluating ethical considerations."
@@ -6178,6 +8452,16 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "objective.key": "3e49812f-4ec9-4c41-827a-0ea1c1d552c9"
+      }
+    },
+    {
+      "key": "40899fdf-fc0d-46c3-a98e-efe83a1e7fc7",
+      "properties": {
+        "description": "Propose equitable AI solutions to ensure responsible and inclusive implementation."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "40899fdf-fc0d-46c3-a98e-efe83a1e7fc7"
       }
     },
     {
@@ -6201,6 +8485,16 @@
       }
     },
     {
+      "key": "44d11daf-04b3-4abf-b763-cc4df69187e8",
+      "properties": {
+        "description": "Justify when AI should or should not be used in a given situation, considering ethical, practical, and societal factors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "44d11daf-04b3-4abf-b763-cc4df69187e8"
+      }
+    },
+    {
       "key": "4fb15a9d-b350-48cf-8122-a2179c60d7d6",
       "properties": {
         "description": "Explain that AI models use probability and statistics to generate responses."
@@ -6218,6 +8512,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "538db2dd-34ab-423e-8c48-b39173309c87"
+      }
+    },
+    {
+      "key": "567d761e-2746-4705-bc2f-76cfa934bd2e",
+      "properties": {
+        "description": "Assess the environmental costs of AI, including energy consumption and carbon emissions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "567d761e-2746-4705-bc2f-76cfa934bd2e"
       }
     },
     {
@@ -6278,6 +8582,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "8454255e-8cb6-4bb4-a586-1f9d6c0e22a0"
+      }
+    },
+    {
+      "key": "86885636-aaee-4256-ae1c-41a305b8db13",
+      "properties": {
+        "description": "Refine predictions by improving prompts and applying human reasoning."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "86885636-aaee-4256-ae1c-41a305b8db13"
       }
     },
     {
@@ -6378,6 +8692,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "e2e92e9c-3e84-4db1-a470-70e731f2c045"
+      }
+    },
+    {
+      "key": "e9073b03-9cae-4e4f-aafb-c3df9a3b6e5e",
+      "properties": {
+        "description": "Assess the usefulness of AI as a collaborator in a creative or problem-solving task, identifying strengths and weaknesses."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "e9073b03-9cae-4e4f-aafb-c3df9a3b6e5e"
       }
     },
     {

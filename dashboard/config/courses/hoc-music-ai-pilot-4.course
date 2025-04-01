@@ -1,0 +1,21 @@
+{
+  "name": "hoc-music-ai-pilot-4",
+  "script_names": [
+    "hoc-music-ai-pilot-4"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoc-music-ai-pilot-4",
+    "pilot_experiment": "hoc-music-ai-pilot-4",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

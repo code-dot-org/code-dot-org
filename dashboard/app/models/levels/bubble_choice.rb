@@ -43,7 +43,6 @@ class BubbleChoice < DSLDefined
       name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
-      uses_lab2 false
 
       sublevels
       level 'level1'

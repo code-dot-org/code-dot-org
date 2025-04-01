@@ -1,0 +1,30 @@
+name 'ea-fac-csaif_pl-everyday-data-L2-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/41e0217e538fdf1f5f0e8ea33a42d240-image-1742484446527.png" alt="laptop with screwdiver symbolizing troubleshooting" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+
+# Types of Data
+
+#### Computers process a wide range of data types to power the applications and technologies we use every day. These data types come from different sources and serve various purposes, from improving user experiences to enabling advanced decision-making.
+
+<div style="clear:both;"></div>
+
+<br>
+
+>- #### **Audio data** includes sounds, speech, and music, which can be analyzed for voice recognition or noise filtering. 
+>- #### **Visual data** consists of images and videos, used in everything from facial recognition to medical imaging. Text data includes written language, such as emails, social media posts, and documents, which computers can analyze for sentiment or keyword recognition.
+>- #### **Location** data captures geographic coordinates from GPS devices, helping with navigation, logistics, and local services. 
+>- #### **Environmental data** comes from sensors that measure temperature, humidity, air quality, and other conditions, supporting applications in weather forecasting and smart home automation.
+>- #### **Biometric data** includes fingerprints, facial features, and heart rate, commonly used for security authentication and health monitoring.
+
+#### By processing and analyzing these diverse data types, computer systems can enhance functionality and improve user experiences in countless ways.
+
+
+
+
+<img src="https://images.code.org/945d2335353f1fa976bec7049e5469f6-image-1742485765009.png" alt="design process graph of the cycle" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+MARKDOWN

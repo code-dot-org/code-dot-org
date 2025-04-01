@@ -17,12 +17,13 @@
       },
       {
         "text": "#Where is Multimodal AI Used?\n\n\n- **Accessibility:** screen readers interpreting images and text\n- **Healthcare:** AI analyzing X-ray images and text\n- **Translation:** real-time text and audio speech translation\n- **Security:** facial and object recognition",
-        "imageUrl": "https://images.code.org/86642ade3620a934f9ddfcc16f191ae5-multimodal.gif",
+        "imageUrl": "",
         "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
-        "layout": "text-bottom-left"
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T17:50:25.679+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level5\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level5\"},{\"changed_at\":\"2025-03-17 17:50:28 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:16:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 03:04:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17T17:50:25.679+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level5\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level5\"},{\"changed_at\":\"2025-03-17 17:50:28 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:16:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-19 03:04:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-31 17:45:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-31 17:46:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -1,0 +1,160 @@
+{
+  "script": {
+    "name": "facilitator-networks-early-access",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pd_for_facilitators",
+      "curriculum_umbrella": "PD for Facilitators",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-31 03:27:23 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "facilitator-networks-early-access"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "facilitator-networks-early-access"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Networks",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-networks-early-access"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson Exploration",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-networks-early-access"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "af6ddb86-c633-4afa-9ea9-2c90b6966ef6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af6ddb86-c633-4afa-9ea9-2c90b6966ef6",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-networks-early-access"
+      }
+    },
+    {
+      "key": "d3e0fef6-618a-4054-b141-86825bcd86e9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d3e0fef6-618a-4054-b141-86825bcd86e9",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-networks-early-access"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "ff89dcf2-c0bd-4e9d-837e-354dd25b0d36",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ff89dcf2-c0bd-4e9d-837e-354dd25b0d36",
+        "lesson_activity.key": "af6ddb86-c633-4afa-9ea9-2c90b6966ef6"
+      }
+    },
+    {
+      "key": "f593568c-f3d0-47da-84d5-de8c260447c0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f593568c-f3d0-47da-84d5-de8c260447c0",
+        "lesson_activity.key": "d3e0fef6-618a-4054-b141-86825bcd86e9"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -37,7 +37,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
  * ## Production-ready Checklist:
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
- *  * (✘) has tests: test every prop, every state and every interaction that's js related;
+ *  * (✔) has tests: test every prop, every state and every interaction that's js related;
  *  * (see ./__tests__/Section.test.tsx)
  *  * (✔) passes accessibility checks;
  *

@@ -2,10 +2,15 @@
 
 .sessionRow {
   align-items: flex-end;
-  button.deleteButton {
+
+  div.deleteButtonContainer {
     flex: 0;
     height: 2rem;
     min-width: 2rem;
+
+    button.deleteButton {
+      min-width: 100%;
+    }
   }
 
   .timeDropdown {

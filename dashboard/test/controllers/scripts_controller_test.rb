@@ -526,7 +526,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'create' do
     unit_name = 'test-unit-create'
     @request.host = CDO.dashboard_hostname
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
     end
@@ -552,7 +552,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'create: sets course type if provided' do
     unit_name = 'test-pl-unit-create'
     @request.host = CDO.dashboard_hostname
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
     end
@@ -644,7 +644,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -665,7 +665,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     unit = create :script, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -686,7 +686,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -707,7 +707,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -729,7 +729,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -750,7 +750,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -771,7 +771,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
@@ -1950,7 +1950,7 @@ class ScriptsControllerTest < ActionController::TestCase
   def stub_file_writes(unit_name, family_name: nil)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
     File.stubs(:write).with do |filename, _|
-      filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts.en.yml')
+      filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts/en.yml')
     end
   end
 

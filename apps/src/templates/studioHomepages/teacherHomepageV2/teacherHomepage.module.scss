@@ -38,14 +38,6 @@
   gap: 6px;
 }
 
-.blankAnnouncement {
-  width: 320px;
-  min-width: 320px;
-  height: 600px;
-  background-color: var(--background-brand-purple-light);
-  margin-inline-start: 40px;
-}
-
 // SectionList
 .sectionList {
   display: flex;
@@ -227,4 +219,64 @@
 
 .emptyStateButtonIcon {
   color: var(--brand-purple-50);
+}
+
+.emptyImage {
+  width: 220px;
+}
+
+// Teacher promotions
+
+.promotions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-inline-start: 40px;
+}
+
+.promotion {
+  position: relative;
+  width: 280px;
+  max-width: 280px;
+  min-height: 150px;
+  max-height: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-neutral-secondary);
+}
+
+.promotionType {
+  margin-bottom: 6px;
+}
+
+.promotionTitle {
+  margin-bottom: 16px;
+}
+
+.promotionImage {
+  width: 280px;
+  min-height: 160px;
+  margin-bottom: 20px;
+}
+
+.promotionPartnerLogo {
+  height: 22px;
+  max-width: 100%;
+  margin-top: 6px;
+  margin-bottom: 20px;
+
+  img {
+    height: 22px;
+  }
+}
+
+.promotionButton {
+  width: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
 }

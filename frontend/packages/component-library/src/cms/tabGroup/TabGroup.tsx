@@ -4,7 +4,7 @@ import {useMemo} from 'react';
 import Accordion from '@/accordion';
 import {AccordionItem} from '@/accordion/Accordion';
 import {LinkButton, LinkButtonProps} from '@/button';
-import Image, {ImageProps} from '@/cms/image';
+import Image, {ImageProps} from '@/image';
 import Tabs, {TabModel, TabsProps} from '@/tabs';
 import {BodyThreeText, Heading3, Heading4} from '@/typography';
 

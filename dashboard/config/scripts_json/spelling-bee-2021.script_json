@@ -19,20 +19,18 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSC K-5",
       "has_verified_resources": true,
-      "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
       "tts": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "spelling-bee",
-    "serialized_at": "2025-01-09 16:47:04 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:30:05 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "spelling-bee-2021"
     }

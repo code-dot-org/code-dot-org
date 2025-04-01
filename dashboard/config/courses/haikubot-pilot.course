@@ -1,0 +1,21 @@
+{
+  "name": "haikubot-pilot",
+  "script_names": [
+    "haikubot-pilot"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "haikubot-pilot",
+    "pilot_experiment": "haikubot-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

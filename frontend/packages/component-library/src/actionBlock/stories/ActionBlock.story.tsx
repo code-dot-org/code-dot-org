@@ -4,7 +4,7 @@ import image3 from '@public/images/action-block-03.png';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import ActionBlock, {FullWidthActionBlock, ActionBlockProps} from '../index';
+import ActionBlock, {ActionBlockProps} from '../index';
 
 export default {
   title: 'DesignSystem/Action Block',
@@ -121,40 +121,6 @@ export const DefaultActionBlocks: Story = {
   },
 };
 
-export const DefaultFullWidthActionBlock: Story = {
-  args: {
-    ...defaultArgs,
-  },
-  render: args => {
-    return <FullWidthActionBlock {...args} />;
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const title = await canvas.findByText('Action block title');
-    const description = await canvas.findByText(DESCRIPTION);
-    const overline = await canvas.findByText('Overline Text');
-    const image = await canvas.findByAltText('');
-    const primaryButton = await canvas.findByLabelText(
-      'Primary Button aria label',
-    );
-    const secondaryButton = await canvas.findByLabelText(
-      'Secondary Button aria label',
-    );
-
-    // check if image is visible
-    await expect(image).toBeVisible();
-
-    // check if text content is visible
-    await expect(title).toBeVisible();
-    await expect(description).toBeVisible();
-    await expect(overline).toBeVisible();
-
-    // check if buttons are visible
-    await expect(primaryButton).toBeVisible();
-    await expect(secondaryButton).toBeVisible();
-  },
-};
-
 export const WithDetail: Story = {
   args: {
     ...defaultArgs,
@@ -263,16 +229,23 @@ export const WithSecondaryBackground: Story = {
         style={{
           backgroundColor: 'var(--background-neutral-secondary)',
           padding: '2rem',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
         }}
       >
-        <FullWidthActionBlock {...args} />
+        <ActionBlock {...args} overline={'Overline One'} />
+        <ActionBlock {...args} />
       </div>
     );
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const image = await canvas.findByRole('figure');
-    const actionBlock = image.closest('div');
+    const titles = await canvas.findAllByText('Action block title');
+    const title = titles[0];
+    const textWrapper = title.parentElement;
+    const actionBlock = textWrapper?.parentElement;
+
     const expectedBackgroundColor = window
       .getComputedStyle(document.body)
       .getPropertyValue('--background-neutral-primary');

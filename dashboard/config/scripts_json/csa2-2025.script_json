@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 13:15:57 UTC",
+    "serialized_at": "2025-03-26 20:56:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10382,6 +10382,16 @@
   ],
   "vocabularies": [
     {
+      "key": "abstraction",
+      "word": "abstraction",
+      "definition": "showing only essential details while hiding implementation details",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
       "key": "access_modifier",
       "word": "access modifier",
       "definition": "a keyword used to set the visibility of classes, variables, constructors, and methods",
@@ -10919,6 +10929,12 @@
       "seeding_key": {
         "lesson.key": "Printing Objects",
         "vocabulary.key": "override"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Program Design",
+        "vocabulary.key": "abstraction"
       }
     },
     {

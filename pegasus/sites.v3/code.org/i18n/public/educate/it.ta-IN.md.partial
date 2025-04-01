@@ -17,7 +17,7 @@ theme: responsive
 
 ## குறைந்தபட்ச ஆதரவு உலாவிகள் மற்றும் இயங்குதளங்கள்
 
-ஜூலை 2024 இல் தொடங்கி, உலாவிகள் மற்றும் இயக்க முறைமைகளுக்குத் தேவையான குறைந்தபட்ச பதிப்புகளை புதுப்பிப்போம். பழைய பதிப்புகள் இன்னும் வேலை செய்யக்கூடும் என்றாலும், பழைய பதிப்புகளில் பிழை திருத்தங்களுக்கான கோரிக்கைகளை நாங்கள் ஆதரிக்க முடியாது.
+ஒவ்வொரு ஆண்டும் உலாவிகள் மற்றும் இயக்க முறைமைகளுக்குத் தேவையான குறைந்தபட்ச பதிப்புகளை புதுப்பிப்போம். பழைய பதிப்புகள் இன்னும் வேலை செய்யக்கூடும் என்றாலும், பழைய பதிப்புகளில் பிழை திருத்தங்களுக்கான கோரிக்கைகளை நாங்கள் ஆதரிக்க முடியாது.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           உலாவி
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          உலாவி ஜூலை '24
         </th>
         <tr>
           <td>குரோம் 103.x</td>
@@ -71,28 +49,6 @@ theme: responsive
           நடைமேடை
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          மேடை ஜூலை '24
-        </th>
-        <tr>
           <td>மேகோஸ் 10.15</td>
         </tr>
         <tr>
@@ -109,6 +65,52 @@ theme: responsive
         </tr>
       </table>
     </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '25
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    -->
   </tr>
 </table>
 

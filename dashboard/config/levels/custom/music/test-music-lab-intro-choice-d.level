@@ -1,0 +1,193 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-03-31T21:36:18.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Choice D",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_riptide",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "chainsmokers_riptide/drums_mouth_drums"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "6CxkC,i6#*_::{t3W].3",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "repeat_simple2",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 4
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "play_sounds_together",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "set_effect_at_current_location_simple2",
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">volume</field>",
+                                          "effects_value": "<field name=\"effects_value\">medium</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect_at_current_location_simple2",
+                                            "id": "=!zLu?[O,ka6ryu0#f3C",
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                                              "effects_value": "<field name=\"effects_value\">medium</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "$iyS,M(k]E2RwkfvPHMf",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "chainsmokers_riptide/drums_snare_tone"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "%JpJh9fg~~MZuGBSMi$M",
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "chainsmokers_riptide/synth_slide"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "7n1V.(;VDU/1CUsqi~t~",
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "chainsmokers_riptide/drums_mouth_drums"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "play_sounds_sequential",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "{+Nm%K_~~%lLMOnnqZ4.",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "chainsmokers_riptide/reverse_chord"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "KcT`E~?ycZr1fz4r)zZO",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "chainsmokers_riptide/vocals_its_only_you"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-31T21:36:18.156+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-c\"},{\"changed_at\":\"2025-03-31 21:36:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 21:37:52 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 21:52:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

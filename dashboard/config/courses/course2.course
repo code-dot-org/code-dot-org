@@ -1,0 +1,20 @@
+{
+  "name": "course2",
+  "script_names": [
+    "course2"
+  ],
+  "published_state": "preview",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "course2",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "frozen-2018-test",
+  "script_names": [
+    "frozen-2018-test"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "frozen-2018-test",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
