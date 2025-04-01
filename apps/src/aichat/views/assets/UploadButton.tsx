@@ -56,7 +56,9 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       ]);
 
     for (const [key, filename] of allowedFiles) {
-      dispatch(addStagedFile({key, asset: {filename, source: 'project'}}));
+      dispatch(
+        addStagedFile({key, asset: {filename, source: AssetSource.PROJECT}})
+      );
     }
 
     let uploadSuccessCount = 0;
