@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csd5-preview-2021-1",
+    "pilot_experiment": "csd-2021-preview",
     "version_year": "unversioned"
   },
   "resources": [

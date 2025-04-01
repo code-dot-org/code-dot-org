@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 19:49:23 UTC",
+    "serialized_at": "2025-03-31 18:25:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1217,6 +1217,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-functions-L15-1-python"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1289,6 +1292,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_custompy-L17-2_Python"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1362,31 +1368,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-pl-choicef-function-L20-Python"
-        ],
-        "progression": "Functions and Parameters"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif-pl-choicef-function-L20-Python"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-python",
-        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
-      },
-      "level_keys": [
-        "csaif-pl-choicef-function-L20-Python"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 23,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csaif-pl-functions-mult-choice-L21-Python"
         ],
         "progression": "Functions and Parameters"
@@ -1403,6 +1384,28 @@
       },
       "level_keys": [
         "csaif-pl-functions-mult-choice-L21-Python"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 23,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_checkreview-functions-22-2_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "csaif_pl_checkreview-functions-22-2_Python"
       ]
     },
     {
@@ -1611,15 +1614,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif-pl-_loop-open-response-L5_python"
-        ],
         "progression": "Conditionals "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-_loop-open-response-L5_python"
+          "csaif-pl-predict-conditional-L5-2-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -1627,7 +1627,7 @@
         "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39"
       },
       "level_keys": [
-        "csaif-pl-_loop-open-response-L5_python"
+        "csaif-pl-predict-conditional-L5-2-python"
       ]
     },
     {
@@ -1687,31 +1687,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-pl-conditional-code-L8-python"
-        ],
-        "progression": "Conditionals "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif-pl-conditional-code-L8-python"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-python",
-        "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39"
-      },
-      "level_keys": [
-        "csaif-pl-conditional-code-L8-python"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 9,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csaif_pl_if-while-L9_python"
         ],
         "progression": "Conditionals "
@@ -1731,9 +1706,9 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 10,
-      "activity_section_position": 6,
+      "chapter": 56,
+      "position": 9,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1756,8 +1731,8 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 11,
+      "chapter": 57,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1781,8 +1756,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 12,
+      "chapter": 58,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1806,8 +1781,8 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 13,
+      "chapter": 59,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1831,8 +1806,8 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 14,
+      "chapter": 60,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1856,8 +1831,8 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 15,
+      "chapter": 61,
+      "position": 14,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1881,8 +1856,8 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 16,
+      "chapter": 62,
+      "position": 15,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -1906,8 +1881,8 @@
       ]
     },
     {
-      "chapter": 64,
-      "position": 17,
+      "chapter": 63,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1931,8 +1906,8 @@
       ]
     },
     {
-      "chapter": 65,
-      "position": 18,
+      "chapter": 64,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1956,8 +1931,8 @@
       ]
     },
     {
-      "chapter": 66,
-      "position": 19,
+      "chapter": 65,
+      "position": 18,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1981,8 +1956,8 @@
       ]
     },
     {
-      "chapter": 67,
-      "position": 20,
+      "chapter": 66,
+      "position": 19,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -2006,7 +1981,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2031,7 +2006,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2056,7 +2031,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2081,7 +2056,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2106,7 +2081,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2131,7 +2106,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2651,9 +2626,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-choicef-function-L20-Python",
+        "level.key": "csaif-pl-functions-mult-choice-L21-Python",
         "script_level.level_keys": [
-          "csaif-pl-choicef-function-L20-Python"
+          "csaif-pl-functions-mult-choice-L21-Python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2663,9 +2638,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-functions-mult-choice-L21-Python",
+        "level.key": "csaif_pl_checkreview-functions-22-2_Python",
         "script_level.level_keys": [
-          "csaif-pl-functions-mult-choice-L21-Python"
+          "csaif_pl_checkreview-functions-22-2_Python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2771,9 +2746,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-_loop-open-response-L5_python",
+        "level.key": "csaif-pl-predict-conditional-L5-2-python",
         "script_level.level_keys": [
-          "csaif-pl-_loop-open-response-L5_python"
+          "csaif-pl-predict-conditional-L5-2-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -2798,18 +2773,6 @@
         "level.key": "csaif-pl_methos-conditional-L7-Python",
         "script_level.level_keys": [
           "csaif-pl_methos-conditional-L7-Python"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-python",
-        "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif-pl-conditional-code-L8-python",
-        "script_level.level_keys": [
-          "csaif-pl-conditional-code-L8-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-31 03:57:15 UTC",
+    "serialized_at": "2025-03-31 14:33:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4021,6 +4021,7 @@
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Help students assess how AI is impacting their own local communities. AI's impact varies by location, economy, and social factors—students should advocate for fair and accessible AI. This part of the activity also focuses on having students use AI to help summarize and draw key points out of source material.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI in My Community activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 1. Students choose one implementation of AI to focus on. For all of the choices, students will be sent to a folder with four articles – one feature article about the use of AI they picked, one editorial on the use of AI they picked, one tabloid-style article about the area they picked, and one feature article focused on environmental issues.\n",
         "duration": "15",
         "name": "AI in My Community: Helpful or Harmful?",
+        "progression_name": "Articles",
         "tips": [
           {
             "type": "teachingTip",
@@ -4047,7 +4048,8 @@
       "key": "af5c01c4-a722-486d-9095-a9effaee99d6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 12, Level 2. Students choose the same implementation they picked in the previous level and then use AI Chat to summarize the articles and pull out key information. They should record their findings in their activity guide.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 12, Level 2. Students choose the same implementation they picked in the previous level and then use AI Chat to summarize the articles and pull out key information. They should record their findings in their activity guide.\n",
+        "progression_name": "AI in the Community"
       },
       "seeding_key": {
         "activity_section.key": "af5c01c4-a722-486d-9095-a9effaee99d6",
@@ -4082,6 +4084,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 3 to complete the formative assessment.",
+        "progression_name": "Check Your Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4112,7 +4115,8 @@
       "key": "e00d6a0b-79be-4c90-8db7-7010f650f91a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"UNICEF Youth Advocate Ayshka on Mental Health\" video.\n\n**Questions to consider with the video:**\n- How does the speaker use emotion, personal experience, and a clear message to connect with the audience?\n\n**Discussion Goal:** Students understand that getting straight to the point and outlining clear, easy-to-follow, steps can be effective steps for straightforward communication in a short video.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 4. Students will use the AI Chat to draft a script for a short video proposing how AI could be made more beneficial for all members of their community.\n"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"UNICEF Youth Advocate Ayshka on Mental Health\" video.\n\n**Questions to consider with the video:**\n- How does the speaker use emotion, personal experience, and a clear message to connect with the audience?\n\n**Discussion Goal:** Students understand that getting straight to the point and outlining clear, easy-to-follow, steps can be effective steps for straightforward communication in a short video.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 4. Students will use the AI Chat to draft a script for a short video proposing how AI could be made more beneficial for all members of their community.\n",
+        "progression_name": "Write a Video Script"
       },
       "seeding_key": {
         "activity_section.key": "e00d6a0b-79be-4c90-8db7-7010f650f91a",
@@ -4698,6 +4702,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level4"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -4720,6 +4727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level6"
+        ],
         "progression": "Prompting Practice"
       },
       "bonus": false,
@@ -4767,6 +4777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level7_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4914,6 +4927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level6_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5011,6 +5027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5133,6 +5152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level5_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5380,6 +5402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level10_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5502,6 +5527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5574,6 +5602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level3_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5796,6 +5827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level9_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5868,6 +5902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level3_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5990,6 +6027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level5_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6012,6 +6052,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level1_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6034,6 +6077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level2_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6056,6 +6102,97 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Articles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level1_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "9334cf43-5727-470a-9063-2ac03d371d63"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level1_2024"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI in the Community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level2_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "af5c01c4-a722-486d-9095-a9effaee99d6"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level2_2024"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level3_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b99c278e-2c45-4c65-a7ae-fe9f45c986e7"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level3_2024"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Write a Video Script"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level4_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e00d6a0b-79be-4c90-8db7-7010f650f91a"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson12-level4_2024"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level5_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6073,11 +6210,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level1_2024"
+        ],
         "progression": "AI Prediction"
       },
       "bonus": false,
@@ -6095,11 +6235,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level2_2024"
+        ],
         "progression": "Final Product"
       },
       "bonus": false,
@@ -6117,11 +6260,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level3_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6139,7 +6285,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6883,6 +7029,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pswai-pilot-2024",
         "activity_section.key": "7bb21374-f73e-478a-94e9-9bb3754efa4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level1_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level1_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "9334cf43-5727-470a-9063-2ac03d371d63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level2_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level2_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "af5c01c4-a722-486d-9095-a9effaee99d6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level3_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level3_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "b99c278e-2c45-4c65-a7ae-fe9f45c986e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson12-level4_2024",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson12-level4_2024"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pswai-pilot-2024",
+        "activity_section.key": "e00d6a0b-79be-4c90-8db7-7010f650f91a"
       }
     },
     {

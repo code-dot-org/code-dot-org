@@ -1,0 +1,361 @@
+{
+  "script": {
+    "name": "vpl-csp-2025-m6",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-31 23:23:48 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csp-2025-m6"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 6: Introduction to the Create Performance Task",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "977edb3c-473e-47e4-a405-7d7843ff0124",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "977edb3c-473e-47e4-a405-7d7843ff0124",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a6af2e99-ead9-4ba4-a41e-047a1cf26435",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 6 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6af2e99-ead9-4ba4-a41e-047a1cf26435",
+        "lesson_activity.key": "977edb3c-473e-47e4-a405-7d7843ff0124"
+      }
+    },
+    {
+      "key": "3fc914f5-d22d-41a3-8165-76145ec52e9f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to the Create Performance Task (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fc914f5-d22d-41a3-8165-76145ec52e9f",
+        "lesson_activity.key": "977edb3c-473e-47e4-a405-7d7843ff0124"
+      }
+    },
+    {
+      "key": "8e4f4fb7-18f2-4eb8-b383-3721025a6ba4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to the Create Performance Task (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e4f4fb7-18f2-4eb8-b383-3721025a6ba4",
+        "lesson_activity.key": "977edb3c-473e-47e4-a405-7d7843ff0124"
+      }
+    },
+    {
+      "key": "b134aedb-4fcf-4430-accd-a53624886ea2",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 6 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b134aedb-4fcf-4430-accd-a53624886ea2",
+        "lesson_activity.key": "977edb3c-473e-47e4-a405-7d7843ff0124"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 6 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL Module 8 - Workshop Overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "a6af2e99-ead9-4ba4-a41e-047a1cf26435"
+      },
+      "level_keys": [
+        "CSP-PL Module 8 - Workshop Overview_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to the Create Performance Task (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - MC Exam 1_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "3fc914f5-d22d-41a3-8165-76145ec52e9f"
+      },
+      "level_keys": [
+        "CSP-PL M8 - MC Exam 1_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to the Create Performance Task (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 2_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "3fc914f5-d22d-41a3-8165-76145ec52e9f"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Exam 2_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to the Create Performance Task (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 3_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "3fc914f5-d22d-41a3-8165-76145ec52e9f"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Exam 3_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to the Create Performance Task (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M6 - Create PT Reqs_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "8e4f4fb7-18f2-4eb8-b383-3721025a6ba4"
+      },
+      "level_keys": [
+        "CSP-PL M6 - Create PT Reqs_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 6 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 8 Wrap Up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "b134aedb-4fcf-4430-accd-a53624886ea2"
+      },
+      "level_keys": [
+        "CSP - Module 8 Wrap Up_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL Module 8 - Workshop Overview_2025",
+        "script_level.level_keys": [
+          "CSP-PL Module 8 - Workshop Overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "a6af2e99-ead9-4ba4-a41e-047a1cf26435"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - MC Exam 1_2025",
+        "script_level.level_keys": [
+          "CSP-PL M8 - MC Exam 1_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "3fc914f5-d22d-41a3-8165-76145ec52e9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Exam 2_2025",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 2_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "3fc914f5-d22d-41a3-8165-76145ec52e9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Exam 3_2025",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 3_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "3fc914f5-d22d-41a3-8165-76145ec52e9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M6 - Create PT Reqs_2025",
+        "script_level.level_keys": [
+          "CSP-PL M6 - Create PT Reqs_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "8e4f4fb7-18f2-4eb8-b383-3721025a6ba4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 8 Wrap Up_2025",
+        "script_level.level_keys": [
+          "CSP - Module 8 Wrap Up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m6",
+        "activity_section.key": "b134aedb-4fcf-4430-accd-a53624886ea2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
