@@ -1,14 +1,36 @@
+import image1 from '@public/images/action-block-01.png';
+import image2 from '@public/images/action-block-02.png';
+import image3 from '@public/images/action-block-03.png';
+import image4 from '@public/images/action-block-04.png';
+import image5 from '@public/images/action-block-05.png';
+import image6 from '@public/images/action-block-06.png';
 import type {Meta, StoryFn} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
+import ActionBlock from '@/actionBlock';
 import {Heading2} from '@/typography';
+import Video from '@/video';
 
-import Video from '../../video/Video';
 import Carousel, {CarouselProps} from '../index';
 
 export default {
   title: 'DesignSystem/Carousel',
   component: Carousel,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable the color contrast rule for action blocks.
+            // ActionBlock component has one a11y issue, and it's related to the overline color.
+            // This is a known issue across our design system, and we are ok accepting this for now.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 // Create a basic slide
@@ -277,14 +299,149 @@ CarouselWithCustomSlidesPerView.play = async ({
   }
 };
 
-// TODO CMS-360 - Add Action Block carousel when Action Block component is ready
-export const ActionBlockCarousel = MultipleTemplate.bind({});
+export const ActionBlockCarousel = SingleTemplate.bind({});
+const DESCRIPTION =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
+const DESCRIPTION_MED =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+ActionBlockCarousel.args = {
+  allowTouchMove: true,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  slides: [
+    {
+      id: 'action-block-slide-1',
+      slide: (
+        <ActionBlock
+          title="Action Block 1"
+          description={DESCRIPTION}
+          image={image1}
+          overline={'Overline 1'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-2',
+      slide: (
+        <ActionBlock
+          title="Action Block 2"
+          description={DESCRIPTION_MED}
+          image={image2}
+          overline={'Overline 2'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-3',
+      slide: (
+        <ActionBlock
+          title="Action Block 3"
+          description={DESCRIPTION}
+          image={image3}
+          overline={'Overline 3'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-4',
+      slide: (
+        <ActionBlock
+          title="Action Block 4"
+          description={DESCRIPTION_MED}
+          image={image4}
+          overline={'Overline 4'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-5',
+      slide: (
+        <ActionBlock
+          title="Action Block 5"
+          description={DESCRIPTION}
+          image={image5}
+          overline={'Overline 5'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'action-block-slide-6',
+      slide: (
+        <ActionBlock
+          title="Action Block 6"
+          description={DESCRIPTION_MED}
+          image={image6}
+          overline={'Overline 6'}
+          primaryButton={{
+            text: 'Primary Button',
+            href: '#',
+          }}
+        />
+      ),
+    },
+  ],
+};
 ActionBlockCarousel.parameters = {
   docs: {
     description: {
-      story: 'COMING SOON',
+      story:
+        'Action blocks can be used in carousels to display a series of related cards. A carousel should be used when there are more than six action blocks in a section.',
     },
   },
+};
+ActionBlockCarousel.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = await canvas.findAllByLabelText('Previous slide');
+  const navArrowNext = await canvas.findAllByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const actionBlockTitles = [
+    'Action Block 1',
+    'Action Block 2',
+    'Action Block 3',
+    'Action Block 4',
+    'Action Block 5',
+    'Action Block 6',
+  ];
+
+  // check that the navigation arrows are showing on both carousels
+  navArrowPrev.forEach(prevArrow => expect(prevArrow).toBeInTheDocument());
+  navArrowNext.forEach(nextArrow => expect(nextArrow).toBeInTheDocument());
+
+  // check that the pagination dots are showing on both carousels
+  for (const dotLabel of paginationDots) {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  }
+
+  // check that action blocks are visible in both carousels
+  for (const title of actionBlockTitles) {
+    const actionBlock = await canvas.findByText(title);
+    expect(actionBlock).toBeVisible();
+  }
 };
 
 export const VideoCarousels = MultipleTemplate.bind({});

@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-07T21:12:27.000Z",
   "level_num": "custom",
@@ -50,6 +49,7 @@
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
                         "deletable": false,
+                        "movable": false,
                         "editable": false,
                         "extraState": {
                           "disableNextConnection": false
@@ -62,6 +62,7 @@
                             "type": "play_sound_at_current_location_simple2",
                             "id": "g?.Wt;h[;suX(UtaXH37",
                             "deletable": false,
+                            "movable": false,
                             "editable": false,
                             "extraState": {
                               "disableNextConnection": false
@@ -105,7 +106,8 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-07T21:12:27.395+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-03-07 21:13:50 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-25 18:55:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:55:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 06:24:06 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 06:25:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-07T21:12:27.395+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-03-07 21:13:50 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-25 18:55:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 18:55:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 06:24:06 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 06:25:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 21:16:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

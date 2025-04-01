@@ -21,7 +21,7 @@ export default class WorkshopEnrollment extends React.Component {
     enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
     workshopId: PropTypes.string.isRequired,
     workshopCourse: PropTypes.string.isRequired,
-    workshopSubject: PropTypes.string.isRequired,
+    workshopSubject: PropTypes.string,
     workshopDate: PropTypes.string.isRequired,
     numSessions: PropTypes.number.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,

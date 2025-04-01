@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "musiclab",
+    "pilot_experiment": "musiclab-pilot",
     "version_year": "unversioned"
   },
   "resources": [

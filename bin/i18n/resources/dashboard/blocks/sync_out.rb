@@ -23,7 +23,6 @@ module I18n
 
           private def distribute_localization(locale, file_path)
             crowdin_translations = I18nScriptUtils.parse_file(file_path)
-
             i18n_data = I18nScriptUtils.to_dashboard_i18n_data(locale, BLOCKS_TYPE, crowdin_translations)
             target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{BLOCKS_TYPE}/#{locale}.json")
             I18nScriptUtils.sanitize_data_and_write(i18n_data, target_i18n_file_path)

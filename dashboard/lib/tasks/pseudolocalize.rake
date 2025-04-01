@@ -36,7 +36,7 @@ timed_task_with_logging pseudolocalize: :environment do
   SOURCE_LOCALE = 'en'.freeze
   PSEUDO_LOCALE = 'en-PLOC'.freeze
 
-  srcs = Dir.glob("#{Rails.root}/config/locales/*#{SOURCE_LOCALE}.yml")
+  srcs = Dir.glob("#{Rails.root}/config/locales/*/#{SOURCE_LOCALE}.yml")
   srcs.each do |src|
     puts "converting: #{src}"
     dest = src.gsub("#{SOURCE_LOCALE}.yml", "#{PSEUDO_LOCALE}.yml")

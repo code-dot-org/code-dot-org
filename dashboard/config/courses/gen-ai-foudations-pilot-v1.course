@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "gen-ai-foudations-pilot-v1",
+    "pilot_experiment": "gen-ai-foundations-v1",
     "version_year": "unversioned"
   },
   "resources": [

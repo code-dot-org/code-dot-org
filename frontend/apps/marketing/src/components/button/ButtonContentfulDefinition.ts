@@ -58,7 +58,12 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
         'External links will be opened in a new tab, while internal links will be opened in the same tab.',
       type: 'Boolean',
       defaultValue: false,
-      group: 'style',
+      group: 'content',
+    },
+    ariaLabel: {
+      displayName: 'Aria Label',
+      type: 'Text',
+      group: 'content',
     },
     iconLeftName: {
       displayName: 'Left Icon Name',

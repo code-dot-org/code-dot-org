@@ -13,6 +13,7 @@ interface ChatMessageProps {
   text: string;
   role: Role;
   customStyles?: {[label: string]: string};
+  header?: React.ReactNode;
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
@@ -22,6 +23,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
   role,
   customStyles,
+  header,
   footer,
   isTA,
   messageStyle = 'default',
@@ -34,6 +36,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       )}
     >
       <div className={moduleStyles.messageWithChildren}>
+        {header && <div>{header}</div>}
         <div className={moduleStyles[`container-${role}`]}>
           {role === Role.ASSISTANT && (
             <div

@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "ai-tutor-test",
+    "pilot_experiment": "ai-tutor",
     "version_year": "unversioned"
   },
   "resources": [

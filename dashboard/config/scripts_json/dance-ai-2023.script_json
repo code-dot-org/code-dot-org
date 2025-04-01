@@ -6,7 +6,6 @@
     "properties": {
       "content_area": "hoc",
       "curriculum_umbrella": "HOC",
-      "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
@@ -17,16 +16,15 @@
         "ai"
       ],
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "dance-ai",
-    "serialized_at": "2025-01-09 16:41:44 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-25 00:55:24 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "dance-ai-2023"
     }

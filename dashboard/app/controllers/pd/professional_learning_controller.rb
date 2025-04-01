@@ -1,8 +1,9 @@
 class Pd::ProfessionalLearningController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
-  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!, only: [:index, :csa, :csd, :csf, :csp, :csaif]
 
+  # GET my-professional-learning
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
 
@@ -27,6 +28,56 @@ class Pd::ProfessionalLearningController < ApplicationController
       joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_without_students),
       courses_as_facilitator: Pd::CourseFacilitator.where(facilitator: current_user).map(&:course).uniq,
     }.compact
+  end
+
+  # GET professional-learning/facilitator/computer-science-a
+  def csa
+    @course_name = Pd::Workshop::COURSE_CSA
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csa'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-discoveries
+  def csd
+    @course_name = Pd::Workshop::COURSE_CSD
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csd'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-fundamentals
+  def csf
+    @course_name = Pd::Workshop::COURSE_CSF
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csf'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-principles
+  def csp
+    @course_name = Pd::Workshop::COURSE_CSP
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csp'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+    end
+  end
+
+  # GET professional-learning/facilitator/computer-science-ai-fundamentals
+  def csaif
+    @course_name = Pd::Workshop::COURSE_CSAIF
+    if can_view_facilitator_page(@course_name)
+      render 'pd/professional_learning/facilitator/csaif'
+    else
+      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+    end
   end
 
   def applications_closed
@@ -66,5 +117,10 @@ class Pd::ProfessionalLearningController < ApplicationController
       reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
       map(&:summarize_for_my_pl_page)
     render json: {status: :ok, workshops_as_program_manager: workshops_as_program_manager}
+  end
+
+  # Returns if the current_user can view the facilitator landing page of the given course.
+  private def can_view_facilitator_page(course)
+    current_user&.can_view_all_facilitator_landing_pages? || current_user&.courses_as_facilitator&.exists?(course: course)
   end
 end

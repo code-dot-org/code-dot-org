@@ -218,3 +218,25 @@ export function validateBlockCategories(workspace) {
     }
   });
 }
+
+export function applyBlockIdOverrides(workspaceJson, overrides) {
+  function walkBlocks(block) {
+    if (block.id && overrides[block.id]) {
+      block.id = overrides[block.id];
+    }
+    if (block.next?.block) {
+      walkBlocks(block.next.block);
+    }
+    if (block.inputs) {
+      for (const stmt of Object.values(block.inputs)) {
+        if (stmt?.block) {
+          walkBlocks(stmt.block);
+        }
+      }
+    }
+  }
+
+  if (Array.isArray(workspaceJson.blocks?.blocks)) {
+    workspaceJson.blocks.blocks.forEach(walkBlocks);
+  }
+}

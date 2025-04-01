@@ -7,15 +7,14 @@
       "content_area": "other",
       "curriculum_umbrella": "Other",
       "is_migrated": true,
-      "pilot_experiment": "spring-2024-k5-pilot",
       "topic_tags": [
         "music_lab"
       ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:34 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2025-03-28 09:29:24 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,

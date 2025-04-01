@@ -21,6 +21,7 @@ export interface MusicLevelData extends ProjectLevelData {
   showAiGenerateAgainHelp?: boolean;
   allowChangeStartingPlayheadPosition?: boolean;
   toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  validationTimeout?: number;
 }
 
 export type LoadFinishedCallback = (
