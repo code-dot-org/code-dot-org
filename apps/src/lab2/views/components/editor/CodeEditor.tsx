@@ -45,8 +45,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   );
   const {signInState} = useAppSelector(state => state.currentUser);
 
-  // We want the user preference for selected font size to persist across a session
+  // User preference for selected font size persists within a session
   // per signed-in user per app type (currently either pythonlab or weblab).
+  // TODO: update so that selected font size will persist across sessions.
   // Note that When the user selects a different font size from settings, fontSizeKey
   // is updated alongside sessionStorage for sessionStorageKey.
   useEffect(() => {
