@@ -1,9 +1,28 @@
 require 'cdo/firehose'
 
 class Api::V1::UsersController < Api::V1::JSONApiController
-  before_action :load_user
+  before_action :allow_cdo_cors, only: %i[signed_in]
+  before_action :prevent_caching, only: %i[signed_in]
+  before_action :load_user, only: %i[
+    get_school_name
+    get_contact_details
+    get_using_text_mode
+    get_display_theme
+    get_mute_music
+    get_donor_teacher_banner_details
+    get_tos_version
+    post_using_text_mode
+    post_mute_music
+    update_display_theme
+    accept_data_transfer_agreement
+    postpone_census_banner
+    dismiss_census_banner
+    dismiss_donor_teacher_banner
+    dismiss_parent_email_banner
+    set_standards_report_info_to_seen
+    verify_captcha
+  ]
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_ai_differentiation_enabled, :post_has_seen_ai_assessments_announcement, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access, :set_seen_ta_scores, :post_has_completed_ai_differentiation_welcome]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -12,6 +31,13 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       raise CanCan::AccessDenied
     end
     @user = current_user
+  end
+
+  # GET /api/v1/users/signed_in
+  def signed_in
+    render json: {
+      is_signed_in: user_signed_in?,
+    }
   end
 
   # GET /api/v1/users/current
