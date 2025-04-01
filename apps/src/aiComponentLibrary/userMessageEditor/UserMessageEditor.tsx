@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
-import React, {useState, useCallback, useMemo} from 'react';
+import React, {useState, useCallback, useMemo, useEffect} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -19,6 +19,7 @@ export interface UserMessageEditorProps {
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  onChange?: () => void;
 }
 
 const UserMessageEditor = React.forwardRef<
@@ -32,6 +33,7 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      onChange,
     },
     ref
   ) => {
@@ -56,7 +58,10 @@ const UserMessageEditor = React.forwardRef<
       [onSubmit]
     );
 
+    useEffect(() => onChange?.(), [onChange, userMessage]);
+
     const icon = {iconName: 'paper-plane'};
+
     return (
       <div
         className={classnames(
