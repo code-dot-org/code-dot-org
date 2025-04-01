@@ -68,6 +68,7 @@
 .sectionCardHeaderLeft {
   display: flex;
   flex-direction: column;
+  max-width: calc(100% - 32px);
 }
 
 .sectionCardHeaderRight {
@@ -76,6 +77,11 @@
 
 .sectionCardHeaderText {
   height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 720px;
+  width: 100%;
 }
 
 .sectionCardCode {
