@@ -17,7 +17,7 @@ theme: responsive
 
 ## Mindestvoraussetzung für Browser und Plattformen
 
-Ab Juli 2024 werden wir die für Browser und Betriebssysteme erforderlichen Mindestversionen aktualisieren. Obwohl die alten Versionen möglicherweise noch funktionieren, können wir Anfragen nach Bugfixes in den älteren Versionen nicht unterstützen.
+Jedes Jahr werden wir die Mindestversionen aktualisieren, die für Browser und Betriebssysteme erforderlich sind. Obwohl die alten Versionen möglicherweise noch funktionieren, können wir Anfragen nach Bugfixes in den älteren Versionen nicht unterstützen.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Ab Juli 2024 werden wir die für Browser und Betriebssysteme erforderlichen Mind
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Browser Juli '24
         </th>
         <tr>
           <td>Chrome 103.x</td>
@@ -71,28 +49,6 @@ Ab Juli 2024 werden wir die für Browser und Betriebssysteme erforderlichen Mind
           Plattform
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Plattform Juli '24
-        </th>
-        <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
@@ -109,6 +65,52 @@ Ab Juli 2024 werden wir die für Browser und Betriebssysteme erforderlichen Mind
         </tr>
       </table>
     </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '25
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    -->
   </tr>
 </table>
 

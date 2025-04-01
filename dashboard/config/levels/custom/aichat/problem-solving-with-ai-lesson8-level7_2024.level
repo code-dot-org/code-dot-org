@@ -39,7 +39,8 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
     "display_name": "Hospital Triage Nurse",
@@ -65,6 +66,6 @@
       "How_to_Become_a_Software_Engineer_1.pdf": "d6ff262f-36a3-412a-9384-68408ddee0c3.pdf"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-25T13:57:35.851+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level6\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level6\"},{\"changed_at\":\"2025-03-25 13:59:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 21:04:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 21:06:56 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 21:08:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:57:35.851+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level6\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level6\"},{\"changed_at\":\"2025-03-25 13:59:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 21:04:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 21:06:56 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 21:08:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-31 20:34:54 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

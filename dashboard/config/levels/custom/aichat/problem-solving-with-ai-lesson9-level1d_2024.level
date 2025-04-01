@@ -39,12 +39,13 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "bubble_choice_description": "Use AI Chat to revise and improve the content you generated earlier.",
     "display_name": "Refining and Editing Chat",
     "thumbnail_url": "https://images.code.org/c6edf3d4c4597cd87585ae6612cc85f2-film-editing.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-25T22:09:37.480+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson9-level1-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson9-level1-choice4\"},{\"changed_at\":\"2025-03-25 22:11:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 20:54:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T22:09:37.480+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson9-level1-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson9-level1-choice4\"},{\"changed_at\":\"2025-03-25 22:11:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-28 20:54:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-31 20:38:18 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

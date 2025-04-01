@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "haikubot-pilot",
+    "pilot_experiment": "haikubot-pilot",
     "version_year": "unversioned"
   },
   "resources": [

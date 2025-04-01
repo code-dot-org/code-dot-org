@@ -15,7 +15,7 @@ title: IT Requirements
 
 ## Minimum Supported Browsers and Platforms
 
-Starting in July 2024, we will update the minimum versions required for browsers and operating systems. While the old versions may still work, we will be unable to support requests for bug fixes in the older versions.
+Each year we will update the minimum versions required for browsers and operating systems. While the old versions may still work, we will be unable to support requests for bug fixes in the older versions.
 
 <table>
   <tr>
@@ -23,28 +23,6 @@ Starting in July 2024, we will update the minimum versions required for browsers
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Browser July '24
         </th>
         <tr>
           <td>Chrome 103.x</td>
@@ -69,26 +47,49 @@ Starting in July 2024, we will update the minimum versions required for browsers
           Platform
         </th>
         <tr>
-          <td>macOS 10.13</td>
+          <td>macOS 10.15</td>
         </tr>
         <tr>
-          <td>iOS 11.x</td>
+          <td>iOS 15.x</td>
         </tr>
         <tr>
-          <td>Windows 7</td>
+          <td>Windows 8</td>
         </tr>
         <tr>
-          <td>Android 6</td>
+          <td>Android 8.x</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '25
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform July '24
+          Platform July '25
         </th>
         <tr>
           <td>macOS 10.15</td>
@@ -107,6 +108,7 @@ Starting in July 2024, we will update the minimum versions required for browsers
         </tr>
       </table>
     </td>
+    -->
   </tr>
 </table>
 
