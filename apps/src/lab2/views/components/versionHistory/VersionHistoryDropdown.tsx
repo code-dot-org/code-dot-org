@@ -7,17 +7,11 @@ import Tags from '@code-dot-org/component-library/tags';
 import {Heading6} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
-import React, {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
+import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -54,7 +48,6 @@ interface VersionHistoryDropdownProps {
 }
 
 const INITIAL_VERSION_ID = 'initial-version';
-const TOP_PADDING = 5;
 
 /**
  * Dropdown that displays a list of versions for the current project.
@@ -89,39 +82,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
-  const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
 
   // If this is a teacher viewing a student's project, we hide the restore button,
   // but still allow viewing old versions.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
   const dialogControl = useDialogControl();
-
-  // Effect to position the dropdown relative to the button that opened it.
-  // We use a layout effect because it is guaranteed to run before the browser repaints
-  // the screen, so we can avoid a flash of the dropdown in the wrong position.
-  useLayoutEffect(() => {
-    const updateDropdownPositionIfShown = () => {
-      if (buttonRef.current && menuRef.current) {
-        const dropdownRect = menuRef.current.getBoundingClientRect();
-        const parentRect = buttonRef.current.getBoundingClientRect();
-        const top =
-          parentRect.top + parentRect.height + TOP_PADDING + window.scrollY;
-        const left = parentRect.right - dropdownRect.width + window.scrollX;
-        setDropdownStyles({
-          top,
-          left,
-        });
-      }
-    };
-
-    updateDropdownPositionIfShown();
-
-    window.addEventListener('resize', updateDropdownPositionIfShown);
-    return () => {
-      window.removeEventListener('resize', updateDropdownPositionIfShown);
-    };
-  }, [buttonRef, menuRef]);
+  const dropdownStyles = useDropdownPosition(buttonRef, menuRef);
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
