@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "denny-science-8",
+    "pilot_experiment": "denny-science-piloters",
     "version_year": "unversioned"
   },
   "resources": [

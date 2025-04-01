@@ -8,9 +8,7 @@ markdown <<MARKDOWN
 #### On day one of this unit, the class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School.
 
 ## Project Description
-<p style="text-align:center; font-size: 18px">
-Welcome to the Future School Convention! You have been chosen to attend this convention because you represent an important stakeholder in the broader school community. Together with a small group you will brainstorm and research computing innovations that you believe will have a positive impact on schools. At the end of the convention, your team will pitch your best idea to a panel of judges. 
-</p>
+#### Welcome to the Future School Convention! You have been chosen to attend this convention because you represent an important stakeholder in the broader school community. Together with a small group you will brainstorm and research computing innovations that you believe will have a positive impact on schools. At the end of the convention, your team will pitch your best idea to a panel of judges. 
 
 ## Project Calendar
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">

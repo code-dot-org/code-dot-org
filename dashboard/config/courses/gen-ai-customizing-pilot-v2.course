@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "gen-ai-customizing-pilot-v2",
+    "pilot_experiment": "gen-ai-lab-v1",
     "version_year": "unversioned"
   },
   "resources": [

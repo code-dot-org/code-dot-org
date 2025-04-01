@@ -3,30 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# HTTP and DNS
+# IP Addresses
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>DNS:</strong> A protocol that allows computers to request and share web content, like webpages, images, and videos.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>IP Address:</strong> A unique number assigned to each device on a network.</p>
+</div>
 </div>
 
-#### The Domain Name System (DNS) helps your device find the IP address of a website through a step-by-step process involving several servers, each with a specific role. This system is designed for efficiency, with servers working together like a team to quickly find the right information without overloading any one server. Additionally, caching helps speed things up by saving IP addresses of recently visited sites, so your device doesn’t have to repeat the entire process every time.
 
-#### DNS converts human-friendly usernames (or domain names) into machine-readable IP addresses and that GET requests structure how information is requested. DNS makes our lives easier by automatically handling the translation of names to IP addresses—just like a phone book.
+#### Activity preview - images and text to show a what routing looks like.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>HyperText Transfer Protocol (HTTP):</strong> A system that translates human-friendly website names (like www.example.com) into numerical IP addresses that computers use to find and communicate with each other on the Internet.</p>
-</div>
+## AI-Assisted Routing
 
-## 📝 To Do
+#### AI-driven network management systems can detect conflicting IP addresses in real-time and automatically reassign unique addresses using dynamic IP addressing (DHCP). AI can also predict and prevent IP conflicts before they happen.
 
-#### Try out <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/6/levels/3?no_redirect=1 ' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>HTTP Cats for HTTP Requests Exploration</a>.
+#### AI monitors real-time traffic patterns and predicts congestion before it happens. When a bottleneck is detected, AI can dynamically reroute traffic through an alternate path to maintain smooth network performance.
 
-## Activity Note:
-#### If you can, try this on a school computer on the school network. Students may not have access to the network settings they need to do this activity on their own. If not, brainstorm an alternative.
+#### AI identifies packet loss in real-time, predicts potential disruptions, and automatically resends lost packets to ensure a smooth viewing experience. AI-powered error correction techniques can reduce buffering and improve video quality.
 
-<br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 MARKDOWN

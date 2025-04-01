@@ -54,8 +54,8 @@ const defaultConfig: ConfigType = {
   activeLayout: 'vertical',
   showFileBrowser: true,
   layoutComponents: {
-    vertical: <VerticalLayout />,
-    horizontal: <HorizontalLayout />,
+    vertical: VerticalLayout,
+    horizontal: HorizontalLayout,
   },
 };
 
