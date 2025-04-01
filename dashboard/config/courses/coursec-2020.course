@@ -1,0 +1,20 @@
+{
+  "name": "coursec-2020",
+  "script_names": [
+    "coursec-2020"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "coursec",
+    "version_year": "2020"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
