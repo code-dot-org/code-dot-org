@@ -265,7 +265,7 @@ export const ThreeAcross: Story = {
     docs: {
       description: {
         story:
-          'Carousels are recommended for sections with 4 or more action blocks, but avoid exceeding six if all blocks must be displayed simultaneously.',
+          'Carousels are recommended for sections with 4+ action blocks, but up to six can be displayed simultaneously.',
       },
     },
   },
