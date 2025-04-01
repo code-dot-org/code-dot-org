@@ -18,24 +18,21 @@
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
-      "pilot_experiment": "csf-2022-pilot",
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "project_widget_visible": true,
-      "version_year": "unversioned"
+      "project_widget_visible": true
     },
     "new_name": null,
-    "family_name": "coursef-2022-pilot",
-    "serialized_at": "2024-11-19 01:14:37 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-31 23:48:01 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursef-2022-pilot"
     }

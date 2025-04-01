@@ -1,0 +1,20 @@
+{
+  "name": "new-stages-sept-2017",
+  "script_names": [
+    "new-stages-sept-2017"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "new-stages-sept-2017",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

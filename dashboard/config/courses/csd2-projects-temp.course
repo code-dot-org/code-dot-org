@@ -1,0 +1,21 @@
+{
+  "name": "csd2-projects-temp",
+  "script_names": [
+    "csd2-projects-temp"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd2-projects-temp",
+    "pilot_experiment": "csd-noaccess",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

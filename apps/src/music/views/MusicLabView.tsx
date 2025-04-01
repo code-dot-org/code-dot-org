@@ -26,7 +26,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
-import {installFunctionBlocks} from '../blockly/blockUtils';
+import {
+  applyBlockIdOverrides,
+  installFunctionBlocks,
+} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import musicI18n from '../locale';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
@@ -147,9 +150,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
+        const workspaceSerialization = blocklyWorkspace.getCode();
+        if (Blockly.blockIdOverrides) {
+          applyBlockIdOverrides(
+            workspaceSerialization,
+            Blockly.blockIdOverrides
+          );
+        }
         const updatedLevelData = {
           ...levelData,
-          startSources: blocklyWorkspace.getCode(),
+          startSources: workspaceSerialization,
         };
         return {level_data: updatedLevelData};
       });

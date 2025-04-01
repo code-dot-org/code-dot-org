@@ -1,0 +1,20 @@
+{
+  "name": "algebrab",
+  "script_names": [
+    "AlgebraB"
+  ],
+  "published_state": "preview",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "algebrab",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

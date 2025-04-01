@@ -52,7 +52,7 @@ module I18n
               programming_env = File.basename(crowdin_file_path, '.json')
               next unless TRANSLATABLE_PROGRAMMING_ENVS.include?(programming_env)
 
-              target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{PROGRAMMING_ENVS_TYPE}.#{language[:locale_s]}.json")
+              target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{PROGRAMMING_ENVS_TYPE}/#{language[:locale_s]}.json")
 
               programming_envs_i18n_data = programming_envs_i18n_data(target_i18n_file_path)
               programming_envs_i18n_data.merge!(new_programming_envs_i18n_data(crowdin_file_path))

@@ -20,4 +20,5 @@ export {
   removeStagedFile,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
+  clearStagedFiles,
 } from './slice';

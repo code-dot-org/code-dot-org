@@ -6,7 +6,7 @@ import {ChatAsset} from './assets';
 import {AiCustomizations} from './customizations';
 import {FeedbackValue} from './toxicity';
 
-export type ChatEventDescriptionKey = 'COPY_CHAT' | 'CLEAR_CHAT' | 'LOAD_LEVEL';
+export type ChatEventDescriptionKey = 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
 /** Base type for all chat events that are displayed in the chat workspace or student chat history view */
 interface BaseChatEvent {

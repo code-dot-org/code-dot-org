@@ -1,0 +1,21 @@
+{
+  "name": "denny-science",
+  "script_names": [
+    "denny-science"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "denny-science",
+    "pilot_experiment": "denny-science-piloters",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "csf-2022-pilot",
+  "script_names": [
+    "csf-2022-pilot"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csf-pilot",
+    "pilot_experiment": "csf-2022-pilot",
+    "version_year": "2022"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -17,7 +17,7 @@ theme: responsive
 
 ## 支持的最低浏览器和平台
 
-从 2024 年 7 月开始，我们将更新浏览器和操作系统所需的最低版本。 虽然旧版本可能仍然有效，但我们将无法支持旧版本中的错误修复请求。
+每年我们都会更新浏览器和操作系统所需的最低版本。 虽然旧版本可能仍然有效，但我们将无法支持旧版本中的错误修复请求。
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           浏览器
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          浏览器 24 年 7 月
         </th>
         <tr>
           <td>Chrome 103.x</td>
@@ -71,28 +49,6 @@ theme: responsive
           平台
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          24年7月24日平台
-        </th>
-        <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
@@ -109,6 +65,52 @@ theme: responsive
         </tr>
       </table>
     </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '25
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    -->
   </tr>
 </table>
 

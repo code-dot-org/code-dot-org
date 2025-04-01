@@ -1,0 +1,28 @@
+name 'csaif_pl_nets_interent_05'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# IP Addresses
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>IP Address:</strong> A unique number assigned to each device on a network.</p>
+</div>
+</div>
+
+
+#### Activity preview - images and text to show a what routing looks like.
+
+## AI-Assisted Routing
+
+#### AI-driven network management systems can detect conflicting IP addresses in real-time and automatically reassign unique addresses using dynamic IP addressing (DHCP). AI can also predict and prevent IP conflicts before they happen.
+
+#### AI monitors real-time traffic patterns and predicts congestion before it happens. When a bottleneck is detected, AI can dynamically reroute traffic through an alternate path to maintain smooth network performance.
+
+#### AI identifies packet loss in real-time, predicts potential disruptions, and automatically resends lost packets to ensure a smooth viewing experience. AI-powered error correction techniques can reduce buffering and improve video quality.
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

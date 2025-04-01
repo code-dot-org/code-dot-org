@@ -1,0 +1,21 @@
+{
+  "name": "contagion-pilot",
+  "script_names": [
+    "contagion-pilot"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "contagion-pilot-1",
+    "pilot_experiment": "contagion-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
