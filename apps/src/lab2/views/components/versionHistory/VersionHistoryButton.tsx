@@ -98,7 +98,6 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         <Button
           isIconOnly
           icon={{iconStyle: 'solid', iconName: 'history'}}
-          color={'white'}
           onClick={toggleVersionHistory}
           ariaLabel={commonI18n.versionHistory_header()}
           size={'xs'}
