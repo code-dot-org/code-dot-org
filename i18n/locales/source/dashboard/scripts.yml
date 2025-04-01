@@ -19030,8 +19030,8 @@ en:
           title: Understanding Equity in Computer Science
           description_audience: ''
           description_short: ''
-          description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** 85 minutes"
-          student_description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward enacting equity in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** 85 minutes"
+          description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward taking action toward equitable outcomes in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** 85 minutes"
+          student_description: "##### **Module 1: Understanding Equity in Computer Science** provides a conceptual foundation for equity. You'll take the time to reflect on your journey and orient yourself toward taking action toward equitable outcomes in your classroom. There are no prerequisites for the learning in this module.\n\n##### There are three lessons in Module 1:\n\n-   ##### What is Equity in CS?\n-   ##### Looking at Data\n-   ##### Reflecting on Personal Experiences\n\n* * *\n\n##### ⏰ **Suggested total time for this module:** 85 minutes"
         self-paced-pl-equitymodule-unit2:
           lessons:
             lesson-1:
@@ -19364,6 +19364,10 @@ en:
               name: 'Mini Project: Walk Up Songs'
             lesson-13:
               name: 'Mini Project: Cat GIF Loops'
+            lesson-14:
+              name: Introduction to Music Lab
+            lesson-15:
+              name: 'Project: Genre Mash-Up'
           lesson_groups: {}
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
@@ -19659,7 +19663,7 @@ en:
               name: Cybersecurity and Global Impacts
           lesson_groups: {}
           name: sandbox-csaif-pl-cyber
-          title: Cybersecurity and Global Impacts PL
+          title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
           description: ''
@@ -20559,3 +20563,425 @@ en:
           description_short: ''
           description: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching any of the Code.org curriculum** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\nPick your content: The Getting Started Content is organized in five lessons: \n\n-   Lesson 1: Welcome to Code.org\n-   Lesson 2: Navigating the Code.org Learning Platform\n-   Lesson 3: The Student Experience\n-   Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n-   Lesson 5: Navigating Support"
           student_description: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching any of the Code.org curriculum** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\nPick your content: The Getting Started Content is organized in five lessons: \n\n-   Lesson 1: Welcome to Code.org\n-   Lesson 2: Navigating the Code.org Learning Platform\n-   Lesson 3: The Student Experience\n-   Lesson 4: Navigating Lesson Plans, Assessments, and Resources\n-   Lesson 5: Navigating Support"
+        facilitator-access-csaif:
+          lessons: {}
+          lesson_groups: {}
+          name: facilitator-access-csaif
+          title: CSAIF - Faciliator Early Access
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-equity-cs:
+          lessons: {}
+          lesson_groups: {}
+        facilitator-compsys-pl-early-access:
+          lessons:
+            lesson-1:
+              name: Teaching Computer Systems and Devices
+            lesson-2:
+              name: Hardware and Software
+            lesson-3:
+              name: Data in Computer Systems
+            lesson-4:
+              name: Ethical Use and the Final Project
+          lesson_groups: {}
+          name: facilitator-compsys-pl-early-access
+          title: Teaching Computer Systems & Devices - EARLY ACCESS
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        facilitator-cyber-csaif-early-access:
+          lessons:
+            lesson-1:
+              name: Teaching Cybersecurity & Global Impact
+            lesson-2:
+              name: Lesson Exploration
+          lesson_groups: {}
+          name: facilitator-cyber-csaif-early-access
+          title: Teaching Cybersecurity and Global Impacts PL (CSAIF) - EARLY ACCESS
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        facilitator-prog-fund-pl-early-access:
+          lessons:
+            lesson-1:
+              name: Teaching Programming Fundamentals
+            lesson-2:
+              name: Computational Thinking
+            lesson-3:
+              name: Python Basics
+            lesson-4:
+              name: Algorithms with Python
+            lesson-5:
+              name: Preparing for Final Project
+          lesson_groups: {}
+          name: facilitator-prog-fund-pl-early-access
+          title: Teaching Programming Fundamentals PL - EARLY ACCESS
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        facilitator-prog-fund-early-access:
+          lessons:
+            lesson-1:
+              name: Teaching Programming Fundamentals
+            lesson-2:
+              name: Computational Thinking
+            lesson-3:
+              name: Python Basics
+            lesson-4:
+              name: Algorithms with Python
+            lesson-5:
+              name: Preparing for the Final Project
+          lesson_groups: {}
+          name: facilitator-prog-fund-early-access
+          title: Teaching Programming Fundamentals PL - EARLY ACCESS
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        facilitator-networks-early-access:
+          lessons:
+            lesson-1:
+              name: Introduction to Networks
+            lesson-2:
+              name: Lesson Exploration
+          lesson_groups: {}
+          name: facilitator-networks-early-access
+          title: Teaching Networks and the Internet - EARLY ACCESS
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        facilitator-datasci-pl-early-access:
+          lessons:
+            lesson-4:
+              name: Overview of Data Science
+            lesson-1:
+              name: Introduction to Data Science
+            lesson-3:
+              name: Introduction to Data Science & Python
+            lesson-5:
+              name: Advanced Data Science & Python
+          lesson_groups: {}
+          name: facilitator-datasci-pl-early-access
+          title: Teaching Data Science PL - EARLY ACCESS
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m1:
+          lessons:
+            lesson-1:
+              name: 'Lesson 1: Module 1: Wrapping Up Unit 3 & EIPM'
+          lesson_groups: {}
+          name: vpl-csp-2025-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m2:
+          lessons:
+            lesson-1:
+              name: 'Module 2: Variables Practice & Make Lessons'
+          lesson_groups: {}
+          name: vpl-csp-2025-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m3:
+          lessons:
+            lesson-1:
+              name: 'Module 3: Tools and Structure in Unit 5 - Data'
+          lesson_groups: {}
+          name: vpl-csp-2025-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m4:
+          lessons:
+            lesson-1:
+              name: 'Module 4: Mental Models, Lists, and Datasets'
+          lesson_groups: {}
+          name: vpl-csp-2025-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2025-5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m5:
+          lessons:
+            lesson-1:
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
+          lesson_groups: {}
+          name: vpl-csp-2025-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m6:
+          lessons:
+            lesson-1:
+              name: 'Module 6: Introduction to the Create Performance Task'
+          lesson_groups: {}
+          name: vpl-csp-2025-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m7:
+          lessons:
+            lesson-1:
+              name: 'Module 7: Introduction to the Create Performance Task'
+          lesson_groups: {}
+          name: vpl-csp-2025-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2025-m8:
+          lessons:
+            lesson-1:
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
+          lesson_groups: {}
+          name: vpl-csp-2025-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csp1-2025:
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+            lesson-2:
+              name: Welcome to "Teaching CS Principles"
+          lesson_groups: {}
+          name: self-paced-pl-csp1-2025
+          title: Welcome
+          description_audience: ''
+          description_short: ''
+          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+        self-paced-pl-csp2-2025:
+          lessons:
+            lesson-1:
+              name: Navigating the Code.org learning platform
+            lesson-2:
+              name: Navigating lesson plans and resources
+            lesson-3:
+              name: Navigating support
+          lesson_groups: {}
+          name: self-paced-pl-csp2-2025
+          title: Navigating Code.org
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section\n-   Locate and use course lesson plans and teacher resources. \n-   Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-csp3-2025:
+          lessons:
+            lesson-1:
+              name: Overview of course content
+            lesson-2:
+              name: Overview of learning tools
+            lesson-3:
+              name: Overview of implementation
+          lesson_groups: {}
+          name: self-paced-pl-csp3-2025
+          title: Overview of CS Principles
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This module will provide you with an overview of the CS Principles course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+            **You will**:
+
+            -   Gain a high-level understanding of the CS Principles curriculum.
+            -   Learn more about the pedagogical approaches used to teach both non-programming and programming units.
+            -   Become familiar with the student learning tools used within CS Principles.
+            -   Explore the components of the AP Exam, as well as your responsibilities as a teacher if you plan to offer CS Principles as an AP course.
+            -   Build an implementation plan for the school year.
+
+            **Suggested time**: 90 minutes
+        self-paced-pl-csp4-2025:
+          lessons:
+            lesson-1:
+              name: The role of the teacher
+            lesson-2:
+              name: Learning CS Principles
+            lesson-3:
+              name: Teaching CS Principles
+            lesson-4:
+              name: Connect with the CS community
+          lesson_groups: {}
+          name: self-paced-pl-csp4-2025
+          title: Teaching and learning CS Principles
+          description_audience: ''
+          description_short: ''
+          description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+          student_description: |-
+            In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+            **You will**:
+
+            -   Consider the role of the teacher in a CS Principles classroom.
+            -   Learn about authentic CS practices that students will develop throughout the CS Principles course.
+            -   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+            -   Learn about opportunities to connect with the broader CS community.
+
+            **Suggested Time**: 70 minutes
+        vpl-csa-2025:
+          lessons:
+            lesson-1:
+              name: Module 1
+            lesson-2:
+              name: Module 2
+            lesson-3:
+              name: Module 3
+            lesson-4:
+              name: Module 4
+            lesson-5:
+              name: Module 5
+            lesson-6:
+              name: Module 6
+            lesson-7:
+              name: Module 7
+            lesson-8:
+              name: Module 8
+          lesson_groups: {}
+          name: vpl-csa-2025
+          title: CSA Virtual Professional Learning '25-'26
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m1:
+          lessons:
+            lesson-1:
+              name: 'Module 1 post-work: Reviewing the Unit 3 project'
+          lesson_groups: {}
+          name: vpl-csa-2025-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m2:
+          lessons:
+            lesson-1:
+              name: 'Module 2 post-work: Understanding Unit 4 content'
+          lesson_groups: {}
+          name: vpl-csa-2025-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m3:
+          lessons:
+            lesson-1:
+              name: 'Module 3 post-work: The Theater and datasets in Unit 4'
+          lesson_groups: {}
+          name: vpl-csa-2025-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m4:
+          lessons:
+            lesson-1:
+              name: 'Module 4 post-work: 2D Arrays in Unit 5 and FRQs'
+          lesson_groups: {}
+          name: vpl-csa-2025-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m5:
+          lessons:
+            lesson-1:
+              name: 'Module 5 post-work: The Unit 5 Project'
+          lesson_groups: {}
+          name: vpl-csa-2025-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m6:
+          lessons:
+            lesson-1:
+              name: 'Module 6 post-work: String methods in Unit 6'
+          lesson_groups: {}
+          name: vpl-csa-2025-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m7:
+          lessons:
+            lesson-1:
+              name: 'Module 7 post-work: The Unit 7 project'
+          lesson_groups: {}
+          name: vpl-csa-2025-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2025-m8:
+          lessons:
+            lesson-1:
+              name: 'Module 8 post-work: Preparing students for the AP CSA Exam'
+          lesson_groups: {}
+          name: vpl-csa-2025-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

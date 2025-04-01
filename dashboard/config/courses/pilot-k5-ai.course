@@ -1,0 +1,21 @@
+{
+  "name": "pilot-k5-ai",
+  "script_names": [
+    "pilot-k5-ai"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "pilot-k5-ai",
+    "pilot_experiment": "spring-2024-k5-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
