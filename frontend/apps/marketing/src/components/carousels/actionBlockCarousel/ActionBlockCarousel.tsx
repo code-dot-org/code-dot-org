@@ -90,20 +90,20 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                 description={shortDescription}
                 image={image?.fields?.file?.url}
                 primaryButton={
-                  primaryLinkRef
+                  primaryLinkRef?.fields?.label
                     ? {
                         text: primaryLinkRef.fields.label,
-                        href: primaryLinkRef.fields.primaryTarget,
-                        ariaLabel: primaryLinkRef.fields.ariaLabel,
+                        href: primaryLinkRef.fields.primaryTarget || '#',
+                        ariaLabel: primaryLinkRef.fields.ariaLabel || '',
                       }
                     : undefined
                 }
                 secondaryButton={
-                  secondaryLinkRef
+                  secondaryLinkRef?.fields?.label
                     ? {
                         text: secondaryLinkRef.fields.label,
-                        href: secondaryLinkRef.fields.primaryTarget,
-                        ariaLabel: secondaryLinkRef.fields.ariaLabel,
+                        href: secondaryLinkRef.fields.primaryTarget || '#',
+                        ariaLabel: secondaryLinkRef.fields.ariaLabel || '',
                       }
                     : undefined
                 }
