@@ -22385,3 +22385,114 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        virtual-pl-csd-summer-2025-day1:
+          lessons:
+            lesson-1:
+              name: Introduction
+            lesson-2:
+              name: CS Discoveries Overview
+            lesson-3:
+              name: Navigating the Code.org Platform
+            lesson-4:
+              name: Unit 1 - Problem Solving & Computing
+            lesson-5:
+              name: Intro to Async
+            lesson-6:
+              name: Asynchronous Overview
+            lesson-7:
+              name: CS Discoveries Units 1 - 7
+            lesson-8:
+              name: The Problem Solving Process Across CSD
+            lesson-9:
+              name: Async Debrief
+            lesson-10:
+              name: Intro to Unit 2 - Web Development
+            lesson-11:
+              name: Model Lesson 1 - U2L2 Intro to HTML
+            lesson-12:
+              name: Model Lesson 2 - U2L6 Styling Text with CSS
+            lesson-13:
+              name: Instructional Strategies
+            lesson-14:
+              name: Day 1 Wrap Up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-2025-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2025-day2:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-2025-day2
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2025-day3:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-2025-day3
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2025-day4:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csd-summer-2025-day4
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csd-summer-2025-day5:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+          name: virtual-pl-csd-summer-2025-day5
+          title: Day 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
