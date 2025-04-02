@@ -293,9 +293,10 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   wait_until do
     href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
     puts "href: #{href.inspect}"
-    href.present?
+    href != nil?
   end
   expect(@section_id).to be > 0
+  puts "final href: #{href.inspect}"
 
   # make sure the query params do not come after the # symbol
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
