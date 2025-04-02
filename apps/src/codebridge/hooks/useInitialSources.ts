@@ -102,15 +102,13 @@ export const useInitialSources = (
     [generateProjectSourceFromStartSource, templateSources]
   );
 
-  const parsedDefaultSources = useMemo(() => {
-    if (defaultSources.labConfig) {
-      return defaultSources;
-    } else {
-      return generateProjectSourceFromStartSource(
+  const parsedDefaultSources = useMemo(
+    () =>
+      generateProjectSourceFromStartSource(
         defaultSources.source as MultiFileSource
-      );
-    }
-  }, [defaultSources, generateProjectSourceFromStartSource]);
+      ),
+    [defaultSources, generateProjectSourceFromStartSource]
+  );
 
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isViewingExemplar = getAppOptionsViewingExemplar();

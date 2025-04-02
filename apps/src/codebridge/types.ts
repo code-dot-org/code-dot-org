@@ -91,5 +91,3 @@ export interface MazeCell {
 export interface LayoutProps {
   isProjectLevel?: boolean;
 }
-
-export type DefaultProjectMap = {[key: string]: ProjectSources};

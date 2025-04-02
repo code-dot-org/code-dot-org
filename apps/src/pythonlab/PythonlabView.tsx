@@ -1,11 +1,7 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
-import {
-  CodebridgeLevelProperties,
-  ConfigType,
-  DefaultProjectMap,
-} from '@codebridge/types';
+import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
@@ -53,7 +49,7 @@ const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
 };
 
-const standaloneStartSources: DefaultProjectMap = {
+const standaloneStartSources: {[key: string]: ProjectSources} = {
   console: standaloneConsoleProject,
   neighborhood: standaloneNeighborhoodProject,
 };
