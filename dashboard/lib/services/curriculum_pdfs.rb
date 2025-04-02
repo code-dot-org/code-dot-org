@@ -194,7 +194,7 @@ module Services
       return metadata
     end
 
-    def self.add_metadata_to_ai_s3(file_path, metadata)
+    def self.add_metadata_to_ai_s3(metadata)
       full_metadata_json = {
         metadataAttributes: metadata
       }.to_json
