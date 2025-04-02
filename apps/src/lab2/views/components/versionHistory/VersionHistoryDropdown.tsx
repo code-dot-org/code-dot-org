@@ -328,7 +328,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
             ariaLabel: commonI18n.current(),
           },
         ]}
-        className={moduleStyles.latestTag}
         size="s"
       />
     );
@@ -351,9 +350,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         data-theme="Dark"
       >
         <div className={moduleStyles.versionHistoryHeader}>
-          <Heading6 className={moduleStyles.versionHistoryTitle}>
-            {commonI18n.versionHistory_header()}
-          </Heading6>
+          <Heading6>{commonI18n.versionHistory_header()}</Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label={lab2I18n.closeVersionHistory()}

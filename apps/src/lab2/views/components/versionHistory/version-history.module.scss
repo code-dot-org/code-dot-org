@@ -13,14 +13,6 @@
   vertical-align: top;
   z-index: 1000;
   right: 0;
-
-  // Overriding the colors until Tag is themed correctly. The border-radius
-  // needs to be re-defined here in order to show up correctly.
-  .latestTag div {
-    background-color: var(--background-brand-teal-light);
-    color: var(--text-neutral-primary);
-    border-radius: 6.25rem;
-  }
 }
 
 .versionHistoryHeader {
@@ -28,10 +20,6 @@
   border-bottom: 1px solid #54595E;
   display: flex;
   justify-content: space-between;
-}
-
-.versionHistoryTitle {
-  color: $white;
 }
 
 .versionHistoryMessage {
@@ -46,9 +34,6 @@
 
 .versionHistoryRow {
   padding: 8px;
-  span {
-    color: $white;
-  }
 }
 
 .versionHistoryRow:has(input[type="radio"]:checked) {
