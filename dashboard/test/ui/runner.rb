@@ -227,6 +227,12 @@ def parse_options
       opts.on("--priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
         options.priority = priority
       end
+      opts.on("--first-run-local", "Use a local Selenium driver for the first run of tests; only reruns will use Saucelabs") do
+        # This is intended to be a temporary option only until we can address
+        # all of the related flakiness issues, at which point we plan to make
+        # it the default.
+        options.first_run_local = true
+      end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
         exit
@@ -772,6 +778,7 @@ def run_feature(browser, feature, options)
   run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['PRIORITY'] = options.priority
+  run_environment['FIRST_RUN_LOCAL'] = options.first_run_local ? "true" : "false"
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
@@ -779,11 +786,6 @@ def run_feature(browser, feature, options)
   run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
 
   max_reruns = how_many_reruns?(test_run_string)
-
-  # TODO: find a better way to do this
-  if ENV['CI']
-    max_reruns += 1
-  end
 
   html_log = html_output_filename(test_run_string, options)
   rerun_file = rerun_filename test_run_string
