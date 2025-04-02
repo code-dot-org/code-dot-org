@@ -10,7 +10,7 @@
   "noFileToRun": "You have no {fileName} to run.",
   "moduleNotSupported": "ModuleNotFoundError: The module {module} is not supported in Python Lab.",
   "neighborhood": "Neighborhood",
-  "neighborhoodDescription": "A project that uses the neighborhood.",
+  "neighborhoodDescription": "A project that uses the Neighborhood.",
   "programCompleted": "Program completed.",
   "programStopped": "Program stopped.",
   "projectPickerTitle": "Select a project type",

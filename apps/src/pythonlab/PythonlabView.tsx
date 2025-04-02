@@ -14,6 +14,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -23,8 +24,6 @@ import {
   useAppSelector,
 } from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
-
-import {setAndSaveProjectSources} from '../lab2/redux/lab2ProjectRedux';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
@@ -115,8 +114,9 @@ const PythonlabView: React.FunctionComponent<
   const dispatch = useAppDispatch();
 
   const levelStartSources = useMemo(() => {
-    // For standalone project levels, we use the standalone default project map to determine
-    // the start sources, so we can use the default project for the user's selected project.
+    // For standalone project levels, we use the standalone start sources map to determine
+    // the start sources, so we can show the user the start code for their chosen project type,
+    // and not accidentally show them the project picker again.
     if (levelProperties.isProjectLevel) {
       const currentProjectType =
         labConfig?.standaloneSettings?.projectType || 'console';
