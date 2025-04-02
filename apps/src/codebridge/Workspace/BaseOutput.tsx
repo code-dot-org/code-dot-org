@@ -85,6 +85,7 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
       )}
       style={style}
       ref={resizeContainerRef}
+      data-theme="Dark"
     >
       <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
         <MiniAppPreview
