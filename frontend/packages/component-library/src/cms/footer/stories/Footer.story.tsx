@@ -78,10 +78,10 @@ const defaultArgs: FooterProps = {
       icon: {iconFamily: 'brands', iconName: 'facebook'},
     },
     {
-      key: 'twitter',
-      label: 'Twitter',
-      href: '/twitter',
-      icon: {iconFamily: 'brands', iconName: 'twitter'},
+      key: 'xTwitter',
+      label: 'X Twitter',
+      href: '/x-twitter',
+      icon: {iconFamily: 'brands', iconName: 'x-twitter'},
     },
     {
       key: 'instagram',
