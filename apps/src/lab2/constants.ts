@@ -43,5 +43,3 @@ export enum FontSize {
   Large = 22,
   Huge = 27,
 }
-
-export const DEFAULT_FONT_SIZE_KEY = FontSize.Small;

@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {DEFAULT_FONT_SIZE_KEY, FontSize} from '@cdo/apps/lab2/constants';
+import {FontSize} from '@cdo/apps/lab2/constants';
 import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -43,7 +43,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const editorFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
-  const selectedFontSizeKey = editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
+  const selectedFontSizeKey = editorFontSizeKey;
   const {signInState} = useAppSelector(state => state.currentUser);
   const {levelProperties} = useCodebridgeContext();
   const dispatch = useAppDispatch();
