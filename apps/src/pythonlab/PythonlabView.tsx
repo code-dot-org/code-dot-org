@@ -19,6 +19,10 @@ import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {
+  restartPyodideIfProgramIsRunning,
+  sendInput,
+} from '@cdo/apps/pythonlab/pyodideWorkerManager';
+import {
   AppDispatch,
   useAppDispatch,
   useAppSelector,
@@ -37,10 +41,6 @@ import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
-import {
-  restartPyodideIfProgramIsRunning,
-  sendInput,
-} from './pyodideWorkerManager';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
