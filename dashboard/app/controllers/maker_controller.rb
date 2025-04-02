@@ -15,7 +15,7 @@ class MakerController < ApplicationController
     }
   end
 
-  # TODO: deprecate this page which is no longer active since the Maker app was deprecated - https://support.code.org/hc/en-us/articles/11304760762125-The-Maker-App-and-Chrome-Serial-Extension-Are-Now-Deprecated.
+  # TODO: deprecate this page which is no longer active since the Maker app was deprecated.
   # For now, since this update https://github.com/code-dot-org/code-dot-org/pull/64729,
   # maker scripts no longer are accessible via "family_name" of "devices".
   # Temporarily show 'devices-2024' script.
