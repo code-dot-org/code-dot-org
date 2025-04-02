@@ -42,7 +42,8 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     // Clear the alert, if any
     dispatch(clearStagedFilesAlert());
 
-    if (files.length > numAllowedFiles) {
+    const excessFileCount = files.length - numAllowedFiles;
+    if (excessFileCount > 0) {
       dispatch(stagedFilesLimitExceeded());
     }
 
@@ -104,6 +105,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         fileCountSuccess: uploadSuccessCount,
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
+        fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
       })
     );
   };
