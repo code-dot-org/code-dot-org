@@ -447,6 +447,7 @@ Resources:
                 Resource:
                   - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:log-stream:*"
                   - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:log-stream:*"
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
 <%  end -%>
 
 <% end -%>
