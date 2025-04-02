@@ -153,7 +153,7 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
 
     3. recreate your local dashboard test db and reseed the data via:
         * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
-        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci;" | mysql -uroot`
 
 2. If you get an error about missing db fields, try migrating your test database:
 `RAILS_ENV=test rake db:migrate`
