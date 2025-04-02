@@ -559,6 +559,13 @@ Resources:
               - 'ecs:DescribeServices'
               - 'ecs:UpdateService'
             Resource: !Ref FargateService
+          - Effect: Allow
+            Action:
+              - "s3:PutObject"
+              - "s3:ListBucket"
+            Resource:
+              - !Sub "arn:aws:s3:::cdo-marketing-static-assets-${Environment}"
+              - !Sub "arn:aws:s3:::cdo-marketing-static-assets-${Environment}/*"
 
   MarketingGithubDeployerAccessKey:
     Type: AWS::IAM::AccessKey
@@ -581,6 +588,24 @@ Resources:
             - '"}'
     UpdateReplacePolicy: Delete
     DeletionPolicy: Delete
+
+  MarketingStaticAssetsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "cdo-marketing-static-assets-${Environment}"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: ExpireOldVersions
+            Status: Enabled
+            NoncurrentVersionExpiration:
+              NoncurrentDays: 90
 
 Outputs:
   FargateServiceLoadBalancerDNS:

@@ -131,7 +131,20 @@ jobs:
       run: |
         ruby ./deploy.rb
 
-    - name: "[Staging] Deploy Marketing App to AWS"
+    - name: "Download Built Docker Image"
+      run: |
+        docker pull ${{ needs.build-and-push-image.outputs.fullImageUri }}
+        docker create --name temp ${{ needs.build-and-push-image.outputs.fullImageUri }}
+
+    - name: "Extract Static Assets from Docker"
+      run: |
+        docker cp temp:/app/apps/marketing/.next/static/ ./static
+
+    - name: "[Test] Upload Static Assets to S3"
+      run: |
+        aws s3 cp static/ s3://cdo-marketing-static-assets-test/_next/static --recursive --quiet
+
+    - name: "[Test] Deploy Marketing App to AWS"
       uses: aws-actions/aws-cloudformation-github-deploy@v1
       with:
         name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
