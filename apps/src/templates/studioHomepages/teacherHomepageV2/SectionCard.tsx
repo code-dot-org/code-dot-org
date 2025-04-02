@@ -41,7 +41,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
   const style = {
     transform: CSS.Translate.toString(transform),
     transition,
-    zIndex: isDragging ? 1 : 0,
+    zIndex: isDragging ? 1 : undefined,
   };
 
   return (
