@@ -183,6 +183,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     pointerMetadataMap: PointerMetadataMap,
     imageSourceId: string
   ) => string;
+  blockIdOverrides: {
+    [originalBlockId: string]: string;
+  };
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;

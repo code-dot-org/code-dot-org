@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "draft-hoc-dp",
+    "pilot_experiment": "hoc-ai-dance-party",
     "version_year": "unversioned"
   },
   "resources": [

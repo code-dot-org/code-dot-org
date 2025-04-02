@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "computer-vision-pilot",
+    "pilot_experiment": "computer-vision-2024-pilot",
     "version_year": "unversioned"
   },
   "resources": [

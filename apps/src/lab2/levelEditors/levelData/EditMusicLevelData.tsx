@@ -12,6 +12,7 @@ import {
   DEFAULT_BPM,
   DEFAULT_LIBRARY,
   DEFAULT_PACK,
+  DEFAULT_VALIDATION_TIMEOUT,
 } from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
@@ -283,6 +284,35 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             }}
             size="s"
           />
+          <div className={moduleStyles.inputRow}>
+            <label htmlFor="validationTimeout" className={moduleStyles.label}>
+              Validation Timeout:
+            </label>
+            <BodyFourText className={moduleStyles.helperText}>
+              This value determines when (in measures) non-success validation
+              messages should start appearing. If the timeout is reached or the
+              last measure has completed, messages will be shown.
+            </BodyFourText>
+
+            <input
+              type="number"
+              id="validationTimeout"
+              name="validationTimeout"
+              value={levelData.validationTimeout}
+              placeholder={DEFAULT_VALIDATION_TIMEOUT.toString()}
+              min={1}
+              onChange={event => {
+                const parsedValue = parseInt(event.target.value);
+                setLevelData({
+                  ...levelData,
+                  validationTimeout: !isNaN(parsedValue)
+                    ? parsedValue
+                    : undefined,
+                });
+              }}
+              className={moduleStyles.input}
+            />
+          </div>
         </div>
       </CollapsibleSection>
       <hr />

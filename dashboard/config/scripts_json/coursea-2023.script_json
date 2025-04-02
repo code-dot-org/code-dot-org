@@ -20,7 +20,6 @@
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_widget_types": [
@@ -30,16 +29,15 @@
       "project_widget_visible": true,
       "show_calendar": true,
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "coursea",
-    "serialized_at": "2025-01-09 16:10:55 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-25 00:55:22 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursea-2023"
     }

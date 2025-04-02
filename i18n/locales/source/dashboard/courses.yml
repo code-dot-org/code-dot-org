@@ -927,8 +927,8 @@ en:
         self-paced-pl-equitymodule-2024:
           title: Code.org's Equity in Computer Science
           description_short: ''
-          description_student: "##### Welcome! This K-12 general, curriculum-agnostic course focuses on the foundational concepts and concrete applications of equity in computer science. You do not need prerequisite equity or computer science knowledge to engage with this course. We welcome adult learners from all grade levels and teaching contexts to join our community of equity-minded educators.\n\n* * *\n\n##### **Find the learning that works for you:**\n\n-   ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your learning. Suggested times are provided for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n-   ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to equity in computer science. However, you can engage with the content in the order that best meets your needs."
-          description_teacher: "##### Welcome! This K-12 general, curriculum-agnostic course focuses on the foundational concepts and concrete applications of equity in computer science. You do not need prerequisite equity or computer science knowledge to engage with this course. We welcome adult learners from all grade levels and teaching contexts to join our community of equity-minded educators.\n\n* * *\n\n##### **Find the learning that works for you:**\n\n-   ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your learning. Suggested times are provided for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n-   ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to equity in computer science. However, you can engage with the content in the order that best meets your needs."
+          description_student: "##### Welcome! This K-12 general, curriculum-agnostic course focuses on the foundational concepts and concrete applications of equity in computer science. You do not need prerequisite equity or computer science knowledge to engage with this course. We welcome adult learners from all grade levels and teaching contexts to join our community of equity-minded educators.\n\n* * *\n\n##### **Find the learning that works for you:**\n\n-   ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your learning. Suggested times are provided for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n-   ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to implementing equity concepts in computer science. However, you can engage with the content in the order that best meets your needs."
+          description_teacher: "##### Welcome! This K-12 general, curriculum-agnostic course focuses on the foundational concepts and concrete applications of equity in computer science. You do not need prerequisite equity or computer science knowledge to engage with this course. We welcome adult learners from all grade levels and teaching contexts to join our community of equity-minded educators.\n\n* * *\n\n##### **Find the learning that works for you:**\n\n-   ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your learning. Suggested times are provided for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n-   ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to implementing equity concepts in computer science. However, you can engage with the content in the order that best meets your needs."
           version_title: ''
         melissasandbox-2025:
           title: melissasandbox-2025
@@ -982,7 +982,7 @@ en:
           description_teacher: ''
           version_title: ''
         pilot-pl-teaching-k5-music-lab:
-          title: pilot-pl-teaching-k5-music-lab
+          title: Teaching Intro to Programming with Music Lab
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -1458,8 +1458,8 @@ en:
         gamelab-demo:
           title: gamelab-demo
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.gamelab-demo.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.gamelab-demo.description'
+          description_student: 'translation missing: en-US.data.script.name.gamelab-demo.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.gamelab-demo.description'
           version_title: unversioned
         workshop-gamelab:
           title: Game Lab Workshop
@@ -1524,8 +1524,8 @@ en:
         allthettsthings:
           title: allthettsthings
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.allthettsthings.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.allthettsthings.description'
+          description_student: 'translation missing: en-US.data.script.name.allthettsthings.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.allthettsthings.description'
           version_title: unversioned
         subgoal-labels-opt-in:
           title: Subgoal Labels Study Opt-in
@@ -1866,8 +1866,8 @@ en:
         denny-science-copy:
           title: denny-science-copy
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.denny-science-copy.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.denny-science-copy.description'
+          description_student: 'translation missing: en-US.data.script.name.denny-science-copy.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.denny-science-copy.description'
           version_title: unversioned
         denny-science-8:
           title: Collision Detector
@@ -1884,8 +1884,8 @@ en:
         moneppo-1:
           title: moneppo-1
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.moneppo-1.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.moneppo-1.description'
+          description_student: 'translation missing: en-US.data.script.name.moneppo-1.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.moneppo-1.description'
           version_title: unversioned
         csd2-virtual:
           title: Self Paced Introduction to Web Lab
@@ -1926,8 +1926,8 @@ en:
         gamelabprojects:
           title: gamelabprojects
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.gamelabprojects.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.gamelabprojects.description'
+          description_student: 'translation missing: en-US.data.script.name.gamelabprojects.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.gamelabprojects.description'
           version_title: unversioned
         dani-june-2020-test:
           title: ''
@@ -2016,8 +2016,8 @@ en:
         teststandard:
           title: teststandard
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.teststandard.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.teststandard.description'
+          description_student: 'translation missing: en-US.data.script.name.teststandard.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.teststandard.description'
           version_title: unversioned
         haikubot-pilot:
           title: Poem Bot (Pilot)
@@ -2064,7 +2064,7 @@ en:
         poster:
           title: 'V1_Interactive Poster: Self-Expression'
           description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
-          description_student: 'translation missing: en.data.script.name.poster.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.poster.student\_description'
           description_teacher: ''
           version_title: unversioned
         self-paced-pl-csd6-2021:
@@ -2100,61 +2100,61 @@ en:
         outbreak-module:
           title: Outbreak
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.outbreak-module.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.outbreak-module.student\_description'
           description_teacher: ''
           version_title: unversioned
         poembot:
           title: Poembot
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.poembot.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.poembot.student\_description'
           description_teacher: ''
           version_title: unversioned
         csa1-exemplars:
           title: Unit 1 - Object Oriented Programming [Exemplars]
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.csa1-exemplars.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.csa1-exemplars.student\_description'
           description_teacher: ''
           version_title: unversioned
         csa2-exemplars:
           title: Unit 2 - Giving Objects State [Exemplars]
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.csa2-exemplars.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.csa2-exemplars.student\_description'
           description_teacher: ''
           version_title: unversioned
         csa-videos:
           title: CSA Videos
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.csa-videos.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.csa-videos.student\_description'
           description_teacher: ''
           version_title: unversioned
         csa3-exemplars:
           title: Unit 3 - Expanding Program Data [Exemplars]
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.csa3-exemplars.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.csa3-exemplars.student\_description'
           description_teacher: ''
           version_title: unversioned
         poster-experiment:
           title: Story Board (V1 - Experiment)
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.poster-experiment.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.poster-experiment.student\_description'
           description_teacher: ''
           version_title: unversioned
         sb-pt-cont:
           title: Story Board (playtest control)
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.sb-pt-cont.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.sb-pt-cont.student\_description'
           description_teacher: ''
           version_title: unversioned
         sb-pt-exp:
           title: Story Board (playtest experiment)
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.sb-pt-exp.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.sb-pt-exp.student\_description'
           description_teacher: ''
           version_title: unversioned
         csa-u6-dev:
           title: CSA Unit 6 Development
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.csa-u6-dev.student\_description'
+          description_student: 'translation missing: en-US.data.script.name.csa-u6-dev.student\_description'
           description_teacher: ''
           version_title: unversioned
         hello-world-draft:
@@ -2412,8 +2412,8 @@ en:
         katie-practice:
           title: katie-practice
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.katie-practice.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.katie-practice.description'
+          description_student: 'translation missing: en-US.data.script.name.katie-practice.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.katie-practice.description'
           version_title: unversioned
         emma:
           title: ''
@@ -2530,8 +2530,8 @@ en:
         testing-digital-information-2023:
           title: testing-digital-information-2023
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.testing-digital-information-2023.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.testing-digital-information-2023.description'
+          description_student: 'translation missing: en-US.data.script.name.testing-digital-information-2023.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.testing-digital-information-2023.description'
           version_title: '2023'
         poemmaker-2023:
           title: Poem Maker
@@ -2958,8 +2958,8 @@ en:
         dan-test:
           title: dan-test
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.dan-test.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.dan-test.description'
+          description_student: 'translation missing: en-US.data.script.name.dan-test.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.dan-test.description'
           version_title: unversioned
         net-int:
           title: Networks & Internet Playground
@@ -2970,8 +2970,8 @@ en:
         none-none:
           title: none-none
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.none-none.student\_description'
-          description_teacher: 'translation missing: en.data.script.name.none-none.description'
+          description_student: 'translation missing: en-US.data.script.name.none-none.student\_description'
+          description_teacher: 'translation missing: en-US.data.script.name.none-none.description'
           version_title: unversioned
         jamila-sandbox:
           title: jamila's stuff go away
@@ -3761,9 +3761,894 @@ en:
         getting-started-2025:
           title: Getting Started with Code.org
           description_short: ''
+          description_student: "## Welcome\n\nThis self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately."
+          description_teacher: "## Welcome\n\nThis self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately."
+          version_title: ''
+        facilitator-access-csaif-2025:
+          title: facilitator-access-csaif-2025
+          description_short: ''
           description_student: ''
           description_teacher: ''
           version_title: ''
+        vpl-csp-2025:
+          title: CS Principles Virtual PL Workshop Course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-csp-2025:
+          title: Teaching CS Principles
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        vpl-csa-2025:
+          title: CSA Virtual Professional Learning '25-'26
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        lori-sandbox-2025:
+          title: lori-sandbox-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        iceage:
+          title: Ice Age Play Lab
+          description_short: Create a story or make a game with Ice Age Play Lab!
+          description_student: Create a story or make a game with Ice Age Play Lab!
+          description_teacher: Create a story or make a game with Ice Age Play Lab!
+          version_title: unversioned
+        coursed-2022:
+          title: Course D (2022)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_student: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description_teacher: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
+          version_title: '2022'
+        coursef-2023:
+          title: Course F (2023)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description_teacher: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          version_title: '2023'
+        gumball:
+          title: Gumball Play Lab
+          description_short: Create a story or make a game with Gumball Play Lab!
+          description_student: Create a story or make a game with Gumball Play Lab!
+          description_teacher: Create a story or make a game with Gumball Play Lab!
+          version_title: unversioned
+        infinity:
+          title: Disney Infinity Play Lab
+          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description_student: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description_teacher: Use Play Lab to create a story or game starring Disney Infinity characters.
+          version_title: unversioned
+        grade5-maker-2024:
+          title: Grade 5 - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org’s CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        coursef-2017:
+          title: Course F
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description_teacher: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          version_title: '2017'
+        starwars:
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_student: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_teacher: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          version_title: unversioned
+        hello-world-retro-2021:
+          title: 'Hello World: Retro'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2021'
+        pre-express-2023:
+          title: Pre-reader Express (2023)
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2023'
+        csc-adaptations-2023:
+          title: Modeling Animal Adaptations
+          description_short: ''
+          description_student: ''
+          description_teacher: "## Suggested Pre-Work for this Module\n\n**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this [Living Things Change Video][0] (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSF Making Sprites][1] is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning][2]."
+          version_title: '2023'
+        dance:
+          title: Dance Party (2018)
+          description_short: Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+          description_student: Code your own dance party to share with your friends!
+          description_teacher: Code your own dance party to share with your friends!
+          version_title: unversioned
+        csc-mappinglandmarks-2023:
+          title: Coding Interactive Maps
+          description_short: ''
+          description_student: ''
+          description_teacher: "## Suggested Pre-Work for this Module\n\n**Social Studies:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: [Maps by Aleksandra and Daniel Mizielinski][0], [The Once Upon a Time Map Book by BG Hennessy][1], or [City Atlas: Travel the World with 30 City Maps by Georgia Cherry][2].\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (ie recess or field trip) create a topographical map using play-dough or salt dough.\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSFundamentals Course F Lesson 3][3] is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning][4]."
+          version_title: '2023'
+        nevada-standards-aligned-fifth-grade-2023:
+          title: 'Nevada Standards Aligned: Beta - CSF Course F'
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: ''
+          description_teacher: Fifth graders begin this course by learning to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about conditionals and variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          version_title: '2023'
+        csc-ecosystems-2023:
+          title: Simulating a Marine Ecosystem
+          description_short: ''
+          description_student: ''
+          description_teacher: "## Suggested Pre-Work for this Module\n\n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video][0] (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing][1] (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon][2] (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab][3] (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards][4] (50 minutes).\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning][5]."
+          version_title: '2023'
+        nevada-standards-aligned-first-grade-2023:
+          title: 'Nevada Standards Aligned: Beta - CSF Course B'
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: ''
+          description_teacher: Developed specifically for Nevada standards alignment.  This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          version_title: '2023'
+        nevada-standards-aligned-second-grade-2023:
+          title: 'Nevada Standards Aligned: Beta - CSF Course C'
+          description_short: " Learn the basics of computer science and create your own art, stories, and games."
+          description_student: ''
+          description_teacher: Developed specifically for Nevada standards alignment.  In this course, second-grade students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          version_title: '2023'
+        code-break:
+          title: Code Break
+          description_short: ''
+          description_student: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 13+. '
+          description_teacher: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 13+. '
+          version_title: unversioned
+        csc-bookcovers-2023:
+          title: Coding Book Covers
+          description_short: ''
+          description_student: ''
+          description_teacher: "## Suggested Pre-Work for this Module\n\n**English Language Arts:** Building some familiarity with and background knowledge on book covers, the elements they all share (title, author, illustrations, etc) and design choices will help students focus. Here are two hands on activities to try in your classroom: \n\n-   **Book sort**: Have groups of students organize books into genre piles, based only on the book cover. Students make inferences based on the book cover about what genre a book may fall under.\n-   **Cover comparison**: show students multiple covers for the same book. Engage in a discussion about what is different in each cover and evaluation which version is best.\n\n**Computer Science:** In this module, students will learn the basics of coding using code.org's Sprite Lab. These activities may be supportive to engage in before starting the module:\n\n-   Introduce students to the idea of **events** with this unplugged activity: [The Big Event][0] (15-minute activity). The teacher will press buttons on a paper remote and students will react depending on which button is pressed. \n-   [Making Sprites][1] (50 minutes) is a great self-paced introduction to the basics of coding with sprites.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning][2]."
+          version_title: '2023'
+        nevada-standards-aligned-fourth-grade-2023:
+          title: 'Nevada Standards Aligned: Beta - CSF Course E'
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_student: ''
+          description_teacher: Developed specifically for Nevada standards alignment.  Fourth graders begin this course with an introduction to the Sprite Lab programming tool. Following these lessons, students will engage in more complex coding. Students will learn about nested loops and functions. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          version_title: '2023'
+        csc-starquilts-2023:
+          title: Coding a Geometric Star Quilt
+          description_short: ''
+          description_student: ''
+          description_teacher: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nFor a quick introduction to shapes and angles with the Artist tool, watch this [Turns and Angles video][2] (2 mins).\n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [Shota and the Star Quilt][3] Picture book about the tradition of quilting and how traditions can change over time\n-   [Rainbow Weavers][4] This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n-   [A Trapezoid is Not a Dinosaur][5] by Suzanne Morris \n-   [The Greedy Triangle][6] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][7]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][8] (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning][9]."
+          version_title: '2023'
+        hello-world-transformers-one-2024:
+          title: 'Hello World: Transformers One'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2024'
+        nevada-standards-aligned-third-grade-2023:
+          title: 'Nevada Standards Aligned: Beta - CSF Course D'
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_student: ''
+          description_teacher: Developed specifically for Nevada standards alignment.  In this course, students in third grade will increase their knowledge of some concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, and more.
+          version_title: '2023'
+        sports:
+          title: Code your own sports game
+          description_short: Mix and match across sports
+          description_student: Mix and match across sports
+          description_teacher: Mix and match across sports
+          version_title: unversioned
+        coursee-2023:
+          title: Course E (2023)
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_student: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description_teacher: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          version_title: '2023'
+        basketball:
+          title: Choose your team and make a basketball game
+          description_short: Choose your team and make a basketball game
+          description_student: Choose your team and make a basketball game
+          description_teacher: Choose your team and make a basketball game
+          version_title: unversioned
+        k5-ai-data-2024:
+          title: How AI Makes Decisions
+          description_short: ''
+          description_student: ''
+          description_teacher: |-
+            Dive into the exciting world of artificial intelligence with Code.org’s innovative module, “How AI Makes Decisions,” tailored for upper elementary school students! This module is named to highlight its focus on unraveling the processes that AI systems use to analyze training data and make decisions. In these five lessons, AI concepts are broken down into engaging, age-appropriate lessons that focus on the critical role of data. Students will use Code.org’s AI tools for fun, educational AI experiences while gaining insight into how AI works behind the scenes. Each lesson provides several opportunities for class discussions about AI, bias, and the impact of AI tools on daily life.
+
+            **New to teaching AI?**
+
+            Get started with our [self-paced Professional Learning][0].
+          version_title: '2024'
+        courseb-2023:
+          title: Course B (2023)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          version_title: '2023'
+        coursec-2023:
+          title: Course C (2023)
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          version_title: '2023'
+        nevada-standards-aligned-kindergarten-2023:
+          title: 'Nevada Standards Aligned: Beta - CSF Course A'
+          description_short: An introduction to computer science for pre-readers.
+          description_student: ''
+          description_teacher: Developed specifically for Nevada standards alignment. This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
+          version_title: '2023'
+        dance-2019:
+          title: Dance Party
+          description_short: Code a Dance Party to share with friends and family. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's "Encanto," and more!
+          description_student: Code your own dance party to share with your friends!
+          description_teacher: Code your own dance party to share with your friends!
+          version_title: unversioned
+        coursed-2023:
+          title: Course D (2023)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_student: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description_teacher: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
+          version_title: '2023'
+        artist:
+          title: Artist
+          description_short: Draw cool pictures and designs with the Artist!
+          description_student: Draw cool pictures and designs with the Artist!
+          description_teacher: Draw cool pictures and designs with the Artist!
+          version_title: unversioned
+        starwarsblocks:
+          title: 'Star Wars: Building a Galaxy With Code (Blockly)'
+          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_student: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_teacher: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          version_title: unversioned
+        coursea-2023:
+          title: Course A (2023)
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
+          version_title: '2023'
+        coursea-2022:
+          title: Course A (2022)
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
+          version_title: '2022'
+        express-2019:
+          title: Express Course (2019)
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2019'
+        music-intro-2024:
+          title: Music Intro
+          description_short: An introduction to Music Lab.
+          description_student: ''
+          description_teacher: ''
+          version_title: '2024'
+        devices-2024:
+          title: Creating Apps with Devices - Circuit Playground ('24-'25)
+          description_short: ''
+          description_student: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          description_teacher: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [Creating Apps with Devices - micro:bit unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to Circuit Playground's - [click here][1] for more information about using Circuit Playground's in your classroom\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n-   You can view the [Implementation Guide][4] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][5]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][6] to let the Code.org curriculum team know how the unit went."
+          version_title: '2024'
+        minecraft:
+          title: Minecraft Designer
+          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_student: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_teacher: Program animals and other Minecraft creatures in your own version of Minecraft.
+          version_title: unversioned
+        microbit-2024:
+          title: Creating Apps with Devices (micro:bit) ('24-'25)
+          description_short: ''
+          description_student: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
+          description_teacher: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit][0]. Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Inputs and Outputs Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n-   Create app prototypes that use a physical device to control a digital app.\n\n**Big Questions:**\n\n-   What inputs and outputs are available on a physical device?\n-   What inputs and outputs are available on an app?\n-   How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Building Physical Prototypes Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n**Goals:**\n\n-   Design and build a physical computing device that integrates sensors with digital apps. \n-   Create app prototypes that use a physical device to solve real-world problems.\n-   Use physical computing to solve problems in fun and innovative ways.\n\n**Big Questions:**\n\n-   How can a physical device use sensors to react to a physical environment?\n-   How can simple hardware be used to develop innovative new products?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n\n-   This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom][1]\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][2] and [Differentiation Guide][3]\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module][4]. The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n \n \n "
+          version_title: '2024'
+        dance-ai-2023:
+          title: 'Dance Party: AI Edition'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2023'
+        music-tutorial-2024:
+          title: Music Lab Tutorial
+          description_short: In this engaging lesson, students use Music Lab to develop coding skills, compose songs, and connect technology with creativity.
+          description_student: In this engaging lesson, students use Music Lab to develop coding skills, compose songs, and connect technology with creativity.
+          description_teacher: In this engaging and interactive lesson, students will dive into the world of music creation through coding. Using Music Lab, a block-based integrated development environment (IDE), learners will discover the power of programming to make their own unique sounds, compose songs, and perform live music. By the end of this lesson, students will not only have developed foundational coding skills but also an appreciation for the interdisciplinary connection between music and technology. All the skills they learn in this tutorial will set them up for success when they get to the [Music Lab project][0], which is an open space for students to create any song they'd like!
+          version_title: unversioned
+        coursef-2021:
+          title: Course F (2021)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to code with sprites, variables, and loops and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description_teacher: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn more advanced concepts, including variables and “for” loops. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects and artwork to share with their friends and family.
+          version_title: '2021'
+        hero:
+          title: 'Minecraft: Hero''s Journey'
+          description_short: Minecraft is back with a brand new activity for Hour of Code!
+          description_student: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+          description_teacher: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+          version_title: unversioned
+        applab-intro:
+          title: Intro to App Lab
+          description_short: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          description_student: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          description_teacher: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          version_title: unversioned
+        oceans:
+          title: AI for Oceans
+          description_short: Learn how AI and machine learning can be used to address world problems.
+          description_student: Learn how AI and machine learning can be used to address world problems.
+          description_teacher: Learn how AI and machine learning can be used to address world problems.
+          version_title: unversioned
+        express-2022:
+          title: Express Course (2022)
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2022'
+        frozen:
+          title: Code with Anna and Elsa
+          description_short: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice.
+          description_student: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          description_teacher: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          version_title: unversioned
+        express-2023:
+          title: Express Course (2023)
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2023'
+        aquatic:
+          title: 'Minecraft: Voyage Aquatic'
+          description_short: Use your creativity and problem solving skills to explore and build underwater worlds with code!
+          description_student: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
+          description_teacher: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
+          version_title: unversioned
+        course4:
+          title: Course 4
+          description_short: Build more complex programs with concepts such as for loops and functions with parameters. This is a follow-up to Course 3.
+          description_student: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description_teacher: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          version_title: unversioned
+        coursee-2021:
+          title: Course E (2021)
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_student: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description_teacher: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          version_title: '2021'
+        elem-game-design-2024:
+          title: Elementary Game Design
+          description_short: ''
+          description_student: ''
+          description_teacher: |-
+            The Game Design module provides an exciting introduction to creating and codng games using Sprite Lab, a block-based programming environment.  In the first lesson, students will learn the basics of creating and animating sprites and making them interactive. The second lesson introduces variables, teaching students how to use them for tracking and modifying game elements like scores. The third lesson dives into game mechanics, focusing on player movement, obstacles, and win/lose conditions. The fourth lesson is a Game Jam where students collaboratively design and code a game based on a randomly generated theme. The final lesson emphasizes user feedback and data-driven improvements, enabling students to refine their games and enhance the player experience.
+
+            **New to teaching Game Design?**
+
+            Get started with our [self-paced Professional Learning][0].
+          version_title: '2024'
+        csp5-virtual:
+          title: Event-Driven Programming in App Lab
+          description_short: Learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
+          description_student: This self-paced module introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_teacher: This self-paced module introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          version_title: unversioned
+        flappy:
+          title: Flappy Code
+          description_short: Write your own Flappy game!
+          description_student: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description_teacher: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          version_title: unversioned
+        mc:
+          title: Minecraft Adventurer
+          description_short: Explore a Minecraft world through code.
+          description_student: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+          description_teacher: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+          version_title: unversioned
+        aiml-2024:
+          title: AI and Machine Learning ('24-'25)
+          description_short: Learn to about Artificial Intelligence and Machine Learning.
+          description_student: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+
+            **Looking to teach this unit?** [Click here to view the lesson plans for these lessons][0]
+          description_teacher: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n**Goals:**\n\n-   Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n-   Understand how machine learning models make decisions from data\n\n**Big Questions:**\n\n-   How does machine learning find patterns in data to make decisions?\n-   How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n\n-   Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n**Big Questions:**\n\n-   How can machine learning be used to solve problems in our community?\n\n:::\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Implementation Guide][2] for more information about this unit\n    :::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][4] to let the Code.org curriculum team know how the unit went."
+          version_title: '2024'
+        pre-express-2021:
+          title: Pre-reader Express (2021)
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2021'
+        course3:
+          title: Course 3
+          description_short: Delve even deeper into programming while building games and interactive stories. This is a follow-up to Course 2.
+          description_student: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description_teacher: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          version_title: unversioned
+        music-jam-2024:
+          title: 'Music Lab: Jam Session'
+          description_short: 'Bring music and coding together in this interactive Hour of Code tutorial. '
+          description_student: 'Ready to mix music and code? In Music Lab: Jam Session, you’ll remix songs from artists like Sabrina Carpenter, Lady Gaga, and Shakira while learning cool coding skills like sequencing and creating beats with AI. It’s a fun way to get creative with coding!'
+          description_teacher: 'Bring music and coding together with our Music Lab: Jam Session tutorial! In this fun, self-guided activity, students remix tracks from popular artists like Sabrina Carpenter, Lady Gaga, and Shakira, learning coding basics like sequencing and functions while exploring AI-powered beat creation. Perfect for sparking creativity and confidence!'
+          version_title: '2024'
+        coursed-2021:
+          title: Course D (2021)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_student: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description_teacher: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
+          version_title: '2021'
+        courseb-2021:
+          title: Course B (2021)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          version_title: '2021'
+        coursea-2021:
+          title: Course A (2021)
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
+          version_title: '2021'
+        coursec-2021:
+          title: Course C (2021)
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          version_title: '2021'
+        web-development-2024:
+          title: Web Development ('24-'25)
+          description_short: " Learn to build your own web site in Web Lab."
+          description_student: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description_teacher: "In Web Development, students are put in the shoes of a web developer and empowered to design and create a web page to meet a user’s needs. As students develop the pages and begin to see themselves as web developers and designers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem-solving related to programming while learning valuable skills such as debugging, using resources, and teamwork. At the conclusion of chapter one, students will design and create a web page for a user. After chapter two, students will have worked with a team to create a multi-page website they can publish and share. \n\n::: details [**Chapter 1 Overview**]\n**Description:** Students work as web developers to design and develop web pages to meet users' needs. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page and CSS to design and organize the content. They also explore the privacy and intellectual property implications of publishing web pages online.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a web page to meet a user's needs.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as creators and consumers of digital media.\n\n**Big Questions:**\n\n-   How do web developers create web pages for users?\n-   How can text communicate a web page's content, structure, and style?\n-   How do I safely and appropriately create content for the Internet?\n-   What strategies can I use when coding to find and fix issues?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a website that solves a problem.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n\n-   How can websites be used to address problems in the world?\n-   What strategies can teams use to work better together?\n-   How do I know what information can be trusted online?\n    :::\n\n::: details [**Implementation Guidance for Web Development**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Implementation Guide][2] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][3] to let the Code.org curriculum team know how the unit went."
+          version_title: '2024'
+        course2:
+          title: Course 2
+          description_short: Introduction to computer science for students who can read.
+          description_student: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description_teacher: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          version_title: unversioned
+        csd3-virtual:
+          title: Self Paced Introduction to Game Lab
+          description_short: " Learn to program animations, interactive art, and games in Game Lab."
+          description_student: You’ll program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
+          description_teacher: You’ll program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
+          version_title: unversioned
+        interactive-games-animations-2024:
+          title: Interactive Animations and Games ('24-'25)
+          description_short: Learn to program animations, interactive art, and games in Game Lab.
+          description_student: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          description_teacher: "In the Interactive Animations and Games unit, students create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students build up toward programming interactive animations in the Game Lab environment.  They begin with simple shapes and sprite objects, then use loops to create flipbook style animations.  Next, they learn to use booleans and conditionals to respond to user input.  At the end of the chapter, students design and create an interactive animation that they can share with the world.\n\n**Goals:**\n\n-   Create an interactive animation that includes basic programming concepts such as control structures, variables, user input, and randomness. \n-   Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n-   View yourself as a computer programmer, and see programming as a fun and creative form of expression.\n\n**Big Questions:**\n\n-   What is a computer program?\n-   What are the core features of most programming languages?\n-   How does programming enable creativity and individual expression?\n-   What practices and strategies will help me as I write programs?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter students combine the constructs that they learned in the first chapter to program more complex movement and collisions in their sprites.  As they create more complex programs, they begin to use functions to organize their code.  In the end, students use a design process to create an original game.\n\n**Goals:**\n\n-   Create an interactive game that includes basic programming concepts such as control structures, variables, user input, and randomness. \n-   Give and respond constructively to peer feedback, and work with their teammates to complete a project. \n-   Work with others to break down programming projects using sprites and functions.\n\n**Big Questions:**\n\n-   How do software developers manage complexity and scale?\n-   How can programs be organized so that common problems only need to be solved once?\n-   How can I build on previous solutions to create even more complex behavior?\n    :::\n\n::: details [**Implementation Guidance for Interactive Animations and Games**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the [Implementation Guide][2] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][3] to let the Code.org curriculum team know how the unit went."
+          version_title: '2024'
+        course1:
+          title: Course 1
+          description_short: Introduction to computer science for early readers.
+          description_student: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          description_teacher: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          version_title: unversioned
+        coursef-2024:
+          title: Course F (2024)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description_teacher: |-
+            We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning][0].
+          version_title: '2024'
+        pre-express-2024:
+          title: Pre-reader Express (2024)
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2024'
+        20-hour:
+          title: Accelerated Intro to CS Course
+          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_student: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+          description_teacher: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+          version_title: unversioned
+        coursee-2024:
+          title: Course E (2024)
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_student: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description_teacher: |-
+            We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning][0].
+          version_title: '2024'
+        express-2021:
+          title: Express Course (2021)
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2021'
+        coursec-2024:
+          title: Course C (2024)
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: |-
+            We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning][0].
+          version_title: '2024'
+        courseb-2024:
+          title: Course B (2024)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: |-
+            We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning][0].
+          version_title: '2024'
+        coursed-2024:
+          title: Course D (2024)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_student: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description_teacher: "We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. \n\n**New to teaching CS?**\n\nGet started with our [self-paced Professional Learning][0]."
+          version_title: '2024'
+        coursea-2024:
+          title: Course A (2024)
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: "Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. \n\n**New to teaching CS?**\n\nGet started with our [self-paced Professional Learning][0]."
+          version_title: '2024'
+        express-2024:
+          title: Express Course (2024)
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2024'
+        hourofcode:
+          title: Classic Maze
+          description_short: Try the basics of computer science with many fun characters!
+          description_student: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_teacher: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          version_title: unversioned
+        coursea-2018:
+          title: Course A (2018)
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2018'
+        coursee-2018:
+          title: Course E (2018)
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
+          description_student: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description_teacher: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          version_title: '2018'
+        coursed-2018:
+          title: Course D (2018)
+          description_short: Learn about conditional statements and create your own art, story or game.
+          description_student: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_teacher: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          version_title: '2018'
+        coursef-2019:
+          title: Course F (2019)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description_teacher: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          version_title: '2019'
+        courseb-2019:
+          title: Course B (2019)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2019'
+        coursec-2019:
+          title: Course C (2019)
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          version_title: '2019'
+        coursee-2019:
+          title: Course E (2019)
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
+          description_student: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description_teacher: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          version_title: '2019'
+        coursef-2018:
+          title: Course F (2018)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description_teacher: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          version_title: '2018'
+        coursec-2018:
+          title: Course C (2018)
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          version_title: '2018'
+        coursed-2019:
+          title: Course D (2019)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_student: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_teacher: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          version_title: '2019'
+        coursef-2020:
+          title: Course F (2020)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description_teacher: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          version_title: '2020'
+        courseb-2018:
+          title: Course B (2018)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2018'
+        coursea-2019:
+          title: Course A (2019)
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2019'
+        coursee-2020:
+          title: Course E (2020)
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
+          description_student: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description_teacher: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          version_title: '2020'
+        coursed-2020:
+          title: Course D (2020)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_student: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_teacher: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          version_title: '2020'
+        coursea-2017:
+          title: Course A
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2017'
+        coursee-2017:
+          title: Course E
+          description_short: Quickly cover concepts in Course C & D and then go further with functions.
+          description_student: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description_teacher: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          version_title: '2017'
+        coursef-2022:
+          title: Course F (2022)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description_teacher: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          version_title: '2022'
+        courseb-2017:
+          title: Course B
+          description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2017'
+        coursec-2017:
+          title: Course C
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          version_title: '2017'
+        coursed-2017:
+          title: Course D
+          description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+          description_student: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before creating your very own game or story that you can share.
+          description_teacher: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before creating your very own game or story that you can share.
+          version_title: '2017'
+        courseb-2022:
+          title: Course B (2022)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          version_title: '2022'
+        courseb-2020:
+          title: Course B (2020)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2020'
+        coursec-2020:
+          title: Course C (2020)
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          version_title: '2020'
+        coursee-2022:
+          title: Course E (2022)
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_student: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description_teacher: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          version_title: '2022'
+        coursec-2022:
+          title: Course C (2022)
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_student: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_teacher: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          version_title: '2022'
+        coursea-2020:
+          title: Course A (2020)
+          description_short: An introduction to computer science for pre-readers.
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2020'
+        course-e-2018:
+          title: Course E 2018 (Outdated!)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
+        course-f-2018:
+          title: Course F 2018 (Outdated)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
+        coursef-2022-pilot:
+          title: Course F (2022)
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_student: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description_teacher: "We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.\n\n## Spring 2022 Open Preview\n\nThis new version of Course F includes three new lessons, and we need your feedback! The new lessons are:\n\n-   Lesson 9 - Lots of Sprites - [give feedback][0]\n-   Lesson 10 - Counting with Variables - [give feedback][1]\n-   Lesson 11 - Mini-Project: Collector Game - [give feedback][2]\n\nPlease note that these new lessons may change between now and July 2022. We appreciate any feedback. Courses A-E of CS Fundamentals (2022) will launch in July 2022.\n\nWe have also added a full slide deck covering all lessons in Course F. We welcome your [feedback][3] on the lesson slides as well!"
+          version_title: unversioned
+        musiclab-pilot:
+          title: Music Lab
+          description_short: Code your own version of a song to share or perform!
+          description_student: Code your own version of a song to share or perform!
+          description_teacher: Code your own version of a song to share or perform!
+          version_title: unversioned
+        coursec-maker-2024:
+          title: Course C - Maker with micro:bit
+          description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        coursed-maker-2024:
+          title: Course D - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        coursee-maker-2024:
+          title: Course E - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        coursef-maker-2024:
+          title: Course F - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        music-intro-elementary-2024:
+          title: 'Music Lab - Elementary '
+          description_short: 'An introduction to Music Lab for elementary aged students. '
+          description_student: ''
+          description_teacher: 'Work in progress. '
+          version_title: '2024'
+        pilot-coursec-maker-2024:
+          title: Course C - Maker with micro:bit
+          description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
+          version_title: unversioned
+        pilot-coursed-maker-2024:
+          title: Course D - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
+          version_title: unversioned
+        pilot-coursee-maker-2024:
+          title: Course E - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
+          version_title: unversioned
+        music-onboard:
+          title: Music Lab Intro
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
+        programming-with-music-lab-2024:
+          title: "[PILOT] Programming with Music Lab"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2024'
+        pilot-k5-ai:
+          title: "[Pilot] Elementary AI Module "
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
+        pilot-k5-game-design:
+          title: "[Pilot] Game Design"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
+        pilot-coursef-maker-2024:
+          title: Course F - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey][1] to share your feedback with the Code.org team."
+          version_title: unversioned
+        pre-express-2017:
+          title: Pre-reader Express
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2017'
+        pre-express-2018:
+          title: Pre-reader Express (2018)
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2018'
+        pre-express-2020:
+          title: Pre-reader Express (2020)
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2020'
+        express-2017:
+          title: Express Course
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2017'
+        grade3-maker-2024:
+          title: Grade 3 - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org’s CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        express-2018:
+          title: Express Course
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_teacher: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          version_title: '2018'
+        grade4-maker-2024:
+          title: Grade 4 - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org’s CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        grade2-maker-2024:
+          title: Grade 2 - Maker with micro:bit
+          description_short: ''
+          description_student: ''
+          description_teacher: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org's CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects. \n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning][0]. \n\nThis self-paced course covers the following topics: \n\n-   How to use the Code.org curriculum \n-   How to setup a classroom on Code.org \n-   How to use micro:bits \n-   How to use the “Meet your micro:bit” project\n-   How to setup a classroom on micro:bit\n-   How to assess student learning "
+          version_title: '2024'
+        pre-express-2022:
+          title: Pre-reader Express (2022)
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2022'
+        pilot-elem-music-lab:
+          title: Intro to Programming with Music Lab
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
+        pre-express-2019:
+          title: Pre-reader Express (2019)
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2019'
+        express-2020:
+          title: Express Course (2020)
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_student: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_teacher: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          version_title: '2020'
     resources:
       curriculum/csd/2017:
         name: Curriculum

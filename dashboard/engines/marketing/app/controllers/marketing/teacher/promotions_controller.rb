@@ -15,7 +15,7 @@ module Marketing
 
         result = entry.fields.clone
         ads = result[:sidebar_ads].map do |ad|
-          ad.fields.transform_values! {|v| v.is_a?(Contentful::Asset) ? v.image_url : v}
+          ad.fields.transform_values {|v| v.is_a?(Contentful::Asset) ? v.image_url : v}.merge(id: ad.id)
         end
 
         render json: ads
