@@ -290,11 +290,14 @@ end
 
 Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   href = nil
+  puts "current time: #{Process.clock_gettime(Process::CLOCK_MONOTONIC)}"
   wait_until do
+    puts "current time: #{Process.clock_gettime(Process::CLOCK_MONOTONIC)}"
     href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
     puts "href: #{href.inspect}"
     href != nil?
   end
+  puts "current time: #{Process.clock_gettime(Process::CLOCK_MONOTONIC)}"
   puts "final href: #{href.inspect}"
   expect(@section_id).to be > 0
 
