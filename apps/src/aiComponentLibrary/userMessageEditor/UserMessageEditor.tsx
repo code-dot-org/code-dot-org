@@ -66,7 +66,7 @@ const UserMessageEditor = React.forwardRef<
       }
 
       ref.current.style.height = 'auto'; // Reset height
-      ref.current.style.height = ref.current.scrollHeight + 'px'; // Set to scroll height
+      ref.current.style.height = ref.current.scrollHeight + 2 + 'px'; // Set to scroll height
     }, [ref, userMessage]);
 
     const icon = {iconName: 'paper-plane'};
@@ -90,6 +90,7 @@ const UserMessageEditor = React.forwardRef<
           disabled={disabled}
           onKeyDown={e => handleKeyPress(e, userMessage)}
           maxLength={MAX_MESSAGE_LENGTH}
+          rows={1}
         />
 
         <div className={moduleStyles.centerSingleItemContainer}>
