@@ -53,5 +53,7 @@ runs:
       with:
         name: ${{ inputs.cloudformation-stack-name }}
         template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
-        parameter-overrides: "ContainerImageHashDigest=${{ inputs.container-image-digest }}"
+        parameter-overrides: |
+          ContainerImageHashDigest=${{ inputs.container-image-digest }},
+          Environment=${{ inputs.environment }}
         capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM

@@ -45,44 +45,28 @@ Resources:
       EnableDnsSupport: true
       InstanceTenancy: default
 
-  VpcPublicSubnet0:
+<% Config::AVAILABILITY_ZONES.each_with_index do |az, index| %>
+  # Public Subnet in <%=az %>
+  VpcPublicSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: us-west-2a
-      CidrBlock: 10.0.0.0/18
+      AvailabilityZone: <%=Config::AVAILABILITY_ZONES[index] %>
+      CidrBlock: <%=Config::PUBLIC_SUBNETS[index] %>
       MapPublicIpOnLaunch: true
       VpcId:
         Ref: Vpc
 
-  VpcPublicSubnet1:
+  # Private Subnet in <%=az %>
+  VpcPrivateSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: us-west-2b
-      CidrBlock: 10.0.64.0/18
-      MapPublicIpOnLaunch: true
-      VpcId:
-        Ref: Vpc
-
-  VpcPrivateSubnet0:
-    Type: AWS::EC2::Subnet
-    Properties:
-      AvailabilityZone: us-west-2a
-      CidrBlock: 10.0.128.0/18
+      AvailabilityZone: <%=Config::AVAILABILITY_ZONES[index] %>
+      CidrBlock: <%=Config::PRIVATE_SUBNETS[index] %>
       MapPublicIpOnLaunch: false
       VpcId:
         Ref: Vpc
 
-  VpcPrivateSubnet1:
-    Type: AWS::EC2::Subnet
-    Properties:
-      AvailabilityZone: us-west-2b
-      CidrBlock: 10.0.192.0/18
-      MapPublicIpOnLaunch: false
-      VpcId:
-        Ref: Vpc
-
-<% Config::AVAILABILITY_ZONES.each_with_index do |region, index| %>
-  # Route Table for Public Subnet <%= region %>
+  # Route Table for Public Subnet <%=az %>
   VpcPublicSubnet<%= index %>RouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
@@ -506,6 +490,21 @@ Resources:
             - '"}'
     UpdateReplacePolicy: Delete
     DeletionPolicy: Delete
+  
+  # Values to be populated manually by an infrastructure engineer
+  # Do not update the SecretString values in this file
+  MarketingContentfulSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Contentful API access token for the ${AWS::StackName} stack"
+      Name: !Sub "${AWS::StackName}/contentful"
+      SecretString: '{}'
+  MarketingStatsigSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Statsig client credentials for the ${AWS::StackName} stack"
+      Name: !Sub "${AWS::StackName}/statsig"
+      SecretString: '{}'
 
 Outputs:
   FargateServiceLoadBalancerDNS:
