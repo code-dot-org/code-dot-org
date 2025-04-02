@@ -69,12 +69,14 @@ const Footer: React.FC<FooterProps> = ({
     className={classNames(moduleStyles.footer, className)}
   >
     <div className={moduleStyles.footerContent}>
-      {/* `.footerLinkListToggle` is used only to toggle the display of `.footerLinkList` on small screens */}
-      <details className={moduleStyles.footerLinkListToggle} aria-hidden="true">
-        <summary tabIndex={-1}>
-          Code.org <FontAwesomeV6Icon iconName="chevron-down" />
-        </summary>
-      </details>
+      <label
+        className={moduleStyles.footerLinkListToggle}
+        aria-label="Click to expand or collapse Site links"
+      >
+        <input type="checkbox" aria-hidden="true" />
+        Code.org
+        <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
+      </label>
 
       <ul className={moduleStyles.footerLinkList} aria-label="Site links">
         {siteLinks?.map(({key, label, href, ...link}) => (

@@ -19,32 +19,6 @@
 
     .footerLinkListToggle {
       display: none;
-
-      summary {
-        @include typography.body-three;
-        @include typography.strong;
-        display: flex;
-        column-gap: 0.38rem;
-        cursor: pointer;
-        color: var(--text-neutral-inverse);
-        list-style: none;
-        margin: 0;
-
-        i {
-          @include mixins.transition-all;
-          @include mixins.icon-dimensions(var(--font-size-body-sm));
-          text-align: center;
-          line-height: 1.54;
-        }
-      }
-
-      &[open] {
-        summary {
-          i {
-            transform: scaleY(-1);
-          }
-        }
-      }
     }
 
     .footerLinkList {
@@ -55,10 +29,6 @@
       padding: 0;
 
       li {
-        @include typography.body-three;
-        @include typography.strong;
-        margin: 0;
-
         &:not(:last-child)::after {
           content: '';
           border: 0.5px solid var(--neutral-white-alpha-20);
@@ -76,6 +46,14 @@
           }
         }
       }
+    }
+
+    .footerLinkList li,
+    .footerLinkListToggle {
+      @include typography.body-three;
+      @include typography.strong;
+      color: var(--text-neutral-inverse);
+      margin: 0;
     }
 
     .footerSocialList {
@@ -155,37 +133,45 @@
 @media (max-width: 600px) {
   .footer {
     position: relative;
-    padding-top: 0.5rem;
+    padding-top: 0;
 
     .footerContent {
       .footerLinkListToggle {
-        display: block;
+        display: flex;
+        justify-content: center;
+        column-gap: 0.38rem;
+        cursor: pointer;
         width: 100%;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid var(--neutral-white-alpha-20);
+        margin: 0;
 
-        summary {
-          justify-content: center;
+        input[type='checkbox'] {
+          display: none;
+        }
+
+        i {
+          @include mixins.icon-dimensions(var(--font-size-body-sm));
+          @include mixins.transition-all;
+          text-align: center;
+          line-height: 1.54;
+          transform: scaleY(1);
         }
 
         & + .footerLinkList {
           background: var(--background-neutral-primary-inverse);
+          position: absolute;
+          left: 0;
+          bottom: 100%;
+          width: 100%;
           flex-direction: column;
           flex-wrap: nowrap;
-          position: absolute;
-          width: 100%;
-          bottom: 100%;
-          left: 0;
           overflow: auto;
           transition: max-height 0.5s ease-out;
 
           li {
             margin: 0 1.5rem;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--neutral-white-alpha-20);
 
-            &:not(:last-child)::after {
-              content: none;
+            &::after {
+              display: none;
             }
 
             a {
@@ -194,13 +180,25 @@
           }
         }
 
-        &[open] + .footerLinkList {
-          max-height: 100vh;
+        &,
+        & + .footerLinkList li {
+          padding: 0.5rem 0;
+          border-bottom: 1px solid var(--neutral-white-alpha-20);
         }
 
-        &:not([open]) + .footerLinkList,
-        &[open]:active + .footerLinkList {
+        &:has(input:not(:checked)) + .footerLinkList,
+        &:has(input:checked:active) + .footerLinkList {
           max-height: 0;
+        }
+
+        &:has(input:checked) {
+          i {
+            transform: scaleY(-1);
+          }
+
+          & + .footerLinkList {
+            max-height: 200vh;
+          }
         }
       }
     }
