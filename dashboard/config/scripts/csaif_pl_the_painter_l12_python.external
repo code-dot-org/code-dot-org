@@ -58,7 +58,7 @@ markdown <<MARKDOWN
 
 ## Getting Started with Objects
 
-#### In simple terms there are two steps to get starting with objects. 
+#### In simple terms, there are two steps to get starting with objects. 
 - #### 1. Create the object with a variable name. This is called **instantiating** an object.
 - #### 2. Tell the object what to do using methods.
 

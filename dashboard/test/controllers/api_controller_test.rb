@@ -1241,6 +1241,30 @@ class ApiControllerTest < ActionController::TestCase
     assert_response 416
   end
 
+  test "section with duplicated students loads all data when per is equal to the number of unique students" do
+    duplicated_section_owner = create(:teacher)
+
+    # section will contain 7 unique students, but 8 followers - one of whom is a "duplicate"
+    duplicated_section = create(:section, user: duplicated_section_owner, login_type: 'word')
+
+    # add students in section
+    duplicated_students = []
+    7.times do |i|
+      student = create(:student, name: "duplicated_student_#{i}")
+      duplicated_students << student
+      create(:follower, section: duplicated_section, student_user: student)
+    end
+
+    # Create a duplicate follower for student_2 in duplicated_section
+    create(:follower, section: duplicated_section, student_user: duplicated_students[2])
+
+    sign_in duplicated_section_owner
+    get :section_level_progress, params: {section_id: duplicated_section.id, page: 1, per: 7}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 7, data['student_progress'].keys.length
+  end
+
   test "should get section level progress with specific script" do
     script = Unit.find_by_name('algebra')
     get :section_level_progress, params: {

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-31 14:33:49 UTC",
+    "serialized_at": "2025-04-01 15:27:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4827,15 +4827,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "problem-solving-with-ai-lesson2-level2_2024"
-        ],
         "progression": "AI's Image Observation Skills"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-level2_2024"
+          "test-problem-solving-with-ai-lesson2-level2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
@@ -4843,7 +4840,7 @@
         "activity_section.key": "0c05cfc1-7846-4109-b08f-7ef68332e958"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson2-level2_2024"
+        "test-problem-solving-with-ai-lesson2-level2"
       ]
     },
     {
@@ -4852,15 +4849,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "problem-solving-with-ai-lesson2-level3_2024"
-        ],
         "progression": "Scenario-Based Prompting"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-level3_2024"
+          "test-problem-solving-with-ai-lesson2-level3"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
@@ -4868,7 +4862,7 @@
         "activity_section.key": "caa09099-8ad9-475d-a520-030c2aacab13"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson2-level3_2024"
+        "test-problem-solving-with-ai-lesson2-level3"
       ]
     },
     {
@@ -4902,15 +4896,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "problem-solving-with-ai-lesson2-level5_2024"
-        ],
         "progression": "Practice with a Multimodal Model"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-level5_2024"
+          "test-problem-solving-with-ai-lesson2-level4"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
@@ -4918,7 +4909,7 @@
         "activity_section.key": "65b58ef8-3ffe-4d3a-894e-8d5d6cdfe715"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson2-level5_2024"
+        "test-problem-solving-with-ai-lesson2-level4"
       ]
     },
     {
@@ -6102,6 +6093,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level1_2024"
+        ],
         "progression": "Articles"
       },
       "bonus": false,
@@ -6124,6 +6118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level2_2024"
+        ],
         "progression": "AI in the Community"
       },
       "bonus": false,
@@ -6146,6 +6143,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level3_2024"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6168,6 +6168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level4_2024"
+        ],
         "progression": "Write a Video Script"
       },
       "bonus": false,
@@ -6421,9 +6424,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson2-level2_2024",
+        "level.key": "test-problem-solving-with-ai-lesson2-level2",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-level2_2024"
+          "test-problem-solving-with-ai-lesson2-level2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
@@ -6433,9 +6436,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson2-level3_2024",
+        "level.key": "test-problem-solving-with-ai-lesson2-level3",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-level3_2024"
+          "test-problem-solving-with-ai-lesson2-level3"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",
@@ -6457,9 +6460,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson2-level5_2024",
+        "level.key": "test-problem-solving-with-ai-lesson2-level4",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson2-level5_2024"
+          "test-problem-solving-with-ai-lesson2-level4"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-3",

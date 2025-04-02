@@ -1,4 +1,4 @@
-import {render, screen, act} from '@testing-library/react';
+import {render, screen, act, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -9,6 +9,8 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {CourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/CourseContentDropdown';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -116,12 +118,14 @@ describe('CourseContentDropdown', () => {
 
   const store: Store = getStore();
   let fetchSpy: jest.SpyInstance;
+  let sendEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
       value: lessons,
       response: new Response(),
     });
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
   });
 
   afterEach(() => {
@@ -156,13 +160,39 @@ describe('CourseContentDropdown', () => {
 
   it('renders section Go to Course page button when no unit is assigned', () => {
     renderComponent();
-    screen.getByText(i18n.goToCourse());
+    const courseButton = screen.getByText(i18n.goToCourse());
+    fireEvent.click(courseButton);
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('renders Jump to lesson dropdown when a unit is assigned', async () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
     expect(fetchSpy).toHaveBeenCalled();
-    screen.getByRole('combobox', {name: 'Jump to'});
+    const lessonDropdown = screen.getByLabelText(i18n.jumpTo());
+    fireEvent.change(lessonDropdown, {
+      target: {value: '/s/csd3-2024/lessons/4/levels/1'},
+    });
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED,
+      {
+        lesson: '/s/csd3-2024/lessons/4/levels/1',
+      },
+      PLATFORMS.BOTH
+    );
+    fireEvent.change(lessonDropdown, {
+      target: {value: '/unit/csd3-2024'},
+    });
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED,
+      {
+        lesson: '/unit/csd3-2024',
+      },
+      PLATFORMS.BOTH
+    );
   });
 });

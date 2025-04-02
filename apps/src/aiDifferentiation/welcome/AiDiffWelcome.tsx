@@ -15,6 +15,7 @@ import React from 'react';
 import Confetti from 'react-dom-confetti';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
@@ -31,6 +32,11 @@ import {
   EXIT_TICKET_PROMPT,
   MINI_LESSON_PROMPT,
   LESSON_HOOK_PROMPT,
+  SUGGEST_CURRICULUM_PROMPT,
+  GET_STARTED_PROMPT,
+  PROFESSIONAL_LEARNING_PROMPT,
+  CREATE_SECTION_PROMPT,
+  ADDITIONAL_HELP_PROMPT,
 } from '../AiDiffPredefinedPrompts';
 import {ChatPrompt} from '../types';
 
@@ -61,8 +67,7 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
   [selection: string]: {initialMessage: string; suggestedPrompts: ChatPrompt[]};
 } = {
   plan: {
-    initialMessage:
-      'Lets iterate together! What would you like to change? Below are some of the tasks I can help you with.',
+    initialMessage: `Let's iterate together! What would you like to change? Below are some of the tasks I can help you with.`,
     suggestedPrompts: [
       EXPLAIN_CONCEPT_PROMPT,
       EXAMPLE_PROMPT,
@@ -72,14 +77,23 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
     ],
   },
   create: {
-    initialMessage:
-      'Lets work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.',
+    initialMessage: `Let's work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.`,
     suggestedPrompts: [
       FINISH_EARLY_PROMPT,
       EXTRA_PRACTICE_PROMPT,
       EXIT_TICKET_PROMPT,
       MINI_LESSON_PROMPT,
       LESSON_HOOK_PROMPT,
+    ],
+  },
+  support: {
+    initialMessage: `Let's get started teaching on Code.org together! What would you like to do on the Code.org platform? Below are some of the tasks I can help you with.`,
+    suggestedPrompts: [
+      SUGGEST_CURRICULUM_PROMPT,
+      GET_STARTED_PROMPT,
+      PROFESSIONAL_LEARNING_PROMPT,
+      CREATE_SECTION_PROMPT,
+      ADDITIONAL_HELP_PROMPT,
     ],
   },
 };
@@ -180,7 +194,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     React.useState(true);
 
   const [selectedOption, setSelectedOption] = React.useState<
-    'plan' | 'create' | null
+    'plan' | 'create' | 'support' | null
   >(null);
 
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
@@ -225,6 +239,14 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               <Heading6 className={style.selectOptionSubtitle}>
                 Using AI in multiple ways increases productivity.
               </Heading6>
+              {context === AiDiffContext.GENERAL &&
+                optionButton(
+                  selectedOption === 'support',
+                  () => setSelectedOption('support'),
+                  'rocket-launch',
+                  'Get Started',
+                  'Get help using the Code.org platform, learn about professional learning opportunities, suggest a curriculum, create a section'
+                )}
               {optionButton(
                 selectedOption === 'plan',
                 () => setSelectedOption('plan'),
@@ -245,7 +267,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         </div>
       );
     },
-    [continueAndSkipButtons, selectedOption]
+    [continueAndSkipButtons, selectedOption, context]
   );
 
   React.useEffect(() => {
