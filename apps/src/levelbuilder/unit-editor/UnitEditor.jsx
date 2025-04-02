@@ -402,7 +402,6 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    console.log(this.state.publishedState);
     const allowMajorCurriculumChanges =
       this.props.initialUnitPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.in_development ||
