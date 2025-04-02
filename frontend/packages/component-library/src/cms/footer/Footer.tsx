@@ -35,6 +35,8 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   imageLinks: ImageLink[];
   /** Footer copyright notices */
   copyright: string;
+  /** Footer brand */
+  brand?: string;
   /** Footer class */
   className?: string;
 }
@@ -53,6 +55,7 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
  * Acts as the main page footer.
  */
 const Footer: React.FC<FooterProps> = ({
+  brand = 'Code.org',
   siteLinks,
   socialLinks,
   imageLinks,
@@ -70,7 +73,7 @@ const Footer: React.FC<FooterProps> = ({
         aria-label="Click to expand or collapse Site links"
       >
         <input type="checkbox" aria-hidden="true" />
-        Code.org
+        {brand}
         <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
       </label>
 
