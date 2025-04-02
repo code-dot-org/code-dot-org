@@ -39,7 +39,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   closeDropdown,
   buttonRef,
 }) => {
-  const menuRef = useOutsideClick<HTMLDivElement>(closeDropdown);
+  const dropdownRef = useOutsideClick<HTMLDivElement>(closeDropdown);
   const editorFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
@@ -51,7 +51,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
 
   const getSelectedKey = (value: string) => value as keyof typeof FontSize;
 
-  const dropdownStyles = useDropdownPosition(buttonRef, menuRef);
+  const dropdownStyles = useDropdownPosition(buttonRef, dropdownRef);
 
   const onTextEditorDropdownChange = async (value: string) => {
     setSelectedValue(getSelectedKey(value));
@@ -80,7 +80,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     >
       <div
         className={moduleStyles.settingsDropdown}
-        ref={menuRef}
+        ref={dropdownRef}
         role="dialog"
         style={dropdownStyles}
         aria-modal="true"

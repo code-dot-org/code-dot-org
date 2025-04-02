@@ -8,14 +8,14 @@ const TOP_PADDING = 5;
 // to the right of the button.
 export default function useDropdownPosition(
   buttonRef: React.RefObject<HTMLElement>,
-  menuRef: React.RefObject<HTMLElement>
+  dropdownRef: React.RefObject<HTMLElement>
 ) {
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
 
   useLayoutEffect(() => {
     const updateDropdownPosition = () => {
-      if (buttonRef.current && menuRef.current) {
-        const dropdownRect = menuRef.current.getBoundingClientRect();
+      if (buttonRef.current && dropdownRef.current) {
+        const dropdownRect = dropdownRef.current.getBoundingClientRect();
         const parentRect = buttonRef.current.getBoundingClientRect();
         const top =
           parentRect.top + parentRect.height + TOP_PADDING + window.scrollY;
@@ -29,7 +29,7 @@ export default function useDropdownPosition(
     return () => {
       window.removeEventListener('resize', updateDropdownPosition);
     };
-  }, [buttonRef, menuRef]);
+  }, [buttonRef, dropdownRef]);
 
   return dropdownStyles;
 }
