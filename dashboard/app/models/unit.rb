@@ -1872,6 +1872,7 @@ class Unit < ApplicationRecord
       :topic_tags
     ]
     boolean_keys = [
+      :has_numbered_lessons,
       :has_verified_resources,
       :project_sharing,
       :tts,

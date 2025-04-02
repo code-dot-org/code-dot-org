@@ -21362,6 +21362,8 @@ en:
           student_description: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: Learn to program animations, interactive art, and games in Game Lab.
           description_audience: ''
+          lessons: {}
+          name: csd3-2025
         csd4-2025:
           lesson_groups:
             lessonGroup-2:
