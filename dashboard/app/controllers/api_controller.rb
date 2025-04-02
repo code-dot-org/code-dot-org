@@ -444,9 +444,11 @@ class ApiController < ApplicationController
     unit_name = params[:unit_name]
     unit_position = params[:unit_position]
     course_name = params[:course_name]
+    unless unit_name || (unit_position && course_name)
+      return render json: {error: 'Must specify either unit_name or unit_position and course_name'}, status: :bad_request
+    end
     unit = nil
 
-    # unit_summary supports calls with either :unit_name or :course_name AND :unit_position
     if unit_name
       context = Queries::Courses.get_course_context(unit_name)
       if context

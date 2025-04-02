@@ -40,8 +40,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const [searchParams] = useSearchParams();
 
   const navigate = useNavigate();
-  const {unitName} = useParams();
-  const {courseVersionName, unitPosition} = useParams();
+  const {unitName, courseVersionName, unitPosition} = useParams();
   const unitDefined = unitName || (courseVersionName && unitPosition);
 
   React.useEffect(() => {
@@ -61,7 +60,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
     if (!unitDefined || !userType || !userId) {
       return;
     }
-    const unitLoadedId = unitName || `${courseVersionName}-${unitPosition}`;
+    const unitLoadedId = unitName || `${courseVersionName}_${unitPosition}`;
 
     if (unitLoaded === unitLoadedId) {
       return;

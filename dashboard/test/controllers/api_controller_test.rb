@@ -1810,6 +1810,45 @@ class ApiControllerTest < ActionController::TestCase
       sign_in user
     end
 
+    context 'params not defined' do
+      let(:params) do
+        {}
+      end
+
+      before do
+        get :unit_summary, params: params
+      end
+
+      it 'returns a 400 response' do
+        assert_response :bad_request
+      end
+
+      context 'only course_name defined' do
+        let(:params) do
+          {
+            course_name: 'course_name',
+          }
+        end
+
+        it 'returns a 400 response' do
+          assert_response :bad_request
+        end
+      end
+
+      context 'only unit_position defined' do
+        let(:unit_position) {'1'}
+        let(:params) do
+          {
+            unit_position: '1',
+          }
+        end
+
+        it 'returns a 400 response' do
+          assert_response :bad_request
+        end
+      end
+    end
+
     context 'unit_name defined' do
       before do
         get :unit_summary, params: {
