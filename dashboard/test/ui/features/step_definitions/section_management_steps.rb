@@ -290,9 +290,10 @@ end
 
 Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   href = nil
-  wait_until(5.minutes) do
+  wait_until do
     href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
-    href != nil?
+    puts "href: #{href.inspect}"
+    href.present?
   end
   expect(@section_id).to be > 0
 
