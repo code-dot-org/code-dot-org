@@ -33,7 +33,6 @@ const SettingsButton: React.FunctionComponent = () => {
         <Button
           isIconOnly
           icon={{iconStyle: 'solid', iconName: 'gear'}}
-          color="white"
           size="xs"
           onClick={() => setIsOpen(true)}
           type="tertiary"
