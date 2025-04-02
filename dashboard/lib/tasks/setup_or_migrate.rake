@@ -33,11 +33,11 @@ namespace :db do
     alter_command = "ALTER DATABASE #{ActiveRecord::Base.connection.current_database} CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci;"
 
     unless character_set == 'utf8mb3'
-      raise "Database character set #{character_set.dump} is not 'utf8mb3'. please run:\n\n  #{alter_command}\n\n"
+      raise "Database character set #{character_set.dump} is not \"utf8mb3\". please run:\n\n  #{alter_command}\n\n"
     end
 
     unless collation == 'utf8mb3_unicode_ci'
-      raise "Database collation #{collation.dump} is not 'utf8mb3_unicode_ci'. please run:\n\n  #{alter_command}\n\n"
+      raise "Database collation #{collation.dump} is not \"utf8mb3_unicode_ci\". please run:\n\n  #{alter_command}\n\n"
     end
   end
 end
