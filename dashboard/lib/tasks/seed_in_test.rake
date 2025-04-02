@@ -2,7 +2,7 @@ Rake::Task['db:test:prepare'].enhance do
   ActiveRecord::Base.establish_connection(:test)
   if ENV['UTF8']
     ActiveRecord::Base.connection.execute(
-      "ALTER DATABASE #{ActiveRecord::Base.connection.current_database} CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+      "ALTER DATABASE #{ActiveRecord::Base.connection.current_database} CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci;"
     )
   end
   Rake::Task['db:fixtures:load'].invoke
