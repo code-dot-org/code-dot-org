@@ -78,3 +78,12 @@
   background-color: $neutral-dark60;
   color: $neutral_light;
 }
+
+.conditionValueInputNumber {
+  width: 50px;
+}
+
+.valueInputsWrapper {
+  display: flex;
+  gap: 0.5rem;
+}

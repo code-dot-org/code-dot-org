@@ -1,15 +1,15 @@
 {
-  "name": "hour-of-code",
+  "name": "music-jam-2024",
   "script_names": [
-    "Hour of Code"
+    "music-jam-2024"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "hour-of-code",
-    "version_year": "unversioned"
+    "family_name": "music-jam",
+    "version_year": "2024"
   },
   "resources": [
 

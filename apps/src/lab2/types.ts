@@ -258,13 +258,9 @@ interface VideoData extends VideoLevelData {
 
 // Exemplar settings for a level.
 export interface ExemplarSettings {
-  // Validation settings (always expected)
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;
-  // Player settings (optional, only used for Music)
-  playerEnabled?: boolean;
-  playerTitle?: string;
 }
 
 // Python Lab specific property
@@ -336,9 +332,11 @@ export interface Condition {
   value?: string | number;
 }
 
+type ValueType = 'string' | 'number';
+type ConditionValueType = `${ValueType}:${ValueType}` | ValueType;
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number' | 'array';
+  valueType?: ConditionValueType;
   description: string;
   valueOptions?: string[];
 }

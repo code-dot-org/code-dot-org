@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Investigative Journalism\r\n\r\nUse AI Chat to analyze an image from a news article and generate a headline.\r\n\r\n### Do This:\r\n\r\n1. Look at the images already uploaded to this level or choose an image related to a recent news event.\r\n2. Start with a general prompt:\r\n\r\n>Write a headline for this image.\r\n\r\n3. Press **Send** and **review AI Chat's response**.\r\n4. **Refine your prompt** by providing **keywords** about the event in the image:\r\n\r\n>Write a headline for this image about a [movie/climate event/sports match].\r\n\r\n5. **Experiment**: \r\n   - Try different **keywords** or **phrasing** and compare how AI’s headlines change.\r\n   - What happens if the **keywords don't match the image** at all?\r\n   - **Upload a related PDF** (e.g., a news article, government report, or historical document). How does AI’s response change when it has additional text to analyze?\r\n\r\n**Try it out!**",
+    "long_instructions": "## Investigative Journalism\r\n\r\nUse AI Chat to analyze an image from a news article and generate a headline.\r\n\r\n### Do This:\r\n\r\n1. Look at the images and articles already uploaded to this level or choose an image/article related to a recent news event.\r\n2. Start with a general prompt:\r\n\r\n>Write a headline for this image.\r\n\r\n3. Press **Send** and **review AI Chat's response**.\r\n4. **Refine your prompt** by providing **keywords** about the event in the image:\r\n\r\n>Write a headline for this image about a [movie/climate event/sports match].\r\n\r\n5. **Experiment**: \r\n   - Try different **keywords** or **phrasing** and compare how AI’s headlines change.\r\n   - What happens if the **keywords don't match the image** at all?\r\n   - **Upload a related PDF** (e.g., a news article, government report, or historical document). How does AI’s response change when it has additional text to analyze?\r\n\r\n**Try it out!**",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -39,12 +39,32 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "display_name": "Investigative Journalism",
     "bubble_choice_description": " Use AI Chat to experiment with how headlines and summaries change based on text, images, and documents. Try different keywords, upload an image, and even include a related PDF to see how AI interprets different types of information.",
-    "thumbnail_url": "https://images.code.org/6ed825ef71c1393355f64d42725fa887-headline.png"
+    "thumbnail_url": "https://images.code.org/6ed825ef71c1393355f64d42725fa887-headline.png",
+    "starter_assets": {
+      "Telltale Data Signs of Bogus Scientific Papers and Fraudulent Academic Research – Global Investigative Journalism Network.pdf": "c5cfb206-3e7a-40b3-ba58-31dda8c46fcd.pdf",
+      "Caught.pdf": "0355f88c-3069-4a49-9556-a56a4b99d71f.pdf",
+      "Uncovering the Deforestation, Mismanagement, and Funders Behind a Malaysian Oil Palm Plantation – Global Investigative Journalism Network.pdf": "dc7b1057-33b2-45bc-a6d0-e2cccfeba529.pdf",
+      "Toiling away for Shein.pdf": "1a15a78b-309b-4521-ada7-81f80c736994.pdf",
+      "Creating a New Nonprofit Outlet to Investigate Wildlife Crime – Global Investigative Journalism Network.pdf": "5efbcd44-9171-4efd-adff-1800583af9ac.pdf",
+      "Using WhatsApp to Crowdsource Data on Ride Hailing Companies’ Labor Lockouts – Global Investigative Journalism Network.pdf": "eaf64391-9549-4291-aca7-56d1006a830d.pdf",
+      "From Audience to Community_ An Alternative Future for Watchdog Journalism – Global Investigative Journalism Network.pdf": "98a0a404-9a5c-480f-ae0d-1d460cb18986.pdf",
+      "Investigative Reporting - The Pulitzer Prizes.pdf": "0f5eb477-b16e-4ea6-a85d-f610351b30b4.pdf",
+      "logging_1.jpg": "9d2d6667-ad9d-4cec-bcc0-4e2398631fe7.jpg",
+      "logging_2.png": "045b0df7-23af-4067-a9e4-19b4de9679ce.png",
+      "logging_3.jpg": "ae1239bb-0e17-4c13-90d8-97cac122f757.jpg",
+      "rideshare_1.jpg": "346ff1ef-1c5b-499d-be07-0019e825006d.jpg",
+      "fashion_1.jpg": "57a392e9-ba5c-4882-99b3-8f559109ef09.jpg",
+      "fashion_2.jpg": "4cae1b29-49d0-4a09-a839-162450f15998.jpg",
+      "fashion_3.jpg": "50c93b56-4e84-4d88-a0fa-03ea3a1b09da.jpg",
+      "fashion_4.jpg": "fb5c6eaf-f684-451c-b57f-771666c05d0f.jpg",
+      "Audience_1.jpg": "d888847b-3362-4549-80db-016ad45df26b.jpg"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-20T17:36:48.276+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice3\"},{\"changed_at\":\"2025-03-20 17:41:23 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:41:56 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:42:11 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:42:55 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:44:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:48:44 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:52:06 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:59:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:59:48 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 18:00:29 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 22:11:44 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-20T17:36:48.276+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice3\"},{\"changed_at\":\"2025-03-20 17:41:23 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:41:56 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:42:11 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:42:55 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:44:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:48:44 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:52:06 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:59:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 17:59:48 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-20 18:00:29 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 22:11:44 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-01 15:21:12 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

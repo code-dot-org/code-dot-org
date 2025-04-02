@@ -280,3 +280,34 @@
   top: 8px;
   inset-inline-end: 8px;
 }
+
+.staticPromotions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.staticPromotion {
+  border: solid 1px var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  border-radius: 4px;  width: 280px;
+  max-width: 280px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.staticPromotionImage {
+  width: 50px;
+  min-height: 50px;
+  height: fit-content;
+  margin-inline-start: 8px;
+}
