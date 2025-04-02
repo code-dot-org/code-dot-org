@@ -21,7 +21,7 @@ import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
-import {defaultProject} from './constants';
+import {defaultNeighborhoodProject, defaultProject} from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -84,6 +84,8 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const [selectedDefaultProject, setSelectedDefaultProject] =
+    useState(defaultProject);
   const {
     source,
     setProject,
@@ -91,7 +93,7 @@ const PythonlabView: React.FunctionComponent<
     projectVersion,
     validationFile,
     labConfig,
-  } = useSource(defaultProject, levelProperties, initialSources);
+  } = useSource(selectedDefaultProject, levelProperties, initialSources);
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -110,6 +112,21 @@ const PythonlabView: React.FunctionComponent<
       );
     }
   }, [progressManager, levelProperties.appName]);
+
+  useEffect(() => {
+    if (labConfig?.standaloneSettings) {
+      // If we have standalone settings, we need to update the default project to reflect
+      // the correct project type.
+      // TODO: this overwrites the new source due to a race condition
+      // const {selectedProjectType} = labConfig.standaloneSettings;
+      // console.log({selectedProjectType});
+      // if (selectedProjectType === 'neighborhood') {
+      //   setSelectedDefaultProject(defaultNeighborhoodProject);
+      // } else {
+      //   setSelectedDefaultProject(defaultProject);
+      // }
+    }
+  }, [labConfig?.standaloneSettings]);
 
   // Ensure any in-progress program is stopped when the level is switched.
   useLifecycleNotifier(

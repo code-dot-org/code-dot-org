@@ -32,6 +32,14 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
     if (type === 'neighborhood') {
       project = defaultNeighborhoodProject;
     }
+    project = {
+      ...project,
+      labConfig: {
+        ...project.labConfig,
+        standaloneSettings: {selectedProjectType: type},
+      },
+    };
+    console.log({project});
     dispatch(setAndSaveProjectSources(project));
     setProjectCallback();
   };
