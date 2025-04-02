@@ -97,9 +97,7 @@ const Footer: React.FC<FooterProps> = ({
         ))}
       </ul>
 
-      <small className={moduleStyles.footerCopyright}>
-        {copyright?.replace('%{year}', new Date().getFullYear().toString())}
-      </small>
+      <small className={moduleStyles.footerCopyright}>{copyright}</small>
 
       <ul className={moduleStyles.footerImageLinkList}>
         {imageLinks?.map(({key, label, href, image, ...link}) => (

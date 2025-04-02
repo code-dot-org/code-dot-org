@@ -5,8 +5,7 @@ import Footer, {FooterProps, SiteLink, SocialLink, ImageLink} from '../Footer';
 
 describe('CMS Footer', () => {
   const title = 'Footer Title';
-  const mockDate = new Date(1970, 1, 1);
-  const copyright = 'Copyright %{year}';
+  const copyright = 'Copyright notices';
   const siteLinks: SiteLink[] = [
     {
       key: 'siteLink',
@@ -44,25 +43,15 @@ describe('CMS Footer', () => {
 
   const getFooter = () => screen.getByTitle(title);
 
-  beforeAll(() => {
-    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
-  });
-
-  afterAll(() => {
-    jest.restoreAllMocks();
-  });
-
   it('renders footer', () => {
     renderFooterContainer();
     const footer = getFooter();
     expect(footer).toBeVisible();
   });
 
-  it('renders footer copyright notices with current year', () => {
+  it('renders footer copyright notices', () => {
     renderFooterContainer();
-    const copyrightNotices = screen.getByText(
-      `Copyright ${mockDate.getFullYear()}`,
-    );
+    const copyrightNotices = screen.getByText(copyright);
     expect(copyrightNotices).toBeVisible();
   });
 
