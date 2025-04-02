@@ -3,7 +3,7 @@ import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {ChangeEvent, FC, useMemo} from 'react';
+import React, {ChangeEvent, FC, memo, useMemo} from 'react';
 
 import {ParticipantGroupTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
@@ -96,3 +96,5 @@ export const AdditionalInfo: FC<AdditionalInfoProps> = ({
     </>
   );
 };
+
+export default memo(AdditionalInfo);

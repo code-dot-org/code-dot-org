@@ -2,11 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import {
-  addChatEvent,
-  selectAllVisibleMessages,
-  sendAnalytics,
-} from '@cdo/apps/aichat/redux';
+import {selectAllVisibleMessages, sendAnalytics} from '@cdo/apps/aichat/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -41,13 +37,6 @@ const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
     dispatch(
       sendAnalytics(EVENTS.CHAT_ACTION, {
         action: 'Copy chat history',
-      })
-    );
-
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'COPY_CHAT',
       })
     );
   };

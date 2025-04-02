@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csd2-projects-temp",
+    "pilot_experiment": "csd-noaccess",
     "version_year": "unversioned"
   },
   "resources": [

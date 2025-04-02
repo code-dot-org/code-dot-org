@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "hoc-music-ai-pilot-3",
+    "pilot_experiment": "hoc-music-ai-pilot-3",
     "version_year": "unversioned"
   },
   "resources": [

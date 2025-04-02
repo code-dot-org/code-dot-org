@@ -1,0 +1,565 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-31T20:35:49.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice B\r\nThis song uses sounds from Lady Gaga's \"Born This Way.\" Refer to your Activity Guide to see if it meets any client's needs. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "lady_gaga_born_this_way",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "F:kWaC^-q42YUGfVE^o}",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "lady_gaga_born_this_way/strings"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "|EQZ}q;KLxgm|Trn0LEk",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "lady_gaga_born_this_way/bass_sub"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "?MHwet}DR~Ru?wt)K_RI",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_rest_at_current_location_simple2",
+                                      "id": "play_rest_at_current_location_simple2",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "play_sound_at_current_location_simple2",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "pop/rainstick"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "QD]AW8C)2aP7X%KuW_lv",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": ";_2!UmzO~84JQ9Kia$R`",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "lady_gaga_born_this_way/bass_sub"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "w8bzTK(PiLF6+wS/CjtI",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "lady_gaga_born_this_way/synth_plink"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "play_sounds_sequential",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "set_effect_at_current_location_simple2",
+                                          "id": "set_effect_at_current_location_simple2",
+                                          "fields": {
+                                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                                            "effects_value": "<field name=\"effects_value\">low</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "c^7g60iK_aA5}~4;grgQ",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "lady_gaga_born_this_way/vocals_spoken_intro_1"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "n*I/ecUQhKFt%`bO-[)}",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "set_effect_at_current_location_simple2",
+                                "id": "qrgi05?-rZ,{|:rp9%TU",
+                                "fields": {
+                                  "effects_name": "<field name=\"effects_name\">volume</field>",
+                                  "effects_value": "<field name=\"effects_value\">normal</field>"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "la~r:SeHlivE3S=2v80|",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "lady_gaga_born_this_way/bass_sub"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "F0h@z7nBg*3Xe,=(x,Ov",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "lady_gaga_born_this_way/synth_plink"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sounds_sequential",
+                                            "id": ";zd=JIe$kpR*_pfQm}Rk",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "inputs": {
+                                              "code": {
+                                                "block": {
+                                                  "type": "set_effect_at_current_location_simple2",
+                                                  "id": "fuJO=IqT})6XS3E+)y$7",
+                                                  "fields": {
+                                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                    "effects_value": "<field name=\"effects_value\">low</field>"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "set_effect_at_current_location_simple2",
+                                                      "id": "bR2;eQ:N7{B$ZMqCnf)k",
+                                                      "fields": {
+                                                        "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                        "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "lk7O$54tE%(V*jdH)Zl)",
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "v]LNT~Y|,~T9.D9pL_K+",
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "3gBvH{8/t;n=+65Du|8{",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "G]]%gq)*3(PZ(qWO]3xh",
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "M-sHk7^G.Bj7K1T00k]#",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "set_effect_at_current_location_simple2",
+                                    "id": "M5s}B_;Re;d=Pz3lO9l7",
+                                    "fields": {
+                                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "}oIHDs`D$#1xT;@xC7)D",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "lady_gaga_born_this_way/bass_trashed"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "8]i:[q:gJvGY,KR)e,{s",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "lady_gaga_born_this_way/synth_bounce"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sounds_sequential",
+                                                "id": "%*[zh,$_n_[1.G#fRj=/",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "inputs": {
+                                                  "code": {
+                                                    "block": {
+                                                      "type": "set_effect_at_current_location_simple2",
+                                                      "id": "_^U87z;2|_OOPp}*$#*X",
+                                                      "fields": {
+                                                        "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                        "effects_value": "<field name=\"effects_value\">low</field>"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "set_effect_at_current_location_simple2",
+                                                          "id": ",6Ip.cDAo/`_Sz/CiGh%",
+                                                          "fields": {
+                                                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "Td~dL9vaaaa/7W2bxd#3",
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "~R-p{v!@U-ATbtBR22`$",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "Fn!QaoOUjgP,_rS`wza!",
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                          "id": "2XWVUY3oLCOuy@WjE+DI",
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "fields": {
+                                                                            "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "h,nD|Jfj#0Tt[miQ(Iez",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "m8pKck:AU=gvEqLXS?Lo",
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">volume</field>",
+                                          "effects_value": "<field name=\"effects_value\">normal</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect_at_current_location_simple2",
+                                            "id": "qd+NrKgq@#tWczPB![Q;",
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                                              "effects_value": "<field name=\"effects_value\">medium</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "set_effect_at_current_location_simple2",
+                                                "id": "T#~jt)RioIX?^~Ao9%{S",
+                                                "fields": {
+                                                  "effects_name": "<field name=\"effects_name\">filter</field>",
+                                                  "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "oB[QGzPqNTwb$=3msHAv",
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "lady_gaga_born_this_way/bass_sub"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "+pbr5Y~?cXquC}i*VM~b",
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "lady_gaga_born_this_way/synth_choir"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_sounds_sequential",
+                                                            "id": "(G0Nu@IFDib}yWrIrKZV",
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "inputs": {
+                                                              "code": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "tBN|4k!b`?po5bDrjAj}",
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "zL(6||W_QbHN.a4^Km(1",
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                          "id": "zp31@8E[oK%ri7GVEek{",
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "fields": {
+                                                                            "sound": "lady_gaga_born_this_way/vocals_chorus_tag"
+                                                                          },
+                                                                          "next": {
+                                                                            "block": {
+                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                              "id": "1e{obWYCLA5egVq*(A^2",
+                                                                              "extraState": {
+                                                                                "disableNextConnection": false
+                                                                              },
+                                                                              "fields": {
+                                                                                "sound": "lady_gaga_born_this_way/digital_toms"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Choice B",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-31T20:35:49.757+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-a\"},{\"changed_at\":\"2025-03-31 20:35:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 20:38:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 20:53:10 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 21:20:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-01 18:28:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-01 20:47:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

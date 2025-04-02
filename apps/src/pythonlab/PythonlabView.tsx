@@ -89,9 +89,9 @@ const defaultConfig: ConfigType = {
   showFileBrowser: true,
   validMimeTypes: ['text/'],
   layoutComponents: {
-    horizontal: <HorizontalLayout />,
-    vertical: <VerticalLayout />,
-    share: <ShareView />,
+    horizontal: HorizontalLayout,
+    vertical: VerticalLayout,
+    share: ShareView,
   },
 };
 

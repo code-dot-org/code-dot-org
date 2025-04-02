@@ -9,13 +9,13 @@ import {workshopLabel} from '../utils/workshopLabel';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
 import {generateNewSession} from './components/SessionsEditor';
-import {AdditionalInfo} from './sections/AdditionalInfo';
-import {Basics} from './sections/Basics';
-import {EmailsReminders} from './sections/EmailsReminders';
-import {PartnerFacilitator} from './sections/PartnerFacilitator';
-import {PublishCancelButtons} from './sections/PublishCancelButtons';
-import {PublishSettings} from './sections/PublishSettings';
-import {Schedule} from './sections/Schedule';
+import AdditionalInfo from './sections/AdditionalInfo';
+import Basics from './sections/Basics';
+import EmailsReminders from './sections/EmailsReminders';
+import PartnerFacilitator from './sections/PartnerFacilitator';
+import PublishCancelButtons from './sections/PublishCancelButtons';
+import PublishSettings from './sections/PublishSettings';
+import Schedule from './sections/Schedule';
 import {
   Session,
   SessionAction,
@@ -235,18 +235,25 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         {...sectionProps}
       />
       <PartnerFacilitator
-        {...sectionProps}
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
+        {...sectionProps}
       />
-      <EmailsReminders {...sectionProps} />
+      <EmailsReminders
+        suppressEmail={workshopFormState.suppressEmail}
+        {...sectionProps}
+      />
       <AdditionalInfo
         fee={workshopFormState.fee}
         participantGroupType={workshopFormState.participantGroupType}
         notes={workshopFormState.notes}
         {...sectionProps}
       />
-      <PublishSettings {...sectionProps} />
+      <PublishSettings
+        registrationLink={workshopFormState.registrationLink}
+        hidden={workshopFormState.hidden}
+        {...sectionProps}
+      />
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );

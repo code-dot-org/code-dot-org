@@ -13,6 +13,7 @@ import moduleStyles from './extra-links.module.scss';
 
 interface ExtraLinksProps {
   levelId: number;
+  positionRightOfFooter?: boolean;
 }
 
 interface ExtraLinksData {
@@ -59,6 +60,7 @@ async function fetchExtraLinksData(
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
+  positionRightOfFooter,
 }: ExtraLinksProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [extraLinksData, setExtraLinksData] = useState<ExtraLinksData | null>(
@@ -90,7 +92,11 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
       <Button
         onClick={() => setIsModalOpen(true)}
         text={'Extra Links'}
-        className={moduleStyles.extraLinksButton}
+        className={
+          positionRightOfFooter
+            ? moduleStyles.buttonRightOfFooter
+            : moduleStyles.extraLinksButton
+        }
         size={'s'}
         id={'uitest-extra-links-button'}
       />

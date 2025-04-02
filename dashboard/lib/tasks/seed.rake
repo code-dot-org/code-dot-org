@@ -302,14 +302,45 @@ namespace :seed do
     %w(allthethingscourse
        csp-2017
        csp-2019
+       20-hour
        allthemigratedthings
        alltheselfpacedplthings
        allthettsthings
+       artist
+       course1
+       course2
+       course3
+       course4
+       coursea-2017
+       courseb-2017
+       coursec-2017
+       coursed-2017
+       coursee-2017
+       coursef-2017
+       pre-express-2017
+       express-2017
+       coursea-2019
+       coursec-2019
+       coursee-2019
+       coursea-2020
        interactive-games-animations-2023
+       interactive-games-animations-2024
        customizing-llms-2024
+       dance
        events
+       flappy
+       frozen
+       hero
+       hourofcode
+       infinity
+       mc
+       minecraft
        playlab
-       step).each do |course_name|
+       starwars
+       starwarsblocks
+       step
+       oceans
+       sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017

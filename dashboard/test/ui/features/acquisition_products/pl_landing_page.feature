@@ -40,7 +40,7 @@ Feature: Professional Learning landing page
     And I wait until element "a:contains(View workshop dashboard)" is visible
     And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
     And I wait until element "a:contains(View CSF Facilitator Landing page)" is visible
-    And the href of selector "a:contains(View CSF Facilitator Landing page)" contains "/educate/facilitator-landing/CSF"
+    And the href of selector "a:contains(View CSF Facilitator Landing page)" contains "/professional-learning/facilitator/computer-science-fundamentals"
     And I see no difference for "Facilitator Resources section"
 
     # Sees Workshops table

@@ -569,15 +569,21 @@ Dashboard::Application.routes.draw do
 
     resources :scripts, path: '/s/', &unit_routes
 
-    get '/certificate_images/:filename', to: 'certificate_images#show'
+    resources :certificate_images, only: [:show], param: 'filename'
 
-    post '/print_certificates/batch'
-    get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+    resources :print_certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        post :batch
+      end
+    end
 
-    get '/certificates/blank'
-    get '/certificates/batch'
-    post '/certificates/batch'
-    get '/certificates/:encoded_params', to: 'certificates#show'
+    resources :certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        get :blank
+        get :batch
+        post :batch
+      end
+    end
 
     get '/beta', to: redirect('/')
 
@@ -843,6 +849,11 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
+    get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
+    get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
+    get 'professional-learning/facilitator/computer-science-fundamentals', to: 'pd/professional_learning#csf'
+    get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
+    get 'professional-learning/facilitator/computer-science-ai-fundamentals', to: 'pd/professional_learning#csaif'
 
     namespace :pd do
       # React-router will handle sub-routes on the client.
@@ -1073,6 +1084,12 @@ Dashboard::Application.routes.draw do
           end
           member do
             post 'increment_visit_count'
+          end
+        end
+
+        resources :users do
+          collection do
+            get :signed_in
           end
         end
       end

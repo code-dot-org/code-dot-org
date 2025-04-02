@@ -12,10 +12,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; // This maintains a 16:9 aspect ratio
+    aspect-ratio: 16 / 9; // Default aspect ratio for videos
     border: 1px solid var(--background-neutral-tertiary);
     border-radius: variables.$regular-border-radius;
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: block;
 
     iframe,

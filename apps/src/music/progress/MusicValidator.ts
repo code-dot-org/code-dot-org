@@ -5,7 +5,7 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
-import {Condition, ConditionType, ExemplarSettings} from '@cdo/apps/lab2/types';
+import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
 import {
   BlockTypes,
@@ -17,8 +17,9 @@ import {isChordEvent} from '../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {PlayingTrigger} from '../player/interfaces/PlayingTrigger';
-import {isSoundEvent} from '../player/interfaces/SoundEvent';
+import {isSoundEvent, SoundEvent} from '../player/interfaces/SoundEvent';
 import MusicPlayer from '../player/MusicPlayer';
+import {ExemplarValidationMode} from '../types';
 
 import {MusicConditions} from './MusicConditions';
 
@@ -27,7 +28,6 @@ export interface ConditionNames {
 }
 
 export default class MusicValidator extends Validator {
-  exemplarSettings: ExemplarSettings | undefined;
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
@@ -35,6 +35,7 @@ export default class MusicValidator extends Validator {
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly getPlayingTriggers: () => PlayingTrigger[],
+    private readonly getExemplarValidationMode: () => ExemplarValidationMode,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
@@ -81,6 +82,9 @@ export default class MusicValidator extends Validator {
     // A map of ids for blocks in nested loops and the count of playback events associated with them.
     const blockIdNestedLoopRepetitions: {[key: string]: number} = {};
 
+    // A map of sound types and the count of playback events associated with them.
+    const soundTypeRepetitions: {[key: string]: number} = {};
+
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
     let playedNumberEmptyPatterns = 0;
@@ -96,8 +100,17 @@ export default class MusicValidator extends Validator {
     let playedNumberEmptyChords = 0;
     let playedNumberChords = 0;
 
+    // This is a list of unique sound IDs that have been played.
     const uniqueSounds: string[] = [];
+
+    // This is a list of unique sound IDs that are currently playing.
     const uniqueCurrentSounds: string[] = [];
+
+    // This is a list of unique function contexts that have been used to play sounds.
+    const uniqueFunctionContexts: string[] = [];
+
+    // This is a list of unique sound lengths that have been played.
+    const uniqueSoundLengths: number[] = [];
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach(eventData => {
@@ -159,7 +172,23 @@ export default class MusicValidator extends Validator {
         }
 
         playedNumberSounds++;
-
+        if (!uniqueSoundLengths.includes(eventData.length)) {
+          uniqueSoundLengths.push(eventData.length);
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_DIFFERENT_LENGTH_SOUNDS.name,
+            value: uniqueSoundLengths.length,
+          });
+        }
+        if (
+          eventData.functionContext &&
+          !uniqueFunctionContexts.includes(eventData.functionContext.name)
+        ) {
+          uniqueFunctionContexts.push(eventData.functionContext.name);
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUNDS_IN_DIFFERENT_FUNCTIONS.name,
+            value: uniqueFunctionContexts.length,
+          });
+        }
         // In order to check that the user has pressed the beat map buttons multiple times,
         // we look at the unique invocation id. (Simple2 only)
         if (eventData.triggered) {
@@ -174,6 +203,17 @@ export default class MusicValidator extends Validator {
 
         if (!uniqueSounds.includes(eventData.id)) {
           playedNumberDifferentSounds++;
+          if (soundTypeRepetitions[eventData.soundType]) {
+            soundTypeRepetitions[eventData.soundType]++;
+          } else {
+            soundTypeRepetitions[eventData.soundType] = 1;
+          }
+          this.conditionsChecker.addSatisfiedCondition({
+            name: MusicConditions.PLAYED_SOUND_TYPE_MULTIPLE_TIMES.name,
+            value: `${eventData.soundType}:${
+              soundTypeRepetitions[eventData.soundType]
+            }`,
+          });
           uniqueSounds.push(eventData.id);
         }
       } else if (
@@ -427,6 +467,7 @@ export default class MusicValidator extends Validator {
   }
 
   conditionsMet(conditions: Condition[]): boolean {
+    this.addSatisfiedBlockCountConditions(conditions);
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 
@@ -447,14 +488,15 @@ export default class MusicValidator extends Validator {
 
   // Validates that both playback event arrays are equivalent based on id, type, and starting measure.
   validatePlaybackEventsEquivalent(): boolean {
+    const mode = this.getExemplarValidationMode();
     const studentEvents = [...this.getPlaybackEvents()];
     const exemplarEvents = this.getExemplarPlaybackEvents();
 
     const studentMatchesExemplar = studentEvents.every(studentEvent =>
-      this.eventMatchFound(studentEvent, exemplarEvents)
+      this.eventMatchFound(studentEvent, exemplarEvents, mode)
     );
     const exemplarMatchesStudent = exemplarEvents.every(exemplarEvent =>
-      this.eventMatchFound(exemplarEvent, studentEvents)
+      this.eventMatchFound(exemplarEvent, studentEvents, mode)
     );
 
     return studentMatchesExemplar && exemplarMatchesStudent;
@@ -462,13 +504,66 @@ export default class MusicValidator extends Validator {
 
   private eventMatchFound(
     currentEvent: PlaybackEvent,
-    comparisonEvents: PlaybackEvent[]
+    comparisonEvents: PlaybackEvent[],
+    mode: ExemplarValidationMode = 'default'
   ): boolean {
-    return comparisonEvents.some(
-      event =>
-        event.id === currentEvent.id &&
-        event.type === currentEvent.type &&
-        event.when === currentEvent.when
+    switch (mode) {
+      case 'type':
+        return comparisonEvents.some(event => {
+          if (
+            event.type !== currentEvent.type ||
+            event.when !== currentEvent.when
+          ) {
+            return false;
+          }
+
+          // If both events are sound events, compare soundType too
+          if (event.type === 'sound' && currentEvent.type === 'sound') {
+            return (
+              (event as SoundEvent).soundType ===
+              (currentEvent as SoundEvent).soundType
+            );
+          }
+
+          // For other event types, matching type + when is sufficient
+          return true;
+        });
+      default:
+        return comparisonEvents.some(
+          event =>
+            event.id === currentEvent.id &&
+            event.type === currentEvent.type &&
+            event.when === currentEvent.when
+        );
+    }
+  }
+
+  private addSatisfiedBlockCountConditions(conditions: Condition[]) {
+    const blockCountConditions = conditions.filter(
+      ({name}) => name === MusicConditions.BLOCK_COUNT_BY_TYPE.name
     );
+    if (blockCountConditions.length === 0) {
+      return;
+    }
+
+    const blocks = Blockly.getMainWorkspace()
+      .getAllBlocks()
+      .filter(block => block.isEnabled());
+
+    blockCountConditions.forEach(({value}) => {
+      const [blockType, countStr] = (value as string).split(':');
+      const expectedCount = parseInt(countStr);
+
+      const blockCountByType = blocks.filter(
+        block => block.type === blockType
+      ).length;
+
+      if (blockCountByType >= expectedCount) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.BLOCK_COUNT_BY_TYPE.name,
+          value: `${blockType}:${expectedCount}`,
+        });
+      }
+    });
   }
 }

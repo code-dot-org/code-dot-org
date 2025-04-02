@@ -321,7 +321,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
                 else
                   params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
                 end
-        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
+        return head :bad_request if @unit && !@course.single_unit_course? && @course.id != @unit.unit_group.try(:id)
       when 'Unit'
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)

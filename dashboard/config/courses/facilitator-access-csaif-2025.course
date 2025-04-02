@@ -1,0 +1,23 @@
+{
+  "name": "facilitator-access-csaif-2025",
+  "script_names": [
+    "facilitator-compsys-pl-early-access",
+    "facilitator-cyber-csaif-early-access",
+    "facilitator-datasci-pl-early-access"
+  ],
+  "published_state": "preview",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "facilitator-access-csaif",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
