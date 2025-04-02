@@ -1,6 +1,6 @@
 'use client';
 
-import {BaseEntry, EntryFields} from 'contentful';
+import {EntryFields} from 'contentful';
 import React, {useMemo} from 'react';
 
 import ActionBlock, {
@@ -8,39 +8,25 @@ import ActionBlock, {
 } from '@code-dot-org/component-library/actionBlock';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
-export type ActionBlockCarouselProps = ActionBlockProps & {
+import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {ContentfulEntry} from '@/contentful/types/entries/ContentfulEntry';
+
+type ActionBlockCarouselFields = {
+  actionBlockOverline: EntryFields.Text;
+  title: EntryFields.Text;
+  shortDescription: EntryFields.Text;
+  image: ImageAssetEntry;
+  primaryLinkRef: LinkEntry;
+  secondaryLinkRef: LinkEntry;
+};
+
+type ActionBlockCarouselEntry = ContentfulEntry<ActionBlockCarouselFields>;
+
+export type ActionBlockCarouselProps = {
   /** Carousel content w/ fields from Contentful */
-  slides: {
-    sys: {
-      contentType: BaseEntry & {
-        sys: {id: EntryFields.Text};
-      };
-    };
-    fields: {
-      actionBlockOverline: EntryFields.Text;
-      title: EntryFields.Text;
-      shortDescription: EntryFields.Text;
-      image: BaseEntry & {
-        fields: {file: {url: EntryFields.Text}};
-      };
-      primaryLinkRef: BaseEntry & {
-        fields: {
-          label: EntryFields.Text;
-          primaryTarget: EntryFields.Text;
-          ariaLabel: EntryFields.Text;
-        };
-      };
-      secondaryLinkRef: BaseEntry & {
-        fields: {
-          label: EntryFields.Text;
-          primaryTarget: EntryFields.Text;
-          ariaLabel: EntryFields.Text;
-        };
-      };
-    };
-  }[];
+  slides: ActionBlockCarouselEntry[];
   /** Background color of the Action Blocks */
-  background: EntryFields.Text;
+  background: Extract<ActionBlockProps['background'], string>;
 };
 
 const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
