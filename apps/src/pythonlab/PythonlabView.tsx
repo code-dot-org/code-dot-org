@@ -1,10 +1,14 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
-import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {
+  CodebridgeLevelProperties,
+  ConfigType,
+  DefaultProjectMap,
+} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -27,7 +31,11 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import {setAndSaveProjectSources} from '../lab2/redux/lab2ProjectRedux';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
-import {defaultNeighborhoodProject, defaultProject} from './constants';
+import {
+  defaultProject,
+  standaloneConsoleProject,
+  standaloneNeighborhoodProject,
+} from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -43,6 +51,11 @@ import moduleStyles from './pythonlab-view.module.scss';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
+};
+
+const standaloneStartSources: DefaultProjectMap = {
+  console: standaloneConsoleProject,
+  neighborhood: standaloneNeighborhoodProject,
 };
 
 const defaultConfig: ConfigType = {
@@ -90,8 +103,6 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [selectedDefaultProject, setSelectedDefaultProject] =
-    useState(defaultProject);
   const {
     source,
     setProject,
@@ -99,7 +110,7 @@ const PythonlabView: React.FunctionComponent<
     projectVersion,
     validationFile,
     labConfig,
-  } = useSource(selectedDefaultProject, levelProperties, initialSources);
+  } = useSource(defaultProject, levelProperties, initialSources);
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -107,10 +118,26 @@ const PythonlabView: React.FunctionComponent<
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const dispatch = useAppDispatch();
 
+  const levelStartSources = useMemo(() => {
+    // For standalone project levels, we use the standalone default project map to determine
+    // the start sources, so we can use the default project for the user's selected project.
+    if (levelProperties.isProjectLevel) {
+      const currentProjectType =
+        labConfig?.standaloneSettings?.projectType || 'console';
+      return standaloneStartSources[currentProjectType];
+    } else {
+      return startSources;
+    }
+  }, [
+    labConfig?.standaloneSettings?.projectType,
+    levelProperties.isProjectLevel,
+    startSources,
+  ]);
+
   const showProjectPickerModal =
     (levelProperties.isProjectLevel &&
       !initialSources &&
-      !labConfig?.standaloneSettings?.selectedProjectType) ||
+      !labConfig?.standaloneSettings?.projectType) ||
     false;
 
   useEffect(() => {
@@ -122,34 +149,12 @@ const PythonlabView: React.FunctionComponent<
   }, [progressManager, levelProperties.appName]);
 
   const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
-    let project = defaultProject;
+    let project = standaloneConsoleProject;
     if (type === 'neighborhood') {
-      project = defaultNeighborhoodProject;
+      project = standaloneNeighborhoodProject;
     }
-    setSelectedDefaultProject(project);
-    project = {
-      ...project,
-      labConfig: {
-        ...project.labConfig,
-        standaloneSettings: {selectedProjectType: type},
-      },
-    };
     dispatch(setAndSaveProjectSources(project));
   };
-
-  useEffect(() => {
-    if (labConfig?.standaloneSettings) {
-      // If we have standalone settings, we need to update the default project to reflect
-      // the correct project type.
-      const {selectedProjectType} = labConfig.standaloneSettings;
-      console.log({selectedProjectType});
-      if (selectedProjectType === 'neighborhood') {
-        setSelectedDefaultProject(defaultNeighborhoodProject);
-      } else {
-        setSelectedDefaultProject(defaultProject);
-      }
-    }
-  }, [labConfig?.standaloneSettings]);
 
   // Ensure any in-progress program is stopped when the level is switched.
   useLifecycleNotifier(
@@ -200,7 +205,7 @@ const PythonlabView: React.FunctionComponent<
           config={config}
           setProject={setProject}
           setConfig={setConfig}
-          startSources={startSources}
+          startSources={levelStartSources}
           onRun={onRun}
           onStop={stopPythonCode}
           projectVersion={projectVersion}

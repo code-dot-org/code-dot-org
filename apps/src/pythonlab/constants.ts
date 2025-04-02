@@ -20,7 +20,27 @@ export const defaultProject: ProjectSources = {
   },
 };
 
-export const defaultNeighborhoodProject: ProjectSources = {
+export const standaloneConsoleProject: ProjectSources = {
+  source: {
+    files: {
+      '0': {
+        id: '0',
+        name: MAIN_PYTHON_FILE,
+        language: 'py',
+        contents: 'print("Hello world!")',
+        folderId: '0',
+        active: true,
+        open: true,
+      },
+    },
+    folders: {},
+  },
+  labConfig: {
+    standaloneSettings: {projectType: 'console'},
+  },
+};
+
+export const standaloneNeighborhoodProject: ProjectSources = {
   source: {
     files: {
       '0': {
@@ -47,5 +67,6 @@ export const defaultNeighborhoodProject: ProjectSources = {
   },
   labConfig: {
     miniApp: {name: 'neighborhood'},
+    standaloneSettings: {projectType: 'neighborhood'},
   },
 };
