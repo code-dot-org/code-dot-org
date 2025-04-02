@@ -17,8 +17,14 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AppDispatch,
+  useAppDispatch,
+  useAppSelector,
+} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {setAndSaveProjectSources} from '../lab2/redux/lab2ProjectRedux';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {defaultNeighborhoodProject, defaultProject} from './constants';
@@ -99,10 +105,12 @@ const PythonlabView: React.FunctionComponent<
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
-  const [choseProjectType, setChoseProjectType] = useState(false);
+  const dispatch = useAppDispatch();
 
   const showProjectPickerModal =
-    (levelProperties.isProjectLevel && !initialSources && !choseProjectType) ||
+    (levelProperties.isProjectLevel &&
+      !initialSources &&
+      !labConfig?.standaloneSettings?.selectedProjectType) ||
     false;
 
   useEffect(() => {
@@ -113,18 +121,33 @@ const PythonlabView: React.FunctionComponent<
     }
   }, [progressManager, levelProperties.appName]);
 
+  const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
+    let project = defaultProject;
+    if (type === 'neighborhood') {
+      project = defaultNeighborhoodProject;
+    }
+    setSelectedDefaultProject(project);
+    project = {
+      ...project,
+      labConfig: {
+        ...project.labConfig,
+        standaloneSettings: {selectedProjectType: type},
+      },
+    };
+    dispatch(setAndSaveProjectSources(project));
+  };
+
   useEffect(() => {
     if (labConfig?.standaloneSettings) {
       // If we have standalone settings, we need to update the default project to reflect
       // the correct project type.
-      // TODO: this overwrites the new source due to a race condition
-      // const {selectedProjectType} = labConfig.standaloneSettings;
-      // console.log({selectedProjectType});
-      // if (selectedProjectType === 'neighborhood') {
-      //   setSelectedDefaultProject(defaultNeighborhoodProject);
-      // } else {
-      //   setSelectedDefaultProject(defaultProject);
-      // }
+      const {selectedProjectType} = labConfig.standaloneSettings;
+      console.log({selectedProjectType});
+      if (selectedProjectType === 'neighborhood') {
+        setSelectedDefaultProject(defaultNeighborhoodProject);
+      } else {
+        setSelectedDefaultProject(defaultProject);
+      }
     }
   }, [labConfig?.standaloneSettings]);
 
@@ -187,10 +210,7 @@ const PythonlabView: React.FunctionComponent<
         />
       )}
       {showProjectPickerModal && (
-        <ProjectTypePicker
-          setProject={setProject}
-          setProjectCallback={() => setChoseProjectType(true)}
-        />
+        <ProjectTypePicker setProjectCallback={handleProjectTypeChange} />
       )}
     </div>
   );

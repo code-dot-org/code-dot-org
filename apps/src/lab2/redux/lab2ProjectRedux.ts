@@ -37,7 +37,6 @@ export const setAndSaveProjectSources = (
   forceNewVersion: boolean = false
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return dispatch => {
-    console.log({sourcesToSave: projectSources});
     dispatch(projectSlice.actions.setProjectSource(projectSources));
     if (Lab2Registry.getInstance().getProjectManager()) {
       Lab2Registry.getInstance()
