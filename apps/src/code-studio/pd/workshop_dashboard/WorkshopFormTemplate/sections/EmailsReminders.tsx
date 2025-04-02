@@ -61,6 +61,7 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
                   checked={!suppressEmail}
                   onChange={handleChange}
                 />
+                {/* TODO: blank href for now until we have mailjet email preview links */}
                 <PreviewEmailLink href="" />
               </div>
             </div>
@@ -75,6 +76,7 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
                 onChange={() => {}}
                 disabled={true}
               />
+              {/* TODO: blank href for now until we have mailjet email preview links */}
               <PreviewEmailLink href="" />
             </div>
             <BodyFourText>
@@ -94,6 +96,7 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
                 onChange={() => {}}
                 disabled={true}
               />
+              {/* TODO: blank href for now until we have mailjet email preview links */}
               <PreviewEmailLink href="" />
             </div>
             <BodyFourText>

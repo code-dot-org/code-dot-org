@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-17 16:50:48 UTC",
+    "serialized_at": "2025-03-31 19:21:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -464,6 +464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_02"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -536,15 +539,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_privacy"
-        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_privacy"
+          "csaif_pl_2_privacy_b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -552,7 +552,7 @@
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_2_privacy"
+        "csaif_pl_2_privacy_b"
       ]
     },
     {
@@ -737,30 +737,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif_pl_vocabulary"
+          "csaif_pl_2_project_1"
         ],
-        "progression": "Wrap-Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_vocabulary"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
-      },
-      "level_keys": [
-        "csaif_pl_vocabulary"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 13,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -778,11 +756,14 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 14,
-      "activity_section_position": 3,
+      "chapter": 25,
+      "position": 13,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_project_02"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -800,9 +781,53 @@
       ]
     },
     {
+      "chapter": 26,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      },
+      "level_keys": [
+        "csaif_pl_wrap-up"
+      ]
+    },
+    {
       "chapter": 27,
       "position": 15,
       "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      },
+      "level_keys": [
+        "csaif_pl_wrap-up_answer"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 16,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1008,9 +1033,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_privacy",
+        "level.key": "csaif_pl_2_privacy_b",
         "script_level.level_keys": [
-          "csaif_pl_2_privacy"
+          "csaif_pl_2_privacy_b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1104,18 +1129,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_vocabulary",
-        "script_level.level_keys": [
-          "csaif_pl_vocabulary"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csaif_pl_2_project_1",
         "script_level.level_keys": [
           "csaif_pl_2_project_1"
@@ -1131,6 +1144,30 @@
         "level.key": "csaif_pl_2_project_02",
         "script_level.level_keys": [
           "csaif_pl_2_project_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_wrap-up",
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_wrap-up_answer",
+        "script_level.level_keys": [
+          "csaif_pl_wrap-up_answer"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

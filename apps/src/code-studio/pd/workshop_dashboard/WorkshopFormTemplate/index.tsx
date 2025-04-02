@@ -249,7 +249,11 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         notes={workshopFormState.notes}
         {...sectionProps}
       />
-      <PublishSettings {...sectionProps} />
+      <PublishSettings
+        registrationLink={workshopFormState.registrationLink}
+        hidden={workshopFormState.hidden}
+        {...sectionProps}
+      />
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );

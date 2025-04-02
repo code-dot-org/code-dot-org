@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionOptionsDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionOptionsDropdown';
@@ -269,6 +270,11 @@ describe('SectionOptionsDropdown', () => {
     const link = screen.getByText(i18n.sectionSettings());
     fireEvent.click(link);
     screen.getByText('/sections/11/settings');
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_SETTINGS_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('displays roster option to navigate to roster page', () => {
@@ -276,6 +282,11 @@ describe('SectionOptionsDropdown', () => {
     const link = screen.getByText(i18n.roster());
     fireEvent.click(link);
     screen.getByText('/sections/11/roster');
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_ROSTER_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('displays login cards option to navigate to login_info page', () => {
@@ -283,6 +294,11 @@ describe('SectionOptionsDropdown', () => {
     const link = screen.getByText(i18n.loginCards());
     fireEvent.click(link);
     screen.getByText('/sections/11/login_info');
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('displays certificates option to print student certificates', async () => {
@@ -291,21 +307,21 @@ describe('SectionOptionsDropdown', () => {
     fireEvent.click(link);
     await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(
-      'Section table print certificates clicked',
+      EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
       {},
-      'Both'
+      PLATFORMS.BOTH
     );
     expect(fetchSpy).toHaveBeenCalledWith('/dashboardapi/sections/11/students');
   });
 
   it('displays archive option to hide / restore section', () => {
     renderComponent();
-    const link = screen.getByText(i18n.archive());
-    fireEvent.click(link);
+    const archiveLink = screen.getByText(i18n.archive());
+    fireEvent.click(archiveLink);
     expect(sendEventSpy).toHaveBeenCalledWith(
-      'Section table archive section clicked',
+      EVENTS.SECTION_CARD_ARCHIVE_CLICKED,
       {},
-      'Both'
+      PLATFORMS.BOTH
     );
   });
 
@@ -315,9 +331,9 @@ describe('SectionOptionsDropdown', () => {
     const link = screen.getByText(i18n.delete());
     fireEvent.click(link);
     expect(sendEventSpy).toHaveBeenCalledWith(
-      'Section table delete section clicked',
+      EVENTS.SECTION_CARD_DELETE_CLICKED,
       {},
-      'Both'
+      PLATFORMS.BOTH
     );
   });
 

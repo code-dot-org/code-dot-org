@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### The Backpack feature in coding platforms allows teachers and students to save and reuse code snippets, functions, or entire blocks of code across different projects.
 
-#### This is especially useful for students as it enables them to store commonly used functions, avoid repetitive coding, and build on their work efficiently over time.
+#### This is especially useful for students as it enables them to store commonly used functions, avoid repetitive coding, and build on their work efficiently over time. They won't have to keep creating functions like `turn_right()` every time they start a new level.
 
 #### For example, if a student creates a helpful function in `custom.py`, they can save it in their Backpack. Later, they can easily pull that function into a new project without having to rewrite it—just like reusing a tool they've already built!
 

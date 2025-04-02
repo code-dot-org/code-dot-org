@@ -172,6 +172,10 @@ export interface EmailsRemindersProps
   extends SectionProps,
     Pick<WorkshopFormState, 'suppressEmail'> {}
 
+export interface PublishSettingsProps
+  extends SectionProps,
+    Pick<WorkshopFormState, 'registrationLink' | 'hidden'> {}
+
 export interface ScheduleProps
   extends SectionProps,
     Pick<WorkshopFormState, 'timeZone'> {

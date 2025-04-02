@@ -4,6 +4,8 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import i18n from '@cdo/locale';
 
@@ -21,6 +23,14 @@ export const SectionCard: React.FC<SectionCardProps> = ({
   section,
   onDeleteClickCallback,
 }) => {
+  const onClickClassCode = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
+  };
+
   return (
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
@@ -35,6 +45,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
                 href={`/join/${section.code}`}
                 target="_blank"
                 rel="noreferrer"
+                onClick={onClickClassCode}
               >
                 {section.code}
               </a>

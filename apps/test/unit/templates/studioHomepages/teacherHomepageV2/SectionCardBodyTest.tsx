@@ -11,6 +11,8 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SectionCardBody} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -138,6 +140,15 @@ describe('SectionCardBody', () => {
   };
 
   const store: Store = getStore();
+  let sendEventSpy: jest.SpyInstance;
+
+  beforeEach(() => {
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
 
   function renderComponent(
     section = defaultSection,
@@ -223,6 +234,11 @@ describe('SectionCardBody', () => {
     const progressButton = screen.getByText('View progress');
     fireEvent.click(progressButton);
     screen.getByText('/sections/11/progress');
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('renders task button with link to lesson materials', () => {
@@ -230,6 +246,11 @@ describe('SectionCardBody', () => {
     const materialsButton = screen.getByText('View lesson materials');
     fireEvent.click(materialsButton);
     screen.getByText('/sections/11/materials');
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('renders empty state button when no course is assigned', () => {
