@@ -8,8 +8,8 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import {
+  restrictToParentElement,
   restrictToVerticalAxis,
-  restrictToWindowEdges,
 } from '@dnd-kit/modifiers';
 import {
   arrayMove,
@@ -106,7 +106,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
         sensors={sensors}
         collisionDetection={closestCenter}
         onDragEnd={handleDragEnd}
-        modifiers={[restrictToVerticalAxis, restrictToWindowEdges]}
+        modifiers={[restrictToVerticalAxis, restrictToParentElement]}
       >
         <SortableContext
           items={sortableSectionIds}
