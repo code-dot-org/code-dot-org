@@ -57,6 +57,7 @@ async function fetchJson<ResponseType>(
   init?: RequestInit,
   validator?: ResponseValidator<ResponseType>
 ): Promise<GetResponse<ResponseType>> {
+  await new Promise(resolve => setTimeout(resolve, 5000));
   const response = await fetch(endpoint, init);
   if (!response.ok) {
     throw new NetworkError(
