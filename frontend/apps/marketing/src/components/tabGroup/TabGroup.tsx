@@ -7,14 +7,15 @@ import TabGroup, {
 } from '@code-dot-org/component-library/cms/tabGroup';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type TabGroupContentfulProps = {
   tabs?: (BaseEntry & {
     fields: {
       ctaLink: LinkEntry;
       description: string;
-      image: ImageAssetEntry;
+      image: ExperienceAsset;
       tabLabel: string;
       title: string;
     };
@@ -33,7 +34,7 @@ const TabGroupContentful: React.FunctionComponent<TabGroupContentfulProps> = ({
           title: tab.fields.title,
           description: tab.fields.description,
           image: {
-            src: `https:${tab.fields.image.fields?.file.url}`,
+            src: `https:${tab.fields.image.fields?.file?.url}`,
             alt: tab.fields.image.fields?.description,
           },
           button: {

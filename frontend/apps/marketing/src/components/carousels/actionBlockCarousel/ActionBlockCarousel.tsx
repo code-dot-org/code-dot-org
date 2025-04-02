@@ -1,6 +1,6 @@
 'use client';
 
-import {EntryFields} from 'contentful';
+import {BaseEntry, EntryFields, EntrySkeletonType} from 'contentful';
 import React, {useMemo} from 'react';
 
 import ActionBlock, {
@@ -8,20 +8,20 @@ import ActionBlock, {
 } from '@code-dot-org/component-library/actionBlock';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
-import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
-import {ContentfulEntry} from '@/contentful/types/entries/ContentfulEntry';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type ActionBlockCarouselFields = {
   actionBlockOverline: EntryFields.Text;
   title: EntryFields.Text;
   shortDescription: EntryFields.Text;
-  image: ImageAssetEntry;
+  image: ExperienceAsset;
   primaryLinkRef: LinkEntry;
   secondaryLinkRef: LinkEntry;
 };
 
-type ActionBlockCarouselEntry = ContentfulEntry<ActionBlockCarouselFields>;
+type ActionBlockCarouselEntry = BaseEntry &
+  EntrySkeletonType<ActionBlockCarouselFields>;
 
 export type ActionBlockCarouselProps = {
   /** Carousel content w/ fields from Contentful */

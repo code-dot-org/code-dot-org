@@ -1,4 +1,4 @@
-import AxeBuilder from '@axe-core/playwright';
+import {AxeBuilder} from '@axe-core/playwright';
 import {expect, Locator} from '@playwright/test';
 
 import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
@@ -25,6 +25,31 @@ test.describe('All the things UI e2e test', () => {
         expect(accessibilityScanResults.violations.length).toEqual(1);
       }
     });
+  });
+
+  test('should have the correct top level SEO metadata', async ({page}) => {
+    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    await allTheThingsPage.goto();
+
+    expect(await allTheThingsPage.pageTitle).toBe(
+      '⛔️ [ENGINEERING ONLY] UI Integration Testing - SEO',
+    );
+    expect(await allTheThingsPage.description).toBe('SEO Description');
+    expect(await allTheThingsPage.robots).toBe('noindex, nofollow');
+
+    // OpenGraph tests
+    expect(await allTheThingsPage.getOpenGraph('title')).toBe(
+      'OpenGraph Title',
+    );
+    expect(await allTheThingsPage.getOpenGraph('description')).toBe(
+      'OpenGraph Description',
+    );
+    expect(await allTheThingsPage.getOpenGraph('image')).toBe(
+      'https://images.ctfassets.net/90t6bu6vlf76/4mNRGSevP1JdG2th62NXfs/9ac89df80ecfc67309b06003f74864ba/ai-and-oceans-cover.png',
+    );
+    expect(await allTheThingsPage.getOpenGraph('image:width')).toBe('1600');
+    expect(await allTheThingsPage.getOpenGraph('image:height')).toBe('900');
+    expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });
 
   Object.entries(EXPECTED_LOCALIZATION_STRINGS).forEach(([locale, entry]) => {

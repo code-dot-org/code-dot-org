@@ -7,6 +7,8 @@ import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import Video from '@/components/video';
 
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+
 export type VideoCarouselProps = {
   /** Carousel content w/ fields from Contentful */
   slides: {
@@ -15,7 +17,7 @@ export type VideoCarouselProps = {
     fields: {
       videoTitle: string;
       youTubeId: string;
-      videoFallbackFile: {fields: {file: {url: string}}};
+      videoFallbackFile: ExperienceAsset;
     };
   }[];
 };
