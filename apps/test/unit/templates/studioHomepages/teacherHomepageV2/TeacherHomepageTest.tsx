@@ -35,6 +35,8 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2024',
       unitName: null,
+      studentCount: 0,
+      participantType: 'student',
     },
     {
       id: 12,
@@ -42,6 +44,7 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 13,
@@ -49,6 +52,7 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      participantType: 'student',
     },
     {
       id: 14,
@@ -56,12 +60,21 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      participantType: 'student',
     },
     {
       id: 15,
       name: 'hidden',
       hidden: true,
       unitName: null,
+      participantType: 'student',
+    },
+    {
+      id: 16,
+      name: 'PL Section',
+      hidden: false,
+      unitName: null,
+      participantType: 'teacher',
     },
   ];
 
