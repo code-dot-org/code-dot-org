@@ -245,6 +245,7 @@ export interface BubbleChoiceSublevel {
   display_name: string;
   level_id: string;
   thumbnail_url: string;
+  url: string;
 }
 
 // Addtional fields for videos that are linked as references in the

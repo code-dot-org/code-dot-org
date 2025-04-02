@@ -5,20 +5,20 @@ description 'description here'
 markdown <<MARKDOWN
 # Reviewing Check for Understanding 
 
-#### The previous level asked you to **identify which option correctly defines a function for the painter to turn right in the `custom.py` file**. 
+#### The previous level asked you to **identify which option correctly defines a function for the painter to turn right**. 
 
 ####Let's take a look. 
 <table style="width: 100%; border-collapse: separate; border-spacing: 0 20px;">
   <tr>
     <td style="width: 33%;"><img src="https://images.code.org/b03c44dfc0415554771e2d9a0af9e7ec-image-1741367712750.png" alt="Image 1" style="width: 100%;"></td>
     <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
-      In this option, the function is being <i>called</i> in the <code>main.py</code> file.
+      In this option, the function is being <i>called</i>, not defined.
     </td>
   </tr>
   <tr>
-    <td style="width: 33%;"><img src="https://images.code.org/56b9f8d346e9508128573385ca208559-image-1741367476173.png" alt="Image 2" style="width: 100%;"></td>
+    <td style="width: 33%;"><img src="https://images.code.org/2ad023d82e02f96faf142deb4d1eff65-image-1743531295580.png" alt="Image 2" style="width: 100%;"></td>
     <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
-      In the option, the function is correctly defined, however, since it does not have <code>painter</code> in the <i>parameter</i> of the function, it is not written for the <code>custom.py</code> file.
+      In this option, the colon <code>:</code> is left off the header which will result in an error.
     </td>
   </tr>
   <tr>
@@ -28,9 +28,9 @@ markdown <<MARKDOWN
     </td>
   </tr>
   <tr>
-    <td style="width: 33%;"><img src="https://images.code.org/6b3c7a4127cd8f845170181dcf75c743-image-1741367020103.png" alt="Image 4" style="width: 100%;"></td>
+    <td style="width: 33%;"><img src="https://images.code.org/56b9f8d346e9508128573385ca208559-image-1741367476173.png" alt="Image 4" style="width: 100%;"></td>
     <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
-      This is the correct option. It has the name of the function with <code>painter</code> in the parameter.
+      This is the correct option. The function is correctly defined.
     </td>
   </tr>
 </table>

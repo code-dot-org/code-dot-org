@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-22 02:03:19 UTC",
+    "serialized_at": "2025-04-02 01:31:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -599,42 +599,42 @@
       }
     },
     {
-      "key": "670b3cc7-704c-41f2-a0ce-3bfd764fe281",
+      "key": "4223f269-bb87-4094-b1b3-c9834bcf99c8",
       "position": 1,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "670b3cc7-704c-41f2-a0ce-3bfd764fe281",
+        "lesson_activity.key": "4223f269-bb87-4094-b1b3-c9834bcf99c8",
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025"
       }
     },
     {
-      "key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f",
+      "key": "a23ceae0-568f-4157-844a-67bc02b8a731",
       "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f",
+        "lesson_activity.key": "a23ceae0-568f-4157-844a-67bc02b8a731",
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025"
       }
     },
     {
-      "key": "60c0f6c0-4f6f-47e4-8a6f-7e10fe07c650",
+      "key": "74d4d750-7292-46f4-9557-ec68374d6828",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "60c0f6c0-4f6f-47e4-8a6f-7e10fe07c650",
+        "lesson_activity.key": "74d4d750-7292-46f4-9557-ec68374d6828",
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025"
@@ -1942,242 +1942,66 @@
       }
     },
     {
-      "key": "2aacbaa6-4e72-49bc-b62e-5cc012a118b5",
+      "key": "33de9899-bad3-4ddc-b2d0-02f52b90195b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a full set of data cards (16 cards in total).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to sort their cards into groups of their choice. Make sure they discuss with their partner their rationale for choosing how to group the cards.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to sort the cards into four categories: strings, integers, floats, and Booleans. After they finish sorting the piles, have them complete the definitions for these words in their Unit Guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Compare your sorted cards with another group. Are there any differences in how you categorized the cards? Did you have to make any changes from how you originally sorted your cards?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to compare their decisions for how to categorize the cards with the decisions made by another group. Students should be able to justify their choices for how they sorted the cards.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Can you identify one of each data type about yourself or someone you know?*\n- Use the Raise a Righteous Hand protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to distinguish between the four fundamental data types: strings, integers, floats, and Booleans. This discussion will prepare them to complete the Variable Data Types activity guide. You can turn this discussion into a game by having students think of data types about celebrities and have other students try to identify them by their information. For example, nickname = “The GOAT”, olympic_medals = 7, height = 4.66, gymnast = True would represent Simone Biles.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The protocol \"Raise a Righteous Hand\" involves students raising their hands to volunteer information, share experiences, or answer questions based on their unique knowledge or personal experiences. The term \"righteous\" in this context is used to emphasize the value and importance of the information being shared. It suggests that the contributions are genuine, meaningful, and worthy of attention and respect."
-          }
-        ]
       },
       "seeding_key": {
-        "activity_section.key": "2aacbaa6-4e72-49bc-b62e-5cc012a118b5",
-        "lesson_activity.key": "670b3cc7-704c-41f2-a0ce-3bfd764fe281"
+        "activity_section.key": "33de9899-bad3-4ddc-b2d0-02f52b90195b",
+        "lesson_activity.key": "4223f269-bb87-4094-b1b3-c9834bcf99c8"
       }
     },
     {
-      "key": "1d9407fa-73b7-4f91-bcac-250c52600cb2",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1d9407fa-73b7-4f91-bcac-250c52600cb2",
-        "lesson_activity.key": "670b3cc7-704c-41f2-a0ce-3bfd764fe281"
-      }
-    },
-    {
-      "key": "d941415c-b768-4b75-908b-55db439217a0",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *variable*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
-      },
-      "seeding_key": {
-        "activity_section.key": "d941415c-b768-4b75-908b-55db439217a0",
-        "lesson_activity.key": "670b3cc7-704c-41f2-a0ce-3bfd764fe281"
-      }
-    },
-    {
-      "key": "a4f6eebe-aef8-4b30-b5be-759bb2a8f90a",
+      "key": "f28283b6-1e19-4b67-8ca8-de31bb923831",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the My Variables activity guide. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that each student will choose a hobby or activity they enjoy, such as skateboarding. They will have to fill out the chart with a variable of each data type: string, integer, float, and boolean. Each variable should be given a name and a value. Then have students brainstorm how this value might change over time and write their answer in the last column.",
-        "duration": "5",
-        "name": "My Variables",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This is a good time to prepare students for writing variables in Python. In Python, variables are written using “snake case” where individual words are_separated_like_this using an underscore “_”. Have students write their variable names in snake case in their activity guide. Some examples are provided above, e.g. “favorite_trick”."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The My Variables activity guide can be collected and used to assess the lesson objectives."
-          }
-        ]
       },
       "seeding_key": {
-        "activity_section.key": "a4f6eebe-aef8-4b30-b5be-759bb2a8f90a",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
+        "activity_section.key": "f28283b6-1e19-4b67-8ca8-de31bb923831",
+        "lesson_activity.key": "a23ceae0-568f-4157-844a-67bc02b8a731"
       }
     },
     {
-      "key": "46fab6ef-d11b-4239-95ef-d9c660c4e108",
+      "key": "929db7f4-321f-4da4-9606-a443abcaf148",
       "position": 2,
       "properties": {
+        "progression_name": "Exploring Variables"
       },
       "seeding_key": {
-        "activity_section.key": "46fab6ef-d11b-4239-95ef-d9c660c4e108",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148",
+        "lesson_activity.key": "a23ceae0-568f-4157-844a-67bc02b8a731"
       }
     },
     {
-      "key": "a0e809ab-6ee2-4ff8-bc55-a4c5be3d02d0",
+      "key": "c594905e-07ee-4b79-b103-b213df8dc626",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How might these variables change over time?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that variables store information that can be updated as needed. Help students who are stuck by asking: \"Would your number of skateboards change over time?\" or \"Would your boolean variable change as your skill level increases?\" or \"Perhaps your favorite trick changes?\" Instruct students to jot down how each variable might change or evolve over time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete the fourth column of their activity guide \"How might it change over time?\" if they have not yet done so."
+        "progression_name": "Check Your Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "a0e809ab-6ee2-4ff8-bc55-a4c5be3d02d0",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
+        "activity_section.key": "c594905e-07ee-4b79-b103-b213df8dc626",
+        "lesson_activity.key": "a23ceae0-568f-4157-844a-67bc02b8a731"
       }
     },
     {
-      "key": "28a65e5c-bc61-4b15-9000-45d8c0642298",
+      "key": "17d91cab-8428-4c94-8955-a2e014b53446",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this is what coding levels will look like on the Code.org platform. Lines 1 and 2 are part of the user's program. Console is where the print out will appear. Ask students to predict what will appear in console when the user clicks \"Run\".\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be stuck. Ask questions like: *“What data types are being used in this program?”\n- *“What might happen when we combine strings using `+`?”*\n- *“What data types are being used in this program?”*",
-        "duration": "5",
-        "name": "Unplugged Predict and Run",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Allowing students to look at the code in pairs can help them synthesize what they are learning by articulating their thoughts to each other, and hearing multiple perspectives. "
-          }
-        ]
+        "progression_name": "My Life, My Variables"
       },
       "seeding_key": {
-        "activity_section.key": "28a65e5c-bc61-4b15-9000-45d8c0642298",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
+        "activity_section.key": "17d91cab-8428-4c94-8955-a2e014b53446",
+        "lesson_activity.key": "a23ceae0-568f-4157-844a-67bc02b8a731"
       }
     },
     {
-      "key": "0abf75e6-8a54-4fa3-b962-a1da0f4680d3",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0abf75e6-8a54-4fa3-b962-a1da0f4680d3",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "669c0f64-04d1-4cd7-9b25-ec085b12bfbe",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share if the output was what they expected, then explain that the reason the program doesn't print out \"name loves pizza\" is because **name** is a variable that stores the string \"Rylee\". Click through the animated slide to explain the following:\n- A *variable* is a named storage location in memory that can hold data and be changed during program execution. Students can think of it as a container that holds data. They can use variables to store different types of information, such as numbers, strings, lists, and more.\n- Assignment operators like = update values of variables. Other assignment operators include += and -=\n- Arithmetic operators like +, -, x, ÷ perform mathematical calculations on numbers. For example, + adds values together. Using the + sign can also be a way to combine text. This is called string concatenation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict what will appear in console when the user clicks \"Run\".\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If students are struggling, ask the following questions to help them think about the code: *\"What data types are being used in this program?\" \"What might happen this time when we combine integers using +?\" \"How does updating num_pets change the output?\"*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share if the output was what they expected.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to learn how to use Python Lab.",
-        "duration": "10",
-        "name": "Investigate and Modify",
-        "progression_name": "Using Python Lab",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students might be curious what `str()` means in this context. You can let them know that they will explore this concept more in later levels. If you want to explain to them how it works, have them articulate the difference between the `num_pets` variable which is an integer and the `print` statement `\"Number of pets:\"` which is a string. In order to cast an integer to print out as a string, students will need to add `str()`."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "669c0f64-04d1-4cd7-9b25-ec085b12bfbe",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "aae9b93f-ba91-4b4f-9d6b-d4c55013ce4d",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "aae9b93f-ba91-4b4f-9d6b-d4c55013ce4d",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "1127e727-7c44-4011-9d90-70671308c0bd",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 4, Level 2 to complete Levels 2 through 5.\n- **Level 2:** Students update the values stored in string variables.\n- **Level 3:** Students create a Boolean variable and print it out.\n- **Level 4:** Students modify an integer value stored in a variable.\n- **Level 5:** Students answer a Check for Understanding question.",
-        "progression_name": "Investigate and Modify"
-      },
-      "seeding_key": {
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "22a91395-7c89-4419-a7d1-06f0f8111b14",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, providing support to those who are stuck. As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Students who successfully complete level 5 will have demonstrated mastery of the following lesson objective:\n- Create and modify variables in Python to store and update different types of data."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "22a91395-7c89-4419-a7d1-06f0f8111b14",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "3a01d148-c7f9-4302-8a9a-37bb91bba8f8",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code. Prompt students to share what they discovered about the following aspects:\n- String concatenation\n- Printing Booleans\n- Arithmetic operators (*, +, -, x, ÷) ",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Students who successfully complete these levels will have demonstrated mastery of the following lesson objectives:\n- Classify data into fundamental types: strings, integers, floats, and Booleans.\n- Create and modify variables in Python to store and update different types of data.\n- Use operations (e.g., arithmetic, concatenation) to update the values of variables."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3a01d148-c7f9-4302-8a9a-37bb91bba8f8",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "0e230f77-b2f3-4b8b-a712-5a572816a747",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0e230f77-b2f3-4b8b-a712-5a572816a747",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "be270966-6d10-4037-b16d-5659fd679402",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 6 to practice creating variables and printing the values stored in them.",
-        "duration": "10",
-        "name": "Practice",
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "be270966-6d10-4037-b16d-5659fd679402",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "265c2511-a7ee-4987-82e0-9e015a95db97",
-      "position": 13,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "265c2511-a7ee-4987-82e0-9e015a95db97",
-        "lesson_activity.key": "6d9adf3b-7dae-450e-83fd-2e1e0393960f"
-      }
-    },
-    {
-      "key": "24943c11-1138-4db1-9a52-19d3244745c0",
+      "key": "6cfd5559-bd5d-4a30-a190-8ac99adba9a0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their Unit Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance. ",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The question of the day in the Unit Guide can be used to assess the lesson objectives."
-          }
-        ]
       },
       "seeding_key": {
-        "activity_section.key": "24943c11-1138-4db1-9a52-19d3244745c0",
-        "lesson_activity.key": "60c0f6c0-4f6f-47e4-8a6f-7e10fe07c650"
+        "activity_section.key": "6cfd5559-bd5d-4a30-a190-8ac99adba9a0",
+        "lesson_activity.key": "74d4d750-7292-46f4-9557-ec68374d6828"
       }
     },
     {
@@ -4601,6 +4425,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4623,6 +4450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level1_2025"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4645,6 +4475,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level2_2025"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4667,6 +4500,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level3_2025"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4689,6 +4525,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level4_2025"
+        ],
         "progression": "Career Persona Exploration"
       },
       "bonus": false,
@@ -4711,6 +4550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level5_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4733,6 +4575,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson2-level1_2025"
+        ],
         "progression": "Decomposition"
       },
       "bonus": false,
@@ -4755,6 +4600,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson2-level2_2025"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4777,6 +4625,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson2-level3_2025"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -4799,6 +4650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson2-level4_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4821,6 +4675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level1_2025"
+        ],
         "progression": "Steps to Create a Playlist"
       },
       "bonus": false,
@@ -4843,6 +4700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level2_2025"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4865,6 +4725,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level3_2025"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4887,6 +4750,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level4_2025"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4909,6 +4775,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level5_2025"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4931,6 +4800,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level6_2025"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -4953,6 +4825,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4975,6 +4850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson3-level8_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4997,160 +4875,207 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Using Python Lab"
+        "progression": "Exploring Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level1_2025"
+          "programming-fundamentals-lesson4-level1_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "669c0f64-04d1-4cd7-9b25-ec085b12bfbe"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       },
       "level_keys": [
-        "programming-fundamentals-lesson4-level1_2025"
+        "programming-fundamentals-lesson4-level1_2025-launch"
       ]
     },
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level2_2025"
+          "programming-fundamentals-lesson4-level2_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       },
       "level_keys": [
-        "programming-fundamentals-lesson4-level2_2025"
+        "programming-fundamentals-lesson4-level2_2025-launch"
       ]
     },
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level3_2025"
+          "programming-fundamentals-lesson4-level3_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       },
       "level_keys": [
-        "programming-fundamentals-lesson4-level3_2025"
+        "programming-fundamentals-lesson4-level3_2025-launch"
       ]
     },
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level4_2025"
+          "programming-fundamentals-lesson4-level4_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       },
       "level_keys": [
-        "programming-fundamentals-lesson4-level4_2025"
+        "programming-fundamentals-lesson4-level4_2025-launch"
       ]
     },
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": 4,
-      "assessment": true,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level5_2025"
+          "programming-fundamentals-lesson4-level5_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       },
       "level_keys": [
-        "programming-fundamentals-lesson4-level5_2025"
+        "programming-fundamentals-lesson4-level5_2025-launch"
       ]
     },
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Exploring Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level6_2025"
+          "programming-fundamentals-lesson4-level6_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "be270966-6d10-4037-b16d-5659fd679402"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       },
       "level_keys": [
-        "programming-fundamentals-lesson4-level6_2025"
+        "programming-fundamentals-lesson4-level6_2025-launch"
       ]
     },
     {
       "chapter": 25,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Student Survey"
+        "progression": "Exploring Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level7_2025"
+          "programming-fundamentals-lesson4-level7_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "265c2511-a7ee-4987-82e0-9e015a95db97"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       },
       "level_keys": [
-        "programming-fundamentals-lesson4-level7_2025"
+        "programming-fundamentals-lesson4-level7_2025-launch"
       ]
     },
     {
       "chapter": 26,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level8_2025-launch"
+        ],
+        "lesson.key": "Variables and Data Flow",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "c594905e-07ee-4b79-b103-b213df8dc626"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level8_2025-launch"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "My Life, My Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level9_2025-launch"
+        ],
+        "lesson.key": "Variables and Data Flow",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "17d91cab-8428-4c94-8955-a2e014b53446"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level9_2025-launch"
+      ]
+    },
+    {
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level1_2025"
+        ],
         "progression": "The Neighborhood and the Painter"
       },
       "bonus": false,
@@ -5168,11 +5093,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level2_2025"
+        ],
         "progression": "The Neighborhood and the Painter"
       },
       "bonus": false,
@@ -5190,11 +5118,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level3_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5212,11 +5143,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level4_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5234,11 +5168,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level5_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5256,11 +5193,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level6_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5278,11 +5218,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level7_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5300,11 +5243,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level8_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5322,11 +5268,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level1_2025"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -5344,11 +5293,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level2_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5366,11 +5318,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level3_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5388,11 +5343,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level4_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5410,11 +5368,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level5_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5432,11 +5393,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level6_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5454,11 +5418,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level7_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5476,11 +5443,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level8_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5498,11 +5468,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level1_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5520,11 +5493,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level2_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5542,11 +5518,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level3_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5564,11 +5543,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level4_2025"
+        ],
         "progression": "Debugging Chatbot"
       },
       "bonus": false,
@@ -5586,11 +5568,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5608,11 +5593,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level6_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5630,11 +5618,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level7_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5652,11 +5643,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level1_2025"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -5674,11 +5668,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level2_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5696,11 +5693,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level3_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5718,11 +5718,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level4_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5740,11 +5743,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level5_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5762,11 +5768,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level6_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5784,11 +5793,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level7_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5806,11 +5818,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level1_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5828,11 +5843,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level2_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5850,11 +5868,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level3_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5872,11 +5893,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level4_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5894,11 +5918,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level5_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -5916,11 +5943,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level6_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5938,11 +5968,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level7_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5960,11 +5993,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson10-survey_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5982,11 +6018,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson11-level1_2025"
+        ],
         "progression": "My Pixel Image"
       },
       "bonus": false,
@@ -6004,11 +6043,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson11-level2_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6026,11 +6068,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level1_2025"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -6048,11 +6093,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level2_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6070,11 +6118,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level3_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6092,11 +6143,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level4_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6114,11 +6168,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level5_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6136,11 +6193,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level6_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6158,11 +6218,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level7_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6180,11 +6243,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson13-level1_2025"
+        ],
         "progression": "Pixels of Me Project"
       },
       "bonus": false,
@@ -6202,11 +6268,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson13-level2_2025"
+        ],
         "progression": "Pixels of Me Project"
       },
       "bonus": false,
@@ -6224,11 +6293,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson13-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6246,11 +6318,14 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -6268,11 +6343,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson14-level1_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6290,11 +6368,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson14-level3_2025"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -6312,11 +6393,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson14-level2_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6334,11 +6418,14 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level1_2025"
+        ],
         "progression": "Using the print() Function"
       },
       "bonus": false,
@@ -6356,11 +6443,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level2_2025"
+        ],
         "progression": "Using the print() Function"
       },
       "bonus": false,
@@ -6378,11 +6468,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level3_2025"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6400,11 +6493,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level4_2025"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6422,11 +6518,14 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level5_2025"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6444,11 +6543,14 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level6_2025"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -6466,11 +6568,14 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level7_2025"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -6488,11 +6593,14 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level8_2025"
+        ],
         "progression": "Parameters"
       },
       "bonus": false,
@@ -6510,11 +6618,14 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level9_2025"
+        ],
         "progression": "Write Your Own Functions"
       },
       "bonus": false,
@@ -6532,11 +6643,14 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson15-level10_2025"
+        ],
         "progression": "Write Your Own Functions"
       },
       "bonus": false,
@@ -6554,11 +6668,14 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level1_2025"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -6576,11 +6693,14 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level2_2025"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6598,11 +6718,14 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level3_2025"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6620,11 +6743,14 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level4_2025"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6642,11 +6768,14 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level5_2025"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -6664,11 +6793,14 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level6_2025"
+        ],
         "progression": "More Debugging Practice"
       },
       "bonus": false,
@@ -6686,11 +6818,14 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level7_2025"
+        ],
         "progression": "More Debugging Practice"
       },
       "bonus": false,
@@ -6708,11 +6843,14 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson16-level8_2025"
+        ],
         "progression": "More Debugging Practice"
       },
       "bonus": false,
@@ -6730,11 +6868,14 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level1_2025"
+        ],
         "progression": "Comparison Operators"
       },
       "bonus": false,
@@ -6752,11 +6893,14 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level2_2025"
+        ],
         "progression": "Comparison Operators"
       },
       "bonus": false,
@@ -6774,11 +6918,14 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level3_2025"
+        ],
         "progression": "Introduction to while Loops"
       },
       "bonus": false,
@@ -6796,11 +6943,14 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level4_2025"
+        ],
         "progression": "Introduction to while Loops"
       },
       "bonus": false,
@@ -6818,11 +6968,14 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level5_2025"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6840,11 +6993,14 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 105,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level6_2025"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6862,11 +7018,14 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 106,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level7_2025"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6884,11 +7043,14 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 107,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level8_2025"
+        ],
         "progression": "Practicing Loops"
       },
       "bonus": false,
@@ -6906,11 +7068,14 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 108,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level9_2025"
+        ],
         "progression": "Dynamic Game Play"
       },
       "bonus": false,
@@ -6928,11 +7093,14 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 109,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson17-level10_2025"
+        ],
         "progression": "Dynamic Game Play"
       },
       "bonus": false,
@@ -6950,11 +7118,14 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level1_2025"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -6972,11 +7143,14 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level2_2025"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -6994,11 +7168,14 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level3_2025"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -7016,11 +7193,14 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 113,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level4_2025"
+        ],
         "progression": "Using elif and Getting User Input"
       },
       "bonus": false,
@@ -7038,11 +7218,14 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 114,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level5_2025"
+        ],
         "progression": "Using elif and Getting User Input"
       },
       "bonus": false,
@@ -7060,11 +7243,14 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 115,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level6_2025"
+        ],
         "progression": "Using elif and Getting User Input"
       },
       "bonus": false,
@@ -7082,11 +7268,14 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 116,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level7_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7104,11 +7293,14 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 117,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson18-level8_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7126,11 +7318,14 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 118,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson19-level1_2025"
+        ],
         "progression": "Examples of Adventure Games"
       },
       "bonus": false,
@@ -7148,11 +7343,14 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level1_2025"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -7170,11 +7368,14 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level2_2025"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -7192,11 +7393,14 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level3_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7214,11 +7418,14 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 122,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level4_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7236,11 +7443,14 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 123,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level5_2025"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -7258,11 +7468,14 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 124,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level6_2025"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -7280,11 +7493,14 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 125,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson20-level7_2025"
+        ],
         "progression": "Debugging Practice"
       },
       "bonus": false,
@@ -7521,86 +7737,110 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson4-level1_2025",
+        "level.key": "programming-fundamentals-lesson4-level1_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level1_2025"
+          "programming-fundamentals-lesson4-level1_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "669c0f64-04d1-4cd7-9b25-ec085b12bfbe"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson4-level2_2025",
+        "level.key": "programming-fundamentals-lesson4-level2_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level2_2025"
+          "programming-fundamentals-lesson4-level2_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson4-level3_2025",
+        "level.key": "programming-fundamentals-lesson4-level3_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level3_2025"
+          "programming-fundamentals-lesson4-level3_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson4-level4_2025",
+        "level.key": "programming-fundamentals-lesson4-level4_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level4_2025"
+          "programming-fundamentals-lesson4-level4_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson4-level5_2025",
+        "level.key": "programming-fundamentals-lesson4-level5_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level5_2025"
+          "programming-fundamentals-lesson4-level5_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1127e727-7c44-4011-9d90-70671308c0bd"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson4-level6_2025",
+        "level.key": "programming-fundamentals-lesson4-level6_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level6_2025"
+          "programming-fundamentals-lesson4-level6_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "be270966-6d10-4037-b16d-5659fd679402"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson4-level7_2025",
+        "level.key": "programming-fundamentals-lesson4-level7_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson4-level7_2025"
+          "programming-fundamentals-lesson4-level7_2025-launch"
         ],
         "lesson.key": "Variables and Data Flow",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "265c2511-a7ee-4987-82e0-9e015a95db97"
+        "activity_section.key": "929db7f4-321f-4da4-9606-a443abcaf148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level8_2025-launch",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level8_2025-launch"
+        ],
+        "lesson.key": "Variables and Data Flow",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "c594905e-07ee-4b79-b103-b213df8dc626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level9_2025-launch",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level9_2025-launch"
+        ],
+        "lesson.key": "Variables and Data Flow",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "17d91cab-8428-4c94-8955-a2e014b53446"
       }
     },
     {

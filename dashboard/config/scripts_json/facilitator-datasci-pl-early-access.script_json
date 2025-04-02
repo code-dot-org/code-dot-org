@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-31 16:51:07 UTC",
+    "serialized_at": "2025-04-01 12:21:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -149,6 +149,7 @@
       "key": "f0b4a14d-6d1c-418d-b348-35b109c31c59",
       "position": 1,
       "properties": {
+        "progression_name": "Overview of Teaching Data Science"
       },
       "seeding_key": {
         "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59",
@@ -156,9 +157,21 @@
       }
     },
     {
+      "key": "7265e221-acdd-414d-b8a7-af3de20e8cef",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is Data Science?"
+      },
+      "seeding_key": {
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef",
+        "lesson_activity.key": "8ec6f001-5630-4263-a1ed-b79950f15e61"
+      }
+    },
+    {
       "key": "86f25c3e-8fb8-4f82-ada1-18f12280b047",
       "position": 1,
       "properties": {
+        "progression_name": "Introduction to Data Science"
       },
       "seeding_key": {
         "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047",
@@ -166,9 +179,76 @@
       }
     },
     {
+      "key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Ethical Data Collection"
+      },
+      "seeding_key": {
+        "activity_section.key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4",
+        "lesson_activity.key": "4c36fce0-97b3-4b90-a612-597da3958345"
+      }
+    },
+    {
+      "key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11",
+      "position": 3,
+      "properties": {
+        "progression_name": "Data Questions and Stories"
+      },
+      "seeding_key": {
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11",
+        "lesson_activity.key": "4c36fce0-97b3-4b90-a612-597da3958345"
+      }
+    },
+    {
+      "key": "9497a718-8a97-43f4-b56f-e71731286274",
+      "position": 4,
+      "properties": {
+        "progression_name": "Data Visualization"
+      },
+      "seeding_key": {
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274",
+        "lesson_activity.key": "4c36fce0-97b3-4b90-a612-597da3958345"
+      }
+    },
+    {
+      "key": "7e35f832-dcb3-4e69-9614-e495aca13779",
+      "position": 5,
+      "properties": {
+        "progression_name": "Cleaning and Interpreting Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779",
+        "lesson_activity.key": "4c36fce0-97b3-4b90-a612-597da3958345"
+      }
+    },
+    {
+      "key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751",
+      "position": 6,
+      "properties": {
+        "progression_name": "More Data Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751",
+        "lesson_activity.key": "4c36fce0-97b3-4b90-a612-597da3958345"
+      }
+    },
+    {
+      "key": "8e963d0c-47af-4d2d-ba3f-4eb109fc6d96",
+      "position": 7,
+      "properties": {
+        "progression_name": "Wrapping Up Chapter 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e963d0c-47af-4d2d-ba3f-4eb109fc6d96",
+        "lesson_activity.key": "4c36fce0-97b3-4b90-a612-597da3958345"
+      }
+    },
+    {
       "key": "f17533ac-cef7-4f72-82b2-28c17bc508f8",
       "position": 1,
       "properties": {
+        "progression_name": "Introduction to Pandas and Python"
       },
       "seeding_key": {
         "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8",
@@ -176,12 +256,123 @@
       }
     },
     {
+      "key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Python Basics"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6",
+        "lesson_activity.key": "869821f3-0bb8-4e6c-8530-07db8b4e1ee2"
+      }
+    },
+    {
+      "key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to Pandas"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef",
+        "lesson_activity.key": "869821f3-0bb8-4e6c-8530-07db8b4e1ee2"
+      }
+    },
+    {
+      "key": "3c0bb764-da88-4e86-9edf-90c3be054d91",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introduction to Matplotlib"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91",
+        "lesson_activity.key": "869821f3-0bb8-4e6c-8530-07db8b4e1ee2"
+      }
+    },
+    {
       "key": "a2ee2c49-26b2-47ee-9735-3f26177307d1",
       "position": 1,
       "properties": {
+        "progression_name": "Getting to Know Your Data"
       },
       "seeding_key": {
         "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1",
+        "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
+      }
+    },
+    {
+      "key": "f5160e96-3f58-4454-96e9-33d941831156",
+      "position": 2,
+      "properties": {
+        "progression_name": "Assessing and Grouping Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156",
+        "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
+      }
+    },
+    {
+      "key": "04a5fa23-727d-4238-9aee-b453c0a9e17a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Cleaning Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a",
+        "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
+      }
+    },
+    {
+      "key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64",
+      "position": 4,
+      "properties": {
+        "progression_name": "More Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64",
+        "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
+      }
+    },
+    {
+      "key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e",
+      "position": 5,
+      "properties": {
+        "progression_name": "Exploratory Data Analysis"
+      },
+      "seeding_key": {
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e",
+        "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
+      }
+    },
+    {
+      "key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc",
+      "position": 6,
+      "properties": {
+        "progression_name": "Querying your Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc",
+        "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
+      }
+    },
+    {
+      "key": "8819cb11-d47f-4886-90fd-8fc3324cef39",
+      "position": 7,
+      "properties": {
+        "progression_name": "Wrapping Up Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "8819cb11-d47f-4886-90fd-8fc3324cef39",
+        "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
+      }
+    },
+    {
+      "key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f",
+      "position": 8,
+      "properties": {
+        "progression_name": "Teacher Resources and Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f",
         "lesson_activity.key": "c052f0f6-4f8a-49fa-a057-380ea86acaf0"
       }
     }
@@ -193,6 +384,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_overview_objectives"
+        ],
+        "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -214,6 +409,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_ cert"
+        ],
+        "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -235,6 +434,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS course_overview2"
+        ],
+        "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -256,6 +459,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL - DataScience Overview-module"
+        ],
+        "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -277,6 +484,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-UnitStructure-w-lessons"
+        ],
+        "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -298,6 +509,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Lesson_resources"
+        ],
+        "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -316,9 +531,10 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "What is Data Science?"
       },
       "bonus": false,
       "seeding_key": {
@@ -328,7 +544,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_definingDS"
@@ -337,9 +553,10 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "What is Data Science?"
       },
       "bonus": false,
       "seeding_key": {
@@ -349,7 +566,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_is_everywher"
@@ -358,9 +575,10 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "What is Data Science?"
       },
       "bonus": false,
       "seeding_key": {
@@ -370,7 +588,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-chk_DSisNot"
@@ -379,9 +597,10 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "What is Data Science?"
       },
       "bonus": false,
       "seeding_key": {
@@ -391,7 +610,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_chk_answers"
@@ -403,6 +622,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-lesson2Overview"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -424,6 +647,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-lesson2LanguageRoutines"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -445,6 +672,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-planningCal"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -466,6 +697,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp_PL_DS_Understanding_Data1"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -487,6 +722,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_Undestanding_Data"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -508,6 +747,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L1andL2"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -529,6 +772,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-SpreadsheetVocab"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -550,6 +797,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_ThreeReads"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -571,6 +822,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-data-science-ch1-lesson2-level1"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -592,6 +847,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_ThreeReadsexlemplar"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -613,6 +872,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_ThreeReadsexlemplar2"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -634,6 +897,10 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-teacher-lesson2"
+        ],
+        "progression": "Introduction to Data Science"
       },
       "bonus": false,
       "seeding_key": {
@@ -652,9 +919,10 @@
     {
       "chapter": 23,
       "position": 13,
-      "activity_section_position": 13,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Ethical Data Collection"
       },
       "bonus": false,
       "seeding_key": {
@@ -664,7 +932,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L3andL4"
@@ -673,9 +941,10 @@
     {
       "chapter": 24,
       "position": 14,
-      "activity_section_position": 14,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Ethical Data Collection"
       },
       "bonus": false,
       "seeding_key": {
@@ -685,7 +954,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-Ethical-Data-Collection"
@@ -694,9 +963,10 @@
     {
       "chapter": 25,
       "position": 15,
-      "activity_section_position": 15,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Ethical Data Collection"
       },
       "bonus": false,
       "seeding_key": {
@@ -706,7 +976,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_EthicalDataColleciton"
@@ -715,9 +985,10 @@
     {
       "chapter": 26,
       "position": 16,
-      "activity_section_position": 16,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Data Questions and Stories"
       },
       "bonus": false,
       "seeding_key": {
@@ -727,7 +998,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L5andL6"
@@ -736,9 +1007,10 @@
     {
       "chapter": 27,
       "position": 17,
-      "activity_section_position": 17,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Data Questions and Stories"
       },
       "bonus": false,
       "seeding_key": {
@@ -748,7 +1020,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_RSAIR-criteria"
@@ -757,9 +1029,10 @@
     {
       "chapter": 28,
       "position": 18,
-      "activity_section_position": 18,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Data Questions and Stories"
       },
       "bonus": false,
       "seeding_key": {
@@ -769,7 +1042,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-datastory-L7"
@@ -778,9 +1051,10 @@
     {
       "chapter": 29,
       "position": 19,
-      "activity_section_position": 19,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Data Questions and Stories"
       },
       "bonus": false,
       "seeding_key": {
@@ -790,7 +1064,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_Data-Story-Discussion"
@@ -799,9 +1073,10 @@
     {
       "chapter": 30,
       "position": 20,
-      "activity_section_position": 20,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Data Questions and Stories"
       },
       "bonus": false,
       "seeding_key": {
@@ -811,7 +1086,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-chk-dataStory-Vocab"
@@ -820,9 +1095,10 @@
     {
       "chapter": 31,
       "position": 21,
-      "activity_section_position": 21,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Data Questions and Stories"
       },
       "bonus": false,
       "seeding_key": {
@@ -832,7 +1108,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_chk_answers-match"
@@ -841,72 +1117,10 @@
     {
       "chapter": 32,
       "position": 22,
-      "activity_section_position": 22,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS-codap-tutorial"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
-      },
-      "level_keys": [
-        "ea-fac-sp-pl-DS-codap-tutorial"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 23,
-      "activity_section_position": 23,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS_L7"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
-      },
-      "level_keys": [
-        "ea-fac-sp-pl-DS_L7"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 24,
-      "activity_section_position": 24,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS-DotPlots"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
-      },
-      "level_keys": [
-        "ea-fac-sp-pl-DS-DotPlots"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 25,
-      "activity_section_position": 25,
-      "assessment": false,
-      "properties": {
+        "progression": "Data Visualization"
       },
       "bonus": false,
       "seeding_key": {
@@ -916,18 +1130,85 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-teacher-Codap"
       ]
     },
     {
-      "chapter": 36,
-      "position": 26,
-      "activity_section_position": 26,
+      "chapter": 33,
+      "position": 23,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Data Visualization"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-DotPlots"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
+      },
+      "level_keys": [
+        "ea-fac-sp-pl-DS-DotPlots"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 24,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualization"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS_L7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
+      },
+      "level_keys": [
+        "ea-fac-sp-pl-DS_L7"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 25,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Visualization"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-codap-tutorial"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
+      },
+      "level_keys": [
+        "ea-fac-sp-pl-DS-codap-tutorial"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 26,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -937,7 +1218,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L8andL9"
@@ -946,9 +1227,10 @@
     {
       "chapter": 37,
       "position": 27,
-      "activity_section_position": 27,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -958,7 +1240,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-cleaningData"
@@ -967,9 +1249,10 @@
     {
       "chapter": 38,
       "position": 28,
-      "activity_section_position": 28,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -979,7 +1262,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_dataTalk"
@@ -988,9 +1271,10 @@
     {
       "chapter": 39,
       "position": 29,
-      "activity_section_position": 29,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -1000,7 +1284,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-PizzaChoice"
@@ -1009,9 +1293,10 @@
     {
       "chapter": 40,
       "position": 30,
-      "activity_section_position": 30,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "More Data Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -1021,7 +1306,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L10"
@@ -1030,9 +1315,10 @@
     {
       "chapter": 41,
       "position": 31,
-      "activity_section_position": 31,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "More Data Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -1042,7 +1328,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-Choice-DataVisuals"
@@ -1051,9 +1337,10 @@
     {
       "chapter": 42,
       "position": 32,
-      "activity_section_position": 32,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "More Data Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -1063,7 +1350,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-chkCodap"
@@ -1072,9 +1359,10 @@
     {
       "chapter": 43,
       "position": 33,
-      "activity_section_position": 33,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrapping Up Chapter 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -1084,7 +1372,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "8e963d0c-47af-4d2d-ba3f-4eb109fc6d96"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L11"
@@ -1093,9 +1381,10 @@
     {
       "chapter": 44,
       "position": 34,
-      "activity_section_position": 34,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Wrapping Up Chapter 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -1105,7 +1394,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "8e963d0c-47af-4d2d-ba3f-4eb109fc6d96"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-teacherEnd"
@@ -1117,6 +1406,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-lesson3Overview"
+        ],
+        "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
       "seeding_key": {
@@ -1138,6 +1431,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-lesson3ResourcesPython"
+        ],
+        "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
       "seeding_key": {
@@ -1159,6 +1456,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-planningCal-Ch2"
+        ],
+        "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
       "seeding_key": {
@@ -1180,6 +1481,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl_DS_primm"
+        ],
+        "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
       "seeding_key": {
@@ -1201,6 +1506,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-guidetoProgrammingLevels"
+        ],
+        "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
       "seeding_key": {
@@ -1222,6 +1531,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L1Project_kickoff"
+        ],
+        "progression": "Introduction to Pandas and Python"
       },
       "bonus": false,
       "seeding_key": {
@@ -1240,9 +1553,10 @@
     {
       "chapter": 51,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1252,7 +1566,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L2PythonBasics"
@@ -1261,9 +1575,10 @@
     {
       "chapter": 52,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1273,7 +1588,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-Python_Overview"
@@ -1282,9 +1597,10 @@
     {
       "chapter": 53,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1294,7 +1610,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-pythonLab_tour"
@@ -1303,9 +1619,10 @@
     {
       "chapter": 54,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1315,7 +1632,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-datascience-U2L2-L1"
@@ -1324,9 +1641,10 @@
     {
       "chapter": 55,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1336,7 +1654,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-Predict_Debrief2"
@@ -1345,9 +1663,10 @@
     {
       "chapter": 56,
       "position": 12,
-      "activity_section_position": 12,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1357,7 +1676,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-Predict_Debrief"
@@ -1366,9 +1685,10 @@
     {
       "chapter": 57,
       "position": 13,
-      "activity_section_position": 13,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1378,7 +1698,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-datascience-U2L2-L4"
@@ -1387,9 +1707,10 @@
     {
       "chapter": 58,
       "position": 14,
-      "activity_section_position": 14,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1399,7 +1720,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-Investigate_Debrief"
@@ -1408,9 +1729,10 @@
     {
       "chapter": 59,
       "position": 15,
-      "activity_section_position": 15,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1420,7 +1742,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_Python-Variables"
@@ -1429,9 +1751,10 @@
     {
       "chapter": 60,
       "position": 16,
-      "activity_section_position": 16,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1441,7 +1764,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_Python-Expressions"
@@ -1450,9 +1773,10 @@
     {
       "chapter": 61,
       "position": 17,
-      "activity_section_position": 17,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1462,7 +1786,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-datascience-U2L2-L5"
@@ -1471,30 +1795,10 @@
     {
       "chapter": 62,
       "position": 18,
-      "activity_section_position": 18,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS_Python-Lists"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
-      },
-      "level_keys": [
-        "ea-fac-sp-pl-DS_Python-Lists"
-      ]
-    },
-    {
-      "chapter": 63,
-      "position": 19,
-      "activity_section_position": 19,
-      "assessment": false,
-      "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1504,18 +1808,19 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-datascience-U2L2-L7"
       ]
     },
     {
-      "chapter": 64,
-      "position": 20,
-      "activity_section_position": 20,
+      "chapter": 63,
+      "position": 19,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1525,18 +1830,41 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-datascience-U2L2-CFU"
       ]
     },
     {
-      "chapter": 65,
-      "position": 21,
-      "activity_section_position": 21,
+      "chapter": 64,
+      "position": 20,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS_Python-Lists"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
+      },
+      "level_keys": [
+        "ea-fac-sp-pl-DS_Python-Lists"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 21,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1546,7 +1874,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_cfu-answerExplain"
@@ -1555,9 +1883,10 @@
     {
       "chapter": 66,
       "position": 22,
-      "activity_section_position": 22,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1567,7 +1896,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_practiceLevelPedagogy"
@@ -1576,9 +1905,10 @@
     {
       "chapter": 67,
       "position": 23,
-      "activity_section_position": 23,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "progression": "Python Basics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1588,7 +1918,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       },
       "level_keys": [
         "ea-fac-SP-PL-datascience-U2L2-L8Prac"
@@ -1597,9 +1927,10 @@
     {
       "chapter": 68,
       "position": 24,
-      "activity_section_position": 24,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1609,7 +1940,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L3Pandas"
@@ -1618,9 +1949,10 @@
     {
       "chapter": 69,
       "position": 25,
-      "activity_section_position": 25,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1630,7 +1962,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_Pandas"
@@ -1639,9 +1971,10 @@
     {
       "chapter": 70,
       "position": 26,
-      "activity_section_position": 26,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1651,7 +1984,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-SP-PL-U2L3-L1_predict"
@@ -1660,9 +1993,10 @@
     {
       "chapter": 71,
       "position": 27,
-      "activity_section_position": 27,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1672,7 +2006,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-Predict_PandasDebrief"
@@ -1681,9 +2015,10 @@
     {
       "chapter": 72,
       "position": 28,
-      "activity_section_position": 28,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1693,7 +2028,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L3-L3_dataframe"
@@ -1702,9 +2037,10 @@
     {
       "chapter": 73,
       "position": 29,
-      "activity_section_position": 29,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1714,7 +2050,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L3-L4_exploring"
@@ -1723,9 +2059,10 @@
     {
       "chapter": 74,
       "position": 30,
-      "activity_section_position": 30,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1735,7 +2072,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-PanelsPandas"
@@ -1744,9 +2081,10 @@
     {
       "chapter": 75,
       "position": 31,
-      "activity_section_position": 31,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1756,7 +2094,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L3-CFU"
@@ -1765,9 +2103,10 @@
     {
       "chapter": 76,
       "position": 32,
-      "activity_section_position": 32,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Pandas"
       },
       "bonus": false,
       "seeding_key": {
@@ -1777,7 +2116,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_cfu-PandasanswerExplain"
@@ -1786,9 +2125,10 @@
     {
       "chapter": 77,
       "position": 33,
-      "activity_section_position": 33,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
       "seeding_key": {
@@ -1798,7 +2138,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L4matlib"
@@ -1807,9 +2147,10 @@
     {
       "chapter": 78,
       "position": 34,
-      "activity_section_position": 34,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
       "seeding_key": {
@@ -1819,7 +2160,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L4-L2"
@@ -1828,9 +2169,10 @@
     {
       "chapter": 79,
       "position": 35,
-      "activity_section_position": 35,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
       "seeding_key": {
@@ -1840,7 +2182,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L4"
@@ -1849,9 +2191,10 @@
     {
       "chapter": 80,
       "position": 36,
-      "activity_section_position": 36,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
       "seeding_key": {
@@ -1861,7 +2204,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-importing-matplotlab"
@@ -1870,9 +2213,10 @@
     {
       "chapter": 81,
       "position": 37,
-      "activity_section_position": 37,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
       "seeding_key": {
@@ -1882,7 +2226,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-Panels_LineChart"
@@ -1891,9 +2235,10 @@
     {
       "chapter": 82,
       "position": 38,
-      "activity_section_position": 38,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
       "seeding_key": {
@@ -1903,7 +2248,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-U2L4-CFU_matplotlib"
@@ -1912,9 +2257,10 @@
     {
       "chapter": 83,
       "position": 39,
-      "activity_section_position": 39,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Introduction to Matplotlib"
       },
       "bonus": false,
       "seeding_key": {
@@ -1924,7 +2270,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_cfu-matPlotLib_Explain"
@@ -1936,6 +2282,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS-lesson4_Overview"
+        ],
+        "progression": "Getting to Know Your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -1957,6 +2307,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-sp-pl-DS_L5getting_to_know_Data"
+        ],
+        "progression": "Getting to Know Your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -1978,6 +2332,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L5-L3"
+        ],
+        "progression": "Getting to Know Your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -1999,6 +2357,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-data_types"
+        ],
+        "progression": "Getting to Know Your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2020,6 +2382,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-fixing_data_types"
+        ],
+        "progression": "Getting to Know Your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2041,6 +2407,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-SP-PL-DS-U2L5-L4"
+        ],
+        "progression": "Getting to Know Your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2059,9 +2429,10 @@
     {
       "chapter": 90,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2071,7 +2442,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L6-assess-group-data"
@@ -2080,9 +2451,10 @@
     {
       "chapter": 91,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2092,7 +2464,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L6-L3"
@@ -2101,9 +2473,10 @@
     {
       "chapter": 92,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2113,7 +2486,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-groupby"
@@ -2122,9 +2495,10 @@
     {
       "chapter": 93,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Assessing and Grouping Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2134,7 +2508,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L6-L7"
@@ -2143,9 +2517,10 @@
     {
       "chapter": 94,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2155,7 +2530,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L7-cleaning-data"
@@ -2164,9 +2539,10 @@
     {
       "chapter": 95,
       "position": 12,
-      "activity_section_position": 12,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2176,7 +2552,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_Python-DataQuality"
@@ -2185,9 +2561,10 @@
     {
       "chapter": 96,
       "position": 13,
-      "activity_section_position": 13,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2197,7 +2574,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-U2L7-L2_isNull"
@@ -2206,9 +2583,10 @@
     {
       "chapter": 97,
       "position": 14,
-      "activity_section_position": 14,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2218,7 +2596,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-Panels_missingData"
@@ -2227,9 +2605,10 @@
     {
       "chapter": 98,
       "position": 15,
-      "activity_section_position": 15,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Cleaning Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2239,7 +2618,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L4_L8"
@@ -2248,9 +2627,10 @@
     {
       "chapter": 99,
       "position": 16,
-      "activity_section_position": 16,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "More Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -2260,7 +2640,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L8-more-visualizations"
@@ -2269,9 +2649,10 @@
     {
       "chapter": 100,
       "position": 17,
-      "activity_section_position": 17,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "More Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -2281,7 +2662,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L9-L2"
@@ -2290,9 +2671,10 @@
     {
       "chapter": 101,
       "position": 18,
-      "activity_section_position": 18,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "More Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -2302,7 +2684,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-stackedVbar"
@@ -2311,9 +2693,10 @@
     {
       "chapter": 102,
       "position": 19,
-      "activity_section_position": 19,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "More Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -2323,7 +2706,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-bar_charts"
@@ -2332,9 +2715,10 @@
     {
       "chapter": 103,
       "position": 20,
-      "activity_section_position": 20,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "More Visualizations"
       },
       "bonus": false,
       "seeding_key": {
@@ -2344,7 +2728,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L9-L4"
@@ -2353,9 +2737,10 @@
     {
       "chapter": 104,
       "position": 21,
-      "activity_section_position": 21,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
       "seeding_key": {
@@ -2365,7 +2750,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L9-exploratory-data"
@@ -2374,9 +2759,10 @@
     {
       "chapter": 105,
       "position": 22,
-      "activity_section_position": 22,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
       "seeding_key": {
@@ -2386,7 +2772,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L10-L2"
@@ -2395,9 +2781,10 @@
     {
       "chapter": 106,
       "position": 23,
-      "activity_section_position": 23,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
       "seeding_key": {
@@ -2407,7 +2794,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L10_minMax"
@@ -2416,9 +2803,10 @@
     {
       "chapter": 107,
       "position": 24,
-      "activity_section_position": 24,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
       "seeding_key": {
@@ -2428,7 +2816,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L10_agg"
@@ -2437,9 +2825,10 @@
     {
       "chapter": 108,
       "position": 25,
-      "activity_section_position": 25,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Exploratory Data Analysis"
       },
       "bonus": false,
       "seeding_key": {
@@ -2449,7 +2838,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L10-L4"
@@ -2458,9 +2847,10 @@
     {
       "chapter": 109,
       "position": 26,
-      "activity_section_position": 26,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Querying your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2470,7 +2860,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_L10-QueryingData"
@@ -2479,30 +2869,10 @@
     {
       "chapter": 110,
       "position": 27,
-      "activity_section_position": 27,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ea-fac-SP-PL-DS-U2L11-L3"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
-      },
-      "level_keys": [
-        "ea-fac-SP-PL-DS-U2L11-L3"
-      ]
-    },
-    {
-      "chapter": 111,
-      "position": 28,
-      "activity_section_position": 28,
-      "assessment": false,
-      "properties": {
+        "progression": "Querying your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2512,18 +2882,41 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-L10-quarryPanels"
       ]
     },
     {
-      "chapter": 112,
-      "position": 29,
-      "activity_section_position": 29,
+      "chapter": 111,
+      "position": 28,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Querying your Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-SP-PL-DS-U2L11-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
+      },
+      "level_keys": [
+        "ea-fac-SP-PL-DS-U2L11-L3"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 29,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Querying your Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -2533,7 +2926,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
       },
       "level_keys": [
         "ea-fac-SP-PL-DS-U2L11-L5"
@@ -2542,9 +2935,10 @@
     {
       "chapter": 113,
       "position": 30,
-      "activity_section_position": 30,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrapping Up Unit 2"
       },
       "bonus": false,
       "seeding_key": {
@@ -2554,7 +2948,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "8819cb11-d47f-4886-90fd-8fc3324cef39"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS_Community-Impact-project"
@@ -2563,9 +2957,10 @@
     {
       "chapter": 114,
       "position": 31,
-      "activity_section_position": 31,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Wrapping Up Unit 2"
       },
       "bonus": false,
       "seeding_key": {
@@ -2575,7 +2970,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "8819cb11-d47f-4886-90fd-8fc3324cef39"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-teacherEnd-Ch2"
@@ -2584,51 +2979,10 @@
     {
       "chapter": 115,
       "position": 32,
-      "activity_section_position": 32,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ea-fac-sp-pl_DS_teaching_bias"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
-      },
-      "level_keys": [
-        "ea-fac-sp-pl_DS_teaching_bias"
-      ]
-    },
-    {
-      "chapter": 116,
-      "position": 33,
-      "activity_section_position": 33,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS-teachingstrategies"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
-      },
-      "level_keys": [
-        "ea-fac-sp-pl-DS-teachingstrategies"
-      ]
-    },
-    {
-      "chapter": 117,
-      "position": 34,
-      "activity_section_position": 34,
-      "assessment": false,
-      "properties": {
+        "progression": "Teacher Resources and Next Steps"
       },
       "bonus": false,
       "seeding_key": {
@@ -2638,10 +2992,54 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f"
       },
       "level_keys": [
         "ea-fac-sp-pl-DS-nextsteps"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 33,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Teacher Resources and Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-teachingstrategies"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f"
+      },
+      "level_keys": [
+        "ea-fac-sp-pl-DS-teachingstrategies"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 34,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Teacher Resources and Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-sp-pl_DS_teaching_bias"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f"
+      },
+      "level_keys": [
+        "ea-fac-sp-pl_DS_teaching_bias"
       ]
     }
   ],
@@ -2727,7 +3125,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       }
     },
     {
@@ -2739,7 +3137,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       }
     },
     {
@@ -2751,7 +3149,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       }
     },
     {
@@ -2763,7 +3161,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f0b4a14d-6d1c-418d-b348-35b109c31c59"
+        "activity_section.key": "7265e221-acdd-414d-b8a7-af3de20e8cef"
       }
     },
     {
@@ -2919,7 +3317,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4"
       }
     },
     {
@@ -2931,7 +3329,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4"
       }
     },
     {
@@ -2943,7 +3341,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "ede5ff8f-3aed-4865-a1a3-5e4e7b7008a4"
       }
     },
     {
@@ -2955,7 +3353,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       }
     },
     {
@@ -2967,7 +3365,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       }
     },
     {
@@ -2979,7 +3377,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       }
     },
     {
@@ -2991,7 +3389,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       }
     },
     {
@@ -3003,7 +3401,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       }
     },
     {
@@ -3015,43 +3413,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ea-fac-sp-pl-DS-codap-tutorial",
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS-codap-tutorial"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ea-fac-sp-pl-DS_L7",
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS_L7"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ea-fac-sp-pl-DS-DotPlots",
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS-DotPlots"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "c85b5cdd-5ce8-41f4-aa91-48d6a6719b11"
       }
     },
     {
@@ -3063,7 +3425,43 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-sp-pl-DS-DotPlots",
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-DotPlots"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-sp-pl-DS_L7",
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS_L7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-sp-pl-DS-codap-tutorial",
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-codap-tutorial"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "9497a718-8a97-43f4-b56f-e71731286274"
       }
     },
     {
@@ -3075,7 +3473,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       }
     },
     {
@@ -3087,7 +3485,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       }
     },
     {
@@ -3099,7 +3497,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       }
     },
     {
@@ -3111,7 +3509,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "7e35f832-dcb3-4e69-9614-e495aca13779"
       }
     },
     {
@@ -3123,7 +3521,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751"
       }
     },
     {
@@ -3135,7 +3533,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751"
       }
     },
     {
@@ -3147,7 +3545,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "2ea5346d-cd9b-4ee8-8018-7d0db1234751"
       }
     },
     {
@@ -3159,7 +3557,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "8e963d0c-47af-4d2d-ba3f-4eb109fc6d96"
       }
     },
     {
@@ -3171,7 +3569,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "86f25c3e-8fb8-4f82-ada1-18f12280b047"
+        "activity_section.key": "8e963d0c-47af-4d2d-ba3f-4eb109fc6d96"
       }
     },
     {
@@ -3255,7 +3653,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3267,7 +3665,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3279,7 +3677,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3291,7 +3689,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3303,7 +3701,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3315,7 +3713,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3327,7 +3725,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3339,7 +3737,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3351,7 +3749,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3363,7 +3761,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3375,19 +3773,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ea-fac-sp-pl-DS_Python-Lists",
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS_Python-Lists"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3399,7 +3785,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3411,7 +3797,19 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-sp-pl-DS_Python-Lists",
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS_Python-Lists"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3423,7 +3821,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3435,7 +3833,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3447,7 +3845,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "e9e71bae-e070-45bc-ba70-0d5c62f41ee6"
       }
     },
     {
@@ -3459,7 +3857,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3471,7 +3869,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3483,7 +3881,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3495,7 +3893,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3507,7 +3905,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3519,7 +3917,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3531,7 +3929,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3543,7 +3941,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3555,7 +3953,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "d3fef3b6-658c-401e-ae8b-a93f145f53ef"
       }
     },
     {
@@ -3567,7 +3965,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       }
     },
     {
@@ -3579,7 +3977,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       }
     },
     {
@@ -3591,7 +3989,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       }
     },
     {
@@ -3603,7 +4001,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       }
     },
     {
@@ -3615,7 +4013,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       }
     },
     {
@@ -3627,7 +4025,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       }
     },
     {
@@ -3639,7 +4037,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "f17533ac-cef7-4f72-82b2-28c17bc508f8"
+        "activity_section.key": "3c0bb764-da88-4e86-9edf-90c3be054d91"
       }
     },
     {
@@ -3723,7 +4121,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       }
     },
     {
@@ -3735,7 +4133,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       }
     },
     {
@@ -3747,7 +4145,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       }
     },
     {
@@ -3759,7 +4157,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "f5160e96-3f58-4454-96e9-33d941831156"
       }
     },
     {
@@ -3771,7 +4169,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       }
     },
     {
@@ -3783,7 +4181,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       }
     },
     {
@@ -3795,7 +4193,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       }
     },
     {
@@ -3807,7 +4205,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       }
     },
     {
@@ -3819,7 +4217,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "04a5fa23-727d-4238-9aee-b453c0a9e17a"
       }
     },
     {
@@ -3831,7 +4229,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       }
     },
     {
@@ -3843,7 +4241,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       }
     },
     {
@@ -3855,7 +4253,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       }
     },
     {
@@ -3867,7 +4265,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       }
     },
     {
@@ -3879,7 +4277,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "b66a1d23-87e6-49db-96b8-d17dc0ff7f64"
       }
     },
     {
@@ -3891,7 +4289,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       }
     },
     {
@@ -3903,7 +4301,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       }
     },
     {
@@ -3915,7 +4313,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       }
     },
     {
@@ -3927,7 +4325,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       }
     },
     {
@@ -3939,7 +4337,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3639b8c1-b72a-48fc-a888-f1a4f672dd8e"
       }
     },
     {
@@ -3951,19 +4349,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ea-fac-SP-PL-DS-U2L11-L3",
-        "script_level.level_keys": [
-          "ea-fac-SP-PL-DS-U2L11-L3"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
       }
     },
     {
@@ -3975,7 +4361,19 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-SP-PL-DS-U2L11-L3",
+        "script_level.level_keys": [
+          "ea-fac-SP-PL-DS-U2L11-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
       }
     },
     {
@@ -3987,7 +4385,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "d0e9cf6a-d61a-4c9c-9002-79efc550cefc"
       }
     },
     {
@@ -3999,7 +4397,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "8819cb11-d47f-4886-90fd-8fc3324cef39"
       }
     },
     {
@@ -4011,31 +4409,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ea-fac-sp-pl_DS_teaching_bias",
-        "script_level.level_keys": [
-          "ea-fac-sp-pl_DS_teaching_bias"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ea-fac-sp-pl-DS-teachingstrategies",
-        "script_level.level_keys": [
-          "ea-fac-sp-pl-DS-teachingstrategies"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "8819cb11-d47f-4886-90fd-8fc3324cef39"
       }
     },
     {
@@ -4047,7 +4421,31 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-datasci-pl-early-access",
-        "activity_section.key": "a2ee2c49-26b2-47ee-9735-3f26177307d1"
+        "activity_section.key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-sp-pl-DS-teachingstrategies",
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-teachingstrategies"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-sp-pl_DS_teaching_bias",
+        "script_level.level_keys": [
+          "ea-fac-sp-pl_DS_teaching_bias"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-datasci-pl-early-access",
+        "activity_section.key": "3d6382a3-aa80-49fd-9410-c3b164f8bc3f"
       }
     }
   ],
