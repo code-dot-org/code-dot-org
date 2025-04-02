@@ -1,8 +1,7 @@
 'use client';
 
 import {BaseEntry, EntryFields} from 'contentful';
-import '@code-dot-org/component-library/carousel/index.css';
-import React, {ReactNode, useMemo} from 'react';
+import React, {useMemo} from 'react';
 
 import ActionBlock, {
   ActionBlockProps,
@@ -12,8 +11,6 @@ import DSCOCarousel from '@code-dot-org/component-library/carousel';
 export type ActionBlockCarouselProps = ActionBlockProps & {
   /** Carousel content w/ fields from Contentful */
   slides: {
-    id: EntryFields.Text;
-    slide: ReactNode;
     sys: {
       contentType: BaseEntry & {
         sys: {id: EntryFields.Text};
