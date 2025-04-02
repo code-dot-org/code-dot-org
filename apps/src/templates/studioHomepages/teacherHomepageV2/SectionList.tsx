@@ -1,3 +1,18 @@
+import {
+  closestCenter,
+  DndContext,
+  DragEndEvent,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from '@dnd-kit/core';
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  verticalListSortingStrategy,
+} from '@dnd-kit/sortable';
 import React, {useState} from 'react';
 
 import {removeSectionOrThrow} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -24,6 +39,40 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
     state => state.teacherSections.sections
   );
 
+  const [sortableSectionIds, setSortableSectionIds] = useState<number[]>(
+    Object.entries(sections)
+      .filter(([_id, section]) => showHiddenOnly === section.hidden)
+      .map(([id, _section]) => Number(id))
+  );
+
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
+
+  const handleDragEnd = React.useCallback(
+    (event: DragEndEvent) => {
+      const {active, over} = event;
+
+      if (over && active.id !== over.id) {
+        setSortableSectionIds(items => {
+          const oldIndex = items.indexOf(active.id as number);
+          const newIndex = items.indexOf(over.id as number);
+
+          return arrayMove(items, oldIndex, newIndex);
+        });
+      }
+    },
+    [setSortableSectionIds]
+  );
+
+  React.useEffect(() => {
+    sortableSectionIds;
+    // TODO(lfm): Update the order of sections in the backend
+  }, [sortableSectionIds]);
+
   const onDeleteClickCallback = (sectionId: number) => {
     setSectionToDelete(sectionId);
   };
@@ -45,25 +94,29 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
       });
   };
 
-  const filteredSectionList = React.useMemo(() => {
-    const sectionElementList: JSX.Element[] = [];
-    for (const [k, section] of Object.entries(sections)) {
-      if (showHiddenOnly === section.hidden) {
-        sectionElementList.push(
-          <SectionCard
-            key={k}
-            section={section}
-            onDeleteClickCallback={onDeleteClickCallback}
-          />
-        );
-      }
-    }
-    return sectionElementList;
-  }, [sections, showHiddenOnly]);
-
   return (
     <div className={styles.sectionList}>
-      {filteredSectionList}
+      <DndContext
+        sensors={sensors}
+        collisionDetection={closestCenter}
+        onDragEnd={handleDragEnd}
+      >
+        <SortableContext
+          items={sortableSectionIds}
+          strategy={verticalListSortingStrategy}
+        >
+          {sortableSectionIds.map(id =>
+            sections[id] ? (
+              <SectionCard
+                id={id}
+                key={id}
+                section={sections[id]}
+                onDeleteClickCallback={onDeleteClickCallback}
+              />
+            ) : null
+          )}
+        </SortableContext>
+      </DndContext>
       {sectionToDelete > NO_SECTION_ID && (
         <SectionDeleteModal
           onCloseCallback={onCloseDeleteDialog}

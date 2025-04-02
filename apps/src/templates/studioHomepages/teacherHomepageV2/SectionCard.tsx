@@ -2,6 +2,8 @@ import {
   Heading5,
   OverlineOneText,
 } from '@code-dot-org/component-library/typography';
+import {useSortable} from '@dnd-kit/sortable';
+import {CSS} from '@dnd-kit/utilities';
 import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -17,12 +19,17 @@ import styles from './teacherHomepage.module.scss';
 interface SectionCardProps {
   section: Section;
   onDeleteClickCallback: (sectionId: number) => void;
+  id: number;
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({
   section,
   onDeleteClickCallback,
+  id,
 }) => {
+  const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
+    useSortable({id});
+
   const onClickClassCode = () => {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
@@ -31,8 +38,20 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     );
   };
 
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    zIndex: isDragging ? 1 : 0,
+  };
+
   return (
-    <div className={styles.sectionCardWrapper}>
+    <div
+      className={styles.sectionCardWrapper}
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+    >
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
           <div className={styles.sectionCardHeaderText}>
