@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_03_31_202624) do
+ActiveRecord::Schema.define(version: 2025_04_01_152234) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2181,6 +2181,28 @@ ActiveRecord::Schema.define(version: 2025_03_31_202624) do
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
   end
 
+  create_table "student_work_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "type", null: false
+    t.integer "student_id"
+    t.integer "requester_id"
+    t.integer "level_id"
+    t.integer "unit_id"
+    t.integer "skill_id"
+    t.integer "section_id"
+    t.string "school_year"
+    t.string "evaluator"
+    t.text "evaluation_criteria"
+    t.text "reasoning"
+    t.string "evaluation"
+    t.string "ai_model_version"
+    t.string "code_version"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["level_id"], name: "index_student_work_evaluations_on_level_id"
+    t.index ["student_id"], name: "index_student_work_evaluations_on_student_id"
+    t.index ["type"], name: "index_student_work_evaluations_on_type"
+  end
+
   create_table "studio_people", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -2364,7 +2386,7 @@ ActiveRecord::Schema.define(version: 2025_03_31_202624) do
     t.index ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true
   end
 
-  create_table "user_preference", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "user_preference", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.json "section_order"
     t.datetime "created_at", precision: 6, null: false

@@ -12,6 +12,9 @@ import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/actionBlocks/fullWidthActionBlock';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
+import ActionBlockCarousel, {
+  ActionBlockCarouselContentfulComponentDefinition,
+} from '@/components/carousels/actionBlockCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
@@ -56,10 +59,14 @@ defineComponents(
         wrapContainerWidth: '100%',
       },
     },
+    {
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
+    },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
-      component: VideoCarousel,
-      definition: VideoCarouselContentfulComponentDefinition,
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
     },
     {
       component: Divider,
@@ -125,6 +132,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: VideoCarousel,
+      definition: VideoCarouselContentfulComponentDefinition,
     },
   ],
   {

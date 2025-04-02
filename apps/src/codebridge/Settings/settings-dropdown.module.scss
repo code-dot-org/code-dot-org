@@ -22,11 +22,6 @@
   margin-bottom: 12px;
 }
 
-// This is duplicated to ensure it takes specificity over the default style.
-.settingsTitle.settingsTitle {
-  color: $white;
-}
-
 .dropdownRow {
   display: flex;
   align-items: center;
