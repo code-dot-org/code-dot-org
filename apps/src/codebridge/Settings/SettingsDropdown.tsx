@@ -85,11 +85,10 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         style={dropdownStyles}
         aria-modal="true"
         aria-label={commonI18n.settings()}
+        data-theme="Dark"
       >
         <div className={moduleStyles.header}>
-          <Heading6 className={moduleStyles.settingsTitle}>
-            {commonI18n.settings()}
-          </Heading6>
+          <Heading6>{commonI18n.settings()}</Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label="Close settings"
@@ -121,15 +120,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             type="secondary"
             size="s"
             onClick={closeDropdown}
-            color={'white'}
           />
-          <Button
-            text="Save"
-            type="primary"
-            size="s"
-            onClick={onSave}
-            color={'white'}
-          />
+          <Button text="Save" type="primary" size="s" onClick={onSave} />
         </div>
       </div>
     </FocusTrap>,
