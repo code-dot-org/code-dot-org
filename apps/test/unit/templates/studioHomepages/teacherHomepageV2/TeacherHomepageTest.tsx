@@ -97,7 +97,7 @@ describe('TeacherHomepage', () => {
   });
 
   afterEach(() => {
-    fetchSpy.mockRestore();
+    jest.restoreAllMocks();
     restoreRedux();
   });
 
