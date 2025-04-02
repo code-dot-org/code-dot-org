@@ -1,12 +1,13 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-31T20:35:49.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Choice B",
+    "long_instructions": "### Choice B\r\nThis song uses sounds from Lady Gaga's \"Born This Way.\" Refer to your Activity Guide to see if it meets any client's needs. ",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -555,10 +556,10 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "display_name": "Choice B",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-31T20:35:49.757+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-a\"},{\"changed_at\":\"2025-03-31 20:35:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 20:38:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 20:53:10 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 21:20:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-31T20:35:49.757+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-a\"},{\"changed_at\":\"2025-03-31 20:35:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 20:38:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 20:53:10 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-31 21:20:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-01 18:28:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-01 20:47:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

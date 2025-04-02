@@ -1217,7 +1217,7 @@ en:
           description_teacher: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           version_title: ''
         self-paced-pl-equitymodule-2024:
-          title: Code.org's Equity in Computer Science
+          title: Equity in Computer Science
           description_short: ''
           description_student: "##### Welcome! This K-12 general, curriculum-agnostic course focuses on the foundational concepts and concrete applications of equity in computer science. You do not need prerequisite equity or computer science knowledge to engage with this course. We welcome adult learners from all grade levels and teaching contexts to join our community of equity-minded educators.\n___\n\n##### **Find the learning that works for you:**\n\n* ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your learning. Suggested times are provided for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to implementing equity concepts in computer science. However, you can engage with the content in the order that best meets your needs. "
           description_teacher: "##### Welcome! This K-12 general, curriculum-agnostic course focuses on the foundational concepts and concrete applications of equity in computer science. You do not need prerequisite equity or computer science knowledge to engage with this course. We welcome adult learners from all grade levels and teaching contexts to join our community of equity-minded educators.\n___\n\n##### **Find the learning that works for you:**\n\n* ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your learning. Suggested times are provided for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to implementing equity concepts in computer science. However, you can engage with the content in the order that best meets your needs. "
@@ -4306,7 +4306,7 @@ en:
             This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
           version_title: ''
         facilitator-access-csaif-2025:
-          title: facilitator-access-csaif-2025
+          title: Facilitator Early Access - CSAIF
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -4331,6 +4331,12 @@ en:
           version_title: ''
         lori-sandbox-2025:
           title: lori-sandbox-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        virtual-pl-csd-summer-2025:
+          title: CSD Virtual PL Workshop Course
           description_short: ''
           description_student: ''
           description_teacher: ''

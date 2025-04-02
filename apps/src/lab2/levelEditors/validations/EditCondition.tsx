@@ -6,6 +6,14 @@ import {Condition, ConditionType} from '../../types';
 
 import moduleStyles from './edit-validations.module.scss';
 
+function getConditionPart(
+  value: string | number,
+  index: number
+): string | number {
+  const parts = typeof value === 'string' ? value.split(':') : [value];
+  return parts[index];
+}
+
 interface EditConditionProps {
   condition: Condition;
   conditionTypes: ConditionType[];
@@ -27,29 +35,53 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
   const currentConditionType = conditionTypes.find(conditionType => {
     return conditionType.name === condition.name;
   });
-
-  const hasValue = currentConditionType?.valueType !== undefined;
-  const isNumeric = currentConditionType?.valueType === 'number';
-  const isString = currentConditionType?.valueType === 'string';
-  const useInput = isNumeric || isString;
-
-  const useDropdown = currentConditionType?.valueType === 'array';
+  const valueType = currentConditionType?.valueType;
+  const hasValueType = valueType !== undefined;
+  const valueTypes = React.useMemo(
+    () => valueType?.split(':') || [],
+    [valueType]
+  );
+  const useDropdown = !!currentConditionType?.valueOptions;
   const dropdownOptions = currentConditionType?.valueOptions || [''];
   const initialDropdownValue = dropdownOptions[0];
 
-  // Ensure that conditions with dropdowns have a value set
+  const handleValueChange = (
+    newPart: string | number,
+    valueIndex: number,
+    isNumber: boolean = false
+  ) => {
+    const currentValues =
+      typeof condition.value === 'string'
+        ? condition.value.split(':')
+        : [condition.value];
+
+    const newCondition = {...condition};
+
+    currentValues[valueIndex] = newPart;
+    newCondition.value = currentValues.join(':');
+    if (isNumber && !isNaN(Number(newCondition.value))) {
+      newCondition.value = parseInt(newCondition.value);
+    }
+    onConditionChange(newCondition, index);
+  };
+
   useEffect(() => {
-    if (hasValue && useDropdown && condition.value === undefined) {
-      condition.value = initialDropdownValue;
-      onConditionChange(condition, index);
+    if (hasValueType && useDropdown && condition.value === undefined) {
+      const defaultParts = valueTypes.map(type =>
+        type === 'number' ? 1 : initialDropdownValue
+      );
+      const newValue = defaultParts.join(':');
+      onConditionChange({...condition, value: newValue}, index);
     }
   }, [
-    hasValue,
+    hasValueType,
+    valueTypes,
     condition,
     initialDropdownValue,
     index,
-    useDropdown,
+    currentConditionType,
     onConditionChange,
+    useDropdown,
   ]);
 
   return (
@@ -64,7 +96,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
         value={condition.name}
         onChange={e => {
           condition.name = e.target.value;
-          if (!hasValue) {
+          if (!hasValueType) {
             condition.value = undefined;
           }
           onConditionChange(condition, index);
@@ -78,45 +110,54 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           );
         })}
       </select>
-      {hasValue && (
+      {hasValueType && (
         <>
-          <label htmlFor="conditionValue" className={moduleStyles.label}>
-            Value:
-          </label>
-          {useInput && (
-            <input
-              type={isNumeric ? 'number' : 'text'}
-              name="conditionValue"
-              id="conditionValue"
-              value={condition.value}
-              onChange={e => {
-                condition.value = isNumeric
-                  ? parseInt(e.target.value)
-                  : e.target.value;
-                onConditionChange(condition, index);
-              }}
-            />
-          )}
-          {useDropdown && (
-            <select
-              className={moduleStyles.conditionValueDropdown}
-              name="conditionValue"
-              id="conditionValue"
-              value={condition.value || dropdownOptions[0]}
-              onChange={e => {
-                condition.value = e.target.value;
-                onConditionChange(condition, index);
-              }}
-            >
-              {dropdownOptions.map((option, index) => {
+          <label className={moduleStyles.label}>Value:</label>
+          <div className={moduleStyles.valueInputsWrapper}>
+            {valueTypes.map((type, i) => {
+              const currentConditionValue = condition.value!;
+              const currentValue = getConditionPart(currentConditionValue, i);
+
+              const isNumber = type === 'number';
+              const isString = type === 'string';
+
+              if (isNumber || (isString && !useDropdown)) {
                 return (
-                  <option key={index} value={option}>
-                    {option}
-                  </option>
+                  <input
+                    key={i}
+                    type={isNumber ? 'number' : 'text'}
+                    className={
+                      isNumber
+                        ? moduleStyles.conditionValueInputNumber
+                        : undefined
+                    }
+                    value={currentValue}
+                    onChange={e =>
+                      handleValueChange(e.target.value, i, isNumber)
+                    }
+                  />
                 );
-              })}
-            </select>
-          )}
+              }
+
+              if (useDropdown) {
+                return (
+                  <select
+                    key={i}
+                    value={currentValue || dropdownOptions[0]}
+                    onChange={e => handleValueChange(e.target.value, i)}
+                  >
+                    {dropdownOptions.map((option, index) => (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                );
+              }
+
+              return null;
+            })}
+          </div>
         </>
       )}
       <button

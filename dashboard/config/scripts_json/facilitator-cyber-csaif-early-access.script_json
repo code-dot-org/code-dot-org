@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-31 02:58:46 UTC",
+    "serialized_at": "2025-04-01 11:45:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -93,6 +93,7 @@
       "key": "1040e967-30e4-44fe-ad35-b5843391fffb",
       "position": 1,
       "properties": {
+        "progression_name": "Course Overview"
       },
       "seeding_key": {
         "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb",
@@ -100,12 +101,67 @@
       }
     },
     {
+      "key": "d7139a8a-71b8-4952-bd70-383b859f0df5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Cybersecurity Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5",
+        "lesson_activity.key": "c6e53532-eb72-4d39-8271-af241c6d50bf"
+      }
+    },
+    {
       "key": "d00a5925-0d31-4484-8819-4c22e8bb91db",
       "position": 1,
       "properties": {
+        "progression_name": "Data and Privacy"
       },
       "seeding_key": {
         "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db",
+        "lesson_activity.key": "ad05b54b-b59b-4ea6-9f7a-cc7c4afb1f28"
+      }
+    },
+    {
+      "key": "dcc7ef4f-5521-402e-8b0d-cf1fe0e4a428",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dcc7ef4f-5521-402e-8b0d-cf1fe0e4a428",
+        "lesson_activity.key": "ad05b54b-b59b-4ea6-9f7a-cc7c4afb1f28"
+      }
+    },
+    {
+      "key": "f23c196d-1789-47ad-ad9e-1ff8ec326cb2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Security Risks"
+      },
+      "seeding_key": {
+        "activity_section.key": "f23c196d-1789-47ad-ad9e-1ff8ec326cb2",
+        "lesson_activity.key": "ad05b54b-b59b-4ea6-9f7a-cc7c4afb1f28"
+      }
+    },
+    {
+      "key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Protecting Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c",
+        "lesson_activity.key": "ad05b54b-b59b-4ea6-9f7a-cc7c4afb1f28"
+      }
+    },
+    {
+      "key": "062da241-b77d-437f-9125-cb8386c7af16",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16",
         "lesson_activity.key": "ad05b54b-b59b-4ea6-9f7a-cc7c4afb1f28"
       }
     }
@@ -117,6 +173,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_overview_objectives"
+        ],
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -138,6 +198,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_cert-cyber"
+        ],
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -159,6 +223,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-face-csaif_pl_module_overview-cyber"
+        ],
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -180,6 +248,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_course_overview-cyber"
+        ],
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -201,6 +273,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_course_structure-cyber"
+        ],
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -222,6 +298,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_lesson_resources-cyber"
+        ],
+        "progression": "Course Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -240,9 +320,10 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Cybersecurity Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -252,7 +333,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       },
       "level_keys": [
         "ea-faccsaif_pl_cyber_overview"
@@ -261,9 +342,10 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Cybersecurity Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -273,7 +355,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       },
       "level_keys": [
         "ea-fac-csaif_pl_cyber_impact"
@@ -282,9 +364,10 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Cybersecurity Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -294,7 +377,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       },
       "level_keys": [
         "ea-fac-csaif_pl_check_for_understanding"
@@ -303,9 +386,10 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Cybersecurity Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -315,7 +399,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       },
       "level_keys": [
         "ea-fac-csaif_pl_check_answer"
@@ -324,9 +408,10 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Cybersecurity Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -336,7 +421,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       },
       "level_keys": [
         "ea-fac-csaif_pl_navigating_module-cyber"
@@ -348,6 +433,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_overview_objectives_02"
+        ],
+        "progression": "Data and Privacy"
       },
       "bonus": false,
       "seeding_key": {
@@ -369,6 +458,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_2_data"
+        ],
+        "progression": "Data and Privacy"
       },
       "bonus": false,
       "seeding_key": {
@@ -390,11 +483,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Data and Privacy"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ea-fac-csaif_pl_2_data_02"
+          "ea_fac_csaif_pl_2_data_02_2_3"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -402,7 +496,7 @@
         "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
       },
       "level_keys": [
-        "ea-fac-csaif_pl_2_data_02"
+        "ea_fac_csaif_pl_2_data_02_2_3"
       ]
     },
     {
@@ -411,6 +505,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_2_privacy"
+        ],
+        "progression": "Data and Privacy"
       },
       "bonus": false,
       "seeding_key": {
@@ -432,6 +530,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ea-fac-csaif_pl_2_privacy_02"
+        ],
+        "progression": "Data and Privacy"
       },
       "bonus": false,
       "seeding_key": {
@@ -450,9 +552,10 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Security Risks"
       },
       "bonus": false,
       "seeding_key": {
@@ -462,7 +565,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "f23c196d-1789-47ad-ad9e-1ff8ec326cb2"
       },
       "level_keys": [
         "ea-fac-csaif_pl_security"
@@ -471,9 +574,10 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -483,7 +587,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       },
       "level_keys": [
         "ea-fac-csaif_pl_2_encryption_03"
@@ -492,9 +596,10 @@
     {
       "chapter": 19,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -504,7 +609,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       },
       "level_keys": [
         "ea-fac-csaif_pl_2_encryption"
@@ -513,9 +618,10 @@
     {
       "chapter": 20,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -525,7 +631,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       },
       "level_keys": [
         "ea-fac-csaif_pl_2_encryption_04"
@@ -534,9 +640,10 @@
     {
       "chapter": 21,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -546,7 +653,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       },
       "level_keys": [
         "ea-fac-csaif_pl_2_encryption_02"
@@ -555,9 +662,10 @@
     {
       "chapter": 22,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Protecting Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -567,7 +675,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       },
       "level_keys": [
         "ea-fac-csaif_pl_2_encrypt-11"
@@ -576,9 +684,10 @@
     {
       "chapter": 23,
       "position": 12,
-      "activity_section_position": 12,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -588,7 +697,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
       },
       "level_keys": [
         "ea-fac-csaif_pl_2_project_1"
@@ -597,9 +706,10 @@
     {
       "chapter": 24,
       "position": 13,
-      "activity_section_position": 13,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -609,7 +719,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
       },
       "level_keys": [
         "ea-fac-csaif_pl_2_project_02"
@@ -618,9 +728,54 @@
     {
       "chapter": 25,
       "position": 14,
-      "activity_section_position": 14,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea_fac_csaif_pl_wrap-up"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-cyber-csaif-early-access",
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
+      },
+      "level_keys": [
+        "ea_fac_csaif_pl_wrap-up"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac_csaif_pl_wrap-up_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-cyber-csaif-early-access",
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
+      },
+      "level_keys": [
+        "ea-fac_csaif_pl_wrap-up_answer"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -630,7 +785,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
       },
       "level_keys": [
         "ea-fac-csaif-pl-nextsteps-cyber"
@@ -719,7 +874,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       }
     },
     {
@@ -731,7 +886,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       }
     },
     {
@@ -743,7 +898,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       }
     },
     {
@@ -755,7 +910,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       }
     },
     {
@@ -767,7 +922,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "1040e967-30e4-44fe-ad35-b5843391fffb"
+        "activity_section.key": "d7139a8a-71b8-4952-bd70-383b859f0df5"
       }
     },
     {
@@ -796,9 +951,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ea-fac-csaif_pl_2_data_02",
+        "level.key": "ea_fac_csaif_pl_2_data_02_2_3",
         "script_level.level_keys": [
-          "ea-fac-csaif_pl_2_data_02"
+          "ea_fac_csaif_pl_2_data_02_2_3"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -839,7 +994,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "f23c196d-1789-47ad-ad9e-1ff8ec326cb2"
       }
     },
     {
@@ -851,7 +1006,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       }
     },
     {
@@ -863,7 +1018,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       }
     },
     {
@@ -875,7 +1030,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       }
     },
     {
@@ -887,7 +1042,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       }
     },
     {
@@ -899,7 +1054,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "0b6f5fa9-9d38-4a09-8dd4-d33bab44366c"
       }
     },
     {
@@ -911,7 +1066,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
       }
     },
     {
@@ -923,7 +1078,31 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea_fac_csaif_pl_wrap-up",
+        "script_level.level_keys": [
+          "ea_fac_csaif_pl_wrap-up"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-cyber-csaif-early-access",
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac_csaif_pl_wrap-up_answer",
+        "script_level.level_keys": [
+          "ea-fac_csaif_pl_wrap-up_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-cyber-csaif-early-access",
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
       }
     },
     {
@@ -935,7 +1114,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-cyber-csaif-early-access",
-        "activity_section.key": "d00a5925-0d31-4484-8819-4c22e8bb91db"
+        "activity_section.key": "062da241-b77d-437f-9125-cb8386c7af16"
       }
     }
   ],
