@@ -478,6 +478,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 onCodeChange={executeCode}
                 startCode={''}
                 editorConfigExtensions={[javascript()]}
+                appName="music"
               />
             )}
             <div role="application" id={blocklyDivId} />

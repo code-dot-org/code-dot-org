@@ -63,7 +63,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   };
 
   return (
-    <div style={style} className={className}>
+    <div data-theme="Dark" style={style} className={className}>
       <PanelContainer
         id="editor-workspace"
         headerContent={headerContent}
