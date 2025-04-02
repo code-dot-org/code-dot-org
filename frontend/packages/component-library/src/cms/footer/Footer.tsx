@@ -1,12 +1,8 @@
 import classNames from 'classnames';
-import {
-  Key,
-  HTMLAttributes,
-  AnchorHTMLAttributes,
-  ImgHTMLAttributes,
-} from 'react';
+import {Key, HTMLAttributes, AnchorHTMLAttributes} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import Image, {ImageProps} from '@/image';
 
 import moduleStyles from './footer.module.scss';
 
@@ -27,7 +23,7 @@ export interface ImageLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   key: Key;
   label: string;
   href: string;
-  image: ImgHTMLAttributes<HTMLImageElement>;
+  image: ImageProps;
 }
 
 export interface FooterProps extends HTMLAttributes<HTMLElement> {
@@ -106,7 +102,11 @@ const Footer: React.FC<FooterProps> = ({
         {imageLinks?.map(({key, label, href, image, ...link}) => (
           <li key={key}>
             <a href={href} aria-label={label} {...link}>
-              <img {...image} alt={image.alt || label} />
+              <Image
+                {...image}
+                className={moduleStyles.footerImageLinkListImg}
+                altText={image.altText || label}
+              />
             </a>
           </li>
         ))}

@@ -93,10 +93,11 @@
       gap: 0.5rem;
 
       li {
+        width: fit-content;
         height: 2.4253rem;
 
-        img {
-          height: 100%;
+        .footerImageLinkListImg {
+          display: contents;
         }
       }
     }
