@@ -295,7 +295,7 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
     puts "current time: #{Process.clock_gettime(Process::CLOCK_MONOTONIC)}"
     href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
     puts "href: #{href.inspect}"
-    href != nil?
+    href.present?
   end
   puts "current time: #{Process.clock_gettime(Process::CLOCK_MONOTONIC)}"
   puts "final href: #{href.inspect}"
