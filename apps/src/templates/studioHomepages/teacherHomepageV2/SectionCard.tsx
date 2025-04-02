@@ -39,13 +39,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({
   };
 
   const style = {
-    transform: CSS.Transform.toString(transform),
+    transform: CSS.Translate.toString(transform),
     transition,
     zIndex: isDragging ? 1 : 0,
   };
 
   return (
-    <div
+    <li
       className={styles.sectionCardWrapper}
       ref={setNodeRef}
       style={style}
@@ -79,6 +79,6 @@ export const SectionCard: React.FC<SectionCardProps> = ({
         </div>
       </div>
       {!section.hidden && <SectionCardBody section={section} />}
-    </div>
+    </li>
   );
 };

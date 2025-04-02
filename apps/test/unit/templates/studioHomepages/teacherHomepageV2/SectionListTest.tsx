@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import {Store} from 'redux';
+import '@testing-library/jest-dom';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionList';
@@ -87,6 +88,7 @@ describe('SectionList', () => {
     screen.getByText('Period 2');
     screen.getByText('Period 3');
     screen.getByText('Period 4');
+    expect(screen.queryByText('hidden')).toBeNull();
   });
 
   it('displays the section delete modal when the delete option is clicked', async () => {

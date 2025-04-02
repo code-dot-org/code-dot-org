@@ -8,6 +8,10 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import {
+  restrictToVerticalAxis,
+  restrictToWindowEdges,
+} from '@dnd-kit/modifiers';
+import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
@@ -95,26 +99,29 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   };
 
   return (
-    <div className={styles.sectionList}>
+    <div>
       <DndContext
         sensors={sensors}
         collisionDetection={closestCenter}
         onDragEnd={handleDragEnd}
+        modifiers={[restrictToVerticalAxis, restrictToWindowEdges]}
       >
         <SortableContext
           items={sortableSectionIds}
           strategy={verticalListSortingStrategy}
         >
-          {sortableSectionIds.map(id =>
-            sections[id] ? (
-              <SectionCard
-                id={id}
-                key={id}
-                section={sections[id]}
-                onDeleteClickCallback={onDeleteClickCallback}
-              />
-            ) : null
-          )}
+          <ol className={styles.sectionList}>
+            {sortableSectionIds.map(id =>
+              sections[id] ? (
+                <SectionCard
+                  id={id}
+                  key={id}
+                  section={sections[id]}
+                  onDeleteClickCallback={onDeleteClickCallback}
+                />
+              ) : null
+            )}
+          </ol>
         </SortableContext>
       </DndContext>
       {sectionToDelete > NO_SECTION_ID && (
