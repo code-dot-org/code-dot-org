@@ -10,9 +10,9 @@ module Services
       end
 
       def call
-        user_type_class = user_params[:user_type].classify.constantize
+        user_type_class = user_params[:user_type].classify.safe_constantize
         user = ::User.new_with_session(user_params, session)
-        user = user.becomes!(user_type_class)
+        user = user.becomes!(user_type_class) if user_type_class
         user.save!
         user
       end
