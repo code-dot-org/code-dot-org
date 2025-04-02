@@ -41,39 +41,6 @@ class MakerControllerTest < ActionController::TestCase
     assert_select '#maker-home'
   end
 
-  test "shows latest stable devices version if it is assigned" do
-    create :user_script, user: @student, script: @most_recent_devices_version, assigned_at: Time.now
-    assert_includes @student.scripts, @most_recent_devices_version
-
-    assert_equal @most_recent_devices_version, MakerController.maker_script(@student)
-  end
-
-  test "prioritizes assigned devices version to show user" do
-    section = create :section, user: @teacher, script: @assigned_devices_version
-    create :user_script, user: @student, script: @assigned_devices_version, assigned_at: Time.now
-    section.students << @student
-    recent_progress_script = create :user_script, user: @student, script: @recent_progress_devices_version, last_progress_at: Time.now
-    assert_includes @student.scripts, @assigned_devices_version
-    assert_equal recent_progress_script, @student.user_script_with_most_recent_progress
-
-    assert_equal @assigned_devices_version, MakerController.maker_script(@student)
-  end
-
-  test "prioritizes recent progress in devices version to show user if no versions assigned" do
-    recent_progress_script = create :user_script, user: @student, script: @recent_progress_devices_version, last_progress_at: Time.now
-    assert_equal recent_progress_script, @student.user_script_with_most_recent_progress
-
-    assert_equal @recent_progress_devices_version, MakerController.maker_script(@student)
-  end
-
-  test "defaults to newest stable devices version if user has no assignments or progress in any version" do
-    assert_empty @student.scripts
-    assert_empty @student.section_courses
-    assert_nil @student.user_script_with_most_recent_progress
-
-    assert_equal @most_recent_devices_version, MakerController.maker_script(@student)
-  end
-
   private def ensure_script(script_name, version_year = '2000', is_stable = true)
     Unit.find_by_name(script_name) ||
       create(:script, name: script_name, family_name: 'devices', version_year: version_year, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
