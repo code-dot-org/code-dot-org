@@ -87,6 +87,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atlaskit/pragmatic-drag-and-drop@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "@atlaskit/pragmatic-drag-and-drop@npm:1.5.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.0.0"
+    bind-event-listener: "npm:^3.0.0"
+    raf-schd: "npm:^4.0.3"
+  checksum: 10/85009e9f819e8a6431632f4eff83b5f5928c708f51730d22590585600e000d26686cb03bb7a8e89a4f838e8d631786d81d82c71620f5c6d5d33ca51a205010c8
+  languageName: node
+  linkType: hard
+
 "@aw-web-design/x-default-browser@npm:1.4.126":
   version: 1.4.126
   resolution: "@aw-web-design/x-default-browser@npm:1.4.126"
@@ -10099,6 +10110,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bind-event-listener@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "bind-event-listener@npm:3.0.0"
+  checksum: 10/3d442307ee906b79f041433b065e7b259bd1e5231a74519271cc5beb485f7c469609da9c7f20fdd0b3ab340e4691fee826b76d003c71cf5ad955186aba5c256e
+  languageName: node
+  linkType: hard
+
 "bindings@npm:^1.5.0":
   version: 1.5.0
   resolution: "bindings@npm:1.5.0"
@@ -10131,6 +10149,7 @@ __metadata:
   resolution: "blockly-mooc@workspace:."
   dependencies:
     "@amplitude/analytics-browser": "npm:^1.5.4"
+    "@atlaskit/pragmatic-drag-and-drop": "npm:^1.5.2"
     "@babel/core": "npm:^7.26.0"
     "@babel/eslint-parser": "npm:7.25.9"
     "@babel/plugin-proposal-object-rest-spread": "npm:^7.20.7"
@@ -23454,7 +23473,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"raf-schd@npm:^4.0.2":
+"raf-schd@npm:^4.0.2, raf-schd@npm:^4.0.3":
   version: 4.0.3
   resolution: "raf-schd@npm:4.0.3"
   checksum: 10/45514041c5ad31fa96aef3bb3c572a843b92da2f2cd1cb4a47c9ad58e48761d3a4126e18daa32b2bfa0bc2551a42d8f324a0e40e536cb656969929602b4e8b58
