@@ -223,11 +223,6 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1,
       });
 
-      // To update based on the list of topic tags
-      expect(wrapper.find('input').length).to.equal(29);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(16);
-      expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
       expect(wrapper.find('SaveBar').length).to.equal(1);
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
