@@ -26,8 +26,6 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
   languages,
   ...props
 }) => {
-  console.log('accessibility', accessibility);
-
   const initItem = (
     label: string,
     iconName: string,
