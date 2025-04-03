@@ -59,6 +59,11 @@ class CleanupAfterStandaloneUnitMigration < ActiveRecord::Migration[6.1]
           next
         end
 
+        unless unit_group.default_units.empty?
+          print_message "UnitGroup [#{unit_group_name}] has units. Skipping..."
+          next
+        end
+
         print_message "Deleting UnitGroup from DB: #{unit_group_name}"
         ActiveRecord::Base.transaction do
           unit_group.destroy!
