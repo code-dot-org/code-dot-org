@@ -5,6 +5,7 @@ import React, {ChangeEvent, useState} from 'react';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import StarterAssetsDialog from '@cdo/apps/lab2/views/components/starterAssetsDialog';
 import {AssetData} from '@cdo/apps/lab2/views/components/starterAssetsDialog/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -14,9 +15,11 @@ import aichatI18n from '../../locale';
 import {
   addStagedFile,
   clearStagedFilesAlert,
+  sendAnalytics,
   stagedFilesLimitExceeded,
   stagedFileUploadFinished,
 } from '../../redux';
+import {AssetSource} from '../../types';
 
 import styles from './upload-button.module.scss';
 
@@ -39,7 +42,8 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     // Clear the alert, if any
     dispatch(clearStagedFilesAlert());
 
-    if (files.length > numAllowedFiles) {
+    const excessFileCount = files.length - numAllowedFiles;
+    if (excessFileCount > 0) {
       dispatch(stagedFilesLimitExceeded());
     }
 
@@ -53,21 +57,30 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       ]);
 
     for (const [key, filename] of allowedFiles) {
-      dispatch(addStagedFile({key, asset: {filename, source: 'project'}}));
+      dispatch(
+        addStagedFile({key, asset: {filename, source: AssetSource.PROJECT}})
+      );
     }
 
+    let uploadSuccessCount = 0;
+    let sizeLimitExceededCount = 0;
+    let uploadFailureCount = 0;
     for (const [key, filename, file] of allowedFiles) {
       try {
         await HttpClient.put(
           `/v3/assets/${currentChannelId}/${encodeURIComponent(filename)}`,
           file
         );
+        uploadSuccessCount += 1;
+
         dispatch(stagedFileUploadFinished({key, status: 'uploaded'}));
       } catch (error) {
         let status: 'sizeLimitExceeded' | 'uploadFailed' = 'uploadFailed';
         if (error instanceof NetworkError && error.response.status === 413) {
+          sizeLimitExceededCount += 1;
           status = 'sizeLimitExceeded';
         } else {
+          uploadFailureCount += 1;
           status = 'uploadFailed';
           // Only log if not a size limit exceeded error
           Lab2Registry.getInstance()
@@ -85,6 +98,16 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         );
       }
     }
+
+    dispatch(
+      sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
+        source: AssetSource.PROJECT,
+        fileCountSuccess: uploadSuccessCount,
+        fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
+        fileCountFailureUnknownCause: uploadFailureCount,
+        fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
+      })
+    );
   };
 
   const onSelectStarterAssets = (assets: AssetData[]) => {
@@ -94,12 +117,19 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
           key: `${asset.filename}-${Date.now()}`,
           asset: {
             filename: asset.filename,
-            source: 'level',
+            source: AssetSource.LEVEL,
           },
           loaded: true,
         })
       );
     }
+
+    dispatch(
+      sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
+        source: AssetSource.LEVEL,
+        fileCountSuccess: assets.length,
+      })
+    );
   };
 
   const [openFileInput, FileInput] = useHiddenFileInput(
@@ -107,6 +137,15 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     ACCEPTED_FILE_TYPES.join(','),
     true
   );
+
+  const onDeviceUploadClick = () => {
+    openFileInput();
+    dispatch(
+      sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
+        source: AssetSource.PROJECT,
+      })
+    );
+  };
 
   if (!currentChannelId) {
     return null;
@@ -141,13 +180,20 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
             value: 'fromLibrary',
             label: 'From Library',
             icon: {iconName: 'copy'},
-            onClick: () => setShowAssetManager(true),
+            onClick: () => {
+              setShowAssetManager(true);
+              dispatch(
+                sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
+                  source: AssetSource.LEVEL,
+                })
+              );
+            },
           },
           {
             value: 'fromDevice',
             label: 'From Device',
             icon: {iconName: 'file-magnifying-glass'},
-            onClick: openFileInput,
+            onClick: onDeviceUploadClick,
           },
         ]}
       />

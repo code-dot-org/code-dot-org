@@ -5,14 +5,12 @@
 // they will get an older-style level implemented with a HAML page and some
 // non-React JS code.
 
-import React, {useEffect} from 'react';
-import {useSelector} from 'react-redux';
+import React from 'react';
 
 import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {LabProps, VideoLevelData} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -21,38 +19,20 @@ import Video from './Video';
 
 import styles from './video.module.scss';
 
-const StandaloneVideo: React.FunctionComponent<LabProps> = () => {
+const StandaloneVideo: React.FunctionComponent<LabProps> = ({
+  levelProperties,
+}) => {
   const dispatch = useAppDispatch();
-  const levelData = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.levelData
-  );
-  const currentAppName = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.appName
-  );
-
-  const [levelVideo, setLevelVideo] = React.useState<VideoLevelData | null>(
-    null
-  );
-
-  useEffect(() => {
-    if (currentAppName === 'standalone_video' && levelData) {
-      setLevelVideo(levelData as VideoLevelData);
-    }
-  }, [currentAppName, levelData]);
+  const levelVideo = levelProperties.levelData as VideoLevelData | undefined;
 
   const nextButtonPressed = () => {
-    const appType = 'standalone_video';
-    dispatch(sendSuccessReport(appType));
+    dispatch(sendSuccessReport(levelProperties.appName));
     dispatch(navigateToNextLevel());
   };
 
   return (
     <div id="standalone-video">
-      <Video
-        src={levelVideo?.src}
-        download={levelVideo?.download}
-        thumbnail={levelVideo?.thumbnail}
-      >
+      <Video {...levelVideo}>
         <button
           id="standalone-video-continue-button"
           type="button"

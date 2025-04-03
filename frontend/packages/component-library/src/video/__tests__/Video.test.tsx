@@ -1,4 +1,4 @@
-import {render, screen, act} from '@testing-library/react';
+import {render, screen, act, fireEvent} from '@testing-library/react';
 import {ReactPlayerProps} from 'react-player';
 import ReactPlayer from 'react-player/file';
 
@@ -42,15 +42,33 @@ describe('Video Component', () => {
     errorHeading: 'Error Heading',
     errorBody: 'Error Body',
     className: 'custom-class',
+    isYouTubeCookieAllowed: true,
   };
+
+  beforeEach(() => {
+    window.CDOVideoPlayer = {isYouTubeBlocked: false};
+  });
+
+  it('renders the facade by default', () => {
+    render(<Video {...defaultProps} />);
+    expect(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    ).toBeInTheDocument();
+  });
 
   it('renders YouTube video player by default', () => {
     render(<Video {...defaultProps} />);
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
+
     const player = screen.getByText('YouTube Player');
     expect(player).toBeVisible();
-
-    const playButton = screen.getByLabelText('Play video Sample Video');
-    expect(playButton).toBeVisible();
   });
 
   it('renders caption when showCaption is true', () => {
@@ -71,11 +89,12 @@ describe('Video Component', () => {
   it('renders native video player when YouTube video fails and fallback is valid', () => {
     (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
     render(<Video {...defaultProps} />);
-    const player = screen.getByText('YouTube Player');
-    expect(player).toBeVisible();
 
-    const playButton = screen.getByLabelText('Play video Sample Video');
-    expect(playButton).toBeVisible();
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
 
     const triggerErrorButton = screen.getByText('Trigger Error');
 
@@ -90,11 +109,12 @@ describe('Video Component', () => {
   it('renders error state when both YouTube and fallback video fail', () => {
     (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
     render(<Video {...defaultProps} />);
-    const player = screen.getByText('YouTube Player');
-    expect(player).toBeVisible();
 
-    const playButton = screen.getByLabelText('Play video Sample Video');
-    expect(playButton).toBeVisible();
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
 
     const triggerErrorButton = screen.getByText('Trigger Error');
 
@@ -117,6 +137,23 @@ describe('Video Component', () => {
     expect(defaultErrorBody).toBeInTheDocument();
   });
 
+  it('renders error state when YouTube is known to be blocked', () => {
+    window.CDOVideoPlayer!.isYouTubeBlocked = true;
+    (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
+    render(<Video {...defaultProps} videoFallback={undefined} />);
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
+
+    const defaultErrorHeading = screen.getByText('Error Heading');
+    const defaultErrorBody = screen.getByText('Error Body');
+    expect(defaultErrorHeading).toBeInTheDocument();
+    expect(defaultErrorBody).toBeInTheDocument();
+  });
+
   it('renders default error messages when errorHeading and errorBody are not provided', () => {
     (ReactPlayer.canPlay as jest.Mock).mockReturnValue(true);
 
@@ -124,11 +161,12 @@ describe('Video Component', () => {
     const {errorHeading, errorBody, ...propsWithoutErrorMessages} =
       defaultProps;
     render(<Video {...propsWithoutErrorMessages} />);
-    const player = screen.getByText('YouTube Player');
-    expect(player).toBeVisible();
 
-    const playButton = screen.getByLabelText('Play video Sample Video');
-    expect(playButton).toBeVisible();
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
 
     const triggerErrorButton = screen.getByText('Trigger Error');
 
@@ -151,5 +189,21 @@ describe('Video Component', () => {
     );
     expect(defaultErrorHeading).toBeInTheDocument();
     expect(defaultErrorBody).toBeInTheDocument();
+  });
+
+  it('renders the cookie-blocked state when YouTube cookies are not available', () => {
+    render(
+      <Video
+        {...defaultProps}
+        videoFallback={undefined}
+        isYouTubeCookieAllowed={false}
+      />,
+    );
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: `Play video ${defaultProps.videoTitle}`,
+      }),
+    );
+    expect(screen.getByText('Cookie Settings')).toBeInTheDocument();
   });
 });

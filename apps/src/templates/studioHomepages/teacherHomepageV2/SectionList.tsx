@@ -45,6 +45,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
 
   const [sortableSectionIds, setSortableSectionIds] = useState<number[]>(
     Object.entries(sections)
+      .filter(([_id, section]) => section.participantType === 'student')
       .filter(([_id, section]) => showHiddenOnly === section.hidden)
       .map(([id, _section]) => Number(id))
   );

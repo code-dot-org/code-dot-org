@@ -22496,3 +22496,77 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        vpl-csd-2025-m1:
+          lessons:
+            lesson-1:
+              name: Asynchronous Pre-Work
+          lesson_groups: {}
+          name: vpl-csd-2025-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2025-m2:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2025-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2025-m3:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2025-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2025-m4:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2025-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2025-m5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2025-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2025-m6:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2025-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2025-m7:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2025-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2025-m8:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2025-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
