@@ -35,7 +35,6 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
         <WithTooltip tooltipProps={tooltipProps}>
           <Button
             isIconOnly
-            color={'white'}
             icon={{iconStyle: 'solid', iconName: 'eraser'}}
             ariaLabel={codebridgeI18n.clearConsole()}
             onClick={clearOutput}
