@@ -10,27 +10,27 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "### This is Roxanne",
+        "text": "### Creative Coding\n\nThis is Roxanne",
         "imageUrl": "https://images.code.org/6f1a4dd47abe027f95a96f189703b87a-roxanne1.png",
         "key": "test-music-lab-loops-sythesize-project-panels-25e9b5d9-07a8-4064-9fb2-75fa8d2262e3",
         "layout": "text-top-right"
       },
       {
-        "text": "### She's an Artist, Creator, and Coder\n",
+        "text": "### Creative Coding\n\nShe's an Artist, Creator, and Coder\n",
         "imageUrl": "https://images.code.org/31de70a2eb96f9e6de2fd7926fef44af-roxanne2.png",
         "key": "test-music-lab-loops-sythesize-project-panels-0b5eb9b2-25d6-472d-9f49-a3c50f1a0b1a",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-right"
       },
       {
-        "text": "### Roxanne performs music using Code",
+        "text": "### Creative Coding\n\nRoxanne performs music using Code",
         "imageUrl": "https://images.code.org/daa047d1614da0edd689079fc5119477-roxanne3.png",
         "key": "test-music-lab-loops-sythesize-project-panels-d145b67c-8a93-4174-92c5-f1215a77cb2b",
         "layout": "text-bottom-right",
         "fadeInOverPrevious": true
       },
       {
-        "text": "### She edits the code live in front of an audience\n\n",
+        "text": "### Creative Coding\n\nShe edits the code live in front of an audience\n\n",
         "imageUrl": "https://images.code.org/aff8ceef94afd6c4e912625315bdba2a-roxanne4.png",
         "key": "test-music-lab-loops-sythesize-project-panels-fb2f98b1-b7e5-4636-a99b-1450c3ccae64",
         "layout": "text-bottom-right",
@@ -53,7 +53,7 @@
         "typing": true
       },
       {
-        "text": "### In this lesson, we're going to try Live Coding in Music Lab!",
+        "text": "### Creative Coding\n\nIn this lesson, we're going to try Live Coding in Music Lab!",
         "imageUrl": "https://images.code.org/66baa69141692193dc2f847639394a24-live-loop-2.gif",
         "key": "test-music-lab-loops-sythesize-project-panels-98fbe714-ece3-4234-8117-2262cc925466",
         "fadeInOverPrevious": true
@@ -76,6 +76,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18 18:28:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 16:34:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:12:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:46:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 18:47:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 18:47:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18 18:28:06 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 16:34:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:12:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-20 17:46:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 18:47:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-24 18:47:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-02 14:38:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

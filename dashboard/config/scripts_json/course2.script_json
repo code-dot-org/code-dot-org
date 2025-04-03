@@ -42,7 +42,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-25 00:55:31 UTC",
+    "serialized_at": "2025-04-03 01:06:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5260,7 +5260,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 9 NEW",
+        "level.key": "2-3 Artist 9",
         "script_level.level_keys": [
           "2-3 Artist 9",
           "2-3 Artist 9 NEW"
@@ -5273,7 +5273,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 9",
+        "level.key": "2-3 Artist 9 NEW",
         "script_level.level_keys": [
           "2-3 Artist 9",
           "2-3 Artist 9 NEW"

@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-04-02T20:48:04.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Optimization Helper - Graphic Design\r\n\r\n#### Instructions:\r\n\r\nA graphic designer notices their image editing software becomes slower the longer it runs, and eventually, it crashes after working on a large file for several hours. What would you suggest they do?\r\n\r\n#### Do This:\r\n1. Choose 2 or 3 actions from the list of **Possible Actions** below.\r\n2. Use AI Chat to compare the actions you selected and explain which is best.\r\n\r\n---\r\n::: details [**Possible Actions:**]\r\n1. Save the project and restart the application periodically to free up memory.\r\n2.\tCheck for updates or patches for the image editing software.\r\n3.\tMonitor memory usage with Task Manager while using the software.\r\n4.\tReduce the number of open projects or layers in the software.\r\n5.\tAllocate more virtual memory (swap space) on the computer.\r\n6.\tClose unnecessary background applications to free up system resources.\r\n7.\tUse a different image editing application optimized for large files.\r\n8.\tIncrease the resolution of the project file for better quality.\t\r\n9.\tInstall an older version of the software to see if the issue persists.\r\n10.\tDisable auto-save or other memory-intensive features in the software.\r\n11.\tInstall an antivirus program and run a full system scan.\r\n12.\tMove the project file to an external drive to free up internal storage.\r\n13.\tDisconnect the computer from the internet while working.\r\n14.\tOpen additional applications to “balance” the system resources.\r\n15.\tIncrease the priority of the editing software in Task Manager.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a knowledgeable and approachable assistant designed to help students evaluate potential actions to optimize a computer system’s performance. Students are working on an activity where they are presented with a specific system performance scenario (e.g., gaming lag, slow software, battery drain) and a list of possible actions. Your role is to:\n\t1.\tClarify Actions: Provide clear and concise explanations of the actions on their list. Break down technical concepts into simple, beginner-friendly terms without oversimplifying.\n\t•\tExample: ‘Increase virtual memory’ means allocating more space on the hard drive for temporary memory when physical RAM is full.\n\t2.\tEncourage Critical Thinking: Help students reason through their choices by providing context and asking guiding questions. Avoid giving direct answers unless explicitly asked.\n\t•\tExample: ‘How might reducing screen brightness affect battery usage?’\n\t•\tExample: ‘Why do you think disabling auto-save might help in a memory-intensive situation?’\n\t3.\tHighlight Trade-Offs: When appropriate, explain how an action might have benefits and drawbacks depending on the scenario.\n\t•\tExample: ‘Closing background apps frees up system resources, but be careful not to close essential applications.’\n\t4.\tProvide Nuanced Guidance: Help students narrow down their options by discussing the specific scenario they’re working on. Offer insight into which actions might help, have no effect, or make the problem worse without explicitly identifying the correct answers.\n\t•\tExample: ‘Clearing the cache might improve performance in some cases, but it won’t resolve issues related to insufficient RAM.’\n\t5.\tRemain Scenario-Specific: Tailor your responses to the scenario they describe, focusing on the context and what would realistically optimize performance in that situation.\n\t6.\tStay Encouraging and Neutral: Support students’ learning by reinforcing the importance of exploration and discovery. If they make a mistake, frame it as a natural part of the learning process.\n\nRemember, your goal is not to provide direct solutions but to guide students in understanding and evaluating actions so they can make informed decisions.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-02T20:48:04.161+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson5-level3_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson5-level3_2025\"},{\"changed_at\":\"2025-04-02 20:53:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

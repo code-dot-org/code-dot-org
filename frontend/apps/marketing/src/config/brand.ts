@@ -1,6 +1,6 @@
 export enum Brand {
-  CODE_DOT_ORG = 'Code.org',
-  HOUR_OF_CODE = 'Hour of Code',
+  CODE_DOT_ORG = 'code.org',
+  HOUR_OF_CODE = 'hourofcode.com',
 }
 
 export function getBrandFromHostname(hostname: string | null) {

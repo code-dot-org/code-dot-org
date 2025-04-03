@@ -1,0 +1,83 @@
+name 'ea-fac-csaif_pl_objects_L11_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding Objects in Programming 
+
+#### In programming, an **object** is a collection of data (attributes) and behaviors (functions/methods). 
+
+#### **Objects** are used to model real-world things in a way that computers can understand and manipulate.
+
+## What is an Object? 
+
+<div style="background-color: #F7F8FA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; 
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: flex; align-items: center; gap: 20px;">
+    
+    <!-- Image on the Left -->
+<img src="https://images.code.org/59ee0a28160ca468b29a0bfe6bfa45fe-image-1741202921824.png" 
+         alt="blueprint" width="100px" 
+         style="border-radius: 10px; flex-shrink: 0;">
+    
+    <!-- Text and List on the Right -->
+    <div>
+               <ul style="padding-left: 20px;">
+            <li style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+                <b>Attributes (Characteristics) </b> Descriptive properties of the object.
+            </li>
+            <li style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+                <b>Methods (Actions/Behaviors)</b>  What the object can do.
+            </li>
+        </ul>
+    </div>
+</div>
+
+#### In Python, **objects** are instances of classes, which define these attributes and functions.
+
+
+## Example: A Camera as an Object
+
+#### A camera is a great example of an object because it has both attributes (characteristics) and functions (actions it can perform).
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px; width: 95%; margin: 20px auto;">
+   
+<img src="https://images.code.org/bbeb2a56d043e63f1837643cb42a39e9-image-1741203692057.png" 
+         alt="Object Concept Image" 
+         style="width: 15%; border-radius: 10px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+
+<div style="background-color: #deceea; padding: 20px; border-radius: 10px; width: 48%; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: left; font-size: 14pt; 
+                display: flex; flex-direction: column; justify-content: space-between;">
+        <h3 style="margin-top: 0; font-size: 14pt;"><b>Attributes (Characteristics)</b></h3>
+        <p style="font-size: 12pt;">These are properties that describe the object.</p>
+        <ul>
+            <li style="font-size: 12pt;"><b>Lens Type</b> – Wide-angle, telephoto, etc.</li><br>
+            <li style="font-size: 12pt;"><b>Resolution</b> – 12MP, 48MP, etc.</li><br>
+            <li style="font-size: 12pt;"><b>Zoom Level</b> – Optical zoom, digital zoom.</li><br>
+            <li style="font-size: 12pt;"><b>Size</b> – Compact, DSLR, mirrorless.</li><br>
+        </ul>
+    </div>
+
+   
+<div style="background-color: #deceea; padding: 20px; border-radius: 10px; width: 37%; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: left; font-size: 14pt;
+                display: flex; flex-direction: column; justify-content: space-between;">
+                <h3 style="margin-top: 0; font-size: 14pt;"><b>Methods (Actions)</b></h3>
+        <p style="font-size: 12pt;">These are behaviors the object can perform.</p>
+        <ul>
+            <li style="font-size: 12pt;"><b>Take a picture</b></li><br>
+            <li style="font-size: 12pt;"><b>Zoom in and out</b></li><br>
+            <li style="font-size: 12pt;"><b>Record video</b></li><br>
+            <li style="font-size: 12pt;"><b>Adjust focus</b></li>
+        </ul>
+    </div>
+</div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ These concepts are covered in Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+## Next, let's see how the Painter object works in the Neighborhood! 
+
+
+MARKDOWN

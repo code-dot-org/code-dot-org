@@ -27,6 +27,8 @@
 #  index_student_work_evaluations_on_type        (type)
 #
 class StudentWorkEvaluation < ApplicationRecord
+  self.inheritance_column = :type
+
   VALID_TYPES = ['UserLevelSkillEvaluation', 'UserLevelEvaluation', 'SectionLevelEvaluation'].freeze
 
   validates :type, inclusion: {in: VALID_TYPES}

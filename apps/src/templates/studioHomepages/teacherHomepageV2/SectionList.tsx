@@ -47,7 +47,9 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
 
   const filteredSectionList = React.useMemo(() => {
     const sectionElementList: JSX.Element[] = [];
-    for (const [k, section] of Object.entries(sections)) {
+    for (const [k, section] of Object.entries(sections).filter(
+      section => section[1].participantType === 'student'
+    )) {
       if (showHiddenOnly === section.hidden) {
         sectionElementList.push(
           <SectionCard
