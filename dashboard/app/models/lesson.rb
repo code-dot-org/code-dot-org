@@ -521,7 +521,8 @@ class Lesson < ApplicationRecord
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
-      studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
+      studentLessonPlanPdfUrl: student_lesson_plan_pdf_url,
+      title: localized_title,
     }
   end
 
