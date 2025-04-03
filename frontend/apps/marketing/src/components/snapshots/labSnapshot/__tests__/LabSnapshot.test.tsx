@@ -1,4 +1,4 @@
-import {render, screen, within} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import LabSnapshot, {
@@ -36,15 +36,29 @@ describe('LabSnapshot component', () => {
     });
 
     const labSnapshot = screen.getByTitle(title);
-    expect(labSnapshot).toBeVisible();
 
-    const labDetails = within(labSnapshot).getAllByRole('listitem');
-    expect(labDetails[0]).toHaveTextContent('Ages: 1, 1st');
-    expect(labDetails[1]).toHaveTextContent('Level: 2, 2nd');
-    expect(labDetails[2]).toHaveTextContent('What you can make: 3, 3rd');
-    expect(labDetails[3]).toHaveTextContent('Devices: 4, 4th');
-    expect(labDetails[4]).toHaveTextContent('Browsers: 5, 5th');
-    expect(labDetails[5]).toHaveTextContent('Accessibility: 6, 6th');
-    expect(labDetails[6]).toHaveTextContent('Languages supported: 7, 7th');
+    expect(labSnapshot).toBeVisible();
+    expect(labSnapshot).toHaveTextContent(
+      'Ages: 1, 1st' +
+        'Level: 2, 2nd' +
+        'What you can make: 3, 3rd' +
+        'Devices: 4, 4th' +
+        'Browsers: 5, 5th' +
+        'Accessibility: 6, 6th' +
+        'Languages supported: 7, 7th',
+    );
+  });
+
+  it('renders only non-empty details', () => {
+    renderSnapshot({
+      ages: ['1'],
+      level: [],
+      creation: '',
+    });
+
+    const labSnapshot = screen.getByTitle(title);
+
+    expect(labSnapshot).toBeVisible();
+    expect(labSnapshot).toHaveTextContent('Ages: 1');
   });
 });

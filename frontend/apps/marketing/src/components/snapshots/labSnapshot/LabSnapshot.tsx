@@ -44,6 +44,7 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
       iconName: string,
       content?: string | string[],
     ) => {
+      // Avoid pushing empty arrays and empty strings
       if (content?.length) items.push(initItem(label, iconName, content));
     };
 
