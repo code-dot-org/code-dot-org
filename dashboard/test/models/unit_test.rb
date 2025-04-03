@@ -2667,11 +2667,11 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'can summarize has_unnumbered_lessons' do
     unit = create :unit
-    refute unit.has_unnumbered_lessons
     refute unit.summarize[:has_unnumbered_lessons]
     unit.update!(has_unnumbered_lessons: true)
-    assert unit.has_unnumbered_lessons
     assert unit.summarize[:has_unnumbered_lessons]
+    unit.update!(has_unnumbered_lessons: false)
+    refute unit.summarize[:has_unnumbered_lessons]
   end
 
   private def has_unlaunched_unit?(units)
