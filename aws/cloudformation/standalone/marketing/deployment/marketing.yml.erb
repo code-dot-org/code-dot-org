@@ -169,14 +169,17 @@ Resources:
             - FargateServiceLBSecurityGroup
             - GroupId
       Subnets:
-        - Ref: VpcPublicSubnet0
-        - Ref: VpcPublicSubnet1
+      <% (0...Config::AVAILABILITY_ZONES.length).each do |index| %>
+        - Ref: VpcPublicSubnet<%=index %>
+      <% end %>
       Type: application
     DependsOn:
-      - VpcPublicSubnet0DefaultRoute
-      - VpcPublicSubnet0RouteTableAssociation
-      - VpcPublicSubnet1DefaultRoute
-      - VpcPublicSubnet1RouteTableAssociation
+    <% (0...Config::AVAILABILITY_ZONES.length).each do |index| %>
+      - VpcPublicSubnet<%=index %>DefaultRoute
+      - VpcPublicSubnet<%=index %>RouteTableAssociation
+      - VpcPublicSubnet<%=index %>DefaultRoute
+      - VpcPublicSubnet<%=index %>RouteTableAssociation
+    <% end %>
 
   FargateServiceLBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
