@@ -319,9 +319,6 @@ Resources:
       StorageLensConfiguration:
         Id: student-projects-dashboard
         IsEnabled: true
-        AwsOrg:
-          Arn: !Ref 'AWS::NoValue'
-        StorageLensArn: !Sub 'arn:aws:s3:${AWS::Region}:${AWS::AccountId}:storage-lens/student-projects-dashboard'
         AccountLevel:
           ActivityMetrics:
             IsEnabled: true
@@ -332,13 +329,6 @@ Resources:
               IsEnabled: true
             AdvancedCostOptimizationMetrics:
               IsEnabled: true
-            PrefixLevel:
-              StorageMetrics:
-                IsEnabled: true
-                SelectionCriteria:
-                  Delimiter: "/"
-                  MaxDepth: 5
-                  MinStorageBytesPercentage: 5.0
         Include:
           Buckets:
             - !Sub 'arn:aws:s3:::cdo-v3-sources'
@@ -357,14 +347,6 @@ Resources:
             Prefix: 'S3StorageLens/student-projects-metrics-export'
           CloudWatchMetrics:
             IsEnabled: true
-        # Default metrics are automatically included
-        # Advanced metrics
-        AdvancedMetrics:
-          IsEnabled: true
-        # Dashboard properties
-        Dashboard:
-          Name: 'Student Projects'
-          Description: 'Storage Lens Dashboard for Student Project Buckets'
 # ELB Access Logs tables defined in Glue Data Catalog.
   ELBLogsDatabase:
     Type: AWS::Glue::Database
