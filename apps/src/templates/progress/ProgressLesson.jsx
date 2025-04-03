@@ -105,12 +105,7 @@ class ProgressLesson extends React.Component {
 
     const showAsLocked = isLockedForUser || isLockedForAllStudents;
 
-    const title = lesson.lessonNumber
-      ? i18n.lessonNumbered({
-          lessonNumber: lesson.lessonNumber,
-          lessonName: lesson.name,
-        })
-      : lesson.name;
+    const title = lesson.title;
 
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
