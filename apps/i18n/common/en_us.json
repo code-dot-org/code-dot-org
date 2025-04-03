@@ -1867,7 +1867,7 @@
   "makeNewSounds": "Make new sounds",
   "makerSetupSupportLinkText": "Maker Toolkit Support",
   "makerSetupDeprecationNoticeOldChromeTitle": "Maker Toolkit requires a newer version of Chrome",
-  "makerSetupDeprecationNoticeOldChromeDetails": "The Maker Toolkit does not support your current version of Chrome. Please update to a version greater than or equal to {minChromeVersion} to continue using the Maker Toolkit. To learn more, please refer to",
+  "makerSetupDeprecationNoticeOldChromeDetails": "The Maker Toolkit does not support your current version of Chrome. Please update to a version greater than or equal to {minChromeVersion} to continue using the Maker Toolkit. To learn more, please refer to:",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",
   "manageAIModels": "Manage AI Models",
   "manageAssets": "Manage Assets",
