@@ -81,6 +81,7 @@ export const lessonShape = PropTypes.shape({
             position: PropTypes.number.isRequired,
             displayName: PropTypes.string.isRequired,
             link: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
           })
         ).isRequired,
       })

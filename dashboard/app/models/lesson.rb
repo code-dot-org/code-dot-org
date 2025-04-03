@@ -469,7 +469,8 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedInstructor: user&.verified_instructor?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
+      title: localized_title,
     }
   end
 
