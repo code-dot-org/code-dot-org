@@ -35,22 +35,20 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
-          <div className={styles.sectionCardHeaderText}>
-            <Heading5>{section.name}</Heading5>
-          </div>
-          <div className={styles.sectionCardCode}>
-            <OverlineOneText>
-              {i18n.classCode()}
-              <a
-                href={`/join/${section.code}`}
-                target="_blank"
-                rel="noreferrer"
-                onClick={onClickClassCode}
-              >
-                {section.code}
-              </a>
-            </OverlineOneText>
-          </div>
+          <Heading5 className={styles.sectionCardHeaderText}>
+            {section.name}
+          </Heading5>
+          <OverlineOneText className={styles.sectionCardCode}>
+            {i18n.classCode()}
+            <a
+              href={`/join/${section.code}`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={onClickClassCode}
+            >
+              {section.code}
+            </a>
+          </OverlineOneText>
         </div>
         <div className={styles.sectionCardHeaderRight}>
           <SectionOptionsDropdown

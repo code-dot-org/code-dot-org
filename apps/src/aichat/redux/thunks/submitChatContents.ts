@@ -76,9 +76,18 @@ export const submitChatContents = createAsyncThunk(
         aiCustomizations,
         aichatContext
       );
+
+      const fileCount = newUserMessage.assets?.length || 0;
+      const fileCountPdf =
+        newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+          .length || 0;
+      const fileCountImage = fileCount - fileCountPdf;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
           levelPath: window.location.pathname,
+          fileCount,
+          fileCountImage,
+          fileCountPdf,
         })
       );
     } catch (error) {

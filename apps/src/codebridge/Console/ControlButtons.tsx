@@ -158,7 +158,7 @@ const ControlButtons: React.FunctionComponent = () => {
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             size={'xs'}
-            type={'primary'}
+            color={'white'}
             className={classNames(
               moduleStyles.controlButton,
               darkModeStyles.primaryButton

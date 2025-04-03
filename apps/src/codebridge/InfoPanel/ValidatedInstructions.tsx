@@ -396,7 +396,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             <Button
               text={navigationText}
               onClick={handleNavigation}
-              type={'primary'}
+              color={'white'}
               className={moduleStyles.buttonInstruction}
               iconLeft={navigationIcon}
               size={'s'}
