@@ -26,6 +26,7 @@ export const Basics: FC<BasicsProps> = ({
   capacity,
   description,
   courseOfferings,
+  errors,
   dispatchWorkshop,
 }) => {
   const {data: fetchedCourseOfferings} = useFetch<CourseOffering[]>(
@@ -120,163 +121,195 @@ export const Basics: FC<BasicsProps> = ({
   }, [fields.subject?.options]);
 
   return (
-    <>
+    <section>
       <Heading2 visualAppearance="heading-sm">Workshop Basics</Heading2>
-      <div className={commonStyles.row}>
-        {fields.name && (
-          <TextField
-            name="name"
-            onChange={handleChange}
-            value={name}
-            label="Workshop name"
-            size="s"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.name.required,
-            })}
-          />
-        )}
-        {fields.grades && (
-          <CheckboxDropdown
-            name="grades"
-            onChange={handleGradesChange}
-            styleAsFormField={true}
-            hideControls
-            checkedOptions={grades}
-            allOptions={StudentGradeLevels.map(value => ({
-              value,
-              label: value,
-            }))}
-            labelText="Grade levels"
-            size="s"
-            helperMessage="Select applicable grade levels for this workshop."
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.grades.required,
-            })}
-          />
-        )}
-        {fields.subject && (
-          <SimpleDropdown
-            name="subject"
-            onChange={handleChange}
-            styleAsFormField={true}
-            items={subjectOptions}
-            selectedValue={subject}
-            labelText="Subject"
-            size="s"
-            dropdownTextThickness="thin"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.subject.required,
-            })}
-          />
-        )}
-      </div>
-      <div className={commonStyles.row}>
-        {fields.prereq && (
-          <SimpleDropdown
-            name="hasPrereq"
-            onChange={handleChange}
-            styleAsFormField={true}
-            items={[
-              {value: 'true', text: 'Has prerequisites'},
-              {value: 'false', text: 'No experience needed'},
-            ]}
-            selectedValue={hasPrereq.toString()}
-            labelText="Experience needed"
-            helperMessage="Indicate if this workshop requires previous experience."
-            size="s"
-            dropdownTextThickness="thin"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.prereq.required,
-            })}
-          />
-        )}
-        {fields.capacity && (
-          <TextField
-            inputType="number"
-            name="capacity"
-            onChange={handleChange}
-            value={capacity?.toString()}
-            label="Capacity"
-            helperMessage="Maximum number of attendees allowed."
-            size="s"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.capacity.required,
-            })}
-          />
-        )}
-        {/* empty space aligns with optional subject */}
-        {subject && <div className={commonStyles.item} />}
-      </div>
-      <div className={commonStyles.row}>
-        {fields.prereq && hasPrereq && (
+      {(fields.name || fields.grades || fields.subject) && (
+        <div className={commonStyles.row}>
+          {fields.name && (
+            <TextField
+              name={fields.name.stateKey}
+              onChange={handleChange}
+              value={name}
+              label={fields.name.label}
+              size="s"
+              className={classNames(commonStyles.item, commonStyles.textField, {
+                [commonStyles.required]: fields.name.required,
+              })}
+              errorMessage={errors.name}
+            />
+          )}
+          {fields.grades && (
+            <CheckboxDropdown
+              name={fields.grades.stateKey}
+              onChange={handleGradesChange}
+              styleAsFormField={true}
+              hideControls
+              checkedOptions={grades}
+              allOptions={StudentGradeLevels.map(value => ({
+                value,
+                label: value,
+              }))}
+              labelText={fields.grades.label}
+              size="s"
+              helperMessage="Select applicable grade levels for this workshop."
+              className={classNames(
+                commonStyles.item,
+                commonStyles.customDropdown,
+                {
+                  [commonStyles.required]: fields.grades.required,
+                }
+              )}
+              errorMessage={errors.grades}
+            />
+          )}
+          {fields.subject && (
+            <SimpleDropdown
+              name={fields.subject.stateKey}
+              onChange={handleChange}
+              styleAsFormField={true}
+              items={subjectOptions}
+              selectedValue={subject}
+              labelText={fields.subject.label}
+              size="s"
+              dropdownTextThickness="thin"
+              className={classNames(
+                commonStyles.item,
+                commonStyles.simpleDropdown,
+                {
+                  [commonStyles.required]: fields.subject.required,
+                  [commonStyles.error]: errors.subject,
+                }
+              )}
+              errorMessage={errors.subject}
+            />
+          )}
+        </div>
+      )}
+      {(fields.prereq || fields.capacity) && (
+        <div className={commonStyles.row}>
+          {fields.prereq && (
+            <SimpleDropdown
+              name="hasPrereq"
+              onChange={handleChange}
+              styleAsFormField={true}
+              items={[
+                {value: 'true', text: 'Has prerequisites'},
+                {value: 'false', text: 'No experience needed'},
+              ]}
+              selectedValue={hasPrereq.toString()}
+              labelText="Experience needed"
+              helperMessage="Indicate if this workshop requires previous experience."
+              size="s"
+              dropdownTextThickness="thin"
+              className={classNames(
+                commonStyles.item,
+                commonStyles.simpleDropdown,
+                commonStyles.required
+              )}
+            />
+          )}
+          {fields.capacity && (
+            <TextField
+              inputType="number"
+              name={fields.capacity.stateKey}
+              onChange={handleChange}
+              value={capacity?.toString()}
+              label={fields.capacity.label}
+              helperMessage="Maximum number of attendees allowed."
+              size="s"
+              className={classNames(commonStyles.item, commonStyles.textField, {
+                [commonStyles.required]: fields.capacity.required,
+              })}
+              errorMessage={errors.capacity}
+            />
+          )}
+          {/* empty space aligns with optional subject */}
+          {fields.subject && <div className={commonStyles.item} />}
+        </div>
+      )}
+      {fields.prereq && hasPrereq && (
+        <div className={commonStyles.row}>
           <div className={commonStyles.card}>
             <TextField
-              name="prereq"
+              name={fields.prereq.stateKey}
               onChange={handleChange}
               value={prereq}
-              label="Workshop prerequisites"
+              label={fields.prereq.label}
               size="s"
-              className={classNames(commonStyles.item, {
+              className={classNames(commonStyles.item, commonStyles.textField, {
                 [commonStyles.required]: fields.prereq.required,
               })}
+              errorMessage={errors.prereq}
             />
           </div>
-        )}
-      </div>
-      <div className={commonStyles.row}>
-        {description && (
+        </div>
+      )}
+      {fields.description && (
+        <div className={commonStyles.row}>
           <FormFieldWrapper
-            label="Workshop description"
+            label={fields.description.label}
             helperMessage="Public-facing summary to attract and inform participants."
             size="s"
-            className={classNames(commonStyles.item, commonStyles.required)}
+            className={classNames(commonStyles.item, commonStyles.textField, {
+              [commonStyles.required]: fields.description.required,
+              [commonStyles.error]: errors.description,
+            })}
+            errorMessage={errors.description}
           >
             <textarea
               id="description"
-              name="description"
+              name={fields.description.stateKey}
               onChange={handleChange}
               value={description}
               placeholder="Enter description here"
             />
           </FormFieldWrapper>
-        )}
-      </div>
-      <div className={commonStyles.row}>
-        {fields.course_offerings && (
-          <CheckboxDropdown
-            name="courseOfferings"
-            onChange={handleCourseOfferingsChange}
-            onSelectAll={handleSelectAllCourseOfferings}
-            selectAllText="Select all"
-            clearAllText="Clear all"
-            onClearAll={handleClearAllCourseOfferings}
-            styleAsFormField={true}
-            checkedOptions={courseOfferings}
-            allOptions={
-              fetchedCourseOfferings?.map(({id, display_name}) => ({
-                value: id.toString(),
-                label: display_name,
-              })) ?? []
-            }
-            labelText="Select workshop topic(s)"
-            size="s"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.course_offerings.required,
-            })}
-          />
-        )}
-      </div>
-      {courseOfferingsById && (
-        <Tags
-          className={commonStyles.wrapContainer}
-          tagsList={courseOfferings.map(offeringId => ({
-            type: 'closable',
-            onClose: handleRemoveCourseOffering(offeringId),
-            label: courseOfferingsById[Number(offeringId)]?.display_name ?? '',
-          }))}
-        />
+        </div>
       )}
-    </>
+      {fields.course_offerings && (
+        <div className={commonStyles.row}>
+          <div className={commonStyles.col}>
+            <CheckboxDropdown
+              name={fields.course_offerings.stateKey}
+              onChange={handleCourseOfferingsChange}
+              onSelectAll={handleSelectAllCourseOfferings}
+              selectAllText="Select all"
+              clearAllText="Clear all"
+              onClearAll={handleClearAllCourseOfferings}
+              styleAsFormField={true}
+              checkedOptions={courseOfferings}
+              allOptions={
+                fetchedCourseOfferings?.map(({id, display_name}) => ({
+                  value: id.toString(),
+                  label: display_name,
+                })) ?? []
+              }
+              labelText={fields.course_offerings.label}
+              size="s"
+              className={classNames(
+                commonStyles.item,
+                commonStyles.customDropdown,
+                {
+                  [commonStyles.required]: fields.course_offerings.required,
+                }
+              )}
+              errorMessage={errors.courseOfferings}
+            />
+            {courseOfferingsById && (
+              <Tags
+                className={commonStyles.wrapContainer}
+                tagsList={courseOfferings.map(offeringId => ({
+                  type: 'closable',
+                  onClose: handleRemoveCourseOffering(offeringId),
+                  label:
+                    courseOfferingsById[Number(offeringId)]?.display_name ?? '',
+                }))}
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </section>
   );
 };
 

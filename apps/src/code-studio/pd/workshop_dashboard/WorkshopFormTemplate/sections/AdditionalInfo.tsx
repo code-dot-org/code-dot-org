@@ -16,6 +16,7 @@ export const AdditionalInfo: FC<AdditionalInfoProps> = ({
   fee,
   participantGroupType,
   notes,
+  errors,
   dispatchWorkshop,
 }) => {
   const participantGroupTypeOptions = useMemo(() => {
@@ -39,61 +40,73 @@ export const AdditionalInfo: FC<AdditionalInfoProps> = ({
     });
   };
   return (
-    <>
+    <section>
       <Heading2 visualAppearance="heading-sm">Additional Information</Heading2>
-      <div className={commonStyles.row}>
-        {fields.fee && (
-          <TextField
-            name="fee"
-            helperMessage="You can leave this field blank if the workshop is free"
-            onChange={handleChange}
-            value={fee}
-            label="Workshop cost"
-            size="s"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.fee.required,
-            })}
-          />
-        )}
-        {fields.participant_group_type ? (
-          <SimpleDropdown
-            name="participantGroupType"
-            onChange={handleChange}
-            styleAsFormField={true}
-            items={participantGroupTypeOptions}
-            selectedValue={participantGroupType}
-            labelText="Cohort type"
-            size="s"
-            dropdownTextThickness="thin"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.participant_group_type.required,
-            })}
-          />
-        ) : (
-          <div className={commonStyles.item} />
-        )}
-      </div>
-      <div className={commonStyles.row}>
-        {fields.notes && (
+      {(fields.fee || fields.participant_group_type) && (
+        <div className={commonStyles.row}>
+          {fields.fee && (
+            <TextField
+              name={fields.fee.stateKey}
+              helperMessage="You can leave this field blank if the workshop is free"
+              onChange={handleChange}
+              value={fee}
+              label={fields.fee.label}
+              size="s"
+              className={classNames(commonStyles.item, commonStyles.textField, {
+                [commonStyles.required]: fields.fee.required,
+              })}
+              errorMessage={errors.fee}
+            />
+          )}
+          {fields.participant_group_type ? (
+            <SimpleDropdown
+              name={fields.participant_group_type.stateKey}
+              onChange={handleChange}
+              styleAsFormField={true}
+              items={participantGroupTypeOptions}
+              selectedValue={participantGroupType}
+              labelText={fields.participant_group_type.label}
+              size="s"
+              dropdownTextThickness="thin"
+              className={classNames(
+                commonStyles.item,
+                commonStyles.simpleDropdown,
+                {
+                  [commonStyles.required]:
+                    fields.participant_group_type.required,
+                  [commonStyles.error]: errors.participantGroupType,
+                }
+              )}
+              errorMessage={errors.participantGroupType}
+            />
+          ) : (
+            <div className={commonStyles.item} />
+          )}
+        </div>
+      )}
+      {fields.notes && (
+        <div className={commonStyles.row}>
           <FormFieldWrapper
-            label="Attendee notes"
+            label={fields.notes.label}
             helperMessage="Notes for logistics like food, parking, or other event details."
             size="s"
-            className={classNames(commonStyles.item, {
+            className={classNames(commonStyles.item, commonStyles.textField, {
               [commonStyles.required]: fields.notes.required,
+              [commonStyles.error]: errors.notes,
             })}
+            errorMessage={errors.notes}
           >
             <textarea
               id="notes"
-              name="notes"
+              name={fields.notes.stateKey}
               onChange={handleChange}
               value={notes}
               placeholder="Enter attendee notes here"
             />
           </FormFieldWrapper>
-        )}
-      </div>
-    </>
+        </div>
+      )}
+    </section>
   );
 };
 

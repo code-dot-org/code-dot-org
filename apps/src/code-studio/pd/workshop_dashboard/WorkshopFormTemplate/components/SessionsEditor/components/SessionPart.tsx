@@ -17,7 +17,7 @@ import React, {
 import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import {TIME_FORMAT} from '../../../../workshopConstants';
-import {SessionFormState, SessionAction} from '../../../types';
+import {SessionFormState, SessionAction, SessionFields} from '../../../types';
 
 import commonStyles from '../../../styles.module.scss';
 import styles from '../styles.module.scss';
@@ -33,6 +33,8 @@ export const SessionPart: FC<{
   meetingLink: SessionFormState['meetingLink'];
   sameAsPrevious: SessionFormState['sameAsPrevious'];
   showSameAsPrevious: boolean;
+  fields: SessionFields;
+  errors?: Record<keyof SessionFormState, string>;
   dispatchSessions: Dispatch<SessionAction>;
 }> = ({
   id,
@@ -45,6 +47,8 @@ export const SessionPart: FC<{
   meetingLink,
   sameAsPrevious,
   showSameAsPrevious,
+  fields,
+  errors,
   dispatchSessions,
 }) => {
   const timeOptions = useMemo(() => {
@@ -109,20 +113,25 @@ export const SessionPart: FC<{
   );
 
   return (
-    <>
+    <div>
       <div className={classNames(commonStyles.row, styles.sessionRow)}>
         <TextField
-          label="Date"
-          name="date"
+          label={fields.date.label}
+          name={fields.date.stateKey}
           inputType="date"
           size="s"
-          className={classNames(commonStyles.item, commonStyles.required)}
+          className={classNames(
+            commonStyles.item,
+            commonStyles.textField,
+            commonStyles.required
+          )}
           value={date}
           onChange={updateSession}
+          errorMessage={errors?.date}
         />
         <SimpleDropdown
-          name="start"
-          labelText="Start Time"
+          name={fields.start.stateKey}
+          labelText={fields.start.label}
           onChange={updateSession}
           iconLeft={{iconName: 'clock'}}
           selectedValue={start}
@@ -131,13 +140,15 @@ export const SessionPart: FC<{
           size="s"
           className={classNames(
             commonStyles.item,
+            commonStyles.simpleDropdown,
             styles.timeDropdown,
             commonStyles.required
           )}
+          errorMessage={errors?.start}
         />
         <SimpleDropdown
-          name="end"
-          labelText="End Time"
+          name={fields.end.stateKey}
+          labelText={fields.end.label}
           onChange={updateSession}
           iconLeft={{iconName: 'clock'}}
           selectedValue={end}
@@ -146,13 +157,15 @@ export const SessionPart: FC<{
           size="s"
           className={classNames(
             commonStyles.item,
+            commonStyles.simpleDropdown,
             styles.timeDropdown,
             commonStyles.required
           )}
+          errorMessage={errors?.end}
         />
         <SimpleDropdown
-          name="format"
-          labelText="Format"
+          name={fields.session_format.stateKey}
+          labelText={fields.session_format.label}
           onChange={updateSession}
           selectedValue={format}
           items={PdSessionFormats.map(({value, label}) => ({
@@ -161,7 +174,13 @@ export const SessionPart: FC<{
           }))}
           dropdownTextThickness="thin"
           size="s"
-          className={classNames(commonStyles.item, commonStyles.required)}
+          className={classNames(
+            commonStyles.item,
+            commonStyles.simpleDropdown,
+
+            commonStyles.required
+          )}
+          errorMessage={errors?.format}
         />
         <WithTooltip
           tooltipOverlayClassName={styles.deleteButtonContainer}
@@ -184,56 +203,75 @@ export const SessionPart: FC<{
           />
         </WithTooltip>
       </div>
-      <div className={commonStyles.card}>
-        <div className={commonStyles.row}>
-          {format === 'in_person' && (
-            <>
-              <TextField
-                label="Location name"
-                name="locationName"
+      {(fields.location_name ||
+        fields.location_address ||
+        fields.meeting_link) && (
+        <div className={commonStyles.card}>
+          <div className={commonStyles.row}>
+            {format === 'in_person' &&
+              fields.location_name &&
+              fields.location_address && (
+                <>
+                  <TextField
+                    label={fields.location_name.label}
+                    name={fields.location_name.stateKey}
+                    size="s"
+                    className={classNames(
+                      commonStyles.item,
+                      commonStyles.textField
+                    )}
+                    onChange={updateSession}
+                    value={locationName}
+                    errorMessage={errors?.locationName}
+                  />
+                  <TextField
+                    label={fields.location_address.label}
+                    name={fields.location_address.stateKey}
+                    size="s"
+                    className={classNames(
+                      commonStyles.item,
+
+                      commonStyles.textField
+                    )}
+                    onChange={updateSession}
+                    value={locationAddress}
+                    errorMessage={errors?.locationAddress}
+                  />
+                </>
+              )}
+            {format === 'virtual' && fields.meeting_link && (
+              <>
+                <TextField
+                  label={fields.meeting_link.label}
+                  name={fields.meeting_link.stateKey}
+                  size="s"
+                  className={classNames(
+                    commonStyles.item,
+                    commonStyles.textField
+                  )}
+                  onChange={updateSession}
+                  value={meetingLink}
+                  errorMessage={errors?.meetingLink}
+                />
+                {/* blank space */}
+                <div className={commonStyles.item} />
+              </>
+            )}
+          </div>
+          {showSameAsPrevious && (
+            <div className={styles.copyPreviousCheckbox}>
+              <Checkbox
+                label={`${sameAsPreviousLabel} same as previous`}
+                name={`${sameAsPreviousLabel} same as previous`}
+                checked={sameAsPrevious}
                 size="s"
-                className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={updateSession}
-                value={locationName}
+                onChange={handleSameAsPrevious}
               />
-              <TextField
-                label="Location address"
-                name="locationAddress"
-                size="s"
-                className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={updateSession}
-                value={locationAddress}
-              />
-            </>
-          )}
-          {format === 'virtual' && (
-            <>
-              <TextField
-                label="Meeting link"
-                name="meetingLink"
-                size="s"
-                className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={updateSession}
-                value={meetingLink}
-              />
-              {/* blank space */}
-              <div className={commonStyles.item} />
-            </>
+            </div>
           )}
         </div>
-        {showSameAsPrevious && (
-          <div className={styles.copyPreviousCheckbox}>
-            <Checkbox
-              label={`${sameAsPreviousLabel} same as previous`}
-              name={`${sameAsPreviousLabel} same as previous`}
-              checked={sameAsPrevious}
-              size="s"
-              onChange={handleSameAsPrevious}
-            />
-          </div>
-        )}
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
