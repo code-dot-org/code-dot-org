@@ -136,7 +136,7 @@ class TestController < ApplicationController
 
     # Need to also assign the course if the script is a part of a single-unit course
     section = script.unit_group.single_unit_course? ?
-                Section.create(name: "New Section", user: teacher_user, script: script, course: script.unit_group, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
+                Section.create(name: "New Section", user: teacher_user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
                 Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
