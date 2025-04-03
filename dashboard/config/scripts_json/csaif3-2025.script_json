@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 23:15:00 UTC",
+    "serialized_at": "2025-04-01 22:49:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1017,8 +1017,14 @@
       "key": "21071237-8c4f-4f8e-a954-a305fbf7145c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2. Levels 2 through 9 have several industry professionals they can interview in different industries. Student should choose the level that matches their selected innovation and complete the Industry Interviews section of their activity guide.",
-        "progression_name": "Industry Interviews"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students use the table on the slide to pick which level they should go to next. Levels 2 through 9 have several industry professionals they can interview in different industries. Student should choose the level that matches their selected innovation and complete the Industry Interviews section of their activity guide.",
+        "progression_name": "Industry Interviews",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to demo how to interact with AI Chat before sending students off to conduct these interviews on their own."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "21071237-8c4f-4f8e-a954-a305fbf7145c",
@@ -1091,15 +1097,33 @@
       }
     },
     {
-      "key": "65bf0883-3b38-4c21-989f-67d9cd54f502",
-      "position": 1,
+      "key": "f03c791a-d698-41af-843f-007eab784719",
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair student groups with another student group (ideally one with a different selected innovation) to share their findings.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 12 to complete the reflection questions.",
-        "progression_name": "Check for Understanding",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair student groups with another student group (ideally one with a different selected innovation) to share their findings.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 12 to complete the reflection questions.",
+        "progression_name": "Check For Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
             "markdown": "The reflection questions on Level 12 can be used to assess students' understanding of different career pathways in computing and how computer systems and people work together to solve problems."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f03c791a-d698-41af-843f-007eab784719",
+        "lesson_activity.key": "0893fa88-7439-4643-8691-599570812062"
+      }
+    },
+    {
+      "key": "65bf0883-3b38-4c21-989f-67d9cd54f502",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson."
           }
         ]
       },
@@ -1358,21 +1382,16 @@
       }
     },
     {
-      "key": "b4bf0bb8-5d78-479d-9987-9a0606deadf1",
-      "position": 15,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "b4bf0bb8-5d78-479d-9987-9a0606deadf1",
-        "lesson_activity.key": "40645ac0-1c4d-42ba-bd6c-8a14541383ed"
-      }
-    },
-    {
       "key": "e531b3e4-36b6-4592-8c89-9e1a9a7ec475",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Build My First PC\" from timemarks 1:08 to 5:48 to learn how to assemble a computer from scratch.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Ask students to share their thoughts with the class after watching the “How to Build a PC” video.\n- *What did you notice about the process of building a computer?*\n- *Did anything surprise you?*"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Have students respond to the Question of the Day in their Unit Guides. After students have had some time to respond, assign students numbers in small groups and give them a discussion prompt. After a short discussion, randomly call out a number—students with that number share their group’s response.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teaching Tip\nIf you have time and want to give students an example of how all these components might fit together in a real computer, you may choose to show them this video [\"Build My First PC\"](https://youtu.be/QlaTC0yGoPg?si=bR2eA1MQrYS5iMZR) or any other you find via a web search."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e531b3e4-36b6-4592-8c89-9e1a9a7ec475",
@@ -1383,10 +1402,22 @@
       "key": "4b8de377-7236-4bdb-97d4-419dad42811a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Guess Who? Device Edition handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write one to two**yes**or**no**questions with a shoulder partner that can help to narrow down the possible devices (*e.g. Does the device have a touch screen?*)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Call on students and have them pose one of their questions to ask out loud. You should answer with a***Yes***or***No***depending which device you’ve chosen. Instruct students to cross out the options they think are eliminated based on your answer on their activity guides. Continue this until students the majority of students raise their hand, signaling that are able to use deductive reasoning in order to accurately guess the device.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What strategy did you use to determine the device?*\n- *How could you have arrived at the correct device quicker?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might have asked about specific properties – the use, the appearance, or the price, for instance. By asking enough of these questions, they are able to systematically eliminate possibilities until only one remains. This is an example of deductive reasoning and is a useful troubleshooting strategy that we will use in today's lesson. Students might note that asking the questions in a different order might have helped them narrow down the potential right answer more quickly depending on which question they asked first. Asking a question that might eliminate the most possible answers is an effective strategy to employ.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Guess Who? Device Edition handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write one to two **yes** or **no** questions with a shoulder partner that can help to narrow down the possible devices (*e.g. Does the device have a touch screen?*)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Call on students and have them pose one of their questions to ask out loud. You should answer with a ***Yes*** or ***No*** depending which device you’ve chosen. Instruct students to cross out the options they think are eliminated based on your answer on their activity guides. Continue this until students the majority of students raise their hand, signaling that are able to use deductive reasoning in order to accurately guess the device.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What strategy did you use to determine the device?*\n- *How could you have arrived at the correct device quicker?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might have asked about specific properties – the use, the appearance, or the price, for instance. By asking enough of these questions, they are able to systematically eliminate possibilities until only one remains. This is an example of deductive reasoning and is a useful troubleshooting strategy that we will use in today's lesson. Students might note that asking the questions in a different order might have helped them narrow down the potential right answer more quickly depending on which question they asked first. Asking a question that might eliminate the most possible answers is an effective strategy to employ.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "4b8de377-7236-4bdb-97d4-419dad42811a",
+        "lesson_activity.key": "ae04baee-82c6-4728-993e-827af0b8cda2"
+      }
+    },
+    {
+      "key": "21f25ce0-703c-4090-b361-8254a615f126",
+      "position": 2,
+      "properties": {
+        "description": "Today you’re stepping into the shoes of a tech professional—like an IT technician, hardware engineer, or systems support specialist. These professionals use logical thinking and problem-solving every day to diagnose and fix real hardware issues. Let's see how you'd approach it.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "21f25ce0-703c-4090-b361-8254a615f126",
         "lesson_activity.key": "ae04baee-82c6-4728-993e-827af0b8cda2"
       }
     },
@@ -1455,8 +1486,24 @@
       }
     },
     {
-      "key": "9c54f6c2-c827-481e-ba1e-f24d5e7b3df3",
+      "key": "fac75228-8e3e-4618-9f31-127f82c9ff48",
       "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Before students begin their own troubleshooting chats, model one live as a class using a character like Maya. Walk through how to ask a clear question, read the AI’s response carefully, and use it to eliminate unlikely causes. This helps students think critically instead of guessing. Remind them that this process is similar to the Guess Who? warm-up. Each question narrows the list of possibilities."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fac75228-8e3e-4618-9f31-127f82c9ff48",
+        "lesson_activity.key": "c34e67f4-9a63-4471-b419-f020b939678c"
+      }
+    },
+    {
+      "key": "9c54f6c2-c827-481e-ba1e-f24d5e7b3df3",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 3, Level 3 to complete the **You Do** section of the activity guide.",
         "progression_name": "Hardware Troubleshooting Scenarios"
@@ -1468,7 +1515,7 @@
     },
     {
       "key": "90b258fd-5fc7-4cf1-bf35-cd1b4e8fc7dc",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students as necessary with the steps of the SNOT strategy."
       },
@@ -1479,7 +1526,7 @@
     },
     {
       "key": "3ebb57ec-7a9b-4ff1-9c5b-69afbfc5afd4",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Next, you will assume the role of the technical expert, acting like an IT support agent. Ask questions, investigate potential causes, and use available resources to find the most logical solution.",
         "remarks": true
@@ -1491,7 +1538,7 @@
     },
     {
       "key": "9298847a-4b62-4519-8390-b10fd03d6f55",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Do This:** Direct students to Lesson 3, Level 4. Students act as tech support for a user experiencing the same issue in the AI Chatbot simulation. They should complete their activity guide for the scenario that they have chosen, identifying the most likely cause of the problem.",
         "progression_name": "Tech Support Chatbot",
@@ -1509,7 +1556,7 @@
     },
     {
       "key": "309c4c6f-62a8-417e-98e9-b2a757b4f9c7",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did employing a strategy for troubleshooting assist with resolving hardware issues?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might articulate that using a strategy like SNOT reduces guesswork and frustration by breaking down the problem into manageable parts (**decomposition** in computational thinking), helps pinpoint causes more quickly and accurately, and encourages independent, logical problem-solving skills that transfer to various real-world situations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 5 to complete Levels 5 and 6.\n- **Level 5:** Students choose one of the videos that provides details about a hardware-related career\n- **Level 6:** Students speculate about how troubleshooting strategies might be employed within this specific career",
         "progression_name": "Hardware Careers: Components and Troubleshooting",
@@ -1527,7 +1574,7 @@
     },
     {
       "key": "541db2b8-43fc-473d-b4c6-226c3d8f7953",
-      "position": 11,
+      "position": 12,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3724,10 +3771,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "computer-systems-lesson1-level12_2025"
-        ],
-        "progression": "Check for Understanding"
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -3737,7 +3781,7 @@
         "lesson.key": "Introduction to Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
-        "activity_section.key": "65bf0883-3b38-4c21-989f-67d9cd54f502"
+        "activity_section.key": "f03c791a-d698-41af-843f-007eab784719"
       },
       "level_keys": [
         "computer-systems-lesson1-level12_2025"
@@ -3895,31 +3939,6 @@
     },
     {
       "chapter": 20,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson2-level6_2025"
-        ],
-        "progression": "Student Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level6_2025"
-        ],
-        "lesson.key": "Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "b4bf0bb8-5d78-479d-9987-9a0606deadf1"
-      },
-      "level_keys": [
-        "computer-systems-lesson2-level6_2025"
-      ]
-    },
-    {
-      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3944,7 +3963,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3969,7 +3988,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3994,7 +4013,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4019,7 +4038,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4044,7 +4063,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4069,7 +4088,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4094,7 +4113,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4119,7 +4138,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4144,7 +4163,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4169,7 +4188,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4194,7 +4213,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4219,7 +4238,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4244,7 +4263,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4269,7 +4288,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4294,7 +4313,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4319,7 +4338,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4344,7 +4363,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4369,7 +4388,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4394,7 +4413,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4419,7 +4438,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4444,7 +4463,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4469,7 +4488,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4494,7 +4513,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -4519,7 +4538,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4544,7 +4563,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4569,7 +4588,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4594,7 +4613,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4619,7 +4638,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4644,7 +4663,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4669,7 +4688,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4694,7 +4713,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4719,7 +4738,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4744,7 +4763,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4769,7 +4788,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4794,7 +4813,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4819,7 +4838,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4844,7 +4863,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4869,7 +4888,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4894,7 +4913,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4919,7 +4938,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4944,7 +4963,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4969,7 +4988,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4994,7 +5013,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5019,7 +5038,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5198,7 +5217,7 @@
         "lesson.key": "Introduction to Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
-        "activity_section.key": "65bf0883-3b38-4c21-989f-67d9cd54f502"
+        "activity_section.key": "f03c791a-d698-41af-843f-007eab784719"
       }
     },
     {
@@ -5271,18 +5290,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
         "activity_section.key": "12c8c1e7-f066-4bbf-87c5-6b5f3c8144e3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson2-level6_2025",
-        "script_level.level_keys": [
-          "computer-systems-lesson2-level6_2025"
-        ],
-        "lesson.key": "Hardware",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "b4bf0bb8-5d78-479d-9987-9a0606deadf1"
       }
     },
     {
@@ -5853,7 +5860,7 @@
     },
     {
       "name": "[KEY] Computer Innovations and Careers",
-      "url": "https://docs.google.com/document/d/17DeraVp683PTsNxzdQaORhUhmA9OAYPAl9wB8dPMIuM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1kjF_QUElEx-F-SXsnVNox295S_pQp1s7yUo6KSB1iyA/edit?usp=drive_link",
       "key": "_key_computer_innovations_and_careers",
       "properties": {
         "audience": "Verified Teacher",
@@ -5865,7 +5872,7 @@
     },
     {
       "name": "[KEY] Hardware",
-      "url": "https://docs.google.com/document/d/1vLzrOOnAQxFSa9qysEhgKT-v1_n8GQIXjRU1io2KOqc",
+      "url": "https://docs.google.com/document/d/1EbLc2x1QUroI3ho1Bj1MwW7P1dJqqYMxeJRw57q6YbU/view",
       "key": "_key_hardware",
       "properties": {
         "audience": "Verified Teacher",
@@ -5995,7 +6002,7 @@
     },
     {
       "name": "Build a Computer System",
-      "url": "https://docs.google.com/presentation/d/1M-OgZVPYJkQqTWNqUw61rqQ5fOROGlk0kUuWs0IEoyc/view",
+      "url": "https://docs.google.com/presentation/d/1-KPyOZvecZiR2SVR9fx9DFUdYqkh_x7kUn_kvRhManw/view",
       "key": "build_a_computer_system_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6007,7 +6014,7 @@
     },
     {
       "name": "Computer Innovations and Careers",
-      "url": "https://docs.google.com/document/d/1cEQFriaJ_fgCw3Dx7umOgE96Vwh7e6us4sp255MyizE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1OV8h6juGv6ddmEvx6ZwjQHcitBhBiF3Bn4AZECbwtKM/edit?usp=drive_link",
       "key": "computer_innovations_and_careers",
       "properties": {
         "audience": "Student",
@@ -6016,6 +6023,18 @@
       },
       "seeding_key": {
         "resource.key": "computer_innovations_and_careers"
+      }
+    },
+    {
+      "name": "Computer Systems and Devices Unit Guide",
+      "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/view",
+      "key": "computer_systems_and_devices_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
     {
@@ -6057,7 +6076,7 @@
     },
     {
       "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/presentation/d/195zer7gkbNraa-vVvMvHIZO2qaEgJTfQDzttQr7SUbA/view",
+      "url": "https://docs.google.com/presentation/d/10vG0dTzFw1Y3VJbzpcPka3P0tYb-7WrHDESQbga7wD4/view",
       "key": "data_in_computer_systems_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6107,7 +6126,7 @@
     },
     {
       "name": "Hardware",
-      "url": "https://docs.google.com/document/d/1iRDJnqWpnHLtAHkDlm7-A8yQZfYn9o14x068EBJQvQA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1IhtigjCqB-sVtAaLFB0j1ed7Msxu0n-SI1G9ADjx66c/view",
       "key": "hardware",
       "properties": {
         "audience": "Student",
@@ -6120,7 +6139,7 @@
     },
     {
       "name": "Hardware",
-      "url": "https://docs.google.com/presentation/d/1mbT3g5Y4hUA0Nycw6rscmJ7N8rN1fuvSTlAwaPSsIpM/view",
+      "url": "https://docs.google.com/presentation/d/1WsSW6ygqmnMUznpWdctNcj1fPrFtktBhwPRhtUOqsdI/view",
       "key": "hardware_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6157,7 +6176,7 @@
     },
     {
       "name": "How AI Uses Data",
-      "url": "https://docs.google.com/presentation/d/1rogWZzX4_9x8Sg3Kphi28szLXH6q5B2GZ3bQ2BwuBQ8/view",
+      "url": "https://docs.google.com/presentation/d/1XKNXXHR597Miswte9i57sSd0h0ukLaXuPeNoEXgCpZQ/view",
       "key": "how_ai_uses_data_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6181,7 +6200,7 @@
     },
     {
       "name": "Introduction to Computer Systems",
-      "url": "https://docs.google.com/presentation/d/1k-qieHMGe9J5uJIdp3tPLyfE-lgDEGHAO8iXjaSwSJA/view",
+      "url": "https://docs.google.com/presentation/d/1i6CSO3A5GbcZGk6Q6vzbF3LXD_oSqCMejJZdBSD0_aQ/edit?usp=drive_link",
       "key": "introduction_to_computer_systems",
       "properties": {
         "audience": "Verified Teacher",
@@ -6193,7 +6212,7 @@
     },
     {
       "name": "IoT and Emerging Technologies",
-      "url": "https://docs.google.com/presentation/d/1389pJoeNUtr_2wwYbZvvahmoahgVFbhxPyVXGrqFLbw/view",
+      "url": "https://docs.google.com/presentation/d/1v5f1DdIv1Y9aOWzKNvz1q71Td4-HMbg5T11ECfeh6xo/view",
       "key": "iot_and_emerging_technologies",
       "properties": {
         "audience": "Verified Teacher",
@@ -6205,7 +6224,7 @@
     },
     {
       "name": "Just Because We Can, Should We?",
-      "url": "https://docs.google.com/presentation/d/1SG3PQzb-KUZcnFrOSHf8DxTYINtJ0uUy-25uLdWWkI4/view",
+      "url": "https://docs.google.com/presentation/d/1Qq0TYhKPcoyR1gbFlgce98Zjuu5upBxoBAQpSQq9DQg/view",
       "key": "just_because_we_can_should_we_",
       "properties": {
         "audience": "Verified Teacher",
@@ -6242,7 +6261,7 @@
     },
     {
       "name": "Processing Data in a System",
-      "url": "https://docs.google.com/presentation/d/1HZNwDSndGgsfpxZo9WszU60AezONYde-EvVVQMN4vzw/view",
+      "url": "https://docs.google.com/presentation/d/1TpPrOyt5NsXhaFUIu6zwB9yIFGsX9SxiyL_fbeW7ZQw/view",
       "key": "processing_data_in_a_system",
       "properties": {
         "audience": "Verified Teacher",
@@ -6303,7 +6322,7 @@
     },
     {
       "name": "Software and Operating Systems",
-      "url": "https://docs.google.com/presentation/d/1zZWrNkGt9AO122tn8OmzmLvGRFsTUVGcXcY51nDv0GI/view",
+      "url": "https://docs.google.com/presentation/d/1mmaHrQBprBkcsn-rBkY_twYPjAmou6Bh7ZMjncO3Bbs/view",
       "key": "software_and_operating_systems",
       "properties": {
         "audience": "Verified Teacher",
@@ -6327,7 +6346,7 @@
     },
     {
       "name": "Sustainable Systems Project",
-      "url": "https://docs.google.com/presentation/d/1Asq5xx3cDCKIWvtqBfgnLgoqNwxybbElV2ebBvfic2w/view",
+      "url": "https://docs.google.com/presentation/d/1lXaMbXq519PNx-B9kNmSUvtE4IH7PI7zjtTJsGBAC4M/view",
       "key": "sustainable_systems_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -6415,7 +6434,7 @@
     },
     {
       "name": "Troubleshooting and Optimizing Hardware",
-      "url": "https://docs.google.com/presentation/d/11GxIr1tg4FcMVMrD52YxTXmg4V9-lmcRBAsPKWt-7WE/view",
+      "url": "https://docs.google.com/presentation/d/1347zxZ4DK2hcXecZNKMasG7MvBBz3Xz1A_L13VfqjQA/view",
       "key": "troubleshooting_and_optimizing_hardware",
       "properties": {
         "audience": "Verified Teacher",
@@ -6427,7 +6446,7 @@
     },
     {
       "name": "Troubleshooting and Optimizing Software",
-      "url": "https://docs.google.com/presentation/d/1Iq9eyi1tmFC2IuWSPuJq6H6YRWQxWFNBE5jE9BbbPmI/view",
+      "url": "https://docs.google.com/presentation/d/1ehVezwU2FNkrD2GNRVLVcKCzkAV6TViD7de3Cg5JM6I/view",
       "key": "troubleshooting_and_optimizing_software",
       "properties": {
         "audience": "Verified Teacher",
@@ -6465,7 +6484,7 @@
     },
     {
       "name": "Unit Guide",
-      "url": "https://docs.google.com/document/d/1ry1IWhEZbp_rRz4sE0ty5Mb5mBdvz_Ism-ZCKiDoZ4k/",
+      "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/view",
       "key": "unit_guide",
       "properties": {
       },
@@ -6487,7 +6506,7 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/presentation/d/1vFPOzJrWAupKe8G_DVEPtBaIAST_4tqsAdXFv6XUPI4/view",
+      "url": "https://docs.google.com/presentation/d/1CFg-WZX3zuwaVRQxrWRGUhZSXPy4laB-k6b5jNHWLc0/",
       "key": "user_testing",
       "properties": {
         "audience": "Verified Teacher",
@@ -6600,6 +6619,12 @@
     {
       "seeding_key": {
         "lesson.key": "Hardware",
+        "resource.key": "computer_systems_and_devices_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hardware",
         "resource.key": "hardware"
       }
     },
@@ -6643,6 +6668,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Computer Systems",
         "resource.key": "computer_innovations_and_careers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Computer Systems",
+        "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
     {

@@ -3,6 +3,7 @@ import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
+import SettingsButton from '@codebridge/Settings/SettingsButton';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
@@ -79,6 +80,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
+      <SettingsButton />
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}

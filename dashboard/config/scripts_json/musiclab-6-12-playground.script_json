@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-31 20:32:53 UTC",
+    "serialized_at": "2025-04-01 21:51:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,7 +65,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Sequences - Practice",
+      "name": "Sequencing - Practice",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -264,12 +264,52 @@
   ],
   "lesson_activities": [
     {
-      "key": "357a0a1c-75f7-4bda-8f75-7b737c0e819d",
+      "key": "c49ceaa6-0a64-42ec-aa3d-b7bd62cb30d0",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c49ceaa6-0a64-42ec-aa3d-b7bd62cb30d0",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "baa6b88b-e012-4cfb-a794-c4abd52b8989",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "baa6b88b-e012-4cfb-a794-c4abd52b8989",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "357a0a1c-75f7-4bda-8f75-7b737c0e819d",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "357a0a1c-75f7-4bda-8f75-7b737c0e819d",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "b3f06e22-a1a6-4ea7-8c1a-64566526ef7d",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3f06e22-a1a6-4ea7-8c1a-64566526ef7d",
         "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground"
@@ -328,9 +368,36 @@
       }
     },
     {
-      "key": "953a4c95-d048-43a7-8b25-f8c17be90e05",
+      "key": "1245e128-0742-4855-b85f-1d10af0bb64a",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1245e128-0742-4855-b85f-1d10af0bb64a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "34a4dd0a-82a3-44a9-b768-267eec54de86",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "34a4dd0a-82a3-44a9-b768-267eec54de86",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "953a4c95-d048-43a7-8b25-f8c17be90e05",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "953a4c95-d048-43a7-8b25-f8c17be90e05",
@@ -340,9 +407,49 @@
       }
     },
     {
-      "key": "4f237e4d-a617-46de-be93-bd8c9692de75",
+      "key": "cbdeadca-e25d-40d8-8bd9-da5549c4e817",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cbdeadca-e25d-40d8-8bd9-da5549c4e817",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "367598dc-64dc-4451-bcb2-5ef812270f66",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "367598dc-64dc-4451-bcb2-5ef812270f66",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "85fcd0b3-b2f6-4a26-9ef6-219d68f5d479",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85fcd0b3-b2f6-4a26-9ef6-219d68f5d479",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "4f237e4d-a617-46de-be93-bd8c9692de75",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "4f237e4d-a617-46de-be93-bd8c9692de75",
@@ -352,9 +459,49 @@
       }
     },
     {
-      "key": "fb17c5de-cabb-415f-9a30-dd52413bcbab",
+      "key": "62e7634c-cb23-4d1d-ac66-137d17cd1fbb",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62e7634c-cb23-4d1d-ac66-137d17cd1fbb",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "9fafa984-c5da-4eed-8264-d3290040c889",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9fafa984-c5da-4eed-8264-d3290040c889",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "25bdfdcf-1f6d-4fb7-a6bd-2d89dbe8b0a2",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25bdfdcf-1f6d-4fb7-a6bd-2d89dbe8b0a2",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "fb17c5de-cabb-415f-9a30-dd52413bcbab",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "fb17c5de-cabb-415f-9a30-dd52413bcbab",
@@ -364,9 +511,49 @@
       }
     },
     {
-      "key": "7900a3f2-0ca2-4966-a55b-40cffe0de59a",
+      "key": "a7c9755e-c364-40c3-b08c-703244258226",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7c9755e-c364-40c3-b08c-703244258226",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "83e5d497-13ce-4bb9-a66c-6a2b89a98fec",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "83e5d497-13ce-4bb9-a66c-6a2b89a98fec",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "26419987-a91c-428d-942e-15720afdc34d",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26419987-a91c-428d-942e-15720afdc34d",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "7900a3f2-0ca2-4966-a55b-40cffe0de59a",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "7900a3f2-0ca2-4966-a55b-40cffe0de59a",
@@ -376,9 +563,49 @@
       }
     },
     {
-      "key": "5944ac84-0940-486c-9192-cb1efac92afb",
+      "key": "fa923f80-39f5-49f3-99fa-9d1644d67ed1",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa923f80-39f5-49f3-99fa-9d1644d67ed1",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "fb85eaee-0e27-492c-b21e-e3ed476b5bbd",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb85eaee-0e27-492c-b21e-e3ed476b5bbd",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "ebf0816d-8962-4c02-999a-7f93e4088d6b",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ebf0816d-8962-4c02-999a-7f93e4088d6b",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "5944ac84-0940-486c-9192-cb1efac92afb",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "5944ac84-0940-486c-9192-cb1efac92afb",
@@ -388,9 +615,49 @@
       }
     },
     {
-      "key": "e856fb1f-664e-440a-93e1-9c20a7d08e4a",
+      "key": "94cc0122-8071-43b3-8032-9ee78e0965d7",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94cc0122-8071-43b3-8032-9ee78e0965d7",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "1d8ad71f-3147-499c-a278-f5c44ea6beea",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d8ad71f-3147-499c-a278-f5c44ea6beea",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "8a2afbee-5890-4012-8f07-e281cac64557",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8a2afbee-5890-4012-8f07-e281cac64557",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "e856fb1f-664e-440a-93e1-9c20a7d08e4a",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "e856fb1f-664e-440a-93e1-9c20a7d08e4a",
@@ -400,9 +667,49 @@
       }
     },
     {
-      "key": "8fe45be5-1223-48d1-88bd-b22d40c35676",
+      "key": "a8386cab-d666-4177-8cb4-49fd2a473159",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8386cab-d666-4177-8cb4-49fd2a473159",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "016f611c-659b-4102-aabf-1eebb059dcd6",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "016f611c-659b-4102-aabf-1eebb059dcd6",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "cb829e1b-78e2-4f56-91a1-1dbe263d62e4",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb829e1b-78e2-4f56-91a1-1dbe263d62e4",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "8fe45be5-1223-48d1-88bd-b22d40c35676",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "8fe45be5-1223-48d1-88bd-b22d40c35676",
@@ -412,9 +719,49 @@
       }
     },
     {
-      "key": "d93a7fdd-7e9c-4b9e-8431-0a747c3c4d27",
+      "key": "177adabb-1ec5-4620-82d6-bd3e45aff9f1",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "177adabb-1ec5-4620-82d6-bd3e45aff9f1",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "da576d89-7ea9-4475-80dd-4d09c7397a82",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da576d89-7ea9-4475-80dd-4d09c7397a82",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "e3c133cb-2316-48f8-9df3-4c5fa151c9e9",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3c133cb-2316-48f8-9df3-4c5fa151c9e9",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "d93a7fdd-7e9c-4b9e-8431-0a747c3c4d27",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d93a7fdd-7e9c-4b9e-8431-0a747c3c4d27",
@@ -424,9 +771,49 @@
       }
     },
     {
-      "key": "0af37828-25be-4570-b7cd-bf10581a70c3",
+      "key": "1221ab4f-3332-468e-a982-80fd2126861c",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1221ab4f-3332-468e-a982-80fd2126861c",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "59c81814-9f64-40d3-bca8-51fe118ef5b5",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59c81814-9f64-40d3-bca8-51fe118ef5b5",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "82a67061-d463-41f9-8f3d-6569a497b568",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82a67061-d463-41f9-8f3d-6569a497b568",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "0af37828-25be-4570-b7cd-bf10581a70c3",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "0af37828-25be-4570-b7cd-bf10581a70c3",
@@ -436,13 +823,118 @@
       }
     },
     {
-      "key": "cb711774-cc5c-4571-91a8-52f3787d3cfa",
+      "key": "822d0bfd-c945-47e5-93c6-1ff99f0ec25e",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "822d0bfd-c945-47e5-93c6-1ff99f0ec25e",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "3102b4a6-031f-49c4-a198-8af63940e5ae",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3102b4a6-031f-49c4-a198-8af63940e5ae",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "dc69ac3f-990a-4b64-a3fe-a4d0c8f6c6ba",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc69ac3f-990a-4b64-a3fe-a4d0c8f6c6ba",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "cb711774-cc5c-4571-91a8-52f3787d3cfa",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "cb711774-cc5c-4571-91a8-52f3787d3cfa",
         "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "85b1a7a2-6e82-4b54-aac3-b6ea738af06f",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85b1a7a2-6e82-4b54-aac3-b6ea738af06f",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "f9c86456-f036-4985-ad24-389882e96074",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9c86456-f036-4985-ad24-389882e96074",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "cb3a4c78-8293-4404-9534-eee0bb09634a",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb3a4c78-8293-4404-9534-eee0bb09634a",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "de661b33-3ce1-4c13-be82-f448633b7519",
+      "position": 3,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de661b33-3ce1-4c13-be82-f448633b7519",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "e7d08565-0279-4510-825e-037dad210f7c",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7d08565-0279-4510-825e-037dad210f7c",
+        "lesson.key": "lesson-15",
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground"
       }
@@ -618,13 +1110,46 @@
   ],
   "activity_sections": [
     {
-      "key": "f1747682-cc44-4442-b68d-fd38fea08511",
+      "key": "7d0dcd77-da8e-4a1e-90d4-8cc12467f6ef",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "7d0dcd77-da8e-4a1e-90d4-8cc12467f6ef",
+        "lesson_activity.key": "c49ceaa6-0a64-42ec-aa3d-b7bd62cb30d0"
+      }
+    },
+    {
+      "key": "9d4419c7-4bf1-4b3b-8de9-aa22cafeede2",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
+        "activity_section.key": "9d4419c7-4bf1-4b3b-8de9-aa22cafeede2",
+        "lesson_activity.key": "baa6b88b-e012-4cfb-a794-c4abd52b8989"
+      }
+    },
+    {
+      "key": "f1747682-cc44-4442-b68d-fd38fea08511",
+      "position": 1,
+      "properties": {
+        "progression_name": "User Stories"
+      },
+      "seeding_key": {
         "activity_section.key": "f1747682-cc44-4442-b68d-fd38fea08511",
         "lesson_activity.key": "357a0a1c-75f7-4bda-8f75-7b737c0e819d"
+      }
+    },
+    {
+      "key": "d4530007-2aca-4838-905c-f565d7e6d693",
+      "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4530007-2aca-4838-905c-f565d7e6d693",
+        "lesson_activity.key": "b3f06e22-a1a6-4ea7-8c1a-64566526ef7d"
       }
     },
     {
@@ -726,6 +1251,17 @@
       }
     },
     {
+      "key": "2f48e943-e4ef-4415-bb09-184c5a8a60b5",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f48e943-e4ef-4415-bb09-184c5a8a60b5",
+        "lesson_activity.key": "845f0acb-5177-4fef-ace6-e9106fb43109"
+      }
+    },
+    {
       "key": "ec8a78d5-cd8c-41d5-bcc4-e752cab0c5e0",
       "position": 1,
       "properties": {
@@ -733,6 +1269,27 @@
       "seeding_key": {
         "activity_section.key": "ec8a78d5-cd8c-41d5-bcc4-e752cab0c5e0",
         "lesson_activity.key": "e4fd0289-fb33-49c2-b681-c6bd25f1af30"
+      }
+    },
+    {
+      "key": "ed03d9e8-3d39-4210-a123-36efd9c59cb8",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ed03d9e8-3d39-4210-a123-36efd9c59cb8",
+        "lesson_activity.key": "1245e128-0742-4855-b85f-1d10af0bb64a"
+      }
+    },
+    {
+      "key": "59789309-53ab-46b8-8024-a45c3c0650a7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "59789309-53ab-46b8-8024-a45c3c0650a7",
+        "lesson_activity.key": "34a4dd0a-82a3-44a9-b768-267eec54de86"
       }
     },
     {
@@ -813,6 +1370,48 @@
       }
     },
     {
+      "key": "7761e0f5-4da7-4c8b-8c89-b4933598e626",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7761e0f5-4da7-4c8b-8c89-b4933598e626",
+        "lesson_activity.key": "953a4c95-d048-43a7-8b25-f8c17be90e05"
+      }
+    },
+    {
+      "key": "180359bf-aab5-4349-897e-953f5261df37",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "180359bf-aab5-4349-897e-953f5261df37",
+        "lesson_activity.key": "cbdeadca-e25d-40d8-8bd9-da5549c4e817"
+      }
+    },
+    {
+      "key": "b245da09-6c06-4c69-a22a-4127ad3d3883",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "b245da09-6c06-4c69-a22a-4127ad3d3883",
+        "lesson_activity.key": "367598dc-64dc-4451-bcb2-5ef812270f66"
+      }
+    },
+    {
+      "key": "52063ab7-ab25-4e53-b98d-0496950a4b7b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "52063ab7-ab25-4e53-b98d-0496950a4b7b",
+        "lesson_activity.key": "85fcd0b3-b2f6-4a26-9ef6-219d68f5d479"
+      }
+    },
+    {
       "key": "ac82421e-f6ed-42ed-a090-b1ba0eff1a6c",
       "position": 1,
       "properties": {
@@ -890,6 +1489,48 @@
       }
     },
     {
+      "key": "1a03d9e9-699e-4464-b6cf-8c3294d53c46",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a03d9e9-699e-4464-b6cf-8c3294d53c46",
+        "lesson_activity.key": "4f237e4d-a617-46de-be93-bd8c9692de75"
+      }
+    },
+    {
+      "key": "b2067150-5f86-4a9e-9bf5-5f0fd35edffb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b2067150-5f86-4a9e-9bf5-5f0fd35edffb",
+        "lesson_activity.key": "62e7634c-cb23-4d1d-ac66-137d17cd1fbb"
+      }
+    },
+    {
+      "key": "59f6dd1b-11f5-446e-ad6d-324328d4cd45",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "59f6dd1b-11f5-446e-ad6d-324328d4cd45",
+        "lesson_activity.key": "9fafa984-c5da-4eed-8264-d3290040c889"
+      }
+    },
+    {
+      "key": "1c299ae4-fe2a-4e5f-a1e7-ad847016ff14",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c299ae4-fe2a-4e5f-a1e7-ad847016ff14",
+        "lesson_activity.key": "25bdfdcf-1f6d-4fb7-a6bd-2d89dbe8b0a2"
+      }
+    },
+    {
       "key": "4d41d0d5-753a-4eb7-8d6f-880ad8f383b3",
       "position": 1,
       "properties": {
@@ -920,6 +1561,48 @@
       "seeding_key": {
         "activity_section.key": "23311dd5-d50e-4f61-affa-75f7809979e6",
         "lesson_activity.key": "fb17c5de-cabb-415f-9a30-dd52413bcbab"
+      }
+    },
+    {
+      "key": "4d045443-9ac9-4bb3-9240-811921d2b666",
+      "position": 4,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d045443-9ac9-4bb3-9240-811921d2b666",
+        "lesson_activity.key": "fb17c5de-cabb-415f-9a30-dd52413bcbab"
+      }
+    },
+    {
+      "key": "5da66a7d-6757-401b-9834-b9361906373c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5da66a7d-6757-401b-9834-b9361906373c",
+        "lesson_activity.key": "a7c9755e-c364-40c3-b08c-703244258226"
+      }
+    },
+    {
+      "key": "206c8032-3d33-489e-8058-1c423aa1e20b",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "206c8032-3d33-489e-8058-1c423aa1e20b",
+        "lesson_activity.key": "83e5d497-13ce-4bb9-a66c-6a2b89a98fec"
+      }
+    },
+    {
+      "key": "2a9811b1-0bd2-49f2-826f-af71dea7d100",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2a9811b1-0bd2-49f2-826f-af71dea7d100",
+        "lesson_activity.key": "26419987-a91c-428d-942e-15720afdc34d"
       }
     },
     {
@@ -986,6 +1669,48 @@
       "seeding_key": {
         "activity_section.key": "3b0ddf41-ce94-4a37-9e0d-a67789f7bbed",
         "lesson_activity.key": "7900a3f2-0ca2-4966-a55b-40cffe0de59a"
+      }
+    },
+    {
+      "key": "15bc3ee1-f322-4d5a-ab34-2c69da819b00",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "15bc3ee1-f322-4d5a-ab34-2c69da819b00",
+        "lesson_activity.key": "7900a3f2-0ca2-4966-a55b-40cffe0de59a"
+      }
+    },
+    {
+      "key": "117fe79b-2bda-4819-bd93-1f8abd038bf3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "117fe79b-2bda-4819-bd93-1f8abd038bf3",
+        "lesson_activity.key": "fa923f80-39f5-49f3-99fa-9d1644d67ed1"
+      }
+    },
+    {
+      "key": "e4a0bf36-6c13-4551-8cfa-8a3905e79159",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e4a0bf36-6c13-4551-8cfa-8a3905e79159",
+        "lesson_activity.key": "fb85eaee-0e27-492c-b21e-e3ed476b5bbd"
+      }
+    },
+    {
+      "key": "dc3e5d0b-085c-457b-a87d-78156016bb32",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dc3e5d0b-085c-457b-a87d-78156016bb32",
+        "lesson_activity.key": "ebf0816d-8962-4c02-999a-7f93e4088d6b"
       }
     },
     {
@@ -1066,6 +1791,48 @@
       }
     },
     {
+      "key": "84533553-7135-4677-af35-ce9e8fedcf77",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "84533553-7135-4677-af35-ce9e8fedcf77",
+        "lesson_activity.key": "5944ac84-0940-486c-9192-cb1efac92afb"
+      }
+    },
+    {
+      "key": "76b851ca-92d2-4b84-b37a-ca8da1b4ed65",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "76b851ca-92d2-4b84-b37a-ca8da1b4ed65",
+        "lesson_activity.key": "94cc0122-8071-43b3-8032-9ee78e0965d7"
+      }
+    },
+    {
+      "key": "808acd97-d724-4613-bde3-72a93c1b94d0",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "808acd97-d724-4613-bde3-72a93c1b94d0",
+        "lesson_activity.key": "1d8ad71f-3147-499c-a278-f5c44ea6beea"
+      }
+    },
+    {
+      "key": "6f4d2727-8f0e-47bb-8b26-6d6991585ae4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f4d2727-8f0e-47bb-8b26-6d6991585ae4",
+        "lesson_activity.key": "8a2afbee-5890-4012-8f07-e281cac64557"
+      }
+    },
+    {
       "key": "aef903b2-03e1-48e7-adcf-6f6650d1757f",
       "position": 1,
       "properties": {
@@ -1143,6 +1910,48 @@
       }
     },
     {
+      "key": "a927c6a0-b3e2-4203-b378-80e0a63fcd62",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a927c6a0-b3e2-4203-b378-80e0a63fcd62",
+        "lesson_activity.key": "e856fb1f-664e-440a-93e1-9c20a7d08e4a"
+      }
+    },
+    {
+      "key": "684d39e3-0bf4-4a5e-8318-279cbb41dd0b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "684d39e3-0bf4-4a5e-8318-279cbb41dd0b",
+        "lesson_activity.key": "a8386cab-d666-4177-8cb4-49fd2a473159"
+      }
+    },
+    {
+      "key": "9b86d998-0d5c-4ece-97fc-8f41bc32f0a9",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "9b86d998-0d5c-4ece-97fc-8f41bc32f0a9",
+        "lesson_activity.key": "016f611c-659b-4102-aabf-1eebb059dcd6"
+      }
+    },
+    {
+      "key": "e9322b1e-988e-41bf-88ed-ce3d361f487b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e9322b1e-988e-41bf-88ed-ce3d361f487b",
+        "lesson_activity.key": "cb829e1b-78e2-4f56-91a1-1dbe263d62e4"
+      }
+    },
+    {
       "key": "f305346b-dce4-4b08-872a-fd0371b4d4f1",
       "position": 1,
       "properties": {
@@ -1162,6 +1971,48 @@
       "seeding_key": {
         "activity_section.key": "412c0355-13e8-4494-8b61-28475d7bf614",
         "lesson_activity.key": "8fe45be5-1223-48d1-88bd-b22d40c35676"
+      }
+    },
+    {
+      "key": "0883773a-b30b-4d4e-b2e1-fc50825a3974",
+      "position": 3,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0883773a-b30b-4d4e-b2e1-fc50825a3974",
+        "lesson_activity.key": "8fe45be5-1223-48d1-88bd-b22d40c35676"
+      }
+    },
+    {
+      "key": "0caf7ce3-bef7-4afa-a5ca-c344cba073dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0caf7ce3-bef7-4afa-a5ca-c344cba073dc",
+        "lesson_activity.key": "177adabb-1ec5-4620-82d6-bd3e45aff9f1"
+      }
+    },
+    {
+      "key": "e52ed24c-0ab8-441e-b6bb-55772c13d142",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e52ed24c-0ab8-441e-b6bb-55772c13d142",
+        "lesson_activity.key": "da576d89-7ea9-4475-80dd-4d09c7397a82"
+      }
+    },
+    {
+      "key": "a3ad38f5-bbbd-4f8f-aca3-5dc8f0ad9be6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a3ad38f5-bbbd-4f8f-aca3-5dc8f0ad9be6",
+        "lesson_activity.key": "e3c133cb-2316-48f8-9df3-4c5fa151c9e9"
       }
     },
     {
@@ -1228,6 +2079,48 @@
       "seeding_key": {
         "activity_section.key": "a099795f-0cec-4fbd-8bb2-cf59d12a6b8a",
         "lesson_activity.key": "d93a7fdd-7e9c-4b9e-8431-0a747c3c4d27"
+      }
+    },
+    {
+      "key": "b356516b-4c08-4674-acf3-c47434206e4d",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b356516b-4c08-4674-acf3-c47434206e4d",
+        "lesson_activity.key": "d93a7fdd-7e9c-4b9e-8431-0a747c3c4d27"
+      }
+    },
+    {
+      "key": "e02db35f-ed6b-4604-93ab-1df008a40fd3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e02db35f-ed6b-4604-93ab-1df008a40fd3",
+        "lesson_activity.key": "1221ab4f-3332-468e-a982-80fd2126861c"
+      }
+    },
+    {
+      "key": "ac2c8a38-0211-4f79-83eb-fe41ab0138d6",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ac2c8a38-0211-4f79-83eb-fe41ab0138d6",
+        "lesson_activity.key": "59c81814-9f64-40d3-bca8-51fe118ef5b5"
+      }
+    },
+    {
+      "key": "4b52064b-00ba-4f2b-acac-e501d55b0087",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4b52064b-00ba-4f2b-acac-e501d55b0087",
+        "lesson_activity.key": "82a67061-d463-41f9-8f3d-6569a497b568"
       }
     },
     {
@@ -1308,6 +2201,48 @@
       }
     },
     {
+      "key": "d5713346-5daa-48bf-a563-e6f373ba8f9b",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5713346-5daa-48bf-a563-e6f373ba8f9b",
+        "lesson_activity.key": "0af37828-25be-4570-b7cd-bf10581a70c3"
+      }
+    },
+    {
+      "key": "8a898df4-3aaf-416a-b4e3-3da4aeae7bee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a898df4-3aaf-416a-b4e3-3da4aeae7bee",
+        "lesson_activity.key": "822d0bfd-c945-47e5-93c6-1ff99f0ec25e"
+      }
+    },
+    {
+      "key": "daf22a06-510b-4dcb-b7b8-2928ebaea68c",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "daf22a06-510b-4dcb-b7b8-2928ebaea68c",
+        "lesson_activity.key": "3102b4a6-031f-49c4-a198-8af63940e5ae"
+      }
+    },
+    {
+      "key": "ca8def4f-26ad-4b9c-babb-b58626ef3412",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca8def4f-26ad-4b9c-babb-b58626ef3412",
+        "lesson_activity.key": "dc69ac3f-990a-4b64-a3fe-a4d0c8f6c6ba"
+      }
+    },
+    {
       "key": "9fdaf611-9059-4fc3-ae50-5c5712d84e21",
       "position": 1,
       "properties": {
@@ -1382,6 +2317,69 @@
       "seeding_key": {
         "activity_section.key": "d7db4671-1a64-4e19-b6d9-7e8724c1a3ef",
         "lesson_activity.key": "cb711774-cc5c-4571-91a8-52f3787d3cfa"
+      }
+    },
+    {
+      "key": "a6ad1e8b-cbe8-46ea-89b6-cd5a2cdc218f",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6ad1e8b-cbe8-46ea-89b6-cd5a2cdc218f",
+        "lesson_activity.key": "cb711774-cc5c-4571-91a8-52f3787d3cfa"
+      }
+    },
+    {
+      "key": "7ddd1614-01cb-4fc4-bf1e-038803357bc9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7ddd1614-01cb-4fc4-bf1e-038803357bc9",
+        "lesson_activity.key": "85b1a7a2-6e82-4b54-aac3-b6ea738af06f"
+      }
+    },
+    {
+      "key": "619db1c4-6194-49c6-96a9-b1e574d33405",
+      "position": 1,
+      "properties": {
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "619db1c4-6194-49c6-96a9-b1e574d33405",
+        "lesson_activity.key": "f9c86456-f036-4985-ad24-389882e96074"
+      }
+    },
+    {
+      "key": "4600f803-a16a-440d-befa-509497fa86f5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4600f803-a16a-440d-befa-509497fa86f5",
+        "lesson_activity.key": "cb3a4c78-8293-4404-9534-eee0bb09634a"
+      }
+    },
+    {
+      "key": "ee94b4e7-7f88-427e-b0a0-b10ebd92c29b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee94b4e7-7f88-427e-b0a0-b10ebd92c29b",
+        "lesson_activity.key": "de661b33-3ce1-4c13-be82-f448633b7519"
+      }
+    },
+    {
+      "key": "02222dfd-2a46-4939-849c-f885f93693be",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "02222dfd-2a46-4939-849c-f885f93693be",
+        "lesson_activity.key": "e7d08565-0279-4510-825e-037dad210f7c"
       }
     },
     {
@@ -1739,6 +2737,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-intro-choice"
+        ],
+        "progression": "User Stories"
       },
       "bonus": false,
       "seeding_key": {
@@ -1756,6 +2758,28 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "d4530007-2aca-4838-905c-f565d7e6d693"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-1"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1780,7 +2804,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1805,7 +2829,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1830,7 +2854,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1855,7 +2879,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1880,7 +2904,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -1905,7 +2929,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1930,7 +2954,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -1955,7 +2979,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1980,7 +3004,29 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "2f48e943-e4ef-4415-bb09-184c5a8a60b5"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-2"
+      ]
+    },
+    {
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2005,7 +3051,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2030,7 +3076,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2055,7 +3101,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2080,7 +3126,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -2105,7 +3151,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2130,7 +3176,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -2155,7 +3201,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -2180,7 +3226,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -2205,7 +3251,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -2230,7 +3276,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2255,7 +3301,29 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7761e0f5-4da7-4c8b-8c89-b4933598e626"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-3"
+      ]
+    },
+    {
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2280,7 +3348,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2305,7 +3373,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2330,7 +3398,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2355,7 +3423,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2380,7 +3448,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -2405,7 +3473,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -2430,7 +3498,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2455,20 +3523,17 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "music-lab-sequencing-synthesis-reflection"
-        ],
         "progression": "Reflection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-lab-sequencing-synthesis-reflection"
+          "music-lab-sequencing-synthesis-reflect-levelgroup"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2476,11 +3541,11 @@
         "activity_section.key": "249765ec-4c7c-4465-98ad-9c6e43534147"
       },
       "level_keys": [
-        "music-lab-sequencing-synthesis-reflection"
+        "music-lab-sequencing-synthesis-reflect-levelgroup"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -2505,7 +3570,29 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "1a03d9e9-699e-4464-b6cf-8c3294d53c46"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-4"
+      ]
+    },
+    {
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2530,7 +3617,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2555,7 +3642,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2580,7 +3667,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2605,7 +3692,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2630,7 +3717,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -2655,7 +3742,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2680,7 +3767,29 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "4d045443-9ac9-4bb3-9240-811921d2b666"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-5"
+      ]
+    },
+    {
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2705,7 +3814,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2730,7 +3839,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2755,7 +3864,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2780,7 +3889,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -2805,7 +3914,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2830,7 +3939,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -2855,7 +3964,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2880,7 +3989,29 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 52,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "15bc3ee1-f322-4d5a-ab34-2c69da819b00"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-6"
+      ]
+    },
+    {
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2905,7 +4036,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2930,7 +4061,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2955,7 +4086,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2980,7 +4111,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3005,7 +4136,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -3030,7 +4161,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -3055,7 +4186,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -3080,7 +4211,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 61,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3105,7 +4236,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 62,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -3130,7 +4261,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 63,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -3155,7 +4286,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 64,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -3180,7 +4311,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 65,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -3205,7 +4336,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 66,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -3230,7 +4361,29 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 67,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-7"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "84533553-7135-4677-af35-ce9e8fedcf77"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-7"
+      ]
+    },
+    {
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3255,7 +4408,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3280,7 +4433,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3305,7 +4458,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3330,7 +4483,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3355,7 +4508,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -3380,7 +4533,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 74,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -3405,7 +4558,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 75,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -3430,7 +4583,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 76,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -3455,7 +4608,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 77,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -3480,20 +4633,17 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 78,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "test-music-lab-loops-synthesis-reflection"
-        ],
         "progression": "Reflect"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-music-lab-loops-synthesis-reflection"
+          "music-lab-loops-synthesis-reflect-levelgroup"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
@@ -3501,11 +4651,11 @@
         "activity_section.key": "db26b081-56f8-492f-9089-b70c552d9e61"
       },
       "level_keys": [
-        "test-music-lab-loops-synthesis-reflection"
+        "music-lab-loops-synthesis-reflect-levelgroup"
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 79,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -3530,7 +4680,29 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 80,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-8"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "a927c6a0-b3e2-4203-b378-80e0a63fcd62"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-8"
+      ]
+    },
+    {
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3555,7 +4727,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3580,7 +4752,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3605,7 +4777,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3630,7 +4802,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3655,7 +4827,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -3680,7 +4852,29 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 87,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-9"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0883773a-b30b-4d4e-b2e1-fc50825a3974"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-9"
+      ]
+    },
+    {
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3705,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3730,7 +4924,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3755,7 +4949,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3780,7 +4974,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -3805,7 +4999,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3830,7 +5024,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3855,7 +5049,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3880,7 +5074,29 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 96,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-10"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "b356516b-4c08-4674-acf3-c47434206e4d"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-10"
+      ]
+    },
+    {
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3905,7 +5121,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3930,7 +5146,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3955,7 +5171,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3980,7 +5196,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4005,7 +5221,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4030,7 +5246,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4055,7 +5271,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4080,7 +5296,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -4105,7 +5321,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4130,7 +5346,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 107,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -4155,7 +5371,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 108,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4180,7 +5396,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 109,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -4205,7 +5421,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 110,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -4230,7 +5446,29 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 111,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-11"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "d5713346-5daa-48bf-a563-e6f373ba8f9b"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-11"
+      ]
+    },
+    {
+      "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4255,7 +5493,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 113,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4280,7 +5518,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 114,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4305,7 +5543,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 115,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4330,7 +5568,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 116,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4355,7 +5593,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 117,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4380,7 +5618,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 118,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4405,20 +5643,17 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 119,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "music-lab-functions-synthesis-reflection"
-        ],
         "progression": "Reflection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-lab-functions-synthesis-reflection"
+          "music-lab-functions-synthesis-reflect-levelgroup"
         ],
         "lesson.key": "lesson-11",
         "lesson_group.key": "",
@@ -4426,11 +5661,11 @@
         "activity_section.key": "864758d9-7f54-4ddb-8abf-f437ecef9bc5"
       },
       "level_keys": [
-        "music-lab-functions-synthesis-reflection"
+        "music-lab-functions-synthesis-reflect-levelgroup"
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 120,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4455,7 +5690,51 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 121,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-12"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "a6ad1e8b-cbe8-46ea-89b6-cd5a2cdc218f"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-12"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-13"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "ee94b4e7-7f88-427e-b0a0-b10ebd92c29b"
+      },
+      "level_keys": [
+        "music-lab-pilot-survey-lesson-13"
+      ]
+    },
+    {
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4480,7 +5759,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4505,7 +5784,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4530,7 +5809,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 126,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4555,7 +5834,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 127,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4580,7 +5859,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 128,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4605,7 +5884,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 129,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4630,7 +5909,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 130,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4655,7 +5934,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 131,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4680,7 +5959,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 132,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -4705,7 +5984,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 133,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4730,7 +6009,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 134,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4755,7 +6034,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 135,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -4780,7 +6059,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 136,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -4805,7 +6084,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 137,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -4830,7 +6109,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 138,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -4855,7 +6134,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 139,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -4880,7 +6159,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 140,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -4905,7 +6184,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 141,
       "position": 19,
       "activity_section_position": 2,
       "assessment": false,
@@ -4930,7 +6209,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 142,
       "position": 20,
       "activity_section_position": 1,
       "assessment": false,
@@ -4955,7 +6234,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 143,
       "position": 21,
       "activity_section_position": 1,
       "assessment": false,
@@ -4980,7 +6259,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 144,
       "position": 22,
       "activity_section_position": 1,
       "assessment": false,
@@ -5005,7 +6284,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 145,
       "position": 23,
       "activity_section_position": 1,
       "assessment": false,
@@ -5030,7 +6309,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 146,
       "position": 24,
       "activity_section_position": 2,
       "assessment": false,
@@ -5055,7 +6334,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 147,
       "position": 25,
       "activity_section_position": 3,
       "assessment": false,
@@ -5080,7 +6359,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 148,
       "position": 26,
       "activity_section_position": 4,
       "assessment": false,
@@ -5105,7 +6384,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 149,
       "position": 27,
       "activity_section_position": 5,
       "assessment": false,
@@ -5130,7 +6409,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 150,
       "position": 28,
       "activity_section_position": 6,
       "assessment": false,
@@ -5155,7 +6434,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 151,
       "position": 29,
       "activity_section_position": 1,
       "assessment": false,
@@ -5180,7 +6459,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 152,
       "position": 30,
       "activity_section_position": 2,
       "assessment": false,
@@ -5205,7 +6484,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 153,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5230,7 +6509,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 154,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5255,7 +6534,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 155,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5280,7 +6559,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 156,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5305,7 +6584,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 157,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5330,7 +6609,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 158,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5355,7 +6634,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 159,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5380,7 +6659,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 160,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5405,7 +6684,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 161,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5430,7 +6709,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 162,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5455,7 +6734,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 163,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5480,7 +6759,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 164,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -5505,7 +6784,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 165,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -5530,7 +6809,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 166,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -5555,7 +6834,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 167,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -5580,7 +6859,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 168,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -5605,7 +6884,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 169,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
@@ -5641,6 +6920,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "f1747682-cc44-4442-b68d-fd38fea08511"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-1",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "d4530007-2aca-4838-905c-f565d7e6d693"
       }
     },
     {
@@ -5749,6 +7040,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "1019669c-5e88-4ab1-a00f-36d7e9ed14cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-2",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "2f48e943-e4ef-4415-bb09-184c5a8a60b5"
       }
     },
     {
@@ -5885,6 +7188,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-3",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "7761e0f5-4da7-4c8b-8c89-b4933598e626"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-music-lab-sequences-synthesize-recap-choice-panels",
         "script_level.level_keys": [
           "test-music-lab-sequences-synthesize-recap-choice-panels"
@@ -5981,9 +7296,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-lab-sequencing-synthesis-reflection",
+        "level.key": "music-lab-sequencing-synthesis-reflect-levelgroup",
         "script_level.level_keys": [
-          "music-lab-sequencing-synthesis-reflection"
+          "music-lab-sequencing-synthesis-reflect-levelgroup"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -6001,6 +7316,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "164b1279-cecb-4e11-be7f-f9895d543c3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-4",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "1a03d9e9-699e-4464-b6cf-8c3294d53c46"
       }
     },
     {
@@ -6085,6 +7412,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "23311dd5-d50e-4f61-affa-75f7809979e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-5",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "4d045443-9ac9-4bb3-9240-811921d2b666"
       }
     },
     {
@@ -6181,6 +7520,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "3b0ddf41-ce94-4a37-9e0d-a67789f7bbed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-6",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "15bc3ee1-f322-4d5a-ab34-2c69da819b00"
       }
     },
     {
@@ -6353,6 +7704,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-7",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-7"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "84533553-7135-4677-af35-ce9e8fedcf77"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-music-lab-loops-sythesize-recap-choice",
         "script_level.level_keys": [
           "test-music-lab-loops-sythesize-recap-choice"
@@ -6473,9 +7836,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-music-lab-loops-synthesis-reflection",
+        "level.key": "music-lab-loops-synthesis-reflect-levelgroup",
         "script_level.level_keys": [
-          "test-music-lab-loops-synthesis-reflection"
+          "music-lab-loops-synthesis-reflect-levelgroup"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
@@ -6493,6 +7856,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "fba5dd2c-d66c-455c-bc9b-2b472df68df7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-8",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-8"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "a927c6a0-b3e2-4203-b378-80e0a63fcd62"
       }
     },
     {
@@ -6565,6 +7940,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "412c0355-13e8-4494-8b61-28475d7bf614"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-9",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-9"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0883773a-b30b-4d4e-b2e1-fc50825a3974"
       }
     },
     {
@@ -6661,6 +8048,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "a099795f-0cec-4fbd-8bb2-cf59d12a6b8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-10",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-10"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "b356516b-4c08-4674-acf3-c47434206e4d"
       }
     },
     {
@@ -6833,6 +8232,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-11",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-11"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "d5713346-5daa-48bf-a563-e6f373ba8f9b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "music-lab-functions-synthesize-recap-choice-panels",
         "script_level.level_keys": [
           "music-lab-functions-synthesize-recap-choice-panels"
@@ -6917,9 +8328,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-lab-functions-synthesis-reflection",
+        "level.key": "music-lab-functions-synthesis-reflect-levelgroup",
         "script_level.level_keys": [
-          "music-lab-functions-synthesis-reflection"
+          "music-lab-functions-synthesis-reflect-levelgroup"
         ],
         "lesson.key": "lesson-11",
         "lesson_group.key": "",
@@ -6937,6 +8348,30 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "d7db4671-1a64-4e19-b6d9-7e8724c1a3ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-12",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-12"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "a6ad1e8b-cbe8-46ea-89b6-cd5a2cdc218f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-pilot-survey-lesson-13",
+        "script_level.level_keys": [
+          "music-lab-pilot-survey-lesson-13"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "ee94b4e7-7f88-427e-b0a0-b10ebd92c29b"
       }
     },
     {
@@ -7506,8 +8941,128 @@
   ],
   "resources": [
     {
+      "name": "Functions - Explore",
+      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/copy",
+      "key": "functions_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_explore"
+      }
+    },
+    {
+      "name": "Functions - Practice",
+      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/copy",
+      "key": "functions_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_practice"
+      }
+    },
+    {
+      "name": "Functions - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1j97kHjLKvm-yQbgT4bRSqKRdZin33ER2bobOJDAJ_OQ/copy",
+      "key": "functions_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_synthesis"
+      }
+    },
+    {
+      "name": "Introduction to Music Lab",
+      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/copy",
+      "key": "introduction_to_music_lab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_music_lab"
+      }
+    },
+    {
+      "name": "Loops - Explore",
+      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/copy",
+      "key": "loops_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_explore"
+      }
+    },
+    {
+      "name": "Loops - Practice",
+      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/copy",
+      "key": "loops_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_practice"
+      }
+    },
+    {
+      "name": "Loops - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1s02366Iz1uO2K-ytHOjL1fQtamjKq8mcF3AUVDk8Ab8/copy",
+      "key": "loops_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_synthesis"
+      }
+    },
+    {
+      "name": "Mini Project - Cat GIF Loops",
+      "url": "https://docs.google.com/presentation/d/1j5lpbvr9BM4UfC6z7Mju9mZSlKJpLz7dEVaGBbw1hbo/copy",
+      "key": "mini_project_-_cat_gif_loops",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_-_cat_gif_loops"
+      }
+    },
+    {
+      "name": "Mini Project - Walk Up Songs",
+      "url": "https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/copy",
+      "key": "mini_project_-_walk_up_songs",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_-_walk_up_songs"
+      }
+    },
+    {
+      "name": "Project - Genre Mash Up",
+      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/copy",
+      "key": "project_-_genre_mash_up",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_genre_mash_up"
+      }
+    },
+    {
       "name": "Sequencing - Explore",
-      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/view",
+      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/copy",
       "key": "sequencing_-_explore",
       "properties": {
         "audience": "Teacher",
@@ -7516,13 +9071,109 @@
       "seeding_key": {
         "resource.key": "sequencing_-_explore"
       }
+    },
+    {
+      "name": "Sequencing - Practice",
+      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/copy",
+      "key": "sequencing_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_practice"
+      }
+    },
+    {
+      "name": "Sequencing - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1w_ZKy07bfN4k32dW4q_u0YpWRekM5Q3yk7DBEnqcHIQ/copy",
+      "key": "sequencing_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_synthesis"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "functions_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "functions_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "mini_project_-_walk_up_songs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "mini_project_-_cat_gif_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "introduction_to_music_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "project_-_genre_mash_up"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "sequencing_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "sequencing_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "sequencing_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "loops_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "loops_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "loops_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "functions_-_explore"
       }
     }
   ],

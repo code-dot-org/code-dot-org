@@ -1086,6 +1086,12 @@ Dashboard::Application.routes.draw do
             post 'increment_visit_count'
           end
         end
+
+        resources :users do
+          collection do
+            get :signed_in
+          end
+        end
       end
     end
 

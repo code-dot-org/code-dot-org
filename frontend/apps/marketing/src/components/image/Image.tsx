@@ -1,8 +1,17 @@
 import React from 'react';
 
-import DSCOImage, {ImageProps} from '@code-dot-org/component-library/image';
+import DSCOImage from '@code-dot-org/component-library/image';
 
-const Image: React.FC<ImageProps> = ({src, ...props}) => {
+type ImageProps = {
+  /** Image URL */
+  src?: string | null;
+  /** Image alt text */
+  altText?: string;
+  /** Image decoration */
+  decoration?: 'none' | 'border' | 'shadow';
+};
+
+const Image: React.FC<ImageProps> = ({src, altText, decoration}) => {
   // Show placeholder text until a content entry is added
   if (src == null) {
     return (
@@ -15,7 +24,7 @@ const Image: React.FC<ImageProps> = ({src, ...props}) => {
     );
   }
 
-  return <DSCOImage src={src} {...props} />;
+  return <DSCOImage src={src} altText={altText} decoration={decoration} />;
 };
 
 export default Image;

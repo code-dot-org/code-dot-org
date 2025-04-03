@@ -108,6 +108,14 @@
       "import": "./dist/esm/closeButton/index.mjs",
       "require": "./dist/cjs/closeButton/index.js"
     },
+    "./cms/footer": {
+      "types": {
+        "import": "./dist/esm/cms/footer/index.d.ts",
+        "require": "./dist/cjs/cms/footer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/footer/index.mjs",
+      "require": "./dist/cjs/cms/footer/index.js"
+    },
     "./cms/iconHighlight": {
       "types": {
         "import": "./dist/esm/cms/iconHighlight/index.d.ts",

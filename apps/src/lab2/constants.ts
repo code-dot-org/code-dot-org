@@ -35,3 +35,11 @@ export enum WARNING_BANNER_MESSAGES {
 
 // Default height of the predict question free response text area.
 export const PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT = 50;
+
+export enum FontSize {
+  Tiny = 11,
+  Small = 14, // Default font size
+  Medium = 17,
+  Large = 22,
+  Huge = 27,
+}

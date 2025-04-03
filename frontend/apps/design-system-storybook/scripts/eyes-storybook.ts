@@ -20,18 +20,19 @@ exec('yarn dotenv-run -- eyes-storybook', (error, stdout) => {
   }
 
   const report = dedent(`
-        # 🖼️ Visual Comparison Report
+        # 🖼️ Storybook Visual Comparison Report
             
         ${
           testsSuccessful
-            ? `✅ No eyes differences detected!`
-            : `⚠️⚠️⚠️ Detected eyes differences, see [report](${eyesFailureLink})!`
+            ? `✅ No Storybook eyes differences detected!`
+            : `⚠️⚠️⚠️ Detected Storybook eyes differences, see [report](${eyesFailureLink})!`
         }
         
         ${
           !testsSuccessful
             ? `
-            Applitools Eyes is used to perform visual comparison testing against the \`staging\` baseline.
+            A difference was found in our Storybook front-end visual comparison testing against the \`staging\` baseline.
+            This difference was detected in Applitools Eyes and is viewable in the link above.
             
             ## Remediation steps:
             

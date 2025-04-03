@@ -405,7 +405,7 @@ ActionBlockCarousel.parameters = {
   docs: {
     description: {
       story:
-        'Action blocks can be used in carousels to display a series of related cards. A carousel should be used when there are more than six action blocks in a section.',
+        'Use action blocks in carousels to display a series of related cards. Carousels are recommended for sections with 4+ action blocks.',
     },
   },
 };
