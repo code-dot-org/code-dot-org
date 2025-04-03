@@ -78,6 +78,11 @@ class CleanupAfterStandaloneUnitMigration < ActiveRecord::Migration[6.1]
         next
       end
 
+      unless unit.is_course?
+        print_message "Unit [#{unit_name}] is not a standalone unit. No migration needed."
+        next
+      end
+
       begin
         result = Services::StandaloneUnitMigrator.call(unit, file_system_changes: file_system_changes)
       rescue Exception => exception
