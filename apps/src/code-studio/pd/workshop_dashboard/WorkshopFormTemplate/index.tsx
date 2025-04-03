@@ -96,55 +96,49 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     }
   }, [workshop, userTimeZone]);
 
-  const getWorkshopErrors = useCallback(() => {
-    const isValidWorkshopStateKey = (
-      key: string
-    ): key is keyof WorkshopFormState => key in workshopFormState;
-
-    return Object.entries(config.fields).reduce(
-      (acc: Record<string, string>, [key, field]: [string, FieldConfig]) => {
-        const {stateKey} = field;
-        const required =
-          field.required || (key === 'prereq' && workshopFormState.hasPrereq);
-        if (
-          required &&
-          isValidWorkshopStateKey(stateKey) &&
-          isEmpty(workshopFormState[stateKey])
-        ) {
-          acc[stateKey] = REQUIRED_ERROR;
-        }
-        return acc;
-      },
-      {}
-    );
-  }, [config.fields, workshopFormState]);
-
-  const getSessionErrors = useCallback(() => {
-    const isValidSessionStateKey = (
-      key: string
-    ): key is keyof SessionFormState => key in generateNewSession();
-
-    return Object.values(config.session_fields).reduce(
-      (acc: Record<string, Record<string, string>>, field: FieldConfig) => {
-        const {stateKey, required} = field;
-        sessionFormState.forEach(session => {
-          if (
-            required &&
-            isValidSessionStateKey(stateKey) &&
-            isEmpty(session[stateKey])
-          ) {
-            acc[session.id] = {
-              ...(acc[session.id] ?? {}),
-              [stateKey]: REQUIRED_ERROR,
-            };
+  const getWorkshopErrors = useCallback(
+    () =>
+      Object.entries(config.fields).reduce(
+        (
+          acc: Record<string, string>,
+          [key, field]: [string, FieldConfig<WorkshopFormState>]
+        ) => {
+          const {stateKey} = field;
+          const required =
+            field.required || (key === 'prereq' && workshopFormState.hasPrereq);
+          if (required && isEmpty(workshopFormState[stateKey])) {
+            acc[stateKey] = REQUIRED_ERROR;
           }
-        });
+          return acc;
+        },
+        {}
+      ),
+    [config.fields, workshopFormState]
+  );
 
-        return acc;
-      },
-      {}
-    );
-  }, [config.session_fields, sessionFormState]);
+  const getSessionErrors = useCallback(
+    () =>
+      Object.values(config.session_fields).reduce(
+        (
+          acc: Record<string, Record<string, string>>,
+          field: FieldConfig<SessionFormState>
+        ) => {
+          const {stateKey, required} = field;
+          sessionFormState.forEach(session => {
+            if (required && isEmpty(session[stateKey])) {
+              acc[session.id] = {
+                ...(acc[session.id] ?? {}),
+                [stateKey]: REQUIRED_ERROR,
+              };
+            }
+          });
+
+          return acc;
+        },
+        {}
+      ),
+    [config.session_fields, sessionFormState]
+  );
 
   const hasErrors = useMemo(
     () => Object.keys({...workshopErrors, ...sessionErrors}).length > 0,

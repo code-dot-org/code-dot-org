@@ -17,7 +17,12 @@ import React, {
 import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import {TIME_FORMAT} from '../../../../workshopConstants';
-import {SessionFormState, SessionAction, SessionFields} from '../../../types';
+import {
+  SessionFormState,
+  SessionAction,
+  SessionFields,
+  Errors,
+} from '../../../types';
 
 import commonStyles from '../../../styles.module.scss';
 import styles from '../styles.module.scss';
@@ -34,7 +39,7 @@ export const SessionPart: FC<{
   sameAsPrevious: SessionFormState['sameAsPrevious'];
   showSameAsPrevious: boolean;
   fields: SessionFields;
-  errors?: Record<keyof SessionFormState, string>;
+  errors?: Errors<keyof SessionFormState>;
   dispatchSessions: Dispatch<SessionAction>;
 }> = ({
   id,

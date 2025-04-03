@@ -5,42 +5,41 @@ export interface Option {
   label: string;
 }
 
-export interface FieldConfig {
+export interface FieldConfig<T extends WorkshopFormState | SessionFormState> {
   required: boolean;
-  stateKey: keyof WorkshopFormState | keyof SessionFormState;
+  stateKey: keyof T;
   label: string;
   helperMessage?: string;
   options?: Option[];
 }
-
 export interface SessionFields {
-  date: FieldConfig;
-  start: FieldConfig;
-  end: FieldConfig;
-  session_format: FieldConfig;
-  location_name?: FieldConfig;
-  location_address?: FieldConfig;
-  meeting_link?: FieldConfig;
+  date: FieldConfig<SessionFormState>;
+  start: FieldConfig<SessionFormState>;
+  end: FieldConfig<SessionFormState>;
+  session_format: FieldConfig<SessionFormState>;
+  location_name?: FieldConfig<SessionFormState>;
+  location_address?: FieldConfig<SessionFormState>;
+  meeting_link?: FieldConfig<SessionFormState>;
 }
 
 export interface WorkshopFields {
-  name?: FieldConfig;
-  capacity?: FieldConfig;
-  grades?: FieldConfig;
-  description?: FieldConfig;
-  notes?: FieldConfig;
-  suppress_email?: FieldConfig;
-  regional_partner_id?: FieldConfig;
-  organizer_id?: FieldConfig;
-  facilitators?: FieldConfig;
-  subject?: FieldConfig;
-  fee?: FieldConfig;
-  prereq?: FieldConfig;
-  hidden?: FieldConfig;
-  registration_link?: FieldConfig;
-  course_offerings?: FieldConfig;
-  participant_group_type?: FieldConfig;
-  time_zone?: FieldConfig;
+  name?: FieldConfig<WorkshopFormState>;
+  capacity?: FieldConfig<WorkshopFormState>;
+  grades?: FieldConfig<WorkshopFormState>;
+  description?: FieldConfig<WorkshopFormState>;
+  notes?: FieldConfig<WorkshopFormState>;
+  suppress_email?: FieldConfig<WorkshopFormState>;
+  regional_partner_id?: FieldConfig<WorkshopFormState>;
+  organizer_id?: FieldConfig<WorkshopFormState>;
+  facilitators?: FieldConfig<WorkshopFormState>;
+  subject?: FieldConfig<WorkshopFormState>;
+  fee?: FieldConfig<WorkshopFormState>;
+  prereq?: FieldConfig<WorkshopFormState>;
+  hidden?: FieldConfig<WorkshopFormState>;
+  registration_link?: FieldConfig<WorkshopFormState>;
+  course_offerings?: FieldConfig<WorkshopFormState>;
+  participant_group_type?: FieldConfig<WorkshopFormState>;
+  time_zone?: FieldConfig<WorkshopFormState>;
 }
 
 export interface WorkshopCourseConfig {
@@ -86,6 +85,7 @@ export interface SessionFormState {
 }
 
 export interface Workshop {
+  id: number;
   course: string;
   name: string;
   capacity: number;
@@ -169,22 +169,26 @@ type EmailsRemindersKeys = 'suppressEmail';
 
 type PublishSettingsKeys = 'registrationLink' | 'hidden';
 
+export type Errors<SectionKeys extends string> = Partial<
+  Record<SectionKeys, string>
+>;
+
 export interface BasicsProps
   extends SectionProps,
     Pick<WorkshopFormState, BasicsKeys> {
-  errors: Record<BasicsKeys, string>;
+  errors: Errors<BasicsKeys>;
 }
 
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
-  errors: Record<PartnerFacilitatorKeys, string>;
+  errors: Errors<PartnerFacilitatorKeys>;
 }
 
 export interface AdditionalInfoProps
   extends SectionProps,
     Pick<WorkshopFormState, AdditionalInfoKeys> {
-  errors: Record<AdditionalInfoKeys, string>;
+  errors: Errors<AdditionalInfoKeys>;
 }
 
 export interface EmailsRemindersProps
@@ -194,12 +198,11 @@ export interface EmailsRemindersProps
 export interface PublishSettingsProps
   extends SectionProps,
     Pick<WorkshopFormState, PublishSettingsKeys> {
-  errors: Record<PublishSettingsKeys, string>;
+  errors: Errors<PublishSettingsKeys>;
 }
 
-export type SessionErrors = Record<
-  SessionFormState['id'],
-  Record<keyof SessionFormState, string>
+export type SessionErrors = Partial<
+  Record<SessionFormState['id'], Errors<keyof SessionFormState>>
 >;
 
 export interface ScheduleProps
