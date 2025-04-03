@@ -8,6 +8,7 @@ import {
 } from '@cdo/apps/aiEvaluation/evaluationApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
+import FeedbackToggle from './FeedbackToggle';
 
 import styles from './summary.module.scss';
 
@@ -39,7 +40,7 @@ const FreeResponseStudentResponseRow: React.FC<
             },
           ]}
           size="m"
-          className={styles.proficientTag}
+          className={styles.proficientStudentTag}
         />
       );
     } else if (studentWorkEvaluation.aiEvaluation === 'needs revision') {
@@ -57,7 +58,7 @@ const FreeResponseStudentResponseRow: React.FC<
             },
           ]}
           size="m"
-          className={styles.needsReviewTag}
+          className={styles.needsReviewStudentTag}
         />
       );
     } else if (studentWorkEvaluation.aiEvaluation === 'No attempt') {
@@ -93,6 +94,19 @@ const FreeResponseStudentResponseRow: React.FC<
       <BodyThreeText
         className={styles.aiAnalysisReasoningColumn}
       >{`${studentWorkEvaluation.aiEvaluation}. ${studentWorkEvaluation.aiReasoning}`}</BodyThreeText>
+      {/* NOTE THE BELOW COMES FROM AI ASSESSMENT FEEDBACK RADIO */}
+      <div>
+        <FeedbackToggle
+          onThumbsUpClick={() => {
+            console.log('thumbsUp');
+          }}
+          onThumbsDownClick={() => {
+            console.log('thumbsDown');
+          }}
+          size="xs"
+          color="gray"
+        />
+      </div>
     </div>
   );
 };

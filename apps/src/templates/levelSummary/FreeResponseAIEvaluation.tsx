@@ -9,6 +9,7 @@ import {
 } from '@cdo/apps/aiEvaluation/evaluationApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
+import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponseHeader';
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
 import FreeResponseStudentResponseRow from './FreeResponseStudentResponseRow';
 
@@ -102,6 +103,9 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
             }
           >
             <div>
+              <FreeResponseAiStudentResponseHeader
+                closeStudentResponses={() => {}}
+              />
               {evaluations.map(evaluation => (
                 <FreeResponseStudentResponseRow
                   key={evaluation.studentId}
