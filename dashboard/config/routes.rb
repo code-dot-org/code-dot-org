@@ -58,7 +58,7 @@ Dashboard::Application.routes.draw do
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
-    resources :user_level_evaluations, only: [:create]
+    resources :student_work_evaluations, only: [:create]
 
     resources :user_level_interactions, only: [:create]
 
@@ -946,6 +946,7 @@ Dashboard::Application.routes.draw do
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
     get 'dashboardapi/unit_summary/:unit_name', to: 'api#unit_summary'
+    get 'dashboardapi/unit_summary/:course_name/:unit_position', to: 'api#unit_summary'
     get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,

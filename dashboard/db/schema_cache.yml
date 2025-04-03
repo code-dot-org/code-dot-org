@@ -7147,6 +7147,19 @@ columns:
     comment: 
   - *30
   - *31
+  user_preference:
+  - *10
+  - *11
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: section_order
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - *15
   user_proficiencies:
   - *5
   - *11
@@ -8203,6 +8216,7 @@ primary_keys:
   user_ml_models: id
   user_module_task_assignments: id
   user_permissions: id
+  user_preference: id
   user_proficiencies: id
   user_project_storage_ids: id
   user_school_infos: id
@@ -8408,6 +8422,7 @@ data_sources:
   user_ml_models: true
   user_module_task_assignments: true
   user_permissions: true
+  user_preference: true
   user_proficiencies: true
   user_project_storage_ids: true
   user_school_infos: true
@@ -13762,6 +13777,20 @@ indexes:
     type: 
     using: :btree
     comment: 
+  user_preference:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_preference
+    name: index_user_preference_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_proficiencies:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_proficiencies
@@ -14119,7 +14148,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250321190657
+version: 20250331202624
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

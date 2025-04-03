@@ -68,6 +68,7 @@
 .sectionCardHeaderLeft {
   display: flex;
   flex-direction: column;
+  max-width: calc(100% - 32px);
 }
 
 .sectionCardHeaderRight {
@@ -76,6 +77,11 @@
 
 .sectionCardHeaderText {
   height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 720px;
+  width: 100%;
 }
 
 .sectionCardCode {
@@ -243,7 +249,35 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-neutral-secondary);
+  border-radius: 4px;
+
+  &.promotion-gray {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &.promotion-purple {
+    background-color: var(--background-brand-purple-extra-light);
+  }
+
+  &.promotion-blue {
+    background-color: var(--background-info-extra-light);
+  }
+
+  &.promotion-aqua {
+    background-color: var(--background-brand-aqua-light);
+  }
+
+  &.promotion-green {
+    background-color: var(--background-success-light);
+  }
+
+  &.promotion-strawberry {
+    background-color: var(--background-accent-strawberry-light);
+  }
+
+  &.promotion-orange {
+    background-color: var(--background-accent-orange-light);
+  }
 }
 
 .promotionType {

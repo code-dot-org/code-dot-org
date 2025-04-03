@@ -64,6 +64,8 @@ cron-pii:
 - dashboard.aidiff_messages
 - dashboard.aidiff_threads
 - dashboard.lti_deployments_user_identities
+- dashboard.user_level_evaluations
+
 
 # All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
 # sensitive data to this schema.
@@ -123,6 +125,7 @@ cron:
 - dashboard.section_hidden_stages
 - dashboard.user_proficiencies
 - dashboard.user_permissions
+- dashboard.user_level_interactions
 - dashboard.level_concept_difficulties
 - dashboard.user_scripts
 - dashboard.census_submissions:

@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include Minitest::RSpecMocks
 
   self.use_transactional_test_case = true
 
@@ -1814,6 +1815,130 @@ class ApiControllerTest < ActionController::TestCase
     assert_nil @response.cookies['CloudFront-Expires']
 
     assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
+  end
+
+  describe '#unit_summary' do
+    let!(:user) {create :teacher}
+    let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:unit) {create :unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let!(:unit_name) {unit.name}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
+    let(:lesson) {unit.lessons.first}
+    let(:lesson_position) {lesson.relative_position}
+    let(:level) {unit.lessons.first.script_levels.first}
+    let(:response) {JSON.parse(@response.body)}
+    let(:unit_data) {response['unitData']}
+
+    before do
+      sign_in user
+    end
+
+    context 'params not defined' do
+      let(:params) do
+        {}
+      end
+
+      before do
+        get :unit_summary, params: params
+      end
+
+      it 'returns a 400 response' do
+        assert_response :bad_request
+      end
+
+      context 'only course_name defined' do
+        let(:params) do
+          {
+            course_name: 'course_name',
+          }
+        end
+
+        it 'returns a 400 response' do
+          assert_response :bad_request
+        end
+      end
+
+      context 'only unit_position defined' do
+        let(:unit_position) {'1'}
+        let(:params) do
+          {
+            unit_position: '1',
+          }
+        end
+
+        it 'returns a 400 response' do
+          assert_response :bad_request
+        end
+      end
+    end
+
+    context 'unit_name defined' do
+      before do
+        get :unit_summary, params: {
+          unit_name: unit_name
+        }
+      end
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'has unitData' do
+        _(response.keys).must_include 'unitData'
+        _(response['unitData']).wont_be_nil
+      end
+
+      it 'has course info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'course_name'
+        _(unit_data['course_name']).must_equal course.name
+      end
+
+      it 'has unit info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'unit_position'
+        _(unit_data['unit_position']).must_equal unit_position
+        _(unit_data.keys).must_include 'name'
+        _(unit_data['name']).must_equal unit.name
+        _(unit_data.keys).must_include 'id'
+        _(unit_data['id'].to_i).must_equal unit.id
+      end
+    end
+
+    context 'course_name defined' do
+      before do
+        get :unit_summary, params: {
+          course_name: course.name,
+          unit_position: unit_position,
+        }
+      end
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'has unitData' do
+        _(response.keys).must_include 'unitData'
+        _(response['unitData']).wont_be_nil
+      end
+
+      it 'has course info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'course_name'
+        _(unit_data['course_name']).must_equal course.name
+      end
+
+      it 'has unit info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'unit_position'
+        _(unit_data['unit_position']).must_equal unit_position
+        _(unit_data.keys).must_include 'name'
+        _(unit_data['name']).must_equal unit.name
+        _(unit_data.keys).must_include 'id'
+        _(unit_data['id'].to_i).must_equal unit.id
+      end
+    end
   end
 
   private def create_script_with_bonus_levels

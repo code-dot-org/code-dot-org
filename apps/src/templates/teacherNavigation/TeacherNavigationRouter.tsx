@@ -271,6 +271,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               element={<UnitCalendar />}
             />
             <Route
+              path={TEACHER_NAVIGATION_PATHS.nestedUnitOverview}
+              element={<TeacherUnitOverview />}
+            />
+            <Route
               path={TEACHER_NAVIGATION_PATHS.courseOverview}
               element={
                 <ElementOrEmptyPage
