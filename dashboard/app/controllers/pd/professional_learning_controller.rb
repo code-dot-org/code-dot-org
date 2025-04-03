@@ -1,7 +1,7 @@
 class Pd::ProfessionalLearningController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
-  before_action :authenticate_user!, only: [:index, :csa, :csd, :csf, :csp, :csaif]
+  before_action :authenticate_user!, only: [:index, :workshops, :csa, :csd, :csf, :csp, :csaif]
 
   # GET my-professional-learning
   def index
@@ -30,13 +30,18 @@ class Pd::ProfessionalLearningController < ApplicationController
     }.compact
   end
 
+  def workshops
+    view_options(full_width: true, no_padding_container: true)
+    render :regional_workshop_catalog
+  end
+
   # GET professional-learning/facilitator/computer-science-a
   def csa
     @course_name = Pd::Workshop::COURSE_CSA
     if can_view_facilitator_page(@course_name)
       render 'pd/professional_learning/facilitator/csa'
     else
-      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
     end
   end
 
@@ -46,7 +51,7 @@ class Pd::ProfessionalLearningController < ApplicationController
     if can_view_facilitator_page(@course_name)
       render 'pd/professional_learning/facilitator/csd'
     else
-      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
     end
   end
 
@@ -56,7 +61,7 @@ class Pd::ProfessionalLearningController < ApplicationController
     if can_view_facilitator_page(@course_name)
       render 'pd/professional_learning/facilitator/csf'
     else
-      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
     end
   end
 
@@ -66,7 +71,7 @@ class Pd::ProfessionalLearningController < ApplicationController
     if can_view_facilitator_page(@course_name)
       render 'pd/professional_learning/facilitator/csp'
     else
-      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
     end
   end
 
@@ -76,7 +81,16 @@ class Pd::ProfessionalLearningController < ApplicationController
     if can_view_facilitator_page(@course_name)
       render 'pd/professional_learning/facilitator/csaif'
     else
-      render 'pd/professional_learning/facilitator/not_permitted_to_view'
+      render 'pd/professional_learning/facilitator/not_permitted_to_view', :status => :forbidden
+    end
+  end
+
+  # GET professional-learning/regional-partner/playbook
+  def rp_playbook
+    if current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      render 'pd/professional_learning/regional_partner/regional_partner_playbook'
+    else
+      render 'pd/professional_learning/regional_partner/not_permitted_to_view', :status => :forbidden
     end
   end
 
