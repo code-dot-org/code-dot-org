@@ -1,7 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Heading1} from '@code-dot-org/component-library/typography';
 import {isEmpty} from 'lodash';
-import moment from 'moment-timezone';
 import React, {
   FC,
   useCallback,
@@ -16,7 +15,7 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {workshopLabel} from '../utils/workshopLabel';
-import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
+import {DATETIME_FORMAT} from '../workshopConstants';
 
 import {generateNewSession} from './components/SessionsEditor';
 import {sessionsReducer} from './reducers/sessionsReducer';
@@ -41,50 +40,13 @@ import {
   WorkshopFormTemplateProps,
   DestroyedSession,
 } from './types';
+import {workshopDataToState, sessionDataToState} from './utils';
 
 import styles from './styles.module.scss';
 
 export const REQUIRED_ERROR = 'Required';
 export const VALIDATION_ERROR =
   'Your form contains validation errors that must be corrected';
-
-export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
-  course: data.course ?? '',
-  capacity: data.capacity?.toString() ?? '',
-  description: data.description ?? '',
-  facilitators: data.facilitators ?? [],
-  fee: data.fee ?? '',
-  grades: data.grades ?? [],
-  hidden: data.hidden ?? false,
-  name: data.name ?? '',
-  notes: data.notes ?? '',
-  organizerId: data.organizer?.id ?? null,
-  prereq: data.prereq ?? '',
-  hasPrereq: data.prereq ? true : false,
-  regionalPartnerId: data.regional_partner_id ?? null,
-  registrationLink: data.registration_link ?? '',
-  subject: data.subject ?? '',
-  suppressEmail: data.suppress_email ?? false,
-  courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
-  participantGroupType: data.participant_group_type ?? '',
-  timeZone: data.time_zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone,
-});
-
-export const sessionDataToState = (
-  data: Session[],
-  timeZone: string
-): SessionFormState[] =>
-  data.map(session => ({
-    id: session.id?.toString() ?? '',
-    date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
-    start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
-    end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
-    locationAddress: session.location_address ?? '',
-    locationName: session.location_name ?? '',
-    meetingLink: session.meeting_link ?? '',
-    format: session.session_format ?? 'in_person',
-    sameAsPrevious: false,
-  }));
 
 export const workshopStateToApi = (
   workshop: WorkshopFormState
