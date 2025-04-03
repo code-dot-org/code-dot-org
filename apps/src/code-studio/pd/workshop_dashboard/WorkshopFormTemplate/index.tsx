@@ -24,7 +24,9 @@ import PublishCancelButtons from './sections/PublishCancelButtons';
 import PublishSettings from './sections/PublishSettings';
 import Schedule from './sections/Schedule';
 import {
+  Errors,
   FieldConfig,
+  SessionErrors,
   SessionFormState,
   Workshop,
   WorkshopFormState,
@@ -72,13 +74,11 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     generateNewSession(),
   ]);
 
-  const [workshopErrors, setWorkshopErrors] = useState<Record<string, string>>(
-    {}
-  );
-
-  const [sessionErrors, setSessionErrors] = useState<
-    Record<string, Record<string, string>>
+  const [workshopErrors, setWorkshopErrors] = useState<
+    Errors<keyof WorkshopFormState>
   >({});
+
+  const [sessionErrors, setSessionErrors] = useState<SessionErrors>({});
 
   useEffect(() => {
     if (workshop) {
