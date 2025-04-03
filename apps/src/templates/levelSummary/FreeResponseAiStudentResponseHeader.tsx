@@ -39,6 +39,7 @@ const FreeResponseAiStudentResponseHeader: React.FC<
           iconName: 'xmark',
         }}
         type="primary"
+        className={styles.closeButton}
       />
     </div>
   );
