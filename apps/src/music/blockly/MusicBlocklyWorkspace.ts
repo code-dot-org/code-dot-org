@@ -17,6 +17,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {nameComparator} from '@cdo/apps/util/sort';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import AppConfig from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
 import musicI18n from '../locale';
 
@@ -411,6 +412,14 @@ export default class MusicBlocklyWorkspace {
     console.log('Execution time: ', Date.now() - startTime);
   }
 
+  executeCode(code: string, scope: object) {
+    try {
+      CustomMarshalingInterpreter.evalWith(code, scope, {runMaxSteps: 1000});
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
   /**
    * Executes code for the specific trigger referenced by the ID. It is
    * assumed that {@link compileSong()} has already been called and all event
@@ -534,6 +543,7 @@ export default class MusicBlocklyWorkspace {
         flyoutItems.push({
           kind: 'block',
           ...Blockly.serialization.blocks.save(block, {saveIds: false}),
+          id: Blockly.blockIdOverrides?.[block.id] || block.id,
           enabled: true,
         });
         currentCategory.contents = flyoutItems;
@@ -569,12 +579,16 @@ export default class MusicBlocklyWorkspace {
     if (this.headlessMode) {
       return;
     }
+    if (AppConfig.getValue('js-editor') === 'true') {
+      return;
+    }
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'updateHighlightedBlocks called before workspace initialized.'
       );
       return;
     }
+
     // Clear all highlights.
     for (const block of this.workspace.getAllBlocks()) {
       (this.workspace as GoogleBlockly.WorkspaceSvg).highlightBlock(

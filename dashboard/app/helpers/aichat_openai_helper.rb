@@ -24,7 +24,10 @@ module AichatOpenaiHelper
   end
 
   def self.format_messages(aichat_model_customizations, stored_messages, new_message, level_id, encrypted_channel_id)
-    level_system_prompt = Level.find_by(id: level_id)&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
+    level = Level.find_by(id: level_id)
+    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
+    level_name = level&.name
+
     instructions = get_instructions(
       aichat_model_customizations['systemPrompt'],
       level_system_prompt,
@@ -33,25 +36,32 @@ module AichatOpenaiHelper
 
     [
       {role: "system", content: instructions},
-      *stored_messages.map {|message| format_message(message, encrypted_channel_id)},
-      format_message(new_message, encrypted_channel_id)
+      *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
+      format_message(new_message, encrypted_channel_id, level_name)
     ]
   end
 
-  def self.format_message(message, encrypted_channel_id)
+  def self.format_message(message, encrypted_channel_id, level_name)
     formatted = {role: message['role'], content: [{type: "text", text: message['chatMessageText']}]}
-    message['assets']&.each do |filename|
-      asset_uris = AichatAssetHelper.get_asset_data_uris(encrypted_channel_id, filename)
-      asset_uris.each do |asset_uri|
-        formatted[:content] << {type: "image_url", image_url: {url: asset_uri}}
-      end
+    message['assets']&.each do |asset|
+      data = AichatAssetHelper.get_asset_data_uri(asset, encrypted_channel_id, level_name)
+      is_pdf = File.extname(asset["filename"]) == '.pdf'
+      formatted[:content] << if is_pdf
+                               {type: 'file', file: {filename: asset["filename"], file_data: data}}
+                             else
+                               {type: "image_url", image_url: {url: data}}
+                             end
     end
     formatted
   end
 
   def self.request_chat_completion(messages, temperature)
     http_response = client.request_chat_completion(messages, temperature)
-    JSON.parse(http_response.body)['choices'][0]['message']['content']
+    body = JSON.parse(http_response.body)
+    raise StandardError.new(body['error']) if body['error']
+    response = body&.dig("choices")&.first&.dig('message', 'content')
+    raise StandardError.new("Unexpected response from OpenAI: #{body}") unless response
+    response
   end
 
   def self.get_instructions(system_prompt, level_system_prompt, retrieval_contexts)

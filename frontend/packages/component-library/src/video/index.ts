@@ -4,5 +4,7 @@
 // Auto-import SASS generated CSS
 import './index.css';
 
-export {default as Video, VideoProps} from './Video';
+export {VideoProps} from './types';
+
+export {default as Video} from './Video';
 export {default as default} from './Video';

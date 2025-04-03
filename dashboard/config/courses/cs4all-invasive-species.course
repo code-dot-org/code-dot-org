@@ -1,0 +1,20 @@
+{
+  "name": "cs4all-invasive-species",
+  "script_names": [
+    "cs4all-invasive-species"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "cs4all-invasive-species",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

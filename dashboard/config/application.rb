@@ -26,6 +26,8 @@ require 'cdo/pycall'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+require_relative '../engines/marketing/lib/marketing/engine'
+
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
@@ -133,8 +135,7 @@ module Dashboard
     config.active_record.default_timezone = :utc
 
     # By default, config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.json').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.{json,yml}').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]

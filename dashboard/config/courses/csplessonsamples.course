@@ -1,0 +1,20 @@
+{
+  "name": "csplessonsamples",
+  "script_names": [
+    "CSPLessonSamples"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csplessonsamples",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

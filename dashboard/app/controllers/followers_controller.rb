@@ -11,7 +11,9 @@ class FollowersController < ApplicationController
 
   # GET /join/:section_code (section_code is optional)
   def student_user_new
-    if current_user.blank?
+    if current_user
+      render 'student_user_new', formats: [:html]
+    else
       @section_code = params[:section_code]
       render 'join_logged_out', formats: [:html]
     end

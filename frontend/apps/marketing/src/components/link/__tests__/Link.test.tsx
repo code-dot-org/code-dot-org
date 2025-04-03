@@ -1,5 +1,6 @@
-import Link, {LinkProps} from '@/components/link';
 import {render, screen} from '@testing-library/react';
+
+import Link, {LinkProps} from '@/components/link';
 
 describe('Link Component', () => {
   const defaultProps = {

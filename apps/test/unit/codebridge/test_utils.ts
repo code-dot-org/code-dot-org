@@ -78,8 +78,8 @@ export const getDefaultCodebridgeContext = () => {
       showFileBrowser: false,
       validMimeTypes: undefined,
       layoutComponents: {
-        horizontal: null,
-        vertical: null,
+        horizontal: () => null,
+        vertical: () => null,
       },
     },
     setProject: () => {},
@@ -109,6 +109,11 @@ export const getDefaultCodebridgeContext = () => {
     setFileType: (fileId: FileId, type: ProjectFileType) => {},
     rearrangeFiles: (fileIds: FileId[]) => {},
     startSources: {source: smallProject},
+    levelProperties: {
+      id: 0,
+      name: '',
+      appName: 'pythonlab',
+    },
   };
   return context;
 };

@@ -36,7 +36,7 @@
     "@axe-core/playwright": "^4.10.1",
     "@storybook/test-runner": "^0.19.1",
     "lint-staged": "^15.4.3",
-    "prettier": "3.3.3",
+    "prettier": "3.4.2",
     "rimraf": "^6.0.1",
     "turbo": "^2.3.0",
     "typescript": "5.5.4"

@@ -36,7 +36,10 @@ class UnitTest < ActiveSupport::TestCase
 
     @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
 
-    @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
+    @csf_unit_2019 = create :csf_script, name: 'csf-2019'
+    @csf_course_2019 = create :unit_group, name: 'csf-2019', version_year: '2019'
+    create(:unit_group_unit, position: 1, unit_group: @csf_course_2019, script: @csf_unit_2019)
+    @csf_unit_2019.reload
 
     # To test level caching, we have to make sure to create a level in a script
     # *before* generating the caches.
@@ -443,6 +446,14 @@ class UnitTest < ActiveSupport::TestCase
 
       @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+
+      @single_unit_course_offering = create :course_offering, key: 'single-unit-course', display_name: 'single-unit-course'
+      @single_unit_2023 = create :unit, name: 'single-unit-2023'
+      @single_unit_course_2023 = create :single_unit_course, name: 'single-unit-course-2023', family_name: "single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
+      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2023, key: "2023", display_name: "2023"
+      @single_unit_2024 = create :unit, name: 'single-unit-2024'
+      @single_unit_course_2024 = create :single_unit_course, name: 'single-unit-course-2024', family_name: "single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+      create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2024, key: "2024", display_name: "2024"
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
@@ -496,6 +507,22 @@ class UnitTest < ActiveSupport::TestCase
       unit2.reload
 
       assert unit2.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is false if unit in single-unit course has no progress and is not assigned' do
+      @single_unit_2023.reload
+      refute @single_unit_2023.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if unit in single-unit course is the latest stable version' do
+      @single_unit_2024.reload
+      assert @single_unit_2024.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if student is assigned to unit in single-unit course' do
+      @student.scripts << @single_unit_2023
+      @single_unit_2023.reload
+      assert @single_unit_2023.can_view_version?(@student)
     end
   end
 
@@ -1452,7 +1479,7 @@ class UnitTest < ActiveSupport::TestCase
   test "update_i18n without metdata" do
     # This simulates us doing a seed after adding new lessons to multiple of
     # our unit files. Doing so should update our object with the new lesson
-    # names (which we would then persist to sripts.en.yml)
+    # names (which we would then persist to sripts/en.yml)
     original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
 
     course3_yml = {'lessons' => {'course3' => {'name' => 'course3'}}}
@@ -1463,7 +1490,7 @@ class UnitTest < ActiveSupport::TestCase
       'course4' => course4_yml
     }
 
-    # updated represents what will get written to scripts.en.yml
+    # updated represents what will get written to scripts/en.yml
     updated = Unit.update_i18n(original_yml, lessons_i18n)
 
     assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
@@ -1497,7 +1524,7 @@ class UnitTest < ActiveSupport::TestCase
   test "update_i18n with new lesson display name" do
     # This simulates us doing a seed after adding new lessons to multiple of
     # our unit files. Doing so should update our object with the new lesson
-    # names (which we would then persist to sripts.en.yml)
+    # names (which we would then persist to sripts/en.yml)
     original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
 
     course3_yml = {'lessons' => {'course3' => {'name' => 'course3'}}}
@@ -1506,7 +1533,7 @@ class UnitTest < ActiveSupport::TestCase
       'course3' => course3_yml,
     }
 
-    # updated represents what will get written to scripts.en.yml
+    # updated represents what will get written to scripts/en.yml
     updated = Unit.update_i18n(original_yml, lessons_i18n)
 
     assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
@@ -1517,7 +1544,7 @@ class UnitTest < ActiveSupport::TestCase
       'course3' => course3_yml,
     }
 
-    # updated represents what will get written to scripts.en.yml
+    # updated represents what will get written to scripts/en.yml
     updated = Unit.update_i18n(original_yml, lessons_i18n)
 
     assert_equal course3_yml, updated['en']['data']['script']['name']['course3']

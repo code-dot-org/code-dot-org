@@ -163,7 +163,7 @@ Feature: Using the teacher homepage sections feature
     And I create a new "Elementary School" student section with course "CS Fundamentals: Course A", version "2017"
     Then the student section table should have 1 rows
     And I wait until element "#classroom-sections" is visible
-    And the section table row at index 0 has primary assignment path "/s/coursea-2017"
+    And the section table row at index 0 has primary assignment path "/courses/coursea-2017"
 
     When I click selector ".ui-test-section-dropdown"
     And I click selector ".edit-section-details-link"
@@ -174,7 +174,7 @@ Feature: Using the teacher homepage sections feature
     And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "#classroom-sections" is visible
     And I wait until element ".uitest-owned-sections" is visible
-    And the section table row at index 0 has primary assignment path "/s/coursea-2019"
+    And the section table row at index 0 has primary assignment path "/courses/coursea-2019"
 
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"

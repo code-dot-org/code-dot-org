@@ -4,15 +4,13 @@ class LevelStarterAssetsController < ApplicationController
   before_action :set_level
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
-  S3_BUCKET = 'cdo-v3-assets'.freeze
-  S3_PREFIX = 'starter_assets/'.freeze
-  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav)
+  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav .pdf)
 
   # GET /level_starter_assets/:level_name
   def show
     starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).filter_map do |friendly_name, uuid_name|
-      file_obj = get_object(uuid_name)
-      summarize(file_obj, friendly_name, uuid_name)
+      file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
+      LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
     end
 
     render json: {starter_assets: starter_assets}
@@ -25,11 +23,11 @@ class LevelStarterAssetsController < ApplicationController
     starter_assets = @level&.project_template_level&.starter_assets || @level&.starter_assets
     return head :not_found if starter_assets.nil_or_empty?
     uuid_name = starter_assets[friendly_name]
-    file_obj = get_object(uuid_name)
-    content_type = file_content_type(File.extname(uuid_name))
+    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
+    content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
 
     expires_in 1.hour, public: true
-    send_data read_file(file_obj), type: content_type, disposition: 'inline'
+    send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
   # POST /level_starter_assets/:level_name
@@ -49,11 +47,11 @@ class LevelStarterAssetsController < ApplicationController
 
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + file_ext
-    file_obj = get_object(uuid_name)
+    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
     success = file_obj&.upload_file(upload.tempfile.path)
 
     if success && @level.add_starter_asset!(friendly_name, uuid_name)
-      render json: summarize(file_obj, friendly_name, uuid_name)
+      render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
     else
       return head :unprocessable_entity
     end
@@ -64,56 +62,14 @@ class LevelStarterAssetsController < ApplicationController
   # but does not delete the asset from S3 as other levels may still be
   # using it.
   def destroy
-    if @level.remove_starter_asset!(params[:filename])
+    if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
       return head :no_content
     else
       return head :unprocessable_entity
     end
   end
 
-  #
-  # HELPERS
-  #
-
-  def summarize(file_obj, friendly_name, uuid_name)
-    if file_obj.blank?
-      nil
-    else
-      {
-        filename: friendly_name,
-        category: file_mime_type(File.extname(uuid_name)),
-        size: file_obj.size,
-        timestamp: file_obj.last_modified
-      }
-    end
-  end
-
-  def read_file(file_obj)
-    file_obj.get.body.read
-  end
-
-  def get_object(s3_filename)
-    path = prefix(s3_filename)
-    bucket.object(path)
-  end
-
   private def set_level
     @level = Level.cache_find(params[:level_name])
-  end
-
-  private def file_mime_type(extension)
-    MIME::Types.type_for(extension)&.first&.raw_media_type
-  end
-
-  private def file_content_type(extension)
-    MIME::Types.type_for(extension)&.first&.content_type
-  end
-
-  private def prefix(key)
-    S3_PREFIX + key
-  end
-
-  private def bucket
-    Aws::S3::Bucket.new(S3_BUCKET)
   end
 end

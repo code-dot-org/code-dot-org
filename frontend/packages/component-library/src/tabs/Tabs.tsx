@@ -5,6 +5,7 @@ import {ComponentSizeXSToL} from '@/common/types';
 
 import _Tab, {TabModel} from './_Tab';
 import _TabPanel from './_TabPanel';
+
 import moduleStyles from './tabs.module.scss';
 
 export interface TabsProps {
@@ -20,8 +21,10 @@ export interface TabsProps {
      The name attribute is used to reference elements in a JavaScript.
      */
   name: string;
-  /** Type of Tabs */
-  type?: 'primary' | 'secondary';
+  /** Type of Tabs.
+   * (```_tabGroup``` is ONLY for internal DSCO usage for now.
+   *  If you need to use it - go to TabGroup component) */
+  type?: 'primary' | 'secondary' | '_tabGroup';
   /** Mode (color) of Tabs */
   mode?: 'light' | 'dark';
   /** Size of Tabs */

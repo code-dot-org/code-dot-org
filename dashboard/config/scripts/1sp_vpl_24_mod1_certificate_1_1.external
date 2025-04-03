@@ -7,9 +7,10 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/e62f36e2be7f118d2396c81c66c2a185-image-1709678127521.35.18 PM.png" alt="A certificate of completion.">
 
-#### Upon finishing this module, you will be eligible to receive a certificate of completion similar to the one above. You must complete **every level** in this module to access your certificate.
+#### Upon finishing this module, you will be eligible to receive a certificate of completion similar to the one shown above. You must complete every level in this module to access your certificate.
+#### We encourage you to share your certificate on social media to celebrate your success!
 
-#### We encourage you to share your certificates to social media to celebrate your success!
+
 
 ## FAQs
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -39,7 +40,7 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 16px; font-weight: bold;"><b>Where can I find the certificates I've earned?</b></summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-<p style="font-size: 18px;"> You can find all your certificates at <a href="studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the module.
+<p style="font-size: 18px;"> You can find all your certificates at <a href="https://studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the module.
 
 #### You can also access your certificates by clicking "Print Certificate" on each module overview page.
 
@@ -58,13 +59,6 @@ markdown <<MARKDOWN
 #### You may need to return to individual levels to complete them. If every level is complete and you still can't access a certificate, <a href="https://support.code.org/hc/en-us/requests/new" target="blank" rel="noopener noreferrer">send us a message</a>.
 </p></div>
 </details>
-<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 10px 10px; margin: 20px 0px 20px 0px">
 
-# <i class="fa-solid fa-person-chalkboard"></i>
-<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 5px 5px 0px 5px;">
-
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>If you are not already a verified teacher,</b></p>
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px"> <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >Click here</a> to complete the form to become a verified teacher. 
-</p>
  
 MARKDOWN

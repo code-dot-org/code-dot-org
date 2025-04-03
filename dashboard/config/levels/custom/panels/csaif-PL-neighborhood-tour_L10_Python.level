@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-05T17:54:14.000Z",
   "level_num": "custom",
@@ -26,20 +27,13 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "#Methods the Painter can do include:\n\n- move()\n- turn_left()\n- paint()",
+        "text": "#Methods the Painter can do include:\n\n- move()\n- turn_left()\n- paint()\n- take_paint()",
         "imageUrl": "https://images.code.org/3a6e5972f2c4f6a85a450b4fcca81a67-Screenshot 2025-02-18 at 3.37.31 PM.png",
         "key": "test-intro-to-programming-lesson6-level1a-21e28908-745a-4f0a-a496-0467aef4bb96",
         "layout": "text-bottom-right"
-      },
-      {
-        "text": "Explore the `painter.py` file in the next level. Afterwards, `painter.py` will be hidden but its methods will still be accessible from `main.py`.",
-        "imageUrl": "https://images.code.org/6eb7c72314e2f65be8dc45e860d215f7-painter file.gif",
-        "key": "test-intro-to-programming-lesson6-level1a-d23a254a-f81d-4f7e-b3b7-d493c832fc1a",
-        "layout": "text-bottom-center"
       }
     ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-05T17:54:14.217+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1a\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-05T17:54:14.217+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1a\"},{\"changed_at\":\"2025-03-27 19:25:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-27 19:26:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-27 19:37:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

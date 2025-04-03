@@ -1,5 +1,6 @@
 // Creates a definition for the Link component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+
 import {removeMarginBottomDefinition} from '@/components/common/definitions';
 
 export const LinkContentfulComponentDefinition: ComponentDefinition = {
@@ -14,7 +15,7 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/2toB92KGYPO9yDK3bI3qD8/7bcfbe2819c43f6c5b9c89e6218bad10/component_link_tooltip.png',
   },
-  builtInStyles: [],
+  builtInStyles: ['cfTextAlign'],
   variables: {
     size: {
       displayName: 'Size',
@@ -30,6 +31,17 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    children: {
+      displayName: 'Link Label',
+      type: 'Text',
+      defaultValue: 'Link',
+      group: 'content',
+    },
+    href: {
+      displayName: 'Link URL',
+      type: 'Text',
+      group: 'content',
+    },
     isLinkExternal: {
       displayName:
         'Is this link external? (Does this link leave the code.org site?)',
@@ -37,18 +49,12 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
         'External links will be opened in a new tab, while internal links will be opened in the same tab.',
       type: 'Boolean',
       defaultValue: false,
-      group: 'style',
-    },
-    href: {
-      displayName: 'Link URL',
-      type: 'Text',
       group: 'content',
     },
     removeMarginBottom: {...removeMarginBottomDefinition},
-    children: {
-      displayName: 'Link Label',
+    ariaLabel: {
+      displayName: 'Aria Label',
       type: 'Text',
-      defaultValue: 'Link',
       group: 'content',
     },
   },

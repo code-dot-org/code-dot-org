@@ -1,3 +1,4 @@
+import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -15,7 +16,8 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {BlocklySource, ExemplarSettings} from '@cdo/apps/lab2/types';
+import {BlocklySource} from '@cdo/apps/lab2/types';
+import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -24,7 +26,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
-import {installFunctionBlocks} from '../blockly/blockUtils';
+import {
+  applyBlockIdOverrides,
+  installFunctionBlocks,
+} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import musicI18n from '../locale';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
@@ -36,6 +41,7 @@ import {
   setCurrentPlayheadPosition,
   showCallout,
 } from '../redux/musicRedux';
+import {MusicExemplarSettings} from '../types';
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
@@ -66,6 +72,7 @@ interface MusicLabViewProps {
   analyticsReporter: AnalyticsReporter;
   blocklyWorkspace: MusicBlocklyWorkspace;
   exemplarPlaybackEvents: PlaybackEvent[];
+  executeCode: (code: string) => void;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -84,6 +91,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   analyticsReporter,
   blocklyWorkspace,
   exemplarPlaybackEvents,
+  executeCode,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -121,7 +129,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   ) as BlocklySource | undefined;
   const exemplarSettings = useAppSelector(
     state => state.lab.levelProperties?.exemplarSettings
-  ) as ExemplarSettings | undefined;
+  ) as MusicExemplarSettings | undefined;
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -143,9 +151,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
+        const workspaceSerialization = blocklyWorkspace.getCode();
+        if (Blockly.blockIdOverrides) {
+          applyBlockIdOverrides(
+            workspaceSerialization,
+            Blockly.blockIdOverrides
+          );
+        }
         const updatedLevelData = {
           ...levelData,
-          startSources: blocklyWorkspace.getCode(),
+          startSources: workspaceSerialization,
         };
         return {level_data: updatedLevelData};
       });
@@ -300,6 +315,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 <ExemplarPlayerView
                   playbackEvents={exemplarPlaybackEvents}
                   title={exemplarSettings.playerTitle!}
+                  player={player}
                 />
               )}
           </PanelContainer>
@@ -313,6 +329,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       isEditingExemplar,
       onInstructionsTextClick,
       exemplarPlaybackEvents,
+      player,
     ]
   );
 
@@ -454,6 +471,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               >
                 {WARNING_BANNER_MESSAGES.TOOLBOX_MODE}
               </div>
+            )}
+            {AppConfig.getValue('js-editor') === 'true' && (
+              <CodeEditor
+                darkMode={true}
+                onCodeChange={executeCode}
+                startCode={''}
+                editorConfigExtensions={[javascript()]}
+                appName="music"
+              />
             )}
             <div role="application" id={blocklyDivId} />
             {showAdvancedControls && (

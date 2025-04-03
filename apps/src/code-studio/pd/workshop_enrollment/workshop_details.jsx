@@ -4,6 +4,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {WorkshopFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
 
 import {WorkshopPropType} from './enrollmentConstants';
@@ -46,25 +48,42 @@ export default class WorkshopDetails extends React.Component {
     );
   }
 
+  format() {
+    return (
+      <>
+        <div className="row">
+          <div className="span2" style={styles.label}>
+            <strong>Format:</strong>
+          </div>
+          <div className="span2">{this.props.workshop.format}</div>
+        </div>
+        {[WorkshopFormats.in_person, WorkshopFormats.hybrid].includes(
+          this.props.workshop.format
+        ) && this.location()}
+      </>
+    );
+  }
+
   location() {
     return (
-      <div className="row">
-        <div className="span2" style={styles.label}>
-          <strong>Location:</strong>
+      <>
+        <div className="row">
+          <div className="span2" style={styles.label}>
+            <strong>Location Name:</strong>
+          </div>
+          <div className="span2">{this.props.workshop.location_name}</div>
         </div>
-        <div className="span2">
-          {this.props.workshop.virtual
-            ? 'Virtual'
-            : this.props.workshop.location_name}
-          {!this.props.workshop.virtual &&
-            this.props.workshop.location_address && (
-              <div>
-                <br />
-                {this.props.workshop.location_address}
-              </div>
-            )}
-        </div>
-      </div>
+        {this.props.workshop.location_address && (
+          <div className="row">
+            <div className="span2" style={styles.label}>
+              <strong>Location Address:</strong>
+            </div>
+            <div className="span2">
+              <div>{this.props.workshop.location_address}</div>
+            </div>
+          </div>
+        )}
+      </>
     );
   }
 
@@ -171,7 +190,7 @@ export default class WorkshopDetails extends React.Component {
           </div>
         </div>
         {this.sessionDates()}
-        {this.location()}
+        {this.format()}
         {this.props.workshop.course === COURSE_BUILD_YOUR_OWN
           ? this.buildYourOwnWSDetails()
           : this.courseAndSubject()}

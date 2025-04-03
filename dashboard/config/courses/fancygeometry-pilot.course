@@ -1,0 +1,20 @@
+{
+  "name": "fancygeometry-pilot",
+  "script_names": [
+    "fancygeometry-pilot"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "fancygeometry-pilot",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

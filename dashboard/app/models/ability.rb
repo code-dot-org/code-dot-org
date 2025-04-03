@@ -95,7 +95,7 @@ class Ability
       can :create, Activity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
-      can :create, UserLevelEvaluation, user_id: user.id
+      can :create, StudentWorkEvaluation, user_id: user.id
       can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower do |follower|
@@ -166,6 +166,8 @@ class Ability
 
       # all signed in users can get their level source
       can :get_level_source, UserLevel
+
+      can :evaluate, :openai_evaluate
 
       if user.teacher?
         can :manage, Section do |s|
@@ -270,9 +272,9 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
+      if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
-        can :submit_feedback, AichatMessage
+        can :submit_feedback, AidiffMessage
       end
     end
 
@@ -361,7 +363,8 @@ class Ability
 
     if user.persisted? && user.can_use_ai_iteration_tools?
       can [:tools], :ai_iteration
-      can [:fetch_student_code_samples], :student_code_sample
+      can [:fetch_student_code_samples], :student_work_sample
+      can [:fetch_free_response_answers], :student_work_sample
     end
 
     # In order to accommodate the possibility of there being no database, we
@@ -508,13 +511,12 @@ class Ability
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
 
-      can :log_chat_event, :aichat_event do
+      # Additional logic that confirms that a given teacher or student should have access
+      # to a given student (or their own, in the case of a student viewer) chat history is in aichat_events_controller.
+      can [:log_chat_event, :chat_history], :aichat_event do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
-
-      # Additional logic that confirms that a given teacher should have access
-      # to a given student's chat history is in aichat_events_controller.
-      can [:student_chat_history, :submit_teacher_feedback], :aichat_event do
+      can :submit_teacher_feedback, :aichat_event do
         user.teacher_can_access_ai_chat?
       end
 

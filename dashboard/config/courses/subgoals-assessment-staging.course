@@ -1,0 +1,20 @@
+{
+  "name": "subgoals-assessment-staging",
+  "script_names": [
+    "subgoals-assessment-staging"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "subgoals-assessment-staging",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

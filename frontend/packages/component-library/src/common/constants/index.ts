@@ -2,9 +2,8 @@
  * This file contains constants that are used across the component library
  */
 
-import {VisualAppearance} from '@/typography';
-
 import {ComponentSizeXSToL, DropdownColor} from '@/common/types';
+import {VisualAppearance} from '@/typography';
 
 /**
  *  This is the map of component size to body text size (visualAppearance)

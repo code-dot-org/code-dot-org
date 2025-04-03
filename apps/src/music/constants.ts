@@ -98,6 +98,7 @@ export const DEFAULT_BEATS_PER_MEASURE = 4;
 export const DEFAULT_KEY = Key.C;
 export const MIN_BPM = 60;
 export const MAX_BPM = 200;
+export const DEFAULT_VALIDATION_TIMEOUT = 2;
 
 export const BUS_EFFECT_COMBINATIONS: Effects[] = [
   {filter: 'medium', delay: 'medium'},

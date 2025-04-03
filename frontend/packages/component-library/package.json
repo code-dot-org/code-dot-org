@@ -34,6 +34,22 @@
       "import": "./dist/esm/accordion/faqAccordion/index.mjs",
       "require": "./dist/cjs/accordion/faqAccordion/index.js"
     },
+    "./actionBlock": {
+      "types": {
+        "import": "./dist/esm/actionBlock/index.d.ts",
+        "require": "./dist/cjs/actionBlock/index.d.ts"
+      },
+      "import": "./dist/esm/actionBlock/index.mjs",
+      "require": "./dist/cjs/actionBlock/index.js"
+    },
+    "./actionBlock/fullWidthActionBlock": {
+      "types": {
+        "import": "./dist/esm/actionBlock/fullWidthActionBlock/index.d.ts",
+        "require": "./dist/cjs/actionBlock/fullWidthActionBlock/index.d.ts"
+      },
+      "import": "./dist/esm/actionBlock/fullWidthActionBlock/index.mjs",
+      "require": "./dist/cjs/actionBlock/fullWidthActionBlock/index.js"
+    },
     "./alert": {
       "types": {
         "import": "./dist/esm/alert/index.d.ts",
@@ -91,6 +107,55 @@
       },
       "import": "./dist/esm/closeButton/index.mjs",
       "require": "./dist/cjs/closeButton/index.js"
+    },
+    "./cms/footer": {
+      "types": {
+        "import": "./dist/esm/cms/footer/index.d.ts",
+        "require": "./dist/cjs/cms/footer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/footer/index.mjs",
+      "require": "./dist/cjs/cms/footer/index.js"
+    },
+    "./cms/iconHighlight": {
+      "types": {
+        "import": "./dist/esm/cms/iconHighlight/index.d.ts",
+        "require": "./dist/cjs/cms/iconHighlight/index.d.ts"
+      },
+      "import": "./dist/esm/cms/iconHighlight/index.mjs",
+      "require": "./dist/cjs/cms/iconHighlight/index.js"
+    },
+    "./cms/iframe": {
+      "types": {
+        "import": "./dist/esm/cms/iframe/index.d.ts",
+        "require": "./dist/cjs/cms/iframe/index.d.ts"
+      },
+      "import": "./dist/esm/cms/iframe/index.mjs",
+      "require": "./dist/cjs/cms/iframe/index.js"
+    },
+    "./cms/section": {
+      "types": {
+        "import": "./dist/esm/cms/section/index.d.ts",
+        "require": "./dist/cjs/cms/section/index.d.ts"
+      },
+      "import": "./dist/esm/cms/section/index.mjs",
+      "require": "./dist/cjs/cms/section/index.js"
+    },
+    "./cms/section/index.css": "./dist/esm/cms/section/index.css",
+    "./cms/snapshot": {
+      "types": {
+        "import": "./dist/esm/cms/snapshot/index.d.ts",
+        "require": "./dist/cjs/cms/snapshot/index.d.ts"
+      },
+      "import": "./dist/esm/cms/snapshot/index.mjs",
+      "require": "./dist/cjs/cms/snapshot/index.js"
+    },
+    "./cms/tabGroup": {
+      "types": {
+        "import": "./dist/esm/cms/tabGroup/index.d.ts",
+        "require": "./dist/cjs/cms/tabGroup/index.d.ts"
+      },
+      "import": "./dist/esm/cms/tabGroup/index.mjs",
+      "require": "./dist/cjs/cms/tabGroup/index.js"
     },
     "./common/constants": {
       "types": {
@@ -205,13 +270,13 @@
       "import": "./dist/esm/formFieldWrapper/index.mjs",
       "require": "./dist/cjs/formFieldWrapper/index.js"
     },
-    "./cms/image": {
+    "./image": {
       "types": {
-        "import": "./dist/esm/cms/image/index.d.ts",
-        "require": "./dist/cjs/cms/image/index.d.ts"
+        "import": "./dist/esm/image/index.d.ts",
+        "require": "./dist/cjs/image/index.d.ts"
       },
-      "import": "./dist/esm/cms/image/index.mjs",
-      "require": "./dist/cjs/cms/image/index.js"
+      "import": "./dist/esm/image/index.mjs",
+      "require": "./dist/cjs/image/index.js"
     },
     "./link": {
       "types": {
@@ -222,6 +287,22 @@
       "require": "./dist/cjs/link/index.js"
     },
     "./link/index.css": "./dist/esm/link/index.css",
+    "./list": {
+      "types": {
+        "import": "./dist/esm/list/index.d.ts",
+        "require": "./dist/cjs/list/index.d.ts"
+      },
+      "import": "./dist/esm/list/index.mjs",
+      "require": "./dist/cjs/list/index.js"
+    },
+    "./list/simpleList": {
+      "types": {
+        "import": "./dist/esm/list/simpleList/index.d.ts",
+        "require": "./dist/cjs/list/simpleList/index.d.ts"
+      },
+      "import": "./dist/esm/list/simpleList/index.mjs",
+      "require": "./dist/cjs/list/simpleList/index.js"
+    },
     "./modal": {
       "types": {
         "import": "./dist/esm/modal/index.d.ts",
@@ -246,23 +327,6 @@
       "import": "./dist/esm/radioButton/index.mjs",
       "require": "./dist/cjs/radioButton/index.js"
     },
-    "./cms/iframe": {
-      "types": {
-        "import": "./dist/esm/cms/iframe/index.d.ts",
-        "require": "./dist/cjs/cms/iframe/index.d.ts"
-      },
-      "import": "./dist/esm/cms/iframe/index.mjs",
-      "require": "./dist/cjs/cms/iframe/index.js"
-    },
-    "./cms/section": {
-      "types": {
-        "import": "./dist/esm/cms/section/index.d.ts",
-        "require": "./dist/cjs/cms/section/index.d.ts"
-      },
-      "import": "./dist/esm/cms/section/index.mjs",
-      "require": "./dist/cjs/cms/section/index.js"
-    },
-    "./cms/section/index.css": "./dist/esm/cms/section/index.css",
     "./segmentedButtons": {
       "types": {
         "import": "./dist/esm/segmentedButtons/index.d.ts",
@@ -365,7 +429,8 @@
   },
   "dependencies": {
     "dompurify": "^3.2.4",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "react-player": "^3.0.0-canary.4"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
@@ -398,7 +463,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.49",
     "postcss-modules": "^6.0.1",
-    "prettier": "3.3.3",
+    "prettier": "3.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "release-it": "^18.1.2",

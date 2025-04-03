@@ -1,5 +1,6 @@
 // Creates a definition for the Paragraph component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+
 import {removeMarginBottomDefinition} from '@/components/common/definitions';
 
 export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
@@ -19,7 +20,7 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
     visualAppearance: {
       displayName: 'Visual Appearance',
       type: 'Text',
-      defaultValue: 'body-one',
+      defaultValue: 'body-two',
       group: 'style',
       validations: {
         in: [

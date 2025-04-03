@@ -494,6 +494,12 @@ class Level < ApplicationRecord
     false
   end
 
+  # Programming levels are levels where students write code.
+  # These are the lab types that support programming used in 6-12th grade curriculum.
+  def upper_grades_programming_level?
+    %w(Applab Gamelab Javalab Pythonlab Weblab).include?(type)
+  end
+
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
   def can_have_feedback?
     ["Applab", "Gamelab", "Weblab"].include?(type)
@@ -704,7 +710,7 @@ class Level < ApplicationRecord
 
   def show_help_and_tips_in_level_editor?
     (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab) || is_a?(Javalab)) &&
-      !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
+      !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice) || is_a?(Music))
   end
 
   def localized_teacher_markdown
@@ -879,6 +885,7 @@ class Level < ApplicationRecord
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
+    properties_camelized[:name] = name
     properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
     properties_camelized[:helpVideos] = related_videos.map(&:summarize)
@@ -942,9 +949,42 @@ class Level < ApplicationRecord
     properties['validations']
   end
 
+  # Some labs override this if starter code isn't block-based.
+  def get_starter_code
+    properties["start_blocks"]
+  end
+
   def get_exemplar_settings
     properties['exemplar_settings']
   end
+
+  # Ensure that if this is a multiple choice predict level, there is at least one correct answer
+  # specified.
+  def has_correct_multiple_choice_answer?
+    if predict_settings && predict_settings["isPredictLevel"] && predict_settings["questionType"] == 'multipleChoice'
+      options = predict_settings["multipleChoiceOptions"]
+      answers = predict_settings["solution"]
+      unless options && answers && !options.empty? && answers.present?
+        errors.add(:predict_settings, 'multiple choice questions must have at least one correct answer')
+      end
+    end
+  end
+
+  def clean_up_predict_settings
+    return unless predict_settings
+    if !predict_settings["isPredictLevel"]
+      # If this is not a predict level, remove any predict settings that may have been set.
+      self.predict_settings = {isPredictLevel: false}
+    elsif predict_settings["questionType"] == 'multipleChoice'
+      # Remove any free response settings if this is a multiple choice question.
+      predict_settings.delete("placeholderText")
+      predict_settings.delete("freeResponseHeight")
+    else
+      # Remove any multiple choice settings if this is a free response question.
+      predict_settings.delete("multipleChoiceOptions")
+    end
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.

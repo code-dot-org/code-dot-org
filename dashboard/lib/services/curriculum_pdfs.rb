@@ -137,10 +137,8 @@ module Services
           pdf_pathname = generate_lesson_pdf(lesson, dir)
 
           # Generate metadata
-          course_name = script.unit_group ? script.unit_group.name : script.name
           metadata = generate_metadata_for_ai(script, lesson)
-          file_path = "/tmp/#{course_name}-#{script.name}-#{format("L%02d", lesson.absolute_position)}.metadata.json"
-          add_metadata_to_ai_s3(file_path, metadata)
+          add_metadata_to_ai_s3(metadata)
           add_pdf_to_ai_s3(pdf_pathname, metadata)
         end
       end
@@ -158,10 +156,8 @@ module Services
             any_pdf_generated = true
 
             # Generate metadata
-            course_name = script.unit_group ? script.unit_group.name : script.name
             metadata = generate_metadata_for_ai(script, lesson)
-            file_path = "/tmp/#{course_name}-#{script.name}-#{format("L%02d", lesson.absolute_position)}.metadata.json"
-            add_metadata_to_ai_s3(file_path, metadata)
+            add_metadata_to_ai_s3(metadata)
             add_pdf_to_ai_s3(pdf_pathname, metadata)
           end
 
@@ -198,20 +194,22 @@ module Services
       return metadata
     end
 
-    def self.add_metadata_to_ai_s3(file_path, metadata)
+    def self.add_metadata_to_ai_s3(metadata)
       full_metadata_json = {
         metadataAttributes: metadata
       }.to_json
-      flat_filename = "live/pdfgen_#{File.basename(file_path)}"
+      flat_filename = s3_file_name(metadata) + ".metadata.json"
       AWS::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, full_metadata_json, no_random: true)
     end
 
     def self.add_pdf_to_ai_s3(filepath, metadata)
       data = File.read(filepath)
-
-      flat_filename = "live/pdfgen_#{metadata[:course]}-#{metadata[:unit_fullname]}-#{metadata[:lesson]}.pdf"
-
+      flat_filename = s3_file_name(metadata)
       AWS::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, data, no_random: true)
+    end
+
+    def self.s3_file_name(metadata)
+      "live/pdfgen_#{metadata[:course]}-#{metadata[:unit_fullname]}-#{metadata[:lesson]}.pdf"
     end
 
     def self.generate_missing_pdfs
@@ -221,9 +219,16 @@ module Services
 
           get_pdfless_lessons(script).each do |lesson|
             puts "Generating missing Lesson PDFs for #{lesson.key} (from #{script.name})"
-            generate_lesson_pdf(lesson, dir)
+            pdf_pathname = generate_lesson_pdf(lesson, dir)
             generate_lesson_pdf(lesson, dir, student_facing: true)
             any_pdf_generated = true
+
+            if lesson.has_lesson_plan
+              # Generate metadata
+              metadata = generate_metadata_for_ai(script, lesson)
+              add_metadata_to_ai_s3(metadata)
+              add_pdf_to_ai_s3(pdf_pathname, metadata)
+            end
           end
 
           if !script_overview_pdf_exists_for?(script) && should_generate_overview_pdf?(script)

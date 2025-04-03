@@ -1,31 +1,16 @@
-import {useState, useEffect, HTMLAttributes} from 'react';
 import classNames from 'classnames';
+import {useState} from 'react';
+import ReactPlayer from 'react-player/file';
 
-import moduleStyles from './video.module.scss';
-import {LinkButton} from '@/button';
+import {Button, LinkButton} from '@/button';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
+import Facade from '@/video/Facade';
+import NativeVideo from '@/video/NativeVideo';
+import {RenderState, VideoProps} from '@/video/types';
+import YouTubeVideo from '@/video/YoutubeVideo';
 
-import {checkIfYouTubeIsBlocked} from '@/common/helpers';
-
-export interface VideoProps extends HTMLAttributes<HTMLElement> {
-  /** Video title */
-  videoTitle?: string;
-  /** Video YouTube ID */
-  youTubeId?: string;
-  /** Video fallback */
-  videoFallback?: string;
-  /** Show caption */
-  showCaption?: boolean;
-  /** Label for Download button */
-  downloadLabel?: string;
-  /** Error heading for placeholder  */
-  errorHeading?: string;
-  /** Error body for placeholder */
-  errorBody?: string;
-  /** Video custom className */
-  className?: string;
-}
+import moduleStyles from './video.module.scss';
 
 /**
  * ### Production-ready Checklist:
@@ -51,56 +36,124 @@ const Video: React.FC<VideoProps> = ({
   errorHeading,
   errorBody,
   className,
-  ...HTMLAttributes
+  isYouTubeCookieAllowed,
 }: VideoProps) => {
-  const [isYouTubeBlocked, setIsYouTubeBlocked] = useState(false);
-  const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/mqdefault.jpg`;
+  const youtubeVideoUrl = `https://www.youtube-nocookie.com/watch?v=${youTubeId}`;
 
-  // Check to see if YouTube is blocked.
-  // If it is, we'll use the fallback video player.
-  useEffect(() => {
-    checkIfYouTubeIsBlocked().then(setIsYouTubeBlocked);
-  }, []);
+  const [renderState, setRenderState] = useState<RenderState>('facade');
+  const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
 
+  const handleError = (
+    error: Error | undefined,
+    nextRenderState: RenderState,
+  ) => {
+    // If blocked due to an interaction autoplay issue, don't move to the next render state but allow the user to
+    // manually click the play button
+    if (error?.name === 'NotAllowedError') {
+      console.warn(error);
+    } else {
+      setRenderState(nextRenderState);
+    }
+  };
+
+  const handleFacadeClick = () => {
+    if (isYouTubeCookieAllowed && !window.CDOVideoPlayer?.isYouTubeBlocked) {
+      setRenderState('youtube');
+    } else {
+      if (videoFallback && ReactPlayer.canPlay(videoFallback)) {
+        setRenderState('native');
+      } else {
+        if (window.CDOVideoPlayer?.isYouTubeBlocked) {
+          setRenderState('error');
+        } else {
+          setRenderState('cookie-blocked');
+        }
+      }
+    }
+  };
+
+  const getVideoPlayer = () => {
+    switch (renderState) {
+      case 'facade':
+        return (
+          <Facade
+            label={`Play video ${videoTitle}`}
+            posterThumbnail={posterThumbnail}
+            onClick={handleFacadeClick}
+          />
+        );
+      case 'youtube':
+        return (
+          <YouTubeVideo
+            posterThumbnail={posterThumbnail}
+            videoTitle={videoTitle}
+            src={youtubeVideoUrl}
+            onError={error => {
+              const nextRenderState =
+                videoFallback && ReactPlayer.canPlay(videoFallback)
+                  ? 'native'
+                  : 'error';
+
+              handleError(error, nextRenderState);
+            }}
+          />
+        );
+      case 'native':
+        return (
+          <NativeVideo
+            posterThumbnail={posterThumbnail}
+            videoTitle={videoTitle}
+            src={videoFallback}
+            className={className}
+            onError={error => handleError(error, 'error')}
+          />
+        );
+      case 'error':
+        return (
+          <div className={classNames(moduleStyles.errorPlaceholder)}>
+            <FontAwesomeV6Icon
+              iconName="exclamation-circle"
+              iconStyle="solid"
+            />
+            <BodyTwoText>
+              <StrongText>{errorHeading || 'Video unavailable'}</StrongText>
+            </BodyTwoText>
+            <BodyThreeText>
+              {errorBody || 'This video is blocked on your network.'}
+            </BodyThreeText>
+          </div>
+        );
+      case 'cookie-blocked':
+        return (
+          <div className={classNames(moduleStyles.errorPlaceholder)}>
+            <FontAwesomeV6Icon
+              iconName="exclamation-circle"
+              iconStyle="solid"
+            />
+            <BodyTwoText>
+              <StrongText>
+                {errorHeading || 'Cookie consent required'}
+              </StrongText>
+            </BodyTwoText>
+            <BodyThreeText>
+              {errorBody ||
+                'Please enable "Functional Cookies" and refresh the page to play this video.'}
+            </BodyThreeText>
+            <Button
+              className={moduleStyles.cookieConsentButton}
+              onClick={() => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).OneTrust.ToggleInfoDisplay();
+              }}
+              text={'Cookie Settings'}
+            />
+          </div>
+        );
+    }
+  };
   return (
     <figure className={moduleStyles.videoComponentContainer}>
-      <div className={moduleStyles.videoWrapper}>
-        {isYouTubeBlocked ? (
-          videoFallback ? (
-            // Disabling this eslint rule since we don't support captions on all of our videos.
-            // eslint-disable-next-line jsx-a11y/media-has-caption
-            <video
-              className={classNames(className)}
-              title={videoTitle || 'Video player'}
-              poster={posterThumbnail}
-              src={videoFallback}
-              controls
-              {...HTMLAttributes}
-            />
-          ) : (
-            <div className={classNames(moduleStyles.errorPlaceholder)}>
-              <FontAwesomeV6Icon
-                iconName="exclamation-circle"
-                iconStyle="solid"
-              />
-              <BodyTwoText>
-                <StrongText>{errorHeading || 'Video unavailable'}</StrongText>
-              </BodyTwoText>
-              <BodyThreeText>
-                {errorBody || 'This video is blocked on your network.'}
-              </BodyThreeText>
-            </div>
-          )
-        ) : (
-          <iframe
-            className={classNames(className)}
-            src={`https://www.youtube-nocookie.com/embed/${youTubeId}`}
-            title={videoTitle || 'YouTube video player'}
-            allowFullScreen
-            {...HTMLAttributes}
-          />
-        )}
-      </div>
+      <div className={moduleStyles.videoWrapper}>{getVideoPlayer()}</div>
       <div className={moduleStyles.footer}>
         {showCaption && <Figcaption>{videoTitle}</Figcaption>}
         {videoFallback && (

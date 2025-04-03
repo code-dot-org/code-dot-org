@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {SpacingNoneToS, SpacingNoneToL} from '@/common/types';
+
 import moduleStyles from './section.module.scss';
 
 export type SectionBackground =
@@ -32,6 +33,12 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
   backgroundImageUrl?: string;
   /** Vertical padding */
   padding?: Exclude<SpacingNoneToL, SpacingNoneToS>;
+  /** Section theme */
+  theme?: 'Light' | 'Dark';
+  /** Section ID */
+  id?: string;
+  /** Section className */
+  className?: string;
   /** Section content */
   children?: ReactNode;
 }
@@ -48,31 +55,47 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  *
  * Design System: Section Component.
  * Acts as a container for section content in the Contentful CMS.
+ * Supports Light and Dark themes automatically based on background color.
  */
 const Section: React.FC<SectionProps> = ({
   background = 'primary',
   backgroundImageUrl,
   padding = 'l',
-  children,
+  theme = 'Light',
+  id,
   className,
+  children,
   ...HTMLAttributes
 }: SectionProps) => {
+  const hasPatternBackground =
+    background === sectionBackground.patternDark ||
+    background === sectionBackground.patternPrimary;
+
+  const useDarkTheme =
+    hasPatternBackground || background === sectionBackground.dark;
+
   return (
     <section
+      id={id}
+      data-theme={hasPatternBackground || useDarkTheme ? 'Dark' : theme}
       className={classNames(
         moduleStyles.section,
         moduleStyles[`section-background-${background}`],
         moduleStyles[`section-padding-${padding}`],
         className,
       )}
-      {...HTMLAttributes}
       style={{
-        ...(backgroundImageUrl && {
-          backgroundImage: `url(${backgroundImageUrl})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '18rem',
-        }),
+        ...(hasPatternBackground
+          ? backgroundImageUrl
+            ? {
+                backgroundImage: `url(${backgroundImageUrl})`,
+                backgroundRepeat: 'repeat',
+                backgroundSize: '18rem',
+              }
+            : {}
+          : {}),
       }}
+      {...HTMLAttributes}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>
     </section>

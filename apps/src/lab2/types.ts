@@ -168,6 +168,7 @@ export interface ProjectFolder {
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
   id: number;
+  name: string;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;
@@ -231,6 +232,22 @@ export interface VideoLevelData {
   thumbnail: string;
 }
 
+// The level data for a bubble_choice level that doesn't require
+// reloads between levels.
+export interface BubbleChoiceLevelData {
+  displayName: string;
+  description: string;
+  sublevels: BubbleChoiceSublevel[];
+}
+
+// Bubble Choice specific property
+export interface BubbleChoiceSublevel {
+  display_name: string;
+  level_id: string;
+  thumbnail_url: string;
+  url: string;
+}
+
 // Addtional fields for videos that are linked as references in the
 // Help & Tips tab of Instructions.
 interface VideoData extends VideoLevelData {
@@ -242,13 +259,9 @@ interface VideoData extends VideoLevelData {
 
 // Exemplar settings for a level.
 export interface ExemplarSettings {
-  // Validation settings (always expected)
   validationEnabled: boolean;
   validationSuccessMessage: string;
   validationFailureMessage: string;
-  // Player settings (optional, only used for Music)
-  playerEnabled?: boolean;
-  playerTitle?: string;
 }
 
 // Python Lab specific property
@@ -274,7 +287,10 @@ export interface Lab2EntryPoint {
   theme?: Theme;
 }
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+export type LevelData =
+  | ProjectLevelData
+  | VideoLevelData
+  | BubbleChoiceLevelData;
 
 export type ProjectType =
   | AppName
@@ -317,10 +333,13 @@ export interface Condition {
   value?: string | number;
 }
 
+type ValueType = 'string' | 'number';
+type ConditionValueType = `${ValueType}:${ValueType}` | ValueType;
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number';
+  valueType?: ConditionValueType;
   description: string;
+  valueOptions?: string[];
 }
 
 // Validation in the level.

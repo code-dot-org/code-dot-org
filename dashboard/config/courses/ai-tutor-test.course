@@ -1,0 +1,21 @@
+{
+  "name": "ai-tutor-test",
+  "script_names": [
+    "ai-tutor-test"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ai-tutor-test",
+    "pilot_experiment": "ai-tutor",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
