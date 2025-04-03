@@ -729,7 +729,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         'xmlns:html': 'http://www.w3.org/1999/xhtml',
         'xmlns:xlink': 'http://www.w3.org/1999/xlink',
         version: '1.1',
-        class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
+        // Ensure that Blockly is not translated by LocalizeJS by default
+        class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv notranslate`,
       },
       null
     );
