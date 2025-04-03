@@ -2665,13 +2665,13 @@ class UnitTest < ActiveSupport::TestCase
     assert unit_with_ai_rubric.ai_assessment_enabled?
   end
 
-  test 'can summarize has_numbered_lessons' do
+  test 'can summarize has_unnumbered_lessons' do
     unit = create :unit
-    refute unit.has_numbered_lessons
-    refute unit.summarize[:has_numbered_lessons]
-    unit.update!(has_numbered_lessons: true)
-    assert unit.has_numbered_lessons
-    assert unit.summarize[:has_numbered_lessons]
+    refute unit.has_unnumbered_lessons
+    refute unit.summarize[:has_unnumbered_lessons]
+    unit.update!(has_unnumbered_lessons: true)
+    assert unit.has_unnumbered_lessons
+    assert unit.summarize[:has_unnumbered_lessons]
   end
 
   private def has_unlaunched_unit?(units)

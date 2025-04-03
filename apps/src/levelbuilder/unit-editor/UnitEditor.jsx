@@ -71,7 +71,7 @@ class UnitEditor extends React.Component {
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
-    initialHasNumberedLessons: PropTypes.bool,
+    initialHasUnnumberedLessons: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialPilotExperiment: PropTypes.string,
@@ -147,7 +147,7 @@ class UnitEditor extends React.Component {
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
-      hasNumberedLessons: this.props.initialHasNumberedLessons,
+      hasUnnumberedLessons: this.props.initialHasUnnumberedLessons,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       curriculumPath: this.props.initialCurriculumPath,
       pilotExperiment: this.props.initialPilotExperiment,
@@ -359,7 +359,7 @@ class UnitEditor extends React.Component {
       lesson_groups:
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
       last_updated_at: this.state.lastUpdatedAt,
-      has_numbered_lessons: this.state.hasNumberedLessons,
+      has_unnumbered_lessons: this.state.hasUnnumberedLessons,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
@@ -971,11 +971,11 @@ class UnitEditor extends React.Component {
             </HelpTip>
             <input
               type="checkbox"
-              defaultChecked={this.state.hasNumberedLessons}
+              defaultChecked={!this.state.hasUnnumberedLessons}
               style={styles.checkbox}
               onChange={() =>
                 this.setState({
-                  hasNumberedLessons: !this.state.hasNumberedLessons,
+                  hasUnnumberedLessons: !this.state.hasUnnumberedLessons,
                 })
               }
             />
