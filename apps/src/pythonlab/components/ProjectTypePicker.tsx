@@ -11,11 +11,15 @@ import moduleStyles from './projectTypePicker.module.scss';
 
 interface ProjectTypePickerProps {
   setProjectCallback: (type: 'console' | 'neighborhood') => void;
+  currentProjectType?: 'console' | 'neighborhood';
 }
 
 const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
   setProjectCallback,
+  currentProjectType,
 }) => {
+  const isNeighborhood = currentProjectType === 'neighborhood';
+  const isConsole = currentProjectType === 'console';
   return (
     <div className={moduleStyles.dialogContainer} data-theme="Dark">
       <CustomDialog
@@ -38,7 +42,10 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               color: 'black',
               useAsLink: false,
               onClick: () => setProjectCallback('console'),
-              iconRight: {iconName: 'chevron-right'},
+              iconRight: isConsole
+                ? {iconName: 'check'}
+                : {iconName: 'chevron-right'},
+              disabled: isConsole,
             }}
           />
           <ActionBlock
@@ -49,7 +56,10 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
               color: 'black',
               useAsLink: false,
               onClick: () => setProjectCallback('neighborhood'),
-              iconRight: {iconName: 'chevron-right'},
+              iconRight: isNeighborhood
+                ? {iconName: 'check'}
+                : {iconName: 'chevron-right'},
+              disabled: isNeighborhood,
             }}
           />
         </div>
