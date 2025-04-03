@@ -34,7 +34,7 @@ import {workshopDataToState, sessionDataToState, workshopLabel} from './utils';
 
 import styles from './styles.module.scss';
 
-const REQUIRED_ERROR = 'Required';
+export const REQUIRED_ERROR = 'Required';
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
