@@ -1,0 +1,20 @@
+{
+  "name": "allthemigratedthings",
+  "script_names": [
+    "allthemigratedthings"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-versioned-script",
+    "version_year": "2020"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

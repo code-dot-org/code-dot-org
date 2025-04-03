@@ -40,6 +40,7 @@ import {
   LEGACY_DEFAULT_LIBRARY,
   DEFAULT_LIBRARY,
   DEFAULT_PACK,
+  DEFAULT_VALIDATION_TIMEOUT,
 } from '../constants';
 import {AnalyticsContext} from '../context';
 import MusicRegistry from '../MusicRegistry';
@@ -157,7 +158,8 @@ class UnconnectedMusicView extends React.Component {
       this.getExemplarPlaybackEvents,
       this.getValidationTimeout,
       this.player,
-      this.getPlayingTriggers
+      this.getPlayingTriggers,
+      this.getExemplarValidationMode
     );
 
     // Set shared shared objects in the MusicRegistry so views outside of this
@@ -469,7 +471,7 @@ class UnconnectedMusicView extends React.Component {
           this.props.levelProperties?.levelData?.validationTimeout,
           this.sequencer.getLastMeasure()
         )
-      : 2;
+      : DEFAULT_VALIDATION_TIMEOUT;
   };
 
   getPlaybackEvents = () => {
@@ -541,6 +543,12 @@ class UnconnectedMusicView extends React.Component {
       const defaultStartSourcesFilename = 'startSources' + this.props.blockMode;
       return require(`@cdo/static/music/${defaultStartSourcesFilename}.json`);
     }
+  };
+
+  getExemplarValidationMode = () => {
+    return (
+      this.props.levelProperties?.exemplarSettings?.validationMode || 'default'
+    );
   };
 
   getExemplarSources = () => {

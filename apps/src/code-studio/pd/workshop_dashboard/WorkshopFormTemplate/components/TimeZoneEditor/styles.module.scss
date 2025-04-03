@@ -1,0 +1,27 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  p {
+    margin: 0;
+  }
+
+  .tzDropdown {
+    gap: unset;
+
+    select {
+      width: 13rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .checkIcon {
+    color: var(--text-success-primary);
+    margin-left: 0.25rem;
+  }
+}

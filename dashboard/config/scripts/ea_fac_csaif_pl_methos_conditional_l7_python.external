@@ -1,0 +1,48 @@
+name 'ea-fac-csaif-pl_methos-conditional-L7-Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Methods Used with Conditional Statements 
+
+#### The following methods can be used in conditional statements to check the Painter’s surroundings in the Neighborhood IDE.
+
+#### These methods help determine movement, paint status, and direction, allowing the Painter to make decisions before taking action.
+
+#### Notice these boolean statements can be evaluated as **true** or **false**.
+
+<table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <th style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Method</th>
+        <th style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">What It Checks</th>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">can_move()</td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Can the Painter move in the direction it is facing?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">can_move("direction")</td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Could the Painter move in the given direction?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">is_on_paint()</td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Is the Painter standing on a painted square?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">has_paint()</td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Does the Painter have paint to use?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">is_on_bucket()</td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Is the Painter standing on a bucket?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">is_facing_*()</td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Is the Painter facing * direction (* could be north, east, south, or west)?</td>
+    </tr>
+</table>
+
+
+
+##Let's continue! 
+MARKDOWN

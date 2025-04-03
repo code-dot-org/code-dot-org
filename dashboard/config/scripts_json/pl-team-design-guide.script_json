@@ -6,17 +6,15 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "pl-team-design-guide",
-    "serialized_at": "2025-02-26 21:52:35 UTC",
-    "published_state": "in_development",
-    "instruction_type": "self_paced",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:22 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "pl-team-design-guide"
     }
@@ -821,6 +819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLStyleGuide_L2_Images2"
+        ],
         "progression": "Cards"
       },
       "bonus": false,
@@ -843,6 +844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLStyleGuide_L2_Boxes"
+        ],
         "progression": "Block Quotes"
       },
       "bonus": false,
@@ -865,6 +869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLStyleGuide_L2_Expandable"
+        ],
         "progression": "Expandable Text"
       },
       "bonus": false,
@@ -887,6 +894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLStyleGuide_L2_Tables"
+        ],
         "progression": "Tables"
       },
       "bonus": false,
@@ -909,6 +919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L3_TextExample1"
+        ],
         "progression": "Text-Heavy Pages"
       },
       "bonus": false,
@@ -931,6 +944,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L3_TextExample2"
+        ],
         "progression": "Text-Heavy Pages"
       },
       "bonus": false,
@@ -953,6 +969,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L3_TextExample3"
+        ],
         "progression": "Text-Heavy Pages"
       },
       "bonus": false,
@@ -975,6 +994,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L3_TextExample4"
+        ],
         "progression": "Text-Heavy Pages"
       },
       "bonus": false,
@@ -1022,6 +1044,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_OverviewPage2"
+        ],
         "progression": "Module/Unit Overview"
       },
       "bonus": false,
@@ -1044,6 +1069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_OrientingTheLearner1"
+        ],
         "progression": "Certificate Overview"
       },
       "bonus": false,
@@ -1116,6 +1144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening2"
+        ],
         "progression": "Module/Unit Roadmap"
       },
       "bonus": false,
@@ -1138,6 +1169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Closing1"
+        ],
         "progression": "Module/Unit/Lesson Closing"
       },
       "bonus": false,
@@ -1160,6 +1194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Closing2"
+        ],
         "progression": "Congratulations"
       },
       "bonus": false,

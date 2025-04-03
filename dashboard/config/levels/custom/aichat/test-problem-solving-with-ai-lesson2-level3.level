@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Upload an Image\r\n\r\nUse AI Chat to help plan ideas for improving the playground.\r\n\r\n### Do This:\r\n2. **Copy and paste** the following prompt: \r\n\r\n>I’m a Parks and Rec working looking for a project to improve a playground with swings, slides, and benches. What are some ideas?\r\n3. Press **Send**.\r\n4. Attach the image of the playground to your prompt.\r\n5. **Copy and paste** the following prompt: \r\n\r\n>I’m a Parks and Rec working looking to improve this playground. What are some ideas? \r\n5. Then read and compare **AI Chat's responses**.\r\n\r\n**Try it out!**\r\n",
+    "long_instructions": "## Upload an Image\r\n\r\nUse AI Chat to help plan ideas for improving the playground.\r\n\r\n### Do This:\r\n1. **Write a prompt** that asks AI Chat to suggest some improvements to a playground. In your prompt, describe some features of a typical playground. *Don't have a prompt? That's ok! You can copy one from below the instructions.*\r\n3. Press **Send**.\r\n4. **Attach an image** of a playground from the Library to your prompt.\r\n5. **Write a prompt** that asks AI Chat for help improving the playground in the picture you've attached.\r\n3. Press **Send**.\r\n5. Then read and compare **AI Chat's responses**.\r\n\r\n---\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I upload an image?**]\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I’m a Parks and Rec working looking for a project to improve a playground with swings, slides, and benches. What are some ideas?\r\n:::\r\n\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -39,9 +39,16 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "a-street-with-houses-and-trees-and-a-gravel-road-2025-02-10-01-17-16-utc.jpg": "655747a1-dec0-4e1c-9c0e-6f5805c1a698.jpg",
+      "tokyo-shitamachi-empty-playground-pink-hippopotamu-2025-01-08-02-28-45-utc.jpg": "71dc943c-5014-46d0-9e22-4c47c4be3f85.jpg",
+      "Pasted Graphic 1.png": "ddd65f37-31c0-45a3-92b3-9067ed2e0a96.png",
+      "pexels-photo-11497156.jpg": "53f0698d-25ff-495e-934b-fc7dfbec7605.jpg"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-17T17:46:01.463+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level2\"},{\"changed_at\":\"2025-03-17 17:46:06 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:26:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-20 17:19:12 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-17T17:46:01.463+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level2\"},{\"changed_at\":\"2025-03-17 17:46:06 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-17 21:26:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-20 17:19:12 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-28 18:04:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-28 19:19:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Aichat>

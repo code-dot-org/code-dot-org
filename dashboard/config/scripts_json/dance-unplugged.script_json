@@ -6,22 +6,20 @@
     "properties": {
       "content_area": "hoc",
       "curriculum_umbrella": "HOC",
-      "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
         "es-MX"
       ],
-      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "dance-unplugged",
-    "serialized_at": "2025-01-09 16:49:10 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:28:55 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "dance-unplugged"
     }

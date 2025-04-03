@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-10T20:16:23.000Z",
   "level_num": "custom",
@@ -7,8 +8,8 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Make a Prediction \r\n\r\nThe `chorus` sound is 4 measures long and the `drum beat pause` sound is 2-measures long. \r\n\r\nWhen you press \"Run,\" what do you think this code will sound like? ",
-    "offer_browser_tts": "false",
+    "long_instructions": "### Predict\r\n\r\nThe <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Chorus 1 </span> track is 4 measures long and the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Drum Beat Pause </span> track is 2-measures long. \r\n\r\nWhen you press \"Run,\" what do you think this code will sound like?",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -236,18 +237,27 @@
       "solution": "",
       "questionType": "freeResponse",
       "allowMultipleAttempts": false,
-      "placeholderText": "",
+      "placeholderText": "Answer Here!",
       "freeResponseHeight": 150,
-      "codeEditableAfterSubmit": true
+      "codeEditableAfterSubmit": false
     },
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-predict_f584a8a4-37c5-4629-8b2f-2330a321c34b",
+        "message": "Look! The beat track is playing twice so it lines up with the chorus track!",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-10 21:04:19 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:07:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:07:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:08:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:27:05 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:55:28 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:26:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-10 21:04:19 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:07:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:07:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-10 21:08:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:27:05 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:55:28 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 18:26:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 21:34:49 +0000\",\"changed\":[\"long_instructions\",\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,3 +1,5 @@
+import {Dispatch} from 'react';
+
 export interface Option {
   value: string;
   label: string;
@@ -67,13 +69,15 @@ export interface Session {
 }
 
 export interface SessionFormState {
-  id?: number;
+  id: string;
+  date: string;
   start: string;
   end: string;
   locationAddress: string;
   locationName: string;
   meetingLink: string;
-  sessionFormat: SessionFormat;
+  format: SessionFormat;
+  sameAsPrevious: boolean;
 }
 
 export interface Workshop {
@@ -138,21 +142,64 @@ export interface WorkshopFormState {
 }
 
 export interface SectionProps {
-  state: WorkshopFormState;
-  handleChange: <K extends keyof WorkshopFormState>(
-    update: Record<K, WorkshopFormState[K]>
-  ) => void;
+  dispatchWorkshop: Dispatch<WorkshopAction>;
   config: WorkshopCourseConfig;
-  courseOfferings?: CourseOffering[] | null;
-  regionalPartners?: RegionalPartner[] | null;
-  facilitators?: Facilitator[] | null;
 }
 
-export interface ScheduleProps {
-  state: SessionFormState[];
+export interface BasicsProps
+  extends SectionProps,
+    Pick<
+      WorkshopFormState,
+      | 'name'
+      | 'grades'
+      | 'subject'
+      | 'prereq'
+      | 'hasPrereq'
+      | 'capacity'
+      | 'description'
+      | 'courseOfferings'
+    > {}
+
+export interface PartnerFacilitatorProps
+  extends SectionProps,
+    Pick<WorkshopFormState, 'facilitators' | 'regionalPartnerId'> {}
+
+export interface AdditionalInfoProps
+  extends SectionProps,
+    Pick<WorkshopFormState, 'fee' | 'participantGroupType' | 'notes'> {}
+
+export interface EmailsRemindersProps
+  extends SectionProps,
+    Pick<WorkshopFormState, 'suppressEmail'> {}
+
+export interface PublishSettingsProps
+  extends SectionProps,
+    Pick<WorkshopFormState, 'registrationLink' | 'hidden'> {}
+
+export interface ScheduleProps
+  extends SectionProps,
+    Pick<WorkshopFormState, 'timeZone'> {
+  sessions: SessionFormState[];
+  dispatchSessions: Dispatch<SessionAction>;
 }
 
 export interface PublishCancelButtonsProps {
   publish: () => void;
   cancel: () => void;
 }
+
+export type SessionAction =
+  | {type: 'ADD_SESSION'}
+  | {type: 'UPDATE_SESSION'; payload: Partial<SessionFormState>; id: string}
+  | {type: 'SET_SESSIONS'; payload: SessionFormState[]}
+  | {type: 'DELETE_SESSION'; id: string}
+  | {type: 'UPDATE_SESSION_SAME_AS_PREVIOUS'; id: string};
+
+export type WorkshopAction =
+  | {type: 'UPDATE_WORKSHOP'; payload: Partial<WorkshopFormState>}
+  | {type: 'ADD_GRADE'; payload: string}
+  | {type: 'REMOVE_GRADE'; payload: string}
+  | {type: 'ADD_COURSE_OFFERING'; payload: string}
+  | {type: 'REMOVE_COURSE_OFFERING'; payload: string}
+  | {type: 'SET_COURSE_OFFERINGS'; payload: string[]}
+  | {type: 'SET_WORKSHOP'; payload: WorkshopFormState};

@@ -4,8 +4,8 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
     :enrollment_code, :pre_workshop_survey_url, :attended, :on_map, :funded, :funding_type, :ready_to_close?,
     :workshop_starting_date, :date_and_location_name, :regional_partner_name, :regional_partner_id,
-    :scholarship_workshop?, :can_delete, :created_at, :virtual, :suppress_email, :third_party_provider, :course_offerings, :module,
-    :participant_group_type, :description, :registration_link, :prereq, :hidden, :grades, :time_zone
+    :scholarship_workshop?, :can_delete, :created_at, :virtual, :suppress_email, :third_party_provider, :course_offerings, :course_offering_names,
+    :module, :participant_group_type, :description, :registration_link, :prereq, :hidden, :grades, :time_zone
 
   def sessions
     object.sessions.map do |session|
@@ -28,6 +28,10 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def course_offerings
     object.course_offerings.map(&:id)
+  end
+
+  def course_offering_names
+    object.course_offerings&.map(&:display_name)&.sort&.join(', ')
   end
 
   def enrolled_teacher_count

@@ -51,11 +51,13 @@ interface DialogManagerProps {
 const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   children,
 }) => {
-  const [openDialog, setOpenDialog] = useState<DialogType | null>(null);
   const [shouldThrowOnCancel, setShouldThrowOnCancel] =
     useState<boolean>(false);
   const [promiseArgs, setPromiseArgs] = useState<unknown>();
-  const [dialogArgs, setDialogArgs] = useState<AnyDialogType>();
+  const [activeDialog, setActiveDialog] = useState<{
+    type: DialogType | null;
+    dialogArgs?: AnyDialogType;
+  } | null>(null);
   const [deferredPromiseObject, setDeferredPromiseObject] =
     useState<DeferredPromiseObject>(getDeferredPromise());
 
@@ -65,30 +67,33 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
       setDeferredPromiseObject(newDeferredPromise);
       setPromiseArgs(undefined);
       setShouldThrowOnCancel(throwOnCancel);
-      setOpenDialog(type);
-      setDialogArgs(dialogArgs);
+      setActiveDialog({type, dialogArgs});
+
       return newDeferredPromise.deferred as Promise<DialogClosePromiseReturnType>;
     },
-    [setDialogArgs, setPromiseArgs]
+    [setActiveDialog]
   );
 
   const closeDialog = useCallback(
     (closeType: DialogCloseActionType) => {
-      setOpenDialog(null);
+      setActiveDialog(null);
       const resolver =
         shouldThrowOnCancel && closeType === 'cancel'
           ? deferredPromiseObject.reject
           : deferredPromiseObject.resolve;
       resolver?.({type: closeType, args: promiseArgs});
     },
-    [setOpenDialog, deferredPromiseObject, shouldThrowOnCancel, promiseArgs]
+    [setActiveDialog, deferredPromiseObject, shouldThrowOnCancel, promiseArgs]
   );
 
   // Allow the any because if it's NOT any, then line 63 with DialogView's args will toss an error.
   // Keep this until we have a better solution. ¯\_(ツ)_/¯
   // The typing on the `showDialog` function ensures the props are correct, so we're still safe'
   // eslint-disable-next-line
-  const DialogView: any = openDialog && dialogArgs && DialogViews[openDialog];
+  const DialogView: any =
+    activeDialog?.type &&
+    activeDialog?.dialogArgs &&
+    DialogViews[activeDialog.type];
 
   return (
     <DialogControlContext.Provider
@@ -102,7 +107,7 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
     >
       {DialogView && (
         <div className={moduleStyles.dialogContainer}>
-          <DialogView {...dialogArgs} />
+          <DialogView {...activeDialog?.dialogArgs} />
         </div>
       )}
       {children}

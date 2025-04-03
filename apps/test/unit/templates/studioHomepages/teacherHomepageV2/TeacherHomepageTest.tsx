@@ -7,9 +7,15 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import {Store} from 'redux';
 
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -20,6 +26,8 @@ import teacherSections, {
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+const INITIAL_ROUTE = '/teacher_dashboard/home';
 
 describe('TeacherHomepage', () => {
   const sections = [
@@ -61,16 +69,13 @@ describe('TeacherHomepage', () => {
 
   const serverSections = sections.map(serverSectionFromSection);
 
-  let store: Store;
-
-  const fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+  let fetchSpy: jest.SpyInstance;
+  let sendEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
-    store = getStore();
-    registerReducers({teacherSections, currentUser});
-    store.dispatch(setSections(serverSections));
-    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
-
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    stubRedux();
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/dashboardapi/sections/available_participant_types') {
         return Promise.resolve({
@@ -84,9 +89,14 @@ describe('TeacherHomepage', () => {
 
   afterEach(() => {
     fetchSpy.mockRestore();
+    restoreRedux();
   });
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+  function renderComponent(initialSections = serverSections) {
+    const store = getStore();
+    registerReducers({teacherSections, currentUser});
+    store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
+    store.dispatch(setSections(initialSections));
     return render(
       <Provider store={store}>
         <RouterProvider
@@ -97,34 +107,50 @@ describe('TeacherHomepage', () => {
                 element={<TeacherHomepage />}
               />,
             ]),
-            {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
+            {initialEntries: [INITIAL_ROUTE], basename: '/teacher_dashboard'}
           )}
         />
       </Provider>
     );
   }
 
+  it('sends analytics event when visiting the page', () => {
+    renderComponent();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
+      {},
+      PLATFORMS.BOTH
+    );
+  });
+
   it('renders SectionList component', () => {
     renderComponent();
     screen.getByText('Welcome, Rubber Ducky');
     screen.getByText('Class Sections');
+    screen.getByText('Period 1');
+    screen.getByText('Period 4');
   });
 
   it('create section button opens popup', async () => {
     renderComponent();
 
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/dashboardapi/sections/available_participant_types'
+    );
+
     fireEvent.click(screen.getByRole('button', {name: 'New class section'}));
 
-    await screen.findByText('Create a new section', {}, {timeout: 5000});
-    screen.getByText('Picture password');
+    await screen.findByText('Create a new section');
+
+    await screen.findByText('Picture password', {}, {timeout: 5000});
     screen.getByRole('button', {name: 'Cancel'});
   }, 15000);
 
-  //TODO (TEACH-1659): Why did we need to increase timeouts on this test?
   it('teaching/archived toggle', async () => {
     renderComponent();
     screen.getByRole('button', {name: 'Teaching'});
     const archivedButton = screen.getByRole('button', {name: 'Archived'});
+    const teachingButton = screen.getByRole('button', {name: 'Teaching'});
 
     screen.getByText('Period 1');
     expect(screen.queryByText('hidden')).toBeNull();
@@ -133,6 +159,20 @@ describe('TeacherHomepage', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
+
+    fireEvent.click(teachingButton);
+    await screen.findByText('Period 1');
+    expect(screen.queryByText('hidden')).toBeNull();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('archive all opens modal', async () => {
@@ -147,5 +187,24 @@ describe('TeacherHomepage', () => {
     fireEvent.click(archiveAllSectionsButton);
 
     screen.getByText('Archive all class sections?');
+  });
+
+  it('empty sections shows empty state', async () => {
+    renderComponent([]);
+
+    await screen.findByText('Welcome, Rubber Ducky');
+    await screen.findByText("It's a bit empty here...");
+    screen.getByText('You haven’t created any class sections yet.');
+  });
+
+  it('empty archived sections shows empty state', () => {
+    renderComponent([]);
+
+    const archivedButton = screen.getByRole('button', {name: 'Archived'});
+    fireEvent.click(archivedButton);
+
+    screen.getByText('Welcome, Rubber Ducky');
+    screen.getByText("It's a bit empty here...");
+    screen.getByText('You haven’t archived any class sections yet.');
   });
 });

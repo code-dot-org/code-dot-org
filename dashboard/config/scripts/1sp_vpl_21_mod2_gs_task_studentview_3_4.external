@@ -1,0 +1,195 @@
+name '1SP-VPL-21-mod2-GS_Task-StudentView_3_4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# How do I know if I'm in Student View or Teacher View? 
+## Differences between views: 
+
+   <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>
+        <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+    Student View
+</th>
+       <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+  Teacher View
+</th>
+    </tr>
+    
+    <tr>
+    
+        <td style="padding: 10px; vertical-align: top; font-size: 18px;">
+        <p>
+        <img src="https://images.code.org/c2150f31421492ca4272819df73d4dea-image-1742930634466.23.41 PM.png" 
+    alt="code.org student level" 
+    style=" display: block; margin: auto; height: 300px; width: 500px; clear: both; margin: 0 20px 20px 0;" 
+        </p>
+            <ul style="font-size: 18px;">  
+                <li>Designed for learners to engage with lessons and activities.</li>
+                <li>Access to coding puzzles, interactive exercises, and tutorials.</li>
+                <li>Tailored to student skill levels.</li>
+                <li>Streamlined for creativity and exploration.</li>
+                <li><b>Students only have access to Student View.</b></li>
+                </ul> 
+        </td>
+        
+       <td style="padding: 10px; vertical-align: top; font-size: 18px;">
+            <ul style="font-size: 18px;">  
+         
+          <p>
+           <img 
+    src="https://images.code.org/691cd16597ece614a68f8f93ab790ded-image-1734124258562.gif" 
+    alt="Teacher panel opening and closing on the right side of the screen" 
+    style=" display: block; margin: auto; height: 300px; width: 500px; clear: both; margin: 0 20px 20px 0;" 
+          </p>    
+               
+    
+  <li>Teacher View has resources like lesson plans, and a blue pop-out window on the right side.</li>
+                <li>Provides tools for educators to guide and monitor student progress.</li>
+                <li>Access to lesson plans and student management tools.</li>
+                <li>Tracks student performance and provides solutions to activities.</li>
+                <li>Includes additional resources like teaching tips and curriculum overviews.</li>
+                <li>Solutions and rosters are available.</li>
+                <li><b>Teachers have access to both Student View and Teacher View</b></li>
+            </ul>
+     
+        </td>
+      <tr>
+      </table>
+      
+<h2>
+My Dashboard
+</h2> 
+      
+  <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>      
+             <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+    Student View
+</th>
+       <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+  Teacher View
+</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+            <p>
+            
+         
+<img 
+    src="https://images.code.org/2455bb2536bc97e2a6697ca577805a05-image-1741287483918.gif" 
+    alt="boxes highlighting the sections on the student dashboard" 
+    style="display: block; margin: auto; height: 300px; width: 275px; clear: both; margin: 0 20px 20px 0;">
+    <br> 
+   <p style="font-size: 18px;"> The first section on the student dashboard shows "My Courses". 
+</p>
+               
+            </ul>
+        </td>
+        <td style="padding: 10px; vertical-align: top;">
+             <div style="flex: 1;">
+
+</div>
+<ul>
+          <p>
+  <img 
+    src="https://images.code.org/512f7b16037227ff651df510d01af5d8-image-1741288173128.gif" 
+    alt="boxes highlighting the sections on the teacher dashboard" 
+    style="display: block; margin: auto; height: 300px; width: 275px; clear: both; margin: 0 20px 20px 0;">
+</p> <br>   
+   <p style="font-size: 18px;">The first section of the teacher dashboard displays the "Create a Section" option, along with a list of sections you have already created. </p>
+</div>
+                
+            </ul>
+        </td>
+      <tr>
+          </table>
+<h2>
+Course Page
+</h2> 
+      
+  <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>      
+           <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+    Student View
+</th>
+       <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+  Teacher View
+</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                <div style="flex: 1;">
+   <img src="https://images.code.org/a0dfbc9609004428598fe097327f152f-image-1741289150575.gif" alt="Student Course Page" width="300"> <br> <br>
+   <p style="font-size: 18px;">Student view shows instructions, course levels and progress.</p>
+</div>
+               
+            </ul>
+        </td>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+          <p>
+  <img 
+    src="https://images.code.org/6dd74b85b3b6cb61e2fa7c37e2428f39-image-1741288870754.gif" 
+    alt="Teacher view of a course highlighting the teacher tools" 
+    style="display: block; margin: auto; height: 300px; width: 275px; clear: both; margin: 0 20px 20px 0;">
+</p> <br>    
+   <p style="font-size: 18px;">Teacher View has resources like the navigation panel on the right, and teacher tools under the course name.</p>
+ </div>
+                
+            </ul>
+        </td>
+      <tr>
+          </table>
+          
+          <h2>
+Lesson Level
+</h2> 
+      
+  <table border="1" width="100%" style="border-collapse: collapse;">
+    <tr>      
+           <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+    Student View
+</th>
+       <th style="width: 50%; text-align: left; padding: 10px; background-color: #0093A4; color: #FFFFFF; font-size: 20px;">
+  Teacher View
+</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+              <img src="https://images.code.org/507a3a5747077797a9eb0b913178019a-image-1741293588647.jpg" alt="Student View of a Code.org Level" width="300"> <br> 
+   <p style="font-size: 18px;">Student View shows course levels without extra teacher tools.</p>
+ </div>
+               
+            </ul>
+        </td>
+        <td style="padding: 10px; vertical-align: top;">
+            <ul>
+                 <img src="https://images.code.org/0747470413c4a67c240543e4fcf0bef2-image-1741293513566.gif" alt="teacher view of a Code.org Level" width="300"><br>
+   <p style="font-size: 18px;">Most levels include a "For Teachers Only" section that provides example solutions.</p>
+                
+            </ul>
+        </td>
+      <tr>
+          </table>
+
+
+
+<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 10px 10px; margin: 20px 0px 20px 0px">
+
+# <i class="fa-solid fa-person-chalkboard"></i>
+
+
+
+<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 5px 5px 0px 5px;">
+
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Don't see solutions or lesson plans in your account?</b></p>
+<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px"> <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >Click here</a> to complete the form to become a verified teacher. 
+</p>
+
+</div>
+
+
+MARKDOWN

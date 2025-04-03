@@ -4,7 +4,7 @@ require 'contentful'
 class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
-  TestEntry = Struct.new(:content_type, :fields, keyword_init: true)
+  TestEntry = Struct.new(:id, :content_type, :fields, keyword_init: true)
   TestContentType = Struct.new(:id, keyword_init: true)
 
   describe '#show' do
@@ -17,11 +17,13 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
         fields: {
           sidebar_ads: [
             TestEntry.new(
+              id: 1,
               fields: {
                 title: 'Ad 1',
               }
             ),
             TestEntry.new(
+              id: 2,
               fields: {
                 title: 'Ad 2',
               }
@@ -33,10 +35,12 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
     let(:expected_result) do
       [
         {
-          title: 'Ad 1'
+          title: 'Ad 1',
+          id: 1
         },
         {
-          title: 'Ad 2'
+          title: 'Ad 2',
+          id: 2
         }
       ].to_json
     end

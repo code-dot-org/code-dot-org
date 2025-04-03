@@ -1,0 +1,20 @@
+{
+  "name": "physcomp-temp",
+  "script_names": [
+    "physcomp-temp"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "physcomp-temp",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -17,7 +17,7 @@ interface EditorProps {
 }
 
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
-  const {source, saveFile} = useCodebridgeContext();
+  const {source, saveFile, levelProperties} = useCodebridgeContext();
 
   const file = getActiveFileForSource(source);
 
@@ -61,6 +61,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
+          appName={levelProperties.appName}
           editorConfigExtensions={editorConfigExtensions}
         />
       ) : (

@@ -222,8 +222,12 @@ class ToneJSPlayer {
     let lastSampleStart = 0;
     await this.startContextIfNeeded();
     events.forEach(({notes, playbackPosition}) => {
+      // While playback time and transport times are 1-based (allowing for playing
+      // a sound early if pickupLength is specified), playing a sound immediately
+      // requires the playback time to be 0-based.
+      const immediatePlaybackTime = playbackPosition - 1;
       const offsetSeconds = Transport.toSeconds(
-        this.playbackTimeToTransportTime(playbackPosition)
+        this.playbackTimeToTransportTime(immediatePlaybackTime)
       );
       lastSampleStart = Math.max(lastSampleStart, offsetSeconds);
       this.previewSamplers[instrument]

@@ -46,10 +46,11 @@ $mobileBreakpoint: 1024px;
   background: var(--background-neutral-primary);
 }
 
-.tabGroupModelTabImageContainer {
+figure.tabGroupModelTabImageContainer {
+  // Image in Tab Group Model Tab have fixed width and height. These value are taken from DSCO Figma design.
   width: 28.6699rem;
-
-  border-radius: variables.$regular-border-radius;
+  height: 18.7234rem;
+  aspect-ratio: auto;
   background: var(--background-neutral-tertiary);
 }
 
@@ -89,8 +90,9 @@ $mobileBreakpoint: 1024px;
   }
 }
 
-.tabGroupAccordionItemImage {
-  width: 100%;
-  border-radius: 0.25rem;
+figure.tabGroupAccordionItemImage {
+  // Image in Tab Group Model Tab have fixed width and height. These value are taken from DSCO Figma design.
+  height: 13.2246rem;
+  aspect-ratio: auto;
   background: var(--background-neutral-tertiary);
 }

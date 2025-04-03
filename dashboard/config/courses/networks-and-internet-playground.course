@@ -1,0 +1,20 @@
+{
+  "name": "networks-and-internet-playground",
+  "script_names": [
+    "networks-and-internet-playground"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "networks-and-internet-playground",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

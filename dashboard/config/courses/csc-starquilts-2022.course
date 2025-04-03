@@ -1,0 +1,20 @@
+{
+  "name": "csc-starquilts-2022",
+  "script_names": [
+    "csc-starquilts-2022"
+  ],
+  "published_state": "sunsetting",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csc-starquilts",
+    "version_year": "2022"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
