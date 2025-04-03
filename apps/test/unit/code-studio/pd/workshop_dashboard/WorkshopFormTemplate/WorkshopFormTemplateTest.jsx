@@ -11,7 +11,6 @@ import {workshopLabel} from '@cdo/apps/code-studio/pd/workshop_dashboard/Worksho
 import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-// Mock the useFetch hook
 jest.mock('@cdo/apps/util/useFetch');
 
 const mockedUseFetch = useFetch;
@@ -127,6 +126,37 @@ describe('WorkshopFormTemplate', () => {
         // prereq isn't required in the config. it only becomes required if the user
         // indicates it has prerequisites
         Object.values(config.fields).filter(f => f.required).length + 1
+      );
+
+      await user.selectOptions(
+        screen.getByRole('combobox', {
+          name: `${config.fields.prereq.label} ${config.fields.prereq.helperMessage}`,
+        }),
+        'false'
+      );
+
+      await user.click(publishButton);
+
+      expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
+        Object.values(config.fields).filter(f => f.required).length
+      );
+
+      // special case when user clears session date input
+      const dateInput = screen.getByLabelText('Date');
+      await user.clear(dateInput);
+
+      await user.click(publishButton);
+
+      expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
+        Object.values(config.fields).filter(f => f.required).length + 1
+      );
+
+      await user.type(dateInput, '2025-03-28');
+
+      await user.click(publishButton);
+
+      expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
+        Object.values(config.fields).filter(f => f.required).length
       );
     }
   );
