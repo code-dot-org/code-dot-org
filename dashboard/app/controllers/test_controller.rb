@@ -134,7 +134,10 @@ class TestController < ApplicationController
       teacher_user = User.create!(attributes)
     end
 
-    section = Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    # Need to also assign the course if the script is a part of a single-unit course
+    section = script.unit_group.single_unit_course? ?
+                Section.create(name: "New Section", user: teacher_user, script: script, course: script.unit_group, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
+                Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
