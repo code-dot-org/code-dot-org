@@ -13,8 +13,6 @@ import {useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {workshopLabel} from '../utils/workshopLabel';
-
 import {generateNewSession} from './components/SessionsEditor';
 import {sessionsReducer} from './reducers/sessionsReducer';
 import {workshopReducer} from './reducers/workshopReducer';
@@ -32,7 +30,7 @@ import {
   WorkshopFormState,
   WorkshopFormTemplateProps,
 } from './types';
-import {workshopDataToState, sessionDataToState} from './utils';
+import {workshopDataToState, sessionDataToState, workshopLabel} from './utils';
 
 import styles from './styles.module.scss';
 
