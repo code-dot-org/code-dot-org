@@ -26,7 +26,7 @@ namespace :db do
   # ensure that developers have their development and test databases set to use utf8mb3.
   # otherwise, new migrations will introduce schema.rb diffs in other environments.
   timed_task_with_logging :check_db_charset_collate do
-    return unless [:development, :test].include? rack_env
+    return unless [:development, :test].include?(rack_env) && !ENV.fetch('CI', nil)
     raise "DB does not exist" unless database_exists?
 
     character_set, collation = ActiveRecord::Base.connection.execute("SELECT @@character_set_database, @@collation_database").to_a[0]
