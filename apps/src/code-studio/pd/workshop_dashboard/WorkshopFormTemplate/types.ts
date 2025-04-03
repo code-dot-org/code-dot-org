@@ -7,6 +7,8 @@ export interface Option {
 
 export interface FieldConfig {
   required: boolean;
+  stateKey: keyof WorkshopFormState | keyof SessionFormState;
+  label: string;
   options?: Option[];
 }
 

@@ -313,66 +313,114 @@ module Pd
     }.freeze
 
     SESSION_FIELDS = {
+      date: {
+        required: true,
+        stateKey: 'date',
+        label: 'Date',
+      },
       start: {
-        required: true
+        required: true,
+        stateKey: 'start',
+        label: 'Start time',
       },
       end: {
-        required: true
+        required: true,
+        stateKey: 'end',
+        label: 'End time',
       },
       session_format: {
         required: true,
+        stateKey: 'format',
+        label: 'Format',
         options: PD_SESSION_FORMATS
       },
       location_name: {
-        required: false
+        required: false,
+        stateKey: 'locationName',
+        label: 'Location name',
       },
       location_address: {
-        required: false
+        required: false,
+        stateKey: 'locationAddress',
+        label: 'Location address',
       },
       meeting_link: {
-        required: false
+        required: false,
+        stateKey: 'meetingLink',
+        label: 'Meeting link',
       },
     }
 
     COMMON_COURSE_FIELDS = {
       name: {
-        required: true
+        required: true,
+        stateKey: 'name',
+        label: 'Workshop name'
       },
       capacity: {
-        required: true
+        required: true,
+        stateKey: 'capacity',
+        label: 'Capacity'
       },
       grades: {
-        required: true
+        required: true,
+        stateKey: 'grades',
+        label: 'Grade levels'
       },
       description: {
-        required: true
+        required: true,
+        stateKey: 'description',
+        label: 'Workshop description'
       },
       notes: {
-        required: false
+        required: false,
+        stateKey: 'notes',
+        label: 'Attendee notes'
       },
       suppress_email: {
-        required: false
+        required: false,
+        stateKey: 'suppressEmail',
+        label: '3 and 10-days prior to start date'
       },
       regional_partner_id: {
-        required: true
+        required: false,
+        stateKey: 'regionalPartnerId',
+        label: 'Regional partner'
       },
-      organizer_id: {
-        required: false
+      organizerId: {
+        required: false,
+        stateKey: 'organizerId',
+        label: 'Organizer'
       },
       facilitators: {
-        required: false
+        required: false,
+        stateKey: 'facilitators',
+        label: 'Select facilitator(s)'
       },
       fee: {
-        required: false
+        required: false,
+        stateKey: 'fee',
+        label: 'Workshop cost'
       },
       prereq: {
-        required: false
+        required: false,
+        stateKey: 'prereq',
+        label: 'Workshop prerequisites'
       },
       hidden: {
-        required: false
+        required: false,
+        stateKey: 'hidden',
+        label: 'Hide this workshop from the public workshop catalog'
       },
       registration_link: {
-        required: false
+        required: false,
+        stateKey: 'registrationLink',
+        label: 'Custom registration link'
+      },
+      time_zone: {
+        required: false,
+        stateKey: 'timeZone',
+        label: 'Workshop time(s) will be set to your timezone:'
       },
     }
 
@@ -381,39 +429,39 @@ module Pd
         slug: COURSE_CSF.parameterize(separator: "_"),
         label: COURSE_CSF,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSP.parameterize(separator: "_"),
         label: COURSE_CSP,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSD.parameterize(separator: "_"),
         label: COURSE_CSD,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSA.parameterize(separator: "_"),
         label: COURSE_CSA,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
         label: COURSE_ADMIN_COUNSELOR,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
         label: COURSE_BUILD_YOUR_OWN,
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(
-          course_offerings: {required: true},
-          participant_group_type: {required: true, options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
+          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
         )
       }
     ].freeze
