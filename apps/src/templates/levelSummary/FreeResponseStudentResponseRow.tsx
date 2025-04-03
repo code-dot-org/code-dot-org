@@ -94,7 +94,6 @@ const FreeResponseStudentResponseRow: React.FC<
       <BodyThreeText
         className={styles.aiAnalysisReasoningColumn}
       >{`${studentWorkEvaluation.aiEvaluation}. ${studentWorkEvaluation.aiReasoning}`}</BodyThreeText>
-      {/* NOTE THE BELOW COMES FROM AI ASSESSMENT FEEDBACK RADIO */}
       <div>
         <FeedbackToggle
           onThumbsUpClick={() => {
