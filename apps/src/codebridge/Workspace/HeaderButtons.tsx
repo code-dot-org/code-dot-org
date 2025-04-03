@@ -24,7 +24,8 @@ import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources, levelProperties} = useCodebridgeContext();
+  const {startSources, levelProperties, projectPickerSettings} =
+    useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
 
   const dialogControl = useDialogControl();
@@ -80,6 +81,16 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
+      {projectPickerSettings && (
+        <Button
+          iconRight={{iconName: 'rotate'}}
+          size={'xs'}
+          color={'white'}
+          text={projectPickerSettings.currentType}
+          onClick={projectPickerSettings.showProjectTypePicker}
+          type={'primary'}
+        />
+      )}
       <SettingsButton />
       {enableMicroBit && (
         <Button

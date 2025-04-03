@@ -11,7 +11,7 @@ import moduleStyles from './projectTypePicker.module.scss';
 
 interface ProjectTypePickerProps {
   setProjectCallback: (type: 'console' | 'neighborhood') => void;
-  currentProjectType?: 'console' | 'neighborhood';
+  currentProjectType?: string;
 }
 
 const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
