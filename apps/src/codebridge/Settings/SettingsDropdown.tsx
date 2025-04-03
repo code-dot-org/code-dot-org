@@ -120,6 +120,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             type="secondary"
             size="s"
             onClick={closeDropdown}
+            color="black"
           />
           <Button text="Save" type="primary" size="s" onClick={onSave} />
         </div>
