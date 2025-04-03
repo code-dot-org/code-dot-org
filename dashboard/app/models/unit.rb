@@ -1635,6 +1635,7 @@ class Unit < ApplicationRecord
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       hasNumberedUnits: unit_group&.has_numbered_units?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
