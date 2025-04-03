@@ -43,6 +43,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin: 0;
 }
 
 // SectionCard
@@ -67,27 +68,41 @@
 
 .sectionCardHeaderLeft {
   display: flex;
+
+  button {
+    margin-inline-end: 12px;
+
+    i {
+      font-size: 16px;
+    }
+  }
+}
+
+.sectionCardHeaderText {
+  display: flex;
   flex-direction: column;
+
+  h5 {
+    height: 28px;
+    margin-bottom: 0;
+  }
+
+  p {
+    height: 22px;
+    margin-bottom: 0;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: var(--brand-teal-50);
+    }
+  }
 }
 
 .sectionCardHeaderRight {
   display: flex;
-}
-
-.sectionCardHeaderText {
-  height: 28px;
-}
-
-.sectionCardCode {
-  height: 22px;
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: var(--brand-teal-50);
-  }
 }
 
 // SectionOptionsDropdown
