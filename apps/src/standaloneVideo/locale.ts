@@ -4,6 +4,6 @@
  */
 import {Locale} from '@cdo/apps/types/locale';
 
-export default require('@cdo/aichat/locale') as Locale<
+export default require('@cdo/standaloneVideo/locale') as Locale<
   typeof import('@cdo/i18n/standaloneVideo/en_us.json')
 >;
