@@ -16,7 +16,8 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "build": "next build",
+    "build": "next build && yarn copy:static-assets",
+    "copy:static-assets": "cp -r public .next/standalone/apps/marketing",
     "dev": "next dev --turbopack -p 3001",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

@@ -3,7 +3,7 @@ import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {OpenaiChatCompletionMessage} from '../aiTutor/chatApi';
 
-import {logUserLevelEvaluation} from './userLevelEvaluations/userLevelEvaluationsApi';
+import {logStudentWorkEvaluations} from './studentWorkEvaluationsApi';
 
 export interface StudentAnswer {
   studentId: number;
@@ -16,6 +16,7 @@ export interface AIResponse {
   aiEvaluation: string;
   aiReasoning: string;
   evaluationCriteria: string;
+  skillEvaluations?: [AIResponse];
 }
 
 export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {}
@@ -34,15 +35,12 @@ export async function evaluateStudentWork(
   let parsedResponse;
   if (response?.content) {
     parsedResponse = JSON.parse(response?.content);
-    logUserLevelEvaluation({
-      userId: studentWorkSample.studentId,
-      levelId: levelId,
-      unitId: unitId,
-      evaluationCriteria: parsedResponse.evaluationCriteria,
-      aiEvaluation: parsedResponse.aiEvaluation,
-      aiReasoning: parsedResponse.aiReasoning,
-      codeVersion: studentWorkSample.codeVersion,
-    });
+    logStudentWorkEvaluations(
+      studentWorkSample,
+      parsedResponse,
+      levelId,
+      unitId
+    );
   }
   return parsedResponse;
 }

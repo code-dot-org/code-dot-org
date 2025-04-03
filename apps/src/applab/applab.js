@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
-import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/evaluationApi';
+import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';

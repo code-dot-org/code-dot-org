@@ -2,9 +2,10 @@ import classNames from 'classnames';
 import {useState} from 'react';
 import ReactPlayer from 'react-player/file';
 
-import {LinkButton} from '@/button';
+import {Button, LinkButton} from '@/button';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
+import Facade from '@/video/Facade';
 import NativeVideo from '@/video/NativeVideo';
 import {RenderState, VideoProps} from '@/video/types';
 import YouTubeVideo from '@/video/YoutubeVideo';
@@ -35,24 +36,52 @@ const Video: React.FC<VideoProps> = ({
   errorHeading,
   errorBody,
   className,
+  isYouTubeCookieAllowed,
 }: VideoProps) => {
   const youtubeVideoUrl = `https://www.youtube-nocookie.com/watch?v=${youTubeId}`;
 
-  const [renderState, setRenderState] = useState<RenderState>('youtube');
+  const [renderState, setRenderState] = useState<RenderState>('facade');
   const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
 
-  const handleError = (error: Error, nextRenderState: RenderState) => {
+  const handleError = (
+    error: Error | undefined,
+    nextRenderState: RenderState,
+  ) => {
     // If blocked due to an interaction autoplay issue, don't move to the next render state but allow the user to
     // manually click the play button
-    if (error.name === 'NotAllowedError') {
+    if (error?.name === 'NotAllowedError') {
       console.warn(error);
     } else {
       setRenderState(nextRenderState);
     }
   };
 
+  const handleFacadeClick = () => {
+    if (isYouTubeCookieAllowed && !window.CDOVideoPlayer?.isYouTubeBlocked) {
+      setRenderState('youtube');
+    } else {
+      if (videoFallback && ReactPlayer.canPlay(videoFallback)) {
+        setRenderState('native');
+      } else {
+        if (window.CDOVideoPlayer?.isYouTubeBlocked) {
+          setRenderState('error');
+        } else {
+          setRenderState('cookie-blocked');
+        }
+      }
+    }
+  };
+
   const getVideoPlayer = () => {
     switch (renderState) {
+      case 'facade':
+        return (
+          <Facade
+            label={`Play video ${videoTitle}`}
+            posterThumbnail={posterThumbnail}
+            onClick={handleFacadeClick}
+          />
+        );
       case 'youtube':
         return (
           <YouTubeVideo
@@ -92,6 +121,32 @@ const Video: React.FC<VideoProps> = ({
             <BodyThreeText>
               {errorBody || 'This video is blocked on your network.'}
             </BodyThreeText>
+          </div>
+        );
+      case 'cookie-blocked':
+        return (
+          <div className={classNames(moduleStyles.errorPlaceholder)}>
+            <FontAwesomeV6Icon
+              iconName="exclamation-circle"
+              iconStyle="solid"
+            />
+            <BodyTwoText>
+              <StrongText>
+                {errorHeading || 'Cookie consent required'}
+              </StrongText>
+            </BodyTwoText>
+            <BodyThreeText>
+              {errorBody ||
+                'Please enable "Functional Cookies" and refresh the page to play this video.'}
+            </BodyThreeText>
+            <Button
+              className={moduleStyles.cookieConsentButton}
+              onClick={() => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                (window as any).OneTrust.ToggleInfoDisplay();
+              }}
+              text={'Cookie Settings'}
+            />
           </div>
         );
     }

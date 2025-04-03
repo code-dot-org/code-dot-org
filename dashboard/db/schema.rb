@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_02_215215) do
+ActiveRecord::Schema.define(version: 2025_04_03_150349) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -37,6 +37,20 @@ ActiveRecord::Schema.define(version: 2025_04_02_215215) do
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_activity_sections_on_key", unique: true
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
+  end
+
+  create_table "ai_interaction_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id"
+    t.integer "script_id"
+    t.boolean "thumbs_up"
+    t.string "school_year"
+    t.json "metadata"
+    t.string "ai_interaction_type", null: false
+    t.bigint "ai_interaction_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ai_interaction_type", "ai_interaction_id"], name: "index_ai_interaction_feedbacks_on_ai_interaction"
   end
 
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2181,6 +2195,15 @@ ActiveRecord::Schema.define(version: 2025_04_02_215215) do
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
   end
 
+  create_table "student_work_evaluation_summaries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "student_work_evaluation_id", null: false
+    t.bigint "student_work_evaluation_summary_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["student_work_evaluation_id"], name: "fk_rails_49598559b9"
+    t.index ["student_work_evaluation_summary_id"], name: "fk_rails_d50fa61780"
+  end
+
   create_table "student_work_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "type", null: false
     t.integer "student_id"
@@ -2625,6 +2648,8 @@ ActiveRecord::Schema.define(version: 2025_04_02_215215) do
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
   add_foreign_key "sections", "lti_integrations"
+  add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
+  add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
