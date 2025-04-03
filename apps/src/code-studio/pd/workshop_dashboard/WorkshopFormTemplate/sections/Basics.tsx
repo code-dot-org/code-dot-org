@@ -229,17 +229,19 @@ export const Basics: FC<BasicsProps> = ({
         </div>
       )}
       {fields.prereq && hasPrereq && (
-        <div className={commonStyles.row}>
-          <div className={commonStyles.card}>
+        <div className={commonStyles.card}>
+          <div className={commonStyles.row}>
             <TextField
               name={fields.prereq.stateKey}
               onChange={handleChange}
               value={prereq}
               label="Workshop prerequisites"
               size="s"
-              className={classNames(commonStyles.item, commonStyles.textField, {
-                [commonStyles.required]: fields.prereq.required,
-              })}
+              className={classNames(
+                commonStyles.item,
+                commonStyles.textField,
+                commonStyles.required
+              )}
               errorMessage={errors.prereq}
             />
           </div>
