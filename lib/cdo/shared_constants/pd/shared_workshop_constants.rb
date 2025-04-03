@@ -405,7 +405,7 @@ module Pd
       prereq: {
         required: false,
         stateKey: 'prereq',
-        label: 'Workshop prerequisites',
+        label: 'Experience needed',
         helperMessage: 'Indicate if this workshop requires previous experience.'
       },
       hidden: {

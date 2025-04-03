@@ -135,6 +135,7 @@ export const Basics: FC<BasicsProps> = ({
               className={classNames(commonStyles.item, commonStyles.textField, {
                 [commonStyles.required]: fields.name.required,
               })}
+              helperMessage={fields.name.helperMessage}
               errorMessage={errors.name}
             />
           )}
@@ -197,7 +198,7 @@ export const Basics: FC<BasicsProps> = ({
                 {value: 'false', text: 'No experience needed'},
               ]}
               selectedValue={hasPrereq.toString()}
-              labelText="Experience needed"
+              labelText={fields.prereq.label}
               helperMessage={fields.prereq.helperMessage}
               size="s"
               dropdownTextThickness="thin"
@@ -234,7 +235,7 @@ export const Basics: FC<BasicsProps> = ({
               name={fields.prereq.stateKey}
               onChange={handleChange}
               value={prereq}
-              label={fields.prereq.label}
+              label="Workshop prerequisites"
               size="s"
               className={classNames(commonStyles.item, commonStyles.textField, {
                 [commonStyles.required]: fields.prereq.required,
