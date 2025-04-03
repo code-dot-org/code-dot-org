@@ -1,6 +1,9 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {
+  BodyThreeText,
+  Heading2,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
@@ -12,11 +15,13 @@ import moduleStyles from './projectTypePicker.module.scss';
 interface ProjectTypePickerProps {
   setProjectCallback: (type: 'console' | 'neighborhood') => void;
   currentProjectType?: string;
+  closeDialog: () => void;
 }
 
 const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
   setProjectCallback,
   currentProjectType,
+  closeDialog,
 }) => {
   const isNeighborhood = currentProjectType === 'neighborhood';
   const isConsole = currentProjectType === 'console';
@@ -26,42 +31,47 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
         mode="dark"
         className={moduleStyles.pickerDialog}
         aria-labelledby="project-picker-title"
+        onClose={currentProjectType ? closeDialog : undefined}
       >
         <Heading2 id="project-picker-title">
           {pythonlabI18n.projectPickerTitle()}
         </Heading2>
-        <div
-          className={moduleStyles.pickerContainer}
-          id="dsco-dialog-description"
-        >
-          <ActionBlock
-            description={pythonlabI18n.consoleOnlyDescription()}
-            image={consoleImage}
-            primaryButton={{
-              text: pythonlabI18n.consoleOnly(),
-              color: 'black',
-              useAsLink: false,
-              onClick: () => setProjectCallback('console'),
-              iconRight: isConsole
-                ? {iconName: 'check'}
-                : {iconName: 'chevron-right'},
-              disabled: isConsole,
-            }}
-          />
-          <ActionBlock
-            description={pythonlabI18n.neighborhoodDescription()}
-            image={neighborhoodImage}
-            primaryButton={{
-              text: pythonlabI18n.neighborhood(),
-              color: 'black',
-              useAsLink: false,
-              onClick: () => setProjectCallback('neighborhood'),
-              iconRight: isNeighborhood
-                ? {iconName: 'check'}
-                : {iconName: 'chevron-right'},
-              disabled: isNeighborhood,
-            }}
-          />
+        <div id="dsco-dialog-description">
+          {(isNeighborhood || isConsole) && (
+            <BodyThreeText>
+              {pythonlabI18n.projectPickerReplaceWarning()}
+            </BodyThreeText>
+          )}
+          <div className={moduleStyles.pickerContainer}>
+            <ActionBlock
+              description={pythonlabI18n.consoleOnlyDescription()}
+              image={consoleImage}
+              primaryButton={{
+                text: pythonlabI18n.consoleOnly(),
+                color: 'black',
+                useAsLink: false,
+                onClick: () => setProjectCallback('console'),
+                iconRight: isConsole
+                  ? {iconName: 'check'}
+                  : {iconName: 'chevron-right'},
+                disabled: isConsole,
+              }}
+            />
+            <ActionBlock
+              description={pythonlabI18n.neighborhoodDescription()}
+              image={neighborhoodImage}
+              primaryButton={{
+                text: pythonlabI18n.neighborhood(),
+                color: 'black',
+                useAsLink: false,
+                onClick: () => setProjectCallback('neighborhood'),
+                iconRight: isNeighborhood
+                  ? {iconName: 'check'}
+                  : {iconName: 'chevron-right'},
+                disabled: isNeighborhood,
+              }}
+            />
+          </div>
         </div>
       </CustomDialog>
     </div>

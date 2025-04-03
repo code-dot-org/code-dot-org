@@ -14,7 +14,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -171,7 +171,7 @@ const PythonlabView: React.FunctionComponent<
 
   const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
     const project = standaloneStartSources[type];
-    dispatch(setAndSaveProjectSources(project));
+    dispatch(changeProjectType({newSources: project}));
     setShowProjectPicker(false);
   };
 
@@ -242,6 +242,7 @@ const PythonlabView: React.FunctionComponent<
               ? currentProjectType
               : undefined
           }
+          closeDialog={() => setShowProjectPicker(false)}
         />
       )}
     </div>

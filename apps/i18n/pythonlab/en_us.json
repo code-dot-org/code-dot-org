@@ -14,6 +14,7 @@
   "programCompleted": "Program completed.",
   "programStopped": "Program stopped.",
   "projectPickerTitle": "Select a project type",
+  "projectPickerReplaceWarning": "This will replace your current project with the selected project type. You can restore your old project via Version History.",
   "runningLevelTests": "Running level tests...",
   "runningProgram": "Running program...",
   "runningProjectTests": "Running your project's tests..."

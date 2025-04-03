@@ -8,6 +8,7 @@ import {AnyAction} from 'redux';
 
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import Lab2Registry from '../Lab2Registry';
 
@@ -104,6 +105,19 @@ export const resetToCurrentVersion = createAsyncThunk(
     }
   }
 );
+
+export const changeProjectType = createAsyncThunk<
+  void,
+  {newSources: ProjectSources},
+  {dispatch: AppDispatch; state: RootState}
+>('lab2Project/changeProjectType', async (payload, thunkAPI) => {
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  if (projectManager) {
+    // We need to ensure we save the existing project before loading a new one.
+    await projectManager.flushSave();
+    thunkAPI.dispatch(setAndSaveProjectSources(payload.newSources, true, true));
+  }
+});
 
 // SLICE
 
