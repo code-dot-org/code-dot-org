@@ -19,7 +19,7 @@ type FreeResponseAiSummaryBoxProps = {
   isPending: boolean;
   studentWorkEvaluations?: StudentWorkEvaluation[];
   evaluationComplete?: boolean;
-  totalStudentCount: number;
+  totalNumberOfStudents: number;
   openDetailedAnalysis?: () => void;
 };
 
@@ -29,10 +29,10 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   isPending,
   studentWorkEvaluations,
   evaluationComplete,
-  totalStudentCount,
+  totalNumberOfStudents,
   openDetailedAnalysis,
 }) => {
-  const proficienceyThreshold = totalStudentCount * 0.8;
+  const proficienceyThreshold = totalNumberOfStudents * 0.8;
   const aiSummaryTag = (proficiencyCount: number) => {
     return (
       <Tags
@@ -115,7 +115,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         {aiSummaryTag(proficientStudentCount)}
         {aiSummaryMessage(proficientStudentCount)}
         <FreeResponseSummaryDataBox
-          totalStudentCount={totalStudentCount}
+          totalStudentCount={totalNumberOfStudents}
           proficientStudentCount={proficientStudentCount}
           needsRevisionStudentCount={needsRevisionStudentCount}
           flaggedStudentCount={flaggedStudentCount}

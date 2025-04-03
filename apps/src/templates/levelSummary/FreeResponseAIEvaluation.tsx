@@ -19,11 +19,12 @@ interface LevelData {
 interface FreeResponseAIEvaluationProps {
   responses: StudentAnswer[];
   levelData: LevelData;
+  totalNumberOfStudents: number;
 }
 
 const FreeResponseAIEvaluation: React.FunctionComponent<
   FreeResponseAIEvaluationProps
-> = ({responses, levelData}) => {
+> = ({responses, levelData, totalNumberOfStudents}) => {
   const [evaluationsPending, setEvaluationsPending] = useState<boolean>(false);
   const [evaluations, setEvaluations] = useState<StudentWorkEvaluation[]>([]);
   const [evaluationCount, setEvaluationCount] = useState<number>(0);
@@ -94,7 +95,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         isPending={evaluationsPending}
         studentWorkEvaluations={evaluations}
         evaluationComplete={evaluationComplete}
-        totalStudentCount={responses.length}
+        totalNumberOfStudents={totalNumberOfStudents}
         openDetailedAnalysis={() => setShowDetailedAnalysis(true)}
       />
       {evaluationComplete && aiSummary && showDetailedAnalysis && (
@@ -102,7 +103,6 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
           {evaluations.map(evaluation => (
             <FreeResponseStudentResponseRow
               key={evaluation.studentId}
-              studentResponse={evaluation}
               studentWorkEvaluation={evaluation}
             />
           ))}
