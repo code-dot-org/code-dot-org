@@ -9,9 +9,9 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import i18n from '@cdo/locale';
 
-import {SectionAvatar} from './SectionAvatar';
-import {SectionCardBody} from './SectionCardBody';
-import {SectionOptionsDropdown} from './SectionOptionsDropdown';
+import SectionAvatar from './SectionAvatar';
+import SectionCardBody from './SectionCardBody';
+import SectionOptionsDropdown from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
 
