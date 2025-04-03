@@ -74,11 +74,12 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
               }
               title={title}
               description={shortDescription}
-              image={image?.fields?.file?.url}
+              image={{src: `https:${image?.fields?.file?.url}`}}
               primaryButton={
                 primaryLinkRef?.fields?.label
                   ? {
                       text: primaryLinkRef.fields.label,
+
                       href: primaryLinkRef.fields.primaryTarget || '#',
                       ariaLabel: primaryLinkRef.fields.ariaLabel || '',
                     }
