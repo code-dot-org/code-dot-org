@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 import {AnyAction} from 'redux';
 
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -18,6 +18,7 @@ export interface Lab2ProjectState {
   restoredOldVersion: boolean;
   hasEdited: boolean;
   projectTooLarge: boolean;
+  lastSavedLabConfig: LabConfig | undefined;
 }
 
 const initialState: Lab2ProjectState = {
@@ -26,6 +27,7 @@ const initialState: Lab2ProjectState = {
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
+  lastSavedLabConfig: undefined,
 };
 
 // THUNKS
@@ -127,6 +129,7 @@ const projectSlice = createSlice({
   reducers: {
     setProjectSource(state, action: PayloadAction<ProjectSources | undefined>) {
       state.projectSources = action.payload;
+      state.lastSavedLabConfig = action.payload?.labConfig;
     },
     setSource(state, action: PayloadAction<MultiFileSource>) {
       state.projectSources = {
