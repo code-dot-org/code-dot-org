@@ -137,6 +137,7 @@ export const navigationLessonShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   unit: PropTypes.shape({
+    hasUnnumberedLessons: PropTypes.bool,
     lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,

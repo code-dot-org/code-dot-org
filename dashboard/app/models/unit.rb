@@ -1712,7 +1712,8 @@ class Unit < ApplicationRecord
       displayName: title_for_display,
       link: link,
       lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
-      publishedState: get_published_state
+      publishedState: get_published_state,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
