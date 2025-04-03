@@ -15,14 +15,12 @@ class MakerController < ApplicationController
     }
   end
 
-  # Returns which devices script version to show:
-  #   Assigned script should take precedence - show most recent version that's been assigned.
-  #   Otherwise, show the most recent version with progress.
-  #   If none of the above applies, default to most recent.
+  # TODO: deprecate this page which is no longer active since the Maker app was deprecated.
+  # For now, since this update https://github.com/code-dot-org/code-dot-org/pull/64729,
+  # maker scripts no longer are accessible via "family_name" of "devices".
+  # Temporarily show 'devices-2024' script.
   def self.maker_script(for_user)
-    Unit.latest_assigned_version('devices', for_user) ||
-      Unit.latest_version_with_progress('devices', for_user) ||
-      Unit.latest_stable_version('devices')
+    Unit.find_by(name: 'devices-2024')
   end
 
   def setup

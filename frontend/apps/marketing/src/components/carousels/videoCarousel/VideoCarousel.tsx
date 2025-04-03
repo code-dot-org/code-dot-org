@@ -4,7 +4,8 @@ import '@code-dot-org/component-library/carousel/index.css';
 import React, {ReactNode, useMemo} from 'react';
 
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
-import Video from '@code-dot-org/component-library/video';
+
+import Video from '@/components/video';
 
 export type VideoCarouselProps = {
   /** Carousel content w/ fields from Contentful */

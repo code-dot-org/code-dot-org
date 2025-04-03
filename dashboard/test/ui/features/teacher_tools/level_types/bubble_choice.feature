@@ -41,6 +41,8 @@ Feature: BubbleChoice
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it to load a new page
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
 
+  # Mobile re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1752
+  @no_mobile
   @no_firefox
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"

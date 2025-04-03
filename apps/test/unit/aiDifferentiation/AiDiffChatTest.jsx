@@ -73,6 +73,22 @@ describe('AiDiffChat', () => {
     screen.getByRole('checkbox', {name: 'Write an exit ticket'});
   });
 
+  it('initial message and suggested prompts are rendered for general context', () => {
+    const overrideProps = {...defaultProps, context: AiDiffContext.GENERAL};
+    render(<AiDiffChat {...overrideProps} />);
+    const message = screen.getByLabelText(i18n.aiChatMessageBot());
+    expect(message).toHaveTextContent(
+      "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
+    );
+    //suggested prompts
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
+    screen.getByRole('checkbox', {name: 'Suggest a curriculum'});
+    screen.getByRole('checkbox', {name: 'Get started with Code.org'});
+    screen.getByRole('checkbox', {name: 'Learn about Professional Learning'});
+    screen.getByRole('checkbox', {name: 'How to create a section?'});
+    screen.getByRole('checkbox', {name: 'Get help using Code.org'});
+  });
+
   it('Selecting a suggested prompt gives response', async () => {
     render(<AiDiffChat {...defaultProps} />);
 

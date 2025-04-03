@@ -158,7 +158,8 @@ class UnconnectedMusicView extends React.Component {
       this.getExemplarPlaybackEvents,
       this.getValidationTimeout,
       this.player,
-      this.getPlayingTriggers
+      this.getPlayingTriggers,
+      this.getExemplarValidationMode
     );
 
     // Set shared shared objects in the MusicRegistry so views outside of this
@@ -542,6 +543,12 @@ class UnconnectedMusicView extends React.Component {
       const defaultStartSourcesFilename = 'startSources' + this.props.blockMode;
       return require(`@cdo/static/music/${defaultStartSourcesFilename}.json`);
     }
+  };
+
+  getExemplarValidationMode = () => {
+    return (
+      this.props.levelProperties?.exemplarSettings?.validationMode || 'default'
+    );
   };
 
   getExemplarSources = () => {

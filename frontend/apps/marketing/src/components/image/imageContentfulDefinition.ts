@@ -5,8 +5,7 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
   id: 'image',
   name: 'Image',
   category: '03: Basic',
-  // Adding an empty array here so no default style options show in the Design tab.
-  builtInStyles: [],
+  builtInStyles: ['cfWidth', 'cfHeight'],
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/2erlhdZVjByJbpMw9UKcWE/ee11e8a21370bbcd3b1b0b702b00d0e5/component_image_thumbnail.png',
   tooltip: {
@@ -21,12 +20,18 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
       type: 'Media',
       defaultValue: undefined,
       group: 'content',
+      validations: {
+        bindingSourceType: ['asset', 'manual'],
+      },
     },
     altText: {
       displayName: 'Alt text',
       type: 'Text',
       defaultValue: '',
       group: 'content',
+      validations: {
+        bindingSourceType: ['asset', 'manual', 'entry'],
+      },
     },
     decoration: {
       displayName: 'Decoration',

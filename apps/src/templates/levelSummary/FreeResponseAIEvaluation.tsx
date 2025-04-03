@@ -6,7 +6,7 @@ import {
   StudentWorkEvaluation,
   evaluateStudentWork,
   summarizeEvaluations,
-} from '@cdo/apps/aiEvaluation/evaluationApi';
+} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';

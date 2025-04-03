@@ -1,7 +1,7 @@
 import {LevelProperties} from '../lab2/types';
 
 export interface PanelsLevelProperties extends LevelProperties {
-  panels: Panel[];
+  panels?: Panel[];
 }
 
 export type PanelLayout =

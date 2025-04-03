@@ -3,11 +3,9 @@
   "script_names": [
     "facilitator-compsys-pl-early-access",
     "facilitator-cyber-csaif-early-access",
-    "facilitator-prog-fund-pl-early-access",
-    "facilitator-networks-early-access",
     "facilitator-datasci-pl-early-access"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
