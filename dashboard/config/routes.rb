@@ -102,7 +102,6 @@ Dashboard::Application.routes.draw do
 
     resources :maker, only: [] do
       collection do
-        get :home
         get :setup
       end
     end

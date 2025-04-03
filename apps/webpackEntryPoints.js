@@ -100,7 +100,6 @@ const CODE_STUDIO_ENTRIES = {
   'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
-  'maker/home': './src/sites/studio/pages/maker/home.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
