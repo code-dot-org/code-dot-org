@@ -31,9 +31,9 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
-  defaultProject,
-  standaloneConsoleProject,
-  standaloneNeighborhoodProject,
+  DEFAULT_PROJECT,
+  STANDALONE_CONSOLE_PROJECT,
+  STANDALONE_NEIGHBORHOOD_PROJECT,
 } from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
@@ -49,8 +49,8 @@ const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
 };
 
 const standaloneStartSources: {[key: string]: ProjectSources} = {
-  console: standaloneConsoleProject,
-  neighborhood: standaloneNeighborhoodProject,
+  console: STANDALONE_CONSOLE_PROJECT,
+  neighborhood: STANDALONE_NEIGHBORHOOD_PROJECT,
 };
 
 const defaultConfig: ConfigType = {
@@ -105,7 +105,7 @@ const PythonlabView: React.FunctionComponent<
     projectVersion,
     validationFile,
     labConfig,
-  } = useSource(defaultProject, levelProperties, initialSources);
+  } = useSource(DEFAULT_PROJECT, levelProperties, initialSources);
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -114,7 +114,7 @@ const PythonlabView: React.FunctionComponent<
   const dispatch = useAppDispatch();
 
   const levelStartSources = useMemo(() => {
-    // For standalone project levels, we use the standalone start sources map to determine
+    // For new standalone project levels, we use the standalone start sources map to determine
     // the start sources, so we can show the user the start code for their chosen project type,
     // and not accidentally show them the project picker again.
     if (levelProperties.isProjectLevel) {
@@ -145,10 +145,7 @@ const PythonlabView: React.FunctionComponent<
   }, [progressManager, levelProperties.appName]);
 
   const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
-    let project = standaloneConsoleProject;
-    if (type === 'neighborhood') {
-      project = standaloneNeighborhoodProject;
-    }
+    const project = standaloneStartSources[type];
     dispatch(setAndSaveProjectSources(project));
   };
 

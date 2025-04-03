@@ -9,7 +9,7 @@ import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
 import {LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {PythonlabView} from '@cdo/apps/pythonlab';
-import {standaloneNeighborhoodProject} from '@cdo/apps/pythonlab/constants';
+import {STANDALONE_NEIGHBORHOOD_PROJECT} from '@cdo/apps/pythonlab/constants';
 import {
   getStore,
   registerReducers,
@@ -80,7 +80,7 @@ describe('PythonLabView', () => {
   it('does not show project type picker if project type is already set', () => {
     renderDefault(
       {...defaultLevelProperties, isProjectLevel: true},
-      standaloneNeighborhoodProject
+      STANDALONE_NEIGHBORHOOD_PROJECT
     );
 
     expect(screen.queryByRole('button', {name: 'Console only'})).toBeNull();

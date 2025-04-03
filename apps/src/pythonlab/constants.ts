@@ -3,7 +3,7 @@ import {MAZE_FILE_NAME} from '@codebridge/constants';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {ProjectFileType, ProjectSources} from '@cdo/apps/lab2/types';
 
-export const defaultProject: ProjectSources = {
+export const DEFAULT_PROJECT: ProjectSources = {
   source: {
     files: {
       '0': {
@@ -20,7 +20,7 @@ export const defaultProject: ProjectSources = {
   },
 };
 
-export const standaloneConsoleProject: ProjectSources = {
+export const STANDALONE_CONSOLE_PROJECT: ProjectSources = {
   source: {
     files: {
       '0': {
@@ -40,7 +40,7 @@ export const standaloneConsoleProject: ProjectSources = {
   },
 };
 
-export const standaloneNeighborhoodProject: ProjectSources = {
+export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
   source: {
     files: {
       '0': {
