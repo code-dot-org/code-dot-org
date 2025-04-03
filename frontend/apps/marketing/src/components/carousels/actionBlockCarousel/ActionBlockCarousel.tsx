@@ -79,7 +79,6 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                 primaryLinkRef?.fields?.label
                   ? {
                       text: primaryLinkRef.fields.label,
-
                       href: primaryLinkRef.fields.primaryTarget || '#',
                       ariaLabel: primaryLinkRef.fields.ariaLabel || '',
                     }
