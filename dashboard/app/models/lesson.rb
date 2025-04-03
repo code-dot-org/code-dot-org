@@ -484,7 +484,8 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
-      link: script_lesson_path(script, self)
+      link: script_lesson_path(script, self),
+      title: localized_title,
     }
   end
 
