@@ -47,7 +47,7 @@ export const AdditionalInfo: FC<AdditionalInfoProps> = ({
           {fields.fee && (
             <TextField
               name={fields.fee.stateKey}
-              helperMessage="You can leave this field blank if the workshop is free"
+              helperMessage={fields.fee.helperMessage}
               onChange={handleChange}
               value={fee}
               label={fields.fee.label}
@@ -88,7 +88,7 @@ export const AdditionalInfo: FC<AdditionalInfoProps> = ({
         <div className={commonStyles.row}>
           <FormFieldWrapper
             label={fields.notes.label}
-            helperMessage="Notes for logistics like food, parking, or other event details."
+            helperMessage={fields.notes.helperMessage}
             size="s"
             className={classNames(commonStyles.item, commonStyles.textField, {
               [commonStyles.required]: fields.notes.required,

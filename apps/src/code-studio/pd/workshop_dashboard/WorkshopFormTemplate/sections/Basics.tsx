@@ -151,7 +151,7 @@ export const Basics: FC<BasicsProps> = ({
               }))}
               labelText={fields.grades.label}
               size="s"
-              helperMessage="Select applicable grade levels for this workshop."
+              helperMessage={fields.grades.helperMessage}
               className={classNames(
                 commonStyles.item,
                 commonStyles.customDropdown,
@@ -198,7 +198,7 @@ export const Basics: FC<BasicsProps> = ({
               ]}
               selectedValue={hasPrereq.toString()}
               labelText="Experience needed"
-              helperMessage="Indicate if this workshop requires previous experience."
+              helperMessage={fields.prereq.helperMessage}
               size="s"
               dropdownTextThickness="thin"
               className={classNames(
@@ -215,7 +215,7 @@ export const Basics: FC<BasicsProps> = ({
               onChange={handleChange}
               value={capacity?.toString()}
               label={fields.capacity.label}
-              helperMessage="Maximum number of attendees allowed."
+              helperMessage={fields.capacity.helperMessage}
               size="s"
               className={classNames(commonStyles.item, commonStyles.textField, {
                 [commonStyles.required]: fields.capacity.required,
@@ -248,7 +248,7 @@ export const Basics: FC<BasicsProps> = ({
         <div className={commonStyles.row}>
           <FormFieldWrapper
             label={fields.description.label}
-            helperMessage="Public-facing summary to attract and inform participants."
+            helperMessage={fields.description.helperMessage}
             size="s"
             className={classNames(commonStyles.item, commonStyles.textField, {
               [commonStyles.required]: fields.description.required,

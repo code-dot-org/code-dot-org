@@ -34,7 +34,7 @@ export const PublishSettings: FC<PublishSettingsProps> = ({
           {fields.registration_link && (
             <TextField
               name={fields.registration_link.stateKey}
-              helperMessage="You can provide a custom URL for registration. Participants must still enroll in our system later for attendance and surveys. Leave blank to use the default process."
+              helperMessage={fields.registration_link.helperMessage}
               onChange={handleChange}
               value={registrationLink}
               label={fields.registration_link.label}
@@ -47,12 +47,12 @@ export const PublishSettings: FC<PublishSettingsProps> = ({
           )}
           {fields.hidden ? (
             <FormFieldWrapper
-              label="Catalog visibility"
+              label={fields.hidden.label}
               size="s"
               errorMessage={errors.hidden}
             >
               <Checkbox
-                label={fields.hidden.label}
+                label={fields.hidden.helperMessage}
                 name={fields.hidden.stateKey}
                 checked={hidden}
                 size="s"

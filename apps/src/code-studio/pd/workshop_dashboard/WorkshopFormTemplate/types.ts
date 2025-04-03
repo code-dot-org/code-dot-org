@@ -9,6 +9,7 @@ export interface FieldConfig {
   required: boolean;
   stateKey: keyof WorkshopFormState | keyof SessionFormState;
   label: string;
+  helperMessage?: string;
   options?: Option[];
 }
 

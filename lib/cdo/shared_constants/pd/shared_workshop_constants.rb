@@ -355,17 +355,20 @@ module Pd
       name: {
         required: true,
         stateKey: 'name',
-        label: 'Workshop name'
+        label: 'Workshop name',
+        helperMessage: 'Name of the workshop for public and internal use.'
       },
       capacity: {
         required: true,
         stateKey: 'capacity',
-        label: 'Capacity'
+        label: 'Capacity',
+        helperMessage: 'Maximum number of attendees allowed.'
       },
       grades: {
         required: true,
         stateKey: 'grades',
-        label: 'Grade levels'
+        label: 'Grade levels',
+        helperMessage: 'Select applicable grade levels for this workshop.'
       },
       description: {
         required: true,
@@ -375,22 +378,18 @@ module Pd
       notes: {
         required: false,
         stateKey: 'notes',
-        label: 'Attendee notes'
+        label: 'Attendee notes',
+        helperMessage: 'Notes for logistics like food, parking, or other event details.'
       },
       suppress_email: {
         required: false,
         stateKey: 'suppressEmail',
-        label: '3 and 10-days prior to start date'
+        label: '3 and 10-days prior to start date',
       },
       regional_partner_id: {
         required: false,
         stateKey: 'regionalPartnerId',
         label: 'Regional partner'
-      },
-      organizerId: {
-        required: false,
-        stateKey: 'organizerId',
-        label: 'Organizer'
       },
       facilitators: {
         required: false,
@@ -400,22 +399,26 @@ module Pd
       fee: {
         required: false,
         stateKey: 'fee',
-        label: 'Workshop cost'
+        label: 'Workshop cost',
+        helperMessage: 'You can leave this field blank if the workshop is free.'
       },
       prereq: {
         required: false,
         stateKey: 'prereq',
-        label: 'Workshop prerequisites'
+        label: 'Workshop prerequisites',
+        helperMessage: 'Indicate if this workshop requires previous experience.'
       },
       hidden: {
         required: false,
         stateKey: 'hidden',
-        label: 'Hide this workshop from the public workshop catalog'
+        label: 'Catalog visibility',
+        helperMessage: 'Hide this workshop from the public workshop catalog.'
       },
       registration_link: {
         required: false,
         stateKey: 'registrationLink',
-        label: 'Custom registration link'
+        label: 'Custom registration link',
+        helperMessage: 'You can provide a custom URL for registration. Participants must still enroll in our system later for attendance and surveys. Leave blank to use the default process.'
       },
       time_zone: {
         required: false,
