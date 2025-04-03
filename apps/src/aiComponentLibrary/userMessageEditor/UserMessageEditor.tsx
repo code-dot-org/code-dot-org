@@ -78,7 +78,7 @@ const UserMessageEditor = React.forwardRef<
           maxLength={MAX_MESSAGE_LENGTH}
         />
 
-        <div className={moduleStyles.centerSingleItemContainer}>
+        <div className={moduleStyles.bottomSingleItemContainer}>
           <Button
             aria-label={commonI18n.submit()}
             id="uitest-chat-submit"

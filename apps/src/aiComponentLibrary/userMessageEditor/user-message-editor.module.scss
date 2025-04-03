@@ -1,9 +1,12 @@
-$message-editor-height: 60px;
+$min-message-editor-height: 42px;
+$max-message-editor-height: 250px;
 
 .textArea {
     width: 80%;
     box-sizing: border-box;
-    resize: none;
+    resize: vertical;
+    min-height: $min-message-editor-height;
+    max-height: $max-message-editor-height;
     margin: 0;
     flex: 1;
 }
@@ -12,13 +15,12 @@ $message-editor-height: 60px;
     padding: 10px;
     display: flex;
     width: 100%;
-    height: $message-editor-height;
     box-sizing: border-box;
     gap: 5px;
 }
 
-.centerSingleItemContainer {
+.bottomSingleItemContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
