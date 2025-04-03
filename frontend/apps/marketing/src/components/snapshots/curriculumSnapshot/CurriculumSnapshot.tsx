@@ -5,7 +5,7 @@ import Snapshot, {
   SnapshotItem,
 } from '@code-dot-org/component-library/cms/snapshot';
 
-export interface CurriculumSnapshotProps extends SnapshotProps {
+export interface CurriculumSnapshotProps extends Omit<SnapshotProps, 'items'> {
   grades?: string[];
   level?: string[];
   duration?: string[];
@@ -29,89 +29,34 @@ const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
   languagesSupported,
   ...props
 }) => {
+  const initItem = (
+    label: string,
+    iconName: string,
+    content: string[],
+  ): SnapshotItem => ({
+    key: label + iconName,
+    label: label,
+    icon: {iconName},
+    content: content.join(', '),
+  });
+
   const items = useMemo(() => {
     const items: SnapshotItem[] = [];
 
-    if (grades?.length) {
-      items.push({
-        key: 'grades',
-        icon: {iconName: 'user'},
-        label: 'Grades',
-        content: grades.join(', '),
-      });
-    }
+    const addItem = (label: string, iconName: string, content?: string[]) => {
+      if (Array.isArray(content) && content.length)
+        items.push(initItem(label, iconName, content));
+    };
 
-    if (level?.length) {
-      items.push({
-        key: 'level',
-        icon: {iconName: 'arrow-up-wide-short'},
-        label: 'Level',
-        content: level.join(', '),
-      });
-    }
-
-    if (duration?.length) {
-      items.push({
-        key: 'duration',
-        icon: {iconName: 'clock'},
-        label: 'Duration',
-        content: duration.join(', '),
-      });
-    }
-
-    if (devices?.length) {
-      items.push({
-        key: 'devices',
-        icon: {iconName: 'desktop'},
-        label: 'Devices',
-        content: devices.join(', '),
-      });
-    }
-
-    if (topics?.length) {
-      items.push({
-        key: 'topics',
-        icon: {iconName: 'book'},
-        label: 'Topics',
-        content: topics.join(', '),
-      });
-    }
-
-    if (programmingTools?.length) {
-      items.push({
-        key: 'programmingTools',
-        icon: {iconName: 'screwdriver-wrench'},
-        label: 'Programming Tools',
-        content: programmingTools.join(', '),
-      });
-    }
-
-    if (professionalLearning?.length) {
-      items.push({
-        key: 'professionalLearning',
-        icon: {iconName: 'chalkboard-user'},
-        label: 'Professional Learning',
-        content: professionalLearning.join(', '),
-      });
-    }
-
-    if (accessibility?.length) {
-      items.push({
-        key: 'accessibility',
-        icon: {iconName: 'universal-access'},
-        label: 'Accessibility',
-        content: accessibility.join(', '),
-      });
-    }
-
-    if (languagesSupported?.length) {
-      items.push({
-        key: 'languagesSupported',
-        icon: {iconName: 'language'},
-        label: 'Languages supported',
-        content: languagesSupported.join(', '),
-      });
-    }
+    addItem('Grades', 'user', grades);
+    addItem('Level', 'arrow-up-wide-short', level);
+    addItem('Duration', 'clock', duration);
+    addItem('Devices', 'desktop', devices);
+    addItem('Topics', 'book', topics);
+    addItem('Programming Tools', 'screwdriver-wrench', programmingTools);
+    addItem('Professional Learning', 'chalkboard-user', professionalLearning);
+    addItem('Accessibility', 'universal-access', accessibility);
+    addItem('Languages supported', 'language', languagesSupported);
 
     return items;
   }, [

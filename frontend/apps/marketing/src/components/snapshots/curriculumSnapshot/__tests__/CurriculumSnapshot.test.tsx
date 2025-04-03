@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import CurriculumSnapshot, {
@@ -24,109 +24,36 @@ describe('CurriculumSnapshot component', () => {
     expect(placeholder).toBeVisible();
   });
 
-  it('renders snapshot Grades item', () => {
-    const grades = ['K-1', '2'];
+  it('renders curriculum details in the correct order', () => {
+    renderSnapshot({
+      grades: ['1', '1st'],
+      level: ['2', '2nd'],
+      duration: ['3', '3rd'],
+      devices: ['4', '4th'],
+      topics: ['5', '5th'],
+      programmingTools: ['6', '6th'],
+      professionalLearning: ['7', '7th'],
+      accessibility: ['8', '8th'],
+      languagesSupported: ['9', '9th'],
+    });
 
-    renderSnapshot({grades});
+    const curriculumSnapshot = screen.getByTitle(title);
+    expect(curriculumSnapshot).toBeVisible();
 
-    const gradesItem = screen.getByText('Grades:').parentElement;
-    expect(gradesItem).toBeVisible();
-    expect(gradesItem).toHaveTextContent('Grades: K-1, 2');
-  });
-
-  it('renders snapshot Level item', () => {
-    const level = ['Beginner'];
-
-    renderSnapshot({level});
-
-    const levelItem = screen.getByText('Level:').parentElement;
-    expect(levelItem).toBeVisible();
-    expect(levelItem).toHaveTextContent('Level: Beginner');
-  });
-
-  it('renders snapshot Duration item', () => {
-    const duration = ['School Year'];
-
-    renderSnapshot({duration});
-
-    const durationItem = screen.getByText('Duration:').parentElement;
-    expect(durationItem).toBeVisible();
-    expect(durationItem).toHaveTextContent('Duration: School Year');
-  });
-
-  it('renders snapshot Devices item', () => {
-    const devices = ['Computer', 'Chromebook'];
-
-    renderSnapshot({devices});
-
-    const devicesItem = screen.getByText('Devices:').parentElement;
-    expect(devicesItem).toBeVisible();
-    expect(devicesItem).toHaveTextContent('Devices: Computer, Chromebook');
-  });
-
-  it('renders snapshot Topics item', () => {
-    const topics = ['Data', 'Programming'];
-
-    renderSnapshot({topics});
-
-    const topicsItem = screen.getByText('Topics:').parentElement;
-    expect(topicsItem).toBeVisible();
-    expect(topicsItem).toHaveTextContent('Topics: Data, Programming');
-  });
-
-  it('renders snapshot Programming Tools item', () => {
-    const programmingTools = ['App Lab'];
-
-    renderSnapshot({programmingTools});
-
-    const programmingToolsItem =
-      screen.getByText('Programming Tools:').parentElement;
-    expect(programmingToolsItem).toBeVisible();
-    expect(programmingToolsItem).toHaveTextContent(
-      'Programming Tools: App Lab',
+    const curriculumDetails =
+      within(curriculumSnapshot).getAllByRole('listitem');
+    expect(curriculumDetails[0]).toHaveTextContent('Grades: 1, 1st');
+    expect(curriculumDetails[1]).toHaveTextContent('Level: 2, 2nd');
+    expect(curriculumDetails[2]).toHaveTextContent('Duration: 3, 3rd');
+    expect(curriculumDetails[3]).toHaveTextContent('Devices: 4, 4th');
+    expect(curriculumDetails[4]).toHaveTextContent('Topics: 5, 5th');
+    expect(curriculumDetails[5]).toHaveTextContent('Programming Tools: 6, 6th');
+    expect(curriculumDetails[6]).toHaveTextContent(
+      'Professional Learning: 7, 7th',
     );
-  });
-
-  it('renders snapshot Professional Learning item', () => {
-    const professionalLearning = [
-      'Facilitator-led Workshops',
-      'Self-paced Modules',
-    ];
-
-    renderSnapshot({professionalLearning});
-
-    const professionalLearningItem = screen.getByText(
-      'Professional Learning:',
-    ).parentElement;
-    expect(professionalLearningItem).toBeVisible();
-    expect(professionalLearningItem).toHaveTextContent(
-      'Professional Learning: Facilitator-led Workshops, Self-paced Modules',
-    );
-  });
-
-  it('renders snapshot Accessibility item', () => {
-    const accessibility = ['Text to Speech', 'Closed captioning'];
-
-    renderSnapshot({accessibility});
-
-    const accessibilityItem = screen.getByText('Accessibility:').parentElement;
-    expect(accessibilityItem).toBeVisible();
-    expect(accessibilityItem).toHaveTextContent(
-      'Accessibility: Text to Speech, Closed captioning',
-    );
-  });
-
-  it('renders snapshot Languages supported item', () => {
-    const languagesSupported = ['English', 'Ukrainian'];
-
-    renderSnapshot({languagesSupported});
-
-    const languagesSupportedItem = screen.getByText(
-      'Languages supported:',
-    ).parentElement;
-    expect(languagesSupportedItem).toBeVisible();
-    expect(languagesSupportedItem).toHaveTextContent(
-      'Languages supported: English, Ukrainian',
+    expect(curriculumDetails[7]).toHaveTextContent('Accessibility: 8, 8th');
+    expect(curriculumDetails[8]).toHaveTextContent(
+      'Languages supported: 9, 9th',
     );
   });
 });
