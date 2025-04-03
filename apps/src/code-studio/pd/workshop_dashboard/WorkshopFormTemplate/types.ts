@@ -13,6 +13,7 @@ export interface FieldConfig {
 }
 
 export interface SessionFields {
+  date: FieldConfig;
   start: FieldConfig;
   end: FieldConfig;
   session_format: FieldConfig;
@@ -22,10 +23,10 @@ export interface SessionFields {
 }
 
 export interface WorkshopFields {
-  name: FieldConfig;
-  capacity: FieldConfig;
-  grades: FieldConfig;
-  description: FieldConfig;
+  name?: FieldConfig;
+  capacity?: FieldConfig;
+  grades?: FieldConfig;
+  description?: FieldConfig;
   notes?: FieldConfig;
   suppress_email?: FieldConfig;
   regional_partner_id?: FieldConfig;
@@ -38,6 +39,7 @@ export interface WorkshopFields {
   registration_link?: FieldConfig;
   course_offerings?: FieldConfig;
   participant_group_type?: FieldConfig;
+  time_zone?: FieldConfig;
 }
 
 export interface WorkshopCourseConfig {
@@ -148,41 +150,63 @@ export interface SectionProps {
   config: WorkshopCourseConfig;
 }
 
+type BasicsKeys =
+  | 'name'
+  | 'grades'
+  | 'subject'
+  | 'prereq'
+  | 'hasPrereq'
+  | 'capacity'
+  | 'description'
+  | 'courseOfferings';
+
+type PartnerFacilitatorKeys = 'facilitators' | 'regionalPartnerId';
+
+type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
+
+type EmailsRemindersKeys = 'suppressEmail';
+
+type PublishSettingsKeys = 'registrationLink' | 'hidden';
+
 export interface BasicsProps
   extends SectionProps,
-    Pick<
-      WorkshopFormState,
-      | 'name'
-      | 'grades'
-      | 'subject'
-      | 'prereq'
-      | 'hasPrereq'
-      | 'capacity'
-      | 'description'
-      | 'courseOfferings'
-    > {}
+    Pick<WorkshopFormState, BasicsKeys> {
+  errors: Record<BasicsKeys, string>;
+}
 
 export interface PartnerFacilitatorProps
   extends SectionProps,
-    Pick<WorkshopFormState, 'facilitators' | 'regionalPartnerId'> {}
+    Pick<WorkshopFormState, PartnerFacilitatorKeys> {
+  errors: Record<PartnerFacilitatorKeys, string>;
+}
 
 export interface AdditionalInfoProps
   extends SectionProps,
-    Pick<WorkshopFormState, 'fee' | 'participantGroupType' | 'notes'> {}
+    Pick<WorkshopFormState, AdditionalInfoKeys> {
+  errors: Record<AdditionalInfoKeys, string>;
+}
 
 export interface EmailsRemindersProps
   extends SectionProps,
-    Pick<WorkshopFormState, 'suppressEmail'> {}
+    Pick<WorkshopFormState, EmailsRemindersKeys> {}
 
 export interface PublishSettingsProps
   extends SectionProps,
-    Pick<WorkshopFormState, 'registrationLink' | 'hidden'> {}
+    Pick<WorkshopFormState, PublishSettingsKeys> {
+  errors: Record<PublishSettingsKeys, string>;
+}
+
+export type SessionErrors = Record<
+  SessionFormState['id'],
+  Record<keyof SessionFormState, string>
+>;
 
 export interface ScheduleProps
   extends SectionProps,
     Pick<WorkshopFormState, 'timeZone'> {
   sessions: SessionFormState[];
   dispatchSessions: Dispatch<SessionAction>;
+  errors: SessionErrors;
 }
 
 export interface PublishCancelButtonsProps {
