@@ -51,7 +51,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
-      activationConstraint: {delay: 100, tolerance: 5},
+      activationConstraint: {distance: 10},
     }),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
