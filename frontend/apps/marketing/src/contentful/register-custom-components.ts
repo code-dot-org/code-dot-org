@@ -5,7 +5,16 @@
  */
 import {defineComponents} from '@contentful/experiences-sdk-react';
 
+import ActionBlock, {
+  ActionBlockContentfulComponentDefinition,
+} from '@/components/actionBlocks/defaultActionBlock';
+import FullWidthActionBlock, {
+  FullWidthActionBlockContentfulComponentDefinition,
+} from '@/components/actionBlocks/fullWidthActionBlock';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
+import ActionBlockCarousel, {
+  ActionBlockCarouselContentfulComponentDefinition,
+} from '@/components/carousels/actionBlockCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
@@ -43,10 +52,21 @@ import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
   [
+    {
+      component: ActionBlock,
+      definition: ActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
+    },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
-      component: VideoCarousel,
-      definition: VideoCarouselContentfulComponentDefinition,
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
     },
     {
       component: Divider,
@@ -58,6 +78,13 @@ defineComponents(
     {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
+    },
+    {
+      component: FullWidthActionBlock,
+      definition: FullWidthActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Heading,
@@ -105,6 +132,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: VideoCarousel,
+      definition: VideoCarouselContentfulComponentDefinition,
     },
   ],
   {

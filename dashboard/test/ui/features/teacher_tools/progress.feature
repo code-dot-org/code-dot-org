@@ -1,4 +1,5 @@
-@no_phone
+@no_mobile
+# Re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1751
 Feature: Level Progress
 
   Scenario: Progress is saved for signed-in student

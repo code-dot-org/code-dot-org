@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 20:02:23 UTC",
+    "serialized_at": "2025-03-27 16:11:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -700,6 +700,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "1GSself-paced-equity-U1L3-identitycircles"
+        ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,
@@ -1022,6 +1025,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "getting-started-teacher-prep"
+        ],
         "progression": "Explore Course Lesson Plans"
       },
       "bonus": false,
@@ -1044,6 +1050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "getting-started-guide-to-assessment"
+        ],
         "progression": "Assessments and Grading"
       },
       "bonus": false,
@@ -1066,6 +1075,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "getting-started-types-of-assessments"
+        ],
         "progression": "Assessments and Grading"
       },
       "bonus": false,
@@ -1138,6 +1150,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting-Started_U2L4 Multiple Choice packets2022_2023"
+        ],
         "progression": "Explore Additional Teacher Resources"
       },
       "bonus": false,

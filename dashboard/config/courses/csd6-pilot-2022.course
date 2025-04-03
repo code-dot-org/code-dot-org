@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csd6-pilot",
+    "pilot_experiment": "csd-u6-pilot-2022",
     "version_year": "2021"
   },
   "resources": [

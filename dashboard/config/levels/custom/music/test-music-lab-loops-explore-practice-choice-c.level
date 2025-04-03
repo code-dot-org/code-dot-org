@@ -8,8 +8,8 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Recreate This Timeline\r\nThere are a few different way to recreate this timeline. \r\n\r\nTry to make it with just 9 blocks of code. \r\n\r\n![](https://images.code.org/fca6d5ce6f4e1ba782c508cd6f4e0805-image-1741895798503.56.32 PM.png)",
-    "offer_browser_tts": "false",
+    "long_instructions": "#### Snap Remix\r\nJuan is excited about a remix he made for Snap:\r\n\r\n> It starts with two sets of beats and effects, then it explodes into three sets of bass, beats, and leads. With loops, I was able to do it with 9 blocks!\r\n\r\nTry to recreate Juan's remix with the provided tracks! When you're finished, it should look like this:\r\n\r\n![](https://images.code.org/fca6d5ce6f4e1ba782c508cd6f4e0805-image-1741895798503.56.32 PM.png)\r\n\r\n",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -62,13 +62,37 @@
           ]
         }
       },
-      "allowChangeStartingPlayheadPosition": true
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true
     },
-    "display_name": "Recreate this Timeline",
-    "thumbnail_url": "https://images.code.org/fca6d5ce6f4e1ba782c508cd6f4e0805-image-1741895798503.56.32 PM.png",
+    "display_name": "Snap Remix",
+    "bubble_choice_description": "Juan made a remix of Snap and is challenging you to recreate it",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-c_0a2b9176-64f5-48e6-b4e7-cab391f9d494",
+        "message": "[add loop counting validation, and validate against type not exact]",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pLlAvVJUickbslXR6gBTiaSL\n878vXaHXRyVaP528Ow65fb8wWQABISE4NYxojllQQ/jcCBMDezAQm1wSy6N0\nbXGal1QIgU0dyDJokwGCJNQKRUR6Oa0txiTZ2wtAyZ69Y7OnHesyLVcoL/Zz\n1zKbiP8TPwTpeGB6GVpdoLiX2VOa7Px4HdGjO2c7dJn4cqIQ+Pr+2QYUZG9K\nGNsXagR1FdibC12DqFeEfijZTUxvjtPRe4qzvHcFRXeJTYasKKhLcYzwQraH\n8leLb3YV7zT7iZHvMWw+/eLWdIk4SX/NBLqUKx7YnIkJO/N/DPfzjSx4Agde\n6hjYRF0ttMV2ApFOgZy6G6K3X02OCra5mQKIlA5b/tycjetRU4XGLMgxIz1C\n9vfgfyVwZJcDBGoZDo/SEZ2xy+AbEldSJLdXm0v7d3pT7IvgF8gUclMg0rah\n1zCCCRl9mYJwNwjRNfr4f2X4+RQ9BNRUykIC50mSGSwUm7QtCRz3TxzJIVBn\nt/YeMTUmzxRqrhjsVAO/CFGyEiwIIWG1Uw9wWDoxe3Fbgc9Wr3s9Ju2rqh71\nD0CNOs02LRNhJEc7BwHAyqvG/4mv1N2arYK56YFJJmVvvK1ByP153BS/5StH\nuxexTsBKFqB7TQoWO2Js04FsimjQEVOcZr8/mZFN7RNsdZlpcU2DZmHCgS1y\nDir08vHBYO9//pkxtwNnkE0RryIMHx48N1INS6zxe3iR7Fk9FdIdcHms1FCp\nO83gOxoIwTQ0O25EMB1kBjyZstzSSYYLRW9NZCbwSOEz4Dxy1PM58GUS5cqr\nqCse4HJoQhUHxb+dK/UBr+ZeOnmb47s0A8owEuATTAA2oO2ox3/4r65Il/ie\neJd7DRSmTAlXtt4N1iNAxYA1Zvke1S9ubqd6Wh7eP6O6IgLvD3b9RWLcjk0D\nupnvSRUdKIRP68Ktbou5wFIeMuXLAe2TUHbByw3aVEqSZ9L7qPfVxTOMLsfQ\nzVBJrIR4U+DapLMV2fmKr+b8HOZFXOrWzu5pMzQJipRcPXcPn9ZbM9BuqtPu\nd7Tp+NR1Y34Tm3xAYrF/AtNjpy6rGxKSes8odhEB4ydz1zW5cVZM2qzHEBe6\naOjV5VT+6mvmkJwHCfKDlLZAcBdn2nrhbXvphI3DXXSbyf/R9iHem/G1tMEa\nZdYX5eC/b6VnODw1969lMKlCuDChDweqQVoTM3c8CMEHMCOi4C2EcYTL5auv\nY8jYvt3taD7CE55rOAsxK2mlbg71sg4+7WaQGW8smfYmtqXAdi1KNfjowP76\nVcfmBONifYMZn4Qk+O+i0haRzDqhIdhCJ6B/THb3aipDIE3rXajzzx9BlycW\nX5QgUyadCIV49I9/KpD8b7CDGfc5YkoTymKjT0r7qrbCBcLa5a1GakfGJ6ky\nWSa7eA==\n",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-13T18:12:05.144+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-03-13 20:07:18 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 20:08:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:45:10 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T18:12:05.144+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-03-13 20:07:18 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 20:08:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:45:10 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\",\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 18:07:37 +0000\",\"changed\":[\"long_instructions\",\"offer_browser_tts\",\"level_data\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:09:11 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:10:20 +0000\",\"changed\":[\"validations\",\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -8,8 +8,11 @@ module AichatAssetHelper
     source = asset["source"]
     result = fetch_asset(filename, source, channel_id, level_name)
 
-    # TODO - error cases
-    return nil unless result && result[:status] == 'FOUND'
+    unless result && result[:status] == 'FOUND'
+      raise StandardError.new(
+        "Error fetching asset #{{**asset, channel_id: channel_id, level_name: level_name, **result}}"
+        )
+    end
 
     data = Base64.encode64(result[:body].read)
     mime_type = Rack::Mime.mime_type(File.extname(filename))

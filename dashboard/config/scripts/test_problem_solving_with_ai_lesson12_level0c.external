@@ -1,6 +1,7 @@
 name 'test-problem-solving-with-ai-lesson12-level0c'
 title 'AI in Public Transportation'
-description 'description here'
+display_name 'AI In Public Transportation'
+thumbnail_url 'https://images.code.org/4f71f8004793cde292dd34a4c3369d33-public-transport.png'
 
 markdown <<MARKDOWN
 ##AI In Public Transportation

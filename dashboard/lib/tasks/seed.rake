@@ -287,6 +287,14 @@ namespace :seed do
     update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
+  # Seeds only ui test scripts, skipping any dependencies. This is useful for
+  # seeding vocab and resources which may have been skipped when seeding into
+  # an empty DB. For more context, see
+  # https://github.com/code-dot-org/code-dot-org/pull/64792
+  timed_task_with_logging reseed_scripts_ui_tests: :environment do
+    update_scripts(script_files: UI_TEST_SCRIPTS)
+  end
+
   timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
     update_scripts(script_files: ADHOC_SCRIPTS)
   end
@@ -302,14 +310,45 @@ namespace :seed do
     %w(allthethingscourse
        csp-2017
        csp-2019
+       20-hour
        allthemigratedthings
        alltheselfpacedplthings
        allthettsthings
+       artist
+       course1
+       course2
+       course3
+       course4
+       coursea-2017
+       courseb-2017
+       coursec-2017
+       coursed-2017
+       coursee-2017
+       coursef-2017
+       pre-express-2017
+       express-2017
+       coursea-2019
+       coursec-2019
+       coursee-2019
+       coursea-2020
        interactive-games-animations-2023
+       interactive-games-animations-2024
        customizing-llms-2024
+       dance
        events
+       flappy
+       frozen
+       hero
+       hourofcode
+       infinity
+       mc
+       minecraft
        playlab
-       step).each do |course_name|
+       starwars
+       starwarsblocks
+       step
+       oceans
+       sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017
@@ -595,7 +634,7 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 

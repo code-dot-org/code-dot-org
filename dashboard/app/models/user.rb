@@ -1300,6 +1300,11 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
+  def can_view_all_facilitator_landing_pages?
+    permission?(UserPermission::PROGRAM_MANAGER) || permission?(UserPermission::WORKSHOP_ORGANIZER) ||
+      permission?(UserPermission::WORKSHOP_ADMIN)
+  end
+
   def ai_tutor_permission?
     permission?(UserPermission::AI_TUTOR_ACCESS)
   end

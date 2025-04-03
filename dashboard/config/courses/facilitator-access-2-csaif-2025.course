@@ -1,0 +1,20 @@
+{
+  "name": "facilitator-access-2-csaif-2025",
+  "script_names": [
+    "facilitator-prog-fund-early-access"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "facilitator-access-2-csaif",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

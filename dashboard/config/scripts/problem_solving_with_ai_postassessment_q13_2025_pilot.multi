@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q13_2025-pilot'
+
+question 'What is one reason AI-generated content may still need human revision?'
+
+wrong 'AI\'s ideas are always wrong.'
+right 'AI doesn\'t understand audience, emotion, or deeper meaning.'
+wrong 'AI content is usually unreadable.'
+wrong 'AI is too slow to finish creative tasks.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Remixing, Creativity, and Originality
+MARKDOWN

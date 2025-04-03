@@ -18,6 +18,11 @@
   // Added min-height so there's workable space in the Contentful experiences editor,
   // it won't have an effect on anything visually once slides are added.
   min-height: 50px;
+
+  :global(.swiper-slide) {
+    display: flex;
+    height: auto;
+  }
 }
 
 // Navigation button styles

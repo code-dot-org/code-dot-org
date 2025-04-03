@@ -9,6 +9,7 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "vpl-csp",
+    "pilot_experiment": "20-21-virtual-AYW-CSP",
     "version_year": "2021"
   },
   "resources": [

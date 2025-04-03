@@ -3,7 +3,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
   id: 'iconHighlight',
-  name: 'Highlight Card',
+  name: 'Icon Highlight',
   category: '03: Basic',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/1Hmduomo4RMBD7E3N3kWKc/5ced16462aa02176586777ccdd04f869/component_icon_highlight_thumbnail.png',
@@ -21,7 +21,7 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Heading',
       type: 'Text',
       group: 'content',
-      defaultValue: 'Highlight Card Heading',
+      defaultValue: 'Icon Highlight Heading',
       validations: {
         required: true,
       },
@@ -30,7 +30,7 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Text content',
       type: 'Text',
       group: 'content',
-      defaultValue: 'Highlight Card\nMultiline Text',
+      defaultValue: 'Icon Highlight\nMultiline Text',
       validations: {
         required: true,
       },
