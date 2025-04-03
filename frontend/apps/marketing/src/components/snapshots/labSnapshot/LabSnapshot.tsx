@@ -1,4 +1,3 @@
-import {castArray} from 'lodash';
 import {useMemo} from 'react';
 
 import Snapshot, {
@@ -29,12 +28,12 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
   const initItem = (
     label: string,
     iconName: string,
-    content: string[],
+    content: string | string[],
   ): SnapshotItem => ({
     key: label + iconName,
     label: label,
     icon: {iconName},
-    content: content.join(', '),
+    content: Array.isArray(content) ? content.join(', ') : content,
   });
 
   const items = useMemo(() => {
@@ -45,8 +44,7 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
       iconName: string,
       content?: string | string[],
     ) => {
-      if (content?.length)
-        items.push(initItem(label, iconName, castArray(content)));
+      if (content?.length) items.push(initItem(label, iconName, content));
     };
 
     addItem('Ages', 'user', ages);
