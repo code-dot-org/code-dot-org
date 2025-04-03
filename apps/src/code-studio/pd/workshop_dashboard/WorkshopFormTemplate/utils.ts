@@ -1,8 +1,11 @@
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
 import {Workshop, WorkshopFormState, Session, SessionFormState} from './types';
+
+export const workshopLabel = (label: string): string =>
+  `${label.replace(/workshop$/i, '').trim()} Workshop`;
 
 export const isEmpty = (
   value: string | boolean | number | unknown[] | null | undefined

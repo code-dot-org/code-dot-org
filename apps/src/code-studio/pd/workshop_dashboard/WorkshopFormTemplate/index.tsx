@@ -14,7 +14,6 @@ import {useNavigate, useParams} from 'react-router-dom';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {workshopLabel} from '../utils/workshopLabel';
 import {DATETIME_FORMAT} from '../workshopConstants';
 
 import {generateNewSession} from './components/SessionsEditor';
@@ -40,7 +39,7 @@ import {
   WorkshopFormTemplateProps,
   DestroyedSession,
 } from './types';
-import {workshopDataToState, sessionDataToState} from './utils';
+import {workshopDataToState, sessionDataToState, workshopLabel} from './utils';
 
 import styles from './styles.module.scss';
 
