@@ -89,29 +89,27 @@ export const Codebridge = React.memo(
     );
 
     return (
-      <div data-theme="Dark">
-        <CodebridgeContextProvider
-          value={{
-            source: internalSource,
-            config,
-            setProject,
-            setConfig,
-            startSources,
-            onRun,
-            onStop,
-            ...sourceUtilities,
-            labConfig,
-            sendConsoleInput,
-            levelProperties,
-          }}
-        >
-          <BackpackAPIContext.Provider value={backpackApi}>
-            <div className={classNames(moduleStyles.codebridgeContainer)}>
-              <InnerLayout isProjectLevel={levelProperties.isProjectLevel} />
-            </div>
-          </BackpackAPIContext.Provider>
-        </CodebridgeContextProvider>
-      </div>
+      <CodebridgeContextProvider
+        value={{
+          source: internalSource,
+          config,
+          setProject,
+          setConfig,
+          startSources,
+          onRun,
+          onStop,
+          ...sourceUtilities,
+          labConfig,
+          sendConsoleInput,
+          levelProperties,
+        }}
+      >
+        <BackpackAPIContext.Provider value={backpackApi}>
+          <div className={classNames(moduleStyles.codebridgeContainer)}>
+            <InnerLayout isProjectLevel={levelProperties.isProjectLevel} />
+          </div>
+        </BackpackAPIContext.Provider>
+      </CodebridgeContextProvider>
     );
   }
 );
