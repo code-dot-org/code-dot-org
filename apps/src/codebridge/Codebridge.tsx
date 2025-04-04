@@ -88,6 +88,7 @@ export const Codebridge = React.memo(
       [appName]
     );
 
+    // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 
     return (
