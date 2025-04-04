@@ -79,6 +79,7 @@ namespace :seed do
     ui-test-facilitator-pl-course
     ui-test-single-unit-2025
     ui-test-single-unit-2026
+    ui-test-unnumbered-lessons
   ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
