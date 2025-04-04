@@ -53,9 +53,6 @@ TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
 
-# Run tests against local Selenium first, before directing reruns to SauceLabs
-FIRST_RUN_LOCAL_TAG = 'first run local'.freeze
-
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
@@ -121,9 +118,8 @@ namespace :ci do
           "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
           "--parallel #{use_saucelabs ? 16 : 8} " \
           "--abort_when_failures_exceed 10 " \
-          "--retry_count #{CI::Utils.tagged?(FIRST_RUN_LOCAL_TAG) ? 3 : 2} " \
+          "--retry_count 2 " \
           "--output-synopsis " \
-          "#{CI::Utils.tagged?(FIRST_RUN_LOCAL_TAG) ? '--first-run-local ' : ''}" \
           "--with-status-page " \
           "--html"
       if test_eyes?
@@ -134,8 +130,7 @@ namespace :ci do
             "--local " \
             "--ci " \
             "--parallel 10 " \
-            "--retry_count #{CI::Utils.tagged?(FIRST_RUN_LOCAL_TAG) ? 2 : 1} " \
-            "#{CI::Utils.tagged?(FIRST_RUN_LOCAL_TAG) ? '--first-run-local ' : ''}" \
+            "--retry_count 1 " \
             "--with-status-page " \
             "--html"
       end

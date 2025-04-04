@@ -65,9 +65,14 @@ def change_orientation(orientation)
 end
 
 def use_local_selenium?
-  # as opposed to saucelabs
+  # If running locally, always use local selenium.
   return true if ENV['TEST_LOCAL'] == 'true'
-  return true if ENV['FIRST_RUN_LOCAL'] == 'true' && ENV.fetch('RERUNS', 0).to_i < 1
+
+  # If running CI tests (as opposed to CD tests), run the first test locally
+  # and only use saucelabs for reruns.
+  return true if ENV['CI'] == 'true' && ENV.fetch('RERUNS', 0).to_i < 1
+
+  # Otherwise, use saucelabs.
   return false
 end
 
