@@ -26,12 +26,12 @@ describe('LabSnapshot component', () => {
 
   it('renders lab details in the correct order', () => {
     renderSnapshot({
-      ages: ['1', '1st'],
-      level: ['2', '2nd'],
-      creation: '3, 3rd',
-      devices: ['4', '4th'],
-      browsers: ['5', '5th'],
-      accessibility: ['6', '6th'],
+      ages: ['1', '1st; '],
+      level: ['2', '2nd; '],
+      creation: '3, 3rd; ',
+      devices: ['4', '4th; '],
+      browsers: ['5', '5th; '],
+      accessibility: ['6', '6th; '],
       languages: ['7', '7th'],
     });
 
@@ -39,13 +39,8 @@ describe('LabSnapshot component', () => {
 
     expect(labSnapshot).toBeVisible();
     expect(labSnapshot).toHaveTextContent(
-      'Ages: 1, 1st' +
-        'Level: 2, 2nd' +
-        'What you can make: 3, 3rd' +
-        'Devices: 4, 4th' +
-        'Browsers: 5, 5th' +
-        'Accessibility: 6, 6th' +
-        'Languages supported: 7, 7th',
+      'Ages: 1, 1st; Level: 2, 2nd; What you can make: 3, 3rd; Devices: 4, 4th; ' +
+        'Browsers: 5, 5th; Accessibility: 6, 6th; Languages supported: 7, 7th',
     );
   });
 
