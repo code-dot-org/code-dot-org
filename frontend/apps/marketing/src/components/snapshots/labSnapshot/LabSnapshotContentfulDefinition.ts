@@ -16,6 +16,14 @@ export const LabSnapshotContentfulComponentDefinition: ComponentDefinition = {
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
   variables: {
+    label: {
+      displayName: 'Aria Label',
+      type: 'Text',
+      group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
+    },
     ages: {
       displayName: 'Ages',
       type: 'Array',

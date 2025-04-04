@@ -1,11 +1,11 @@
 import {useMemo} from 'react';
 
 import Snapshot, {
-  SnapshotProps,
   SnapshotItem,
 } from '@code-dot-org/component-library/cms/snapshot';
 
-export interface LabSnapshotProps extends Omit<SnapshotProps, 'items'> {
+export interface LabSnapshotProps {
+  label?: string;
   ages?: string[];
   level?: string[];
   creation?: string;
@@ -16,6 +16,7 @@ export interface LabSnapshotProps extends Omit<SnapshotProps, 'items'> {
 }
 
 const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
+  label,
   ages,
   level,
   devices,
@@ -23,7 +24,6 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
   browsers,
   accessibility,
   languages,
-  ...props
 }) => {
   const initItem = (
     label: string,
@@ -69,7 +69,7 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
     );
   }
 
-  return <Snapshot {...props} items={items} />;
+  return <Snapshot aria-label={label} items={items} />;
 };
 
 export default LabSnapshot;
