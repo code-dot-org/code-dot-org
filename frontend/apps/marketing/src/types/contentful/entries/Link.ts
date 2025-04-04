@@ -1,4 +1,4 @@
-import {EntrySkeletonType} from 'contentful';
+import {Entry} from '@/types/contentful/Entry';
 
 export type Link = {
   ariaLabel?: string;
@@ -7,4 +7,4 @@ export type Link = {
   primaryTarget: string;
 };
 
-export type LinkEntry = EntrySkeletonType<Link>;
+export type LinkEntry = Entry<Link>;

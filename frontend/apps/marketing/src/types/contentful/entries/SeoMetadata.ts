@@ -1,5 +1,4 @@
-import {EntrySkeletonType} from 'contentful';
-
+import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export type SeoMetadata = {
@@ -14,4 +13,4 @@ export type SeoMetadata = {
   openGraphImage: ExperienceAsset;
 };
 
-export type SeoMetadataEntry = EntrySkeletonType<SeoMetadata>;
+export type SeoMetadataEntry = Entry<SeoMetadata>;

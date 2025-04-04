@@ -6,7 +6,6 @@ import React, {ReactNode, useMemo} from 'react';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import Video from '@/components/video';
-
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export type VideoCarouselProps = {

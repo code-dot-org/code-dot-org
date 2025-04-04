@@ -1,6 +1,6 @@
 'use client';
 
-import {BaseEntry, EntryFields, EntrySkeletonType} from 'contentful';
+import {EntryFields} from 'contentful';
 import React, {useMemo} from 'react';
 
 import ActionBlock, {
@@ -9,6 +9,7 @@ import ActionBlock, {
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import {LinkEntry} from '@/types/contentful/entries/Link';
+import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type ActionBlockCarouselFields = {
@@ -20,8 +21,7 @@ type ActionBlockCarouselFields = {
   secondaryLinkRef: LinkEntry;
 };
 
-type ActionBlockCarouselEntry = BaseEntry &
-  EntrySkeletonType<ActionBlockCarouselFields>;
+type ActionBlockCarouselEntry = Entry<ActionBlockCarouselFields>;
 
 export type ActionBlockCarouselProps = {
   /** Carousel content w/ fields from Contentful */
