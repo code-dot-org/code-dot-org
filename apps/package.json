@@ -19,7 +19,7 @@
     "clean": "grunt clean",
     "build": "DEV=1 yarn grunt build",
     "build:analyze": "ANALYZE_BUNDLE=1 DEV=1 yarn grunt build",
-    "build:dist": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=7168 grunt clean build",
+    "build:dist": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8096 grunt clean build",
     "build:dist:debug": "NODE_ENV=production DEBUG_MINIFIED=1 yarn grunt clean build",
     "build:dist:analyze": "NODE_ENV=production ANALYZE_BUNDLE=1 yarn build:dist",
     "grunt": "NODE_OPTIONS=--max-old-space-size=4096 grunt",
