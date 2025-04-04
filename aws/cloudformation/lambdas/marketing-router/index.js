@@ -7,7 +7,7 @@ const marketingPaths = {
   // e.g. '/videos': true,
 }
 
-export const handler = (event, context, callback) => {
+module.exports.handler = (event, context, callback) => {
   const request = event?.Records?.[0]?.cf?.request;
   const uri = request?.uri;
 
