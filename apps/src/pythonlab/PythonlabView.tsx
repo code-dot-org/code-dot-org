@@ -4,32 +4,43 @@ import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
-import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  restartPyodideIfProgramIsRunning,
+  sendInput,
+} from '@cdo/apps/pythonlab/pyodideWorkerManager';
+import {
+  AppDispatch,
+  useAppDispatch,
+  useAppSelector,
+} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import ProjectTypePicker from './components/ProjectTypePicker';
+import {
+  DEFAULT_PROJECT,
+  STANDALONE_CONSOLE_PROJECT,
+  STANDALONE_NEIGHBORHOOD_PROJECT,
+} from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
-import {
-  restartPyodideIfProgramIsRunning,
-  sendInput,
-} from './pyodideWorkerManager';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -37,21 +48,9 @@ const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
 };
 
-const defaultProject: ProjectSources = {
-  source: {
-    files: {
-      '0': {
-        id: '0',
-        name: MAIN_PYTHON_FILE,
-        language: 'py',
-        contents: 'print("Hello world!")',
-        folderId: '0',
-        active: true,
-        open: true,
-      },
-    },
-    folders: {},
-  },
+const standaloneStartSources: {[key: string]: ProjectSources} = {
+  console: STANDALONE_CONSOLE_PROJECT,
+  neighborhood: STANDALONE_NEIGHBORHOOD_PROJECT,
 };
 
 const defaultConfig: ConfigType = {
@@ -106,12 +105,36 @@ const PythonlabView: React.FunctionComponent<
     projectVersion,
     validationFile,
     labConfig,
-  } = useSource(defaultProject, levelProperties, initialSources);
+  } = useSource(DEFAULT_PROJECT, levelProperties, initialSources);
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const dispatch = useAppDispatch();
+
+  const levelStartSources = useMemo(() => {
+    // For new standalone project levels, we use the standalone start sources map to determine
+    // the start sources, so we can show the user the start code for their chosen project type,
+    // and not accidentally show them the project picker again.
+    if (levelProperties.isProjectLevel) {
+      const currentProjectType =
+        labConfig?.standaloneSettings?.projectType || 'console';
+      return standaloneStartSources[currentProjectType];
+    } else {
+      return startSources;
+    }
+  }, [
+    labConfig?.standaloneSettings?.projectType,
+    levelProperties.isProjectLevel,
+    startSources,
+  ]);
+
+  const showProjectPickerModal =
+    (levelProperties.isProjectLevel &&
+      !initialSources &&
+      !labConfig?.standaloneSettings?.projectType) ||
+    false;
 
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {
@@ -120,6 +143,11 @@ const PythonlabView: React.FunctionComponent<
       );
     }
   }, [progressManager, levelProperties.appName]);
+
+  const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
+    const project = standaloneStartSources[type];
+    dispatch(setAndSaveProjectSources(project));
+  };
 
   // Ensure any in-progress program is stopped when the level is switched.
   useLifecycleNotifier(
@@ -170,7 +198,7 @@ const PythonlabView: React.FunctionComponent<
           config={config}
           setProject={setProject}
           setConfig={setConfig}
-          startSources={startSources}
+          startSources={levelStartSources}
           onRun={onRun}
           onStop={stopPythonCode}
           projectVersion={projectVersion}
@@ -178,6 +206,9 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
         />
+      )}
+      {showProjectPickerModal && (
+        <ProjectTypePicker setProjectCallback={handleProjectTypeChange} />
       )}
     </div>
   );

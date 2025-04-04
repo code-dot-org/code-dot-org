@@ -4,6 +4,7 @@ import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Heading6} from '@code-dot-org/component-library/typography';
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import FocusTrap from 'focus-trap-react';
 import React, {useState} from 'react';
 import {createPortal} from 'react-dom';
@@ -12,6 +13,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -40,14 +42,13 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   buttonRef,
 }) => {
   const dropdownRef = useOutsideClick<HTMLDivElement>(closeDropdown);
-  const editorFontSizeKey = useAppSelector(
+  const currentFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
-  const selectedFontSizeKey = editorFontSizeKey;
   const {signInState} = useAppSelector(state => state.currentUser);
   const {levelProperties} = useCodebridgeContext();
   const dispatch = useAppDispatch();
-  const [selectedValue, setSelectedValue] = useState(selectedFontSizeKey);
+  const [selectedValue, setSelectedValue] = useState(currentFontSizeKey);
 
   const getSelectedKey = (value: string) => value as keyof typeof FontSize;
 
@@ -59,7 +60,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
 
   const onSave = () => {
     const selectedKey = getSelectedKey(selectedValue);
-    if (FontSize[selectedKey]) {
+    if (selectedKey !== currentFontSizeKey && FontSize[selectedKey]) {
       // We want the user preference for selected font size to persist across a session
       // for signed-in users per app type.
       if (signInState === SignInState.SignedIn) {
@@ -67,6 +68,14 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         trySetSessionStorage(sessionStorageKey, selectedKey);
       }
       dispatch(setEditorFontSize(selectedKey));
+      sendCodebridgeAnalyticsEvent(
+        EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE,
+        levelProperties.appName,
+        {
+          levelPath: window.location.pathname,
+          fontSize: selectedKey,
+        }
+      );
     }
     closeDropdown();
   };
@@ -120,6 +129,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             type="secondary"
             size="s"
             onClick={closeDropdown}
+            color="black"
           />
           <Button text="Save" type="primary" size="s" onClick={onSave} />
         </div>

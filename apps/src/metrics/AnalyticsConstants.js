@@ -519,6 +519,9 @@ const EVENTS = {
   CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
     'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
+  CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
+  CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE:
+    'User changed font size on codebridge editor',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',

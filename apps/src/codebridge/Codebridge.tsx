@@ -4,7 +4,7 @@ import {
   SOURCE_REDUCER_ACTIONS,
   useSourceUtilities,
 } from '@codebridge/codebridgeContext';
-import {useReducerWithCallback} from '@codebridge/hooks';
+import {useReducerWithCallback, useZoomTracker} from '@codebridge/hooks';
 import {
   ConfigType,
   SetProjectFunction,
@@ -87,6 +87,9 @@ export const Codebridge = React.memo(
       () => new BackpackClientApi(appName, null),
       [appName]
     );
+
+    // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
+    useZoomTracker(appName);
 
     return (
       <CodebridgeContextProvider
