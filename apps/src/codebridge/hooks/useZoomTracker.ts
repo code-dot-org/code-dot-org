@@ -7,16 +7,26 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 const DEBOUNCE_TIMEOUT = 300;
 
 export const useZoomTracker = (appName: string) => {
-  const initialDPRRef = useRef(window?.devicePixelRatio || 1);
+  const initialDevicePixelRatioRef = useRef(window?.devicePixelRatio || 1);
   const lastZoomValuesRef = useRef<number[]>([
-    Math.round(initialDPRRef.current * 100),
+    Math.round(initialDevicePixelRatioRef.current * 100),
     100,
   ]);
 
+  // Returns a list of two zoom percent values:
+  // First number is based on window.devicePixelRatio which captures zoom via browser zoom settings
+  // or ctrl +/-
+  // Second number is based on window.visualViewport.scale which captures zoom via pinch in/out
+  // on touchpad/screen.
   const detectZoom = (): number[] => {
-    const currentDPR = window.devicePixelRatio || 1;
-    const zoomDPR = currentDPR / initialDPRRef.current;
-    const zoomValues = [Math.round(zoomDPR * 100), 100];
+    const currentDevicePixelRatio = window.devicePixelRatio || 1;
+    // Normalize value so that zoom ratio is normalized to 1.0.
+    // The device pixel ratio depends on devices (typical values include 1.0, 1.5, 2.0, etc).
+    const zoomDevicePixelRatio =
+      currentDevicePixelRatio / initialDevicePixelRatioRef.current;
+
+    const zoomValues = [Math.round(zoomDevicePixelRatio * 100), 100];
+
     if (window.visualViewport?.scale) {
       zoomValues[1] = Math.round(window.visualViewport.scale * 100);
     }
@@ -36,6 +46,7 @@ export const useZoomTracker = (appName: string) => {
     const checkZoom = () => {
       const currentZoomValues = detectZoom();
       let logged = false;
+      // First check device pixel ratio, then visualViewport.
       currentZoomValues.forEach((zoomValue, index) => {
         if (zoomValue !== lastZoomValuesRef.current[index] && !logged) {
           const direction =
