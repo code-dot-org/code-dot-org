@@ -22,7 +22,7 @@ import {useCodebridgeContext} from '../codebridgeContext';
 
 import moduleStyles from './settings-dropdown.module.scss';
 
-// fontSizeOptions contains a list of value/text from the FontSize enum,
+// fontSizeOptions contains a list of value/localized text from the FontSize enum,
 // e.g., [{value: 'Tiny', text: 'Tiny'}, {value: 'Small', text: 'Small'}, ...]
 const fontSizeOptions: SimpleDropdownProps['items'] = [
   {
