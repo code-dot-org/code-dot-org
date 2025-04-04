@@ -12,8 +12,9 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import i18n from '@cdo/locale';
 
-import {SectionCardBody} from './SectionCardBody';
-import {SectionOptionsDropdown} from './SectionOptionsDropdown';
+import SectionAvatar from './SectionAvatar';
+import SectionCardBody from './SectionCardBody';
+import SectionOptionsDropdown from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -69,6 +70,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               }}
             />
           )}
+          <SectionAvatar seed={section.id} />
           <div className={styles.sectionCardHeaderText}>
             <Heading5 id={`section-card-title-${section.id}`}>
               {section.name}

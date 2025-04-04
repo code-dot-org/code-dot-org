@@ -8,6 +8,7 @@ import {
   summarizeEvaluations,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
+import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponseHeader';
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
 import FreeResponseStudentResponseRow from './FreeResponseStudentResponseRow';
 
@@ -100,6 +101,9 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       />
       {evaluationComplete && aiSummary && showDetailedAnalysis && (
         <div>
+          <FreeResponseAiStudentResponseHeader
+            closeStudentResponses={() => {}}
+          />
           {evaluations.map(evaluation => (
             <FreeResponseStudentResponseRow
               key={evaluation.studentId}

@@ -274,6 +274,7 @@ svg text[fill] {
   width: 150px;
   align-items: center;
   flex: 0 0 150px;
+  margin-bottom: 0 !important;
 }
 
 .aiAnalysisResponseColumn {
@@ -282,15 +283,19 @@ svg text[fill] {
   -webkit-line-clamp: 3;
   flex: 1 0 0;
   overflow: hidden;
+  margin-bottom: 0 !important;
+  max-width: 150px;
 }
 
 .aiAnalysisTagColumn {
   width: 145px;
   flex: 0 0 145px;
+  margin-bottom: 0 !important;
 }
 
 .aiAnalysisReasoningColumn {
   flex: 1 1 0;
+  margin-bottom: 0 !important;
 }
 
 .aiSummaryContainer {
@@ -365,6 +370,33 @@ svg text[fill] {
   color: white !important;
 }
 
+.proficientStudentTag div {
+  background-color: var(--background-success-extra-light, #e2f6e2) !important;
+}
+
+.proficientStudentTag div i {
+  color: var(--text-success-primary, #3ea33e) !important;
+}
+
+.proficientStudentTag div span {
+  color: var(--text-neutral-primary, #292f36) !important;
+}
+
+.needsReviewStudentTag div {
+  background-color: var(
+    --background-brand-purple-extra-light,
+    #f6edfd
+  ) !important;
+}
+
+.needsReviewStudentTag div i {
+  color: var(--text-brand-purple-primary, #8c52ba) !important;
+}
+
+.needsReviewStudentTag div span {
+  color: var(--text-neutral-primary, #292f36) !important;
+}
+
 .noAttemptTag div {
   background-color: var(--background-neutral-tertiary) !important;
 }
@@ -391,6 +423,32 @@ svg text[fill] {
 
 .noAttemptIcon {
   color: var(--text-neutral-tertiary);
+}
+
+.headerRow {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-tertiary, #e4e6e9);
+  border-top: 1px solid var(--borders-neutral-primary, #d1d4d8);
+  border-right: 1px solid var(--borders-neutral-primary, #d1d4d8);
+  border-left: 1px solid var(--borders-neutral-primary, #d1d4d8);
+}
+
+.closeButton {
+  background: transparent !important;
+
+  &:hover {
+    background: var(--background-neutral-quaternary, #e4e6e9) !important;
+  }
+
+  i {
+    font-size: 16px !important;
+  }
 }
 
 .evaluateButton {
