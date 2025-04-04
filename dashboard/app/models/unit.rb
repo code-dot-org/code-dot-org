@@ -1506,7 +1506,7 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
       # so that they don't need a bunch of one off cases (example peer reviews
@@ -1888,13 +1888,6 @@ class Unit < ApplicationRecord
     result
   end
 
-  # A unit is considered to have a matching course if there is exactly one
-  # unit_group for this unit
-  def unit_group
-    return nil if unit_group_units.length != 1
-    UnitGroup.get_from_cache(unit_group_units[0].course_id)
-  end
-
   # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
   # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
   # if there is one.
@@ -1930,19 +1923,6 @@ class Unit < ApplicationRecord
   # Use the unit group's pilot_experiment if one exists
   def get_pilot_experiment
     pilot_experiment || unit_group&.pilot_experiment
-  end
-
-  # @return {String|nil} path to the course overview page for this unit if there
-  #   is one.
-  def course_link(section_id = nil)
-    return nil unless unit_group
-    path = course_path(unit_group)
-    path += "?section_id=#{section_id}" if section_id
-    path
-  end
-
-  def course_title
-    unit_group.try(:localized_title)
   end
 
   def unversioned?

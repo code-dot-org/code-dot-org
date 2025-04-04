@@ -66,7 +66,7 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_unit = redirect_unit(@script, request.locale)
+    if !override_redirect && redirect_unit = redirect_unit(@script, request.locale, @course)
       redirect_to script_path(redirect_unit) + "?redirect_warning=true"
       return
     end
@@ -82,8 +82,8 @@ class ScriptsController < ApplicationController
     end
 
     additional_script_data = {
-      course_name: @script.unit_group&.name,
-      course_id: @script.unit_group&.id,
+      course_name: @course&.name,
+      course_id: @course&.id,
       show_redirect_warning: @show_redirect_warning,
       redirect_script_url: @redirect_unit_url,
       section: @section,
@@ -94,9 +94,9 @@ class ScriptsController < ApplicationController
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
-      course_link: @script.course_link(params[:section_id]),
-      course_title: @script.course_title || I18n.t('view_all_units'),
-      is_single_unit_course: @script.unit_group&.single_unit_course?,
+      course_link: @course&.link(section_id: params[:section_id]),
+      course_title: @course&.localized_title || I18n.t('view_all_units'),
+      is_single_unit_course: @course&.single_unit_course?,
       sections: @sections
     }
 
@@ -418,7 +418,7 @@ class ScriptsController < ApplicationController
     end
   end
 
-  private def redirect_unit(unit, locale)
+  private def redirect_unit(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale)
 
@@ -427,9 +427,9 @@ class ScriptsController < ApplicationController
     redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
     redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
 
-    if unit.unit_group&.single_unit_course?
-      redirect_unit_group = UnitGroup.latest_assigned_version(unit.unit_group.family_name, current_user)
-      redirect_unit_group ||= UnitGroup.latest_stable_version(unit.unit_group.family_name, locale: locale)
+    if course&.single_unit_course?
+      redirect_unit_group = UnitGroup.latest_assigned_version(course.family_name, current_user)
+      redirect_unit_group ||= UnitGroup.latest_stable_version(course.family_name, locale: locale)
       redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
     end
 

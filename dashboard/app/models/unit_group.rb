@@ -59,7 +59,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
-  validates_presence_of :link
+  validates :link, presence: true
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
@@ -302,8 +302,14 @@ class UnitGroup < ApplicationRecord
     }
   end
 
-  def link
-    Rails.application.routes.url_helpers.course_path(self)
+  # Generates a URL pointing to the course, optionally including a section ID as a query parameter.
+  #
+  # @param section_id [Integer, String, nil] The ID of the section to include in the query parameter. Defaults to nil.
+  # @return [String] The URL for the course, which may include a section ID query parameter.
+  def link(section_id: nil)
+    path = course_path(self)
+    path += "?section_id=#{section_id}" if section_id
+    path
   end
 
   def summarize_short
