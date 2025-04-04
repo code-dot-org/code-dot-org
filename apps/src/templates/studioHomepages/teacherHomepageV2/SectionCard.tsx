@@ -36,6 +36,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
+          <SectionAvatar color={0} emoji={0} />
           <Heading5 className={styles.sectionCardHeaderText}>
             {section.name}
           </Heading5>
