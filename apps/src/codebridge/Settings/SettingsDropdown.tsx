@@ -24,12 +24,28 @@ import moduleStyles from './settings-dropdown.module.scss';
 
 // fontSizeOptions contains a list of value/text from the FontSize enum,
 // e.g., [{value: 'Tiny', text: 'Tiny'}, {value: 'Small', text: 'Small'}, ...]
-const fontSizeOptions: SimpleDropdownProps['items'] = Object.keys(FontSize)
-  .filter(key => isNaN(Number(key))) // Filters out the reverse enum keys.
-  .map(key => ({
-    value: key,
-    text: key,
-  }));
+const fontSizeOptions: SimpleDropdownProps['items'] = [
+  {
+    value: 'Tiny',
+    text: codebridgeI18n.fontSize_tiny(),
+  },
+  {
+    value: 'Small',
+    text: codebridgeI18n.fontSize_small(),
+  },
+  {
+    value: 'Medium',
+    text: codebridgeI18n.fontSize_medium(),
+  },
+  {
+    value: 'Large',
+    text: codebridgeI18n.fontSize_large(),
+  },
+  {
+    value: 'Huge',
+    text: codebridgeI18n.fontSize_huge(),
+  },
+];
 interface SettingsDropdownProps {
   closeDropdown: () => void;
   buttonRef: React.RefObject<HTMLDivElement>;
@@ -91,7 +107,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
           <Heading6>{commonI18n.settings()}</Heading6>
           <CloseButton
             onClick={closeDropdown}
-            aria-label="Close settings"
+            aria-label={codebridgeI18n.closeSettings()}
             id="close-settings-dropdown"
           />
         </div>
@@ -116,13 +132,18 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         </div>
         <div className={moduleStyles.footer}>
           <Button
-            text="Cancel"
+            text={commonI18n.cancel()}
             type="secondary"
             size="s"
             onClick={closeDropdown}
             color="black"
           />
-          <Button text="Save" type="primary" size="s" onClick={onSave} />
+          <Button
+            text={commonI18n.save()}
+            type="primary"
+            size="s"
+            onClick={onSave}
+          />
         </div>
       </div>
     </FocusTrap>,

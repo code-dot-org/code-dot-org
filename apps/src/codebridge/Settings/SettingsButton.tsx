@@ -38,7 +38,7 @@ const SettingsButton: React.FunctionComponent = () => {
           color={'white'}
           type="tertiary"
           className={darkModeStyles.tertiaryButton}
-          ariaLabel="Settings"
+          ariaLabel={commonI18n.settings()}
         />
       </WithTooltip>
       {isOpen && (
