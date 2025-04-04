@@ -56,7 +56,6 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
       <div
         className={classNames(moduleStyles.outputContainer, className)}
         style={style}
-        data-theme="Dark"
       >
         <Console />
       </div>
@@ -85,7 +84,6 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
       )}
       style={style}
       ref={resizeContainerRef}
-      data-theme="Dark"
     >
       <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
         <MiniAppPreview
