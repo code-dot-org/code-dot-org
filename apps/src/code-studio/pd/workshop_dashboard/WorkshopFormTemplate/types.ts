@@ -173,22 +173,28 @@ export type Errors<SectionKeys extends string> = Partial<
   Record<SectionKeys, string>
 >;
 
+export type SessionErrors = Partial<
+  Record<SessionFormState['id'], Errors<keyof SessionFormState>>
+>;
+
+export type WorkshopErrors = Errors<keyof WorkshopFormState>;
+
 export interface BasicsProps
   extends SectionProps,
     Pick<WorkshopFormState, BasicsKeys> {
-  errors: Errors<BasicsKeys>;
+  errors: WorkshopErrors;
 }
 
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
-  errors: Errors<PartnerFacilitatorKeys>;
+  errors: WorkshopErrors;
 }
 
 export interface AdditionalInfoProps
   extends SectionProps,
     Pick<WorkshopFormState, AdditionalInfoKeys> {
-  errors: Errors<AdditionalInfoKeys>;
+  errors: WorkshopErrors;
 }
 
 export interface EmailsRemindersProps
@@ -198,12 +204,8 @@ export interface EmailsRemindersProps
 export interface PublishSettingsProps
   extends SectionProps,
     Pick<WorkshopFormState, PublishSettingsKeys> {
-  errors: Errors<PublishSettingsKeys>;
+  errors: WorkshopErrors;
 }
-
-export type SessionErrors = Partial<
-  Record<SessionFormState['id'], Errors<keyof SessionFormState>>
->;
 
 export interface ScheduleProps
   extends SectionProps,
