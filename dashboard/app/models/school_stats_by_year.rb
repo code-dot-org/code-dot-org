@@ -45,9 +45,22 @@
 #
 
 class SchoolStatsByYear < ApplicationRecord
+  SCHOOL_STATUSES = {
+    open: '1-Open',
+    closed: '2-Closed',
+    new: '3-New',
+    added: '4-Added',
+    changed_boundary: '5-Changed Boundary/Agency',
+    inactive: '6-Inactive',
+    future: '7-Future',
+    reopened: '8-Reopened'
+  }.freeze
+
   self.primary_keys = :school_id, :school_year
 
   belongs_to :school, optional: true
+
+  validates_inclusion_of :status, in: SCHOOL_STATUSES, if: :status?
 
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.

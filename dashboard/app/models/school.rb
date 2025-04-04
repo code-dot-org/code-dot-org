@@ -89,7 +89,13 @@ class School < ApplicationRecord
 
   # School statuses representing currently open schools in 2019-2020 and 2020-2021 import.
   # Non-open statuses are '2-Closed', '7-Future', '6-Inactive'
-  OPEN_SCHOOL_STATUSES = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
+  OPEN_SCHOOL_STATUSES = [
+    SchoolStatsByYear::SCHOOL_STATUSES[:open],
+    SchoolStatsByYear::SCHOOL_STATUSES[:new],
+    SchoolStatsByYear::SCHOOL_STATUSES[:added],
+    SchoolStatsByYear::SCHOOL_STATUSES[:changed_boundary],
+    SchoolStatsByYear::SCHOOL_STATUSES[:reopened]
+  ]
 
   # School categories need to be mapped to existing values for 2019-2020 import.
   SCHOOL_CATEGORY_MAP = {
