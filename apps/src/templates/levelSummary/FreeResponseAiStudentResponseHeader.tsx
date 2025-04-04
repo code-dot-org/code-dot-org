@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import {Heading6} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
@@ -27,19 +27,10 @@ const FreeResponseAiStudentResponseHeader: React.FC<
       <Heading6 className={styles.aiAnalysisReasoningColumn}>
         {i18n.details()}
       </Heading6>
-      <Button
-        onClick={() => {
-          closeStudentResponses();
-        }}
-        color="white"
-        size="xs"
-        isIconOnly
-        icon={{
-          iconStyle: 'regular',
-          iconName: 'xmark',
-        }}
-        type="primary"
-        className={styles.closeButton}
+      <CloseButton
+        id="ui-close-student-table"
+        aria-label={i18n.closeTable()}
+        onClick={closeStudentResponses}
       />
     </div>
   );
