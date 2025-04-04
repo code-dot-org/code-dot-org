@@ -113,54 +113,54 @@ const PythonlabView: React.FunctionComponent<
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const dispatch = useAppDispatch();
 
-  const getInitialDevicePixelRatio = (): number => {
-    return window?.devicePixelRatio || 1;
-  };
+  // const getInitialDevicePixelRatio = (): number => {
+  //   return window?.devicePixelRatio || 1;
+  // };
 
-  const detectZoom = (initialDPR: number): number[] => {
-    const currentDPR = window.devicePixelRatio || 1;
-    const zoomDPR = currentDPR / initialDPR;
-    const zoomValues = [Math.round(zoomDPR * 100), 100];
-    if (window.visualViewport?.scale) {
-      zoomValues[1] = Math.round(window.visualViewport.scale * 100);
-    }
-    return zoomValues;
-  };
+  // const detectZoom = (initialDPR: number): number[] => {
+  //   const currentDPR = window.devicePixelRatio || 1;
+  //   const zoomDPR = currentDPR / initialDPR;
+  //   const zoomValues = [Math.round(zoomDPR * 100), 100];
+  //   if (window.visualViewport?.scale) {
+  //     zoomValues[1] = Math.round(window.visualViewport.scale * 100);
+  //   }
+  //   return zoomValues;
+  // };
 
-  useEffect(() => {
-    const initialDPR = getInitialDevicePixelRatio();
-    let lastZoomValues = detectZoom(initialDPR);
-    const pageLoadState = document.readyState;
+  // useEffect(() => {
+  //   const initialDPR = getInitialDevicePixelRatio();
+  //   let lastZoomValues = detectZoom(initialDPR);
+  //   const pageLoadState = document.readyState;
 
-    const logZoomChange = (zoomPercent: number, direction: 'in' | 'out') => {
-      console.log('BrowserZoomChanged', {
-        zoomPercent,
-        direction,
-        pageLoadState,
-      });
-    };
+  //   const logZoomChange = (zoomPercent: number, direction: 'in' | 'out') => {
+  //     console.log('BrowserZoomChanged', {
+  //       zoomPercent,
+  //       direction,
+  //       pageLoadState,
+  //     });
+  //   };
 
-    const checkZoom = () => {
-      const currentZoomValues = detectZoom(initialDPR);
-      let loggedZoom = false;
-      currentZoomValues.forEach((zoomValue, index) => {
-        if (zoomValue !== lastZoomValues[index] && !loggedZoom) {
-          const direction =
-            currentZoomValues[0] > lastZoomValues[0] ? 'in' : 'out';
-          logZoomChange(currentZoomValues[index], direction);
-          lastZoomValues = currentZoomValues;
-          loggedZoom = true;
-        }
-      });
-    };
-    const interval = setInterval(checkZoom, 1000);
-    window.visualViewport?.addEventListener('resize', checkZoom);
+  //   const checkZoom = () => {
+  //     const currentZoomValues = detectZoom(initialDPR);
+  //     let loggedZoom = false;
+  //     currentZoomValues.forEach((zoomValue, index) => {
+  //       if (zoomValue !== lastZoomValues[index] && !loggedZoom) {
+  //         const direction =
+  //           currentZoomValues[0] > lastZoomValues[0] ? 'in' : 'out';
+  //         logZoomChange(currentZoomValues[index], direction);
+  //         lastZoomValues = currentZoomValues;
+  //         loggedZoom = true;
+  //       }
+  //     });
+  //   };
+  //   const interval = setInterval(checkZoom, 1000);
+  //   window.visualViewport?.addEventListener('resize', checkZoom);
 
-    return () => {
-      clearInterval(interval);
-      window.visualViewport?.removeEventListener('resize', checkZoom);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //     window.visualViewport?.removeEventListener('resize', checkZoom);
+  //   };
+  // }, []);
 
   const levelStartSources = useMemo(() => {
     // For new standalone project levels, we use the standalone start sources map to determine
