@@ -85,6 +85,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         style={dropdownStyles}
         aria-modal="true"
         aria-label={commonI18n.settings()}
+        data-theme="Dark"
       >
         <div className={moduleStyles.header}>
           <Heading6>{commonI18n.settings()}</Heading6>
