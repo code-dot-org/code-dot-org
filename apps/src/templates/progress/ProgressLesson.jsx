@@ -42,6 +42,7 @@ class ProgressLesson extends React.Component {
     isRtl: PropTypes.bool,
     isMiniView: PropTypes.bool,
     lockStatusLoaded: PropTypes.bool.isRequired,
+    unitHasUnnumberedLessons: PropTypes.bool,
   };
 
   constructor(props) {
@@ -97,6 +98,7 @@ class ProgressLesson extends React.Component {
       isLockedForAllStudents,
       selectedSectionId,
       isRtl,
+      unitHasUnnumberedLessons,
     } = this.props;
 
     if (!isVisible) {
@@ -105,7 +107,13 @@ class ProgressLesson extends React.Component {
 
     const showAsLocked = isLockedForUser || isLockedForAllStudents;
 
-    const title = lesson.title;
+    const title =
+      lesson.lessonNumber && !unitHasUnnumberedLessons
+        ? i18n.lessonNumbered({
+            lessonNumber: lesson.lessonNumber,
+            lessonName: lesson.name,
+          })
+        : lesson.name;
 
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
@@ -346,4 +354,5 @@ export default connect((state, ownProps) => ({
   lockStatusLoaded:
     state.progress.unitProgressHasLoaded &&
     state.lessonLock.lessonsBySectionIdLoaded,
+  unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
 }))(ProgressLesson);

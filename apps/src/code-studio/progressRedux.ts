@@ -83,6 +83,7 @@ export interface ProgressState {
   courseVersionId: number | undefined;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  unitHasUnnumberedLessons: boolean | undefined;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
 }
@@ -176,6 +177,7 @@ const progressSlice = createSlice({
       state.unitTitle = action.payload.unitTitle;
       state.unitDescription = action.payload.unitDescription;
       state.unitStudentDescription = action.payload.unitStudentDescription;
+      state.unitHasUnnumberedLessons = action.payload.unitHasUnnumberedLessons;
       state.courseId = action.payload.courseId;
       state.courseVersionId = action.payload.courseVersionId;
       state.currentLessonId = currentLessonId;

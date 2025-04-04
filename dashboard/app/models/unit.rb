@@ -1704,7 +1704,8 @@ class Unit < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      show_sign_in_callout: csf? || csc?
+      show_sign_in_callout: csf? || csc?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
