@@ -42,13 +42,13 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   buttonRef,
 }) => {
   const dropdownRef = useOutsideClick<HTMLDivElement>(closeDropdown);
-  const selectedFontSizeKey = useAppSelector(
+  const currentFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
   const {signInState} = useAppSelector(state => state.currentUser);
   const {levelProperties} = useCodebridgeContext();
   const dispatch = useAppDispatch();
-  const [selectedValue, setSelectedValue] = useState(selectedFontSizeKey);
+  const [selectedValue, setSelectedValue] = useState(currentFontSizeKey);
 
   const getSelectedKey = (value: string) => value as keyof typeof FontSize;
 
@@ -60,7 +60,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
 
   const onSave = () => {
     const selectedKey = getSelectedKey(selectedValue);
-    if (selectedKey !== selectedFontSizeKey && FontSize[selectedKey]) {
+    if (selectedKey !== currentFontSizeKey && FontSize[selectedKey]) {
       // We want the user preference for selected font size to persist across a session
       // for signed-in users per app type.
       if (signInState === SignInState.SignedIn) {

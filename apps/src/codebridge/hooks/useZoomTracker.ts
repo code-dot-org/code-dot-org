@@ -4,7 +4,7 @@ import {useEffect, useRef} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-const DEBOUNCE_TIMEOUT = 300;
+const DEBOUNCE_TIMEOUT = 1500;
 
 export const useZoomTracker = (appName: string) => {
   const initialDevicePixelRatioRef = useRef(window?.devicePixelRatio || 1);
