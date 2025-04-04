@@ -10,17 +10,38 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "panels that explain how `play sequential` works. ",
-        "imageUrl": "",
-        "key": "test-music-lab-sequences-practice-play-sequential-panel-77c61549-a2c5-4165-a211-283d47d9b82a"
+        "text": "### Play Sequential\n\nPlay Sequential blocks play each sound in order\n",
+        "imageUrl": "https://images.code.org/eab6e0563c5fa13637cdb13cd9ac8bfd-sequential-1.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-77c61549-a2c5-4165-a211-283d47d9b82a",
+        "fadeInOverPrevious": true
       },
       {
-        "text": "another one. ",
-        "imageUrl": "",
-        "key": "test-music-lab-sequences-practice-play-sequential-panel-44ddc497-1a7a-4252-a306-a19ab550d8cf"
+        "text": "### Play Sequential\n\nThey can be used to get sounds with different lengths to line up inside a `play together` block\n",
+        "imageUrl": "https://images.code.org/e23b73233d223dc8bb49c5882a5835a2-sequential-2.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-44ddc497-1a7a-4252-a306-a19ab550d8cf",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Play Sequential\n\nSince the beats are shorter than the vocals, we need to tell them to play twice in order for the song to line up",
+        "imageUrl": "https://images.code.org/ce12f5133942e94caebd9d3cfae63cf9-sequential-3.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-08943d00-a581-4880-acd6-de0970d8529d",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Play Sequential\n\nFor really long tracks, you may need several `play sequential` blocks!",
+        "imageUrl": "https://images.code.org/9e7cd1eb93b5aa6558b7d70e002c0681-sequential-4.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-bf0bbc9c-45a8-4461-b394-d279f7547c56",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Key Takeaway: Use play sequential inside play together to make your tracks line up!\n",
+        "imageUrl": "https://images.code.org/ee571f0d08b44bf375b93b5c04f77655-sequential-5.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-c846fce5-8889-4bff-8a48-f717d5302c15",
+        "typing": true,
+        "fadeInOverPrevious": true
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-10 21:10:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-10 21:10:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-02 18:29:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-02 18:30:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

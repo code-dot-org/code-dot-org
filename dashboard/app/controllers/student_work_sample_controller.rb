@@ -107,7 +107,7 @@ class StudentWorkSampleController < ApplicationController
   end
 
   def fetch_student_code_samples_with_evaluations(level, unit_id, num_samples)
-    evaluations = UserLevelEvaluation.where(level_id: level.id, script_id: unit_id)
+    evaluations = UserLevelEvaluationOld.where(level_id: level.id, script_id: unit_id)
     if evaluations.empty?
       return render status: :not_found, json: "There are no evaluations for the level with id #{level.id} in unit with id #{unit_id}"
     end

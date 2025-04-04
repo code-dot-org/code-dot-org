@@ -32,6 +32,7 @@ class Queries::CoursesTest < ActiveSupport::TestCase
           {
             course: course,
             unit_group_unit: unit_group_unit,
+            unit: unit,
           }
         end
 
