@@ -30,7 +30,7 @@ module Cdo::CloudFormation
     def js_erb(filename, **args)
       Tempfile.open do |tmp|
         File.write(tmp, erb_file(filename))
-        js(tmp.path, **args)
+        inline_js(tmp.path, **args)
       end
     end
 
