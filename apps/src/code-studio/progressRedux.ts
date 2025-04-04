@@ -147,6 +147,7 @@ const initialState: ProgressState = {
   courseVersionId: undefined,
   unitDescription: undefined,
   unitStudentDescription: undefined,
+  unitHasUnnumberedLessons: undefined,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
 };
