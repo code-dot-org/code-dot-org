@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-06T04:26:30.000Z",
   "level_num": "custom",
@@ -29,51 +28,20 @@
               "x": 30,
               "y": 30,
               "deletable": false,
-              "movable": false
-            },
-            {
-              "type": "play_sound_at_current_location_simple2",
-              "id": "play_sound_at_current_location_simple2",
-              "x": 250,
-              "y": 70,
-              "disabledReasons": [
-                "MANUALLY_DISABLED"
-              ],
-              "extraState": {
-                "disableNextConnection": false
-              },
-              "fields": {
-                "sound": "electro/drum_beat_cowbell"
-              }
-            },
-            {
-              "type": "play_sound_at_current_location_simple2",
-              "id": "@~cGP3I]]@Ojn+pOh*1i",
-              "x": 250,
-              "y": 150,
-              "disabledReasons": [
-                "MANUALLY_DISABLED"
-              ],
-              "extraState": {
-                "disableNextConnection": false
-              },
-              "fields": {
-                "sound": "electro/drum_beat_cowbell"
-              }
-            },
-            {
-              "type": "play_sound_at_current_location_simple2",
-              "id": "testCallouts",
-              "x": 530,
-              "y": 90,
-              "disabledReasons": [
-                "MANUALLY_DISABLED"
-              ],
-              "extraState": {
-                "disableNextConnection": false
-              },
-              "fields": {
-                "sound": "electro/drum_beat_cowbell"
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_workspace_1",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "rock/drum_kit_roll"
+                  }
+                }
               }
             }
           ]
@@ -93,7 +61,8 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-06T04:26:30.797+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-06 04:27:27 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 06:07:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 06:07:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 06:08:34 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-06T04:26:30.797+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-06 04:27:27 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 06:07:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 06:07:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 06:08:34 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 16:07:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 20:22:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-31 20:23:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

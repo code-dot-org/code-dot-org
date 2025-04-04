@@ -43,15 +43,23 @@ markdown <<MARKDOWN
             <th align="center">Transportation</th>
         </tr>
     <tr>
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Protecting patient records from cyber threats, securing medical devices from hacking, and ensuring data privacy in telemedicine services.</td>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><ul>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Preventing fraud through advanced security systems, encrypting online transactions, and safeguarding financial institutions from cyberattacks.
+            <li>protecting patient records from cyber threats</li> <li>securing medical devices from hacking</li> <li>ensuring data privacy in telemedicine services</li></ul></td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><ul>
+           
+           <li>preventing fraud through advanced security systems</li><li>encrypting online transactions</li> <li>safeguarding financial institutions from cyberattacks</li>
+</ul></td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><ul>
+           <li>protecting customer data from breaches</li><li>securing e-commerce transactions</li><li>preventing cyber fraud in digital payment systems</li>
+           </ul>
 </td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Protecting customer data from breaches, securing e-commerce transactions, and preventing cyber fraud in digital payment systems.
-</td>
-            
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Securing GPS navigation systems, protecting ride-sharing and public transit platforms from cyber threats, and ensuring safe communication between smart vehicles.
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><ul>
+            <li>securing GPS navigation systems</li><li>protecting ride-sharing and public transit platforms from cyber threats</li><li>ensuring safe communication between smart vehicles</li>
+            </ul>
 </td>
             
            
@@ -87,11 +95,17 @@ markdown <<MARKDOWN
             
         </tr>
     <tr>
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"> Implementing secure online learning environments, preventing cyberbullying and phishing attacks, and protecting student data from unauthorized access.</td>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"> <ul>
+            <li>implementing secure online learning environments</li><li>preventing cyberbullying and phishing attacks</li><li>protecting student data from unauthorized access</li>
+            </ul>.</td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Ensuring cybersecurity in sports analytics platforms, protecting athlete data from unauthorized access, and securing smart stadiums from digital threats.</td>
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><ul>
+           <li>ensuring cybersecurity in sports analytics platforms</li><li>protecting athlete data from unauthorized access</li><li>securing smart stadiums from digital threats</li>
+           </ul></td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Safeguarding data from environmental monitoring systems, securing smart grids from cyber threats, and ensuring the integrity of climate research data.</td>
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><ul>
+           <li>safeguarding data from environmental monitoring systems</li><li>securing smart grids from cyber threats</li><li>ensuring the integrity of climate research data</li>
+           </ul></td>
             
    
             

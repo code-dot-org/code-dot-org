@@ -35,6 +35,7 @@ import {
   COURSE_CSD,
   COURSE_CSP,
   COURSE_CSA,
+  COURSE_CSAIF,
 } from '../workshop_dashboard/workshopConstants';
 import WorkshopEnrollmentCelebrationDialog from '../workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 
@@ -498,6 +499,12 @@ function LandingPage({
         urlSlug: 'computer-science-a',
       });
     }
+    if (coursesAsFacilitator.includes(COURSE_CSAIF)) {
+      landingPageCourses.push({
+        name: 'CSAIF',
+        urlSlug: 'computer-science-ai-fundamentals',
+      });
+    }
     landingPageCourses.forEach(course => {
       allResources.push({
         headingText: i18n.plSectionsFacilitatorResourcesTitle({
@@ -556,7 +563,7 @@ function LandingPage({
         headingText: i18n.plSectionsRegionalPartnerPlaybookTitle(),
         descriptionText: i18n.plSectionsRegionalPartnerPlaybookDesc(),
         buttonText: i18n.plSectionsRegionalPartnerPlaybookButton(),
-        buttonUrl: pegasus('/educate/regional-partner/playbook'),
+        buttonUrl: '/professional-learning/regional-partner/playbook',
       },
     ];
     return (

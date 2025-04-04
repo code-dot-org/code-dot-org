@@ -235,18 +235,25 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         {...sectionProps}
       />
       <PartnerFacilitator
-        {...sectionProps}
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
+        {...sectionProps}
       />
-      <EmailsReminders {...sectionProps} />
+      <EmailsReminders
+        suppressEmail={workshopFormState.suppressEmail}
+        {...sectionProps}
+      />
       <AdditionalInfo
         fee={workshopFormState.fee}
         participantGroupType={workshopFormState.participantGroupType}
         notes={workshopFormState.notes}
         {...sectionProps}
       />
-      <PublishSettings {...sectionProps} />
+      <PublishSettings
+        registrationLink={workshopFormState.registrationLink}
+        hidden={workshopFormState.hidden}
+        {...sectionProps}
+      />
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );

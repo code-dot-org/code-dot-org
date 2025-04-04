@@ -12,11 +12,13 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/0d5ccbdeb31cf38001ebb37338ac81cc-image-1741191408570.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
 #### **Concatenation** simply means joining things together, like two pieces of text or data and uses `+` symbol. 
-#### In the picture above, the symbol connects the variable value to the string message in the print statement.
+#### In the picture above, the symbol `+` connects the variable `name` to the string message **"loves pizza"** in the print statement.
 
 ## Non-string variables
 
-#### Since `print` statements in Python output **text**, any non-string variable (such as an `int`, `float`, or `boolean`) must be **converted to a string** before being printed, this is called **casting a variable.**
+#### Since `print` statements in Python output **text**, any non-string, or non-text, variable (such as an `int`, `float`, or `boolean`) must be **converted to a string** before being printed, this is called **casting a variable.**
+
+#### Notice in the picture below `str()` is added to the Boolean variable `loves_pizza` in the print statement.
 
 <img src="https://images.code.org/ce76a8a8e439f4b531fcc6d3df6c7e48-image-1741191203136.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
 
@@ -34,6 +36,10 @@ markdown <<MARKDOWN
     Without <code>str()</code>, this would cause a <code>TypeError</code> because Python cannot concatenate a string and an integer directly.
     </p>
 </div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This concept is covered in Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
 
 ## Let's practice with a choice level!
 MARKDOWN

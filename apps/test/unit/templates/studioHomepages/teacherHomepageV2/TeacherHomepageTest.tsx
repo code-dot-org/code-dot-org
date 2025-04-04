@@ -8,6 +8,8 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -35,6 +37,8 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2024',
       unitName: null,
+      studentCount: 0,
+      participantType: 'student',
     },
     {
       id: 12,
@@ -42,6 +46,7 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 13,
@@ -49,6 +54,7 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      participantType: 'student',
     },
     {
       id: 14,
@@ -56,21 +62,32 @@ describe('TeacherHomepage', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      participantType: 'student',
     },
     {
       id: 15,
       name: 'hidden',
       hidden: true,
       unitName: null,
+      participantType: 'student',
+    },
+    {
+      id: 16,
+      name: 'PL Section',
+      hidden: false,
+      unitName: null,
+      participantType: 'teacher',
     },
   ];
 
   const serverSections = sections.map(serverSectionFromSection);
 
   let fetchSpy: jest.SpyInstance;
+  let sendEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     stubRedux();
     fetchSpy.mockImplementation((url: string) => {
       if (url === '/dashboardapi/sections/available_participant_types') {
@@ -84,7 +101,7 @@ describe('TeacherHomepage', () => {
   });
 
   afterEach(() => {
-    fetchSpy.mockRestore();
+    jest.restoreAllMocks();
     restoreRedux();
   });
 
@@ -110,6 +127,15 @@ describe('TeacherHomepage', () => {
     );
   }
 
+  it('sends analytics event when visiting the page', () => {
+    renderComponent();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
+      {},
+      PLATFORMS.BOTH
+    );
+  });
+
   it('renders SectionList component', () => {
     renderComponent();
     screen.getByText('Welcome, Rubber Ducky');
@@ -133,11 +159,11 @@ describe('TeacherHomepage', () => {
     screen.getByRole('button', {name: 'Cancel'});
   }, 15000);
 
-  //TODO (TEACH-1659): Why did we need to increase timeouts on this test?
   it('teaching/archived toggle', async () => {
     renderComponent();
     screen.getByRole('button', {name: 'Teaching'});
     const archivedButton = screen.getByRole('button', {name: 'Archived'});
+    const teachingButton = screen.getByRole('button', {name: 'Teaching'});
 
     screen.getByText('Period 1');
     expect(screen.queryByText('hidden')).toBeNull();
@@ -146,6 +172,20 @@ describe('TeacherHomepage', () => {
 
     await screen.findByText('hidden');
     expect(screen.queryByText('Period 1')).toBeNull();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
+
+    fireEvent.click(teachingButton);
+    await screen.findByText('Period 1');
+    expect(screen.queryByText('hidden')).toBeNull();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('archive all opens modal', async () => {

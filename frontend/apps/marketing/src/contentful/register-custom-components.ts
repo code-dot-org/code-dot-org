@@ -8,7 +8,13 @@ import {defineComponents} from '@contentful/experiences-sdk-react';
 import ActionBlock, {
   ActionBlockContentfulComponentDefinition,
 } from '@/components/actionBlocks/defaultActionBlock';
+import FullWidthActionBlock, {
+  FullWidthActionBlockContentfulComponentDefinition,
+} from '@/components/actionBlocks/fullWidthActionBlock';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
+import ActionBlockCarousel, {
+  ActionBlockCarouselContentfulComponentDefinition,
+} from '@/components/carousels/actionBlockCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
@@ -39,6 +45,12 @@ import Section, {
 import SimpleList, {
   SimpleListContentfulComponentDefinition,
 } from '@/components/simpleList';
+import CurriculumSnapshot, {
+  CurriculumSnapshotContentfulComponentDefinition,
+} from '@/components/snapshots/curriculumSnapshot';
+import LabSnapshot, {
+  LabSnapshotContentfulComponentDefinition,
+} from '@/components/snapshots/labSnapshot';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
@@ -53,10 +65,14 @@ defineComponents(
         wrapContainerWidth: '100%',
       },
     },
+    {
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
+    },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
-      component: VideoCarousel,
-      definition: VideoCarouselContentfulComponentDefinition,
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
     },
     {
       component: Divider,
@@ -68,6 +84,13 @@ defineComponents(
     {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
+    },
+    {
+      component: FullWidthActionBlock,
+      definition: FullWidthActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Heading,
@@ -89,6 +112,10 @@ defineComponents(
       definition: ImageContentfulComponentDefinition,
     },
     {
+      component: LabSnapshot,
+      definition: LabSnapshotContentfulComponentDefinition,
+    },
+    {
       component: Link,
       definition: LinkContentfulComponentDefinition,
     },
@@ -108,6 +135,10 @@ defineComponents(
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
     },
+    {
+      component: CurriculumSnapshot,
+      definition: CurriculumSnapshotContentfulComponentDefinition,
+    },
     {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
     {
       component: Video,
@@ -115,6 +146,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: VideoCarousel,
+      definition: VideoCarouselContentfulComponentDefinition,
     },
   ],
   {

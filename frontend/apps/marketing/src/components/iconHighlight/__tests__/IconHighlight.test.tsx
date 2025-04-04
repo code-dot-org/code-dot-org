@@ -7,8 +7,8 @@ import IconHighlight, {
 } from '@/components/iconHighlight/IconHighlight';
 
 describe('IconHighlight component', () => {
-  const heading = 'Highlight Card Heading';
-  const text = 'Highlight Card Text';
+  const heading = 'Icon Highlight Heading';
+  const text = 'Icon Highlight Text';
   const iconName = 'message';
 
   const renderCardContainer = (

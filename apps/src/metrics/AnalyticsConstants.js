@@ -439,6 +439,29 @@ const EVENTS = {
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
 
+  // New Teacher Homepage
+  NEW_TEACHER_HOMEPAGE_VISITED: 'New Teacher Homepage Visited',
+  SECTION_LIST_TEACHING_TOGGLE_CLICKED:
+    'Class Sections Teaching Toggle Clicked',
+  SECTION_LIST_ARCHIVE_TOGGLE_CLICKED: 'Class Sections Archive Toggle Clicked',
+  SECTION_CARD_CLASS_CODE_CLICKED: 'Section Card Class Code Clicked',
+  SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED:
+    'Section Card Go To Course Button Clicked',
+  SECTION_CARD_JUMP_TO_LESSON_CLICKED: 'Section Card Jump To Lesson Clicked',
+  SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED:
+    'Section Card Jump To Unit Overview Clicked',
+  SECTION_CARD_VIEW_PROGRESS_CLICKED: 'Section Card View Progress Clicked',
+  SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED:
+    'Section Card View Lesson Materials Clicked',
+  SECTION_CARD_SETTINGS_CLICKED: 'Section Card Settings Clicked',
+  SECTION_CARD_ROSTER_CLICKED: 'Section Card Roster Clicked',
+  SECTION_CARD_LOGIN_CARDS_CLICKED: 'Section Card Login Cards Clicked',
+  SECTION_CARD_PRINT_CERTIFICATES_CLICKED:
+    'Section Card Print Certificates Clicked',
+  SECTION_CARD_ARCHIVE_CLICKED: 'Section Card Archive Clicked',
+  SECTION_CARD_DELETE_CLICKED: 'Section Card Delete Clicked',
+  SECTION_CARD_RESTORE_CLICKED: 'Section Card Restore Clicked',
+
   // Student Homepage
   STUDENT_HOMEPAGE_VISITED: 'Student Homepage Visited',
 
@@ -453,6 +476,9 @@ const EVENTS = {
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
+  AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
+  AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',

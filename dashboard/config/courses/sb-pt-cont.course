@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "sb-pt-cont",
+    "pilot_experiment": "storyboard-pt-a",
     "version_year": "unversioned"
   },
   "resources": [

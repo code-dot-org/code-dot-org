@@ -21,6 +21,24 @@
         height: 2rem;
       }
     }
+
+    .col {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+
+  .toggleWrapper {
+    label {
+      padding: 0.25rem 0;
+    }
+    p {
+      margin-top: 0.25rem;
+    }
+    a {
+      flex: 0;
+      white-space: nowrap;
+    }
   }
 
   .card {

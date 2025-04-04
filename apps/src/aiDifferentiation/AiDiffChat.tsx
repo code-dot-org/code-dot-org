@@ -2,7 +2,10 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
@@ -21,6 +24,11 @@ import {
   EXIT_TICKET_PROMPT,
   MINI_LESSON_PROMPT,
   LESSON_HOOK_PROMPT,
+  SUGGEST_CURRICULUM_PROMPT,
+  GET_STARTED_PROMPT,
+  PROFESSIONAL_LEARNING_PROMPT,
+  CREATE_SECTION_PROMPT,
+  ADDITIONAL_HELP_PROMPT,
 } from './AiDiffPredefinedPrompts';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {ChatItem, ChatPrompt} from './types';
@@ -46,6 +54,14 @@ const SUGGESTED_PROMPTS = [
   ],
 ];
 
+const GENERAL_SUGGESTED_PROMPTS = [
+  SUGGEST_CURRICULUM_PROMPT,
+  GET_STARTED_PROMPT,
+  PROFESSIONAL_LEARNING_PROMPT,
+  CREATE_SECTION_PROMPT,
+  ADDITIONAL_HELP_PROMPT,
+];
+
 const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
 
 interface AiDiffChatProps {
@@ -66,7 +82,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   unitDisplayName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
-  suggestedPrompts = SUGGESTED_PROMPTS[0],
+  suggestedPrompts = context === AiDiffContext.GENERAL
+    ? GENERAL_SUGGESTED_PROMPTS
+    : SUGGESTED_PROMPTS[0],
   disableEndButtons = false,
 }) => {
   const reportingData = React.useMemo(() => {
@@ -113,7 +131,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     setSuggestionPage(nextPage);
     setMessageHistory(prevMessages => [
       ...prevMessages,
-      SUGGESTED_PROMPTS[nextPage],
+      context === AiDiffContext.GENERAL
+        ? GENERAL_SUGGESTED_PROMPTS
+        : SUGGESTED_PROMPTS[nextPage],
     ]);
   };
 

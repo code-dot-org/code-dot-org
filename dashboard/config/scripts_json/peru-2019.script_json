@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:15 UTC",
+    "serialized_at": "2025-03-28 09:28:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2462,19 +2462,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp1",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp1",
-          "courseE_maze_ramp1"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "",
-        "script.name": "peru-2019",
-        "activity_section.key": "da7277d7-dbc5-4cd4-82f6-316f897f35dd"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_maze_ramp1",
         "script_level.level_keys": [
           "courseD_scrat_ramp1",
@@ -2488,10 +2475,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp2",
+        "level.key": "courseD_scrat_ramp1",
         "script_level.level_keys": [
-          "courseD_scrat_ramp2",
-          "courseE_maze_ramp2"
+          "courseD_scrat_ramp1",
+          "courseE_maze_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
@@ -2514,10 +2501,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp3",
+        "level.key": "courseD_scrat_ramp2",
         "script_level.level_keys": [
-          "courseD_scrat_ramp3",
-          "courseE_maze_ramp3"
+          "courseD_scrat_ramp2",
+          "courseE_maze_ramp2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
@@ -2540,10 +2527,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp4",
+        "level.key": "courseD_scrat_ramp3",
         "script_level.level_keys": [
-          "courseD_scrat_ramp4",
-          "courseE_maze_ramp4"
+          "courseD_scrat_ramp3",
+          "courseE_maze_ramp3"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
@@ -2566,10 +2553,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp5",
+        "level.key": "courseD_scrat_ramp4",
         "script_level.level_keys": [
-          "courseD_scrat_ramp5",
-          "courseE_maze_ramp5"
+          "courseD_scrat_ramp4",
+          "courseE_maze_ramp4"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
@@ -2592,7 +2579,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_predict1",
+        "level.key": "courseD_scrat_ramp5",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp5",
+          "courseE_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "peru-2019",
+        "activity_section.key": "da7277d7-dbc5-4cd4-82f6-316f897f35dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_predict1",
         "script_level.level_keys": [
           "courseD_scrat_predict1",
           "courseE_maze_predict1"
@@ -2605,7 +2605,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_predict1",
+        "level.key": "courseD_scrat_predict1",
         "script_level.level_keys": [
           "courseD_scrat_predict1",
           "courseE_maze_predict1"
@@ -2644,19 +2644,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp6",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp6",
-          "courseE_maze_ramp6"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "",
-        "script.name": "peru-2019",
-        "activity_section.key": "da7277d7-dbc5-4cd4-82f6-316f897f35dd"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_maze_ramp6",
         "script_level.level_keys": [
           "courseD_scrat_ramp6",
@@ -2670,10 +2657,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp7",
+        "level.key": "courseD_scrat_ramp6",
         "script_level.level_keys": [
-          "courseD_scrat_ramp7",
-          "courseE_maze_ramp7"
+          "courseD_scrat_ramp6",
+          "courseE_maze_ramp6"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
@@ -2696,7 +2683,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp8",
+        "level.key": "courseD_scrat_ramp7",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp7",
+          "courseE_maze_ramp7"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "peru-2019",
+        "activity_section.key": "da7277d7-dbc5-4cd4-82f6-316f897f35dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_ramp8",
         "script_level.level_keys": [
           "courseD_scrat_ramp8",
           "courseE_artist_ramp8"
@@ -2709,7 +2709,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_ramp8",
+        "level.key": "courseD_scrat_ramp8",
         "script_level.level_keys": [
           "courseD_scrat_ramp8",
           "courseE_artist_ramp8"
@@ -2748,19 +2748,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_ramp8_2",
-        "script_level.level_keys": [
-          "courseE_artist_ramp8_2",
-          "courseE_artist_ramp9"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "",
-        "script.name": "peru-2019",
-        "activity_section.key": "da7277d7-dbc5-4cd4-82f6-316f897f35dd"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_artist_ramp9",
         "script_level.level_keys": [
           "courseE_artist_ramp8_2",
@@ -2774,7 +2761,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseC_video_angles2",
+        "level.key": "courseE_artist_ramp8_2",
+        "script_level.level_keys": [
+          "courseE_artist_ramp8_2",
+          "courseE_artist_ramp9"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "peru-2019",
+        "activity_section.key": "da7277d7-dbc5-4cd4-82f6-316f897f35dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_predict1",
         "script_level.level_keys": [
           "courseC_video_angles2",
           "courseE_artist_predict1"
@@ -2787,7 +2787,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_predict1",
+        "level.key": "courseC_video_angles2",
         "script_level.level_keys": [
           "courseC_video_angles2",
           "courseE_artist_predict1"
