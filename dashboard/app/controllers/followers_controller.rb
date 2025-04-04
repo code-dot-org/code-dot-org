@@ -26,8 +26,7 @@ class FollowersController < ApplicationController
       @user = current_user
     elsif params[:user]
       user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-      @user = User.new(followers_params(user_type))
-      @user.user_type = user_type
+      @user = Student.new(followers_params(user_type))
     else
       @section_code = params[:section_code]
       render 'join_logged_out', formats: [:html]
