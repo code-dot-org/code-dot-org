@@ -1,0 +1,81 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/variables' as variables;
+@use '@code-dot-org/component-library-styles/typography.module' as typography;
+
+$mobileBreakpoint: 1024px;
+
+.heroBannerWrapper {
+  width: 100%;
+  background: var(--background-neutral-tertiary);
+}
+
+.heroBannerContainer {
+  display: flex;
+  max-width: 60rem;
+  margin: 0 auto;
+  align-items: center;
+  gap: 4.375rem;
+  padding: 4rem 2rem;
+
+  @media (max-width: $mobileBreakpoint) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+
+    .heroBannerVisualSection figure {
+      height: unset;
+    }
+  }
+}
+
+.heroBannerDescriptiveSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+
+  p {
+    margin-top: 0;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    margin: 1.875rem 0 0;
+  }
+}
+
+.heroBannerPartnerSection {
+  @include typography.body-three;
+  @include typography.strong;
+  display: inline-flex;
+  width: 100%;
+  margin: 0;
+  flex: 1 0 0;
+
+  figure {
+    margin-inline-start: 0.25rem;
+    max-width: 11.9375rem;
+    max-height: 1.875rem;
+  }
+}
+
+.heroBannerVisualSection {
+  display: flex;
+  align-items: center;
+  gap: 4.375rem;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  figure {
+    display: flex;
+    height: 18.75rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: variables.$regular-border-radius;
+    background: var(--background-neutral-primary);
+  }
+}
