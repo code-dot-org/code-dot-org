@@ -6,6 +6,12 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: Marketing App AWS resources
 
 Parameters:
+  BaseDomainName:
+    Type: String
+    Description: Base domain name (e.g. 'code.org' in 'marketing.code.org').
+  SubdomainName:
+    Type: String
+    Description: Subdomain name for marketing (e.g. 'marketing' in 'marketing.code.org').
   Environment:
     Type: String
     Default: "test"
@@ -14,6 +20,8 @@ Parameters:
     Type: String
     Description: "The sha256sum of the marketing container image."
 
+Conditions:
+  IsDevCondition: !Equals [!Ref BaseDomainName, "dev-code.org"]
 Resources:
   # Route 53 root hosted zone for marketing.dev-code.org
   RootHostedZone:
@@ -592,7 +600,11 @@ Resources:
   MarketingStaticAssetsBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub "cdo-marketing-static-assets-${Environment}"
+      BucketName: !If [IsDevCondition, !Sub "cdo-dev-${SubdomainName}-static-assets", !Sub "cdo-${SubdomainName}-static-assets"]
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
@@ -600,6 +612,12 @@ Resources:
         RestrictPublicBuckets: true
       VersioningConfiguration:
         Status: Enabled
+      IntelligentTieringConfigurations:
+        - Id: EntireBucket
+          Status: Enabled
+          Tierings:
+            - AccessTier: ARCHIVE_ACCESS
+              Days: 30
       LifecycleConfiguration:
         Rules:
           - Id: ExpireOldVersions
