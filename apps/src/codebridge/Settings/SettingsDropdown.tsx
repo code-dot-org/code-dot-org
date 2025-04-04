@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {DEFAULT_FONT_SIZE_KEY, FontSize} from '@cdo/apps/lab2/constants';
+import {FontSize} from '@cdo/apps/lab2/constants';
 import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -43,7 +43,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const editorFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
-  const selectedFontSizeKey = editorFontSizeKey || DEFAULT_FONT_SIZE_KEY;
+  const selectedFontSizeKey = editorFontSizeKey;
   const {signInState} = useAppSelector(state => state.currentUser);
   const {levelProperties} = useCodebridgeContext();
   const dispatch = useAppDispatch();
@@ -85,11 +85,10 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         style={dropdownStyles}
         aria-modal="true"
         aria-label={commonI18n.settings()}
+        data-theme="Dark"
       >
         <div className={moduleStyles.header}>
-          <Heading6 className={moduleStyles.settingsTitle}>
-            {commonI18n.settings()}
-          </Heading6>
+          <Heading6>{commonI18n.settings()}</Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label="Close settings"
@@ -121,15 +120,9 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             type="secondary"
             size="s"
             onClick={closeDropdown}
-            color={'white'}
+            color="black"
           />
-          <Button
-            text="Save"
-            type="primary"
-            size="s"
-            onClick={onSave}
-            color={'white'}
-          />
+          <Button text="Save" type="primary" size="s" onClick={onSave} />
         </div>
       </div>
     </FocusTrap>,

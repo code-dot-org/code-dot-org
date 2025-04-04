@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
-import {FontSize, DEFAULT_FONT_SIZE_KEY} from '@cdo/apps/lab2/constants';
+import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
@@ -40,9 +40,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const [editorView, setEditorView] = useState<EditorView | null>(null);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const fontSizeKey = useAppSelector(
-    state => state.lab2View.editorFontSizeKey || DEFAULT_FONT_SIZE_KEY
-  );
+  const fontSizeKey = useAppSelector(state => state.lab2View.editorFontSizeKey);
   const {signInState} = useAppSelector(state => state.currentUser);
 
   // User preference for selected font size persists within a session

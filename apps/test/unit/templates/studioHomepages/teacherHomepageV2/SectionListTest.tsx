@@ -27,6 +27,7 @@ describe('SectionList', () => {
       courseVersionName: 'csd-2024',
       unitName: null,
       studentCount: 0,
+      participantType: 'student',
     },
     {
       id: 12,
@@ -34,6 +35,7 @@ describe('SectionList', () => {
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 13,
@@ -41,6 +43,7 @@ describe('SectionList', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      participantType: 'student',
     },
     {
       id: 14,
@@ -48,12 +51,21 @@ describe('SectionList', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      participantType: 'student',
     },
     {
       id: 15,
       name: 'hidden',
       hidden: true,
       unitName: null,
+      participantType: 'student',
+    },
+    {
+      id: 16,
+      name: 'PL Section',
+      hidden: false,
+      unitName: null,
+      participantType: 'teacher',
     },
   ];
 
@@ -81,7 +93,7 @@ describe('SectionList', () => {
     );
   }
 
-  it('renders list of teacher section cards', async () => {
+  it('renders list of teacher section cards without displaying PL or hidden sections', async () => {
     renderComponent();
     screen.getByText('Period 1');
     screen.getByText('Period 2');

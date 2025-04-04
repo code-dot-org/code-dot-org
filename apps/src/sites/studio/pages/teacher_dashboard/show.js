@@ -24,6 +24,7 @@ import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAs
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
+import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
@@ -130,23 +131,29 @@ $(document).ready(function () {
   };
 
   const getV2TeacherDashboard = () => {
-    const selectedSectionFromList = window.location.pathname.includes(
-      '/teacher_dashboard/home'
-    )
-      ? sections[0]
-      : sections.find(s => s.id === section.id);
-    const selectedSection = {...selectedSectionFromList, ...section};
+    // If a teacher has no sections, we will send them directly to the homepage to bypass
+    // all of the section loading logic in the TeacherNavigationRouter.
+    if (sections.length === 0) {
+      return <TeacherHomepage />;
+    } else {
+      const selectedSectionFromList = window.location.pathname.includes(
+        '/teacher_dashboard/home'
+      )
+        ? sections[0]
+        : sections.find(s => s.id === section.id);
+      const selectedSection = {...selectedSectionFromList, ...section};
 
-    store.dispatch(selectSection(selectedSection.id));
+      store.dispatch(selectSection(selectedSection.id));
 
-    setSelectedSectionData(selectedSection);
+      setSelectedSectionData(selectedSection);
 
-    return (
-      <TeacherNavigationRouter
-        studioUrlPrefix={scriptData.studioUrlPrefix}
-        showAITutorTab={showAITutorTab}
-      />
-    );
+      return (
+        <TeacherNavigationRouter
+          studioUrlPrefix={scriptData.studioUrlPrefix}
+          showAITutorTab={showAITutorTab}
+        />
+      );
+    }
   };
 
   ReactDOM.render(

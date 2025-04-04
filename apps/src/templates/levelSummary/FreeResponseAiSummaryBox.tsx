@@ -3,7 +3,7 @@ import Tags from '@code-dot-org/component-library/tags';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/evaluationApi';
+import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import aiBot from './AI-Bot-default.png';
 import FreeResponseSummaryDataBox from './FreeResponseSummaryDataBox';

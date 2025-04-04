@@ -125,7 +125,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
 
   const CurrentPanelView = panelMap[currentPanel];
   return (
-    <div data-theme="Dark" style={style} className={className}>
+    <div style={style} className={className}>
       <PanelContainer
         id="codebridge-info-panel"
         headerContent={currentPanelHeader}

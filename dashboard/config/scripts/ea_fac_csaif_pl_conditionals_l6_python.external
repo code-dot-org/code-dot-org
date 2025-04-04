@@ -1,0 +1,75 @@
+name 'ea-fac-csaif_pl_conditionals-L6_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Conditionals   
+
+
+#### Let's examine what is happening in the code from the previous level.
+
+<img src="https://images.code.org/f3ef1f77da436feb6031a01556611ba8-image-1741629200115.png" alt="code with conditional and painter painting blue" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### When the computer reaches line 11 and sees the `if` statement, it checks whether the painter can move south. If the answer is yes, the painter will paint the square blue and then move south.
+
+#### This `if` statement appears twice in the code. The first time it runs—when the painter is in the top-right corner—it can move south, so it moves and paints. 
+
+#### The second time, on line 15, the painter checks again, but this time a truck is blocking the way. Since it cannot move south, the condition is false, and the painter skips that part of the code.
+
+## Conditional Statements
+
+#### A **conditional statement** is a command that runs only if a certain condition is true, allowing a program to make decisions. 
+
+<img src="https://images.code.org/0a3045036a3ec53ae086f14a6eeb2704-image-1741629741213.png" alt="code with a conditional underlined" width="400px" style="display: block; margin-left: auto; margin-right: auto;">
+
+--- 
+
+## Syntax for Conditional Statements
+
+
+<div style="background-color: #F7F8FA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: space-between;">
+  
+  <div style="flex: 1;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Coding a Conditional</p><br>
+    <ul style="font-size: 14pt; line-height: 1.5; padding-left: 20px;">
+      <li>Use the key term <b>if</b></li><br>
+      <li>Includes a<b> : (colon)</b> at the end</li><br>
+      <li>Indentation matters!</li>
+    </ul>
+  </div>
+
+  <img src="https://images.code.org/6fe95faab436e5dc247f5443c9907e43-image-1741629976193.png" 
+       alt="conditional statement with syntax labeled" 
+       width="400px" 
+       style="max-width: 75%; height: auto; margin-left: 30px;">
+</div>
+
+---
+
+## How Conditional Statements Work
+<img src="https://images.code.org/cfb8d737716d4fac85a487abe934f6be-image-1741630391959.png" alt="code with conditional statement" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+#### Use **methods** to check a condition
+#### The method will return a **boolean**, true or false
+- #### If **true**, the code inside the conditional block **runs**
+- #### If **false**, the code inside the conditional block is **skipped** 
+
+<div style="clear:both;"></div>
+
+---
+
+## Simplifying with Functions
+
+<img src="https://images.code.org/6b626f9a3a0340f417f6813e5713c512-image-1743444908994.png" alt="code with conditional statement" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+#### In the previous prediction level, this conditional was put into a function to simplify the code. 
+
+#### This way, the programmer can simply call the function using the function name instead of making if statements over and over. 
+
+<br><br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Conditionals are covered in Lesson 9. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+MARKDOWN

@@ -5,7 +5,7 @@ import React from 'react';
 import {
   StudentAnswer,
   StudentWorkEvaluation,
-} from '@cdo/apps/aiEvaluation/evaluationApi';
+} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 
