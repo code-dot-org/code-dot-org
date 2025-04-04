@@ -46,7 +46,12 @@ export const SectionCard: React.FC<SectionCardProps> = ({
   };
 
   return (
-    <li className={styles.sectionCardWrapper} ref={setNodeRef} style={style}>
+    <li
+      className={styles.sectionCardWrapper}
+      ref={setNodeRef}
+      style={style}
+      aria-labelledby={`section-card-title-${section.id}`}
+    >
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
           {!section.hidden && (
@@ -65,7 +70,9 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             />
           )}
           <div className={styles.sectionCardHeaderText}>
-            <Heading5>{section.name}</Heading5>
+            <Heading5 id={`section-card-title-${section.id}`}>
+              {section.name}
+            </Heading5>
             <OverlineOneText>
               {i18n.classCode()}
               <a
