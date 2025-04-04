@@ -417,9 +417,6 @@ Resources:
       LoggingConfig:
         ApplicationLogLevel: "ERROR"
         LogFormat: "JSON"
-      Environment:
-        Variables:
-          MARKETING_DOMAIN: !Ref MarketingDomainName
   MarketingRouterVersion:
     Type: AWS::Lambda::Version
     Properties:
