@@ -113,6 +113,65 @@ const PythonlabView: React.FunctionComponent<
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const dispatch = useAppDispatch();
 
+  const getInitialDevicePixelRatio = (): number => {
+    if (typeof window === 'undefined') return 1;
+    return window.devicePixelRatio || 1;
+  };
+
+  const detectZoom = (initialDPR: number): number[] => {
+    // Works with pinch in/out
+    console.log('window.visualViewport?.scale', window.visualViewport?.scale);
+    // works with browser zoom setting
+
+    const currentDPR = window.devicePixelRatio || 1;
+    const zoom = currentDPR / initialDPR;
+    console.log('devicePixelRatio zoom', zoom);
+    const zoomValues = [100, Math.round(zoom * 100)];
+    if (window.visualViewport?.scale) {
+      zoomValues[0] = Math.round(window.visualViewport.scale * 100);
+    }
+    if (window.devicePixelRatio) {
+      zoomValues[1] = Math.round(window.devicePixelRatio * 100);
+    }
+    return zoomValues;
+  };
+
+  useEffect(() => {
+    const initialDPR = getInitialDevicePixelRatio();
+    let lastZoomValues = detectZoom(initialDPR);
+    const pageLoadState = document.readyState;
+
+    const logZoomChange = (zoomPercent: number, direction: 'in' | 'out') => {
+      console.log('BrowserZoomChanged', {
+        zoomPercent,
+        direction,
+        pageLoadState,
+      });
+    };
+
+    const checkZoom = () => {
+      const currentZoomValues = detectZoom(initialDPR);
+      if (currentZoomValues[0] !== lastZoomValues[0]) {
+        const direction =
+          currentZoomValues[0] > lastZoomValues[0] ? 'in' : 'out';
+        logZoomChange(currentZoomValues[0], direction);
+        lastZoomValues = currentZoomValues;
+      } else if (currentZoomValues[1] !== lastZoomValues[1]) {
+        const direction =
+          currentZoomValues[1] > lastZoomValues[1] ? 'in' : 'out';
+        logZoomChange(currentZoomValues[1], direction);
+        lastZoomValues = currentZoomValues;
+      }
+    };
+    const interval = setInterval(checkZoom, 1000);
+    window.visualViewport?.addEventListener('resize', checkZoom);
+
+    return () => {
+      clearInterval(interval);
+      window.visualViewport?.removeEventListener('resize', checkZoom);
+    };
+  }, []);
+
   const levelStartSources = useMemo(() => {
     // For new standalone project levels, we use the standalone start sources map to determine
     // the start sources, so we can show the user the start code for their chosen project type,
