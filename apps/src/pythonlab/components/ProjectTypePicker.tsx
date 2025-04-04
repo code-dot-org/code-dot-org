@@ -7,7 +7,7 @@ import {
 import React from 'react';
 
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
-import consoleImage from '@cdo/static/pythonlab/console-only.svg';
+import consoleImage from '@cdo/static/pythonlab/ConsolePreview.png';
 import neighborhoodImage from '@cdo/static/pythonlab/neighborhood-console.svg';
 
 import moduleStyles from './projectTypePicker.module.scss';
