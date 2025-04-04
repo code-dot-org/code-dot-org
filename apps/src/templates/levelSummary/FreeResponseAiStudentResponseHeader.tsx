@@ -16,7 +16,7 @@ const FreeResponseAiStudentResponseHeader: React.FC<
   return (
     <div className={styles.headerRow}>
       <Heading6 className={styles.aiAnalysisNameColumn}>
-        {i18n.loginExportHeader_studentName()}
+        {i18n.studentName()}
       </Heading6>
       <Heading6 className={styles.aiAnalysisResponseColumn}>
         {i18n.studentResponse()}

@@ -57,7 +57,7 @@ const FeedbackToggle: React.FC<FeedbackToggleProps> = ({
   return (
     <div className={style.container}>
       <Button
-        aria-label={i18n.aiDifferentiationThumbsUp()}
+        aria-label={i18n.aiResponseThumbsUp()}
         onClick={handleThumbsUpClick}
         color="white"
         size={size}
@@ -70,7 +70,7 @@ const FeedbackToggle: React.FC<FeedbackToggleProps> = ({
         className={getIconStyle(thumbsUp, 'thumbs-up')}
       />
       <Button
-        aria-label={i18n.aiDifferentiationThumbsDown()}
+        aria-label={i18n.aiResponseThumbsDown()}
         onClick={handleThumbsDownClick}
         color="white"
         size={size}

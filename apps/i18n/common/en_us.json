@@ -169,6 +169,8 @@
   "aiEvaluationStatusAll_summary": "The AI assessment has successfully run for {evaluatedCount}/{totalCount} student projects.",
   "aiEvaluationDetails": "The AI Assessment runs automatically when a student presses \"submit\" for their project. If students forget to submit, you can run the AI Assessment for the entire class using the button above, or run it for an individual student while viewing their rubric.",
   "aiEvaluationsToReview": "AI evaluations to review",
+  "aiResponseThumbsUp": "Give this AI response a thumbs up",
+  "aiResponseThumbsDown": "Give this AI response a thumbs down",
   "aiSettings": "AI Settings",
   "aiStudentAssessment": "{studentName} has achieved {understandingLevel} for this learning goal.",
   "aiSubmitShouldKeepWorking": "Student should keep working",
