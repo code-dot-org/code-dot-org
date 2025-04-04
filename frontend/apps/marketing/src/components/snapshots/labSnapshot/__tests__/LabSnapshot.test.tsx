@@ -12,7 +12,7 @@ describe('LabSnapshot component', () => {
     render(<LabSnapshot {...props} label={label} />);
   };
 
-  const getSnaphot = () => screen.getByLabelText(label);
+  const getSnapshot = () => screen.getByLabelText(label);
 
   it('renders empty list placeholder', () => {
     renderSnapshot();
@@ -37,7 +37,7 @@ describe('LabSnapshot component', () => {
       languages: ['7', '7th'],
     });
 
-    const labSnapshot = getSnaphot();
+    const labSnapshot = getSnapshot();
 
     expect(labSnapshot).toBeVisible();
     expect(labSnapshot).toHaveTextContent(
@@ -53,7 +53,7 @@ describe('LabSnapshot component', () => {
       creation: '',
     });
 
-    const labSnapshot = getSnaphot();
+    const labSnapshot = getSnapshot();
 
     expect(labSnapshot).toBeVisible();
     expect(labSnapshot).toHaveTextContent('Ages: 1');
