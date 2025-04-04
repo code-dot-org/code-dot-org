@@ -29,7 +29,7 @@ const DESCRIPTION =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.';
 
 const defaultArgs: ActionBlockProps = {
-  image: image,
+  image: {src: image},
   title: 'Action block title',
   description: DESCRIPTION,
   overline: 'Overline Text',

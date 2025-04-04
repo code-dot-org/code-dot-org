@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-10T20:19:35.000Z",
   "level_num": "custom",
@@ -105,10 +106,13 @@
     "validations": [
       {
         "key": "test-music-lab-sequence-practice-formative_4de548a7-8e34-4d32-a71a-4abd525f0732",
-        "message": "[update exemplar validation setting to use by type and not exact, then delete this]",
-        "next": false,
+        "message": "You did it!",
+        "next": true,
         "conditions": [
-
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:4"
+          }
         ]
       }
     ],
@@ -118,14 +122,14 @@
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": true,
-      "validationSuccessMessage": "You did it! The song matches the example!",
-      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
-      "playerTitle": "Example"
+      "validationSuccessMessage": "You did it!",
+      "validationFailureMessage": "Something's not quite right!",
+      "playerTitle": "Example",
+      "validationMode": "type"
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-10T20:19:35.330+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequence-practice-formative\\\"\"],\"cloned_from\":\"music-lab-sequence-practice-formative\"},{\"changed_at\":\"2025-03-10 20:19:38 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 21:55:47 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-10T20:19:35.330+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequence-practice-formative\\\"\"],\"cloned_from\":\"music-lab-sequence-practice-formative\"},{\"changed_at\":\"2025-03-10 20:19:38 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 21:55:47 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 22:46:27 +0000\",\"changed\":[\"validations\",\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

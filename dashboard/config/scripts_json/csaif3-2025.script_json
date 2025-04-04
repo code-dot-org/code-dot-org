@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-02 20:55:49 UTC",
+    "serialized_at": "2025-04-04 00:16:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -211,7 +211,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do different types of data and sensors help solve real-world problems?**\n\nStudents learn about different types of data (text, audio, visual, location, environmental/biometric) and the hardware components used to collect them. They work in teams to analyze user needs, identify required data types, and determine appropriate sensors for solving real-world problems. The lesson integrates AI chatbots for brainstorming sensor ideas and culminates in a collaborative reflection.",
-        "preparation": "- Plan on how to divide the classroom into six different stations\n- Gather several sticky notes\n- Print copies of the Station Activity Cards\n- Print copies of the Data in Computer Systems activity guide (one for each student)\n- Print copies of the Data in Computer Systems Unit Guide (one for each student)",
+        "preparation": "- Plan on how to divide the classroom into six different stations\n- Gather several sticky notes\n- Print copies of the Station Activity Cards\n- Print copies of the Data in Computer Systems activity guide (one for each student)\n- Print copies of the Computer Systems and Devices Unit Guide (one for each student)",
         "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do different types of data and sensors help solve real-world problems?**\n\nYou explore different types of data and the sensors that are used to collect them. Working in a teams, you learn to analyze user needs, identify required data types, and determine appropriate sensors for solving real-world mysteries!"
       },
       "seeding_key": {
@@ -301,7 +301,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**What are the decisions made for us without us?**\n\nIn this activity, students will engage with several different scenarios in which different ethical approaches to AI and computing systems might exist. Students will roleplay the scenario from the perspective different stakeholders, ultimately using this experience in empathy to craft ethical guidelines for AI and emerging technologies.",
-        "preparation": "- Prepare several half-sheets of paper\n- Make an editable class copy of the FigJam or slide",
+        "preparation": "- Prepare several half-sheets of paper\n- Make an editable class copy of the [AI and Emerging Technology Slide template](https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing)",
         "student_overview": "**What are the decisions made for us without us?**\n\nYou will take be asked to role play several different personas throughout today’s activity, trying to create a set of ethical guidelines for AI and emerging technologies. By examining how these technologies manifest in real-world scenarios, you will be asked to construct your own personal guidelines and expectations."
       },
       "seeding_key": {
@@ -1881,18 +1881,8 @@
       }
     },
     {
-      "key": "4f2e334b-7665-4484-bced-02b29f054b48",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4f2e334b-7665-4484-bced-02b29f054b48",
-        "lesson_activity.key": "b2cf85e1-6d96-4d65-9a04-7d1595e85b0f"
-      }
-    },
-    {
       "key": "3800f90c-4155-43d9-8256-1d4db505fb88",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -1902,7 +1892,7 @@
     },
     {
       "key": "e71b1994-78d7-44d5-a1c2-ae9b695f10f4",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which scenario felt most realistic?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share comparisons to real-world troubleshooting situations they’ve encountered and how those were similar or different to what they encountered in the simulation. Pull out the idea of a process being followed no matter what the problem you are facing.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one step you would always try first in a real-world troubleshooting process?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Pick out themes or specific answers for students to expand on.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share the “why” behind the step they picked and have them expand on their reasoning. Some examples of things students might share:\n- “I always restart my device when there is an issue because I’ve found that it fixes most problems even if I don’t necessarily understand why.”\n- “I start by googling the error or problem I’m facing to see if I can find a youtube video showing how to fix it. That way I have a step-by-step guide that I can go through at my own pace.”\n- “I would try anything that would help me narrow down the what it causing the issue because that’s what we learned a few lessons ago.”"
       },
@@ -1913,7 +1903,7 @@
     },
     {
       "key": "4575e758-d4bb-47f6-b510-90d66f56be68",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "Now that we’ve worked on troubleshooting when things aren’t working correctly, we are going to focus on solving a different type of problem: how do you make sure your computer system performs at its best for the task you are trying to accomplish? This is known as optimization.",
         "duration": "15",
@@ -1927,7 +1917,7 @@
     },
     {
       "key": "f310206c-7600-4c49-92d5-40bae2283766",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.",
         "progression_name": "Optimization"
@@ -1939,7 +1929,7 @@
     },
     {
       "key": "4f24ebe2-03f5-4c34-ba03-1f17544f9c5f",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students going back and forth between discussing the options amongst themselves and asking the AI Chat for input. If students aren’t engaging with each other, use questioning to get them to explain their process and thinking about whichever scenario they are working through.",
         "tips": [
@@ -2002,7 +1992,7 @@
       "key": "44bab899-d158-40a6-a50b-3cae5e980844",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Could you make a working computer from all of the hardware that your group has listed, or are there important components missing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students collaboratively analyze the list of computer hardware components generated during the activity to determine if they have all the essential parts needed to build a functioning computer. They identify any missing components and explain why each component is critical to the computer's operation. This discussion aims to deepen their understanding of computer architecture and enhance their critical thinking and communication skills.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students redistribute the papers. Students choose one of the components on the paper from Round One and write a definition, description, analogy, or make a fast sketch that explains what this component is or what it does within a computer system. They then pass papers to the left and repeat the process.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students work, encourage them to keep coming up with contributions. If a group member appears stuck, encourage them to switch papers.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the importance of this hardware component in a computer system? Are there descriptions, analogies, or images you might add to further explain the component?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion seeks to help them recall prior learning and discuss the work that they have created as a group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Could you make a working computer from all of the hardware that your group has listed, or are there important components missing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students collaboratively analyze the list of computer hardware components generated during the activity to determine if they have all the essential parts needed to build a functioning computer. They identify any missing components and explain why each component is critical to the computer's operation. This discussion aims to deepen their understanding of computer architecture and enhance their critical thinking and communication skills. If the you have time or the discussion lags, consider prompting students with this follow up question to have them examine their lists critically: Are there components listed that aren’t necessary for making a working computer?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "44bab899-d158-40a6-a50b-3cae5e980844",
@@ -2192,25 +2182,14 @@
       }
     },
     {
-      "key": "b072fa48-2cb8-493c-b451-427d54bd7597",
-      "position": 3,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "b072fa48-2cb8-493c-b451-427d54bd7597",
-        "lesson_activity.key": "444b5593-3326-441d-93b8-1801a334e3e0"
-      }
-    },
-    {
       "key": "b73f01ca-d003-45c7-a267-197ff28265f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write one key insight or takeaway from today's lesson that relates to the Question of the Day. This can be completed in the Unit Guide, under the Question of the Day section. Have them share their takeaways with a partner or with the class.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Unit Guide can be collected and used to formatively assess the lesson objectives."
+            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson."
           }
         ]
       },
@@ -2364,8 +2343,19 @@
       }
     },
     {
-      "key": "2f500825-8618-48e4-a904-34431193d7da",
+      "key": "ecb7cd5c-69c2-4423-b669-d15b46d8d640",
       "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *sort, filter, aggregate* and *validate*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**:  Define *match, compare, summarize* and *group*.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecb7cd5c-69c2-4423-b669-d15b46d8d640",
+        "lesson_activity.key": "878e3379-48ee-4aae-8ff6-9892a81a201c"
+      }
+    },
+    {
+      "key": "2f500825-8618-48e4-a904-34431193d7da",
+      "position": 6,
       "properties": {
         "description": "Now it’s your turn! Work with your partner to complete three library data choice levels. For each scenario, follow the steps we just practiced: define the goal, choose the action, identify the relevant data, apply the action, describe the output, and reflect on the insights. Don’t forget to complete the flowchart and Madlib template for each level!",
         "remarks": true
@@ -2377,7 +2367,7 @@
     },
     {
       "key": "e8b3396d-0f42-434b-9208-3c348cca1760",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete the remaining library data choice levels in Lesson 8, Level 1. They use their activity guide to write down the steps for three of the choice levels, and fill out the Madlib template to summarize their process and results for three of the choice levels level."
       },
@@ -2388,7 +2378,7 @@
     },
     {
       "key": "2a6b9bc0-5e8f-4c58-bcd6-612f70ffa452",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their flowchart worksheets and Madlib templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
         "tips": [
@@ -2405,7 +2395,7 @@
     },
     {
       "key": "0b801014-a62b-49ee-a899-d3c8c6226fc9",
-      "position": 8,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -2415,7 +2405,7 @@
     },
     {
       "key": "3d58b80c-0077-43bc-a20f-dd3e1f8af1fd",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. Ask student pairs to share their answers, focusing on the flowchart steps and the Madlib templates. Highlight and clarify any differences or commonalities in their findings."
       },
@@ -2426,7 +2416,7 @@
     },
     {
       "key": "3b3e5710-8305-4152-a7d0-9e80b85e3a56",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "Let’s take some time to reflect on what you’ve learned. You’ll answer three free-response questions to compare the benefits and limitations of manual and computational data processing. Think about how the tools and methods we used today improve efficiency, accuracy, and help us handle larger datasets.",
         "duration": "10",
@@ -2440,7 +2430,7 @@
     },
     {
       "key": "fd05e97f-fa26-4a3d-9ff9-b2801014b6b6",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to respond to the reflection questions on Levels 2, 3, and 4.",
         "progression_name": "Reflection",
@@ -2457,53 +2447,19 @@
       }
     },
     {
-      "key": "25d3c94b-11ee-4587-8c01-f7e98142229e",
-      "position": 12,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "25d3c94b-11ee-4587-8c01-f7e98142229e",
-        "lesson_activity.key": "878e3379-48ee-4aae-8ff6-9892a81a201c"
-      }
-    },
-    {
       "key": "cad9b21d-ecfd-4cc9-b796-ec251123bae9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or small piece of paper."
-      },
-      "seeding_key": {
-        "activity_section.key": "cad9b21d-ecfd-4cc9-b796-ec251123bae9",
-        "lesson_activity.key": "9a4d19f9-969b-4e83-bd5e-832de401014c"
-      }
-    },
-    {
-      "key": "3ec0b74c-0a1e-43fb-926d-164be4786f45",
-      "position": 2,
-      "properties": {
-        "description": "We’re going to watch a short video that connects what we’ve learned today to a real-world example. While you watch, think about the questions on the screen and take notes. You’ll answer all three questions as your exit ticket.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "3ec0b74c-0a1e-43fb-926d-164be4786f45",
-        "lesson_activity.key": "9a4d19f9-969b-4e83-bd5e-832de401014c"
-      }
-    },
-    {
-      "key": "7d5ab9e7-54fd-41a1-bdbf-14d1ad96e43e",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video**: Show the video \"This AI coach can show tennis players how to up their game\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students watch the video carefully and answer the questions on their index card.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Exit Ticket can be collected and used to formatively assess the lesson objectives.\n"
+            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson.\n\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "7d5ab9e7-54fd-41a1-bdbf-14d1ad96e43e",
+        "activity_section.key": "cad9b21d-ecfd-4cc9-b796-ec251123bae9",
         "lesson_activity.key": "9a4d19f9-969b-4e83-bd5e-832de401014c"
       }
     },
@@ -2531,8 +2487,22 @@
       }
     },
     {
-      "key": "154ff281-bece-4ec8-b7a8-b918ed56051f",
+      "key": "55278ea7-5191-40b1-936b-ca8e90f97875",
       "position": 1,
+      "properties": {
+        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 1. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
+        "duration": "15",
+        "name": "AI Hardware",
+        "progression_name": "Processing Unit Battle"
+      },
+      "seeding_key": {
+        "activity_section.key": "55278ea7-5191-40b1-936b-ca8e90f97875",
+        "lesson_activity.key": "bc718954-5724-45f8-ab47-fb166ccaaac4"
+      }
+    },
+    {
+      "key": "154ff281-bece-4ec8-b7a8-b918ed56051f",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide.",
         "duration": "10",
@@ -2545,7 +2515,7 @@
     },
     {
       "key": "89d35ee3-0d14-4f1e-8f69-c7be9babb9aa",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "AI systems use data to make decisions in real-world applications. Let’s explore how different AI models function and what data they rely on.",
         "remarks": true
@@ -2557,9 +2527,9 @@
     },
     {
       "key": "786378b1-caab-470b-8250-e3994f5ffdc8",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4. Assign each group an AI use case:\n- Voice Assistants (Alexa/Siri): AI processes voice input and generates responses.\n- Self-Driving Cars: AI uses sensor data to navigate roads.\n- Medical Imaging AI: AI scans medical images for disease detection.\n- AI Translation Tools: AI converts text/audio between languages.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to open Lesson 9, Level 1. In their groups, students will watch a video about the assigned technology and answer the following questions in their activity guide:\n- What is the AI model doing in this scenario?\n- What type of data is being input?\n- What is the decision being made? In other words, what does this AI system do with the data?\n- Why does this task require speed and scale?",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4. Assign each group an AI use case:\n- Voice Assistants (Alexa/Siri): AI processes voice input and generates responses.\n- Self-Driving Cars: AI uses sensor data to navigate roads.\n- Medical Imaging AI: AI scans medical images for disease detection.\n- AI Translation Tools: AI converts text/audio between languages.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to open Lesson 9, Level 2. In their groups, students will watch a video about the assigned technology and answer the following questions in their activity guide:\n- What is the AI model doing in this scenario?\n- What type of data is being input?\n- What is the decision being made? In other words, what does this AI system do with the data?\n- Why does this task require speed and scale?",
         "progression_name": "Explore an AI Model"
       },
       "seeding_key": {
@@ -2569,7 +2539,7 @@
     },
     {
       "key": "d31e9261-00bf-4d6a-8d64-f458550c69ae",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that all students are able to answer all questions. At the end of the lesson, students will do a jigsaw activity to share out their answers."
       },
@@ -2579,24 +2549,10 @@
       }
     },
     {
-      "key": "55278ea7-5191-40b1-936b-ca8e90f97875",
-      "position": 5,
-      "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 2. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
-        "duration": "15",
-        "name": "AI Hardware",
-        "progression_name": "Processing Unit Battle"
-      },
-      "seeding_key": {
-        "activity_section.key": "55278ea7-5191-40b1-936b-ca8e90f97875",
-        "lesson_activity.key": "bc718954-5724-45f8-ab47-fb166ccaaac4"
-      }
-    },
-    {
       "key": "8a59bfa0-b221-4d39-8647-322c1373cbfd",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for their AI model. They record their findings and respond to guided questions in the Determine AI Hardware section of their activity guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for various tasks that might be associated with an AI model",
         "progression_name": "Determine AI Hardware",
         "tips": [
           {
@@ -2611,21 +2567,27 @@
       }
     },
     {
-      "key": "0dfb0c75-fbc6-4388-8942-8a191f3facb1",
-      "position": 7,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "0dfb0c75-fbc6-4388-8942-8a191f3facb1",
-        "lesson_activity.key": "bc718954-5724-45f8-ab47-fb166ccaaac4"
-      }
-    },
-    {
       "key": "925d7e9d-a919-43f4-b95d-c8eead2ad2f0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Form new groups (1 student from each AI case study per group). Each student presents their AI system, explaining what the AI model does, what kind of data it processes, and what hardware best supports it and why.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Ensure students explain why specific hardware is best suited for their AI model.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "925d7e9d-a919-43f4-b95d-c8eead2ad2f0",
+        "lesson_activity.key": "65b4832e-ebce-4ea3-a5f1-2b49b81015dc"
+      }
+    },
+    {
+      "key": "480aa08b-bd6d-4089-a32f-9b9311a292b5",
+      "position": 2,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Form new groups (1 student from each AI case study per group). Each student presents their AI system, explaining what the AI model does, what kind of data it processes, and what hardware best supports it and why.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Ensure students explain why specific hardware is best suited for their AI model.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2634,7 +2596,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "925d7e9d-a919-43f4-b95d-c8eead2ad2f0",
+        "activity_section.key": "480aa08b-bd6d-4089-a32f-9b9311a292b5",
         "lesson_activity.key": "65b4832e-ebce-4ea3-a5f1-2b49b81015dc"
       }
     },
@@ -2756,21 +2718,16 @@
       "key": "fea2f070-434c-4485-b513-21175328936b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Give a recommendation to someone thinking about designing their home using smart devices. What are some things they should consider?*\n- *What will be easier or safer?*\n- *What will be more challenging or dangerous?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students think critically about the benefits and challenges of designing a smart home. Encourage them to balance convenience and security in their recommendations by considering factors such as privacy risks, data security, and device compatibility. Guide students to explore how smart devices can enhance safety, such as through security cameras and alarms, while also introducing potential risks like hacking and data breaches. Additionally, prompt them to think about long-term costs, reliability, and ethical implications, helping them develop well-rounded recommendations for someone considering a smart home."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson.\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fea2f070-434c-4485-b513-21175328936b",
-        "lesson_activity.key": "be8d58bc-bd55-4f3a-be4f-756b87bc2fa1"
-      }
-    },
-    {
-      "key": "09301055-5942-4f0b-8952-3c10c14c91f8",
-      "position": 2,
-      "properties": {
-        "progression_name": "Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "09301055-5942-4f0b-8952-3c10c14c91f8",
         "lesson_activity.key": "be8d58bc-bd55-4f3a-be4f-756b87bc2fa1"
       }
     },
@@ -3033,10 +2990,27 @@
       "key": "d5bf9289-409b-404b-b6ad-b03b852eb654",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two reasons why user testing can improve a product in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two answers for what happens when user testing is skipped in their unit guides.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you choose, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to cite examples shared during the class period and/or personal experiences the students have had themselves as justifications for their answers.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d5bf9289-409b-404b-b6ad-b03b852eb654",
+        "lesson_activity.key": "0d38952a-b0a2-45ad-90e8-dd42705452b7"
+      }
+    },
+    {
+      "key": "8be26629-825d-4abd-bfb1-4adfaf36fdee",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on their Question of the Day reflection, have students write down their top two reasons why user testing can improve a product in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two answers for what happens when user testing is skipped in their unit guides.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you choose, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to cite examples shared during the class period and/or personal experiences the students have had themselves as justifications for their answers.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8be26629-825d-4abd-bfb1-4adfaf36fdee",
         "lesson_activity.key": "0d38952a-b0a2-45ad-90e8-dd42705452b7"
       }
     },
@@ -3082,7 +3056,7 @@
       "key": "dd3681a9-4085-41ce-9d1b-10c240164e6a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to either the class FigJam or slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the FigJam or Slide template. Each member of the group should pick a distinct role – there are four roles per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the FigJam or slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to the shared slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the Slide template. Each member of the group should pick a distinct role – there are four roles per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
         "duration": "20",
         "name": "Role Playing",
         "tips": [
@@ -3115,7 +3089,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Figjam or slides can be collected and used to formatively assess the lesson objectives:\n- Evaluate the ethical implications of real-world examples of emerging technologies, including those that incorporate AI.\n- Develop ethical guidelines for the responsible design and development of AI and emerging technologies.\n"
+            "markdown": "The slides can be collected and used to formatively assess the lesson objectives:\n- Evaluate the ethical implications of real-world examples of emerging technologies, including those that incorporate AI.\n- Develop ethical guidelines for the responsible design and development of AI and emerging technologies.\n"
           }
         ]
       },
@@ -3222,31 +3196,16 @@
       "key": "79d0cfdb-3d5f-4cd1-8897-efe7139d6da8",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "79d0cfdb-3d5f-4cd1-8897-efe7139d6da8",
-        "lesson_activity.key": "3de70dd7-b300-4817-ba5e-3b893023e863"
-      }
-    },
-    {
-      "key": "4f187810-42e0-484f-9008-4aea6c6b09ce",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which guideline do you personally believe is the most important?*\n- *If only one could be universally adopted, which would you choose and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Allow students to synthesize their learning for the day and to advocate for their own personal ethical points of view as a capstone activity."
-      },
-      "seeding_key": {
-        "activity_section.key": "4f187810-42e0-484f-9008-4aea6c6b09ce",
-        "lesson_activity.key": "3de70dd7-b300-4817-ba5e-3b893023e863"
-      }
-    },
-    {
-      "key": "beaafac8-0c2f-4cb3-a402-eb62066393d2",
-      "position": 3,
-      "properties": {
-        "progression_name": "Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "beaafac8-0c2f-4cb3-a402-eb62066393d2",
         "lesson_activity.key": "3de70dd7-b300-4817-ba5e-3b893023e863"
       }
     },
@@ -3313,7 +3272,13 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to record this target in their Project Guide under Select an SDG Target.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to help them learn more about the target they’ve chosen and start to brainstorm potential solutions and project ideas.",
-        "progression_name": "Brainstorm Your Project"
+        "progression_name": "Brainstorm Your Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Open Lesson 13 Level 2 and model for students how to use AI Chat in the brainstorming process. Demonstrate an example conversation where AI helps brainstorm ideas. Some questions to try: \n- How could technology help solve the effects of natural disasters?\n- What kinds of sensors or data could be used to address pollution?\n- How might a computer system (hardware, software, network) be designed to improve energy efficiency?\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "07119673-3522-4b6c-ae63-ac0117864b7a",
@@ -3321,8 +3286,19 @@
       }
     },
     {
-      "key": "b8f907f0-1754-4d68-83de-58e1d0111b93",
+      "key": "7c999a34-7c97-4401-9143-adc6be3aa45e",
       "position": 6,
+      "properties": {
+        "progression_name": "Brainstorm Your Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c999a34-7c97-4401-9143-adc6be3aa45e",
+        "lesson_activity.key": "1ad4a761-5b91-4f69-9c75-ab105a188084"
+      }
+    },
+    {
+      "key": "b8f907f0-1754-4d68-83de-58e1d0111b93",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should write a description of the system in the Project Description section of their project guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
         "progression_name": "Understanding Your Users",
@@ -3340,7 +3316,7 @@
     },
     {
       "key": "104e3e32-edf2-481b-852d-570a17cb3a8f",
-      "position": 7,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -3350,7 +3326,7 @@
     },
     {
       "key": "b57fa4f8-9305-4e0e-9913-f64d62c00dde",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Step 2 in their Project Guides which includes defining the data, ideating a solution, and sketching a rapid prototype.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
       },
@@ -3361,7 +3337,7 @@
     },
     {
       "key": "45c9e300-24fc-43b4-874e-9a22d73737bf",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
         "duration": "5",
@@ -3492,17 +3468,6 @@
       },
       "seeding_key": {
         "activity_section.key": "e31870ea-8d42-4e10-bddd-da31a0616ae2",
-        "lesson_activity.key": "7768f04f-28f9-4b05-8dd3-3fc3f92f83d5"
-      }
-    },
-    {
-      "key": "84999c57-2695-4982-9d8d-2aee4bf5c1e3",
-      "position": 7,
-      "properties": {
-        "progression_name": "Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "84999c57-2695-4982-9d8d-2aee4bf5c1e3",
         "lesson_activity.key": "7768f04f-28f9-4b05-8dd3-3fc3f92f83d5"
       }
     },
@@ -3825,6 +3790,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level12_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3843,6 +3811,28 @@
     },
     {
       "chapter": 14,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level13_2025-launch"
+        ],
+        "lesson.key": "Introduction to Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "f03c791a-d698-41af-843f-007eab784719"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level13_2025-launch"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3867,7 +3857,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3892,7 +3882,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3917,7 +3907,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3942,7 +3932,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 2,
       "assessment": true,
@@ -3967,7 +3957,29 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Career Hardware Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level6_2025-launch"
+        ],
+        "lesson.key": "Hardware",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "12c8c1e7-f066-4bbf-87c5-6b5f3c8144e3"
+      },
+      "level_keys": [
+        "computer-systems-lesson2-level6_2025-launch"
+      ]
+    },
+    {
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3992,7 +4004,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4017,7 +4029,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4042,7 +4054,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4067,11 +4079,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level5_2025"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -4089,11 +4104,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level6_2025"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -4111,7 +4129,29 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Hardware Careers: Components and Troubleshooting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson3-level7_2025-launch"
+        ],
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "a69b3f99-41df-475d-ba6f-8304b3c1ccb0"
+      },
+      "level_keys": [
+        "computer-systems-lesson3-level7_2025-launch"
+      ]
+    },
+    {
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4136,7 +4176,29 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Software Scavenger Hunt Debrief"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson4-level2_2025-launch"
+        ],
+        "lesson.key": "Software and Operating Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "5ef38901-ef90-442c-9b0d-fd1f536f87e0"
+      },
+      "level_keys": [
+        "computer-systems-lesson4-level2_2025-launch"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4161,7 +4223,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4186,29 +4248,8 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson5-level3_2025-launch"
-        ],
-        "lesson.key": "Troubleshooting and Optimizing Software",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "4f2e334b-7665-4484-bced-02b29f054b48"
-      },
-      "level_keys": [
-        "computer-systems-lesson5-level3_2025-launch"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4232,11 +4273,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level2_2025"
+        ],
         "progression": "Computer Build User Profiles"
       },
       "bonus": false,
@@ -4254,7 +4298,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4279,7 +4323,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4304,7 +4348,29 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Computer Build Assistant"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level4_2025-launch"
+        ],
+        "lesson.key": "Build a Computer System",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "858f2049-0cf4-4b57-b266-14f6f1d7da9f"
+      },
+      "level_keys": [
+        "computer-systems-lesson6-level4_2025-launch"
+      ]
+    },
+    {
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4329,32 +4395,29 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
+      "activity_section_position": 2,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "computer-systems-lesson7-level2_2025"
-        ],
-        "progression": "Student Survey"
+        "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson7-level2_2025"
+          "computer-systems-lesson7-level2_2025-launch"
         ],
         "lesson.key": "Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
-        "activity_section.key": "b072fa48-2cb8-493c-b451-427d54bd7597"
+        "activity_section.key": "01a20fd2-5c29-4bc6-8cba-37265234dbc2"
       },
       "level_keys": [
-        "computer-systems-lesson7-level2_2025"
+        "computer-systems-lesson7-level2_2025-launch"
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4379,7 +4442,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4404,7 +4467,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4429,7 +4492,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -4454,58 +4517,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson8-level5_2025"
-        ],
-        "progression": "Student Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson8-level5_2025"
-        ],
-        "lesson.key": "Processing Data in a System",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "25d3c94b-11ee-4587-8c01-f7e98142229e"
-      },
-      "level_keys": [
-        "computer-systems-lesson8-level5_2025"
-      ]
-    },
-    {
-      "chapter": 40,
+      "chapter": 43,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson9-level1_2025"
-        ],
-        "progression": "Explore an AI Model"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson9-level1_2025"
-        ],
-        "lesson.key": "How AI Uses Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "786378b1-caab-470b-8250-e3994f5ffdc8"
-      },
-      "level_keys": [
-        "computer-systems-lesson9-level1_2025"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4529,7 +4542,32 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level1_2025"
+        ],
+        "progression": "Explore an AI Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-level1_2025"
+        ],
+        "lesson.key": "How AI Uses Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "786378b1-caab-470b-8250-e3994f5ffdc8"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-level1_2025"
+      ]
+    },
+    {
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4554,32 +4592,7 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson9-level4_2025"
-        ],
-        "progression": "Student Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson9-level4_2025"
-        ],
-        "lesson.key": "How AI Uses Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "0dfb0c75-fbc6-4388-8942-8a191f3facb1"
-      },
-      "level_keys": [
-        "computer-systems-lesson9-level4_2025"
-      ]
-    },
-    {
-      "chapter": 44,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4604,32 +4617,7 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson10-level2_2025"
-        ],
-        "progression": "Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson10-level2_2025"
-        ],
-        "lesson.key": "IoT and Emerging Technologies",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "09301055-5942-4f0b-8952-3c10c14c91f8"
-      },
-      "level_keys": [
-        "computer-systems-lesson10-level2_2025"
-      ]
-    },
-    {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4654,7 +4642,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4679,7 +4667,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4704,7 +4692,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4729,7 +4717,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4754,32 +4742,29 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
+      "activity_section_position": 2,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "computer-systems-lesson11-level6_2025"
-        ],
-        "progression": "Student Survey"
+        "progression": "Lydia's Scenario"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson11-level6_2025"
+          "computer-systems-lesson11-level6_2025-launch"
         ],
         "lesson.key": "User Testing",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
-        "activity_section.key": "2b88f13e-4727-4771-8c21-d7ae3a176149"
+        "activity_section.key": "3b476650-9606-4b3d-a04f-598acd1583d6"
       },
       "level_keys": [
-        "computer-systems-lesson11-level6_2025"
+        "computer-systems-lesson11-level6_2025-launch"
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4801,31 +4786,6 @@
       },
       "level_keys": [
         "computer-systems-lesson12-level2_2025"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson12-level3_2025"
-        ],
-        "progression": "Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson12-level3_2025"
-        ],
-        "lesson.key": "Just Because We Can, Should We?",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "beaafac8-0c2f-4cb3-a402-eb62066393d2"
-      },
-      "level_keys": [
-        "computer-systems-lesson12-level3_2025"
       ]
     },
     {
@@ -4859,9 +4819,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "computer-systems-lesson13-level2_2025"
-        ],
         "progression": "Brainstorm Your Project"
       },
       "bonus": false,
@@ -4872,7 +4829,7 @@
         "lesson.key": "Nobel in AI Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csaif3-2025",
-        "activity_section.key": "07119673-3522-4b6c-ae63-ac0117864b7a"
+        "activity_section.key": "7c999a34-7c97-4401-9143-adc6be3aa45e"
       },
       "level_keys": [
         "computer-systems-lesson13-level2_2025"
@@ -4930,31 +4887,6 @@
     },
     {
       "chapter": 58,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson13-level5_2025"
-        ],
-        "progression": "Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson13-level5_2025"
-        ],
-        "lesson.key": "Nobel in AI Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "84999c57-2695-4982-9d8d-2aee4bf5c1e3"
-      },
-      "level_keys": [
-        "computer-systems-lesson13-level5_2025"
-      ]
-    },
-    {
-      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5138,6 +5070,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson1-level13_2025-launch",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level13_2025-launch"
+        ],
+        "lesson.key": "Introduction to Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "f03c791a-d698-41af-843f-007eab784719"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson2-level1_2025",
         "script_level.level_keys": [
           "computer-systems-lesson2-level1_2025"
@@ -5189,6 +5133,18 @@
         "level.key": "computer-systems-lesson2-level5_2025",
         "script_level.level_keys": [
           "computer-systems-lesson2-level5_2025"
+        ],
+        "lesson.key": "Hardware",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "12c8c1e7-f066-4bbf-87c5-6b5f3c8144e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson2-level6_2025-launch",
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level6_2025-launch"
         ],
         "lesson.key": "Hardware",
         "lesson_group.key": "lessonGroup-3",
@@ -5270,9 +5226,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson3-level7_2025-launch",
+        "script_level.level_keys": [
+          "computer-systems-lesson3-level7_2025-launch"
+        ],
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "a69b3f99-41df-475d-ba6f-8304b3c1ccb0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson4-level1_2025",
         "script_level.level_keys": [
           "computer-systems-lesson4-level1_2025"
+        ],
+        "lesson.key": "Software and Operating Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "5ef38901-ef90-442c-9b0d-fd1f536f87e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson4-level2_2025-launch",
+        "script_level.level_keys": [
+          "computer-systems-lesson4-level2_2025-launch"
         ],
         "lesson.key": "Software and Operating Systems",
         "lesson_group.key": "lessonGroup-3",
@@ -5302,18 +5282,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
         "activity_section.key": "1cf1e66a-3a03-4910-94f8-56fc40461cdc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson5-level3_2025-launch",
-        "script_level.level_keys": [
-          "computer-systems-lesson5-level3_2025-launch"
-        ],
-        "lesson.key": "Troubleshooting and Optimizing Software",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "4f2e334b-7665-4484-bced-02b29f054b48"
       }
     },
     {
@@ -5366,6 +5334,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson6-level4_2025-launch",
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level4_2025-launch"
+        ],
+        "lesson.key": "Build a Computer System",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif3-2025",
+        "activity_section.key": "858f2049-0cf4-4b57-b266-14f6f1d7da9f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson7-level1_2025",
         "script_level.level_keys": [
           "computer-systems-lesson7-level1_2025"
@@ -5378,14 +5358,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson7-level2_2025",
+        "level.key": "computer-systems-lesson7-level2_2025-launch",
         "script_level.level_keys": [
-          "computer-systems-lesson7-level2_2025"
+          "computer-systems-lesson7-level2_2025-launch"
         ],
         "lesson.key": "Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
-        "activity_section.key": "b072fa48-2cb8-493c-b451-427d54bd7597"
+        "activity_section.key": "01a20fd2-5c29-4bc6-8cba-37265234dbc2"
       }
     },
     {
@@ -5438,14 +5418,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson8-level5_2025",
+        "level.key": "computer-systems-lesson9-level2_2025",
         "script_level.level_keys": [
-          "computer-systems-lesson8-level5_2025"
+          "computer-systems-lesson9-level2_2025"
         ],
-        "lesson.key": "Processing Data in a System",
+        "lesson.key": "How AI Uses Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
-        "activity_section.key": "25d3c94b-11ee-4587-8c01-f7e98142229e"
+        "activity_section.key": "55278ea7-5191-40b1-936b-ca8e90f97875"
       }
     },
     {
@@ -5462,18 +5442,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson9-level2_2025",
-        "script_level.level_keys": [
-          "computer-systems-lesson9-level2_2025"
-        ],
-        "lesson.key": "How AI Uses Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "55278ea7-5191-40b1-936b-ca8e90f97875"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "computer-systems-lesson9-level3_2025",
         "script_level.level_keys": [
           "computer-systems-lesson9-level3_2025"
@@ -5486,18 +5454,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson9-level4_2025",
-        "script_level.level_keys": [
-          "computer-systems-lesson9-level4_2025"
-        ],
-        "lesson.key": "How AI Uses Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "0dfb0c75-fbc6-4388-8942-8a191f3facb1"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "computer-systems-lesson10-level1_2025",
         "script_level.level_keys": [
           "computer-systems-lesson10-level1_2025"
@@ -5506,18 +5462,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
         "activity_section.key": "49e26697-108c-4ef3-8919-547b8b114d6b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson10-level2_2025",
-        "script_level.level_keys": [
-          "computer-systems-lesson10-level2_2025"
-        ],
-        "lesson.key": "IoT and Emerging Technologies",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "09301055-5942-4f0b-8952-3c10c14c91f8"
       }
     },
     {
@@ -5582,14 +5526,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson11-level6_2025",
+        "level.key": "computer-systems-lesson11-level6_2025-launch",
         "script_level.level_keys": [
-          "computer-systems-lesson11-level6_2025"
+          "computer-systems-lesson11-level6_2025-launch"
         ],
         "lesson.key": "User Testing",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
-        "activity_section.key": "2b88f13e-4727-4771-8c21-d7ae3a176149"
+        "activity_section.key": "3b476650-9606-4b3d-a04f-598acd1583d6"
       }
     },
     {
@@ -5602,18 +5546,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif3-2025",
         "activity_section.key": "0388904f-7a53-470f-bd63-16f4b0c49304"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson12-level3_2025",
-        "script_level.level_keys": [
-          "computer-systems-lesson12-level3_2025"
-        ],
-        "lesson.key": "Just Because We Can, Should We?",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "beaafac8-0c2f-4cb3-a402-eb62066393d2"
       }
     },
     {
@@ -5637,7 +5569,7 @@
         "lesson.key": "Nobel in AI Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csaif3-2025",
-        "activity_section.key": "07119673-3522-4b6c-ae63-ac0117864b7a"
+        "activity_section.key": "7c999a34-7c97-4401-9143-adc6be3aa45e"
       }
     },
     {
@@ -5662,18 +5594,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csaif3-2025",
         "activity_section.key": "13babc7a-df21-461d-8812-b17250effc21"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson13-level5_2025",
-        "script_level.level_keys": [
-          "computer-systems-lesson13-level5_2025"
-        ],
-        "lesson.key": "Nobel in AI Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csaif3-2025",
-        "activity_section.key": "84999c57-2695-4982-9d8d-2aee4bf5c1e3"
       }
     },
     {
@@ -5740,7 +5660,7 @@
     },
     {
       "name": "[KEY] How AI Uses Data",
-      "url": "https://docs.google.com/document/d/147m8ZGSM8OMSH7HmtWm_wPJm_urwsaQaa3iKBcJSWPk",
+      "url": "https://docs.google.com/document/d/1UzQIo8HLwajsZS1z1EHmqsllqj8OnnFnxTiT76FtFM4/edit?usp=drive_link",
       "key": "_key_how_ai_uses_data",
       "properties": {
         "audience": "Verified Teacher",
@@ -5752,7 +5672,7 @@
     },
     {
       "name": "[KEY] Optimization",
-      "url": "https://docs.google.com/document/d/16_jRMfFjBIcCFfWHfrSdM_YMldAiEj_46l77B4U3MXc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1H9XPYEzXhsiGsjBuQ5rq1THzxlEOeLuNu1wcPLnfSVU/view",
       "key": "_key_optimization",
       "properties": {
         "audience": "Verified Teacher",
@@ -5955,31 +5875,6 @@
       }
     },
     {
-      "name": "Data in Computer Systems Unit Guide",
-      "url": "https://docs.google.com/document/d/1_sGvJ9HfP7jN3-jjEc4xA2W6oUYZ4P2nNrDndMAUTWI/edit?usp=sharing",
-      "key": "data_in_computer_systems_unit_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_in_computer_systems_unit_guide"
-      }
-    },
-    {
-      "name": "FigJam template",
-      "url": "https://www.figma.com/board/dTC7I157Jr8yxZq6cglYrk/AI-and-Emerging-Technologies-Roleplay?node-id=0-1&t=shPGkZFSCaS8bcF2-1",
-      "key": "figjam_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "figjam_template"
-      }
-    },
-    {
       "name": "Guess Who? Device Edition",
       "url": "https://docs.google.com/document/d/1WHQ70QDVp4FG2TJEN7GRA3nRfmb2WWuyIW3zRBFFR3k/edit?usp=sharing",
       "key": "guess_who_device_edition",
@@ -6031,7 +5926,7 @@
     },
     {
       "name": "How AI Uses Data",
-      "url": "https://docs.google.com/document/d/19GUCTCX7351HhdVsrXQ72lii1Bfb-q84cynYYHgPKoY",
+      "url": "https://docs.google.com/document/d/1ZT8_qTrlu1jCPLzlaX-GMfRrfAz3aBc1aVxfkcC-G5w/edit?usp=drive_link",
       "key": "how_ai_uses_data",
       "properties": {
         "audience": "Student",
@@ -6104,7 +5999,7 @@
     },
     {
       "name": "Library Books Dataset",
-      "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4/edit?usp=sharing",
+      "url": "https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?usp=sharing",
       "key": "library_books_dataset",
       "properties": {
         "audience": "Student",
@@ -6116,7 +6011,7 @@
     },
     {
       "name": "Optimization",
-      "url": "https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/19hYR-jQpZqWZTb4qjkKRWMdVOj-YdwPorcNXkVhuIGw/view",
       "key": "optimization",
       "properties": {
         "audience": "Student",
@@ -6165,7 +6060,7 @@
       }
     },
     {
-      "name": "Slide Template",
+      "name": "AI and Emerging Technology Slide Template",
       "url": "https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing",
       "key": "slide_template",
       "properties": {
@@ -6288,19 +6183,6 @@
       }
     },
     {
-      "name": "The Transmission of Data Unit Guide",
-      "url": "https://docs.google.com/document/d/1bzL6dqzq3Ez5cGVmyRbb-a-xTh83KsSUtoXzxAFoFq8/edit?usp=sharing",
-      "key": "the_transmission_of_data_unit_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "the_transmission_of_data_unit_guide"
-      }
-    },
-    {
       "name": "Troubleshooting and Optimizing Hardware",
       "url": "https://docs.google.com/presentation/d/1347zxZ4DK2hcXecZNKMasG7MvBBz3Xz1A_L13VfqjQA/view",
       "key": "troubleshooting_and_optimizing_hardware",
@@ -6322,19 +6204,6 @@
       },
       "seeding_key": {
         "resource.key": "troubleshooting_and_optimizing_software"
-      }
-    },
-    {
-      "name": "Troubleshooting and Optimizing Software Unit Guide",
-      "url": "https://docs.google.com/document/d/1kkFJnCL7-EPvgtRiSSZA_jlLG0X-yo_S_fgqfb2wYrU/edit?usp=sharing",
-      "key": "troubleshooting_and_optimizing_software_unit_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "troubleshooting_and_optimizing_software_unit_guide"
       }
     },
     {
@@ -6398,16 +6267,15 @@
       }
     },
     {
-      "name": "User Testing Unit Guide",
-      "url": "https://docs.google.com/document/d/1EhTWnBa8p9QIt5Jw2BOEsw885tf5nk3Q3vnZ2cthOco/edit?usp=drive_link",
-      "key": "user_testing_unit_guide",
+      "name": "Using AI as a Collaborator",
+      "url": "https://docs.google.com/document/d/1LfC1VCc8M8raXw_vjdXdZaNWAglVWDKtnOQMXgXUj1c/view",
+      "key": "using_ai_as_a_collaborator",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "user_testing_unit_guide"
+        "resource.key": "using_ai_as_a_collaborator"
       }
     },
     {
@@ -6457,6 +6325,12 @@
     {
       "seeding_key": {
         "lesson.key": "Data in Computer Systems",
+        "resource.key": "computer_systems_and_devices_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data in Computer Systems",
         "resource.key": "data_in_computer_systems"
       }
     },
@@ -6464,12 +6338,6 @@
       "seeding_key": {
         "lesson.key": "Data in Computer Systems",
         "resource.key": "data_in_computer_systems_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data in Computer Systems",
-        "resource.key": "data_in_computer_systems_unit_guide"
       }
     },
     {
@@ -6506,6 +6374,12 @@
       "seeding_key": {
         "lesson.key": "How AI Uses Data",
         "resource.key": "_key_how_ai_uses_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "How AI Uses Data",
+        "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
     {
@@ -6571,6 +6445,12 @@
     {
       "seeding_key": {
         "lesson.key": "IoT and Emerging Technologies",
+        "resource.key": "computer_systems_and_devices_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IoT and Emerging Technologies",
         "resource.key": "iot_and_emerging_technologies"
       }
     },
@@ -6589,19 +6469,13 @@
     {
       "seeding_key": {
         "lesson.key": "IoT and Emerging Technologies",
-        "resource.key": "the_transmission_of_data_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "IoT and Emerging Technologies",
         "resource.key": "what_is_iot_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
-        "resource.key": "figjam_template"
+        "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
     {
@@ -6660,8 +6534,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Nobel in AI Project",
+        "resource.key": "using_ai_as_a_collaborator"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Processing Data in a System",
         "resource.key": "_key_processing_library_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
     {
@@ -6745,6 +6631,12 @@
     {
       "seeding_key": {
         "lesson.key": "Troubleshooting and Optimizing Software",
+        "resource.key": "computer_systems_and_devices_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Software",
         "resource.key": "optimization"
       }
     },
@@ -6756,14 +6648,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Troubleshooting and Optimizing Software",
-        "resource.key": "troubleshooting_and_optimizing_software_unit_guide"
+        "lesson.key": "User Testing",
+        "resource.key": "_key_user_testing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Testing",
-        "resource.key": "_key_user_testing"
+        "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
     {
@@ -6776,12 +6668,6 @@
       "seeding_key": {
         "lesson.key": "User Testing",
         "resource.key": "user_testing_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Testing",
-        "resource.key": "user_testing_unit_guide"
       }
     }
   ],

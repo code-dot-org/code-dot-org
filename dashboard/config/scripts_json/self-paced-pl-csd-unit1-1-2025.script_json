@@ -1,0 +1,956 @@
+{
+  "script": {
+    "name": "self-paced-pl-csd-unit1-1-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-04 03:31:58 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csd-unit1-1-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Problem Solving and Computing",
+      "name": "Introduction to Problem Solving and Computing",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's Problem Solving and Computing unit. \n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's Problem Solving and Computing unit. \n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025"
+      }
+    },
+    {
+      "key": "Practice Using the Problem Solving Process",
+      "name": "Practice Using the Problem Solving Process",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore content from Chapter 1 of the Problem Solving and Computing unit. \n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore content from Chapter 1 of the Problem Solving and Computing unit. \n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025"
+      }
+    },
+    {
+      "key": "Learn How a Computer Works",
+      "name": "Learn How a Computer Works",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore content from Chapter 2 of the Problem Solving and Computing unit. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Explore content from Chapter 2 of the Problem Solving and Computing unit. \n\n**Suggested time:** 20 minutes",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "50807e76-308c-4973-aca3-7bdc574f07c0",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50807e76-308c-4973-aca3-7bdc574f07c0",
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025"
+      }
+    },
+    {
+      "key": "887b93e6-1217-43ef-a831-47a832eb9959",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "887b93e6-1217-43ef-a831-47a832eb9959",
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025"
+      }
+    },
+    {
+      "key": "3e5c6117-2391-4f82-9e9e-3fa647bc24e9",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e5c6117-2391-4f82-9e9e-3fa647bc24e9",
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "8b1b19eb-35ab-455f-908d-80b337c73f58",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to This Module"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b1b19eb-35ab-455f-908d-80b337c73f58",
+        "lesson_activity.key": "50807e76-308c-4973-aca3-7bdc574f07c0"
+      }
+    },
+    {
+      "key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 1 - Problem Solving and Computing Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e",
+        "lesson_activity.key": "50807e76-308c-4973-aca3-7bdc574f07c0"
+      }
+    },
+    {
+      "key": "9700dcb7-7941-46c0-818f-1cc360e58e77",
+      "position": 1,
+      "properties": {
+        "progression_name": "Chapter 1 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9700dcb7-7941-46c0-818f-1cc360e58e77",
+        "lesson_activity.key": "887b93e6-1217-43ef-a831-47a832eb9959"
+      }
+    },
+    {
+      "key": "355e1a93-16df-437f-a9dd-44610cc435e7",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Problem Solving Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7",
+        "lesson_activity.key": "887b93e6-1217-43ef-a831-47a832eb9959"
+      }
+    },
+    {
+      "key": "e2d63508-46b6-46c0-bd5c-3c10a9d716e6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Chapter 2 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2d63508-46b6-46c0-bd5c-3c10a9d716e6",
+        "lesson_activity.key": "3e5c6117-2391-4f82-9e9e-3fa647bc24e9"
+      }
+    },
+    {
+      "key": "54f1940d-cf26-46b2-9c89-0a57cb23047c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Computing"
+      },
+      "seeding_key": {
+        "activity_section.key": "54f1940d-cf26-46b2-9c89-0a57cb23047c",
+        "lesson_activity.key": "3e5c6117-2391-4f82-9e9e-3fa647bc24e9"
+      }
+    },
+    {
+      "key": "1087e505-6125-45e2-819d-c4554faf4a67",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore Processing and Storage"
+      },
+      "seeding_key": {
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67",
+        "lesson_activity.key": "3e5c6117-2391-4f82-9e9e-3fa647bc24e9"
+      }
+    },
+    {
+      "key": "53c1977e-d17f-45e3-96ce-35d286e37e6b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Sample projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "53c1977e-d17f-45e3-96ce-35d286e37e6b",
+        "lesson_activity.key": "3e5c6117-2391-4f82-9e9e-3fa647bc24e9"
+      }
+    },
+    {
+      "key": "1e50cbc5-708a-4d56-9957-e83fab14317d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e50cbc5-708a-4d56-9957-e83fab14317d",
+        "lesson_activity.key": "3e5c6117-2391-4f82-9e9e-3fa647bc24e9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to This Module"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "8b1b19eb-35ab-455f-908d-80b337c73f58"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to This Module"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "8b1b19eb-35ab-455f-908d-80b337c73f58"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 - Problem Solving and Computing Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 - Problem Solving and Computing Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U1_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U1_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 - Problem Solving and Computing Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chapter 1 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-alternate lessons_-self-paced-_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9700dcb7-7941-46c0-818f-1cc360e58e77"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-alternate lessons_-self-paced-_25"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Problem Solving Process"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Vid_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Vid_25"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Problem Solving Process"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Problem Solving Process"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod1-lesson3-animals_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod1-lesson3-animals_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "The Problem Solving Process"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP-pract_-self-paced-_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP-pract_-self-paced-_25"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "The Problem Solving Process"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-PSP-C4U_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-PSP-C4U_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chapter 2 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "e2d63508-46b6-46c0-bd5c-3c10a9d716e6"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-U1L5_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Computing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "54f1940d-cf26-46b2-9c89-0a57cb23047c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_25"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Computing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-mod1-IOSP-Overview_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "54f1940d-cf26-46b2-9c89-0a57cb23047c"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-mod1-IOSP-Overview_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Processing and Storage"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_25"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Processing and Storage"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_25"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Processing and Storage"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_25"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Explore Processing and Storage"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_-self-paced-unit1_25"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1_-self-paced-un_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "53c1977e-d17f-45e3-96ce-35d286e37e6b"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1_-self-paced-un_25"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1e50cbc5-708a-4d56-9957-e83fab14317d"
+      },
+      "level_keys": [
+        "-VPL-CSD-PILOT-summer22-navigation_-self-paced-unit1_25"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "8b1b19eb-35ab-455f-908d-80b337c73f58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "8b1b19eb-35ab-455f-908d-80b337c73f58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U1_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U1_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9974d8c1-8c9b-46ac-9fcc-37212c854d2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-alternate lessons_-self-paced-_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-alternate lessons_-self-paced-_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "9700dcb7-7941-46c0-818f-1cc360e58e77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Vid_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Vid_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod1-lesson3-animals_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod1-lesson3-animals_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP-pract_-self-paced-_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP-pract_-self-paced-_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-PSP-C4U_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-PSP-C4U_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Practice Using the Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "355e1a93-16df-437f-a9dd-44610cc435e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-U1L5_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "e2d63508-46b6-46c0-bd5c-3c10a9d716e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "54f1940d-cf26-46b2-9c89-0a57cb23047c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-mod1-IOSP-Overview_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-mod1-IOSP-Overview_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "54f1940d-cf26-46b2-9c89-0a57cb23047c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1087e505-6125-45e2-819d-c4554faf4a67"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1_-self-paced-un_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1_-self-paced-un_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "53c1977e-d17f-45e3-96ce-35d286e37e6b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "-VPL-CSD-PILOT-summer22-navigation_-self-paced-unit1_25",
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_-self-paced-unit1_25"
+        ],
+        "lesson.key": "Learn How a Computer Works",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit1-1-2025",
+        "activity_section.key": "1e50cbc5-708a-4d56-9957-e83fab14317d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

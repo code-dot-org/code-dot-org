@@ -7,7 +7,7 @@
   "user_id": 18605,
   "properties": {
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "panels": [
       {
         "text": "# 5 Key Elements of a Prompt\n\nAs you craft your AI Chat prompts, keep in mind the 5 key elements that could be added to refine a prompt:\n- **Task**\n- **Context**\n- **Format**\n- **Reference**\n- **Tone**\n\nLet's learn how to improve this prompt: \n>_\"Write a short story about two friends.\"_",
@@ -52,6 +52,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-25T13:57:22.404+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level1-panel\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level1-panel\"},{\"changed_at\":\"2025-03-25 13:59:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:57:22.404+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level1-panel\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level1-panel\"},{\"changed_at\":\"2025-03-25 13:59:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-03 21:32:06 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Panels>
