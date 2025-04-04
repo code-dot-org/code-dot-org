@@ -381,7 +381,11 @@ function initializeStoreWithProgress(
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
-      unitHasUnnumberedLessons: scriptData.hasUnnumberedLessons || false,
+      // The case is different depending on whether we are on a unit overview or a level page.
+      unitHasUnnumberedLessons:
+        scriptData.hasUnnumberedLessons ||
+        scriptData.has_unnumbered_lessons ||
+        false,
       courseVersionId: scriptData.courseVersionId,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
