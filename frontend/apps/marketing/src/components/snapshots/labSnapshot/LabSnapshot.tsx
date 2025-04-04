@@ -25,17 +25,6 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
   accessibility,
   languages,
 }) => {
-  const initItem = (
-    label: string,
-    iconName: string,
-    content: string | string[],
-  ): SnapshotItem => ({
-    key: label + iconName,
-    label: label,
-    icon: {iconName},
-    content: Array.isArray(content) ? content.join(', ') : content,
-  });
-
   const items = useMemo(() => {
     const items: SnapshotItem[] = [];
 
@@ -45,7 +34,13 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
       content?: string | string[],
     ) => {
       // Avoid pushing empty arrays and empty strings
-      if (content?.length) items.push(initItem(label, iconName, content));
+      if (content?.length)
+        items.push({
+          key: label + iconName,
+          label: label,
+          icon: {iconName},
+          content: Array.isArray(content) ? content.join(', ') : content,
+        });
     };
 
     addItem('Ages', 'user', ages);
