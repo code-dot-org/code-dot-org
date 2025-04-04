@@ -10479,6 +10479,8 @@ en:
               name: Sprite Lab Tutorial
             lesson-16:
               name: Career Journeys
+            lesson-17:
+              name: Career Journeys B
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -22570,3 +22572,86 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-csd1-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          name: self-paced-pl-csd1-2025
+          title: 'Module 1: Welcome'
+          description_audience: ''
+          description_short: ''
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+        self-paced-pl-csd2-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating Code.org
+          name: self-paced-pl-csd2-2025
+          title: 'Module 2: Navigating Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes\n\n\n\n\n"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 70 minutes"
+        self-paced-pl-csd3-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Overview of CS Discoveries
+          name: self-paced-pl-csd3-2025
+          title: 'Module 3: Overview of CS Discoveries'
+          description_audience: ''
+          description_short: ''
+          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-csd4-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching and Learning CS Discoveries
+          name: self-paced-pl-csd4-2025
+          title: 'Module 4: Teaching and Learning CS Discoveries'
+          description_audience: ''
+          description_short: ''
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+        self-paced-pl-csd5-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Artificial Intelligence and Machine Learning
+          name: self-paced-pl-csd5-2025
+          title: "[Hidden - Do Not Use] Preparing to Teach AI and Machine Learning"
+          description_audience: ''
+          description_short: ''
+          description: "**Note:** This unit is hidden within the CSD Self-Paced Course. The content of this unit has instead been moved to [https://studio.code.org/courses/self-paced-pl-aiml-2023](https://studio.code.org/courses/self-paced-pl-aiml-2023)\n\nThis professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+        self-paced-pl-csd-unit1-1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit1-1-2025
+          title: Preparing to Teach Problem Solving and Computing
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+        self-paced-pl-csd-unit2-1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit2-1-2025
+          title: Preparing to Teach Web Development
+          description_audience: ''
+          description_short: ''
+          description: |-
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes
+          student_description: |-
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 120 minutes

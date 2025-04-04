@@ -47,7 +47,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
           <div className={moduleStyles.pickerContainer}>
             <ActionBlock
               description={pythonlabI18n.consoleOnlyDescription()}
-              image={consoleImage}
+              image={{src: consoleImage}}
               primaryButton={{
                 text: pythonlabI18n.consoleOnly(),
                 color: 'black',
@@ -61,7 +61,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
             />
             <ActionBlock
               description={pythonlabI18n.neighborhoodDescription()}
-              image={neighborhoodImage}
+              image={{src: neighborhoodImage}}
               primaryButton={{
                 text: pythonlabI18n.neighborhood(),
                 color: 'black',
