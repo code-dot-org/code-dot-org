@@ -29,6 +29,7 @@ Parameters:
     Description: Subdomain name for corporate web site ("Pegasus").
   MarketingDomainName:
     Type: String
+    # Todo: update to handle multiple envs once the app is in prod
     Default: 'dev.marketing.dev-code.org'
     Description: Subdomain name for marketing site.
   HourOfCodeBaseDomainName:
@@ -410,7 +411,9 @@ Resources:
     Properties:
       Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
       FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      Code: <%=zip_directory 'marketing-router'%>
+      # The JS file for this function depends on the Sub function to inject the value of MarketingDomainName
+      Code: 
+        ZipFile: !Sub <%=js 'lambdas/marketing-router/index.js'%>
       Handler: index.handler
       Runtime: nodejs22.x
       Role: !GetAtt MarketingRouterLambdaRole.Arn
