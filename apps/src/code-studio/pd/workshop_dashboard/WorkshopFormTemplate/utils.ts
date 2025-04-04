@@ -7,14 +7,6 @@ import {Workshop, WorkshopFormState, Session, SessionFormState} from './types';
 export const workshopLabel = (label: string): string =>
   `${label.replace(/workshop$/i, '').trim()} Workshop`;
 
-export const isEmpty = (
-  value: string | boolean | number | unknown[] | null | undefined
-) =>
-  value === undefined ||
-  value === null ||
-  value === '' ||
-  (Array.isArray(value) && value.length === 0);
-
 export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   course: data.course ?? '',
   capacity: data.capacity?.toString() ?? '',
