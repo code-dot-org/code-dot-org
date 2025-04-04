@@ -60,7 +60,7 @@ class SchoolStatsByYear < ApplicationRecord
 
   belongs_to :school, optional: true
 
-  validates_inclusion_of :status, in: SCHOOL_STATUSES, if: :status?
+  validates_inclusion_of :status, in: SCHOOL_STATUSES.values, if: :status?
 
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.
