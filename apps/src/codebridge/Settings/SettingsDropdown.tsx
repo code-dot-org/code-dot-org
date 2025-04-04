@@ -27,23 +27,23 @@ import moduleStyles from './settings-dropdown.module.scss';
 const fontSizeOptions: SimpleDropdownProps['items'] = [
   {
     value: 'Tiny',
-    text: codebridgeI18n.fontSize_tiny(),
+    text: codebridgeI18n.fontSizeTiny(),
   },
   {
     value: 'Small',
-    text: codebridgeI18n.fontSize_small(),
+    text: codebridgeI18n.fontSizeSmall(),
   },
   {
     value: 'Medium',
-    text: codebridgeI18n.fontSize_medium(),
+    text: codebridgeI18n.fontSizeMedium(),
   },
   {
     value: 'Large',
-    text: codebridgeI18n.fontSize_large(),
+    text: codebridgeI18n.fontSizeLarge(),
   },
   {
     value: 'Huge',
-    text: codebridgeI18n.fontSize_huge(),
+    text: codebridgeI18n.fontSizeHuge(),
   },
 ];
 interface SettingsDropdownProps {
