@@ -114,24 +114,15 @@ const PythonlabView: React.FunctionComponent<
   const dispatch = useAppDispatch();
 
   const getInitialDevicePixelRatio = (): number => {
-    if (typeof window === 'undefined') return 1;
-    return window.devicePixelRatio || 1;
+    return window?.devicePixelRatio || 1;
   };
 
   const detectZoom = (initialDPR: number): number[] => {
-    // Works with pinch in/out
-    console.log('window.visualViewport?.scale', window.visualViewport?.scale);
-    // works with browser zoom setting
-
     const currentDPR = window.devicePixelRatio || 1;
-    const zoom = currentDPR / initialDPR;
-    console.log('devicePixelRatio zoom', zoom);
-    const zoomValues = [100, Math.round(zoom * 100)];
+    const zoomDPR = currentDPR / initialDPR;
+    const zoomValues = [Math.round(zoomDPR * 100), 100];
     if (window.visualViewport?.scale) {
-      zoomValues[0] = Math.round(window.visualViewport.scale * 100);
-    }
-    if (window.devicePixelRatio) {
-      zoomValues[1] = Math.round(window.devicePixelRatio * 100);
+      zoomValues[1] = Math.round(window.visualViewport.scale * 100);
     }
     return zoomValues;
   };
@@ -151,17 +142,16 @@ const PythonlabView: React.FunctionComponent<
 
     const checkZoom = () => {
       const currentZoomValues = detectZoom(initialDPR);
-      if (currentZoomValues[0] !== lastZoomValues[0]) {
-        const direction =
-          currentZoomValues[0] > lastZoomValues[0] ? 'in' : 'out';
-        logZoomChange(currentZoomValues[0], direction);
-        lastZoomValues = currentZoomValues;
-      } else if (currentZoomValues[1] !== lastZoomValues[1]) {
-        const direction =
-          currentZoomValues[1] > lastZoomValues[1] ? 'in' : 'out';
-        logZoomChange(currentZoomValues[1], direction);
-        lastZoomValues = currentZoomValues;
-      }
+      let loggedZoom = false;
+      currentZoomValues.forEach((zoomValue, index) => {
+        if (zoomValue !== lastZoomValues[index] && !loggedZoom) {
+          const direction =
+            currentZoomValues[0] > lastZoomValues[0] ? 'in' : 'out';
+          logZoomChange(currentZoomValues[index], direction);
+          lastZoomValues = currentZoomValues;
+          loggedZoom = true;
+        }
+      });
     };
     const interval = setInterval(checkZoom, 1000);
     window.visualViewport?.addEventListener('resize', checkZoom);
