@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
-import React, {useState, useCallback, useMemo, useEffect} from 'react';
+import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -35,6 +35,7 @@ const UserMessageEditor = React.forwardRef<
     },
     ref
   ) => {
+    const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
     const [userMessage, setUserMessage] = useState<string>('');
 
     const userMessageIsEmpty = useMemo(() => {
@@ -57,16 +58,13 @@ const UserMessageEditor = React.forwardRef<
     );
 
     useEffect(() => {
-      if (typeof ref !== 'object' || ref === null) {
+      if (!internalInputRef.current) {
         return;
       }
 
-      if (!ref.current) {
-        return;
-      }
-
-      ref.current.style.height = 'auto'; // Reset height
-      ref.current.style.height = ref.current.scrollHeight + 2 + 'px'; // Set to scroll height
+      internalInputRef.current.style.height = 'auto'; // Reset height
+      internalInputRef.current.style.height =
+        internalInputRef.current.scrollHeight + 2 + 'px'; // Set to scroll height
     }, [ref, userMessage]);
 
     const icon = {iconName: 'paper-plane'};
@@ -79,7 +77,16 @@ const UserMessageEditor = React.forwardRef<
         )}
       >
         <textarea
-          ref={ref}
+          ref={node => {
+            // need to handle this being null?
+            internalInputRef.current = node;
+
+            if (typeof ref !== 'object' || ref === null) {
+              return;
+            }
+
+            ref.current = node;
+          }}
           id="uitest-chat-textarea"
           className={moduleStyles.textArea}
           placeholder={

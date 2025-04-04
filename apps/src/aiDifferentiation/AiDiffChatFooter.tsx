@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import {PDFDownloadLink} from '@react-pdf/renderer';
-import React, {useRef} from 'react';
+import React from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -25,15 +25,12 @@ const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
   waiting,
   disableEndButtons,
 }) => {
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-
   return (
     <div className={style.chatFooter}>
       <UserMessageEditor
         onSubmit={onSubmit}
         disabled={waiting}
         customPlaceholder={commonI18n.aiDifferentiation_write_message()}
-        ref={inputRef}
       />
       {!disableEndButtons && (
         <div className={style.chatFooterButtons}>

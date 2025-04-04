@@ -1,4 +1,4 @@
-import React, {useCallback, useRef} from 'react';
+import React, {useCallback} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -19,8 +19,6 @@ interface AITutorFooterProps {
 }
 
 const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
   );
@@ -84,11 +82,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   return (
     <div className={style.aiTutorFooter}>
-      <UserMessageEditor
-        onSubmit={handleSubmit}
-        disabled={disabled}
-        ref={inputRef}
-      />
+      <UserMessageEditor onSubmit={handleSubmit} disabled={disabled} />
     </div>
   );
 };
