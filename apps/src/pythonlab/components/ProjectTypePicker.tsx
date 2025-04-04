@@ -34,7 +34,9 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
         onClose={currentProjectType ? closeDialog : undefined}
       >
         <Heading2 id="project-picker-title">
-          {pythonlabI18n.projectPickerTitle()}
+          {currentProjectType
+            ? pythonlabI18n.switchProjectTypeTitle()
+            : pythonlabI18n.projectPickerTitle()}
         </Heading2>
         <div id="dsco-dialog-description">
           {(isNeighborhood || isConsole) && (
