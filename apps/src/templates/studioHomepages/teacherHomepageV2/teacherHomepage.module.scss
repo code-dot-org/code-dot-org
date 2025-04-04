@@ -68,7 +68,14 @@
 
 .sectionCardHeaderLeft {
   display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.sectionCardHeaderLeftText {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: calc(100% - 32px);
 }
 
@@ -354,8 +361,12 @@
 
 // Section Avatars
 .sectionAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   font-family: 'Noto Color Emoji', sans-serif;
+  font-size: 32px;
 }

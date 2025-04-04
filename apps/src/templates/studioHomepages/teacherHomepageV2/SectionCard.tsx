@@ -36,21 +36,23 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
-          <SectionAvatar color={0} emoji={0} />
-          <Heading5 className={styles.sectionCardHeaderText}>
-            {section.name}
-          </Heading5>
-          <OverlineOneText className={styles.sectionCardCode}>
-            {i18n.classCode()}
-            <a
-              href={`/join/${section.code}`}
-              target="_blank"
-              rel="noreferrer"
-              onClick={onClickClassCode}
-            >
-              {section.code}
-            </a>
-          </OverlineOneText>
+          <SectionAvatar seed={section.id} />
+          <div className={styles.sectionCardHeaderLeftText}>
+            <Heading5 className={styles.sectionCardHeaderText}>
+              {section.name}
+            </Heading5>
+            <OverlineOneText className={styles.sectionCardCode}>
+              {i18n.classCode()}
+              <a
+                href={`/join/${section.code}`}
+                target="_blank"
+                rel="noreferrer"
+                onClick={onClickClassCode}
+              >
+                {section.code}
+              </a>
+            </OverlineOneText>
+          </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
           <SectionOptionsDropdown
