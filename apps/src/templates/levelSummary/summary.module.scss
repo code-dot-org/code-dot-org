@@ -439,18 +439,6 @@ svg text[fill] {
   border-left: 1px solid var(--borders-neutral-primary, #d1d4d8);
 }
 
-.closeButton {
-  background: transparent !important;
-
-  &:hover {
-    background: var(--background-neutral-quaternary, #e4e6e9) !important;
-  }
-
-  i {
-    font-size: 16px !important;
-  }
-}
-
 .evaluateButton {
   padding-left: 8px !important;
   padding-right: 8px !important;
@@ -458,4 +446,15 @@ svg text[fill] {
 
 .viewAnalysisLink {
   color: var(--text-neutral-primary) !important;
+}
+
+.summaryBoxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.feedbackText {
+  color: var(--text-neutral-quaternary, #727a83) !important;
 }

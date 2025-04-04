@@ -102,7 +102,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       {evaluationComplete && aiSummary && showDetailedAnalysis && (
         <div>
           <FreeResponseAiStudentResponseHeader
-            closeStudentResponses={() => {}}
+            closeStudentResponses={() => setShowDetailedAnalysis(false)}
           />
           {evaluations.map(evaluation => (
             <FreeResponseStudentResponseRow

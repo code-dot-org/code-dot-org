@@ -1,7 +1,10 @@
 import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {
+  BodyTwoText,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
@@ -9,6 +12,7 @@ import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';
 import {FEEDBACK_TYPE} from './AiFeedbackType';
+import FeedbackToggle from './FeedbackToggle';
 import FreeResponseSummaryDataBox from './FreeResponseSummaryDataBox';
 
 import styles from './summary.module.scss';
@@ -112,7 +116,20 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   const aiSummaryContent = () => {
     return (
       <>
-        {aiSummaryTag(proficientStudentCount)}
+        <div className={styles.summaryBoxHeader}>
+          {aiSummaryTag(proficientStudentCount)}
+          <div>
+            <BodyThreeText className={styles.feedbackText}>
+              {i18n.aiFeedbackQuestion()}
+              <FeedbackToggle
+                onThumbsUpClick={() => {}}
+                onThumbsDownClick={() => {}}
+                size="m"
+                color="gray"
+              />
+            </BodyThreeText>
+          </div>
+        </div>
         {aiSummaryMessage(proficientStudentCount)}
         <FreeResponseSummaryDataBox
           totalStudentCount={totalNumberOfStudents}
