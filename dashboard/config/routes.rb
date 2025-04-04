@@ -1,16 +1,27 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  mount Marketing::Engine => '/marketing'
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
+
+  get '/robots.txt' => 'robots#index'
 
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
-  # Redirect old sign up flow to new sign up flow
-  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+  # Redirect old sign up flow to current sign up flow
+  get "/users/sign_up", to: redirect("/users/sign_up/account_type")
 
-  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
+  # Redirect uses of "new_sign_up" to "sign_up"
+  get "/users/new_sign_up/account_type", to: redirect("/users/sign_up/account_type")
+  get "/users/new_sign_up/login_type", to: redirect("/users/sign_up/login_type")
+  get "/users/new_sign_up/finish_student_account", to: redirect("/users/sign_up/finish_student_account")
+  get "/users/new_sign_up/finish_teacher_account", to: redirect("/users/sign_up/finish_teacher_account")
+
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
+  # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
+  get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
   # Redirect enable and disable experiments to most recent section
@@ -26,6 +37,7 @@ Dashboard::Application.routes.draw do
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
+      get :home, controller: :teacher_dashboard, action: :show
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -45,6 +57,8 @@ Dashboard::Application.routes.draw do
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
+
+    resources :student_work_evaluations, only: [:create]
 
     resources :user_level_interactions, only: [:create]
 
@@ -82,10 +96,16 @@ Dashboard::Application.routes.draw do
 
     resources :images, only: [:new]
 
-    get "/ai_tutor/tester", to: "ai_tutor#tester"
+    get "/ai_iteration/tools", to: "ai_iteration#tools"
+    post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
+    post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
-    get 'maker/home', to: 'maker#home'
-    get 'maker/setup', to: 'maker#setup'
+    resources :maker, only: [] do
+      collection do
+        get :home
+        get :setup
+      end
+    end
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -130,9 +150,11 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+        get :retrieve_lessons_for_dropdown
       end
       collection do
         post 'section_instructors_verified'
+        post 'archive_all'
       end
     end
     # Section API routes (JSON only)
@@ -208,12 +230,12 @@ Dashboard::Application.routes.draw do
     devise_scope :user do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
-      post '/users/finish_sign_up', to: 'registrations#new'
-      get '/users/new_sign_up/account_type', to: 'registrations#account_type'
-      get '/users/new_sign_up/login_type', to: 'registrations#login_type'
+      get '/users/sign_up', to: 'registrations#new'
+      get '/users/sign_up/account_type', to: 'registrations#account_type'
+      get '/users/sign_up/login_type', to: 'registrations#login_type'
       get '/users/gdpr_check', to: 'registrations#gdpr_check'
-      get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
-      get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      get '/users/sign_up/finish_student_account', to: 'registrations#finish_student_account'
+      get '/users/sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -227,6 +249,7 @@ Dashboard::Application.routes.draw do
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
+      delete '/expire_other', to: 'sessions#expire_other'
       get '/users/existing_account', to: 'registrations#existing_account'
       get '/users/edit', to: 'registrations#edit'
     end
@@ -372,7 +395,7 @@ Dashboard::Application.routes.draw do
       member do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
-        delete '/:filename', to: 'level_starter_assets#destroy'
+        delete '/:filename', to: 'level_starter_assets#destroy', format: true
       end
     end
 
@@ -388,6 +411,60 @@ Dashboard::Application.routes.draw do
     # these routes use course_course_name to match generated routes below that are nested within courses
     get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
+    # Repeated routes to support Unit routes in both /s/ and /courses/xxx/unit/y
+    unit_routes = lambda do
+      get 'reset', to: 'script_levels#reset'
+      get 'next', to: 'script_levels#next'
+      get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
+      post 'toggle_hidden', to: 'script_levels#toggle_hidden'
+
+      member do
+        get 'vocab'
+        get 'resources'
+        get 'code'
+        get 'standards'
+        get 'instructions'
+        get 'get_rollup_resources'
+      end
+
+      resources :lessons, only: [:show], param: 'position', format: false do
+        get 'student', to: 'lessons#student_lesson_plan'
+        get 'extras', to: 'script_levels#lesson_extras', format: false
+        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+        get 'edit', to: 'lessons#edit_with_lesson_position'
+
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          member do
+            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+            get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level's properties via JSON.
+            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
+          end
+        end
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          # This route is defined in a separate resources, below the one above,
+          # because of how our assert_routing tests and Rails routing
+          # precedence work with multiple routes that point to the same action,
+          # with only a static path (no dynamic parts like 'path/:id').
+          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
+        end
+      end
+
+      resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
+        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          member do
+            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+          end
+        end
+      end
+
+      get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+      post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+      get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
+    end
+
     resources :courses, param: 'course_name' do
       member do
         get 'vocab'
@@ -398,6 +475,8 @@ Dashboard::Application.routes.draw do
       end
 
       resources :reference_guides, param: 'key', path: 'guides'
+
+      resources :units, controller: 'scripts', param: 'position', &unit_routes
     end
 
     resources :potential_teachers, only: [:create]
@@ -488,77 +567,23 @@ Dashboard::Application.routes.draw do
     get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels')
     get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
-    resources :scripts, path: '/s/' do
-      # /s/xxx/reset
-      get 'reset', to: 'script_levels#reset'
-      get 'next', to: 'script_levels#next'
-      get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
-      post 'toggle_hidden', to: 'script_levels#toggle_hidden'
+    resources :scripts, path: '/s/', &unit_routes
 
-      member do
-        get 'vocab'
-        get 'resources'
-        get 'code'
-        get 'standards'
-        get 'instructions'
-        get 'get_rollup_resources'
+    resources :certificate_images, only: [:show], param: 'filename'
+
+    resources :print_certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        post :batch
       end
-
-      # /s/xxx/lessons/yyy
-      resources :lessons, only: [:show], param: 'position', format: false do
-        get 'student', to: 'lessons#student_lesson_plan'
-        get 'extras', to: 'script_levels#lesson_extras', format: false
-        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-        get 'edit', to: 'lessons#edit_with_lesson_position'
-
-        # /s/xxx/lessons/yyy/levels/zzz
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          member do
-            # /s/xxx/lessons/yyy/levels/zzz/page/ppp
-            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-            # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
-            get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level's properties via JSON.
-            # /s/xxx/lessons/yyy/levels/zzz/level_properties
-            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
-          end
-        end
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          # This route is defined in a separate resources, below the one above,
-          # because of how our assert_routing tests and Rails routing
-          # precedence work with multiple routes that point to the same action,
-          # with only a static path (no dynamic parts like 'path/:id').
-          # /s/xxx/lessons/yyy/levels/zzz/summary
-          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
-        end
-      end
-
-      # /s/xxx/lockable/yyy/levels/zzz
-      resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
-        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          member do
-            # /s/xxx/lockable/yyy/levels/zzz/page/ppp
-            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-          end
-        end
-      end
-
-      get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
-      post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
-
-      get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
     end
 
-    get '/certificate_images/:filename', to: 'certificate_images#show'
-
-    post '/print_certificates/batch'
-    get '/print_certificates/:encoded_params', to: 'print_certificates#show'
-
-    get '/certificates/blank'
-    get '/certificates/batch'
-    post '/certificates/batch'
-    get '/certificates/:encoded_params', to: 'certificates#show'
+    resources :certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        get :blank
+        get :batch
+        post :batch
+      end
+    end
 
     get '/beta', to: redirect('/')
 
@@ -598,15 +623,21 @@ Dashboard::Application.routes.draw do
     get '/admin/debug', to: 'admin_reports#debug'
 
     # internal search tools
-    get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-    get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
-    post '/admin/lookup_section', to: 'admin_search#lookup_section'
-    post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
-    get '/admin/pilots/', to: 'admin_search#pilots', as: 'pilots'
-    post '/admin/pilots/', to: 'admin_search#create_pilot', as: 'create_pilot'
-    get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
-    post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
-    post '/admin/remove_from_pilot', to: 'admin_search#remove_from_pilot', as: 'remove_from_pilot'
+    resources :admin_search, only: [], path: '/admin' do
+      collection do
+        get :find_students
+        get :lookup_section
+        post :lookup_section
+        post :undelete_section
+      end
+    end
+
+    resources :admin_pilots, only: [:index, :create, :show], path: '/admin/pilots', param: 'pilot_name' do
+      collection do
+        post :add_to_pilot
+        post :remove_from_pilot
+      end
+    end
 
     # internal engineering dashboards
     get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
@@ -690,7 +721,6 @@ Dashboard::Application.routes.draw do
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
-    get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
     get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
     get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
 
@@ -809,16 +839,23 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
     get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-    get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
-    get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_facilitator_for_pl_page'
-    get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_organizer_for_pl_page'
-    get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_program_manager_for_pl_page'
+    get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning#applications_closed'
+    get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
-    get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
+    get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
+    get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
+    get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
+    get 'professional-learning/facilitator/computer-science-fundamentals', to: 'pd/professional_learning#csf'
+    get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
+    get 'professional-learning/facilitator/computer-science-ai-fundamentals', to: 'pd/professional_learning#csaif'
+    get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
 
     namespace :pd do
       # React-router will handle sub-routes on the client.
@@ -911,6 +948,7 @@ Dashboard::Application.routes.draw do
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
     get 'dashboardapi/unit_summary/:unit_name', to: 'api#unit_summary'
+    get 'dashboardapi/unit_summary/:course_name/:unit_position', to: 'api#unit_summary'
     get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
@@ -973,9 +1011,11 @@ Dashboard::Application.routes.draw do
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
+        post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
+        post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
@@ -1047,6 +1087,12 @@ Dashboard::Application.routes.draw do
           end
           member do
             post 'increment_visit_count'
+          end
+        end
+
+        resources :users do
+          collection do
+            get :signed_in
           end
         end
       end
@@ -1181,7 +1227,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/backpacks/channel', to: 'backpacks#get_channel'
+    get '/backpacks/channel/:app_type', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
@@ -1199,17 +1245,20 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+    post '/openai/evaluate', to: 'openai_evaluate#evaluate'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
-    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
-    post '/aichat/submit_teacher_feedback', to: 'aichat#submit_teacher_feedback'
-    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
+    post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
+    post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
+    get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
+
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
+    post 'aidiff_messages/:aidiff_message_id/submit_feedback', to: 'aidiff_messages#submit_feedback'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

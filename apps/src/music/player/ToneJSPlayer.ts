@@ -222,8 +222,12 @@ class ToneJSPlayer {
     let lastSampleStart = 0;
     await this.startContextIfNeeded();
     events.forEach(({notes, playbackPosition}) => {
+      // While playback time and transport times are 1-based (allowing for playing
+      // a sound early if pickupLength is specified), playing a sound immediately
+      // requires the playback time to be 0-based.
+      const immediatePlaybackTime = playbackPosition - 1;
       const offsetSeconds = Transport.toSeconds(
-        this.playbackTimeToTransportTime(playbackPosition)
+        this.playbackTimeToTransportTime(immediatePlaybackTime)
       );
       lastSampleStart = Math.max(lastSampleStart, offsetSeconds);
       this.previewSamplers[instrument]
@@ -268,6 +272,8 @@ class ToneJSPlayer {
     Transport.bpm.value = bpm;
     // We need to regenerate all effect busses when BPM changes as some effects (e.g. delay) are BPM-dependent.
     this.generateEffectBusses();
+    // We also need to regenerate samplers so that they connect themselves to the new effects busses.
+    this.samplers = {};
   }
 
   scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
@@ -294,7 +300,11 @@ class ToneJSPlayer {
 
     player
       .sync()
-      .start(this.playbackTimeToTransportTime(sample.playbackPosition));
+      .start(
+        this.playbackTimeToTransportTime(
+          sample.playbackPosition - (sample.pickupLength || 0)
+        )
+      );
 
     this.activePlayers.push(player);
 
@@ -378,7 +388,7 @@ class ToneJSPlayer {
     transportTime: BarsBeatsSixteenths
   ): number {
     const [bar, beat, sixteenths] = transportTime.split(':').map(Number);
-    return bar + 1 + beat / 4 + sixteenths / 16;
+    return bar + beat / 4 + sixteenths / 16;
   }
 
   private playbackTimeToTransportTime(
@@ -389,7 +399,7 @@ class ToneJSPlayer {
     const sixteenths = (playbackPosition - bar - beat / 4) * 16;
     // Round sixteenths note value to 3 decimal places.
     const sixteenthsRounded = Math.round(sixteenths * 1000) / 1000;
-    return `${bar - 1}:${beat}:${sixteenthsRounded}`;
+    return `${bar}:${beat}:${sixteenthsRounded}`;
   }
 
   private createPlayer(

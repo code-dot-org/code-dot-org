@@ -40,6 +40,7 @@ class UnitOverview extends React.Component {
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
+    isSingleUnitCourse: PropTypes.bool,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
@@ -167,12 +168,11 @@ class UnitOverview extends React.Component {
           <EndOfLessonDialog lessonNumber={completedLessonNumber} />
         )}
         <div>
-          {this.props.courseLink && (
+          {!this.props.isSingleUnitCourse && this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
-              <a
-                href={this.props.courseLink}
-                style={styles.navLink}
-              >{`< ${this.props.courseTitle}`}</a>
+              <a href={this.props.courseLink} style={styles.navLink}>
+                {`< ${this.props.courseTitle}`}
+              </a>
             </div>
           )}
           {displayRedirectDialog && (

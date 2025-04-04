@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "title": "Wrap Up: News Headline",
+    "title": "Check for Understanding",
     "long_instructions": "Write a news headline summarizing what you and your partner learned or a key takeaway from your work building a the system for your specific user.",
     "height": "100",
     "placeholder": "Enter your headline here...",
@@ -19,7 +19,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-15 20:11:32 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-01-15 20:11:32 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-16 22:49:25 +0000\",\"changed\":[\"title\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

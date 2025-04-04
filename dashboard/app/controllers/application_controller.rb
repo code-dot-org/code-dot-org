@@ -110,6 +110,14 @@ class ApplicationController < ActionController::Base
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
+  # Allow cross-origin requests from code.org
+  def allow_cdo_cors
+    response.headers['Access-Control-Allow-Origin']      = CDO.code_org_url '', request.protocol.chomp('//')
+    response.headers['Access-Control-Allow-Methods']     = request.request_method
+    response.headers['Access-Control-Allow-Headers']     = '*'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
+  end
+
   # These are sometimes updated from the registration form
   SCHOOL_INFO_ATTRIBUTES = [
     :country,
@@ -231,8 +239,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    response[:activity_id] = options[:activity] && options[:activity].id
-
     response
   end
 
@@ -326,10 +332,9 @@ class ApplicationController < ActionController::Base
   end
 
   protected def clear_sign_up_session_vars
-    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+    if session[:sign_up_uid] || session[:sign_up_type]
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
-      session.delete(:sign_up_tracking_expiration)
     end
   end
 

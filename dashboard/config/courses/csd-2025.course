@@ -1,0 +1,29 @@
+{
+  "name": "csd-2025",
+  "script_names": [
+    "csd1-2025",
+    "csd2-2025",
+    "csd3-2025",
+    "csd4-2025",
+    "csd5-2025",
+    "csd6a-2025",
+    "csd6b-2025",
+    "csd7-2025",
+    "csd-post-survey-2025"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

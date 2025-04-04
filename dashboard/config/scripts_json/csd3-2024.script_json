@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-22 18:59:54 UTC",
+    "serialized_at": "2025-03-25 04:34:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -21993,7 +21993,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,

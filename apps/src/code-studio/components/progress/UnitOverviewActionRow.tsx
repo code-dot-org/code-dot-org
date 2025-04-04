@@ -1,7 +1,7 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

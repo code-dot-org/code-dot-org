@@ -1,0 +1,10 @@
+name 'ken-levelgroup-test'
+title 'title of the assessment here'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+text 'ken-external-test'
+level 'test-music-lab-loops-synthesis-reflection'
+

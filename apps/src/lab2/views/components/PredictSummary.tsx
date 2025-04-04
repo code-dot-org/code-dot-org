@@ -1,7 +1,7 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {getSectionSummary} from '@cdo/apps/lab2/projects/userLevelsApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';

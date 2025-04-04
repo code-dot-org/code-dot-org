@@ -124,6 +124,6 @@ export default class AdvancedSequencer extends Sequencer {
   }
 
   getLastMeasure(): number {
-    return 0;
+    return 100;
   }
 }

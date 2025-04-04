@@ -1,5 +1,5 @@
-@import '@/common/styles/colors.css';
-@import '@/typography/typography.module';
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/typography.module.scss';
 
 $tooltip-background-color: var(--background-neutral-primary-inverse);
 $tail-offset: 4px;
@@ -54,6 +54,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   z-index: 10;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: fit-content;
   background-color: $tooltip-background-color;
   box-sizing: border-box;

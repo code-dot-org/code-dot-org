@@ -13,19 +13,30 @@
     "//#format": {},
     "//#format:fix": {},
     "release:dryrun": {
-      "dependsOn": ["lint", "test", "build"]
+      "dependsOn": ["build", "lint", "test"]
     },
     "lint": {
-      "dependsOn": ["^lint", "prettier", "typecheck", "//#format"]
+      "dependsOn": ["^lint", "prettier", "stylelint", "typecheck", "//#format"]
     },
     "lint:fix": {
-      "dependsOn": ["^lint:fix", "prettier:fix", "//#format:fix"]
+      "dependsOn": [
+        "^lint:fix",
+        "prettier:fix",
+        "stylelint:fix",
+        "//#format:fix"
+      ]
     },
     "prettier": {
       "dependsOn": ["^prettier"]
     },
     "prettier:fix": {
       "dependsOn": ["^prettier:fix"]
+    },
+    "stylelint": {
+      "dependsOn": ["^stylelint"]
+    },
+    "stylelint:fix": {
+      "dependsOn": ["^stylelint:fix"]
     },
     "typecheck": {
       "dependsOn": ["^typecheck"]
@@ -34,11 +45,14 @@
       "dependsOn": ["^test"]
     },
     "test:ui:ci": {
-      "dependsOn": ["^test:ui:ci"]
+      "cache": false,
+      "dependsOn": ["^test:ui:ci"],
+      "env": ["STAGE"]
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dependsOn": ["^build"]
     }
   }
 }

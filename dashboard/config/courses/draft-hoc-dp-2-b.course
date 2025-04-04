@@ -1,0 +1,21 @@
+{
+  "name": "draft-hoc-dp-2-b",
+  "script_names": [
+    "draft-hoc-dp-2-b"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "draft-hoc-dp-2-b",
+    "pilot_experiment": "draft-hoc-dp-2-b",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

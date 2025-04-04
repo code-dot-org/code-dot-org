@@ -1,0 +1,21 @@
+{
+  "name": "csd4-preview-2021",
+  "script_names": [
+    "csd4-preview-2021"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd4-preview-2021-1",
+    "pilot_experiment": "csd-2021-preview",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

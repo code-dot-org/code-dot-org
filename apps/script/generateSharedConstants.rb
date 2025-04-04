@@ -102,6 +102,7 @@ def main
       CHILD_ACCOUNT_COMPLIANCE_STATES
       CENSUS_CONSTANTS
       DANCE_SONG_MANIFEST_FILENAME
+      AI_EVALUATION_TYPES
       AI_INTERACTION_STATUS
       AI_TUTOR_INTERACTION_STATUS
       AI_TUTOR_TYPES
@@ -117,6 +118,8 @@ def main
       US_STATES
       PROJECT_SUBMISSION_STATUS
       EDUCATOR_ROLES
+      AI_DIFF_CONTEXT
+      DISALLOWED_ROUTES
     ),
     file_type: 'ts'
   )
@@ -179,6 +182,8 @@ def main
         CSD_CUSTOM_WORKSHOP_MODULES
         PARTICIPANT_GROUP_TYPES
         PD_SESSION_FORMATS
+        WORKSHOP_FORMATS
+        WORKSHOP_COURSE_CONFIGS
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false

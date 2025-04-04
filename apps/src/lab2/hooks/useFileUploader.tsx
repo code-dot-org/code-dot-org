@@ -8,7 +8,7 @@ export const enum analyticsEvents {
   UPLOAD_UNACCEPTED_FILE = 'UPLOAD_UNACCEPTED_FILE',
 }
 
-type FileUploaderProps = {
+export type FileUploaderProps = {
   children?: React.ReactNode;
   callback: (
     filename: string,
@@ -16,6 +16,7 @@ type FileUploaderProps = {
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
+  validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
   sendAnalyticsEvent?: (
@@ -85,6 +86,7 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
+  validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
 }: FileUploaderProps) => {
@@ -104,6 +106,12 @@ export const useFileUploader = ({
         );
         return;
       }
+      const fileNameErrorMessage = validateFileName(file.name);
+      if (fileNameErrorMessage) {
+        errorCallback(fileNameErrorMessage, callbackArgs.current);
+        return;
+      }
+
       const reader = new FileReader();
       if (file.type.match(/^text/)) {
         reader.readAsText(file);
@@ -135,7 +143,13 @@ export const useFileUploader = ({
         }
       };
     });
-  }, [callback, errorCallback, validMimeTypes, sendAnalyticsEvent]);
+  }, [
+    validMimeTypes,
+    validateFileName,
+    sendAnalyticsEvent,
+    errorCallback,
+    callback,
+  ]);
 
   return useMemo(
     () => ({

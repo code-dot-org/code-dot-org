@@ -1,6 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';

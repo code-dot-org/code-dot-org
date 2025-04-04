@@ -120,7 +120,7 @@ Resources:
   ALBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Inbound HTTP[S] from the public Internet, outbound HTTP[S] downstream
+      GroupDescription: Inbound HTTPS from CloudFront, outbound HTTP[S] downstream
       VpcId: {Ref: VPC}
       SecurityGroupIngress:
         - IpProtocol: tcp
@@ -133,7 +133,7 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-        # Forward HTTP requests to nginx on Web Application Server ("Front End") EC2 Instances.
+        # Forward HTTPS requests to nginx on Web Application Server ("Front End") EC2 Instances.
         - IpProtocol: tcp
           FromPort: 443
           ToPort: 443

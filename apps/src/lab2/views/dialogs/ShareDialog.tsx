@@ -1,13 +1,13 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
 import React, {useCallback, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';

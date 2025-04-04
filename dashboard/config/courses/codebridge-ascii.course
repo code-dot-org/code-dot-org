@@ -1,0 +1,20 @@
+{
+  "name": "codebridge-ascii",
+  "script_names": [
+    "codebridge-ascii"
+  ],
+  "published_state": "beta",
+  "instruction_type": "self_paced",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "codebridge-ascii",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -98,8 +98,8 @@ end
 Given /^I open the new workshop form$/ do
   steps <<~GHERKIN
     And I am on "http://studio.code.org/pd/workshop_dashboard"
-    Then I wait until element "button:contains('New Workshop')" is visible
-    Then I press "button:contains('New Workshop')" using jQuery
+    Then I wait until element "a:contains('New Workshop')" is visible
+    Then I press the last link with text "New Workshop"
 
     And I wait until element "h2:contains('New Workshop')" is visible
   GHERKIN
@@ -275,6 +275,28 @@ Given(/^I am a teacher enrolling in "([^"]*)"$/) do |course|
   steps <<~GHERKIN
     And I create a teacher named "#{random_teacher_name}"
     And I am on "http://studio.code.org/pd/workshops/#{@workshop_id}/enroll"
+  GHERKIN
+end
+
+Given 'I start a self-paced PL course' do
+  steps <<~GHERKIN
+    Given I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
+    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
+    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
+    When I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
+    Then I wait until element "a:contains(Submit)" is visible
+    When I click selector "a:contains(Submit)"
+    Then I wait until I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/4"
+    And I wait until element "a:contains(Submit)" is visible
+  GHERKIN
+end
+
+And 'I see Farsi version of Professional Learning Lending page' do
+  steps <<~GHERKIN
+    And element "a:contains(Learn about professional learning)" is not visible
+    And element "button.ui-test-join-section" is not visible
+    And element "a:contains(Learn more about workshops)" is not visible
+    And the href of selector "a:contains(Start professional learning courses)" contains "/global/fa/teacher"
   GHERKIN
 end
 

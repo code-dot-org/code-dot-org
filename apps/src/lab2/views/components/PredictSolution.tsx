@@ -1,32 +1,26 @@
+import {
+  BodyThreeText,
+  Heading1,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {BodyThreeText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import {
   LevelPredictSettings,
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import moduleStyles from './predict.module.scss';
 
 // Component that displays the solution to a predict question.
 // The backend will only send the solution if the user has permission to see it.
-const PredictSolution: React.FunctionComponent = () => {
-  const predictSettings = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings
-  );
-
-  return <UnconnectedPredictSolution predictSettings={predictSettings} />;
-};
-
-interface UnconnectedPredictSolutionProps {
+interface PredictSolutionProps {
   predictSettings: LevelPredictSettings | undefined;
 }
 
-export const UnconnectedPredictSolution: React.FunctionComponent<
-  UnconnectedPredictSolutionProps
-> = ({predictSettings}) => {
+export const PredictSolution: React.FunctionComponent<PredictSolutionProps> = ({
+  predictSettings,
+}) => {
   if (!predictSettings?.solution) {
     return null;
   }

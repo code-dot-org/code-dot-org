@@ -1,0 +1,42 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// IconHighlight common styles
+.iconHighlight {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  gap: 0.25rem 1rem;
+  justify-content: start;
+  align-items: start;
+  width: fit-content;
+
+  .iconHighlightIcon {
+    @include mixins.icon-dimensions(2rem);
+    color: var(--text-neutral-primary);
+    text-align: center;
+    grid-row: 1 / -1;
+    grid-column: 1;
+  }
+
+  > :not(.iconHighlightIcon) {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .iconHighlightText {
+    white-space: pre-wrap;
+  }
+
+  .iconHighlightLinkList {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    padding: 0;
+
+    .iconHighlightLink {
+      gap: 0.375rem;
+    }
+  }
+}

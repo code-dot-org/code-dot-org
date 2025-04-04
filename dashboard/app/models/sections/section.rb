@@ -28,10 +28,11 @@
 #
 # Indexes
 #
-#  fk_rails_20b1e5de46        (course_id)
-#  fk_rails_f0d4df9901        (lti_integration_id)
-#  index_sections_on_code     (code) UNIQUE
-#  index_sections_on_user_id  (user_id)
+#  fk_rails_20b1e5de46          (course_id)
+#  fk_rails_f0d4df9901          (lti_integration_id)
+#  index_sections_on_code       (code) UNIQUE
+#  index_sections_on_script_id  (script_id)
+#  index_sections_on_user_id    (user_id)
 #
 
 require 'full-name-splitter'
@@ -435,15 +436,23 @@ class Section < ApplicationRecord
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
 
+      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+
+      primary_instructor = {
+        email: teacher.email,
+        name: teacher.name,
+        ltiRosterSyncEnabled: teacher&.properties&.[]("lti_roster_sync_enabled")
+      }
+
       {
         id: id,
         name: name,
         students: students.distinct(&:id).map(&:summarize),
         login_type_name: login_type_name,
         script: {
-          id: script_id,
-          name: script.try(:name),
-          project_sharing: script.try(:project_sharing),
+          id: selected_unit&.id,
+          name: selected_unit&.name,
+          project_sharing: selected_unit&.project_sharing
         },
         course: {
           course_offering_id: course_offering_id,
@@ -452,7 +461,9 @@ class Section < ApplicationRecord
           lesson_extras_available: script.try(:lesson_extras_available),
           text_to_speech_enabled: script.try(:text_to_speech_enabled?),
         },
-        any_student_has_progress: any_student_has_progress?
+        any_student_has_progress: any_student_has_progress?,
+        is_assigned_single_unit_course: unit_group&.single_unit_course?,
+        primaryInstructor: primary_instructor,
       }
     end
   end
@@ -484,6 +495,8 @@ class Section < ApplicationRecord
         course_version_name = script.name
       end
 
+      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+
       # Remove ordering from scope when not including full
       # list of students, in order to improve query performance.
       unique_students = include_students ?
@@ -492,6 +505,11 @@ class Section < ApplicationRecord
       num_students = unique_students.size
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+      primary_instructor = {
+        email: teacher.email,
+        name: teacher.name,
+        ltiRosterSyncEnabled: teacher&.properties&.[]("lti_roster_sync_enabled")
+      }
 
       at_risk_student = at_risk_age_gated_student
 
@@ -506,6 +524,7 @@ class Section < ApplicationRecord
         createdAt: created_at,
         teacherName: teacher.name,
         sectionInstructors: serialized_section_instructors,
+        primaryInstructor: primary_instructor,
         linkToProgress: "#{base_url}#{id}/progress",
         assignedTitle: title,
         linkToAssigned: link_to_assigned,
@@ -528,9 +547,9 @@ class Section < ApplicationRecord
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
         script: {
-          id: script_id,
-          name: script.try(:name),
-          project_sharing: script.try(:project_sharing)
+          id: selected_unit&.id,
+          name: selected_unit&.name,
+          project_sharing: selected_unit&.project_sharing
         },
         studentCount: num_students,
         grades: grades,
@@ -539,6 +558,7 @@ class Section < ApplicationRecord
         students: include_students ? unique_students.map(&:summarize) : nil,
         restrict_section: restrict_section,
         is_assigned_csa: assigned_csa?,
+        is_assigned_single_unit_course: unit_group&.single_unit_course?,
         # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
         code_review_expires_at: code_review_expires_at,
@@ -630,14 +650,27 @@ class Section < ApplicationRecord
     script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
-  def assigned_gen_ai?
-    [
-      'exploring-gen-ai1-2024',
-      'exploring-gen-ai2-2024',
-      'foundations-gen-ai-2024',
-      'customizing-llms-2024'
-    ].include?(script&.name) ||
-      unit_group&.name == 'exploring-gen-ai-2024'
+  def assigned_ai_chat?
+    # Our generative AI courses have scripts that can be assigned individually,
+    # whereas CS and AI Foundations (CSAIF) does not.
+    gen_ai_scripts = %w[
+      exploring-gen-ai1-2024
+      exploring-gen-ai2-2024
+      foundations-gen-ai-2024
+      customizing-llms-2024
+      customizing-llms-latm-pilot
+    ]
+    gen_ai_course = 'exploring-gen-ai-2024'
+
+    csaif_courses = %w[
+      computer-systems-and-devices-2024
+      programming-fundamentals-2024
+      programming-fundamentals-aitutor-2024
+      networks-and-the-internet-2024
+    ]
+
+    gen_ai_scripts.include?(script&.name) ||
+      (csaif_courses + [gen_ai_course]).include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)

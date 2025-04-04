@@ -1,0 +1,52 @@
+name 'csaif_pl_course_overview_l4-cs-devices'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computer Systems and Devices Curriculum Overview
+ 
+#### This unit introduces students to AI and computing systems, emphasizing how they process information, integrate with emerging technologies, and impact society.
+
+#### Through hands-on activities and discussions, students design and troubleshoot systems, analyze AI’s ethical implications, and apply human-centered design to create equitable, technology-driven solutions.
+
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li> Explain how AI and computing systems process information and interact with hardware and software.</li>&#8201;
+    <li> Design, troubleshoot, and optimize computing systems while exploring emerging technologies like IoT and robotics.</li>&#8201;
+    <li> Design, troubleshoot, and optimize computing systems while exploring emerging technologies like IoT and robotics.</li>&#8201;
+    <li> Apply human-centered design principles to develop AI-driven solutions for real-world problems.</li><br>
+    <li> Critically evaluate AI-generated outputs for accuracy, reliability, and potential biases.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/39c4021c9dc61fc1544c823039aed657-image-1741880050858.png" 
+         alt="Icon with computer and gears" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+#### <b> Explore the Unit <a href = "LINKLINKLINKLINK" target = "blank" rel = "noopener noreferrer"> here </a></b>
+
+<div style="clear:both;"></div>
+
+## Unit Calendar 
+
+#### Here is a quick overview of the lessons in this unit. 
+
+#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+
+#### Check out the <a href="https://levelbuilder-studio.code.org/s/pf-aitutor-pilot-content-2024" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+
+*** needs the correct calendar
+
+<p align="center">
+
+<img src="https://images.code.org/075430f6f244afc930aa6f0398f07659-image-1741375452584.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+</p>
+
+MARKDOWN

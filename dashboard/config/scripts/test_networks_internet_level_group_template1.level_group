@@ -1,0 +1,10 @@
+name 'test-networks-internet-level-group-template1'
+
+submittable 'false'
+anonymous 'false'
+
+page
+text 'test-networks-internet-markdown-level-group-template1'
+level 'test-networks-internet-fr-template1'
+level 'test-networks-internet-fr-template2'
+level 'test-networks-internet-fr-template3'

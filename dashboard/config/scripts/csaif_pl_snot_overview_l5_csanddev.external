@@ -1,0 +1,73 @@
+name 'csaif_pl-SNOT-overview-L5-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The SNOT Troubleshooting Strategy
+
+
+<img src="https://images.code.org/52df44bc304a4f077d318253d2b49bdd-image-1742233885762.png" alt="laptop with screwdiver symbolizing troubleshooting" style="border-radius:10px; float: right; ; height: 100px; margin: 20px 20px 0px 10px; ">
+
+## Troubleshooting
+
+#### Troubleshooting is a form of problem-solving that involves using a logical and systematic search for the source of a problem.
+
+
+<div style="clear:both;"></div>
+
+---
+
+## Steps for SNOT
+
+#### The SNOT Strategy provides a structured approach for troubleshooting problems, helping students develop independence and critical thinking skills when faced with challenges.
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h3><b>Step 1:Self</b></h3>
+  <p style = "font-size:14pt;">
+    Restate the problem and make your best guesses about possible solutions. 
+</p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h3><b>Step 2: Neighbor</b></h3>
+  <p style = "font-size:14pt;">
+    Talk through the problem with someone to share viewpoints and narrow down possibilities.
+</p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h3><b>Step 3: Online Resouces</b></h3>
+  <p style = "font-size:14pt;">
+    Search message boards, technical manuals, FAQs and other online resources to further narrow down possible solutions.
+</p>
+</div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h3><b>Step 4: Technical Expert</b></h3>
+  <p style = "font-size:14pt;">
+    Ask a technical or subject-matter expert that can provide guidance.
+
+</p>
+</div>
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;"><br>
+<p style= "font-size: 14px; ">
+<b>Teacher Tip:</b>
+</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> Having a clear troubleshooting strategy like SNOT encourages students to become problem-solvers instead of immediately seeking help. It builds resilience, promotes collaboration, and teaches them how to find and evaluate reliable resources—an essential skill for coding, data science, and beyond.    
+</p>
+</div>
+
+
+
+
+## Let's try a troubleshooting activity
+
+
+MARKDOWN

@@ -27,6 +27,7 @@ import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBloc
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(function () {
   prepareBlockly();
@@ -151,11 +152,14 @@ function displayDifferentiationChat() {
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
     ReactDOM.render(
-      <AiDiffFloatingActionButton
-        lessonId={lessonId}
-        lessonName={lessonName}
-        unitDisplayName={lessonData['unit']['displayName']}
-      />,
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.LESSON}
+          scriptId={lessonId}
+          scriptName={lessonName}
+          unitDisplayName={lessonData['unit']['displayName']}
+        />
+      </Provider>,
       aiDiffFabMountPoint
     );
   }

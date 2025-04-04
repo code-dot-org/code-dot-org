@@ -1,0 +1,43 @@
+@import 'color.scss';
+
+.settingsDropdown {
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid #54595E;
+  background-color: $light_gray_950;
+  scrollbar-color: $light_gray_200 $light_gray_950;
+  color: $white;
+  width: 400px;
+  text-align: left;
+  vertical-align: top;
+  z-index: 1000;
+  right: 0;
+  padding: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.dropdownRow {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  margin-bottom: 16px;
+}
+
+.dropdownLabel {
+  min-width: 150px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}

@@ -43,5 +43,9 @@ services:
         echo 'db_endpoint_proxy_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
         echo 'db_credential_writer:' &&
         echo '  username: root' &&
-        echo '  password: password'
+        echo '  password: password' &&
+        echo 'cloudfront_key_pair_id: localoverride' &&
+        echo 'cloudfront_private_key: localoverride' &&
+        echo 'slack_bot_token: localoverride' &&
+        echo \"properties_encryption_key: ''\"
       "

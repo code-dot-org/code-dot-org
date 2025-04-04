@@ -28,6 +28,19 @@ FactoryBot.define do
         create(:course_version, :with_unit_group, course_offering: course_offering)
       end
     end
+
+    factory :csp_course_offering do
+      sequence(:key, 'a') {|c| "csp-course-offering-#{c}"}
+      sequence(:display_name, 'a') {|c| "csp-course-offering-#{c}"}
+      assignable {true}
+      grade_levels {"9,10,11,12"}
+
+      trait :with_units do
+        after(:create) do |csp_course_offering|
+          create(:course_version, :with_csp_unit, course_offering: csp_course_offering)
+        end
+      end
+    end
   end
 
   factory :course_version do
@@ -43,6 +56,10 @@ FactoryBot.define do
     trait :with_unit do
       association(:content_root, factory: :script, is_course: true)
     end
+
+    trait :with_csp_unit do
+      association(:content_root, factory: :csp_script, is_course: true)
+    end
   end
 
   factory :unit_group_unit do
@@ -56,6 +73,15 @@ FactoryBot.define do
     instruction_type {"teacher_led"}
     participant_audience {"student"}
     instructor_audience {"teacher"}
+
+    factory :single_unit_course do
+      transient do
+        unit {nil}
+      end
+      after(:create) do |unit_group, evaluator|
+        create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit)), position: 1
+      end
+    end
   end
 
   factory :experiment do
@@ -169,6 +195,13 @@ FactoryBot.define do
         after(:create) do |ai_tutor_access|
           ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
           ai_tutor_access.save
+        end
+      end
+      factory :ai_iteration_tools_user do
+        after(:create) do |ai_iteration_tools_user|
+          ai_iteration_tools_user.permission = UserPermission::AI_TUTOR_ACCESS
+          ai_iteration_tools_user.permission = UserPermission::LEVELBUILDER
+          ai_iteration_tools_user.save
         end
       end
       factory :facilitator do
@@ -488,6 +521,8 @@ FactoryBot.define do
         ao = user.authentication_options.find_by(credential_type: AuthenticationOption::EMAIL)
         ao&.destroy
         user.save
+        # Reload to ensure that further uses of the pre-loaded user don't see the now-destroyed auth option
+        user.reload
       end
     end
 
@@ -495,6 +530,7 @@ FactoryBot.define do
       after(:create) do |user|
         user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
+        user.reload
         lti_user_id = create(:lti_user_identity, user: user)
         user.lti_user_identities << lti_user_id
         auth_id = lti_user_id.lti_integration.issuer + "|" + lti_user_id.lti_integration.client_id + "|" + lti_user_id.subject
@@ -589,6 +625,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -606,6 +643,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -621,6 +659,7 @@ FactoryBot.define do
             oauth_token: 'some-clever-token'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -667,6 +706,11 @@ FactoryBot.define do
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     credential_type {AuthenticationOption::EMAIL}
     authentication_id {SecureRandom.uuid}
+
+    after(:create) do |auth_option|
+      # Ensure that the original user model reloads the auth options list
+      auth_option.user&.reload
+    end
 
     factory :google_authentication_option do
       credential_type {AuthenticationOption::GOOGLE}
@@ -783,6 +827,13 @@ FactoryBot.define do
     trait :with_instructions do
       after(:create) do |level|
         level.properties['long_instructions'] = 'Write a loop.'
+        level.save!
+      end
+    end
+
+    trait :with_starter_code do
+      after(:create) do |level|
+        level.properties['start_blocks'] = 'const isCode = true;'
         level.save!
       end
     end
@@ -1207,6 +1258,13 @@ FactoryBot.define do
       after(:create) do |csf_script_level|
         csf_script_level.script.curriculum_umbrella = 'CSF'
         csf_script_level.save
+      end
+    end
+
+    factory :csp_script_level do
+      after(:create) do |csp_script_level|
+        csp_script_level.script.curriculum_umbrella = 'CSP'
+        csp_script_level.save
       end
     end
 
@@ -2093,11 +2151,19 @@ FactoryBot.define do
     project_id {1}
   end
 
-  factory :aichat_thread do
+  factory :aidiff_thread do
     association :user
     external_id {"1234"}
     llm_version {"dummy_llm"}
     unit_id {1}
     level_id {1}
+  end
+
+  factory :aidiff_message do
+    association :aidiff_thread, factory: :aidiff_thread
+    external_id {"1234"}
+    role {:assistant}
+    content {"Lorem ipsum"}
+    is_preset {false}
   end
 end

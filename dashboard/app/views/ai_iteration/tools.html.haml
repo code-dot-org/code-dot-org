@@ -1,0 +1,7 @@
+:ruby
+    ai_iteration_tools_data = {}
+    ai_iteration_tools_data[:allowed] = current_user.can_use_ai_iteration_tools?
+
+%script{src: webpack_asset_path('js/ai_iteration/tools.js'), data: {aiIterationToolsData: ai_iteration_tools_data.to_json}}
+
+#ai-iteration-tools

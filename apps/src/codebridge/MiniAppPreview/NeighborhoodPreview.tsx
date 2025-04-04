@@ -6,22 +6,59 @@ import {
   MiniApps,
 } from '@codebridge/constants';
 import {findFile} from '@codebridge/utils';
-import React, {useEffect, useMemo} from 'react';
+import {throttle} from 'lodash';
+import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeCell} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
+import {scaleMiniApp} from '../Workspace/outputHelpers';
+
+import moduleStyles from './mini-app-preview.module.scss';
+
+interface NeighborhoodPreviewProps {
+  handleScaling?: boolean;
+}
 
 // Preview panel for the neighborhood mini app.
-const NeighborhoodPreview: React.FunctionComponent = () => {
-  const levelProperties = useAppSelector(state => state.lab.levelProperties);
-  const {source, config} = useCodebridgeContext();
-  const serializedMaze = findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID);
+const NeighborhoodPreview: React.FunctionComponent<
+  NeighborhoodPreviewProps
+> = ({handleScaling}) => {
+  const {source, config, levelProperties} = useCodebridgeContext();
+  const serializedMaze = findFile(
+    source,
+    MAZE_FILE_NAME,
+    DEFAULT_FOLDER_ID
+  )?.contents;
   const dispatch = useAppDispatch();
-  const isVertical = config.activeGridLayout === 'vertical';
+  const isVertical = config.activeLayout === 'vertical';
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const scaleNeighborhood = useCallback(() => {
+    const width = containerRef.current?.clientWidth || DEFAULT_MINI_APP_SIZE;
+    const height = containerRef.current?.clientHeight || DEFAULT_MINI_APP_SIZE;
+    scaleMiniApp(height, width);
+  }, []);
+
+  const throttledScaleNeighborhood = useMemo(
+    () => throttle(scaleNeighborhood, 30),
+    [scaleNeighborhood]
+  );
+
+  // If handleScaling is true, scale neighborhood on load, and on resize.
+  useEffect(() => {
+    if (handleScaling) {
+      throttledScaleNeighborhood();
+      window.addEventListener('resize', throttledScaleNeighborhood);
+      return () =>
+        window.removeEventListener('resize', throttledScaleNeighborhood);
+    }
+  }, [throttledScaleNeighborhood, handleScaling]);
 
   const neighborhood = useMemo(() => {
     const neighborhoodRef = new Neighborhood(
@@ -55,8 +92,8 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       return;
     }
 
-    const mazeContents = serializedMaze?.contents
-      ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
+    const mazeContents = serializedMaze
+      ? (JSON.parse(serializedMaze) as MazeCell[][])
       : undefined;
 
     // Combine the serialized maze from the project with the level properties.
@@ -77,22 +114,6 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       () => {},
       () => {}
     );
-
-    // The vertical version of the mini app is a static size for now,
-    // so we can hard-code the css. The horizontal version is resizable,
-    // and the css is handled by WorkspaceAndOutput.
-    if (isVertical) {
-      $('#visualization').css({
-        height: '400px',
-        width: '400px',
-      });
-
-      $('#svgMaze').css({
-        transform: 'scale(0.5)',
-        'transform-origin': '0 0',
-        position: 'absolute',
-      });
-    }
   }, [
     dispatch,
     levelProperties,
@@ -103,7 +124,9 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
   ]);
 
   return (
-    <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
+    <div ref={containerRef} className={moduleStyles.miniAppContainer}>
+      <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
+    </div>
   );
 };
 

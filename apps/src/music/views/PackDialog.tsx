@@ -1,3 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -8,9 +11,6 @@ import React, {
 } from 'react';
 import {FocusOn} from 'react-focus-on';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';

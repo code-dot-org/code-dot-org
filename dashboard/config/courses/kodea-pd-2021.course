@@ -1,0 +1,21 @@
+{
+  "name": "kodea-pd-2021",
+  "script_names": [
+    "kodea-pd-2021"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "kodea-pd-2021",
+    "pilot_experiment": "csf-online-pd-kodea",
+    "version_year": "2021"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

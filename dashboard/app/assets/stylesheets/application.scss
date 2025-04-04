@@ -21,8 +21,8 @@
  *= require_directory ./lti
  *
  * Shared
- *= require barlow-semi-condensed-font
- *= require fonts/metropolis
+ *= require fonts/barlow-semi-condensed
+ *= require fonts/figtree
  *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
@@ -76,10 +76,21 @@ body.oceans-blue {
 
 body.music-black, body.background-dark {
   background-color: $dark_black;
+  color: $neutral_light;
 }
 
 body.background-dark, body.background-light {
-  overscroll-behavior: none;
+  .header-wrapper .header {
+    position: fixed;
+    z-index: 1;
+  }
+}
+
+// For modern Lab2 labs, prevent the entire body from scrolling.
+// All content is typically displayed on the page at once, and
+// internal components manage their own scroll behavior.
+body:has(#lab2-container) {
+  overflow: hidden;
 }
 
 h1 {
@@ -4189,12 +4200,13 @@ a {
   .clickable-text {
     cursor: pointer;
     position: relative;
+    outline-offset: 2px;
 
     &-with-glow {
       animation: clickable-text-glow-keyframes 2s ease-in-out;
 
       &:hover {
-        color: $light_primary_500;
+        color: $light_primary_700;
       }
     }
   }

@@ -1,10 +1,7 @@
 from .exception_key import ExceptionKey
 from .neighborhood_runtime_exception import NeighborhoodRuntimeException
+from .constants import NORTH, SOUTH, EAST, WEST
 
-NORTH = 'north'
-EAST = 'east'
-SOUTH = 'south'
-WEST = 'west'
 VALID_DIRECTIONS = [NORTH, EAST, SOUTH, WEST]
 
 class Direction:

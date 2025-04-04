@@ -1,0 +1,28 @@
+name: "Install & Setup Frontend Directory"
+description: "Setup for the frontend directory"
+
+runs:
+  using: composite
+  steps:
+    - name: Enable Corepack before setting up Node
+      shell: bash
+      run: corepack enable
+
+    - name: Cache turborepo
+      uses: actions/cache@v4
+      with:
+        path: frontend/.turbo
+        key: "${{ runner.os }}-turbo-${{ github.sha }}"
+        restore-keys: |
+          ${{ runner.os }}-turbo-
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: ".nvmrc"
+        cache: "yarn"
+        cache-dependency-path: 'frontend/yarn.lock'
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn install
+      working-directory: ./frontend

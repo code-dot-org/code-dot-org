@@ -129,6 +129,7 @@ export function getSectionRows(state, sectionIds) {
       'grades',
       'providerManaged',
       'hidden',
+      'isAssignedSingleUnitCourse',
     ]),
     assignmentNames: assignmentNames(courseOfferings, sections[id]),
     assignmentPaths: assignmentPaths(courseOfferings, sections[id]),
@@ -148,8 +149,11 @@ export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
   courseVersionName: serverSection.courseVersionName,
-  unitName: serverSection.unitName,
+  unitName: serverSection.is_assigned_single_unit_course
+    ? serverSection.script.name
+    : serverSection.unitName,
   isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
+  isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   loginTypeName: serverSection.login_type_name,
@@ -173,7 +177,9 @@ export const sectionFromServerSection = serverSection => ({
         textToSpeechEnabled: serverSection.course.text_to_speech_enabled,
       }
     : null,
-  unitId: serverSection.unit_id,
+  unitId: serverSection.is_assigned_single_unit_course
+    ? serverSection.script.id
+    : serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
   restrictSection: serverSection.restrict_section,
@@ -183,7 +189,13 @@ export const sectionFromServerSection = serverSection => ({
     : null,
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
-  sectionInstructors: serverSection.section_instructors,
+  sectionInstructors: serverSection.sectionInstructors?.map(instructor => ({
+    id: instructor?.id,
+    status: instructor?.status,
+    instructorEmail: instructor?.instructor_email,
+    instructorName: instructor?.instructor_name,
+  })),
+  primaryInstructor: serverSection.primaryInstructor,
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,
   anyStudentHasProgress: serverSection.any_student_has_progress,

@@ -1,0 +1,21 @@
+{
+  "name": "music-intro-elementary-2024",
+  "script_names": [
+    "music-intro-elementary-2024"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "self_paced",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "music-intro-elementary",
+    "pilot_experiment": "spring-2024-k5-pilot",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

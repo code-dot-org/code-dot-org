@@ -1,8 +1,7 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
-  "created_at": "2024-05-10T00:44:31.000Z",
+  "created_at": "2024-05-16T09:29:48.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -72,9 +71,11 @@
         ]
       }
     ],
+    "thumbnail_url": "https://images.code.org/e9a6bb95b36116a2f41f99d406010e3a-bubblechoice-1.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-09T10:44:31.898-07:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"},{\"changed_at\":\"2024-05-09 10:44:35 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-09T10:44:31.898-07:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"},{\"changed_at\":\"2024-05-09 10:44:35 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-03-24 18:07:49 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

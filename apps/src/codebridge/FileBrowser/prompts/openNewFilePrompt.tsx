@@ -51,7 +51,6 @@ export const openNewFilePrompt = async ({
   newFile({
     fileName,
     folderId,
-    validationFileId: validationFile?.id,
   });
 
   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE);

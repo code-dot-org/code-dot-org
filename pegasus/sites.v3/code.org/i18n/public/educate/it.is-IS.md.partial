@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-Frá og með júlí 2024 munum við uppfæra lágmarksútgáfur sem krafist er fyrir vafra og stýrikerfi. Þó að gömlu útgáfurnar kunni enn að virka munum við ekki geta stutt beiðnir um villuleiðréttingar í eldri útgáfunum.
+Á hverju ári munum við uppfæra lágmarksútgáfur sem krafist er fyrir vafra og stýrikerfi. Þó að gömlu útgáfurnar kunni enn að virka munum við ekki geta stutt beiðnir um villuleiðréttingar í eldri útgáfunum.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Frá og með júlí 2024 munum við uppfæra lágmarksútgáfur sem krafist er f
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Browser júlí '24
         </th>
         <tr>
           <td>Króm 103.x</td>
@@ -71,28 +49,6 @@ Frá og með júlí 2024 munum við uppfæra lágmarksútgáfur sem krafist er f
           Vettvangur
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Vettvangur júlí '24
-        </th>
-        <tr>
           <td>MacOS 10.15</td>
         </tr>
         <tr>
@@ -109,6 +65,52 @@ Frá og með júlí 2024 munum við uppfæra lágmarksútgáfur sem krafist er f
         </tr>
       </table>
     </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '25
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    -->
   </tr>
 </table>
 

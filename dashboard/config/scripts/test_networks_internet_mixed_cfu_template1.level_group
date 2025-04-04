@@ -1,0 +1,11 @@
+name 'test-networks-internet-mixed-cfu-template1'
+title 'Troubleshooting Synthesis'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'test-networks-internet-mc-mixed-cfu-template1'
+level 'test-networks-internet-fr-mixed-cfu-template1'
+
+

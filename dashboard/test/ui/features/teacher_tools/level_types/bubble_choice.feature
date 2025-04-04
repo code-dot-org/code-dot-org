@@ -1,4 +1,6 @@
 Feature: BubbleChoice
+  @no_safari
+  @no_mobile
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 
@@ -40,6 +42,8 @@ Feature: BubbleChoice
     And I wait for 4 seconds
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
 
+  # Mobile re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1752
+  @no_mobile
   @no_firefox
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
@@ -109,7 +113,7 @@ Feature: BubbleChoice
     And I wait until element "#ui-close-dialog" is not visible
 
     # Go to another Lab2 level (panels)
-    And I click selector ".progress-bubble:nth(5)"
+    And I click selector ".progress-bubble:eq(5)"
     And I wait until element "#lab2-panels" is visible
     And check that the url contains "/s/allthethings/lessons/52/levels/6"
 

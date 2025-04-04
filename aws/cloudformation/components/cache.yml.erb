@@ -1,4 +1,4 @@
-<% cache_node_type = rack_env?(:production) ? 'cache.r3.large' : 'cache.t2.micro' -%>
+<% cache_node_type = rack_env?(:production) ? 'cache.r5.large' : 'cache.t2.micro' -%>
   GeocoderSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
@@ -7,7 +7,7 @@
   GeocoderGroup:
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
-      ReplicationGroupDescription: Geocoder Replication Group
+      ReplicationGroupDescription: <%="Geocoder Replication Group (#{stack_name})" %>
       NumCacheClusters: 3
 <%  if cache_node_type.include? 'cache.t2' -%>
       AutomaticFailoverEnabled: false

@@ -20,11 +20,16 @@ const EVENTS = {
   ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
   LOGIN_PAGE_VISITED: 'Login Page Visited',
   LOGIN_PAGE_CREATE_ACCOUNT_CLICKED: 'Login Page Create Account Button Clicked',
+  LOGIN_PAGE_SIGN_IN_CLICKED: 'Login Page Sign In Button Clicked',
+  LOGIN_PAGE_OAUTH_CLICKED: 'Login Page OAuth Button Clicked',
+  LOGIN_PAGE_COURSE_BLOCK_CLICKED: 'Login Page Course Block Clicked',
   CURRICULUM_FREE_DIALOG_BUTTON_CLICKED:
     'Curriculum Free Dialog Button Clicked',
   LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
+  SECTION_SETUP_STARTED: 'Section Setup Started',
+  LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
 
   // School Association
   // Update School Info Dialog
@@ -105,6 +110,11 @@ const EVENTS = {
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
+  WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
+    'Workshop Add Session to Calendar Clicked',
+
+  // Workshop session attendance
+  WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',
 
   // PD Application flow
   TEACHER_APP_VISITED_EVENT: '6-12 Teacher Application Visited',
@@ -284,6 +294,8 @@ const EVENTS = {
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
   AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
+  AI_DIFF_FEEDBACK_EVENT: 'AI Differentiation Feedback Event',
+  AI_DIFF_CHAT_TOGGLED: 'AI Differentiation Chat Toggled on/off',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -291,6 +303,7 @@ const EVENTS = {
   AI_TUTOR_CHAT_EVENT: 'AI Tutor was asked a question',
   AI_TUTOR_SUGGESTED_PROMPT_NONE: 'None - general chat',
   AI_TUTOR_SUGGESTED_PROMPT_COMPILATION: 'Compilation',
+  AI_TUTOR_SUGGESTED_PROMPT_GENERIC_HELP: 'Generic Help',
   AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
@@ -426,6 +439,29 @@ const EVENTS = {
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
 
+  // New Teacher Homepage
+  NEW_TEACHER_HOMEPAGE_VISITED: 'New Teacher Homepage Visited',
+  SECTION_LIST_TEACHING_TOGGLE_CLICKED:
+    'Class Sections Teaching Toggle Clicked',
+  SECTION_LIST_ARCHIVE_TOGGLE_CLICKED: 'Class Sections Archive Toggle Clicked',
+  SECTION_CARD_CLASS_CODE_CLICKED: 'Section Card Class Code Clicked',
+  SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED:
+    'Section Card Go To Course Button Clicked',
+  SECTION_CARD_JUMP_TO_LESSON_CLICKED: 'Section Card Jump To Lesson Clicked',
+  SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED:
+    'Section Card Jump To Unit Overview Clicked',
+  SECTION_CARD_VIEW_PROGRESS_CLICKED: 'Section Card View Progress Clicked',
+  SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED:
+    'Section Card View Lesson Materials Clicked',
+  SECTION_CARD_SETTINGS_CLICKED: 'Section Card Settings Clicked',
+  SECTION_CARD_ROSTER_CLICKED: 'Section Card Roster Clicked',
+  SECTION_CARD_LOGIN_CARDS_CLICKED: 'Section Card Login Cards Clicked',
+  SECTION_CARD_PRINT_CERTIFICATES_CLICKED:
+    'Section Card Print Certificates Clicked',
+  SECTION_CARD_ARCHIVE_CLICKED: 'Section Card Archive Clicked',
+  SECTION_CARD_DELETE_CLICKED: 'Section Card Delete Clicked',
+  SECTION_CARD_RESTORE_CLICKED: 'Section Card Restore Clicked',
+
   // Student Homepage
   STUDENT_HOMEPAGE_VISITED: 'Student Homepage Visited',
 
@@ -440,6 +476,9 @@ const EVENTS = {
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
+  AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
+  AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
@@ -456,6 +495,19 @@ const EVENTS = {
     'Attempted upload of unaccepted file on codebridge',
   CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
 
+  // Codebridge - Backpack events
+  CODEBRIDGE_SAVE_TO_BACKPACK_NEW: 'Save new file to backpack on codebridge',
+  CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack on codebridge',
+  CODEBRIDGE_SAVE_TO_BACKPACK_RENAME:
+    'Save renamed file to backpack on codebridge',
+  CODEBRIDGE_DELETE_FROM_BACKPACK: 'Delete from backpack on codebridge',
+  CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW:
+    'Import new file from backpack on codebridge',
+  CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE:
+    'Import a file from backpack on codebridge, replacing existing file',
+  CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME:
+    'Import a file from backpack on codebridge, renaming it',
+
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
   CODEBRIDGE_MOVE_CONSOLE: 'Console moved on codebridge',
@@ -467,7 +519,6 @@ const EVENTS = {
   CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
     'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
-  CODEBRIDGE_HELP_TIPS_TOGGLE: 'Toggled to Help and Tips on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
@@ -524,6 +575,11 @@ const EVENTS = {
 
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
+
+  // Lab2
+  LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+
+  // AI Teaching Assistant - Differentiation
 };
 
 const EVENT_GROUP_NAMES = {

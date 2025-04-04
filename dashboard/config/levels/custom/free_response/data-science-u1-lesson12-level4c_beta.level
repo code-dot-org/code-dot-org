@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-01-24T21:48:41.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Step 3: Data Filtering",
+    "long_instructions": "####Describe how you applied filters to your data. What specific subsets of data did you focus on and why? How did filtering the data help you focus your analysis?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_beta"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-24T21:48:41.136+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4c\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4c\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -30,6 +30,7 @@ const sectionRowData = [
     providerManaged: false,
     hidden: false,
     courseOfferingsAreLoaded: true,
+    isAssignedSingleUnitCourse: false,
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: ['/courses/csd', '/s/csd1-2019'],
   },
@@ -44,6 +45,7 @@ const sectionRowData = [
     providerManaged: true,
     hidden: false,
     courseOfferingsAreLoaded: true,
+    isAssignedSingleUnitCourse: false,
     assignmentNames: ['CS Principles'],
     assignmentPaths: ['/courses/csp'],
   },
@@ -85,6 +87,24 @@ const sectionRowData = [
     assignmentNames: [],
     assignmentPaths: [],
   },
+  {
+    id: 6,
+    name: 'sectionF',
+    studentCount: 4,
+    code: 'PQR',
+    courseId: 10,
+    grades: ['10'],
+    loginType: 'email',
+    providerManaged: true,
+    hidden: false,
+    courseOfferingsAreLoaded: true,
+    isAssignedSingleUnitCourse: true,
+    assignmentNames: ['Single Unit Course 2025', 'Single Unit 2025'],
+    assignmentPaths: [
+      '/courses/single-unit-course-2025',
+      '/s/single-unit-2025',
+    ],
+  },
 ];
 
 // Scramble these for the table to start un-ordered
@@ -94,6 +114,7 @@ const scrambledSections = [
   sectionRowData[4],
   sectionRowData[3],
   sectionRowData[1],
+  sectionRowData[5],
 ];
 
 describe('OwnedSectionsTable', () => {
@@ -111,7 +132,7 @@ describe('OwnedSectionsTable', () => {
   });
 
   const DEFAULT_PROPS = {
-    sectionIds: [1, 2, 3, 4, 5],
+    sectionIds: [1, 2, 3, 4, 5, 6],
     sectionRows: sectionRowData,
     onEdit: () => {},
   };
@@ -268,6 +289,22 @@ describe('OwnedSectionsTable', () => {
         sectionRowData[0].assignmentPaths[1]
       )
     ).toBeTruthy();
+
+    // For sections with a single-unit course, show course name only
+    const singleUnitCourseName = screen
+      .getByText(sectionRowData[5].assignmentNames[0])
+      .closest('a');
+    const singleUnitCourseCell = singleUnitCourseName.closest('td');
+    expect(
+      singleUnitCourseName.href.includes(sectionRowData[5].assignmentPaths[0])
+    ).toBeTruthy();
+
+    expect(singleUnitCourseCell).toHaveTextContent(
+      sectionRowData[5].assignmentNames[0]
+    );
+    expect(singleUnitCourseCell.textContent.trim()).toBe(
+      sectionRowData[5].assignmentNames[0]
+    );
   });
 
   it('courseLinkFormatter provides links to teacher dashboard course page if new teacher dashboard experiment is enabled', () => {

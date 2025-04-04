@@ -1,10 +1,10 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';

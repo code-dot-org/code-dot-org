@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-01-22T22:37:59.000Z",
   "level_num": "custom",
@@ -21,7 +20,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "# create new functions that give your characters more actions\n",
+          "contents": "# create new functions that give your characters more actions. Here are some examples.\ndef character_action(character, action):\n    print(character + \" decides to \" + action + \"!\")\n\n# Example Calls:\ncharacter_action(\"Elara the Sorcerer\", \"cast a fire spell\")\ncharacter_action(\"Rex the Hacker\", \"hack into the mainframe\")\ncharacter_action(\"Luna the Cat\", \"find hidden treasure\")",
           "folderId": "0",
           "active": true,
           "open": true
@@ -35,6 +34,7 @@
     "bubble_choice_description": "What else can your character do? ",
     "thumbnail_url": "https://images.code.org/9c1600059639016ccc264aaf1c2f0af2-Screen Shot 2025-01-22 at 2.52.40 PM.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T22:37:59.776+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-choice-gameWorld\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-choice-gameWorld\"},{\"changed_at\":\"2025-01-22 22:41:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:42:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:53:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-22T22:37:59.776+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-choice-gameWorld\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-choice-gameWorld\"},{\"changed_at\":\"2025-01-22 22:41:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:42:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:53:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-20 19:15:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>

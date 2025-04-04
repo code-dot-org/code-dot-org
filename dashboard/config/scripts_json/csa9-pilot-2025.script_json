@@ -13,12 +13,13 @@
       "pilot_experiment": "csa-pilot-2025",
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:15:31 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2025-02-07 20:25:16 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -3002,7 +3003,7 @@
   "resources": [
     {
       "name": "[KEY] Exploring Exam Expectations",
-      "url": "https://docs.google.com/document/d/1kS5ye7NOhH3Vt5bC_H9XxAgPlrBekNtj6clyo4lv0sk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1MgKBDsT7_jDtor2T2_WYf89j0VH7RGzJVZYvXv9E3o0/edit?tab=t.0",
       "key": "_key_exploring_exam_expectations",
       "properties": {
         "audience": "Verified Teacher",
@@ -3123,7 +3124,7 @@
     },
     {
       "name": "Course and Exam Description",
-      "url": "https://docs.google.com/document/d/13plMgDK_6RDMdtAs52nP8R9obQf9i4RM6UsdhD0GnRU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1UXJYtTDf1ezh9xtcfsJOj6qsxnn0cqNJq-pyIQdQCRE/edit?tab=t.0#heading=h.dmg4wiv1dp5",
       "key": "course_and_exam_description",
       "properties": {
         "audience": "Student",
@@ -3148,7 +3149,7 @@
     },
     {
       "name": "Exploring Exam Expectations",
-      "url": "https://docs.google.com/document/d/1EvdhrUznF3Vso_egZc569A85oq4l1L9VPLWPtGcFfUo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/140rF2QC2Z_zNx7g53oyxmrVOJMtae8yAx_LT9-Edywo/edit?tab=t.0",
       "key": "exploring_exam_expectations",
       "properties": {
         "audience": "Student",
@@ -3212,7 +3213,7 @@
     },
     {
       "name": "FRQ Practice - Day 1",
-      "url": "https://docs.google.com/presentation/d/1AhXt1dMeXTr8K2r45_0YuSoAk_TwgV-1bpbHqlGqwyI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1O1hJ_ZFU21UR4y8aC6UjzYc90THdxgZcGO3XBBPBuas/edit?usp=drive_link",
       "key": "frq_practice_-_day_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3224,7 +3225,7 @@
     },
     {
       "name": "FRQ Practice - Day 2",
-      "url": "https://docs.google.com/presentation/d/17mQTAKW_1GajW913RmpzXevxCh2k-UVicDgsORSO4YM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1y8ackOtnZiNzzn1UeGjlrYDH7Gmc5NRgqlwkC9Yge5Y/edit?usp=drive_link",
       "key": "frq_practice_-_day_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3248,7 +3249,7 @@
     },
     {
       "name": "FRQ Pre-Assessment",
-      "url": "https://docs.google.com/presentation/d/1wi6kNZvTY8B2TwwLh888IRDeYPX9OFbToVIycu6ZLEQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1rj0l7iAl_MtJh5B2Y4QLEZaWbOP32V2hT5mv-2vmwhk/edit?usp=drive_link",
       "key": "frq_pre-assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -3273,7 +3274,7 @@
     },
     {
       "name": "FRQ Study Plan",
-      "url": "https://docs.google.com/presentation/d/1uZ1fobCQpJ1KKVDzKJNaHGiQd9GjUmTlxNrUa2KmHhc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1QpOzcfipzyFrfTbFyqt6WvIjMxOj-x-p3kX-n7GNL34/edit?usp=drive_link",
       "key": "frq_study_plan_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3336,7 +3337,7 @@
     },
     {
       "name": "MCQ Practice - Day 1",
-      "url": "https://docs.google.com/presentation/d/1FJb5vViedO_sH-NH3Iqwq0qRUgdWIAezEDxcapZnqT4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/13PCv5ZA4SoXgHbfWJlcLvDDlrbZNfEOOoWY02n4Qqt8/edit?usp=drive_link",
       "key": "mcq_practice_-_day_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3348,7 +3349,7 @@
     },
     {
       "name": "MCQ Practice - Day 2",
-      "url": "https://docs.google.com/presentation/d/1MA5hnHwLD_gjY4umuFwvszzeMt50drDi-kPeRkoQIIs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1PVjC7kWBML19BeUnfrDU1-h-j_vOs20gf4ZpVstTTZA/edit?usp=drive_link",
       "key": "mcq_practice_-_day_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3372,7 +3373,7 @@
     },
     {
       "name": "MCQ Pre-Assessment",
-      "url": "https://docs.google.com/presentation/d/1O3ucv2sT7DdwFXmGQdTdBTJCP-tf9Ty1VZJvrVvc_-8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1cD-QzcPAzUPkL3uuO7DwP_wKXP9aiwN3ka3EgSCbxXQ/edit?usp=drive_link",
       "key": "mcq_pre-assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -3397,7 +3398,7 @@
     },
     {
       "name": "MCQ Study Plan",
-      "url": "https://docs.google.com/document/u/4/d/1gQr19A9ovGHWqK6F8bHklnTWKYLBaaHNYsLdqvBPzsQ/edit",
+      "url": "https://docs.google.com/document/d/1dD6sb2dRvnCY4Q1l8aaOwaRP62N2RaZHfcpMJmLFLGk/edit?tab=t.0",
       "key": "mcq_study_plan",
       "properties": {
         "audience": "Student",
@@ -3410,7 +3411,7 @@
     },
     {
       "name": "MCQ Study Plan",
-      "url": "https://docs.google.com/presentation/d/1Dr5QgE3qHxtLVhb-T3pr1yMX9R8_bNSRGKCLG273pmc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1sd42NZADilSeNtES13_WLDvYQNHhjpKV3HRTMHdSe0I/edit?usp=drive_link",
       "key": "mcq_study_plan_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3422,7 +3423,7 @@
     },
     {
       "name": "Mock FRQ Exam - Day 1",
-      "url": "https://docs.google.com/presentation/d/1GiMe-xGICiKNsPM86MjX3wfyjSWDWuc0MZOk46x7FrM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1In8_AHTKGODs80NA4yegwdI9ppHlH2zsJtRLObKJe8k/edit?usp=drive_link",
       "key": "mock_frq_exam_-_day_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3434,7 +3435,7 @@
     },
     {
       "name": "Mock FRQ Exam - Day 2",
-      "url": "https://docs.google.com/presentation/d/1t0fGuRSC0VEOzvBDlva--jEI9EebQIPV_zvuz0JgdKU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1r845IT97pa0ZiLvSGPfMtImvYoNAUTt7MaPB4p9HJRk/edit?usp=drive_link",
       "key": "mock_frq_exam_-_day_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3446,7 +3447,7 @@
     },
     {
       "name": "Mock FRQ Exam - Day 3",
-      "url": "https://docs.google.com/presentation/d/1ajVIVUsuJp8JexO-7tvrptHiNWFecdBeJQr2Oh_5C3g/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/174dI-WrrQZNo90eX8stIaeZI2Ijt1PjfKKaoSFC_Wro/edit?usp=drive_link",
       "key": "mock_frq_exam_-_day_3",
       "properties": {
         "audience": "Verified Teacher",
@@ -3458,7 +3459,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 1",
-      "url": "https://docs.google.com/presentation/d/1O9O-75_Y1ef5ENE8B-BA-916318K51PGRj4kdkluOjg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1EBigtaW4vU4rvu48qKAChZ5CJr_UAC3GiNCboJMG7n0/edit?usp=drive_link",
       "key": "mock_mcq_exam_-_day_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3470,7 +3471,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 2",
-      "url": "https://docs.google.com/presentation/d/1yVTiex0bHlczXSVeqxDJF4YX72EQ-HUUoMLYPuLsvkk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1QsKjnSzB210PTIoqucR3T9AqMbjkTvjcF7ktOgwY0CQ/edit?usp=drive_link",
       "key": "mock_mcq_exam_-_day_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3482,7 +3483,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 3",
-      "url": "https://docs.google.com/presentation/d/1D01ix7dcSd6haUNT9VPBhbJ1AJ0LfogJRYUiOyXtQEg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ybJATHDhe0WREFFACE9krNObEQNvstlrfmg0jFqXEVY/edit?usp=drive_link",
       "key": "mock_mcq_exam_-_day_3",
       "properties": {
         "audience": "Verified Teacher",
@@ -3494,7 +3495,7 @@
     },
     {
       "name": "The AP CSA Exam",
-      "url": "https://docs.google.com/presentation/d/1xECPozWZr3acpq2SnQPfYI_ne1a2vwYuxMakm9yzFAg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Ht3-pmVpdHQ5GzqDWq3cZQ7pRG64jGbnZajd5W2S5LA/edit?usp=drive_link",
       "key": "the_ap_csa_exam",
       "properties": {
         "audience": "Verified Teacher",
@@ -3502,6 +3503,17 @@
       },
       "seeding_key": {
         "resource.key": "the_ap_csa_exam"
+      }
+    },
+    {
+      "name": "Unit 9 Slides",
+      "url": "https://docs.google.com/presentation/d/1iC55LoVfmtgBXzzO9ATwLJuzyU7XwX8w5So-s0KwmyI/edit?usp=drive_link",
+      "key": "unit_9_slides",
+      "properties": {
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_9_slides"
       }
     }
   ],
@@ -3826,7 +3838,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "unit_9_slides",
+        "script.name": "csa9-pilot-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

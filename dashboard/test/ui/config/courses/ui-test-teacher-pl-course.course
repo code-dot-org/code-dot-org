@@ -1,0 +1,20 @@
+{
+  "name": "ui-test-teacher-pl-course",
+  "script_names": [
+    "ui-test-teacher-pl-course"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "ui-test-teacher-pl-course",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

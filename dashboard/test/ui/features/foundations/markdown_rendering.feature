@@ -20,11 +20,3 @@ Feature: Markdown rendering across the website
     And I wait for the lab page to fully load
     Then I see no difference for "K1 embedded blockly"
     And I close my eyes
-
-  @eyes
-  Scenario: Visiting an External level with blockly xml in the Markdown
-    When I open my eyes to test "Blockly in External level"
-    And I am on "http://studio.code.org/s/allthethings/lessons/21/levels/1?noautoplay=true"
-    And I wait to see ".blocklySvg"
-    Then I see no difference for "blockly on External level"
-    And I close my eyes

@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
+import {getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
 import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -203,7 +203,7 @@ const styles = {
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
-  scriptName: getSelectedScriptName(state),
+  scriptName: getSelectedUnitName(state),
   participantType:
     state.teacherSections.sections[state.teacherSections.selectedSectionId]
       .participantType,

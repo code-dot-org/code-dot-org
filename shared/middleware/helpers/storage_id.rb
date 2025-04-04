@@ -28,13 +28,15 @@ def destroy_storage_id_cookie
 end
 
 def storage_decrypt(encrypted)
-  $storage_id_decrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |decrypter|
+  Thread.current[:storage_id_decrypter] ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |decrypter|
     decrypter.decrypt
     decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   end
-  (decrypter = $storage_id_decrypter).reset
+  decrypter = Thread.current[:storage_id_decrypter]
+  decrypter.reset
   plain = decrypter.update(encrypted)
   plain << decrypter.final
+  plain
 end
 
 def storage_decrypt_id(encrypted)
@@ -68,13 +70,15 @@ def valid_encrypted_channel_id(encrypted)
 end
 
 def storage_encrypt(plain)
-  $storage_id_encrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |encrypter|
+  Thread.current[:storage_id_encrypter] ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |encrypter|
     encrypter.encrypt
     encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   end
-  (encrypter = $storage_id_encrypter).reset
+  encrypter = Thread.current[:storage_id_encrypter]
+  encrypter.reset
   encrypted = encrypter.update(plain.to_s)
   encrypted << encrypter.final
+  encrypted
 end
 
 def storage_encrypt_id(id)

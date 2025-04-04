@@ -1,7 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import React from 'react';
-
-import {Button} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
 import {LevelPredictSettings} from '../types';
 
@@ -60,6 +59,7 @@ const MultipleChoiceFields: React.FunctionComponent<
     return null;
   }
 
+  const solutions = predictSettings.solution?.split(',') || [];
   return (
     <div>
       <label className={moduleStyles.fieldArea}>
@@ -74,7 +74,7 @@ const MultipleChoiceFields: React.FunctionComponent<
             />
             <Checkbox
               label="Correct answer"
-              checked={predictSettings.solution?.includes(option) || false}
+              checked={solutions.includes(option) || false}
               onChange={handleToggleMultipleChoiceAnswer}
               name={`mark_correct_answer_${index}`}
               value={option}

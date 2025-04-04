@@ -29,4 +29,4 @@ def test_cannot_create_invalid_grid():
         Grid([[wall_grid_square, passable_grid_square], [obstacle_grid_square]])
         assert False
     except NeighborhoodRuntimeException as e:
-        assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID: Grid is not a square"
+        assert str(e) == "INVALID_GRID: Grid is not a square"

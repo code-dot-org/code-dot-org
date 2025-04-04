@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
 import React, {useState, useCallback, useMemo} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './user-message-editor.module.scss';

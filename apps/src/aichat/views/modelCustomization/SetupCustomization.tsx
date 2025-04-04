@@ -1,17 +1,17 @@
+import Button from '@code-dot-org/component-library/button';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import Slider, {SliderProps} from '@code-dot-org/component-library/slider';
 import classNames from 'classnames';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
-import Slider, {SliderProps} from '@cdo/apps/componentLibrary/slider/Slider';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../../constants';
 import aichatI18n from '../../locale';
-import {setAiCustomizationProperty} from '../../redux/aichatRedux';
+import {setAiCustomizationProperty} from '../../redux';
 
 import CompareModelsDialog from './CompareModelsDialog';
 import {
@@ -112,10 +112,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             onClick={() => setIsShowingModelDialog(true)}
             type="secondary"
             color="gray"
-            className={classNames(
-              styles.updateButton,
-              styles.compareModelsButton
-            )}
+            className={classNames(styles.compareModelsButton)}
             disabled={readOnlyWorkspace}
           />
         )}
@@ -173,7 +170,12 @@ const SetupCustomization: React.FunctionComponent = () => {
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
           <>
-            <div className={styles.horizontalFlexContainer}>
+            <div
+              className={classNames(
+                styles.horizontalFlexContainer,
+                'uitest-temperature-container'
+              )}
+            >
               <FieldLabel
                 id="temperature"
                 label={aichatI18n.technicalInfoHeader_temperature()}

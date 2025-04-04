@@ -17,7 +17,7 @@
 # An ordered set of levels associated with a single app, e.g. Farmer2
 # also associates an intro video
 
-# Game.name also maps to localized strings, e.g. [data.en.yml]: game: name: 'Unplug1': 'Introduction to Computer Science'
+# Game.name also maps to localized strings, e.g. [data/en.yml]: game: name: 'Unplug1': 'Introduction to Computer Science'
 class Game < ApplicationRecord
   include Seeded
   has_many :levels
@@ -277,6 +277,7 @@ class Game < ApplicationRecord
 
   def use_restricted_songs?
     return false unless [DANCE, MUSIC].include? app
+    return true if CDO.aws_s3_emulated
     dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV.fetch('CI', nil))
   end

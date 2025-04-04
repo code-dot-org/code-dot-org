@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-01-24T21:48:39.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Four Elephant Seals",
+    "display_name": "Four Elephant Seals Data",
+    "long_instructions": "## Data Decisions and Visualizations\r\nTracking data from elephant seals 546, 541, 536, and 528 are displayed in the table. Start exploring how these seals are behaving in different parts of the ocean.\r\n\r\n####[CODAP Link](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FADKLsr14bCQTYmXrbJBy%2Ffile.json)\r\n\r\n## Do This\r\n\r\n### Day 2:\r\n1. Make decisions about your data. \r\n   - For example, do you need to clean it? Do you need to summarize your data with a new attribute and the count() function? \r\n2. Create visualizations that help answer your data question(s).\r\n\r\n### Day 3:\r\n1. Continue making visualizations that will help you answer your data question. \r\n2. Use your visualizations to start figuring out your answer to your data question. \r\n   - What does each visualization tell you about your data and your data question?\r\n   - What insights does each provide?\r\n3. Ensure you have created all the visualizations you need to help support the answer to your data question. \r\n4. Download an image of each visualization you will use to support your answer to your data question.\r\n   - Click on the camera icon in the toolbar on the right side of the visualization. \r\n   - Select “Export PNG Image”\r\n   - Click “Local File” and Rename your image\r\n   - Click “Download” and select a location on your device to save the image to.\r\n\r\n",
+    "bubble_choice_description": "Explore the dataset, make decisions with your data and create visualizations.",
+    "thumbnail_url": "https://images.code.org/e9b2c3f3291f76fd09d1d1d06349037d-seal.png",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_beta"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-24T21:48:39.803+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level2f\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level2f\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

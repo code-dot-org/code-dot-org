@@ -9,8 +9,10 @@ import {Provider} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
 import {getAllBlocks} from './blockly/utils';
@@ -305,9 +307,21 @@ FeedbackUtils.prototype.displayFeedback = function (
     showXButton: !options.hideXButton,
   });
 
+  const levelId = this.studioApp_.config.serverLevelId;
+  const scriptId = this.studioApp_.config.serverScriptId;
+  // We only want to log UserLevelInteractions for units from 2024 onwards.
+  const unitYear = Number(this.studioApp_.config.unitYear);
+
   if (againButton) {
     dom.addClickTouchEvent(againButton, function () {
       feedbackDialog.hide();
+      if (unitYear >= 2024) {
+        logUserLevelInteraction({
+          levelId: levelId,
+          scriptId: scriptId,
+          interaction: UserLevelInteractions.click_keep_working,
+        });
+      }
     });
   }
 
@@ -399,6 +413,13 @@ FeedbackUtils.prototype.displayFeedback = function (
         puzzleRatingUtils.cachePuzzleRating(feedback, {
           script_id: options.response.script_id,
           level_id: options.response.level_id,
+        });
+      }
+      if (unitYear >= 2024) {
+        logUserLevelInteraction({
+          levelId: levelId,
+          scriptId: scriptId,
+          interaction: UserLevelInteractions.click_continue,
         });
       }
       options.onContinue();
