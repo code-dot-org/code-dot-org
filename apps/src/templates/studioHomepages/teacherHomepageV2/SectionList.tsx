@@ -1,8 +1,10 @@
 import {
+  Active,
   closestCenter,
   DndContext,
   DragEndEvent,
   KeyboardSensor,
+  Over,
   PointerSensor,
   useSensor,
   useSensors,
@@ -17,6 +19,7 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
+import _ from 'lodash';
 import React, {useState} from 'react';
 
 import {removeSectionOrThrow} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -36,6 +39,18 @@ interface SectionListProps {
 
 const NO_SECTION_ID = -1;
 
+function moveSection(
+  active: Active,
+  over: Over
+): React.SetStateAction<number[]> {
+  return items => {
+    const oldIndex = items.indexOf(active.id as number);
+    const newIndex = items.indexOf(over.id as number);
+
+    return arrayMove(items, oldIndex, newIndex);
+  };
+}
+
 export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
   const [sectionToDelete, setSectionToDelete] = useState<number>(NO_SECTION_ID);
@@ -46,9 +61,39 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   const [sortableSectionIds, setSortableSectionIds] = useState<number[]>(
     Object.entries(sections)
       .filter(([_id, section]) => section.participantType === 'student')
-      .filter(([_id, section]) => showHiddenOnly === section.hidden)
+      .filter(([_id, section]) => !section.hidden)
       .map(([id, _section]) => Number(id))
   );
+
+  // Hidden sections are not sortable
+  const hiddenSectionIds = React.useMemo(
+    () =>
+      Object.entries(sections)
+        .filter(([_id, section]) => section.participantType === 'student')
+        .filter(([_id, section]) => section.hidden)
+        .map(([id, _section]) => Number(id)),
+    [sections]
+  );
+
+  // Update sortableSectionIds when sections change
+  React.useEffect(() => {
+    const filteredSections = Object.entries(sections)
+      .filter(([_id, section]) => section.participantType === 'student')
+      .filter(([_id, section]) => !section.hidden)
+      .map(([id, _section]) => Number(id));
+
+    const sectionsToAdd = _.difference(filteredSections, sortableSectionIds);
+    const sectionsToRemove = _.difference(sortableSectionIds, filteredSections);
+
+    if (sectionsToAdd.length > 0 || sectionsToRemove.length > 0) {
+      setSortableSectionIds(sectionIds => [
+        ...sectionsToAdd,
+        ...sectionIds.filter(id => !sectionsToRemove.includes(id)),
+      ]);
+    }
+    // We do not need to add/remove sections when the section order changes, only when the sections from redux change
+    // This also prevents flickering when archiving sections
+  }, [sections]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -64,12 +109,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
       const {active, over} = event;
 
       if (over && active.id !== over.id) {
-        setSortableSectionIds(items => {
-          const oldIndex = items.indexOf(active.id as number);
-          const newIndex = items.indexOf(over.id as number);
-
-          return arrayMove(items, oldIndex, newIndex);
-        });
+        setSortableSectionIds(moveSection(active, over));
       }
     },
     [setSortableSectionIds]
@@ -101,6 +141,10 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
       });
   };
 
+  const sectionIdsToShow = showHiddenOnly
+    ? hiddenSectionIds
+    : sortableSectionIds;
+
   return (
     <div>
       <DndContext
@@ -114,7 +158,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
           strategy={verticalListSortingStrategy}
         >
           <ol className={styles.sectionList}>
-            {sortableSectionIds.map(id =>
+            {sectionIdsToShow.map(id =>
               sections[id] ? (
                 <SectionCard
                   id={id}

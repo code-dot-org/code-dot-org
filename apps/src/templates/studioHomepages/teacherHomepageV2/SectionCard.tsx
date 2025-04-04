@@ -49,19 +49,21 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <li className={styles.sectionCardWrapper} ref={setNodeRef} style={style}>
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
-          <Button
-            {...attributes}
-            {...listeners}
-            onClick={() => {}} // Uses attributes and listeners to make the button draggable
-            isIconOnly
-            icon={{iconName: 'grip-vertical'}}
-            color="gray"
-            size="s"
-            type="tertiary"
-            style={{
-              cursor: isDragging ? 'grabbing' : 'grab',
-            }}
-          />
+          {!section.hidden && (
+            <Button
+              {...attributes}
+              {...listeners}
+              onClick={() => {}} // Uses attributes and listeners to make the button draggable
+              isIconOnly
+              icon={{iconName: 'grip-vertical'}}
+              color="gray"
+              size="s"
+              type="tertiary"
+              style={{
+                cursor: isDragging ? 'grabbing' : 'grab',
+              }}
+            />
+          )}
           <div className={styles.sectionCardHeaderText}>
             <Heading5>{section.name}</Heading5>
             <OverlineOneText>
