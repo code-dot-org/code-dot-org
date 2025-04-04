@@ -41,6 +41,9 @@ export const setAndSaveProjectSources = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return dispatch => {
     dispatch(projectSlice.actions.setProjectSource(projectSources));
+    dispatch(
+      projectSlice.actions.setLastSavedLabConfig(projectSources.labConfig)
+    );
     if (Lab2Registry.getInstance().getProjectManager()) {
       Lab2Registry.getInstance()
         .getProjectManager()
@@ -129,7 +132,6 @@ const projectSlice = createSlice({
   reducers: {
     setProjectSource(state, action: PayloadAction<ProjectSources | undefined>) {
       state.projectSources = action.payload;
-      state.lastSavedLabConfig = action.payload?.labConfig;
     },
     setSource(state, action: PayloadAction<MultiFileSource>) {
       state.projectSources = {
@@ -162,6 +164,9 @@ const projectSlice = createSlice({
       state.hasEdited = false;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
+    },
+    setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
+      state.lastSavedLabConfig = action.payload;
     },
   },
 });

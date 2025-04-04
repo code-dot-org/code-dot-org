@@ -113,22 +113,22 @@ const PythonlabView: React.FunctionComponent<
   const [showProjectPicker, setShowProjectPicker] = useState(false);
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const lastSavedLabConfig = useAppSelector(
+    state => state.lab2Project.lastSavedLabConfig
+  );
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
     if (levelProperties.isProjectLevel) {
+      const labConfigToUse = lastSavedLabConfig || labConfig;
       return (
-        labConfig?.standaloneSettings?.projectType ||
-        labConfig?.miniApp?.name ||
+        labConfigToUse?.standaloneSettings?.projectType ||
+        labConfigToUse?.miniApp?.name ||
         'console'
       );
     }
     return undefined;
-  }, [
-    labConfig?.miniApp?.name,
-    labConfig?.standaloneSettings?.projectType,
-    levelProperties.isProjectLevel,
-  ]);
+  }, [labConfig, lastSavedLabConfig, levelProperties.isProjectLevel]);
 
   const levelStartSources = useMemo(() => {
     // For new standalone project levels, we use the standalone start sources map to determine
