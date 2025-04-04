@@ -2,7 +2,7 @@ import Tags from '@code-dot-org/component-library/tags';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/evaluationApi';
+import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 
