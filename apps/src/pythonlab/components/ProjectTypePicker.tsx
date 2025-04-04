@@ -41,7 +41,11 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
         <div id="dsco-dialog-description">
           {(isNeighborhood || isConsole) && (
             <BodyThreeText>
-              {pythonlabI18n.projectPickerReplaceWarning()}
+              <span className={moduleStyles.boldWarning}>
+                {pythonlabI18n.projectPickerReplaceWarning()}
+              </span>
+              <br />
+              {pythonlabI18n.projectPickerReplaceRestoreInfo()}
             </BodyThreeText>
           )}
           <div className={moduleStyles.pickerContainer}>
