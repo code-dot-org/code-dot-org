@@ -1,7 +1,4 @@
-$message-editor-height: 60px;
-
 .textArea {
-    width: 80%;
     max-height: 250px;
     box-sizing: border-box;
     resize: none;
@@ -13,7 +10,6 @@ $message-editor-height: 60px;
     padding: 10px;
     display: flex;
     width: 100%;
-    //height: $message-editor-height;
     box-sizing: border-box;
     gap: 5px;
 }
