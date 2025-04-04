@@ -7,8 +7,12 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const isSignedOut = getScriptData('isSignedOut');
+  const inStrictPasswordCountry = getScriptData('inStrictPasswordCountry');
   ReactDOM.render(
-    <LoginTypeSelection isSignedOut={isSignedOut} />,
+    <LoginTypeSelection
+      isSignedOut={isSignedOut}
+      inStrictPasswordCountry={inStrictPasswordCountry}
+    />,
     document.getElementById('login-type-selection')
   );
 });

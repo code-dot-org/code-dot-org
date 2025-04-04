@@ -138,6 +138,9 @@ class User < ApplicationRecord
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
 
+  # Countries that require a 14 character password minimum
+  STRICT_PASSWORD_COUNTRIES = %w[AU NZ RD].freeze
+
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # When adding a new version, append to the end of the array
@@ -227,6 +230,7 @@ class User < ApplicationRecord
     :data_transfer_agreement_required,
     :raw_token,
     :child_users,
+    :sign_up_country
   )
 
   ## Association Macros
@@ -386,6 +390,7 @@ class User < ApplicationRecord
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
+  validates_length_of       :password, within: 14..128, if: ->(user) {Services::User::PasswordChecker.requires_strict_password?(user)}
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}

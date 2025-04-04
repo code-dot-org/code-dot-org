@@ -33,11 +33,19 @@ describe('LoginTypeSelection', () => {
     sessionStorage.clear();
   });
 
-  function renderDefault(userType: string | null = 'student') {
+  function renderDefault(
+    userType: string | null = 'student',
+    inStrictPasswordCountry: boolean = false
+  ) {
     if (userType) {
       sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
     }
-    render(<LoginTypeSelection isSignedOut={true} />);
+    render(
+      <LoginTypeSelection
+        isSignedOut={true}
+        inStrictPasswordCountry={inStrictPasswordCountry}
+      />
+    );
   }
 
   it('redirects user back to account type page if they have not selected account type', async () => {
@@ -102,7 +110,7 @@ describe('LoginTypeSelection', () => {
     screen.getByText(locale.email_address());
     screen.getByText(locale.password());
     screen.getByText(locale.confirm_password());
-    screen.getByText(locale.minimum_six_chars());
+    screen.getByText(locale.minimum_num_chars({minChars: '6'}));
 
     // Renders button that sends the user to the Finish Account page
     screen.getByRole('button', {name: locale.create_my_account()});
@@ -474,5 +482,13 @@ describe('LoginTypeSelection', () => {
       fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
     });
     expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe('invalidEmail');
+  });
+
+  it('user who is a teacher and in a strict password country sees min 14 character password required', async () => {
+    await waitFor(() => {
+      renderDefault('teacher', true);
+    });
+
+    screen.getByText(locale.minimum_num_chars({minChars: '14'}));
   });
 });

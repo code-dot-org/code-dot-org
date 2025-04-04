@@ -50,7 +50,8 @@ const getUserType = () => {
 
 const LoginTypeSelection: React.FunctionComponent<{
   isSignedOut: boolean;
-}> = ({isSignedOut}) => {
+  inStrictPasswordCountry: boolean;
+}> = ({isSignedOut, inStrictPasswordCountry}) => {
   const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
@@ -70,6 +71,7 @@ const LoginTypeSelection: React.FunctionComponent<{
     ? studio('/users/sign_up/finish_teacher_account')
     : studio('/users/sign_up/finish_student_account');
   cookies.set(SIGN_UP_USER_TYPE, userType, {path: '/'});
+  const minPasswordLength = isTeacher && inStrictPasswordCountry ? '14' : '6';
 
   useEffect(() => {
     async function getToken() {
@@ -174,6 +176,7 @@ const LoginTypeSelection: React.FunctionComponent<{
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: userType,
       },
     };
     try {
@@ -368,7 +371,9 @@ const LoginTypeSelection: React.FunctionComponent<{
                   className={passwordIconClass}
                   iconName={passwordIcon}
                 />
-                <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
+                <BodyThreeText>
+                  {locale.minimum_num_chars({minChars: minPasswordLength})}
+                </BodyThreeText>
               </div>
             </div>
             <div>
