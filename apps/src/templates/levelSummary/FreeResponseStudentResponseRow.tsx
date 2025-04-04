@@ -2,10 +2,7 @@ import Tags from '@code-dot-org/component-library/tags';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {
-  StudentAnswer,
-  StudentWorkEvaluation,
-} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FeedbackToggle from './FeedbackToggle';
@@ -13,18 +10,17 @@ import FeedbackToggle from './FeedbackToggle';
 import styles from './summary.module.scss';
 
 type FreeResponseStudentResponseRowProps = {
-  studentResponse: StudentAnswer | null;
-  studentWorkEvaluation: StudentWorkEvaluation;
+  studentWorkEvaluation: StudentWorkEvaluation | null;
 };
 
 const FreeResponseStudentResponseRow: React.FC<
   FreeResponseStudentResponseRowProps
-> = ({studentResponse, studentWorkEvaluation}) => {
+> = ({studentWorkEvaluation}) => {
   // used to create the tag for the response
   const analysisTag = () => {
     if (
-      studentWorkEvaluation.aiEvaluation === 'great' ||
-      studentWorkEvaluation.aiEvaluation === 'ok'
+      studentWorkEvaluation?.aiEvaluation === 'great' ||
+      studentWorkEvaluation?.aiEvaluation === 'ok'
     ) {
       return (
         <Tags
@@ -43,7 +39,7 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.proficientStudentTag}
         />
       );
-    } else if (studentWorkEvaluation.aiEvaluation === 'needs revision') {
+    } else if (studentWorkEvaluation?.aiEvaluation === 'needs revision') {
       return (
         <Tags
           tagsList={[
@@ -61,7 +57,7 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.needsReviewStudentTag}
         />
       );
-    } else if (studentWorkEvaluation.aiEvaluation === 'No attempt') {
+    } else if (studentWorkEvaluation?.aiEvaluation === 'No attempt') {
       return (
         <Tags
           tagsList={[
@@ -85,15 +81,15 @@ const FreeResponseStudentResponseRow: React.FC<
   return (
     <div className={styles.rowContainer}>
       <BodyThreeText className={styles.aiAnalysisNameColumn}>
-        <strong>{studentResponse?.studentDisplayName}</strong>
+        <strong>{studentWorkEvaluation?.studentDisplayName}</strong>
       </BodyThreeText>
       <BodyThreeText className={styles.aiAnalysisResponseColumn}>
-        {studentResponse?.studentWork}
+        {studentWorkEvaluation?.studentWork}
       </BodyThreeText>
       <div className={styles.aiAnalysisTagColumn}>{analysisTag()}</div>
       <BodyThreeText
         className={styles.aiAnalysisReasoningColumn}
-      >{`${studentWorkEvaluation.aiEvaluation}. ${studentWorkEvaluation.aiReasoning}`}</BodyThreeText>
+      >{`${studentWorkEvaluation?.aiEvaluation}. ${studentWorkEvaluation?.aiReasoning}`}</BodyThreeText>
       <div>
         <FeedbackToggle
           onThumbsUpClick={() => {
