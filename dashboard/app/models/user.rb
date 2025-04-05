@@ -1075,33 +1075,6 @@ class User < ApplicationRecord
     sections_instructed.select(:id).all
   end
 
-  # Is the provided script_level hidden, on account of the section(s) that this
-  # user is enrolled in
-  def script_level_hidden?(script_level)
-    return false if script_level.script.can_be_instructor?(self)
-
-    sections = sections_as_student
-    return false if sections.empty?
-
-    script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
-
-    if script_sections.empty?
-      # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
-      # hide it
-      sections.any? {|s| script_level.hidden_for_section?(s.id)}
-    else
-      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
-      # hides the lesson
-      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
-    end
-  end
-
-  def visible_script_levels(script)
-    script.script_levels.select do |sl|
-      !script_level_hidden?(sl)
-    end
-  end
-
   # Is the given unit hidden for this user (based on the sections that they are in)
   def unit_hidden?(unit)
     return false if unit.can_be_instructor?(self)
