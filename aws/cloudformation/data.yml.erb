@@ -669,13 +669,13 @@ Resources:
           projection.timestamp_folder.interval.unit: "MINUTES"
           projection.timestamp_folder.range: "2024/01/01/00/00,NOW"
           projection.timestamp_folder.type: "date"
-          storage.location.template: "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/${timestamp_folder}"
+          storage.location.template: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/${timestamp_folder}"
           transient_lastDdlTime: "1733787890"
         PartitionKeys:
           - Name: timestamp_folder
             Type: string
         StorageDescriptor:
-          Location: "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org"
+          Location: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org"
           Columns:
             - Name: timestamp
               Type: bigint
