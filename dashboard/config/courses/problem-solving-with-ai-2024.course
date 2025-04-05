@@ -3,12 +3,14 @@
   "script_names": [
     "pswai-pilot-2024"
   ],
-  "published_state": "in_development",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "problem-solving-with-ai",
+    "has_verified_resources": true,
+    "pilot_experiment": "csaif-problem-solving-with-ai-2025-pilot",
     "version_year": "2024"
   },
   "resources": [

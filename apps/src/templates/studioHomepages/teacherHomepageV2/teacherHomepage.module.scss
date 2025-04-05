@@ -38,14 +38,6 @@
   gap: 6px;
 }
 
-.blankAnnouncement {
-  width: 320px;
-  min-width: 320px;
-  height: 600px;
-  background-color: var(--background-brand-purple-light);
-  margin-inline-start: 40px;
-}
-
 // SectionList
 .sectionList {
   display: flex;
@@ -76,6 +68,7 @@
 .sectionCardHeaderLeft {
   display: flex;
   flex-direction: column;
+  max-width: calc(100% - 32px);
 }
 
 .sectionCardHeaderRight {
@@ -84,6 +77,11 @@
 
 .sectionCardHeaderText {
   height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 720px;
+  width: 100%;
 }
 
 .sectionCardCode {
@@ -227,4 +225,127 @@
 
 .emptyStateButtonIcon {
   color: var(--brand-purple-50);
+}
+
+.emptyImage {
+  width: 220px;
+}
+
+// Teacher promotions
+
+.promotions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-inline-start: 40px;
+}
+
+.promotion {
+  position: relative;
+  width: 280px;
+  max-width: 280px;
+  min-height: 150px;
+  max-height: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+
+  &.promotion-gray {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &.promotion-purple {
+    background-color: var(--background-brand-purple-extra-light);
+  }
+
+  &.promotion-blue {
+    background-color: var(--background-info-extra-light);
+  }
+
+  &.promotion-aqua {
+    background-color: var(--background-brand-aqua-light);
+  }
+
+  &.promotion-green {
+    background-color: var(--background-success-light);
+  }
+
+  &.promotion-strawberry {
+    background-color: var(--background-accent-strawberry-light);
+  }
+
+  &.promotion-orange {
+    background-color: var(--background-accent-orange-light);
+  }
+}
+
+.promotionType {
+  margin-bottom: 6px;
+}
+
+.promotionTitle {
+  margin-bottom: 16px;
+}
+
+.promotionImage {
+  width: 280px;
+  min-height: 160px;
+  margin-bottom: 20px;
+}
+
+.promotionPartnerLogo {
+  height: 22px;
+  max-width: 100%;
+  margin-top: 6px;
+  margin-bottom: 20px;
+
+  img {
+    height: 22px;
+  }
+}
+
+.promotionButton {
+  width: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
+}
+
+.imageSkeleton {
+  font-size: 160px;
+}
+
+.staticPromotions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.staticPromotion {
+  border: solid 1px var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  border-radius: 4px;  width: 280px;
+  max-width: 280px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.staticPromotionImage {
+  width: 50px;
+  min-height: 50px;
+  height: fit-content;
+  margin-inline-start: 8px;
 }

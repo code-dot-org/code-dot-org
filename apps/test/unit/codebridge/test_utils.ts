@@ -78,8 +78,8 @@ export const getDefaultCodebridgeContext = () => {
       showFileBrowser: false,
       validMimeTypes: undefined,
       layoutComponents: {
-        horizontal: null,
-        vertical: null,
+        horizontal: () => null,
+        vertical: () => null,
       },
     },
     setProject: () => {},

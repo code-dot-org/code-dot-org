@@ -9,6 +9,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "ai-unit-pilot",
+    "pilot_experiment": "ai-unit-pilot",
     "version_year": "unversioned"
   },
   "resources": [

@@ -3,6 +3,8 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState, useMemo} from 'react';
 import {useNavigate} from 'react-router-dom';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
@@ -55,13 +57,22 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
     }
   }, [section.id, section.unitId]);
 
-  const dropdownOptions = useMemo(() => {
-    const options = [{value: i18n.goToLesson(), text: i18n.goToLesson()}];
-    options.push(...lessonList);
-    return options;
-  }, [lessonList]);
+  const dropdownOptions = useMemo(
+    () => [{value: i18n.jumpTo(), text: i18n.jumpTo()}, ...lessonList],
+    [lessonList]
+  );
 
   const onDropdownChange = (args: React.ChangeEvent<HTMLSelectElement>) => {
+    const jumpToEvent = args.target.value.includes('/lessons/')
+      ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
+      : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED;
+    analyticsReporter.sendEvent(
+      jumpToEvent,
+      {
+        lesson: args.target.value,
+      },
+      PLATFORMS.BOTH
+    );
     if (args.target.value !== 'Go to') {
       if (!section.unitId) {
         const unit = args.target.value.replace('/s/', '');
@@ -83,10 +94,10 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
         <SimpleDropdown
           className={styles.courseContentDropdown}
           name="go-to-lesson-dropdown"
-          labelText={i18n.goToLesson()}
+          labelText={i18n.jumpTo()}
           isLabelVisible={false}
           items={dropdownOptions}
-          selectedValue={i18n.goToLesson()}
+          selectedValue={i18n.jumpTo()}
           size="m"
           dropdownTextThickness="thin"
           onChange={args => onDropdownChange(args)}

@@ -1,0 +1,20 @@
+{
+  "name": "csd3-virtual",
+  "script_names": [
+    "csd3-virtual"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd3-virtual",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

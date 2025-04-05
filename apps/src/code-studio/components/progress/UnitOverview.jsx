@@ -170,10 +170,9 @@ class UnitOverview extends React.Component {
         <div>
           {!this.props.isSingleUnitCourse && this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
-              <a
-                href={this.props.courseLink}
-                style={styles.navLink}
-              >{`< ${this.props.courseTitle}`}</a>
+              <a href={this.props.courseLink} style={styles.navLink}>
+                {`< ${this.props.courseTitle}`}
+              </a>
             </div>
           )}
           {displayRedirectDialog && (

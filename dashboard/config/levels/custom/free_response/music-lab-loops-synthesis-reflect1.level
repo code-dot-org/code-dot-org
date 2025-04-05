@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-04-01T19:39:23.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Reflect",
+    "long_instructions": "What skills did you use today that could be useful in a future career, either in music or computer science?",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-01T19:39:23.286+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-reflection\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-reflection\"},{\"changed_at\":\"2025-04-01 19:46:08 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-01 19:46:26 +0000\",\"changed\":[\"height\",\"placeholder\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

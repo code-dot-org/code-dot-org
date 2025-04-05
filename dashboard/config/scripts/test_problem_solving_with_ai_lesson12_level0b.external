@@ -1,6 +1,7 @@
 name 'test-problem-solving-with-ai-lesson12-level0b'
 title 'AI in Medical Diagnosis'
-description 'description here'
+display_name 'AI In Medical Diagnosis'
+thumbnail_url 'https://images.code.org/afa58913c4b8c18bb94449e3ffaab06c-diagnosis.png'
 
 markdown <<MARKDOWN
 ##AI In Medical Diagnosis

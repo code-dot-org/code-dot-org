@@ -93,14 +93,19 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
     setValidations(newValidations);
   };
 
-  const addValidation = () => {
-    const newValidation: Validation = {
-      key: levelName + '_' + createUuid(),
-      message: '',
-      next: false,
-      conditions: [],
-    };
-    setValidations([...validations, newValidation]);
+  const createNewValidation = (): Validation => ({
+    key: levelName + '_' + createUuid(),
+    message: '',
+    next: false,
+    conditions: [],
+  });
+
+  const prependValidation = () => {
+    setValidations([createNewValidation(), ...validations]);
+  };
+
+  const appendValidation = () => {
+    setValidations([...validations, createNewValidation()]);
   };
 
   return (
@@ -118,6 +123,15 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
         validation set that passes is the one that is displayed, so be sure to
         order your validation sets from most stringent to least.
       </Typography>
+      {validations.length > 0 && (
+        <button
+          type="button"
+          className={moduleStyles.addValidationButton}
+          onClick={prependValidation}
+        >
+          + Add New Validation
+        </button>
+      )}
       {validations.map((validation, index) => {
         return (
           <EditValidation
@@ -134,7 +148,7 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
       <button
         type="button"
         className={moduleStyles.addValidationButton}
-        onClick={addValidation}
+        onClick={appendValidation}
       >
         + Add New Validation
       </button>

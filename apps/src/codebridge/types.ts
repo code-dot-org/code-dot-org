@@ -49,9 +49,9 @@ export type ConfigType = {
   showFileBrowser: boolean;
   validMimeTypes?: string[];
   layoutComponents: {
-    horizontal: React.ReactNode;
-    vertical: React.ReactNode;
-    share?: React.ReactNode;
+    horizontal: React.FunctionComponent<LayoutProps>;
+    vertical: React.FunctionComponent<LayoutProps>;
+    share?: React.FunctionComponent<LayoutProps>;
   };
 };
 
@@ -86,4 +86,8 @@ export interface MazeCell {
   tileType: number;
   value: number;
   assetId: number;
+}
+
+export interface LayoutProps {
+  isProjectLevel?: boolean;
 }

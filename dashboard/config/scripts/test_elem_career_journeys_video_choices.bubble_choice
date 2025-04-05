@@ -1,6 +1,6 @@
 name 'test-elem-career-journeys-video-choices'
 display_name 'Career Exploration'
-description '###Which theme are you most interested in?'
+description '###First choose a theme. Learn about the three careers in the theme.'
 
 sublevels
 level 'test-elem-career-journeys-explore-panels'
