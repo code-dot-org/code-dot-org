@@ -709,6 +709,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@encrypted_level') if CDO.properties_encryption_key.blank?
+  arguments += skip_tag('@cloudfront') if CDO.cloudfront_key.blank?
   arguments
 end
 
