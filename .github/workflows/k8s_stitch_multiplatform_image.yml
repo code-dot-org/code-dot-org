@@ -11,9 +11,6 @@ on:
         description: "Base Docker tag for the multi-platform image"
         required: true
         type: string
-    secrets:
-      GITHUB_TOKEN:
-        required: true
 
 jobs:
   stitch-multi-platform:
