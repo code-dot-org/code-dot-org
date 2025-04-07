@@ -1,7 +1,6 @@
 name 'test-music-lab-sequences-explore-song-choice-level'
 display_name 'Challenge'
 description 'Try some of these additional challenges!'
-uses_lab2
 
 sublevels
 level 'test-music-lab-sequences-explore-song-choice-level-a'

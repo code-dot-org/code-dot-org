@@ -116,4 +116,9 @@ describe('SectionCard', () => {
     renderComponent();
     screen.getByLabelText('Section options dropdown');
   });
+
+  it('renders the SectionAvatar component', () => {
+    renderComponent();
+    screen.getByText('☔');
+  });
 });

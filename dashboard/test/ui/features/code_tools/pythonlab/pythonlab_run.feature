@@ -38,6 +38,5 @@ Scenario: Continue button and progress status shows up correctly
   And I press "uitest-validate-button"
   And I wait until element "#instructions-navigation" is visible
   And element "#instructions-navigation" contains text "Continue"
-  And I wait for 2 seconds
   Then I verify progress in the header of the current page is "perfect" for level 2
   Then I sign out

@@ -82,7 +82,7 @@ const onDeleteClick = (
   onDeleteClickCallback(sectionId);
 };
 
-export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
+const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   section,
   onDeleteClickCallback,
 }) => {
@@ -196,3 +196,5 @@ export const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
     </form>
   );
 };
+
+export default SectionOptionsDropdown;

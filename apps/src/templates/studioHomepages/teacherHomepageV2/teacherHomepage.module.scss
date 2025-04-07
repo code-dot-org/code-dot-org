@@ -1,4 +1,5 @@
 @import 'color';
+@import 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap';
 
 // TeacherHomepage
 .teacherHomepage {
@@ -67,7 +68,14 @@
 
 .sectionCardHeaderLeft {
   display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.sectionCardHeaderLeftText {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: calc(100% - 32px);
 }
 
@@ -328,7 +336,8 @@
 .staticPromotion {
   border: solid 1px var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
-  border-radius: 4px;  width: 280px;
+  border-radius: 4px;
+  width: 280px;
   max-width: 280px;
   padding: 20px;
   display: flex;
@@ -348,4 +357,16 @@
   min-height: 50px;
   height: fit-content;
   margin-inline-start: 8px;
+}
+
+// Section Avatars
+.sectionAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-family: 'Noto Color Emoji', sans-serif;
+  font-size: 32px;
 }

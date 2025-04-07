@@ -9,8 +9,9 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import i18n from '@cdo/locale';
 
-import {SectionCardBody} from './SectionCardBody';
-import {SectionOptionsDropdown} from './SectionOptionsDropdown';
+import SectionAvatar from './SectionAvatar';
+import SectionCardBody from './SectionCardBody';
+import SectionOptionsDropdown from './SectionOptionsDropdown';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -35,20 +36,23 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
-          <Heading5 className={styles.sectionCardHeaderText}>
-            {section.name}
-          </Heading5>
-          <OverlineOneText className={styles.sectionCardCode}>
-            {i18n.classCode()}
-            <a
-              href={`/join/${section.code}`}
-              target="_blank"
-              rel="noreferrer"
-              onClick={onClickClassCode}
-            >
-              {section.code}
-            </a>
-          </OverlineOneText>
+          <SectionAvatar seed={section.id} />
+          <div className={styles.sectionCardHeaderLeftText}>
+            <Heading5 className={styles.sectionCardHeaderText}>
+              {section.name}
+            </Heading5>
+            <OverlineOneText className={styles.sectionCardCode}>
+              {i18n.classCode()}
+              <a
+                href={`/join/${section.code}`}
+                target="_blank"
+                rel="noreferrer"
+                onClick={onClickClassCode}
+              >
+                {section.code}
+              </a>
+            </OverlineOneText>
+          </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
           <SectionOptionsDropdown

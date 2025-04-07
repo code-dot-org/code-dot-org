@@ -1,51 +1,45 @@
 import {useMemo} from 'react';
 
 import Snapshot, {
-  SnapshotProps,
   SnapshotItem,
 } from '@code-dot-org/component-library/cms/snapshot';
 
-export interface CurriculumSnapshotProps extends Omit<SnapshotProps, 'items'> {
+export interface CurriculumSnapshotProps {
+  label: string;
   grades?: string[];
   level?: string[];
   duration?: string[];
   devices?: string[];
   topics?: string[];
-  programmingTools?: string[];
-  professionalLearning?: string[];
+  devTools?: string[];
+  proLearning?: string[];
   accessibility?: string[];
-  languagesSupported?: string[];
+  languages?: string[];
 }
 
 const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
+  label,
   grades,
   level,
   duration,
   devices,
   topics,
-  programmingTools,
-  professionalLearning,
+  devTools,
+  proLearning,
   accessibility,
-  languagesSupported,
-  ...props
+  languages,
 }) => {
-  const initItem = (
-    label: string,
-    iconName: string,
-    content: string[],
-  ): SnapshotItem => ({
-    key: label + iconName,
-    label: label,
-    icon: {iconName},
-    content: content.join(', '),
-  });
-
   const items = useMemo(() => {
     const items: SnapshotItem[] = [];
 
     const addItem = (label: string, iconName: string, content?: string[]) => {
       if (Array.isArray(content) && content.length)
-        items.push(initItem(label, iconName, content));
+        items.push({
+          key: label + iconName,
+          label: label,
+          icon: {iconName},
+          content: content.join(', '),
+        });
     };
 
     addItem('Grades', 'user', grades);
@@ -53,10 +47,10 @@ const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
     addItem('Duration', 'clock', duration);
     addItem('Devices', 'desktop', devices);
     addItem('Topics', 'book', topics);
-    addItem('Programming Tools', 'screwdriver-wrench', programmingTools);
-    addItem('Professional Learning', 'chalkboard-user', professionalLearning);
+    addItem('Programming Tools', 'screwdriver-wrench', devTools);
+    addItem('Professional Learning', 'chalkboard-user', proLearning);
     addItem('Accessibility', 'universal-access', accessibility);
-    addItem('Languages supported', 'language', languagesSupported);
+    addItem('Languages supported', 'language', languages);
 
     return items;
   }, [
@@ -65,10 +59,10 @@ const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
     duration,
     devices,
     topics,
-    programmingTools,
-    professionalLearning,
+    devTools,
+    proLearning,
     accessibility,
-    languagesSupported,
+    languages,
   ]);
 
   // Show placeholder text until a content entry is added
@@ -81,7 +75,7 @@ const CurriculumSnapshot: React.FunctionComponent<CurriculumSnapshotProps> = ({
     );
   }
 
-  return <Snapshot {...props} items={items} />;
+  return <Snapshot aria-label={label} items={items} />;
 };
 
 export default CurriculumSnapshot;

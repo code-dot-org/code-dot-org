@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-02 19:42:11 UTC",
+    "serialized_at": "2025-04-03 22:04:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -198,7 +198,7 @@
     },
     {
       "key": "Functions and Parameters",
-      "name": "Functions and Parameters",
+      "name": "Functions",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -683,42 +683,42 @@
       }
     },
     {
-      "key": "520262f6-5fd8-4805-ac25-e951e57582c7",
+      "key": "4265e89c-2ed1-4a51-97d1-64afd63a5b05",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "520262f6-5fd8-4805-ac25-e951e57582c7",
+        "lesson_activity.key": "4265e89c-2ed1-4a51-97d1-64afd63a5b05",
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025"
       }
     },
     {
-      "key": "7649ccf7-bccc-4c66-ac03-11153c0243a1",
+      "key": "45835d8c-9298-4fb7-9b3c-9bb021aaa49a",
       "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1",
+        "lesson_activity.key": "45835d8c-9298-4fb7-9b3c-9bb021aaa49a",
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025"
       }
     },
     {
-      "key": "dee6f9a3-4e5d-4c4f-9123-205cfbfb42fd",
+      "key": "4b17b6f8-8dac-41b6-9d9a-478194f5cc76",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "dee6f9a3-4e5d-4c4f-9123-205cfbfb42fd",
+        "lesson_activity.key": "4b17b6f8-8dac-41b6-9d9a-478194f5cc76",
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025"
@@ -2068,252 +2068,55 @@
       }
     },
     {
-      "key": "a51cb89e-bd88-4a52-bf84-9884eaa0b757",
+      "key": "11c30b17-7d00-4a0b-bc46-69769d329e18",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What `Painter` class method do you wish you had last class that would’ve made things easier?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify `Painter` methods that would have made their `Painter` tasks easier, most notably, a `turn_right()` method. The goal is to get students to recognize repetitive tasks in the previous lesson and think about how having a `Painter` method for it would have simplified their programming tasks. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students are struggling to come up with an answer, ask them questions like, *“What tasks did you find yourself repeating over and over?”* or *“What steps were the most frustrating or time-consuming?”* or *If you could create a new `Painter` method, what would it do?”*"
-          }
-        ]
       },
       "seeding_key": {
-        "activity_section.key": "a51cb89e-bd88-4a52-bf84-9884eaa0b757",
-        "lesson_activity.key": "520262f6-5fd8-4805-ac25-e951e57582c7"
+        "activity_section.key": "11c30b17-7d00-4a0b-bc46-69769d329e18",
+        "lesson_activity.key": "4265e89c-2ed1-4a51-97d1-64afd63a5b05"
       }
     },
     {
-      "key": "939b7354-b23d-4915-8403-761b5cf725c6",
+      "key": "b7ce4122-32e7-4dae-9728-d6548cbb4a1c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b7ce4122-32e7-4dae-9728-d6548cbb4a1c",
+        "lesson_activity.key": "45835d8c-9298-4fb7-9b3c-9bb021aaa49a"
+      }
+    },
+    {
+      "key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9",
       "position": 2,
       "properties": {
+        "progression_name": "Exploring Functions"
       },
       "seeding_key": {
-        "activity_section.key": "939b7354-b23d-4915-8403-761b5cf725c6",
-        "lesson_activity.key": "520262f6-5fd8-4805-ac25-e951e57582c7"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9",
+        "lesson_activity.key": "45835d8c-9298-4fb7-9b3c-9bb021aaa49a"
       }
     },
     {
-      "key": "1e2a33ba-c321-4527-b0d5-43c22b8b6d97",
+      "key": "d79b0346-a22c-4104-8cd5-36421b4fee20",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Think back to last class. How did you make the `Painter` turn right when you only had `painter.turn_left()` available?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on how they solved the limitation of only having `painter.turn_left()` in the last class by calling the `turn_left()` method three times in a row. The goal is for students to recognize this as a repetitive task that could be simplified with a function, such as `turn_right()`.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "progression_name": "Problem-Solving with Functions"
       },
       "seeding_key": {
-        "activity_section.key": "1e2a33ba-c321-4527-b0d5-43c22b8b6d97",
-        "lesson_activity.key": "520262f6-5fd8-4805-ac25-e951e57582c7"
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20",
+        "lesson_activity.key": "45835d8c-9298-4fb7-9b3c-9bb021aaa49a"
       }
     },
     {
-      "key": "7ae73d85-2676-4b6b-8202-11537a83c256",
+      "key": "64c21600-6daa-4f7f-b921-a4091507e9bf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to predict the program's outcome, then run the program to compare their predictions to the actual outcome.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students predict that the program will move the painter 3 times, paint blue and then move forward 3 times again. If students are stuck, ask guiding questions like, \"What’s happening inside the `move_fast()` function?\" Or \"How is this different from the `Painter` methods you’ve used before?\" ",
-        "duration": "5",
-        "name": "Predict",
-        "progression_name": "Predict and Run",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Allowing students to look at the code in pairs can help them synthesize what they are learning by articulating their thoughts to each other, and hearing multiple perspectives. "
-          }
-        ]
       },
       "seeding_key": {
-        "activity_section.key": "7ae73d85-2676-4b6b-8202-11537a83c256",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "7b8b7711-a3a9-4662-a54d-596a9eeca863",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7b8b7711-a3a9-4662-a54d-596a9eeca863",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "405e8137-5b1d-4f24-ac27-d668259dae0e",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about the code in this program? What do you wonder about the code in this program?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to ensure students notice the syntax used to define a function and the function call. Student should also notice that the `move_fast()` function call does **not **use dot notation like the `Painter` class methods they have been using, like `painter.move()` or `painter.paint(“blue”)`."
-      },
-      "seeding_key": {
-        "activity_section.key": "405e8137-5b1d-4f24-ac27-d668259dae0e",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "e5f06400-0436-4d18-88f3-f842c19f786b",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that `Painter` class methods are defined in the `Painter` class and use dot notation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *function*. Explain how a key benefit of creating a function is that they make our code more reusable and organized. For example, instead of repeatedly using `painter.turn_left()` three times to turn right, they defined and reused their own `turn_right()` function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that user-defined functions are created by programmers themselves and therefore not associated with a class, so they do not use dot notation.",
-        "duration": "15",
-        "name": "Investigate and Modify",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students are struggling to understand the difference, you can provide additional explanation:\n- Dot notation is used for `Painter` class methods associated with *attributes* and *behaviors* of an object.\n- `Painter` class methods like `painter.move()` use dot notation because they’re tied to the `Painter` object, while student-created functions like `move_fast()` don’t use dot notation because they’re independent, and not created or associated with a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e5f06400-0436-4d18-88f3-f842c19f786b",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "ca05ca62-3ec3-48a2-8a8c-006b85c6877a",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ca05ca62-3ec3-48a2-8a8c-006b85c6877a",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "81ca8d98-170d-481b-ba6c-52b6e392a818",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that when we define functions that we know we will want to reuse, we can save them in a separate file (`custom.py`) instead of rewriting them every time. In Python Lab, we can import `custom.py` as a separate file and use its functions inside `main.py`. This helps keep our code organized and allows us to reuse functions we’ve already written.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>** Do This:** Point out that the function in `custom.py` uses a parameter (`painter`), meaning it can work with different objects. When calling the function in `main.py`, we pass in an actual object (e.g., `bob`). This allows us to reuse the same function for multiple objects without rewriting it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that when we import `custom.py` into Python Lab, we can call its functions inside `main.py` using dot notation. For example, `custom.turn_right(bob)` tells Python that the `turn_right` function is located in `custom.py` and should be used with the object `bob`. Without dot notation, Python wouldn't know where to find `turn_right`.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> Transition:** Direct students to complete Levels 2 through 5.\n- **Level 2:** Students create and test a `turn_right()` function.\n- **Level 3:** Students create and test a `turn_around()` function.\n- **Level 4:** Students refactor repeated code into a `paint_line(color)` function.\n- **Level 5:** Students answer a Check for Understanding question.",
-        "progression_name": "Investigate and Modify"
-      },
-      "seeding_key": {
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "ae95e1d8-764a-422f-9b13-769a209a1db2",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, providing support to those who are stuck. As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Students who successfully complete level 5 will have demonstrated mastery of the following lesson objective:\n- Differentiate between parameters and arguments in a function."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "ae95e1d8-764a-422f-9b13-769a209a1db2",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "489a9ac8-f95b-4d39-83ad-30740c375ee2",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "489a9ac8-f95b-4d39-83ad-30740c375ee2",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "83430165-9f66-40a4-afeb-2b35cf9f923b",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The protocol \"Raise a Righteous Hand\" involves students raising their hands to volunteer information, share experiences, or answer questions based on their unique knowledge or personal experiences. The term \"righteous\" in this context is used to emphasize the value and importance of the information being shared. It suggests that the contributions are genuine, meaningful, and worthy of attention and respect.\n\nPrompt students to share what they discovered about the following aspects:\n- Creating a function\n- Calling a function\n- Parameters\n- Comments"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "83430165-9f66-40a4-afeb-2b35cf9f923b",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "1b5b868d-2de3-43eb-96dd-8fa734202c86",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1b5b868d-2de3-43eb-96dd-8fa734202c86",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "52bfb837-1b43-4d36-a559-302c94ca17bc",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the syntax of defining a function and calling a function and the required indentation for the code within the function definition as they add the information to their unit guide. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *parameter*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *argument*.",
-        "duration": "15",
-        "name": "Practice",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, you can give students a quick check for understanding prompt by asking them to identify which line of code they would need to update if we wanted to paint with pink instead of blue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "52bfb837-1b43-4d36-a559-302c94ca17bc",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "8290da09-4990-461c-b4f4-6b4875f83bd2",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8290da09-4990-461c-b4f4-6b4875f83bd2",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "8a6845cf-5670-44f8-b4d2-62a473450701",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *comment* and explain what they are used for:\n- Explain code’s purpose by describing what the code is meant to do.\n- Improve readability by making your code easier for others (and yourself) to understand later.\n- Support collaboration by allowing team members to quickly understand your code.\nAll of which aid in debugging code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the TAG feedback protocol and explain to students that they will be using this TAG protocol to give and receive feedback on the first practice level 6. Ensure students have a sticky note to write their TAG feedback on for a classmate.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 6 to complete Levels 6 through 7.\n- **Level 6:** Students practice combining functions to create a unique pattern and will give TAG feedback to a peer.\n- **Level 7:** Students choose a Neighborhood layout and write a program using the functions they’ve created to complete a task efficiently",
-        "progression_name": "Practice",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Students who successfully complete these levels will have demonstrated mastery of the following lesson objectives:\n- Define and call functions to simplify repetitive tasks\n- Define functions with parameters to make code reusable and flexible.\n- Differentiate between parameters and arguments in a function\n- Writing descriptive comments to explain the purpose of your functions and code segments"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8a6845cf-5670-44f8-b4d2-62a473450701",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "15a1d887-e6d9-4d19-8435-3954e64a6b07",
-      "position": 14,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "15a1d887-e6d9-4d19-8435-3954e64a6b07",
-        "lesson_activity.key": "7649ccf7-bccc-4c66-ac03-11153c0243a1"
-      }
-    },
-    {
-      "key": "fddb8986-58de-4be7-be4e-af33843c8c67",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to share their thoughts on the Question of the Day with their small group before adding their own responses to their Unit Guides.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Answers to the question of the day can be used to formatively asses the following lesson objectives:\n- Define and call functions to simplify repetitive tasks\n- Define functions with parameters to make code reusable and flexible.\n\nLook for student answers to include how functions reduce repetition by grouping tasks into reusable code blocks and how parameters make functions flexible by allowing different inputs, such as using one function to paint multiple colors. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fddb8986-58de-4be7-be4e-af33843c8c67",
-        "lesson_activity.key": "dee6f9a3-4e5d-4c4f-9123-205cfbfb42fd"
+        "activity_section.key": "64c21600-6daa-4f7f-b921-a4091507e9bf",
+        "lesson_activity.key": "4b17b6f8-8dac-41b6-9d9a-478194f5cc76"
       }
     },
     {
@@ -4621,6 +4424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level1_2025-launch"
+        ],
         "progression": "Exploring Variables"
       },
       "bonus": false,
@@ -4643,6 +4449,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level2_2025-launch"
+        ],
         "progression": "Exploring Variables"
       },
       "bonus": false,
@@ -4665,6 +4474,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level3_2025-launch"
+        ],
         "progression": "Exploring Variables"
       },
       "bonus": false,
@@ -4687,6 +4499,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level4_2025-launch"
+        ],
         "progression": "Exploring Variables"
       },
       "bonus": false,
@@ -4709,6 +4524,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level5_2025-launch"
+        ],
         "progression": "Exploring Variables"
       },
       "bonus": false,
@@ -4731,6 +4549,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level6_2025-launch"
+        ],
         "progression": "Exploring Variables"
       },
       "bonus": false,
@@ -4753,6 +4574,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level7_2025-launch"
+        ],
         "progression": "Exploring Variables"
       },
       "bonus": false,
@@ -4775,6 +4599,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level8_2025-launch"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4797,6 +4624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-level9_2025-launch"
+        ],
         "progression": "My Life, My Variables"
       },
       "bonus": false,
@@ -4819,6 +4649,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level1_2025-launch"
+        ],
         "progression": "Meet the Painter"
       },
       "bonus": false,
@@ -4841,6 +4674,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level2_2025-launch"
+        ],
         "progression": "Meet the Painter"
       },
       "bonus": false,
@@ -4863,6 +4699,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level3_2025-launch"
+        ],
         "progression": "Meet the Painter"
       },
       "bonus": false,
@@ -4885,6 +4724,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level4_2025-launch"
+        ],
         "progression": "Meet the Painter"
       },
       "bonus": false,
@@ -4907,6 +4749,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level5_2025-launch"
+        ],
         "progression": "Meet the Painter"
       },
       "bonus": false,
@@ -4929,6 +4774,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level6_2025-launch"
+        ],
         "progression": "Meet the Painter"
       },
       "bonus": false,
@@ -4951,6 +4799,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level7_2025-launch"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -4973,6 +4824,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level8_2025-launch"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -4995,6 +4849,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level9_2025-launch"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5017,6 +4874,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level10_2025-launch"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5039,6 +4899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level11_2025-launch"
+        ],
         "progression": "Painter Challenges"
       },
       "bonus": false,
@@ -5061,6 +4924,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level12_2025-launch"
+        ],
         "progression": "Painter Challenges"
       },
       "bonus": false,
@@ -5083,173 +4949,152 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level1_2025"
-        ],
-        "progression": "Predict and Run"
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level1_2025"
+          "programming-fundamentals-lesson6-level1_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "7ae73d85-2676-4b6b-8202-11537a83c256"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level1_2025"
+        "programming-fundamentals-lesson6-level1_2025-launch"
       ]
     },
     {
       "chapter": 41,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level2_2025"
-        ],
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level2_2025"
+          "programming-fundamentals-lesson6-level2_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level2_2025"
+        "programming-fundamentals-lesson6-level2_2025-launch"
       ]
     },
     {
       "chapter": 42,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level3_2025"
-        ],
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level3_2025"
+          "programming-fundamentals-lesson6-level3_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level3_2025"
+        "programming-fundamentals-lesson6-level3_2025-launch"
       ]
     },
     {
       "chapter": 43,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level4_2025"
-        ],
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level4_2025"
+          "programming-fundamentals-lesson6-level4_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level4_2025"
+        "programming-fundamentals-lesson6-level4_2025-launch"
       ]
     },
     {
       "chapter": 44,
       "position": 5,
-      "activity_section_position": 4,
-      "assessment": true,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level5_2025"
-        ],
-        "progression": "Investigate and Modify"
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level5_2025"
+          "programming-fundamentals-lesson6-level5_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level5_2025"
+        "programming-fundamentals-lesson6-level5_2025-launch"
       ]
     },
     {
       "chapter": 45,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level6_2025"
-        ],
-        "progression": "Practice"
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level6_2025"
+          "programming-fundamentals-lesson6-level6_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "8a6845cf-5670-44f8-b4d2-62a473450701"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level6_2025"
+        "programming-fundamentals-lesson6-level6_2025-launch"
       ]
     },
     {
       "chapter": 46,
       "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
+      "activity_section_position": 7,
+      "assessment": true,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level7_2025"
-        ],
-        "progression": "Practice"
+        "progression": "Exploring Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level7_2025"
+          "programming-fundamentals-lesson6-level7_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "8a6845cf-5670-44f8-b4d2-62a473450701"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level7_2025"
+        "programming-fundamentals-lesson6-level7_2025-launch"
       ]
     },
     {
@@ -5258,27 +5103,90 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson6-level8_2025"
-        ],
-        "progression": "Student Survey"
+        "progression": "Problem-Solving with Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level8_2025"
+          "programming-fundamentals-lesson6-level8_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "15a1d887-e6d9-4d19-8435-3954e64a6b07"
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
       },
       "level_keys": [
-        "programming-fundamentals-lesson6-level8_2025"
+        "programming-fundamentals-lesson6-level8_2025-launch"
       ]
     },
     {
       "chapter": 48,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Problem-Solving with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level9_2025-launch"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level9_2025-launch"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Problem-Solving with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level10_2025-launch"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level10_2025-launch"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Problem-Solving with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level11_2025-launch"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level11_2025-launch"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5303,7 +5211,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5328,7 +5236,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5353,7 +5261,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5378,7 +5286,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5403,7 +5311,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5428,7 +5336,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5453,7 +5361,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5478,7 +5386,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5503,7 +5411,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5528,7 +5436,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5553,7 +5461,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 4,
       "assessment": true,
@@ -5578,7 +5486,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5603,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5628,7 +5536,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5653,7 +5561,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5678,7 +5586,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5703,7 +5611,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5728,7 +5636,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -5753,7 +5661,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5778,7 +5686,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5803,7 +5711,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5828,7 +5736,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5853,7 +5761,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5878,7 +5786,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5903,7 +5811,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5928,7 +5836,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5953,7 +5861,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5978,7 +5886,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": 4,
       "assessment": true,
@@ -6003,7 +5911,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6028,7 +5936,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6053,7 +5961,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6078,7 +5986,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6103,7 +6011,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6128,7 +6036,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6153,7 +6061,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6178,7 +6086,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6203,7 +6111,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6228,7 +6136,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6253,7 +6161,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6278,7 +6186,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 91,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6303,7 +6211,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 92,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6328,7 +6236,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 93,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6353,7 +6261,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 94,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6378,7 +6286,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 95,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6403,7 +6311,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 96,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -6428,7 +6336,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 97,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6453,7 +6361,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 98,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -6478,7 +6386,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 99,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6503,7 +6411,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 100,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6528,7 +6436,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 101,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6553,7 +6461,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 102,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6578,7 +6486,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 103,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6603,7 +6511,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 104,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6628,7 +6536,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 105,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6653,7 +6561,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 106,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -6678,7 +6586,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6703,7 +6611,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6728,7 +6636,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6753,7 +6661,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6778,7 +6686,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6803,7 +6711,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6828,7 +6736,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6853,7 +6761,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6878,7 +6786,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 115,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6903,7 +6811,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 116,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -6928,7 +6836,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6953,7 +6861,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6978,7 +6886,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7003,7 +6911,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7028,7 +6936,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7053,7 +6961,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7078,7 +6986,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 123,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7103,7 +7011,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 124,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7128,7 +7036,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7153,7 +7061,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7178,7 +7086,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 127,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7203,7 +7111,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 128,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7228,7 +7136,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 129,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7253,7 +7161,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 130,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7278,7 +7186,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 131,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7303,7 +7211,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 132,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7799,98 +7707,134 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level1_2025",
+        "level.key": "programming-fundamentals-lesson6-level1_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level1_2025"
+          "programming-fundamentals-lesson6-level1_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "7ae73d85-2676-4b6b-8202-11537a83c256"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level2_2025",
+        "level.key": "programming-fundamentals-lesson6-level2_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level2_2025"
+          "programming-fundamentals-lesson6-level2_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level3_2025",
+        "level.key": "programming-fundamentals-lesson6-level3_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level3_2025"
+          "programming-fundamentals-lesson6-level3_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level4_2025",
+        "level.key": "programming-fundamentals-lesson6-level4_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level4_2025"
+          "programming-fundamentals-lesson6-level4_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level5_2025",
+        "level.key": "programming-fundamentals-lesson6-level5_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level5_2025"
+          "programming-fundamentals-lesson6-level5_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81ca8d98-170d-481b-ba6c-52b6e392a818"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level6_2025",
+        "level.key": "programming-fundamentals-lesson6-level6_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level6_2025"
+          "programming-fundamentals-lesson6-level6_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "8a6845cf-5670-44f8-b4d2-62a473450701"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level7_2025",
+        "level.key": "programming-fundamentals-lesson6-level7_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level7_2025"
+          "programming-fundamentals-lesson6-level7_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "8a6845cf-5670-44f8-b4d2-62a473450701"
+        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson6-level8_2025",
+        "level.key": "programming-fundamentals-lesson6-level8_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson6-level8_2025"
+          "programming-fundamentals-lesson6-level8_2025-launch"
         ],
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "15a1d887-e6d9-4d19-8435-3954e64a6b07"
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level9_2025-launch",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level9_2025-launch"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level10_2025-launch",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level10_2025-launch"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level11_2025-launch",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level11_2025-launch"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "d79b0346-a22c-4104-8cd5-36421b4fee20"
       }
     },
     {

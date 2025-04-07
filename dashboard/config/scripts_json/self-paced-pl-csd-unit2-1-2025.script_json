@@ -1,0 +1,2597 @@
+{
+  "script": {
+    "name": "self-paced-pl-csd-unit2-1-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-04 03:41:06 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csd-unit2-1-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Web Development",
+      "name": "Introduction to Web Development",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "Build a Website with HTML",
+      "name": "Build a Website with HTML",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HTML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HTML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "Style a Website with CSS",
+      "name": "Style a Website with CSS",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Style the text of a web page using CSS.\n* Link a CSS style sheet to the web page index.\n* Explore additional properties to style elements on a web page.\n* Utilize Flexbox and div containers to organize a web page.\n\n**Suggested time:** 45 minutes",
+        "student_overview": "**You will:**\n\n* Style the text of a web page using CSS.\n* Link a CSS style sheet to the web page index.\n* Explore additional properties to style elements on a web page.\n* Utilize Flexbox and div containers to organize a web page.\n\n**Suggested time:** 45 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "Consider Roles & Responsibilities in Digital Media",
+      "name": "Consider Roles & Responsibilities in Digital Media",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore how students will work to understand their roles and responsibilities as creators and consumers of digital media.\n* Review key lesson materials to prepare to teach students about their roles and responsibilities on the internet.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Explore how students will work to understand their roles and responsibilities as creators and consumers of digital media.\n* Review key lesson materials to prepare to teach students about their roles and responsibilities on the internet.\n\n**Suggested time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "Unit Wrap Up",
+      "name": "Unit Wrap Up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore end-of-chapter projects. \n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore end-of-chapter projects. \n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f838519d-927a-424b-9fbc-63cbbd1a4f9f",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f838519d-927a-424b-9fbc-63cbbd1a4f9f",
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "ea80e950-f9fe-4af6-9459-799eef46b9b8",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea80e950-f9fe-4af6-9459-799eef46b9b8",
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077",
+      "position": 1,
+      "properties": {
+        "duration": 45
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077",
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "99e24334-9ba8-41b2-9487-e5925eccf388",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99e24334-9ba8-41b2-9487-e5925eccf388",
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    },
+    {
+      "key": "065247ea-756c-4ff9-b420-b04b66bc99ef",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "065247ea-756c-4ff9-b420-b04b66bc99ef",
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a",
+        "lesson_activity.key": "f838519d-927a-424b-9fbc-63cbbd1a4f9f"
+      }
+    },
+    {
+      "key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455",
+      "position": 2,
+      "properties": {
+        "progression_name": "Learning Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455",
+        "lesson_activity.key": "f838519d-927a-424b-9fbc-63cbbd1a4f9f"
+      }
+    },
+    {
+      "key": "efe44b8d-5ddf-4166-82e7-571b9adc9429",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore the First Week of Curriculum"
+      },
+      "seeding_key": {
+        "activity_section.key": "efe44b8d-5ddf-4166-82e7-571b9adc9429",
+        "lesson_activity.key": "f838519d-927a-424b-9fbc-63cbbd1a4f9f"
+      }
+    },
+    {
+      "key": "a0cb9e2d-17e3-4610-a2e7-ab2bc517c73b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0cb9e2d-17e3-4610-a2e7-ab2bc517c73b",
+        "lesson_activity.key": "ea80e950-f9fe-4af6-9459-799eef46b9b8"
+      }
+    },
+    {
+      "key": "19b3388c-33c3-46a4-a06d-2491da9a25be",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is HTML?"
+      },
+      "seeding_key": {
+        "activity_section.key": "19b3388c-33c3-46a4-a06d-2491da9a25be",
+        "lesson_activity.key": "ea80e950-f9fe-4af6-9459-799eef46b9b8"
+      }
+    },
+    {
+      "key": "8eb1ff51-0895-4c71-8330-e184f508615e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore HTML and Web Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e",
+        "lesson_activity.key": "ea80e950-f9fe-4af6-9459-799eef46b9b8"
+      }
+    },
+    {
+      "key": "1297eabb-df41-485c-bc9c-e4f37cc2a622",
+      "position": 4,
+      "properties": {
+        "progression_name": "Add Structure Using HTML"
+      },
+      "seeding_key": {
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622",
+        "lesson_activity.key": "ea80e950-f9fe-4af6-9459-799eef46b9b8"
+      }
+    },
+    {
+      "key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86",
+      "position": 5,
+      "properties": {
+        "progression_name": "Add Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86",
+        "lesson_activity.key": "ea80e950-f9fe-4af6-9459-799eef46b9b8"
+      }
+    },
+    {
+      "key": "5e7cb4d7-7835-43e2-9744-e0e6c632214d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "5e7cb4d7-7835-43e2-9744-e0e6c632214d",
+        "lesson_activity.key": "ea80e950-f9fe-4af6-9459-799eef46b9b8"
+      }
+    },
+    {
+      "key": "aa25d842-95e7-4ca0-8511-10c42dfb086f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa25d842-95e7-4ca0-8511-10c42dfb086f",
+        "lesson_activity.key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077"
+      }
+    },
+    {
+      "key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Style Text with CSS"
+      },
+      "seeding_key": {
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8",
+        "lesson_activity.key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077"
+      }
+    },
+    {
+      "key": "095856ef-4306-4774-bfa1-b24e4760e428",
+      "position": 3,
+      "properties": {
+        "progression_name": "Style Elements with CSS"
+      },
+      "seeding_key": {
+        "activity_section.key": "095856ef-4306-4774-bfa1-b24e4760e428",
+        "lesson_activity.key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077"
+      }
+    },
+    {
+      "key": "2979aec4-92c5-435d-9408-9ca7c710aacb",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using Flexbox"
+      },
+      "seeding_key": {
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb",
+        "lesson_activity.key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077"
+      }
+    },
+    {
+      "key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa",
+      "position": 5,
+      "properties": {
+        "progression_name": "Flexbox Children"
+      },
+      "seeding_key": {
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa",
+        "lesson_activity.key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077"
+      }
+    },
+    {
+      "key": "7be1b8a4-c13b-485e-982b-99c869173a7c",
+      "position": 6,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "7be1b8a4-c13b-485e-982b-99c869173a7c",
+        "lesson_activity.key": "32c9cbe0-4b09-45a0-a4b5-547175a6f077"
+      }
+    },
+    {
+      "key": "e94e3f7a-78bc-4fd3-abcf-03a83823bc7d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e94e3f7a-78bc-4fd3-abcf-03a83823bc7d",
+        "lesson_activity.key": "99e24334-9ba8-41b2-9487-e5925eccf388"
+      }
+    },
+    {
+      "key": "3c93dd98-a1e3-481a-9361-3b82c584ea49",
+      "position": 2,
+      "properties": {
+        "progression_name": "Digital Citizenship"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c93dd98-a1e3-481a-9361-3b82c584ea49",
+        "lesson_activity.key": "99e24334-9ba8-41b2-9487-e5925eccf388"
+      }
+    },
+    {
+      "key": "2748a26b-8120-4ab9-ba97-eda8f7b23457",
+      "position": 3,
+      "properties": {
+        "progression_name": "Intellectual Property"
+      },
+      "seeding_key": {
+        "activity_section.key": "2748a26b-8120-4ab9-ba97-eda8f7b23457",
+        "lesson_activity.key": "99e24334-9ba8-41b2-9487-e5925eccf388"
+      }
+    },
+    {
+      "key": "679c4933-a512-4b33-bf99-908fd5f44cc7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Sources and research"
+      },
+      "seeding_key": {
+        "activity_section.key": "679c4933-a512-4b33-bf99-908fd5f44cc7",
+        "lesson_activity.key": "99e24334-9ba8-41b2-9487-e5925eccf388"
+      }
+    },
+    {
+      "key": "f8143a7a-22af-456d-a7a3-275b0f72f49e",
+      "position": 5,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8143a7a-22af-456d-a7a3-275b0f72f49e",
+        "lesson_activity.key": "99e24334-9ba8-41b2-9487-e5925eccf388"
+      }
+    },
+    {
+      "key": "7b374be6-9e1b-4fc8-9f6d-6d59f960f68c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b374be6-9e1b-4fc8-9f6d-6d59f960f68c",
+        "lesson_activity.key": "065247ea-756c-4ff9-b420-b04b66bc99ef"
+      }
+    },
+    {
+      "key": "9b767505-1edb-4c9f-8445-79d154dd693d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b767505-1edb-4c9f-8445-79d154dd693d",
+        "lesson_activity.key": "065247ea-756c-4ff9-b420-b04b66bc99ef"
+      }
+    },
+    {
+      "key": "b16dbd42-c1aa-4b7e-bb71-9bf778fc3b8f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "b16dbd42-c1aa-4b7e-bb71-9bf778fc3b8f",
+        "lesson_activity.key": "065247ea-756c-4ff9-b420-b04b66bc99ef"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Lesson1Cert_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-Lesson1Cert_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_tools-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Tools"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2-Self-Paced-ProjectPreview_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455"
+      },
+      "level_keys": [
+        "CSD-U2-Self-Paced-ProjectPreview_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the First Week of Curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "efe44b8d-5ddf-4166-82e7-571b9adc9429"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Explore the First Week of Curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "efe44b8d-5ddf-4166-82e7-571b9adc9429"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "a0cb9e2d-17e3-4610-a2e7-ab2bc517c73b"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore HTML and Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U2-SelfPaced-Intro to HTML_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      },
+      "level_keys": [
+        "VPL-CSD-U2-SelfPaced-Intro to HTML_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore HTML and Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore HTML and Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore HTML and Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Structure Using HTML"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Structure Using HTML"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Add Structure Using HTML"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_-csd_CSD-PL_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_-csd_CSD-PL_25"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Structure Using HTML"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD_Lesson2WrapUp_self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "5e7cb4d7-7835-43e2-9744-e0e6c632214d"
+      },
+      "level_keys": [
+        "CSD_Lesson2WrapUp_self-paced-unit2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "aa25d842-95e7-4ca0-8511-10c42dfb086f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-CSS-overview_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "aa25d842-95e7-4ca0-8511-10c42dfb086f"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-CSS-overview_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 9,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 10,
+      "activity_section_position": 8,
+      "assessment": true,
+      "properties": {
+        "progression": "Style Text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Elements with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "095856ef-4306-4774-bfa1-b24e4760e428"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Style Elements with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-StylingElements_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "095856ef-4306-4774-bfa1-b24e4760e428"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-StylingElements_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxOverview_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-FlexboxOverview_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxVideo1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-FlexboxVideo1_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 18,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Flexbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Flexbox Children"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxVideo2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-FlexboxVideo2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 20,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Flexbox Children"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 21,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Flexbox Children"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 22,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Flexbox Children"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 23,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Flexbox Children"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 24,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD_Lesson3WrapUp_self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "7be1b8a4-c13b-485e-982b-99c869173a7c"
+      },
+      "level_keys": [
+        "CSD_Lesson3WrapUp_self-paced-unit2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "e94e3f7a-78bc-4fd3-abcf-03a83823bc7d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-overview_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Digital Citizenship"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview_-csd_CSD-PL-_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "3c93dd98-a1e3-481a-9361-3b82c584ea49"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview_-csd_CSD-PL-_25"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Digital Citizenship"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity_-csd_CSD-PL-_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "3c93dd98-a1e3-481a-9361-3b82c584ea49"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity_-csd_CSD-PL-_25"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Digital Citizenship"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "3c93dd98-a1e3-481a-9361-3b82c584ea49"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intellectual Property"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview_-_CSD-PL_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2748a26b-8120-4ab9-ba97-eda8f7b23457"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview_-_CSD-PL_25"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sources and research"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview_-cs_CSD-PL_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "679c4933-a512-4b33-bf99-908fd5f44cc7"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview_-cs_CSD-PL_25"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sources and research"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd web search video_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "679c4933-a512-4b33-bf99-908fd5f44cc7"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-csd web search video_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Lesson4-Matching_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "f8143a7a-22af-456d-a7a3-275b0f72f49e"
+      },
+      "level_keys": [
+        "CSD-U2SelfPaced-Lesson4-Matching_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD_Lesson4WrapUp_self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "f8143a7a-22af-456d-a7a3-275b0f72f49e"
+      },
+      "level_keys": [
+        "CSD_Lesson4WrapUp_self-paced-unit2_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "7b374be6-9e1b-4fc8-9f6d-6d59f960f68c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2-Mini-ProjectsOverview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9b767505-1edb-4c9f-8445-79d154dd693d"
+      },
+      "level_keys": [
+        "VPL-CSD-Summer-CI-CSD U2-Mini-ProjectsOverview_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9b767505-1edb-4c9f-8445-79d154dd693d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9b767505-1edb-4c9f-8445-79d154dd693d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2_-csd_CSD-PL-24_25"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b16dbd42-c1aa-4b7e-bb71-9bf778fc3b8f"
+      },
+      "level_keys": [
+        "-VPL-CSD-PILOT-summer22-navigation_-csd_CSD-PL-24_25"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-Lesson1Cert_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Lesson1Cert_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9f04d5f3-7f21-4fb6-83de-b530cb433d1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_tools-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_tools-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2-Self-Paced-ProjectPreview_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2-Self-Paced-ProjectPreview_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "c05e2fd6-84d3-4b1f-bfd6-da2a5420f455"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "efe44b8d-5ddf-4166-82e7-571b9adc9429"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Introduction to Web Development",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "efe44b8d-5ddf-4166-82e7-571b9adc9429"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "a0cb9e2d-17e3-4610-a2e7-ab2bc517c73b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U2-SelfPaced-Intro to HTML_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-U2-SelfPaced-Intro to HTML_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Inspector Warm Up_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "8eb1ff51-0895-4c71-8330-e184f508615e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 HTML Adding Paragraphs_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Heading Demo_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_-csd_CSD-PL_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_-csd_CSD-PL_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD-U2 Unordered Lists_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "1297eabb-df41-485c-bc9c-e4f37cc2a622"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Image Tag 1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 Image Tag Inconsistent Spelling_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b4ae6d6a-95b5-4362-95a6-cb10a4863a86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD_Lesson2WrapUp_self-paced-unit2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD_Lesson2WrapUp_self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Build a Website with HTML",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "5e7cb4d7-7835-43e2-9744-e0e6c632214d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "aa25d842-95e7-4ca0-8511-10c42dfb086f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-CSS-overview_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-CSS-overview_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "aa25d842-95e7-4ca0-8511-10c42dfb086f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 text style h1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 text style h3_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 text style size_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD Web Headings Wrong Tag in Rule Set_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2 add file_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "77de6ea0-784a-4f62-bf7c-85ba1b65e2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "095856ef-4306-4774-bfa1-b24e4760e428"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-StylingElements_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-StylingElements_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "095856ef-4306-4774-bfa1-b24e4760e428"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-FlexboxOverview_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxOverview_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-FlexboxVideo1_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxVideo1_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox3_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox4_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Flexbox5_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2979aec4-92c5-435d-9408-9ca7c710aacb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-FlexboxVideo2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxVideo2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren3_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren4_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-FlexboxChildren5_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "88bd6494-225f-49ff-9cf4-c6e9b276c3fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD_Lesson3WrapUp_self-paced-unit2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD_Lesson3WrapUp_self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Style a Website with CSS",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "7be1b8a4-c13b-485e-982b-99c869173a7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-overview_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-overview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "e94e3f7a-78bc-4fd3-abcf-03a83823bc7d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview_-csd_CSD-PL-_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview_-csd_CSD-PL-_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "3c93dd98-a1e3-481a-9361-3b82c584ea49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity_-csd_CSD-PL-_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity_-csd_CSD-PL-_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "3c93dd98-a1e3-481a-9361-3b82c584ea49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "3c93dd98-a1e3-481a-9361-3b82c584ea49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview_-_CSD-PL_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview_-_CSD-PL_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "2748a26b-8120-4ab9-ba97-eda8f7b23457"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview_-cs_CSD-PL_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview_-cs_CSD-PL_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "679c4933-a512-4b33-bf99-908fd5f44cc7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-csd web search video_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd web search video_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "679c4933-a512-4b33-bf99-908fd5f44cc7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U2SelfPaced-Lesson4-Matching_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD-U2SelfPaced-Lesson4-Matching_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "f8143a7a-22af-456d-a7a3-275b0f72f49e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD_Lesson4WrapUp_self-paced-unit2_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "CSD_Lesson4WrapUp_self-paced-unit2_CSD-PL-24_25"
+        ],
+        "lesson.key": "Consider Roles & Responsibilities in Digital Media",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "f8143a7a-22af-456d-a7a3-275b0f72f49e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "7b374be6-9e1b-4fc8-9f6d-6d59f960f68c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-Summer-CI-CSD U2-Mini-ProjectsOverview_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-Summer-CI-CSD U2-Mini-ProjectsOverview_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9b767505-1edb-4c9f-8445-79d154dd693d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9b767505-1edb-4c9f-8445-79d154dd693d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "9b767505-1edb-4c9f-8445-79d154dd693d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "-VPL-CSD-PILOT-summer22-navigation_-csd_CSD-PL-24_25",
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_-csd_CSD-PL-24_25"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit2-1-2025",
+        "activity_section.key": "b16dbd42-c1aa-4b7e-bb71-9bf778fc3b8f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
