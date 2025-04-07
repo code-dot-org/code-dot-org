@@ -77,6 +77,11 @@
   flex-direction: column;
   justify-content: center;
   max-width: calc(100% - 32px);
+
+  p,
+  h5 {
+    margin: 0;
+  }
 }
 
 .sectionCardHeaderRight {
