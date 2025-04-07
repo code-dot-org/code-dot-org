@@ -18,7 +18,7 @@ const lab2ViewSlice = createSlice({
   initialState,
   reducers: {
     setConsoleFontSize(state, action: PayloadAction<keyof typeof FontSize>) {
-      state.editorFontSizeKey = action.payload;
+      state.consoleFontSizeKey = action.payload;
     },
     setEditorFontSize(state, action: PayloadAction<keyof typeof FontSize>) {
       state.editorFontSizeKey = action.payload;
