@@ -122,6 +122,9 @@ const Console: React.FunctionComponent = () => {
     terminal.onData(onData);
     fitAddon.fit();
     window.addEventListener('resize', () => fitAddon.fit());
+    terminal.options = {
+      fontSize: 30,
+    };
 
     // Right now we are tracking lines from the previous console so we can replay them here.
     // We may be able to avoid this after
