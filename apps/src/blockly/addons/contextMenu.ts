@@ -13,9 +13,7 @@ import LegacyDialog from '../../code-studio/LegacyDialog';
 import {
   Themes,
   MenuOptionStates,
-  BLOCKLY_CURSOR,
   BLOCKLY_THEME,
-  NAVIGATION_CURSOR_TYPES,
   DARK_THEME_SUFFIX,
   BLOCK_TYPES,
 } from '../constants';
@@ -405,77 +403,6 @@ const registerAllBlocksUnmovable = function (weight: number) {
   );
 };
 
-const registerKeyboardNavigation = function (weight: number) {
-  const keyboardNavigationOption = {
-    displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      return scope.workspace?.keyboardAccessibilityMode
-        ? commonI18n.blocklyKBNavOff()
-        : commonI18n.blocklyKBNavOn();
-    },
-    preconditionFn: function () {
-      return Blockly.navigationController
-        ? MenuOptionStates.ENABLED
-        : MenuOptionStates.HIDDEN;
-    },
-    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      const controller = Blockly.navigationController;
-      const analyticsData = Blockly.analyticsData;
-      if (scope.workspace?.keyboardAccessibilityMode) {
-        controller.disable(scope.workspace);
-        analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
-          setting: EVENTS.BLOCKLY_SETTING_KEYBOARD_NAVIGATION,
-          value: EVENTS.BLOCKLY_SETTING_OFF,
-          ...analyticsData,
-        });
-      } else {
-        controller.enable(scope.workspace);
-        analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
-          setting: EVENTS.BLOCKLY_SETTING_KEYBOARD_NAVIGATION,
-          value: EVENTS.BLOCKLY_SETTING_ON,
-          ...analyticsData,
-        });
-        Blockly.navigationController.navigation.focusWorkspace(scope.workspace);
-      }
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: 'keyboardNavigation',
-    weight,
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(keyboardNavigationOption);
-};
-
-/**
- * Change cursor type for keyboard navigation
- */
-const registerCursor = function (cursorType: string, weight: number) {
-  const cursorOption = {
-    displayText: function () {
-      return isCurrentCursor(cursorType)
-        ? `✓ ${commonI18n.usingCursorType({type: cursorType})}`
-        : `${commonI18n.useCursorType({type: cursorType})}`;
-    },
-    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      if (
-        !experiments.isEnabled(experiments.KEYBOARD_NAVIGATION) ||
-        !scope.workspace?.keyboardAccessibilityMode
-      ) {
-        return MenuOptionStates.HIDDEN;
-      } else if (isCurrentCursor(cursorType)) {
-        return MenuOptionStates.DISABLED;
-      } else {
-        return MenuOptionStates.ENABLED;
-      }
-    },
-    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      setNewCursor(cursorType, scope);
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: `${cursorType}CursorOption`,
-    weight,
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(cursorOption);
-};
-
 const themes = [
   {
     name: Themes.MODERN,
@@ -598,35 +525,6 @@ function registerHelp(weight: number) {
     weight,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
-}
-
-function registerAllCursors(weight: number, cursorTypes: string[]) {
-  cursorTypes.forEach((cursorType, index) => {
-    registerCursor(cursorType, weight);
-  });
-}
-
-function isCurrentCursor(cursorType: string) {
-  const currentCursorType = Blockly.navigationController.cursorType;
-  return cursorType === currentCursorType;
-}
-
-function setNewCursor(
-  type: string,
-  scope: GoogleBlockly.ContextMenuRegistry.Scope
-) {
-  localStorage.setItem(BLOCKLY_CURSOR, type);
-  Blockly.navigationController.cursorType = type;
-  Blockly.getMainWorkspace()
-    .getMarkerManager()
-    .setCursor(Blockly.getNewCursor(type));
-  if (Blockly.getFunctionEditorWorkspace()) {
-    Blockly.getFunctionEditorWorkspace()
-      ?.getMarkerManager()
-      .setCursor(Blockly.getNewCursor(type));
-  }
-  // Set the navigation state to the workspace and moves the cursor to the top block.
-  Blockly.navigationController.navigation.focusWorkspace(scope.workspace);
 }
 
 export const registerAllContextMenuItems = function () {
@@ -767,8 +665,6 @@ function registerCustomWorkspaceOptions() {
 
   // Custom workspace options. We increment the weight for each so they are automatically
   // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
-  registerKeyboardNavigation(nextWeight++);
-  registerAllCursors(nextWeight++, NAVIGATION_CURSOR_TYPES);
   registerThemes(nextWeight++, themes);
   registerAllBlocksUndeletable(nextWeight++);
   registerAllBlocksUneditable(nextWeight++);
