@@ -22,7 +22,7 @@ class OpenaiChatController < ApplicationController
     level_id = params[:levelId]
     script_id = params[:scriptId]
 
-    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AiSystemPrompts::AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
 
     messages = prepend_system_prompt(system_prompt, params[:messages])
 

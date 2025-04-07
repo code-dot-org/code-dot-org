@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2024-05-10T00:45:09.000Z",
+  "created_at": "2024-05-16T09:29:48.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -43,8 +42,10 @@
       "availableModelIds": [
         "gen-ai-mistral-7b-inst-v01"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/6f7906047636234c1445292e656c8308-bubblechoice-0.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-09T10:45:09.158-07:00\",\"changed\":[\"cloned from \\\"AI Chat Test Level - 2\\\"\"],\"cloned_from\":\"AI Chat Test Level - 2\"},{\"changed_at\":\"2024-05-09 10:45:12 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-09T10:45:09.158-07:00\",\"changed\":[\"cloned from \\\"AI Chat Test Level - 2\\\"\"],\"cloned_from\":\"AI Chat Test Level - 2\"},{\"changed_at\":\"2024-05-09 10:45:12 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-03-24 18:04:12 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

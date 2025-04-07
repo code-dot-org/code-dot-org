@@ -1,6 +1,6 @@
 !!! 5
 -require '../shared/middleware/helpers/experiments'
-%html{dir: locale_dir}
+%html{dir: locale_dir, lang: locale}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
@@ -38,6 +38,8 @@
     %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
     -# auth key needed for statsig analytics
     %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+    -# auth key needed for statsig analytics
+    %script{data: {'statsig-api-client-key-session-replay': CDO.safe_statsig_api_client_key_session_replay}}
     -# for statsig to recognized managed test server
     %script{data: {'managed-test-server': managed_test_server}}
     -# user id and type for analytics logging- may not work for cached pages

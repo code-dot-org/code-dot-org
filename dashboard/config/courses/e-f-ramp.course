@@ -1,0 +1,20 @@
+{
+  "name": "e-f-ramp",
+  "script_names": [
+    "e-f-ramp"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "e-f-ramp",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

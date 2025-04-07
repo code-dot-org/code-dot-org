@@ -1,0 +1,362 @@
+{
+  "script": {
+    "name": "vpl-csa-2025-m5",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-01 03:37:41 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csa-2025-m5"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 5 post-work: The Unit 5 Project",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "9b48e0c5-d112-484e-9e9c-8609f2720737",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b48e0c5-d112-484e-9e9c-8609f2720737",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "efee96af-cbe2-4604-a753-d06707820de5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 5 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "efee96af-cbe2-4604-a753-d06707820de5",
+        "lesson_activity.key": "9b48e0c5-d112-484e-9e9c-8609f2720737"
+      }
+    },
+    {
+      "key": "19e6421e-9abd-4be9-92e6-f95c76bda7dc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "19e6421e-9abd-4be9-92e6-f95c76bda7dc",
+        "lesson_activity.key": "9b48e0c5-d112-484e-9e9c-8609f2720737"
+      }
+    },
+    {
+      "key": "992e71cd-641b-4225-a884-8c21b6ab2797",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Unit 5 Project (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "992e71cd-641b-4225-a884-8c21b6ab2797",
+        "lesson_activity.key": "9b48e0c5-d112-484e-9e9c-8609f2720737"
+      }
+    },
+    {
+      "key": "d5d706ff-ccff-4546-a1ee-fbab17f372e4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5d706ff-ccff-4546-a1ee-fbab17f372e4",
+        "lesson_activity.key": "9b48e0c5-d112-484e-9e9c-8609f2720737"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 5 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "efee96af-cbe2-4604-a753-d06707820de5"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-overview_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "19e6421e-9abd-4be9-92e6-f95c76bda7dc"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-filter-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Image Filters in Unit 5 (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "19e6421e-9abd-4be9-92e6-f95c76bda7dc"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-make-your-own-filter_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 5 Project (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-project-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "992e71cd-641b-4225-a884-8c21b6ab2797"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-5-project-reflection_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unit 5 Project (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "992e71cd-641b-4225-a884-8c21b6ab2797"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-2022-making-changes-to-u5-project_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-5-wrap-up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "d5d706ff-ccff-4546-a1ee-fbab17f372e4"
+      },
+      "level_keys": [
+        "vpl-csa-module-5-wrap-up_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-overview_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "efee96af-cbe2-4604-a753-d06707820de5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-filter-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-filter-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "19e6421e-9abd-4be9-92e6-f95c76bda7dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-make-your-own-filter_2025",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-make-your-own-filter_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "19e6421e-9abd-4be9-92e6-f95c76bda7dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-5-project-reflection_2025",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-5-project-reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "992e71cd-641b-4225-a884-8c21b6ab2797"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-2022-making-changes-to-u5-project_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-2022-making-changes-to-u5-project_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "992e71cd-641b-4225-a884-8c21b6ab2797"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-5-wrap-up_2025",
+        "script_level.level_keys": [
+          "vpl-csa-module-5-wrap-up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2025-m5",
+        "activity_section.key": "d5d706ff-ccff-4546-a1ee-fbab17f372e4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

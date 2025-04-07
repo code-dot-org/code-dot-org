@@ -14,15 +14,39 @@
     gap: 1rem;
 
     > * {
+      min-width: unset;
+      display: flex;
       flex: 1;
+      > input {
+        height: 2rem;
+      }
     }
 
-    .card {
-      border-radius: $regular-border-radius;
-      padding: 1rem;
-      background-color: var(--background-neutral-secondary);
-      border: 1px solid var(--borders-neutral-primary);
+    .col {
+      flex-direction: column;
+      gap: 0.75rem;
     }
+  }
+
+  .toggleWrapper {
+    label {
+      padding: 0.25rem 0;
+    }
+    p {
+      margin-top: 0.25rem;
+    }
+    a {
+      flex: 0;
+      white-space: nowrap;
+    }
+  }
+
+  .card {
+    border-radius: $regular-border-radius;
+    padding: 1rem;
+    background-color: var(--background-neutral-secondary);
+    border: 1px solid var(--borders-neutral-primary);
+    gap: 1rem;
   }
 
   .item {
@@ -30,9 +54,13 @@
     flex-direction: column;
     width: 100%;
 
+    > div,
     input,
-    textarea {
+    textarea,
+    select,
+    button {
       width: 100%;
+      border-color: var(--borders-neutral-strong);
     }
 
     &.required {
@@ -45,8 +73,7 @@
     textarea {
       height: 6rem;
       margin-bottom: 0;
-      border-radius: 0.25rem;
-      border: 1px solid;
+      border-radius: $regular-border-radius;
       box-sizing: border-box;
       resize: vertical;
 
@@ -58,20 +85,8 @@
     }
   }
 
-  .tag_button_container {
-    position: relative;
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-
-    button {
-      all: unset;
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 20px;
-      cursor: pointer;
-    }
+  .wrapContainer {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
   }
 }

@@ -505,7 +505,6 @@ describe('FinishStudentAccount', () => {
     const country = 'US';
     const parentEmail = 'parent@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: email,
@@ -589,7 +588,6 @@ describe('FinishStudentAccount', () => {
     const country = 'US';
     const parentEmail = 'parent@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: email,
@@ -681,7 +679,6 @@ describe('FinishStudentAccount', () => {
     const country = 'US';
     const parentEmail = 'parent@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: email,
@@ -771,7 +768,6 @@ describe('FinishStudentAccount', () => {
     const parentEmail = 'parent@email.com';
     const userReturnToUrl = '/sample/url';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: email,

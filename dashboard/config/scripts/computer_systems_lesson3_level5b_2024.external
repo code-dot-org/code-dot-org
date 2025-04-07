@@ -1,6 +1,9 @@
 name 'computer-systems-lesson3-level5b-2024'
 title 'Electric Vehicle Technician'
 description 'Explore how these engineers design and build the physical components of computers and other devices.'
+display_name 'Electric Vehicle Technician'
+bubble_choice_description 'Explore how these engineers design and build the physical components of computers and other devices.'
+thumbnail_url 'https://images.code.org/692c836295de5207ea127cbfc617d165-Electric-Vehicle-Technician.png'
 
 markdown <<MARKDOWN
 # Electric Vehicle Technician

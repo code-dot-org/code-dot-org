@@ -387,7 +387,7 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   onDelete: PropTypes.func.isRequired,
   onClickSelect: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
-  workshopSubject: PropTypes.string.isRequired,
+  workshopSubject: PropTypes.string,
   numSessions: PropTypes.number.isRequired,
   selectedEnrollments: PropTypes.array,
 };

@@ -12,6 +12,7 @@ import {
   DEFAULT_BPM,
   DEFAULT_LIBRARY,
   DEFAULT_PACK,
+  DEFAULT_VALIDATION_TIMEOUT,
 } from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
@@ -25,7 +26,12 @@ import RawJsonEditor from './RawJsonEditor';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
-const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024', 'curriculum2024'];
+const VALID_LIBRARIES = [
+  DEFAULT_LIBRARY,
+  'launch2024',
+  'launch2024-preview',
+  'curriculum2024',
+];
 const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
@@ -121,10 +127,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               instead!
             </li>
             <li>
-              The curriculum2024 library is currently just a staging ground for
-              sounds that we want to test out in scripts not intended for full
-              launch. Once those sounds are finalized, they will be put into the
-              launch2024 library in the appropriate form.
+              The launch2024-preview and curriculum2024 libraries are just
+              staging grounds for sounds that we want to test out in scripts not
+              intended for full launch. Once those sounds are finalized, they
+              will be put into the launch2024 library in the appropriate form.
             </li>
           </ul>
           <div>
@@ -225,9 +231,48 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             name="showSoundFilters"
             label="Show Sound Filters in Sound Picker"
             onChange={event => {
+              const showSoundFilters = event.target.checked;
               setLevelData({
                 ...levelData,
-                showSoundFilters: event.target.checked,
+                showSoundFilters,
+                ...(showSoundFilters
+                  ? {}
+                  : {
+                      showSoundsPanelInSoundsMode: false,
+                      sortUnrestrictedPacksByType: false,
+                    }),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.showSoundsPanelInSoundsMode}
+            name="showSoundsPanelInSoundsMode"
+            label="Default to 'Sounds' mode in Sound Picker"
+            onChange={event => {
+              const showSoundsPanelInSoundsMode = event.target.checked;
+              setLevelData({
+                ...levelData,
+                showSoundsPanelInSoundsMode,
+                ...(showSoundsPanelInSoundsMode
+                  ? {showSoundFilters: true}
+                  : {}),
+              });
+            }}
+            size="s"
+          />
+          <Checkbox
+            checked={!!levelData.sortUnrestrictedPacksByType}
+            name="sortUnrestrictedPacksByType"
+            label="Sort unrestricted (Code.org) packs by type in Sound Picker"
+            onChange={event => {
+              const sortUnrestrictedPacksByType = event.target.checked;
+              setLevelData({
+                ...levelData,
+                sortUnrestrictedPacksByType,
+                ...(sortUnrestrictedPacksByType
+                  ? {showSoundFilters: true}
+                  : {}),
               });
             }}
             size="s"
@@ -244,6 +289,35 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             }}
             size="s"
           />
+          <div className={moduleStyles.inputRow}>
+            <label htmlFor="validationTimeout" className={moduleStyles.label}>
+              Validation Timeout:
+            </label>
+            <BodyFourText className={moduleStyles.helperText}>
+              This value determines when (in measures) non-success validation
+              messages should start appearing. If the timeout is reached or the
+              last measure has completed, messages will be shown.
+            </BodyFourText>
+
+            <input
+              type="number"
+              id="validationTimeout"
+              name="validationTimeout"
+              value={levelData.validationTimeout}
+              placeholder={DEFAULT_VALIDATION_TIMEOUT.toString()}
+              min={1}
+              onChange={event => {
+                const parsedValue = parseInt(event.target.value);
+                setLevelData({
+                  ...levelData,
+                  validationTimeout: !isNaN(parsedValue)
+                    ? parsedValue
+                    : undefined,
+                });
+              }}
+              className={moduleStyles.input}
+            />
+          </div>
         </div>
       </CollapsibleSection>
       <hr />

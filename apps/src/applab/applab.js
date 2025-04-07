@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
-import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/evaluationApi';
+import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
@@ -1129,20 +1129,15 @@ Applab.runButtonClick = function () {
   ];
   const shouldEvaluateStudentCode = aiEvaluationLevels.includes(levelUrl);
   if (shouldEvaluateStudentCode) {
-    const evaluationCriteria = `"Does the code run without errors? Does the code follow best practices?"`;
-    const systemPrompt = `Please review the student's work. Respond in correctly formatted JSON.
-    evaluationCriteria should just be a copy of ${evaluationCriteria}.
-    aiEvaluation should be your assessment of the student's work based on the evaluationCriteria. Respond with "great", "ok", or "needs revision".
-    aiReasoning should be one sentence with your reasoning.`;
     evaluateStudentWork(
       {
         studentId: config.userId,
         studentDisplayName: config.codeOwnersName,
         studentWork: config.getCode(),
+        codeVersion: project.getCurrentSourceVersionId(),
       },
       analyticsData.levelId,
-      analyticsData.scriptId,
-      systemPrompt
+      analyticsData.scriptId
     );
   }
 

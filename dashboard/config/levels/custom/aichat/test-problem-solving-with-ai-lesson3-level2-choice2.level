@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-21T05:56:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Video Game Developer - Level 2: One-Shot Prompting\r\n\r\nPractice one-shot prompting through the career of a video game developer by adding a single example to help guide the AI’s dialogue.\r\n\r\n### Do This:\r\n\r\n1. Try a prompt like the one below, or write a similar one that includes an example of a hero-villain exchange.\r\n\r\n>Here’s an example: “Hero: You can’t stop me. Villain: We’ll see about that.” Now create a dialogue between a hero and villain where the villain reveals their ultimate plan.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, noticing how the AI uses the example to shape tone, style, or plot.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Video Game Developer",
+    "bubble_choice_description": "Practice one-shot prompting through the career of a video game developer by adding a single example to help guide the AI’s dialogue.",
+    "thumbnail_url": "https://images.code.org/8c4485c1eac15a6acacbe43a90f97480-game-developer.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-21T05:56:52.582+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson3-level2-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson3-level2-choice1\"},{\"changed_at\":\"2025-03-21 05:58:36 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

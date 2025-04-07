@@ -1,5 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import {within, expect, userEvent} from '@storybook/test';
+
+import Section from '@/cms/section';
 
 import Video from '../index';
 
@@ -16,14 +18,27 @@ export const DefaultVideo: Story = {
   args: {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
+    isYouTubeCookieAllowed: true,
   },
-  play: async ({canvasElement}) => {
+  parameters: {
+    eyes: {
+      // Skip eyes for video as this auto plays
+      include: false,
+    },
+  },
+  play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);
-    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    const playButton = await canvas.findByLabelText(
+      `Play video ${args.videoTitle}`,
+    );
+    await expect(playButton).toBeVisible();
+    await userEvent.click(playButton);
+
     const video = await canvas.findByTitle("What Most Schools Don't Teach");
 
     // check if video is visible
-    expect(video).toBeVisible();
+    await expect(video).toBeVisible();
   },
 };
 
@@ -32,23 +47,27 @@ export const VideoWithCaption: Story = {
     videoTitle: "What Most Schools Don't Teach",
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
+    isYouTubeCookieAllowed: true,
   },
-  parameters: {
-    eyes: {
-      ignoreRegions: [{selector: '.ytp-impression-link'}],
-    },
+  decorators: Story => {
+    return (
+      <Section background={'dark'}>
+        <Story />
+      </Section>
+    );
   },
-  play: async ({canvasElement}) => {
+  play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    const video = await canvas.findByTitle("What Most Schools Don't Teach");
+
+    const playButton = await canvas.findByLabelText(
+      `Play video ${args.videoTitle}`,
+    );
+    await expect(playButton).toBeVisible();
+
     const caption = canvas.getByText("What Most Schools Don't Teach");
 
-    // check if video is visible
-    expect(video).toBeVisible();
-
     // check if caption is visible
-    expect(caption).toBeVisible();
+    await expect(caption).toBeVisible();
   },
 };
 
@@ -59,6 +78,7 @@ export const VideoWithFallback: Story = {
       'https://videos.code.org/social/what-most-schools-dont-teach.mp4',
     youTubeId: 'nKIu9yen5nc',
     showCaption: false,
+    isYouTubeCookieAllowed: true,
   },
   parameters: {
     docs: {
@@ -67,18 +87,24 @@ export const VideoWithFallback: Story = {
           'This is a video component with a fallback HTML video player. The fallback player will show up if YouTube is blocked, and a Download button will also show up. To test this block _www.youtube.com_ and _www.youtube-nocookie.com_ in the Network tab in DevTools.',
       },
     },
+    eyes: {
+      // Skip eyes for video as this auto plays
+      include: false,
+    },
   },
-  play: async ({canvasElement}) => {
+  play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    const video = await canvas.findByTitle("What Most Schools Don't Teach");
+
+    const playButton = await canvas.findByLabelText(
+      `Play video ${args.videoTitle}`,
+    );
+    await expect(playButton).toBeVisible();
+    await userEvent.click(playButton);
+
     const download = canvas.getByRole('link');
 
-    // check if video is visible
-    expect(video).toBeVisible();
-
     // check if download button is visible
-    expect(download).toBeVisible();
+    await expect(download).toBeVisible();
   },
 };
 
@@ -89,21 +115,41 @@ export const VideoWithCaptionAndFallback: Story = {
       'https://videos.code.org/social/what-most-schools-dont-teach.mp4',
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
+    isYouTubeCookieAllowed: true,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    const video = await canvas.findByTitle("What Most Schools Don't Teach");
     const caption = canvas.getByText("What Most Schools Don't Teach");
     const download = canvas.getByRole('link');
 
-    // check if video is visible
-    expect(video).toBeVisible();
-
     // check if caption is visible
-    expect(caption).toBeVisible();
+    await expect(caption).toBeVisible();
 
     // check if download button is visible
-    expect(download).toBeVisible();
+    await expect(download).toBeVisible();
+  },
+};
+
+export const VideoCookieBlocked: Story = {
+  args: {
+    videoTitle: "What Most Schools Don't Teach",
+    youTubeId: 'nKIu9yen5nc',
+    showCaption: true,
+    isYouTubeCookieAllowed: false,
+  },
+  play: async ({canvasElement, args}) => {
+    const canvas = within(canvasElement);
+
+    const playButton = await canvas.findByLabelText(
+      `Play video ${args.videoTitle}`,
+    );
+    await expect(playButton).toBeVisible();
+    await userEvent.click(playButton);
+
+    expect(
+      canvas.getByText(
+        'Please enable "Functional Cookies" and refresh the page to play this video.',
+      ),
+    );
   },
 };

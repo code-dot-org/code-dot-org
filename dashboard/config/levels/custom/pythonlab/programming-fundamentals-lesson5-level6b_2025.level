@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-03-22T01:52:14.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "name = \"Manda\"\nnum_skateboards = 3\ncan_ollie =  True\nhelmet_price = 15.99\n\n#Add print statements to print out each variable\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Let's Print it Out",
+    "thumbnail_url": "https://images.code.org/8f4771a8a6c30a877d01c04a330c68c5-printer.jpg",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzq1WWswnDfHaVEJk1PuBz9gB9me/slI+\nOFprgSPPScTHiKvJr+BWmi7XYo7vgpxXG0RDjBs0AJkel6BQFa0/01OT5y8h\nS7hO3fm2QDZW5vGeR99QMH79wTFfPMs/eoGRG2T48s5N7xUNXfBRpRVB0Whv\n+wEQ9s7tQMILGvMgysm3s7DlTOVWJKaYy4HhhC1caTReUj3RwEG6LkNVzFpX\njfXQms4F8t/umCe64Q2qP5OmB6rV2GyNc/FvaykBxmoMdZ47KgqDS5Sv9g1g\nHJv5svm9giE7hmwr7T8PBtHtZTB09itEdi4H3K5WhpcjgokWhxwCOtZfwpbf\nufTo7q50c2M0XQtw93mtvJY5aaYHv4b+UWCCgRvO1aZrUc5h0QEOMzhDKyHK\n1om/zfbUx8qSd4A6/4cUsTHAnxUdaWT35nORJj0vwa1xPlSCXfkIxVrLGRSA\nIZ2XQpn02hJKzbrb8pbqwahj4MFuvMEdAlCDIbST5sk5y+yCPrGvMizc15SZ\nlA==\n",
+    "long_instructions": "## Do This:\r\n1. Add `print` statements to print out each variable.\r\n    * *Hint: What do you need to do to combine non-string variables (like `num_skateboards`) with strings in a `print()` statement?*\r\n2. Manda just got a new skateboard! Change the value of the `num_skateboards` variable using an arithmetic operator (`+`, `-`, `x`, `÷`) and print out the updated total.",
+    "validation_file": {
+      "id": "1",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom unittest_runner import ValidationProtocol\n\nclass TestSkateboardVariables(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Retrieve the program output once for all tests.\"\"\"\n        cls.lines = ValidationProtocol().get_stdout_logs()\n\n    def test_line_1_name_variable(self):\n        \"\"\"\n        Check that the first printed line is 'Manda'.\n        \"\"\"\n        self.assertGreaterEqual(len(self.lines), 1, \n            \"You need at least 1 print statement for the name variable.\")\n        self.assertEqual(\n            self.lines[0], \n            \"Manda\", \n            \"The first printed line should be 'Manda'.\"\n        )\n\n    def test_line_2_num_skateboards(self):\n        \"\"\"\n        Check that the second printed line is '3' (the initial num_skateboards).\n        \"\"\"\n        self.assertGreaterEqual(len(self.lines), 2, \n            \"You need at least 2 print statements (the second for the num_skateboards variable).\")\n        self.assertEqual(\n            self.lines[1], \n            \"3\", \n            \"The second printed line should be '3'.\"\n        )\n\n    def test_line_3_can_ollie(self):\n        \"\"\"\n        Check that the third printed line is either 'True' or 'False'.\n        \"\"\"\n        self.assertGreaterEqual(len(self.lines), 3, \n            \"You need at least 3 print statements (the third for the can_ollie variable).\")\n        self.assertIn(\n            self.lines[2], \n            [\"True\", \"False\"], \n            \"The third printed line should be either 'True' or 'False'.\"\n        )\n\n    def test_line_4_helmet_price(self):\n        \"\"\"\n        Check that the fourth printed line is '15.99' (the helmet_price).\n        \"\"\"\n        self.assertGreaterEqual(len(self.lines), 4, \n            \"You need at least 4 print statements (the fourth for the helmet_price variable).\")\n        try:\n            float_val = float(self.lines[3])\n        except ValueError:\n            self.fail(\"The fourth printed line should be numeric, e.g. '15.99'.\")\n\n        self.assertAlmostEqual(\n            float_val, \n            15.99, \n            places=2, \n            msg=\"The fourth printed line should be '15.99'.\"\n        )\n\n    def test_line_5_updated_num_skateboards(self):\n        \"\"\"\n        Check that there is a fifth line and it's a valid number.\n        The updated value should NOT be 3, ensuring the student's arithmetic operator\n        actually changes num_skateboards.\n        \"\"\"\n        self.assertGreaterEqual(len(self.lines), 5, \n            \"You need a 5th print statement for the updated num_skateboards.\")\n        updated_str = self.lines[4]\n        try:\n            updated_val = float(updated_str)\n        except ValueError:\n            self.fail(\"The updated num_skateboards printout (line 5) should be numeric.\")\n\n        # Now ensure the updated value != 3.0\n        self.assertNotEqual(\n            updated_val, \n            3.0, \n            \"The updated num_skateboards must differ from 3, to show it was changed.\"\n        )\n\nif __name__ == '__main__':\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:52:14.503+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level6b-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level6b-2024\"}]"
+}]]></config>
+</Pythonlab>

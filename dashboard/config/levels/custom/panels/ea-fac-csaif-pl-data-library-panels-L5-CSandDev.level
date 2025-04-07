@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-31T02:23:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Processing Library Data\n\nIn this activity from **Lesson 8**, you’ll step into the shoes of a librarian who uses computational thinking to quickly analyze a large book dataset.\n\nYou'll work with a spreadsheet to uncover patterns and make data-driven decisions, just like a computer system would.\n\nFollow along with the <a href=\"https://docs.google.com/document/d/1XzYTHgCSkDFogdTEkddYqgm6heBQ2s-pYSlcNkJNZYs/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> as you work through the lesson.",
+        "imageUrl": "https://images.code.org/3dd67e104e45555ac7c34fbb26f33d91-panel slides (4).png",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-top-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Challenge 1\nEach scenario comes with a different challenge. \n\nIn the first one, a visitor wants to know the hottest books to start reading. \n\nAfter exploring the linked spreadsheet, you notice a popularity rating column—perfect for sorting to find the most popular picks.",
+        "imageUrl": "https://images.code.org/366607b7d0e160ab87d4e5a8b5ff8cc8-panel slides (5).png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Analyzing the Data \nUse the caret tab (🔽) in the popularity rating column to sort the data from highest to lowest—this will help you quickly find the top-rated books.",
+        "imageUrl": "https://images.code.org/a1d78a16f28bb436c4b26560901cdffb-panel slides (6).png",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Activity Guide\nStudents will complete their analysis using the madlib template in the activity guide. ",
+        "imageUrl": "https://images.code.org/1438b493734ecaa70ad8be98302f4ee8-panel slides (7).png",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Up Next\nAs you proceed to the next level, feel free to work through as much or as little of the activity as you like.\n\nRemeber to use the <a href=\"https://docs.google.com/document/d/1XzYTHgCSkDFogdTEkddYqgm6heBQ2s-pYSlcNkJNZYs/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> to guide you through the lesson.",
+        "imageUrl": "https://images.code.org/05dd3491e441404703e71d6d33ce4d90-panel slides (8).png",
+        "key": "csaif-pl-data-library-panels-L5-CSandDev-061a3301-6515-4f18-9963-040f193637c5",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-31T02:23:29.060+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-data-library-panels-L5-CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-data-library-panels-L5-CSandDev\"}]"
+}]]></config>
+</Panels>

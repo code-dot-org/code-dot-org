@@ -3,6 +3,7 @@ import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
+import SettingsButton from '@codebridge/Settings/SettingsButton';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
@@ -23,13 +24,9 @@ import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources} = useCodebridgeContext();
+  const {startSources, levelProperties} = useCodebridgeContext();
+  const {appName, enableMicroBit, skipUrl} = levelProperties;
 
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const enableMicroBit = useAppSelector(
-    state => state.lab.levelProperties?.enableMicroBit || false
-  );
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -83,6 +80,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
+      <SettingsButton />
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
@@ -94,7 +92,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           className={darkModeStyles.tertiaryButton}
         />
       )}
-      <VersionHistoryButton startSources={startSources} />
+      <VersionHistoryButton startSources={startSources} appName={appName} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <Button

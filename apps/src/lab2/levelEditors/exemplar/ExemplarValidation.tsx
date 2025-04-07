@@ -7,7 +7,7 @@ import {AppName, ExemplarSettings} from '../../types';
 
 import moduleStyles from './exemplar-settings.module.scss';
 
-interface ExemplarSettingsProps {
+interface ExemplarValidationProps {
   exemplarDefined: boolean;
   exemplarSettings: ExemplarSettings;
   onChange: (updatedFields: ExemplarSettings) => void;
@@ -20,7 +20,7 @@ const defaultExemplarValidationSettings: ExemplarSettings = {
   validationEnabled: false,
 };
 
-const ExemplarValidation: React.FunctionComponent<ExemplarSettingsProps> = ({
+const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
   exemplarDefined,
   exemplarSettings,
   onChange,
@@ -35,16 +35,10 @@ const ExemplarValidation: React.FunctionComponent<ExemplarSettingsProps> = ({
         <div className={moduleStyles.row}>
           <BodyThreeText>
             An additional layer of validation is available for levels with
-            exemplar sources.
-            <br />
-            If checked, the playback events on the student’s timeline must match
-            those on the exemplar’s timeline. If condition-based validations are
-            defined (in the section above), they will be checked first. Exemplar
-            validation cannot check code organization (such as loops or
-            functions) - use condition-based validation in combination with
-            exemplar validation to achieve this. The student cannot pass the
-            level unless all timeline events match exactly, even if they have
-            satisfied all other condition-based validations.
+            exemplar sources. If enabled, the student's work will be compared
+            against the exemplar's expected output. The validation method may
+            vary by app, and all validations must pass for the level to be
+            marked complete.
           </BodyThreeText>
         </div>
         {!exemplarDefined && (

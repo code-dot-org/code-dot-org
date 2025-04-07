@@ -5,11 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Encryption
 
-#### What if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of the alphabet? This is called a random substitution cipher.
+#### What if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of the alphabet? This is called a **random substitution cipher**.
+
+## 📝 To Do
 
 #### Explore the widget for decrypting a random substitution cipher in the next level. While you're exploring think about: *How does the widget work? What steps would you take to crack the code?*
 
 <br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🧐 Hint

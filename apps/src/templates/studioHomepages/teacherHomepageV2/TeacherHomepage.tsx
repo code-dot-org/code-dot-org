@@ -1,13 +1,17 @@
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {asyncLoadTeacherHomepageSectionData} from '../../teacherDashboard/teacherSectionsRedux';
 
+import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
+import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -22,8 +26,38 @@ export const TeacherHomepage: React.FC = () => {
     dispatch(asyncLoadTeacherHomepageSectionData());
   }, [dispatch]);
 
+  React.useEffect(() => {
+    analyticsReporter.sendEvent(
+      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
+      {},
+      PLATFORMS.BOTH
+    );
+  }, []);
+
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
+
+  const sections = useAppSelector(state => state.teacherSections.sections);
+
+  // The server uses hidden to mean the same thing as archived.
+  const showHiddenOnly = selectedArchiveToggle === 'archived';
+
+  const numSections = React.useMemo(
+    () =>
+      Object.values(sections).filter(
+        section => showHiddenOnly === section.hidden
+      ).length,
+    [sections, showHiddenOnly]
+  );
+
+  const onArchiveToggleChange = (value: ArchivedToggleOption) => {
+    const toggleEvent =
+      value === 'teaching'
+        ? EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED
+        : EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED;
+    analyticsReporter.sendEvent(toggleEvent, {}, PLATFORMS.BOTH);
+    setSelectedArchiveToggle(value);
+  };
 
   return (
     <div className={styles.teacherHomepage}>
@@ -34,13 +68,17 @@ export const TeacherHomepage: React.FC = () => {
           <div className={styles.teacherHomepageLeftContent}>
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
-              setSelectedArchiveToggle={setSelectedArchiveToggle}
+              setSelectedArchiveToggle={onArchiveToggleChange}
             />
-            <SectionList
-              showHiddenOnly={selectedArchiveToggle === 'archived'}
-            />
+            {numSections === 0 ? (
+              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+            ) : (
+              <SectionList
+                showHiddenOnly={selectedArchiveToggle === 'archived'}
+              />
+            )}
           </div>
-          <div className={styles.blankAnnouncement} />
+          <TeacherPromotions />
         </div>
       </div>
     </div>

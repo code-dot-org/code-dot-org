@@ -1,0 +1,20 @@
+{
+  "name": "test-teaching-ap-cs-unit-1",
+  "script_names": [
+    "test-teaching-ap-cs-unit-1"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "test-teaching-ap-cs-unit-1",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

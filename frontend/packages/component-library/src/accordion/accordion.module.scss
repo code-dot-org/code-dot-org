@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
 
     border-radius: $regular-border-radius;
     border: 1px solid var(--borders-neutral-primary);
@@ -30,12 +31,18 @@
       background: var(--background-neutral-primary);
 
       i {
+        @include transition-all;
         color: var(--text-neutral-placeholder);
       }
 
       p {
         margin: 0;
       }
+    }
+
+    // Remove the native summary disclosure triangle on Safari browsers
+    summary::-webkit-details-marker {
+      display: none;
     }
 
     > p {
@@ -59,7 +66,6 @@
     }
 
     summary:hover {
-      @include transition-all;
       background: var(--background-neutral-secondary);
 
       i {

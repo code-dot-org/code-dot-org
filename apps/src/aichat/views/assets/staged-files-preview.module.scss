@@ -20,7 +20,6 @@
 %preview {
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
-  padding: 8px;
   position: relative;
 }
 
@@ -59,8 +58,11 @@
 
 .preview-pdf {
   @extend %preview;
+  padding: 8px;
   display: flex;
   gap: 8px;
+  text-align: left;
+  align-items: center;
 
   .fileIcon {
     display: flex;
@@ -80,6 +82,7 @@
     display: flex;
     flex-direction: column;
     max-width: 120px;
+    color: var(--text-neutral-primary);
 
     strong {
       white-space: nowrap;
@@ -91,9 +94,20 @@
 
 .preview-image {
   @extend %preview;
-  height: 36px;
-  width: 36px;
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
+  padding: 0;
+
+  img {
+    height: 52px;
+    width: auto;
+    border-radius: 3px;
+  }
+}
+
+.preview-image-loading {
+  width: 52px;
+  height: 52px;
+}
+
+.hide {
+  display: none;
 }

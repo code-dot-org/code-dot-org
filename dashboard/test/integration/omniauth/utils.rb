@@ -35,7 +35,7 @@ module OmniauthCallbacksControllerTests
 
     # The user signs in through OAuth
     # The oauth endpoint (which is mocked) redirects to the oauth callback,
-    # which in turn does some work and redirects to something else: homepage, finish_sign_up, etc.
+    # which in turn does some work and redirects to something else: homepage, finish_teacher_account, etc.
     # @param [String] provider
     def sign_in_through(provider)
       post "/users/auth/#{provider}"
@@ -44,18 +44,17 @@ module OmniauthCallbacksControllerTests
     end
 
     # The user signs in through Google, which hits the oauth callback
-    # and redirects to something else: homepage, finish_sign_up, etc.
+    # and redirects to something else: homepage, finish_teacher_account, etc.
     def sign_in_through_google
       sign_in_through AuthenticationOption::GOOGLE
     end
 
-    def finish_sign_up(auth_hash, user_type, new_sign_up = false)
+    def finish_sign_up(auth_hash, user_type)
       complete_params = finish_sign_up_params(
         {
           name: auth_hash[:info]&.name,
           user_type: user_type
-        },
-        new_sign_up
+        }
       )
       post '/users', params: complete_params
     end
@@ -69,11 +68,10 @@ module OmniauthCallbacksControllerTests
       )
     end
 
-    def finish_sign_up_params(override_params, new_sign_up = false)
+    def finish_sign_up_params(override_params)
       user_type = override_params[:user_type] || User::TYPE_STUDENT
       if user_type == User::TYPE_STUDENT
         {
-          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -90,7 +88,6 @@ module OmniauthCallbacksControllerTests
         }
       else
         {
-          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -151,23 +148,6 @@ module OmniauthCallbacksControllerTests
         @firehose_requests << [stream, args]
         true
       end
-    end
-
-    def assert_sign_up_tracking(expected_study_group, expected_events)
-      study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
-      study_records = study_requests.map {|e| e[1]}
-      study_groups = study_records.pluck(:study_group).uniq.compact
-      study_events = study_records.pluck(:event)
-
-      assert(study_records.all? {|record| record[:data_string].present?})
-      assert_equal 1, study_records.pluck(:data_string).uniq.count
-      assert_equal [expected_study_group], study_groups
-      assert_equal expected_events, study_events
-    end
-
-    def refute_sign_up_tracking
-      study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
-      assert_empty study_requests
     end
   end
 end

@@ -30,18 +30,33 @@ const onSectionSettingsClick = (
   navigate: NavigateFunction,
   sectionId: number
 ) => {
+  analyticsReporter.sendEvent(
+    EVENTS.SECTION_CARD_SETTINGS_CLICKED,
+    {},
+    PLATFORMS.BOTH
+  );
   navigate(
     `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
   );
 };
 
 const onRosterClick = (navigate: NavigateFunction, sectionId: number) => {
+  analyticsReporter.sendEvent(
+    EVENTS.SECTION_CARD_ROSTER_CLICKED,
+    {},
+    PLATFORMS.BOTH
+  );
   navigate(
     `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
   );
 };
 
 const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
+  analyticsReporter.sendEvent(
+    EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED,
+    {},
+    PLATFORMS.BOTH
+  );
   navigate(
     `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
   );
@@ -49,8 +64,8 @@ const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
 
 const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
   const hideShowEvent = section.hidden
-    ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
-    : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
+    ? EVENTS.SECTION_CARD_RESTORE_CLICKED
+    : EVENTS.SECTION_CARD_ARCHIVE_CLICKED;
   analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
   dispatch(toggleSectionHidden(section.id));
 };
@@ -60,7 +75,7 @@ const onDeleteClick = (
   sectionId: number
 ) => {
   analyticsReporter.sendEvent(
-    EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
+    EVENTS.SECTION_CARD_DELETE_CLICKED,
     {},
     PLATFORMS.BOTH
   );

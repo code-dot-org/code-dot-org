@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/713841a7e8823b8340c37a56cd316a14-image-1734022195459.png" alt="phone app icon" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
 
-## Scenario 1:
+## Scenario A:
 #### A company trains employees on customer service etiquette to improve communication.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/d6f7b9db8c609831ceda707a25a8ddba-image-1734022345967.png" alt="books and graded papers" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
 
-## Scenario 2:
+## Scenario B:
 #### A website requires users to verify their identity using two-factor authentication before logging in.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
@@ -42,7 +42,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/61e76c291c3e6143851d4e85defe3edf-image-1734022440768.png" alt="computer emphasising retail shopping" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
 
-## Scenario 3:
+## Scenario C:
 #### A chef stores recipes in a physical cookbook to keep track of ingredients.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
@@ -59,7 +59,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/c8d0ed429aa6a3816496f18659941bd5-image-1734022520463.png" alt="computer emphasizing photo editing software" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
 
-## Scenario 4:
+## Scenario D:
 #### A bank encrypts online transactions to protect customers from fraud and cyberattacks.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
@@ -76,7 +76,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/3ecbfc19dcf2cebfe82044fe2d5e7908-image-1734022641846.png" alt="cellphone with social media apps" style="border-radius:10px; float: left; height: 120px; margin: 20px 20px 0px 10px; ">
 
-## Scenario 5:
+## Scenario E:
 #### A school district installs content filtering software to prevent students from accessing harmful websites.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">

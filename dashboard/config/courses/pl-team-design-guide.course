@@ -1,0 +1,20 @@
+{
+  "name": "pl-team-design-guide",
+  "script_names": [
+    "pl-team-design-guide"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "pl-team-design-guide",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

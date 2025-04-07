@@ -7,8 +7,8 @@ class AichatEventsControllerTest < ActionController::TestCase
     @authorized_teacher1 = create :authorized_teacher
     @authorized_teacher2 = create :authorized_teacher
     unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
-    section = create :section, user: @authorized_teacher1, unit_group: unit_group
-    @authorized_student1 = create(:follower, section: section).student_user
+    @section = create :section, user: @authorized_teacher1, unit_group: unit_group
+    @authorized_student1 = create(:follower, section: @section).student_user
 
     @level = create(:level)
     @script = create(:script)
@@ -29,7 +29,7 @@ class AichatEventsControllerTest < ActionController::TestCase
     }
 
     @valid_params_student1_chat_history = {
-      studentUserId: @authorized_student1.id,
+      userId: @authorized_student1.id,
       levelId: @level.id,
       scriptId: @script.id,
     }
@@ -43,7 +43,7 @@ class AichatEventsControllerTest < ActionController::TestCase
   [
     :log_chat_event,
     :submit_teacher_feedback,
-    [:student_chat_history, :get]
+    [:chat_history, :get]
   ].each do |action, method = :post|
     users.each do |user|
       test_user_gets_response_for action,
@@ -58,13 +58,13 @@ class AichatEventsControllerTest < ActionController::TestCase
   # log_chat_event tests
   # *****
 
-  test 'authorized teacher has access to log_chat_event test' do
+  test 'authorized teacher has access to log_chat_event' do
     sign_in(@authorized_teacher1)
     post :log_chat_event, params: @valid_params_log_chat_event, as: :json
     assert_response :success
   end
 
-  test 'student of authorized teacher has access to log_chat_event test' do
+  test 'student of authorized teacher has access to log_chat_event' do
     sign_in(@authorized_student1)
     post :log_chat_event, params: @valid_params_log_chat_event, as: :json
     assert_response :success
@@ -113,36 +113,43 @@ class AichatEventsControllerTest < ActionController::TestCase
   end
 
   # *****
-  # student_chat_history tests
+  # chat_history tests
   # *****
 
-  test 'Bad request if required params are not included for student_chat_history' do
+  test 'Bad request if required params are not included for chat_history' do
     sign_in(@authorized_teacher1)
-    get :student_chat_history, params: {studentId: @authorized_student1.id}, as: :json
+    get :chat_history, params: {studentId: @authorized_student1.id}, as: :json
     assert_response :bad_request
   end
 
-  test 'student of authorized teacher does not have access to student_chat_history test' do
+  test 'student of authorized teacher has access to their own chat_history' do
     sign_in(@authorized_student1)
-    get :student_chat_history, params: @valid_params_student1_chat_history, as: :json
-    assert_response :forbidden
-  end
-
-  test 'authorized teacher has access to student_chat_history if teacher of student' do
-    sign_in(@authorized_teacher1)
-    get :student_chat_history, params: @valid_params_student1_chat_history, as: :json
+    get :chat_history, params: @valid_params_student1_chat_history, as: :json
     assert_response :success
   end
 
-  test 'authorized teacher does not have access to student_chat_history if not teacher of student' do
-    sign_in(@authorized_teacher2)
-    get :student_chat_history, params: @valid_params_student1_chat_history, as: :json
+  test 'student of authorized teacher does not have access to chat_history of another student' do
+    another_student = create(:follower, section: @section).student_user
+    sign_in(another_student)
+    get :chat_history, params: @valid_params_student1_chat_history, as: :json
     assert_response :forbidden
   end
 
-  test 'student_chat_history successfully returns list of student aichat_events' do
+  test 'authorized teacher has access to chat_history if teacher of student' do
     sign_in(@authorized_teacher1)
-    post :student_chat_history, params: @valid_params_student1_chat_history, as: :json
+    get :chat_history, params: @valid_params_student1_chat_history, as: :json
+    assert_response :success
+  end
+
+  test 'authorized teacher does not have access to chat_history if not teacher of student' do
+    sign_in(@authorized_teacher2)
+    get :chat_history, params: @valid_params_student1_chat_history, as: :json
+    assert_response :forbidden
+  end
+
+  test 'chat_history successfully returns list of student aichat_events' do
+    sign_in(@authorized_teacher1)
+    post :chat_history, params: @valid_params_student1_chat_history, as: :json
     assert_response :success
     chat_events_array = json_response
     # 2 chat event stored for authorized student1 in AichatEvents table so 2 chat events returned

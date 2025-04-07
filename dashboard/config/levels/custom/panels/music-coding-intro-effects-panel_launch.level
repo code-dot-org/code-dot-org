@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-18T19:57:07.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "This block lets you play an **arpeggio**, which is a string of notes.",
+        "imageUrl": "https://images.code.org/ddc094e194c79fa9fd6e968ff3e3cc37-Lesson 3 Level 7a.png",
+        "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Click on the block to choose the instrument and whether the notes play up, down, randomly, or all together.",
+        "imageUrl": "https://images.code.org/743321458a828a34392b7ee09554675d-Lesson 3 Level 7b (1).png",
+        "key": "music-coding-intro-effects-panel-6df27d16-d6f1-4aff-b88a-d4921d2b6347",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "This block lets you play drums on a drum set!",
+        "imageUrl": "https://images.code.org/e5292c5ece3f85b05c662b0e065947cf-Lesson 3 Level 7c.png",
+        "key": "music-coding-intro-effects-panel-d45981b9-9c92-44c8-b5ed-2c03677f22c2",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Click on the block to choose which drums to play.",
+        "imageUrl": "https://images.code.org/939e27d20c68b4ef92f100a674c28e35-Lesson 3 Level 7d.png",
+        "key": "music-coding-intro-effects-panel-419eec8f-c8c5-4242-b6bc-edc9d4ace123",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-center"
+      }
+    ],
+    "name_suffix": "_launch"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:07.024+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects-panel\\\"\"],\"cloned_from\":\"music-coding-intro-effects-panel\"}]"
+}]]></config>
+</Panels>

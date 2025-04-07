@@ -143,12 +143,20 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
+    const defaultMode = MusicRegistry.showSoundsPanelInSoundsMode
+      ? 'sounds'
+      : 'packs';
+    const sortUnrestrictedPacksByType =
+      MusicRegistry.sortUnrestrictedPacksByType;
+
     ReactDOM.render(
       <SoundsPanel
         library={MusicLibrary.getInstance()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
         showSoundFilters={MusicRegistry.showSoundFilters}
+        defaultMode={defaultMode}
+        sortUnrestrictedPacksByType={sortUnrestrictedPacksByType}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();

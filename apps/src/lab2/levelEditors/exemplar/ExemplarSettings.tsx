@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 
 import {AppName, ExemplarSettings} from '../../types';
 
-import ExemplarPlayer from './ExemplarPlayer';
 import ExemplarValidation from './ExemplarValidation';
+import MusicExemplarSettings from './MusicExemplarSettings';
 
 const AppExemplarSupport: {[key in AppName]?: boolean} = {
   music: true,
@@ -54,8 +54,7 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
         onChange={updateSettings}
       />
       {appName === 'music' && (
-        <ExemplarPlayer
-          appName={appName}
+        <MusicExemplarSettings
           exemplarDefined={exemplarDefined}
           exemplarSettings={exemplarSettings}
           onChange={updateSettings}

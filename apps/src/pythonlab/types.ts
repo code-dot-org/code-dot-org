@@ -23,4 +23,5 @@ export type MessageType =
   | 'internal_error'
   | 'system_error'
   | 'loading_pyodide'
-  | 'loaded_pyodide';
+  | 'loaded_pyodide'
+  | 'load_failed';

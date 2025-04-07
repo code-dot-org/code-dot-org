@@ -1,0 +1,7 @@
+name 'programming-fundamentals-lesson5-level6_2025'
+display_name 'Practice with Moving'
+description 'Choose one of the options below!'
+
+sublevels
+level 'programming-fundamentals-lesson5-level6a_2025'
+level 'programming-fundamentals-lesson5-level6b_2025'

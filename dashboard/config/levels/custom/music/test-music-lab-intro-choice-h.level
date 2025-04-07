@@ -1,0 +1,409 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-04-01T20:32:14.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice H\r\nPress \"Run\" to listen to this song. Refer to your Activity Guide to see if this song might fit a client's needs. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 2
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "acoustic_arcade/drum_beat_sweep"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "]]#YTqbPjW84+(T$NQP+",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "acoustic_arcade/bass_giant"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "repeat_simple2",
+                      "id": "IE/ALg[:jqFp@$IUzFXv",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "times": 2
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": "]o7T[INNFv`%lCW8]M}b",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "xa+JMq,3Z[U3h+;o3-2A",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "acoustic_arcade/drum_beat_wobble"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "S,xcSMA{9*SEeEUVoWA,",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "acoustic_arcade/bass_giant"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "BS@WBH;pZ#mSnuzDp?KO",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "repeat_simple2",
+                                "id": "kphhI^Wg%LnqAfyEdl[5",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "times": 12
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sounds_together",
+                                      "id": "_8z!o)6oal}oNSykWK{=",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "50b$l:fHIVe=/%PraLc`",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "acoustic_arcade/drum_beat_wobble"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "W%{cFc3JFg:`SG/^e1!#",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "acoustic_arcade/bass_giant"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "repeat_simple2",
+                                    "id": "@_E|8QDAAT%z9/k$8!o]",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "times": 2
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sounds_sequential",
+                                          "id": "play_sounds_sequential",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "VVs$6KUPO[4RoBZmQX4}",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "acoustic_arcade/synth_castle"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "Wb-^!C:t?)v|+ray[*#-",
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "acoustic_arcade/synth_castle"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "Y!r=lcf*RtYD3Luj0P8C",
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "acoustic_arcade/synth_cloud"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_sound_at_current_location_simple2",
+                                                            "id": "oa3$efvDuwPZ#yGLKLx`",
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "sound": "acoustic_arcade/synth_cloud"
+                                                            },
+                                                            "next": {
+                                                              "block": {
+                                                                "type": "play_sound_at_current_location_simple2",
+                                                                "id": "Zyo~;N~#NSKk!C2XtO`L",
+                                                                "extraState": {
+                                                                  "disableNextConnection": false
+                                                                },
+                                                                "fields": {
+                                                                  "sound": "acoustic_arcade/synth_cosmic"
+                                                                },
+                                                                "next": {
+                                                                  "block": {
+                                                                    "type": "play_sound_at_current_location_simple2",
+                                                                    "id": "rJ/i!^Tki1=BL!A1JKA7",
+                                                                    "extraState": {
+                                                                      "disableNextConnection": false
+                                                                    },
+                                                                    "fields": {
+                                                                      "sound": "acoustic_arcade/synth_cosmic"
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "-C`:J;_r1HRT$U~gAHn)",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 2
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sounds_together",
+                                    "id": "s^`HDN~:prRuE|7|6Av}",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "IzmqfElJH@wu*x{]mvF,",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "acoustic_arcade/drum_beat_wobble"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "ROo9brajTTGiK/c}nqGi",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "acoustic_arcade/bass_giant"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "Y$W`h3l)iV@DFkD|CN`3",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 2
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sounds_together",
+                                        "id": "1N-i/-M~B_^L;|NRCs5s",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "%V^ccAU9YeE}W9]nsk]l",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "acoustic_arcade/drum_beat_sweep"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "xp^,lzS^R`+[|$TY_8Wd",
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "acoustic_arcade/bass_giant"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Choice H",
+    "thumbnail_url": "https://images.code.org/965f2e5f46e56baf8cc9a91a90606f78-Screenshot 2025-04-02 at 7.41.54 AM.png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-01T20:32:14.543+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-g\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-g\"},{\"changed_at\":\"2025-04-01 20:32:43 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-01 20:33:41 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-02 14:49:20 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-02 14:49:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-02 14:59:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-02 15:04:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-02 17:40:43 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

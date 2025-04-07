@@ -1,0 +1,20 @@
+{
+  "name": "csp-pre-survey",
+  "script_names": [
+    "csp-pre-survey"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csp-pre-survey",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

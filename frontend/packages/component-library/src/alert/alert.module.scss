@@ -1,6 +1,7 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
+@use '@code-dot-org/component-library-styles/font.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 $alert-span-vertical-top-spacing: 2px;
 
@@ -16,53 +17,54 @@ $alert-span-vertical-top-spacing: 2px;
 
     i {
       text-align: center;
+      color: var(--text-neutral-primary);
     }
 
     a {
-      color: var(--neutral-base-black);
+      color: var(--text-neutral-primary);
     }
   }
 }
 
 // Types (colors)
 .alert-primary {
-  background-color: var(--brand-purple-10);
+  background-color: var(--background-brand-purple-light);
 }
 
 .alert-success {
-  background-color: var(--sentiment-success-10);
+  background-color: var(--background-success-extra-light);
 
   .alertContentContainer i {
-    color: var(--sentiment-success-50);
+    color: var(--text-success-primary);
   }
 }
 
 .alert-danger {
-  background-color: var(--sentiment-error-10);
+  background-color: var(--background-error-extra-light);
 
   .alertContentContainer i {
-    color: var(--sentiment-error-50);
+    color: var(--text-error-primary);
   }
 }
 
 .alert-warning {
-  background-color: var(--sentiment-warning-10);
+  background-color: var(--background-warning-extra-light);
 
   .alertContentContainer i {
-    color: var(--sentiment-warning-50);
+    color: var(--text-warning-primary);
   }
 }
 
 .alert-info {
-  background-color: var(--sentiment-information-10);
+  background-color: var(--background-info-extra-light);
 
   .alertContentContainer i {
-    color: var(--sentiment-information-50);
+    color: var(--text-info-primary);
   }
 }
 
 .alert-gray {
-  background-color: var(--neutral-gray-5);
+  background-color: var(--background-neutral-tertiary);
 }
 
 // Sizes
@@ -79,7 +81,7 @@ $alert-span-vertical-top-spacing: 2px;
     }
 
     span {
-      @include body-one;
+      @include typography.body-one;
       margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }
@@ -99,7 +101,7 @@ $alert-span-vertical-top-spacing: 2px;
     }
 
     span {
-      @include body-two;
+      @include typography.body-two;
       margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }
@@ -119,7 +121,7 @@ $alert-span-vertical-top-spacing: 2px;
     }
 
     span {
-      @include body-three;
+      @include typography.body-three;
       margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }
@@ -139,7 +141,7 @@ $alert-span-vertical-top-spacing: 2px;
     }
 
     span {
-      @include body-four;
+      @include typography.body-four;
       margin-top: $alert-span-vertical-top-spacing;
       margin-bottom: 0;
     }

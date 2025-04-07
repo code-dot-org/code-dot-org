@@ -4,17 +4,27 @@
     "self-paced-pl-equitymodule-unit1",
     "self-paced-pl-equitymodule-unit2"
   ],
-  "published_state": "pilot",
-  "instruction_type": "teacher_led",
+  "published_state": "stable",
+  "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-equitymodule",
-    "pilot_experiment": "equitycomputersciencemoduleplpilot",
     "version_year": "2024"
   },
   "resources": [
-
+    {
+      "name": "Equity in Computer Science Activity Guide",
+      "url": "https://bit.ly/EquityActivityGuide",
+      "key": "equity_in_computer_science_activity_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "equity_in_computer_science_activity_guide"
+      }
+    }
   ],
   "student_resources": [
 

@@ -1,0 +1,27 @@
+name 'csaif_pl_troubleshoot-about-L14-CSandDev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Software Troubleshooting
+
+#### In the next level, you will interact with an app while troubleshooting real-world system issues such as crashes, errors, and performance slowdowns. 
+
+#### The simulation randomly introduces system scenarios that require you to test and evaluate different actions to resolve the issue before resuming gameplay, reinforcing critical thinking and problem-solving skills. 
+
+## Guidance for the Activity
+
+<img src="https://images.code.org/e5cf485c72e531c4dbf1fd2700f13e0c-image-1742403409824.png" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+- #### **Experiment Freely** – Not every action will work, and that’s okay! The goal is to test different solutions and determine what’s most effective for each type of problem.
+
+- #### **Trial and Error is Expected** – Troubleshooting isn’t about getting it right the first time. Running through the simulation multiple times can reveal different outcomes and insights.
+
+- #### **Observe Cause and Effect** – Pay attention to what happens after taking an action. Does the issue improve, stay the same, or get worse? Each result offers valuable clues.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/csad-pilot-content-2024/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+## Let's try it! 
+MARKDOWN

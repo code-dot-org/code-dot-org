@@ -10,7 +10,7 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
-  # Redirect old sign up flow to new sign up flow
+  # Redirect old sign up flow to current sign up flow
   get "/users/sign_up", to: redirect("/users/sign_up/account_type")
 
   # Redirect uses of "new_sign_up" to "sign_up"
@@ -58,7 +58,7 @@ Dashboard::Application.routes.draw do
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
-    resources :user_level_evaluations, only: [:create]
+    resources :student_work_evaluations, only: [:create]
 
     resources :user_level_interactions, only: [:create]
 
@@ -97,10 +97,15 @@ Dashboard::Application.routes.draw do
     resources :images, only: [:new]
 
     get "/ai_iteration/tools", to: "ai_iteration#tools"
-    get "/student_code_sample/:num_samples/:script_id/:level_id", to: "student_code_sample#fetch_student_code_samples"
+    post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
+    post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
-    get 'maker/home', to: 'maker#home'
-    get 'maker/setup', to: 'maker#setup'
+    resources :maker, only: [] do
+      collection do
+        get :home
+        get :setup
+      end
+    end
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -145,6 +150,7 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+        get :retrieve_lessons_for_dropdown
       end
       collection do
         post 'section_instructors_verified'
@@ -563,15 +569,21 @@ Dashboard::Application.routes.draw do
 
     resources :scripts, path: '/s/', &unit_routes
 
-    get '/certificate_images/:filename', to: 'certificate_images#show'
+    resources :certificate_images, only: [:show], param: 'filename'
 
-    post '/print_certificates/batch'
-    get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+    resources :print_certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        post :batch
+      end
+    end
 
-    get '/certificates/blank'
-    get '/certificates/batch'
-    post '/certificates/batch'
-    get '/certificates/:encoded_params', to: 'certificates#show'
+    resources :certificates, only: [:show], param: 'encoded_params' do
+      collection do
+        get :blank
+        get :batch
+        post :batch
+      end
+    end
 
     get '/beta', to: redirect('/')
 
@@ -827,16 +839,23 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
     get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-    get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
-    get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_facilitator_for_pl_page'
-    get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_organizer_for_pl_page'
-    get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_program_manager_for_pl_page'
+    get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning#applications_closed'
+    get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
-    get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
+    get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
+    get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
+    get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
+    get 'professional-learning/facilitator/computer-science-fundamentals', to: 'pd/professional_learning#csf'
+    get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
+    get 'professional-learning/facilitator/computer-science-ai-fundamentals', to: 'pd/professional_learning#csaif'
+    get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
 
     namespace :pd do
       # React-router will handle sub-routes on the client.
@@ -929,6 +948,7 @@ Dashboard::Application.routes.draw do
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
     get 'dashboardapi/unit_summary/:unit_name', to: 'api#unit_summary'
+    get 'dashboardapi/unit_summary/:course_name/:unit_position', to: 'api#unit_summary'
     get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
@@ -1067,6 +1087,12 @@ Dashboard::Application.routes.draw do
           end
           member do
             post 'increment_visit_count'
+          end
+        end
+
+        resources :users do
+          collection do
+            get :signed_in
           end
         end
       end
@@ -1226,7 +1252,7 @@ Dashboard::Application.routes.draw do
 
     post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
-    get '/aichat_events/student_chat_history', to: 'aichat_events#student_chat_history'
+    get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'

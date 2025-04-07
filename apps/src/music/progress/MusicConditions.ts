@@ -1,6 +1,16 @@
+import {defaultMaps} from '../blockly/toolbox/definitions';
+import {BlockMode} from '../constants';
+
 import {ConditionNames} from './MusicValidator';
 
 export const MusicConditions: ConditionNames = {
+  BLOCK_COUNT_BY_TYPE: {
+    name: 'block_count_by_type',
+    valueType: 'string:number',
+    description:
+      'Counts blocks on the workspace of a given type. Blocks must be enabled on the workspace. Ex. Value: [repeatSimple2, 2]',
+    valueOptions: Object.values(defaultMaps[BlockMode.SIMPLE2]).flat(),
+  },
   PLAYED_SOUNDS_TOGETHER: {
     name: 'played_sounds_together',
     valueType: 'number',
@@ -38,6 +48,12 @@ export const MusicConditions: ConditionNames = {
     description:
       'Checks if something is playing from within an if/else block. Advanced mode only.',
   },
+  PLAYED_SOUNDS_IN_DIFFERENT_FUNCTIONS: {
+    name: 'played_sounds_in_different_functions',
+    valueType: 'number',
+    description:
+      'Tracks how many unique functions were used when playing sounds.  Useful for checking how many functions the student has called. Ex. Value: 3',
+  },
   PLAYED_ANYTHING_IN_SAME_FUNCTION: {
     name: 'played_anything_in_same_function',
     valueType: 'number',
@@ -73,6 +89,19 @@ export const MusicConditions: ConditionNames = {
     valueType: 'string',
     description:
       'Checks if a specific sound is playing. Ex. Value: beats/drum_kit_disco',
+  },
+  PLAYED_SOUND_TYPE: {
+    name: 'played_sound_type',
+    valueType: 'string',
+    description: 'Checks if a certain sound type is playing.',
+    valueOptions: ['beat', 'bass', 'lead', 'fx', 'vocal'],
+  },
+  PLAYED_SOUND_TYPE_MULTIPLE_TIMES: {
+    name: 'played_sound_type_multiple_times',
+    valueType: 'string:number',
+    description:
+      'Checks if a certain sound type has played at least this many times. Ex. Value: [lead, 2]',
+    valueOptions: ['beat', 'bass', 'lead', 'fx', 'vocal'],
   },
   PLAYED_EMPTY_CHORDS: {
     name: 'played_empty_chords',
@@ -124,6 +153,12 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
     description:
       'Checks if at least 2 sounds have played together at least this many times. Ex. Value: 2',
+  },
+  PLAYED_DIFFERENT_LENGTH_SOUNDS: {
+    name: 'played_different_length_sounds',
+    valueType: 'number',
+    description:
+      'Checks if at least this many sounds with different length have played. Ex. Value: 2',
   },
   TRIGGER_ID_PRESSED: {
     name: 'trigger_id_pressed',

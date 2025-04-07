@@ -5,7 +5,16 @@
  */
 import {defineComponents} from '@contentful/experiences-sdk-react';
 
+import ActionBlock, {
+  ActionBlockContentfulComponentDefinition,
+} from '@/components/actionBlocks/defaultActionBlock';
+import FullWidthActionBlock, {
+  FullWidthActionBlockContentfulComponentDefinition,
+} from '@/components/actionBlocks/fullWidthActionBlock';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
+import ActionBlockCarousel, {
+  ActionBlockCarouselContentfulComponentDefinition,
+} from '@/components/carousels/actionBlockCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
@@ -18,6 +27,9 @@ import FAQAccordion, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import IconHighlight, {
+  IconHighlightContentfulComponentDefinition,
+} from '@/components/iconHighlight';
 import Iframe, {IframeContentfulComponentDefinition} from '@/components/iframe';
 import Image, {ImageContentfulComponentDefinition} from '@/components/image';
 import Link, {LinkContentfulComponentDefinition} from '@/components/link';
@@ -30,14 +42,34 @@ import Paragraph, {
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
+import SimpleList, {
+  SimpleListContentfulComponentDefinition,
+} from '@/components/simpleList';
+import CurriculumSnapshot, {
+  CurriculumSnapshotContentfulComponentDefinition,
+} from '@/components/snapshots/curriculumSnapshot';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
   [
+    {
+      component: ActionBlock,
+      definition: ActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
+    },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
-      component: VideoCarousel,
-      definition: VideoCarouselContentfulComponentDefinition,
+      component: ActionBlockCarousel,
+      definition: ActionBlockCarouselContentfulComponentDefinition,
     },
     {
       component: Divider,
@@ -51,8 +83,19 @@ defineComponents(
       definition: FAQAccordionContentfulComponentDefinition,
     },
     {
+      component: FullWidthActionBlock,
+      definition: FullWidthActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: IconHighlight,
+      definition: IconHighlightContentfulComponentDefinition,
     },
     {
       component: Iframe,
@@ -82,11 +125,24 @@ defineComponents(
       },
     },
     {
+      component: SimpleList,
+      definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: CurriculumSnapshot,
+      definition: CurriculumSnapshotContentfulComponentDefinition,
+    },
+    {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
+    {
       component: Video,
       definition: VideoContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: VideoCarousel,
+      definition: VideoCarouselContentfulComponentDefinition,
     },
   ],
   {
