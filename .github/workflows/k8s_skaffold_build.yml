@@ -116,18 +116,18 @@ jobs:
       # - name: ssh into the runner
       #   uses: mxschmitt/action-tmate@v3
 
-      - name: skaffold cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.skaffold/cache
-          key: skaffold-${{ hashFiles('~/.skaffold/cache') }}
-          restore-keys: |
-            skaffold-
+      # - name: skaffold cache
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: ~/.skaffold/cache
+      #     key: skaffold-${{ hashFiles('~/.skaffold/cache') }}
+      #     restore-keys: |
+      #       skaffold-
 
-      - name: did we use skaffold cache?
-        run: |
-          find ~/.skaffold/cache || true
-          du -h ~/.skaffold/cache || true
+      # - name: did we use skaffold cache?
+      #   run: |
+      #     find ~/.skaffold/cache || true
+      #     du -h ~/.skaffold/cache || true
 
       # - name: Free disk space
       #   run: |
@@ -147,7 +147,7 @@ jobs:
 
           echo "Done w/ skaffold build"
 
-      - name: did we use skaffold cache?
-        run: |
-          find ~/.skaffold/cache
-          du -h ~/.skaffold/cache
+      # - name: did we use skaffold cache?
+      #   run: |
+      #     find ~/.skaffold/cache
+      #     du -h ~/.skaffold/cache
