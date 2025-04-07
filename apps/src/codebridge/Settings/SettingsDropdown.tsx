@@ -89,49 +89,45 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     setSelectedConsoleFontSizeValue(getSelectedKey(value));
   };
 
+  const handleFontSizeChange = (
+    type: 'CodeEditor' | 'Console',
+    selectedKey: keyof typeof FontSize,
+    currentKey: keyof typeof FontSize,
+    event: string
+  ) => {
+    if (selectedKey !== currentKey && FontSize[selectedKey]) {
+      if (signInState === SignInState.SignedIn) {
+        trySetSessionStorage(`${appName}${type}FontSizeKey`, selectedKey);
+      }
+      const reduxAction =
+        type === 'Console' ? setConsoleFontSize : setEditorFontSize;
+      dispatch(reduxAction(selectedKey));
+      sendCodebridgeAnalyticsEvent(event, appName, {
+        levelPath: window.location.pathname,
+        fontSize: selectedKey,
+      });
+    }
+  };
+
   const onSave = () => {
     const selectedEditorKey = getSelectedKey(selectedEditorFontSizeValue);
     const selectedConsoleKey = getSelectedKey(selectedConsoleFontSizeValue);
-    if (
-      selectedEditorKey !== currentEditorFontSizeKey &&
-      FontSize[selectedEditorKey]
-    ) {
-      // We want the user preference for selected font size to persist across a session
-      // for signed-in users per app type.
-      if (signInState === SignInState.SignedIn) {
-        const sessionStorageKey = `${appName}CodeEditorFontSizeKey`;
-        trySetSessionStorage(sessionStorageKey, selectedEditorKey);
-      }
-      dispatch(setEditorFontSize(selectedEditorKey));
-      sendCodebridgeAnalyticsEvent(
-        EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE,
-        appName,
-        {
-          levelPath: window.location.pathname,
-          fontSize: selectedEditorKey,
-        }
-      );
-    }
-    if (
-      selectedConsoleKey !== currentConsoleFontSizeKey &&
-      FontSize[selectedConsoleKey]
-    ) {
-      // We want the user preference for selected font size to persist across a session
-      // for signed-in users per app type.
-      if (signInState === SignInState.SignedIn) {
-        const sessionStorageKey = `${appName}ConsoleFontSizeKey`;
-        trySetSessionStorage(sessionStorageKey, selectedConsoleKey);
-      }
-      dispatch(setConsoleFontSize(selectedConsoleKey));
-      sendCodebridgeAnalyticsEvent(
-        EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE,
-        appName,
-        {
-          levelPath: window.location.pathname,
-          fontSize: selectedConsoleKey,
-        }
-      );
-    }
+
+    // We want the user preference for selected font size to persist across a session
+    // for signed-in users per app type.
+    handleFontSizeChange(
+      'CodeEditor',
+      selectedEditorKey,
+      currentEditorFontSizeKey,
+      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
+    );
+    handleFontSizeChange(
+      'Console',
+      selectedConsoleKey,
+      currentConsoleFontSizeKey,
+      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
+    );
+
     closeDropdown();
   };
 
