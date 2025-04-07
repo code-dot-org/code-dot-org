@@ -7,6 +7,8 @@ import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
+import HttpClient from '../util/HttpClient';
+import {useAppSelector} from '../util/reduxHooks';
 
 import AiDiffContainer from './AiDiffContainer';
 
@@ -16,6 +18,8 @@ import style from './ai-differentiation.module.scss';
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
  * toggling an AI element open and closed.
  */
+
+const HAS_OPENED_DIFF_URL = '/api/v1/users/has_opened_ai_differentiation';
 
 interface AiDiffFloatingActionButtonProps {
   context: string;
@@ -31,17 +35,27 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   unitDisplayName,
 }) => {
   const sessionStorageKey = 'AiDiffFabOpenStateKey';
-  // Show the pulse if this is the first time the user has seen the FAB in this
-  // session. Depends on other logic which sets the open state in session storage.
-  const [isFirstSession] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
+
+  // Show the pulse until the user clicks the FAB to open the chat window
+  const hasOpened = useAppSelector(
+    state => state.currentUser.hasOpenedAiDifferentiation
   );
+
+  // Open the chat window if this is the first time the user has seen the FAB in this
+  // session and they haven't opened the FAB yet.
+  // Depends on other logic which sets the open state in session storage.
+  const isFirstSession =
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null &&
+    !hasOpened;
+
   const [isOpen, setIsOpen] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, isFirstSession)) ||
+      isFirstSession
   );
+
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
-  const showPulse = isFirstSession && isFabImageLoaded;
+  const showPulse = !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -54,15 +68,22 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       unitName: unitDisplayName,
     };
     const eventName = isOpen
-      ? EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT
-      : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
+      ? EVENTS.AI_DIFF_CHAT_CLOSED
+      : EVENTS.AI_DIFF_CHAT_OPENED;
     analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
+    if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
+      updateHasOpenedDiff();
+    }
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
     trySetSessionStorage(sessionStorageKey, isOpen);
   }, [isOpen]);
+
+  const updateHasOpenedDiff = React.useCallback(() => {
+    HttpClient.post(HAS_OPENED_DIFF_URL, undefined, true).then(() => {});
+  }, []);
 
   return (
     <div id="fab-contained">
@@ -80,7 +101,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         />
       </button>
       <AiDiffContainer
-        open={isOpen}
+        open={isOpen || isFirstSession}
         context={context}
         closeTutor={handleClick}
         scriptId={scriptId}
