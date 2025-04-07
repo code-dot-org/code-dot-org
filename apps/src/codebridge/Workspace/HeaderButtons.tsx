@@ -88,6 +88,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           text={projectPickerSettings.currentType}
           onClick={projectPickerSettings.showProjectTypePicker}
           type={'primary'}
+          aria-label={codebridgeI18n.projectPickerAriaLabel()}
         />
       )}
       <SettingsButton />
