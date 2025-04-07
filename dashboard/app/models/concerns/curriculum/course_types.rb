@@ -40,7 +40,7 @@ module Curriculum::CourseTypes
 
     if is_a?(UnitGroup)
       all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
-    elsif is_a?(Unit) && !unit_group
+    elsif is_a?(Unit) && !original_unit_group
       all_family_courses = Unit.get_family_from_cache(family_name)
     end
 
@@ -59,7 +59,7 @@ module Curriculum::CourseTypes
     return false unless user
 
     # If unit is in a unit group then decide based on unit group audience
-    return unit_group.can_be_instructor?(user) if is_a?(Unit) && unit_group
+    return original_unit_group.can_be_instructor?(user) if is_a?(Unit) && original_unit_group
 
     return false if user.student?
     return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
@@ -82,7 +82,7 @@ module Curriculum::CourseTypes
   # in student courses.
   def can_be_participant?(user)
     # If unit is in a unit group then decide based on unit group audience
-    return unit_group.can_be_participant?(user) if is_a?(Unit) && unit_group
+    return original_unit_group.can_be_participant?(user) if is_a?(Unit) && original_unit_group
 
     # Signed out users can only use student facing courses
     return false if !user && participant_audience != 'student'
@@ -107,7 +107,7 @@ module Curriculum::CourseTypes
   # those can be checked for using old_professional_learning_course?
   def pl_course?
     # If unit is in a unit group then decide based on unit group
-    return unit_group.pl_course? if is_a?(Unit) && unit_group
+    return original_unit_group.pl_course? if is_a?(Unit) && original_unit_group
 
     participant_audience != 'student'
   end

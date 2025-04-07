@@ -1234,7 +1234,7 @@ class User < ApplicationRecord
     return false if sections_as_student.empty?
 
     # Can't hide a unit that isn't part of a course
-    unit_group = unit.try(:unit_group)
+    unit_group = unit.try(:original_unit_group)
     return false unless unit_group
 
     get_participant_hidden_ids(unit_group.id, false).include?(unit.id)
@@ -1511,12 +1511,12 @@ class User < ApplicationRecord
   end
 
   def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
+    section_scripts.include?(script) || section_courses.include?(script&.original_unit_group)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
+    visible_scripts.filter_map(&:original_unit_group).concat(section_courses).uniq
   end
 
   # Checks if there are any launched scripts assigned to the user.

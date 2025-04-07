@@ -121,7 +121,7 @@ module Services
     test 'seed script in unit group' do
       script = create_script_tree(with_unit_group: true)
       refute script.course_version
-      assert script.unit_group.course_version
+      assert script.original_unit_group.course_version
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
@@ -130,8 +130,8 @@ module Services
       # its lessons and everything else they contain. Leave the script and its
       # unit group intact, so that resources can be imported.
       script_to_destroy = Unit.find(script.id)
-      script_to_destroy.unit_group.course_version.resources.destroy_all
-      script_to_destroy.unit_group.course_version.vocabularies.destroy_all
+      script_to_destroy.original_unit_group.course_version.resources.destroy_all
+      script_to_destroy.original_unit_group.course_version.vocabularies.destroy_all
       script_to_destroy.lesson_groups.destroy_all
 
       ScriptSeed.seed_from_json(json)
@@ -148,7 +148,7 @@ module Services
     test 'seed script not yet in unit group' do
       script = create_script_tree(with_unit_group: true)
       refute script.course_version
-      assert script.unit_group.course_version
+      assert script.original_unit_group.course_version
 
       # Capture the json while resources are still present. This test checks
       # that these resources do not get added back during the seed process.
@@ -163,8 +163,8 @@ module Services
       # destroy the script and its unit group, so that no course version will
       # be available during seed.
       script_to_destroy = Unit.find(script.id)
-      script_to_destroy.unit_group.course_version.destroy!
-      script_to_destroy.unit_group.destroy!
+      script_to_destroy.original_unit_group.course_version.destroy!
+      script_to_destroy.original_unit_group.destroy!
       script_to_destroy.destroy!
 
       ScriptSeed.seed_from_json(json)
