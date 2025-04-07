@@ -7,11 +7,13 @@ import {Terminal} from '@xterm/xterm';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {FontSize} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import '@xterm/xterm/css/xterm.css';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';
@@ -26,6 +28,9 @@ const Console: React.FunctionComponent = () => {
   const {labConfig, sendConsoleInput, levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
   const hasMiniApp = !!labConfig?.miniApp?.name;
+  const fontSizeKey = useAppSelector(
+    state => state.lab2View.consoleFontSizeKey
+  );
 
   const clearOutput = useCallback(
     (sendAnalytics: boolean) => {
@@ -123,7 +128,7 @@ const Console: React.FunctionComponent = () => {
     fitAddon.fit();
     window.addEventListener('resize', () => fitAddon.fit());
     terminal.options = {
-      fontSize: 30,
+      fontSize: FontSize[fontSizeKey],
     };
 
     // Right now we are tracking lines from the previous console so we can replay them here.
@@ -140,7 +145,15 @@ const Console: React.FunctionComponent = () => {
     terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);
 
     setDidInit(true);
-  }, [didInit, terminalRef, onData]);
+  }, [didInit, terminalRef, onData, fontSizeKey]);
+
+  useEffect(() => {
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const terminal = consoleManager?.getTerminal();
+    if (terminal) {
+      terminal.options.fontSize = FontSize[fontSizeKey];
+    }
+  }, [fontSizeKey]);
 
   return (
     <PanelContainer
