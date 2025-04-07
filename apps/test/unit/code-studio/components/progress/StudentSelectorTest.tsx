@@ -52,7 +52,7 @@ const PROGRESS: InitProgressPayload = {
   unitTitle: '',
   unitDescription: '',
   unitStudentDescription: '',
-  unitHasUnnumberedLessons: undefined,
+  unitHasUnnumberedLessons: false,
   courseId: 1,
   courseVersionId: 1,
   isLessonExtras: false,

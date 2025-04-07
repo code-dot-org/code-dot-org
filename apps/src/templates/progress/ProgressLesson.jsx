@@ -42,7 +42,7 @@ class ProgressLesson extends React.Component {
     isRtl: PropTypes.bool,
     isMiniView: PropTypes.bool,
     lockStatusLoaded: PropTypes.bool.isRequired,
-    unitHasUnnumberedLessons: PropTypes.bool,
+    unitHasUnnumberedLessons: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
