@@ -1,3 +1,5 @@
+import amazonFutureEngineerLogo from '@public/images/amazon-future-engineer-dark-logo.png';
+import customBackgroundImage from '@public/images/hero-banner-custom-bg-example.png';
 import imageFile from '@public/images/image-component.png';
 import {Meta, StoryObj} from '@storybook/react';
 
@@ -54,9 +56,9 @@ export const WithPartnerAndCTA: Story = {
     subHeading: 'In collaboration with Tech for Good',
     description: 'Together we build inclusive education tools.',
     partner: {
-      title: 'Tech for Good',
+      title: 'In partnership with',
       logo: {
-        src: imageFile,
+        src: amazonFutureEngineerLogo,
         altText: 'Tech for Good Logo',
       },
     },
@@ -82,5 +84,41 @@ export const LongContent: Story = {
       'Subheading can also be multiline and should be styled correctly across breakpoints.',
     description:
       'The description here is intentionally long to ensure text flows properly across viewports and doesn’t break layout.',
+  },
+};
+
+export const WithBackgroundImage: Story = {
+  args: {
+    heading: 'Background Image Example',
+    subHeading: 'This hero has a custom background image',
+    description:
+      'The background image should not interfere with the text readability.',
+    backgroundImageUrl: customBackgroundImage,
+    'data-theme': 'Dark',
+  },
+};
+
+export const WithoutBackground: Story = {
+  args: {
+    heading: 'No Background Example',
+    subHeading: 'This hero has no background color or image',
+    description:
+      'The content should be clearly visible without any background distractions.',
+    removeBackground: true,
+  },
+};
+
+export const WithWideText: Story = {
+  args: {
+    heading: 'Wide Text Example',
+    subHeading: 'This hero has wide text layout',
+    description:
+      'The text should be centered and span the full width of the container.',
+    imageProps: {
+      src: imageFile,
+      altText: 'Decorative image for hero section',
+      className: 'custom-image-class',
+    },
+    withWideText: true,
   },
 };

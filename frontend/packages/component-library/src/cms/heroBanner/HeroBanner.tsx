@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import {ReactNode, HTMLAttributes} from 'react';
 
 import {LinkButton, LinkButtonProps} from '@/button';
+import {Theme} from '@/common/contexts';
 import Image, {ImageProps} from '@/image';
 import {Heading1, BodyOneText, BodyTwoText} from '@/typography';
 import Video, {VideoProps} from '@/video';
@@ -23,8 +24,14 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   buttonProps?: LinkButtonProps;
   /** HeroBanner custom background url */
   backgroundImageUrl?: string;
+  /** HeroBanner theme value.
+   *  If you're using backgroundImageUrl - you should make sure you set correct theme value to HeroBanner.
+   *  */
+  'data-theme'?: Theme;
   /** Whether to show the background color */
   removeBackground?: boolean;
+  /** HeroBanner whether show with wide text (text is wider than image) */
+  withWideText?: boolean;
   /** HeroBanner partner prop */
   partner?: {title: string; logo: ImageProps};
   /** HeroBanner custom className  */
@@ -52,12 +59,25 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   buttonProps,
   imageProps,
   videoProps,
+  backgroundImageUrl,
+  removeBackground = false,
+  withWideText = false,
   className,
   ...HTMLAttributes
 }) => (
   <section
     {...HTMLAttributes}
-    className={classNames(moduleStyles.heroBannerWrapper, className)}
+    className={classNames(moduleStyles.heroBannerWrapper, className, {
+      [moduleStyles['heroBanner-withWideText']]: withWideText,
+    })}
+    data-theme={HTMLAttributes['data-theme']}
+    style={{
+      ...(HTMLAttributes.style ?? {}),
+      backgroundImage: backgroundImageUrl
+        ? `url(${backgroundImageUrl})`
+        : HTMLAttributes.style?.backgroundImage,
+      ...(removeBackground ? {background: 'none'} : {}),
+    }}
   >
     <div className={classNames(moduleStyles.heroBannerContainer)}>
       <div className={moduleStyles.heroBannerDescriptiveSection}>
@@ -74,12 +94,16 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           </span>
         )}
 
-        {buttonProps && <LinkButton {...buttonProps} />}
+        {buttonProps && (
+          <LinkButton color="purple" type="primary" {...buttonProps} />
+        )}
       </div>
-      <div className={moduleStyles.heroBannerVisualSection}>
-        {imageProps && !videoProps && <Image {...imageProps} />}
-        {videoProps && <Video {...videoProps} />}
-      </div>
+      {(imageProps || videoProps) && (
+        <div className={moduleStyles.heroBannerVisualSection}>
+          {imageProps && !videoProps && <Image {...imageProps} />}
+          {videoProps && <Video {...videoProps} />}
+        </div>
+      )}
     </div>
   </section>
 );
