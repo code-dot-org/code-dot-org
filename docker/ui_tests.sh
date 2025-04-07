@@ -27,8 +27,8 @@ build_dashboard: true
 build_i18n: false
 build_pegasus: true
 bundler_use_sudo: false
-cloudfront_key_pair_id: invalid_cloudfront_key_pair_id
-cloudfront_private_key: \"invalid_cloudfront_private_key\"
+cloudfront_key_pair_id: nil
+cloudfront_private_key: nil
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_port: 3000
@@ -44,7 +44,7 @@ no_https_store: true
 override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
 pegasus_port: 3000
-properties_encryption_key: ''
+properties_encryption_key: nil
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
 saucelabs_tunnel_name: cdo-tunnel-$CI_BUILD_NUMBER
