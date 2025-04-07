@@ -29,7 +29,10 @@ describe('POST /api/revalidate', () => {
 
   it('should return 403 if the secret is invalid', async () => {
     mockEnv('valid-secret');
-    const request = mockRequest({path: '/test-path', secret: 'invalid-secret'});
+    const request = mockRequest({
+      pagePaths: {'en-US': 'test-path', 'zh-CN': 'test-path'},
+      secret: 'invalid-secret',
+    });
 
     const response = await POST(request);
 
@@ -43,7 +46,10 @@ describe('POST /api/revalidate', () => {
 
   it('should return 500 if revalidatePath throws an error', async () => {
     mockEnv('valid-secret');
-    const request = mockRequest({path: '/test-path', secret: 'valid-secret'});
+    const request = mockRequest({
+      pagePaths: {'en-US': 'test-path', 'zh-CN': 'test-path'},
+      secret: 'valid-secret',
+    });
     mockRevalidatePath.mockImplementation(() => {
       throw new Error('Revalidation error');
     });
@@ -60,7 +66,10 @@ describe('POST /api/revalidate', () => {
 
   it('should return 200 and revalidate the path if the secret is valid', async () => {
     mockEnv('valid-secret');
-    const request = mockRequest({path: '/test-path', secret: 'valid-secret'});
+    const request = mockRequest({
+      pagePaths: {'en-US': 'test-path', 'zh-CN': 'test-path'},
+      secret: 'valid-secret',
+    });
 
     mockRevalidatePath.mockImplementation(() => {
       return true;

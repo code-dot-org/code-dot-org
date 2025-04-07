@@ -21,7 +21,6 @@ type ExperiencePageProps = {
 
 async function getPageProps({params}: ExperiencePageProps) {
   const {locale = 'en-US', slug = 'home-page'} = (await params) || {};
-  const editorMode = expEditorMode === 'true';
 
   return {
     experienceResult: await getExperience(slug, locale),
