@@ -116,8 +116,14 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   );
 
   React.useEffect(() => {
-    sortableSectionIds;
-    // TODO(lfm): Update the order of sections in the backend
+    HttpClient.put(
+      '/user_preference',
+      JSON.stringify({sectionOrder: sortableSectionIds}),
+      true,
+      {
+        'Content-Type': 'application/json; charset=UTF-8',
+      }
+    );
   }, [sortableSectionIds]);
 
   const onDeleteClickCallback = (sectionId: number) => {
