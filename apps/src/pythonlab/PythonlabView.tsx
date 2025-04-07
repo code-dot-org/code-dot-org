@@ -119,6 +119,12 @@ const PythonlabView: React.FunctionComponent<
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
+    // The current project type is determined by the last saved lab config
+    // if it exists, otherwise it is determined by the lab config provided by useSource.
+    // The reason for this is the useSource lab config could be the lab config when viewing
+    // a previous version of the project, and we want to use the lab config from their most recent
+    // save. I.e., if the user is currently on a neighborhood project, but a previous version was console,
+    // we want to show them the start sources for neighborhood.
     if (levelProperties.isProjectLevel) {
       const labConfigToUse = lastSavedLabConfig || labConfig;
       return (
