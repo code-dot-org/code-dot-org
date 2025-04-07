@@ -1,17 +1,17 @@
 import {Experience} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 
-import {getSeoMetadataFromExperience} from '@/contentful/selectors/getExperienceEntryFields';
-import {getAbsoluteImageUrl} from '@/contentful/selectors/getImage';
+import {getSeoMetadataFromExperience} from '@/selectors/contentful/getExperienceEntryFields';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {SeoMetadata} from '@/types/contentful/entries/SeoMetadata';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 import {getSeoMetadata} from '../seo';
 
-jest.mock('@/contentful/selectors/getExperienceEntryFields', () => ({
+jest.mock('@/selectors/contentful/getExperienceEntryFields', () => ({
   getSeoMetadataFromExperience: jest.fn(),
 }));
-jest.mock('@/contentful/selectors/getImage', () => ({
+jest.mock('@/selectors/contentful/getImage', () => ({
   getAbsoluteImageUrl: jest.fn(),
 }));
 

@@ -8,8 +8,8 @@ import FontLoader from '@code-dot-org/fonts/FontLoader';
 
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
-import {getPageHeading} from '@/contentful/selectors/getExperienceEntryFields';
 import {getSeoMetadata} from '@/metadata/seo';
+import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; preview?: string}>;

@@ -1,8 +1,8 @@
 import {Experience} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 
-import {getSeoMetadataFromExperience} from '@/contentful/selectors/getExperienceEntryFields';
-import {getAbsoluteImageUrl} from '@/contentful/selectors/getImage';
+import {getSeoMetadataFromExperience} from '@/selectors/contentful/getExperienceEntryFields';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {SeoMetadata} from '@/types/contentful/entries/SeoMetadata';
 
 export function getSeoMetadata(
