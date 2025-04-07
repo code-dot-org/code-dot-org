@@ -161,6 +161,32 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('image', () => {
+      let component: Locator;
+
+      test.beforeEach(() => {
+        component = allTheThingsPage.getSectionLocator('Image');
+      });
+
+      test('renders all images with correct alt text', async () => {
+        const altText = ['', 'Image with border', 'Image with shadow'];
+
+        for (const alt of altText) {
+          const image =
+            alt === ''
+              ? component.locator('img[alt=""]')
+              : component.getByRole('img', {name: alt});
+
+          await image.scrollIntoViewIfNeeded();
+          await expect(image).toBeVisible();
+        }
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('overline', () => {
       let component: Locator;
 
