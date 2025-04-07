@@ -1621,7 +1621,8 @@ class Unit < ApplicationRecord
     lessons.none?(&:has_lesson_plan)
   end
 
-  def summarize_for_lesson_materials_view(user)
+  def summarize_for_lesson_materials_view(user, unit_group)
+    # DAYNE SHOULD I DELETE UNIT_GROUP OR CHANGE IT TO RETURN THE FIRST UNIT_GROUP_UNITS?
     summary = {
       unitId: id,
       title: title_for_display,
