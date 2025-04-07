@@ -244,7 +244,10 @@ class Level < ApplicationRecord
       # developers and adhoc environments must be able to seed levels without properties_encryption_key
       # non_ci_test = rack_env == :test && !CDO.ci && !CDO.chef_managed
       # raise unless rack_env?(:development) || rack_env?(:adhoc) || non_ci_test
-      puts "WARNING THAT WOULD BE ERROR IF NOT DISABLEDE: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
+
+      # Seth: I think this is roughly equivalent in our systems, and I can understand it:
+      # raise if (rack_env == :test && (CDO.ci || CDO.chef_managed)) || CDO.rack_env?(:production)
+      puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash
   end
