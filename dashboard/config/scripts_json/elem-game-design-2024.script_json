@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-25 00:55:27 UTC",
+    "serialized_at": "2025-04-03 01:06:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2870,6 +2870,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/elem-game-design-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/elem-game-design-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/elem-game-design-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "CSF - Course E - Slides",
       "url": "https://docs.google.com/presentation/d/1ITQJowykWuEy4hb8SkS6L4f_GE5Hkbtdb_x0TO1HbCE/template/preview",
       "key": "csf_-_course_e_-_slides",
@@ -3027,7 +3060,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "elem-game-design-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "elem-game-design-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

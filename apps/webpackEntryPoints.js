@@ -100,7 +100,6 @@ const CODE_STUDIO_ENTRIES = {
   'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
-  'maker/home': './src/sites/studio/pages/maker/home.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
@@ -257,6 +256,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',
 
   'pd/professional_learning/index': './src/sites/studio/pages/pd/professional_learning/index.js',
+  'pd/professional_learning/regional_workshop_catalog': './src/sites/studio/pages/pd/professional_learning/regional_workshop_catalog.js',
   'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
   'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',

@@ -1,11 +1,14 @@
 import Button from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/evaluationApi';
+import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';
+import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FreeResponseSummaryDataBox from './FreeResponseSummaryDataBox';
 
 import styles from './summary.module.scss';
@@ -16,6 +19,8 @@ type FreeResponseAiSummaryBoxProps = {
   isPending: boolean;
   studentWorkEvaluations?: StudentWorkEvaluation[];
   evaluationComplete?: boolean;
+  totalNumberOfStudents: number;
+  openDetailedAnalysis?: () => void;
 };
 
 const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
@@ -24,36 +29,57 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   isPending,
   studentWorkEvaluations,
   evaluationComplete,
+  totalNumberOfStudents,
+  openDetailedAnalysis,
 }) => {
-  // TO DO: Update logic for the proficiency label.  Should be > 20% of students have a proficient answer
-  const aiSummaryTag = (proficiencyCount: number) => (
-    <Tags
-      tagsList={[
-        {
-          label: proficiencyCount > 0 ? 'Proficient' : 'Needs Review',
-          icon: {
-            iconName:
-              proficiencyCount > 0 ? 'circle-check' : 'circle-exclamation',
-            iconStyle: 'solid',
-            title: 'check',
-            placement: 'left',
+  const proficienceyThreshold = totalNumberOfStudents * 0.8;
+  const aiSummaryTag = (proficiencyCount: number) => {
+    return (
+      <Tags
+        tagsList={[
+          {
+            label:
+              proficiencyCount > proficienceyThreshold
+                ? FEEDBACK_TYPE.PROFICIENT.label
+                : FEEDBACK_TYPE.NEEDS_REVIEW.label,
+            icon: {
+              iconName:
+                proficiencyCount > proficienceyThreshold
+                  ? FEEDBACK_TYPE.PROFICIENT.icon
+                  : FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+              iconStyle: 'solid',
+              title: 'check',
+              placement: 'left',
+            },
           },
-        },
-      ]}
-      size="l"
-      className={
-        proficiencyCount > 0 ? styles.proficientTag : styles.needsReviewTag
-      }
-    />
-  );
+        ]}
+        size="l"
+        className={
+          proficiencyCount > proficienceyThreshold
+            ? styles.proficientTag
+            : styles.needsReviewTag
+        }
+      />
+    );
+  };
 
   const aiSummaryMessage = (proficiencyCount: number) => (
-    <BodyTwoText>
-      <strong>Reasoning: </strong>
-      {proficiencyCount > 0
-        ? 'This is proficient because more than 1 student has a proficient answer'
-        : 'This is needs review because more than one student needed review'}
-    </BodyTwoText>
+    <>
+      <BodyTwoText>
+        <strong>{`${i18n.reasoning()}:`}</strong>
+        {proficiencyCount > proficienceyThreshold
+          ? 'This is proficient because more than 80% of the students demonstrated proficiency in their responses. '
+          : 'This is needs review less than 80% of students demonstrated proficiency in their responses. '}
+        <Link
+          type="primary"
+          size="m"
+          onClick={openDetailedAnalysis}
+          className={styles.viewAnalysisLink}
+        >
+          {i18n.viewDetailedAnalysis()}
+        </Link>
+      </BodyTwoText>
+    </>
   );
 
   const countEvaluationsByType = (
@@ -73,12 +99,12 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
     : 0;
 
-  // TO DO: Update this with perhaps different logic...
+  // TO DO: Update this with perhaps different logic for "flagged students"
   const flaggedStudentCount = studentWorkEvaluations
     ? countEvaluationsByType(studentWorkEvaluations, ['Cant Evaluate'])
     : 0;
   const noResponseStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['No Response'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['No attempt'])
     : 0;
 
   const showEvaluationSummary = studentWorkEvaluations && evaluationComplete;
@@ -89,7 +115,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         {aiSummaryTag(proficientStudentCount)}
         {aiSummaryMessage(proficientStudentCount)}
         <FreeResponseSummaryDataBox
-          totalStudentCount={10}
+          totalStudentCount={totalNumberOfStudents}
           proficientStudentCount={proficientStudentCount}
           needsRevisionStudentCount={needsRevisionStudentCount}
           flaggedStudentCount={flaggedStudentCount}
@@ -99,19 +125,19 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     );
   };
 
-  // TO DO: Get total student count loaded in
   return (
     <div className={styles.aiSummaryContainer}>
       <div className={styles.leftSide}>
         <img src={aiBot} alt="Ai Bot" className={styles.botImage} />
         <Button
-          text="Evaluate student responses"
+          text={i18n.evaluateStudentResponses()}
           onClick={aiEvaluationHandler}
           size={'s'}
           color={'gray'}
           disabled={disabled}
           type="secondary"
           isPending={isPending}
+          className={styles.evaluateButton}
         />
       </div>
       <div className={styles.rightSide}>

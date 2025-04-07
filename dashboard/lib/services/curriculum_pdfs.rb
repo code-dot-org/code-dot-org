@@ -219,9 +219,16 @@ module Services
 
           get_pdfless_lessons(script).each do |lesson|
             puts "Generating missing Lesson PDFs for #{lesson.key} (from #{script.name})"
-            generate_lesson_pdf(lesson, dir)
+            pdf_pathname = generate_lesson_pdf(lesson, dir)
             generate_lesson_pdf(lesson, dir, student_facing: true)
             any_pdf_generated = true
+
+            if lesson.has_lesson_plan
+              # Generate metadata
+              metadata = generate_metadata_for_ai(script, lesson)
+              add_metadata_to_ai_s3(metadata)
+              add_pdf_to_ai_s3(pdf_pathname, metadata)
+            end
           end
 
           if !script_overview_pdf_exists_for?(script) && should_generate_overview_pdf?(script)

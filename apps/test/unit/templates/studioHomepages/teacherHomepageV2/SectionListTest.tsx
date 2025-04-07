@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import {Store} from 'redux';
+import '@testing-library/jest-dom';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionList';
@@ -27,6 +28,7 @@ describe('SectionList', () => {
       courseVersionName: 'csd-2024',
       unitName: null,
       studentCount: 0,
+      participantType: 'student',
     },
     {
       id: 12,
@@ -34,6 +36,7 @@ describe('SectionList', () => {
       hidden: false,
       courseVersionName: 'csd-2023',
       unitName: null,
+      participantType: 'student',
     },
     {
       id: 13,
@@ -41,6 +44,7 @@ describe('SectionList', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      participantType: 'student',
     },
     {
       id: 14,
@@ -48,12 +52,21 @@ describe('SectionList', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      participantType: 'student',
     },
     {
       id: 15,
       name: 'hidden',
       hidden: true,
       unitName: null,
+      participantType: 'student',
+    },
+    {
+      id: 16,
+      name: 'PL Section',
+      hidden: false,
+      unitName: null,
+      participantType: 'teacher',
     },
   ];
 
@@ -81,12 +94,13 @@ describe('SectionList', () => {
     );
   }
 
-  it('renders list of teacher section cards', async () => {
+  it('renders list of teacher section cards without displaying PL or hidden sections', async () => {
     renderComponent();
     screen.getByText('Period 1');
     screen.getByText('Period 2');
     screen.getByText('Period 3');
     screen.getByText('Period 4');
+    expect(screen.queryByText('hidden')).toBeNull();
   });
 
   it('displays the section delete modal when the delete option is clicked', async () => {
@@ -108,5 +122,46 @@ describe('SectionList', () => {
     screen.getByText('Period 2');
     screen.getByText('Period 3');
     screen.getByText('Period 4');
+  });
+
+  it('removes a section from the list when archived and maintains the order of other sections', async () => {
+    renderComponent();
+
+    screen.getByRole('listitem', {
+      name: 'Period 1',
+    });
+    screen.getByRole('listitem', {
+      name: 'Period 2',
+    });
+    screen.getByRole('listitem', {
+      name: 'Period 3',
+    });
+    screen.getByRole('listitem', {
+      name: 'Period 4',
+    });
+
+    const optionsDropdown = screen.getAllByRole('button', {
+      name: 'Section options dropdown',
+    });
+    fireEvent.click(optionsDropdown[0]);
+    const archiveButtons = screen.getAllByText('Archive');
+    fireEvent.click(archiveButtons[1]);
+
+    waitFor(() => {
+      expect(screen.queryByText('Period 2')).toBeNull();
+    });
+    const p1 = screen.getByRole('listitem', {
+      name: 'Period 1',
+    });
+    const p3 = screen.getByRole('listitem', {
+      name: 'Period 3',
+    });
+    screen.getByRole('listitem', {
+      name: 'Period 4',
+    });
+
+    expect(p1.compareDocumentPosition(p3)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
   });
 });

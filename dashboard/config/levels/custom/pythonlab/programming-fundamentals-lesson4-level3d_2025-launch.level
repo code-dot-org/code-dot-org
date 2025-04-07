@@ -1,21 +1,39 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-02T01:16:42.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "You're creating a game where each player starts at a certain level. Your program needs to remember the player's starting level when they begin the game.\r\n\r\n## Do This:\r\n\r\n1. Create a variable called `starting_level`\r\n\r\n2. Assign it a number like `1` or `3`\r\n\r\n3. Use `print()` to display a message like `Starting at level 1. Good luck!`\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use **commas** in a `print()` statement to combine text and variables. For example:\r\n\r\n```\r\nprint(\"Name:\", first_name)\r\n```",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
     "predict_settings": {
       "isPredictLevel": false
-    }
+    },
+    "display_name": "Starting Level",
+    "bubble_choice_description": "You're creating a game where each player starts at a certain level. Your program needs to remember the player's starting level when they begin the game.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program stores and prints a starting level\n\n# Your code goes here!\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/7505c3fd2de77a4e637ab57abcc176f5-controller.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-02 01:19:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-02 01:19:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:44:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:44:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:50:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

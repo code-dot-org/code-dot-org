@@ -4,6 +4,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 import PermanentPromotions from './PermanentPromotions';
+import {SkeletonTeacherPromo} from './SkeletonTeacherPromo';
 import TeacherPromo, {TeacherPromoInfo} from './TeacherPromo';
 
 import styles from './teacherHomepage.module.scss';
@@ -103,11 +104,13 @@ const TeacherPromotions: React.FC = () => {
 
   return (
     <div className={styles.promotions}>
-      {isLoading && <div>Loading...</div>}
-      {/* TODO(lfm): Add a skeleton here */}
-      {promotions.map(promotion => (
-        <TeacherPromo {...promotion} onClose={closePromotionCallback} />
-      ))}
+      {isLoading ? (
+        <SkeletonTeacherPromo />
+      ) : (
+        promotions.map((promotion, ind) => (
+          <TeacherPromo {...promotion} onClose={closePromotionCallback} />
+        ))
+      )}
       <PermanentPromotions />
     </div>
   );

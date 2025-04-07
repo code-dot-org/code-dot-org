@@ -223,9 +223,9 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1,
       });
 
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
       expect(wrapper.find('SaveBar').length).to.equal(1);
-      expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
+      expect(wrapper.find('CourseTypeEditor').length).to.equal(0);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
     });
@@ -727,38 +727,6 @@ describe('UnitEditor', () => {
           .find('.saveBar')
           .contains(
             'Error Saving: Please set both version year and family name.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('shows error when moving standalone unit out of in development if not supplied all standalone unit information', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({publishedState: 'beta'});
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Standalone units that are not in development must be a standalone unit with family name and version year.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
           )
       ).to.be.true;
 

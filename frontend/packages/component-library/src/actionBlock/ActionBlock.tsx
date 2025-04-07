@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 
 import {LinkButton, LinkButtonProps} from '@/button';
+import Image, {ImageProps} from '@/image';
 import {
   Heading3,
   BodyThreeText,
@@ -12,13 +13,9 @@ import {ActionBlockProps} from './types';
 
 import moduleStyles from './actionBlock.module.scss';
 
-export const getImage = (image?: string) => {
+export const getImage = (image?: ImageProps) => {
   if (!image) return null;
-  return (
-    <figure>
-      <img src={image} alt="" loading={'lazy'} />
-    </figure>
-  );
+  return <Image src={image.src} loading="lazy" alt="" />;
 };
 
 export const getDetail = (details?: {label: string; description: string}) => {

@@ -476,6 +476,9 @@ const EVENTS = {
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
+  AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
+  AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
@@ -516,6 +519,9 @@ const EVENTS = {
   CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
     'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
+  CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
+  CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE:
+    'User changed font size on codebridge editor',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
