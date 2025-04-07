@@ -712,8 +712,10 @@ Dashboard::Application.routes.draw do
 
     resources :zendesk_session, only: [:index]
 
-    post '/report_abuse', to: 'report_abuse#report_abuse'
-    get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    controller :report_abuse do
+      get :report_abuse_form, path: '/report_abuse'
+      post :report_abuse, path: '/report_abuse'
+    end
 
     get '/too_young', to: 'too_young#index'
 
