@@ -188,6 +188,8 @@ export interface BasicsProps
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
+  regionalPartnerData: RegionalPartner[] | null;
+  facilitatorData: Facilitator[] | null;
   errors: WorkshopErrors;
 }
 

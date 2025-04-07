@@ -28,6 +28,8 @@ import Schedule from './sections/Schedule';
 import {
   Errors,
   FieldConfig,
+  Facilitator,
+  RegionalPartner,
   Session,
   SessionAction,
   SessionErrors,
@@ -171,6 +173,14 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
+  );
+
+  const {data: regionalPartnerData} = useFetch<RegionalPartner[]>(
+    '/api/v1/regional_partners'
+  );
+
+  const {data: facilitatorData} = useFetch<Facilitator[]>(
+    `/api/v1/pd/course_facilitators?course=${encodeURIComponent(config.label)}`
   );
 
   const [workshopFormState, dispatchWorkshop] = useReducer(workshopReducer, {
@@ -324,6 +334,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
         errors={workshopErrors}
+        regionalPartnerData={regionalPartnerData}
+        facilitatorData={facilitatorData}
         {...sectionProps}
       />
       <EmailsReminders
