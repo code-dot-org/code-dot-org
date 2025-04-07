@@ -1,7 +1,8 @@
 .textArea {
+    min-height: 40px;
     max-height: 250px;
     box-sizing: border-box;
-    resize: none;
+    resize: vertical;
     margin: 0;
     flex: 1;
 }
