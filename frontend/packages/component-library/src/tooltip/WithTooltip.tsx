@@ -104,11 +104,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        if (event.target instanceof HTMLElement) {
-          event.target.blur(); // Remove focus from the container
-        } else {
-          handleHideTooltip(); // Hide the tooltip if unable to remove focus natively
-        }
+        handleHideTooltip();
       }
     };
     if (showTooltip) {
