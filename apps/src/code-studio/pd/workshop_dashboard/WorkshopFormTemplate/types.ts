@@ -69,7 +69,12 @@ export interface Session {
   location_address?: string;
   location_name?: string;
   meeting_link?: string;
-  session_format?: SessionFormat;
+  session_format: SessionFormat;
+}
+
+export interface DestroyedSession {
+  id: number;
+  _destroy: true;
 }
 
 export interface SessionFormState {

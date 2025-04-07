@@ -39,6 +39,7 @@ import {
   WorkshopAction,
   WorkshopFormState,
   WorkshopFormTemplateProps,
+  DestroyedSession,
 } from './types';
 
 import styles from './styles.module.scss';
@@ -110,25 +111,44 @@ export const workshopStateToApi = (
 
 export const sessionStateToApi = (
   sessions: SessionFormState[],
-  timeZone: string
-): Session[] =>
-  sessions.map(session => ({
-    id: session.id.startsWith('existing')
-      ? Number(session.id.replace(/\D/g, ''))
-      : undefined,
-    session_format: session.format,
-    start: moment
-      .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
-      .utc()
-      .toISOString(),
-    end: moment
-      .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
-      .utc()
-      .toISOString(),
-    location_address: session.locationAddress || undefined,
-    location_name: session.locationName || undefined,
-    meeting_link: session.meetingLink || undefined,
-  }));
+  timeZone: string,
+  existingSessions?: Array<Session>
+): Array<Session | DestroyedSession> => {
+  const newOrUpdatedSessions: Array<Session | DestroyedSession> = [];
+  const sessionsMap = new Map(sessions.map(s => [s.id, s]));
+  const sessionsToDestroy =
+    existingSessions?.reduce((acc: DestroyedSession[], curr) => {
+      if (curr.id && !sessionsMap.get(`existing-${curr.id}`)) {
+        acc.push({
+          id: curr.id,
+          _destroy: true,
+        });
+      }
+      return acc;
+    }, []) ?? [];
+
+  sessions.forEach(session => {
+    newOrUpdatedSessions.push({
+      id: session.id.startsWith('existing')
+        ? Number(session.id.replace(/\D/g, ''))
+        : undefined,
+      session_format: session.format,
+      start: moment
+        .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
+        .utc()
+        .toISOString(),
+      end: moment
+        .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
+        .utc()
+        .toISOString(),
+      location_address: session.locationAddress || undefined,
+      location_name: session.locationName || undefined,
+      meeting_link: session.meetingLink || undefined,
+    });
+  });
+
+  return newOrUpdatedSessions.concat(sessionsToDestroy);
+};
 
 export const workshopReducer = (
   state: WorkshopFormState,
@@ -339,7 +359,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       const workshopData = workshopStateToApi(workshopFormState);
       const sessionData = sessionStateToApi(
         sessionFormState,
-        workshopFormState.timeZone
+        workshopFormState.timeZone,
+        workshop?.sessions
       );
 
       const method = workshop ? 'PATCH' : 'POST';
