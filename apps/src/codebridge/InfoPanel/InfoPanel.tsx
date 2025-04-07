@@ -104,7 +104,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           }}
           isIconOnly
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          color={'white'}
           ariaLabel={'Information panel dropdown'}
           size={'xs'}
           type={'tertiary'}
@@ -125,7 +124,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
 
   const CurrentPanelView = panelMap[currentPanel];
   return (
-    <div data-theme="Dark" style={style} className={className}>
+    <div style={style} className={className}>
       <PanelContainer
         id="codebridge-info-panel"
         headerContent={currentPanelHeader}
@@ -139,7 +138,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
               {panelOptions.map(panel => (
                 <li key={panel}>
                   <Button
-                    color={'black'}
+                    color={'white'}
                     onClick={() => changePanel(panel)}
                     ariaLabel={panel}
                     size={'xs'}

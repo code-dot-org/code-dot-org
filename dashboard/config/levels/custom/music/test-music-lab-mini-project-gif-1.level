@@ -45,6 +45,7 @@
           {
             "kind": "block",
             "type": "play_sound_at_current_location_simple2",
+            "id": "47e`9SvJb1imU9I$WqX(",
             "extraState": {
               "disableNextConnection": false
             },
@@ -56,6 +57,10 @@
           {
             "kind": "block",
             "type": "play_rest_at_current_location_simple2",
+            "id": "]4]6{WvmmYxDq1/lsO{G",
+            "extraState": {
+              "disableNextConnection": false
+            },
             "fields": {
               "rest_duration": "<field name=\"rest_duration\">1</field>"
             },
@@ -63,16 +68,8 @@
           },
           {
             "kind": "block",
-            "type": "triggered_at_simple2",
-            "fields": {
-              "trigger": "<field name=\"trigger\">trigger1</field>",
-              "trigger_start": "<field name=\"trigger_start\">immediately</field>"
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
             "type": "play_sounds_together",
+            "id": "PYV#ih[vPx_|`[x5xs$u",
             "extraState": {
               "disableNextConnection": false
             },
@@ -81,6 +78,7 @@
           {
             "kind": "block",
             "type": "play_sounds_sequential",
+            "id": "V81zb^aPQVu7kr`e@EZk",
             "extraState": {
               "disableNextConnection": false
             },
@@ -89,6 +87,7 @@
           {
             "kind": "block",
             "type": "play_sounds_random",
+            "id": "7~OEaFDE#:.@QU{q$Bz%",
             "extraState": {
               "disableNextConnection": false
             },
@@ -97,6 +96,7 @@
           {
             "kind": "block",
             "type": "repeat_simple2",
+            "id": "e{#leUs+/5v|Kbv{|!-+",
             "extraState": {
               "disableNextConnection": false
             },
@@ -108,6 +108,7 @@
           {
             "kind": "block",
             "type": "set_effect_at_current_location_simple2",
+            "id": ".PY(yjZc2xK2J~mPT!5w",
             "fields": {
               "effects_name": "<field name=\"effects_name\">volume</field>",
               "effects_value": "<field name=\"effects_value\">normal</field>"
@@ -116,19 +117,11 @@
           },
           {
             "kind": "block",
-            "type": "set_effect_at_current_location_simple2",
+            "type": "triggered_at_simple2",
+            "id": "[jaMbB$_{?q/E]yyMFkn",
             "fields": {
-              "effects_name": "<field name=\"effects_name\">filter</field>",
-              "effects_value": "<field name=\"effects_value\">normal</field>"
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "set_effect_at_current_location_simple2",
-            "fields": {
-              "effects_name": "<field name=\"effects_name\">delay</field>",
-              "effects_value": "<field name=\"effects_value\">normal</field>"
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">immediately</field>"
             },
             "enabled": true
           }
@@ -144,7 +137,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-20 17:06:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 17:10:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:30:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:33:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-20 17:06:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 17:10:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:30:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:33:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:43:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

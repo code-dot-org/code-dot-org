@@ -16,7 +16,8 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "build": "next build",
+    "build": "next build && yarn copy:static-assets",
+    "copy:static-assets": "cp -r public .next/standalone/apps/marketing",
     "dev": "next dev --turbopack -p 3001",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -42,7 +43,7 @@
     "@statsig/statsig-node-core": "^0.0.8",
     "@statsig/web-analytics": "^3.14.1",
     "contentful": "^11.2.5",
-    "next": "^15.2.3",
+    "next": "^15.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

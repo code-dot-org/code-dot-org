@@ -56,7 +56,6 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
       <div
         className={classNames(moduleStyles.outputContainer, className)}
         style={style}
-        data-theme="Dark"
       >
         <Console />
       </div>

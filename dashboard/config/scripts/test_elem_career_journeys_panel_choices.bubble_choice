@@ -1,6 +1,6 @@
 name 'test-elem-career-journeys-panel-choices'
 display_name 'Learn more about careers in CS and AI'
-description 'These people all have jobs in computer science!'
+description '###Choose one video to watch. Then, tap Finish to move on.'
 
 sublevels
 level 'test-elem-career-journeys-video-choice1'

@@ -4,25 +4,13 @@ description 'description here'
 
 markdown <<MARKDOWN
 <div style="position: relative; text-align: center; color: white; margin-top: 20px;">
-    <img src="https://images.code.org/a035808b2a48ce2f5885fe702272fbf2-image-1732312298159.51.29 PM.png" alt="Banner Image" style="width: 100%; border-radius: 10px;">
+    <img src="https://images.code.org/052b5fc25308b850001f547503386322-image-1743815060120.png" alt="Banner Image" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
-        <p style="color: white; line-height: 1; margin-left: 10px; margin-right: 10px; font-size: 40px"><b>Code.org's Equity in Computer Science Module</b></p>
     </div>
 </div>
 <br>
 
 # Welcome!
-
-___
-
-<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; margin-bottom: 20px; ">
-    <img src="https://images.code.org/98012c4db3f6cd448bacb14a1dfbad1b-image-1732227622374.ORG-117.jpeg" alt="A student sits on the ground with a laptop on their lap. They look up at the camera." style="width: 23%; height: auto; border-radius: 10px;">
-    <img src="https://images.code.org/d58547efd396bd965b67d16d16a025c5-image-1732227528989.jpeg" alt="Two students sit side-by-side with devices on their laps. They have happy expressions on their faces." style="width: 23%; height: auto; border-radius: 10px;">
-    <img src="https://images.code.org/5b4e65375ea9de36e6f75020eb05f404-image-1732227572610.jpeg" alt="A teacher crosses their arms in front of the camera. Their classroom is in the background." style="width: 23%; height: auto; border-radius: 10px;">
-    <img src="https://images.code.org/92942e22a0495e229ef1205c9ec39e8f-image-1732227622371.jpeg" alt="Two students sit at a desk, looking forward at a computer screen. One points at the screen." style="width: 23%; height: auto; border-radius: 10px;">
-</div>
-
-___
 
 #### Welcome! Code.org’s Equity in Computer Science professional learning experience is designed to help educators reflect and take action to make their classrooms **diverse**, **accessible**, and **inclusive** for all students.
 
@@ -86,4 +74,6 @@ ___
 <!-- 4/1 Launch pre-survey link: https://studio.code.org/form/selfpaced_pd_equity_cs_pre_survey -->
 
 ### **Suggested total time for this course:** 225 minutes
+
+![]()
 MARKDOWN

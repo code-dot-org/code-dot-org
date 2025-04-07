@@ -563,7 +563,7 @@ function LandingPage({
         headingText: i18n.plSectionsRegionalPartnerPlaybookTitle(),
         descriptionText: i18n.plSectionsRegionalPartnerPlaybookDesc(),
         buttonText: i18n.plSectionsRegionalPartnerPlaybookButton(),
-        buttonUrl: pegasus('/educate/regional-partner/playbook'),
+        buttonUrl: '/professional-learning/regional-partner/playbook',
       },
     ];
     return (

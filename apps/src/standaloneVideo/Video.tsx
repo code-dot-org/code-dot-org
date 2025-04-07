@@ -10,9 +10,9 @@ type VideoChoiceType = undefined | 'youtube' | 'fallback';
 
 interface VideoProps {
   children: React.ReactNode;
-  src: string | undefined;
-  download: string | undefined;
-  thumbnail: string | undefined;
+  src?: string;
+  download?: string;
+  thumbnail?: string;
 }
 
 function useWindowSize() {

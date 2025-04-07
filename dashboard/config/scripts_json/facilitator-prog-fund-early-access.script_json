@@ -6,15 +6,16 @@
     "properties": {
       "content_area": "pd_for_facilitators",
       "curriculum_umbrella": "PD for Facilitators",
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-31 03:22:28 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "serialized_at": "2025-04-03 04:12:34 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "facilitator-prog-fund-early-access"
     }
@@ -111,60 +112,60 @@
   ],
   "lesson_activities": [
     {
-      "key": "727ecf78-c9e2-4eae-97da-53367b325dfa",
+      "key": "524cd301-78cc-489b-838d-3ef7537f0a03",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "727ecf78-c9e2-4eae-97da-53367b325dfa",
+        "lesson_activity.key": "524cd301-78cc-489b-838d-3ef7537f0a03",
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "facilitator-prog-fund-early-access"
       }
     },
     {
-      "key": "c51e0d1b-650b-4828-935d-d98dc629bed7",
+      "key": "b9100578-50db-4568-b33f-6fbd80cd0d84",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "c51e0d1b-650b-4828-935d-d98dc629bed7",
+        "lesson_activity.key": "b9100578-50db-4568-b33f-6fbd80cd0d84",
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "facilitator-prog-fund-early-access"
       }
     },
     {
-      "key": "37528da4-ea95-48c9-9e24-7e796c9b345c",
+      "key": "d486682e-8084-40dd-97d5-a538c35cfbb0",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "37528da4-ea95-48c9-9e24-7e796c9b345c",
+        "lesson_activity.key": "d486682e-8084-40dd-97d5-a538c35cfbb0",
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "facilitator-prog-fund-early-access"
       }
     },
     {
-      "key": "06ae63f0-8c35-4817-81a7-f899fe6491c6",
+      "key": "230a3fc9-4c2f-483b-9b78-164d9c76a7b9",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "06ae63f0-8c35-4817-81a7-f899fe6491c6",
+        "lesson_activity.key": "230a3fc9-4c2f-483b-9b78-164d9c76a7b9",
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "facilitator-prog-fund-early-access"
       }
     },
     {
-      "key": "5624162f-444a-481b-88d4-aeb19ccd97a6",
+      "key": "ff4ddc95-a431-43f7-a79f-a24897d630a9",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "5624162f-444a-481b-88d4-aeb19ccd97a6",
+        "lesson_activity.key": "ff4ddc95-a431-43f7-a79f-a24897d630a9",
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "facilitator-prog-fund-early-access"
@@ -173,61 +174,2543 @@
   ],
   "activity_sections": [
     {
-      "key": "5485d084-2998-444a-909e-0ddca0d38a7a",
+      "key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2",
       "position": 1,
       "properties": {
+        "progression_name": "Course Introduction"
       },
       "seeding_key": {
-        "activity_section.key": "5485d084-2998-444a-909e-0ddca0d38a7a",
-        "lesson_activity.key": "727ecf78-c9e2-4eae-97da-53367b325dfa"
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2",
+        "lesson_activity.key": "524cd301-78cc-489b-838d-3ef7537f0a03"
       }
     },
     {
-      "key": "fad4d818-6a84-452b-a2c8-fd537a0f1c3b",
-      "position": 1,
+      "key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64",
+      "position": 2,
       "properties": {
+        "progression_name": "Course Resources"
       },
       "seeding_key": {
-        "activity_section.key": "fad4d818-6a84-452b-a2c8-fd537a0f1c3b",
-        "lesson_activity.key": "c51e0d1b-650b-4828-935d-d98dc629bed7"
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64",
+        "lesson_activity.key": "524cd301-78cc-489b-838d-3ef7537f0a03"
       }
     },
     {
-      "key": "855ece20-53d0-4230-b2f3-d1a87d316a07",
+      "key": "121ad3ad-68bb-4407-a583-957115610cdb",
       "position": 1,
       "properties": {
+        "progression_name": "What is Computational Thinking?"
       },
       "seeding_key": {
-        "activity_section.key": "855ece20-53d0-4230-b2f3-d1a87d316a07",
-        "lesson_activity.key": "37528da4-ea95-48c9-9e24-7e796c9b345c"
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb",
+        "lesson_activity.key": "b9100578-50db-4568-b33f-6fbd80cd0d84"
       }
     },
     {
-      "key": "46d10df9-6c36-4320-bb0b-3dd92064f414",
-      "position": 1,
+      "key": "c45a7816-7e5a-42d9-bdb4-14467545dfff",
+      "position": 2,
       "properties": {
+        "progression_name": "Exploring Computational Thinking"
       },
       "seeding_key": {
-        "activity_section.key": "46d10df9-6c36-4320-bb0b-3dd92064f414",
-        "lesson_activity.key": "06ae63f0-8c35-4817-81a7-f899fe6491c6"
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff",
+        "lesson_activity.key": "b9100578-50db-4568-b33f-6fbd80cd0d84"
       }
     },
     {
-      "key": "5ac81158-d30a-463e-a123-1ab217eabc61",
+      "key": "f6b96690-fa7f-43f3-9eeb-f48f59dcf092",
       "position": 1,
       "properties": {
+        "progression_name": "Python Basics"
       },
       "seeding_key": {
-        "activity_section.key": "5ac81158-d30a-463e-a123-1ab217eabc61",
-        "lesson_activity.key": "5624162f-444a-481b-88d4-aeb19ccd97a6"
+        "activity_section.key": "f6b96690-fa7f-43f3-9eeb-f48f59dcf092",
+        "lesson_activity.key": "d486682e-8084-40dd-97d5-a538c35cfbb0"
+      }
+    },
+    {
+      "key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83",
+      "position": 2,
+      "properties": {
+        "progression_name": "Variables and Print Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83",
+        "lesson_activity.key": "d486682e-8084-40dd-97d5-a538c35cfbb0"
+      }
+    },
+    {
+      "key": "99e46f3a-e465-49a8-a9da-dcc126242d51",
+      "position": 3,
+      "properties": {
+        "progression_name": "Objects and The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51",
+        "lesson_activity.key": "d486682e-8084-40dd-97d5-a538c35cfbb0"
+      }
+    },
+    {
+      "key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc",
+      "position": 4,
+      "properties": {
+        "progression_name": "Functions and Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc",
+        "lesson_activity.key": "d486682e-8084-40dd-97d5-a538c35cfbb0"
+      }
+    },
+    {
+      "key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a",
+        "lesson_activity.key": "d486682e-8084-40dd-97d5-a538c35cfbb0"
+      }
+    },
+    {
+      "key": "3d4daab6-bf73-41e5-8026-85168d3c89ca",
+      "position": 1,
+      "properties": {
+        "progression_name": "While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca",
+        "lesson_activity.key": "230a3fc9-4c2f-483b-9b78-164d9c76a7b9"
+      }
+    },
+    {
+      "key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42",
+      "position": 2,
+      "properties": {
+        "progression_name": "Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42",
+        "lesson_activity.key": "230a3fc9-4c2f-483b-9b78-164d9c76a7b9"
+      }
+    },
+    {
+      "key": "6176881f-19b6-47cc-9864-1afc52727b82",
+      "position": 3,
+      "properties": {
+        "progression_name": "Two-way and Nested Selection"
+      },
+      "seeding_key": {
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82",
+        "lesson_activity.key": "230a3fc9-4c2f-483b-9b78-164d9c76a7b9"
+      }
+    },
+    {
+      "key": "9a176af9-146e-4f1b-91cb-0755d2f9a331",
+      "position": 4,
+      "properties": {
+        "progression_name": "Ethical Algorithmic Decision Making"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331",
+        "lesson_activity.key": "230a3fc9-4c2f-483b-9b78-164d9c76a7b9"
+      }
+    },
+    {
+      "key": "be8b3427-a753-47ec-a2b1-6419f72432d9",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9",
+        "lesson_activity.key": "ff4ddc95-a431-43f7-a79f-a24897d630a9"
       }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_overview_objectives_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_overview_objectives_python"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_cert_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_cert_python"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_module_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_module_overview_python"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_course_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_course_overview_python"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_course_structure_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_course_structure_python"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_resources_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_lesson_resources_python"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_career_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_career_overview_python"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_AI_chatbot_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_AI_chatbot_overview_python"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_AI_tutor_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_AI_tutor_overview_python"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Course Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_teacher_Lesson1_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_teacher_Lesson1_python"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_comp_think_L1_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_lesson_overview_comp_think_L1_python"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_overview_L2_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_comp_think_overview_L2_python"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-DS-comp_think_panel_L3_Python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-DS-comp_think_panel_L3_Python"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Computational Thinking?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_module_comp_think_L4_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_module_comp_think_L4_python"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_L5_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_comp_think_L5_python"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_L6_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_comp_think_L6_python"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_L7_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_comp_think_L7_python"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-comp_thinking_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-comp_thinking_L8_python"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_comp_think_forum_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-_comp_think_forum_L8_python"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Python Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_code_basicsL1_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "f6b96690-fa7f-43f3-9eeb-f48f59dcf092"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_lesson_overview_code_basicsL1_python"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Python Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-pythonLab_tour-L1-5_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "f6b96690-fa7f-43f3-9eeb-f48f59dcf092"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-pythonLab_tour-L1-5_python"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_Python-data-Variables-L4-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl_Python-data-Variables-L4-Python"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_Python-Variables-L3-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl_Python-Variables-L3-Python"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-variablecode-L5-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-variablecode-L5-python"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-variable_print_L6_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-variable_print_L6_python"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_concat_L7_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_concat_L7_python"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables and Print Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-choice_L8_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-choice_L8_python"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_neighborhood_L9_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl_neighborhood_L9_Python"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-neighborhood-tour_L10_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-neighborhood-tour_L10_Python"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_objects_L11_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_objects_L11_Python"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_the-painter_L12_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_the-painter_L12_Python"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 13,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-objects-code_L13_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-objects-code_L13_Python"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 14,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_object-code-L14_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl_object-code-L14_Python"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 15,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_choice-objects-L15_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl_choice-objects-L15_Python"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-functions-L15-1-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-functions-L15-1-python"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-functions-L16_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-functions-L16_Python"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 18,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-function-trn-rght-L17-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-function-trn-rght-L17-Python"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 19,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_custompy-L17-2_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_custompy-L17-2_Python"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 20,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_backpack-L18_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_backpack-L18_Python"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 21,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-bkpk-function-L19-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-bkpk-function-L19-Python"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 22,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-functions-mult-choice-L21-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-functions-mult-choice-L21-Python"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 23,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_checkreview-functions-22-2_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_checkreview-functions-22-2_Python"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 24,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_debugging_L22_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_debugging_L22_Python"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 25,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-debug-L23-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-debug-L23-Python"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 26,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_python-basics-forem_L26_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-_python-basics-forem_L26_python"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_advanced_alg_L1_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_lesson_overview_advanced_alg_L1_python"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_loops_L2-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl_loops_L2-Python"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-loop-modify-code_L3-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-loop-modify-code_L3-python"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-loop-code-L4-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-loop-code-L4-python"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-predict-conditional-L5-2-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-predict-conditional-L5-2-python"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_conditionals-L6_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_conditionals-L6_python"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_methos-conditional-L7-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl_methos-conditional-L7-Python"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_if-while-L9_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_if-while-L9_python"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-conditional-practice-L10-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-conditional-practice-L10-python"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_algorithm_review-L11-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_algorithm_review-L11-Python"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_flowChart_L12_Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_flowChart_L12_Python"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-predict-nested-L13-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      },
+      "level_keys": [
+        "ea-fac-csaif-PL-predict-nested-L13-python"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_else-compare-L14-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_else-compare-L14-python"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 14,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-2csaif_pl_else-compare-L14-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      },
+      "level_keys": [
+        "ea-fac-2csaif_pl_else-compare-L14-python"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 15,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-assessment-L16-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-assessment-L16-python"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_real-life-alg_forum_L17_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-_real-life-alg_forum_L17_python"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_ethical-algorithmic-decision-L18-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_ethical-algorithmic-decision-L18-python"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 18,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_ethic-teaching-tips-L19-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_ethic-teaching-tips-L19-python"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 19,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_teacher_Lesson4-L20_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_teacher_Lesson4-L20_python"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_endofUnit_L1_python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_lesson_overview_endofUnit_L1_python"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_project-description-L2-python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_project-description-L2-python"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_3-day-project-L3-Python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_3-day-project-L3-Python"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_collaboration-L4_python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      },
+      "level_keys": [
+        "ea-fac-csaif_pl_collaboration-L4_python"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_projectmanage_forum_L5_python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-_projectmanage_forum_L5_python"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-nextsteps-L6-python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      },
+      "level_keys": [
+        "ea-fac-csaif-pl-nextsteps-L6-python"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_overview_objectives_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_overview_objectives_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_cert_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_cert_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_module_overview_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_module_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_course_overview_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_course_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_course_structure_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_course_structure_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "707fb5f6-393c-4cb5-acf2-f3962cf260d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_lesson_resources_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_resources_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_career_overview_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_career_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_AI_chatbot_overview_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_AI_chatbot_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_AI_tutor_overview_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_AI_tutor_overview_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_teacher_Lesson1_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_teacher_Lesson1_python"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "8dc5e683-1bfb-4429-9319-f2f0db5c5c64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_lesson_overview_comp_think_L1_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_comp_think_L1_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_comp_think_overview_L2_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_overview_L2_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-DS-comp_think_panel_L3_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-DS-comp_think_panel_L3_Python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_module_comp_think_L4_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_module_comp_think_L4_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "121ad3ad-68bb-4407-a583-957115610cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_comp_think_L5_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_L5_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_comp_think_L6_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_L6_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_comp_think_L7_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_comp_think_L7_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-comp_thinking_L8_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-comp_thinking_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-_comp_think_forum_L8_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_comp_think_forum_L8_python"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "c45a7816-7e5a-42d9-bdb4-14467545dfff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_lesson_overview_code_basicsL1_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_code_basicsL1_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "f6b96690-fa7f-43f3-9eeb-f48f59dcf092"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-pythonLab_tour-L1-5_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-pythonLab_tour-L1-5_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "f6b96690-fa7f-43f3-9eeb-f48f59dcf092"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl_Python-data-Variables-L4-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_Python-data-Variables-L4-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl_Python-Variables-L3-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_Python-Variables-L3-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-variablecode-L5-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-variablecode-L5-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-variable_print_L6_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-variable_print_L6_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_concat_L7_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_concat_L7_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-choice_L8_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-choice_L8_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "ae642b68-da23-426b-9ec7-f52dd9bd0b83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl_neighborhood_L9_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_neighborhood_L9_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-neighborhood-tour_L10_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-neighborhood-tour_L10_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_objects_L11_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_objects_L11_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_the-painter_L12_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_the-painter_L12_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-objects-code_L13_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-objects-code_L13_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl_object-code-L14_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_object-code-L14_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl_choice-objects-L15_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_choice-objects-L15_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "99e46f3a-e465-49a8-a9da-dcc126242d51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-functions-L15-1-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-functions-L15-1-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-functions-L16_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-functions-L16_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-function-trn-rght-L17-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-function-trn-rght-L17-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_custompy-L17-2_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_custompy-L17-2_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_backpack-L18_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_backpack-L18_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-bkpk-function-L19-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-bkpk-function-L19-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-functions-mult-choice-L21-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-functions-mult-choice-L21-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_checkreview-functions-22-2_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_checkreview-functions-22-2_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "4874dc84-2a52-40fc-91aa-1f8ed8e485fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_debugging_L22_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_debugging_L22_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-debug-L23-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-debug-L23-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-_python-basics-forem_L26_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_python-basics-forem_L26_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "0432ea41-f7cb-4cb9-b03b-6a9bebbf4e7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_lesson_overview_advanced_alg_L1_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_advanced_alg_L1_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl_loops_L2-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_loops_L2-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-loop-modify-code_L3-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-loop-modify-code_L3-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-loop-code-L4-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-loop-code-L4-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "3d4daab6-bf73-41e5-8026-85168d3c89ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-predict-conditional-L5-2-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-predict-conditional-L5-2-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_conditionals-L6_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_conditionals-L6_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl_methos-conditional-L7-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl_methos-conditional-L7-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_if-while-L9_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_if-while-L9_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-conditional-practice-L10-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-conditional-practice-L10-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "12b156a3-c8e3-4f67-a8b6-739426c3ab42"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_algorithm_review-L11-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_algorithm_review-L11-Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_flowChart_L12_Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_flowChart_L12_Python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-PL-predict-nested-L13-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-PL-predict-nested-L13-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_else-compare-L14-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_else-compare-L14-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-2csaif_pl_else-compare-L14-python",
+        "script_level.level_keys": [
+          "ea-fac-2csaif_pl_else-compare-L14-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-assessment-L16-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-assessment-L16-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "6176881f-19b6-47cc-9864-1afc52727b82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-_real-life-alg_forum_L17_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_real-life-alg_forum_L17_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_ethical-algorithmic-decision-L18-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_ethical-algorithmic-decision-L18-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_ethic-teaching-tips-L19-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_ethic-teaching-tips-L19-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_teacher_Lesson4-L20_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_teacher_Lesson4-L20_python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "9a176af9-146e-4f1b-91cb-0755d2f9a331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_lesson_overview_endofUnit_L1_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_lesson_overview_endofUnit_L1_python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_project-description-L2-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_project-description-L2-python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_3-day-project-L3-Python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_3-day-project-L3-Python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif_pl_collaboration-L4_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif_pl_collaboration-L4_python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-_projectmanage_forum_L5_python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-_projectmanage_forum_L5_python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-csaif-pl-nextsteps-L6-python",
+        "script_level.level_keys": [
+          "ea-fac-csaif-pl-nextsteps-L6-python"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "facilitator-prog-fund-early-access",
+        "activity_section.key": "be8b3427-a753-47ec-a2b1-6419f72432d9"
+      }
+    }
   ],
   "resources": [
 

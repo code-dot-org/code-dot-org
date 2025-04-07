@@ -4,7 +4,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
-import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/evaluationApi';
+import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {fetchFreeResponseAnswers} from './StudentWorkSamplesApi';
 

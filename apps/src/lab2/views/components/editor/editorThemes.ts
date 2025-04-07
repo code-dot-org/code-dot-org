@@ -10,7 +10,7 @@ import color from '@cdo/apps/util/color';
 
 // modified from @codemirror/theme-one-dark
 const chalky = '#e5c07b',
-  coral = '#e06c75',
+  coral = '#E48189',
   cyan = '#56b6c2',
   invalid = '#ffffff',
   stone = color.light_gray_500,
