@@ -15,7 +15,7 @@ import {useParams} from 'react-router-dom';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {workshopLabel} from '../utils/workshopLabel';
-import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
+import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
 import {generateNewSession} from './components/SessionsEditor';
 import AdditionalInfo from './sections/AdditionalInfo';
@@ -80,6 +80,53 @@ export const sessionDataToState = (
     meetingLink: session.meeting_link ?? '',
     format: session.session_format ?? 'in_person',
     sameAsPrevious: false,
+  }));
+
+export const workshopStateToApi = (
+  workshop: WorkshopFormState
+): Omit<Workshop, 'sessions' | 'organizer'> => ({
+  course: workshop.course || undefined,
+  capacity:
+    workshop.capacity && !isNaN(Number(workshop.capacity))
+      ? Number(workshop.capacity)
+      : undefined,
+  description: workshop.description || undefined,
+  facilitators: workshop.facilitators,
+  fee: workshop.fee || undefined,
+  grades: workshop.grades,
+  hidden: workshop.hidden,
+  name: workshop.name || undefined,
+  notes: workshop.notes || undefined,
+  prereq: workshop.hasPrereq ? workshop.prereq : undefined,
+  regional_partner_id: workshop.regionalPartnerId ?? undefined,
+  registration_link: workshop.registrationLink || undefined,
+  subject: workshop.subject || undefined,
+  suppress_email: workshop.suppressEmail,
+  course_offerings: workshop.courseOfferings.map(offering => Number(offering)),
+  participant_group_type: workshop.participantGroupType,
+  time_zone: workshop.timeZone,
+});
+
+export const sessionStateToApi = (
+  sessions: SessionFormState[],
+  timeZone: string
+): Session[] =>
+  sessions.map(session => ({
+    id: session.id.startsWith('existing')
+      ? Number(session.id.replace(/\D/g, ''))
+      : undefined,
+    session_format: session.format,
+    start: moment
+      .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
+      .utc()
+      .toISOString(),
+    end: moment
+      .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
+      .utc()
+      .toISOString(),
+    location_address: session.locationAddress || undefined,
+    location_name: session.locationName || undefined,
+    meeting_link: session.meetingLink || undefined,
   }));
 
 export const workshopReducer = (
