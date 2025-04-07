@@ -2511,7 +2511,7 @@ class User < ApplicationRecord
   end
 
   def self.password_min_length(user_type, country_code)
-    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code)
+    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code) && DCDO.get('strict-password-country', false)
       PASSWORD_STRICT_MIN_LENGTH
     else
       PASSWORD_MIN_LENGTH

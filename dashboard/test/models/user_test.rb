@@ -5473,6 +5473,47 @@ class UserTest < ActiveSupport::TestCase
     assert_equal new_us_state, student.reload.us_state
   end
 
+  test 'teacher in password strict country requires longer password length' do
+    user = User.new(
+      user_type: User::TYPE_TEACHER,
+      country_code: User::PASSWORD_STRICT_COUNTRIES.first,
+      password: 'short',
+      password_confirmation: 'short'
+    )
+    DCDO.stubs(:get).with('strict-password-country', false).returns(true)
+
+    refute user.valid?
+    assert_includes user.errors[:password], 'is too short (minimum is 14 characters)'
+
+    user = User.new(
+      user_type: User::TYPE_TEACHER,
+      country_code: User::PASSWORD_STRICT_COUNTRIES.first,
+      password: 'longlongpassword',
+      password_confirmation: 'longlongpassword'
+    )
+
+    user.valid?
+    assert_empty user.errors[:password]
+  end
+
+  test 'update password in password strict country as a teacher' do
+    teacher = create(:teacher, country_code: 'US')
+    # Change country to a strict country
+    teacher.update(country_code: User::PASSWORD_STRICT_COUNTRIES.first)
+    DCDO.stubs(:get).with('strict-password-country', false).returns(true)
+
+    # Try to update with a too-short password
+    result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
+    refute result
+    assert_includes teacher.errors[:password], 'is too short (minimum is 14 characters)'
+
+    # Update with a valid password and check that it passes validation
+    result = teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
+    assert result
+    assert_empty teacher.errors[:password]
+    assert_equal teacher.password, 'longlongpassword'
+  end
+
   test "teacher with oauth account can access AI Chat" do
     teacher = create :teacher, :google_sso_provider
     assert teacher.teacher_can_access_ai_chat?
