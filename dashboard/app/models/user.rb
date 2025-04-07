@@ -133,13 +133,17 @@ class User < ApplicationRecord
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
 
+  # Password Constants
+  PASSWORD_MAX_LENGTH = 128
+  PASSWORD_MIN_LENGTH = 6
+  PASSWORD_STRICT_MIN_LENGTH = 14
+  # Countries that require a 14 character password minimum
+  PASSWORD_STRICT_COUNTRIES = %w[AU NZ RD].freeze
+
   # Provider variables
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
-
-  # Countries that require a 14 character password minimum
-  STRICT_PASSWORD_COUNTRIES = %w[AU NZ RD].freeze
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
@@ -230,7 +234,6 @@ class User < ApplicationRecord
     :data_transfer_agreement_required,
     :raw_token,
     :child_users,
-    :sign_up_country
   )
 
   ## Association Macros
@@ -390,7 +393,7 @@ class User < ApplicationRecord
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
-  validates_length_of       :password, within: 14..128, if: ->(user) {Services::User::PasswordChecker.requires_strict_password?(user)}
+  validates_length_of       :password, minimum: :password_min_length, maximum: :password_max_length, allow_blank: true
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
@@ -486,6 +489,14 @@ class User < ApplicationRecord
   include Devise::Models::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
+
+  def password_min_length
+    self.class.password_min_length(user_type, country_code)
+  end
+
+  def password_max_length
+    PASSWORD_MAX_LENGTH
+  end
 
   def save_email_preference
     if teacher?
@@ -2497,6 +2508,14 @@ class User < ApplicationRecord
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
       Services::User.assign_form_params(user, params)
+    end
+  end
+
+  def self.password_min_length(user_type, country_code)
+    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code)
+      PASSWORD_STRICT_MIN_LENGTH
+    else
+      PASSWORD_MIN_LENGTH
     end
   end
 

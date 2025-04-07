@@ -36,7 +36,7 @@ class RegistrationsController < Devise::RegistrationsController
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
     location = Geocoder.search(request.ip).try(:first)
-    @user.sign_up_country = location&.country_code.to_s.upcase
+    @user.country_code = location&.country_code.to_s.upcase
     @user.validate_for_finish_sign_up
 
     if @user.errors.blank?
@@ -62,8 +62,8 @@ class RegistrationsController < Devise::RegistrationsController
   def login_type
     @is_signed_out = current_user.nil?
     location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    @in_strict_password_country = Services::User::PasswordChecker.strict_password_country?(country_code)
+    @country_code = location&.country_code.to_s.upcase
+    @user_type = params[:user_type]
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
   end

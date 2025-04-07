@@ -7,11 +7,11 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const isSignedOut = getScriptData('isSignedOut');
-  const inStrictPasswordCountry = getScriptData('inStrictPasswordCountry');
+  const passwordMinLength = getScriptData('passwordMinLength');
   ReactDOM.render(
     <LoginTypeSelection
       isSignedOut={isSignedOut}
-      inStrictPasswordCountry={inStrictPasswordCountry}
+      passwordMinLength={passwordMinLength}
     />,
     document.getElementById('login-type-selection')
   );

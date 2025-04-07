@@ -35,7 +35,7 @@ describe('LoginTypeSelection', () => {
 
   function renderDefault(
     userType: string | null = 'student',
-    inStrictPasswordCountry: boolean = false
+    passwordMinLength: number = 6
   ) {
     if (userType) {
       sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
@@ -43,7 +43,7 @@ describe('LoginTypeSelection', () => {
     render(
       <LoginTypeSelection
         isSignedOut={true}
-        inStrictPasswordCountry={inStrictPasswordCountry}
+        passwordMinLength={passwordMinLength}
       />
     );
   }
@@ -486,7 +486,7 @@ describe('LoginTypeSelection', () => {
 
   it('user who is a teacher and in a strict password country sees min 14 character password required', async () => {
     await waitFor(() => {
-      renderDefault('teacher', true);
+      renderDefault('teacher', 14);
     });
 
     screen.getByText(locale.minimum_num_chars({minChars: '14'}));
