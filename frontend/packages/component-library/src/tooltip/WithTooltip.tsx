@@ -103,7 +103,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   // Effect to handle the Escape key to close the tooltip
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && !event.defaultPrevented) {
+      if (event.key === 'Escape') {
         if (event.target instanceof HTMLElement) {
           event.target.blur(); // Remove focus from the container
         } else {
@@ -112,10 +112,10 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       }
     };
     if (showTooltip) {
-      window.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('keydown', handleKeyDown);
     }
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [showTooltip]);
 
