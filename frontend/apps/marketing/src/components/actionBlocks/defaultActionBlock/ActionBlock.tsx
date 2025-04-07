@@ -4,14 +4,14 @@ import DSCOActionBlock, {
   ActionBlockProps,
 } from '@code-dot-org/component-library/actionBlock';
 
-import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export type ActionBlockContentfulProps = ActionBlockProps & {
   overline: EntryFields.Text;
   title: EntryFields.Text;
   description: EntryFields.Text;
-  image: ImageAssetEntry;
+  image: ExperienceAsset;
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;

@@ -1,5 +1,8 @@
 import {render} from '@testing-library/react';
 
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+
 import FullWidthActionBlock, {
   FullWidthActionBlockContentfulProps,
 } from '../FullWidthActionBlock';
@@ -10,7 +13,7 @@ describe('ActionBlock', () => {
       fields: {
         file: {url: 'https://code.org/image.jpg'},
       },
-    },
+    } as ExperienceAsset,
     overline: 'Test Overline',
     title: 'Test Title',
     description: 'Test Description',
@@ -19,15 +22,17 @@ describe('ActionBlock', () => {
         label: 'Test Primary Button',
         primaryTarget: '/primary-link',
         ariaLabel: 'Test Primary Button aria label',
+        isThisAnExternalLink: false,
       },
-    },
+    } as LinkEntry,
     secondaryButton: {
       fields: {
         label: 'Test Secondary Button',
         primaryTarget: '/secondary-link',
         ariaLabel: 'Test Secondary Button aria label',
+        isThisAnExternalLink: false,
       },
-    },
+    } as LinkEntry,
     background: 'primary',
   };
 
@@ -45,8 +50,11 @@ describe('ActionBlock', () => {
   });
 
   it('does not render buttons when the primary button is not provided', () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const primaryButton: any = undefined;
+
     const {queryByText} = render(
-      <FullWidthActionBlock {...defaultProps} primaryButton={undefined} />,
+      <FullWidthActionBlock {...defaultProps} primaryButton={primaryButton} />,
     );
 
     // check for primary button
