@@ -4,6 +4,7 @@ import DSCOFullWidthActionBlock, {
   ActionBlockProps,
 } from '@code-dot-org/component-library/actionBlock/fullWidthActionBlock';
 
+import {externalLinkIconProps} from '@/components/common/constants';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 

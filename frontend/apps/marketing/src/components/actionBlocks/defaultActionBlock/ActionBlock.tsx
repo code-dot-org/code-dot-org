@@ -4,6 +4,7 @@ import DSCOActionBlock, {
   ActionBlockProps,
 } from '@code-dot-org/component-library/actionBlock';
 
+import {externalLinkIconProps} from '@/components/common/constants';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
