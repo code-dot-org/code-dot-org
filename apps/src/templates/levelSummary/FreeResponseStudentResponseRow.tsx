@@ -48,7 +48,7 @@ const FreeResponseStudentResponseRow: React.FC<
               icon: {
                 iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
                 iconStyle: 'solid',
-                title: 'check',
+                title: 'exclamation point',
                 placement: 'left',
               },
             },
@@ -66,13 +66,31 @@ const FreeResponseStudentResponseRow: React.FC<
               icon: {
                 iconName: FEEDBACK_TYPE.NO_ATTEMPT.icon,
                 iconStyle: 'solid',
-                title: 'check',
+                title: 'dash',
                 placement: 'left',
               },
             },
           ]}
           size="m"
           className={styles.noAttemptTag}
+        />
+      );
+    } else if (studentWorkEvaluation?.aiEvaluation === 'Profanity detected') {
+      return (
+        <Tags
+          tagsList={[
+            {
+              label: FEEDBACK_TYPE.FLAGGED.label,
+              icon: {
+                iconName: FEEDBACK_TYPE.FLAGGED.icon,
+                iconStyle: 'solid',
+                title: 'flag',
+                placement: 'left',
+              },
+            },
+          ]}
+          size="m"
+          className={styles.flaggedTag}
         />
       );
     }
