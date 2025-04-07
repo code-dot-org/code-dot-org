@@ -1,6 +1,8 @@
 {
   "changeConsoleVisibility": "Change Console Visibility",
   "codeEditor": "Code Editor",
+  "codeEditorAccessible": "Code Editor - press escape tab or escape shift tab to exit",
+  "codeEditorExitInstructions": "Press esc + tab or esc + shift + tab to exit",
   "console": "Console",
   "consoleOnly": "Console only",
   "consoleOnlyDescription": "A project that outputs to the console.",

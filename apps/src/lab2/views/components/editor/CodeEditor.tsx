@@ -1,3 +1,4 @@
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {autocompletion} from '@codemirror/autocomplete';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
@@ -184,18 +185,26 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   useEffect(() => {
     const cmContentDiv = editorRef.current?.querySelector('.cm-content');
     if (cmContentDiv) {
-      cmContentDiv.setAttribute('aria-label', i18n.codeEditor());
+      cmContentDiv.setAttribute('aria-label', i18n.codeEditorAccessible());
     }
   }, []);
 
   return (
-    <div
-      ref={editorRef}
-      className={classNames(
-        'codemirror-container',
-        moduleStyles.codeEditorContainer
-      )}
-    />
+    <WithTooltip
+      tooltipProps={{
+        tooltipId: 'code-editor-tooltip',
+        size: 'xs',
+        text: i18n.codeEditorExitInstructions(),
+      }}
+    >
+      <div
+        ref={editorRef}
+        className={classNames(
+          'codemirror-container',
+          moduleStyles.codeEditorContainer
+        )}
+      />
+    </WithTooltip>
   );
 };
 
