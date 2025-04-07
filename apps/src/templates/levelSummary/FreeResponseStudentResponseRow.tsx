@@ -5,6 +5,7 @@ import React from 'react';
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
+import FeedbackToggle from './FeedbackToggle';
 
 import styles from './summary.module.scss';
 
@@ -35,7 +36,7 @@ const FreeResponseStudentResponseRow: React.FC<
             },
           ]}
           size="m"
-          className={styles.proficientTag}
+          className={styles.proficientStudentTag}
         />
       );
     } else if (studentWorkEvaluation?.aiEvaluation === 'needs revision') {
@@ -53,7 +54,7 @@ const FreeResponseStudentResponseRow: React.FC<
             },
           ]}
           size="m"
-          className={styles.needsReviewTag}
+          className={styles.needsReviewStudentTag}
         />
       );
     } else if (studentWorkEvaluation?.aiEvaluation === 'No attempt') {
@@ -89,6 +90,18 @@ const FreeResponseStudentResponseRow: React.FC<
       <BodyThreeText
         className={styles.aiAnalysisReasoningColumn}
       >{`${studentWorkEvaluation?.aiEvaluation}. ${studentWorkEvaluation?.aiReasoning}`}</BodyThreeText>
+      <div>
+        <FeedbackToggle
+          onThumbsUpClick={() => {
+            console.log('thumbsUp');
+          }}
+          onThumbsDownClick={() => {
+            console.log('thumbsDown');
+          }}
+          size="xs"
+          color="gray"
+        />
+      </div>
     </div>
   );
 };

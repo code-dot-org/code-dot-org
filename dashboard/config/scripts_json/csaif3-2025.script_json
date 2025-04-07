@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 00:16:57 UTC",
+    "serialized_at": "2025-04-04 15:29:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3056,13 +3056,13 @@
       "key": "dd3681a9-4085-41ce-9d1b-10c240164e6a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to the shared slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the Slide template. Each member of the group should pick a distinct role – there are four roles per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to the shared slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the Slide template. Each member of the group should pick a distinct stakeholder– there are four stakeholder per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the slide that corresponds to the scenario and stakeholder that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
         "duration": "20",
         "name": "Role Playing",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The students' goal is to think and respond from the perspective of the role which they are assigned—considering their concerns, responsibilities, and priorities. As students think about their role’s perspective, they can use the information provided to consider:\n- What does this role value most in this situation?\n- What pressures or responsibilities influence my decisions?\n- How might I react to different arguments from other roles?\n- What personal experiences, beliefs, or priorities shape my viewpoint?\n\nEven if students don’t personally agree with the role’s stance, encourage them to try to think like their role and defend their position as convincingly as possible. The goal isn’t to win a debate—it’s to deeply understand different perspectives on ethics, privacy, and technology in education."
+            "markdown": "The students' goal is to think and respond from the perspective of the stakeholder which they are assigned—considering their concerns, responsibilities, and priorities. As students think about their stakeholder’s perspective, they can use the information provided to consider:\n- What does this stakeholder’ value most in this situation?\n- What pressures or responsibilities influence their decisions?\n- How might they react to different arguments from other stakeholders?\n- What personal experiences, beliefs, or priorities might shape their viewpoint?\n\nEven if students don’t personally agree with the stakeholder’s stance, encourage them to try to empathize and to defend their position as convincingly as possible. The goal isn’t to win a debate—it’s to deeply understand different perspectives on ethics, privacy, and technology in education."
           }
         ]
       },
@@ -3085,7 +3085,7 @@
       "key": "0db5efab-0377-488c-a884-44b6ea0efa7f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Remind students that their proposal should reflect a compromise between roles, not just one perspective. Encourage students to justify their ideas and challenge each other’s assumptions respectfully.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups present their proposals and discuss differences in approaches.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Remind students that their proposal should reflect a compromise between stakeholders, not just one perspective. Encourage students to justify their ideas and challenge each other’s assumptions respectfully.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups present their proposals and discuss differences in approaches.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3112,7 +3112,7 @@
       "key": "a9baff92-414c-43d7-965d-53b1803b9bbd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an insight or highlight from your group's roleplaying experience.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal with this discussion is to allow students to share their learning and ethical explorations with the class, and to talk through their personal thoughts about the ethical considerations of the scenario apart from the role that had been assumed.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an insight or highlight from your group's exploration of this issue in AI Ethics.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal with this discussion is to allow students to share their learning and ethical explorations with the class, and to talk through their personal thoughts about the ethical considerations of the scenario apart from the stakeholder that had been assigned.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3300,7 +3300,7 @@
       "key": "b8f907f0-1754-4d68-83de-58e1d0111b93",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should write a description of the system in the Project Description section of their project guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should wrote a description of the system in the Project Description section of their project guide.\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
         "progression_name": "Understanding Your Users",
         "tips": [
           {
@@ -3328,7 +3328,7 @@
       "key": "b57fa4f8-9305-4e0e-9913-f64d62c00dde",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Step 2 in their Project Guides which includes defining the data, ideating a solution, and sketching a rapid prototype.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
       },
       "seeding_key": {
         "activity_section.key": "b57fa4f8-9305-4e0e-9913-f64d62c00dde",
@@ -3815,6 +3815,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level13_2025-launch"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3962,6 +3965,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level6_2025-launch"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -4134,6 +4140,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level7_2025-launch"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -4181,6 +4190,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson4-level2_2025-launch"
+        ],
         "progression": "Software Scavenger Hunt Debrief"
       },
       "bonus": false,
@@ -4353,6 +4365,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level4_2025-launch"
+        ],
         "progression": "Computer Build Assistant"
       },
       "bonus": false,
@@ -4400,6 +4415,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson7-level2_2025-launch"
+        ],
         "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
@@ -4747,6 +4765,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level6_2025-launch"
+        ],
         "progression": "Lydia's Scenario"
       },
       "bonus": false,
@@ -4819,6 +4840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level2_2025"
+        ],
         "progression": "Brainstorm Your Project"
       },
       "bonus": false,
@@ -5612,7 +5636,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1idCnK-UdlFODd6xPUzYv7P0GkQAe7IDCSb6B9mCnBoI/edit?usp=sharing",
       "key": "_exemplar_sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -6121,7 +6145,7 @@
     },
     {
       "name": "Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/140knzapQRCeyvLojN24lOFr9mBo1e-LbQKj8uFrz2qM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1NH12geFM3xXpVWjY9U_U06nwnRM4t6HcnX0jOYg-Tu0/edit?usp=sharing",
       "key": "sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Student",

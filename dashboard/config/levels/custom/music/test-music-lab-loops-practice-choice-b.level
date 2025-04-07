@@ -143,16 +143,22 @@
       },
       "packId": "default"
     },
-    "long_instructions": "### Ramona's Song\r\nRamona is in a groove and really wants to use the Reggaeton Beat and the Groovy Beat Two throughout his song. \r\n\r\nShe wants you to add bass, leads, and effects to make her song come to life. \r\n\r\nHer only requirements are: \r\n- The Reggaeton Beat starts the song off for 6 measures\r\n- Then the Groovy Beat Two plays for 4 measures\r\n- Last, the Reggaeton Beat comes back for 2 measures\r\n",
+    "long_instructions": "### Ramona's Song\r\nRamona is in a groove and really wants to use the Reggaeton Beat and the Groovy Beat Two throughout his song. \r\n\r\nShe wants you to add bass, leads, and effects to make her song come to life. \r\n\r\nHer only requirements are: \r\n- The \"Reggaeton Beat\" and the \"Groovy Beat 2\" play together\r\n- The beats last for 20 measures. \r\n\r\nThe rest of the song is up to you. ",
     "exemplar_settings": {
-      "playerEnabled": false,
-      "validationEnabled": false
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Ramona's Drums "
     },
     "display_name": "Ramona's Song",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RB9K57+7l4eyEWHmFiRIIW9Jj\nk3IqEBsgJiAJkZJ4S+pnq3zj60x+bCM/beMYW98QNvZV9wQR5DNyQgdpkUq/\n8HaSJlwOgoHZsDefhK++qJ0kwFq1VdVdQQ8Cnuy4tm+Jyzl6mDbe85W7tzV/\n4BMy9/u3R3R6raTswj6eVx/8e+7W0dNxl18DgN09dvjhXg/URywHI0LCCJsq\ntA6HNudhGhoNZzqdipMrL7EDjZ7EDH60f+uq3drCnwxYZSrky3gVuS8LfNgb\nkPhhcHzIex90MeMNODc5M0O2QkGu9zZ25c2DLBihfcx/PVq/nnrGovp9hmNk\n52IlKiQhuUkv9d1gXZjuxNH6Qtkfqsd8X8V/nRzW4b6UfOGKIMG1qGJOGPG9\nYWLLLJ3MFWh99gvJ7UHcXCioErsl/StS0ouwIXzoR5/LC2dyRKpkAPQX+S5y\nwxV8m9AHjKw/Btn7EMI1lVd4aXXeUDAh3C3w08MBen/XiGMBTjvVUALe3Ovv\nXSvyo5LTf4yJvNtRcyG/xYyWmghXXAQPuqcHzLY07gferzIxTVENq78IAmco\nZtAvmmyS3C30+d1PxiuGw/Yz5MJY20rM92AEHUTZuZq1U3XWdk8+9dmYDADn\n85YXpxrvFGHF0eEUz7Z2m3/3aoJtNGAMuzwu7rQ=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-14T22:58:29.181+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-14 23:02:08 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:02:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-03 20:27:57 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-14T22:58:29.181+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-14 23:02:08 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:02:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-03 20:27:57 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:37:49 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:40:24 +0000\",\"changed\":[\"long_instructions\",\"exemplar_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:40:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

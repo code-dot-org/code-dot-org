@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-06 21:11:25 UTC",
+    "serialized_at": "2025-04-04 21:12:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -434,7 +434,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
-        "duration": "5",
+        "duration": "10",
         "name": "What is Required of My Program?"
       },
       "seeding_key": {
@@ -459,7 +459,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
-        "duration": "10",
+        "duration": "15",
         "name": "Function Requirement Activity 1: Does It Count?"
       },
       "seeding_key": {
@@ -475,30 +475,6 @@
       },
       "seeding_key": {
         "activity_section.key": "1d56e8a8-5bdf-4405-889c-a283adc3a18a",
-        "lesson_activity.key": "d058f34f-4b49-4789-9a81-51361348f8b6"
-      }
-    },
-    {
-      "key": "12967a94-8011-443f-8121-0c88dacac6b3",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to \ncomplete the activity on page 5. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result.",
-        "duration": "10",
-        "name": "Function Requirements Activity 2: Two Function Calls:"
-      },
-      "seeding_key": {
-        "activity_section.key": "12967a94-8011-443f-8121-0c88dacac6b3",
-        "lesson_activity.key": "d058f34f-4b49-4789-9a81-51361348f8b6"
-      }
-    },
-    {
-      "key": "69dcee86-ef08-41f6-b898-a63d1563fdab",
-      "position": 9,
-      "properties": {
-        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterward, lead a discussion on the patterns they see.*\n\n**Discussion Goal:** This activity is designed to help students anticipate how they'll need to make some decisions about how to design their functions. Here are some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "69dcee86-ef08-41f6-b898-a63d1563fdab",
         "lesson_activity.key": "d058f34f-4b49-4789-9a81-51361348f8b6"
       }
     },
