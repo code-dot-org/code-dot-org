@@ -55,7 +55,10 @@
     }
   }
 
-#summary-content.container
+  lesson_background = @script_level.lesson.properties['background'] if @script_level.lesson
+  theme = 'Dark' if lesson_background == 'dark'
+
+#summary-content.container{'data-theme': theme}
   #summary-top-links
 
   #level-question
