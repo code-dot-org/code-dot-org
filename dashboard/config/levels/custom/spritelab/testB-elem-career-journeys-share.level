@@ -30,7 +30,7 @@
     "disable_examples": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "free_play": "false",
+    "free_play": "true",
     "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
@@ -66,7 +66,6 @@
     "mini_toolbox": "false",
     "display_name": "Sprites & Location",
     "bubble_choice_description": "**Level:** 🌶️\r\n\r\n**Description:** Make a new sprite and decide its location.",
-    "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel2();",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"pin\",\r\n  \"callout_text\": \"pin\",\r\n  \"element_id\": \"pin\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
@@ -75,13 +74,13 @@
     "skip_autosave": true,
     "encrypted_examples": "BSM4jyBBFj9TcbrXfX73f62epf+k9xoger0tL8JAYbGz6Scb8St4rJBkv8Tj\nD9abO0cepd0MrhJjLOicu5bG/A==\n",
     "standalone_app_name": "spritelab",
-    "enable_big_playspace": "false",
+    "enable_big_playspace": "true",
     "thumbnail_url": "https://images.code.org/fb0cd74370f0ea3172459544935fa026-Sprite location.jpg",
     "project_template_level_name": "testB-elem-career-journeys-template",
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-03T23:10:35.026+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-sprite-location\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-sprite-location\"},{\"changed_at\":\"2025-04-03 23:20:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 23:21:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 23:22:14 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 23:22:40 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-03T23:10:35.026+00:00\",\"changed\":[\"cloned from \\\"testB-elem-career-journeys-sprite-location\\\"\"],\"cloned_from\":\"testB-elem-career-journeys-sprite-location\"},{\"changed_at\":\"2025-04-03 23:20:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 23:21:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 23:22:14 +0000\",\"changed\":[\"start_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-03 23:22:40 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:40:14 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"enable_big_playspace\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:41:05 +0000\",\"changed\":[\"start_blocks\",\"free_play\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

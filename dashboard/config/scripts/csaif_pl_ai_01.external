@@ -1,0 +1,33 @@
+name 'csaif_pl_ai_01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Chat
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Artificial intelligence (AI)</strong> is a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.</p>
+</div>
+
+
+#### We interact with AI Chat using prompts.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt</strong> is a question, instruction, scenario, or statement provided by the user to guide the AI's response.</p>
+</div>
+
+#### AI selects words based on probability. It tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Probability</strong> is the likelihood that a specific outcome might occur.</p>
+</div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 1. You can find more details in the full <a href='https://studio.code.org/s/pswai-pilot-2024/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+
+##Up Next!
+#### In the next level you'll try out AI Chat.
+
+MARKDOWN

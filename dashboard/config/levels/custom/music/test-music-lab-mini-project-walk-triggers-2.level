@@ -1,12 +1,13 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-21T17:03:59.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "### Explore Triggers \r\nThere are three different ways to time when the code under a trigger will play: \r\n- Immediately \r\n- At the next beat \r\n- At the start of the next measure \r\n\r\n**Do This:** \r\n- Code 2-3 sounds under each type of trigger in the workspace. \r\n- Press \"Run\" \r\n- While the song under `when run` is playing, press \"1\", \"2\", and \"3\" to experiment with trigger timing. ",
+    "long_instructions": "### Explore Triggers \r\n\r\n**Do This:** \r\n- Add an effect under each of the triggers\r\n- Press \"Run\"\r\n- While the song is playing, press \"1\", \"2\", and \"3\" to experiment with trigger timing. ",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -338,31 +339,64 @@
                 "trigger": "<field name=\"trigger\">trigger3</field>",
                 "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
               }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "@]wh:wWF|h,S~FbQz4H,",
+              "x": 550,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "acoustic_arcade/waterfall"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "3}cI?s#=?)?B(Mf:~B?g",
+              "x": 550,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "acoustic_arcade/bongo_roll"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "+y}pwcutt`u5:NLQrT,}",
+              "x": 570,
+              "y": 370,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "acoustic_arcade/vibra_verb"
+              }
             }
           ]
         }
       },
       "toolboxDefinition": {
         "contents": [
-          {
-            "kind": "block",
-            "type": "play_sound_at_current_location_simple2",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "fields": {
-              "sound": "acoustic_arcade/synth_castle"
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "play_sounds_together",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "enabled": true
-          }
+
         ],
         "kind": "flyoutToolbox"
       }
@@ -376,8 +410,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-21 17:32:43 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:35:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:37:07 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:37:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:38:45 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:39:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:40:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:40:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-21 17:32:43 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:35:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:37:07 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:37:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:38:45 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:39:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:40:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:40:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:22:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:22:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:25:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

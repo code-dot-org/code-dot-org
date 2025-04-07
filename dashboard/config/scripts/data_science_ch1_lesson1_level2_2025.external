@@ -19,9 +19,20 @@ markdown <<MARKDOWN
 |<img src="https://images.code.org/2379c356d72a9e678e45c4e9039bb4e2-image-1718042597835.png" width="125"/>| **WEB<br>DuBois** | **Race** | [Article](https://sparkmap.org/data/w-e-b-du-bois-data-visualization-history/) |
 |<img src="https://images.code.org/f74186da88a44d8988a6e14c0fe04e38-image-1718042605652.png" width="125"/>| **Kimberly<br>Arcand** | **Space** | [Profile + Video](https://roadtripnation.com/interviews/kimberly-arcand) // [Personal Website](https://www.kimarcand.com/) |
 |<img src="https://images.code.org/1732a7006e77a5447c900cc18bfa7d70-image-1718042610686.png" width="125"/>| **Ivana<br>Seric** | **Sports** | [Article](https://www.smorescience.com/data-scientist-ivana-seric/) // [Video](https://www.youtube.com/watch?v=N7WpMixTD-g) |
-
+|<img src="https://images.code.org/622019fb58e5fe75de35166ed5050364-image-1743795821462.png" width="125"/>| **Nina<br>Nduwayo** | **Fraud Detection** | [Article](https://www.franklinfitch.com/uk/resources/blog/black-history-month-spotlight-on-nina-nduwayo/) |
+|<img src="https://images.code.org/b045824b3e29d5978735939fbe57325f-image-1743807898172.jpg" width="125"/>| **Namita<br>Nandakumar** | **Sports** | [Article](https://www.nhl.com/kraken/news/namita-nandakumar-senior-quantitative-analyst-seattle-hockey-316662686) |
+|<img src="" width="125"/>| **Carly<br>Fennel** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Evalyne<br>Muiruri** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Krystal<br>Tsosie** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Yeshimabeit<br>Milner** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Fernanda<br>Viegas** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Ben<br>Ackerman** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Jeff<br>Leek** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Callie<br>McNicholas** | **FIELD** | [Article]() // [Video]() |
+|<img src="" width="125"/>| **Florence<br>Nightingale** | **FIELD** | [Article]() // [Video]() |
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
 This level exists to give students access to the links that they can follow to learn more about each person. You should have assigned each of the students one of these data scientists to find on this page and research. This [spreadsheet](https://docs.google.com/spreadsheets/d/1wjbbdckWogsZAqgXmCuZoqAxdgqJrCo1KUP6P2TUS-Y/edit#gid=0) provides some basic information about which people also have videos students can watch in addition to reading, and which data scientists have shorter articles, so you can differentiate which student gets which data scientist from that.
+
 MARKDOWN
