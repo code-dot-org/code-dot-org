@@ -667,6 +667,7 @@ class Section < ApplicationRecord
       programming-fundamentals-2024
       programming-fundamentals-aitutor-2024
       networks-and-the-internet-2024
+      pswai-pilot-2024
     ]
 
     gen_ai_scripts.include?(script&.name) ||
