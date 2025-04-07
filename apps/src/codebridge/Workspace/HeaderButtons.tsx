@@ -85,7 +85,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         <Button
           iconRight={{iconName: 'rotate'}}
           size={'xs'}
-          color={'white'}
           text={projectPickerSettings.currentType}
           onClick={projectPickerSettings.showProjectTypePicker}
           type={'primary'}
