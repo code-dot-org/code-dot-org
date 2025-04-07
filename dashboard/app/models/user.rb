@@ -392,7 +392,6 @@ class User < ApplicationRecord
 
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, within: 6..128, allow_blank: true
   validates_length_of       :password, minimum: :password_min_length, maximum: :password_max_length, allow_blank: true
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
