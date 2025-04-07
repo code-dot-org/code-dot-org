@@ -54,7 +54,7 @@ const ShareView: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.shareContainer}>
-      <div className={moduleStyles.sidebar} data-theme="Dark">
+      <div className={moduleStyles.sidebar}>
         {showPreview && (
           <div className={moduleStyles.consoleToggle}>
             <Toggle

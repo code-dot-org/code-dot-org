@@ -35,10 +35,9 @@ const SettingsButton: React.FunctionComponent = () => {
           icon={{iconStyle: 'solid', iconName: 'gear'}}
           size="xs"
           onClick={() => setIsOpen(true)}
-          color={'white'}
           type="tertiary"
           className={darkModeStyles.tertiaryButton}
-          ariaLabel="Settings"
+          ariaLabel={commonI18n.settings()}
         />
       </WithTooltip>
       {isOpen && (

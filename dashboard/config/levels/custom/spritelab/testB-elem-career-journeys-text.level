@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2025-04-03T23:24:27.000Z",
   "level_num": "custom",
@@ -79,34 +78,19 @@
     "display_name": "Text",
     "bubble_choice_description": "Learn how to add text to your project.",
     "thumbnail_url": "https://images.code.org/103feda0c46231be0d9ce1e4b9fed878-text.jpg",
-    "preload_asset_list": null,
-    "project_template_level_name": "testB-elem-career-journeys-template"
+    "project_template_level_name": "testB-elem-career-journeys-template",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-03T23:24:27.312+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-add-text\\\"\"],\"cloned_from\":\"test-elem-career-journeys-add-text\"},{\"changed_at\":\"2025-04-03 23:28:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-03T23:24:27.312+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-add-text\\\"\"],\"cloned_from\":\"test-elem-career-journeys-add-text\"},{\"changed_at\":\"2025-04-03 23:28:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:34:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:34:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" deletable="false" movable="false" x="16" y="16">
-          <next>
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"court_1"</field>
-              <next>
-                <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"emoji_02_1"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker" movable="false">
-                      <field name="LOCATION">{"x":216,"y":182}</field>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false" x="16" y="16"/>
         <block type="behavior_definition" movable="false" x="0" y="0">
           <mutation behaviorId="patrolling"/>
           <field name="button_behavior_definition"/>
@@ -618,42 +602,83 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs" id="}EHCVL[rsrhe(Rl8u99," x="0" y="0">
-          <field name="IMG">"gradient_16_1"</field>
+        <block type="gamelab_setBackgroundImageAs" id="zXV`^A#TdCs=E~5d87T$" x="0" y="0">
+          <field name="IMG">"gradient_34_1"</field>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="w*:,YF?9nbTW_41NC[@@" x="0" y="88">
-          <field name="ANIMATION_NAME">"emoji_06_1"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="j].z8j2W,HLnea/N@ikJ" movable="false">
-              <field name="LOCATION">{"x":200,"y":200}</field>
+        <block type="gamelab_setBackground" id="b:A!|gM3I(FvEfqyW;F;" x="0" y="88">
+          <value name="COLOR">
+            <block type="colour_picker" id="{peX,hW//-I+gO6pZZ50" movable="false">
+              <field name="COLOUR">#ffcc99</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay" id="Y:t:Gkn5?,#VxcmG0gTj" x="0" y="168">
-          <field name="SPEECH">Oh, wow!</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="Z/Xe{1boUz]1jb3HVPy@" movable="false">
-              <field name="ANIMATION">"emoji_06_1"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteClicked" id="6" x="0" y="258">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="?FEmK;GzC1dT-I/.Y6/K" movable="false">
-              <field name="ANIMATION">"emoji_06_1"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_showTitleScreen" id="K@-?9VKm|@}PPokVhAKG" x="0" y="348">
+        <block type="gamelab_showTitleScreen" id="QzQKm#JO5Whyb:!powS`" x="0" y="144">
           <value name="TITLE">
-            <block type="text" id="aI4_Tth9+MBS)+D8XGS`">
+            <block type="text" id="rwVBhzJ^.HOdM#3MYyR+">
               <field name="TEXT"/>
             </block>
           </value>
           <value name="SUBTITLE">
-            <block type="text" id="F[n}V:KsLw(:P6N=%p-A">
+            <block type="text" id="2LSYqQifah8WyM^g^)]e">
               <field name="TEXT"/>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="5({HJj`%q1{ro7UfYTO:" x="0" y="256">
+          <field name="ANIMATION_NAME">"emoji_19_1"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="_H3nLb+TqGc/LwE)Q#^V" movable="false">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay" id="RRR0I)KT;X^b=D].a54^" x="0" y="336">
+          <field name="SPEECH">I love computer science!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="FdE::LOP039.~hNqby`8" movable="false">
+              <field name="ANIMATION">"emoji_19_1"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp" id="f+RHWF/~(bk]27hhk3[I" x="0" y="426">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="[+BcuXPPebre0z%1T:5r" movable="false">
+              <field name="ANIMATION">"emoji_19_1"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number" id="O,vi2=Kx+IaGH0]RHe7T" movable="false">
+              <field name="NUM">50</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_changePropBy" id="(Ibg7K2Sk_wQ%.r2*[z0" x="0" y="516">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="=MEtzUY2-glxEZG$M2r8" movable="false">
+              <field name="ANIMATION">"emoji_19_1"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number" id="{$X$}_W-#f0oN+Q3y8uD" movable="false">
+              <field name="NUM">10</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setAnimation" id="E).RO@!tuHLD:#y3[,-#" x="0" y="606">
+          <field name="ANIMATION">"emoji_19_1"</field>
+          <value name="THIS">
+            <block type="gamelab_allSpritesWithAnimation" id="=8jnLkl$2Ony9yXF`@wS" movable="false">
+              <field name="ANIMATION">"emoji_19_1"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteClicked" id="I/L:s@*#6cXJUGSqnhkF" x="0" y="696">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="21T(u.-jau:[U4-Gb-fd" movable="false">
+              <field name="ANIMATION">"emoji_19_1"</field>
             </block>
           </value>
         </block>

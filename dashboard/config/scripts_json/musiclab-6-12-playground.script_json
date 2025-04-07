@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 23:11:36 UTC",
+    "serialized_at": "2025-04-05 17:53:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3117,6 +3117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-intro-try"
+        ],
         "progression": "Prepare & Try"
       },
       "bonus": false,
@@ -6914,6 +6917,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-nested-loops-multi"
+        ],
         "progression": "Unused Loops 2"
       },
       "bonus": false,

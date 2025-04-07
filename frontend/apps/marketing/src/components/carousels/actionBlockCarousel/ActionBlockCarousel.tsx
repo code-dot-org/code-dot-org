@@ -8,6 +8,7 @@ import ActionBlock, {
 } from '@code-dot-org/component-library/actionBlock';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
+import {externalLinkIconProps} from '@/components/common/constants';
 import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
 import {ContentfulEntry} from '@/contentful/types/entries/ContentfulEntry';
 
@@ -81,6 +82,9 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                       text: primaryLinkRef.fields.label,
                       href: primaryLinkRef.fields.primaryTarget || '#',
                       ariaLabel: primaryLinkRef.fields.ariaLabel || '',
+                      iconRight: primaryLinkRef.fields.isThisAnExternalLink
+                        ? externalLinkIconProps
+                        : undefined,
                     }
                   : undefined
               }
@@ -91,6 +95,9 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                       text: secondaryLinkRef.fields.label,
                       href: secondaryLinkRef.fields.primaryTarget || '#',
                       ariaLabel: secondaryLinkRef.fields.ariaLabel || '',
+                      iconRight: secondaryLinkRef.fields.isThisAnExternalLink
+                        ? externalLinkIconProps
+                        : undefined,
                     }
                   : undefined
               }

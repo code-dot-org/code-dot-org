@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-19T17:57:33.000Z",
   "level_num": "custom",
@@ -51,7 +50,74 @@
         }
       },
       "allowChangeStartingPlayheadPosition": true,
-      "packId": "default"
+      "packId": "default",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">volume</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "id": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
     },
     "long_instructions": "### Make your second character's \"Walk Up\" song\r\n\r\nNow do it all over again for your next character! \r\n\r\n**Do This:**\r\n- Choose your second character. \r\n- Code a sequence of sounds under `when run`. \r\n- Make sure the beginning (Measures 1-2) build up to the middle (Measures 4-6) and that leads to the ending (Measures 7-8). *Note: Your song can be longer, but do not exceed 12 measures*. \r\n- When you have a sequence you like, drag the `2 triggered immediately` block to your workspace and move all the code under `when run` to the trigger block. \r\n- Press \"Run\" and then practice pressing \"1\" or \"2\" to trigger each walk up song you've made so far. ",
     "exemplar_settings": {
@@ -61,7 +127,8 @@
     "project_template_level_name": "test-music-lab-mini-project-walk-template",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T17:57:33.928+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-1\"},{\"changed_at\":\"2025-03-19 17:59:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T17:57:33.928+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-1\"},{\"changed_at\":\"2025-03-19 17:59:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:36:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

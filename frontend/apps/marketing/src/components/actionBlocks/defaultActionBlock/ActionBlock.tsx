@@ -4,6 +4,7 @@ import DSCOActionBlock, {
   ActionBlockProps,
 } from '@code-dot-org/component-library/actionBlock';
 
+import {externalLinkIconProps} from '@/components/common/constants';
 import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
 
 export type ActionBlockContentfulProps = ActionBlockProps & {
@@ -36,6 +37,9 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
             text: primaryButton.fields.label,
             href: primaryButton.fields.primaryTarget || '#',
             ariaLabel: primaryButton.fields.ariaLabel || '',
+            iconRight: primaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }
@@ -45,6 +49,9 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
             text: secondaryButton.fields.label,
             href: secondaryButton.fields.primaryTarget || '#',
             ariaLabel: secondaryButton.fields.ariaLabel || '',
+            iconRight: secondaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }
