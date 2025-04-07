@@ -194,6 +194,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       tooltipProps={{
         tooltipId: 'code-editor-tooltip',
         size: 'xs',
+        direction: 'onRight',
         text: i18n.codeEditorExitInstructions(),
       }}
     >
