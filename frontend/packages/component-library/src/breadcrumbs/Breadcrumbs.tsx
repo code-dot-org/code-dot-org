@@ -16,6 +16,10 @@ export interface BreadcrumbsProps {
   size?: ComponentSizeXSToL;
   /** Custom className */
   className?: string;
+  /** Whether to show the home icon at the start */
+  showHomeIcon?: boolean;
+  /** Link for the home icon */
+  homeLink?: string;
 }
 
 /**
@@ -36,6 +40,8 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
   name,
   size = 'm',
   className,
+  showHomeIcon = false,
+  homeLink = '/',
 }) => {
   return (
     <div
@@ -48,6 +54,21 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
 
       data-testid={`breadcrumbs-${name}`}
     >
+      {showHomeIcon && (
+        <>
+          <Link
+            href={homeLink}
+            className={moduleStyles.breadcrumb}
+          >
+            <FontAwesomeV6Icon 
+              iconName="house" 
+              className={moduleStyles.homeIcon}
+              title="Home"
+            />
+          </Link>
+          <FontAwesomeV6Icon iconName="chevron-right" />
+        </>
+      )}
       {breadcrumbs.map(({text, href, ...rest}, i) => (
         <Fragment key={`${text}-${href}`}>
           <Link
