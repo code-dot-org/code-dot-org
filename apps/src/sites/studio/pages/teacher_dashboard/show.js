@@ -47,7 +47,6 @@ const {
   localeCode,
   hasSeenStandardsReportInfo,
   canViewStudentAIChatMessages,
-  sectionOrder,
 } = scriptData;
 
 $(document).ready(function () {
@@ -78,8 +77,6 @@ $(document).ready(function () {
   store.dispatch(setLocaleCode(localeCode));
 
   const showAITutorTab = canViewStudentAIChatMessages;
-
-  console.log('lfm', {sectionOrder});
 
   // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
