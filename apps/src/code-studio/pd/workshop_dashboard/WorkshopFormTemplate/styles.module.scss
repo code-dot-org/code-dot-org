@@ -43,6 +43,14 @@
       gap: 0.75rem;
       width: 100%;
     }
+
+    &.formSubmitRow {
+      justify-content: space-between;
+      > button {
+        flex: 0;
+        white-space: nowrap;
+      }
+    }
   }
 
   .toggleWrapper {
@@ -168,6 +176,7 @@
   .wrapContainer {
     flex-wrap: wrap;
     row-gap: 0.5rem;
+    margin-top: 0.5rem;
   }
 }
 
