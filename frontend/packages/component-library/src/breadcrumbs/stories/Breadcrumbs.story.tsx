@@ -43,6 +43,18 @@ DefaultBreadcrumbs.args = {
   ],
 };
 
+export const BreadcrumbsWithHomeIcon = SingleTemplate.bind({});
+BreadcrumbsWithHomeIcon.args = {
+  name: 'test-Breadcrumbs-home',
+  showHomeIcon: true,
+  homeLink: 'https://studio.code.org',
+  breadcrumbs: [
+    {text: 'Breadcrumb1', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb2', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb3', href: 'https://studio.code.org/home'},
+  ],
+};
+
 export const GroupOfSizesOfBreadcrumbs = MultipleTemplate.bind({});
 GroupOfSizesOfBreadcrumbs.args = {
   components: [
@@ -53,8 +65,6 @@ GroupOfSizesOfBreadcrumbs.args = {
         {text: 'LBreadcrumb1', href: 'https://studio.code.org/home'},
         {text: 'LBreadcrumb2', href: 'https://studio.code.org/home'},
         {text: 'LBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'LBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'LBreadcrumb5', href: 'https://studio.code.org/home'},
       ],
     },
     {
@@ -64,8 +74,6 @@ GroupOfSizesOfBreadcrumbs.args = {
         {text: 'MBreadcrumb1', href: 'https://studio.code.org/home'},
         {text: 'MBreadcrumb2', href: 'https://studio.code.org/home'},
         {text: 'MBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'MBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'MBreadcrumb5', href: 'https://studio.code.org/home'},
       ],
     },
     {
@@ -75,8 +83,6 @@ GroupOfSizesOfBreadcrumbs.args = {
         {text: 'SBreadcrumb1', href: 'https://studio.code.org/home'},
         {text: 'SBreadcrumb2', href: 'https://studio.code.org/home'},
         {text: 'SBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'SBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'SBreadcrumb5', href: 'https://studio.code.org/home'},
       ],
     },
     {
@@ -86,8 +92,6 @@ GroupOfSizesOfBreadcrumbs.args = {
         {text: 'XSBreadcrumb1', href: 'https://studio.code.org/home'},
         {text: 'XSBreadcrumb2', href: 'https://studio.code.org/home'},
         {text: 'XSBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'XSBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'XSBreadcrumb5', href: 'Breadcrumb5'},
       ],
     },
   ],
