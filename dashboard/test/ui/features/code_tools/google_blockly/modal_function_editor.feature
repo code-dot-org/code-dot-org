@@ -48,5 +48,5 @@ Scenario: Can close the editor using the ESC key
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Close editor
-  Then I press keys ":escape" for element "body"
+  Then I press keys ":escape" for element "#modalFunctionEditor .blocklySvg"
   And element "#modalFunctionEditor" is not visible

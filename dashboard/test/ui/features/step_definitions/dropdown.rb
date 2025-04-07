@@ -17,6 +17,6 @@ Then /^the dropdown is (.*)$/ do |visibility|
 end
 
 Then /^I select item (\d+) from the dropdown$/ do |n|
-  elements = @browser.find_elements(:class, 'goog-menuitem-content')
+  elements = @browser.find_elements(:class, 'blocklyMenuItemContent')
   elements[n.to_i].click
 end

@@ -73,15 +73,15 @@ export function flyoutCategoryBlocks(workspace: GoogleBlockly.WorkspaceSvg) {
   const blockList = [];
   if (variableModelList.length > 0) {
     if (Blockly.Blocks['variables_get']) {
-      variableModelList.sort(Blockly.VariableModel.compareByName);
+      variableModelList.sort(Blockly.Variables.compareByName);
       variableModelList.forEach(variable => {
         const block = {
           kind: 'block',
           type: 'variables_get',
           fields: {
             VAR: {
-              name: variable.name,
-              type: variable.type,
+              name: variable.getName(),
+              type: variable.getType(),
             },
           },
         };
@@ -95,7 +95,10 @@ export function flyoutCategoryBlocks(workspace: GoogleBlockly.WorkspaceSvg) {
         kind: 'block',
         type: 'variables_set',
         fields: {
-          VAR: {name: mostRecentVariable.name, type: mostRecentVariable.type},
+          VAR: {
+            name: mostRecentVariable.getName(),
+            type: mostRecentVariable.getType(),
+          },
         },
       };
       blockList.push(block);

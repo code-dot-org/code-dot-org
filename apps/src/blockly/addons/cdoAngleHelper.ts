@@ -389,6 +389,10 @@ class CdoAngleHelper {
   }
 
   private updateDrag_(e: MouseEvent): void {
+    // Recalculate bounding rect in case the SVG has moved or resized.
+    if (this.svg_) {
+      this.rect_ = this.svg_.getBoundingClientRect();
+    }
     const x = e.clientX - this.rect_!.left;
     const y = e.clientY - this.rect_!.top;
     let angle = this.calculateAngle(this.center_.x, this.center_.y, x, y);

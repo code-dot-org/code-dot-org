@@ -39,7 +39,6 @@ export default class FieldTune extends GoogleBlockly.Field {
     this.options = options;
     this.newDiv = null;
     this.SERIALIZABLE = true;
-    this.CURSOR = 'default';
     this.backgroundElement = null;
   }
 

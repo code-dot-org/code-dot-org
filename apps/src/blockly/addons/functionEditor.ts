@@ -621,8 +621,8 @@ export default class FunctionEditor {
 
       variables.forEach(variable => {
         functionEditorVariableMap.createVariable(
-          variable.name,
-          variable.type,
+          variable.getName(),
+          variable.getType(),
           variable.getId()
         );
       });

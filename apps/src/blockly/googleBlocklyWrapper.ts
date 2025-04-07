@@ -645,6 +645,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
+  // Remove once https://github.com/google/blockly/issues/8863 is resolved
+  // (Should be ready with Blockly 12.0.0)
+  const originalGetTypes = extendedVariableMap.getTypes;
+  extendedVariableMap.getTypes = function () {
+    const types = originalGetTypes.call(this);
+    return types.includes('') ? types : [...types, ''];
+  };
+
   gestureOverrides(blocklyWrapper);
 
   // Used for spritelab behavior blocks.
