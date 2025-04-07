@@ -178,13 +178,13 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         {hasConsole && (
           <div className={moduleStyles.dropdownRow}>
             <label
-              htmlFor={'Console font size'}
+              htmlFor={codebridgeI18n.consoleFontSize()}
               className={moduleStyles.dropdownLabel}
             >
-              {'Console font size'}
+              {codebridgeI18n.consoleFontSize()}
             </label>
             <SimpleDropdown
-              labelText={'Console font size'}
+              labelText={codebridgeI18n.consoleFontSize()}
               isLabelVisible={false}
               onChange={event => onConsoleDropdownChange(event.target.value)}
               items={fontSizeOptions}
