@@ -18,11 +18,8 @@ jobs:
   build:
     name: skaffold build
 
-    # while experimental, we /never/ want to block normal PR work:
+    # while we're experimental, we /never/ want to block a normal PR:
     continue-on-error: true
-
-    # only run on PRs where the source branch is *k8s*:
-    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
 
     runs-on: ${{ matrix.runs-on }}
     strategy:
@@ -55,9 +52,6 @@ jobs:
           
           echo "DOCKER_TAG=$DOCKER_TAG" >> $GITHUB_ENV
 
-      # - name: ssh into the runner
-      #   uses: mxschmitt/action-tmate@v3
-      
       # GitHub Runners didn't have a big enough disk for our giant Docker images
       # but fortunately they have an empty tmp disk mounted at /mnt, we just need
       # to symlink it into /var/lib/docker.
@@ -88,15 +82,8 @@ jobs:
           fi
           sudo install skaffold /usr/local/bin/
 
-      # Add support for more platforms with QEMU (optional)
-      # https://github.com/docker/setup-qemu-action
-      # - name: Set up QEMU
-      #   uses: docker/setup-qemu-action@v3
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-        # with:
-          # platforms: linux/amd64,linux/arm64
 
       # Login to GitHub Container Registry
       - name: Login to GitHub Container Registry
@@ -116,24 +103,6 @@ jobs:
       # - name: ssh into the runner
       #   uses: mxschmitt/action-tmate@v3
 
-      # - name: skaffold cache
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ~/.skaffold/cache
-      #     key: skaffold-${{ hashFiles('~/.skaffold/cache') }}
-      #     restore-keys: |
-      #       skaffold-
-
-      # - name: did we use skaffold cache?
-      #   run: |
-      #     find ~/.skaffold/cache || true
-      #     du -h ~/.skaffold/cache || true
-
-      # - name: Free disk space
-      #   run: |
-      #     echo "Docker has `sudo df -h /var/lib/docker | awk 'NR==2 {print $4}'` available"
-      #     echo "Workspace has `sudo df -h $GITHUB_WORKSPACE | awk 'NR==2 {print $4}'` available"
-
       - name: skaffold build
         run: |
           skaffold \
@@ -146,8 +115,3 @@ jobs:
           #   --platform=linux/arm64,linux/amd64
 
           echo "Done w/ skaffold build"
-
-      # - name: did we use skaffold cache?
-      #   run: |
-      #     find ~/.skaffold/cache
-      #     du -h ~/.skaffold/cache

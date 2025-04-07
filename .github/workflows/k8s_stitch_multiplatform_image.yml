@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       docker_tags_json:
-        description: "JSON string of all Docker tags"
+        description: "JSON object like { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
         required: true
         type: string
       docker_tag:
@@ -15,8 +15,10 @@ on:
 jobs:
   stitch-multi-platform:
     name: stitch multi-platform image
+
+    # while we're experimental, we /never/ want to block a normal PR:
     continue-on-error: true
-    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/code-dot-org
