@@ -3,6 +3,9 @@ import {type Locator, type Page} from '@playwright/test';
 import {MarketingPage} from './marketing';
 
 type Section =
+  | 'Action Block'
+  | 'Action Block Carousel'
+  | 'Full Width Action Block'
   | 'Button'
   | 'Divider'
   | 'Heading'
