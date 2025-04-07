@@ -531,3 +531,5 @@ While it's possible to run the server locally without these, we've found the fol
 - Storage: The repository takes up 20GB
 
 [ubuntu-iso-url]: https://releases.ubuntu.com/focal/ubuntu-20.04.6-desktop-amd64.iso
+
+Trivial change is trivial.
