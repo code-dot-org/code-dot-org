@@ -97,7 +97,7 @@ RUN \
   # Instuct Docker to maintain a download cache for yarn packages
   # so we don't have to re-download npms whenever package.json changes
   --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${SRC}/apps/.yarn/cache \
-<<EOF
+  <<EOF
   # yarn install
   cd apps
   CI=true yarn install --immutable --silent
