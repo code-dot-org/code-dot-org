@@ -10,8 +10,9 @@ import React, {
   useReducer,
   useState,
 } from 'react';
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {workshopLabel} from '../utils/workshopLabel';
@@ -215,6 +216,7 @@ export const sessionsReducer = (
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
 }) => {
+  const navigate = useNavigate();
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const {workshopId} = useParams();
 
@@ -261,6 +263,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   >({});
 
   const [sessionErrors, setSessionErrors] = useState<SessionErrors>({});
+
+  const [responseErrors, setResponseErrors] = useState<string[]>([]);
 
   useEffect(() => {
     if (workshop) {
@@ -320,11 +324,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     [config.session_fields, sessionFormState]
   );
 
-  const hasErrors = useMemo(
-    () => Object.keys({...workshopErrors, ...sessionErrors}).length > 0,
-    [workshopErrors, sessionErrors]
-  );
-
   const publish = useCallback(async () => {
     try {
       const workshopValidationErrors = getWorkshopErrors();
@@ -337,13 +336,55 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       ) {
         return;
       }
-      // api request
-    } catch (error) {
-      // handle error
-    }
-  }, [getSessionErrors, getWorkshopErrors]);
+      const workshopData = workshopStateToApi(workshopFormState);
+      const sessionData = sessionStateToApi(
+        sessionFormState,
+        workshopFormState.timeZone
+      );
 
-  const cancel = () => {};
+      const method = workshop ? 'PATCH' : 'POST';
+      const url = workshop
+        ? `/api/v1/pd/workshops/${workshop.id}`
+        : '/api/v1/pd/workshops';
+
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+        body: JSON.stringify({
+          pd_workshop: {...workshopData, sessions_attributes: sessionData},
+        }),
+      });
+
+      const responseData = await response.json();
+
+      if (responseData.errors || responseData.error) {
+        const allErrors = [responseData.error]
+          .concat(responseData.errors)
+          .filter(e => !!e);
+        setResponseErrors(allErrors);
+      }
+
+      if (response.ok) {
+        navigate(`/workshops/${responseData.id}`);
+      }
+    } catch (error) {
+      setResponseErrors([
+        'There was a problem processing your request. Please try again or contact support@code.org',
+      ]);
+    }
+  }, [
+    getSessionErrors,
+    getWorkshopErrors,
+    navigate,
+    sessionFormState,
+    workshop,
+    workshopFormState,
+  ]);
+
+  const cancel = useCallback(() => navigate('/workshops'), [navigate]);
 
   const heading = workshopLabel(`New ${config.label}`);
 
@@ -353,6 +394,16 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       config,
     }),
     [dispatchWorkshop, config]
+  );
+
+  const hasValidationErrors = useMemo(
+    () => Object.keys({...workshopErrors, ...sessionErrors}).length > 0,
+    [workshopErrors, sessionErrors]
+  );
+
+  const hasResponseErrors = useMemo(
+    () => responseErrors.length > 0,
+    [responseErrors]
   );
 
   return (
@@ -402,12 +453,14 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         errors={workshopErrors}
         {...sectionProps}
       />
-      {hasErrors && (
+      {hasValidationErrors && (
         <Alert
           type="danger"
           text="Your form contains validation errors that must be corrected"
         />
       )}
+      {hasResponseErrors &&
+        responseErrors.map(error => <Alert type="danger" text={error} />)}
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );
