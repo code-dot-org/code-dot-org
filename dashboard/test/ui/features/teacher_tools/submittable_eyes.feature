@@ -16,7 +16,7 @@ Scenario: Submittable level
   And I see no difference for "submitted puzzle"
   And I close my eyes
 
-@encrypted_level
+@properties_encryption_key
 Scenario: Lockable level
   When I open my eyes to test "lockable level"
   Then I am on "http://studio.code.org/s/allthethings"

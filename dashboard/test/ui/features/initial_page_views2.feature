@@ -4,7 +4,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  @encrypted_level
+  @properties_encryption_key
   Scenario Outline: Logged in simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     And I am a <user_type>

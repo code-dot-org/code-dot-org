@@ -1,7 +1,7 @@
 Feature: Lesson Locking Retake
 
 @eyes
-@encrypted_level
+@properties_encryption_key
 Scenario: Lock settings for retake not submit scenario
   Given I create an authorized teacher-associated student named "babby"
 
@@ -77,7 +77,7 @@ Scenario: Lock settings for retake not submit scenario
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
 @no_mobile
-@encrypted_level
+@properties_encryption_key
 Scenario: Lock settings for retake after submit scenario
   Given I create an authorized teacher-associated student named "frank"
 
