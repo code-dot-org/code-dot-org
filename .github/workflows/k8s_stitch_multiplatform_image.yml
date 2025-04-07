@@ -1,0 +1,52 @@
+name: k8s-stitch-multiplatform-image
+
+on:
+  workflow_call:
+    inputs:
+      docker_tags_json:
+        description: "JSON string of all Docker tags"
+        required: true
+        type: string
+      docker_tag:
+        description: "Base Docker tag for the multi-platform image"
+        required: true
+        type: string
+    secrets:
+      GITHUB_TOKEN:
+        required: true
+
+jobs:
+  stitch-multi-platform:
+    name: stitch multi-platform image
+    continue-on-error: true
+    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/code-dot-org
+      MULTI_PLATFORM_IMAGE: ghcr.io/${{ github.repository_owner }}/code-dot-org:${{ inputs.docker_tag }}
+    defaults:
+      run:
+        shell: bash -ex {0}
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Parse DOCKER_TAGS JSON and prepare tag list
+        id: parse_tags
+        run: |
+          # Use the passed JSON string directly
+          DOCKER_TAGS_JSON='${{ inputs.docker_tags_json }}'
+          SINGLE_ARCH_IMAGES=$(jq -r --arg prefix "$IMAGE_NAME" 'to_entries | map(select(.key | test("^docker_tag_")) | "\($prefix):\(.value)") | join(" ")' <<< "$DOCKER_TAGS_JSON")
+          echo "SINGLE_ARCH_IMAGES=$SINGLE_ARCH_IMAGES" >> "$GITHUB_ENV"
+
+      - name: Stitch platform images into a multi-platform image
+        run: |
+          # Use imagetools to stitch all platform-specific images into one multi-platform image
+          docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
