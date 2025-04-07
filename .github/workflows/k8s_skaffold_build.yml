@@ -1,13 +1,17 @@
-# This is currently an experimental feature, see: k8s/experimental.yaml
+name: k8s-skaffold-build
 
-name: k8s
 on:
-  # Trigger on merges into production (i.e. DTP), or on any PR, however note that we filter
-  # PRs down to PRs where the source-branch is *k8s* using `if:` blocks below.
-  push:
-    branches:
-      - production
-  pull_request:
+  workflow_call:
+    outputs:
+      docker_tag_amd64:
+        description: "Docker tag for amd64 architecture"
+        value: ${{ jobs.build.outputs.docker_tag_amd64 }}
+      docker_tag_arm64:
+        description: "Docker tag for arm64 architecture"
+        value: ${{ jobs.build.outputs.docker_tag_arm64 }}
+      docker_tag:
+        description: "Docker tag"
+        value: ${{ jobs.build.outputs.docker_tag }}
 
 jobs:
   # Step 1: build platform specific docker images: amd64, arm64
@@ -147,50 +151,3 @@ jobs:
         run: |
           find ~/.skaffold/cache
           du -h ~/.skaffold/cache
-
-  # Step 2: stitch the platform specific images into a multi-platform image
-  stitch-multi-platform:
-    name: stitch multi-platform image
-
-    # while experimental, we /never/ want to block normal PR work:
-    continue-on-error: true
-
-    # only run on PRs where the source branch is *k8s*:
-    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
-
-    runs-on: ubuntu-latest
-    needs: build
-    env:
-      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/code-dot-org
-      MULTI_PLATFORM_IMAGE: ghcr.io/${{ github.repository_owner }}/code-dot-org:${{ needs.build.outputs.docker_tag }}
-    defaults:
-      run:
-        shell: bash -ex {0}
-    steps:
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Parse DOCKER_TAGS JSON and prepare tag list
-        id: parse_tags
-        run: |
-          # Extract tags prefixed with "docker_tag_" and prepend $IMAGE_NAME to each tag
-          DOCKER_TAGS_JSON='${{ toJSON(needs.build.outputs) }}'          
-          SINGLE_ARCH_IMAGES=$(jq -r --arg prefix "$IMAGE_NAME" 'to_entries | map(select(.key | test("^docker_tag_")) | "\($prefix):\(.value)") | join(" ")' <<< "$DOCKER_TAGS_JSON")
-          echo "SINGLE_ARCH_IMAGES=$SINGLE_ARCH_IMAGES" >> "$GITHUB_ENV"
-
-      - name: Stitch platform images into a multi-platform image
-        run: |
-          # Use imagetools to stitch all platform-specific images into one multi-platform image
-          docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
-
-# Grant the GITHUB_TOKEN the necessary permissions to publish to GitHub Packages
-permissions:
-  contents: read
-  packages: write
