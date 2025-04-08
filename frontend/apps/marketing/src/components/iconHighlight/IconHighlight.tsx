@@ -6,7 +6,7 @@ import IconHighlight, {
 } from '@code-dot-org/component-library/cms/iconHighlight';
 
 import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
-import type {LinkEntry} from '@/contentful/types/entries';
+import {LinkEntry} from '@/types/contentful/entries/Link';
 
 export interface IconHighlightContentfulProps {
   heading: EntryFields.Text;
