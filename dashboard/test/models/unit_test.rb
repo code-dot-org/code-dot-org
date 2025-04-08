@@ -963,7 +963,8 @@ class UnitTest < ActiveSupport::TestCase
       disablePostMilestone: false,
       student_detail_progress_view: false,
       age_13_required: false,
-      show_sign_in_callout: false
+      show_sign_in_callout: false,
+      hasUnnumberedLessons: false,
     }
     assert_equal expected, unit.summarize_header
   end

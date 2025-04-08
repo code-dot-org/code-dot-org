@@ -95,6 +95,7 @@ export const DUMMY_PROPS = {
     lesson: {
       position: 3,
       name: 'Data Structures',
+      title: 'Lesson 3: Data Structures',
     },
     level: {
       name: 'test_level',
