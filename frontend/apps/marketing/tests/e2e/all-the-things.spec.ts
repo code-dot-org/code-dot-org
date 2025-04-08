@@ -66,6 +66,40 @@ test.describe('All the things UI e2e test', () => {
       await allTheThingsPage.goto();
     });
 
+    test.describe('action block', () => {
+      let component: Locator;
+
+      test.beforeEach(() => {
+        component = allTheThingsPage.getSectionLocator('Action Block');
+      });
+
+      test('renders action block', async () => {
+        const overline = component.getByText('K-12 Teachers');
+        const title = component.getByText('TEST - Self-Paced PL');
+        const description = component.getByText(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
+        );
+        const image = component.locator('img[alt=""]');
+        const primaryButton = component.getByText('Primary button test');
+        const secondaryButton = component.getByText('Secondary button test');
+        const externalLinkButton = component.getByText(
+          'External link button test',
+        );
+
+        expect(await overline.count()).toBeGreaterThan(0);
+        expect(await title.count()).toBeGreaterThan(0);
+        expect(await description.count()).toBeGreaterThan(0);
+        expect(await image.count()).toBeGreaterThan(0);
+        expect(await primaryButton.count()).toBeGreaterThan(0);
+        expect(await secondaryButton.count()).toBeGreaterThan(0);
+        expect(await externalLinkButton.count()).toBeGreaterThan(0);
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('button', () => {
       let component: Locator;
 
