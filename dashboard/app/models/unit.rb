@@ -708,10 +708,10 @@ class Unit < ApplicationRecord
     return false unless Ability.new(user).can?(:read, self)
 
     # Users can view any course not in a family.
-    return true if family_name.nil? && !unit_group&.single_unit_course?
+    return true if family_name.nil? && !original_unit_group&.single_unit_course?
 
-    if unit_group&.single_unit_course?
-      return unit_group&.can_view_version?(user, locale)
+    if original_unit_group&.single_unit_course?
+      return original_unit_group&.can_view_version?(user, locale)
     end
 
     latest_stable_version = Unit.latest_stable_version(family_name)
@@ -882,7 +882,7 @@ class Unit < ApplicationRecord
   end
 
   def has_standards_associations?
-    curriculum_umbrella == 'CSF' && ((version_year && version_year >= '2019') || (unit_group&.version_year && unit_group.version_year >= '2019'))
+    curriculum_umbrella == 'CSF' && ((version_year && version_year >= '2019') || (original_unit_group&.version_year && original_unit_group.version_year >= '2019'))
   end
 
   def standards
@@ -1585,7 +1585,7 @@ class Unit < ApplicationRecord
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
-        version_year: unit_group&.version_year || version_year,
+        version_year: original_unit_group&.version_year || version_year,
         assigned_section_id: assigned_section_id,
         hasStandards: has_standards_associations?,
         tts: tts?,
@@ -1634,9 +1634,9 @@ class Unit < ApplicationRecord
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      hasNumberedUnits: unit_group&.has_numbered_units?,
+      hasNumberedUnits: original_unit_group&.has_numbered_units?,
       hasUnnumberedLessons: has_unnumbered_lessons?,
-      versionYear: unit_group&.version_year || version_year,
+      versionYear: original_unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
     summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
