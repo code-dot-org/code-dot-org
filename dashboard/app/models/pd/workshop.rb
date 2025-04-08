@@ -105,22 +105,22 @@ class Pd::Workshop < ApplicationRecord
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
       unless sessions.map {|session| session.start_time.to_date}.uniq.length == sessions.length
-        errors.add(:sessions, 'must start on separate days.')
+        errors.add(:sessions, 'must start on separate days')
       end
     else
-      errors.add(:sessions, "must each have a valid start and end.")
+      errors.add(:sessions, "must each have a valid start and end")
     end
   end
 
   def subject_must_be_valid_for_course
     unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
-      errors.add(:subject, 'must be a valid option for the course.')
+      errors.add(:subject, 'must be a valid option for the course')
     end
   end
 
   def not_funded_subjects_must_not_be_funded
     if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
-      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded.'
+      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded'
     end
   end
 
