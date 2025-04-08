@@ -1,4 +1,4 @@
-import {render, screen, fireEvent, waitFor} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -7,7 +7,6 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 jest.mock('@react-pdf/renderer', () => {
@@ -26,20 +25,18 @@ const DEFAULT_PROPS = {
 };
 
 describe('AIDiffFloatingActionButton', () => {
-  let fetchStub;
-
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
-    fetchStub = jest.spyOn(HttpClient, 'post').mockResolvedValue();
+    localStorage.clear();
   });
 
   afterEach(() => {
     sessionStorage.clear();
-    jest.restoreAllMocks();
+    localStorage.clear();
   });
 
-  function renderDefault(propOverrides = {}, hasOpenedDiff = true) {
+  function renderDefault(propOverrides = {}) {
     const store = getStore();
 
     registerReducers({
@@ -50,7 +47,6 @@ describe('AIDiffFloatingActionButton', () => {
         id: 1,
         name: 'test_user',
         has_completed_ai_differentiation_welcome: true,
-        has_opened_ai_differentiation: hasOpenedDiff,
       })
     );
 
@@ -61,13 +57,14 @@ describe('AIDiffFloatingActionButton', () => {
     );
   }
 
-  it('begins closed', () => {
+  it('begins closed if has been opened before', () => {
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     renderDefault();
     expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
   });
 
   it('begins open if no session storage and has not been opened before', () => {
-    renderDefault({}, false);
+    renderDefault({});
     expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
   });
 
@@ -77,25 +74,19 @@ describe('AIDiffFloatingActionButton', () => {
     expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
   });
 
-  it('opens on click', async () => {
+  it('opens on click', () => {
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     renderDefault();
     fireEvent.click(
       screen.getByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
     );
-    await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
-        '/api/v1/users/has_opened_ai_differentiation',
-        undefined,
-        true
-      );
-    });
     expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
   });
 
   describe('pulse animation', () => {
     it('renders pulse animation when hasOpenedDiff is false and window is closed', () => {
       sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
-      renderDefault({}, false);
+      renderDefault({});
       const fab = screen.getByRole('button', {
         name: i18n.openOrCloseTeachingAssistant(),
       });
@@ -108,6 +99,7 @@ describe('AIDiffFloatingActionButton', () => {
 
     it('does not render pulse animation when hasOpenedDiff is true', () => {
       sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
+      localStorage.setItem('AiDiffHasOpenedKey', 'true');
       renderDefault();
       const image = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(image);
