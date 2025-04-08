@@ -38,8 +38,8 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
-        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.original_unit_group&.default_units&.any? {|u| u.id == @script.id}}
+        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.original_unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
         if !params[:section_id]
           redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/unit/#{@script.name}"
           return
@@ -96,7 +96,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
-      is_single_unit_course: @script.unit_group&.single_unit_course?,
+      is_single_unit_course: @script.original_unit_group&.single_unit_course?,
       sections: @sections
     }
 
@@ -106,10 +106,10 @@ class ScriptsController < ApplicationController
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
     link = Unit.latest_stable_version(@script.family_name)&.link
-    @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
+    @canonical_url = CDO.studio_url(link) if @script.original_unit_group&.single_unit_course? && link
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
-      @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
+      @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.original_unit_group)}
     end
   end
 
@@ -428,7 +428,7 @@ class ScriptsController < ApplicationController
     redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
     redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
 
-    if unit.unit_group&.single_unit_course?
+    if unit.original_unit_group&.single_unit_course?
       redirect_unit_group = UnitGroup.latest_assigned_version(unit.unit_group.family_name, current_user)
       redirect_unit_group ||= UnitGroup.latest_stable_version(unit.unit_group.family_name, locale: locale)
       redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
