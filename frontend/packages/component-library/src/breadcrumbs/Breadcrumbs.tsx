@@ -18,8 +18,6 @@ export interface BreadcrumbsProps {
   className?: string;
   /** Whether to show the home icon at the start */
   showHomeIcon?: boolean;
-  /** Link for the home icon */
-  homeLink?: string;
 }
 
 /**
@@ -41,7 +39,6 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
   size = 'm',
   className,
   showHomeIcon = false,
-  homeLink = '/',
 }) => {
   return (
     <div
@@ -56,7 +53,7 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
     >
       {showHomeIcon && (
         <>
-          <Link href={homeLink} className={moduleStyles.breadcrumb}>
+          <Link href="/" className={moduleStyles.breadcrumb}>
             <FontAwesomeV6Icon
               iconName="house"
               className={moduleStyles.homeIcon}
