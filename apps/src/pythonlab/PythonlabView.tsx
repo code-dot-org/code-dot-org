@@ -55,44 +55,17 @@ const standaloneStartSources: {[key: string]: ProjectSources} = {
 };
 
 const defaultConfig: ConfigType = {
-  activeLeftNav: 'Files',
   languageMapping: pythonlabLangMapping,
   editableFileTypes: ['py', 'csv', 'txt'],
-  leftNav: [
-    {
-      icon: 'fa-square-check',
-      component: 'info-panel',
-    },
-    {
-      icon: 'fa-file',
-      component: 'Files',
-    },
-    {
-      icon: 'fa-solid fa-magnifying-glass',
-      component: 'Search',
-    },
-  ],
-  sideBar: [
-    {
-      icon: 'fa-circle-question',
-      label: 'Help',
-      action: () => window.alert('Help is not currently implemented'),
-    },
-    {
-      icon: 'fa-folder',
-      label: 'Files',
-      action: () => window.alert('You are already on the file browser'),
-    },
-  ],
 
   activeLayout: 'horizontal',
-  showFileBrowser: true,
   validMimeTypes: ['text/'],
   layoutComponents: {
     horizontal: HorizontalLayout,
     vertical: VerticalLayout,
     share: ShareView,
   },
+  showFileBrowser: true,
 };
 
 const PythonlabView: React.FunctionComponent<
