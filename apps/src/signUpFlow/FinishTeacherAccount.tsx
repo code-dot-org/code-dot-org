@@ -16,6 +16,9 @@ import React, {useState, useEffect, useMemo} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import StatsigSessionReplay, {
+  REPLAY_MASK_CLASS,
+} from '@cdo/apps/metrics/StatsigSessionReplay';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
@@ -139,6 +142,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
       !educatorRole,
     [gdprValid, name, schoolInfo, educatorRole]
   );
+
+  useEffect(() => {
+    const statsigSessionReplay = new StatsigSessionReplay();
+    statsigSessionReplay.startRecording();
+    return () => {
+      statsigSessionReplay.stopRecording();
+    };
+  }, []);
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
@@ -275,6 +286,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               value={name}
               placeholder={locale.msCoder()}
               onChange={onNameChange}
+              className={REPLAY_MASK_CLASS}
             />
             <BodyThreeText className={style.displayNameSubtext}>
               {locale.this_is_what_your_students_will_see()}

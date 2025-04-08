@@ -31,7 +31,7 @@ import {
 } from './statsigHelpers';
 
 // A flag that can be toggled to enable session recording for development environments
-const LOCAL_MODE = false;
+const LOCAL_MODE = true;
 
 class StatsigSessionReplay {
   constructor() {
@@ -86,6 +86,7 @@ class StatsigSessionReplay {
 
     this.statsigClient = new StatsigClient(this.api_key, this.user);
     runStatsigSessionReplay(this.statsigClient);
+    //forceStartRecording()
     runStatsigAutoCapture(this.statsigClient);
     await this.statsigClient.initializeAsync();
   }
@@ -102,3 +103,5 @@ class StatsigSessionReplay {
 }
 
 export default StatsigSessionReplay;
+
+export const REPLAY_MASK_CLASS = 'rr-mask';
