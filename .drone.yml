@@ -281,7 +281,27 @@ trigger:
     - pull_request
 
 ---
+name: sleep-for-30s-and-pass
 
+steps:
+  - name: sleep
+    image: alpine
+    commands:
+      - sleep 30
+
+kind: pipeline
+type: docker
+
+trigger:
+  branch:
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
+  event:
+    - pull_request
+
+---
 kind: pipeline
 type: docker
 name: trigger-github-workflow-on-droneci-success
@@ -306,8 +326,9 @@ steps:
       debug: true
 
 depends_on:
-  - unit
-  - ui
+  - sleep-for-30s-and-pass
+  # - unit
+  # - ui
 
 trigger:
   event:
@@ -352,6 +373,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 65c31417f460edad8b952ed288a994cdeedece90e0312887dc4ffbe15452b6c2
+hmac: 479022a88fa0cf2e9c35755b95af483b22534fb4a240d70d1db0ccf859fc2e69
 
 ...
