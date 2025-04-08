@@ -22,10 +22,15 @@ import {
 import _ from 'lodash';
 import React, {useState} from 'react';
 
-import {removeSectionOrThrow} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  removeSectionOrThrow,
+  setSectionOrder,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {getSectionOrderIds} from '../../teacherDashboard/sectionOrderUtils';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -57,12 +62,12 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
     state => state.teacherSections.sections
   );
 
-  const [sortableSectionIds, setSortableSectionIds] = useState<number[]>(
-    Object.entries(sections)
-      .filter(([_id, section]) => section.participantType === 'student')
-      .filter(([_id, section]) => !section.hidden)
-      .map(([id, _section]) => Number(id))
+  const reduxSectionOrder: number[] = useAppSelector(
+    state => state.teacherSections.sectionOrder
   );
+
+  const [sortableSectionIds, setSortableSectionIds] =
+    useState<number[]>(reduxSectionOrder);
 
   // Hidden sections are not sortable
   const hiddenSectionIds = React.useMemo(
@@ -76,19 +81,13 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
 
   // Update sortableSectionIds when sections change
   React.useEffect(() => {
-    const filteredSections = Object.entries(sections)
-      .filter(([_id, section]) => section.participantType === 'student')
-      .filter(([_id, section]) => !section.hidden)
-      .map(([id, _section]) => Number(id));
+    const newSectionOrder = getSectionOrderIds(
+      Object.values(sections),
+      sortableSectionIds
+    );
 
-    const sectionsToAdd = _.difference(filteredSections, sortableSectionIds);
-    const sectionsToRemove = _.difference(sortableSectionIds, filteredSections);
-
-    if (sectionsToAdd.length > 0 || sectionsToRemove.length > 0) {
-      setSortableSectionIds(sectionIds => [
-        ...sectionsToAdd,
-        ...sectionIds.filter(id => !sectionsToRemove.includes(id)),
-      ]);
+    if (_.xor(newSectionOrder, sortableSectionIds).length > 1) {
+      setSortableSectionIds(newSectionOrder);
     }
     // We do not need to add/remove sections when the section order changes, only when the sections from redux change
     // This also prevents flickering when archiving sections
@@ -115,15 +114,18 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   );
 
   React.useEffect(() => {
-    HttpClient.put(
-      '/user_preference',
-      JSON.stringify({sectionOrder: sortableSectionIds}),
-      true,
-      {
-        'Content-Type': 'application/json; charset=UTF-8',
-      }
-    );
-  }, [sortableSectionIds]);
+    if (!_.isEqual(sortableSectionIds, reduxSectionOrder)) {
+      dispatch(setSectionOrder(sortableSectionIds));
+      HttpClient.put(
+        '/user_preference',
+        JSON.stringify({sectionOrder: sortableSectionIds}),
+        true,
+        {
+          'Content-Type': 'application/json; charset=UTF-8',
+        }
+      );
+    }
+  }, [sortableSectionIds, dispatch, reduxSectionOrder]);
 
   const onDeleteClickCallback = (sectionId: number) => {
     setSectionToDelete(sectionId);

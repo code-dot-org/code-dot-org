@@ -20,6 +20,7 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 
+import {getSectionOrderIds} from './sectionOrderUtils';
 import {
   isAddingSection,
   sectionFromServerSection as untypedSectionFromServerSection,
@@ -65,6 +66,8 @@ export interface TeacherSectionState {
   sectionIds: number[];
   studentSectionIds: number[];
   plSectionIds: number[];
+  // A list of the user's un-archived, non-PL section IDs ordered by the user.
+  sectionOrder: number[];
   selectedSectionId: number | null;
   selectedSectionName: string;
   // Array of course offerings, to populate the assignment dropdown
@@ -125,6 +128,8 @@ const initialState: TeacherSectionState = {
   sectionIds: [],
   studentSectionIds: [],
   plSectionIds: [],
+  // A list of the user's un-archived, non-PL section IDs ordered by the user.
+  sectionOrder: [],
   selectedSectionId: NO_SECTION,
   selectedSectionName: '',
   // Array of course offerings, to populate the assignment dropdown
@@ -280,6 +285,7 @@ const sectionSlice = createSlice({
         state.sectionIds = sectionIds;
         state.studentSectionIds = studentSectionIds;
         state.plSectionIds = plSectionIds;
+        state.sectionOrder = getSectionOrderIds(sections, state.sectionOrder);
         state.sections = {
           ...state.sections,
           ..._.keyBy(sections, 'id'),
@@ -394,6 +400,7 @@ const sectionSlice = createSlice({
       state.studentSectionIds = _.without(state.studentSectionIds, sectionId);
       state.plSectionIds = _.without(state.plSectionIds, sectionId);
       state.sections = _.omit(state.sections, sectionId);
+      state.sectionOrder = _.without(state.sectionOrder, sectionId);
     },
     beginCreatingSection: {
       reducer(
@@ -667,6 +674,12 @@ const sectionSlice = createSlice({
       state.sectionIds.forEach(id => {
         state.sections[id].hidden = true;
       });
+    },
+    setSectionOrder(state, action: PayloadAction<number[]>) {
+      state.sectionOrder = getSectionOrderIds(
+        Object.values(state.sections),
+        action.payload
+      );
     },
   },
 });
@@ -1181,6 +1194,7 @@ export const {
   sectionHasNewData,
   sectionDoesNotHaveNewData,
   archiveAllSections,
+  setSectionOrder,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;
