@@ -27,7 +27,10 @@ export class AllTheThingsPage extends MarketingPage {
 
   getSectionLocator(heading: Section): Locator {
     // Find the section with the heading
-    const headingLocator = this.page.getByRole('heading', {name: heading});
+    const headingLocator = this.page.getByRole('heading', {
+      name: heading,
+      exact: true,
+    });
 
     // Go through the top-level sections, finding the one that has this heading
     return this.page.locator('section').filter({has: headingLocator});
