@@ -312,6 +312,7 @@ describe('LoginTypeSelection', () => {
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: 'student',
       },
     };
 
@@ -366,6 +367,7 @@ describe('LoginTypeSelection', () => {
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: 'student',
       },
     };
 
