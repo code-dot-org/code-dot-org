@@ -290,7 +290,7 @@ steps:
   - name: sleep
     image: alpine
     commands:
-      - sleep 30
+      - sleep 10
 trigger:
   branch:
     exclude:
@@ -371,6 +371,6 @@ trigger:
 
 ---
 kind: signature
-hmac: a1db5926ed5ae4e5f36bd6ec95192ca52864ff49199f2d0b1f3057fe185a707a
+hmac: bcc3d96d74fd0e0a1e926f3b5d123d9ac931ae73e845444767ec97c46766b883
 
 ...
