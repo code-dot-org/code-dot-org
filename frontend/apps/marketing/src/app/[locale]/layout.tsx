@@ -1,8 +1,9 @@
 import {GoogleAnalytics} from '@next/third-parties/google';
 import {headers} from 'next/headers';
 
-import {getBrandFromHostname} from '@/config/brand';
+import {getBrandFromHostname, Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
+import CDOJsonLd from '@/config/jsonLd/CDOJsonLd';
 import {getStage} from '@/config/stage';
 import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
@@ -41,6 +42,8 @@ export default async function Layout({
           {children}
         </StatsigProvider>
       </OneTrustProvider>
+
+      {brand === Brand.CODE_DOT_ORG && <CDOJsonLd />}
     </>
   );
 }
