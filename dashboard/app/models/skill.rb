@@ -11,4 +11,6 @@
 #
 class Skill < ApplicationRecord
   validates :description, presence: true
+
+  has_and_belongs_to_many :levels, join_table: 'levels_skills'
 end
