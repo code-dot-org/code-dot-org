@@ -11,6 +11,7 @@
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   overflow-x: auto;
   padding-top: 8px;
