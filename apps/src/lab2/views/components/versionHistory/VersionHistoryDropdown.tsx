@@ -189,7 +189,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         appName,
         {isInitialVersion: 'true'}
       );
-      // closeDropdown();
+      closeDropdown();
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
       sendCodebridgeAnalyticsEvent(
@@ -301,7 +301,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     );
   };
 
-  return (
+  return createPortal(
     <FocusTrap
       focusTrapOptions={{
         onDeactivate: closeDropdown,
@@ -312,7 +312,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         className={moduleStyles.versionHistoryDropdown}
         ref={menuRef}
         role="dialog"
-        style={{top: 100, left: 300}}
+        style={dropdownStyles}
         aria-modal="true"
         aria-label={lab2I18n.versionHistoryList()}
         data-theme="Dark"
@@ -411,7 +411,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
           </div>
         )}
       </div>
-    </FocusTrap>
+    </FocusTrap>,
+    document.body
   );
 };
 
