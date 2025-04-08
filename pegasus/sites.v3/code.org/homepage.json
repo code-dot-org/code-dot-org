@@ -20,9 +20,9 @@
       "actions": [
         {
           "type": "music-lab-banner",
-          "text_overline": "music_lab.introducing_music_lab_strong",
-          "text_h1": "music_lab.banner.heading",
-          "text_desc": "music_lab.banner.desc",
+          "text_overline": "music_lab.banner2.overline",
+          "text_h1": "music_lab.banner2.heading",
+          "text_desc": "music_lab.banner2.desc",
           "button_label_primary": "music_lab.button.try_music_lab",
           "button_url_primary": "https://studio.code.org/s/music-intro-2024/reset",
           "button_label_secondary": "music_lab.button.learn_more",
