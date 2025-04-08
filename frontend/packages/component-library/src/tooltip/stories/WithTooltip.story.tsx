@@ -18,6 +18,23 @@ const SingleTemplate: StoryFn<TooltipProps> = args => (
   </WithTooltip>
 );
 
+const SingleTemplateTextbox: StoryFn<TooltipProps> = args => (
+  <WithTooltip tooltipProps={{...args}}>
+    <textarea
+      placeholder="Hover me"
+      style={{
+        width: '300px',
+        minWidth: '200px',
+        height: '100px',
+        minHeight: '50px',
+        fontSize: '16px',
+        boxSizing: 'border-box',
+        resize: 'both',
+      }}
+    />
+  </WithTooltip>
+);
+
 const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
   <>
     <p>
@@ -36,6 +53,13 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
 );
 export const DefaultTooltip = SingleTemplate.bind({});
 DefaultTooltip.args = {
+  text: 'Tooltip Label',
+  direction: 'onBottom',
+  tooltipId: 'tooltipId',
+};
+
+export const TextboxTooltip = SingleTemplateTextbox.bind({});
+TextboxTooltip.args = {
   text: 'Tooltip Label',
   direction: 'onBottom',
   tooltipId: 'tooltipId',

@@ -38,6 +38,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
   const [tooltipStyles, setTooltipStyles] = useState<React.CSSProperties>({});
   const tooltipRef = useRef<HTMLDivElement | null>(null);
+  const childRef = useRef<HTMLElement | null>(null);
   const hideTimeoutRef = useRef<number | null>(null);
 
   // Define the additional event handlers
@@ -65,40 +66,97 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
 
   const tailLength = tailLengths[tooltipProps.size || 'm'];
 
-  const updateTooltipStyles = useCallback(
-    () =>
-      updatePositionedElementStyles({
-        nodePosition,
-        positionedElementRef: tooltipRef,
-        direction: tooltipProps.direction,
-        setPositionedElementStyles: setTooltipStyles,
-        tailOffset,
-        tailLength,
-      }),
-    [nodePosition, tailLength, tooltipProps.direction],
-  );
+  // Update tooltip position dynamically
+  const updateTooltipStyles = useCallback(() => {
+    updatePositionedElementStyles({
+      nodePosition,
+      positionedElementRef: tooltipRef,
+      direction: tooltipProps.direction,
+      setPositionedElementStyles: setTooltipStyles,
+      tailOffset,
+      tailLength,
+    });
+    const tooltip = tooltipRef.current;
+    const child = childRef.current;
+
+    if (!tooltip || !child) return;
+
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const childRect = child.getBoundingClientRect();
+    const {innerWidth: viewportWidth, innerHeight: viewportHeight} = window;
+
+    let top = 0;
+    let left = 0;
+
+    // Adjust tooltip position based on viewport boundaries
+    if (tooltipProps.direction === 'onTop') {
+      top = childRect.top - tooltipRect.height;
+      left = childRect.left + childRect.width / 2 - tooltipRect.width / 2;
+
+      // If the tooltip goes offscreen at the top, switch to onBottom
+      if (top < 0) {
+        top = childRect.bottom;
+        tooltipProps.direction = 'onBottom';
+      }
+    } else if (tooltipProps.direction === 'onBottom') {
+      top = childRect.bottom;
+      left = childRect.left + childRect.width / 2 - tooltipRect.width / 2;
+
+      // If the tooltip goes offscreen at the bottom, switch to onTop
+      if (top + tooltipRect.height > viewportHeight) {
+        top = childRect.top - tooltipRect.height;
+        tooltipProps.direction = 'onTop';
+      }
+    } else if (tooltipProps.direction === 'onLeft') {
+      top = childRect.top + childRect.height / 2 - tooltipRect.height / 2;
+      left = childRect.left - tooltipRect.width;
+
+      // If the tooltip goes offscreen on the left, switch to onRight
+      if (left < 0) {
+        left = childRect.right;
+        tooltipProps.direction = 'onRight';
+      }
+    } else if (tooltipProps.direction === 'onRight') {
+      top = childRect.top + childRect.height / 2 - tooltipRect.height / 2;
+      left = childRect.right;
+
+      // If the tooltip goes offscreen on the right, switch to onLeft
+      if (left + tooltipRect.width > viewportWidth) {
+        left = childRect.left - tooltipRect.width;
+        tooltipProps.direction = 'onLeft';
+      }
+    }
+
+    // Apply the calculated styles
+    setTooltipStyles({
+      top: `${top}px`,
+      left: `${left}px`,
+      position: 'absolute',
+    });
+  }, [nodePosition, tailLength, tooltipProps.direction]);
 
   // Effect to update tooltip styles when the tooltip is shown
   useEffect(() => {
-    const updateTooltipPositionIfShown = () => {
-      if (showTooltip) {
+    if (showTooltip) {
+      updateTooltipStyles();
+
+      const observer = new ResizeObserver(() => {
         updateTooltipStyles();
+      });
+
+      const child = childRef.current;
+      if (child) {
+        observer.observe(child);
       }
-    };
 
-    updateTooltipPositionIfShown();
+      window.addEventListener('resize', updateTooltipStyles);
 
-    window.addEventListener('resize', updateTooltipPositionIfShown);
-    return () => {
-      window.removeEventListener('resize', updateTooltipPositionIfShown);
-    };
-  }, [
-    showTooltip,
-    nodePosition,
-    tooltipProps.direction,
-    tailLength,
-    updateTooltipStyles,
-  ]);
+      return () => {
+        window.removeEventListener('resize', updateTooltipStyles);
+        observer.disconnect();
+      };
+    }
+  }, [showTooltip, tooltipProps.direction, updateTooltipStyles]);
 
   // Effect to handle the Escape key to close the tooltip
   useEffect(() => {
