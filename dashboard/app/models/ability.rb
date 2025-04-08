@@ -361,8 +361,11 @@ class Ability
       can :extra_links, ProjectsController
     end
 
-    if user.persisted? && user.can_use_ai_iteration_tools?
+    if user.persisted? && (user.can_use_ai_iteration_tools? || user.dataset_maker?)
       can [:tools], :ai_iteration
+    end
+
+    if user.persisted? && user.dataset_maker?
       can [:fetch_student_code_samples], :student_work_sample
       can [:fetch_free_response_answers], :student_work_sample
     end

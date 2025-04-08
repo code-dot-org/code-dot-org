@@ -7,10 +7,15 @@ import StudentCodeDatasetMaker from './StudentCodeDatasetMaker';
 import styles from './ai-tutor/ai-tutor-tester.module.scss';
 
 interface AIIterationToolsProps {
-  allowed: boolean;
+  aiTutorAccess: boolean;
+  datasetMaker: boolean;
 }
 
-const AIIterationTools: React.FC<AIIterationToolsProps> = ({allowed}) => {
+const AIIterationTools: React.FC<AIIterationToolsProps> = ({
+  aiTutorAccess,
+  datasetMaker,
+}) => {
+  const allowed = aiTutorAccess || datasetMaker;
   return (
     <div>
       <h1>AI Iteration Tools</h1>
@@ -19,20 +24,23 @@ const AIIterationTools: React.FC<AIIterationToolsProps> = ({allowed}) => {
       </p>
       {!allowed && (
         <h3 className={styles.denied}>
-          You need to be a Levelbuilder with AI Tutor Access to use these tools.
+          You don't have the permissions needed to use these tools.
         </h3>
       )}
-      {allowed && (
-        <div>
-          <StudentCodeDatasetMaker />
-          <br />
-          <br />
-          <FreeResponseDatasetMaker />
-          <hr />
-          <br />
-          <AITutorTester />
-        </div>
-      )}
+      <div>
+        {datasetMaker && (
+          <div>
+            <StudentCodeDatasetMaker />
+            <br />
+            <hr />
+            <br />
+            <FreeResponseDatasetMaker />
+          </div>
+        )}
+        <hr />
+        <br />
+        {aiTutorAccess && <AITutorTester />}
+      </div>
     </div>
   );
 };

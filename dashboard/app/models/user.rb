@@ -1290,6 +1290,10 @@ class User < ApplicationRecord
     permission?(UserPermission::LEVELBUILDER)
   end
 
+  def dataset_maker?
+    permission?(UserPermission::DATASET_MAKER)
+  end
+
   # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
   # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
   # should be trusted with locked down instructor only content. It is important to use this

@@ -80,6 +80,9 @@
 - if current_user && !@level.uses_lab2?
   = render partial: 'levels/admin'
 
+- if current_user && current_user.dataset_maker?
+  = render partial: 'levels/dataset_maker_level_info'
+
 - if @script && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
   = render partial: 'levels/teacher_panel'
 

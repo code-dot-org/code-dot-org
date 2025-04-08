@@ -1,0 +1,27 @@
+- if current_user && current_user.dataset_maker?
+  = render layout: 'shared/extra_links' do
+    %strong= @level.key
+    %br
+    %ul 
+      %li= "level id: #{@level.id}"
+      %li= "level type: #{@level.type}"
+      %li= "This level is in #{@level.levels_parent_levels.count} other levels"
+      %li= "This level contains #{@level.child_levels.count} other levels"
+      %br
+      - if @level.levels_parent_levels.count > 0
+        %h4 Parent levels
+        %ul
+        - @level.levels_parent_levels.each do |parent_level|
+          %strong= parent_level.key
+          %li= "level id: #{parent_level.id}"
+          %li= "level type: #{parent_level.type}"
+          %br
+    
+      - if @level.child_levels.count > 0
+        %h4 Child levels
+        %ul 
+        - @level.child_levels.each do |child_level|
+          %strong= child_level.key
+          %li= "level id: #{child_level.id}"
+          %li= "level type: #{child_level.type}"
+          %br
