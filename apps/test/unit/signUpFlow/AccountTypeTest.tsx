@@ -74,12 +74,12 @@ describe('SelectAccountType', () => {
 
     fireEvent.click(screen.getByText(locale.sign_up_as_a_student()));
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/sign_up/finish_student_account'
+      '/users/sign_up/finish_student_account?user_type=student'
     );
 
     fireEvent.click(screen.getByText(locale.sign_up_as_a_teacher()));
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/sign_up/finish_teacher_account'
+      '/users/sign_up/finish_teacher_account?user_type=teacher'
     );
 
     sessionStorage.clear();
