@@ -8,6 +8,7 @@ import React, {useContext, useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import AITutorChatWorkspace from '@cdo/apps/aiTutor/views/AITutorChatWorkspace';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
@@ -385,6 +386,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </InstructorsOnly>
           )}
         </div>
+        <AITutorChatWorkspace />
         {showNavigation && (
           <div
             id="instructions-navigation"
