@@ -443,8 +443,6 @@ Resources:
   MarketingCacheFileSystem:
     Type: AWS::EFS::FileSystem
     Properties:
-      BackupPolicy:
-        Status: ENABLED
       Encrypted: true
       PerformanceMode: generalPurpose
       ThroughputMode: bursting
