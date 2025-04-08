@@ -29,6 +29,8 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
+jest.mock('@cdo/apps/util/HttpClient');
+
 describe('TeacherHomepage', () => {
   const sections = [
     {
