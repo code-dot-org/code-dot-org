@@ -281,7 +281,10 @@ trigger:
     - pull_request
 
 ---
-name: sleep-for-30s-and-pass
+name: sleep-for-10s
+
+clone:
+  disable: true
 
 steps:
   - name: sleep
@@ -326,7 +329,7 @@ steps:
       debug: true
 
 depends_on:
-  - sleep-for-30s-and-pass
+  - sleep-for-10s
   # - unit
   # - ui
 
@@ -373,6 +376,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 479022a88fa0cf2e9c35755b95af483b22534fb4a240d70d1db0ccf859fc2e69
+hmac: b7949fe096b328a3569567b0e4b31959a41410b0e6a821bbe1beabdb9a0aec80
 
 ...
