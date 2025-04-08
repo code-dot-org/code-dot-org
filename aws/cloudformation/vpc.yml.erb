@@ -187,10 +187,14 @@ Resources:
   FrontendSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Inbound HTTP[S] from load balancer, SSH from Gateway.
+      GroupDescription: Inbound HTTP[S] from load balancer, SSH from Gateway & Daemon.
       VpcId: {Ref: VPC}
       SecurityGroupIngress:
         # nginx listens for incoming HTTP requests forwarded by Load Balancer
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          SourceSecurityGroupId: {Ref: ALBSecurityGroup}
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
@@ -199,13 +203,25 @@ Resources:
         - IpProtocol: tcp
           FromPort: 443
           ToPort: 443
+          SourceSecurityGroupId: {Ref: ALBSecurityGroup}
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
         # Enable Dashboard Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
         - IpProtocol: tcp
           FromPort: 9000
           ToPort: 9000
+          SourceSecurityGroupId: {Ref: ALBSecurityGroup}
+        - IpProtocol: tcp
+          FromPort: 9000
+          ToPort: 9000
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
         # Enable Pegasus Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
+        - IpProtocol: tcp
+          FromPort: 9001
+          ToPort: 9001
+          SourceSecurityGroupId: {Ref: ALBSecurityGroup}
         - IpProtocol: tcp
           FromPort: 9001
           ToPort: 9001
