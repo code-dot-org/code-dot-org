@@ -5374,3 +5374,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        ui-test-unnumbered-lessons:
+          title: ui-test-unnumbered-lessons
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
