@@ -81,4 +81,19 @@ describe('Breadcrumbs Component', () => {
     expect(lastLink).toHaveAttribute('aria-disabled', 'true');
     expect(lastLink).not.toHaveAttribute('href');
   });
+
+  it('renders home icon with correct href when showHomeIcon is true', () => {
+    setup({showHomeIcon: true});
+
+    const homeIconLink = screen.getByTitle('Home').closest('a');
+    expect(homeIconLink).toBeInTheDocument();
+    expect(homeIconLink).toHaveAttribute('href', '/');
+  });
+
+  it('does not render home icon when showHomeIcon is false', () => {
+    setup({showHomeIcon: false});
+
+    const homeIcon = screen.queryByTitle('Home');
+    expect(homeIcon).not.toBeInTheDocument();
+  });
 });
