@@ -33,7 +33,7 @@ const UserMessageEditor = React.forwardRef<
       customPlaceholder,
       showSubmitLabel = false,
     },
-    ref
+    externalInputRef
   ) => {
     const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
     const [userMessage, setUserMessage] = useState<string>('');
@@ -62,10 +62,10 @@ const UserMessageEditor = React.forwardRef<
         return;
       }
 
-      internalInputRef.current.style.height = 'auto'; // Reset height
+      internalInputRef.current.style.height = 'auto'; // Need to reset height before update.
       internalInputRef.current.style.height =
-        internalInputRef.current.scrollHeight + 2 + 'px'; // Set to scroll height
-    }, [ref, userMessage]);
+        internalInputRef.current.scrollHeight + 2 + 'px';
+    }, [userMessage]);
 
     const icon = {iconName: 'paper-plane'};
 
@@ -78,14 +78,14 @@ const UserMessageEditor = React.forwardRef<
       >
         <textarea
           ref={node => {
-            // need to handle this being null?
             internalInputRef.current = node;
 
-            if (typeof ref !== 'object' || ref === null) {
-              return;
+            if (
+              typeof externalInputRef === 'object' &&
+              externalInputRef !== null
+            ) {
+              externalInputRef.current = node;
             }
-
-            ref.current = node;
           }}
           id="uitest-chat-textarea"
           className={moduleStyles.textArea}
@@ -100,7 +100,7 @@ const UserMessageEditor = React.forwardRef<
           rows={1}
         />
 
-        <div className={moduleStyles.centerSingleItemContainer}>
+        <div className={moduleStyles.endSingleItemContainer}>
           <Button
             aria-label={commonI18n.submit()}
             id="uitest-chat-submit"
