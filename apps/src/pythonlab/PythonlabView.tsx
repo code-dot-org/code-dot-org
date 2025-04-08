@@ -65,7 +65,7 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     share: ShareView,
   },
-  showFileBrowser: false,
+  showFileBrowser: true,
 };
 
 const PythonlabView: React.FunctionComponent<
