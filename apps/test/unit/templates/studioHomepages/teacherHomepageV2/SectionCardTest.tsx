@@ -76,6 +76,7 @@ describe('SectionCard', () => {
                 path={TEACHER_NAVIGATION_PATHS.home}
                 element={
                   <SectionCard
+                    id={section.id}
                     section={section}
                     onDeleteClickCallback={() => {}}
                   />

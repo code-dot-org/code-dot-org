@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-08T00:18:33.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "###Cyber Detective\n\n- Uses code to track hackers and stop cyber crimes\n\n- AI spots strange patterns in computer systems\n\n- Protects data and keeps people safe online",
+        "imageUrl": "https://images.code.org/dd2afc85f7c69f0d369266986a41393b-CyberDetPanel.gif",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Sports Data Analyst\n\n- Uses code to track player stats and game data\n\n- AI finds patterns to boost team performance",
+        "imageUrl": "https://images.code.org/4b27ce5ce895a3a84385e226ea5a4633-SportsPanel.gif",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###VR Developer\n\n- Uses code to build 3D virtual worlds you can explore\n\n- AI makes characters and scenes feel real\n\n- Adds motion and sound to create full VR experiences",
+        "imageUrl": "https://images.code.org/1958d6aa3e4d14b8934b6f5ae2a86858-VRPanel.gif",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "display_name": "Jobs that Solve Problems",
+    "thumbnail_url": "https://images.code.org/c36e1c76a2999cf8da10195f29f1cc0c-puzzle2.jpg",
+    "bubble_choice_description": "**<i class=\"fa-solid fa-image\"></i> Images that explore:**\n* Cyber Detective\n\n* Sports Statistics\n\n- VR Developer",
+    "name_suffix": "_b"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-08T00:18:33.389+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels4\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels4\"}]"
+}]]></config>
+</Panels>
