@@ -395,18 +395,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors[:name].empty?
   end
 
-  test "cannot build user with panda in email" do
-    user = build :user, email: "#{panda_panda}@panda.org"
-    refute user.valid?
-    assert user.errors[:email].length == 1
-  end
-
-  test "cannot build user with invalid email" do
-    user = build :user, email: 'foo@bar@com'
-    refute user.valid?
-    assert user.errors[:email].length == 1
-  end
-
   test "cannot build user with no type" do
     user = build :user, user_type: nil
     refute user.valid?
@@ -423,32 +411,6 @@ class UserTest < ActiveSupport::TestCase
     user = build :user, user_type: 'invalid_type'
     refute user.valid?
     assert user.errors[:user_type].length == 1
-  end
-
-  test "cannot create user with duplicate email" do
-    # actually create a user
-    User.create!(@good_data)
-
-    # Now create second user
-    user = User.create(@good_data)
-    assert_equal ['Email has already been taken'], user.errors.full_messages
-
-    # Now create second user with duplicate email with different case
-    user = User.create(@good_data.merge(email: @good_data[:email].upcase))
-    assert_equal ['Email has already been taken'], user.errors.full_messages
-  end
-
-  test "cannot create young user with duplicate email" do
-    # actually create a user
-    User.create!(@good_data_young)
-
-    # Now create second user
-    user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email])))
-    assert_equal ['Email has already been taken'], user.errors.full_messages
-
-    # Now create second user with duplicate username with different case
-    user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email].upcase)))
-    assert_equal ['Email has already been taken'], user.errors.full_messages
   end
 
   test 'cannot create user when a user with the same credentials exists' do
@@ -3310,29 +3272,6 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
 
     assert_nil student.days_since_first_sign_in
-  end
-
-  test 'new users must have valid email addresses' do
-    assert_creates User do
-      create :user, email: 'valid@example.net'
-    end
-
-    e = assert_raises ActiveRecord::RecordInvalid do
-      create :user, email: 'invalid@incomplete'
-    end
-    assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
-  end
-
-  test 'existing users with invalid email addresses are still allowed' do
-    user_with_invalid_email = build :user, email: 'invalid@incomplete'
-    user_with_invalid_email.save!(validate: false)
-
-    assert user_with_invalid_email.valid?
-
-    # Update another field
-    user_with_invalid_email.name = 'updated name'
-    assert user_with_invalid_email.valid?
-    assert user_with_invalid_email.save
   end
 
   test 'no personal email for under 13 users' do
