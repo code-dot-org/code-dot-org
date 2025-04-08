@@ -281,6 +281,41 @@ trigger:
     - pull_request
 
 ---
+
+kind: pipeline
+type: docker
+name: trigger-github-workflow-on-droneci-success
+
+steps:
+  - name: trigger-gh
+    image: plugins/webhook
+    settings:
+      urls:
+        - https://api.github.com/repos/code-dot-org/code-dot-org/actions/workflows/on-droneci-success.yml/dispatches
+      username: x-access-token
+      secrets:
+        - source: github_token_on_droneci_success
+          target: webhook_password
+      template: |
+        {
+          "ref": "{{ build.branch }}",
+          "inputs": {
+            "commit": "{{ build.commit }}"
+          }
+        }
+      debug: true
+
+depends_on:
+  - unit
+  - ui
+
+trigger:
+  event:
+    - pull_request
+  status:
+    - success
+
+---
 # On push, cache a clone of staging to drone's S3 bucket.
 # The staging cache reduces git bandwidth in PR pipelines.
 kind: pipeline
@@ -314,8 +349,9 @@ trigger:
     - "staging-next"
   event:
     - push
+
 ---
 kind: signature
-hmac: bee4dcf20e1a1dcbb6b1dddb9777ff0d9c7b73fda6ae26811edce8227fea5413
+hmac: 5de6a88b56bb6f09162b666d3d99dd41fc426e7ec768d0396bf1e4d54c32b972
 
 ...

@@ -1,0 +1,17 @@
+name: on-drone-ci-success
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        required: true
+
+jobs:
+  followup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - run: |
+          echo "Triggered by Drone commit: ${{ github.event.inputs.commit }}"
