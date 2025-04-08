@@ -290,7 +290,7 @@ steps:
   - name: sleep
     image: alpine
     commands:
-      - sleep 11
+      - sleep 10
 trigger:
   branch:
     exclude:
