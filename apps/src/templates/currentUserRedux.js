@@ -267,7 +267,6 @@ export default function currentUser(state = initialState, action) {
       created_at,
       is_verified_instructor,
       has_completed_ai_differentiation_welcome,
-      has_opened_ai_differentiation,
       educator_role,
     } = action.serverUser;
     analyticsReport.setUserProperties(
@@ -307,7 +306,6 @@ export default function currentUser(state = initialState, action) {
       hasSeenProgressTableInvite: has_seen_progress_table_v2_invitation,
       hasCompletedAiDifferentiationWelcome:
         has_completed_ai_differentiation_welcome,
-      hasOpenedAiDifferentiation: has_opened_ai_differentiation,
       childAccountComplianceState: child_account_compliance_state,
       countryCode: country_code,
       usStateCode: us_state_code,

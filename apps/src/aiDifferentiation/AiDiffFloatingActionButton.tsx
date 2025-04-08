@@ -1,14 +1,17 @@
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import {
+  tryGetSessionStorage,
+  trySetSessionStorage,
+  tryGetLocalStorage,
+  trySetLocalStorage,
+} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
-import HttpClient from '../util/HttpClient';
-import {useAppSelector} from '../util/reduxHooks';
 
 import AiDiffContainer from './AiDiffContainer';
 
@@ -18,8 +21,6 @@ import style from './ai-differentiation.module.scss';
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
  * toggling an AI element open and closed.
  */
-
-const HAS_OPENED_DIFF_URL = '/api/v1/users/has_opened_ai_differentiation';
 
 interface AiDiffFloatingActionButtonProps {
   context: string;
@@ -35,11 +36,11 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   unitDisplayName,
 }) => {
   const sessionStorageKey = 'AiDiffFabOpenStateKey';
+  const localStorageKey = 'AiDiffHasOpenedKey';
 
   // Show the pulse until the user clicks the FAB to open the chat window
-  const hasOpened = useAppSelector(
-    state => state.currentUser.hasOpenedAiDifferentiation
-  );
+  const hasOpened =
+    JSON.parse(tryGetLocalStorage(localStorageKey, false.toString())) || false;
 
   // Open the chat window if this is the first time the user has seen the FAB in this
   // session and they haven't opened the FAB yet.
@@ -72,7 +73,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       : EVENTS.AI_DIFF_CHAT_OPENED;
     analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
     if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
-      updateHasOpenedDiff();
+      trySetLocalStorage(localStorageKey, true.toString());
     }
     setIsOpen(!isOpen);
   };
@@ -80,10 +81,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   useEffect(() => {
     trySetSessionStorage(sessionStorageKey, isOpen);
   }, [isOpen]);
-
-  const updateHasOpenedDiff = React.useCallback(() => {
-    HttpClient.post(HAS_OPENED_DIFF_URL, undefined, true).then(() => {});
-  }, []);
 
   return (
     <div id="fab-contained">

@@ -35,5 +35,4 @@ export interface CurrentUserState {
   isLti: boolean;
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
-  hasOpenedAiDifferentiation: boolean;
 }
