@@ -1,3 +1,6 @@
+# Build kubernetes oriented docker images using skaffold (see /skaffold.yaml and 
+# k8s/README.md for details).
+#
 # This is currently an experimental feature, see: k8s/experimental.yaml
 
 name: k8s
@@ -10,7 +13,7 @@ on:
   pull_request:
 
 jobs:
-  # Step 1: build platform specific docker images: amd64, arm64
+  # Step 1: build platform specific docker images: amd64, arm64, using `skaffold build`
   skaffold-build:
     name: skaffold build
     uses: ./.github/workflows/k8s_skaffold_build.yml

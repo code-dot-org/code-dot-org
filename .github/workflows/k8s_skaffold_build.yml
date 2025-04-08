@@ -1,3 +1,25 @@
+# Executes `skaffold build` on multiple architectures (e.g. amd64, arm64) in parallel
+# and pushes the per-architecture images to the GitHub Container Registry:
+# https://github.com/code-dot-org/code-dot-org/pkgs/container/code-dot-org)
+#
+# In theory skaffold can do multiple arc cross-platform builds using QEMU via the
+# `skaffold build --platform` flag. However, using QEMU results in 5x slower builds,
+# and a full docker build is already quite slow. Therefore, we add the complexity
+# of forking out to native runners and merging back into a single final multi-platform image
+# as a later step.
+#
+# Per-architecture images are tagged with the branch name and architecture, e.g.:
+# - code-dot-org:my-branch-amd64
+# - code-dot-org:my-branch-arm64
+#
+# In a later step (see: ./k8s_stitch_multiplatform_image.yml) we stitch the per-architecture
+# images together into a single multi-platform image, e.g.:
+# - code-dot-org:my-branch
+#
+# The "real action" in this file is the final `skaffold build` command which does the
+# actual docker build and push, see /skaffold.yaml for details on what images are built
+# by this command.
+
 name: k8s-skaffold-build
 
 on:
@@ -38,6 +60,15 @@ jobs:
       run:
         shell: bash -ex {0}
     steps:
+
+      # We run this job multiple times in parallel, once for each architecture.
+      # This step computes the correct per-architecture docker tag for this runner.
+      #
+      # For example, on the arm64 runner, this will set:
+      # outputs.docker_tag_arm64=code-dot-org:my-branch-arm64
+      #
+      # Additionally, it computes the docker tag for the final multi-platform image e.g.:
+      # outputs.docker_tag=amd64=code-dot-org:my-branch
       - name: Setup Docker Tags
         id: docker_tags
         run: |
@@ -103,6 +134,7 @@ jobs:
       # - name: ssh into the runner
       #   uses: mxschmitt/action-tmate@v3
 
+      # Run `skaffold build` to build the docker image for the current runner's architecture
       - name: skaffold build
         run: |
           skaffold \
@@ -110,8 +142,5 @@ jobs:
             -v info \
             --tag $DOCKER_TAG \
             --push
-
-          # Disabled because it takes 5x as long on GitHub AMD64 machines:
-          #   --platform=linux/arm64,linux/amd64
 
           echo "Done w/ skaffold build"

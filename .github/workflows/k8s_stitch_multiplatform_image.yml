@@ -1,14 +1,25 @@
+# In a previous step (see: ./k8s_skaffold_build.yml) we built the docker image for multiple
+# architectures (e.g. amd64, arm64) in parallel on a GH runner for that specific architecture.
+#
+# The resulting build artifacts are multiple tagged single-architecture docker images, for example:
+# - code-dot-org:my-branch-amd64
+# - code-dot-org:my-branch-arm64
+#
+# This step uses `docker buildx imagetools` to stitch the single-architecture images into one final
+# multi-platform docker image, for example:
+# - code-dot-org:my-branch
+
 name: k8s-stitch-multiplatform-image
 
 on:
   workflow_call:
     inputs:
       docker_tags_json:
-        description: "JSON object like { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
+        description: "JSON object like: { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
         required: true
         type: string
       docker_tag:
-        description: "Base Docker tag for the multi-platform image"
+        description: "Docker tag for the final multi-platform image e.g. code-dot-org:my-branch"
         required: true
         type: string
 
@@ -37,7 +48,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Parse DOCKER_TAGS JSON and prepare tag list
+      # Parse docker_tags_json into a single shell variable listing each single-arch image:
+      # SINGLE_ARCH_IMAGES="code-dot-org:my-branch-amd64 code-dot-org:my-branch-arm64"
+      - name: Parse DOCKER_TAGS JSON into $SINGLE_ARCH_IMAGES
         id: parse_tags
         run: |
           # Use the passed JSON string directly
@@ -48,4 +61,5 @@ jobs:
       - name: Stitch platform images into a multi-platform image
         run: |
           # Use imagetools to stitch all platform-specific images into one multi-platform image
+          # $MULTI_PLATFORM_IMAGE is the final multi-platform image name, e.g. code-dot-org:my-branch
           docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
