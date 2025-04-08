@@ -103,7 +103,6 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
     : 0;
 
-  // TO DO: Update this with perhaps different logic for "flagged students"
   const flaggedStudentCount = studentWorkEvaluations
     ? countEvaluationsByType(studentWorkEvaluations, ['Profanity detected'])
     : 0;
