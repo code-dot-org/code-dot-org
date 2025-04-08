@@ -68,10 +68,6 @@ def use_local_selenium?
   # If running locally, always use local selenium.
   return true if ENV['TEST_LOCAL'] == 'true'
 
-  # If running CI tests (as opposed to CD tests), run the first test locally
-  # and only use saucelabs for reruns.
-  return true if ENV['CI'] == 'true' && ENV.fetch('RERUNS', 0).to_i < 1
-
   # Otherwise, use saucelabs.
   return false
 end

@@ -106,6 +106,7 @@ def parse_options
     options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
     options.local_headless = true
+    options.first_run_local = nil
     options.html = nil
     options.maximize = nil
     options.auto_retry = false
@@ -147,6 +148,9 @@ def parse_options
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
+      end
+      opts.on("--first-run-local", "Use the local webdriver (not Saucelabs) only for the first run of a test; reruns will use Saucelabs.") do
+        options.first_run_local = 'true'
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -766,7 +770,7 @@ def run_feature(browser, feature, options)
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
-  run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+  run_environment['TEST_LOCAL'] = (options.local || options.first_run_local) ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
@@ -799,11 +803,14 @@ def run_feature(browser, feature, options)
     }
   )
 
+  # After the first run, we no longer want to consider the `first_run_local`
+  # option when deciding whether a test should be run locally.
+  run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
+
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
     retry_again_msg = reruns < max_reruns ? " once, will retry" : ", not going to retry"
-    run_environment['RERUNS'] = reruns.to_s
 
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.

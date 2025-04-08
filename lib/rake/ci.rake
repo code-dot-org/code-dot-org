@@ -119,6 +119,7 @@ namespace :ci do
           "--parallel #{use_saucelabs ? 16 : 8} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
+          "--first_run_local " \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -131,6 +132,7 @@ namespace :ci do
             "--ci " \
             "--parallel 10 " \
             "--retry_count 1 " \
+            "--first_run_local " \
             "--with-status-page " \
             "--html"
       end
