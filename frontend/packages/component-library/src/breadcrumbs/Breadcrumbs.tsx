@@ -53,12 +53,9 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
     >
       {showHomeIcon && (
         <>
-          <Link
-            href="/"
-            className={moduleStyles.breadcrumb}
-          >
-            <FontAwesomeV6Icon 
-              iconName="house" 
+          <Link href="/" className={moduleStyles.breadcrumb}>
+            <FontAwesomeV6Icon
+              iconName="house"
               className={moduleStyles.homeIcon}
               title="Home"
             />
