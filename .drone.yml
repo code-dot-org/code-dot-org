@@ -282,19 +282,15 @@ trigger:
 
 ---
 name: sleep-for-10s
-
+kind: pipeline
+type: docker
 clone:
   disable: true
-
 steps:
   - name: sleep
     image: alpine
     commands:
       - sleep 30
-
-kind: pipeline
-type: docker
-
 trigger:
   branch:
     exclude:
@@ -308,7 +304,8 @@ trigger:
 kind: pipeline
 type: docker
 name: trigger-github-workflow-on-droneci-success
-
+clone:
+  disable: true
 steps:
   - name: trigger-gh
     image: plugins/webhook
@@ -327,12 +324,10 @@ steps:
           }
         }
       debug: true
-
 depends_on:
   - sleep-for-10s
   # - unit
   # - ui
-
 trigger:
   event:
     - pull_request
@@ -376,6 +371,6 @@ trigger:
 
 ---
 kind: signature
-hmac: b7949fe096b328a3569567b0e4b31959a41410b0e6a821bbe1beabdb9a0aec80
+hmac: a1db5926ed5ae4e5f36bd6ec95192ca52864ff49199f2d0b1f3057fe185a707a
 
 ...
