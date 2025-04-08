@@ -2,7 +2,6 @@ import {render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import IconHighlight, {
-  IconHighlightContentfulLinkEntry,
   IconHighlightContentfulProps,
 } from '@/components/iconHighlight/IconHighlight';
 
@@ -53,8 +52,52 @@ describe('IconHighlight component', () => {
     expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 
-  it('renders card link list with provided link entries', () => {
-    const internalLinkEntry: IconHighlightContentfulLinkEntry = {
+  it('renders card link list with provided link entry', () => {
+    const linkEntry = {
+      sys: {
+        id: 'link',
+      },
+      fields: {
+        label: 'Link',
+        primaryTarget: 'https://code.org/link',
+        ariaLabel: 'Link aria label',
+        isThisAnExternalLink: false,
+      },
+    };
+
+    renderCardContainer({linkEntry: linkEntry});
+
+    const linkList = screen.getByRole('list');
+    expect(linkList).toBeVisible();
+
+    const internalLink = within(linkList).getByRole('link', {
+      name: linkEntry.fields.ariaLabel,
+    });
+    expect(internalLink).toBeVisible();
+    expect(internalLink).toHaveTextContent(linkEntry.fields.label);
+    expect(internalLink).toHaveAttribute(
+      'href',
+      linkEntry.fields.primaryTarget,
+    );
+    expect(internalLink).not.toHaveAttribute('target');
+    expect(
+      within(internalLink).queryByRole('img', {name: 'external link'}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders card link list with only provided link entries', () => {
+    const linkEntry = {
+      sys: {
+        id: 'link',
+      },
+      fields: {
+        label: 'Link',
+        primaryTarget: 'https://code.org/link',
+        ariaLabel: 'Link aria label',
+        isThisAnExternalLink: false,
+      },
+    };
+    const internalLinkEntry = {
       sys: {
         id: 'internal-link',
       },
@@ -65,7 +108,7 @@ describe('IconHighlight component', () => {
         isThisAnExternalLink: false,
       },
     };
-    const externalLinkEntry: IconHighlightContentfulLinkEntry = {
+    const externalLinkEntry = {
       sys: {
         id: 'external-link',
       },
@@ -77,10 +120,18 @@ describe('IconHighlight component', () => {
       },
     };
 
-    renderCardContainer({linkEntries: [internalLinkEntry, externalLinkEntry]});
+    renderCardContainer({
+      linkEntry: linkEntry,
+      linkEntries: [internalLinkEntry, externalLinkEntry],
+    });
 
     const linkList = screen.getByRole('list');
     expect(linkList).toBeVisible();
+
+    const link = within(linkList).queryByRole('link', {
+      name: linkEntry.fields.ariaLabel,
+    });
+    expect(link).not.toBeInTheDocument();
 
     const internalLink = within(linkList).getByRole('link', {
       name: internalLinkEntry.fields.ariaLabel,
