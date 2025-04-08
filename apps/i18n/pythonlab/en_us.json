@@ -14,7 +14,10 @@
   "programCompleted": "Program completed.",
   "programStopped": "Program stopped.",
   "projectPickerTitle": "Select a project type",
+  "projectPickerReplaceRestoreInfo": "You can restore your old project using Version History.",
+  "projectPickerReplaceWarning": "This will clear your code and start over with the new project type.",
   "runningLevelTests": "Running level tests...",
   "runningProgram": "Running program...",
-  "runningProjectTests": "Running your project's tests..."
+  "runningProjectTests": "Running your project's tests...",
+  "switchProjectTypeTitle": "Switch your project type"
 }

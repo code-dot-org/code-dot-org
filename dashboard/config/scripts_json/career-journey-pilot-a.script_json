@@ -1,0 +1,551 @@
+{
+  "script": {
+    "name": "career-journey-pilot-a",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-08 00:29:53 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "career-journey-pilot-a"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Career Journeys A",
+      "name": "Career Journeys A",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "96926205-95cf-49cb-acb4-2ab281eed4d0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96926205-95cf-49cb-acb4-2ab281eed4d0",
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3825f657-3604-4824-853a-118fde4fd2c8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Career Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8",
+        "lesson_activity.key": "96926205-95cf-49cb-acb4-2ab281eed4d0"
+      }
+    },
+    {
+      "key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b",
+        "lesson_activity.key": "96926205-95cf-49cb-acb4-2ab281eed4d0"
+      }
+    },
+    {
+      "key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a",
+        "lesson_activity.key": "96926205-95cf-49cb-acb4-2ab281eed4d0"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-video_a"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-video-choices_a"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-panel-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-panel-choices_a"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-example-choices_a"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video-choice4_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-video-choice4_a"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-sprite-location_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-sprite-location_a"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-backgrounds_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-backgrounds_a"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-event-say_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-event-say_a"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-extra-skills-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-extra-skills-choices_a"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-planning_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-planning_a"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-project_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-project_a"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Version A Survey_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a"
+      },
+      "level_keys": [
+        "Version A Survey_a"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-video_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-video-choices_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-panel-choices_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-panel-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-example-choices_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-example-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-video-choice4_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video-choice4_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-sprite-location_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-sprite-location_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-backgrounds_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-backgrounds_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-event-say_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-event-say_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-extra-skills-choices_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-extra-skills-choices_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "da550add-dde0-4f1c-b5b2-1b4c7fcfc14b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-planning_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-planning_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-elem-career-journeys-project_a",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-project_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Version A Survey_a",
+        "script_level.level_keys": [
+          "Version A Survey_a"
+        ],
+        "lesson.key": "Career Journeys A",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-a",
+        "activity_section.key": "d2a2a9b4-fea1-47ff-bbb0-01b80964a51a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

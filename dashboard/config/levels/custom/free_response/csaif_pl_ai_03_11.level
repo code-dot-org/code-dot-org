@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-04-07T20:04:35.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Ethics of AI Collaboration\r\n\r\n<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Ethics</strong> the branch of philosophy that deals with what is morally right and wrong, and how decisions affect people and society.</p>\r\n\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Copyright</strong> the legal right granted to the creator of an original work to use, distribute, and modify it.</p>\r\n\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Attribution</strong> the act of giving credit to the original creator of a work, especially in the context of using or referencing their material.</p>\r\n\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Transparency</strong> the practice of openly disclosing how something works, especially in terms of decision-making, data use, or AI processes.</p>\r\n</div>\r\n\r\n#### Debates over \"real art\" raged in 2022 after an AI-generated artwork titled \"\", created using MidJourney, won first place at the Colorado State Fair's digital art competition.\r\n\r\n## 📝 To Do\r\n#### Reflection...\r\n* #### Should AI-generated art be considered \"real art?\"\r\n* #### Who should get credit - the AI, the programmer, or the person providing the prompt?\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-07T20:04:35.233+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_03c\\\"\"],\"cloned_from\":\"csaif_pl_ai_03c\"},{\"changed_at\":\"2025-04-07 20:11:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

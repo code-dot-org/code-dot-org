@@ -87,19 +87,25 @@ class School < ApplicationRecord
   # Non-open statuses are 'Closed', 'Future', 'Inactive'
   OPEN_SCHOOL_STATUSES_2018_2019 = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
 
-  # School statuses representing currently open schools in 2019-2020 and 2020-2021 import.
+  # School statuses representing currently open schools in 2019-2020 onward.
   # Non-open statuses are '2-Closed', '7-Future', '6-Inactive'
   OPEN_SCHOOL_STATUSES = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
 
-  # School categories need to be mapped to existing values for 2019-2020 import.
+  # School categories need to be mapped to existing values.
   SCHOOL_CATEGORY_MAP = {
     '1-Regular school' => 'Regular School',
     '2-Special education school' => 'Special Education School',
+    # Career and Technical School label for pre-2023-2024 school years
     '3-Vocational school' => 'Career and Technical School',
-    '4-Alternative/other school' => 'Alternative School'
+    # Career and Technical School label 2023-2024 school year onward
+    '3-Career and Technical School' => 'Career and Technical School',
+    # Alternative Education label for pre-2023-2024 school years
+    '4-Alternative/other school' => 'Alternative School',
+    # Alternative Education label for 2023-2024 school year onward
+    '4-Alternative Education School' => 'Alternative School',
   }
 
-  # School charter values need to be mapped to existing values for 2019-2020 import.
+  # School charter values need to be mapped to existing values.
   CHARTER_SCHOOL_MAP = {
     '1-Yes' => 'charter',
     '2-No' => 'public',
