@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-07 03:46:11 UTC",
+    "serialized_at": "2025-04-07 20:59:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1432,7 +1432,7 @@
       "key": "0aa3cbdd-b64f-4418-9cda-24858cc8fd21",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the investigate levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate",
         "tips": [
           {
@@ -1450,7 +1450,7 @@
       "key": "24ab1767-e0bc-4d27-ba75-f759d1cd7e9b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices to help complete the levels as a class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
       },
       "seeding_key": {
         "activity_section.key": "24ab1767-e0bc-4d27-ba75-f759d1cd7e9b",
@@ -1504,7 +1504,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
           }
         ]
       },
@@ -1540,7 +1540,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**High Ceiling:** Challenge levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
           }
         ]
       },
@@ -2048,7 +2048,7 @@
       "key": "193bca1f-b27d-405e-8111-1e22d24e631d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Choose from one of the following videos to show the class:\n- [Owen Pallewtt - Live on KEXP](https://youtu.be/kz4KASHRsT4?t=1440) (start at 24:00 - This is The Dream of Win and Regine)\n- [Carolina Eyck - Ennio Morricone cover with Theramin and Voice](https://www.youtube.com/watch?v=ajM4vYCZMZk)\n- [Hailey Knox - New Guitar Loop](https://www.youtube.com/watch?v=j4iqfYEx23c)\n- [Reggie Watts - I Just Want To](https://www.youtube.com/watch?v=344OpaQCAQI)\n\nEach video features an artist who uses a loop pedal to construct the backing tracks for their songs live as the song is being performed. You may decide to only show part of the video (usually up a minute) during a sequence that highlights this feature.\n\n",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Choose from one of the following videos to show the class:\n- [Owen Pallett - Live on KEXP](https://youtu.be/kz4KASHRsT4?t=1440) (start at 24:00 - This is The Dream of Win and Regine)\n- [Carolina Eyck - Ennio Morricone cover with Theramin and Voice](https://www.youtube.com/watch?v=ajM4vYCZMZk)\n- [Hailey Knox - New Guitar Loop](https://www.youtube.com/watch?v=j4iqfYEx23c)\n- [Reggie Watts - I Just Want To](https://www.youtube.com/watch?v=344OpaQCAQI)\n\nEach video features an artist who uses a loop pedal to construct the backing tracks for their songs live as the song is being performed. You may decide to only show part of the video (usually up a minute) during a sequence that highlights this feature.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2094,7 +2094,7 @@
       "key": "d26f0865-798d-4304-9d25-ea06d3f216c6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the repeat` block works and ensure students understand why the code behaves the way it does before continuing. "
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `repeat` block works and ensure students understand why the code behaves the way it does before continuing. "
       },
       "seeding_key": {
         "activity_section.key": "d26f0865-798d-4304-9d25-ea06d3f216c6",
@@ -2105,7 +2105,7 @@
       "key": "b53475a7-0a77-4d5b-ab02-79454103847b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the investigate levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate",
         "tips": [
           {
@@ -2123,7 +2123,7 @@
       "key": "cd1f3aa7-ea9a-48af-a952-93d35565491c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices to help complete the levels as a class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
       },
       "seeding_key": {
         "activity_section.key": "cd1f3aa7-ea9a-48af-a952-93d35565491c",
@@ -2157,7 +2157,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
           }
         ]
       },
@@ -2193,7 +2193,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**High Ceiling:** Challenge levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
           }
         ]
       },
@@ -2711,7 +2711,7 @@
       "key": "36b61d68-b2fd-4ac8-8067-4c9739cb2431",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the investigate levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate"
       },
       "seeding_key": {
@@ -2723,7 +2723,7 @@
       "key": "a5b6fd8f-04fc-420d-88c7-872cb2be5310",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices to help complete the levels as a class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
       },
       "seeding_key": {
         "activity_section.key": "a5b6fd8f-04fc-420d-88c7-872cb2be5310",
@@ -2757,7 +2757,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
           }
         ]
       },
@@ -2793,7 +2793,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**High Ceiling:** Challenge levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
           }
         ]
       },
@@ -4154,6 +4154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-4"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4176,6 +4179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-sequencing-project-prepare"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -4373,6 +4379,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-5"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5270,6 +5279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-8"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5292,6 +5304,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-project-prepare"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -5464,6 +5479,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-9"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6311,6 +6329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-12"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6333,6 +6354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-project-prepare"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -6380,6 +6404,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-13"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -7951,7 +7978,7 @@
     },
     {
       "name": "Functions - Explore",
-      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/copy",
+      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/template/preview",
       "key": "functions_-_explore",
       "properties": {
         "audience": "Teacher",
@@ -7963,7 +7990,7 @@
     },
     {
       "name": "Functions - Practice",
-      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/copy",
+      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/template/preview",
       "key": "functions_-_practice",
       "properties": {
         "audience": "Teacher",
@@ -8000,7 +8027,7 @@
     },
     {
       "name": "Introduction to Music Lab",
-      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/copy",
+      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/template/preview",
       "key": "introduction_to_music_lab",
       "properties": {
         "audience": "Teacher",
@@ -8012,7 +8039,7 @@
     },
     {
       "name": "Loops - Explore",
-      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/copy",
+      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/template/preview",
       "key": "loops_-_explore",
       "properties": {
         "audience": "Teacher",
@@ -8024,7 +8051,7 @@
     },
     {
       "name": "Loops - Practice",
-      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/copy",
+      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/template/preview",
       "key": "loops_-_practice",
       "properties": {
         "audience": "Teacher",
@@ -8158,7 +8185,7 @@
     },
     {
       "name": "Sequencing - Explore",
-      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/copy",
+      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/template/preview",
       "key": "sequencing_-_explore",
       "properties": {
         "audience": "Teacher",
@@ -8170,7 +8197,7 @@
     },
     {
       "name": "Sequencing - Practice",
-      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/copy",
+      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/template/preview",
       "key": "sequencing_-_practice",
       "properties": {
         "audience": "Teacher",

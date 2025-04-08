@@ -14,10 +14,11 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {
   restartPyodideIfProgramIsRunning,
   sendInput,
@@ -109,32 +110,62 @@ const PythonlabView: React.FunctionComponent<
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const [showProjectPicker, setShowProjectPicker] = useState(false);
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const lastSavedLabConfig = useAppSelector(
+    state => state.lab2Project.lastSavedLabConfig
+  );
   const dispatch = useAppDispatch();
+
+  const currentProjectType = useMemo(() => {
+    // The current project type is determined by the last saved lab config
+    // if it exists, otherwise it is determined by the lab config provided by useSource.
+    // The reason for this is the useSource lab config could be the lab config when viewing
+    // a previous version of the project, and we want to use the lab config from their most recent
+    // save. I.e., if the user is currently on a neighborhood project, but a previous version was console,
+    // we want to show them the start sources for neighborhood.
+    if (levelProperties.isProjectLevel) {
+      const labConfigToUse = lastSavedLabConfig || labConfig;
+      return (
+        labConfigToUse?.standaloneSettings?.projectType ||
+        labConfigToUse?.miniApp?.name ||
+        'console'
+      );
+    }
+    return undefined;
+  }, [labConfig, lastSavedLabConfig, levelProperties.isProjectLevel]);
 
   const levelStartSources = useMemo(() => {
     // For new standalone project levels, we use the standalone start sources map to determine
     // the start sources, so we can show the user the start code for their chosen project type,
     // and not accidentally show them the project picker again.
-    if (levelProperties.isProjectLevel) {
-      const currentProjectType =
-        labConfig?.standaloneSettings?.projectType || 'console';
+    if (currentProjectType) {
       return standaloneStartSources[currentProjectType];
     } else {
       return startSources;
     }
-  }, [
-    labConfig?.standaloneSettings?.projectType,
-    levelProperties.isProjectLevel,
-    startSources,
-  ]);
+  }, [currentProjectType, startSources]);
 
   const showProjectPickerModal =
+    showProjectPicker ||
     (levelProperties.isProjectLevel &&
       !initialSources &&
       !labConfig?.standaloneSettings?.projectType) ||
     false;
+
+  const projectPickerSettings = useMemo(() => {
+    if (!levelProperties.isProjectLevel) {
+      return undefined;
+    }
+    return {
+      currentType:
+        currentProjectType === 'neighborhood'
+          ? pythonlabI18n.neighborhood()
+          : pythonlabI18n.consoleOnly(),
+      showProjectTypePicker: () => setShowProjectPicker(true),
+    };
+  }, [currentProjectType, levelProperties.isProjectLevel]);
 
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {
@@ -146,7 +177,8 @@ const PythonlabView: React.FunctionComponent<
 
   const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
     const project = standaloneStartSources[type];
-    dispatch(setAndSaveProjectSources(project));
+    dispatch(changeProjectType({newSources: project}));
+    setShowProjectPicker(false);
   };
 
   // Ensure any in-progress program is stopped when the level is switched.
@@ -205,10 +237,19 @@ const PythonlabView: React.FunctionComponent<
           labConfig={labConfig}
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
+          projectPickerSettings={projectPickerSettings}
         />
       )}
       {showProjectPickerModal && (
-        <ProjectTypePicker setProjectCallback={handleProjectTypeChange} />
+        <ProjectTypePicker
+          setProjectCallback={handleProjectTypeChange}
+          currentProjectType={
+            initialSources || labConfig?.standaloneSettings?.projectType
+              ? currentProjectType
+              : undefined
+          }
+          closeDialog={() => setShowProjectPicker(false)}
+        />
       )}
     </div>
   );
