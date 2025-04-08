@@ -17,6 +17,10 @@ def single_session?
   $browser_config['mobile'] || $single_session
 end
 
+def test_local?
+  return ENV['TEST_LOCAL'] == 'true'
+end
+
 def saucelabs_browser(test_run_name, http_client: nil)
   raise 'Please define CDO.saucelabs_username' if CDO.saucelabs_username.blank?
   raise 'Please define CDO.saucelabs_authkey'  if CDO.saucelabs_authkey.blank?
@@ -64,19 +68,11 @@ def change_orientation(orientation)
   )
 end
 
-def use_local_selenium?
-  # If running locally, always use local selenium.
-  return true if ENV['TEST_LOCAL'] == 'true'
-
-  # Otherwise, use saucelabs.
-  return false
-end
-
 def get_browser(test_run_name)
   browser = nil
   $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
-  if use_local_selenium?
-    headless = ENV['TEST_LOCAL_HEADLESS'] == 'true' || ENV['CI'] == 'true'
+  if test_local?
+    headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
@@ -166,7 +162,7 @@ After do |scenario|
 end
 
 def context(str)
-  unless use_local_selenium?
+  unless test_local?
     $browser&.execute_script("sauce:context=#{str}")
   end
 rescue => exception
