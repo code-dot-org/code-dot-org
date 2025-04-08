@@ -40,7 +40,7 @@ GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
+S3_LOGS_PREFIX = CI::Utils.running_on_ci? ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
@@ -241,7 +241,7 @@ def parse_options
     if options.force_db_access
       options.pegasus_db_access = true
       options.dashboard_db_access = true
-    elsif ENV['CI']
+    elsif CI::Utils.running_on_ci?
       options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
@@ -565,8 +565,8 @@ end
 def parallel_config(parallel_limit)
   {
     # Run in parallel threads on CI (less memory), processes on main test machine (better CPU utilization)
-    in_threads: ENV['CI'] ? parallel_limit : nil,
-    in_processes: ENV['CI'] ? nil : parallel_limit,
+    in_threads: CI::Utils.running_on_ci? ? parallel_limit : nil,
+    in_processes: CI::Utils.running_on_ci? ? nil : parallel_limit,
 
     # This 'finish' lambda runs on the main thread after each Parallel.map work
     # item is completed.
@@ -725,7 +725,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
 
   # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
-  if ENV['CI']
+  if CI::Utils.running_on_ci?
     arguments += " --format junit --out $CI_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
@@ -886,7 +886,7 @@ def run_feature(browser, feature, options)
     end
   puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})", log_prefix)
 
-  if scenario_count == 0 && !ENV['CI']
+  if scenario_count == 0 && !CI::Utils.running_on_ci?
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
     skip_warning += <<~EOS
       Check the excluded @tags in the cucumber command line above and in the #{feature} file:
