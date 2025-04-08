@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-08T00:18:33.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "###Farming \n\nFarmers use **AI and computers** to study pictures from satellites or drones to see:\n\n\n- If plants are sick and how to help them\n- Exactly when and where to deliver water",
+        "imageUrl": "https://images.code.org/907078d315e82adca27231553583df4c-farmPanel.gif",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "####Health Data Expert\n- AI helps find sickness in X-rays, like broken bones or infections.\n- This helps doctors spot problems early.\n- Their work makes care smarter and faster! ",
+        "imageUrl": "https://images.code.org/a11427e2a0bc62c57dc9b2d4d3b61081-HealthCarePanel.gif",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "###Fitness App Coder\n\n- They use code and AI to track moves and workouts.\n- Apps give smart tips to stay healthy.\n- Tech that helps you stay active! ",
+        "imageUrl": "https://images.code.org/352e0d66b3ffd4dc616caf593f76a21b-FitnessAppPanel.gif",
+        "key": "test-elem-career-journeys-explore-panels-efeae7e1-8db4-4614-b904-07eedf4ef555",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "display_name": "Jobs that Help Others",
+    "thumbnail_url": "https://images.code.org/9bba03198891d21acac6d718603039dc-hand.jpg",
+    "bubble_choice_description": "**<i class=\"fa-solid fa-image\"></i> Images that explore:**\n* Farmers\n* Healthcare Data Scientists\n\n* Fitness App Coders",
+    "name_suffix": "_b"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-08T00:18:33.052+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-explore-panels\\\"\"],\"cloned_from\":\"test-elem-career-journeys-explore-panels\"}]"
+}]]></config>
+</Panels>

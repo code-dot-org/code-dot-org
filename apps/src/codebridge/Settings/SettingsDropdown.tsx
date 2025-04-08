@@ -4,6 +4,7 @@ import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Heading6} from '@code-dot-org/component-library/typography';
+import {codebridgeLabsWithConsole} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import FocusTrap from 'focus-trap-react';
 import React, {useState} from 'react';
@@ -12,7 +13,10 @@ import {createPortal} from 'react-dom';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
-import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {
+  setConsoleFontSize,
+  setEditorFontSize,
+} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
@@ -58,43 +62,76 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   buttonRef,
 }) => {
   const dropdownRef = useOutsideClick<HTMLDivElement>(closeDropdown);
-  const currentFontSizeKey = useAppSelector(
+  const currentEditorFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
+  );
+  const currentConsoleFontSizeKey = useAppSelector(
+    state => state.lab2View.consoleFontSizeKey
   );
   const {signInState} = useAppSelector(state => state.currentUser);
   const {levelProperties} = useCodebridgeContext();
+  const appName = levelProperties.appName;
+
   const dispatch = useAppDispatch();
-  const [selectedValue, setSelectedValue] = useState(currentFontSizeKey);
+  const [selectedEditorFontSizeValue, setSelectedEditorFontSizeValue] =
+    useState(currentEditorFontSizeKey);
+  const [selectedConsoleFontSizeValue, setSelectedConsoleFontSizeValue] =
+    useState(currentConsoleFontSizeKey);
 
   const getSelectedKey = (value: string) => value as keyof typeof FontSize;
 
   const dropdownStyles = useDropdownPosition(buttonRef, dropdownRef);
 
-  const onTextEditorDropdownChange = async (value: string) => {
-    setSelectedValue(getSelectedKey(value));
+  const onTextEditorDropdownChange = (value: string) => {
+    setSelectedEditorFontSizeValue(getSelectedKey(value));
+  };
+  const onConsoleDropdownChange = (value: string) => {
+    setSelectedConsoleFontSizeValue(getSelectedKey(value));
+  };
+
+  const handleFontSizeChange = (
+    type: 'CodeEditor' | 'Console',
+    selectedKey: keyof typeof FontSize,
+    currentKey: keyof typeof FontSize,
+    event: string
+  ) => {
+    if (selectedKey !== currentKey && FontSize[selectedKey]) {
+      if (signInState === SignInState.SignedIn) {
+        trySetSessionStorage(`${appName}${type}FontSizeKey`, selectedKey);
+      }
+      const reduxAction =
+        type === 'Console' ? setConsoleFontSize : setEditorFontSize;
+      dispatch(reduxAction(selectedKey));
+      sendCodebridgeAnalyticsEvent(event, appName, {
+        levelPath: window.location.pathname,
+        fontSize: selectedKey,
+      });
+    }
   };
 
   const onSave = () => {
-    const selectedKey = getSelectedKey(selectedValue);
-    if (selectedKey !== currentFontSizeKey && FontSize[selectedKey]) {
-      // We want the user preference for selected font size to persist across a session
-      // for signed-in users per app type.
-      if (signInState === SignInState.SignedIn) {
-        const sessionStorageKey = `${levelProperties.appName}CodeEditorFontSizeKey`;
-        trySetSessionStorage(sessionStorageKey, selectedKey);
-      }
-      dispatch(setEditorFontSize(selectedKey));
-      sendCodebridgeAnalyticsEvent(
-        EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE,
-        levelProperties.appName,
-        {
-          levelPath: window.location.pathname,
-          fontSize: selectedKey,
-        }
-      );
-    }
+    const selectedEditorKey = getSelectedKey(selectedEditorFontSizeValue);
+    const selectedConsoleKey = getSelectedKey(selectedConsoleFontSizeValue);
+
+    // We want the user preference for selected font size to persist across a session
+    // for signed-in users per app type.
+    handleFontSizeChange(
+      'CodeEditor',
+      selectedEditorKey,
+      currentEditorFontSizeKey,
+      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
+    );
+    handleFontSizeChange(
+      'Console',
+      selectedConsoleKey,
+      currentConsoleFontSizeKey,
+      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
+    );
+
     closeDropdown();
   };
+
+  const hasConsole = codebridgeLabsWithConsole.includes(appName);
 
   return createPortal(
     <FocusTrap
@@ -121,7 +158,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
           />
         </div>
         <div className={moduleStyles.dropdownRow}>
-          {/* Customized label for dropdown */}
           <label
             htmlFor={codebridgeI18n.textEditorFontSize()}
             className={moduleStyles.dropdownLabel}
@@ -133,12 +169,32 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             isLabelVisible={false}
             onChange={event => onTextEditorDropdownChange(event.target.value)}
             items={fontSizeOptions}
-            selectedValue={selectedValue}
+            selectedValue={selectedEditorFontSizeValue}
             name={'font-size'}
             size="s"
             color="white"
           />
         </div>
+        {hasConsole && (
+          <div className={moduleStyles.dropdownRow}>
+            <label
+              htmlFor={codebridgeI18n.consoleFontSize()}
+              className={moduleStyles.dropdownLabel}
+            >
+              {codebridgeI18n.consoleFontSize()}
+            </label>
+            <SimpleDropdown
+              labelText={codebridgeI18n.consoleFontSize()}
+              isLabelVisible={false}
+              onChange={event => onConsoleDropdownChange(event.target.value)}
+              items={fontSizeOptions}
+              selectedValue={selectedConsoleFontSizeValue}
+              name={'font-size'}
+              size="s"
+              color="white"
+            />
+          </div>
+        )}
         <div className={moduleStyles.footer}>
           <Button
             text={commonI18n.cancel()}

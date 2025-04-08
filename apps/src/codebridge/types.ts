@@ -91,3 +91,8 @@ export interface MazeCell {
 export interface LayoutProps {
   isProjectLevel?: boolean;
 }
+
+export interface ProjectPickerSettings {
+  currentType: string;
+  showProjectTypePicker: () => void;
+}

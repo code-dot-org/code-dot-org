@@ -1,22 +1,38 @@
 @import '@code-dot-org/component-library-styles/colors.scss';
 @import '@code-dot-org/component-library-styles/variables.scss';
 
+@mixin error-or-helper-message {
+  position: absolute;
+  top: 100%;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+  gap: 1.5rem;
+
+  section {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
 
   .row {
     display: flex;
     gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
 
     > * {
       min-width: unset;
       display: flex;
-      flex: 1;
+      flex: 1 1 0;
+      width: 100%;
       > input {
         height: 2rem;
       }
@@ -25,15 +41,25 @@
     .col {
       flex-direction: column;
       gap: 0.75rem;
+      width: 100%;
     }
   }
 
   .toggleWrapper {
+    position: relative;
+    margin-bottom: 1rem;
+
+    .row {
+      margin-bottom: 0;
+    }
+
     label {
       padding: 0.25rem 0;
     }
     p {
       margin-top: 0.25rem;
+      position: absolute;
+      top: 100%;
     }
     a {
       flex: 0;
@@ -43,30 +69,84 @@
 
   .card {
     border-radius: $regular-border-radius;
-    padding: 1rem;
+    padding: 1rem 1rem 0;
     background-color: var(--background-neutral-secondary);
     border: 1px solid var(--borders-neutral-primary);
     gap: 1rem;
   }
 
+  .required {
+    > span::after,
+    &[id='grades-dropdown'] > div:first-of-type > span::after {
+      content: '*';
+    }
+  }
+
   .item {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    position: relative;
 
     > div,
     input,
     textarea,
     select,
-    button {
+    > button {
       width: 100%;
       border-color: var(--borders-neutral-strong);
     }
 
-    &.required {
-      > span::after,
-      &[id='grades-dropdown'] > div:first-of-type > span::after {
-        content: '*';
+    &.error,
+    .error {
+      > div > label > div:first-of-type,
+      textarea,
+      select {
+        border-color: var(--text-error-primary);
+      }
+    }
+
+    &.textField {
+      > div {
+        @include error-or-helper-message;
+      }
+    }
+
+    &.customDropdown {
+      gap: 0.125rem;
+      width: 100%;
+
+      > div:nth-of-type(3) {
+        @include error-or-helper-message;
+      }
+
+      ul + div {
+        span {
+          text-align: center;
+        }
+      }
+
+      > button {
+        span {
+          display: block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+        }
+      }
+    }
+
+    &.simpleDropdown {
+      > div:nth-of-type(2) {
+        @include error-or-helper-message;
+      }
+    }
+
+    &.multiSelect {
+      label {
+        > div:nth-of-type(2) {
+          @include error-or-helper-message;
+        }
       }
     }
 
@@ -88,5 +168,18 @@
   .wrapContainer {
     flex-wrap: wrap;
     row-gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .row {
+      flex-direction: column;
+      gap: 1.5rem;
+      > * {
+        width: 100%;
+        flex: 0 0 auto;
+      }
+    }
   }
 }
