@@ -4,7 +4,6 @@ import {MarketingPage} from './marketing';
 
 type Section =
   | 'Action Block'
-  | 'Action Block Carousel'
   | 'Full Width Action Block'
   | 'Button'
   | 'Divider'
