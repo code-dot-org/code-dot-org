@@ -208,7 +208,6 @@ class User < ApplicationRecord
     educator_role
     ai_differentiation_toggled_off
     has_completed_ai_differentiation_welcome
-    has_opened_ai_differentiation
   )
 
   attr_accessor(

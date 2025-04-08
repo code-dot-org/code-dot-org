@@ -73,7 +73,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
-        has_opened_ai_differentiation: current_user.has_opened_ai_differentiation?,
         educator_role: current_user.educator_role,
       }
     else
@@ -329,15 +328,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     return head :unauthorized unless current_user
 
     current_user.update!(has_completed_ai_differentiation_welcome: true)
-
-    head :no_content
-  end
-
-  # POST /api/v1/users/has_opened_ai_differentiation
-  def post_has_opened_ai_differentiation
-    return head :unauthorized unless current_user
-
-    current_user.update!(has_opened_ai_differentiation: true)
 
     head :no_content
   end
