@@ -14,6 +14,7 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
   config: {label, fields},
   facilitators,
   regionalPartnerId,
+  errors,
   dispatchWorkshop,
 }) => {
   const {data: regionalPartners} = useFetch<RegionalPartner[]>(
@@ -71,40 +72,67 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
     [dispatchWorkshop]
   );
 
+  if (!fields.facilitators && !fields.regional_partner_id) {
+    return null;
+  }
+
   return (
-    <>
+    <section>
       <Heading2 visualAppearance="heading-sm">
         Partner and Facilitator Information
       </Heading2>
-      <div className={commonStyles.row}>
-        {fields.regional_partner_id && (
-          <SimpleDropdown
-            name="regional_partner_id"
-            onChange={handleRegionalPartner}
-            styleAsFormField={true}
-            items={regionalPartnerOptions}
-            selectedValue={regionalPartnerId?.toString() ?? ''}
-            labelText="Regional partner"
-            size="s"
-            dropdownTextThickness="thin"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.regional_partner_id.required,
-            })}
-          />
-        )}
-        {fields.facilitators && (
-          <MultiSelectInput
-            label="Select facilitator(s)"
-            options={facilitatorOptions}
-            selectedOptions={facilitators}
-            setSelectedOptions={handleFacilitators}
-            placeholder={
-              facilitators.length ? 'Type to filter' : 'Enter name or email'
-            }
-          />
-        )}
-      </div>
-    </>
+      {(fields.regional_partner_id || fields.facilitators) && (
+        <div className={commonStyles.row}>
+          {fields.regional_partner_id && (
+            <SimpleDropdown
+              name={fields.regional_partner_id.stateKey}
+              onChange={handleRegionalPartner}
+              styleAsFormField={true}
+              items={regionalPartnerOptions}
+              selectedValue={regionalPartnerId?.toString() ?? ''}
+              labelText={fields.regional_partner_id.label}
+              size="s"
+              dropdownTextThickness="thin"
+              className={classNames(
+                commonStyles.item,
+                commonStyles.simpleDropdown,
+                {
+                  [commonStyles.required]: fields.regional_partner_id.required,
+                  [commonStyles.error]: errors.regionalPartnerId,
+                }
+              )}
+              errorMessage={errors.regionalPartnerId}
+            />
+          )}
+          {fields.facilitators && (
+            <div
+              className={classNames(
+                commonStyles.item,
+                commonStyles.multiSelect,
+                {
+                  [commonStyles.error]: errors.facilitators,
+                }
+              )}
+            >
+              <MultiSelectInput
+                label={fields.facilitators.label}
+                options={facilitatorOptions}
+                selectedOptions={facilitators}
+                setSelectedOptions={handleFacilitators}
+                placeholder={
+                  facilitators.length ? 'Type to filter' : 'Enter name or email'
+                }
+                errorMessage={errors.facilitators}
+                size="s"
+                className={classNames({
+                  [commonStyles.required]: fields.facilitators.required,
+                })}
+              />
+            </div>
+          )}
+        </div>
+      )}
+    </section>
   );
 };
 

@@ -1,0 +1,8 @@
+name 'VersionB q1_b'
+question 'This lesson was very fun!'
+right '😍 Yes, definitely!'
+right '👍 Yes.'
+right '🫤 Not really.'
+right '👎 No.'
+right '🤔 I do not know.'
+allow_multiple_attempts true
