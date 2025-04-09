@@ -50,7 +50,7 @@ export interface WorkshopCourseConfig {
 }
 
 export interface WorkshopFormTemplateProps {
-  config: WorkshopCourseConfig;
+  config?: WorkshopCourseConfig;
 }
 
 export interface Organizer {
