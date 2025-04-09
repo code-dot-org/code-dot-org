@@ -2430,6 +2430,13 @@ class User < ApplicationRecord
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
+      klass_map = {
+        ::User::TYPE_TEACHER => ::Teacher,
+        ::User::TYPE_STUDENT => ::Student,
+        'staff' => ::Teacher # Powerschool sends through 'staff' instead of 'teacher'
+      }
+      klass = klass_map.fetch(omniauth_user.user_type, ::User)
+      omniauth_user = omniauth_user.becomes!(klass)
       omniauth_user.save
     end
 
