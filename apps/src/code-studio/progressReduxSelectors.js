@@ -44,6 +44,7 @@ const lessonFromLesson = lesson =>
     'lesson_plan_html_url',
     'lesson_feedback_url',
     'student_lesson_plan_html_url',
+    'title',
     'description_student',
     'description_teacher',
   ]);

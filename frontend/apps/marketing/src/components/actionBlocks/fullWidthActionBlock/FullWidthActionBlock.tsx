@@ -5,10 +5,14 @@ import DSCOFullWidthActionBlock, {
 } from '@code-dot-org/component-library/actionBlock/fullWidthActionBlock';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
-export type FullWidthActionBlockContentfulProps = ActionBlockProps & {
-  image: ImageAssetEntry;
+export type FullWidthActionBlockContentfulProps = Omit<
+  ActionBlockProps,
+  'image'
+> & {
+  image: ExperienceAsset;
   overline: EntryFields.Text;
   title: EntryFields.Text;
   description: EntryFields.Text;

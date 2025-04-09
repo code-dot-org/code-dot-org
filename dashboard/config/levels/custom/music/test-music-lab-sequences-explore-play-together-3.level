@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-25T19:10:28.000Z",
   "level_num": "custom",
@@ -176,8 +177,12 @@
       "isPredictLevel": false
     },
     "exemplar_settings": {
-      "playerEnabled": false,
-      "validationEnabled": false
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "validationMode": "type",
+      "playerTitle": "Example"
     },
     "validations": [
       {
@@ -186,40 +191,55 @@
         "next": true,
         "conditions": [
           {
-            "name": "played_sounds_together",
-            "value": 4
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:12"
           },
           {
-            "name": "played_different_sounds_together_multiple_times",
-            "value": 3
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:3"
           },
           {
             "name": "played_sounds",
-            "value": 12
-          },
-          {
-            "name": "played_sound_id",
-            "value": "carly_rae_jepsen_call_me_maybe/so_call_me_maybe"
+            "value": 9
           }
         ]
       },
       {
-        "key": "test-music-lab-sequences-explore-play-together-3_92edb901-c3f3-4353-b7b4-b613f932ef08",
-        "message": "Be sure to play the \"Call me maybe\" vocal that's 1-measure long!",
+        "key": "test-music-lab-sequences-explore-play-together-3_662ec1cb-603a-4dd3-ba82-eb26dc406e6b",
+        "message": "Your song sounds good so far…",
         "next": false,
         "conditions": [
           {
-            "name": "played_sounds_together",
-            "value": 4
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:12"
           },
           {
-            "name": "played_different_sounds_together",
-            "value": 3
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:3"
           },
           {
             "name": "played_sounds",
-            "value": 12
+            "value": 1
           }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-3_920a7dfe-f497-4eb2-b5d7-1da8c4fcbb63",
+        "message": "Make sure you add 4 new tracks to your song!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:3"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-3_39bfc121-64da-4746-bd52-33fd75981c86",
+        "message": "You need at least 3 Play Together blocks!",
+        "next": false,
+        "conditions": [
+
         ]
       }
     ],
@@ -227,8 +247,7 @@
     "project_template_level_name": "test-music-lab-sequences-explore-play-template-parent",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-25T19:10:28.499+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-2\"},{\"changed_at\":\"2025-03-25 19:23:05 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"project_template_level_name\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 19:24:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 19:29:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 19:31:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 22:44:13 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 23:08:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 21:33:01 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 21:34:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-25T19:10:28.499+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-2\"},{\"changed_at\":\"2025-03-25 19:23:05 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"project_template_level_name\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 19:24:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 19:29:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-25 19:31:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 22:44:13 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-26 23:08:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 21:33:01 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 21:34:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-07 23:36:54 +0000\",\"changed\":[\"predict_settings\",\"exemplar_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-07 23:41:37 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
