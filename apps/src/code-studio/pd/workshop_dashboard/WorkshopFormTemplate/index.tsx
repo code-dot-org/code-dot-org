@@ -45,6 +45,8 @@ import {
 import styles from './styles.module.scss';
 
 export const REQUIRED_ERROR = 'Required';
+export const VALIDATION_ERROR =
+  'Your form contains validation errors that must be corrected';
 
 export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   course: data.course ?? '',
@@ -423,10 +425,11 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     [workshopErrors, sessionErrors]
   );
 
-  const hasResponseErrors = useMemo(
-    () => responseErrors.length > 0,
-    [responseErrors]
-  );
+  const allErrors = useMemo(() => {
+    return hasValidationErrors
+      ? [VALIDATION_ERROR, ...responseErrors]
+      : responseErrors;
+  }, [hasValidationErrors, responseErrors]);
 
   return (
     <form id="workshop-form-template" className={styles.container}>
@@ -475,14 +478,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         errors={workshopErrors}
         {...sectionProps}
       />
-      {hasValidationErrors && (
-        <Alert
-          type="danger"
-          text="Your form contains validation errors that must be corrected"
-        />
-      )}
-      {hasResponseErrors &&
-        responseErrors.map(error => <Alert type="danger" text={error} />)}
+      {allErrors.length > 0 &&
+        allErrors.map(error => <Alert type="danger" text={error} />)}
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );
