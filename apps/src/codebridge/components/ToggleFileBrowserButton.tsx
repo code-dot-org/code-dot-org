@@ -48,7 +48,6 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
             iconName: 'folder',
           }}
           isIconOnly
-          color={'white'}
           onClick={onClick}
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}

@@ -1,34 +1,19 @@
-import {BaseEntry, EntryFields} from 'contentful';
+import {EntryFields} from 'contentful';
 
 import DSCOFullWidthActionBlock, {
   ActionBlockProps,
 } from '@code-dot-org/component-library/actionBlock/fullWidthActionBlock';
 
+import {externalLinkIconProps} from '@/components/common/constants';
+import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+
 export type FullWidthActionBlockContentfulProps = ActionBlockProps & {
-  image: BaseEntry & {
-    fields: {
-      description?: EntryFields.Text;
-      title?: EntryFields.Text;
-      file: {url: EntryFields.Text};
-    };
-  };
+  image: ImageAssetEntry;
   overline: EntryFields.Text;
   title: EntryFields.Text;
   description: EntryFields.Text;
-  primaryButton: BaseEntry & {
-    fields: {
-      label: EntryFields.Text;
-      primaryTarget: EntryFields.Text;
-      ariaLabel: EntryFields.Text;
-    };
-  };
-  secondaryButton: BaseEntry & {
-    fields: {
-      label: EntryFields.Text;
-      primaryTarget: EntryFields.Text;
-      ariaLabel: EntryFields.Text;
-    };
-  };
+  primaryButton: LinkEntry;
+  secondaryButton: LinkEntry;
   background: EntryFields.Text;
 };
 
@@ -42,7 +27,7 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
   background,
 }) => (
   <DSCOFullWidthActionBlock
-    image={image}
+    image={{src: `https:${image}`}}
     overline={overline}
     title={title}
     description={description}
@@ -52,6 +37,9 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
             text: primaryButton.fields.label,
             href: primaryButton.fields.primaryTarget || '#',
             ariaLabel: primaryButton.fields.ariaLabel || '',
+            iconRight: primaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }
@@ -61,6 +49,9 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
             text: secondaryButton.fields.label,
             href: secondaryButton.fields.primaryTarget || '#',
             ariaLabel: secondaryButton.fields.ariaLabel || '',
+            iconRight: secondaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }

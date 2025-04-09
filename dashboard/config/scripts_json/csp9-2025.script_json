@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:25:44 UTC",
+    "serialized_at": "2025-04-04 21:13:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -433,7 +433,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
-        "duration": "5",
+        "duration": "10",
         "name": "What is Required of My Program?"
       },
       "seeding_key": {
@@ -458,7 +458,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
-        "duration": "10",
+        "duration": "15",
         "name": "Function Requirement Activity 1: Does It Count?"
       },
       "seeding_key": {
@@ -474,30 +474,6 @@
       },
       "seeding_key": {
         "activity_section.key": "71bcc4d9-f49c-41a2-90b2-bba8e63b852e",
-        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
-      }
-    },
-    {
-      "key": "0b6cd3c5-e34a-4a0f-98fa-5bb9d0aa6f49",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to \ncomplete the activity on page 5. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result.",
-        "duration": "10",
-        "name": "Function Requirements Activity 2: Two Function Calls:"
-      },
-      "seeding_key": {
-        "activity_section.key": "0b6cd3c5-e34a-4a0f-98fa-5bb9d0aa6f49",
-        "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
-      }
-    },
-    {
-      "key": "12f3d594-6004-4a11-86e8-fc22e956dc30",
-      "position": 9,
-      "properties": {
-        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterward, lead a discussion on the patterns they see.*\n\n**Discussion Goal:** This activity is designed to help students anticipate how they'll need to make some decisions about how to design their functions. Here are some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "12f3d594-6004-4a11-86e8-fc22e956dc30",
         "lesson_activity.key": "4fcc6a0a-72aa-4313-98cb-7a7376b2aa7c"
       }
     },
@@ -1174,6 +1150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools2022_2025"
+        ],
         "progression": "Tech Setup and Tools for Create PT"
       },
       "bonus": false,
@@ -1196,6 +1175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Create PT Workspace 2020_2025"
+        ],
         "progression": "Create PT Coding Workspace"
       },
       "bonus": false,
@@ -1218,6 +1200,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp8_2025"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -1240,6 +1225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2025"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

@@ -36,7 +36,7 @@ markdown <<MARKDOWN
 </div>
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 3: Online Resouces</b></h3>
+    <h3><b>Step 3: Online Resources</b></h3>
   <p style = "font-size:14pt;">
     Search message boards, technical manuals, FAQs and other online resources to further narrow down possible solutions.
 </p>
@@ -57,10 +57,10 @@ markdown <<MARKDOWN
 
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;"><br>
-<p style= "font-size: 14px; ">
+<p style= "font-size: 16px; ">
 <b>Teacher Tip:</b>
 </p>
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> Having a clear troubleshooting strategy like SNOT encourages students to become problem-solvers instead of immediately seeking help. It builds resilience, promotes collaboration, and teaches them how to find and evaluate reliable resources—an essential skill for coding, data science, and beyond.    
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "> Having a clear troubleshooting strategy like SNOT encourages students to become problem-solvers instead of immediately seeking help. It builds resilience, promotes collaboration, and teaches them how to find and evaluate reliable resources—an essential skill for coding, data science, and beyond.    
 </p>
 </div>
 

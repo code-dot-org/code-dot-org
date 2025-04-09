@@ -10,12 +10,47 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Abstraction!",
-        "imageUrl": "",
-        "key": "music-lab-functions-practice-abstract-panel-3b135fec-37b5-421c-a078-8aa602a6b152"
+        "text": "### Abstraction\n\nAs songs get complex, you may end up with multiple lines of code that all have the same purpose\n\nIn this example, all of these blocks are necessary for just one section of the chorus for In The Stars by Benson Boone\n",
+        "imageUrl": "https://images.code.org/48e8ebb2600d4ddb3d89d5c0b91df4b5-abstraction-1.png",
+        "key": "music-lab-functions-practice-abstract-panel-3b135fec-37b5-421c-a078-8aa602a6b152",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Abstraction\n\nYou can use functions to reduce the complexity of your code by replacing large chunks of code with a single function instead.\n\nThis makes the code easier to read while still preserving the \"purpose\" of the code.\n",
+        "imageUrl": "https://images.code.org/9fda0b75a3c4f2b3397334391718c12f-abstraction-2.png",
+        "key": "music-lab-functions-practice-abstract-panel-8f50f7d3-3094-4668-a19c-270d329eb794",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Abstraction\n\nThis is an example of **abstraction** - focusing on the big–picture rather than the details.\n\nUsing functions makes this song easier to understand as three chorus parts.\n",
+        "imageUrl": "https://images.code.org/ebb59173c8da834a0561faa33129b3aa-abstraction-3.png",
+        "key": "music-lab-functions-practice-abstract-panel-116b0983-9ba7-465e-b2a1-20cd51dbf0d2",
+        "fadeInOverPrevious": true,
+        "nextUrl": "Image URL: https://images.code.org/ebb59173c8da834a0561faa33129b3aa-abstraction-3.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Abstraction\n\nMost songs have a structure that can be represented with functions\n",
+        "imageUrl": "https://images.code.org/ede2ff50a24e5cc093d8d2425ac09cf5-abstraction-4.png",
+        "key": "music-lab-functions-practice-abstract-panel-b8617e7a-7fb2-46df-aa71-bac3b2c15033",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "### Abstraction\n\nAnd Abstraction is what lets you focus on the big picture once you've finalized the details.\n",
+        "imageUrl": "https://images.code.org/5199b9bda791dbf3d0503d15af9679f3-abstraction-5.png",
+        "key": "music-lab-functions-practice-abstract-panel-a57edcca-9cb5-4509-bd9e-d50865070b2e",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Key Takeaway: use functions to represent chunks of code with the same purpose. This makes it easier to understand the bigger structure of your song without getting lost in the details.\n",
+        "imageUrl": "https://images.code.org/bcaf2ebea09528c166cc1e9573519fbe-abstraction-6.png",
+        "key": "music-lab-functions-practice-abstract-panel-3151bd7f-59fd-4ab8-b40f-f2806bfedbca",
+        "fadeInOverPrevious": true,
+        "typing": true
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T23:33:15.764+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-parallel-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-parallel-panels\"},{\"changed_at\":\"2025-03-19 23:33:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-19T23:33:15.764+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-parallel-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-parallel-panels\"},{\"changed_at\":\"2025-03-19 23:33:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:14:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:15:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:17:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:20:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

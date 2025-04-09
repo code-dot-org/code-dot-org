@@ -7,7 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "### Try It! \r\n**Do This:**\r\n- Add new sounds to play under `when run`. \r\n- Code at least two triggers with two different sets of sounds. \r\n\r\n**Don't Forget**: \r\n- Each trigger must have a different number assigned to it. \r\n- Click on the dropdown menu in the trigger block to specify whether the sound(s) should be triggered immediately, at the next beat, or at the next measure. ",
+    "long_instructions": "### Debug\r\n\r\nChloe is trying to get her effects to work at the correct time, but all of her triggers have become messed up.\r\n\r\n> I want the alien to happen immediately when I press 3, the wormhole should happen on the next beat when I press 2, and the wheel should happen on the next measure when I press 1\r\n\r\nhelp Chloe debug her code so the triggers happen when she wants.",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -112,6 +112,102 @@
           ]
         },
         "type": "flyout"
+      },
+      "toolboxDefinition": {
+        "contents": [
+
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "triggered_at_simple2",
+              "x": 170,
+              "y": 30,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_beat</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "sound": "electro/alien"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "T119a|q?u}5r5^DMUV[l",
+              "x": 170,
+              "y": 170,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "v(XGvT~2is|Zvk{=f,p*",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "sound": "electro/wormhole"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "CVchQpQJN8yRz8~sLZk~",
+              "x": 170,
+              "y": 330,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "R@m2+Gs,ad_.{ppD9w:9",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "sound": "acoustic_arcade/wheel_spoke"
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     },
     "predict_settings": {
@@ -123,7 +219,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21 17:49:37 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:50:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-21 17:49:37 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:50:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:37:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:38:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:40:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:40:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:42:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
