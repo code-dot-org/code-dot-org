@@ -5478,11 +5478,12 @@ class UserTest < ActiveSupport::TestCase
 
     before do
       allow(DCDO).to receive(:get).with('strict-password-country', false).and_return(true)
+      allow(DCDO).to receive(:get).with('migration_service_enabled', false).and_return(false)
     end
 
     describe 'when creating a teacher in a strict country' do
       context 'when using a short password' do
-        let(:user) {create(:teacher, country_code: strict_country, password: 'short', password_confirmation: 'short', validate: false)}
+        let(:user) {build(:teacher, country_code: strict_country, password: 'short', password_confirmation: 'short')}
         it 'rejects passwords' do
           _(user).wont_be :valid?
         end
@@ -5507,11 +5508,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     describe 'when updating a teacher in a strict country' do
-      let(:teacher) {create(:teacher, country_code: 'US')}
-
-      before do
-        teacher.update!(country_code: strict_country)
-      end
+      let(:teacher) {build(:teacher, country_code: strict_country)}
 
       it 'rejects a too-short password' do
         result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')

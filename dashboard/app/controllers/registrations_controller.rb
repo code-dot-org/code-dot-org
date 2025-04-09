@@ -8,6 +8,7 @@ require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+  before_action :assign_country_code, only: [:begin_sign_up, :login_type, :finish_student_account, :finish_teacher_account, :edit]
 
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
@@ -35,8 +36,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
-    location = Geocoder.search(request.ip).try(:first)
-    @user.country_code = location&.country_code.to_s.upcase
+    @user.country_code = @country_code
     @user.validate_for_finish_sign_up
 
     if @user.errors.blank?
@@ -61,8 +61,6 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def login_type
     @is_signed_out = current_user.nil?
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @user_type = params[:user_type]
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
@@ -96,8 +94,6 @@ class RegistrationsController < Devise::RegistrationsController
   # Get /users/sign_up/finish_teacher_account
   #
   def finish_teacher_account
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
 
     render 'finish_teacher_account'
@@ -437,8 +433,6 @@ class RegistrationsController < Devise::RegistrationsController
     @permission_status = current_user.cap_status
 
     # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @is_usa = Policies::User.in_usa?(@country_code)
 
     # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
@@ -664,5 +658,9 @@ class RegistrationsController < Devise::RegistrationsController
     location = Geocoder.search(request.ip).try(:first)
     country_code = location&.country_code.to_s.upcase
     ['US', 'RD'].include?(country_code)
+  end
+
+  private def assign_country_code
+    @country_code = request.country_code
   end
 end
