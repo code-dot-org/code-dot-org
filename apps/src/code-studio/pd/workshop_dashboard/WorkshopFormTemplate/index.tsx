@@ -476,7 +476,9 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         {...sectionProps}
       />
       {allErrors.length > 0 &&
-        allErrors.map(error => <Alert type="danger" text={error} />)}
+        allErrors.map(error => (
+          <Alert key={error} type="danger" text={error} />
+        ))}
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );
