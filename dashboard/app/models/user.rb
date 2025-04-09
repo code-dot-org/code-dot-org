@@ -138,7 +138,7 @@ class User < ApplicationRecord
   PASSWORD_MIN_LENGTH = 6
   PASSWORD_STRICT_MIN_LENGTH = 14
   # Countries that require a 14 character password minimum
-  PASSWORD_STRICT_COUNTRIES = %w[AU NZ RD].freeze
+  PASSWORD_STRICT_COUNTRIES = %w[AU NZ].freeze
 
   # Provider variables
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password

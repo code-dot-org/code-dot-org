@@ -175,7 +175,6 @@ const LoginTypeSelection: React.FunctionComponent<{
         email: email,
         password: password,
         password_confirmation: password,
-        user_type: userType,
       },
     };
     try {

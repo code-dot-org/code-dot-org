@@ -492,6 +492,6 @@ describe('LoginTypeSelection', () => {
       renderDefault('teacher', 14);
     });
 
-    screen.getByText(locale.minimum_num_chars({minChars: '14'}));
+    screen.getByText(locale.minimum_num_chars({minChars: 14}));
   });
 });

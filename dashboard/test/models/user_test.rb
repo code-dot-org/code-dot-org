@@ -5473,45 +5473,71 @@ class UserTest < ActiveSupport::TestCase
     assert_equal new_us_state, student.reload.us_state
   end
 
-  test 'teacher in password strict country requires longer password length' do
-    user = User.new(
-      user_type: User::TYPE_TEACHER,
-      country_code: User::PASSWORD_STRICT_COUNTRIES.first,
-      password: 'short',
-      password_confirmation: 'short'
-    )
-    DCDO.stubs(:get).with('strict-password-country', false).returns(true)
+  describe 'strict password requirements by country' do
+    let(:strict_country) {User::PASSWORD_STRICT_COUNTRIES.first}
 
-    refute user.valid?
-    assert_includes user.errors[:password], 'is too short (minimum is 14 characters)'
+    before do
+      allow(DCDO).to receive(:get).with('strict-password-country', false).and_return(true)
+    end
 
-    user = User.new(
-      user_type: User::TYPE_TEACHER,
-      country_code: User::PASSWORD_STRICT_COUNTRIES.first,
-      password: 'longlongpassword',
-      password_confirmation: 'longlongpassword'
-    )
+    describe 'when creating a teacher in a strict country' do
+      context 'when using a short password' do
+        let(:user) {create(:teacher, country_code: strict_country, password: 'short', password_confirmation: 'short', validate: false)}
+        it 'rejects passwords' do
+          _(user).wont_be :valid?
+        end
 
-    user.valid?
-    assert_empty user.errors[:password]
-  end
+        it 'adds an error message' do
+          user.valid?
+          _(user.errors[:password]).must_include 'is too short (minimum is 14 characters)'
+        end
+      end
+      context 'when using a short password' do
+        let(:user) {create(:teacher, country_code: strict_country, password: 'longlongpassword', password_confirmation: 'longlongpassword')}
 
-  test 'update password in password strict country as a teacher' do
-    teacher = create(:teacher, country_code: 'US')
-    # Change country to a strict country
-    teacher.update(country_code: User::PASSWORD_STRICT_COUNTRIES.first)
-    DCDO.stubs(:get).with('strict-password-country', false).returns(true)
+        it 'accepts passwords that are at least 14 characters' do
+          _(user).must_be :valid?
+        end
 
-    # Try to update with a too-short password
-    result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
-    refute result
-    assert_includes teacher.errors[:password], 'is too short (minimum is 14 characters)'
+        it 'has no password errors for long password' do
+          user.valid?
+          _(user.errors[:password]).must_be :empty?
+        end
+      end
+    end
 
-    # Update with a valid password and check that it passes validation
-    result = teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
-    assert result
-    assert_empty teacher.errors[:password]
-    assert_equal teacher.password, 'longlongpassword'
+    describe 'when updating a teacher in a strict country' do
+      let(:teacher) {create(:teacher, country_code: 'US')}
+
+      before do
+        teacher.update!(country_code: strict_country)
+      end
+
+      it 'rejects a too-short password' do
+        result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
+        _(result).must_equal false
+      end
+
+      it 'adds error for too-short password' do
+        teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
+        _(teacher.errors[:password]).must_include 'is too short (minimum is 14 characters)'
+      end
+
+      it 'accepts a sufficiently long password' do
+        result = teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
+        _(result).must_equal true
+      end
+
+      it 'has no password errors after successful update' do
+        teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
+        _(teacher.errors[:password]).must_be :empty?
+      end
+
+      it 'persists the new password' do
+        teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
+        _(teacher.password).must_equal 'longlongpassword'
+      end
+    end
   end
 
   test "teacher with oauth account can access AI Chat" do
