@@ -64,7 +64,7 @@ const UserMessageEditor = React.forwardRef<
 
       internalInputRef.current.style.height = 'auto'; // Need to reset height before update.
       internalInputRef.current.style.height =
-        internalInputRef.current.scrollHeight + 2 + 'px';
+        internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
     }, [userMessage]);
 
     const icon = {iconName: 'paper-plane'};
