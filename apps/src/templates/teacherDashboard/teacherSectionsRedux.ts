@@ -20,7 +20,7 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {getSectionOrderIds} from './sectionOrderUtils';
+import {getFilteredSectionOrderIds} from './sectionOrderUtils';
 import {
   isAddingSection,
   sectionFromServerSection as untypedSectionFromServerSection,
@@ -285,7 +285,10 @@ const sectionSlice = createSlice({
         state.sectionIds = sectionIds;
         state.studentSectionIds = studentSectionIds;
         state.plSectionIds = plSectionIds;
-        state.sectionOrder = getSectionOrderIds(sections, state.sectionOrder);
+        state.sectionOrder = getFilteredSectionOrderIds(
+          sections,
+          state.sectionOrder
+        );
         state.sections = {
           ...state.sections,
           ..._.keyBy(sections, 'id'),
@@ -676,7 +679,7 @@ const sectionSlice = createSlice({
       });
     },
     setSectionOrder(state, action: PayloadAction<number[]>) {
-      state.sectionOrder = getSectionOrderIds(
+      state.sectionOrder = getFilteredSectionOrderIds(
         Object.values(state.sections),
         action.payload
       );

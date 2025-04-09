@@ -4,23 +4,31 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 
 import {Section} from './types/teacherSectionTypes';
 
+// Takes filtered section IDs and ordered section IDs and returns a properly ordered list
+export const getOrderedSectionIds = (
+  filteredSectionIds: number[],
+  orderedSectionIds: number[]
+): number[] => {
+  const sectionsToPrepend = _.difference(filteredSectionIds, orderedSectionIds);
+
+  const orderedSectionsFiltered = _.intersection(
+    orderedSectionIds,
+    filteredSectionIds
+  );
+
+  return [...sectionsToPrepend, ...orderedSectionsFiltered];
+};
+
 // Returns a list of section IDs with the order from orderedSectionIds and
-// all sections that are not hidden and have a participantType of student appended.
-export const getSectionOrderIds = (
+// all sections that are not hidden and have a participantType of student prepended.
+export const getFilteredSectionOrderIds = (
   sections: Section[],
   orderedSectionIds: number[]
-) => {
-  const filteredSections = sections
+): number[] => {
+  const filteredSectionIds = sections
     .filter(section => section.participantType === ParticipantAudience.student)
     .filter(section => !section.hidden)
     .map(section => section.id);
 
-  const sectionsToPrepend = _.difference(orderedSectionIds, filteredSections);
-
-  const orderedSectionsFiltered = _.intersection(
-    orderedSectionIds,
-    filteredSections
-  );
-
-  return [...sectionsToPrepend, ...orderedSectionsFiltered];
+  return getOrderedSectionIds(filteredSectionIds, orderedSectionIds);
 };

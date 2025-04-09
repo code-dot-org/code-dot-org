@@ -30,7 +30,7 @@ import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSect
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {getSectionOrderIds} from '../../teacherDashboard/sectionOrderUtils';
+import {getFilteredSectionOrderIds} from '../../teacherDashboard/sectionOrderUtils';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -81,7 +81,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
 
   // Update sortableSectionIds when sections change
   React.useEffect(() => {
-    const newSectionOrder = getSectionOrderIds(
+    const newSectionOrder = getFilteredSectionOrderIds(
       Object.values(sections),
       sortableSectionIds
     );
