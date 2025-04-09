@@ -297,7 +297,7 @@ steps:
         from_secret: on-droneci-complete-github-token
       template: |
         {
-          "ref": "{{ build.branch }}",
+          "ref": "${DRONE_SOURCE_BRANCH}",
           "inputs": {
             "github_sha": "{{ build.commit }}",
             "drone_build_status": "{{ build.status }}"
