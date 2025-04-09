@@ -847,6 +847,7 @@ export class WorkshopForm extends React.Component {
       course_offerings: this.state.course_offerings,
       participant_group_type: this.state.participant_group_type,
       time_zone: this.workshopTimezone,
+      legacy: true,
     };
 
     if (this.state.organizer) {
