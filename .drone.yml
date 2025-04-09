@@ -292,22 +292,17 @@ steps:
     settings:
       urls:
         - https://api.github.com/repos/code-dot-org/test-workflow-dispatch/actions/workflows/on-droneci-complete.yml/dispatches
-      username: x-access-token
+      username: deploy-code-org
       password:
         from_secret: on-droneci-complete-github-token
-      # secrets:
-      #   - source: on-droneci-complete-github-token
-      #     target: webhook_password
-      content_type: application/json
       template: |
         {
           "ref": "{{ build.branch }}",
           "inputs": {
             "github_sha": "{{ build.commit }}",
-            "drone_build_status": "{{ build.status }}",
+            "drone_build_status": "{{ build.status }}"
           }
         }
-      debug: true
 # depends_on:
 #   - unit
 #   - ui
@@ -351,6 +346,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d15dff0aa4519647d7ca9446e2daa872b10a31feaaffa28d4df4e4f653f06d9d
+hmac: 0202dfaa247151e02720fd24fcd8b6cafc8ca07d37db1ab4a05160199ae29eea
 
 ...
