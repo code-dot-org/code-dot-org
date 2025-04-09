@@ -3,18 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Multi-modal Prompting
+# Multimodal Prompting
+
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Multimodal Model</strong> is an AI system that can process information from multiple types of input.</p>
 </div>
 
 <p align="center">
-<img src="https://images.code.org/1a18d8f154f916d657b501f0ad677efd-Screenshot 2025-04-07 at 11.29.10 AM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/1a18d8f154f916d657b501f0ad677efd-Screenshot 2025-04-07 at 11.29.10 AM.png" alt="lesson plan diagram" width="30%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
-## Career Connection
+#### AI Chat is multimodal. We've already used images, but you can also input pdf documents.
 
-#### Where is Multimodal AI Used?
+## 🔁 Career Connection
+
+#### Where is multimodal AI used in industry?
 * #### Accessibility: screen readers interpreting images and text
 * #### Healthcare: AI analyzing X-ray images and text
 * #### Translation: real-time text and audio speech translation

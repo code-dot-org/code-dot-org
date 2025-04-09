@@ -296,10 +296,13 @@
     "validations": [
       {
         "key": "test-music-lab-loops-practice-formative_16d9d3c1-5226-49a4-bd3f-84a195affaa9",
-        "message": "[update to check for nested loops]",
+        "message": "You used a nested loop.",
         "next": true,
         "conditions": [
-
+          {
+            "name": "played_anything_in_same_nested_loop",
+            "value": 3
+          }
         ]
       }
     ],
@@ -316,7 +319,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-13T22:02:58.273+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-formative\\\"\"],\"cloned_from\":\"music-lab-loops-practice-formative\"},{\"changed_at\":\"2025-04-06 02:06:13 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T22:02:58.273+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-formative\\\"\"],\"cloned_from\":\"music-lab-loops-practice-formative\"},{\"changed_at\":\"2025-04-06 02:06:13 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-08 14:10:25 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
