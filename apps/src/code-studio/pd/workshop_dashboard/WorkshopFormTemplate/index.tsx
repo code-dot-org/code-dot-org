@@ -75,7 +75,7 @@ export const sessionDataToState = (
   timeZone: string
 ): SessionFormState[] =>
   data.map(session => ({
-    id: `existing-${session.id}`,
+    id: session.id?.toString() ?? '',
     date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
     start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
     end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
@@ -120,7 +120,7 @@ export const sessionStateToApi = (
   const sessionsMap = new Map(sessions.map(s => [s.id, s]));
   const sessionsToDestroy =
     existingSessions?.reduce((acc: DestroyedSession[], curr) => {
-      if (curr.id && !sessionsMap.get(`existing-${curr.id}`)) {
+      if (curr.id && !sessionsMap.get(curr.id.toString())) {
         acc.push({
           id: curr.id,
           _destroy: true,
@@ -131,9 +131,9 @@ export const sessionStateToApi = (
 
   sessions.forEach(session => {
     newOrUpdatedSessions.push({
-      id: session.id.startsWith('existing')
-        ? Number(session.id.replace(/\D/g, ''))
-        : undefined,
+      id: session.id.startsWith('new')
+        ? undefined
+        : Number(session.id.replace(/\D/g, '')),
       session_format: session.format,
       start: moment
         .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)

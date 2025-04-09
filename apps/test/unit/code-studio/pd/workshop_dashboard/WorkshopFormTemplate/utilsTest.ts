@@ -31,7 +31,7 @@ describe('sessionDataToState', () => {
     const timeZone = 'America/Denver';
     const expectedState = [
       {
-        id: 'existing-1',
+        id: '1',
         date: '2024-01-01',
         start: '9:00am',
         end: '5:00pm',
@@ -102,7 +102,7 @@ describe('sessionStateToApi', () => {
     const timeZone = 'America/Denver';
     const sessionState: SessionFormState[] = [
       {
-        id: 'existing-1',
+        id: '1',
         date: '2024-03-15',
         start: '9:00am',
         end: '12:00pm',
@@ -166,7 +166,7 @@ describe('sessionStateToApi', () => {
     const timeZone = 'America/Denver';
     const sessionState: SessionFormState[] = [
       {
-        id: 'existing-1',
+        id: '1',
         date: '2024-03-15',
         start: '9:00am',
         end: '12:00pm',
@@ -204,7 +204,7 @@ describe('sessionStateToApi', () => {
     const timeZone = 'America/Denver';
     const sessionState: SessionFormState[] = [
       {
-        id: 'existing-1',
+        id: '1',
         date: '2024-03-15',
         start: '9:00am',
         end: '12:00pm',
