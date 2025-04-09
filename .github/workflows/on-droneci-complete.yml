@@ -1,0 +1,71 @@
+name: on-droneci-complete
+
+on:
+  workflow_dispatch:
+    inputs:
+      github_sha:
+        description: "equivalent to github.sha in an ordinary workflow"
+        required: true
+      drone_build_status:
+        required: true
+        type: choice
+        options:
+          - success
+          - failure
+
+permissions:
+  statuses: write
+
+jobs:
+  # This one should pass
+  cms-followup:
+    runs-on: ubuntu-24.04
+    if: ${{ inputs.drone_build_status == 'success' }}
+    # uses: ./.github/workflows/cms-followup.yml
+    steps:
+      - run: |
+          echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
+          echo "This job should succeed"
+          true
+
+      # Need to update commit status manually, or the result won't be visible within the PR:
+      - uses: actions/github-script@v7
+        if: always()
+        with:
+          script: |
+            await github.rest.repos.createCommitStatus({
+              context: 'CMS Followup',
+              description: 'blah blah blah',
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ inputs.github_sha }}',
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}'
+            })
+
+  # This one should fail
+  k8s-followup:
+    runs-on: ubuntu-24.04
+    if: ${{ inputs.drone_build_status == 'success' }}
+    # uses: ./.github/workflows/k8s-followup.yml
+    steps:
+      - run: |
+          echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
+          echo "This job should fail"
+          false
+
+      - if: always()
+        run: echo "k"
+
+      # Need to update commit status manually, or the result won't be visible within the PR:
+      - uses: actions/github-script@v7
+        if: always()
+        with:
+          script: |
+            await github.rest.repos.createCommitStatus({
+              context: 'K8S Followup',
+              description: 'blah blah blah',
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ inputs.github_sha }}',
+              state: '${{ job.status == 'success' && 'success' || 'failure' }}'
+            })

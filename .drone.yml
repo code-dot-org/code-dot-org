@@ -281,59 +281,37 @@ trigger:
     - pull_request
 
 ---
-name: sleep-for-10s
 kind: pipeline
 type: docker
+name: on-droneci-complete
 clone:
   disable: true
 steps:
-  - name: sleep
-    image: alpine
-    commands:
-      - sleep 10
-trigger:
-  branch:
-    exclude:
-      - "production"
-      - "test"
-      - "levelbuilder"
-  event:
-    - pull_request
-
----
-kind: pipeline
-type: docker
-name: trigger-github-workflow-on-droneci-success
-clone:
-  disable: true
-steps:
-  - name: trigger-gh
+  - name: trigger-github-actions
     image: plugins/webhook
     settings:
       urls:
-        - https://api.github.com/repos/code-dot-org/code-dot-org/actions/workflows/on-droneci-success.yml/dispatches
+        - https://api.github.com/repos/code-dot-org/test-workflow-dispatch/actions/workflows/on-droneci-complete.yml/dispatches
       username: x-access-token
       secrets:
-        - source: github_token_on_droneci_success
+        - source: on-droneci-complete-github-token
           target: webhook_password
+      content_type: application/json
       template: |
         {
           "ref": "{{ build.branch }}",
           "inputs": {
-            "commit": "{{ build.commit }}"
+            "github_sha": "{{ build.commit }}",
+            "drone_build_status": "{{ build.status }}",
           }
         }
       debug: true
-depends_on:
-  - sleep-for-10s
-  # - unit
-  # - ui
+# depends_on:
+#   - unit
+#   - ui
 trigger:
   event:
     - pull_request
-  status:
-    - success
-
 ---
 # On push, cache a clone of staging to drone's S3 bucket.
 # The staging cache reduces git bandwidth in PR pipelines.
@@ -371,6 +349,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 67cdeba3c4920f02000f01067920a9146578e8a7f4d6db0a3e27732f76ee9ddb
+hmac: fe1587c97b3b1f0375a8ed83425e3290d43fc305a810cc37b7a51f73244b3324
 
 ...
