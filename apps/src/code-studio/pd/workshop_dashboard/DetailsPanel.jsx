@@ -1,13 +1,13 @@
-import $ from 'jquery';
+import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Row, Col, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 import ConfirmationDialog from '../components/confirmation_dialog';
 
-import WorkshopForm from './components/workshop_form';
+import {DATE_FORMAT, TIME_FORMAT} from './workshopConstants';
 import WorkshopPanel from './WorkshopPanel';
 
 /**
@@ -15,13 +15,19 @@ import WorkshopPanel from './WorkshopPanel';
  */
 export default class DetailsPanel extends React.Component {
   static propTypes = {
-    view: PropTypes.string,
     workshopId: PropTypes.string,
     workshop: PropTypes.shape({
       state: PropTypes.string,
+      time_zone: PropTypes.string,
+      name: PropTypes.string,
+      course: PropTypes.string,
+      subject: PropTypes.string,
+      course_offering_names: PropTypes.string,
+      sessions: PropTypes.array,
+      facilitators: PropTypes.array,
+      regional_partner_name: PropTypes.string,
     }),
     isWorkshopAdmin: PropTypes.bool,
-    onWorkshopSaved: PropTypes.func.isRequired,
   };
 
   static contextType = RouterContext;
@@ -30,19 +36,17 @@ export default class DetailsPanel extends React.Component {
     showAdminEditConfirmation: false,
   };
 
-  getToday = () => {
-    return new Date();
-  };
+  get timeZone() {
+    return (
+      Intl.DateTimeFormat().resolvedOptions().timeZone ||
+      this.props.workshop?.time_zone ||
+      'UTC'
+    );
+  }
 
   handleEditClick = () => {
     const {workshopId} = this.props;
     this.context.router.push(`/workshops/${workshopId}/edit`);
-  };
-
-  handleSaveClick = () => {
-    // This button is just a shortcut to click the Save button in the form component,
-    // which will handle the logic.
-    $('#workshop-form-save-btn').trigger('click');
   };
 
   handleAdminEditClick = () => this.setState({showAdminEditConfirmation: true});
@@ -55,27 +59,8 @@ export default class DetailsPanel extends React.Component {
     this.handleEditClick();
   };
 
-  handleBackClick = () => {
-    this.context.router.push('/workshops');
-  };
-
   render() {
-    const {view, workshop, isWorkshopAdmin, onWorkshopSaved} = this.props;
-
-    if (view === 'edit') {
-      const header = <EditHeader handleSave={this.handleSaveClick} />;
-      return (
-        <WorkshopPanel header={header}>
-          <div>
-            <WorkshopForm
-              workshop={workshop}
-              onSaved={onWorkshopSaved}
-              today={this.getToday()}
-            />
-          </div>
-        </WorkshopPanel>
-      );
-    }
+    const {workshop, isWorkshopAdmin} = this.props;
 
     let header = <DetailsPanelHeader />;
     if (workshop.state === 'Not Started') {
@@ -85,20 +70,88 @@ export default class DetailsPanel extends React.Component {
     }
     return (
       <WorkshopPanel header={header}>
-        <div>
-          <WorkshopForm workshop={workshop} today={this.getToday()} readOnly>
+        <Row style={styles.container}>
+          <Col style={styles.section} md={4}>
+            <h2 style={styles.header}>
+              <strong>Workshop Name</strong>
+            </h2>
+            <p style={styles.truncate}>{workshop.name || workshop.course}</p>
+
+            <h2 style={styles.header}>
+              <strong>Subject/Topics</strong>
+            </h2>
+            <ul style={{...styles.list, ...styles.truncate}}>
+              {workshop.subject && <li>{workshop.subject}</li>}
+              {workshop.course_offering_names &&
+                workshop.course_offering_names
+                  .split(', ')
+                  .map(course => <li key={course}>{course}</li>)}
+            </ul>
+          </Col>
+
+          <div style={styles.divider} />
+
+          <Col style={styles.section} md={4}>
             <Row>
-              <Col sm={4}>
-                <ButtonToolbar>
-                  {workshop.state === 'Not Started' && (
-                    <Button onClick={this.handleEditClick}>Edit</Button>
-                  )}
-                  <Button onClick={this.handleBackClick}>Back</Button>
-                </ButtonToolbar>
+              <Col xs={4}>
+                <h2 style={styles.header}>
+                  <strong>Date</strong>
+                </h2>
+              </Col>
+              <Col xs={4}>
+                <h2 style={styles.header}>
+                  <strong>Time</strong>
+                </h2>
+              </Col>
+              <Col xs={4}>
+                <h2 style={styles.header}>
+                  <strong>Location</strong>
+                </h2>
               </Col>
             </Row>
-          </WorkshopForm>
-        </div>
+            {workshop.sessions.map(session => (
+              <Row key={session.id}>
+                <Col style={styles.noWrap} xs={4}>
+                  {moment.tz(session.start, this.timeZone).format(DATE_FORMAT)}
+                </Col>
+                <Col style={styles.noWrap} xs={4}>
+                  {moment.tz(session.start, this.timeZone).format(TIME_FORMAT)}-
+                  {moment.tz(session.end, this.timeZone).format(TIME_FORMAT)}
+                </Col>
+                <Col style={styles.truncate} xs={4}>
+                  {session.session_format === 'in_person'
+                    ? session.location_name ?? 'N/A'
+                    : 'Virtual'}
+                </Col>
+              </Row>
+            ))}
+          </Col>
+
+          <div style={styles.divider} />
+
+          <Col style={styles.section} md={4}>
+            <h2 style={styles.header}>
+              <strong>Facilitators</strong>
+            </h2>
+            {workshop.facilitators?.length ? (
+              workshop.facilitators.map(facilitator => (
+                <p style={styles.truncate} key={facilitator.id}>
+                  {facilitator.name}, {facilitator.email}
+                </p>
+              ))
+            ) : (
+              <p>N/A</p>
+            )}
+
+            <h2 style={styles.header}>
+              <strong>Regional Partner</strong>
+            </h2>
+            <p style={styles.truncate}>
+              {workshop.regional_partner_name || 'N/A'}
+            </p>
+          </Col>
+        </Row>
+
         <ConfirmationDialog
           show={isWorkshopAdmin && this.state.showAdminEditConfirmation}
           onOk={this.handleAdminEditConfirmed}
@@ -113,6 +166,36 @@ export default class DetailsPanel extends React.Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    fontSize: '13px',
+  },
+  container: {
+    display: 'flex',
+  },
+  section: {
+    width: '100%',
+    overflow: 'hidden',
+  },
+  divider: {
+    flex: 1,
+    borderRight: '1px solid #D1D4D8',
+  },
+  noWrap: {
+    whiteSpace: 'nowrap',
+  },
+  truncate: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
+  list: {
+    listStyleType: 'none',
+    padding: 0,
+    margin: 0,
+  },
+};
 
 const NotStartedHeader = ({handleEdit}) => (
   <DetailsPanelHeader>
@@ -136,7 +219,7 @@ const EditHeader = ({handleSave}) => (
 EditHeader.propTypes = {handleSave: PropTypes.func.isRequired};
 
 const DetailsPanelHeader = ({children}) => (
-  <span>Workshop Details: {children}</span>
+  <span>Workshop Information: {children}</span>
 );
 DetailsPanelHeader.propTypes = {children: PropTypes.node};
 
