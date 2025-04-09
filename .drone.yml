@@ -292,7 +292,6 @@ steps:
   - name: trigger-github-actions
     image: plugins/webhook
     settings:
-      debug: true
       urls:
         - https://api.github.com/repos/code-dot-org/code-dot-org/actions/workflows/on-droneci-complete.yml/dispatches
       username: deploy-code-org
@@ -349,6 +348,6 @@ trigger:
 
 ---
 kind: signature
-hmac: e3866208bfafe0736d0ec65508914748f70f4e47b59ab681a33370f9f1533f38
+hmac: 225519ca7c570cc17c796894b739abedfcf22c3e25479617bef0e7360ac9ec4b
 
 ...
