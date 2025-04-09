@@ -6,8 +6,6 @@ import {Brand} from '@/config/brand';
 /** See: https://developers.google.com/search/docs/appearance/structured-data/organization */
 const BRANDS_ORG_JSON_LD: {
   [K in Brand]?: WithContext<EducationalOrganization>;
-} & {
-  [Brand.CODE_DOT_ORG]: WithContext<EducationalOrganization>;
 } = {
   [Brand.CODE_DOT_ORG]: {
     '@context': 'https://schema.org',
@@ -70,8 +68,7 @@ interface OrganizationJsonLdProps {
   brand: Brand;
 }
 
-const OrganizationJsonLd: React.FunctionComponent<OrganizationJsonLdProps> = ({
-  brand,
-}) => BRANDS_ORG_JSON_LD[brand] && <JsonLd item={BRANDS_ORG_JSON_LD[brand]} />;
+const OrganizationJsonLd: React.FC<OrganizationJsonLdProps> = ({brand}) =>
+  BRANDS_ORG_JSON_LD[brand] && <JsonLd item={BRANDS_ORG_JSON_LD[brand]} />;
 
 export default OrganizationJsonLd;
