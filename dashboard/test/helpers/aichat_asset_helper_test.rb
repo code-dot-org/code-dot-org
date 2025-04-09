@@ -1,17 +1,6 @@
 require 'test_helper'
-
-# Top-level override of LevelStarterAssetsHelper (real one is restored in teardown)
-REAL_LSA_HELPER = Object.const_get(:LevelStarterAssetsHelper) if Object.const_defined?(:LevelStarterAssetsHelper)
-
-Object.send(:remove_const, :LevelStarterAssetsHelper) if Object.const_defined?(:LevelStarterAssetsHelper)
-LevelStarterAssetsHelper = Module.new do
-  def self.get_object(uuid)
-    OpenStruct.new(get: OpenStruct.new(body: StringIO.new("level content for #{uuid}")))
-  end
-end
-
 class AichatAssetHelperTest < ActionView::TestCase
-  # Setup mock asset bucket at class level
+  # Set up a fake bucket object with a .get method
   FAKE_BUCKET = Object.new
   def FAKE_BUCKET.get(channel_id, filename)
     if filename == 'project.png'
@@ -21,6 +10,7 @@ class AichatAssetHelperTest < ActionView::TestCase
     end
   end
 
+  # Replace ASSET_BUCKET constant safely
   if AichatAssetHelper.const_defined?(:ASSET_BUCKET)
     AichatAssetHelper.send(:remove_const, :ASSET_BUCKET)
   end
@@ -33,18 +23,17 @@ class AichatAssetHelperTest < ActionView::TestCase
     @project_asset = {"filename" => "project.png", "source" => "project"}
     @level_asset   = {"filename" => "level.png", "source" => "level"}
 
+    LevelStarterAssetsHelper.stubs(:get_object).returns(
+      OpenStruct.new(get: OpenStruct.new(body: StringIO.new("level content for uuid-123")))
+    )
+
+    # ✅ Stub Level return object
     Level.stubs(:find_by).with(name: @level_name).returns(
       OpenStruct.new(
         starter_assets: {'level.png' => 'uuid-123'},
         project_template_level: nil
       )
     )
-  end
-
-  def teardown
-    # Restore the real LevelStarterAssetsHelper
-    Object.send(:remove_const, :LevelStarterAssetsHelper)
-    Object.const_set(:LevelStarterAssetsHelper, REAL_LSA_HELPER)
   end
 
   test 'returns base64 data URI for project asset' do
@@ -63,7 +52,6 @@ class AichatAssetHelperTest < ActionView::TestCase
 
   test 'raises error if asset is not found' do
     missing_asset = {"filename" => "nonexistent.png", "source" => "level"}
-
     Level.stubs(:find_by).with(name: @level_name).returns(
       OpenStruct.new(starter_assets: {}, project_template_level: nil)
     )
