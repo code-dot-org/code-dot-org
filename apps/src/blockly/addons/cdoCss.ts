@@ -86,6 +86,9 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyShadowMusicFieldRect {
       fill: ${color.neutral_dark};
     }
+    .noFocusOutline {
+      outline: none !important;
+    }
     `
   );
 }

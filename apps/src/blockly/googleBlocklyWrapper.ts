@@ -645,14 +645,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
-  // Remove once https://github.com/google/blockly/issues/8863 is resolved
-  // (Should be ready with Blockly 12.0.0)
-  const originalGetTypes = extendedVariableMap.getTypes;
-  extendedVariableMap.getTypes = function () {
-    const types = originalGetTypes.call(this);
-    return types.includes('') ? types : [...types, ''];
-  };
-
   gestureOverrides(blocklyWrapper);
 
   // Used for spritelab behavior blocks.
@@ -859,6 +851,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options
     ) as ExtendedWorkspaceSvg;
 
+    GoogleBlockly.utils.dom.addClass(workspace.getSvgGroup(), 'noFocusOutline');
     workspace.defs = Blockly.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},
@@ -875,7 +868,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
 
-    new KeyboardNavigation(workspace);
+    blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
     // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
     const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
     workspace.setTheme(theme);

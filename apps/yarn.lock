@@ -3695,21 +3695,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-experiment@npm:^0.0.5":
-  version: 0.0.5
-  resolution: "@blockly/keyboard-experiment@npm:0.0.5"
+"@blockly/keyboard-experiment@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@blockly/keyboard-experiment@npm:0.0.6"
   peerDependencies:
-    blockly: ^11.1.0
-  checksum: 10/bc620c79111c12db2fe96927c6500ce55c92250a5fd78a17c8986852ab72ae3ffb2d96895157e704880397831d46effbec26edd341b88bcff0e29567071aede5
-  languageName: node
-  linkType: hard
-
-"@blockly/keyboard-navigation@npm:~0.6.9":
-  version: 0.6.9
-  resolution: "@blockly/keyboard-navigation@npm:0.6.9"
-  peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/a0dc01f1a3401def2b3d83349d63918b6db13aa5428b7457ce34549f102f494cc16a9ae52e6781cd5de3368229b0a2a524f701e4650e5739fde2212aa7c3efd9
+    blockly: ^12.0.0-beta.3
+  checksum: 10/3f20b8709fc2db1ebe02f519d379a4a10e1ea27c0ce17a79115404fa76728750d2b9a527ae41067aecc674f51419d42cfb407638de2c52d0ed9a9e338ed86086
   languageName: node
   linkType: hard
 
@@ -10211,8 +10202,7 @@ __metadata:
     "@blockly/field-bitmap": "npm:^5.0.9"
     "@blockly/field-colour": "npm:^5.0.9"
     "@blockly/field-grid-dropdown": "npm:~5.0.9"
-    "@blockly/keyboard-experiment": "npm:^0.0.5"
-    "@blockly/keyboard-navigation": "npm:~0.6.9"
+    "@blockly/keyboard-experiment": "npm:^0.0.6"
     "@blockly/plugin-cross-tab-copy-paste": "npm:~6.0.9"
     "@blockly/plugin-scroll-options": "npm:~6.0.9"
     "@blockly/theme-dark": "npm:7.0.7"
@@ -10304,7 +10294,7 @@ __metadata:
     babel-plugin-add-module-exports: "npm:^1.0.4"
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
     babel-plugin-syntax-async-functions: "npm:^6.13.0"
-    blockly: "npm:12.0.0-beta.2"
+    blockly: "npm:12.0.0-beta.3"
     bootstrap-sass: "npm:^3.4.1"
     browser-process-hrtime: "npm:0.1.2"
     buffer: "npm:^6.0.3"
@@ -10521,12 +10511,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:12.0.0-beta.2":
-  version: 12.0.0-beta.2
-  resolution: "blockly@npm:12.0.0-beta.2"
+"blockly@npm:12.0.0-beta.3":
+  version: 12.0.0-beta.3
+  resolution: "blockly@npm:12.0.0-beta.3"
   dependencies:
     jsdom: "npm:25.0.1"
-  checksum: 10/e7f4c667eeee8e9774614bb2a3efaafdb224db1f6ec494d904d975a62c49b7a613dabeb0f1518ac4d10663c0b58f16ddfcfffa574a30dbe90cbb8c868cf63946
+  checksum: 10/008451d7ffea7eea2a5fe9c1411aa69689e3df357c5d60c429d7b0e81e167aaf9937733cced6c5cdf163f65fc101a9cb5aa86cc88ef3843da3d22ce771c407bf
   languageName: node
   linkType: hard
 
