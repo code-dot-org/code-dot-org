@@ -3,6 +3,7 @@ import {headers} from 'next/headers';
 
 import {getBrandFromHostname} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
+import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {getStage} from '@/config/stage';
 import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
@@ -41,6 +42,8 @@ export default async function Layout({
           {children}
         </StatsigProvider>
       </OneTrustProvider>
+
+      <OrganizationJsonLd brand={brand} />
     </>
   );
 }

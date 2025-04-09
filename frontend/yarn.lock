@@ -1110,6 +1110,8 @@ __metadata:
     prettier: "npm:3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    react-schemaorg: "npm:^2.0.0"
+    schema-dts: "npm:^1.1.5"
     stylelint: "npm:^16.14.1"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5"
@@ -15814,6 +15816,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-schemaorg@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-schemaorg@npm:2.0.0"
+  peerDependencies:
+    react: ">=16.3.0"
+    schema-dts: ">=0.7.4"
+    typescript: ">=3.1.6"
+  checksum: 10c0/34dd300c6154a908a26cd8a7c664e60ed30b583d9b4c3afc0de1ca6a8ce139bb5fac2630483639d73bf79089ff699d86d453e81cbbb6a3bd2c485f92506ff3c0
+  languageName: node
+  linkType: hard
+
 "react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
   version: 19.0.0
   resolution: "react@npm:19.0.0"
@@ -16551,6 +16564,13 @@ __metadata:
   version: 0.25.0
   resolution: "scheduler@npm:0.25.0"
   checksum: 10c0/a4bb1da406b613ce72c1299db43759526058fdcc413999c3c3e0db8956df7633acf395cb20eb2303b6a65d658d66b6585d344460abaee8080b4aa931f10eaafe
+  languageName: node
+  linkType: hard
+
+"schema-dts@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "schema-dts@npm:1.1.5"
+  checksum: 10c0/babe23a1577c75c5df79d73acf34af3399e60928eab46f2236a0c4212061f5778d613a31c9e9ec86a2807d20b1ea460673d72d3fe1f64fb7543867460e607f76
   languageName: node
   linkType: hard
 
