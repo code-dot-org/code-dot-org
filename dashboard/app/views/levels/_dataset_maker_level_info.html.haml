@@ -2,7 +2,7 @@
   = render layout: 'shared/extra_links' do
     %strong= @level.key
     %br
-    %ul 
+    %ul
       %li= "level id: #{@level.id}"
       %li= "level type: #{@level.type}"
       %li= "This level is in #{@level.levels_parent_levels.count} other levels"
@@ -16,10 +16,9 @@
           %li= "level id: #{parent_level.id}"
           %li= "level type: #{parent_level.type}"
           %br
-    
       - if @level.child_levels.count > 0
         %h4 Child levels
-        %ul 
+        %ul
         - @level.child_levels.each do |child_level|
           %strong= child_level.key
           %li= "level id: #{child_level.id}"
