@@ -14,8 +14,6 @@ import {useNavigate, useParams} from 'react-router-dom';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {DATETIME_FORMAT} from '../workshopConstants';
-
 import {generateNewSession} from './components/SessionsEditor';
 import {sessionsReducer} from './reducers/sessionsReducer';
 import {workshopReducer} from './reducers/workshopReducer';
@@ -31,87 +29,25 @@ import {
   FieldConfig,
   Facilitator,
   RegionalPartner,
-  Session,
   SessionErrors,
   SessionFormState,
   Workshop,
   WorkshopFormState,
   WorkshopFormTemplateProps,
-  DestroyedSession,
 } from './types';
-import {workshopDataToState, sessionDataToState, workshopLabel} from './utils';
+import {
+  workshopDataToState,
+  sessionDataToState,
+  workshopLabel,
+  sessionStateToApi,
+  workshopStateToApi,
+} from './utils';
 
 import styles from './styles.module.scss';
 
 export const REQUIRED_ERROR = 'Required';
 export const VALIDATION_ERROR =
   'Your form contains validation errors that must be corrected';
-
-export const workshopStateToApi = (
-  workshop: WorkshopFormState
-): Omit<Workshop, 'sessions' | 'organizer'> => ({
-  course: workshop.course || undefined,
-  capacity:
-    workshop.capacity && !isNaN(Number(workshop.capacity))
-      ? Number(workshop.capacity)
-      : undefined,
-  description: workshop.description || undefined,
-  facilitators: workshop.facilitators,
-  fee: workshop.fee || undefined,
-  grades: workshop.grades,
-  hidden: workshop.hidden,
-  name: workshop.name || undefined,
-  notes: workshop.notes || undefined,
-  prereq: workshop.hasPrereq ? workshop.prereq : undefined,
-  regional_partner_id: workshop.regionalPartnerId ?? undefined,
-  registration_link: workshop.registrationLink || undefined,
-  subject: workshop.subject || undefined,
-  suppress_email: workshop.suppressEmail,
-  course_offerings: workshop.courseOfferings.map(offering => Number(offering)),
-  participant_group_type: workshop.participantGroupType,
-  time_zone: workshop.timeZone,
-});
-
-export const sessionStateToApi = (
-  sessions: SessionFormState[],
-  timeZone: string,
-  existingSessions?: Array<Session>
-): Array<Session | DestroyedSession> => {
-  const newOrUpdatedSessions: Array<Session | DestroyedSession> = [];
-  const sessionsMap = new Map(sessions.map(s => [s.id, s]));
-  const sessionsToDestroy =
-    existingSessions?.reduce((acc: DestroyedSession[], curr) => {
-      if (curr.id && !sessionsMap.get(curr.id.toString())) {
-        acc.push({
-          id: curr.id,
-          _destroy: true,
-        });
-      }
-      return acc;
-    }, []) ?? [];
-
-  sessions.forEach(session => {
-    newOrUpdatedSessions.push({
-      id: session.id.startsWith('new')
-        ? undefined
-        : Number(session.id.replace(/\D/g, '')),
-      session_format: session.format,
-      start: moment
-        .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
-        .utc()
-        .toISOString(),
-      end: moment
-        .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
-        .utc()
-        .toISOString(),
-      location_address: session.locationAddress || undefined,
-      location_name: session.locationName || undefined,
-      meeting_link: session.meetingLink || undefined,
-    });
-  });
-
-  return newOrUpdatedSessions.concat(sessionsToDestroy);
-};
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
