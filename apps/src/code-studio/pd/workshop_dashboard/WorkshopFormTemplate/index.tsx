@@ -11,6 +11,7 @@ import React, {
 } from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
@@ -34,6 +35,7 @@ import {
   Workshop,
   WorkshopFormState,
   WorkshopFormTemplateProps,
+  WorkshopCourseConfig,
 } from './types';
 import {
   workshopDataToState,
@@ -55,6 +57,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   const navigate = useNavigate();
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const {workshopId} = useParams();
+  const [workshopConfig, setWorkshopConfig] = useState(config);
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
@@ -65,11 +68,15 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   );
 
   const {data: facilitatorData} = useFetch<Facilitator[]>(
-    `/api/v1/pd/course_facilitators?course=${encodeURIComponent(config.label)}`
+    workshopConfig?.label
+      ? `/api/v1/pd/course_facilitators?course=${encodeURIComponent(
+          workshopConfig.label
+        )}`
+      : ''
   );
 
   const [workshopFormState, dispatchWorkshop] = useReducer(workshopReducer, {
-    course: config.label,
+    course: workshopConfig?.label ?? '',
     capacity: '',
     description: '',
     facilitators: [],
@@ -103,6 +110,10 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   const [responseErrors, setResponseErrors] = useState<string[]>([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (workshop) {
       dispatchWorkshop({
         type: 'SET_WORKSHOP',
@@ -115,12 +126,17 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
           workshop.time_zone ?? userTimeZone
         ),
       });
+      setWorkshopConfig(
+        (WorkshopCourseConfigs as WorkshopCourseConfig[]).find(
+          wsc => wsc.label === workshop.course
+        )
+      );
     }
   }, [workshop, userTimeZone]);
 
   const getWorkshopErrors = useCallback(
     () =>
-      Object.values(config.fields).reduce(
+      Object.values(workshopConfig?.fields ?? {}).reduce(
         (
           acc: Errors<keyof WorkshopFormState>,
           field: FieldConfig<WorkshopFormState>
@@ -136,12 +152,12 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         },
         {}
       ),
-    [config.fields, workshopFormState]
+    [workshopConfig?.fields, workshopFormState]
   );
 
   const getSessionErrors = useCallback(
     () =>
-      Object.values(config.session_fields).reduce(
+      Object.values(workshopConfig?.session_fields ?? {}).reduce(
         (acc: SessionErrors, field: FieldConfig<SessionFormState>) => {
           const {stateKey, required} = field;
           sessionFormState.forEach(session => {
@@ -157,7 +173,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         },
         {}
       ),
-    [config.session_fields, sessionFormState]
+    [workshopConfig?.session_fields, sessionFormState]
   );
 
   const publish = useCallback(async () => {
@@ -224,14 +240,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const cancel = useCallback(() => navigate('/workshops'), [navigate]);
 
-  const heading = workshopLabel(`New ${config.label}`);
-
-  const sectionProps = useMemo(
-    () => ({
-      dispatchWorkshop,
-      config,
-    }),
-    [dispatchWorkshop, config]
+  const heading = workshopLabel(
+    `${workshop ? 'Edit' : 'New'} ${workshopConfig?.label}`
   );
 
   const allErrors = useMemo(
@@ -241,6 +251,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         : [VALIDATION_ERROR, ...responseErrors],
     [workshopErrors, sessionErrors, responseErrors]
   );
+
+  if (!workshopConfig) return null;
 
   return (
     <form id="workshop-form-template" className={styles.container}>
@@ -255,14 +267,16 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         courseOfferings={workshopFormState.courseOfferings}
         name={workshopFormState.name}
         errors={workshopErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <Schedule
         timeZone={workshopFormState.timeZone}
         sessions={sessionFormState}
         dispatchSessions={dispatchSessions}
         errors={sessionErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <PartnerFacilitator
         facilitators={workshopFormState.facilitators}
@@ -270,24 +284,28 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         errors={workshopErrors}
         regionalPartnerData={regionalPartnerData}
         facilitatorData={facilitatorData}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <EmailsReminders
         suppressEmail={workshopFormState.suppressEmail}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <AdditionalInfo
         fee={workshopFormState.fee}
         participantGroupType={workshopFormState.participantGroupType}
         notes={workshopFormState.notes}
         errors={workshopErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <PublishSettings
         registrationLink={workshopFormState.registrationLink}
         hidden={workshopFormState.hidden}
         errors={workshopErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       {allErrors.length > 0 &&
         allErrors.map(error => (
