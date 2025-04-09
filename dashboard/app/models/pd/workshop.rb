@@ -73,7 +73,10 @@ class Pd::Workshop < ApplicationRecord
     # If true, our system will not send enrollees reminders related to this workshop.
     # If the subject is not in the MUST_SUPPRESS_EMAIL_SUBJECTS constant, this attribute
     # can be set to be true or false from the UI
-    'suppress_email'
+    'suppress_email',
+    # temporary flag that skips some of the config based workshop validation if the
+    # workshop is submitted from the legacy form
+    'legacy'
   ]
 
   before_validation :sanitize_time_zone
@@ -89,6 +92,8 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
+
+  validate :config_validation
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -127,6 +132,50 @@ class Pd::Workshop < ApplicationRecord
   def virtual_only_subjects_must_be_virtual
     if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
       errors.add :properties, "Workshops with the subject #{subject} must be virtual"
+    end
+  end
+
+  def config_validation
+    return if ARCHIVED_COURSES.include?(course)
+
+    config = Pd::SharedWorkshopConstants::WORKSHOP_COURSE_CONFIGS.find do |c|
+      c[:label] == course
+    end
+
+    unless config
+      errors.add(:course, "#{course} is not a valid workshop course")
+      return
+    end
+
+    return if legacy?
+
+    check_fields_exist(config)
+    required_validation(config)
+  end
+
+  def check_fields_exist(config)
+    config[:fields].each_key do |field_name|
+      errors.add(field_name, "is not a valid field") unless respond_to?(field_name)
+    end
+  end
+
+  def required_validation(config)
+    config[:fields].each do |field_name, field_options|
+      next unless field_options[:required]
+      value = public_send(field_name)
+      is_invalid = value.nil? || (value.respond_to?(:empty?) && value.empty?)
+      if is_invalid
+        case field_name
+        when :course_offerings
+          errors.add(:base, "Please select at least one workshop topic")
+        when :grades
+          errors.add(:base, "Please select at least one grade level")
+        when :participant_group_type
+          errors.add(:base, "Cohort type is required")
+        else
+          errors.add(field_name, "is required")
+        end
+      end
     end
   end
 
