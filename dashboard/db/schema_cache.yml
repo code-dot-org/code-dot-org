@@ -7266,6 +7266,22 @@ columns:
     comment: 
   - *14
   - *15
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: editor_font_size
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: console_font_size
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   user_proficiencies:
   - *5
   - *11
@@ -14342,7 +14358,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250403185752
+version: 20250409155126
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
