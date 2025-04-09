@@ -614,12 +614,13 @@ Dashboard::Application.routes.draw do
     get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
 
     scope path: '/admin' do
-      get '/', to: 'admin_reports#directory', as: 'admin_directory'
-
       # internal report dashboards
-      get '/levels', to: 'admin_reports#level_completions', as: 'level_completions'
-      get '/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
-      get '/debug', to: 'admin_reports#debug', as: 'admin_debug'
+      controller :admin_reports do
+        get '/', action: 'directory', as: 'admin_directory'
+        get '/levels', action: 'level_completions', as: 'level_completions'
+        get '/level_answers', action: 'level_answers', as: 'level_answers'
+        get '/debug', action: 'debug', as: 'admin_debug'
+      end
 
       # internal search tools
       resources :admin_search, only: [], path: '/' do
@@ -643,41 +644,47 @@ Dashboard::Application.routes.draw do
       post '/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
 
       # internal engineering dashboards
-      get '/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
+      controller :dynamic_config do
+        get '/dynamic_config', action: 'show', as: 'dynamic_config_state'
 
-      get '/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
-      post '/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
-      post '/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+        get '/gatekeeper', action: 'gatekeeper_show', as: 'gatekeeper_show'
+        post '/gatekeeper/delete', action: 'gatekeeper_delete'
+        post '/gatekeeper/set', action: 'gatekeeper_set'
 
-      get '/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
-      post '/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
+        get '/dcdo', action: 'dcdo_show', as: 'dcdo_show'
+        post '/dcdo/set', action: 'dcdo_set'
+      end
 
-      get '/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
-      post '/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
+      controller :feature_mode do
+        get '/feature_mode', action: 'show'
+        post '/feature_mode', action: 'update', as: 'feature_mode_update'
+      end
 
       # internal support tools
-      get '/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
-      post '/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
-      get '/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
-      post '/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
-      post '/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
-      post '/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
-      get '/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
-      post '/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
-      get '/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
-      get '/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
-      post '/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
-      get '/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
-      post '/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
-      get '/studio_person', to: 'admin_users#studio_person_form', as: 'studio_person_form'
-      post '/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
-      post '/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
-      post '/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
-      get '/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
-      get '/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
-      put '/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
-      get '/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
-      post '/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
+      controller :admin_users do
+        get '/account_repair', action: 'account_repair_form', as: 'account_repair_form'
+        post '/account_repair', action: 'account_repair'
+        get '/assume_identity', action: 'assume_identity_form', as: 'assume_identity_form'
+        post '/assume_identity', action: 'assume_identity'
+        post '/delete_user', action: 'delete_user'
+        post '/undelete_user', action: 'undelete_user'
+        get '/manual_pass', action: 'manual_pass_form', as: 'manual_pass_form'
+        post '/manual_pass', action: 'manual_pass'
+        get '/permissions', action: 'permissions_form', as: 'permissions_form'
+        get '/permissions/csv', action: 'permissions_csv'
+        post '/grant_permission', action: 'grant_permission'
+        get '/revoke_permission', action: 'revoke_permission'
+        post '/bulk_grant_permission', action: 'bulk_grant_permission'
+        get '/studio_person', action: 'studio_person_form', as: 'studio_person_form'
+        post '/studio_person_merge', action: 'studio_person_merge'
+        post '/studio_person_split', action: 'studio_person_split'
+        post '/studio_person_add_email_to_emails', action: 'studio_person_add_email_to_emails'
+        get '/user_progress', action: 'user_progress_form', as: 'user_progress_form'
+        get '/user_projects', action: 'user_projects_form', as: 'user_projects_form'
+        put '/user_project', action: 'user_project_restore_form', as: 'user_project_restore_form'
+        get '/delete_progress', action: 'delete_progress_form', as: 'delete_progress_form'
+        post '/delete_progress', action: 'delete_progress'
+      end
 
       get '/styleguide', to: redirect('/styleguide/'), as: 'admin_styleguide'
     end
