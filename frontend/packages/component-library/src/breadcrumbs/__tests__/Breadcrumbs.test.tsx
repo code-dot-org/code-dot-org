@@ -81,4 +81,32 @@ describe('Breadcrumbs Component', () => {
     expect(lastLink).toHaveAttribute('aria-disabled', 'true');
     expect(lastLink).not.toHaveAttribute('href');
   });
+
+  describe('Home Icon', () => {
+    it('renders home icon when showHomeIcon is true', () => {
+      setup({showHomeIcon: true});
+      const homeIcon = screen.getByTitle('Home');
+      expect(homeIcon).toBeInTheDocument();
+    });
+
+    it('does not render home icon when showHomeIcon is false', () => {
+      setup({showHomeIcon: false});
+      const homeIcon = screen.queryByTitle('Home');
+      expect(homeIcon).not.toBeInTheDocument();
+    });
+
+    it('home icon link points to root directory', () => {
+      setup({showHomeIcon: true});
+      const homeLink = screen.getByTitle('Home').closest('a');
+      expect(homeLink).toHaveAttribute('href', '/');
+    });
+
+    it('home icon is clickable', async () => {
+      const user = userEvent.setup();
+      setup({showHomeIcon: true});
+      const homeLink = screen.getByTitle('Home').closest('a');
+      await user.click(homeLink!);
+      expect(homeLink).not.toHaveAttribute('aria-disabled');
+    });
+  });
 });

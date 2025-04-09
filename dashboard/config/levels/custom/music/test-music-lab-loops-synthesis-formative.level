@@ -206,7 +206,7 @@
       {
         "key": "test-music-lab-loops-synthesis-formative_fbf0d228-a50f-4c98-a784-b7c3b65e66ad",
         "message": "You did it!",
-        "next": false,
+        "next": true,
         "conditions": [
           {
             "name": "block_count_by_type",
@@ -236,7 +236,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-13T22:27:27.569+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-synthesis-formative\\\"\"],\"cloned_from\":\"music-lab-loops-synthesis-formative\"},{\"changed_at\":\"2025-03-13 22:27:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 14:53:16 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T22:27:27.569+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-synthesis-formative\\\"\"],\"cloned_from\":\"music-lab-loops-synthesis-formative\"},{\"changed_at\":\"2025-03-13 22:27:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 14:53:16 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-08 14:49:23 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -45,8 +45,17 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
         required: true,
       },
     },
+    linkEntry: {
+      displayName: 'Single Link',
+      type: 'Link',
+      group: 'content',
+      description: 'Accepts only the "Link" content type entry',
+      validations: {
+        bindingSourceType: ['entry'],
+      },
+    },
     linkEntries: {
-      displayName: 'Links',
+      displayName: 'Multiple Links',
       type: 'Array',
       group: 'content',
       description:

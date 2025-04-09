@@ -12,8 +12,8 @@
 #  section_id          :integer
 #  school_year         :string(255)
 #  evaluator           :string(255)
-#  evaluation_criteria :string(255)
-#  reasoning           :string(255)
+#  evaluation_criteria :text(65535)
+#  reasoning           :text(65535)
 #  evaluation          :string(255)
 #  ai_model_version    :string(255)
 #  code_version        :string(255)

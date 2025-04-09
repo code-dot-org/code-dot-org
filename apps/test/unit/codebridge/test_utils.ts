@@ -61,15 +61,7 @@ export const getDefaultCodebridgeContext = () => {
   const context: CodebridgeContextType = {
     source: smallProject,
     config: {
-      activeLeftNav: '',
-      sideBar: [],
-      instructions: undefined,
-      Instructions: undefined,
       defaultTheme: undefined,
-      leftNav: [],
-      gridLayout: undefined,
-      gridLayoutRows: undefined,
-      gridLayoutColumns: undefined,
       editableFileTypes: [],
       previewFileTypes: undefined,
       PreviewComponents: undefined,

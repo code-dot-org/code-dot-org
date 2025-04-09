@@ -3133,6 +3133,14 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
 }
 
+// Summary
+#summary-content {
+  // Ensure the summary can be seen even when the lesson has a dark background.
+  background-color: $white;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;

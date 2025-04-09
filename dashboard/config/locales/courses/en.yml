@@ -568,8 +568,8 @@ en:
         virtual-pl-csa-summer-2024:
           title: CSA Virtual Summer Professional Learning '24-'25
           description_short: ''
-          description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
-          description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: ''
         virtual-pl-csp-summer-2024:
           title: CS Principles Virtual PL Workshop Course
@@ -5363,7 +5363,7 @@ en:
           description_teacher: ''
           version_title: ''
         career-journey-pilot-a:
-          title: Career Journeys Pilot Lesson
+          title: Career Journey Pilot Lesson (Version A)
           description_short: ''
           description_student: ''
           description_teacher: ''
