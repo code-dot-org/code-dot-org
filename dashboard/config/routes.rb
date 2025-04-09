@@ -617,9 +617,9 @@ Dashboard::Application.routes.draw do
       # internal report dashboards
       controller :admin_reports do
         get '/', action: 'directory', as: 'admin_directory'
-        get '/levels', action: 'level_completions', as: 'level_completions'
-        get '/level_answers', action: 'level_answers', as: 'level_answers'
-        get '/debug', action: 'debug', as: 'admin_debug'
+        get :levels, action: 'level_completions', as: 'level_completions'
+        get :level_answers, as: 'level_answers'
+        get :debug, as: 'admin_debug'
       end
 
       # internal search tools
@@ -632,7 +632,7 @@ Dashboard::Application.routes.draw do
         end
       end
 
-      resources :admin_pilots, only: [:index, :create, :show], path: '/pilots', param: 'pilot_name' do
+      resources :admin_pilots, only: [:index, :create, :show], path: :pilots, param: 'pilot_name' do
         collection do
           post :add_to_pilot
           post :remove_from_pilot
@@ -640,53 +640,52 @@ Dashboard::Application.routes.draw do
       end
 
       # NPS dashboards
-      get '/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
-      post '/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
+      controller :admin_nps do
+        get '/nps/nps_form', action: 'nps_form', as: 'nps_form'
+        post '/nps/nps_update', action: 'nps_update', as: 'nps_update'
+      end
 
       # internal engineering dashboards
       controller :dynamic_config do
-        get '/dynamic_config', action: 'show', as: 'dynamic_config_state'
+        get :dynamic_config, action: 'show', as: 'dynamic_config_state'
 
-        get '/gatekeeper', action: 'gatekeeper_show', as: 'gatekeeper_show'
+        get :gatekeeper, action: 'gatekeeper_show', as: 'gatekeeper_show'
         post '/gatekeeper/delete', action: 'gatekeeper_delete'
         post '/gatekeeper/set', action: 'gatekeeper_set'
 
-        get '/dcdo', action: 'dcdo_show', as: 'dcdo_show'
+        get :dcdo, action: 'dcdo_show', as: 'dcdo_show'
         post '/dcdo/set', action: 'dcdo_set'
       end
 
-      controller :feature_mode do
-        get '/feature_mode', action: 'show'
-        post '/feature_mode', action: 'update', as: 'feature_mode_update'
-      end
+      resource :feature_mode, only: [:show, :create], controller: :feature_mode
 
       # internal support tools
       controller :admin_users do
-        get '/account_repair', action: 'account_repair_form', as: 'account_repair_form'
-        post '/account_repair', action: 'account_repair'
-        get '/assume_identity', action: 'assume_identity_form', as: 'assume_identity_form'
-        post '/assume_identity', action: 'assume_identity'
-        post '/delete_user', action: 'delete_user'
-        post '/undelete_user', action: 'undelete_user'
-        get '/manual_pass', action: 'manual_pass_form', as: 'manual_pass_form'
-        post '/manual_pass', action: 'manual_pass'
-        get '/permissions', action: 'permissions_form', as: 'permissions_form'
+        get :account_repair, action: 'account_repair_form', as: 'account_repair_form'
+        post :account_repair
+        get :assume_identity, action: 'assume_identity_form', as: 'assume_identity_form'
+        post :assume_identity
+        post :delete_user
+        post :undelete_user
+        get :manual_pass, action: 'manual_pass_form', as: 'manual_pass_form'
+        post :manual_pass
+        get :permissions, action: 'permissions_form', as: 'permissions_form'
         get '/permissions/csv', action: 'permissions_csv'
-        post '/grant_permission', action: 'grant_permission'
-        get '/revoke_permission', action: 'revoke_permission'
-        post '/bulk_grant_permission', action: 'bulk_grant_permission'
-        get '/studio_person', action: 'studio_person_form', as: 'studio_person_form'
-        post '/studio_person_merge', action: 'studio_person_merge'
-        post '/studio_person_split', action: 'studio_person_split'
-        post '/studio_person_add_email_to_emails', action: 'studio_person_add_email_to_emails'
-        get '/user_progress', action: 'user_progress_form', as: 'user_progress_form'
-        get '/user_projects', action: 'user_projects_form', as: 'user_projects_form'
-        put '/user_project', action: 'user_project_restore_form', as: 'user_project_restore_form'
-        get '/delete_progress', action: 'delete_progress_form', as: 'delete_progress_form'
-        post '/delete_progress', action: 'delete_progress'
+        post :grant_permission
+        get :revoke_permission
+        post :bulk_grant_permission
+        get :studio_person, action: 'studio_person_form', as: 'studio_person_form'
+        post :studio_person_merge
+        post :studio_person_split
+        post :studio_person_add_email_to_emails
+        get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
+        get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
+        put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
+        get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
+        post :delete_progress
       end
 
-      get '/styleguide', to: redirect('/styleguide/'), as: 'admin_styleguide'
+      get :styleguide, to: redirect('/styleguide/'), as: 'admin_styleguide'
     end
 
     # LTI API endpoints
