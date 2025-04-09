@@ -604,7 +604,6 @@ Dashboard::Application.routes.draw do
     post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
     post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
-    get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
     resources :regional_partners
     post 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
     get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
@@ -614,68 +613,74 @@ Dashboard::Application.routes.draw do
 
     get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
 
-    # NPS dashboards
-    get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
-    post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
+    scope path: '/admin' do
+      get '/', to: 'admin_reports#directory', as: 'admin_directory'
 
-    # internal report dashboards
-    get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
-    get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
-    get '/admin/debug', to: 'admin_reports#debug'
+      # internal report dashboards
+      get '/levels', to: 'admin_reports#level_completions', as: 'level_completions'
+      get '/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
+      get '/debug', to: 'admin_reports#debug', as: 'admin_debug'
 
-    # internal search tools
-    resources :admin_search, only: [], path: '/admin' do
-      collection do
-        get :find_students
-        get :lookup_section
-        post :lookup_section
-        post :undelete_section
+      # internal search tools
+      resources :admin_search, only: [], path: '/' do
+        collection do
+          get :find_students
+          get :lookup_section
+          post :lookup_section
+          post :undelete_section
+        end
       end
-    end
 
-    resources :admin_pilots, only: [:index, :create, :show], path: '/admin/pilots', param: 'pilot_name' do
-      collection do
-        post :add_to_pilot
-        post :remove_from_pilot
+      resources :admin_pilots, only: [:index, :create, :show], path: '/pilots', param: 'pilot_name' do
+        collection do
+          post :add_to_pilot
+          post :remove_from_pilot
+        end
       end
+
+      # NPS dashboards
+      get '/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+      post '/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
+
+      # internal engineering dashboards
+      get '/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
+
+      get '/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
+      post '/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
+      post '/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+
+      get '/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
+      post '/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
+
+      get '/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
+      post '/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
+
+      # internal support tools
+      get '/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
+      post '/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
+      get '/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
+      post '/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+      post '/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
+      post '/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
+      get '/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
+      post '/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
+      get '/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+      get '/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
+      post '/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
+      get '/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
+      post '/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
+      get '/studio_person', to: 'admin_users#studio_person_form', as: 'studio_person_form'
+      post '/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
+      post '/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
+      post '/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
+      get '/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
+      get '/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
+      put '/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
+      get '/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
+      post '/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
+
+      get '/styleguide', to: redirect('/styleguide/'), as: 'admin_styleguide'
     end
-
-    # internal engineering dashboards
-    get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
-    get '/admin/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
-    post '/admin/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
-
-    # internal support tools
-    get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
-    post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
-    get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
-    post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
-    post '/admin/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
-    post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
-    get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
-    post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
-    get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
-    get '/admin/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
-    post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
-    get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
-    post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
-    get '/admin/studio_person', to: 'admin_users#studio_person_form', as: 'studio_person_form'
-    post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
-    post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
-    post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
-    get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
-    get '/admin/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
-    put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
-    get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
-    post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
-
-    get '/admin/styleguide', to: redirect('/styleguide/')
-
-    get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
-    post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
-    post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-    get '/admin/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
-    post '/admin/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
