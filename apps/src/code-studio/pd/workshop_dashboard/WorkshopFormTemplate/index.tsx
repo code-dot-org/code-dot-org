@@ -420,16 +420,13 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     [dispatchWorkshop, config]
   );
 
-  const hasValidationErrors = useMemo(
-    () => Object.keys({...workshopErrors, ...sessionErrors}).length > 0,
-    [workshopErrors, sessionErrors]
+  const allErrors = useMemo(
+    () =>
+      isEmpty({...workshopErrors, ...sessionErrors})
+        ? responseErrors
+        : [VALIDATION_ERROR, ...responseErrors],
+    [workshopErrors, sessionErrors, responseErrors]
   );
-
-  const allErrors = useMemo(() => {
-    return hasValidationErrors
-      ? [VALIDATION_ERROR, ...responseErrors]
-      : responseErrors;
-  }, [hasValidationErrors, responseErrors]);
 
   return (
     <form id="workshop-form-template" className={styles.container}>
