@@ -35,7 +35,7 @@ const paths = {
   FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
 };
 
-const MAX_POLLING_TIME_MS = 45000;
+const MAX_POLLING_TIME_MS = 60000;
 const MIN_POLLING_INTERVAL_MS = 1000;
 const DEFAULT_BACKOFF_RATE = 1;
 
