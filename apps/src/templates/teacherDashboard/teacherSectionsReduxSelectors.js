@@ -152,6 +152,7 @@ export const sectionFromServerSection = serverSection => ({
   unitName: serverSection.is_assigned_single_unit_course
     ? serverSection.script.name
     : serverSection.unitName,
+  unitPosition: serverSection.unitPosition,
   isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,

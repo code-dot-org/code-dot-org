@@ -121,7 +121,8 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   const currentUnitSummaryAvailable =
     unitSummaryResponse.unitData.name === unitName ||
     (unitSummaryResponse.unitData.course_name === courseVersionName &&
-      unitSummaryResponse.unitData.unit_position === unitPosition);
+      unitSummaryResponse.unitData.unit_position?.toString() ===
+        unitPosition?.toString());
   if (!currentUnitSummaryAvailable) {
     return <Spinner size={'large'} />;
   }
