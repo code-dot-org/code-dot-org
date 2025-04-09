@@ -44,13 +44,13 @@ class OpenaiEvaluateController < ApplicationController
       # mimic the format of the response from AI
       json_response = {"content" => no_attempt_response.to_json}
       return render(status: :ok, json: json_response)
-    elsif ProfanityFilter.find_potential_profanities(student_work, "en", {})
-      json_response = {"content" => profanity_detected_response.to_json}
-      return render(status: :ok, json: json_response)
     elsif level.upper_grades_programming_level? && level.get_starter_code == student_work
       no_attempt_response[:aiReasoning] = "The student did not change the starter code."
       # mimic the format of the response from AI
       json_response = {"content" => no_attempt_response.to_json}
+      return render(status: :ok, json: json_response)
+    elsif ProfanityFilter.find_potential_profanities(student_work, "en", {})
+      json_response = {"content" => profanity_detected_response.to_json}
       return render(status: :ok, json: json_response)
     else
       system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, unit, evaluation_type)

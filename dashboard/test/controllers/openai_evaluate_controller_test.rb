@@ -40,8 +40,10 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
   test 'evaluate returns custom `Profanity detected` for free response with profanity",' do
     student = create(:student)
     sign_in(student)
-    level = create(:free_response, :with_script)
-    unit = level.script_levels.first.script
+    csp_course_offering = create(:csp_course_offering, :with_units)
+    unit = csp_course_offering.course_versions.first.content_root
+    level = create(:free_response)
+    create(:script_level, script: unit, levels: [level])
     get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: "This is shit.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
