@@ -35,7 +35,7 @@ jobs:
           script: |
             await github.rest.repos.createCommitStatus({
               context: 'CMS Followup',
-              description: 'blah blah blah',
+              description: 'this job should succeed',
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha: '${{ inputs.github_sha }}',
@@ -63,7 +63,7 @@ jobs:
           script: |
             await github.rest.repos.createCommitStatus({
               context: 'K8S Followup',
-              description: 'blah blah blah',
+              description: 'this job should fail',
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha: '${{ inputs.github_sha }}',
