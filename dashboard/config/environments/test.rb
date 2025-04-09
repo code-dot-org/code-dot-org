@@ -100,4 +100,9 @@ Dashboard::Application.configure do
   end
 
   config.experiment_cache_time_seconds = 0
+
+  # Prevent merge conflicts on schema.rb by skipping regeneration of schema.rb
+  # on the test machine. this is necessary because as of April 2025 the test DB
+  # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
+  config.active_record.dump_schema_after_migration = !CDO.test_system?
 end
