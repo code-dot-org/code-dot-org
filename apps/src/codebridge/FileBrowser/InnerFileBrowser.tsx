@@ -50,7 +50,6 @@ const InnerFileBrowser = React.memo(
               <Droppable
                 data={{id: f.id}}
                 key={f.id + f.open}
-                Component="li"
                 className={classNames(moduleStyles.droppableArea, {
                   [moduleStyles.acceptingDrop]:
                     f.id === dropData?.id && dragData?.parentId !== f.id,
@@ -95,7 +94,6 @@ const InnerFileBrowser = React.memo(
               <MaybeDraggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
-                Component="li"
               >
                 <FileRow {...fileRowProps} />
               </MaybeDraggable>
