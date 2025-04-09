@@ -95,6 +95,19 @@
     padding: 0 2px;
   }
 
+  .newWorkshopButton.btn.btn-primary {
+    background-color: $brand_secondary_default;
+    + ul {
+      i {
+        margin-right: 1rem;
+        width: 0.5rem;
+      }
+      a {
+        background-image: none;
+      }
+    }
+  }
+
   /* stylelint-disable max-line-length */
   // React-Select does not provide a way to override the .Select-control class for the underlying input.
   // For consistent UI, apply the same error highlighting to .Select-control that Bootstrap uses for .form-control
