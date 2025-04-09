@@ -79,20 +79,49 @@ export const calculatePositionedElementStyles = ({
       case 'onRight':
         styles.top = verticalMiddlePosition;
         styles.left = isLtr ? horizontalRightPosition : horizontalLeftPosition;
+        // Adjust if the tooltip goes offscreen on the right
+        if (styles.left + tooltipRect.width > window.innerWidth) {
+          styles.left = horizontalLeftPosition;
+        }
         break;
       case 'onBottom':
         styles.top = verticalBottomPosition;
         styles.left = horizontalMiddlePosition;
+        // Adjust if the tooltip goes offscreen at the bottom
+        if (styles.top + tooltipRect.height > window.innerHeight) {
+          styles.top = verticalTopPosition;
+        }
         break;
       case 'onLeft':
         styles.top = verticalMiddlePosition;
         styles.left = isLtr ? horizontalLeftPosition : horizontalRightPosition;
+        // Adjust if the tooltip goes offscreen on the left
+        if (styles.left < 0) {
+          styles.left = horizontalRightPosition;
+        }
         break;
       case 'onTop':
       default:
         styles.top = verticalTopPosition;
         styles.left = horizontalMiddlePosition;
+        // Adjust if the tooltip goes offscreen at the top
+        if (styles.top < 0) {
+          styles.top = verticalBottomPosition;
+        }
         break;
+    }
+    // Ensure the tooltip stays within the viewport horizontally
+    if (styles.left + tooltipRect.width > window.innerWidth) {
+      styles.left = window.innerWidth - tooltipRect.width - tailOffset;
+    } else if (styles.left < 0) {
+      styles.left = tailOffset;
+    }
+
+    // Ensure the tooltip stays within the viewport vertically
+    if (styles.top + tooltipRect.height > window.innerHeight) {
+      styles.top = window.innerHeight - tooltipRect.height - tailOffset;
+    } else if (styles.top < 0) {
+      styles.top = tailOffset;
     }
   }
 
