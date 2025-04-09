@@ -2171,7 +2171,7 @@ class Unit < ApplicationRecord
   end
 
   def has_ai_tutor_level?
-    levels.any?(&:ai_tutor_available?)
+    levels&.any?(&:ai_tutor_available?)
   end
 
   private def teacher_feedback_enabled?
