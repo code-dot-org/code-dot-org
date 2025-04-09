@@ -31,7 +31,6 @@ import teacherSections, {
   selectSection,
   setRosterProvider,
   setRosterProviderName,
-  setSectionOrder,
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -75,9 +74,8 @@ $(document).ready(function () {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  store.dispatch(setSections(sections, false));
+  store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
-  store.dispatch(setSectionOrder(sectionOrder));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 

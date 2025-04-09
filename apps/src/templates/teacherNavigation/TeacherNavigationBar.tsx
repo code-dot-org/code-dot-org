@@ -35,9 +35,8 @@ import styles from './teacher-navigation.module.scss';
 const TeacherNavigationBar: React.FC<{
   showAITutorTab: boolean;
 }> = showAITutorTab => {
-  const sections = useAppSelector(state => state.teacherSections.sections);
-  const sectionOrder = useAppSelector(
-    state => state.teacherSections.sectionOrder
+  const {sections, sectionOrder} = useAppSelector(
+    state => state.teacherSections
   );
 
   const [sectionArray, setSectionArray] = useState<

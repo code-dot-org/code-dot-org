@@ -233,6 +233,7 @@ const sectionSlice = createSlice({
         action: PayloadAction<{
           sections: ServerSection[];
           autoSelectOnlySection: boolean;
+          sectionOrder: number[] | null;
         }>
       ) {
         const sections = action.payload.sections.map(sectionFromServerSection);
@@ -285,20 +286,22 @@ const sectionSlice = createSlice({
         state.sectionIds = sectionIds;
         state.studentSectionIds = studentSectionIds;
         state.plSectionIds = plSectionIds;
+
         state.sectionOrder = getFilteredSectionOrderIds(
           sections,
-          state.sectionOrder
+          action.payload.sectionOrder || state.sectionOrder
         );
         state.sections = {
           ...state.sections,
           ..._.keyBy(sections, 'id'),
         };
       },
-      prepare(sections, autoSelectOnlySection = true) {
+      prepare(sections, autoSelectOnlySection = true, sectionOrder = null) {
         return {
           payload: {
             sections,
             autoSelectOnlySection,
+            sectionOrder,
           },
         };
       },

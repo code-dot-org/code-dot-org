@@ -86,7 +86,7 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
       sortableSectionIds
     );
 
-    if (_.xor(newSectionOrder, sortableSectionIds).length > 1) {
+    if (_.xor(newSectionOrder, sortableSectionIds).length > 0) {
       setSortableSectionIds(newSectionOrder);
     }
     // We do not need to add/remove sections when the section order changes, only when the sections from redux change
