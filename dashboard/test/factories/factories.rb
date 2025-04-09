@@ -204,6 +204,12 @@ FactoryBot.define do
           ai_iteration_tools_user.save
         end
       end
+      factory :dataset_maker do
+        after(:create) do |dataset_maker|
+          dataset_maker.permission = UserPermission::DATASET_MAKER
+          dataset_maker.save
+        end
+      end
       factory :facilitator do
         transient do
           course {nil}

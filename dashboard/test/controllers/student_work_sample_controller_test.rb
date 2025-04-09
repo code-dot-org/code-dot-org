@@ -46,18 +46,18 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   params: {level_id: 123, script_id: 456, num_samples: 7},
   response: :forbidden
 
-  # AI Tutor Access + Levelbuilder can fetch student code samples
+  # Dataset Maker can fetch student code samples
   # not found if bogus params
   test_user_gets_response_for :fetch_student_code_samples,
-  name: "ai_iteration_tools_user_can_access_bogus_params",
-  user: :ai_iteration_tools_user,
+  name: "dataset_maker_can_access_bogus_params",
+  user: :dataset_maker,
   method: :get,
   params: {level_id: 123, script_id: 456, num_samples: 7},
   response: :not_found
 
-  # AI Tutor Access + Levelbuilder response ok if valid params
-  test 'ai iteration tools user can access valid params",' do
-    user = create(:ai_iteration_tools_user)
+  # Dataset Maker response ok if valid params
+  test 'dataset_maker_can_access_valid_params' do
+    user = create(:dataset_maker)
     sign_in(user)
     level = create(:level)
     script = create(:script)
