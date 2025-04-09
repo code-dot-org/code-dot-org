@@ -8,6 +8,8 @@ import {
   Session,
   SessionFormState,
   DestroyedSession,
+  SessionRequest,
+  WorkshopRequest,
 } from './types';
 
 export const workshopLabel = (label: string): string =>
@@ -17,7 +19,7 @@ export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   course: data.course ?? '',
   capacity: data.capacity?.toString() ?? '',
   description: data.description ?? '',
-  facilitators: data.facilitators ?? [],
+  facilitators: data.facilitators?.map(({id}) => id) ?? [],
   fee: data.fee ?? '',
   grades: data.grades ?? [],
   hidden: data.hidden ?? false,
@@ -40,7 +42,7 @@ export const sessionDataToState = (
   timeZone: string
 ): SessionFormState[] =>
   data.map(session => ({
-    id: `existing-${session.id}`,
+    id: session.id.toString(),
     date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
     start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
     end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
@@ -53,7 +55,7 @@ export const sessionDataToState = (
 
 export const workshopStateToApi = (
   workshop: WorkshopFormState
-): Omit<Workshop, 'sessions' | 'organizer'> => ({
+): Omit<WorkshopRequest, 'sessions'> => ({
   course: workshop.course || undefined,
   capacity:
     workshop.capacity && !isNaN(Number(workshop.capacity))
@@ -80,8 +82,8 @@ export const sessionStateToApi = (
   sessions: SessionFormState[],
   timeZone: string,
   existingSessions?: Array<Session>
-): Array<Session | DestroyedSession> => {
-  const newOrUpdatedSessions: Array<Session | DestroyedSession> = [];
+): Array<SessionRequest | DestroyedSession> => {
+  const newOrUpdatedSessions: Array<SessionRequest | DestroyedSession> = [];
   const sessionsMap = new Map(sessions.map(s => [s.id, s]));
   const sessionsToDestroy =
     existingSessions?.reduce((acc: DestroyedSession[], curr) => {
@@ -96,9 +98,7 @@ export const sessionStateToApi = (
 
   sessions.forEach(session => {
     newOrUpdatedSessions.push({
-      id: session.id.startsWith('new')
-        ? undefined
-        : Number(session.id.replace(/\D/g, '')),
+      id: session.id.startsWith('new') ? undefined : Number(session.id),
       session_format: session.format,
       start: moment
         .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)

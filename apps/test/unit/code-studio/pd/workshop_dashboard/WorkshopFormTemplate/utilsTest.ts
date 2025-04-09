@@ -2,6 +2,7 @@ import moment from 'moment-timezone';
 
 import {DATETIME_FORMAT} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 import {
+  Facilitator,
   Organizer,
   Session,
   SessionFormState,
@@ -26,6 +27,7 @@ describe('sessionDataToState', () => {
         location_name: 'Test Location',
         meeting_link: 'https://test.com',
         session_format: 'in_person',
+        code: 'abc',
       },
     ];
     const timeZone = 'America/Denver';
@@ -54,7 +56,7 @@ describe('workshopDataToState', () => {
       course: 'Test Course',
       capacity: 10,
       description: 'Test Description',
-      facilitators: [1, 2],
+      facilitators: [{id: 1} as Facilitator, {id: 2} as Facilitator],
       fee: '100',
       grades: ['K', '1'],
       hidden: true,
@@ -236,6 +238,7 @@ describe('sessionStateToApi', () => {
         location_address: '123 Test St',
         location_name: 'Test Location',
         meeting_link: 'https://test.meeting',
+        code: 'abc',
       },
       {
         id: 2,
@@ -245,6 +248,7 @@ describe('sessionStateToApi', () => {
         location_address: '456 Old St',
         location_name: 'Old Location',
         meeting_link: '',
+        code: 'abc',
       },
     ];
 
