@@ -281,6 +281,8 @@ trigger:
     - pull_request
 
 ---
+# When our UI and Unit tests complete, we trigger a GitHub Actions workflow
+# to do followup work.
 kind: pipeline
 type: docker
 name: on-droneci-complete
@@ -346,6 +348,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 0202dfaa247151e02720fd24fcd8b6cafc8ca07d37db1ab4a05160199ae29eea
+hmac: d8149497615c9d24b4427a18d259b56fcf7b31e7a482e4f987bc4c993d2033e4
 
 ...
