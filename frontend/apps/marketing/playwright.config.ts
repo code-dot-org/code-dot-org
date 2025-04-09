@@ -36,7 +36,6 @@ export default defineConfig<EyesFixture>({
       },
       sendDom: true,
       failTestsOnDiff: 'afterEach',
-      branchName: 'staging',
       // Additional configuration options...
     },
   },

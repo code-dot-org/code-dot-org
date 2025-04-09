@@ -23130,3 +23130,25 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           student_description: ''
+        career-journey-pilot-a:
+          lessons:
+            lesson-1:
+              name: Career Journeys Pilot Lesson
+          lesson_groups: {}
+          name: career-journey-pilot-a
+          title: Career Journey Pilot Lesson
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        career-journey-pilot-b:
+          lessons:
+            lesson-1:
+              name: Career Journeys Lesson B
+          lesson_groups: {}
+          name: career-journey-pilot-b
+          title: Career Journey Pilot Lesson B
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
