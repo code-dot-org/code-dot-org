@@ -306,6 +306,7 @@ class Unit < ApplicationRecord
     project_widget_visible
     project_widget_types
     lesson_extras_available
+    has_unnumbered_lessons
     has_verified_resources
     curriculum_path
     announcements
@@ -1568,6 +1569,7 @@ class Unit < ApplicationRecord
         teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         lesson_extras_available: lesson_extras_available,
+        hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
@@ -1633,6 +1635,7 @@ class Unit < ApplicationRecord
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       hasNumberedUnits: unit_group&.has_numbered_units?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
@@ -1701,7 +1704,8 @@ class Unit < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      show_sign_in_callout: csf? || csc?
+      show_sign_in_callout: csf? || csc?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
@@ -1710,7 +1714,8 @@ class Unit < ApplicationRecord
       displayName: title_for_display,
       link: link,
       lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
-      publishedState: get_published_state
+      publishedState: get_published_state,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
@@ -1870,6 +1875,7 @@ class Unit < ApplicationRecord
       :topic_tags
     ]
     boolean_keys = [
+      :has_unnumbered_lessons,
       :has_verified_resources,
       :project_sharing,
       :tts,

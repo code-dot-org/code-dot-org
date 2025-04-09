@@ -4,10 +4,15 @@ import DSCOFullWidthActionBlock, {
   ActionBlockProps,
 } from '@code-dot-org/component-library/actionBlock/fullWidthActionBlock';
 
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {externalLinkIconProps} from '@/components/common/constants';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
-export type FullWidthActionBlockContentfulProps = ActionBlockProps & {
-  image: ImageAssetEntry;
+export type FullWidthActionBlockContentfulProps = Omit<
+  ActionBlockProps,
+  'image'
+> & {
+  image: ExperienceAsset;
   overline: EntryFields.Text;
   title: EntryFields.Text;
   description: EntryFields.Text;
@@ -36,6 +41,9 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
             text: primaryButton.fields.label,
             href: primaryButton.fields.primaryTarget || '#',
             ariaLabel: primaryButton.fields.ariaLabel || '',
+            iconRight: primaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }
@@ -45,6 +53,9 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
             text: secondaryButton.fields.label,
             href: secondaryButton.fields.primaryTarget || '#',
             ariaLabel: secondaryButton.fields.ariaLabel || '',
+            iconRight: secondaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }

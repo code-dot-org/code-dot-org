@@ -208,8 +208,9 @@ class Lesson < ApplicationRecord
 
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
-    # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1
-    return localized_name unless numbered_lesson?
+    # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1.
+    # We also skip lesson numbering if it is explicitly disabled on the unit.
+    return localized_name unless numbered_lesson? && !script.has_unnumbered_lessons
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
@@ -468,7 +469,8 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedInstructor: user&.verified_instructor?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
+      title: localized_title,
     }
   end
 
@@ -483,7 +485,8 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
-      link: script_lesson_path(script, self)
+      link: script_lesson_path(script, self),
+      title: localized_title,
     }
   end
 
@@ -518,7 +521,8 @@ class Lesson < ApplicationRecord
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
-      studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
+      studentLessonPlanPdfUrl: student_lesson_plan_pdf_url,
+      title: localized_title,
     }
   end
 

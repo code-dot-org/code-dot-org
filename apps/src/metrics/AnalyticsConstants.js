@@ -522,6 +522,8 @@ const EVENTS = {
   CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
   CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE:
     'User changed font size on codebridge editor',
+  CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
+    'User changed font size on codebridge console',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',

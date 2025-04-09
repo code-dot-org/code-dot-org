@@ -60,6 +60,7 @@ class DCDOBase < DynamicConfigBase
       # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
       'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
       'ai-tutor-teacher-nav-v2': DCDO.get('ai-tutor-teacher-nav-v2', true),
+      'music-lab-banner': DCDO.get('music-lab-banner', false),
     }
   end
 end
