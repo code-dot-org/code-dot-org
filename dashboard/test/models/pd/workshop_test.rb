@@ -321,7 +321,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
       subject: nil,
       course_offerings: [] << (create :course_offering),
-      num_facilitators: 1
+      num_facilitators: 1,
+      participant_group_type: 'Regional'
     byo_workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
@@ -528,6 +529,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       num_facilitators: 1,
       location_name: 'Code.org',
       location_address: 'Seattle, WA',
+      participant_group_type: 'Regional',
       sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # with name ending in 'Workshop'
