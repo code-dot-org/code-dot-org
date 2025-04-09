@@ -22,13 +22,11 @@ class ValidationTestResult(TextTestResult):
       self.simplified_results.append({'name': self.getDescription(test), 'result': "PASS"})
 
   def addError(self, test, err):
-      self.errors.append(test, self.parseError(err))
-      self.write_status(test, "ERROR", "E")
+      super(ValidationTestResult, self).addError(test, err)
       self.simplified_results.append({'name': self.getDescription(test), 'result': "ERROR"})
 
   def addFailure(self, test, err):
-      self.failures.append(test, self.parseError(err))
-      self.write_status(test, "FAILURE", "F")
+      super(ValidationTestResult, self).addFailure(test, err)
       self.simplified_results.append({'name': self.getDescription(test), 'result': "FAIL"})
 
   def addSkip(self, test, reason):
@@ -36,21 +34,20 @@ class ValidationTestResult(TextTestResult):
       self.simplified_results.append({'name': self.getDescription(test), 'result': "SKIP"})
 
   def addExpectedFailure(self, test, err):
-      self.expectedFailures.append(test, self.parseError(err))
-      self.write_status(test, "expected failure", "x")
+      super(ValidationTestResult, self).addExpectedFailure(test, err)
       self.simplified_results.append({'name': self.getDescription(test), 'result': "EXPECTED_FAILURE"})
 
   def addUnexpectedSuccess(self, test):
       super(ValidationTestResult, self).addUnexpectedSuccess(test)
       self.simplified_results.append({'name': self.getDescription(test), 'result': "UNEXPECTED_SUCCESS"})
 
+  def _exc_info_to_string(self, err, test):
+      """Convert an exception to a string."""
+      # This is a copy of the original implementation in unittest.TextTestResult
+      # but we don't want to call it because it will print the traceback to the stream.
+      # We just want to return the exception value.
+      return self.parseError(err)
+
   def parseError(self, err):
      exception_type, value, traceback = err
      return value
-  
-  def write_status(self, test, status_long, status_short):
-    if self.showAll:
-      self._write_status(test, status_long)
-    elif self.dots:
-      self.stream.write(status_short)
-      self.stream.flush()

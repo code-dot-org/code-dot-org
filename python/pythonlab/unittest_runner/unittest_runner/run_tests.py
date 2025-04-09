@@ -15,6 +15,7 @@ def run_validation_tests(file_pattern):
           - 'result': The outcome, which is one of the following:
             'PASS', 'FAIL', 'ERROR', 'SKIP', 'EXPECTED_FAILURE', 'UNEXPECTED_SUCCESS'.
   """
+  patchTestCase()
   result = run_tests(file_pattern, ValidationTestResult)
   return result.simplified_results
 
@@ -34,3 +35,6 @@ def run_tests(file_pattern, resultclass):
   test_suite = loader.discover('.', file_pattern)
   runner = unittest.TextTestRunner(verbosity=2, resultclass=resultclass)
   return runner.run(test_suite)
+
+def patchTestCase():
+  unittest.TestCase.longMessage = False
