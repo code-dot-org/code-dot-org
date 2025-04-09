@@ -127,7 +127,7 @@ export class Workshop extends React.Component {
     const {workshopId} = params;
     const isWorkshopAdmin = permission.has(WorkshopAdmin);
     const {workshop, enrollments, loadingEnrollments} = this.state;
-    const {created_at, sessions, state: workshopState} = workshop;
+    const {created_at, sessions, state: workshopState, time_zone} = workshop;
 
     return (
       <Grid>
@@ -143,6 +143,7 @@ export class Workshop extends React.Component {
         <IntroPanel
           workshopId={workshopId}
           workshopState={workshopState}
+          workshopTimezone={time_zone}
           sessions={sessions}
           isAccountRequiredForAttendance={
             workshop['account_required_for_attendance?']
