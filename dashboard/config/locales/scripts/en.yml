@@ -23152,3 +23152,12 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-unnumbered-lessons:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-unnumbered-lessons
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
