@@ -116,6 +116,9 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   React.useEffect(() => {
     if (!_.isEqual(sortableSectionIds, reduxSectionOrder)) {
       dispatch(setSectionOrder(sortableSectionIds));
+      // Update the backend with the new order
+      // This is done in `sectionOrderUtils.ts` but we need to do it here as well
+      // because the order is the only thing that changed here
       HttpClient.put(
         '/user_preference',
         JSON.stringify({sectionOrder: sortableSectionIds}),

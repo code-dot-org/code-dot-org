@@ -13,6 +13,7 @@ import '@testing-library/jest-dom';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionList';
 import teacherSections, {
+  setSectionOrder,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -82,6 +83,7 @@ describe('SectionList', () => {
     store = getStore();
     registerReducers({teacherSections});
     store.dispatch(setSections(serverSections));
+    store.dispatch(setSectionOrder([11, 12, 13, 14]));
   });
 
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
@@ -169,6 +171,29 @@ describe('SectionList', () => {
     });
 
     expect(p1.compareDocumentPosition(p3)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+  });
+
+  it('renders sections in the same order as specified in Redux', async () => {
+    const customOrder = [14, 13, 12, 11];
+    store.dispatch(setSectionOrder(customOrder));
+
+    renderComponent();
+
+    // Alternative verification by checking DOM order
+    const p4 = screen.getByRole('listitem', {name: 'Period 4'});
+    const p3 = screen.getByRole('listitem', {name: 'Period 3'});
+    const p2 = screen.getByRole('listitem', {name: 'Period 2'});
+    const p1 = screen.getByRole('listitem', {name: 'Period 1'});
+
+    expect(p4.compareDocumentPosition(p3)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+    expect(p3.compareDocumentPosition(p2)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+    expect(p2.compareDocumentPosition(p1)).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING
     );
   });

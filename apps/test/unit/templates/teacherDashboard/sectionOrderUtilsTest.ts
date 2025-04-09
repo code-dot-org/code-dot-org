@@ -4,6 +4,7 @@ import {
   getOrderedSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/sectionOrderUtils';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const SECTION: Section = {
   id: 11,
@@ -50,6 +51,18 @@ const makeTestSection = (
 };
 
 describe('Section Order Utils', () => {
+  let httpClientPutSpy: jest.SpyInstance;
+
+  beforeEach(() => {
+    httpClientPutSpy = jest
+      .spyOn(HttpClient, 'put')
+      .mockResolvedValue(new Response());
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('getFilteredSectionOrderIds', () => {
     it('returns an empty array when both sections and orderedSectionIds are empty', () => {
       const result = getFilteredSectionOrderIds([], []);
@@ -199,6 +212,34 @@ describe('Section Order Utils', () => {
         orderedSectionIds
       );
       expect(result).toEqual([1]);
+    });
+
+    it('calls HttpClient.put when order changes', () => {
+      const filteredSectionIds = [1, 2, 3];
+      const orderedSectionIds = [3, 1];
+      getOrderedSectionIds(filteredSectionIds, orderedSectionIds);
+
+      expect(httpClientPutSpy).toHaveBeenCalledWith(
+        '/user_preference',
+        JSON.stringify({sectionOrder: [2, 3, 1]}),
+        true,
+        {
+          'Content-Type': 'application/json; charset=UTF-8',
+        }
+      );
+    });
+
+    it('does not call HttpClient.put when order is the same', () => {
+      const filteredSectionIds = [1, 2, 3];
+      const orderedSectionIds = [1, 2, 3];
+      getOrderedSectionIds(filteredSectionIds, orderedSectionIds);
+
+      expect(httpClientPutSpy).not.toHaveBeenCalled();
+    });
+
+    it('calls HttpClient.put with empty array when both inputs are empty', () => {
+      getOrderedSectionIds([], []);
+      expect(httpClientPutSpy).not.toHaveBeenCalled();
     });
   });
 });

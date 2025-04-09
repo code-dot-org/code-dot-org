@@ -1,14 +1,20 @@
 import _ from 'lodash';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {Section} from './types/teacherSectionTypes';
 
 // Takes filtered section IDs and ordered section IDs and returns a properly ordered list
+// If the results are different from the ordered section IDs, it updates the order in the backend.
 export const getOrderedSectionIds = (
   filteredSectionIds: number[],
   orderedSectionIds: number[]
 ): number[] => {
+  if (_.xor(orderedSectionIds, filteredSectionIds).length === 0) {
+    return orderedSectionIds;
+  }
+
   const sectionsToPrepend = _.difference(filteredSectionIds, orderedSectionIds);
 
   const orderedSectionsFiltered = _.intersection(
@@ -16,7 +22,19 @@ export const getOrderedSectionIds = (
     filteredSectionIds
   );
 
-  return [...sectionsToPrepend, ...orderedSectionsFiltered];
+  const result = [...sectionsToPrepend, ...orderedSectionsFiltered];
+
+  // Need to update when order changes
+  HttpClient.put(
+    '/user_preference',
+    JSON.stringify({sectionOrder: result}),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  return result;
 };
 
 // Returns a list of section IDs with the order from orderedSectionIds and
