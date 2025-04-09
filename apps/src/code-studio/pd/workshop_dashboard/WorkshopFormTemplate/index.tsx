@@ -346,6 +346,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const publish = useCallback(async () => {
     try {
+      setResponseErrors([]);
       const workshopValidationErrors = getWorkshopErrors();
       setWorkshopErrors(workshopValidationErrors);
       const sessionValidationErrors = getSessionErrors();
