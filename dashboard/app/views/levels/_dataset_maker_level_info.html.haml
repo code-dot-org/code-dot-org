@@ -7,15 +7,7 @@
       %li= "level type: #{@level.type}"
       %li= "This level is in #{@level.levels_parent_levels.count} other levels"
       %li= "This level contains #{@level.child_levels.count} other levels"
-      %br
-      - if @level.levels_parent_levels.count > 0
-        %h4 Parent levels
-        %ul
-        - @level.levels_parent_levels.each do |parent_level|
-          %strong= parent_level.key
-          %li= "level id: #{parent_level.id}"
-          %li= "level type: #{parent_level.type}"
-          %br
+    
       - if @level.child_levels.count > 0
         %h4 Child levels
         %ul
