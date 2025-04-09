@@ -4,11 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "career-journeys-elem-b",
+      "show_calendar": true,
+      "tts": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-08 00:18:45 UTC",
+    "serialized_at": "2025-04-08 23:05:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -39,6 +44,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "This lesson introduces students to the wide range of careers that involve computer science and artificial intelligence. Through interactive videos and guided exploration, students learn about real-world jobs that use CS. They are then guided step by step to build their own coding projects using Sprite Lab to present an interactive scene that relates to a career or subject they may be interested in. The lesson wraps up with students reflecting on what they’ve learned and how it connects to their future goals."
       },
       "seeding_key": {
         "lesson.key": "Career Journeys B",
@@ -49,12 +55,42 @@
   ],
   "lesson_activities": [
     {
-      "key": "8b2408fb-dbb9-4deb-8ffa-ad40c7d3e1e6",
+      "key": "a019c173-093c-4d44-9b19-85157f488e3f",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a019c173-093c-4d44-9b19-85157f488e3f",
+        "lesson.key": "Career Journeys B",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-b"
+      }
+    },
+    {
+      "key": "8b2408fb-dbb9-4deb-8ffa-ad40c7d3e1e6",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "8b2408fb-dbb9-4deb-8ffa-ad40c7d3e1e6",
+        "lesson.key": "Career Journeys B",
+        "lesson_group.key": "",
+        "script.name": "career-journey-pilot-b"
+      }
+    },
+    {
+      "key": "d580ef2d-4fe9-4ca5-a764-d55665d79a32",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d580ef2d-4fe9-4ca5-a764-d55665d79a32",
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
         "script.name": "career-journey-pilot-b"
@@ -63,10 +99,42 @@
   ],
   "activity_sections": [
     {
+      "key": "c86b6864-59f2-4523-b5bb-33c589b3e37c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the short video, CS is Everything\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say**: Think about careers that work on ideas and things in the video.",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "c86b6864-59f2-4523-b5bb-33c589b3e37c",
+        "lesson_activity.key": "a019c173-093c-4d44-9b19-85157f488e3f"
+      }
+    },
+    {
+      "key": "fa5c759c-3390-449c-ac08-2ee9b76fd9e1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, let’s discuss! Think silently for a moment, then turn to a partner and answer one of the questions on the slide:\n- What did you like about this video?\n- What are some examples of careers that use CS? \n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:**  Listen to student discussions and encourage deeper thinking.\n\n<i class=\"fa-solid fa-lightbulb\"></i> **Discussion Goal:** Help students connect coding to real-world careers and reflect on their own interests."
+      },
+      "seeding_key": {
+        "activity_section.key": "fa5c759c-3390-449c-ac08-2ee9b76fd9e1",
+        "lesson_activity.key": "a019c173-093c-4d44-9b19-85157f488e3f"
+      }
+    },
+    {
       "key": "5ac55abc-a62e-4d82-9287-885a4001744e",
       "position": 1,
       "properties": {
-        "progression_name": "Career Exploration"
+        "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Transition to exploring more computer science career options.\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Set the timer for four minutes so students know when to move to the next level\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** You are exploring some ideas of careers! Keep in mind what you’re interested in and will want to make your project about! ",
+        "duration": "15",
+        "name": "Career Exploration",
+        "progression_name": "Career Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guiding questions to promote deeper thinking and prepare students to code a small project representing a career they’re interested in.**\n- What would be the most fun part of that job for you? What might be hard?\n- Do you think someone like you could do this job? Why or why not?\n- Is there a job or interest you’d like to show in your project?\nWhat could your project include to tell others about this interest or career?\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5ac55abc-a62e-4d82-9287-885a4001744e",
@@ -77,11 +145,56 @@
       "key": "f7c411ba-23e2-4e60-b1bf-2dbf11256c4d",
       "position": 2,
       "properties": {
-        "progression_name": "Build Your Project"
+        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:** To transition into using Sprite Lab. Introduce sprite and event as the two key computer science concepts they will use in their project. \n\n**Show slide:** Tips for using Sprite Lab\n",
+        "duration": "15",
+        "name": "Code your Project ",
+        "progression_name": "Build Your Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Differentiation:** Level 9 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 9 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f7c411ba-23e2-4e60-b1bf-2dbf11256c4d",
         "lesson_activity.key": "8b2408fb-dbb9-4deb-8ffa-ad40c7d3e1e6"
+      }
+    },
+    {
+      "key": "b6e948e3-819c-4e74-a9b1-d8675fa35eac",
+      "position": 3,
+      "properties": {
+        "duration": "5",
+        "name": "Share your project",
+        "progression_name": "Share out"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6e948e3-819c-4e74-a9b1-d8675fa35eac",
+        "lesson_activity.key": "8b2408fb-dbb9-4deb-8ffa-ad40c7d3e1e6"
+      }
+    },
+    {
+      "key": "6dec6b8f-b13d-4b54-bba7-5ab7fa9651d3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Use the guiding questions in the notes of slide 16 to support students as you move around the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "6dec6b8f-b13d-4b54-bba7-5ab7fa9651d3",
+        "lesson_activity.key": "8b2408fb-dbb9-4deb-8ffa-ad40c7d3e1e6"
+      }
+    },
+    {
+      "key": "6a1a1931-788d-465f-a289-0ab30917122e",
+      "position": 1,
+      "properties": {
+        "description": "☑️ Do This: Take some time to provide feedback on the lesson and learning experience. ",
+        "progression_name": "Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a1a1931-788d-465f-a289-0ab30917122e",
+        "lesson_activity.key": "d580ef2d-4fe9-4ca5-a764-d55665d79a32"
       }
     }
   ],
@@ -92,7 +205,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Career Exploration"
+        "progression": "Intro Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -102,7 +215,7 @@
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
         "script.name": "career-journey-pilot-b",
-        "activity_section.key": "5ac55abc-a62e-4d82-9287-885a4001744e"
+        "activity_section.key": "c86b6864-59f2-4523-b5bb-33c589b3e37c"
       },
       "level_keys": [
         "testB-elem-career-journeys-video_b"
@@ -111,9 +224,12 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-panels_b"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -133,9 +249,12 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-videos_b"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -155,9 +274,12 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-projects_b"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -180,6 +302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-plan_b"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -202,6 +327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-sprite-location_b"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -224,6 +352,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-backgrounds_b"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -246,6 +377,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-event-say_b"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -268,6 +402,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-extra-skills_b"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -287,10 +424,10 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Project"
+        "progression": "Share out"
       },
       "bonus": false,
       "seeding_key": {
@@ -300,7 +437,7 @@
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
         "script.name": "career-journey-pilot-b",
-        "activity_section.key": "f7c411ba-23e2-4e60-b1bf-2dbf11256c4d"
+        "activity_section.key": "b6e948e3-819c-4e74-a9b1-d8675fa35eac"
       },
       "level_keys": [
         "testB-elem-career-journeys-share_b"
@@ -309,10 +446,10 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Build Your Project"
+        "progression": "Lesson Survey"
       },
       "bonus": false,
       "seeding_key": {
@@ -322,7 +459,7 @@
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
         "script.name": "career-journey-pilot-b",
-        "activity_section.key": "f7c411ba-23e2-4e60-b1bf-2dbf11256c4d"
+        "activity_section.key": "6a1a1931-788d-465f-a289-0ab30917122e"
       },
       "level_keys": [
         "Version B Survey_b"
@@ -339,7 +476,7 @@
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
         "script.name": "career-journey-pilot-b",
-        "activity_section.key": "5ac55abc-a62e-4d82-9287-885a4001744e"
+        "activity_section.key": "c86b6864-59f2-4523-b5bb-33c589b3e37c"
       }
     },
     {
@@ -447,7 +584,7 @@
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
         "script.name": "career-journey-pilot-b",
-        "activity_section.key": "f7c411ba-23e2-4e60-b1bf-2dbf11256c4d"
+        "activity_section.key": "b6e948e3-819c-4e74-a9b1-d8675fa35eac"
       }
     },
     {
@@ -459,15 +596,32 @@
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
         "script.name": "career-journey-pilot-b",
-        "activity_section.key": "f7c411ba-23e2-4e60-b1bf-2dbf11256c4d"
+        "activity_section.key": "6a1a1931-788d-465f-a289-0ab30917122e"
       }
     }
   ],
   "resources": [
-
+    {
+      "name": "Helpful Hints in Sprite Lab",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/edit#slide=id.g1b38224bb2a_0_20",
+      "key": "helpful_hints_in_sprite_lab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -476,16 +630,117 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "career",
+      "word": "Career",
+      "definition": "A job you work toward by building skills and learning new things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "key": "computer_science",
+      "word": "Computer Science",
+      "definition": "Using computers to solve problems and create things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action, like a key press, that causes something in your program to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "An object on the screen with a location, size, and appearance.\t",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "52790cfc-a48f-402b-81cc-22e8bcef3bd2",
+      "properties": {
+        "description": "Explore and describe careers that use computer science"
+      },
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "objective.key": "52790cfc-a48f-402b-81cc-22e8bcef3bd2"
+      }
+    },
+    {
+      "key": "b6b54af4-4e40-431a-ba77-8b84dcd10e6d",
+      "properties": {
+        "description": "Design and build an interactive project"
+      },
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "objective.key": "b6b54af4-4e40-431a-ba77-8b84dcd10e6d"
+      }
+    },
+    {
+      "key": "b7a28e65-025c-4ec7-b09b-9302f7a1f59b",
+      "properties": {
+        "description": "Practice basic coding skills"
+      },
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "objective.key": "b7a28e65-025c-4ec7-b09b-9302f7a1f59b"
+      }
+    },
+    {
+      "key": "c279002c-4e13-4dd3-8fbe-389a6f356282",
+      "properties": {
+        "description": "Present a project and explain the coding skills used"
+      },
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "objective.key": "c279002c-4e13-4dd3-8fbe-389a6f356282"
+      }
+    }
   ],
   "lessons_standards": [
 

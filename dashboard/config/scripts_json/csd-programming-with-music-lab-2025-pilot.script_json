@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-07 20:59:44 UTC",
+    "serialized_at": "2025-04-08 20:42:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1043,7 +1043,7 @@
       "key": "97c3eb25-6cd9-4446-93e0-34f5838dff78",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [Word Search](https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/copy) to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [Word Search](https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/view) to each student, face down. Make sure students don't start the word search ahead of time.\n"
       },
       "seeding_key": {
         "activity_section.key": "97c3eb25-6cd9-4446-93e0-34f5838dff78",
@@ -1213,7 +1213,7 @@
       "key": "4f9218ff-1d7c-4408-a619-e5f4085590ab",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [activity guide](https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/copy) to each student. ",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [activity guide](https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view) to each student. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -7966,7 +7966,7 @@
     },
     {
       "name": "Client Stories",
-      "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/copy",
+      "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view",
       "key": "client_stories",
       "properties": {
         "audience": "Student",
@@ -8112,7 +8112,7 @@
     },
     {
       "name": "Music Word Search",
-      "url": "https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/copy",
+      "url": "https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/view",
       "key": "music_word_search",
       "properties": {
         "audience": "Student",

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-06 16:44:33 UTC",
+    "serialized_at": "2025-04-08 23:08:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1110,7 +1110,7 @@
       "key": "e1e95721-7365-462c-bd7f-30da1016135e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***range***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***average***. Explain how spreadsheets assist with calculating averages even when it might be hard to do this manually.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. ",
         "progression_name": "Read 3: Questions"
       },
       "seeding_key": {
@@ -1163,9 +1163,22 @@
       }
     },
     {
-      "key": "d9fe0ede-923c-4fc8-b636-eb1417ac9528",
+      "key": "60deda90-8d7f-4d8d-9191-f689a88283da",
       "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what AI data analytics tools can do to help make sense of large datasets. Then, walk through the YouTube example to show how AI identifies patterns and makes predictions."
+      },
+      "seeding_key": {
+        "activity_section.key": "60deda90-8d7f-4d8d-9191-f689a88283da",
+        "lesson_activity.key": "20b7fe8f-f3b3-4ca4-81a3-127065749250"
+      }
+    },
+    {
+      "key": "d9fe0ede-923c-4fc8-b636-eb1417ac9528",
+      "position": 10,
+      "properties": {
+        "description": "You’ve started thinking like a data scientist. Now let’s bring in AI as a thinking partner and compare what it notices about the dataset.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "d9fe0ede-923c-4fc8-b636-eb1417ac9528",
@@ -1173,10 +1186,22 @@
       }
     },
     {
-      "key": "e535f5d6-45ce-4f29-a909-5915a8695419",
-      "position": 10,
+      "key": "45a1c0ad-3abc-4aa1-b749-c463f4050244",
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Answering a Data Question activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students that now that they’re done with the Three Reads, they’re ready to explore the full data set. Tell students that their job is to see if they can answer the data question: How much pizza should we order for a school party? Let students know that the full data set includes survey responses from hundreds of students. Prepare students by telling them that while more data can be necessary to answer a question, it can also be more challenging to work with, which is why data scientists use computers to work with large sets of data.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to access the Pizza Slice data set.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 4 to analyze the data using AI Chat. ",
+        "progression_name": "Analyze Data with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "45a1c0ad-3abc-4aa1-b749-c463f4050244",
+        "lesson_activity.key": "20b7fe8f-f3b3-4ca4-81a3-127065749250"
+      }
+    },
+    {
+      "key": "e535f5d6-45ce-4f29-a909-5915a8695419",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Answering a Data Question activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students that now that they’re done with the Three Reads, they’re ready to explore the full data set. Tell students that their job is to see if they can answer the data question: How much pizza should we order for a school party? Let students know that the full data set includes survey responses from hundreds of students. Prepare students by telling them that while more data can be necessary to answer a question, it can also be more challenging to work with, which is why data scientists use computers to work with large sets of data.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to access the Pizza Slice data set.",
         "progression_name": "Pizza Slice Data Set",
         "tips": [
           {
@@ -1192,7 +1217,7 @@
     },
     {
       "key": "72eaefc4-dfbb-46cf-9ba5-4421dad1a6c4",
-      "position": 11,
+      "position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -1201,8 +1226,28 @@
       }
     },
     {
+      "key": "04a0bac1-f24d-4a89-a8a7-83a066209eaa",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "04a0bac1-f24d-4a89-a8a7-83a066209eaa",
+        "lesson_activity.key": "20b7fe8f-f3b3-4ca4-81a3-127065749250"
+      }
+    },
+    {
+      "key": "392ac3d0-bf5b-4c29-b851-bbd8c6772f45",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "392ac3d0-bf5b-4c29-b851-bbd8c6772f45",
+        "lesson_activity.key": "20b7fe8f-f3b3-4ca4-81a3-127065749250"
+      }
+    },
+    {
       "key": "18481e73-5caa-4d5e-aa65-5dd06635bf9b",
-      "position": 12,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How much pizza should we order for a school party?*\n\n* Use a Think, Pair, Share to close out this activity with this question from the activity guide.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to see where your students are at when it comes to using data to answer questions like this one. Remind them that their goal today isn’t really to figure out how much pizza to order--but to be able to understand how to read information in a spreadsheet, because spreadsheets are how data scientists organize large amounts of data using computers."
       },
@@ -1279,7 +1324,7 @@
       "key": "1492f22a-bfc2-47c3-a1e2-0295458aac97",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the three components of data ethics.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***bias***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair several sticky notes and a pair of scissors.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students group the datasets and discuss how they might group them based on how the data might have been collected. They should use sticky notes to label their classifications.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Challenge students to come up with thorough descriptions of the collection methods that they are grouping together on their sticky notes. Remind them that it is alright to change their minds and to reorganize as new realizations and discoveries come to light. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the three components of data ethics.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How might AI tools be used to collect this kind of data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify ways AI can collect data automatically—through apps, sensors, social media, or surveillance—and describe how that might look in real-world contexts.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What ethical concerns come up when AI is involved in data collection?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should raise ethical concerns such as lack of consent, invasion of privacy, potential bias in how AI collects or interprets data, and misuse of sensitive information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***bias***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair several sticky notes and a pair of scissors.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students group the datasets and discuss how they might group them based on how the data might have been collected. They should use sticky notes to label their classifications.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Challenge students to come up with thorough descriptions of the collection methods that they are grouping together on their sticky notes. Remind them that it is alright to change their minds and to reorganize as new realizations and discoveries come to light. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1306,7 +1351,7 @@
       "key": "2fb49b0f-40d4-4218-93c6-c2fe713d97b6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What method of data collection might the AI in YouTube recommendations use, and what ethical concerns are raised?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are a variety of different ways in which the AI recommendation engine in YouTube might collect data. Some of it is voluntary– thumbs up or down, subscribing to content creators– and some of it is hidden from the user– watch history, clicks, and time spent on videos. This might raise a variety of different ethical concerns such as a lack of transparency for how the algorithm decides what to offer. It might profile users based on their interactions and the data that is collected without the user being able to see how they are being represented in the system. Also, there exists the possibility that a user might be shown videos with the intent to influence or affect their opinions and behavior without consent."
       },
       "seeding_key": {
         "activity_section.key": "2fb49b0f-40d4-4218-93c6-c2fe713d97b6",
@@ -1438,7 +1483,7 @@
       "key": "7e1f886f-5775-4f76-b983-a914bf27fd8b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data rights***.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you download a new app or sign up at a new website, do you read the Privacy Policy or simply click Accept and move on?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. The first activity will have students examining some statements that are seen in the privacy policies of popular applications. This serves as a focusing question for the activity.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student one of the Privacy Policy Statements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students find a partner. Students should take turns reading the privacy policy statement and discussing the reflection question. After the discussion, students should mark an X on the line to reflect how they feel about the privacy policy statement. Students will then switch cards with one another, find another partner, and repeat the process.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students participate in this activity, listen to their discussion and encourage them to dive deeper into topics that might arise. While responses will certainly vary, students might be surprised at how long companies can keep their data, wonder about what kinds of information companies choose to store, question the need to share information with others, and feel as though the policy statements give too much freedom to companies. The pace of the activity should be quick enough so that each discussion should be brief, but impactful. If there are an odd number of students, then you might consider having students form small groups of three.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did these privacy policy statements affect your perception of your personal data rights?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students responses to this prompt will vary. The following themes might develop from discussion:\n* Students might have increased awareness of how much data that they are giving away\n* They might express concerns about the possible misuse of their personal data\n* Students might feel as though there is little that they can do to affect the ways that their data is being collected and used\n* There can be an increased urge to understand how data is collected and to protect their privacy in a more active way"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data rights***.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you download a new app or sign up at a new website, do you read the Privacy Policy or simply click Accept and move on?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. The first activity will have students examining some statements that are seen in the privacy policies of popular applications. This serves as a focusing question for the activity.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do AI tools like voice assistants or facial recognition systems raise new data rights questions?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students should recognize that AI tools can collect sensitive personal data (like voice or facial features), sometimes continuously, and this raises concerns about consent, storage, and how that data is used or shared.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Should AI systems be required to forget your data if you delete your account?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students should consider that even after deletion, AI systems may retain patterns learned from user data. Students may raise questions about whether true deletion is possible and what ethical responsibility companies have.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student one of the Privacy Policy Statements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students find a partner. Students should take turns reading the privacy policy statement and discussing the reflection question. After the discussion, students should mark an X on the line to reflect how they feel about the privacy policy statement. Students will then switch cards with one another, find another partner, and repeat the process.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students participate in this activity, listen to their discussion and encourage them to dive deeper into topics that might arise. While responses will certainly vary, students might be surprised at how long companies can keep their data, wonder about what kinds of information companies choose to store, question the need to share information with others, and feel as though the policy statements give too much freedom to companies. The pace of the activity should be quick enough so that each discussion should be brief, but impactful. If there are an odd number of students, then you might consider having students form small groups of three.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did these privacy policy statements affect your perception of your personal data rights?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students responses to this prompt will vary. The following themes might develop from discussion:\n* Students might have increased awareness of how much data that they are giving away\n* They might express concerns about the possible misuse of their personal data\n* Students might feel as though there is little that they can do to affect the ways that their data is being collected and used\n* There can be an increased urge to understand how data is collected and to protect their privacy in a more active way"
       },
       "seeding_key": {
         "activity_section.key": "7e1f886f-5775-4f76-b983-a914bf27fd8b",
@@ -3476,6 +3521,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Analyze Data with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data_science_lesson2_ai_chat"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "45a1c0ad-3abc-4aa1-b749-c463f4050244"
+      },
+      "level_keys": [
+        "data_science_lesson2_ai_chat"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "data-science-ch1-lesson2-level4_2025"
         ],
@@ -3496,7 +3563,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3521,7 +3588,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3546,7 +3613,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3571,7 +3638,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3596,7 +3663,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3621,7 +3688,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3646,7 +3713,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3671,7 +3738,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3696,11 +3763,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci - Ch1L5 match criteria_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3717,7 +3787,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3742,8 +3812,30 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Expository Data Story"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data_science_lesson6_ai_chat"
+        ],
+        "lesson.key": "Data Storytelling",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "13626318-02d3-4d1c-94b1-48edb6c54e10"
+      },
+      "level_keys": [
+        "data_science_lesson6_ai_chat"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3767,8 +3859,30 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 3,
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Persuasive Data Story"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data_science_lesson6_ai_chat_2"
+        ],
+        "lesson.key": "Data Storytelling",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "6fdbd32a-70ab-4cfe-ba39-992a4952c3e8"
+      },
+      "level_keys": [
+        "data_science_lesson6_ai_chat_2"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3792,7 +3906,29 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Party Planning Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data_science_lesson6_ai_chat_3"
+        ],
+        "lesson.key": "Data Storytelling",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "0fc26eb2-a29c-463c-897c-2e93796f0d24"
+      },
+      "level_keys": [
+        "data_science_lesson6_ai_chat_3"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3817,7 +3953,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3842,7 +3978,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3867,7 +4003,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3892,7 +4028,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3917,7 +4053,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3942,7 +4078,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3967,7 +4103,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3992,7 +4128,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4017,7 +4153,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4042,11 +4178,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4064,11 +4203,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4086,11 +4228,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4108,7 +4253,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4133,7 +4278,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4158,7 +4303,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4183,7 +4328,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4208,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4233,7 +4378,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4258,7 +4403,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4283,7 +4428,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4308,7 +4453,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4333,7 +4478,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 46,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4358,7 +4503,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4383,7 +4528,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4408,7 +4553,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4433,7 +4578,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4458,7 +4603,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4554,6 +4699,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif6-2025",
         "activity_section.key": "e1e95721-7365-462c-bd7f-30da1016135e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data_science_lesson2_ai_chat",
+        "script_level.level_keys": [
+          "data_science_lesson2_ai_chat"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "45a1c0ad-3abc-4aa1-b749-c463f4050244"
       }
     },
     {
@@ -4690,6 +4847,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data_science_lesson6_ai_chat",
+        "script_level.level_keys": [
+          "data_science_lesson6_ai_chat"
+        ],
+        "lesson.key": "Data Storytelling",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "13626318-02d3-4d1c-94b1-48edb6c54e10"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-science-ch1-lesson6-level2_2025",
         "script_level.level_keys": [
           "data-science-ch1-lesson6-level2_2025"
@@ -4702,9 +4871,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "data_science_lesson6_ai_chat_2",
+        "script_level.level_keys": [
+          "data_science_lesson6_ai_chat_2"
+        ],
+        "lesson.key": "Data Storytelling",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "6fdbd32a-70ab-4cfe-ba39-992a4952c3e8"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-science-ch1-lesson6-level3_2025",
         "script_level.level_keys": [
           "data-science-ch1-lesson6-level3_2025"
+        ],
+        "lesson.key": "Data Storytelling",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif6-2025",
+        "activity_section.key": "0fc26eb2-a29c-463c-897c-2e93796f0d24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data_science_lesson6_ai_chat_3",
+        "script_level.level_keys": [
+          "data_science_lesson6_ai_chat_3"
         ],
         "lesson.key": "Data Storytelling",
         "lesson_group.key": "lessonGroup-3",
