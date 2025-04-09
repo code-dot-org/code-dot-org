@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_09_155126) do
+ActiveRecord::Schema.define(version: 2025_04_09_201643) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2108,6 +2108,8 @@ ActiveRecord::Schema.define(version: 2025_04_09_155126) do
     t.string "participant_type", default: "student", null: false
     t.bigint "lti_integration_id"
     t.boolean "ai_tutor_enabled", default: false
+    t.integer "avatar_color"
+    t.integer "avatar_emoji"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
