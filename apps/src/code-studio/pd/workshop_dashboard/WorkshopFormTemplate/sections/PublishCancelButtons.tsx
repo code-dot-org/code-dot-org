@@ -12,7 +12,7 @@ export const PublishCancelButtons: FC<PublishCancelButtonsProps> = ({
 }) => {
   return (
     <div className={classNames(commonStyles.row, commonStyles.formSubmitRow)}>
-      <Button onClick={() => publish()} text="Publish" />
+      <Button onClick={publish} text="Publish" />
       <Button
         onClick={cancel}
         text="Cancel and exit"
