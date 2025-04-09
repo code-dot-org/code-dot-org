@@ -294,7 +294,7 @@ steps:
     settings:
       debug: true
       urls:
-        - https://api.github.com/repos/code-dot-org/test-workflow-dispatch/actions/workflows/on-droneci-complete.yml/dispatches
+        - https://api.github.com/repos/code-dot-org/code-dot-org/actions/workflows/on-droneci-complete.yml/dispatches
       username: deploy-code-org
       password:
         from_secret: on-droneci-complete-github-token
@@ -349,6 +349,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 5e996f01caa336f7eb604da445b5f11d7a7c9ef38a0ceff1dd6cac2f68b290a1
+hmac: e3866208bfafe0736d0ec65508914748f70f4e47b59ab681a33370f9f1533f38
 
 ...
