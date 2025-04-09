@@ -26,7 +26,6 @@ import {removeSectionOrThrow} from '@cdo/apps/templates/teacherDashboard/teacher
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import i18n from '@cdo/locale';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -116,8 +115,14 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   );
 
   React.useEffect(() => {
-    sortableSectionIds;
-    // TODO(lfm): Update the order of sections in the backend
+    HttpClient.put(
+      '/user_preference',
+      JSON.stringify({sectionOrder: sortableSectionIds}),
+      true,
+      {
+        'Content-Type': 'application/json; charset=UTF-8',
+      }
+    );
   }, [sortableSectionIds]);
 
   const onDeleteClickCallback = (sectionId: number) => {
@@ -135,7 +140,6 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
         setSectionToDelete(NO_SECTION_ID);
       })
       .catch((error: Error) => {
-        alert(i18n.unexpectedError());
         console.error(error);
         setSectionToDelete(NO_SECTION_ID);
       });
