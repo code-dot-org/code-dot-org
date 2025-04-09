@@ -13,6 +13,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   before_perform do |job|
+    puts job
     request = job.arguments.first[:request]
     request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:RUNNING])
     report_job_start(request)
@@ -24,7 +25,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   # Catch any exceptions that occur during the job and update the request status accordingly
-  rescue_from Exception do |exception|
+  rescue_from StandardError do |exception|
     if rack_env?(:development)
       puts "AichatRequestChatCompletionJob Error: #{exception.full_message}"
     end
@@ -41,8 +42,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # Report metrics for the failed job (after_perform doesn't run on failure)
     report_job_finish(request)
 
-    # Raise an exception to notify our system of the failed job. Make sure not to exceed the delayed_jobs.last_error column size.
-    raise "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}. Context: #{request.to_json[0..MAX_REQUEST_LOG_LENGTH]}"
+    # Re-raise error to notify our system of the failed job.
+    raise
   end
 
   def perform(request:, locale:)
