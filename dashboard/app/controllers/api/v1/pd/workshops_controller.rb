@@ -291,22 +291,9 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     supplied_facilitator_ids = ws_params.delete(:facilitators) || ws_params.delete("facilitators")
     supplied_facilitator_ids = [] if supplied_facilitator_ids.blank?
 
-    existing_facilitator_ids = @workshop.facilitators.map(&:id)
-    new_facilitator_ids = supplied_facilitator_ids - existing_facilitator_ids
-    facilitator_ids_to_remove = existing_facilitator_ids - supplied_facilitator_ids
+    valid_facilitators = User.joins(:permissions).where(id: supplied_facilitator_ids, user_permissions: {permission: 'facilitator'}).distinct
 
-    facilitator_ids_to_remove.each do |facilitator_id|
-      @workshop.facilitators.delete(facilitator_id)
-    end
-
-    new_facilitator_ids.each do |facilitator_id|
-      facilitator = User.find_by(id: facilitator_id)
-
-      # Since these ids are supplied by the caller, make sure they each actually represent a real user
-      # and that the user is actually a facilitator before adding.
-      next unless facilitator&.facilitator?
-      @workshop.facilitators << facilitator
-    end
+    @workshop.facilitators = valid_facilitators
   end
 
   private def adjust_course_offerings
@@ -315,7 +302,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     return unless ws_params.key?(:course_offerings) ||  ws_params.key?("course_offerings")
     supplied_course_offering_ids = ws_params.delete(:course_offerings) || ws_params.delete("course_offerings")
     supplied_course_offering_ids = [] if supplied_course_offering_ids.blank?
-    @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
+    @workshop.course_offerings = CourseOffering.where(id: supplied_course_offering_ids)
   end
 
   private def adjust_grades
@@ -351,7 +338,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :prereq,
       :hidden,
       :grades,
-      :time_zone
+      :time_zone,
+      :legacy
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner
