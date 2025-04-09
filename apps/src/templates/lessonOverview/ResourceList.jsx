@@ -115,6 +115,7 @@ export default class ResourceList extends Component {
         onClick={e => {
           this.openResource(e, resource);
         }}
+        data-lz-url
         href={resource.url}
       >
         {resource.name}
@@ -127,6 +128,7 @@ export default class ResourceList extends Component {
             onClick={e => {
               this.downloadResource(e, resource);
             }}
+            data-lz-url
             href={resource.download_url}
           >{`${i18n.download()}`}</a>
           {')'}
@@ -143,6 +145,7 @@ export default class ResourceList extends Component {
           >
             <a
               href={gDocsPdfUrl(resource.url)}
+              data-lz-url
               onClick={e => {
                 this.sendLinkVisitedEvent(resource, `copyPdf`);
               }}
@@ -151,6 +154,7 @@ export default class ResourceList extends Component {
             </a>
             <a
               href={gDocsMsOfficeUrl(resource.url)}
+              data-lz-url
               onClick={e => {
                 this.sendLinkVisitedEvent(resource, `copyMsOffice`);
               }}
@@ -159,6 +163,7 @@ export default class ResourceList extends Component {
             </a>
             <a
               href={gDocsCopyUrl(resource.url)}
+              data-lz-url
               onClick={e => {
                 this.sendLinkVisitedEvent(resource, `copyGDocs`);
               }}

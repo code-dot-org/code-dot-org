@@ -6,7 +6,7 @@
   / Force English in both JS-land and Rails-land
   - I18n.locale = I18n.default_locale
   - request.locale = I18n.default_locale.to_s
-  %script{id: "localize-js", src: "https://global.localizecdn.com/localize.js", data: { locale: I18n.locale, blah: "foo", jslocale: request.env['cdo.locale'], path: request.path, prefixes: { "MlKri360o3v2T": csd_prefixes, "I0P5RaUEW8s5h": donor_prefixes, "3vPUSGZrdllW2": unplugged_prefixes, }.to_json}}
+  %script{id: "localize-js", src: "https://global.localizecdn.com/localize.508.js", data: { locale: I18n.locale, blah: "foo", jslocale: request.env['cdo.locale'], path: request.path, prefixes: { "MlKri360o3v2T": csd_prefixes, "I0P5RaUEW8s5h": donor_prefixes, "3vPUSGZrdllW2": unplugged_prefixes, }.to_json}}
   :javascript
     // Currently, restrict the localize widget to these pages
     window.forcedLocale = "en-US";
