@@ -63,15 +63,13 @@ const InnerFileBrowser = React.memo(
                     enableMenu={!isReadOnly && !dragData?.id}
                   />
                   {f.open && (
-                    <ul>
-                      <InnerFileBrowser
-                        folders={folders}
-                        parentId={f.id}
-                        files={files}
-                        setFileType={setFileType}
-                        appName={appName}
-                      />
-                    </ul>
+                    <InnerFileBrowser
+                      folders={folders}
+                      parentId={f.id}
+                      files={files}
+                      setFileType={setFileType}
+                      appName={appName}
+                    />
                   )}
                 </MaybeDraggable>
               </Droppable>
