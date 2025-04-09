@@ -133,6 +133,7 @@ export interface InitProgressPayload {
   unitTitle: string | null;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  unitHasUnnumberedLessons: boolean;
   courseId: number | null;
   courseVersionId: number | undefined;
   isLessonExtras: boolean;

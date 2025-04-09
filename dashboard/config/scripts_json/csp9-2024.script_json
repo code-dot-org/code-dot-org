@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 21:12:52 UTC",
+    "serialized_at": "2025-04-08 14:40:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1298,8 +1298,8 @@
   ],
   "resources": [
     {
-      "name": "[KEY] Create PT Survival Guide 23-24",
-      "url": "https://docs.google.com/document/d/1W2Rr1AaABirBXR2leyUsKct-CJSQu8PbutRzSYxKw34/edit?usp=sharing",
+      "name": "[KEY] Create PT Survival Guide",
+      "url": "https://docs.google.com/document/d/1W2Rr1AaABirBXR2leyUsKct-CJSQu8PbutRzSYxKw34/",
       "key": "_key_create_pt_survival_guide_23-24",
       "properties": {
         "audience": "Verified Teacher",
@@ -1488,8 +1488,8 @@
       }
     },
     {
-      "name": "Create PT Survival Guide 23-24",
-      "url": "https://docs.google.com/document/d/1TgVzXFCMqLLu8U2wHCWfj6rC9yUSBAWLOsdaEV8xxF8/edit?usp=sharing",
+      "name": "Create PT Survival Guide",
+      "url": "https://docs.google.com/document/d/1TgVzXFCMqLLu8U2wHCWfj6rC9yUSBAWLOsdaEV8xxF8/",
       "key": "create_pt_survival_guide_23-24",
       "properties": {
         "audience": "Student",

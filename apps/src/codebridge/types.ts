@@ -32,15 +32,7 @@ export type SideBarItem = {
 };
 
 export type ConfigType = {
-  activeLeftNav: string;
-  sideBar: SideBarItem[];
-  instructions?: string;
-  Instructions?: () => JSX.Element;
   defaultTheme?: EditorTheme;
-  leftNav: LeftNavElement[];
-  gridLayout?: string;
-  gridLayoutRows?: string;
-  gridLayoutColumns?: string;
   editableFileTypes: string[];
   previewFileTypes?: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};

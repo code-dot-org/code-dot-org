@@ -82,12 +82,7 @@ class StudentLessonOverview extends Component {
             viewAs={ViewType.Participant}
           />
         )}
-        <h1>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.displayName,
-          })}
-        </h1>
+        <h1>{lesson.title}</h1>
         {lesson.overview && (
           <div>
             <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>

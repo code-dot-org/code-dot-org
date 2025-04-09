@@ -10,6 +10,7 @@ const assertions = {
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
   'link-text': 'off', // re-enable after CMS-497
+  'meta-description': 'off', // Substituted by equivalent test in 'All The Things' UI Test.
 };
 
 if (process.env.STAGE !== 'production') {
