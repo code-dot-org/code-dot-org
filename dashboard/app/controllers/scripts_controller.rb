@@ -109,7 +109,7 @@ class ScriptsController < ApplicationController
     @canonical_url = CDO.studio_url(link) if @script.original_unit_group&.single_unit_course? && link
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
-      @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.original_unit_group)}
+      @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
     end
   end
 
