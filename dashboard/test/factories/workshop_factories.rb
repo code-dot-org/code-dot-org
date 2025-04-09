@@ -35,6 +35,9 @@ FactoryBot.define do
     capacity {10}
     on_map {true}
     funded {false}
+    name {'Workshop name'}
+    description {'Workshop description'}
+    grades {['12']}
 
     #
     # Traits
