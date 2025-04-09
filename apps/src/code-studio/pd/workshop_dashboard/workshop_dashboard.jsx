@@ -90,8 +90,8 @@ const routeConfigs = [
   {
     path: 'workshops/:workshopId/edit',
     breadcrumbs: 'Workshops,Edit Workshop',
-    component: Workshop,
-    props: {view: 'edit'},
+    component: WorkshopFormTemplate,
+    noRouter: true,
   },
   {
     path: 'workshops/:workshopId/attendance',
