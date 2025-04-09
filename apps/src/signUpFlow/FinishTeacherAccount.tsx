@@ -17,7 +17,7 @@ import React, {useState, useEffect, useMemo} from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import StatsigSessionReplay, {
-  REPLAY_MASK_CLASS,
+  REPLAY_BLOCK_CLASS,
 } from '@cdo/apps/metrics/StatsigSessionReplay';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -286,7 +286,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               value={name}
               placeholder={locale.msCoder()}
               onChange={onNameChange}
-              className={REPLAY_MASK_CLASS}
+              className={REPLAY_BLOCK_CLASS}
             />
             <BodyThreeText className={style.displayNameSubtext}>
               {locale.this_is_what_your_students_will_see()}

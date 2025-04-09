@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
-import {REPLAY_MASK_CLASS} from '@cdo/apps/metrics/StatsigSessionReplay';
+import {REPLAY_BLOCK_CLASS} from '@cdo/apps/metrics/StatsigSessionReplay';
 import {
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
@@ -97,14 +97,12 @@ export default function SchoolDataInputs({
 
   const computedStyleClass = classNames(
     style.schoolAssociationWrapper,
-    containerClassName
+    containerClassName,
+    REPLAY_BLOCK_CLASS
   );
 
   return (
-    <div
-      id={SCHOOL_INFO_ID}
-      className={`${computedStyleClass} ${REPLAY_MASK_CLASS}`}
-    >
+    <div id={SCHOOL_INFO_ID} className={`${computedStyleClass}`}>
       {includeHeaders && (
         <div className={style.headerContainer}>
           <Heading2>{i18n.censusHeading()}</Heading2>
