@@ -286,16 +286,12 @@ trigger:
 kind: pipeline
 type: docker
 name: on-droneci-complete
-# depends_on:
-#   - unit
-#   - ui
+depends_on:
+  - unit
+  - ui
 clone:
   disable: true
 steps:
-  - name: sleep-16-minutes
-    image: alpine
-    commands:
-      - sleep 960
   - name: trigger-github-actions
     image: plugins/webhook
     settings:
@@ -354,6 +350,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 8cdf9ce9f11c7a2efefa2e68d39362bfa34c3e9c8c1a22ca907be32d4d8744b3
+hmac: 90de7b1ffa492a2e72fa742b0c4442c1f9dd953c5494eca5d8e05b1d53c6c108
 
 ...
