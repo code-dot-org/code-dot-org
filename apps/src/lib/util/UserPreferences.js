@@ -1,6 +1,8 @@
 import {Record} from 'immutable';
 import $ from 'jquery';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 export default class UserPreferences extends Record({userId: 'me'}) {
   /**
    * Save the using_text_mode user preference
@@ -89,5 +91,51 @@ export default class UserPreferences extends Record({userId: 'me'}) {
     return $.getJSON(`/api/v1/users/${this.userId}/mute_music`).then(
       response => response.mute_music
     );
+  }
+
+  /**
+   * Save the user's console font size selection
+   * @param {string} fontSize
+   * @param {string} appName
+   * @param {string} field either 'consoleFontSize' or 'editorFontSize'
+   */
+  setFontSize(fontSize, appName, field) {
+    const body = {
+      [field]: {
+        [appName]: fontSize,
+      },
+    };
+
+    HttpClient.put('/user_preference', JSON.stringify(body), true, {
+      'Content-Type': 'application/json',
+    });
+  }
+
+  /**
+   * Fetch the user's editor font size selection
+   * @param {string} fontSize
+   * @param {string} appType
+   */
+  async getConsoleFontSize(appName) {
+    const consoleFontSizeResponse = await HttpClient.fetchJson(
+      '/user_preference/font_size/console'
+    );
+    const consoleFontSize =
+      consoleFontSizeResponse.value.console_font_size[appName];
+    return consoleFontSize;
+  }
+
+  /**
+   * Fetch the user's editor font size selection
+   * @param {string} editorFontSize
+   * @param {string} appType
+   */
+  async getEditorFontSize(appName) {
+    const editorFontSizeResponse = await HttpClient.fetchJson(
+      '/user_preference/font_size/editor'
+    );
+    const editorFontSize =
+      editorFontSizeResponse.value.editor_font_size[appName];
+    return editorFontSize;
   }
 }

@@ -9,10 +9,10 @@ import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
@@ -37,28 +37,34 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   const [didInit, setDidInit] = useState(false);
+  const [fontSizeLoaded, setFontSizeLoaded] = useState(false);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const fontSizeKey = useAppSelector(state => state.lab2View.editorFontSizeKey);
   const {signInState} = useAppSelector(state => state.currentUser);
 
-  // User preference for selected font size persists within a session
+  // User preference for selected font size is saved on the backend
   // per signed-in user per app type (currently either pythonlab or weblab).
-  // TODO: update so that selected font size will persist across sessions.
   // Note that When the user selects a different font size from settings, fontSizeKey
-  // is updated alongside sessionStorage for sessionStorageKey.
+  // is updated and saved on the backend.
   useEffect(() => {
-    const sessionStorageKey = `${appName}CodeEditorFontSizeKey`;
-    const sessionStorage = tryGetSessionStorage(sessionStorageKey, false);
-    if (
-      sessionStorage &&
-      sessionStorage !== fontSizeKey &&
-      signInState === SignInState.SignedIn
-    ) {
-      dispatch(setEditorFontSize(sessionStorage));
-    }
-  }, [dispatch, signInState, fontSizeKey, appName]);
+    const fetchFontSize = async () => {
+      if (signInState !== SignInState.SignedIn) {
+        setFontSizeLoaded(true);
+        return;
+      }
+      const savedEditorFontSize = await new UserPreferences().getEditorFontSize(
+        appName
+      );
+      if (savedEditorFontSize) {
+        dispatch(setEditorFontSize(savedEditorFontSize));
+      }
+      setFontSizeLoaded(true);
+    };
+
+    fetchFontSize();
+  }, [dispatch, signInState, appName]);
 
   // These two compartments control read-only settings.
   // Controls if you can type in the editor or not.
@@ -77,7 +83,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     });
   };
   useEffect(() => {
-    if (editorRef.current === null || didInit) {
+    if (!fontSizeLoaded || editorRef.current === null || didInit) {
       return;
     }
 
@@ -131,6 +137,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorEditableCompartment,
     fontSizeCompartment,
     fontSizeKey,
+    fontSizeLoaded,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
@@ -187,6 +194,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       cmContentDiv.setAttribute('aria-label', i18n.codeEditor());
     }
   }, []);
+
+  if (!fontSizeLoaded) {
+    return null;
+  }
 
   return (
     <div
