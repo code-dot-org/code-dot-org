@@ -138,5 +138,3 @@ To remove build artifacts, use the following commmand:
 ```bash
 yarn clean
 ```
-
-Small change is small
