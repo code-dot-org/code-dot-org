@@ -25,7 +25,6 @@ jobs:
   # if any of the others are still pending.
   complete-applitools-eyes-batch:
     runs-on: ubuntu-24.04
-    if: ${{ inputs.drone_build_status == 'success' }}
     steps:
       - run: |
           echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
