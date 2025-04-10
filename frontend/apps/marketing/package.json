@@ -45,7 +45,8 @@
     "contentful": "^11.2.5",
     "next": "^15.2.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-schemaorg": "^2.0.0"
   },
   "devDependencies": {
     "@applitools/eyes-playwright": "^1.36.3",
@@ -65,6 +66,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "playwright-core": "~1.49.1",
     "prettier": "3.4.2",
+    "schema-dts": "^1.1.5",
     "stylelint": "^16.14.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"

@@ -1,0 +1,7 @@
+name 'music-coding-intro-inspiration'
+display_name 'Career Exploration'
+description 'Learn how these singer songwriters use computer science in their career!'
+
+sublevels
+level 'music-coding-intro-drop3_launch'
+level 'music-coding-intro-drop2_launch'

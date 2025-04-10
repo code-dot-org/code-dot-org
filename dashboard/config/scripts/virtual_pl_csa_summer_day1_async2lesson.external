@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Task: Explore a lesson plan
 
-#### **Step 1:** Navigate to Unit 1 Lesson 7.
+#### **Step 1:** Navigate to <a href="https://studio.code.org/s/csa1-2025/lessons/7" target="blank" rel="noopener noreferrer">Unit 1 Lesson 7</a>.
 #### **Step 2:** Explore the lesson plan content. 
 #### **Step 3:** Before moving on, make sure you are able to locate all of the items on the list below. 
 
