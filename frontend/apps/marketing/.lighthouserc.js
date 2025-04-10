@@ -10,6 +10,7 @@ const assertions = {
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
   'link-text': 'off', // re-enable after CMS-497
+  'uses-responsive-images': ['error', {maxLength: 1}], // re-enable after CMS-516
 };
 
 if (process.env.STAGE !== 'production') {
