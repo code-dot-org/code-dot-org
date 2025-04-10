@@ -17,6 +17,12 @@ def single_session?
   $browser_config['mobile'] || $single_session
 end
 
+# Should we run the tests using the local Selenium webdriver rather than on
+# Saucelabs?
+#
+# Used not only to modify the behavior of `get_browser` but also to avoid
+# unnecessarily applying various Saucelabs-specific accommodations throughout
+# the codebase. We expect TEST_LOCAL to be set by `runner.rb`.
 def test_local?
   return ENV['TEST_LOCAL'] == 'true'
 end
