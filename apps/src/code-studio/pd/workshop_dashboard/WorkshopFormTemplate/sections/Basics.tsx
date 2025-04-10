@@ -283,7 +283,12 @@ export const Basics: FC<BasicsProps> = ({
       )}
       {fields.course_offerings && (
         <div className={commonStyles.row}>
-          <div className={commonStyles.col}>
+          <div
+            className={classNames(
+              commonStyles.col,
+              commonStyles.plTopicsContainer
+            )}
+          >
             <CheckboxDropdown
               name={fields.course_offerings.stateKey}
               onChange={handleCourseOfferingsChange}
@@ -312,10 +317,12 @@ export const Basics: FC<BasicsProps> = ({
             />
             {courseOfferingsById && (
               <Tags
+                size="s"
                 className={commonStyles.wrapContainer}
                 tagsList={courseOfferings.map(offeringId => ({
                   type: 'closable',
                   onClose: handleRemoveCourseOffering(offeringId),
+                  key: offeringId,
                   label:
                     courseOfferingsById[Number(offeringId)]?.display_name ?? '',
                 }))}
