@@ -108,9 +108,18 @@ export const sessionStateToApi = (
         .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
         .utc()
         .toISOString(),
-      location_address: session.locationAddress || undefined,
-      location_name: session.locationName || undefined,
-      meeting_link: session.meetingLink || undefined,
+      location_address:
+        session.format === 'in_person'
+          ? session.locationAddress || undefined
+          : undefined,
+      location_name:
+        session.format === 'in_person'
+          ? session.locationName || undefined
+          : undefined,
+      meeting_link:
+        session.format === 'virtual'
+          ? session.meetingLink || undefined
+          : undefined,
     });
   });
 

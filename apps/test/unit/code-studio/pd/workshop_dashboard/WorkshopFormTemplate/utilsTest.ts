@@ -25,7 +25,6 @@ describe('sessionDataToState', () => {
         end: '2024-01-02T00:00:00Z',
         location_address: '123 Main St',
         location_name: 'Test Location',
-        meeting_link: 'https://test.com',
         session_format: 'in_person',
         code: 'abc',
       },
@@ -39,7 +38,7 @@ describe('sessionDataToState', () => {
         end: '5:00pm',
         locationAddress: '123 Main St',
         locationName: 'Test Location',
-        meetingLink: 'https://test.com',
+        meetingLink: '',
         format: 'in_person',
         sameAsPrevious: false,
       },
@@ -139,8 +138,6 @@ describe('sessionStateToApi', () => {
           .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
           .utc()
           .toISOString(),
-        location_address: '123 Test St',
-        location_name: 'Test Location',
         meeting_link: 'https://test.meeting',
       },
       {
@@ -156,7 +153,6 @@ describe('sessionStateToApi', () => {
           .toISOString(),
         location_address: '456 New St',
         location_name: 'New Location',
-        meeting_link: undefined,
       },
     ];
 
@@ -235,8 +231,6 @@ describe('sessionStateToApi', () => {
         session_format: 'virtual',
         start: '2024-03-15T16:00:00Z',
         end: '2024-03-15T19:00:00Z',
-        location_address: '123 Test St',
-        location_name: 'Test Location',
         meeting_link: 'https://test.meeting',
         code: 'abc',
       },
@@ -247,7 +241,6 @@ describe('sessionStateToApi', () => {
         end: '2024-03-16T20:00:00Z',
         location_address: '456 Old St',
         location_name: 'Old Location',
-        meeting_link: '',
         code: 'abc',
       },
     ];
@@ -264,8 +257,6 @@ describe('sessionStateToApi', () => {
           .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
           .utc()
           .toISOString(),
-        location_address: '123 Test St',
-        location_name: 'Test Location',
         meeting_link: 'https://test.meeting',
       },
       {
@@ -281,7 +272,6 @@ describe('sessionStateToApi', () => {
           .toISOString(),
         location_address: '789 New St',
         location_name: 'New Location',
-        meeting_link: undefined,
       },
       {
         id: 2,

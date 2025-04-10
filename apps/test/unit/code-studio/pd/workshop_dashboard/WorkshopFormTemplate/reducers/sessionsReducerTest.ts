@@ -65,6 +65,8 @@ describe('sessionsReducer', () => {
       id: '1',
     };
     const newState = sessionsReducer(stateWithPrevious, action);
+    expect(newState[0].id).not.toEqual(newState[1].id);
+    expect(newState[1].locationAddress).toEqual('123 Main St');
     expect(newState[1].locationName).toEqual('Previous Location');
     expect(newState[1].sameAsPrevious).toEqual(true);
   });
