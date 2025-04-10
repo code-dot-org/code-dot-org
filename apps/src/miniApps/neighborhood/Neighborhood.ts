@@ -109,10 +109,11 @@ export default class Neighborhood {
     // if this is the first non-console signal, send a starting painter message
     if (!this.seenFirstSignal && signal.value !== CONSOLE_LOG_KEY) {
       this.seenFirstSignal = true;
-      this.onOutputMessage(
-        `${this.statusMessagePrefix} ${commonI18n.startingPainter()}`
-      );
-      this.onNewlineMessage();
+      this.signals.push({
+        value: CONSOLE_LOG_KEY,
+        detail: `${this.statusMessagePrefix} ${commonI18n.startingPainter()}`,
+      });
+      this.signals.push({value: CONSOLE_LOG_KEY, detail: ''});
     }
   }
 
@@ -134,7 +135,7 @@ export default class Neighborhood {
         timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
 
       const beginTime = Date.now();
-      if (signal.value === 'CONSOLE_LOG') {
+      if (signal.value === CONSOLE_LOG_KEY) {
         this.onOutputMessage(signal.detail);
       } else {
         this.mazeCommand(signal, timeForSignal);
@@ -219,7 +220,7 @@ export default class Neighborhood {
   }
 
   getAnimationTime(signal: NeighborhoodSignal | ConsoleSignal) {
-    if (signal.value === 'CONSOLE_LOG') {
+    if (signal.value === CONSOLE_LOG_KEY) {
       return 0;
     }
     return ANIMATED_STEPS.includes(signal.value) ? ANIMATED_STEP_SPEED : 0;
