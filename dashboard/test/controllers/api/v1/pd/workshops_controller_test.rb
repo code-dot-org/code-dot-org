@@ -460,7 +460,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
         ]
       }
 
-    workshop = create :pd_workshop, funded: false, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, subject: nil, participant_group_type: 'Regional', course_offerings: [] << (create :course_offering)
+    workshop = create :pd_workshop, funded: false, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, subject: nil, course_offerings: [] << (create :course_offering)
 
     put :update, params: {id: workshop.id, pd_workshop: byo_params.merge(course_offerings: nil)}
     assert_response :bad_request
@@ -1231,9 +1231,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       capacity: 10,
       virtual: false,
       suppress_email: false,
-      grades: ['12'],
-      description: 'Workshop description',
-      name: 'Workshop name',
+      legacy: true,
       sessions_attributes: [
         {
           start: session_start,
