@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 19:23:09 UTC",
+    "serialized_at": "2025-04-10 06:26:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2653,7 +2653,7 @@
       "key": "11f5bfef-6431-4c4a-b4fd-84d0a8f418ed",
       "position": 6,
       "properties": {
-        "progression_name": "Survey"
+        "progression_name": "Final Project Reflection"
       },
       "seeding_key": {
         "activity_section.key": "11f5bfef-6431-4c4a-b4fd-84d0a8f418ed",
@@ -3778,6 +3778,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Final Project Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson8-level1_2025"
+        ],
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csaif4-2025",
+        "activity_section.key": "11f5bfef-6431-4c4a-b4fd-84d0a8f418ed"
+      },
+      "level_keys": [
+        "networks-internet-lesson8-level1_2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "networks-internet-lesson9-level1_2025"
         ],
@@ -3798,7 +3820,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3823,7 +3845,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3848,7 +3870,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3873,7 +3895,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3898,7 +3920,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3923,7 +3945,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3948,7 +3970,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4248,6 +4270,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif4-2025",
         "activity_section.key": "85ec2c02-167f-46a5-bcc5-52bebb42b42b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson8-level1_2025",
+        "script_level.level_keys": [
+          "networks-internet-lesson8-level1_2025"
+        ],
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csaif4-2025",
+        "activity_section.key": "11f5bfef-6431-4c4a-b4fd-84d0a8f418ed"
       }
     },
     {

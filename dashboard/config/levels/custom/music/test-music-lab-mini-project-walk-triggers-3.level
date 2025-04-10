@@ -217,9 +217,38 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-walk-triggers-3_89615100-a05e-4558-b62d-00422a4f82b5",
+        "message": "You played 3 effects! Make sure they match the directions from the level!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 2
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-walk-triggers-3_694961cf-36b8-48fd-8e75-f92464a13a4e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting to hear 3 effects…",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21 17:49:37 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:50:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:37:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:38:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:40:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:40:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:42:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-21 17:49:37 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-21 17:50:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:37:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:38:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:40:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:40:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-05 23:42:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 05:05:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

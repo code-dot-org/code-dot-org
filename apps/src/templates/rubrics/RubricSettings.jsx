@@ -274,12 +274,7 @@ function RubricSettings({
       })}
     >
       <div className={style.studentInfoGroup}>
-        <Heading3>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.name,
-          })}
-        </Heading3>
+        <Heading3>{lesson.title}</Heading3>
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
         </div>

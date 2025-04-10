@@ -963,7 +963,8 @@ class UnitTest < ActiveSupport::TestCase
       disablePostMilestone: false,
       student_detail_progress_view: false,
       age_13_required: false,
-      show_sign_in_callout: false
+      show_sign_in_callout: false,
+      hasUnnumberedLessons: false,
     }
     assert_equal expected, unit.summarize_header
   end
@@ -2672,6 +2673,15 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.summarize[:hasUnnumberedLessons]
     unit.update!(has_unnumbered_lessons: false)
     refute unit.summarize[:hasUnnumberedLessons]
+  end
+
+  test 'has ai tutor level' do
+    unit_without_ai_tutor = create :unit
+    refute unit_without_ai_tutor.has_ai_tutor_level?
+
+    unit_with_ai_tutor = create :unit, :with_levels
+    unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
+    assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
   private def has_unlaunched_unit?(units)

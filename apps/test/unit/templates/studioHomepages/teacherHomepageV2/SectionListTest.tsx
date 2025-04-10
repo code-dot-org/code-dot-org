@@ -19,62 +19,70 @@ import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/tea
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import i18n from '@cdo/locale';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  delete: jest.fn(() => Promise.resolve({})),
+  put: jest.fn(() => Promise.resolve({})),
+}));
+
+const sections = [
+  {
+    id: 11,
+    name: 'Period 1',
+    hidden: false,
+    courseVersionName: 'csd-2024',
+    unitName: null,
+    studentCount: 0,
+    participantType: 'student',
+  },
+  {
+    id: 12,
+    name: 'Period 2',
+    hidden: false,
+    courseVersionName: 'csd-2023',
+    unitName: null,
+    participantType: 'student',
+  },
+  {
+    id: 13,
+    name: 'Period 3',
+    hidden: false,
+    courseVersionName: 'csd-2022',
+    unitName: 'csd3-2022',
+    participantType: 'student',
+  },
+  {
+    id: 14,
+    name: 'Period 4',
+    hidden: false,
+    courseVersionName: 'csd-2022',
+    unitName: 'csd6-2022',
+    participantType: 'student',
+  },
+  {
+    id: 15,
+    name: 'hidden',
+    hidden: true,
+    unitName: null,
+    participantType: 'student',
+  },
+  {
+    id: 16,
+    name: 'PL Section',
+    hidden: false,
+    unitName: null,
+    participantType: 'teacher',
+  },
+];
+
 describe('SectionList', () => {
-  const sections = [
-    {
-      id: 11,
-      name: 'Period 1',
-      hidden: false,
-      courseVersionName: 'csd-2024',
-      unitName: null,
-      studentCount: 0,
-      participantType: 'student',
-    },
-    {
-      id: 12,
-      name: 'Period 2',
-      hidden: false,
-      courseVersionName: 'csd-2023',
-      unitName: null,
-      participantType: 'student',
-    },
-    {
-      id: 13,
-      name: 'Period 3',
-      hidden: false,
-      courseVersionName: 'csd-2022',
-      unitName: 'csd3-2022',
-      participantType: 'student',
-    },
-    {
-      id: 14,
-      name: 'Period 4',
-      hidden: false,
-      courseVersionName: 'csd-2022',
-      unitName: 'csd6-2022',
-      participantType: 'student',
-    },
-    {
-      id: 15,
-      name: 'hidden',
-      hidden: true,
-      unitName: null,
-      participantType: 'student',
-    },
-    {
-      id: 16,
-      name: 'PL Section',
-      hidden: false,
-      unitName: null,
-      participantType: 'teacher',
-    },
-  ];
+  let store: Store;
+  beforeEach(() => {
+    const serverSections = sections.map(serverSectionFromSection);
 
-  const serverSections = sections.map(serverSectionFromSection);
-
-  const store: Store = getStore();
-  registerReducers({teacherSections});
-  store.dispatch(setSections(serverSections));
+    store = getStore();
+    registerReducers({teacherSections});
+    store.dispatch(setSections(serverSections));
+  });
 
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
     return render(

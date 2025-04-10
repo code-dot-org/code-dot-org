@@ -95,7 +95,13 @@ progress.generateLessonProgress = function (
 ) {
   const store = getStore();
 
-  const {name, displayName, disablePostMilestone, age_13_required} = scriptData;
+  const {
+    name,
+    displayName,
+    disablePostMilestone,
+    age_13_required,
+    hasUnnumberedLessons,
+  } = scriptData;
 
   initializeStoreWithProgress(
     store,
@@ -107,6 +113,7 @@ progress.generateLessonProgress = function (
       disablePostMilestone,
       age_13_required,
       id: lessonData.script_id,
+      hasUnnumberedLessons,
     },
     currentLevelId,
     false,
@@ -374,6 +381,7 @@ function initializeStoreWithProgress(
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
+      unitHasUnnumberedLessons: scriptData.hasUnnumberedLessons || false,
       courseVersionId: scriptData.courseVersionId,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
