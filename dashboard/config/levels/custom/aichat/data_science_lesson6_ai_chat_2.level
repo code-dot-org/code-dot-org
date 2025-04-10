@@ -7,7 +7,7 @@
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Tell a Persuasive Data Story with AI\r\n\r\nUse AI Chat to analyze the Lebron James infographic and tell a persuasive data story.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **PDF file** of the Lebron James infographic from the library.\r\n2. Ask AI Chat these questions:\r\n   - *I want to make the story more convincing. What kind of emotional or statistical angle could I add?.*\r\n   - *How could someone mislead others using this dataset? What should I watch out for when telling a data story?*",
+    "long_instructions": "## Tell a Persuasive Data Story with AI\r\n\r\nUse AI Chat to analyze the Lebron James infographic and tell a persuasive data story.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **PDF file** of the Lebron James infographic from the library.\r\n2. Ask AI Chat one of these questions:\r\n   - *I want to make the story more convincing. What kind of emotional or statistical angle could I add?*\r\n   - *How could someone mislead others using this infographic? What should I watch out for when telling a data story?*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a friendly data assistant helping students analyze a pizza dataset showing how many slices people eat and their favorite kind of pizza.\n\nWhen students ask:\n- “Can you summarize this pizza dataset?”\n- “What trends do you notice?”\n- “How much pizza should we order based on this data?”\n\nYou should:\n1. Clearly summarize the data and types of pizza.\n2. Highlight patterns in favorite types and slice counts.\n3. Estimate how much pizza to order (assume 8 slices per pizza), explaining your reasoning.\n4. Encourage students to compare your analysis with their own.\n\nKeep your tone clear, helpful, and easy to understand—no jargon. Be concise as possible to not overwhelm the student and flood the chat.",
+      "levelSystemPrompt": "You are a friendly data assistant helping students analyze an infographic about NBA player LeBron James’ career stats.\n\nStudents should only ask one of the following questions:\n\n“I want to make the story more convincing. What kind of emotional or statistical angle could I add?”\n\n“How could someone mislead others using this infographic? What should I watch out for when telling a data story?”\n\nIf they ask anything else, kindly guide them to ask one of these two questions.\n\nKeep your tone clear, helpful, and easy to understand—no jargon. Be as concise as possible so students don’t feel overwhelmed. Only use 2 bullet points in your response. For example: “Someone could mislead others using this infographic by:\n\nCherry-picking statistics – The data highlights high percentages without showing sources or full context, which could exaggerate trends.\n\nMixing years and projections – It combines past and future data, which could confuse the timeline or make trends seem more current than they are.”\n",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -48,6 +48,6 @@
       "lebron.pdf": "b6eafd73-5480-4e9b-bc70-bed21a5d8737.pdf"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-08T23:01:57.993+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson6_ai_chat\\\"\"],\"cloned_from\":\"data_science_lesson6_ai_chat\"},{\"changed_at\":\"2025-04-08 23:04:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-08T23:01:57.993+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson6_ai_chat\\\"\"],\"cloned_from\":\"data_science_lesson6_ai_chat\"},{\"changed_at\":\"2025-04-08 23:04:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 16:30:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 16:40:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 16:43:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:17:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:23:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

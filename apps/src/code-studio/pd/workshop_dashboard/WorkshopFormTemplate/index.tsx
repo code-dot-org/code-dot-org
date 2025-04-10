@@ -10,12 +10,13 @@ import React, {
   useReducer,
   useState,
 } from 'react';
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {workshopLabel} from '../utils/workshopLabel';
-import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
+import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
 import {generateNewSession} from './components/SessionsEditor';
 import AdditionalInfo from './sections/AdditionalInfo';
@@ -28,6 +29,8 @@ import Schedule from './sections/Schedule';
 import {
   Errors,
   FieldConfig,
+  Facilitator,
+  RegionalPartner,
   Session,
   SessionAction,
   SessionErrors,
@@ -36,11 +39,14 @@ import {
   WorkshopAction,
   WorkshopFormState,
   WorkshopFormTemplateProps,
+  DestroyedSession,
 } from './types';
 
 import styles from './styles.module.scss';
 
 export const REQUIRED_ERROR = 'Required';
+export const VALIDATION_ERROR =
+  'Your form contains validation errors that must be corrected';
 
 export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   course: data.course ?? '',
@@ -69,7 +75,7 @@ export const sessionDataToState = (
   timeZone: string
 ): SessionFormState[] =>
   data.map(session => ({
-    id: `existing-${session.id}`,
+    id: session.id?.toString() ?? '',
     date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
     start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
     end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
@@ -79,6 +85,72 @@ export const sessionDataToState = (
     format: session.session_format ?? 'in_person',
     sameAsPrevious: false,
   }));
+
+export const workshopStateToApi = (
+  workshop: WorkshopFormState
+): Omit<Workshop, 'sessions' | 'organizer'> => ({
+  course: workshop.course || undefined,
+  capacity:
+    workshop.capacity && !isNaN(Number(workshop.capacity))
+      ? Number(workshop.capacity)
+      : undefined,
+  description: workshop.description || undefined,
+  facilitators: workshop.facilitators,
+  fee: workshop.fee || undefined,
+  grades: workshop.grades,
+  hidden: workshop.hidden,
+  name: workshop.name || undefined,
+  notes: workshop.notes || undefined,
+  prereq: workshop.hasPrereq ? workshop.prereq : undefined,
+  regional_partner_id: workshop.regionalPartnerId ?? undefined,
+  registration_link: workshop.registrationLink || undefined,
+  subject: workshop.subject || undefined,
+  suppress_email: workshop.suppressEmail,
+  course_offerings: workshop.courseOfferings.map(offering => Number(offering)),
+  participant_group_type: workshop.participantGroupType,
+  time_zone: workshop.timeZone,
+});
+
+export const sessionStateToApi = (
+  sessions: SessionFormState[],
+  timeZone: string,
+  existingSessions?: Array<Session>
+): Array<Session | DestroyedSession> => {
+  const newOrUpdatedSessions: Array<Session | DestroyedSession> = [];
+  const sessionsMap = new Map(sessions.map(s => [s.id, s]));
+  const sessionsToDestroy =
+    existingSessions?.reduce((acc: DestroyedSession[], curr) => {
+      if (curr.id && !sessionsMap.get(curr.id.toString())) {
+        acc.push({
+          id: curr.id,
+          _destroy: true,
+        });
+      }
+      return acc;
+    }, []) ?? [];
+
+  sessions.forEach(session => {
+    newOrUpdatedSessions.push({
+      id: session.id.startsWith('new')
+        ? undefined
+        : Number(session.id.replace(/\D/g, '')),
+      session_format: session.format,
+      start: moment
+        .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
+        .utc()
+        .toISOString(),
+      end: moment
+        .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
+        .utc()
+        .toISOString(),
+      location_address: session.locationAddress || undefined,
+      location_name: session.locationName || undefined,
+      meeting_link: session.meetingLink || undefined,
+    });
+  });
+
+  return newOrUpdatedSessions.concat(sessionsToDestroy);
+};
 
 export const workshopReducer = (
   state: WorkshopFormState,
@@ -166,11 +238,20 @@ export const sessionsReducer = (
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
 }) => {
+  const navigate = useNavigate();
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const {workshopId} = useParams();
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
+  );
+
+  const {data: regionalPartnerData} = useFetch<RegionalPartner[]>(
+    '/api/v1/regional_partners'
+  );
+
+  const {data: facilitatorData} = useFetch<Facilitator[]>(
+    `/api/v1/pd/course_facilitators?course=${encodeURIComponent(config.label)}`
   );
 
   const [workshopFormState, dispatchWorkshop] = useReducer(workshopReducer, {
@@ -204,6 +285,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   >({});
 
   const [sessionErrors, setSessionErrors] = useState<SessionErrors>({});
+
+  const [responseErrors, setResponseErrors] = useState<string[]>([]);
 
   useEffect(() => {
     if (workshop) {
@@ -263,13 +346,9 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     [config.session_fields, sessionFormState]
   );
 
-  const hasErrors = useMemo(
-    () => Object.keys({...workshopErrors, ...sessionErrors}).length > 0,
-    [workshopErrors, sessionErrors]
-  );
-
   const publish = useCallback(async () => {
     try {
+      setResponseErrors([]);
       const workshopValidationErrors = getWorkshopErrors();
       setWorkshopErrors(workshopValidationErrors);
       const sessionValidationErrors = getSessionErrors();
@@ -280,13 +359,56 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       ) {
         return;
       }
-      // api request
-    } catch (error) {
-      // handle error
-    }
-  }, [getSessionErrors, getWorkshopErrors]);
+      const workshopData = workshopStateToApi(workshopFormState);
+      const sessionData = sessionStateToApi(
+        sessionFormState,
+        workshopFormState.timeZone,
+        workshop?.sessions
+      );
 
-  const cancel = () => {};
+      const method = workshop ? 'PATCH' : 'POST';
+      const url = workshop
+        ? `/api/v1/pd/workshops/${workshop.id}`
+        : '/api/v1/pd/workshops';
+
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+        body: JSON.stringify({
+          pd_workshop: {...workshopData, sessions_attributes: sessionData},
+        }),
+      });
+
+      const responseData = await response.json();
+
+      if (responseData.errors || responseData.error) {
+        const allErrors = [responseData.error]
+          .concat(responseData.errors)
+          .filter(e => !!e);
+        setResponseErrors(allErrors);
+      }
+
+      if (response.ok) {
+        navigate(`/workshops/${responseData.id}`);
+      }
+    } catch (error) {
+      setResponseErrors([
+        'There was a problem processing your request. Please try again or contact support@code.org',
+      ]);
+    }
+  }, [
+    getSessionErrors,
+    getWorkshopErrors,
+    navigate,
+    sessionFormState,
+    workshop,
+    workshopFormState,
+  ]);
+
+  const cancel = useCallback(() => navigate('/workshops'), [navigate]);
 
   const heading = workshopLabel(`New ${config.label}`);
 
@@ -296,6 +418,14 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       config,
     }),
     [dispatchWorkshop, config]
+  );
+
+  const allErrors = useMemo(
+    () =>
+      isEmpty({...workshopErrors, ...sessionErrors})
+        ? responseErrors
+        : [VALIDATION_ERROR, ...responseErrors],
+    [workshopErrors, sessionErrors, responseErrors]
   );
 
   return (
@@ -324,6 +454,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
         errors={workshopErrors}
+        regionalPartnerData={regionalPartnerData}
+        facilitatorData={facilitatorData}
         {...sectionProps}
       />
       <EmailsReminders
@@ -343,12 +475,10 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         errors={workshopErrors}
         {...sectionProps}
       />
-      {hasErrors && (
-        <Alert
-          type="danger"
-          text="Your form contains validation errors that must be corrected"
-        />
-      )}
+      {allErrors.length > 0 &&
+        allErrors.map(error => (
+          <Alert key={error} type="danger" text={error} />
+        ))}
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );
