@@ -286,13 +286,12 @@ trigger:
 kind: pipeline
 type: docker
 name: on-droneci-complete
+depends_on:
+  - unit
+  - ui
 clone:
   disable: true
 steps:
-  - name: sleep-15-minutes
-    image: alpine
-    commands:
-      - sleep 900
   - name: trigger-github-actions
     image: plugins/webhook
     settings:
@@ -309,12 +308,11 @@ steps:
             "drone_build_status": "{{ build.status }}"
           }
         }
-# depends_on:
-#   - unit
-#   - ui
+
 trigger:
   event:
     - pull_request
+
 ---
 # On push, cache a clone of staging to drone's S3 bucket.
 # The staging cache reduces git bandwidth in PR pipelines.
@@ -352,6 +350,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 80856fa9ec3075abbeed85849d4c28e0ee230a90b58d39c27c339bbb6593b748
+hmac: 90de7b1ffa492a2e72fa742b0c4442c1f9dd953c5494eca5d8e05b1d53c6c108
 
 ...
