@@ -139,3 +139,4 @@ To remove build artifacts, use the following commmand:
 yarn clean
 ```
 
+Small change is small
