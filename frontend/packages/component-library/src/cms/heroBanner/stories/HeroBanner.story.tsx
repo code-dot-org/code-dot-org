@@ -156,8 +156,8 @@ export const WithBackgroundImage: Story = {
     const canvas = within(canvasElement);
     const banner = canvas.getByRole('banner');
     const styles = window.getComputedStyle(banner);
-    await expect(styles.backgroundImage).toMatch(
-      /hero-banner-custom-bg-example\.png/,
+    await expect(styles.backgroundImage).toContain(
+      'hero-banner-custom-bg-example.png',
     );
   },
 };
