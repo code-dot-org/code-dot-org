@@ -73,6 +73,7 @@ jobs:
           script: |
             await github.rest.repos.createCommitStatus({
               context: 'Mark Applitools Eyes batch as complete',
+              description: 'see: https://github.com/code-dot-org/code-dot-org/actions/workflows/on-droneci-complete.yml?query=is%3Afailure for logs',
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha: '${{ inputs.github_sha }}',
