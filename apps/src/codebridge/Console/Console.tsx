@@ -13,11 +13,11 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setConsoleFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import '@xterm/xterm/css/xterm.css';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';
@@ -162,21 +162,24 @@ const Console: React.FunctionComponent = () => {
     }
   }, [fontSizeKey]);
 
-  // User preference for selected font size persists within a session
-  // per signed-in user per app type (currently in pythonlab).
-  // TODO: update so that selected console font size will persist across sessions.
-  // Note that When the user selects a different font size from settings, fontSizeKey
-  // is updated alongside sessionStorage for sessionStorageKey.
+  // User preference for selected font size persists per signed-in user per app type
+  // (currently in pythonlab) because it is saved on the backend.
+  // Note that when the user selects a different font size from settings, fontSizeKey
+  // is updated and saved on the backend.
   useEffect(() => {
-    const sessionStorageKey = `${appName}ConsoleFontSizeKey`;
-    const sessionStorage = tryGetSessionStorage(sessionStorageKey, false);
-    if (
-      sessionStorage &&
-      sessionStorage !== fontSizeKey &&
-      signInState === SignInState.SignedIn
-    ) {
-      dispatch(setConsoleFontSize(sessionStorage));
+    if (signInState !== SignInState.SignedIn) {
+      return;
     }
+    const fetchFontSize = async () => {
+      const savedConsoleFontSize =
+        await new UserPreferences().getConsoleFontSize(appName);
+      if (savedConsoleFontSize !== fontSizeKey) {
+        if (savedConsoleFontSize) {
+          dispatch(setConsoleFontSize(savedConsoleFontSize));
+        }
+      }
+    };
+    fetchFontSize();
   }, [signInState, fontSizeKey, appName, dispatch]);
 
   return (
