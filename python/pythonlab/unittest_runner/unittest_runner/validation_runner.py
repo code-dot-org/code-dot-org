@@ -50,4 +50,4 @@ class ValidationTestResult(TextTestResult):
 
   def parseError(self, err):
      exception_type, value, traceback = err
-     return value
+     return f"\x1b[38;5;203m{value}\x1b[0m"
