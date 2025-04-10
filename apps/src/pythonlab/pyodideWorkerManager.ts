@@ -7,6 +7,7 @@ import {
   setLoadedCodeEnvironment,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {CONSOLE_LOG_KEY} from '@cdo/apps/miniApps/neighborhood/constants';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
@@ -69,13 +70,16 @@ const setUpPyodideWorker = () => {
           break;
         }
         isNeighborhoodRun
-          ? neighborhood?.handleSignal({value: 'CONSOLE_LOG', detail: message})
+          ? neighborhood?.handleSignal({
+              value: CONSOLE_LOG_KEY,
+              detail: message,
+            })
           : consoleManager?.writeConsoleMessage(message);
         break;
       case 'run_complete':
         isNeighborhoodRun
           ? neighborhood?.handleSignal({
-              value: 'CONSOLE_LOG',
+              value: CONSOLE_LOG_KEY,
               detail: `[PYTHON LAB] ${pythonlabI18n.programCompleted()}`,
             })
           : consoleManager?.writeSystemMessage(

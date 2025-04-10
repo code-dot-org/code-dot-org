@@ -1,4 +1,4 @@
-import {NeighborhoodSignalType} from './constants';
+import {ConsoleSignalType, NeighborhoodSignalType} from './constants';
 
 export interface NeighborhoodSignal {
   value: NeighborhoodSignalType;
@@ -13,6 +13,6 @@ export interface NeighborhoodSignal {
 }
 
 export interface ConsoleSignal {
-  value: 'CONSOLE_LOG';
+  value: ConsoleSignalType;
   detail: string;
 }

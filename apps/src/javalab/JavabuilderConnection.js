@@ -5,6 +5,8 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import javalabMsg from '@cdo/javalab/locale';
 
+import {CONSOLE_LOG_KEY} from '../miniApps/neighborhood/constants';
+
 import {
   WebSocketMessageType,
   StatusMessageType,
@@ -297,7 +299,14 @@ export default class JavabuilderConnection {
         this.onStatusMessage(data.value, data.detail);
         break;
       case WebSocketMessageType.SYSTEM_OUT:
-        this.onOutputMessage(data.value);
+        if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+          this.miniApp.handleSignal({
+            value: CONSOLE_LOG_KEY,
+            detail: data.value,
+          });
+        } else {
+          this.onOutputMessage(data.value);
+        }
         break;
       case WebSocketMessageType.TEST_RESULT:
         testResult = onTestResult(

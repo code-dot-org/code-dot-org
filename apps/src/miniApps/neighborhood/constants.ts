@@ -25,6 +25,9 @@ export enum NeighborhoodSignalType {
   DONE = 'DONE',
 }
 
+export type ConsoleSignalType = 'CONSOLE_LOG';
+export const CONSOLE_LOG_KEY: ConsoleSignalType = 'CONSOLE_LOG';
+
 export enum NeighborhoodExceptionType {
   INVALID_GRID = 'INVALID_GRID',
   INVALID_DIRECTION = 'INVALID_DIRECTION',
