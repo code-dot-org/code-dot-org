@@ -36,21 +36,20 @@ jobs:
         with:
           script: |
             async function assertWorkflowNotPending(workflow_id) {
-              const { data } = await github.rest.actions.listWorkflowRuns({
+              const result = await github.rest.actions.listWorkflowRuns({
+                workflow_id,
+                head_sha: context.sha,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                workflow_id,
-                head_sha: context.sha
               });
+              console.log(`Result for ${workflow_id}:`, result);
+              const data = result.data;
 
               if (data.workflow_runs.length === 0) {
                 console.log(`Workflow ${workflow_id} was not triggered by this commit, ignoring`);
                 return;
-              }
-
-              const latest = data.workflow_runs[0];
-              if (latest.status !== 'completed') {
-                core.setFailed(`Error: We currently assume Drone will be the last eyes-using test suite to finish, and close the batch when it completes. However, ${workflow_id} has not yet finished (status: ${latest.status}), this may cause it problems.`);
+              } else if (data.workflow_runs[0].status !== 'completed') {
+                core.setFailed(`Error: ${workflow_id} is still pending, this may cause problems.`);
                 process.exit(1);
               }
             }
