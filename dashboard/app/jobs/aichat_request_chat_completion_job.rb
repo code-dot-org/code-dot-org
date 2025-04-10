@@ -13,7 +13,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   before_perform do |job|
-    puts job
     request = job.arguments.first[:request]
     request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:RUNNING])
     report_job_start(request)
@@ -43,7 +42,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     report_job_finish(request)
 
     # Re-raise error to notify our system of the failed job.
-    raise
+    raise exception
   end
 
   def perform(request:, locale:)
