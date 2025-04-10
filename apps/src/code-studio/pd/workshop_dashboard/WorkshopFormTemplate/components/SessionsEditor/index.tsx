@@ -53,6 +53,7 @@ export const SessionsEditor: FC<{
         <SessionPart
           key={session.id}
           showSameAsPrevious={i > 0}
+          deleteDisabled={sessions.length <= 1}
           dispatchSessions={dispatchSessions}
           fields={fields}
           errors={errors[session.id]}

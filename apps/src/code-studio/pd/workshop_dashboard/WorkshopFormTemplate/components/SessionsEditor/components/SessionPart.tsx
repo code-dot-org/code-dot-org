@@ -38,6 +38,7 @@ export const SessionPart: FC<{
   meetingLink: SessionFormState['meetingLink'];
   sameAsPrevious: SessionFormState['sameAsPrevious'];
   showSameAsPrevious: boolean;
+  deleteDisabled: boolean;
   fields: SessionFields;
   errors?: Errors<keyof SessionFormState>;
   dispatchSessions: Dispatch<SessionAction>;
@@ -52,6 +53,7 @@ export const SessionPart: FC<{
   meetingLink,
   sameAsPrevious,
   showSameAsPrevious,
+  deleteDisabled,
   fields,
   errors,
   dispatchSessions,
@@ -200,12 +202,14 @@ export const SessionPart: FC<{
           tooltipProps={{
             tooltipId: `delete-session-tooltip-${id}`,
             size: 'xs',
-            text: 'delete workshop session',
+            text: 'Delete workshop session',
           }}
         >
           <Button
             icon={{iconName: 'minus'}}
             onClick={deleteSession}
+            disabled={deleteDisabled}
+            size="s"
             isIconOnly={true}
             className={styles.deleteButton}
             type="secondary"
