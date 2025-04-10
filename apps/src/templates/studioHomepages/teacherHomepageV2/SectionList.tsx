@@ -30,7 +30,10 @@ import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSect
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {getFilteredSectionOrderIds} from '../../teacherDashboard/sectionOrderUtils';
+import {
+  getFilteredSectionOrderIds,
+  saveSectionOrder,
+} from '../../teacherDashboard/sectionOrderUtils';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -117,16 +120,9 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
     if (!_.isEqual(sortableSectionIds, reduxSectionOrder)) {
       dispatch(setSectionOrder(sortableSectionIds, true));
       // Update the backend with the new order
-      // This is done in `sectionOrderUtils.ts` but we need to do it here as well
-      // because the order is the only thing that changed here
-      HttpClient.put(
-        '/user_preference',
-        JSON.stringify({sectionOrder: sortableSectionIds}),
-        true,
-        {
-          'Content-Type': 'application/json; charset=UTF-8',
-        }
-      );
+      // This is done in `setSectionOrder` only when there are sections to be added or removed.
+      // We need to save manually here because the order is different.
+      saveSectionOrder(sortableSectionIds);
     }
   }, [sortableSectionIds, dispatch, reduxSectionOrder]);
 

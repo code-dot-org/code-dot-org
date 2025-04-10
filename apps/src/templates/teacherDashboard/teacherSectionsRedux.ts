@@ -693,7 +693,10 @@ const sectionSlice = createSlice({
           Object.values(state.sections),
           action.payload.sectionOrder
         );
-        if (action.payload.save && result !== action.payload.sectionOrder) {
+        if (
+          action.payload.save &&
+          !_.isEqual(result, action.payload.sectionOrder)
+        ) {
           saveSectionOrder(result);
         }
 
