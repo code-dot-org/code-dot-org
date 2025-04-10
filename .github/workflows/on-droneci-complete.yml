@@ -18,9 +18,9 @@ permissions:
   statuses: write
 
 jobs:
-  # We use applitools eyes from: drone, marketing-app-ci.yml and component-library-ci.yml.
-  # We need to close the batch after all of these are completed. We assume Drone will be
-  # the last to finish, but we check and throw an error if any of the others are still pending.
+  # We use applitools eyes from: drone and frontend-ci.yml. We need to close the eyes batch
+  # after these are done. Drone is so slow that we assume Drone will be the last to finish,
+  # but we check and throw an error if frontend-ci.yml is still running when drone completes.
   complete-applitools-eyes-batch:
     runs-on: ubuntu-24.04
     steps:
@@ -49,8 +49,7 @@ jobs:
               }
             }
 
-            await assertWorkflowNotPending('marketing-app-ci.yml');
-            await assertWorkflowNotPending('component-library-ci.yml');
+            await assertWorkflowNotPending('frontend-ci.yml');
 
       # Close the eyes batch after all distributed eyes tests have completed
       - name: Mark Applitools Eyes batch as complete
