@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ValidatesEmailTest < ActiveSupport::TestCase
+class EmailValidationsTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
   context 'when building a new user without a password' do

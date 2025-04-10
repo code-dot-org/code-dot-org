@@ -93,7 +93,7 @@ class User < ApplicationRecord
   include LocaleHelper
   include UserMultiAuthHelper
   include UserPermissionGrantee
-  include ValidatesEmail
+  include EmailValidations
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
@@ -123,8 +123,6 @@ class User < ApplicationRecord
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
-  # FND-1130: This field will no longer be required
-  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
@@ -783,35 +781,6 @@ class User < ApplicationRecord
     # Password is required for:
     # New users with no encrypted_password set
     !persisted? && encrypted_password.blank?
-  end
-
-  # Determines if email is a required field for a teacher.
-  # Currently, we have some old teacher accounts which don't have an email
-  # address associated with them because it wasn't required when they were
-  # created. Those old accounts are allowed to skip the email validation.
-  def teacher_email_required?
-    return false if Policies::Lti.lti? self
-    # non-teachers are not relevant to this method.
-    return false unless teacher? && purged_at.nil?
-
-    # new teacher accounts should always require an email
-    return true if created_at.blank?
-
-    # existing accounts created after the email requirement must have an email.
-    # FND-1130: The created_at exception will no longer be required
-    # Remove the created_at > '2016-06-14 00:00:00' once all teachers have
-    # emails.
-    return created_at.to_datetime > DATE_TEACHER_EMAIL_REQUIREMENT_ADDED
-  end
-
-  def email_or_hashed_email_required?
-    return false if Policies::Lti.lti? self
-    return true if teacher?
-    return false if manual?
-    return false if sponsored?
-    return false if oauth?
-    return false if parent_managed_account?
-    true
   end
 
   def username_required?
