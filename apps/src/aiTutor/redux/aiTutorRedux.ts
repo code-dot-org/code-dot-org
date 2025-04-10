@@ -25,13 +25,7 @@ export interface AITutorState {
   showSuggestedPrompts: boolean;
 }
 
-const initialChatMessages: ChatCompletionMessage[] = [
-  {
-    role: Role.ASSISTANT,
-    chatMessageText: initialAssistantGreeting,
-    status: Status.OK,
-  },
-];
+const initialChatMessages: ChatCompletionMessage[] = [];
 
 const initialState: AITutorState = {
   level: undefined,
@@ -83,7 +77,7 @@ export const askAITutor = createAsyncThunk(
       status: Status.UNKNOWN,
       chatMessageText: chatContext.studentInput,
     };
-    thunkAPI.dispatch(addChatMessage(newMessage));
+    //thunkAPI.dispatch(addChatMessage(newMessage));
 
     const formattedQuestion = formatQuestionForAITutor(chatContext);
     // We currently use the default system prompt stored on the server,

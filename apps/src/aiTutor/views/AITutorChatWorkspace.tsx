@@ -103,15 +103,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
                 text={message.chatMessageText}
                 role={message.role}
                 customStyles={style}
-                footer={
-                  message.role === Role.ASSISTANT &&
-                  message.chatMessageText !== initialAssistantGreeting ? (
-                    <AssistantMessageFeedback
-                      messageId={message.id}
-                      onDetailsOpenChange={setFeedbackDetailsOpen}
-                    />
-                  ) : null
-                }
+                footer={null}
               />
             </div>
           );
