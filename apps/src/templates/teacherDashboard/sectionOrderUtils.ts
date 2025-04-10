@@ -11,6 +11,10 @@ export const getOrderedSectionIds = (
   filteredSectionIds: number[],
   orderedSectionIds: number[]
 ): number[] => {
+  if (orderedSectionIds.length === 0) {
+    return filteredSectionIds;
+  }
+
   if (_.xor(orderedSectionIds, filteredSectionIds).length === 0) {
     return orderedSectionIds;
   }
@@ -22,19 +26,7 @@ export const getOrderedSectionIds = (
     filteredSectionIds
   );
 
-  const result = [...sectionsToPrepend, ...orderedSectionsFiltered];
-
-  // Need to update when order changes
-  HttpClient.put(
-    '/user_preference',
-    JSON.stringify({sectionOrder: result}),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
-  );
-
-  return result;
+  return [...sectionsToPrepend, ...orderedSectionsFiltered];
 };
 
 // Returns a list of section IDs with the order from orderedSectionIds and
@@ -49,4 +41,15 @@ export const getFilteredSectionOrderIds = (
     .map(section => section.id);
 
   return getOrderedSectionIds(filteredSectionIds, orderedSectionIds);
+};
+
+export const saveSectionOrder = (orderedSectionIds: number[]) => {
+  HttpClient.put(
+    '/user_preference',
+    JSON.stringify({sectionOrder: orderedSectionIds}),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
 };

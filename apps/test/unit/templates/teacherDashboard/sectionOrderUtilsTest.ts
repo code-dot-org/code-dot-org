@@ -2,6 +2,7 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 import {
   getFilteredSectionOrderIds,
   getOrderedSectionIds,
+  saveSectionOrder,
 } from '@cdo/apps/templates/teacherDashboard/sectionOrderUtils';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -214,21 +215,6 @@ describe('Section Order Utils', () => {
       expect(result).toEqual([1]);
     });
 
-    it('calls HttpClient.put when order changes', () => {
-      const filteredSectionIds = [1, 2, 3];
-      const orderedSectionIds = [3, 1];
-      getOrderedSectionIds(filteredSectionIds, orderedSectionIds);
-
-      expect(httpClientPutSpy).toHaveBeenCalledWith(
-        '/user_preference',
-        JSON.stringify({sectionOrder: [2, 3, 1]}),
-        true,
-        {
-          'Content-Type': 'application/json; charset=UTF-8',
-        }
-      );
-    });
-
     it('does not call HttpClient.put when order is the same', () => {
       const filteredSectionIds = [1, 2, 3];
       const orderedSectionIds = [1, 2, 3];
@@ -240,6 +226,22 @@ describe('Section Order Utils', () => {
     it('calls HttpClient.put with empty array when both inputs are empty', () => {
       getOrderedSectionIds([], []);
       expect(httpClientPutSpy).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('saveSectionOrder', () => {
+    it('calls HttpClient.put', () => {
+      const sectionIds = [1, 2, 3];
+      saveSectionOrder(sectionIds);
+
+      expect(httpClientPutSpy).toHaveBeenCalledWith(
+        '/user_preference',
+        JSON.stringify({sectionOrder: sectionIds}),
+        true,
+        {
+          'Content-Type': 'application/json; charset=UTF-8',
+        }
+      );
     });
   });
 });
