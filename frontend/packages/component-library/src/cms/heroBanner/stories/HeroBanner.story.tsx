@@ -113,7 +113,7 @@ export const WithWideText: Story = {
     heading: 'Wide Text Example',
     subHeading: 'This hero has wide text layout',
     description:
-      'The text should be centered and span the full width of the container.',
+      'The text should be left-aligned and span the full width of the container.',
     imageProps: {
       src: imageFile,
       altText: 'Decorative image for hero section',
