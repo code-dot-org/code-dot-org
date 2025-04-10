@@ -49,7 +49,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
  * ### Status: ```Ready for dev```
  *
  * Design System: HeroBanner Component.
- * Renders a Hero Banner/Section which serves as an opening section of a page. There should only be one Hero Banner per page at the very top of the page under the header navigation. 
+ * Renders a Hero Banner/Section which serves as an opening section of a page. There should only be one Hero Banner
+ * per page at the very top of the page under the header navigation.
  */
 const HeroBanner: React.FC<HeroBannerProps> = ({
   heading,
@@ -80,7 +81,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     }}
   >
     <div className={classNames(moduleStyles.heroBannerContainer)}>
-      <div className={moduleStyles.heroBannerDescriptiveSection}>
+      <div className={moduleStyles.heroBannerTextContainer}>
         <Heading1>{heading}</Heading1>
 
         {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
@@ -88,7 +89,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         {description && <BodyTwoText>{description}</BodyTwoText>}
 
         {partner && (
-          <span className={moduleStyles.heroBannerPartnerSection}>
+          <span className={moduleStyles.heroBannerPartnerContainer}>
             {partner.title}
             <Image {...partner.logo} />
           </span>
@@ -99,7 +100,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         )}
       </div>
       {(imageProps || videoProps) && (
-        <div className={moduleStyles.heroBannerVisualSection}>
+        <div className={moduleStyles.heroBannerMediaContainer}>
           {imageProps && !videoProps && <Image {...imageProps} />}
           {videoProps && <Video {...videoProps} />}
         </div>

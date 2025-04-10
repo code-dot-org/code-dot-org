@@ -39,7 +39,7 @@ $mobileBreakpoint: 970px;
   }
 }
 
-.heroBannerDescriptiveSection {
+.heroBannerTextContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -59,7 +59,7 @@ $mobileBreakpoint: 970px;
   }
 }
 
-.heroBannerPartnerSection {
+.heroBannerPartnerContainer {
   @include typography.body-three;
   @include typography.strong;
   display: inline-flex;
@@ -87,7 +87,7 @@ $mobileBreakpoint: 970px;
   }
 }
 
-.heroBannerVisualSection {
+.heroBannerMediaContainer {
   display: flex;
   align-items: center;
   gap: 4.375rem;
