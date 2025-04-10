@@ -61,11 +61,12 @@ jobs:
           curl -X POST "https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/${{ github.run_id }}/complete?apiKey=${{secrets.APPLITOOLS_API_KEY}}"
 
 
-      # OPTIONAL: running this step lets you see in the PR if the complete-applitools-eyes-batch job succeeded or failed
-      # This will always be visible inside the GitHub actions view, but surfacing it as a PR status might not be worth
-      # the developer UI clutter. Judgement call, not sure which is right.
+      # Running this step lets you see in the PR if the complete-applitools-eyes-batch job failed.
+      # Otherwise, you have to browse github actions to see the failure. We only do this when
+      # it failed. This reduces noise in daily development, but lets us avoid silent failure if some
+      # year/condition Drone starts completing before frontend tests.
       - uses: actions/github-script@v7
-        if: always()
+        if: failure()
         with:
           script: |
             await github.rest.repos.createCommitStatus({
@@ -75,31 +76,3 @@ jobs:
               sha: '${{ inputs.github_sha }}',
               state: '${{ job.status == 'success' && 'success' || 'failure' }}'
             })
-
-  # # This one should fail
-  # k8s-followup:
-  #   runs-on: ubuntu-24.04
-  #   if: ${{ inputs.drone_build_status == 'success' }}
-  #   # uses: ./.github/workflows/k8s-followup.yml
-  #   steps:
-  #     - run: |
-  #         echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
-  #         echo "This job should fail"
-  #         false
-  #
-  #     - if: always()
-  #       run: echo "k"
-  #
-  #     # Need to update commit status manually, or the result won't be visible within the PR:
-  #     - uses: actions/github-script@v7
-  #       if: always()
-  #       with:
-  #         script: |
-  #           await github.rest.repos.createCommitStatus({
-  #             context: 'K8S Followup',
-  #             description: 'this job should fail',
-  #             owner: context.repo.owner,
-  #             repo: context.repo.repo,
-  #             sha: '${{ inputs.github_sha }}',
-  #             state: '${{ job.status == 'success' && 'success' || 'failure' }}'
-  #           })
