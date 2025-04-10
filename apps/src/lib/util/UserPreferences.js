@@ -94,7 +94,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Save the user's console font size selection
+   * Save the user's font size selection for the console or editor.
    * @param {string} fontSize
    * @param {string} appName
    * @param {string} field either 'consoleFontSize' or 'editorFontSize'
@@ -112,7 +112,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Fetch the user's editor font size selection
+   * Fetch the user's console font size selection.
    * @param {string} fontSize
    * @param {string} appType
    */
