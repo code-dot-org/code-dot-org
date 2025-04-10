@@ -5,24 +5,29 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import moment from 'moment-timezone';
 import React, {FC, memo, useState} from 'react';
 
+import {WorkshopCourseConfig} from '../../types';
+
 import styles from './styles.module.scss';
 
 const usTimeZones = moment.tz.zonesForCountry('US');
 
 export const TimeZoneEditor: FC<{
-  text: string;
   timeZone: string;
+  config: WorkshopCourseConfig;
   handleChange: (tz: string) => void;
-}> = ({text, timeZone, handleChange}) => {
+}> = ({timeZone, config: {fields}, handleChange}) => {
   const [editMode, setEditMode] = useState(false);
   const [tzChanged, setTzChanged] = useState(false);
 
+  if (!fields.time_zone) return null;
+
   return (
     <div className={styles.container}>
-      <BodyThreeText id="tz-label">{text}</BodyThreeText>
+      <BodyThreeText id="tz-label">{fields.time_zone.label}</BodyThreeText>
       {editMode ? (
         <SimpleDropdown
-          name="timezone"
+          name={fields.time_zone.stateKey}
+          // labelText left blank intentionally
           labelText=""
           aria-labelledby="tz-label"
           size="xs"

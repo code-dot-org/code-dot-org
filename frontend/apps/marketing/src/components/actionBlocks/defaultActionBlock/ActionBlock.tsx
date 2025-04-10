@@ -4,13 +4,15 @@ import DSCOActionBlock, {
   ActionBlockProps,
 } from '@code-dot-org/component-library/actionBlock';
 
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {externalLinkIconProps} from '@/components/common/constants';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export type ActionBlockContentfulProps = ActionBlockProps & {
   overline: EntryFields.Text;
   title: EntryFields.Text;
   description: EntryFields.Text;
-  image: ImageAssetEntry;
+  image: ExperienceAsset;
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
@@ -36,6 +38,9 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
             text: primaryButton.fields.label,
             href: primaryButton.fields.primaryTarget || '#',
             ariaLabel: primaryButton.fields.ariaLabel || '',
+            iconRight: primaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }
@@ -45,6 +50,9 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
             text: secondaryButton.fields.label,
             href: secondaryButton.fields.primaryTarget || '#',
             ariaLabel: secondaryButton.fields.ariaLabel || '',
+            iconRight: secondaryButton.fields.isThisAnExternalLink
+              ? externalLinkIconProps
+              : undefined,
           }
         : undefined
     }

@@ -14,7 +14,7 @@ import {Store} from 'redux';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {SectionCardBody} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
+import SectionCardBody from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,

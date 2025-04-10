@@ -189,6 +189,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         appName,
         {isInitialVersion: 'true'}
       );
+      closeDropdown();
       confirmStartOver();
     } else if (projectManager && selectedVersion) {
       sendCodebridgeAnalyticsEvent(

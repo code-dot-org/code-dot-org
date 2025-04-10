@@ -45,8 +45,13 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
     },
     [dispatchWorkshop]
   );
+
+  if (!fields.suppress_email) {
+    return null;
+  }
+
   return (
-    <>
+    <section>
       <Heading2 visualAppearance="heading-sm">Emails & Reminders</Heading2>
       <div className={commonStyles.row}>
         <div className={commonStyles.col}>
@@ -55,8 +60,8 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
             <div className={commonStyles.toggleWrapper}>
               <div className={commonStyles.row}>
                 <Toggle
-                  label="3 and 10-days prior to start date"
-                  name="reminder emails"
+                  label={fields.suppress_email.label}
+                  name={fields.suppress_email.stateKey}
                   size="s"
                   checked={!suppressEmail}
                   onChange={handleChange}
@@ -105,7 +110,7 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

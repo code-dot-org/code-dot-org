@@ -13,7 +13,7 @@ import ImageInput from '../ImageInput';
 
 import OrderableList from './OrderableList';
 
-const EDITOR_LANGUAGES = ['blockly', 'droplet', 'html/css', 'java'];
+const EDITOR_LANGUAGES = ['blockly', 'droplet', 'html/css', 'java', 'python'];
 
 const useProgrammingEnvironment = initialProgrammingEnvironment => {
   const [programmingEnvironment, setProgrammingEnvironment] = useState(

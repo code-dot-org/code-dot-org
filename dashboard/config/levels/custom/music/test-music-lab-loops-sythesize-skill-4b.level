@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-19T15:53:01.000Z",
   "level_num": "custom",
@@ -8,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -227,13 +226,28 @@
       "validationEnabled": true,
       "validationSuccessMessage": "You did it! The song matches the example!",
       "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
-      "playerTitle": "Example"
+      "playerTitle": "Example",
+      "validationMode": "type"
     },
-    "long_instructions": "### Layering Multiple Backtracks with Loops\r\n\r\nUse a `play sequential` block to add the another lyric to the backtrack. The vocals should alternate between the two tracks while the rest of the backing continues!\r\n\r\nThis will mess up your loop count though - make sure to edit your loop count so the song ends at the same time again!",
+    "long_instructions": "### Layering Multiple Backtracks with Loops\r\n\r\nUse a `play sequential` block to add the another lyric to the backtrack. The vocals should alternate between the two tracks while the rest of the backing continues!\r\n\r\nThis will mess up your loop count though - make sure to edit your loop count so the song still ends at measure 8!",
     "encrypted_exemplar_sources": "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\nVbZfKCrNs1ra+i5z\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-sythesize-skill-4b_8ea3933f-b7f5-4fad-af02-8754d3830dce",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T15:53:01.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-4a\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-4a\"},{\"changed_at\":\"2025-03-19 15:53:56 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:54:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:56:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:57:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T15:53:01.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-4a\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-4a\"},{\"changed_at\":\"2025-03-19 15:53:56 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:54:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:56:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:57:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-07 14:14:25 +0000\",\"changed\":[\"offer_browser_tts\",\"exemplar_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

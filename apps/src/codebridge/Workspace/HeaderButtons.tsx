@@ -1,4 +1,4 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {Button} from '@code-dot-org/component-library/button';
 import {
   TooltipProps,
   WithTooltip,
@@ -24,7 +24,8 @@ import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources, levelProperties} = useCodebridgeContext();
+  const {startSources, levelProperties, projectPickerSettings} =
+    useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
 
   const dialogControl = useDialogControl();
@@ -80,6 +81,16 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.rightHeaderButtons}>
+      {projectPickerSettings && (
+        <Button
+          iconRight={{iconName: 'rotate'}}
+          size={'xs'}
+          text={projectPickerSettings.currentType}
+          onClick={projectPickerSettings.showProjectTypePicker}
+          type={'primary'}
+          aria-label={codebridgeI18n.projectPickerAriaLabel()}
+        />
+      )}
       <SettingsButton />
       {enableMicroBit && (
         <Button
@@ -87,7 +98,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           onClick={onClickFlash}
           size={'xs'}
           type={'tertiary'}
-          color={buttonColors.white}
           text={codebridgeI18n.sendToMicroBit()}
           className={darkModeStyles.tertiaryButton}
         />
@@ -98,7 +108,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           <Button
             isIconOnly
             icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            color={'white'}
             onClick={openFeedbackForm}
             ariaLabel={commonI18n.feedback()}
             size={'xs'}
@@ -113,7 +122,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           onClick={onClickSkip}
           size={'xs'}
           type={'tertiary'}
-          color={buttonColors.white}
           text={commonI18n.skipToProject()}
           className={classNames(
             darkModeStyles.tertiaryButton,
