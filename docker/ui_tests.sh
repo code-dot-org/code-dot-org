@@ -27,8 +27,8 @@ build_dashboard: true
 build_i18n: false
 build_pegasus: true
 bundler_use_sudo: false
-cloudfront_key_pair_id: nil
-cloudfront_private_key: nil
+cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
+cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_port: 3000
@@ -44,7 +44,7 @@ no_https_store: true
 override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
 pegasus_port: 3000
-properties_encryption_key: nil
+properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
 saucelabs_tunnel_name: cdo-tunnel-$CI_BUILD_NUMBER
@@ -57,9 +57,6 @@ aiproxy_api_key: 'fake_key'
 echo "Wrote secrets from env vars into locals.yml."
 
 set -x
-
-# Trash the UI test cache on this branch, we don't want to use it until we gain understanding
-rm dashboard/db/ui_test_data.hash
 
 bundle install --quiet
 bundle exec rake install
