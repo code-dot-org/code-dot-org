@@ -162,25 +162,24 @@ const Console: React.FunctionComponent = () => {
     }
   }, [fontSizeKey]);
 
-  // User preference for selected font size persists per signed-in user per app type
-  // (currently in pythonlab) because it is saved on the backend.
+  // User preference for selected console font size is saved on the backend
+  // per signed-in user per app type (currently in pythonlab).
   // Note that when the user selects a different font size from settings, fontSizeKey
   // is updated and saved on the backend.
   useEffect(() => {
-    if (signInState !== SignInState.SignedIn) {
-      return;
-    }
     const fetchFontSize = async () => {
+      if (signInState !== SignInState.SignedIn) {
+        return;
+      }
       const savedConsoleFontSize =
         await new UserPreferences().getConsoleFontSize(appName);
-      if (savedConsoleFontSize !== fontSizeKey) {
-        if (savedConsoleFontSize) {
-          dispatch(setConsoleFontSize(savedConsoleFontSize));
-        }
+      if (savedConsoleFontSize) {
+        dispatch(setConsoleFontSize(savedConsoleFontSize));
       }
     };
+
     fetchFontSize();
-  }, [signInState, fontSizeKey, appName, dispatch]);
+  }, [signInState, appName, dispatch]);
 
   return (
     <PanelContainer
