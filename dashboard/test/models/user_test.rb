@@ -5486,21 +5486,15 @@ class UserTest < ActiveSupport::TestCase
         let(:user) {build(:teacher, country_code: strict_country, password: 'short', password_confirmation: 'short')}
         it 'rejects passwords' do
           _(user).wont_be :valid?
-        end
-
-        it 'adds an error message' do
           user.valid?
           _(user.errors[:password]).must_include 'is too short (minimum is 14 characters)'
         end
       end
-      context 'when using a short password' do
+      context 'when using a long password' do
         let(:user) {create(:teacher, country_code: strict_country, password: 'longlongpassword', password_confirmation: 'longlongpassword')}
 
         it 'accepts passwords that are at least 14 characters' do
           _(user).must_be :valid?
-        end
-
-        it 'has no password errors for long password' do
           user.valid?
           _(user.errors[:password]).must_be :empty?
         end
@@ -5513,25 +5507,13 @@ class UserTest < ActiveSupport::TestCase
       it 'rejects a too-short password' do
         result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
         _(result).must_equal false
-      end
-
-      it 'adds error for too-short password' do
-        teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
         _(teacher.errors[:password]).must_include 'is too short (minimum is 14 characters)'
       end
 
       it 'accepts a sufficiently long password' do
         result = teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
         _(result).must_equal true
-      end
-
-      it 'has no password errors after successful update' do
-        teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
         _(teacher.errors[:password]).must_be :empty?
-      end
-
-      it 'persists the new password' do
-        teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
         _(teacher.password).must_equal 'longlongpassword'
       end
     end
