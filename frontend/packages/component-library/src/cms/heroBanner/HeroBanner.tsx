@@ -49,7 +49,7 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
  * ### Status: ```Ready for dev```
  *
  * Design System: HeroBanner Component.
- * Renders a Hero Banner/Section which serves as an opening section of a page.
+ * Renders a Hero Banner/Section which serves as an opening section of a page. There should only be one Hero Banner per page at the very top of the page under the header navigation. 
  */
 const HeroBanner: React.FC<HeroBannerProps> = ({
   heading,
