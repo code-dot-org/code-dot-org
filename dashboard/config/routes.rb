@@ -48,7 +48,10 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resource :user_preference, only: [:update]
+    resource :user_preference, only: [:update] do
+      get '/font_size/console', to: 'user_preferences#console_font_size'
+      get '/font_size/editor', to: 'user_preferences#editor_font_size'
+    end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
 
