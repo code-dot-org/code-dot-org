@@ -5,7 +5,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
   DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
-  MAX_REQUEST_LOG_LENGTH = 4 * 1024 * 1024
 
   before_enqueue do |job|
     request = job.arguments.first[:request]
