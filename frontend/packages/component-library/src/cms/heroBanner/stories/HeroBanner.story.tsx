@@ -2,6 +2,7 @@ import codeOrgLogo from '@public/images/code-org-logo.png';
 import customBackgroundImage from '@public/images/hero-banner-custom-bg-example.png';
 import imageFile from '@public/images/image-component.png';
 import {Meta, StoryObj} from '@storybook/react';
+import {within, expect} from '@storybook/test';
 
 import HeroBanner from './../HeroBanner';
 
@@ -144,5 +145,46 @@ export const WithWideText: Story = {
       className: 'custom-image-class',
     },
     withWideText: true,
+  },
+};
+
+export const WithCustomStyles: Story = {
+  args: {
+    heading: 'Styled via className',
+    subHeading: 'This HeroBanner has custom styles via className',
+    description:
+      'We apply a dashed border and fixed height using a custom class injected in the Storybook play function.',
+    className: 'customHeroBannerClass',
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+
+    // Dynamically inject custom style for test and visual verification
+    const style = document.createElement('style');
+    style.innerHTML = `
+      section.customHeroBannerClass {
+        outline: 3px dashed rgb(255, 165, 0);
+        background-color: #fefbe9;
+        padding: 0;
+      }
+    `;
+    canvasElement.appendChild(style);
+
+    const heroBannerSection = await canvas.findByRole('banner');
+
+    await expect(heroBannerSection).toHaveClass('customHeroBannerClass');
+
+    const computedStyle = window.getComputedStyle(heroBannerSection);
+
+    await expect(computedStyle.outline).toBe('rgb(255, 165, 0) dashed 3px');
+    await expect(computedStyle.backgroundColor).toBe('rgb(254, 251, 233)'); // #fefbe9
+  },
+};
+
+WithCustomStyles.parameters = {
+  docs: {
+    description: {
+      story: 'This example demonstrates how to apply styles via className',
+    },
   },
 };

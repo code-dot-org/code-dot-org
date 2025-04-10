@@ -71,11 +71,12 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   ...HTMLAttributes
 }) => (
   <section
-    {...HTMLAttributes}
+    role="banner"
     className={classNames(moduleStyles.heroBannerWrapper, className, {
       [moduleStyles['heroBanner-withWideText']]: withWideText,
     })}
     data-theme={HTMLAttributes['data-theme']}
+    {...HTMLAttributes}
     style={{
       ...(HTMLAttributes.style ?? {}),
       backgroundColor: backgroundColor
