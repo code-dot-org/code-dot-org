@@ -18,11 +18,9 @@ permissions:
   statuses: write
 
 jobs:
-  # We use applitools eyes, with the same batch id, from drone, from marketing-app-ci.yml and from
-  # component-library-ci.yml. We need to close the batch after all of these are completed.
-  #
-  # This code assumes Drone will be the last to finish, a good assumption in 2025, but throws an error
-  # if any of the others are still pending.
+  # We use applitools eyes from: drone, marketing-app-ci.yml and component-library-ci.yml.
+  # We need to close the batch after all of these are completed. We assume Drone will be
+  # the last to finish, but we check and throw an error if any of the others are still pending.
   complete-applitools-eyes-batch:
     runs-on: ubuntu-24.04
     steps:
@@ -36,20 +34,17 @@ jobs:
         with:
           script: |
             async function assertWorkflowNotPending(workflow_id) {
-              const result = await github.rest.actions.listWorkflowRuns({
+              const { data: { workflow_runs } } = await github.rest.actions.listWorkflowRuns({
                 workflow_id,
                 head_sha: context.sha,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
               });
-              console.log(`Result for ${workflow_id}:`, result);
-              const data = result.data;
 
-              if (data.workflow_runs.length === 0) {
+              if (workflow_runs.length === 0) {
                 console.log(`Workflow ${workflow_id} was not triggered by this commit, ignoring`);
-                return;
-              } else if (data.workflow_runs[0].status !== 'completed') {
-                core.setFailed(`Error: ${workflow_id} is still pending, this may cause problems.`);
+              } else if (workflow_runs[0].status !== 'completed') {
+                core.setFailed(`Error: ${workflow_id} is still pending, but we're closing the applitools batch now that drone is complete. This may cause problems for ${workflow_id}.`);
                 process.exit(1);
               }
             }
@@ -92,10 +87,10 @@ jobs:
   #         echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
   #         echo "This job should fail"
   #         false
-
+  #
   #     - if: always()
   #       run: echo "k"
-
+  #
   #     # Need to update commit status manually, or the result won't be visible within the PR:
   #     - uses: actions/github-script@v7
   #       if: always()
