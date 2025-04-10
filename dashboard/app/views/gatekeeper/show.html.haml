@@ -59,10 +59,10 @@
 .features
   .feature-list
     %h3 Features
-    = form_for :add, :url => {:controller => 'dynamic_config', :action => 'gatekeeper_set'} do |f|
-      %input#new-feature{:type => "text", :placeholder => "Feature name", :name => "feature"}
-      %input{:type => "hidden", :name => "value", :value => "false"}
-      %input{:type => "submit", :value => "Add", :class => "btn"}
+    = form_with url: gatekeeper_path, method: :patch do |f|
+      = f.text_field :feature, placeholder: "Feature name", id: "new-feature"
+      = f.hidden_field :value, value: "false"
+      = f.submit "Add", class: "btn"
     %ul
       - @gk_hsh.to_a.sort.each do |feature, clauses|
         -unless clauses.empty?
@@ -88,16 +88,15 @@
           %strong Enabled:
           = clause['value']
         .delete-form
-          = form_for :delete, :url => {:controller => 'dynamic_config', :action => 'gatekeeper_delete'} do |f|
-            %input{:type => "hidden", :name => "feature", :value => @feature }
-            %input{:type => "hidden", :name => "where", :value => clause['where'].to_json }
-            %input{:type => "submit", :value => "Delete", :class => "btn btn-danger", :onclick => "return confirm('Are you sure you want to delete this rule?');"}
-
+          = form_with url: gatekeeper_path, method: :delete do |f|
+            = f.hidden_field :feature, value: @feature
+            = f.hidden_field :where, value: clause['where'].to_json
+            = f.submit "Delete", class: "btn btn-danger", :onclick => "return confirm('Are you sure you want to delete this rule?');"
 
     .add-rule
       %h4 Set/Update Rule
-      = form_for :add, :url => {:controller => 'dynamic_config', :action => 'gatekeeper_set'} do |f|
-        %input{:type => "hidden", :name => "feature", :value => @feature }
+      = form_with url: gatekeeper_path, method: :patch do |f|
+        = f.hidden_field :feature, value: @feature
         %p
           %strong Where:
           %div#where-clauses
@@ -107,9 +106,7 @@
           %select{:name => "value"}
             %option{:value => "true"} true
             %option{:value => "false"} false
-
-
-        %input{:type => "submit", :value => "Set Rule", :class => "btn"}
+        = f.submit "Set Rule", class: "btn"
 
 :javascript
   var whereClauseCount = 0;
