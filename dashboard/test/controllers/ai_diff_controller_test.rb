@@ -44,18 +44,25 @@ class AiDiffControllerTest < ActionController::TestCase
                     uri: "s3://dummy_file"
                   },
                   type: "S3"
+                },
+                metadata: {
+                  'url' => 'https://zombo.com'
                 }
               }
             ]
           }
         ],
         output: {
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          text: "Lorem ipsum dolor sit amet, (source 1) consectetur adipiscing elit,(Sources 42 and 87) sed do eiusmod tempor (source 1, 3, 5) incididunt ut labore et dolore magna aliqua."
         },
         session_id: @session_id
       }
     )
     AiDiffBedrockHelper.stubs(:create_bedrock_client).returns(@bedrock_client)
+    @expected_response = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+**See also:**
+- [Link 1](https://zombo.com)"
   end
 
   class AiDiffControllerNoPIIViolationTest < AiDiffControllerTest
@@ -149,14 +156,14 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
       thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
       assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: @expected_response, is_preset: false).count
 
       assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
       assert_equal @session_id, json_response["session_id"]
-      assert_equal "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", json_response["chat_message_text"]
+      assert_equal @expected_response, json_response["chat_message_text"]
       assert_equal "assistant", json_response["role"]
     end
 
@@ -177,14 +184,14 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
       thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
       assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: @expected_response, is_preset: false).count
 
       assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
       assert_equal @session_id, json_response["session_id"]
-      assert_equal "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", json_response["chat_message_text"]
+      assert_equal @expected_response, json_response["chat_message_text"]
       assert_equal "assistant", json_response["role"]
     end
 
@@ -204,14 +211,14 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
       thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
       assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: @expected_response, is_preset: false).count
 
       assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
       assert_equal @session_id, json_response["session_id"]
-      assert_equal "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", json_response["chat_message_text"]
+      assert_equal @expected_response, json_response["chat_message_text"]
       assert_equal "assistant", json_response["role"]
     end
 
@@ -232,14 +239,14 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
       thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
       assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: @expected_response, is_preset: false).count
 
       assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
       assert_equal @session_id, json_response["session_id"]
-      assert_equal "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", json_response["chat_message_text"]
+      assert_equal @expected_response, json_response["chat_message_text"]
       assert_equal "assistant", json_response["role"]
     end
 
@@ -260,14 +267,14 @@ class AiDiffControllerTest < ActionController::TestCase
       assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
       thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
       assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
-      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: @expected_response, is_preset: false).count
 
       assert_equal 2, thread.aidiff_messages.count
 
       json_response = JSON.parse(response.body)
       assert_response :success
       assert_equal @session_id, json_response["session_id"]
-      assert_equal "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", json_response["chat_message_text"]
+      assert_equal @expected_response, json_response["chat_message_text"]
       assert_equal "assistant", json_response["role"]
     end
   end

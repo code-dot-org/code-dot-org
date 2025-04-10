@@ -3,31 +3,24 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 
-import {useFetch} from '@cdo/apps/util/useFetch';
-
 import {MultiSelectInput, OptionId} from '../components/MultiSelectInput';
-import {Facilitator, PartnerFacilitatorProps, RegionalPartner} from '../types';
+import {PartnerFacilitatorProps} from '../types';
 
 import commonStyles from '../styles.module.scss';
 
 export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
-  config: {label, fields},
+  config: {fields},
   facilitators,
   regionalPartnerId,
   errors,
   dispatchWorkshop,
+  regionalPartnerData,
+  facilitatorData,
 }) => {
-  const {data: regionalPartners} = useFetch<RegionalPartner[]>(
-    '/api/v1/regional_partners'
-  );
-
-  const {data: fetchedFacilitators} = useFetch<Facilitator[]>(
-    `/api/v1/pd/course_facilitators?course=${encodeURIComponent(label)}`
-  );
   const regionalPartnerOptions = useMemo(() => {
     const options = [{value: '', text: 'None'}];
 
-    regionalPartners?.forEach(({id, name}) => {
+    regionalPartnerData?.forEach(({id, name}) => {
       options.push({
         value: id.toString(),
         text: name,
@@ -35,17 +28,17 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
     });
 
     return options;
-  }, [regionalPartners]);
+  }, [regionalPartnerData]);
 
   const facilitatorOptions = useMemo(
     () =>
-      fetchedFacilitators?.map(({id, name, email}) => ({
+      facilitatorData?.map(({id, name, email}) => ({
         id,
         label: name,
         secondaryLabel: email,
         searchText: [name, email],
       })) ?? [],
-    [fetchedFacilitators]
+    [facilitatorData]
   );
 
   const handleFacilitators = useCallback(

@@ -9,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build a sequence\r\n\r\n1. Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block).\r\n2. Choose two different sounds.\r\n2. Press [Run](#clickable=run-button).\r\n\r\n[<i class=\"fa-solid fa-lightbulb\"></i> HINT](#clickable=play-sound-block---when-run-block)",
+    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build a sequence\r\n\r\n1. Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block).\r\n2. Choose two different sounds.\r\n2. Press [Run](#clickable=run-button).\r\n\r\n**[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id:play-sound-block---when-run-block)**\r\n\r\n- [Play Sound to When Run](#clickable=flyout-id:play_sound_at_current_location_simple2---id:when-run-block)",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -184,7 +184,7 @@
     "level_data": {
       "validationTimeout": 6,
       "library": "launch2024",
-      "packId": "default",
+      "packId": "twinkle_twinkle",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -201,16 +201,11 @@
         }
       },
       "sounds": {
-        "electro": [
-          "drum_beat_cowbell",
-          "drum_beat_edm",
-          "drum_beat_noise",
-          "bass_synth_candy",
-          "bass_synth_blocks",
-          "synth_cave",
-          "synth_sleek",
-          "guitar_melody",
-          "guitar_shimmy"
+        "twinkle_twinkle": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_verse_1",
+          "vocals_verse_2"
         ]
       },
       "toolbox": {
@@ -230,9 +225,12 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:36.808+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-two\\\"\"],\"cloned_from\":\"music-coding-intro-play-two\"},{\"changed_at\":\"2025-03-20 21:12:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:36.808+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-two\\\"\"],\"cloned_from\":\"music-coding-intro-play-two\"},{\"changed_at\":\"2025-03-20 21:12:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:17:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:18:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:35:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

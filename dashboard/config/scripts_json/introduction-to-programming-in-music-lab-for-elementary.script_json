@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-08 09:28:26 UTC",
+    "serialized_at": "2025-04-09 23:21:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -279,7 +279,7 @@
       "key": "113e6612-aa7d-4b60-a733-6098f5bfe479",
       "position": 5,
       "properties": {
-        "progression_name": "Freeplay"
+        "progression_name": "Career Exploration"
       },
       "seeding_key": {
         "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479",
@@ -287,8 +287,19 @@
       }
     },
     {
-      "key": "08bf6cda-2ecc-4375-8fab-410d75e151fe",
+      "key": "cab331d7-7c83-4c1a-9181-b1f4accff58a",
       "position": 6,
+      "properties": {
+        "progression_name": "Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "cab331d7-7c83-4c1a-9181-b1f4accff58a",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "08bf6cda-2ecc-4375-8fab-410d75e151fe",
+      "position": 7,
       "properties": {
         "name": "Lesson Plan:"
       },
@@ -716,63 +727,13 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-coding-intro-drop2_launch"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-drop2_launch"
-        ],
-        "lesson.key": "Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
-      },
-      "level_keys": [
-        "music-coding-intro-drop2_launch"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-coding-intro-drop3_launch"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-drop3_launch"
-        ],
-        "lesson.key": "Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
-      },
-      "level_keys": [
-        "music-coding-intro-drop3_launch"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-songwriter-videos"
         ],
-        "progression": "Freeplay"
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -789,14 +750,33 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-inspiration"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "cab331d7-7c83-4c1a-9181-b1f4accff58a"
+      },
+      "level_keys": [
+        "music-coding-intro-inspiration"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-make_launch"
-        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -807,14 +787,14 @@
         "lesson.key": "Songwriter's Toolbox",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479"
+        "activity_section.key": "cab331d7-7c83-4c1a-9181-b1f4accff58a"
       },
       "level_keys": [
         "music-coding-intro-make_launch"
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -839,7 +819,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -864,7 +844,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -889,7 +869,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -914,7 +894,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -939,7 +919,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -964,7 +944,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -989,7 +969,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -1014,7 +994,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -1039,7 +1019,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1064,7 +1044,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -1089,7 +1069,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -1114,7 +1094,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1139,7 +1119,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1164,7 +1144,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1189,7 +1169,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1214,7 +1194,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1239,7 +1219,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -1264,7 +1244,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -1289,7 +1269,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -1314,7 +1294,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -1339,7 +1319,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1364,7 +1344,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -1524,30 +1504,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-drop2_launch",
-        "script_level.level_keys": [
-          "music-coding-intro-drop2_launch"
-        ],
-        "lesson.key": "Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "music-coding-intro-drop3_launch",
-        "script_level.level_keys": [
-          "music-coding-intro-drop3_launch"
-        ],
-        "lesson.key": "Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "music-coding-intro-songwriter-videos",
         "script_level.level_keys": [
           "music-coding-intro-songwriter-videos"
@@ -1560,6 +1516,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-coding-intro-inspiration",
+        "script_level.level_keys": [
+          "music-coding-intro-inspiration"
+        ],
+        "lesson.key": "Songwriter's Toolbox",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "cab331d7-7c83-4c1a-9181-b1f4accff58a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "music-coding-intro-make_launch",
         "script_level.level_keys": [
           "music-coding-intro-make_launch"
@@ -1567,7 +1535,7 @@
         "lesson.key": "Songwriter's Toolbox",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "113e6612-aa7d-4b60-a733-6098f5bfe479"
+        "activity_section.key": "cab331d7-7c83-4c1a-9181-b1f4accff58a"
       }
     },
     {
