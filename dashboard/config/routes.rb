@@ -48,7 +48,10 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resource :user_preference, only: [:update]
+    resource :user_preference, only: [:update] do
+      get '/font_size/console', to: 'user_preferences#console_font_size'
+      get '/font_size/editor', to: 'user_preferences#editor_font_size'
+    end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
 
@@ -604,13 +607,15 @@ Dashboard::Application.routes.draw do
     post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
     post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
-    resources :regional_partners
-    post 'regional_partners/:id/assign_program_manager', controller: 'regional_partners', action: 'assign_program_manager'
-    get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
-    post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
-    get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
-    post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
-
+    resources :regional_partners do
+      member do
+        post :assign_program_manager
+        get 'remove_program_manager/:program_manager_id', action: 'remove_program_manager'
+        post :add_mapping
+        get 'remove_mapping/:id', action: 'remove_mapping'
+        post :replace_mappings
+      end
+    end
     get 'regional-partner-search', to: 'regional_partners#regional_partner_search'
 
     scope path: '/admin' do

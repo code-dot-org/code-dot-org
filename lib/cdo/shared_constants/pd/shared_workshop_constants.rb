@@ -459,6 +459,12 @@ module Pd
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
       },
       {
+        slug: COURSE_FACILITATOR.parameterize(separator: "_"),
+        label: COURSE_FACILITATOR,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS
+      },
+      {
         slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
         label: COURSE_BUILD_YOUR_OWN,
         session_fields: SESSION_FIELDS,
