@@ -214,6 +214,12 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def destroy_course
+    course = UnitGroup.find_by!(name: params[:course_name])
+    course.destroy
+    head :ok
+  end
+
   def destroy_level
     level = Level.find(params[:id])
     level.destroy
