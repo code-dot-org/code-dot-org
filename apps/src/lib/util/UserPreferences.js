@@ -126,7 +126,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Fetch the user's editor font size selection
+   * Fetch the user's editor font size selection.
    * @param {string} editorFontSize
    * @param {string} appType
    */
