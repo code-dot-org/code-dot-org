@@ -2,18 +2,18 @@ import moment from 'moment-timezone';
 
 import {DATETIME_FORMAT} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 import {
-  sessionDataToState,
-  sessionStateToApi,
-  workshopDataToState,
-  workshopStateToApi,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate';
-import {
   Organizer,
   Session,
   SessionFormState,
   Workshop,
   WorkshopFormState,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+import {
+  sessionDataToState,
+  sessionStateToApi,
+  workshopDataToState,
+  workshopStateToApi,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/utils';
 
 describe('sessionDataToState', () => {
   it('should convert session data to state', () => {
