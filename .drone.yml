@@ -289,6 +289,10 @@ name: on-droneci-complete
 clone:
   disable: true
 steps:
+  - name: sleep-15-minutes
+    image: alpine
+    commands:
+      - sleep 900
   - name: trigger-github-actions
     image: plugins/webhook
     settings:
@@ -348,6 +352,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 225519ca7c570cc17c796894b739abedfcf22c3e25479617bef0e7360ac9ec4b
+hmac: 80856fa9ec3075abbeed85849d4c28e0ee230a90b58d39c27c339bbb6593b748
 
 ...
