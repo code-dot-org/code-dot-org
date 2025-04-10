@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-04-06T19:51:30.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL-Video-21",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28494,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "##### This video features Code.org's founder and CEO, Hadi Partovi, in welcoming you to Code.org's Professional Learning."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-06T19:51:30.980+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-PLVid_2024\\\"\"],\"cloned_from\":\"OPD-K5-PLVid_2024\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

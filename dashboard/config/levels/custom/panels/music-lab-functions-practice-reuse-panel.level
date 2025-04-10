@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2025-03-19T23:33:45.000Z",
   "level_num": "custom",
@@ -14,8 +13,10 @@
         "imageUrl": "",
         "key": "music-lab-functions-practice-abstract-panel-3b135fec-37b5-421c-a078-8aa602a6b152"
       }
-    ]
+    ],
+    "display_name": "Reusing Functions"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T23:33:45.321+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-abstract-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-abstract-panel\"},{\"changed_at\":\"2025-03-19 23:33:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T23:33:45.321+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-abstract-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-abstract-panel\"},{\"changed_at\":\"2025-03-19 23:33:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 04:29:49 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

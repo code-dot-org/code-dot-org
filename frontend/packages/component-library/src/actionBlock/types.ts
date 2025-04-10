@@ -1,6 +1,7 @@
 import {HTMLAttributes} from 'react';
 
 import {LinkButtonProps} from '@/button';
+import {ImageProps} from '@/image';
 
 export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
   /** Action Block title */
@@ -8,7 +9,7 @@ export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
   /** Action Block description */
   description?: string;
   /** Action Block image */
-  image?: string;
+  image?: ImageProps;
   /** Action Block overline */
   overline?: string;
   /** Action Block Details */

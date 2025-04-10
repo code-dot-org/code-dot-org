@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-04-04T20:19:22.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Gift Recommendations, Part 3\r\n\r\nUse AI Chat to get gift recommendations for your friend.\r\n\r\n### Do This:\r\n\r\n1. Put your customized prompt from level 3 or a similar prompt in the chat. *Don't have a prompt? That's ok! You can copy one from below the instructions.*\r\n2. Select an image from the pre-loaded images folder that best represents the gift recipient’s room decor.\r\n3. Upload the image alongside your prompt.\r\n4. Press **Send** and read **AI Chat's response**.\r\n5. **Compare the response** to the one you received in Level 3. How did including an image change AI’s recommendations?\r\n\r\n**Try it out!**\r\n\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Give me 3 gift ideas under $30 for a 15-year-old girl who likes watercolor paintings. Her favorite birthday gift last year was a purple Polaroid camera. Justify your answer based on her decorating style in this picture of her room.\r\n:::\r\n&nbsp\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I upload an image?**]\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a gift recommender. When given a prompt, answer with your gift recommendations.\n\nDo not answer any questions that are not related to gifts.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "Bedroom Level 4 Image.jpg": "0f46a5d9-43f9-4a8d-b4a9-024d060fb3a5.jpg",
+      "Bedroom Level 4 Image (1).jpg": "c66d4b21-7478-4b79-8d22-17393b43c2eb.jpg",
+      "Bedroom Level 4 Image (2).jpg": "5fcc747f-f116-459c-baea-ecb3ce0e7c0a.jpg",
+      "Bedroom Level 4.jpg": "f96899c8-5528-4b66-a447-3662db942b3f.jpg",
+      "Bedroom5.jpg": "6e9c93ea-0248-43db-85d0-859eab8db113.jpg",
+      "Bedroom6.jpg": "80ac2725-6be8-4104-9c23-19e018035c85.jpg"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-04T20:19:22.124+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level4\"}]"
+}]]></config>
+</Aichat>

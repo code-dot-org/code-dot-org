@@ -1,6 +1,8 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
+import FormFieldWrapper, {
+  FormFieldWrapperProps,
+} from '@code-dot-org/component-library/formFieldWrapper';
 import Tags from '@code-dot-org/component-library/tags';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
@@ -23,13 +25,19 @@ export const MultiSelectInput: React.FC<{
   selectedOptions: OptionId[];
   setSelectedOptions: (selectedOptions: OptionId[]) => void;
   id?: string;
+  size?: FormFieldWrapperProps['size'];
+  className?: string;
   placeholder?: string;
   emptyStateMessage?: string;
+  errorMessage?: string;
 }> = ({
   label,
   options,
   selectedOptions,
   setSelectedOptions,
+  errorMessage,
+  size,
+  className,
   id = 'multiselect',
   placeholder = 'Filter options',
   emptyStateMessage = 'No results found',
@@ -242,8 +250,10 @@ export const MultiSelectInput: React.FC<{
     <div ref={wrapperRef}>
       <FormFieldWrapper
         label={label}
-        className={styles.label}
+        className={classNames(styles.label, className)}
         id={`${id}-label`}
+        size={size}
+        errorMessage={errorMessage}
         onClick={e => {
           // prevent label's native click event and stop propagation
           e.preventDefault();

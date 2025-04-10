@@ -109,7 +109,6 @@ export const PopUpButton = ({
         className={classNames(className, darkModeStyles.tertiaryButton)}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}
-        color="white"
         isIconOnly
         onClick={clickHandler}
         type={'tertiary'}

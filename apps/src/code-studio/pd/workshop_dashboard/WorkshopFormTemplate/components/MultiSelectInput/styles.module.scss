@@ -14,6 +14,8 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  min-height: 2rem;
+  box-sizing: border-box;
   cursor: default;
 
   &.focused {
@@ -30,7 +32,7 @@
     column-gap: 0.5rem;
     display: flex;
     align-items: center;
-    padding: 0.313rem 0.75rem;
+    padding: 0.25rem 0.75rem;
     flex-grow: 1;
     min-width: 6.25rem;
     pointer-events: none;
@@ -57,7 +59,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      height: 1.375rem;
+      height: 1.25rem;
       display: inline-flex;
       flex: 1 1 6.25rem; /* grow, shrink, basis */
       min-width: 6.25rem;

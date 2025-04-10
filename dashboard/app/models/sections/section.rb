@@ -25,6 +25,8 @@
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
 #  ai_tutor_enabled     :boolean          default(FALSE)
+#  avatar_color         :integer
+#  avatar_emoji         :integer
 #
 # Indexes
 #
@@ -660,6 +662,11 @@ class Section < ApplicationRecord
       customizing-llms-2024
       customizing-llms-latm-pilot
     ]
+
+    csaif_scripts = %w[
+      pswai-pilot-2024
+    ]
+
     gen_ai_course = 'exploring-gen-ai-2024'
 
     csaif_courses = %w[
@@ -667,9 +674,10 @@ class Section < ApplicationRecord
       programming-fundamentals-2024
       programming-fundamentals-aitutor-2024
       networks-and-the-internet-2024
+      problem-solving-with-ai-2024
     ]
 
-    gen_ai_scripts.include?(script&.name) ||
+    (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
       (csaif_courses + [gen_ai_course]).include?(unit_group&.name)
   end
 

@@ -1,4 +1,4 @@
-import {render, screen, fireEvent, waitFor} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
@@ -14,6 +14,11 @@ import {
   generateNewSession,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor';
 import {SessionPart} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor/components/SessionPart';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+const config = WorkshopCourseConfigs.find(
+  ({slug}) => slug === 'build_your_own_workshop'
+);
 
 describe('generateNewSession', () => {
   const newIdRegex = /^new-\d+-\w+$/;
@@ -90,6 +95,8 @@ describe('SessionsEditor', () => {
       <SessionsEditor
         sessions={initialSessions}
         dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
       />
     );
 
@@ -101,6 +108,8 @@ describe('SessionsEditor', () => {
       <SessionsEditor
         sessions={initialSessions}
         dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
       />
     );
 
@@ -137,6 +146,7 @@ describe('SessionPart', () => {
     if (!sessions.length) return null;
     return (
       <SessionPart
+        fields={config.session_fields}
         dispatchSessions={dispatchSessions.mockImplementation(dispatch)}
         showSameAsPrevious={true}
         index={0}
@@ -161,12 +171,24 @@ describe('SessionPart', () => {
   it('renders with form fields', () => {
     render(<SessionPartWithState />);
 
-    expect(screen.getByLabelText('Date')).toBeInTheDocument();
-    expect(screen.getByLabelText('Start Time')).toBeInTheDocument();
-    expect(screen.getByLabelText('End Time')).toBeInTheDocument();
-    expect(screen.getByLabelText('Format')).toBeInTheDocument();
-    expect(screen.getByLabelText('Location name')).toBeInTheDocument();
-    expect(screen.getByLabelText('Location address')).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(config.session_fields.date.label)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(config.session_fields.start.label)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(config.session_fields.end.label)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(config.session_fields.session_format.label)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(config.session_fields.location_name.label)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(config.session_fields.location_address.label)
+    ).toBeInTheDocument();
   });
 
   it('dispatches UPDATE_SESSION when date changes', async () => {
@@ -190,7 +212,9 @@ describe('SessionPart', () => {
   it('dispatches UPDATE_SESSION when start time changes', async () => {
     render(<SessionPartWithState />);
 
-    const startTimeDropdown = screen.getByLabelText('Start Time');
+    const startTimeDropdown = screen.getByLabelText(
+      config.session_fields.start.label
+    );
     await user.selectOptions(startTimeDropdown, '8:30am');
 
     await waitFor(() => {
@@ -208,7 +232,9 @@ describe('SessionPart', () => {
   it('dispatches UPDATE_SESSION when end time changes', async () => {
     render(<SessionPartWithState />);
 
-    const endTimeDropdown = screen.getByLabelText('End Time');
+    const endTimeDropdown = screen.getByLabelText(
+      config.session_fields.end.label
+    );
     await user.selectOptions(endTimeDropdown, '5:30pm');
 
     await waitFor(() => {
@@ -226,7 +252,9 @@ describe('SessionPart', () => {
   it('dispatches UPDATE_SESSION when format changes', async () => {
     render(<SessionPartWithState />);
 
-    const formatDropdown = screen.getByLabelText('Format');
+    const formatDropdown = screen.getByLabelText(
+      config.session_fields.session_format.label
+    );
     await user.selectOptions(formatDropdown, 'virtual');
 
     await waitFor(() => {
@@ -259,7 +287,9 @@ describe('SessionPart', () => {
   it('dispatches UPDATE_SESSION when location name changes', async () => {
     render(<SessionPartWithState />);
 
-    const locationNameInput = screen.getByLabelText('Location name');
+    const locationNameInput = screen.getByLabelText(
+      config.session_fields.location_name.label
+    );
     const newLocation = 'New Location';
     await user.clear(locationNameInput);
     await user.type(locationNameInput, newLocation);
@@ -279,7 +309,9 @@ describe('SessionPart', () => {
   it('dispatches UPDATE_SESSION when location address changes', async () => {
     render(<SessionPartWithState />);
 
-    const locationAddressInput = screen.getByLabelText('Location address');
+    const locationAddressInput = screen.getByLabelText(
+      config.session_fields.location_address.label
+    );
     const newAddress = 'New Address';
     await user.clear(locationAddressInput);
     await user.type(locationAddressInput, newAddress);
@@ -304,7 +336,9 @@ describe('SessionPart', () => {
     };
     render(<SessionPartWithState session={virtualSession} />);
 
-    const meetingLinkInput = screen.getByLabelText('Meeting link');
+    const meetingLinkInput = screen.getByLabelText(
+      config.session_fields.meeting_link.label
+    );
     const newLink = 'new.com';
     await user.clear(meetingLinkInput);
     await user.type(meetingLinkInput, newLink);
@@ -384,8 +418,14 @@ describe('SessionPart', () => {
     };
     render(<SessionPartWithState session={virtualSession} />);
 
-    expect(screen.getByLabelText('Meeting link')).toBeInTheDocument();
-    expect(screen.queryByLabelText('Location name')).not.toBeInTheDocument();
-    expect(screen.queryByLabelText('Location address')).not.toBeInTheDocument();
+    expect(
+      screen.getByLabelText(config.session_fields.meeting_link.label)
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByLabelText(config.session_fields.location_name.label)
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByLabelText(config.session_fields.location_address.label)
+    ).not.toBeInTheDocument();
   });
 });
