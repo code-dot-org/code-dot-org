@@ -23,6 +23,10 @@ export const Default: Story = {
     description:
       'Join millions of students learning computer science around the world.',
   },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('banner')).toBeInTheDocument();
+  },
 };
 
 export const WithImage: Story = {
@@ -37,6 +41,12 @@ export const WithImage: Story = {
       className: 'custom-image-class',
     },
   },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.getByAltText('Decorative image for hero section'),
+    ).toBeInTheDocument();
+  },
 };
 
 export const WithVideo: Story = {
@@ -48,6 +58,12 @@ export const WithVideo: Story = {
       youTubeId: 'dQw4w9WgXcQ',
       videoTitle: 'Watch our intro video',
     },
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.getByLabelText('Play video Watch our intro video'),
+    ).toBeInTheDocument();
   },
 };
 
@@ -68,12 +84,25 @@ export const WithPartnerAndCTA: Story = {
       href: '#',
     },
   },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText('In partnership with')).toBeInTheDocument();
+    await expect(canvas.getByAltText('Tech for Good Logo')).toBeInTheDocument();
+    await expect(
+      canvas.getByRole('link', {name: 'Learn More'}),
+    ).toBeInTheDocument();
+  },
 };
 
 export const TextOnly: Story = {
   args: {
     heading: 'Minimalist Hero',
     subHeading: 'Simple and elegant',
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText('Minimalist Hero')).toBeInTheDocument();
+    await expect(canvas.getByText('Simple and elegant')).toBeInTheDocument();
   },
 };
 
@@ -86,6 +115,12 @@ export const LongContent: Story = {
     description:
       'The description here is intentionally long to ensure text flows properly across viewports and doesn’t break layout.',
   },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.getByText(/This is a longer hero heading/),
+    ).toBeInTheDocument();
+  },
 };
 
 export const WithBackgroundColor: Story = {
@@ -94,21 +129,17 @@ export const WithBackgroundColor: Story = {
     subHeading: 'This hero has a background color set via hex code',
     description:
       'You can use the `backgroundColor` prop to apply any hex or CSS color value.',
-    backgroundColor: '#E3F2FD', // Light blue as an example
+    backgroundColor: '#E3F2FD',
     imageProps: {
       src: imageFile,
       altText: 'Decorative image for hero section',
     },
   },
-};
-
-WithBackgroundColor.parameters = {
-  docs: {
-    description: {
-      story:
-        'This story shows how to apply a custom background color using the `backgroundColor` prop.' +
-        ' This is useful when a design calls for specific color values outside of design tokens.',
-    },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const banner = canvas.getByRole('banner');
+    const styles = window.getComputedStyle(banner);
+    await expect(styles.backgroundColor).toBe('rgb(227, 242, 253)');
   },
 };
 
@@ -121,6 +152,14 @@ export const WithBackgroundImage: Story = {
     backgroundImageUrl: customBackgroundImage,
     'data-theme': 'Dark',
   },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const banner = canvas.getByRole('banner');
+    const styles = window.getComputedStyle(banner);
+    await expect(styles.backgroundImage).toMatch(
+      /hero-banner-custom-bg-example\.png/,
+    );
+  },
 };
 
 export const WithoutBackground: Story = {
@@ -130,6 +169,12 @@ export const WithoutBackground: Story = {
     description:
       'The content should be clearly visible without any background distractions.',
     removeBackground: true,
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const banner = canvas.getByRole('banner');
+    const styles = window.getComputedStyle(banner);
+    await expect(styles.backgroundImage).toBe('none');
   },
 };
 
@@ -146,6 +191,13 @@ export const WithWideText: Story = {
     },
     withWideText: true,
   },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText('Wide Text Example')).toBeInTheDocument();
+    await expect(
+      canvas.getByAltText('Decorative image for hero section'),
+    ).toBeInTheDocument();
+  },
 };
 
 export const WithCustomStyles: Story = {
@@ -159,7 +211,6 @@ export const WithCustomStyles: Story = {
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
 
-    // Dynamically inject custom style for test and visual verification
     const style = document.createElement('style');
     style.innerHTML = `
       section.customHeroBannerClass {
@@ -170,21 +221,11 @@ export const WithCustomStyles: Story = {
     `;
     canvasElement.appendChild(style);
 
-    const heroBannerSection = await canvas.findByRole('banner');
+    const banner = await canvas.findByRole('banner');
+    await expect(banner).toHaveClass('customHeroBannerClass');
 
-    await expect(heroBannerSection).toHaveClass('customHeroBannerClass');
-
-    const computedStyle = window.getComputedStyle(heroBannerSection);
-
-    await expect(computedStyle.outline).toBe('rgb(255, 165, 0) dashed 3px');
-    await expect(computedStyle.backgroundColor).toBe('rgb(254, 251, 233)'); // #fefbe9
-  },
-};
-
-WithCustomStyles.parameters = {
-  docs: {
-    description: {
-      story: 'This example demonstrates how to apply styles via className',
-    },
+    const styles = window.getComputedStyle(banner);
+    await expect(styles.outline).toBe('rgb(255, 165, 0) dashed 3px');
+    await expect(styles.backgroundColor).toBe('rgb(254, 251, 233)');
   },
 };
