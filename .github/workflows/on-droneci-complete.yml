@@ -1,4 +1,7 @@
-# This is an experiment with triggering a GitHub worfklow AFTER Drone CI completes.
+# After DroneCI completes, we need to close the Applitools Eyes batch (and potentially
+# do other GH actions tasks in the future).
+#
+# This workflow is triggered by an HTTP post from the `on-droneci-complete` job in .drone.yml
 name: on-droneci-complete
 
 on:
@@ -33,21 +36,23 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            // Check if a given GH workflow has completed or not. If it hasn't
+            // we set an error message.
             async function assertWorkflowNotPending(workflow_id) {
-              const result = await github.rest.actions.listWorkflowRuns({
+              const { data: { workflow_runs } } = await github.rest.actions.listWorkflowRuns({
                 workflow_id,
                 head_sha: context.sha,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
               });
-              const { data: { workflow_runs } } = result;
 
               if (workflow_runs.length === 0) {
                 console.log(`Workflow ${workflow_id} was not triggered by this commit, ignoring`);
               } else if (workflow_runs[0].status !== 'completed') {
-                console.log(`listWorkflowRuns returned ${result}`);
-                core.setFailed(`Error: ${workflow_id} is still pending (status: ${workflow_runs[0].status}), but we're closing the applitools batch now that drone is complete. This may cause problems for ${workflow_id}.`);
+                core.setFailed(`Error: workflow ${workflow_id} is still pending (status: ${workflow_runs[0].status}), but we're closing the applitools batch now that drone is complete. This may cause problems for ${workflow_id}.`);
                 process.exit(1);
+              } else {
+                console.log(`Confirmed: workflow ${workflow_id} is already complete.`);
               }
             }
 
