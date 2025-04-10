@@ -1,4 +1,4 @@
-import amazonFutureEngineerLogo from '@public/images/amazon-future-engineer-dark-logo.png';
+import codeOrgLogo from '@public/images/code-org-logo.png';
 import customBackgroundImage from '@public/images/hero-banner-custom-bg-example.png';
 import imageFile from '@public/images/image-component.png';
 import {Meta, StoryObj} from '@storybook/react';
@@ -58,7 +58,7 @@ export const WithPartnerAndCTA: Story = {
     partner: {
       title: 'In partnership with',
       logo: {
-        src: amazonFutureEngineerLogo,
+        src: codeOrgLogo,
         altText: 'Tech for Good Logo',
       },
     },

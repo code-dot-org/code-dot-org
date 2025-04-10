@@ -62,15 +62,17 @@ $mobileBreakpoint: 1024px;
   @include typography.body-three;
   @include typography.strong;
   display: inline-flex;
+  flex: 1;
+  flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  gap: 0.25rem;
   margin: 0;
-  flex: 1 0 0;
+  width: 100%;
 
   figure {
-    margin-inline-start: 0.25rem;
     max-width: 11.9375rem;
     max-height: 1.875rem;
+    width: auto;
   }
 }
 
