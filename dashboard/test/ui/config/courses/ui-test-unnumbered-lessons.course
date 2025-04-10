@@ -1,0 +1,21 @@
+{
+  "name": "ui-test-unnumbered-lessons",
+  "script_names": [
+    "ui-test-unnumbered-lessons"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-unnumbered-lessons",
+    "has_numbered_units": true,
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

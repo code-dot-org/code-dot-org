@@ -192,10 +192,12 @@ describe('TeacherNavigationBar', () => {
 
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
+    localStorage.clear();
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
+    localStorage.clear();
   });
 
   test('renders correctly with visible sections', async () => {
@@ -320,6 +322,7 @@ describe('TeacherNavigationBar', () => {
 
   test('renders AiDiffFloatingActionButton component', async () => {
     // mock experiment is enabled
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     experiments.isEnabled = jest.fn(() => true);
     renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
 

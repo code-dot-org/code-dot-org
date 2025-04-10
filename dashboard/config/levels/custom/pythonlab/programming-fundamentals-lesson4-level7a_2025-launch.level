@@ -1,21 +1,39 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-02T01:18:43.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "You're helping fix a book recommendation app. The code is supposed to store and print the title of a recommended book, but something's broken!\r\n\r\n## Do This:\r\n\r\n1. Look for **two** bugs.\r\n\r\n2. Fix both bugs so the program runs without errors and prints the message.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
     "predict_settings": {
       "isPredictLevel": false
-    }
+    },
+    "display_name": "Book Club",
+    "bubble_choice_description": "You're helping fix a book recommendation app. The code is supposed to store and print the title of a recommended book, but something's broken!",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program prints a book recommendation\n\nbook_title = The House on Mango Street\nprint(\"Next read:\", booktile)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/4618d23a464e9f5836e9c4f7beecdb54-stack-of-books.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-02 01:20:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-02 01:20:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 03:34:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 03:35:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 03:40:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

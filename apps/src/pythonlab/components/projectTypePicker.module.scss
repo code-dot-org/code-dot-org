@@ -2,6 +2,7 @@
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
 }
 
 // Ensures the dialog and overlay are on top of other Python Lab elements.
@@ -11,4 +12,8 @@ div.dialogContainer > div[role='presentation'] {
 
 .pickerDialog {
   padding: 24px 32px;
+}
+
+.boldWarning {
+  font-weight: bold;
 }

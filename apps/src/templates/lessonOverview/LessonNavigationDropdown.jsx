@@ -102,6 +102,7 @@ export default class LessonNavigationDropdown extends Component {
 
   render() {
     const {lesson} = this.props;
+    const {hasUnnumberedLessons} = lesson.unit;
 
     const lessonsList = this.createSectionsOfLessons();
 
@@ -128,7 +129,9 @@ export default class LessonNavigationDropdown extends Component {
                       ...(listItem.key === lesson.key && styles.boldText),
                     }}
                   >
-                    {`${listItem.position} - ${listItem.displayName}`}
+                    {hasUnnumberedLessons
+                      ? listItem.displayName
+                      : `${listItem.position} - ${listItem.displayName}`}
                   </span>
                 </span>
               )}
