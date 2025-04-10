@@ -11,11 +11,11 @@ $mobileBreakpoint: 970px;
 
   &.heroBanner-withWideText {
     .heroBannerDescriptiveSection {
-      flex: 0 0 65%;
+      flex: 2;
     }
 
     .heroBannerVisualSection {
-      flex: 0 0 30%;
+      flex: 1;
     }
   }
 }
